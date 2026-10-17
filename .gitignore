@@ -1,0 +1,27 @@
+# Local credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Python environments and generated caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+
+# JavaScript dependencies and generated builds
+node_modules/
+dist/
+build/
+
+# Operating system metadata
+.DS_Store
+Thumbs.db
+
+# Keep coursework reports, AI interaction records, and validation outputs.
