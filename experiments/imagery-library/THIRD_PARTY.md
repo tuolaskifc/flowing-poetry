@@ -1,4 +1,4 @@
-> 本轮更新：九类独立工具；月形可切换圆缺与亮边方向，新增雨线与落花。落花轮廓复用 sxywu（MIT），运动为本项目编写；雨与月形为本项目编写。详见 [工具结构与来源](drawing/README.md)。
+> 本轮更新：十一类独立工具；石取用 Mount.rock，亭取用 Arch 内 hut/roof/rail 的部分几何，均来自 Lingdong Huang（MIT）。原件未改，自动人物未取用。详见 [工具结构与来源](drawing/README.md)。
 
 # 意象试画室：第三方来源与改动
 

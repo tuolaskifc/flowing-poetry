@@ -114,8 +114,8 @@
       "id": "architecture",
       "name": "楼亭与栏杆",
       "phase": "首批",
-      "code_reference": "experiments/imagery-library/code-research/shan-index.html",
-      "status": "已有 arch01–arch04 建筑源码及长卷出图记录；各变体仍需单独检查，楼、亭和栏杆保留不同轮廓。"
+      "code_reference": "experiments/imagery-library/drawing/tools/pavilion.js",
+      "status": "已有独立空亭、茅顶／折檐与可选栏杆；楼阁多层仍未实现，不将楼、亭视为同一形体。"
     },
     {
       "id": "liquid_container",

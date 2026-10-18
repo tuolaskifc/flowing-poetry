@@ -31,6 +31,18 @@ window.PoemDrawingSources = Object.freeze({
     originals:['code-research/flower/index.html','code-research/flower/.block'],licenseFile:'code-research/flower/.block',
     note:'取 petalPath 的曲线生成，改为数值控制点与 Canvas 绘制；去掉 D3/Lodash 依赖，预生成花瓣，茎叶和风响应由本项目编写。'
   }),
+  'shan-rock': Object.freeze({
+    id:'shan-rock',author:'Lingdong Huang',license:'MIT',kind:'adapted',
+    url:'https://github.com/LingDong-/shan-shui-inf',
+    originals:['code-research/shan-index.html'],licenseFile:'code-research/shan-LICENSE.txt',
+    note:'取 Mount.rock 的椭圆极径、噪声外缘、压扁底部与内缩轮廓思路；改为闭合周期噪声、种子预计算和 Canvas 纹理，不复制原 SVG texture/stroke。'
+  }),
+  'shan-pavilion': Object.freeze({
+    id:'shan-pavilion',author:'Lingdong Huang',license:'MIT',kind:'adapted',
+    url:'https://github.com/LingDong-/shan-shui-inf',
+    originals:['code-research/shan-index.html'],licenseFile:'code-research/shan-LICENSE.txt',
+    note:'取 Arch 内 hut 的幂函数屋顶展开、roof 的屋脊/檐角控制点，以及 rail 的菱形平面；重写柱、栏、屋顶纹理与 Canvas 绘制，不复制 arch01 自动人物。'
+  }),
   'shan-boat': Object.freeze({
     id:'shan-boat',author:'Lingdong Huang',license:'MIT',kind:'adapted',
     url:'https://github.com/LingDong-/shan-shui-inf',

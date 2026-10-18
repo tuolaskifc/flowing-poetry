@@ -159,6 +159,49 @@
       "poseKey": "3cf3ac7e",
       "finite": true,
       "geometryKey": "325a67bb"
+    },
+    {
+      "id": "rock",
+      "seed": 915,
+      "time": 0,
+      "ticks": 0,
+      "paused": false,
+      "disposed": false,
+      "ready": true,
+      "options": {
+        "profile": "low"
+      },
+      "sources": [
+        "shan-rock",
+        "project"
+      ],
+      "rockCount": 1,
+      "profile": "low",
+      "finite": true,
+      "geometryKey": "e4e92fd4"
+    },
+    {
+      "id": "pavilion",
+      "seed": 1012,
+      "time": 0,
+      "ticks": 0,
+      "paused": false,
+      "disposed": false,
+      "ready": true,
+      "options": {
+        "roof": "tiled",
+        "railing": "open"
+      },
+      "sources": [
+        "shan-pavilion",
+        "project"
+      ],
+      "pavilionCount": 1,
+      "personCount": 0,
+      "roof": "tiled",
+      "railing": "open",
+      "finite": true,
+      "geometryKey": "ea5479aa"
     }
   ],
   "pausedBefore": [
@@ -319,6 +362,49 @@
       "poseKey": "3cf3ac7e",
       "finite": true,
       "geometryKey": "325a67bb"
+    },
+    {
+      "id": "rock",
+      "seed": 915,
+      "time": 0,
+      "ticks": 0,
+      "paused": true,
+      "disposed": false,
+      "ready": true,
+      "options": {
+        "profile": "low"
+      },
+      "sources": [
+        "shan-rock",
+        "project"
+      ],
+      "rockCount": 1,
+      "profile": "low",
+      "finite": true,
+      "geometryKey": "e4e92fd4"
+    },
+    {
+      "id": "pavilion",
+      "seed": 1012,
+      "time": 0,
+      "ticks": 0,
+      "paused": true,
+      "disposed": false,
+      "ready": true,
+      "options": {
+        "roof": "tiled",
+        "railing": "open"
+      },
+      "sources": [
+        "shan-pavilion",
+        "project"
+      ],
+      "pavilionCount": 1,
+      "personCount": 0,
+      "roof": "tiled",
+      "railing": "open",
+      "finite": true,
+      "geometryKey": "ea5479aa"
     }
   ],
   "pausedAfter": [
@@ -479,6 +565,49 @@
       "poseKey": "3cf3ac7e",
       "finite": true,
       "geometryKey": "325a67bb"
+    },
+    {
+      "id": "rock",
+      "seed": 915,
+      "time": 0,
+      "ticks": 1,
+      "paused": true,
+      "disposed": false,
+      "ready": true,
+      "options": {
+        "profile": "low"
+      },
+      "sources": [
+        "shan-rock",
+        "project"
+      ],
+      "rockCount": 1,
+      "profile": "low",
+      "finite": true,
+      "geometryKey": "e4e92fd4"
+    },
+    {
+      "id": "pavilion",
+      "seed": 1012,
+      "time": 0,
+      "ticks": 1,
+      "paused": true,
+      "disposed": false,
+      "ready": true,
+      "options": {
+        "roof": "tiled",
+        "railing": "open"
+      },
+      "sources": [
+        "shan-pavilion",
+        "project"
+      ],
+      "pavilionCount": 1,
+      "personCount": 0,
+      "roof": "tiled",
+      "railing": "open",
+      "finite": true,
+      "geometryKey": "ea5479aa"
     }
   ],
   "changed": [
@@ -639,6 +768,49 @@
       "poseKey": "50ff4c07",
       "finite": true,
       "geometryKey": "f04111d7"
+    },
+    {
+      "id": "rock",
+      "seed": 916,
+      "time": 0,
+      "ticks": 4,
+      "paused": true,
+      "disposed": false,
+      "ready": true,
+      "options": {
+        "profile": "low"
+      },
+      "sources": [
+        "shan-rock",
+        "project"
+      ],
+      "rockCount": 1,
+      "profile": "low",
+      "finite": true,
+      "geometryKey": "80b9e3ae"
+    },
+    {
+      "id": "pavilion",
+      "seed": 1013,
+      "time": 0,
+      "ticks": 4,
+      "paused": true,
+      "disposed": false,
+      "ready": true,
+      "options": {
+        "roof": "tiled",
+        "railing": "open"
+      },
+      "sources": [
+        "shan-pavilion",
+        "project"
+      ],
+      "pavilionCount": 1,
+      "personCount": 0,
+      "roof": "tiled",
+      "railing": "open",
+      "finite": true,
+      "geometryKey": "9383c631"
     }
   ],
   "settings": {
@@ -650,8 +822,8 @@
     {
       "id": "flower",
       "seed": 43,
-      "time": 1.2995000000059602,
-      "ticks": 41,
+      "time": 1.3097999999940402,
+      "ticks": 43,
       "paused": false,
       "disposed": false,
       "ready": true,
@@ -667,8 +839,8 @@
     {
       "id": "tree",
       "seed": 140,
-      "time": 1.2993000000178812,
-      "ticks": 41,
+      "time": 1.3097999999940402,
+      "ticks": 43,
       "paused": false,
       "disposed": false,
       "ready": true,
@@ -683,8 +855,8 @@
     {
       "id": "water",
       "seed": 237,
-      "time": 1.2993000000178812,
-      "ticks": 41,
+      "time": 1.3097999999940402,
+      "ticks": 43,
       "paused": false,
       "disposed": false,
       "ready": true,
@@ -699,8 +871,8 @@
     {
       "id": "mist",
       "seed": 334,
-      "time": 1.2993000000178812,
-      "ticks": 41,
+      "time": 1.3097999999940402,
+      "ticks": 43,
       "paused": false,
       "disposed": false,
       "ready": true,
@@ -714,8 +886,8 @@
     {
       "id": "birds",
       "seed": 431,
-      "time": 1.2993000000178812,
-      "ticks": 41,
+      "time": 1.3097999999940402,
+      "ticks": 43,
       "paused": false,
       "disposed": false,
       "ready": true,
@@ -731,8 +903,8 @@
     {
       "id": "boat",
       "seed": 528,
-      "time": 1.2993000000178812,
-      "ticks": 41,
+      "time": 1.3097999999940402,
+      "ticks": 43,
       "paused": false,
       "disposed": false,
       "ready": true,
@@ -749,8 +921,8 @@
     {
       "id": "moon",
       "seed": 625,
-      "time": 1.2993000000178812,
-      "ticks": 49,
+      "time": 1.3097999999940402,
+      "ticks": 51,
       "paused": false,
       "disposed": false,
       "ready": true,
@@ -771,8 +943,8 @@
     {
       "id": "rain",
       "seed": 722,
-      "time": 1.2993000000178812,
-      "ticks": 41,
+      "time": 1.3097999999940402,
+      "ticks": 43,
       "paused": false,
       "disposed": false,
       "ready": true,
@@ -787,8 +959,8 @@
     {
       "id": "falling-petals",
       "seed": 819,
-      "time": 1.2993000000178812,
-      "ticks": 41,
+      "time": 1.3097999999940402,
+      "ticks": 43,
       "paused": false,
       "disposed": false,
       "ready": true,
@@ -801,12 +973,65 @@
       ],
       "petalCount": 18,
       "landedCount": 0,
-      "poseKey": "56aa873e",
+      "poseKey": "b4f415e0",
       "finite": true,
       "geometryKey": "f04111d7"
+    },
+    {
+      "id": "rock",
+      "seed": 916,
+      "time": 1.3097999999940402,
+      "ticks": 45,
+      "paused": false,
+      "disposed": false,
+      "ready": true,
+      "options": {
+        "profile": "low"
+      },
+      "sources": [
+        "shan-rock",
+        "project"
+      ],
+      "rockCount": 1,
+      "profile": "low",
+      "finite": true,
+      "geometryKey": "80b9e3ae"
+    },
+    {
+      "id": "pavilion",
+      "seed": 1013,
+      "time": 1.3097999999940402,
+      "ticks": 47,
+      "paused": false,
+      "disposed": false,
+      "ready": true,
+      "options": {
+        "roof": "tiled",
+        "railing": "open"
+      },
+      "sources": [
+        "shan-pavilion",
+        "project"
+      ],
+      "pavilionCount": 1,
+      "personCount": 0,
+      "roof": "tiled",
+      "railing": "open",
+      "finite": true,
+      "geometryKey": "9383c631"
     }
   ],
   "exportInfo": [
+    {
+      "width": 640,
+      "height": 388,
+      "png": true
+    },
+    {
+      "width": 640,
+      "height": 388,
+      "png": true
+    },
     {
       "width": 640,
       "height": 388,
@@ -864,7 +1089,9 @@
       "boat",
       "moon",
       "rain",
-      "falling-petals"
+      "falling-petals",
+      "rock",
+      "pavilion"
     ],
     "repeatAll": true,
     "sameSeed": true,
@@ -888,21 +1115,29 @@
     "loopMoves": true,
     "invalidRejected": true
   },
+  "architecture": {
+    "rockVariants": true,
+    "roofVariants": true,
+    "railingVariant": true,
+    "windStatic": true,
+    "countsCorrect": true,
+    "anchorsFinite": true
+  },
   "wideLayout": {
     "viewport": 1280,
     "document": 1265,
     "candidates": 10,
-    "canvases": 9
+    "canvases": 11
   },
   "narrowLayout": {
     "viewport": 390,
     "document": 390,
-    "canvases": 9
+    "canvases": 11
   },
   "runtimeErrors": [],
   "limitations": [
     "未操作系统下载确认界面；仅验证 canvas 导出 PNG 数据。",
     "本地画面经浏览器截图检查；OpenProcessing 原作未完成视觉检查。",
-    "九类工具检查暂停重置后的重复出图；不等同于运动的跨设备逐帧确定性。"
+    "十一类工具检查暂停重置后的重复出图；不等同于运动的跨设备逐帧确定性。"
   ]
 }

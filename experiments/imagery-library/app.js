@@ -9,7 +9,8 @@
     const card=document.createElement('article');card.className='study';card.id=d.id;
     const reference=d.reference.startsWith('ref-')?`#${d.reference}`:d.reference;
     const referenceLabel=d.reference.startsWith('ref-')?'比较社区候选':'查看工具记录';
-    card.innerHTML=`<div class="canvas-host" aria-label="${d.name}的动态试画" role="img"></div><div class="study-body"><div class="study-heading"><h3>${d.name}</h3><span class="study-index">0${index+1}</span></div><p>${d.subtitle}</p><p>${d.note}</p><p class="credit">${d.credit}</p><div class="study-actions"><a href="${reference}">${referenceLabel} ↗</a><button type="button" aria-label="保存${d.name}的当前画面">保存这一刻</button></div></div>`;
+    const displayIndex=String(index+1).padStart(2,'0');
+    card.innerHTML=`<div class="canvas-host" aria-label="${d.name}的动态试画" role="img"></div><div class="study-body"><div class="study-heading"><h3>${d.name}</h3><span class="study-index">${displayIndex}</span></div><p>${d.subtitle}</p><p>${d.note}</p><p class="credit">${d.credit}</p><div class="study-actions"><a href="${reference}">${referenceLabel} ↗</a><button type="button" aria-label="保存${d.name}的当前画面">保存这一刻</button></div></div>`;
     studies.append(card);
     const controller=window.PoemStudies.mount(d.id,card.querySelector('.canvas-host'),shared,seed+index*97);
     controllers.push(controller);card.querySelector('button').addEventListener('click',()=>controller.save());

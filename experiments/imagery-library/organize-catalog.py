@@ -24,7 +24,7 @@ families=[
 ('insect','虫体','扩展',None,'待制作虫体；只有鸣声依据时不自动添加可见虫体。'),
 ('horse','马体','扩展',None,'待制作轮廓、步态与肢体结构；第一版暂缓。'),
 ('boat','舟船与桨','首批','experiments/imagery-library/drawing/tools/boat.js','已有独立船体与甲板锚点，不自动加船夫；桨、帆与真正载人关系尚未实现。'),
-('architecture','楼亭与栏杆','首批','experiments/imagery-library/code-research/shan-index.html','已有 arch01–arch04 建筑源码及长卷出图记录；各变体仍需单独检查，楼、亭和栏杆保留不同轮廓。'),
+('architecture','楼亭与栏杆','首批','experiments/imagery-library/drawing/tools/pavilion.js','已有独立空亭、茅顶／折檐与可选栏杆；楼阁多层仍未实现，不将楼、亭视为同一形体。'),
 ('liquid_container','酒液与容器','扩展',None,'先判断画酒液、酒器还是饮酒动作；原文没写杯不能自动补杯。'),
 ('instrument','乐器形体','扩展',None,'琴、瑟、笛分别制作；形体与声音分开，暂不实现音频。'),
 ('fruit','果实','扩展','experiments/imagery-library/code-research/fresco/demos/fruitTrees/sketch.js','有通用果实示例，不代表已有梅子形态；需确认外形与附着。'),
@@ -131,7 +131,7 @@ lines += ['','首批 12 类：'+ '、'.join(f['name'] for f in family_map.values
 for x in items:
     fs='、'.join(family_map[k]['name'] for k in x['candidate_families']) or '交其他模块'
     lines.append(f"| {x['imagery']} | {x['count']:,} | {x['treatment']} | {fs} | {x['note']} |")
-lines += ['','当前工具结构见 [九类独立工具与来源](drawing/README.md)。登记的工具数量不等于完成的文学意象数量；月形由观看者选择，花鸟尚未区分具体物种，落花尚未连接枝条。','','## 绘画单元需要提供什么','','每个单元后续至少记录：','',
+lines += ['','当前工具结构见 [十一类独立工具与来源](drawing/README.md)。登记的工具数量不等于完成的文学意象数量；月形由观看者选择，花鸟尚未区分具体物种，落花尚未连接枝条。','','## 绘画单元需要提供什么','','每个单元后续至少记录：','',
 '1. 身份与变体：原词、规范含义、形态类型，以及同一实体的持续身份。',
 '2. 形态结构：轮廓、局部特征、锚点与边界；花、叶、果实等是否可分离。',
 '3. 可用接口：位置、尺度、方向、笔触疏密；颜色由情感与配色模块统一传入。',
