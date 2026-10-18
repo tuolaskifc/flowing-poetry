@@ -1,0 +1,41 @@
+{
+  "retrievedOn": "2026-10-18",
+  "author": "Daniel Shiffman / The Nature of Code",
+  "files": [
+    {
+      "file": "noc-boid.js",
+      "url": "https://raw.githubusercontent.com/nature-of-code/noc-examples-p5.js-archived/master/chp06_agents/NOC_6_09_Flocking/boid.js",
+      "bytes": 5109,
+      "sha256": "33bd5e3fa2c71c53b47f0b84562589a1c166a77adf39df3e2cb566a62849800b",
+      "license": "MIT"
+    },
+    {
+      "file": "noc-flock.js",
+      "url": "https://raw.githubusercontent.com/nature-of-code/noc-examples-p5.js-archived/master/chp06_agents/NOC_6_09_Flocking/flock.js",
+      "bytes": 456,
+      "sha256": "2464691fad762338ae1d73d9aeb807aea104136012148f7b54ca8de852df5c7f",
+      "license": "MIT"
+    },
+    {
+      "file": "noc-tree.js",
+      "url": "https://raw.githubusercontent.com/nature-of-code/noc-examples-p5.js-archived/master/chp08_fractals/NOC_8_06_Tree/sketch.js",
+      "bytes": 1380,
+      "sha256": "810f3234344f3cdf24144550a1c8b53b6654819eb0011cd67d1bee682e343526",
+      "license": "MIT"
+    },
+    {
+      "file": "noc-wave.js",
+      "url": "https://raw.githubusercontent.com/nature-of-code/noc-examples-p5.js-archived/master/chp03_oscillation/NOC_3_09_wave/sketch.js",
+      "bytes": 377,
+      "sha256": "ca47270f3ea924ad8dacecdb974ebd7cc650ea0e2e7022004acdce3061aa849f",
+      "license": "MIT"
+    },
+    {
+      "file": "NOC-LICENSE.txt",
+      "url": "https://raw.githubusercontent.com/nature-of-code/noc-examples-p5.js-archived/master/LICENSE",
+      "bytes": 1075,
+      "sha256": "17a425fd052aa9d4a9ce2e55e43ee9e0fd70cde3218ba478f5424fb0ff56cd94",
+      "license": "MIT"
+    }
+  ]
+}

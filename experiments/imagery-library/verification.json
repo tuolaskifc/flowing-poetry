@@ -1,0 +1,267 @@
+{
+  "status": "passed",
+  "targetUrl": "http://127.0.0.1:4185/?seed=42",
+  "initial": [
+    {
+      "id": "flower",
+      "seed": 42,
+      "time": 0,
+      "ticks": 0,
+      "paused": false,
+      "finite": true
+    },
+    {
+      "id": "tree",
+      "seed": 139,
+      "time": 0,
+      "ticks": 0,
+      "paused": false,
+      "finite": true
+    },
+    {
+      "id": "water",
+      "seed": 236,
+      "time": 0,
+      "ticks": 0,
+      "paused": false,
+      "finite": true
+    },
+    {
+      "id": "mist",
+      "seed": 333,
+      "time": 0,
+      "ticks": 0,
+      "paused": false,
+      "finite": true
+    },
+    {
+      "id": "birds",
+      "seed": 430,
+      "time": 0,
+      "ticks": 0,
+      "paused": false,
+      "birdCount": 22,
+      "finite": true
+    }
+  ],
+  "pausedBefore": [
+    {
+      "id": "flower",
+      "seed": 42,
+      "time": 0,
+      "ticks": 0,
+      "paused": true,
+      "finite": true
+    },
+    {
+      "id": "tree",
+      "seed": 139,
+      "time": 0,
+      "ticks": 0,
+      "paused": true,
+      "finite": true
+    },
+    {
+      "id": "water",
+      "seed": 236,
+      "time": 0,
+      "ticks": 0,
+      "paused": true,
+      "finite": true
+    },
+    {
+      "id": "mist",
+      "seed": 333,
+      "time": 0,
+      "ticks": 0,
+      "paused": true,
+      "finite": true
+    },
+    {
+      "id": "birds",
+      "seed": 430,
+      "time": 0,
+      "ticks": 0,
+      "paused": true,
+      "birdCount": 22,
+      "finite": true
+    }
+  ],
+  "pausedAfter": [
+    {
+      "id": "flower",
+      "seed": 42,
+      "time": 0,
+      "ticks": 1,
+      "paused": true,
+      "finite": true
+    },
+    {
+      "id": "tree",
+      "seed": 139,
+      "time": 0,
+      "ticks": 1,
+      "paused": true,
+      "finite": true
+    },
+    {
+      "id": "water",
+      "seed": 236,
+      "time": 0,
+      "ticks": 1,
+      "paused": true,
+      "finite": true
+    },
+    {
+      "id": "mist",
+      "seed": 333,
+      "time": 0,
+      "ticks": 1,
+      "paused": true,
+      "finite": true
+    },
+    {
+      "id": "birds",
+      "seed": 430,
+      "time": 0,
+      "ticks": 1,
+      "paused": true,
+      "birdCount": 22,
+      "finite": true
+    }
+  ],
+  "changed": [
+    {
+      "id": "flower",
+      "seed": 43,
+      "time": 0,
+      "ticks": 4,
+      "paused": true,
+      "finite": true
+    },
+    {
+      "id": "tree",
+      "seed": 140,
+      "time": 0,
+      "ticks": 4,
+      "paused": true,
+      "finite": true
+    },
+    {
+      "id": "water",
+      "seed": 237,
+      "time": 0,
+      "ticks": 4,
+      "paused": true,
+      "finite": true
+    },
+    {
+      "id": "mist",
+      "seed": 334,
+      "time": 0,
+      "ticks": 4,
+      "paused": true,
+      "finite": true
+    },
+    {
+      "id": "birds",
+      "seed": 431,
+      "time": 0,
+      "ticks": 4,
+      "paused": true,
+      "birdCount": 22,
+      "finite": true
+    }
+  ],
+  "settings": {
+    "wind": 1,
+    "density": 1,
+    "palette": "tender"
+  },
+  "resumed": [
+    {
+      "id": "flower",
+      "seed": 43,
+      "time": 1.2987,
+      "ticks": 41,
+      "paused": false,
+      "finite": true
+    },
+    {
+      "id": "tree",
+      "seed": 140,
+      "time": 1.2987,
+      "ticks": 41,
+      "paused": false,
+      "finite": true
+    },
+    {
+      "id": "water",
+      "seed": 237,
+      "time": 1.2987,
+      "ticks": 41,
+      "paused": false,
+      "finite": true
+    },
+    {
+      "id": "mist",
+      "seed": 334,
+      "time": 1.2987,
+      "ticks": 41,
+      "paused": false,
+      "finite": true
+    },
+    {
+      "id": "birds",
+      "seed": 431,
+      "time": 1.2987,
+      "ticks": 41,
+      "paused": false,
+      "birdCount": 22,
+      "finite": true
+    }
+  ],
+  "exportInfo": [
+    {
+      "width": 640,
+      "height": 388,
+      "png": true
+    },
+    {
+      "width": 640,
+      "height": 388,
+      "png": true
+    },
+    {
+      "width": 640,
+      "height": 388,
+      "png": true
+    },
+    {
+      "width": 640,
+      "height": 388,
+      "png": true
+    },
+    {
+      "width": 640,
+      "height": 388,
+      "png": true
+    }
+  ],
+  "wideLayout": {
+    "viewport": 1280,
+    "document": 1265,
+    "candidates": 10,
+    "canvases": 5
+  },
+  "narrowLayout": {
+    "viewport": 390,
+    "document": 390,
+    "canvases": 5
+  },
+  "runtimeErrors": [],
+  "limitations": [
+    "未操作系统下载确认界面；仅验证 canvas 导出 PNG 数据。",
+    "本地画面经浏览器截图检查；OpenProcessing 原作未完成视觉检查。"
+  ]
+}

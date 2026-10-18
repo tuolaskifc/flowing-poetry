@@ -1,0 +1,19 @@
+{
+  "checkedOn": "2026-10-18",
+  "directRequests": [
+    {
+      "url": "https://openprocessing.org/sketch/2225948",
+      "observedTitle": "Validating Connection — OpenProcessing",
+      "completeSourceObtained": false
+    },
+    {
+      "url": "https://openprocessing.org/@u288685/2041849",
+      "observedTitle": "Validating Connection — OpenProcessing",
+      "completeSourceObtained": false
+    }
+  ],
+  "indexedSources": "Search results provided descriptions, account paths, visible license labels, and in a few cases incomplete code. These do not establish current runtime or privacy status.",
+  "candidateInventory": "../catalog.js",
+  "actualLocalCodeSources": "manifest.json",
+  "opCodeImported": false
+}

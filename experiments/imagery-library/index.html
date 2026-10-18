@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>流动诗 · 意象试画室</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="../../poem-flow/vendor/p5.min.js"></script>
+  <script defer src="boid-adapter.js"></script>
+  <script defer src="studies.js"></script>
+  <script defer src="catalog.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <header><a href="./index.html">流动诗 <span>／ 意象试画室</span></a><a href="#references">查看社区候选 ↗</a></header>
+  <main>
+    <section class="intro">
+      <p class="eyebrow">IMAGERY STUDIES · 01</p>
+      <h1>先有风，再看万物如何回应。</h1>
+      <p>花、树、水、云雾与鸟群的第一组本地试画。用同一组颜色与观看尺度，试一试它们能否进入同一个诗意世界。</p>
+      <p class="provenance">本地画面：树、水、鸟群参考 The Nature of Code；花与云雾为本项目试作。OpenProcessing 原作见下方候选，尚未取得完整源码，未在此复刻其效果。</p>
+    </section>
+    <section class="controls" aria-label="试画控制">
+      <label>风的作用 <input id="wind" type="range" min="0" max="100" value="35"><output id="wind-value">35%</output></label>
+      <label>笔触疏密 <input id="density" type="range" min="0" max="100" value="45"><output id="density-value">45%</output></label>
+      <label>配色 <select id="palette"><option value="clear">清寂澄明</option><option value="tender">温柔缱绻</option></select></label>
+      <div class="buttons"><button id="pause" aria-pressed="false">暂停</button><button id="reseed">换一组形态</button></div>
+    </section>
+    <p class="control-note">风调节运动与局部形变；疏密调节笔触和空间分布，不改变鸟群数量。这里只试绘画能力，还没有诗句自动分析。</p>
+    <section id="studies" class="studies" aria-label="五类意象本地试画"></section>
+    <section id="references" class="reference-section">
+      <p class="eyebrow">OPENPROCESSING · CANDIDATES</p><h2>从社区挑选，逐件核实。</h2>
+      <p>以下依据公开作品说明与搜索索引初筛，还没有完成原作视觉审阅或源码适配。许可标注为页面／索引可见值，实际引入前仍需核对完整版本与派生来源。</p>
+      <div id="candidate-list"></div>
+    </section>
+    <footer>试画是候选，不是最终风格。<a href="README.md">实验记录与来源说明 ↗</a></footer>
+    <p id="live-status" class="sr-only" role="status" aria-live="polite"></p>
+  </main>
+</body>
+</html>
