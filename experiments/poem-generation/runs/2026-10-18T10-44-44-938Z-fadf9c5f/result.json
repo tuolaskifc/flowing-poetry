@@ -1,0 +1,160 @@
+{
+  "id": "2026-10-18T10-44-44-938Z-fadf9c5f",
+  "fingerprint": "948dc91c814bfe6900c877f561027d6536d647f9a092f0ffe25d6bedab0074ae",
+  "poem": "兰有秀兮菊有芳，怀佳人兮不能忘。",
+  "source": {
+    "provider": "今日诗词",
+    "author": "刘彻",
+    "title": "秋风辞",
+    "dynasty": "两汉"
+  },
+  "mode": "imagery-only",
+  "model": "DeepSeek-V4.1-Flash",
+  "started_at": "2026-10-18T10:44:44.942Z",
+  "cached": false,
+  "http_status": 200,
+  "usage": {
+    "completion_tokens": 281,
+    "prompt_tokens": 1993,
+    "total_tokens": 2274,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  },
+  "finish_reason": "stop",
+  "analysis": {
+    "schema_version": "3.0",
+    "poem": "兰有秀兮菊有芳，怀佳人兮不能忘。",
+    "reading": "兰草开花、菊花吐香，芬芳并陈；心中怀念那位佳人，始终无法忘怀。",
+    "entities": [
+      {
+        "id": "i1",
+        "mentions": [
+          "兰"
+        ],
+        "concept": "兰草",
+        "kind": "organism",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "兰有秀兮"
+        ]
+      },
+      {
+        "id": "i2",
+        "mentions": [
+          "菊"
+        ],
+        "concept": "菊花",
+        "kind": "organism",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "菊有芳"
+        ]
+      },
+      {
+        "id": "i3",
+        "mentions": [
+          "佳人"
+        ],
+        "concept": "心中所念的美好之人",
+        "kind": "person",
+        "role": "scene",
+        "presence": "unclear",
+        "evidence": [
+          "怀佳人兮"
+        ]
+      }
+    ],
+    "relations": [],
+    "atmosphere": {
+      "labels": [
+        "芬芳",
+        "思念"
+      ],
+      "valence": "mixed",
+      "energy": "low",
+      "tension": "low",
+      "openness": "unclear",
+      "evidence": [
+        "兰有秀兮菊有芳",
+        "怀佳人兮不能忘"
+      ]
+    },
+    "time": {
+      "markers": [],
+      "note": null
+    },
+    "uncertainties": [
+      "“佳人”是实指某人还是泛称理想对象，文本未明。",
+      "兰、菊是眼前实景还是起兴之物，无法确定。"
+    ]
+  },
+  "validation": {
+    "valid": true,
+    "errors": [],
+    "warnings": [
+      "$.entities[2]: 场景主体的出现情况不清楚",
+      "模型保留了不确定性，需要审阅"
+    ],
+    "review_required": true
+  },
+  "plan": {
+    "version": "trial-1",
+    "seed": 1367961563,
+    "settings": {
+      "wind": 0,
+      "density": 0.45,
+      "palette": "clear"
+    },
+    "layers": [
+      {
+        "tool": "flower-forms",
+        "entities": [
+          "i2"
+        ],
+        "names": [
+          "菊"
+        ],
+        "options": {
+          "kind": "chrysanthemum"
+        },
+        "animate": false,
+        "placement": {
+          "anchor": [
+            320,
+            188
+          ],
+          "at": [
+            0.42,
+            0.65
+          ],
+          "scale": 0.9
+        }
+      }
+    ],
+    "omitted": [
+      {
+        "id": "i1",
+        "name": "兰",
+        "reason": "该具体意象尚无可用形态；没有替换成通用树、花或鸟群"
+      },
+      {
+        "id": "i3",
+        "name": "佳人",
+        "reason": "出现情况不确定，暂不补画"
+      }
+    ],
+    "notes": [
+      "菊目前只画花冠示意，未补出枝叶或整株。",
+      "本句有否定或假设提示，基础意象模式未细分其范围，暂缓动画，不宣称完成逻辑解释。",
+      "位置、大小、笔触、固定群体数量与默认微动是本地试画选择；不表示原句给出了这些数值。"
+    ],
+    "relations": []
+  },
+  "elapsed_seconds": 2.5
+}

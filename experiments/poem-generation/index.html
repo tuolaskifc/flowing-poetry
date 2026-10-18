@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><base href="/experiments/poem-generation/">
+  <title>流动诗 · 生成试验</title><link rel="stylesheet" href="styles.css">
+  <script defer src="../../poem-flow/vendor/p5.min.js"></script>
+  <script defer src="../imagery-library/boid-adapter.js"></script>
+  <script defer src="../imagery-library/drawing/sources.js"></script><script defer src="../imagery-library/drawing/core.js"></script>
+  <script defer src="../imagery-library/drawing/petals.js"></script><script defer src="../imagery-library/drawing/cloud-outline.js"></script>
+  <script defer src="../imagery-library/drawing/tools/flower.js"></script><script defer src="../imagery-library/drawing/tools/tree.js"></script>
+  <script defer src="../imagery-library/drawing/tools/water.js"></script><script defer src="../imagery-library/drawing/tools/mist.js"></script>
+  <script defer src="../imagery-library/drawing/tools/birds.js"></script><script defer src="../imagery-library/drawing/tools/boat.js"></script>
+  <script defer src="../imagery-library/drawing/tools/moon.js"></script><script defer src="../imagery-library/drawing/tools/rain.js"></script>
+  <script defer src="../imagery-library/drawing/tools/falling-petals.js"></script><script defer src="../imagery-library/drawing/tools/rock.js"></script>
+  <script defer src="../imagery-library/drawing/tools/pavilion.js"></script><script defer src="../imagery-library/drawing/tools/grass.js"></script>
+  <script defer src="../imagery-library/drawing/tools/bamboo.js"></script><script defer src="../imagery-library/drawing/tools/willow.js"></script>
+  <script defer src="../imagery-library/drawing/tools/snow.js"></script><script defer src="../imagery-library/drawing/tools/leaves.js"></script>
+  <script defer src="../imagery-library/drawing/tools/fish.js"></script><script defer src="../imagery-library/drawing/tools/cloud.js"></script>
+  <script defer src="../imagery-library/drawing/tools/catkins.js"></script><script defer src="../imagery-library/drawing/tools/flower-forms.js"></script>
+  <script defer src="scene.js"></script><script defer src="app.js"></script>
+</head>
+<body>
+  <header><a href="/">流动诗 ／ 生成试验</a><a href="http://127.0.0.1:4185/experiments/imagery-library/progress.html">意象进度表 ↗</a></header>
+  <main>
+    <p class="eyebrow">POEM → READING → DRAWING</p><h1>让一句诗，试着进入画面。</h1>
+    <p class="intro">从今日诗词取一句，也可以自己输入。本轮先接通基础意象组合，完整关系与逻辑编排尚未接入；暂时画不了的部分会留在说明里。</p>
+    <section class="input-panel" aria-label="输入诗句">
+      <label for="poem">诗句 <span>1–200 字</span></label><textarea id="poem" rows="3" maxlength="200" placeholder="例如：明月松间照，清泉石上流。"></textarea>
+      <p id="source" class="muted"></p>
+      <div class="actions"><button id="fetch-poem" type="button">今日诗词取一句</button><button id="sample" type="button">填入试画样句</button><button id="generate" class="primary" type="button">生成画面</button><button id="replay" type="button" hidden>回看上次结果</button></div>
+      <p class="input-note">取句不会自动请求模型；点击“生成画面”才开始分析。相同的上一条结果可直接回看，不重复调用。</p>
+      <p id="status" role="status" aria-live="polite">正在连接本地分析服务……</p>
+    </section>
+    <section id="output" hidden>
+      <div class="scene-heading"><h2 id="scene-title">这一次的试画</h2><span id="record-info"></span></div>
+      <canvas id="scene" width="960" height="600" role="img" aria-label="根据诗句组合的动态试画"></canvas><div id="layer-hosts" hidden></div>
+      <div class="view-controls">
+        <label>配色 <select id="palette"><option value="clear">清寂澄明</option><option value="tender">温柔缱绻</option></select></label>
+        <label id="moon-control" hidden>月形 <select id="moon-shape"><option value="crescent">弯月</option><option value="half">半月</option><option value="gibbous">凸月</option><option value="full">满月</option><option value="dark">暗月</option></select></label>
+        <button id="pause" type="button" aria-pressed="false">暂停</button><button id="reseed" type="button">换一组形态</button><button id="save" type="button">保存画面</button>
+      </div>
+      <div class="reading-grid"><article><h2>文字怎样被理解</h2><p id="reading"></p><ul id="entities"></ul><p id="atmosphere" class="muted"></p><ul id="uncertainties"></ul></article><article><h2>这次画了什么</h2><ul id="drawn"></ul><h3>保留的空缺</h3><ul id="omitted"></ul></article></div>
+      <details><summary>画面选择与尚未表现的关系</summary><ul id="notes"></ul><ul id="relations"></ul></details>
+      <details><summary>来源与用量记录</summary><p id="usage"></p><ul id="credits"></ul></details>
+    </section>
+    <footer><span>第一轮通路试验 · 画面仍待审阅</span><a href="https://www.jinrishici.com/doc/" target="_blank" rel="noopener noreferrer">今日诗词官方文档 ↗</a></footer>
+  </main>
+</body>
+</html>

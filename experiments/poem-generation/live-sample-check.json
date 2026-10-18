@@ -1,0 +1,239 @@
+{
+  "live": true,
+  "poetry": null,
+  "state": {
+    "status": "已生成试画。有 2 项尚未绘制，详见“保留的空缺”。",
+    "scene": {
+      "ready": true,
+      "paused": false,
+      "layers": [
+        {
+          "id": "moon",
+          "seed": 410416620,
+          "time": 0.037399999988078886,
+          "ticks": 1,
+          "paused": false,
+          "disposed": false,
+          "ready": true,
+          "options": {
+            "shape": "crescent",
+            "lightSide": "right"
+          },
+          "sources": [
+            "project"
+          ],
+          "moonCount": 1,
+          "shape": "crescent",
+          "lightSide": "right",
+          "litFraction": 0.16,
+          "finite": true,
+          "geometryKey": "ff594ebe"
+        },
+        {
+          "id": "water",
+          "seed": 410416717,
+          "time": 0.037399999988078886,
+          "ticks": 1,
+          "paused": false,
+          "disposed": false,
+          "ready": true,
+          "options": {},
+          "sources": [
+            "noc-wave",
+            "project"
+          ],
+          "finite": true,
+          "geometryKey": "3135585a"
+        }
+      ],
+      "settings": {
+        "wind": 0,
+        "density": 0.45,
+        "palette": "clear"
+      }
+    },
+    "poem": "明月松间照，清泉石上流。",
+    "reading": "明月照入松林之间，清泉在石上流淌；两句并置静夜山林中的光与水的动态。",
+    "omitted": [
+      "松间：该具体意象尚无可用形态；没有替换成通用树、花或鸟群",
+      "石上：暂未提供该人物、地点或抽象含义的绘画单元"
+    ],
+    "drawn": [
+      "明月 → 月",
+      "清泉 → 水"
+    ]
+  },
+  "network": [
+    {
+      "host": "127.0.0.1",
+      "path": "/",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/poem-generation/styles.css",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/boid-adapter.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/petals.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/sources.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/core.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/cloud-outline.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/tools/tree.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/tools/flower.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/tools/water.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/tools/mist.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/tools/boat.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/tools/birds.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/tools/moon.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/tools/rain.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/tools/falling-petals.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/tools/rock.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/tools/pavilion.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/tools/grass.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/tools/bamboo.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/tools/willow.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/tools/snow.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/tools/leaves.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/tools/fish.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/tools/catkins.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/tools/cloud.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/poem-generation/scene.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/tools/flower-forms.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/poem-generation/app.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/poem-flow/vendor/p5.min.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/api/status",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/api/latest",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/favicon.ico",
+      "status": 204
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/api/analyze",
+      "status": 200
+    }
+  ],
+  "runtimeErrors": []
+}

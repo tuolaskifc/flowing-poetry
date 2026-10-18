@@ -121,7 +121,7 @@ for item in items:
     if record['stage'] in ['basic','partial']:assert record['tools'],item['imagery']
     item['progress']={**record,'label':stages[record['stage']]}
 stage_counts=Counter(item['progress']['stage'] for item in items)
-progress_summary={'total':len(items),'tools':len(tool_map),'stages':{key:{'label':label,'count':stage_counts[key]} for key,label in stages.items()},'needs_context':sum(item['progress']['needs_context'] for item in items),'automatic_poem_integration':False,'art_review':'待用户审阅'}
+progress_summary={'total':len(items),'tools':len(tool_map),'stages':{key:{'label':label,'count':stage_counts[key]} for key,label in stages.items()},'needs_context':sum(item['progress']['needs_context'] for item in items),'basic_generation_trial':True,'full_semantic_visual_integration':False,'art_review':'待用户审阅'}
 data={'catalog_version':'0.2-progress','date':'2026-10-18','status':'设计映射与实际试画进度，不是模型输出协议',
       'basis':'已保存的新华网统计条目与本项目设计讨论；词义提示不是经过词书核实的文学注释',
       'source':'docs/sources/quansongci/意象频次.json','progress_summary':progress_summary,'families':list(family_map.values()),'items':items}
@@ -147,7 +147,7 @@ lines += ['','首批 12 类：'+ '、'.join(f['name'] for f in family_map.values
 '','这些是绘画方法类别，不是 20 种物体。例如“风”属于作用，“露霜”需要附着载体；一条诗句可以组合多种方法。',
 '','## 六十项进度总表','','[打开可筛选的网页进度表](progress.html)。同一份进度记录生成本表和网页，按原统计顺序保留全部 60 项。',
 '','当前：'+'；'.join(f'{stages[key]} {stage_counts[key]}' for key in stages)+f'。另有 {progress_summary["needs_context"]} 项需要具体语境判断；语境标记不代表该项绘画已完成。',
-'','“基础可画”只表示已有该目标的本地形态试画，全部仍待审美确认；“部分支持”表示目标的一部分已实现；通用花、树、鸟的代码不能让未制作的具体物种自动升级。诗句自动组合尚未接入。',
+'','“基础可画”只表示已有该目标的本地形态试画，全部仍待审美确认；“部分支持”表示目标的一部分已实现；通用花、树、鸟的代码不能让未制作的具体物种自动升级。已另做[基础诗句组合试验](../poem-generation/README.md)，不表示全部条目或完整关系已接入。',
 '','处理数量：'+'；'.join(f'{k} {v}' for k,v in counts.items())+'。',
 '','“待语境”的条目不自动选中某一候选；所有词义提示是本项目的设计审阅提醒，尚未逐条核对词书或原诗，不能作为文学定论。',
 '','| 原条目 | 原频次 | 进度 | 已有能力／试画 | 剩余工作 | 语义处理 |','| --- | ---: | --- | --- | --- | --- |']
@@ -166,7 +166,7 @@ lines += ['',f'当前共 {len(tool_map)} 类工具，见 [独立工具与来源]
 '6. 来源和验收：作者、代码入口、许可、实际截图、未实现特征；明确是否能辨认具体花鸟。',
 '','不要为了画面完整，擅自添加鸟、人物、酒杯、火源或默认配对。月体光感不取代情感配色；形态疏密不取代主体数量；单元自身的默认微动也不能覆盖原文否定。',
 '','## 已完成与未完成','','已完成：60 项的覆盖检查、绘画方法归并建议、特殊条目转交规则、源码定位与可读取目录。',
-'','未完成：表中待制作的专门形态、全部花鸟树种的识别验证、跨工具场景组合、与模型协议 3.0 的字段对齐、任意诗句的自动绘画。`candidate_families` 只是设计数据，不能直接作为运行时绘图指令。',
+'','未完成：表中待制作的专门形态、全部花鸟树种的识别验证、完整关系与逻辑编排、与模型协议 3.0 的完整对齐、任意诗句的完整自动绘画。基础组合试验使用明确限制的本地映射，`candidate_families` 不直接作为运行时绘图指令。',
 '','已取得代码见 [第二轮检索](code-research/README.md)。可读取数据见 [意象目录.json](意象目录.json)。原始提取见 [新华网意象记录](../../docs/sources/quansongci/意象提取.md)。']
 (out/'意象目录.md').write_text('\n'.join(lines)+'\n',encoding='utf-8')
 report={'source_count':len(source['items']),'catalog_count':len(items),'unique_terms':len(rows),'families':len(family_map),'suggested_first_phase':sum(f['phase']=='首批' for f in family_map.values()),'treatments':dict(counts),'missing':[],'unknown_family_ids':[],'code_references_exist':True}

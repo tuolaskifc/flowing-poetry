@@ -1,0 +1,188 @@
+{
+  "id": "2026-10-18T10-46-08-931Z-b771468b",
+  "fingerprint": "5b7a9d822730135f1727c81937358d6eb30908f60d47b797889650d536b2d64d",
+  "poem": "明月松间照，清泉石上流。",
+  "source": {
+    "provider": "手动试画样句",
+    "author": "王维",
+    "title": "山居秋暝",
+    "dynasty": "唐代"
+  },
+  "mode": "imagery-only",
+  "model": "DeepSeek-V4.1-Flash",
+  "started_at": "2026-10-18T10:46:08.933Z",
+  "cached": false,
+  "http_status": 200,
+  "usage": {
+    "completion_tokens": 292,
+    "prompt_tokens": 1990,
+    "total_tokens": 2282,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 1920
+    }
+  },
+  "finish_reason": "stop",
+  "analysis": {
+    "schema_version": "3.0",
+    "poem": "明月松间照，清泉石上流。",
+    "reading": "明月照入松林之间，清泉在石上流淌；两句并置静夜山林中的光与水的动态。",
+    "entities": [
+      {
+        "id": "i1",
+        "mentions": [
+          "明月"
+        ],
+        "concept": "明亮的月亮",
+        "kind": "object",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "明月松间照"
+        ]
+      },
+      {
+        "id": "i2",
+        "mentions": [
+          "松间"
+        ],
+        "concept": "松树之间",
+        "kind": "environment",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "明月松间照"
+        ]
+      },
+      {
+        "id": "i3",
+        "mentions": [
+          "清泉"
+        ],
+        "concept": "清澈的泉水",
+        "kind": "object",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "清泉石上流"
+        ]
+      },
+      {
+        "id": "i4",
+        "mentions": [
+          "石上"
+        ],
+        "concept": "石头之上",
+        "kind": "place",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "清泉石上流"
+        ]
+      }
+    ],
+    "relations": [],
+    "atmosphere": {
+      "labels": [
+        "清幽",
+        "明净"
+      ],
+      "valence": "positive",
+      "energy": "low",
+      "tension": "low",
+      "openness": "medium",
+      "evidence": [
+        "明月松间照",
+        "清泉石上流"
+      ]
+    },
+    "time": {
+      "markers": [],
+      "note": null
+    },
+    "uncertainties": []
+  },
+  "validation": {
+    "valid": true,
+    "errors": [],
+    "warnings": [],
+    "review_required": false
+  },
+  "plan": {
+    "version": "trial-1",
+    "seed": 410416620,
+    "settings": {
+      "wind": 0,
+      "density": 0.45,
+      "palette": "clear"
+    },
+    "layers": [
+      {
+        "tool": "moon",
+        "entities": [
+          "i1"
+        ],
+        "names": [
+          "明月"
+        ],
+        "options": {
+          "shape": "crescent"
+        },
+        "animate": true,
+        "placement": {
+          "anchor": [
+            320,
+            175
+          ],
+          "at": [
+            0.76,
+            0.2
+          ],
+          "scale": 0.85
+        }
+      },
+      {
+        "tool": "water",
+        "entities": [
+          "i3"
+        ],
+        "names": [
+          "清泉"
+        ],
+        "options": {},
+        "animate": true,
+        "placement": {
+          "anchor": [
+            320,
+            130
+          ],
+          "at": [
+            0.5,
+            0.57
+          ],
+          "scale": 1.5
+        }
+      }
+    ],
+    "omitted": [
+      {
+        "id": "i2",
+        "name": "松间",
+        "reason": "该具体意象尚无可用形态；没有替换成通用树、花或鸟群"
+      },
+      {
+        "id": "i4",
+        "name": "石上",
+        "reason": "暂未提供该人物、地点或抽象含义的绘画单元"
+      }
+    ],
+    "notes": [
+      "原句未明确月形，暂用弯月试画；可以手动切换。",
+      "位置、大小、笔触、固定群体数量与默认微动是本地试画选择；不表示原句给出了这些数值。"
+    ],
+    "relations": []
+  },
+  "elapsed_seconds": 6.2
+}

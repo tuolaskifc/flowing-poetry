@@ -14,6 +14,7 @@
 | 意象如何合并与分工 | [意象目录](../experiments/imagery-library/意象目录.md) | 60 个原始条目、20 类绘画方法及首批建议 |
 | 绘画工具怎么扩展 | [结构与来源登记](../experiments/imagery-library/drawing/README.md) | 二十个独立工具、来源追溯、运行接口与扩展步骤 |
 | 每个意象完善多少 | [六十项进度总表](../experiments/imagery-library/progress.html) | 单表记录已有能力、缺口、试画入口与语境标记 |
+| 取诗句到出画面是否跑通 | [第一轮通路记录](../experiments/poem-generation/README.md) | 今日诗词取句、真实模型请求、基础组合画面与完整关系失败记录 |
 | 过去的讨论与开发 | [历史归档](archive/README.md) | 供回溯，设计以主文档为准 |
 
 情感、关系、逻辑、时间单项规范已经合并，原稿仍保留。网页与实验程序在各自目录，整理文档不表示功能已经接通。

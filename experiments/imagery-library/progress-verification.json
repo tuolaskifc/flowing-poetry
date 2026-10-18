@@ -23,7 +23,8 @@
       }
     },
     "needs_context": 12,
-    "automatic_poem_integration": false,
+    "basic_generation_trial": true,
+    "full_semantic_visual_integration": false,
     "art_review": "待用户审阅"
   },
   "filters": {
@@ -39,12 +40,12 @@
   "deepLinks": [
     {
       "name": "露",
-      "href": "file:///C:/Users/Liu%20Mie/Desktop/%E5%A4%A7%E4%BA%8C%E4%B8%8A/AI%E7%BC%96%E7%A8%8B%E8%BF%9B%E9%98%B6%EF%BC%9A%E6%96%B9%E6%B3%95%E4%B8%8E%E5%AE%9E%E8%B7%B5%20%E9%9F%A9%E6%96%87%E5%BC%BA/experiments/imagery-library/index.html?tool=grass&surface=dew#grass",
+      "href": "http://127.0.0.1:4185/experiments/imagery-library/index.html?tool=grass&surface=dew#grass",
       "selected": "dew"
     },
     {
       "name": "黄叶",
-      "href": "file:///C:/Users/Liu%20Mie/Desktop/%E5%A4%A7%E4%BA%8C%E4%B8%8A/AI%E7%BC%96%E7%A8%8B%E8%BF%9B%E9%98%B6%EF%BC%9A%E6%96%B9%E6%B3%95%E4%B8%8E%E5%AE%9E%E8%B7%B5%20%E9%9F%A9%E6%96%87%E5%BC%BA/experiments/imagery-library/index.html?tool=leaves&color=yellow#leaves",
+      "href": "http://127.0.0.1:4185/experiments/imagery-library/index.html?tool=leaves&color=yellow#leaves",
       "selected": "yellow"
     }
   ],

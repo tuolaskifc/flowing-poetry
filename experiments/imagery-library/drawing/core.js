@@ -27,7 +27,7 @@ window.PoemDrawing = (() => {
   }
   const definitions=()=>Array.from(registry.values(),({create,...metadata})=>({...metadata,sources:[...metadata.sources]}));
   function fingerprint(value){let hash=2166136261;for(const c of JSON.stringify(value)){hash^=c.charCodeAt(0);hash=Math.imul(hash,16777619);}return (hash>>>0).toString(16);}
-  function mount(id,host,shared={},initialSeed=42) {
+  function mount(id,host,shared={},initialSeed=42,renderOptions={}) {
     const definition=registry.get(id);
     if(!definition)throw new Error(`Unknown drawing tool: ${id}`);
     let instance,tool,ctx,time=0,ticks=0,paused=false,disposed=false,seed=number(initialSeed,42)>>>0;
@@ -61,7 +61,7 @@ window.PoemDrawing = (() => {
         if(disposed||!tool)return;
         sync();const dt=paused?0:clamp(p.deltaTime/1000,0,.1);time+=dt;ticks++;
         tool.update?.(dt);
-        p.background(palette.bg);p.push();
+        if(renderOptions.transparent)p.clear();else p.background(palette.bg);p.push();
         try{p.strokeCap(p.ROUND);p.strokeJoin(p.ROUND);tool.draw();}finally{p.pop();}
       };
     };
@@ -84,5 +84,5 @@ window.PoemDrawing = (() => {
       dispose(){if(!disposed){disposed=true;tool?.dispose?.();instance.remove();host.dataset.ready='false';}}
     };
   }
-  return Object.freeze({register,definitions,mount,settings,width,height});
+  return Object.freeze({register,definitions,mount,settings,width,height,paletteFor:name=>palettes[name]||palettes.clear});
 })();

@@ -22,7 +22,8 @@ window.PoemProgress = {
       }
     },
     "needs_context": 12,
-    "automatic_poem_integration": false,
+    "basic_generation_trial": true,
+    "full_semantic_visual_integration": false,
     "art_review": "待用户审阅"
   },
   "items": [

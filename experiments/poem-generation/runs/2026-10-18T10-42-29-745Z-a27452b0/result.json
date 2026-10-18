@@ -1,0 +1,144 @@
+{
+  "id": "2026-10-18T10-42-29-745Z-a27452b0",
+  "fingerprint": "9c81a505166c75aef1103276520562bc8b1dcea689f4d5fcb2087834b79f5709",
+  "poem": "兰有秀兮菊有芳，怀佳人兮不能忘。",
+  "source": {
+    "provider": "今日诗词",
+    "author": "刘彻",
+    "title": "秋风辞",
+    "dynasty": "两汉"
+  },
+  "model": "DeepSeek-V4.1-Flash",
+  "started_at": "2026-10-18T10:42:29.747Z",
+  "cached": false,
+  "http_status": 200,
+  "usage": {
+    "completion_tokens": 437,
+    "prompt_tokens": 2038,
+    "total_tokens": 2475,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  },
+  "finish_reason": "stop",
+  "analysis": {
+    "schema_version": "3.0",
+    "poem": "兰有秀兮菊有芳，怀佳人兮不能忘。",
+    "reading": "兰草有秀色，菊花有芬芳；心中怀念那位佳人，无法忘怀。前句以兰菊的秀芳起兴，后句转入对人的深切思念。",
+    "entities": [
+      {
+        "id": "i1",
+        "mentions": [
+          "兰"
+        ],
+        "concept": "兰草",
+        "kind": "organism",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "兰有秀兮"
+        ]
+      },
+      {
+        "id": "i2",
+        "mentions": [
+          "菊"
+        ],
+        "concept": "菊花",
+        "kind": "organism",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "菊有芳"
+        ]
+      },
+      {
+        "id": "i3",
+        "mentions": [
+          "佳人"
+        ],
+        "concept": "所怀念的美好之人",
+        "kind": "person",
+        "role": "scene",
+        "presence": "unclear",
+        "evidence": [
+          "怀佳人兮"
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "type": "carries",
+        "source": "i1",
+        "target": null,
+        "meaning": "兰草呈现秀色，秀为兰所具有的状态",
+        "modality": "asserted",
+        "basis": "explicit",
+        "evidence": [
+          "兰有秀兮"
+        ]
+      },
+      {
+        "type": "carries",
+        "source": "i2",
+        "target": null,
+        "meaning": "菊花散发芬芳，芳为菊所具有的状态",
+        "modality": "asserted",
+        "basis": "explicit",
+        "evidence": [
+          "菊有芳"
+        ]
+      },
+      {
+        "type": "other",
+        "source": null,
+        "target": "i3",
+        "meaning": "主体怀念佳人，思念之情无法忘怀",
+        "modality": "asserted",
+        "basis": "explicit",
+        "evidence": [
+          "怀佳人兮不能忘"
+        ]
+      }
+    ],
+    "atmosphere": {
+      "labels": [
+        "清雅",
+        "思念"
+      ],
+      "valence": "mixed",
+      "energy": "low",
+      "tension": "low",
+      "openness": "medium",
+      "evidence": [
+        "兰有秀兮菊有芳",
+        "怀佳人兮不能忘"
+      ]
+    },
+    "time": {
+      "markers": [],
+      "note": null
+    },
+    "uncertainties": [
+      "‘怀’的主体未在句中明说，只能理解为抒情者或隐含人物。",
+      "‘佳人’的具体身份与是否在场不明，故 presence 标为 unclear。"
+    ]
+  },
+  "validation": {
+    "valid": false,
+    "errors": [
+      "$.relations[0]: 缺少关系对象",
+      "$.relations[1]: 缺少关系对象"
+    ],
+    "warnings": [
+      "$.entities[2]: 场景主体的出现情况不清楚",
+      "$.relations[2]: 未归类关系需人工确认",
+      "模型保留了不确定性，需要审阅"
+    ],
+    "review_required": true
+  },
+  "elapsed_seconds": 3.7
+}

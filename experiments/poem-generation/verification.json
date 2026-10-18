@@ -1,0 +1,94 @@
+{
+  "status": "passed",
+  "live": false,
+  "poetry": null,
+  "state": {
+    "status": "已生成试画。有 1 项尚未绘制，详见“保留的空缺”。",
+    "scene": {
+      "ready": true,
+      "paused": false,
+      "layers": [
+        {
+          "id": "moon",
+          "seed": 410416620,
+          "time": 0,
+          "ticks": 0,
+          "paused": false,
+          "disposed": false,
+          "ready": true,
+          "options": {
+            "shape": "crescent",
+            "lightSide": "right"
+          },
+          "sources": [
+            "project"
+          ],
+          "moonCount": 1,
+          "shape": "crescent",
+          "lightSide": "right",
+          "litFraction": 0.16,
+          "finite": true,
+          "geometryKey": "ff594ebe"
+        },
+        {
+          "id": "water",
+          "seed": 410416717,
+          "time": 0,
+          "ticks": 0,
+          "paused": false,
+          "disposed": false,
+          "ready": true,
+          "options": {},
+          "sources": [
+            "noc-wave",
+            "project"
+          ],
+          "finite": true,
+          "geometryKey": "3135585a"
+        },
+        {
+          "id": "rock",
+          "seed": 410416814,
+          "time": 0,
+          "ticks": 0,
+          "paused": false,
+          "disposed": false,
+          "ready": true,
+          "options": {
+            "profile": "low"
+          },
+          "sources": [
+            "shan-rock",
+            "project"
+          ],
+          "rockCount": 1,
+          "profile": "low",
+          "finite": true,
+          "geometryKey": "ceece050"
+        }
+      ],
+      "settings": {
+        "wind": 0,
+        "density": 0.45,
+        "palette": "clear"
+      }
+    },
+    "poem": "明月松间照，清泉石上流。",
+    "reading": "明月照入松林之间，清泉在石上流淌；两句并置静夜山林中的光与水的动态。",
+    "omitted": [
+      "松间：该具体意象尚无可用形态；没有替换成通用树、花或鸟群"
+    ],
+    "drawn": [
+      "明月 → 月",
+      "清泉 → 水",
+      "石上 → 石"
+    ]
+  },
+  "transparentLayers": 3,
+  "exportPng": true,
+  "mobile": {
+    "width": 390,
+    "document": 390
+  },
+  "runtimeErrors": []
+}
