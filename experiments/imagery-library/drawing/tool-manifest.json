@@ -103,17 +103,114 @@
     {
       "id": "moon",
       "name": "月",
-      "subtitle": "留一轮月体，让周围保持安静。",
-      "credit": "本项目试作 · 月体与局部光感",
+      "subtitle": "有时如钩，有时半轮，有时圆满。",
+      "credit": "本项目试作 · 月形与局部光感",
       "sources": [
         "project"
       ],
       "reference": "drawing/README.md#月",
-      "note": "这一张试圆月轮廓，保持静止；不把圆月、光晕或夜景作为所有“月”字的默认解释。",
+      "note": "月形与亮边方向分别选择；默认弯月，不从诗句或日期自动推断圆缺。暗月保留极淡的轮廓。",
+      "controls": [
+        {
+          "id": "shape",
+          "label": "月形",
+          "default": "crescent",
+          "choices": [
+            {
+              "value": "crescent",
+              "label": "弯月"
+            },
+            {
+              "value": "half",
+              "label": "半月"
+            },
+            {
+              "value": "gibbous",
+              "label": "凸月"
+            },
+            {
+              "value": "full",
+              "label": "满月"
+            },
+            {
+              "value": "dark",
+              "label": "暗月"
+            }
+          ]
+        },
+        {
+          "id": "lightSide",
+          "label": "亮边",
+          "default": "right",
+          "choices": [
+            {
+              "value": "right",
+              "label": "朝右"
+            },
+            {
+              "value": "left",
+              "label": "朝左"
+            }
+          ]
+        }
+      ],
       "capabilities": [
         "static",
+        "phase-selection",
+        "light-direction",
         "density-detail",
         "anchors",
+        "fixed-count"
+      ]
+    },
+    {
+      "id": "rain",
+      "name": "雨",
+      "subtitle": "雨线斜落，风让方向可见。",
+      "credit": "本项目试作 · 固定雨线与风偏移",
+      "sources": [
+        "project"
+      ],
+      "reference": "drawing/README.md#雨与落花",
+      "note": "固定 64 条雨线，风改变倾斜与漂移，疏密改变笔触浓淡；尚未加入积水、涟漪或雪。",
+      "capabilities": [
+        "wind-response",
+        "density-detail",
+        "fixed-count"
+      ]
+    },
+    {
+      "id": "falling-petals",
+      "name": "落花",
+      "subtitle": "从空中飘落，最后留在地上。",
+      "credit": "花瓣改编 sxywu · MIT；飘落与停留为本项目试作",
+      "sources": [
+        "sxywu-petals",
+        "project"
+      ],
+      "reference": "drawing/README.md#雨与落花",
+      "note": "固定 18 片花瓣；默认一次飘落后停留。可显式切换循环试画；尚未实现从具体花枝脱落，也不代替柳絮。",
+      "controls": [
+        {
+          "id": "playback",
+          "label": "过程",
+          "default": "once",
+          "choices": [
+            {
+              "value": "once",
+              "label": "落地停留"
+            },
+            {
+              "value": "loop",
+              "label": "循环试画"
+            }
+          ]
+        }
+      ],
+      "capabilities": [
+        "wind-response",
+        "density-detail",
+        "once-or-loop",
         "fixed-count"
       ]
     }

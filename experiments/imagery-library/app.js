@@ -13,6 +13,17 @@
     studies.append(card);
     const controller=window.PoemStudies.mount(d.id,card.querySelector('.canvas-host'),shared,seed+index*97);
     controllers.push(controller);card.querySelector('button').addEventListener('click',()=>controller.save());
+    if(d.controls?.length){
+      const controls=document.createElement('div');controls.className='tool-controls';
+      for(const field of d.controls){
+        const label=document.createElement('label');label.textContent=field.label+' ';
+        const select=document.createElement('select');select.id=`${d.id}-${field.id}`;
+        for(const choice of field.choices){const option=document.createElement('option');option.value=choice.value;option.textContent=choice.label;select.append(option);}
+        select.value=field.default;select.addEventListener('change',()=>controller.configure({[field.id]:select.value}));
+        label.append(select);controls.append(label);
+      }
+      card.querySelector('.study-actions').before(controls);
+    }
   }
   for(const key of ['wind','density']) {
     document.getElementById(key).addEventListener('input',event=>{

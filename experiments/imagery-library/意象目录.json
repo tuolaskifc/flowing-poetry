@@ -24,7 +24,7 @@
       "name": "月体",
       "phase": "首批",
       "code_reference": "experiments/imagery-library/drawing/tools/moon.js",
-      "status": "已有独立静止圆月小样与局部光感；圆缺需依据，不默认月亮必为圆月。"
+      "status": "已有五种可选月形与亮边方向；默认弯月，不自动推断诗句中的圆缺。"
     },
     {
       "id": "water",
@@ -37,8 +37,8 @@
       "id": "precipitation",
       "name": "雨雪粒子",
       "phase": "首批",
-      "code_reference": "experiments/imagery-library/code-research/fresco/demos/theatre/theatre.js",
-      "status": "已有降雨示例；雪的粒形、飘落与积雪需单独做。"
+      "code_reference": "experiments/imagery-library/drawing/tools/rain.js",
+      "status": "已有独立雨线与风偏移；雪的粒形、飘落与积雪需单独做。"
     },
     {
       "id": "surface_weather",
@@ -72,8 +72,8 @@
       "id": "petal_drift",
       "name": "离枝花瓣与飞絮",
       "phase": "首批",
-      "code_reference": "experiments/imagery-library/studies.js",
-      "status": "只有通用花形及风控制；离枝、飘落、飞絮形态与轨迹尚未实现。"
+      "code_reference": "experiments/imagery-library/drawing/tools/falling-petals.js",
+      "status": "已有独立花瓣飘落、落地停留与显式循环；从枝条离落、飞絮形态尚未实现。"
     },
     {
       "id": "bird",

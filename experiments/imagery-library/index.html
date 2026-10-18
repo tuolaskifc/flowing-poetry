@@ -17,6 +17,8 @@
   <script defer src="drawing/tools/birds.js"></script>
   <script defer src="drawing/tools/boat.js"></script>
   <script defer src="drawing/tools/moon.js"></script>
+  <script defer src="drawing/tools/rain.js"></script>
+  <script defer src="drawing/tools/falling-petals.js"></script>
   <script defer src="studies.js"></script>
   <script defer src="catalog.js"></script>
   <script defer src="app.js"></script>
@@ -26,10 +28,10 @@
   <main>
     <section class="intro">
       <p><a href="code-research/index.html">新进展：四组已取得的代码、八项实际运行预览 ↗</a></p>
-      <p class="eyebrow">IMAGERY STUDIES · 03</p>
+      <p class="eyebrow">IMAGERY STUDIES · 04</p>
       <h1>先有风，再看万物如何回应。</h1>
-      <p>花、树、水、云雾、鸟群，以及新加入的舟与月。用同一组颜色与观看尺度，试一试它们能否进入同一个诗意世界。</p>
-      <p class="provenance">花瓣改编自 sxywu；树、水、鸟群参考 The Nature of Code；船体改编自 Lingdong Huang；月体与薄雾为本项目试作。各项保留来源与许可，尚未接入诗句自动生成。</p>
+      <p>花、树、水、云雾、鸟群，舟、月，以及新加入的雨与落花。用同一组颜色与观看尺度，试一试它们能否进入同一个诗意世界。</p>
+      <p class="provenance">花瓣改编自 sxywu；树、水、鸟群参考 The Nature of Code；船体改编自 Lingdong Huang；月形、雨线、薄雾及飘落运动为本项目试作。各项保留来源与许可，尚未接入诗句自动生成。</p>
     </section>
     <section class="controls" aria-label="试画控制">
       <label>风的作用 <input id="wind" type="range" min="0" max="100" value="35"><output id="wind-value">35%</output></label>
@@ -38,7 +40,7 @@
       <div class="buttons"><button id="pause" aria-pressed="false">暂停</button><button id="reseed">换一组形态</button></div>
     </section>
     <p class="control-note">风调节运动与局部形变；疏密调节笔触和空间分布，不改变鸟群数量。这里只试绘画能力，还没有诗句自动分析。</p>
-    <section id="studies" class="studies" aria-label="七类意象本地试画"></section>
+    <section id="studies" class="studies" aria-label="九类意象本地试画"></section>
     <section id="references" class="reference-section">
       <p class="eyebrow">OPENPROCESSING · CANDIDATES</p><h2>从社区挑选，逐件核实。</h2>
       <p>以下依据公开作品说明与搜索索引初筛，还没有完成原作视觉审阅或源码适配。许可标注为页面／索引可见值，实际引入前仍需核对完整版本与派生来源。</p>

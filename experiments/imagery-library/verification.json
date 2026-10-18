@@ -10,6 +10,7 @@
       "paused": false,
       "disposed": false,
       "ready": true,
+      "options": {},
       "sources": [
         "sxywu-petals",
         "project"
@@ -26,6 +27,7 @@
       "paused": false,
       "disposed": false,
       "ready": true,
+      "options": {},
       "sources": [
         "noc-tree",
         "project"
@@ -41,6 +43,7 @@
       "paused": false,
       "disposed": false,
       "ready": true,
+      "options": {},
       "sources": [
         "noc-wave",
         "project"
@@ -56,6 +59,7 @@
       "paused": false,
       "disposed": false,
       "ready": true,
+      "options": {},
       "sources": [
         "project"
       ],
@@ -70,6 +74,7 @@
       "paused": false,
       "disposed": false,
       "ready": true,
+      "options": {},
       "sources": [
         "noc-boids",
         "project"
@@ -86,6 +91,7 @@
       "paused": false,
       "disposed": false,
       "ready": true,
+      "options": {},
       "sources": [
         "shan-boat",
         "project"
@@ -103,12 +109,56 @@
       "paused": false,
       "disposed": false,
       "ready": true,
+      "options": {
+        "shape": "crescent",
+        "lightSide": "right"
+      },
       "sources": [
         "project"
       ],
       "moonCount": 1,
+      "shape": "crescent",
+      "lightSide": "right",
+      "litFraction": 0.16,
       "finite": true,
       "geometryKey": "28928f0d"
+    },
+    {
+      "id": "rain",
+      "seed": 721,
+      "time": 0,
+      "ticks": 0,
+      "paused": false,
+      "disposed": false,
+      "ready": true,
+      "options": {},
+      "sources": [
+        "project"
+      ],
+      "dropCount": 64,
+      "finite": true,
+      "geometryKey": "85158576"
+    },
+    {
+      "id": "falling-petals",
+      "seed": 818,
+      "time": 0,
+      "ticks": 0,
+      "paused": false,
+      "disposed": false,
+      "ready": true,
+      "options": {
+        "playback": "once"
+      },
+      "sources": [
+        "sxywu-petals",
+        "project"
+      ],
+      "petalCount": 18,
+      "landedCount": 0,
+      "poseKey": "3cf3ac7e",
+      "finite": true,
+      "geometryKey": "325a67bb"
     }
   ],
   "pausedBefore": [
@@ -120,6 +170,7 @@
       "paused": true,
       "disposed": false,
       "ready": true,
+      "options": {},
       "sources": [
         "sxywu-petals",
         "project"
@@ -136,6 +187,7 @@
       "paused": true,
       "disposed": false,
       "ready": true,
+      "options": {},
       "sources": [
         "noc-tree",
         "project"
@@ -151,6 +203,7 @@
       "paused": true,
       "disposed": false,
       "ready": true,
+      "options": {},
       "sources": [
         "noc-wave",
         "project"
@@ -166,6 +219,7 @@
       "paused": true,
       "disposed": false,
       "ready": true,
+      "options": {},
       "sources": [
         "project"
       ],
@@ -180,6 +234,7 @@
       "paused": true,
       "disposed": false,
       "ready": true,
+      "options": {},
       "sources": [
         "noc-boids",
         "project"
@@ -196,6 +251,7 @@
       "paused": true,
       "disposed": false,
       "ready": true,
+      "options": {},
       "sources": [
         "shan-boat",
         "project"
@@ -213,12 +269,56 @@
       "paused": true,
       "disposed": false,
       "ready": true,
+      "options": {
+        "shape": "crescent",
+        "lightSide": "right"
+      },
       "sources": [
         "project"
       ],
       "moonCount": 1,
+      "shape": "crescent",
+      "lightSide": "right",
+      "litFraction": 0.16,
       "finite": true,
       "geometryKey": "28928f0d"
+    },
+    {
+      "id": "rain",
+      "seed": 721,
+      "time": 0,
+      "ticks": 0,
+      "paused": true,
+      "disposed": false,
+      "ready": true,
+      "options": {},
+      "sources": [
+        "project"
+      ],
+      "dropCount": 64,
+      "finite": true,
+      "geometryKey": "85158576"
+    },
+    {
+      "id": "falling-petals",
+      "seed": 818,
+      "time": 0,
+      "ticks": 0,
+      "paused": true,
+      "disposed": false,
+      "ready": true,
+      "options": {
+        "playback": "once"
+      },
+      "sources": [
+        "sxywu-petals",
+        "project"
+      ],
+      "petalCount": 18,
+      "landedCount": 0,
+      "poseKey": "3cf3ac7e",
+      "finite": true,
+      "geometryKey": "325a67bb"
     }
   ],
   "pausedAfter": [
@@ -230,6 +330,7 @@
       "paused": true,
       "disposed": false,
       "ready": true,
+      "options": {},
       "sources": [
         "sxywu-petals",
         "project"
@@ -246,6 +347,7 @@
       "paused": true,
       "disposed": false,
       "ready": true,
+      "options": {},
       "sources": [
         "noc-tree",
         "project"
@@ -261,6 +363,7 @@
       "paused": true,
       "disposed": false,
       "ready": true,
+      "options": {},
       "sources": [
         "noc-wave",
         "project"
@@ -276,6 +379,7 @@
       "paused": true,
       "disposed": false,
       "ready": true,
+      "options": {},
       "sources": [
         "project"
       ],
@@ -290,6 +394,7 @@
       "paused": true,
       "disposed": false,
       "ready": true,
+      "options": {},
       "sources": [
         "noc-boids",
         "project"
@@ -306,6 +411,7 @@
       "paused": true,
       "disposed": false,
       "ready": true,
+      "options": {},
       "sources": [
         "shan-boat",
         "project"
@@ -323,12 +429,56 @@
       "paused": true,
       "disposed": false,
       "ready": true,
+      "options": {
+        "shape": "crescent",
+        "lightSide": "right"
+      },
       "sources": [
         "project"
       ],
       "moonCount": 1,
+      "shape": "crescent",
+      "lightSide": "right",
+      "litFraction": 0.16,
       "finite": true,
       "geometryKey": "28928f0d"
+    },
+    {
+      "id": "rain",
+      "seed": 721,
+      "time": 0,
+      "ticks": 1,
+      "paused": true,
+      "disposed": false,
+      "ready": true,
+      "options": {},
+      "sources": [
+        "project"
+      ],
+      "dropCount": 64,
+      "finite": true,
+      "geometryKey": "85158576"
+    },
+    {
+      "id": "falling-petals",
+      "seed": 818,
+      "time": 0,
+      "ticks": 1,
+      "paused": true,
+      "disposed": false,
+      "ready": true,
+      "options": {
+        "playback": "once"
+      },
+      "sources": [
+        "sxywu-petals",
+        "project"
+      ],
+      "petalCount": 18,
+      "landedCount": 0,
+      "poseKey": "3cf3ac7e",
+      "finite": true,
+      "geometryKey": "325a67bb"
     }
   ],
   "changed": [
@@ -340,6 +490,7 @@
       "paused": true,
       "disposed": false,
       "ready": true,
+      "options": {},
       "sources": [
         "sxywu-petals",
         "project"
@@ -356,6 +507,7 @@
       "paused": true,
       "disposed": false,
       "ready": true,
+      "options": {},
       "sources": [
         "noc-tree",
         "project"
@@ -371,6 +523,7 @@
       "paused": true,
       "disposed": false,
       "ready": true,
+      "options": {},
       "sources": [
         "noc-wave",
         "project"
@@ -386,6 +539,7 @@
       "paused": true,
       "disposed": false,
       "ready": true,
+      "options": {},
       "sources": [
         "project"
       ],
@@ -400,6 +554,7 @@
       "paused": true,
       "disposed": false,
       "ready": true,
+      "options": {},
       "sources": [
         "noc-boids",
         "project"
@@ -416,6 +571,7 @@
       "paused": true,
       "disposed": false,
       "ready": true,
+      "options": {},
       "sources": [
         "shan-boat",
         "project"
@@ -433,12 +589,56 @@
       "paused": true,
       "disposed": false,
       "ready": true,
+      "options": {
+        "shape": "crescent",
+        "lightSide": "right"
+      },
       "sources": [
         "project"
       ],
       "moonCount": 1,
+      "shape": "crescent",
+      "lightSide": "right",
+      "litFraction": 0.16,
       "finite": true,
       "geometryKey": "bf1dbeb3"
+    },
+    {
+      "id": "rain",
+      "seed": 722,
+      "time": 0,
+      "ticks": 4,
+      "paused": true,
+      "disposed": false,
+      "ready": true,
+      "options": {},
+      "sources": [
+        "project"
+      ],
+      "dropCount": 64,
+      "finite": true,
+      "geometryKey": "4d6aa526"
+    },
+    {
+      "id": "falling-petals",
+      "seed": 819,
+      "time": 0,
+      "ticks": 4,
+      "paused": true,
+      "disposed": false,
+      "ready": true,
+      "options": {
+        "playback": "once"
+      },
+      "sources": [
+        "sxywu-petals",
+        "project"
+      ],
+      "petalCount": 18,
+      "landedCount": 0,
+      "poseKey": "50ff4c07",
+      "finite": true,
+      "geometryKey": "f04111d7"
     }
   ],
   "settings": {
@@ -450,11 +650,12 @@
     {
       "id": "flower",
       "seed": 43,
-      "time": 1.3105999999940396,
+      "time": 1.2995000000059602,
       "ticks": 41,
       "paused": false,
       "disposed": false,
       "ready": true,
+      "options": {},
       "sources": [
         "sxywu-petals",
         "project"
@@ -466,11 +667,12 @@
     {
       "id": "tree",
       "seed": 140,
-      "time": 1.3105000000000002,
+      "time": 1.2993000000178812,
       "ticks": 41,
       "paused": false,
       "disposed": false,
       "ready": true,
+      "options": {},
       "sources": [
         "noc-tree",
         "project"
@@ -481,11 +683,12 @@
     {
       "id": "water",
       "seed": 237,
-      "time": 1.3105000000000002,
+      "time": 1.2993000000178812,
       "ticks": 41,
       "paused": false,
       "disposed": false,
       "ready": true,
+      "options": {},
       "sources": [
         "noc-wave",
         "project"
@@ -496,11 +699,12 @@
     {
       "id": "mist",
       "seed": 334,
-      "time": 1.3105000000000002,
+      "time": 1.2993000000178812,
       "ticks": 41,
       "paused": false,
       "disposed": false,
       "ready": true,
+      "options": {},
       "sources": [
         "project"
       ],
@@ -510,11 +714,12 @@
     {
       "id": "birds",
       "seed": 431,
-      "time": 1.3105000000000002,
+      "time": 1.2993000000178812,
       "ticks": 41,
       "paused": false,
       "disposed": false,
       "ready": true,
+      "options": {},
       "sources": [
         "noc-boids",
         "project"
@@ -526,11 +731,12 @@
     {
       "id": "boat",
       "seed": 528,
-      "time": 1.3105000000000002,
+      "time": 1.2993000000178812,
       "ticks": 41,
       "paused": false,
       "disposed": false,
       "ready": true,
+      "options": {},
       "sources": [
         "shan-boat",
         "project"
@@ -543,20 +749,74 @@
     {
       "id": "moon",
       "seed": 625,
-      "time": 1.3105000000000002,
-      "ticks": 41,
+      "time": 1.2993000000178812,
+      "ticks": 49,
       "paused": false,
       "disposed": false,
       "ready": true,
+      "options": {
+        "shape": "crescent",
+        "lightSide": "right"
+      },
       "sources": [
         "project"
       ],
       "moonCount": 1,
+      "shape": "crescent",
+      "lightSide": "right",
+      "litFraction": 0.16,
       "finite": true,
       "geometryKey": "bf1dbeb3"
+    },
+    {
+      "id": "rain",
+      "seed": 722,
+      "time": 1.2993000000178812,
+      "ticks": 41,
+      "paused": false,
+      "disposed": false,
+      "ready": true,
+      "options": {},
+      "sources": [
+        "project"
+      ],
+      "dropCount": 64,
+      "finite": true,
+      "geometryKey": "4d6aa526"
+    },
+    {
+      "id": "falling-petals",
+      "seed": 819,
+      "time": 1.2993000000178812,
+      "ticks": 41,
+      "paused": false,
+      "disposed": false,
+      "ready": true,
+      "options": {
+        "playback": "once"
+      },
+      "sources": [
+        "sxywu-petals",
+        "project"
+      ],
+      "petalCount": 18,
+      "landedCount": 0,
+      "poseKey": "56aa873e",
+      "finite": true,
+      "geometryKey": "f04111d7"
     }
   ],
   "exportInfo": [
+    {
+      "width": 640,
+      "height": 388,
+      "png": true
+    },
+    {
+      "width": 640,
+      "height": 388,
+      "png": true
+    },
     {
       "width": 640,
       "height": 388,
@@ -602,7 +862,9 @@
       "mist",
       "birds",
       "boat",
-      "moon"
+      "moon",
+      "rain",
+      "falling-petals"
     ],
     "repeatAll": true,
     "sameSeed": true,
@@ -618,21 +880,29 @@
     ],
     "disposed": true
   },
+  "variants": {
+    "distinctShapes": 5,
+    "mirrored": true,
+    "landedCount": 18,
+    "staysLanded": true,
+    "loopMoves": true,
+    "invalidRejected": true
+  },
   "wideLayout": {
     "viewport": 1280,
     "document": 1265,
     "candidates": 10,
-    "canvases": 7
+    "canvases": 9
   },
   "narrowLayout": {
     "viewport": 390,
     "document": 390,
-    "canvases": 7
+    "canvases": 9
   },
   "runtimeErrors": [],
   "limitations": [
     "未操作系统下载确认界面；仅验证 canvas 导出 PNG 数据。",
     "本地画面经浏览器截图检查；OpenProcessing 原作未完成视觉检查。",
-    "七类工具检查暂停重置后的重复出图；不等同于运动的跨设备逐帧确定性。"
+    "九类工具检查暂停重置后的重复出图；不等同于运动的跨设备逐帧确定性。"
   ]
 }
