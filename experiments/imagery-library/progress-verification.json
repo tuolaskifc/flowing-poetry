@@ -1,0 +1,66 @@
+{
+  "status": "passed",
+  "total": 60,
+  "summary": {
+    "total": 60,
+    "tools": 20,
+    "stages": {
+      "basic": {
+        "label": "基础可画",
+        "count": 15
+      },
+      "partial": {
+        "label": "部分支持",
+        "count": 9
+      },
+      "todo": {
+        "label": "待制作",
+        "count": 27
+      },
+      "handoff": {
+        "label": "转交其他模块",
+        "count": 9
+      }
+    },
+    "needs_context": 12,
+    "automatic_poem_integration": false,
+    "art_review": "待用户审阅"
+  },
+  "filters": {
+    "basic": 15,
+    "partial": 9,
+    "todo": 27,
+    "handoff": 9,
+    "context": 12,
+    "search": true,
+    "empty": true,
+    "reset": true
+  },
+  "deepLinks": [
+    {
+      "name": "露",
+      "href": "file:///C:/Users/Liu%20Mie/Desktop/%E5%A4%A7%E4%BA%8C%E4%B8%8A/AI%E7%BC%96%E7%A8%8B%E8%BF%9B%E9%98%B6%EF%BC%9A%E6%96%B9%E6%B3%95%E4%B8%8E%E5%AE%9E%E8%B7%B5%20%E9%9F%A9%E6%96%87%E5%BC%BA/experiments/imagery-library/index.html?tool=grass&surface=dew#grass",
+      "selected": "dew"
+    },
+    {
+      "name": "黄叶",
+      "href": "file:///C:/Users/Liu%20Mie/Desktop/%E5%A4%A7%E4%BA%8C%E4%B8%8A/AI%E7%BC%96%E7%A8%8B%E8%BF%9B%E9%98%B6%EF%BC%9A%E6%96%B9%E6%B3%95%E4%B8%8E%E5%AE%9E%E8%B7%B5%20%E9%9F%A9%E6%96%87%E5%BC%BA/experiments/imagery-library/index.html?tool=leaves&color=yellow#leaves",
+      "selected": "yellow"
+    }
+  ],
+  "wide": {
+    "width": 1280,
+    "document": 1265
+  },
+  "narrow": {
+    "width": 390,
+    "document": 390,
+    "table": 930
+  },
+  "runtimeErrors": [],
+  "externalRequests": [],
+  "limits": [
+    "基础可画仍待用户审美确认；不代表诗句自动生成已完成。",
+    "来源与词义提示的事实边界见目录；不把通用轮廓计为全部物种完成。"
+  ]
+}

@@ -5,6 +5,7 @@ import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 const dir=dirname(fileURLToPath(import.meta.url));
+const expected=JSON.parse(await readFile(resolve(dir,'drawing/tool-manifest.json'),'utf8')).tools.map(t=>t.id);
 const qa=resolve(dir,'.qa');await mkdir(qa,{recursive:true});
 const profile=resolve(qa,`browser-${Date.now()}`);
 const edge=spawn('C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe',[
@@ -27,10 +28,9 @@ try {
   await send('Emulation.setDeviceMetricsOverride',{width:1280,height:1000,deviceScaleFactor:1,mobile:false});
   const targetUrl=process.argv.includes('--http')?'http://127.0.0.1:4185/?seed=42':pathToFileURL(resolve(dir,'index.html')).href+'?seed=42';
   await send('Page.navigate',{url:targetUrl});
-  try {await evaluate(`new Promise((resolve,reject)=>{let n=0;const t=setInterval(()=>{if(window.imageryExperiment && document.querySelectorAll('[data-ready="true"]').length===11){clearInterval(t);resolve(true);}else if(++n>100){clearInterval(t);reject(new Error('Canvas readiness timeout'));}},100);})`);}
+  try {await evaluate(`new Promise((resolve,reject)=>{let n=0;const t=setInterval(()=>{if(window.imageryExperiment && document.querySelectorAll('[data-ready="true"]').length===${expected.length}){clearInterval(t);resolve(true);}else if(++n>100){clearInterval(t);reject(new Error('Canvas readiness timeout'));}},100);})`);}
   catch(e){console.error(JSON.stringify({errors,page:await evaluate(`({url:location.href,text:document.body.innerText.slice(0,1200),p5:typeof p5,ready:document.querySelectorAll('[data-ready="true"]').length})`)}));throw e;}
   const initial=await evaluate('window.imageryExperiment.inspect()');
-  const expected=['flower','tree','water','mist','birds','boat','moon','rain','falling-petals','rock','pavilion'];
   if(JSON.stringify(initial.map(x=>x.id).sort())!==JSON.stringify([...expected].sort()))throw new Error('Missing/extra tool registrations');
   await evaluate(`document.getElementById('pause').click()`);
   const pausedBefore=await evaluate('window.imageryExperiment.inspect()');
@@ -45,7 +45,7 @@ try {
   if(settings.wind!==1||settings.density!==1||settings.palette!=='tender')throw new Error('Controls failed');
   // Export via canvas data proves a drawable, untainted image; does not test OS download UI.
   const exportInfo=await evaluate(`Array.from(document.querySelectorAll('canvas'),c=>({width:c.width,height:c.height,png:c.toDataURL('image/png').startsWith('data:image/png;base64,')}))`);
-  if(exportInfo.length!==11||exportInfo.some(x=>!x.png||!x.width))throw new Error('Canvas export failed');
+  if(exportInfo.length!==expected.length||exportInfo.some(x=>!x.png||!x.width))throw new Error('Canvas export failed');
   const countCheck=await evaluate('window.imageryExperiment.inspect()');
   if(countCheck.find(x=>x.id==='birds').birdCount!==22||countCheck.find(x=>x.id==='flower').flowerCount!==7||countCheck.find(x=>x.id==='boat').personCount!==0)throw new Error('Density changed entity counts or boat added a person');
   const isolation=await evaluate(`(async()=>{
@@ -98,20 +98,68 @@ try {
     return {distinctShapes:new Set(Object.values(shapes)).size,mirrored,landedCount:landed.landedCount,staysLanded:landed.poseKey===still.poseKey,loopMoves:loop.poseKey!==still.poseKey&&loop.landedCount===0,invalidRejected};
   })()`);
   if(variants.distinctShapes!==5||!variants.mirrored||variants.landedCount!==18||!variants.staysLanded||!variants.loopMoves||!variants.invalidRejected)throw new Error('Moon variants or petal lifecycle failed: '+JSON.stringify(variants));
+  const newFeatures=await evaluate(`(async()=>{
+    const snapshot=id=>document.querySelector('#'+id+' canvas').toDataURL();
+    const choose=async(id,value)=>{const s=document.getElementById(id);s.value=value;s.dispatchEvent(new Event('change'));await new Promise(r=>setTimeout(r,40));};
+    const unique={};
+    for(const id of ['grass','snow','leaves','fish','flower-forms']){
+      const d=window.PoemDrawing.definitions().find(d=>d.id===id),field=d.controls[0],images=[];
+      for(const choice of field.choices){await choose(id+'-'+field.id,choice.value);images.push(snapshot(id));}
+      unique[id]=new Set(images).size===field.choices.length;await choose(id+'-'+field.id,field.default);
+    }
+    await choose('grass-surface','dew');const dew=window.imageryExperiment.inspect().find(t=>t.id==='grass');
+    await choose('grass-surface','frost');const frost=window.imageryExperiment.inspect().find(t=>t.id==='grass');await choose('grass-surface','plain');
+    await choose('snow-state','settled');const snowStill=snapshot('snow');const wind=document.getElementById('wind');wind.value=0;wind.dispatchEvent(new Event('input'));await new Promise(r=>setTimeout(r,50));
+    const snowStatic=snowStill===snapshot('snow');await choose('snow-state','fall');wind.value=100;wind.dispatchEvent(new Event('input'));
+    const inspect=window.imageryExperiment.inspect(),find=id=>inspect.find(x=>x.id===id);
+    const counts=find('grass').bladeCount===54&&find('bamboo').culmCount===3&&find('willow').treeCount===1&&find('fish').fishCount===1&&find('leaves').leafCount===5&&find('catkins').tuftCount===18;
+    return {...unique,attachedDew:dew.dewCount===54,attachedFrost:frost.frostBladeCount===54,snowStatic,counts};
+  })()`);
+  if(Object.values(newFeatures).some(v=>v!==true))throw new Error('New tool options failed: '+JSON.stringify(newFeatures));
+  const extensionLifecycle=await evaluate(`(async()=>{
+    const ids=['catkins','cloud','fish'],hosts=ids.map(()=>document.body.appendChild(document.createElement('div')));hosts.forEach(h=>h.style.display='none');
+    const controls=hosts.map((h,i)=>window.PoemDrawing.mount(ids[i],h,{wind:.8,density:.5,palette:'clear'},777));
+    await new Promise(r=>setTimeout(r,100));controls.forEach(c=>c.pause(true));
+    const clouds=controls[1],keys=[];
+    for(let seed=0;seed<64;seed++){clouds.reset(seed);const state=clouds.inspect();if(!state.finite||state.cloudCount!==3)throw new Error('Cloud seed failed: '+seed);keys.push(state.geometryKey);}
+    clouds.reset(10);const repeated=clouds.inspect().geometryKey===keys[10];
+    const catkins=controls[0];catkins.reset(777);catkins.pause(false);
+    const fish=controls[2];fish.configure({motion:'tail'});fish.reset(777);fish.pause(false);
+    const hashFish=()=>hosts[2].querySelector('canvas').toDataURL();await new Promise(r=>setTimeout(r,80));const fishBefore=hashFish();await new Promise(r=>setTimeout(r,180));const fishMoves=fishBefore!==hashFish();fish.pause(true);
+    const start=performance.now();while(catkins.inspect().time<12.1){if(performance.now()-start>22000)throw new Error('Catkin duration timeout');await new Promise(r=>setTimeout(r,100));}
+    const once=catkins.inspect();await new Promise(r=>setTimeout(r,150));const still=catkins.inspect();catkins.configure({playback:'loop'});await new Promise(r=>setTimeout(r,180));const looping=catkins.inspect();
+    const result={cloudSeeds:64,cloudDistinct:new Set(keys).size,cloudRepeat:repeated,catkinsStop:once.poseKey===still.poseKey,catkinsLoop:looping.poseKey!==still.poseKey,fishMoves};controls.forEach(c=>c.dispose());hosts.forEach(h=>h.remove());return result;
+  })()`);
+  if(extensionLifecycle.cloudDistinct!==64||!extensionLifecycle.cloudRepeat||!extensionLifecycle.catkinsStop||!extensionLifecycle.catkinsLoop||!extensionLifecycle.fishMoves)throw new Error('Extended lifecycle failed: '+JSON.stringify(extensionLifecycle));
   await evaluate(`document.getElementById('pause').click()`);await sleep(1200);
   const resumed=await evaluate('window.imageryExperiment.inspect()');
   if(resumed.some(x=>!x.finite||x.time<=0)||resumed.find(x=>x.id==='birds').birdCount!==22)throw new Error('Animation/bird state failed');
   // Restore the initial viewing controls for a representative screenshot.
   await evaluate(`for(const [id,val] of [['wind',35],['density',45]]){const el=document.getElementById(id);el.value=val;el.dispatchEvent(new Event('input',{bubbles:true}));}const s=document.getElementById('palette');s.value='clear';s.dispatchEvent(new Event('change'));document.getElementById('pause').click()`);await sleep(100);
   const wideLayout=await evaluate(`({viewport:innerWidth,document:document.documentElement.scrollWidth,candidates:document.querySelectorAll('.candidate').length,canvases:document.querySelectorAll('canvas').length})`);
-  const shot=await send('Page.captureScreenshot',{format:'png',captureBeyondViewport:true,clip:{x:0,y:0,width:1280,height:4700,scale:1}});
+  const variantSheet=await evaluate(`(async()=>{
+    const variants=[['grass','surface','dew'],['grass','surface','frost'],['snow','state','settled'],['leaves','color','yellow'],['fish','motion','tail'],['flower-forms','kind','chrysanthemum'],['flower-forms','kind','lotus'],['moon','shape','half'],['moon','shape','gibbous']];
+    const canvas=document.createElement('canvas');canvas.width=1200;canvas.height=810;const c=canvas.getContext('2d');c.fillStyle='#f5f4ed';c.fillRect(0,0,1200,810);
+    const set=async(id,field,value)=>{const select=document.getElementById(id+'-'+field);select.value=value;select.dispatchEvent(new Event('change'));await new Promise(r=>setTimeout(r,40));};
+    for(const [i,[id,field,value]] of variants.entries()){await set(id,field,value);const x=(i%3)*400,y=Math.floor(i/3)*270;c.drawImage(document.querySelector('#'+id+' canvas'),x,y,400,242.5);c.fillStyle='#344b43';c.font='16px Microsoft YaHei';const select=document.getElementById(id+'-'+field);c.fillText(document.querySelector('#'+id+' h3').textContent+' · '+select.selectedOptions[0].textContent,x+16,y+263);}
+    for(const [id,field] of variants){const d=window.PoemDrawing.definitions().find(d=>d.id===id);await set(id,field,d.controls.find(f=>f.id===field).default);}return canvas.toDataURL();
+  })()`);
+  await writeFile(resolve(dir,'variant-preview.png'),Buffer.from(variantSheet.split(',')[1],'base64'));
+  const galleryHeight=await evaluate(`Math.ceil(document.getElementById('studies').getBoundingClientRect().bottom+scrollY+40)`);
+  const shot=await send('Page.captureScreenshot',{format:'png',captureBeyondViewport:true,clip:{x:0,y:0,width:1280,height:galleryHeight,scale:1}});
   await writeFile(resolve(dir,'preview.png'),Buffer.from(shot.data,'base64'));
+  const newToolSheet=await evaluate(`(()=>{
+    const ids=['grass','bamboo','willow','snow','leaves','fish','cloud','catkins','flower-forms'];
+    const canvas=document.createElement('canvas');canvas.width=1200;canvas.height=810;const c=canvas.getContext('2d');c.fillStyle='#f5f4ed';c.fillRect(0,0,1200,810);
+    ids.forEach((id,i)=>{const x=(i%3)*400,y=Math.floor(i/3)*270;c.drawImage(document.querySelector('#'+id+' canvas'),x,y,400,242.5);c.fillStyle='#344b43';c.font='16px Microsoft YaHei';c.fillText(document.querySelector('#'+id+' h3').textContent,x+16,y+263);});return canvas.toDataURL();
+  })()`);
+  await writeFile(resolve(dir,'new-tools-preview.png'),Buffer.from(newToolSheet.split(',')[1],'base64'));
   await send('Emulation.setDeviceMetricsOverride',{width:390,height:844,deviceScaleFactor:1,mobile:true});await sleep(150);
   const narrowLayout=await evaluate(`({viewport:innerWidth,document:document.documentElement.scrollWidth,canvases:document.querySelectorAll('canvas').length})`);
   if(narrowLayout.document>narrowLayout.viewport||wideLayout.document>wideLayout.viewport)throw new Error('Horizontal overflow');
   const mobile=await send('Page.captureScreenshot',{format:'png'});await writeFile(resolve(qa,'mobile.png'),Buffer.from(mobile.data,'base64'));
   if(errors.length)throw new Error(JSON.stringify(errors));
-  const report={status:'passed',targetUrl,initial,pausedBefore,pausedAfter,changed,settings,resumed,exportInfo,isolation,variants,architecture,wideLayout,narrowLayout,runtimeErrors:errors,limitations:['未操作系统下载确认界面；仅验证 canvas 导出 PNG 数据。','本地画面经浏览器截图检查；OpenProcessing 原作未完成视觉检查。','十一类工具检查暂停重置后的重复出图；不等同于运动的跨设备逐帧确定性。']};
+  const report={status:'passed',targetUrl,initial,pausedBefore,pausedAfter,changed,settings,resumed,exportInfo,isolation,variants,architecture,newFeatures,extensionLifecycle,wideLayout,narrowLayout,runtimeErrors:errors,limitations:['未操作系统下载确认界面；仅验证 canvas 导出 PNG 数据。','本地画面经浏览器截图检查；具体花鸟树种尚未做植物学或生物学辨识验收。','所有登记工具检查暂停重置后的重复出图；不等同于运动的跨设备逐帧确定性。']};
   await writeFile(resolve(dir,'verification.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify({status:report.status,wideLayout,narrowLayout,runtimeErrors:errors.length}));
   await send('Browser.close').catch(()=>{});
 }finally{if(ws)ws.close();edge.kill();}

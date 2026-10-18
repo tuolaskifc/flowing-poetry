@@ -10,6 +10,7 @@
   <script defer src="drawing/sources.js"></script>
   <script defer src="drawing/core.js"></script>
   <script defer src="drawing/petals.js"></script>
+  <script defer src="drawing/cloud-outline.js"></script>
   <script defer src="drawing/tools/flower.js"></script>
   <script defer src="drawing/tools/tree.js"></script>
   <script defer src="drawing/tools/water.js"></script>
@@ -21,28 +22,38 @@
   <script defer src="drawing/tools/falling-petals.js"></script>
   <script defer src="drawing/tools/rock.js"></script>
   <script defer src="drawing/tools/pavilion.js"></script>
+  <script defer src="drawing/tools/grass.js"></script>
+  <script defer src="drawing/tools/bamboo.js"></script>
+  <script defer src="drawing/tools/willow.js"></script>
+  <script defer src="drawing/tools/snow.js"></script>
+  <script defer src="drawing/tools/leaves.js"></script>
+  <script defer src="drawing/tools/fish.js"></script>
+  <script defer src="drawing/tools/cloud.js"></script>
+  <script defer src="drawing/tools/catkins.js"></script>
+  <script defer src="drawing/tools/flower-forms.js"></script>
   <script defer src="studies.js"></script>
   <script defer src="catalog.js"></script>
   <script defer src="app.js"></script>
 </head>
 <body>
-  <header><a href="./index.html">流动诗 <span>／ 意象试画室</span></a><a href="#references">查看社区候选 ↗</a></header>
+  <header><a href="./index.html">流动诗 <span>／ 意象试画室</span></a><a href="progress.html">查看六十项进度表 ↗</a></header>
   <main>
     <section class="intro">
-      <p><a href="code-research/index.html">新进展：四组已取得的代码、八项实际运行预览 ↗</a></p>
-      <p class="eyebrow">IMAGERY STUDIES · 05</p>
+      <p><a href="progress.html">六十项意象：已有能力、试画与剩余工作 ↗</a></p>
+      <p class="eyebrow">IMAGERY STUDIES · 06</p>
       <h1>先有风，再看万物如何回应。</h1>
-      <p>花、树、水、云雾、鸟群，舟、月、雨、落花，以及新加入的石与亭。用同一组颜色与观看尺度，试一试它们能否进入同一个诗意世界。</p>
-      <p class="provenance">花瓣改编自 sxywu；树、水、鸟群参考 The Nature of Code；船体、石体与亭顶改编自 Lingdong Huang；月形、雨线、薄雾及飘落运动为本项目试作。各项保留来源与许可，尚未接入诗句自动生成。</p>
+      <p>二十个绘画工具，逐步补足花、枝叶、风物与水中生灵。用同一组颜色与观看尺度，试一试它们能否进入同一个诗意世界。六十项意象的覆盖程度另见进度总表。</p>
+      <p class="provenance">花瓣改编自 sxywu；树、水、鸟群参考 The Nature of Code；船体、石体与亭顶改编自 Lingdong Huang；云形改编自 Niels Pichon / p5.Fresco。其余新增形态为本项目试作；各项保留来源与许可，尚未接入诗句自动生成。</p>
     </section>
     <section class="controls" aria-label="试画控制">
       <label>风的作用 <input id="wind" type="range" min="0" max="100" value="35"><output id="wind-value">35%</output></label>
       <label>笔触疏密 <input id="density" type="range" min="0" max="100" value="45"><output id="density-value">45%</output></label>
       <label>配色 <select id="palette"><option value="clear">清寂澄明</option><option value="tender">温柔缱绻</option></select></label>
+      <label>快速查看 <select id="tool-jump"><option value="">选择意象</option></select></label>
       <div class="buttons"><button id="pause" aria-pressed="false">暂停</button><button id="reseed">换一组形态</button></div>
     </section>
     <p class="control-note">风调节运动与局部形变；疏密调节笔触和空间分布，不改变鸟群数量。这里只试绘画能力，还没有诗句自动分析。</p>
-    <section id="studies" class="studies" aria-label="十一类意象本地试画"></section>
+    <section id="studies" class="studies" aria-label="意象本地试画"></section>
     <section id="references" class="reference-section">
       <p class="eyebrow">OPENPROCESSING · CANDIDATES</p><h2>从社区挑选，逐件核实。</h2>
       <p>以下依据公开作品说明与搜索索引初筛，还没有完成原作视觉审阅或源码适配。许可标注为页面／索引可见值，实际引入前仍需核对完整版本与派生来源。</p>

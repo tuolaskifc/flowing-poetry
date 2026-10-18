@@ -31,6 +31,12 @@ window.PoemDrawingSources = Object.freeze({
     originals:['code-research/flower/index.html','code-research/flower/.block'],licenseFile:'code-research/flower/.block',
     note:'取 petalPath 的曲线生成，改为数值控制点与 Canvas 绘制；去掉 D3/Lodash 依赖，预生成花瓣，茎叶和风响应由本项目编写。'
   }),
+  'fresco-cloud': Object.freeze({
+    id:'fresco-cloud',author:'Niels Pichon',license:'Apache-2.0',kind:'adapted',
+    url:'https://github.com/NielsPichon/p5.Fresco/blob/main/demos/theatre/cloudGen.js',
+    originals:['code-research/fresco/demos/theatre/cloudGen.js'],licenseFile:'code-research/fresco/LICENSE',
+    note:'取圆弧/S 路径/水平段云形生成与归一化；实例化随机与点函数，返回数值点，递归改为有界重试；去掉 Fresco.Shape、随机配色与边框放置。'
+  }),
   'shan-rock': Object.freeze({
     id:'shan-rock',author:'Lingdong Huang',license:'MIT',kind:'adapted',
     url:'https://github.com/LingDong-/shan-shui-inf',

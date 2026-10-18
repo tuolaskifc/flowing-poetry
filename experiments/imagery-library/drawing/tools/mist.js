@@ -1,6 +1,6 @@
 /* Extracted from the first local study; provenance is declared by source id. */
 window.PoemDrawing.register({
-"id":"mist","name":"云雾","subtitle":"边缘散开，形体仍然相连。","credit":"本项目试作 · 柔边色层与平移","note":"柔边色层；尚未实现实体遮蔽、消散或显露关系。","sources":["project"],"reference":"ref-mist",
+"id":"mist","name":"薄雾","subtitle":"边缘散开，形体仍然相连。","credit":"本项目试作 · 柔边色层与平移","note":"柔边色层；尚未实现实体遮蔽、消散或显露关系。","sources":["project"],"reference":"ref-mist",
 capabilities:["wind-response", "density-detail"],
 create(ctx) {
  const {p,width:W,height:H,alpha}=ctx; const shared=ctx.settings;

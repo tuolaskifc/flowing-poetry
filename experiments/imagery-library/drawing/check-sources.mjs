@@ -1,5 +1,5 @@
 // Check provenance, actual source files/licenses and saved upstream hashes.
-import { readFile, writeFile, stat } from 'node:fs/promises';
+import { readFile, writeFile, stat, readdir } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -10,7 +10,8 @@ const html=await readFile(resolve(root,'index.html'),'utf8');
 const scripts=[...html.matchAll(/<script defer src="([^"]+)"/g)].map(m=>m[1]).filter(p=>p.startsWith('drawing/'));
 for(const script of scripts)vm.runInContext(await readFile(resolve(root,script),'utf8'),sandbox,{filename:script});
 const definitions=sandbox.window.PoemDrawing.definitions(),sources=sandbox.window.PoemDrawingSources;
-if(definitions.length!==11)throw new Error('Expected eleven independently registered tools');
+const toolFiles=(await readdir(resolve(dir,'tools'))).filter(f=>f.endsWith('.js')).map(f=>f.slice(0,-3)).sort();
+if(JSON.stringify(definitions.map(t=>t.id).sort())!==JSON.stringify(toolFiles))throw new Error('Every tool module must be loaded and registered exactly once');
 for(const tool of definitions)for(const key of tool.sources){
   const source=sources[key];if(!source)throw new Error(`Source missing: ${key}`);
   if(source.kind==='adapted'&&(!source.url||!source.license||!source.licenseFile||!source.originals.length))throw new Error(`Incomplete attribution: ${key}`);

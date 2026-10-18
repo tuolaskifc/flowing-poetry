@@ -5,8 +5,8 @@
     {
       "id": "flower",
       "seed": 42,
-      "time": 0,
-      "ticks": 0,
+      "time": 0.031,
+      "ticks": 1,
       "paused": false,
       "disposed": false,
       "ready": true,
@@ -22,8 +22,8 @@
     {
       "id": "tree",
       "seed": 139,
-      "time": 0,
-      "ticks": 0,
+      "time": 0.02930000001192093,
+      "ticks": 1,
       "paused": false,
       "disposed": false,
       "ready": true,
@@ -202,14 +202,185 @@
       "railing": "open",
       "finite": true,
       "geometryKey": "ea5479aa"
+    },
+    {
+      "id": "grass",
+      "seed": 1109,
+      "time": 0,
+      "ticks": 0,
+      "paused": false,
+      "disposed": false,
+      "ready": true,
+      "options": {
+        "surface": "plain"
+      },
+      "sources": [
+        "project"
+      ],
+      "tuftCount": 9,
+      "bladeCount": 54,
+      "surface": "plain",
+      "dewCount": 0,
+      "frostBladeCount": 0,
+      "finite": true,
+      "geometryKey": "c5cdc4f2"
+    },
+    {
+      "id": "bamboo",
+      "seed": 1206,
+      "time": 0,
+      "ticks": 0,
+      "paused": false,
+      "disposed": false,
+      "ready": true,
+      "options": {},
+      "sources": [
+        "project"
+      ],
+      "culmCount": 3,
+      "nodeCount": 18,
+      "leafCount": 90,
+      "finite": true,
+      "geometryKey": "976d578d"
+    },
+    {
+      "id": "willow",
+      "seed": 1303,
+      "time": 0,
+      "ticks": 0,
+      "paused": false,
+      "disposed": false,
+      "ready": true,
+      "options": {},
+      "sources": [
+        "project"
+      ],
+      "treeCount": 1,
+      "hangingBranchCount": 17,
+      "leafCount": 221,
+      "finite": true,
+      "geometryKey": "22f9db2e"
+    },
+    {
+      "id": "snow",
+      "seed": 1400,
+      "time": 0,
+      "ticks": 0,
+      "paused": false,
+      "disposed": false,
+      "ready": true,
+      "options": {
+        "state": "fall"
+      },
+      "sources": [
+        "project"
+      ],
+      "snowParticleCount": 60,
+      "state": "fall",
+      "finite": true,
+      "geometryKey": "8ce5062"
+    },
+    {
+      "id": "leaves",
+      "seed": 1497,
+      "time": 0,
+      "ticks": 0,
+      "paused": false,
+      "disposed": false,
+      "ready": true,
+      "options": {
+        "color": "red"
+      },
+      "sources": [
+        "project"
+      ],
+      "leafCount": 5,
+      "color": "red",
+      "finite": true,
+      "geometryKey": "e13358c5"
+    },
+    {
+      "id": "fish",
+      "seed": 1594,
+      "time": 0,
+      "ticks": 0,
+      "paused": false,
+      "disposed": false,
+      "ready": true,
+      "options": {
+        "motion": "still"
+      },
+      "sources": [
+        "project"
+      ],
+      "fishCount": 1,
+      "motion": "still",
+      "finite": true,
+      "geometryKey": "a5059798"
+    },
+    {
+      "id": "cloud",
+      "seed": 1691,
+      "time": 0,
+      "ticks": 0,
+      "paused": false,
+      "disposed": false,
+      "ready": true,
+      "options": {},
+      "sources": [
+        "fresco-cloud",
+        "project"
+      ],
+      "cloudCount": 3,
+      "finite": true,
+      "geometryKey": "61675fc3"
+    },
+    {
+      "id": "catkins",
+      "seed": 1788,
+      "time": 0,
+      "ticks": 0,
+      "paused": false,
+      "disposed": false,
+      "ready": true,
+      "options": {
+        "playback": "once"
+      },
+      "sources": [
+        "project"
+      ],
+      "tuftCount": 18,
+      "poseKey": "2843e127",
+      "finite": true,
+      "geometryKey": "c1f20938"
+    },
+    {
+      "id": "flower-forms",
+      "seed": 1885,
+      "time": 0,
+      "ticks": 0,
+      "paused": false,
+      "disposed": false,
+      "ready": true,
+      "options": {
+        "kind": "plum"
+      },
+      "sources": [
+        "project"
+      ],
+      "flowerCount": 1,
+      "kind": "plum",
+      "petalCount": 5,
+      "finite": true,
+      "geometryKey": "4ccccdb"
     }
   ],
   "pausedBefore": [
     {
       "id": "flower",
       "seed": 42,
-      "time": 0,
-      "ticks": 0,
+      "time": 0.031,
+      "ticks": 2,
       "paused": true,
       "disposed": false,
       "ready": true,
@@ -225,8 +396,8 @@
     {
       "id": "tree",
       "seed": 139,
-      "time": 0,
-      "ticks": 0,
+      "time": 0.02930000001192093,
+      "ticks": 2,
       "paused": true,
       "disposed": false,
       "ready": true,
@@ -241,8 +412,8 @@
     {
       "id": "water",
       "seed": 236,
-      "time": 0,
-      "ticks": 0,
+      "time": 0.0450000000178814,
+      "ticks": 2,
       "paused": true,
       "disposed": false,
       "ready": true,
@@ -257,8 +428,8 @@
     {
       "id": "mist",
       "seed": 333,
-      "time": 0,
-      "ticks": 0,
+      "time": 0.04389999999403955,
+      "ticks": 2,
       "paused": true,
       "disposed": false,
       "ready": true,
@@ -272,8 +443,8 @@
     {
       "id": "birds",
       "seed": 430,
-      "time": 0,
-      "ticks": 0,
+      "time": 0.04250000001788141,
+      "ticks": 2,
       "paused": true,
       "disposed": false,
       "ready": true,
@@ -289,8 +460,8 @@
     {
       "id": "boat",
       "seed": 527,
-      "time": 0,
-      "ticks": 0,
+      "time": 0.041399999994039545,
+      "ticks": 2,
       "paused": true,
       "disposed": false,
       "ready": true,
@@ -307,8 +478,8 @@
     {
       "id": "moon",
       "seed": 624,
-      "time": 0,
-      "ticks": 0,
+      "time": 0.040500000017881406,
+      "ticks": 2,
       "paused": true,
       "disposed": false,
       "ready": true,
@@ -329,8 +500,8 @@
     {
       "id": "rain",
       "seed": 721,
-      "time": 0,
-      "ticks": 0,
+      "time": 0.039500000017881405,
+      "ticks": 2,
       "paused": true,
       "disposed": false,
       "ready": true,
@@ -345,8 +516,8 @@
     {
       "id": "falling-petals",
       "seed": 818,
-      "time": 0,
-      "ticks": 0,
+      "time": 0.038300000000000015,
+      "ticks": 2,
       "paused": true,
       "disposed": false,
       "ready": true,
@@ -359,15 +530,15 @@
       ],
       "petalCount": 18,
       "landedCount": 0,
-      "poseKey": "3cf3ac7e",
+      "poseKey": "b94da6f5",
       "finite": true,
       "geometryKey": "325a67bb"
     },
     {
       "id": "rock",
       "seed": 915,
-      "time": 0,
-      "ticks": 0,
+      "time": 0.03530000000000001,
+      "ticks": 2,
       "paused": true,
       "disposed": false,
       "ready": true,
@@ -386,8 +557,8 @@
     {
       "id": "pavilion",
       "seed": 1012,
-      "time": 0,
-      "ticks": 0,
+      "time": 0.03430000000000001,
+      "ticks": 2,
       "paused": true,
       "disposed": false,
       "ready": true,
@@ -405,14 +576,185 @@
       "railing": "open",
       "finite": true,
       "geometryKey": "ea5479aa"
+    },
+    {
+      "id": "grass",
+      "seed": 1109,
+      "time": 0.033200000005960476,
+      "ticks": 2,
+      "paused": true,
+      "disposed": false,
+      "ready": true,
+      "options": {
+        "surface": "plain"
+      },
+      "sources": [
+        "project"
+      ],
+      "tuftCount": 9,
+      "bladeCount": 54,
+      "surface": "plain",
+      "dewCount": 0,
+      "frostBladeCount": 0,
+      "finite": true,
+      "geometryKey": "c5cdc4f2"
+    },
+    {
+      "id": "bamboo",
+      "seed": 1206,
+      "time": 0.032200000005960475,
+      "ticks": 2,
+      "paused": true,
+      "disposed": false,
+      "ready": true,
+      "options": {},
+      "sources": [
+        "project"
+      ],
+      "culmCount": 3,
+      "nodeCount": 18,
+      "leafCount": 90,
+      "finite": true,
+      "geometryKey": "976d578d"
+    },
+    {
+      "id": "willow",
+      "seed": 1303,
+      "time": 0.031000000017881404,
+      "ticks": 2,
+      "paused": true,
+      "disposed": false,
+      "ready": true,
+      "options": {},
+      "sources": [
+        "project"
+      ],
+      "treeCount": 1,
+      "hangingBranchCount": 17,
+      "leafCount": 221,
+      "finite": true,
+      "geometryKey": "22f9db2e"
+    },
+    {
+      "id": "snow",
+      "seed": 1400,
+      "time": 0.030000000017881404,
+      "ticks": 2,
+      "paused": true,
+      "disposed": false,
+      "ready": true,
+      "options": {
+        "state": "fall"
+      },
+      "sources": [
+        "project"
+      ],
+      "snowParticleCount": 60,
+      "state": "fall",
+      "finite": true,
+      "geometryKey": "8ce5062"
+    },
+    {
+      "id": "leaves",
+      "seed": 1497,
+      "time": 0.028899999994039548,
+      "ticks": 2,
+      "paused": true,
+      "disposed": false,
+      "ready": true,
+      "options": {
+        "color": "red"
+      },
+      "sources": [
+        "project"
+      ],
+      "leafCount": 5,
+      "color": "red",
+      "finite": true,
+      "geometryKey": "e13358c5"
+    },
+    {
+      "id": "fish",
+      "seed": 1594,
+      "time": 0,
+      "ticks": 1,
+      "paused": true,
+      "disposed": false,
+      "ready": true,
+      "options": {
+        "motion": "still"
+      },
+      "sources": [
+        "project"
+      ],
+      "fishCount": 1,
+      "motion": "still",
+      "finite": true,
+      "geometryKey": "a5059798"
+    },
+    {
+      "id": "cloud",
+      "seed": 1691,
+      "time": 0,
+      "ticks": 1,
+      "paused": true,
+      "disposed": false,
+      "ready": true,
+      "options": {},
+      "sources": [
+        "fresco-cloud",
+        "project"
+      ],
+      "cloudCount": 3,
+      "finite": true,
+      "geometryKey": "61675fc3"
+    },
+    {
+      "id": "catkins",
+      "seed": 1788,
+      "time": 0,
+      "ticks": 1,
+      "paused": true,
+      "disposed": false,
+      "ready": true,
+      "options": {
+        "playback": "once"
+      },
+      "sources": [
+        "project"
+      ],
+      "tuftCount": 18,
+      "poseKey": "2843e127",
+      "finite": true,
+      "geometryKey": "c1f20938"
+    },
+    {
+      "id": "flower-forms",
+      "seed": 1885,
+      "time": 0,
+      "ticks": 1,
+      "paused": true,
+      "disposed": false,
+      "ready": true,
+      "options": {
+        "kind": "plum"
+      },
+      "sources": [
+        "project"
+      ],
+      "flowerCount": 1,
+      "kind": "plum",
+      "petalCount": 5,
+      "finite": true,
+      "geometryKey": "4ccccdb"
     }
   ],
   "pausedAfter": [
     {
       "id": "flower",
       "seed": 42,
-      "time": 0,
-      "ticks": 1,
+      "time": 0.031,
+      "ticks": 2,
       "paused": true,
       "disposed": false,
       "ready": true,
@@ -428,8 +770,8 @@
     {
       "id": "tree",
       "seed": 139,
-      "time": 0,
-      "ticks": 1,
+      "time": 0.02930000001192093,
+      "ticks": 2,
       "paused": true,
       "disposed": false,
       "ready": true,
@@ -444,8 +786,8 @@
     {
       "id": "water",
       "seed": 236,
-      "time": 0,
-      "ticks": 1,
+      "time": 0.0450000000178814,
+      "ticks": 2,
       "paused": true,
       "disposed": false,
       "ready": true,
@@ -460,8 +802,8 @@
     {
       "id": "mist",
       "seed": 333,
-      "time": 0,
-      "ticks": 1,
+      "time": 0.04389999999403955,
+      "ticks": 2,
       "paused": true,
       "disposed": false,
       "ready": true,
@@ -475,8 +817,8 @@
     {
       "id": "birds",
       "seed": 430,
-      "time": 0,
-      "ticks": 1,
+      "time": 0.04250000001788141,
+      "ticks": 2,
       "paused": true,
       "disposed": false,
       "ready": true,
@@ -492,8 +834,8 @@
     {
       "id": "boat",
       "seed": 527,
-      "time": 0,
-      "ticks": 1,
+      "time": 0.041399999994039545,
+      "ticks": 2,
       "paused": true,
       "disposed": false,
       "ready": true,
@@ -510,8 +852,8 @@
     {
       "id": "moon",
       "seed": 624,
-      "time": 0,
-      "ticks": 1,
+      "time": 0.040500000017881406,
+      "ticks": 2,
       "paused": true,
       "disposed": false,
       "ready": true,
@@ -532,8 +874,8 @@
     {
       "id": "rain",
       "seed": 721,
-      "time": 0,
-      "ticks": 1,
+      "time": 0.039500000017881405,
+      "ticks": 2,
       "paused": true,
       "disposed": false,
       "ready": true,
@@ -548,8 +890,8 @@
     {
       "id": "falling-petals",
       "seed": 818,
-      "time": 0,
-      "ticks": 1,
+      "time": 0.038300000000000015,
+      "ticks": 2,
       "paused": true,
       "disposed": false,
       "ready": true,
@@ -562,15 +904,15 @@
       ],
       "petalCount": 18,
       "landedCount": 0,
-      "poseKey": "3cf3ac7e",
+      "poseKey": "b94da6f5",
       "finite": true,
       "geometryKey": "325a67bb"
     },
     {
       "id": "rock",
       "seed": 915,
-      "time": 0,
-      "ticks": 1,
+      "time": 0.03530000000000001,
+      "ticks": 2,
       "paused": true,
       "disposed": false,
       "ready": true,
@@ -589,8 +931,8 @@
     {
       "id": "pavilion",
       "seed": 1012,
-      "time": 0,
-      "ticks": 1,
+      "time": 0.03430000000000001,
+      "ticks": 2,
       "paused": true,
       "disposed": false,
       "ready": true,
@@ -608,6 +950,177 @@
       "railing": "open",
       "finite": true,
       "geometryKey": "ea5479aa"
+    },
+    {
+      "id": "grass",
+      "seed": 1109,
+      "time": 0.033200000005960476,
+      "ticks": 2,
+      "paused": true,
+      "disposed": false,
+      "ready": true,
+      "options": {
+        "surface": "plain"
+      },
+      "sources": [
+        "project"
+      ],
+      "tuftCount": 9,
+      "bladeCount": 54,
+      "surface": "plain",
+      "dewCount": 0,
+      "frostBladeCount": 0,
+      "finite": true,
+      "geometryKey": "c5cdc4f2"
+    },
+    {
+      "id": "bamboo",
+      "seed": 1206,
+      "time": 0.032200000005960475,
+      "ticks": 2,
+      "paused": true,
+      "disposed": false,
+      "ready": true,
+      "options": {},
+      "sources": [
+        "project"
+      ],
+      "culmCount": 3,
+      "nodeCount": 18,
+      "leafCount": 90,
+      "finite": true,
+      "geometryKey": "976d578d"
+    },
+    {
+      "id": "willow",
+      "seed": 1303,
+      "time": 0.031000000017881404,
+      "ticks": 2,
+      "paused": true,
+      "disposed": false,
+      "ready": true,
+      "options": {},
+      "sources": [
+        "project"
+      ],
+      "treeCount": 1,
+      "hangingBranchCount": 17,
+      "leafCount": 221,
+      "finite": true,
+      "geometryKey": "22f9db2e"
+    },
+    {
+      "id": "snow",
+      "seed": 1400,
+      "time": 0.030000000017881404,
+      "ticks": 2,
+      "paused": true,
+      "disposed": false,
+      "ready": true,
+      "options": {
+        "state": "fall"
+      },
+      "sources": [
+        "project"
+      ],
+      "snowParticleCount": 60,
+      "state": "fall",
+      "finite": true,
+      "geometryKey": "8ce5062"
+    },
+    {
+      "id": "leaves",
+      "seed": 1497,
+      "time": 0.028899999994039548,
+      "ticks": 2,
+      "paused": true,
+      "disposed": false,
+      "ready": true,
+      "options": {
+        "color": "red"
+      },
+      "sources": [
+        "project"
+      ],
+      "leafCount": 5,
+      "color": "red",
+      "finite": true,
+      "geometryKey": "e13358c5"
+    },
+    {
+      "id": "fish",
+      "seed": 1594,
+      "time": 0,
+      "ticks": 1,
+      "paused": true,
+      "disposed": false,
+      "ready": true,
+      "options": {
+        "motion": "still"
+      },
+      "sources": [
+        "project"
+      ],
+      "fishCount": 1,
+      "motion": "still",
+      "finite": true,
+      "geometryKey": "a5059798"
+    },
+    {
+      "id": "cloud",
+      "seed": 1691,
+      "time": 0,
+      "ticks": 1,
+      "paused": true,
+      "disposed": false,
+      "ready": true,
+      "options": {},
+      "sources": [
+        "fresco-cloud",
+        "project"
+      ],
+      "cloudCount": 3,
+      "finite": true,
+      "geometryKey": "61675fc3"
+    },
+    {
+      "id": "catkins",
+      "seed": 1788,
+      "time": 0,
+      "ticks": 1,
+      "paused": true,
+      "disposed": false,
+      "ready": true,
+      "options": {
+        "playback": "once"
+      },
+      "sources": [
+        "project"
+      ],
+      "tuftCount": 18,
+      "poseKey": "2843e127",
+      "finite": true,
+      "geometryKey": "c1f20938"
+    },
+    {
+      "id": "flower-forms",
+      "seed": 1885,
+      "time": 0,
+      "ticks": 1,
+      "paused": true,
+      "disposed": false,
+      "ready": true,
+      "options": {
+        "kind": "plum"
+      },
+      "sources": [
+        "project"
+      ],
+      "flowerCount": 1,
+      "kind": "plum",
+      "petalCount": 5,
+      "finite": true,
+      "geometryKey": "4ccccdb"
     }
   ],
   "changed": [
@@ -811,6 +1324,177 @@
       "railing": "open",
       "finite": true,
       "geometryKey": "9383c631"
+    },
+    {
+      "id": "grass",
+      "seed": 1110,
+      "time": 0,
+      "ticks": 4,
+      "paused": true,
+      "disposed": false,
+      "ready": true,
+      "options": {
+        "surface": "plain"
+      },
+      "sources": [
+        "project"
+      ],
+      "tuftCount": 9,
+      "bladeCount": 54,
+      "surface": "plain",
+      "dewCount": 0,
+      "frostBladeCount": 0,
+      "finite": true,
+      "geometryKey": "2361a175"
+    },
+    {
+      "id": "bamboo",
+      "seed": 1207,
+      "time": 0,
+      "ticks": 4,
+      "paused": true,
+      "disposed": false,
+      "ready": true,
+      "options": {},
+      "sources": [
+        "project"
+      ],
+      "culmCount": 3,
+      "nodeCount": 18,
+      "leafCount": 90,
+      "finite": true,
+      "geometryKey": "b2bdf58a"
+    },
+    {
+      "id": "willow",
+      "seed": 1304,
+      "time": 0,
+      "ticks": 4,
+      "paused": true,
+      "disposed": false,
+      "ready": true,
+      "options": {},
+      "sources": [
+        "project"
+      ],
+      "treeCount": 1,
+      "hangingBranchCount": 17,
+      "leafCount": 221,
+      "finite": true,
+      "geometryKey": "738b7201"
+    },
+    {
+      "id": "snow",
+      "seed": 1401,
+      "time": 0,
+      "ticks": 4,
+      "paused": true,
+      "disposed": false,
+      "ready": true,
+      "options": {
+        "state": "fall"
+      },
+      "sources": [
+        "project"
+      ],
+      "snowParticleCount": 60,
+      "state": "fall",
+      "finite": true,
+      "geometryKey": "aacf369a"
+    },
+    {
+      "id": "leaves",
+      "seed": 1498,
+      "time": 0,
+      "ticks": 4,
+      "paused": true,
+      "disposed": false,
+      "ready": true,
+      "options": {
+        "color": "red"
+      },
+      "sources": [
+        "project"
+      ],
+      "leafCount": 5,
+      "color": "red",
+      "finite": true,
+      "geometryKey": "324bc984"
+    },
+    {
+      "id": "fish",
+      "seed": 1595,
+      "time": 0,
+      "ticks": 4,
+      "paused": true,
+      "disposed": false,
+      "ready": true,
+      "options": {
+        "motion": "still"
+      },
+      "sources": [
+        "project"
+      ],
+      "fishCount": 1,
+      "motion": "still",
+      "finite": true,
+      "geometryKey": "a47c45c1"
+    },
+    {
+      "id": "cloud",
+      "seed": 1692,
+      "time": 0,
+      "ticks": 4,
+      "paused": true,
+      "disposed": false,
+      "ready": true,
+      "options": {},
+      "sources": [
+        "fresco-cloud",
+        "project"
+      ],
+      "cloudCount": 3,
+      "finite": true,
+      "geometryKey": "864a20d5"
+    },
+    {
+      "id": "catkins",
+      "seed": 1789,
+      "time": 0,
+      "ticks": 4,
+      "paused": true,
+      "disposed": false,
+      "ready": true,
+      "options": {
+        "playback": "once"
+      },
+      "sources": [
+        "project"
+      ],
+      "tuftCount": 18,
+      "poseKey": "e5ea8ffd",
+      "finite": true,
+      "geometryKey": "be7e7a3a"
+    },
+    {
+      "id": "flower-forms",
+      "seed": 1886,
+      "time": 0,
+      "ticks": 4,
+      "paused": true,
+      "disposed": false,
+      "ready": true,
+      "options": {
+        "kind": "plum"
+      },
+      "sources": [
+        "project"
+      ],
+      "flowerCount": 1,
+      "kind": "plum",
+      "petalCount": 5,
+      "finite": true,
+      "geometryKey": "d6076eab"
     }
   ],
   "settings": {
@@ -822,8 +1506,8 @@
     {
       "id": "flower",
       "seed": 43,
-      "time": 1.3097999999940402,
-      "ticks": 43,
+      "time": 1.306199999994037,
+      "ticks": 45,
       "paused": false,
       "disposed": false,
       "ready": true,
@@ -839,8 +1523,8 @@
     {
       "id": "tree",
       "seed": 140,
-      "time": 1.3097999999940402,
-      "ticks": 43,
+      "time": 1.3060999999999976,
+      "ticks": 45,
       "paused": false,
       "disposed": false,
       "ready": true,
@@ -855,8 +1539,8 @@
     {
       "id": "water",
       "seed": 237,
-      "time": 1.3097999999940402,
-      "ticks": 43,
+      "time": 1.3060999999999976,
+      "ticks": 45,
       "paused": false,
       "disposed": false,
       "ready": true,
@@ -871,8 +1555,8 @@
     {
       "id": "mist",
       "seed": 334,
-      "time": 1.3097999999940402,
-      "ticks": 43,
+      "time": 1.3060999999999976,
+      "ticks": 45,
       "paused": false,
       "disposed": false,
       "ready": true,
@@ -886,8 +1570,8 @@
     {
       "id": "birds",
       "seed": 431,
-      "time": 1.3097999999940402,
-      "ticks": 43,
+      "time": 1.306000000005958,
+      "ticks": 45,
       "paused": false,
       "disposed": false,
       "ready": true,
@@ -903,8 +1587,8 @@
     {
       "id": "boat",
       "seed": 528,
-      "time": 1.3097999999940402,
-      "ticks": 43,
+      "time": 1.306000000005958,
+      "ticks": 45,
       "paused": false,
       "disposed": false,
       "ready": true,
@@ -921,8 +1605,8 @@
     {
       "id": "moon",
       "seed": 625,
-      "time": 1.3097999999940402,
-      "ticks": 51,
+      "time": 1.306000000005958,
+      "ticks": 53,
       "paused": false,
       "disposed": false,
       "ready": true,
@@ -943,8 +1627,8 @@
     {
       "id": "rain",
       "seed": 722,
-      "time": 1.3097999999940402,
-      "ticks": 43,
+      "time": 1.306000000005958,
+      "ticks": 45,
       "paused": false,
       "disposed": false,
       "ready": true,
@@ -959,8 +1643,8 @@
     {
       "id": "falling-petals",
       "seed": 819,
-      "time": 1.3097999999940402,
-      "ticks": 43,
+      "time": 1.306000000005958,
+      "ticks": 45,
       "paused": false,
       "disposed": false,
       "ready": true,
@@ -973,15 +1657,15 @@
       ],
       "petalCount": 18,
       "landedCount": 0,
-      "poseKey": "b4f415e0",
+      "poseKey": "7a7061d4",
       "finite": true,
       "geometryKey": "f04111d7"
     },
     {
       "id": "rock",
       "seed": 916,
-      "time": 1.3097999999940402,
-      "ticks": 45,
+      "time": 1.306000000005958,
+      "ticks": 47,
       "paused": false,
       "disposed": false,
       "ready": true,
@@ -1000,8 +1684,8 @@
     {
       "id": "pavilion",
       "seed": 1013,
-      "time": 1.3097999999940402,
-      "ticks": 47,
+      "time": 1.306000000005958,
+      "ticks": 49,
       "paused": false,
       "disposed": false,
       "ready": true,
@@ -1019,9 +1703,225 @@
       "railing": "open",
       "finite": true,
       "geometryKey": "9383c631"
+    },
+    {
+      "id": "grass",
+      "seed": 1110,
+      "time": 1.306000000005958,
+      "ticks": 52,
+      "paused": false,
+      "disposed": false,
+      "ready": true,
+      "options": {
+        "surface": "plain"
+      },
+      "sources": [
+        "project"
+      ],
+      "tuftCount": 9,
+      "bladeCount": 54,
+      "surface": "plain",
+      "dewCount": 0,
+      "frostBladeCount": 0,
+      "finite": true,
+      "geometryKey": "2361a175"
+    },
+    {
+      "id": "bamboo",
+      "seed": 1207,
+      "time": 1.306000000005958,
+      "ticks": 45,
+      "paused": false,
+      "disposed": false,
+      "ready": true,
+      "options": {},
+      "sources": [
+        "project"
+      ],
+      "culmCount": 3,
+      "nodeCount": 18,
+      "leafCount": 90,
+      "finite": true,
+      "geometryKey": "b2bdf58a"
+    },
+    {
+      "id": "willow",
+      "seed": 1304,
+      "time": 1.306000000005958,
+      "ticks": 45,
+      "paused": false,
+      "disposed": false,
+      "ready": true,
+      "options": {},
+      "sources": [
+        "project"
+      ],
+      "treeCount": 1,
+      "hangingBranchCount": 17,
+      "leafCount": 221,
+      "finite": true,
+      "geometryKey": "738b7201"
+    },
+    {
+      "id": "snow",
+      "seed": 1401,
+      "time": 1.306000000005958,
+      "ticks": 50,
+      "paused": false,
+      "disposed": false,
+      "ready": true,
+      "options": {
+        "state": "fall"
+      },
+      "sources": [
+        "project"
+      ],
+      "snowParticleCount": 60,
+      "state": "fall",
+      "finite": true,
+      "geometryKey": "aacf369a"
+    },
+    {
+      "id": "leaves",
+      "seed": 1498,
+      "time": 1.306000000005958,
+      "ticks": 48,
+      "paused": false,
+      "disposed": false,
+      "ready": true,
+      "options": {
+        "color": "red"
+      },
+      "sources": [
+        "project"
+      ],
+      "leafCount": 5,
+      "color": "red",
+      "finite": true,
+      "geometryKey": "324bc984"
+    },
+    {
+      "id": "fish",
+      "seed": 1595,
+      "time": 1.306000000005958,
+      "ticks": 48,
+      "paused": false,
+      "disposed": false,
+      "ready": true,
+      "options": {
+        "motion": "still"
+      },
+      "sources": [
+        "project"
+      ],
+      "fishCount": 1,
+      "motion": "still",
+      "finite": true,
+      "geometryKey": "a47c45c1"
+    },
+    {
+      "id": "cloud",
+      "seed": 1692,
+      "time": 1.306000000005958,
+      "ticks": 45,
+      "paused": false,
+      "disposed": false,
+      "ready": true,
+      "options": {},
+      "sources": [
+        "fresco-cloud",
+        "project"
+      ],
+      "cloudCount": 3,
+      "finite": true,
+      "geometryKey": "864a20d5"
+    },
+    {
+      "id": "catkins",
+      "seed": 1789,
+      "time": 1.306000000005958,
+      "ticks": 45,
+      "paused": false,
+      "disposed": false,
+      "ready": true,
+      "options": {
+        "playback": "once"
+      },
+      "sources": [
+        "project"
+      ],
+      "tuftCount": 18,
+      "poseKey": "9785137",
+      "finite": true,
+      "geometryKey": "be7e7a3a"
+    },
+    {
+      "id": "flower-forms",
+      "seed": 1886,
+      "time": 1.306000000005958,
+      "ticks": 49,
+      "paused": false,
+      "disposed": false,
+      "ready": true,
+      "options": {
+        "kind": "plum"
+      },
+      "sources": [
+        "project"
+      ],
+      "flowerCount": 1,
+      "kind": "plum",
+      "petalCount": 5,
+      "finite": true,
+      "geometryKey": "d6076eab"
     }
   ],
   "exportInfo": [
+    {
+      "width": 640,
+      "height": 388,
+      "png": true
+    },
+    {
+      "width": 640,
+      "height": 388,
+      "png": true
+    },
+    {
+      "width": 640,
+      "height": 388,
+      "png": true
+    },
+    {
+      "width": 640,
+      "height": 388,
+      "png": true
+    },
+    {
+      "width": 640,
+      "height": 388,
+      "png": true
+    },
+    {
+      "width": 640,
+      "height": 388,
+      "png": true
+    },
+    {
+      "width": 640,
+      "height": 388,
+      "png": true
+    },
+    {
+      "width": 640,
+      "height": 388,
+      "png": true
+    },
+    {
+      "width": 640,
+      "height": 388,
+      "png": true
+    },
     {
       "width": 640,
       "height": 388,
@@ -1091,7 +1991,16 @@
       "rain",
       "falling-petals",
       "rock",
-      "pavilion"
+      "pavilion",
+      "grass",
+      "bamboo",
+      "willow",
+      "snow",
+      "leaves",
+      "fish",
+      "cloud",
+      "catkins",
+      "flower-forms"
     ],
     "repeatAll": true,
     "sameSeed": true,
@@ -1123,21 +2032,40 @@
     "countsCorrect": true,
     "anchorsFinite": true
   },
+  "newFeatures": {
+    "grass": true,
+    "snow": true,
+    "leaves": true,
+    "fish": true,
+    "flower-forms": true,
+    "attachedDew": true,
+    "attachedFrost": true,
+    "snowStatic": true,
+    "counts": true
+  },
+  "extensionLifecycle": {
+    "cloudSeeds": 64,
+    "cloudDistinct": 64,
+    "cloudRepeat": true,
+    "catkinsStop": true,
+    "catkinsLoop": true,
+    "fishMoves": true
+  },
   "wideLayout": {
     "viewport": 1280,
     "document": 1265,
     "candidates": 10,
-    "canvases": 11
+    "canvases": 20
   },
   "narrowLayout": {
     "viewport": 390,
     "document": 390,
-    "canvases": 11
+    "canvases": 20
   },
   "runtimeErrors": [],
   "limitations": [
     "未操作系统下载确认界面；仅验证 canvas 导出 PNG 数据。",
-    "本地画面经浏览器截图检查；OpenProcessing 原作未完成视觉检查。",
-    "十一类工具检查暂停重置后的重复出图；不等同于运动的跨设备逐帧确定性。"
+    "本地画面经浏览器截图检查；具体花鸟树种尚未做植物学或生物学辨识验收。",
+    "所有登记工具检查暂停重置后的重复出图；不等同于运动的跨设备逐帧确定性。"
   ]
 }

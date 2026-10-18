@@ -1,4 +1,4 @@
-> 本轮更新：十一类独立工具；石取用 Mount.rock，亭取用 Arch 内 hut/roof/rail 的部分几何，均来自 Lingdong Huang（MIT）。原件未改，自动人物未取用。详见 [工具结构与来源](drawing/README.md)。
+> 本轮更新：二十个独立工具；新增云形取用 Niels Pichon / p5.Fresco 的 cloudGen.js（Apache-2.0），保存原件和完整许可未改。草、露霜、竹、柳、雪、红黄叶、鱼、柳絮与新花冠结构为本项目编写。详见 [工具结构与来源](drawing/README.md)。
 
 # 意象试画室：第三方来源与改动
 

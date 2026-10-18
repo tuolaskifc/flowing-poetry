@@ -1,9 +1,34 @@
 {
-  "catalog_version": "0.1-design",
+  "catalog_version": "0.2-progress",
   "date": "2026-10-18",
-  "status": "待审阅的绘画组织建议，不是模型输出协议或已实现功能",
+  "status": "设计映射与实际试画进度，不是模型输出协议",
   "basis": "已保存的新华网统计条目与本项目设计讨论；词义提示不是经过词书核实的文学注释",
   "source": "docs/sources/quansongci/意象频次.json",
+  "progress_summary": {
+    "total": 60,
+    "tools": 20,
+    "stages": {
+      "basic": {
+        "label": "基础可画",
+        "count": 15
+      },
+      "partial": {
+        "label": "部分支持",
+        "count": 9
+      },
+      "todo": {
+        "label": "待制作",
+        "count": 27
+      },
+      "handoff": {
+        "label": "转交其他模块",
+        "count": 9
+      }
+    },
+    "needs_context": 12,
+    "automatic_poem_integration": false,
+    "art_review": "待用户审阅"
+  },
   "families": [
     {
       "id": "airflow",
@@ -16,8 +41,8 @@
       "id": "atmosphere",
       "name": "云与雾",
       "phase": "首批",
-      "code_reference": "experiments/imagery-library/code-research/fresco/demos/theatre/cloudGen.js",
-      "status": "云形源码已运行；薄雾另需边缘、透明度与遮蔽处理。"
+      "code_reference": "experiments/imagery-library/drawing/tools/cloud.js",
+      "status": "已有独立结构化云形与薄雾工具；跨实体遮蔽尚未实现。"
     },
     {
       "id": "moon",
@@ -30,50 +55,50 @@
       "id": "water",
       "name": "水面",
       "phase": "首批",
-      "code_reference": "experiments/imagery-library/code-research/shan-index.html",
-      "status": "water 源码与水面示例已运行；需拆接口并支持局部起伏。"
+      "code_reference": "experiments/imagery-library/drawing/tools/water.js",
+      "status": "已有独立水纹与风响应；岸线、流向与承载仍待实现。"
     },
     {
       "id": "precipitation",
       "name": "雨雪粒子",
       "phase": "首批",
-      "code_reference": "experiments/imagery-library/drawing/tools/rain.js",
-      "status": "已有独立雨线与风偏移；雪的粒形、飘落与积雪需单独做。"
+      "code_reference": "experiments/imagery-library/drawing/tools/snow.js",
+      "status": "雨线、雪点与静止积雪已有独立试画；累积和实体附着未实现。"
     },
     {
       "id": "surface_weather",
       "name": "露霜附着",
       "phase": "扩展",
-      "code_reference": null,
-      "status": "待制作附着在叶片或地表的颗粒／覆层，不等同于雨雪下落。"
+      "code_reference": "experiments/imagery-library/drawing/tools/grass.js",
+      "status": "已有草叶露珠与覆霜；其他载体与地表附着仍待实现。"
     },
     {
       "id": "grass",
       "name": "草叶簇",
       "phase": "首批",
-      "code_reference": null,
-      "status": "待制作基础草叶，保留与树枝、竹叶的形态区别。"
+      "code_reference": "experiments/imagery-library/drawing/tools/grass.js",
+      "status": "已有九簇草叶及风响应；其他草种和地表组织待扩展。"
     },
     {
       "id": "branch",
       "name": "枝干与叶片",
       "phase": "首批",
       "code_reference": "experiments/imagery-library/code-research/shan-index.html",
-      "status": "tree01–tree08 已有源码；柳、竹、梧桐、松柏等特征仍需专门验证。"
+      "status": "已有通用树、柳形与竹竿叶簇；梧桐、松柏、芭蕉仍待专门形态。"
     },
     {
       "id": "flower",
       "name": "花瓣与花冠",
       "phase": "首批",
       "code_reference": "experiments/imagery-library/drawing/tools/flower.js",
-      "status": "petalPath 已接入独立花工具；梅、桃、菊、兰、莲仍需专门变体。"
+      "status": "已有通用花和梅／菊／莲花冠结构示意；尚缺整株、枝叶组合与辨识验收，桃花、兰仍待做。"
     },
     {
       "id": "petal_drift",
       "name": "离枝花瓣与飞絮",
       "phase": "首批",
       "code_reference": "experiments/imagery-library/drawing/tools/falling-petals.js",
-      "status": "已有独立花瓣飘落、落地停留与显式循环；从枝条离落、飞絮形态尚未实现。"
+      "status": "已有落花与独立细丝柳絮试画；从枝条脱离仍未实现。"
     },
     {
       "id": "bird",
@@ -86,8 +111,8 @@
       "id": "fish",
       "name": "鱼体",
       "phase": "扩展",
-      "code_reference": null,
-      "status": "待制作轮廓与摆尾；不能直接把鸟群换颜色当鱼群。"
+      "code_reference": "experiments/imagery-library/drawing/tools/fish.js",
+      "status": "已有独立单鱼轮廓、鳍、尾与摆尾；鱼种、群游和水体交互未实现。"
     },
     {
       "id": "insect",
@@ -156,7 +181,19 @@
         "airflow"
       ],
       "note": "作为作用场影响已有主体；可见流线仅是待选择的艺术表达。",
-      "status": "设计候选，未接入语义协议或渲染器"
+      "status": "语义映射仍是设计候选，未接入正式诗句生成流程",
+      "progress": {
+        "stage": "partial",
+        "tools": [
+          "tree",
+          "water",
+          "rain"
+        ],
+        "available": "多种工具已有共用风强度、局部形变与漂移。",
+        "remaining": "尚无空间风场、遮挡或跨物体一致的风传播。",
+        "needs_context": false,
+        "label": "部分支持"
+      }
     },
     {
       "rank": 2,
@@ -167,7 +204,17 @@
         "atmosphere"
       ],
       "note": "保留云团轮廓；与烟雾共享部分色层方法但不视为同义词。",
-      "status": "设计候选，未接入语义协议或渲染器"
+      "status": "语义映射仍是设计候选，未接入正式诗句生成流程",
+      "progress": {
+        "stage": "basic",
+        "tools": [
+          "cloud"
+        ],
+        "available": "圆弧与 S 形路径构成三团结构化云形，可随风平移。",
+        "remaining": "待审美确认；尚无实体遮蔽、消散或天气联动。",
+        "needs_context": false,
+        "label": "基础可画"
+      }
     },
     {
       "rank": 3,
@@ -178,7 +225,17 @@
         "moon"
       ],
       "note": "保留月体；月色、月影与月体是否可见分别判断。",
-      "status": "设计候选，未接入语义协议或渲染器"
+      "status": "语义映射仍是设计候选，未接入正式诗句生成流程",
+      "progress": {
+        "stage": "basic",
+        "tools": [
+          "moon"
+        ],
+        "available": "五种月形、亮边方向、静止月体与光感。",
+        "remaining": "待审美确认；月影、遮蔽与诗句中的可见性未接入。",
+        "needs_context": false,
+        "label": "基础可画"
+      }
     },
     {
       "rank": 4,
@@ -189,7 +246,17 @@
         "water"
       ],
       "note": "水面基础形态，具体尺度与流向由语境决定。",
-      "status": "设计候选，未接入语义协议或渲染器"
+      "status": "语义映射仍是设计候选，未接入正式诗句生成流程",
+      "progress": {
+        "stage": "basic",
+        "tools": [
+          "water"
+        ],
+        "available": "多层连续水纹、风响应与笔触调整。",
+        "remaining": "待审美确认；岸线、承载与具体流向未实现。",
+        "needs_context": false,
+        "label": "基础可画"
+      }
     },
     {
       "rank": 5,
@@ -200,7 +267,17 @@
         "precipitation"
       ],
       "note": "雨滴与雨线；雨势不直接决定情感配色。",
-      "status": "设计候选，未接入语义协议或渲染器"
+      "status": "语义映射仍是设计候选，未接入正式诗句生成流程",
+      "progress": {
+        "stage": "basic",
+        "tools": [
+          "rain"
+        ],
+        "available": "固定雨线、下落循环、随风倾斜。",
+        "remaining": "待审美确认；碰撞、积水与涟漪未实现。",
+        "needs_context": false,
+        "label": "基础可画"
+      }
     },
     {
       "rank": 6,
@@ -211,7 +288,15 @@
         "liquid_container"
       ],
       "note": "酒液、酒器、饮酒活动均可能；不自动补出酒杯或饮酒者。",
-      "status": "设计候选，未接入语义协议或渲染器"
+      "status": "语义映射仍是设计候选，未接入正式诗句生成流程",
+      "progress": {
+        "stage": "todo",
+        "tools": [],
+        "available": "尚无该条目的专用形态试画。",
+        "remaining": "酒液、酒器、饮酒活动均可能；不自动补出酒杯或饮酒者。",
+        "needs_context": true,
+        "label": "待制作"
+      }
     },
     {
       "rank": 7,
@@ -222,7 +307,15 @@
         "architecture"
       ],
       "note": "楼体轮廓，和长亭共享建筑方法但保持层高与结构差异。",
-      "status": "设计候选，未接入语义协议或渲染器"
+      "status": "语义映射仍是设计候选，未接入正式诗句生成流程",
+      "progress": {
+        "stage": "todo",
+        "tools": [],
+        "available": "尚无该条目的专用形态试画。",
+        "remaining": "楼体轮廓，和长亭共享建筑方法但保持层高与结构差异。",
+        "needs_context": false,
+        "label": "待制作"
+      }
     },
     {
       "rank": 8,
@@ -234,7 +327,22 @@
         "flower"
       ],
       "note": "先判断花、枝或整株；可复用枝条与花瓣，仍需梅的辨识特征。",
-      "status": "设计候选，未接入语义协议或渲染器"
+      "status": "语义映射仍是设计候选，未接入正式诗句生成流程",
+      "progress": {
+        "stage": "partial",
+        "tools": [
+          "flower-forms"
+        ],
+        "available": "圆瓣五出花冠示意，和多瓣花形区分。",
+        "remaining": "尚未做植物学辨识验收；枝叶、整株和具体品种仍缺。",
+        "needs_context": false,
+        "presets": {
+          "flower-forms": {
+            "kind": "plum"
+          }
+        },
+        "label": "部分支持"
+      }
     },
     {
       "rank": 9,
@@ -245,7 +353,17 @@
         "branch"
       ],
       "note": "枝条下垂与叶形待做；不能仅把通用树叫作柳。",
-      "status": "设计候选，未接入语义协议或渲染器"
+      "status": "语义映射仍是设计候选，未接入正式诗句生成流程",
+      "progress": {
+        "stage": "basic",
+        "tools": [
+          "willow"
+        ],
+        "available": "弯干、长枝下垂、细叶与风中摆动。",
+        "remaining": "待审美与形态辨识确认；枝叶分离与季节变化未实现。",
+        "needs_context": false,
+        "label": "基础可画"
+      }
     },
     {
       "rank": 10,
@@ -257,7 +375,17 @@
         "surface_weather"
       ],
       "note": "飘雪与积雪分开；原文未表明降雪时不自动下雪。",
-      "status": "设计候选，未接入语义协议或渲染器"
+      "status": "语义映射仍是设计候选，未接入正式诗句生成流程",
+      "progress": {
+        "stage": "basic",
+        "tools": [
+          "snow"
+        ],
+        "available": "可单独选择飘雪或静止积雪，风影响飘移。",
+        "remaining": "待审美确认；尚无从落雪到积雪的累积过程，也未附着具体物体。",
+        "needs_context": false,
+        "label": "基础可画"
+      }
     },
     {
       "rank": 11,
@@ -268,7 +396,22 @@
         "surface_weather"
       ],
       "note": "附着水珠或局部亮点，需有载体或明确的抽象表达。",
-      "status": "设计候选，未接入语义协议或渲染器"
+      "status": "语义映射仍是设计候选，未接入正式诗句生成流程",
+      "progress": {
+        "stage": "partial",
+        "tools": [
+          "grass"
+        ],
+        "available": "露珠附在草叶表面，随叶片摆动。",
+        "remaining": "当前只支持草叶载体；树叶、花瓣及其他物体附着未接入。",
+        "needs_context": false,
+        "presets": {
+          "grass": {
+            "surface": "dew"
+          }
+        },
+        "label": "部分支持"
+      }
     },
     {
       "rank": 12,
@@ -279,7 +422,17 @@
         "grass"
       ],
       "note": "草叶簇与地表组织；不以通用枝树替代。",
-      "status": "设计候选，未接入语义协议或渲染器"
+      "status": "语义映射仍是设计候选，未接入正式诗句生成流程",
+      "progress": {
+        "stage": "basic",
+        "tools": [
+          "grass"
+        ],
+        "available": "固定草簇、细长叶片与局部风响应。",
+        "remaining": "待审美确认；地表扩展与其他草种尚未制作。",
+        "needs_context": false,
+        "label": "基础可画"
+      }
     },
     {
       "rank": 13,
@@ -290,7 +443,22 @@
         "surface_weather"
       ],
       "note": "附着覆层，不默认持续飘落。",
-      "status": "设计候选，未接入语义协议或渲染器"
+      "status": "语义映射仍是设计候选，未接入正式诗句生成流程",
+      "progress": {
+        "stage": "partial",
+        "tools": [
+          "grass"
+        ],
+        "available": "草叶上部的静止霜线与结晶笔触。",
+        "remaining": "当前只支持草叶载体；地表、树枝覆霜和形成过程未实现。",
+        "needs_context": false,
+        "presets": {
+          "grass": {
+            "surface": "frost"
+          }
+        },
+        "label": "部分支持"
+      }
     },
     {
       "rank": 14,
@@ -301,7 +469,17 @@
         "branch"
       ],
       "note": "节、竿、窄叶需要独立规则，可共享局部枝叶方法。",
-      "status": "设计候选，未接入语义协议或渲染器"
+      "status": "语义映射仍是设计候选，未接入正式诗句生成流程",
+      "progress": {
+        "stage": "basic",
+        "tools": [
+          "bamboo"
+        ],
+        "available": "竹竿分节、侧枝与窄叶簇，叶簇响应风。",
+        "remaining": "待审美与形态辨识确认；尚未区分竹种或生长过程。",
+        "needs_context": false,
+        "label": "基础可画"
+      }
     },
     {
       "rank": 15,
@@ -312,7 +490,15 @@
         "bird"
       ],
       "note": "共用鸟体与运动骨架，保留物种名；不靠标签宣称已辨认。",
-      "status": "设计候选，未接入语义协议或渲染器"
+      "status": "语义映射仍是设计候选，未接入正式诗句生成流程",
+      "progress": {
+        "stage": "todo",
+        "tools": [],
+        "available": "已有通用鸟群运动可复用，但尚无该鸟种的专门外形。",
+        "remaining": "共用鸟体与运动骨架，保留物种名；不靠标签宣称已辨认。",
+        "needs_context": false,
+        "label": "待制作"
+      }
     },
     {
       "rank": 16,
@@ -324,7 +510,15 @@
         "grass"
       ],
       "note": "花与长叶可分层组织；不直接等同于草。",
-      "status": "设计候选，未接入语义协议或渲染器"
+      "status": "语义映射仍是设计候选，未接入正式诗句生成流程",
+      "progress": {
+        "stage": "todo",
+        "tools": [],
+        "available": "已有通用花瓣方法可复用，但尚无该花种的专门结构。",
+        "remaining": "花与长叶可分层组织；不直接等同于草。",
+        "needs_context": false,
+        "label": "待制作"
+      }
     },
     {
       "rank": 17,
@@ -335,7 +529,15 @@
         "horse"
       ],
       "note": "需要独立身体结构和姿态，暂缓专门绘制。",
-      "status": "设计候选，未接入语义协议或渲染器"
+      "status": "语义映射仍是设计候选，未接入正式诗句生成流程",
+      "progress": {
+        "stage": "todo",
+        "tools": [],
+        "available": "尚无该条目的专用形态试画。",
+        "remaining": "需要独立身体结构和姿态，暂缓专门绘制。",
+        "needs_context": false,
+        "label": "待制作"
+      }
     },
     {
       "rank": 18,
@@ -346,7 +548,17 @@
         "boat"
       ],
       "note": "与船共用基础舟船单元；大小、用途、帆桨按原文和艺术选择细化。",
-      "status": "设计候选，未接入语义协议或渲染器"
+      "status": "语义映射仍是设计候选，未接入正式诗句生成流程",
+      "progress": {
+        "stage": "basic",
+        "tools": [
+          "boat"
+        ],
+        "available": "独立船体、轻微起伏、船首船尾与甲板锚点。",
+        "remaining": "待审美确认；帆、桨、人物及真正承载未实现。",
+        "needs_context": false,
+        "label": "基础可画"
+      }
     },
     {
       "rank": 19,
@@ -357,7 +569,17 @@
         "fish"
       ],
       "note": "鱼体和摆尾独立制作，群游方法可另行复用。",
-      "status": "设计候选，未接入语义协议或渲染器"
+      "status": "语义映射仍是设计候选，未接入正式诗句生成流程",
+      "progress": {
+        "stage": "basic",
+        "tools": [
+          "fish"
+        ],
+        "available": "独立鱼体、尾鳍、鳍片与眼；静止或摆尾可选。",
+        "remaining": "待审美确认；尚未区分鱼种、群游或水体交互。",
+        "needs_context": false,
+        "label": "基础可画"
+      }
     },
     {
       "rank": 20,
@@ -368,7 +590,17 @@
         "boat"
       ],
       "note": "与舟共享绘画入口，原词和语义解释仍保留。",
-      "status": "设计候选，未接入语义协议或渲染器"
+      "status": "语义映射仍是设计候选，未接入正式诗句生成流程",
+      "progress": {
+        "stage": "basic",
+        "tools": [
+          "boat"
+        ],
+        "available": "独立船体、轻微起伏、船首船尾与甲板锚点。",
+        "remaining": "待审美确认；帆、桨、人物及真正承载未实现。",
+        "needs_context": false,
+        "label": "基础可画"
+      }
     },
     {
       "rank": 21,
@@ -380,7 +612,22 @@
         "grass"
       ],
       "note": "莲花与叶片的组合按语境选择，花冠与叶片均需专门变体。",
-      "status": "设计候选，未接入语义协议或渲染器"
+      "status": "语义映射仍是设计候选，未接入正式诗句生成流程",
+      "progress": {
+        "stage": "partial",
+        "tools": [
+          "flower-forms"
+        ],
+        "available": "尖瓣层叠花冠示意。",
+        "remaining": "尚未做植物学辨识验收；枝叶、整株和具体品种仍缺。",
+        "needs_context": false,
+        "presets": {
+          "flower-forms": {
+            "kind": "lotus"
+          }
+        },
+        "label": "部分支持"
+      }
     },
     {
       "rank": 22,
@@ -391,7 +638,15 @@
         "bird"
       ],
       "note": "保留鸟种与数量，颜色服从意象特征及配色协调。",
-      "status": "设计候选，未接入语义协议或渲染器"
+      "status": "语义映射仍是设计候选，未接入正式诗句生成流程",
+      "progress": {
+        "stage": "todo",
+        "tools": [],
+        "available": "已有通用鸟群运动可复用，但尚无该鸟种的专门外形。",
+        "remaining": "保留鸟种与数量，颜色服从意象特征及配色协调。",
+        "needs_context": false,
+        "label": "待制作"
+      }
     },
     {
       "rank": 23,
@@ -403,7 +658,15 @@
         "branch"
       ],
       "note": "可借用枝条与花瓣，仍需检验花形与着生方式。",
-      "status": "设计候选，未接入语义协议或渲染器"
+      "status": "语义映射仍是设计候选，未接入正式诗句生成流程",
+      "progress": {
+        "stage": "todo",
+        "tools": [],
+        "available": "已有通用花瓣方法可复用，但尚无该花种的专门结构。",
+        "remaining": "可借用枝条与花瓣，仍需检验花形与着生方式。",
+        "needs_context": false,
+        "label": "待制作"
+      }
     },
     {
       "rank": 24,
@@ -414,7 +677,15 @@
         "insect"
       ],
       "note": "若只是听到蝉鸣，交给声音线索处理，不自动画出虫体。",
-      "status": "设计候选，未接入语义协议或渲染器"
+      "status": "语义映射仍是设计候选，未接入正式诗句生成流程",
+      "progress": {
+        "stage": "todo",
+        "tools": [],
+        "available": "尚无该条目的专用形态试画。",
+        "remaining": "若只是听到蝉鸣，交给声音线索处理，不自动画出虫体。",
+        "needs_context": true,
+        "label": "待制作"
+      }
     },
     {
       "rank": 25,
@@ -423,7 +694,15 @@
       "treatment": "场景",
       "candidate_families": [],
       "note": "保留地点／文化语境；不凭地名生成固定城楼或特定历史建筑。",
-      "status": "设计候选，未接入语义协议或渲染器"
+      "status": "语义映射仍是设计候选，未接入正式诗句生成流程",
+      "progress": {
+        "stage": "handoff",
+        "tools": [],
+        "available": "已确定交给场景、关系、动作或声音处理。",
+        "remaining": "转交规则已有记录；对应模块尚未实现。",
+        "needs_context": false,
+        "label": "转交其他模块"
+      }
     },
     {
       "rank": 26,
@@ -434,7 +713,15 @@
         "bird"
       ],
       "note": "鸟体可共用；数量、成对关系和象征含义不由名称强制生成。",
-      "status": "设计候选，未接入语义协议或渲染器"
+      "status": "语义映射仍是设计候选，未接入正式诗句生成流程",
+      "progress": {
+        "stage": "todo",
+        "tools": [],
+        "available": "已有通用鸟群运动可复用，但尚无该鸟种的专门外形。",
+        "remaining": "鸟体可共用；数量、成对关系和象征含义不由名称强制生成。",
+        "needs_context": false,
+        "label": "待制作"
+      }
     },
     {
       "rank": 27,
@@ -446,7 +733,18 @@
         "flower"
       ],
       "note": "花瓣形态与离枝／落地状态分开；不默认无限生成或满场循环。",
-      "status": "设计候选，未接入语义协议或渲染器"
+      "status": "语义映射仍是设计候选，未接入正式诗句生成流程",
+      "progress": {
+        "stage": "partial",
+        "tools": [
+          "falling-petals",
+          "flower"
+        ],
+        "available": "18 片花瓣飘落、落地停留及显式循环。",
+        "remaining": "尚未实现从具体花枝离落或特定花种。",
+        "needs_context": false,
+        "label": "部分支持"
+      }
     },
     {
       "rank": 28,
@@ -457,7 +755,15 @@
         "bird"
       ],
       "note": "共用运动方法，尾形与飞行姿态需专门变体。",
-      "status": "设计候选，未接入语义协议或渲染器"
+      "status": "语义映射仍是设计候选，未接入正式诗句生成流程",
+      "progress": {
+        "stage": "todo",
+        "tools": [],
+        "available": "已有通用鸟群运动可复用，但尚无该鸟种的专门外形。",
+        "remaining": "共用运动方法，尾形与飞行姿态需专门变体。",
+        "needs_context": false,
+        "label": "待制作"
+      }
     },
     {
       "rank": 29,
@@ -468,7 +774,15 @@
         "petal_drift"
       ],
       "note": "暂保留原词；确认所指后才与飞絮单元对应，不直接当作柳絮的固定别名。",
-      "status": "设计候选，未接入语义协议或渲染器"
+      "status": "语义映射仍是设计候选，未接入正式诗句生成流程",
+      "progress": {
+        "stage": "todo",
+        "tools": [],
+        "available": "尚无该条目的专用形态试画。",
+        "remaining": "暂保留原词；确认所指后才与飞絮单元对应，不直接当作柳絮的固定别名。",
+        "needs_context": true,
+        "label": "待制作"
+      }
     },
     {
       "rank": 30,
@@ -479,7 +793,15 @@
         "branch"
       ],
       "note": "树冠、叶片特征待做；共享枝条不代表已有该树种。",
-      "status": "设计候选，未接入语义协议或渲染器"
+      "status": "语义映射仍是设计候选，未接入正式诗句生成流程",
+      "progress": {
+        "stage": "todo",
+        "tools": [],
+        "available": "已有通用枝叶可复用，但尚无该条目的专门形态。",
+        "remaining": "树冠、叶片特征待做；共享枝条不代表已有该树种。",
+        "needs_context": false,
+        "label": "待制作"
+      }
     },
     {
       "rank": 31,
@@ -490,7 +812,17 @@
         "architecture"
       ],
       "note": "亭体与柱、檐的轮廓；不自动补成送别事件。",
-      "status": "设计候选，未接入语义协议或渲染器"
+      "status": "语义映射仍是设计候选，未接入正式诗句生成流程",
+      "progress": {
+        "stage": "partial",
+        "tools": [
+          "pavilion"
+        ],
+        "available": "空亭、两类屋顶、可选栏杆与地板锚点。",
+        "remaining": "尚无长亭尺度或场景组合；不默认添加送别人群。",
+        "needs_context": false,
+        "label": "部分支持"
+      }
     },
     {
       "rank": 32,
@@ -499,7 +831,15 @@
       "treatment": "场景",
       "candidate_families": [],
       "note": "在语境明确时可组织水岸、行旅等场景；不设独立固定图标。",
-      "status": "设计候选，未接入语义协议或渲染器"
+      "status": "语义映射仍是设计候选，未接入正式诗句生成流程",
+      "progress": {
+        "stage": "handoff",
+        "tools": [],
+        "available": "已确定交给场景、关系、动作或声音处理。",
+        "remaining": "转交规则已有记录；对应模块尚未实现。",
+        "needs_context": false,
+        "label": "转交其他模块"
+      }
     },
     {
       "rank": 33,
@@ -508,7 +848,15 @@
       "treatment": "场景",
       "candidate_families": [],
       "note": "保留地域与语境，山水、岸线等是否出现需有依据。",
-      "status": "设计候选，未接入语义协议或渲染器"
+      "status": "语义映射仍是设计候选，未接入正式诗句生成流程",
+      "progress": {
+        "stage": "handoff",
+        "tools": [],
+        "available": "已确定交给场景、关系、动作或声音处理。",
+        "remaining": "转交规则已有记录；对应模块尚未实现。",
+        "needs_context": false,
+        "label": "转交其他模块"
+      }
     },
     {
       "rank": 34,
@@ -520,7 +868,15 @@
         "flower"
       ],
       "note": "可能涉及鸟或花等所指；本目录不代替具体诗句消歧。",
-      "status": "设计候选，未接入语义协议或渲染器"
+      "status": "语义映射仍是设计候选，未接入正式诗句生成流程",
+      "progress": {
+        "stage": "todo",
+        "tools": [],
+        "available": "尚无该条目的专用形态试画。",
+        "remaining": "可能涉及鸟或花等所指；本目录不代替具体诗句消歧。",
+        "needs_context": true,
+        "label": "待制作"
+      }
     },
     {
       "rank": 35,
@@ -529,7 +885,15 @@
       "treatment": "动作",
       "candidate_families": [],
       "note": "交给人物动作、视点与构图；不设登高物体，不自动添加高山。",
-      "status": "设计候选，未接入语义协议或渲染器"
+      "status": "语义映射仍是设计候选，未接入正式诗句生成流程",
+      "progress": {
+        "stage": "handoff",
+        "tools": [],
+        "available": "已确定交给场景、关系、动作或声音处理。",
+        "remaining": "转交规则已有记录；对应模块尚未实现。",
+        "needs_context": false,
+        "label": "转交其他模块"
+      }
     },
     {
       "rank": 36,
@@ -540,7 +904,22 @@
         "branch"
       ],
       "note": "复用叶片形态，保留局部红色特征；在枝还是飘落另行判断。",
-      "status": "设计候选，未接入语义协议或渲染器"
+      "status": "语义映射仍是设计候选，未接入正式诗句生成流程",
+      "progress": {
+        "stage": "basic",
+        "tools": [
+          "leaves"
+        ],
+        "available": "独立叶片、叶脉与明确的局部叶色。",
+        "remaining": "待审美确认；尚未接入枝条附着或离枝过程，不自动落叶。",
+        "needs_context": false,
+        "presets": {
+          "leaves": {
+            "color": "red"
+          }
+        },
+        "label": "基础可画"
+      }
     },
     {
       "rank": 37,
@@ -551,7 +930,17 @@
         "water"
       ],
       "note": "与水共享单元，保留江面尺度、岸线、流向等候选参数；不改写原统计。",
-      "status": "设计候选，未接入语义协议或渲染器"
+      "status": "语义映射仍是设计候选，未接入正式诗句生成流程",
+      "progress": {
+        "stage": "partial",
+        "tools": [
+          "water"
+        ],
+        "available": "可复用连续水纹。",
+        "remaining": "江面尺度、岸线与流向仍缺独立参数。",
+        "needs_context": false,
+        "label": "部分支持"
+      }
     },
     {
       "rank": 38,
@@ -562,7 +951,22 @@
         "flower"
       ],
       "note": "多瓣结构待设计，与梅、桃花共享生成接口而非同一轮廓。",
-      "status": "设计候选，未接入语义协议或渲染器"
+      "status": "语义映射仍是设计候选，未接入正式诗句生成流程",
+      "progress": {
+        "stage": "partial",
+        "tools": [
+          "flower-forms"
+        ],
+        "available": "细长多瓣、三层花冠示意。",
+        "remaining": "尚未做植物学辨识验收；枝叶、整株和具体品种仍缺。",
+        "needs_context": false,
+        "presets": {
+          "flower-forms": {
+            "kind": "chrysanthemum"
+          }
+        },
+        "label": "部分支持"
+      }
     },
     {
       "rank": 39,
@@ -571,7 +975,15 @@
       "treatment": "场景",
       "candidate_families": [],
       "note": "保留语境与艺术意图，不自动添加桃树林或认定具体地点。",
-      "status": "设计候选，未接入语义协议或渲染器"
+      "status": "语义映射仍是设计候选，未接入正式诗句生成流程",
+      "progress": {
+        "stage": "handoff",
+        "tools": [],
+        "available": "已确定交给场景、关系、动作或声音处理。",
+        "remaining": "转交规则已有记录；对应模块尚未实现。",
+        "needs_context": false,
+        "label": "转交其他模块"
+      }
     },
     {
       "rank": 40,
@@ -582,7 +994,17 @@
         "petal_drift"
       ],
       "note": "细絮形态与飘移；与落花共享运动方法但保留不同质感。",
-      "status": "设计候选，未接入语义协议或渲染器"
+      "status": "语义映射仍是设计候选，未接入正式诗句生成流程",
+      "progress": {
+        "stage": "basic",
+        "tools": [
+          "catkins"
+        ],
+        "available": "细丝絮团独立轮廓，一次漂移或显式循环。",
+        "remaining": "待审美确认；尚无从柳树脱离或落地附着过程。",
+        "needs_context": false,
+        "label": "基础可画"
+      }
     },
     {
       "rank": 41,
@@ -593,7 +1015,15 @@
         "branch"
       ],
       "note": "宽叶与叶柄结构，不能直接由通用树改名得到。",
-      "status": "设计候选，未接入语义协议或渲染器"
+      "status": "语义映射仍是设计候选，未接入正式诗句生成流程",
+      "progress": {
+        "stage": "todo",
+        "tools": [],
+        "available": "已有通用枝叶可复用，但尚无该条目的专门形态。",
+        "remaining": "宽叶与叶柄结构，不能直接由通用树改名得到。",
+        "needs_context": false,
+        "label": "待制作"
+      }
     },
     {
       "rank": 42,
@@ -604,7 +1034,15 @@
         "human_detail"
       ],
       "note": "先判断具体眉部、人物指代或其他用法；不自动补出完整人物。",
-      "status": "设计候选，未接入语义协议或渲染器"
+      "status": "语义映射仍是设计候选，未接入正式诗句生成流程",
+      "progress": {
+        "stage": "todo",
+        "tools": [],
+        "available": "尚无该条目的专用形态试画。",
+        "remaining": "先判断具体眉部、人物指代或其他用法；不自动补出完整人物。",
+        "needs_context": true,
+        "label": "待制作"
+      }
     },
     {
       "rank": 43,
@@ -616,7 +1054,15 @@
         "architecture"
       ],
       "note": "动作与人物—栏杆关系；不将人物局部单元视为已有完整人形。",
-      "status": "设计候选，未接入语义协议或渲染器"
+      "status": "语义映射仍是设计候选，未接入正式诗句生成流程",
+      "progress": {
+        "stage": "handoff",
+        "tools": [],
+        "available": "已确定交给场景、关系、动作或声音处理。",
+        "remaining": "转交规则已有记录；对应模块尚未实现。",
+        "needs_context": false,
+        "label": "转交其他模块"
+      }
     },
     {
       "rank": 44,
@@ -627,7 +1073,15 @@
         "bird"
       ],
       "note": "保留鸟种；是否栖息水岸及数量要另行判断。",
-      "status": "设计候选，未接入语义协议或渲染器"
+      "status": "语义映射仍是设计候选，未接入正式诗句生成流程",
+      "progress": {
+        "stage": "todo",
+        "tools": [],
+        "available": "已有通用鸟群运动可复用，但尚无该鸟种的专门外形。",
+        "remaining": "保留鸟种；是否栖息水岸及数量要另行判断。",
+        "needs_context": false,
+        "label": "待制作"
+      }
     },
     {
       "rank": 45,
@@ -639,7 +1093,15 @@
         "branch"
       ],
       "note": "果实与承载枝条可组合；不把梅花和梅子合成同一视觉形态。",
-      "status": "设计候选，未接入语义协议或渲染器"
+      "status": "语义映射仍是设计候选，未接入正式诗句生成流程",
+      "progress": {
+        "stage": "todo",
+        "tools": [],
+        "available": "尚无该条目的专用形态试画。",
+        "remaining": "果实与承载枝条可组合；不把梅花和梅子合成同一视觉形态。",
+        "needs_context": false,
+        "label": "待制作"
+      }
     },
     {
       "rank": 46,
@@ -650,7 +1112,15 @@
         "architecture"
       ],
       "note": "判断实际楼宇还是借代／典故；仅在适宜时使用楼体变体。",
-      "status": "设计候选，未接入语义协议或渲染器"
+      "status": "语义映射仍是设计候选，未接入正式诗句生成流程",
+      "progress": {
+        "stage": "todo",
+        "tools": [],
+        "available": "尚无该条目的专用形态试画。",
+        "remaining": "判断实际楼宇还是借代／典故；仅在适宜时使用楼体变体。",
+        "needs_context": true,
+        "label": "待制作"
+      }
     },
     {
       "rank": 47,
@@ -661,7 +1131,15 @@
         "bird"
       ],
       "note": "鸟体与鸣声分开；所指及呈现方式需依具体语境。",
-      "status": "设计候选，未接入语义协议或渲染器"
+      "status": "语义映射仍是设计候选，未接入正式诗句生成流程",
+      "progress": {
+        "stage": "todo",
+        "tools": [],
+        "available": "尚无该条目的专用形态试画。",
+        "remaining": "鸟体与鸣声分开；所指及呈现方式需依具体语境。",
+        "needs_context": true,
+        "label": "待制作"
+      }
     },
     {
       "rank": 48,
@@ -672,7 +1150,22 @@
         "branch"
       ],
       "note": "与红叶共用叶片结构，保留色彩差别；不因黄色就自动飘落。",
-      "status": "设计候选，未接入语义协议或渲染器"
+      "status": "语义映射仍是设计候选，未接入正式诗句生成流程",
+      "progress": {
+        "stage": "basic",
+        "tools": [
+          "leaves"
+        ],
+        "available": "独立叶片、叶脉与明确的局部叶色。",
+        "remaining": "待审美确认；尚未接入枝条附着或离枝过程，不自动落叶。",
+        "needs_context": false,
+        "presets": {
+          "leaves": {
+            "color": "yellow"
+          }
+        },
+        "label": "基础可画"
+      }
     },
     {
       "rank": 49,
@@ -681,7 +1174,15 @@
       "treatment": "背景",
       "candidate_families": [],
       "note": "历史背景与语境，不设独立可绘物体，也不擅自添加历史建筑。",
-      "status": "设计候选，未接入语义协议或渲染器"
+      "status": "语义映射仍是设计候选，未接入正式诗句生成流程",
+      "progress": {
+        "stage": "handoff",
+        "tools": [],
+        "available": "已确定交给场景、关系、动作或声音处理。",
+        "remaining": "转交规则已有记录；对应模块尚未实现。",
+        "needs_context": false,
+        "label": "转交其他模块"
+      }
     },
     {
       "rank": 50,
@@ -692,7 +1193,15 @@
         "boat"
       ],
       "note": "先判断指桨还是借代舟船；桨与船不是可无条件合并的实体。",
-      "status": "设计候选，未接入语义协议或渲染器"
+      "status": "语义映射仍是设计候选，未接入正式诗句生成流程",
+      "progress": {
+        "stage": "todo",
+        "tools": [],
+        "available": "尚无该条目的专用形态试画。",
+        "remaining": "先判断指桨还是借代舟船；桨与船不是可无条件合并的实体。",
+        "needs_context": true,
+        "label": "待制作"
+      }
     },
     {
       "rank": 51,
@@ -703,7 +1212,15 @@
         "bird"
       ],
       "note": "共用鸟体与运动；雁形、队列、传书等含义要分别确认。",
-      "status": "设计候选，未接入语义协议或渲染器"
+      "status": "语义映射仍是设计候选，未接入正式诗句生成流程",
+      "progress": {
+        "stage": "todo",
+        "tools": [],
+        "available": "已有通用鸟群运动可复用，但尚无该鸟种的专门外形。",
+        "remaining": "共用鸟体与运动；雁形、队列、传书等含义要分别确认。",
+        "needs_context": false,
+        "label": "待制作"
+      }
     },
     {
       "rank": 52,
@@ -714,7 +1231,15 @@
         "bird"
       ],
       "note": "判断具体鸟体、传信形象或其他用法；不机械画成蓝色小鸟。",
-      "status": "设计候选，未接入语义协议或渲染器"
+      "status": "语义映射仍是设计候选，未接入正式诗句生成流程",
+      "progress": {
+        "stage": "todo",
+        "tools": [],
+        "available": "尚无该条目的专用形态试画。",
+        "remaining": "判断具体鸟体、传信形象或其他用法；不机械画成蓝色小鸟。",
+        "needs_context": true,
+        "label": "待制作"
+      }
     },
     {
       "rank": 53,
@@ -725,7 +1250,17 @@
         "atmosphere"
       ],
       "note": "与云共享部分绘制方法，保留柔边、透叠与遮蔽的差别；不凭空补火源。",
-      "status": "设计候选，未接入语义协议或渲染器"
+      "status": "语义映射仍是设计候选，未接入正式诗句生成流程",
+      "progress": {
+        "stage": "basic",
+        "tools": [
+          "mist"
+        ],
+        "available": "柔边薄雾色层与轻微漂移。",
+        "remaining": "待审美确认；实体遮蔽、火源与浓烟尚未实现。",
+        "needs_context": false,
+        "label": "基础可画"
+      }
     },
     {
       "rank": 54,
@@ -736,7 +1271,15 @@
         "branch"
       ],
       "note": "可共用枝干基础，但名称包含的差别及具体树形仍需语境和变体设计。",
-      "status": "设计候选，未接入语义协议或渲染器"
+      "status": "语义映射仍是设计候选，未接入正式诗句生成流程",
+      "progress": {
+        "stage": "todo",
+        "tools": [],
+        "available": "已有通用枝叶可复用，但尚无该条目的专门形态。",
+        "remaining": "可共用枝干基础，但名称包含的差别及具体树形仍需语境和变体设计。",
+        "needs_context": false,
+        "label": "待制作"
+      }
     },
     {
       "rank": 55,
@@ -745,7 +1288,15 @@
       "treatment": "场景",
       "candidate_families": [],
       "note": "保留地点与语境，不以单一建筑替代整个地点。",
-      "status": "设计候选，未接入语义协议或渲染器"
+      "status": "语义映射仍是设计候选，未接入正式诗句生成流程",
+      "progress": {
+        "stage": "handoff",
+        "tools": [],
+        "available": "已确定交给场景、关系、动作或声音处理。",
+        "remaining": "转交规则已有记录；对应模块尚未实现。",
+        "needs_context": false,
+        "label": "转交其他模块"
+      }
     },
     {
       "rank": 56,
@@ -754,7 +1305,15 @@
       "treatment": "声音",
       "candidate_families": [],
       "note": "声音事件优先；若画猿体，需要额外语境或明确艺术选择，当前无猿体单元。",
-      "status": "设计候选，未接入语义协议或渲染器"
+      "status": "语义映射仍是设计候选，未接入正式诗句生成流程",
+      "progress": {
+        "stage": "handoff",
+        "tools": [],
+        "available": "已确定交给场景、关系、动作或声音处理。",
+        "remaining": "转交规则已有记录；对应模块尚未实现。",
+        "needs_context": false,
+        "label": "转交其他模块"
+      }
     },
     {
       "rank": 57,
@@ -765,7 +1324,15 @@
         "instrument"
       ],
       "note": "笛的形体与笛声分开；只出现听觉线索时不自动补演奏者。",
-      "status": "设计候选，未接入语义协议或渲染器"
+      "status": "语义映射仍是设计候选，未接入正式诗句生成流程",
+      "progress": {
+        "stage": "todo",
+        "tools": [],
+        "available": "尚无该条目的专用形态试画。",
+        "remaining": "笛的形体与笛声分开；只出现听觉线索时不自动补演奏者。",
+        "needs_context": true,
+        "label": "待制作"
+      }
     },
     {
       "rank": 58,
@@ -776,7 +1343,15 @@
         "instrument"
       ],
       "note": "保留琴与瑟的区别；不能合成一个已经确定的通用乐器图标。",
-      "status": "设计候选，未接入语义协议或渲染器"
+      "status": "语义映射仍是设计候选，未接入正式诗句生成流程",
+      "progress": {
+        "stage": "todo",
+        "tools": [],
+        "available": "尚无该条目的专用形态试画。",
+        "remaining": "保留琴与瑟的区别；不能合成一个已经确定的通用乐器图标。",
+        "needs_context": false,
+        "label": "待制作"
+      }
     },
     {
       "rank": 59,
@@ -787,7 +1362,15 @@
         "insect"
       ],
       "note": "虫体与鸣声分开，具体是否可见需确认。",
-      "status": "设计候选，未接入语义协议或渲染器"
+      "status": "语义映射仍是设计候选，未接入正式诗句生成流程",
+      "progress": {
+        "stage": "todo",
+        "tools": [],
+        "available": "尚无该条目的专用形态试画。",
+        "remaining": "虫体与鸣声分开，具体是否可见需确认。",
+        "needs_context": true,
+        "label": "待制作"
+      }
     },
     {
       "rank": 60,
@@ -798,7 +1381,15 @@
         "bird"
       ],
       "note": "具体鸟体、群体处境或比喻等所指需确认，不直接等同于鸿雁实体。",
-      "status": "设计候选，未接入语义协议或渲染器"
+      "status": "语义映射仍是设计候选，未接入正式诗句生成流程",
+      "progress": {
+        "stage": "todo",
+        "tools": [],
+        "available": "尚无该条目的专用形态试画。",
+        "remaining": "具体鸟体、群体处境或比喻等所指需确认，不直接等同于鸿雁实体。",
+        "needs_context": true,
+        "label": "待制作"
+      }
     }
   ]
 }

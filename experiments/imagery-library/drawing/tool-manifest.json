@@ -52,7 +52,7 @@
     },
     {
       "id": "mist",
-      "name": "云雾",
+      "name": "薄雾",
       "subtitle": "边缘散开，形体仍然相连。",
       "credit": "本项目试作 · 柔边色层与平移",
       "note": "柔边色层；尚未实现实体遮蔽、消散或显露关系。",
@@ -300,6 +300,270 @@
         "anchors",
         "fixed-count"
       ]
+    },
+    {
+      "id": "grass",
+      "name": "草 · 露 · 霜",
+      "subtitle": "风经过草尖，露与霜留在叶上。",
+      "credit": "本项目试作 · 草叶曲线与附着层",
+      "sources": [
+        "project"
+      ],
+      "reference": "drawing/README.md#本轮植物与天气",
+      "note": "固定 9 簇、每簇 6 片草叶；露珠和霜线按选择附在叶面，不在空中降落。当前载体仅为草叶。",
+      "controls": [
+        {
+          "id": "surface",
+          "label": "叶面",
+          "default": "plain",
+          "choices": [
+            {
+              "value": "plain",
+              "label": "草叶"
+            },
+            {
+              "value": "dew",
+              "label": "带露"
+            },
+            {
+              "value": "frost",
+              "label": "覆霜"
+            }
+          ]
+        }
+      ],
+      "capabilities": [
+        "wind-response",
+        "surface-attachment",
+        "density-detail",
+        "anchors",
+        "fixed-count"
+      ]
+    },
+    {
+      "id": "bamboo",
+      "name": "竹",
+      "subtitle": "竿有节，叶从节旁舒展开。",
+      "credit": "本项目试作 · 竹节、侧枝与窄叶",
+      "sources": [
+        "project"
+      ],
+      "reference": "drawing/README.md#本轮植物与天气",
+      "note": "固定 3 根竹竿，按节布置侧枝与窄叶；风改变叶簇摆动，不把通用树改名为竹。尚未区分竹种。",
+      "capabilities": [
+        "wind-response",
+        "density-detail",
+        "anchors",
+        "fixed-count"
+      ]
+    },
+    {
+      "id": "willow",
+      "name": "柳",
+      "subtitle": "枝条垂下，细叶顺着风轻摆。",
+      "credit": "本项目试作 · 下垂枝条与细叶",
+      "sources": [
+        "project"
+      ],
+      "reference": "drawing/README.md#本轮植物与天气",
+      "note": "固定一株柳形试画，以弯干、下垂长枝和细叶区别于通用树；尚未做植物学辨识验收。",
+      "capabilities": [
+        "wind-response",
+        "density-detail",
+        "anchors",
+        "fixed-count"
+      ]
+    },
+    {
+      "id": "snow",
+      "name": "雪",
+      "subtitle": "飘雪与积雪，是两种不同的状态。",
+      "credit": "本项目试作 · 雪点漂移与地表覆雪",
+      "sources": [
+        "project"
+      ],
+      "reference": "drawing/README.md#本轮植物与天气",
+      "note": "飘落模式为固定 60 点的循环试画；积雪模式为静止地表覆层。两者单独选择，不自动把“雪”解释成正在下雪。",
+      "controls": [
+        {
+          "id": "state",
+          "label": "状态",
+          "default": "fall",
+          "choices": [
+            {
+              "value": "fall",
+              "label": "飘雪"
+            },
+            {
+              "value": "settled",
+              "label": "积雪"
+            }
+          ]
+        }
+      ],
+      "capabilities": [
+        "wind-response",
+        "state-selection",
+        "density-detail",
+        "fixed-count"
+      ]
+    },
+    {
+      "id": "leaves",
+      "name": "红叶 · 黄叶",
+      "subtitle": "先辨叶的形，再留一点季节的颜色。",
+      "credit": "本项目试作 · 叶缘、叶脉与局部色彩",
+      "sources": [
+        "project"
+      ],
+      "reference": "drawing/README.md#本轮植物与天气",
+      "note": "固定 5 片独立叶形；红、黄作为局部意象色，整体仍随配色变化。静止悬置用于看形，不自动解释成正在落叶。",
+      "controls": [
+        {
+          "id": "color",
+          "label": "叶色",
+          "default": "red",
+          "choices": [
+            {
+              "value": "red",
+              "label": "红叶"
+            },
+            {
+              "value": "yellow",
+              "label": "黄叶"
+            }
+          ]
+        }
+      ],
+      "capabilities": [
+        "static",
+        "imagery-accent",
+        "density-detail",
+        "fixed-count"
+      ]
+    },
+    {
+      "id": "fish",
+      "name": "鱼",
+      "subtitle": "身体与尾鳍各有自己的动势。",
+      "credit": "本项目试作 · 鱼体与摆尾",
+      "sources": [
+        "project"
+      ],
+      "reference": "drawing/README.md#本轮植物与天气",
+      "note": "固定一尾鱼，鱼体、尾鳍与鳍片独立绘制。默认静止，可选择摆尾；没有自动加水面、鱼群或水花。",
+      "controls": [
+        {
+          "id": "motion",
+          "label": "动作",
+          "default": "still",
+          "choices": [
+            {
+              "value": "still",
+              "label": "静止"
+            },
+            {
+              "value": "tail",
+              "label": "摆尾试画"
+            }
+          ]
+        }
+      ],
+      "capabilities": [
+        "motion-selection",
+        "density-detail",
+        "anchors",
+        "fixed-count"
+      ]
+    },
+    {
+      "id": "cloud",
+      "name": "云",
+      "subtitle": "云有自己的轮廓，与薄雾分别看。",
+      "credit": "云形改编 Niels Pichon / p5.Fresco · Apache-2.0",
+      "sources": [
+        "fresco-cloud",
+        "project"
+      ],
+      "reference": "drawing/README.md#结构化云形",
+      "note": "固定 3 团云，圆弧与横向路径构成轮廓；不把云团直接当作烟雾，不自动加雨或雷电。",
+      "capabilities": [
+        "wind-response",
+        "density-detail",
+        "fixed-count"
+      ]
+    },
+    {
+      "id": "catkins",
+      "name": "柳絮",
+      "subtitle": "轻絮展开细丝，与花瓣分开。",
+      "credit": "本项目试作 · 细絮轮廓与风中漂移",
+      "sources": [
+        "project"
+      ],
+      "reference": "drawing/README.md#本轮植物与天气",
+      "note": "固定 18 团细絮，不复用花瓣轮廓。默认一次漂移后停留；循环为显式试画选项。杨花仍需先判断语境。",
+      "controls": [
+        {
+          "id": "playback",
+          "label": "过程",
+          "default": "once",
+          "choices": [
+            {
+              "value": "once",
+              "label": "一次漂移"
+            },
+            {
+              "value": "loop",
+              "label": "循环试画"
+            }
+          ]
+        }
+      ],
+      "capabilities": [
+        "wind-response",
+        "density-detail",
+        "once-or-loop",
+        "fixed-count"
+      ]
+    },
+    {
+      "id": "flower-forms",
+      "name": "梅 · 菊 · 莲花冠",
+      "subtitle": "从瓣形与层次区别花形，不只换颜色。",
+      "credit": "本项目试作 · 三类花冠结构",
+      "sources": [
+        "project"
+      ],
+      "reference": "drawing/README.md#花形变体",
+      "note": "圆瓣五出、细长多瓣与尖瓣层叠三种花冠示意；尚未接入花枝、莲叶或具体品种，也未做植物学辨识验收。",
+      "controls": [
+        {
+          "id": "kind",
+          "label": "花冠",
+          "default": "plum",
+          "choices": [
+            {
+              "value": "plum",
+              "label": "梅形"
+            },
+            {
+              "value": "chrysanthemum",
+              "label": "菊形"
+            },
+            {
+              "value": "lotus",
+              "label": "莲形"
+            }
+          ]
+        }
+      ],
+      "capabilities": [
+        "shape-selection",
+        "density-detail",
+        "anchors",
+        "fixed-count"
+      ]
     }
   ],
   "sources": {
@@ -361,6 +625,18 @@
       ],
       "licenseFile": "code-research/flower/.block",
       "note": "取 petalPath 的曲线生成，改为数值控制点与 Canvas 绘制；去掉 D3/Lodash 依赖，预生成花瓣，茎叶和风响应由本项目编写。"
+    },
+    "fresco-cloud": {
+      "id": "fresco-cloud",
+      "author": "Niels Pichon",
+      "license": "Apache-2.0",
+      "kind": "adapted",
+      "url": "https://github.com/NielsPichon/p5.Fresco/blob/main/demos/theatre/cloudGen.js",
+      "originals": [
+        "code-research/fresco/demos/theatre/cloudGen.js"
+      ],
+      "licenseFile": "code-research/fresco/LICENSE",
+      "note": "取圆弧/S 路径/水平段云形生成与归一化；实例化随机与点函数，返回数值点，递归改为有界重试；去掉 Fresco.Shape、随机配色与边框放置。"
     },
     "shan-rock": {
       "id": "shan-rock",

@@ -4,6 +4,11 @@
   const params=new URLSearchParams(location.search);
   let seed=Number(params.get('seed')||42)>>>0,paused=false;
   const controllers=[];
+  const jump=document.getElementById('tool-jump');
+  for(const d of window.PoemStudies.definitions){const option=document.createElement('option');option.value=d.id;option.textContent=d.name;jump.append(option);}
+  jump.addEventListener('change',()=>{if(jump.value)location.hash=jump.value;});
+  function syncJump(){const id=location.hash.slice(1);jump.value=window.PoemStudies.definitions.some(d=>d.id===id)?id:'';}
+  addEventListener('hashchange',syncJump);syncJump();
   const studies=document.getElementById('studies');
   for(const [index,d] of window.PoemStudies.definitions.entries()) {
     const card=document.createElement('article');card.className='study';card.id=d.id;
@@ -13,6 +18,10 @@
     card.innerHTML=`<div class="canvas-host" aria-label="${d.name}的动态试画" role="img"></div><div class="study-body"><div class="study-heading"><h3>${d.name}</h3><span class="study-index">${displayIndex}</span></div><p>${d.subtitle}</p><p>${d.note}</p><p class="credit">${d.credit}</p><div class="study-actions"><a href="${reference}">${referenceLabel} ↗</a><button type="button" aria-label="保存${d.name}的当前画面">保存这一刻</button></div></div>`;
     studies.append(card);
     const controller=window.PoemStudies.mount(d.id,card.querySelector('.canvas-host'),shared,seed+index*97);
+    if(params.get('tool')===d.id){
+      const options={};for(const field of d.controls||[]){const value=params.get(field.id);if(field.choices.some(c=>c.value===value))options[field.id]=value;}
+      controller.configure(options);
+    }
     controllers.push(controller);card.querySelector('button').addEventListener('click',()=>controller.save());
     if(d.controls?.length){
       const controls=document.createElement('div');controls.className='tool-controls';
@@ -20,7 +29,7 @@
         const label=document.createElement('label');label.textContent=field.label+' ';
         const select=document.createElement('select');select.id=`${d.id}-${field.id}`;
         for(const choice of field.choices){const option=document.createElement('option');option.value=choice.value;option.textContent=choice.label;select.append(option);}
-        select.value=field.default;select.addEventListener('change',()=>controller.configure({[field.id]:select.value}));
+        select.value=controller.inspect().options[field.id];select.addEventListener('change',()=>controller.configure({[field.id]:select.value}));
         label.append(select);controls.append(label);
       }
       card.querySelector('.study-actions').before(controls);

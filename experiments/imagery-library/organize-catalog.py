@@ -3,6 +3,7 @@
 from pathlib import Path
 import json
 from collections import Counter
+from urllib.parse import urlencode
 
 root=Path(__file__).resolve().parents[2]
 out=root/'experiments/imagery-library'
@@ -10,17 +11,17 @@ source=json.loads((root/'docs/sources/quansongci/意象频次.json').read_text(e
 # id, label, suggested phase, source code/study (not integrated renderers), remaining work
 families=[
 ('airflow','风的作用','首批','experiments/imagery-library/studies.js','已有风控制试作；需要独立作用场，不能一律画出可见风线。'),
-('atmosphere','云与雾','首批','experiments/imagery-library/code-research/fresco/demos/theatre/cloudGen.js','云形源码已运行；薄雾另需边缘、透明度与遮蔽处理。'),
+('atmosphere','云与雾','首批','experiments/imagery-library/drawing/tools/cloud.js','已有独立结构化云形与薄雾工具；跨实体遮蔽尚未实现。'),
 ('moon','月体','首批','experiments/imagery-library/drawing/tools/moon.js','已有五种可选月形与亮边方向；默认弯月，不自动推断诗句中的圆缺。'),
-('water','水面','首批','experiments/imagery-library/code-research/shan-index.html','water 源码与水面示例已运行；需拆接口并支持局部起伏。'),
-('precipitation','雨雪粒子','首批','experiments/imagery-library/drawing/tools/rain.js','已有独立雨线与风偏移；雪的粒形、飘落与积雪需单独做。'),
-('surface_weather','露霜附着','扩展',None,'待制作附着在叶片或地表的颗粒／覆层，不等同于雨雪下落。'),
-('grass','草叶簇','首批',None,'待制作基础草叶，保留与树枝、竹叶的形态区别。'),
-('branch','枝干与叶片','首批','experiments/imagery-library/code-research/shan-index.html','tree01–tree08 已有源码；柳、竹、梧桐、松柏等特征仍需专门验证。'),
-('flower','花瓣与花冠','首批','experiments/imagery-library/drawing/tools/flower.js','petalPath 已接入独立花工具；梅、桃、菊、兰、莲仍需专门变体。'),
-('petal_drift','离枝花瓣与飞絮','首批','experiments/imagery-library/drawing/tools/falling-petals.js','已有独立花瓣飘落、落地停留与显式循环；从枝条离落、飞絮形态尚未实现。'),
+('water','水面','首批','experiments/imagery-library/drawing/tools/water.js','已有独立水纹与风响应；岸线、流向与承载仍待实现。'),
+('precipitation','雨雪粒子','首批','experiments/imagery-library/drawing/tools/snow.js','雨线、雪点与静止积雪已有独立试画；累积和实体附着未实现。'),
+('surface_weather','露霜附着','扩展','experiments/imagery-library/drawing/tools/grass.js','已有草叶露珠与覆霜；其他载体与地表附着仍待实现。'),
+('grass','草叶簇','首批','experiments/imagery-library/drawing/tools/grass.js','已有九簇草叶及风响应；其他草种和地表组织待扩展。'),
+('branch','枝干与叶片','首批','experiments/imagery-library/code-research/shan-index.html','已有通用树、柳形与竹竿叶簇；梧桐、松柏、芭蕉仍待专门形态。'),
+('flower','花瓣与花冠','首批','experiments/imagery-library/drawing/tools/flower.js','已有通用花和梅／菊／莲花冠结构示意；尚缺整株、枝叶组合与辨识验收，桃花、兰仍待做。'),
+('petal_drift','离枝花瓣与飞絮','首批','experiments/imagery-library/drawing/tools/falling-petals.js','已有落花与独立细丝柳絮试画；从枝条脱离仍未实现。'),
 ('bird','鸟体与鸟群','首批','experiments/imagery-library/sources/noc-boid.js','群体运动已试跑；鸟体、物种特征、单体栖息与扑翼仍待细化。'),
-('fish','鱼体','扩展',None,'待制作轮廓与摆尾；不能直接把鸟群换颜色当鱼群。'),
+('fish','鱼体','扩展','experiments/imagery-library/drawing/tools/fish.js','已有独立单鱼轮廓、鳍、尾与摆尾；鱼种、群游和水体交互未实现。'),
 ('insect','虫体','扩展',None,'待制作虫体；只有鸣声依据时不自动添加可见虫体。'),
 ('horse','马体','扩展',None,'待制作轮廓、步态与肢体结构；第一版暂缓。'),
 ('boat','舟船与桨','首批','experiments/imagery-library/drawing/tools/boat.js','已有独立船体与甲板锚点，不自动加船夫；桨、帆与真正载人关系尚未实现。'),
@@ -97,18 +98,37 @@ for line in text.splitlines():
     assert name not in rows,name
     fs=[x for x in ids.split(',') if x]
     assert all(x in family_map for x in fs),name
-    rows[name]={'treatment':route,'candidate_families':fs,'note':note,'status':'设计候选，未接入语义协议或渲染器'}
+    rows[name]={'treatment':route,'candidate_families':fs,'note':note,'status':'语义映射仍是设计候选，未接入正式诗句生成流程'}
 names={x['imagery'] for x in source['items']}
 assert set(rows)==names,{'missing':list(names-set(rows)),'extra':list(set(rows)-names)}
 for f in family_map.values():
     if f['code_reference']:assert (root/f['code_reference']).is_file(),f
 items=[{**x,**rows[x['imagery']]} for x in source['items']]
-data={'catalog_version':'0.1-design','date':'2026-10-18','status':'待审阅的绘画组织建议，不是模型输出协议或已实现功能',
+progress=json.loads((out/'progress-records.json').read_text(encoding='utf-8'))['records']
+manifest=json.loads((out/'drawing/tool-manifest.json').read_text(encoding='utf-8'))
+tool_map={tool['id']:tool for tool in manifest['tools']}
+stages={'basic':'基础可画','partial':'部分支持','todo':'待制作','handoff':'转交其他模块'}
+assert set(progress)==names,'Progress must cover all 60 original terms exactly'
+for item in items:
+    record=progress[item['imagery']]
+    assert record['stage'] in stages and record['remaining'] and record['available'],item['imagery']
+    assert len(record['tools'])==len(set(record['tools'])),item['imagery']
+    assert all(t in tool_map for t in record['tools']),item['imagery']
+    for tool_id,preset in record.get('presets',{}).items():
+        assert tool_id in record['tools'],item['imagery']
+        fields={f['id']:f for f in tool_map[tool_id].get('controls',[])}
+        assert all(key in fields and any(c['value']==value for c in fields[key]['choices']) for key,value in preset.items()),item['imagery']
+    if record['stage'] in ['basic','partial']:assert record['tools'],item['imagery']
+    item['progress']={**record,'label':stages[record['stage']]}
+stage_counts=Counter(item['progress']['stage'] for item in items)
+progress_summary={'total':len(items),'tools':len(tool_map),'stages':{key:{'label':label,'count':stage_counts[key]} for key,label in stages.items()},'needs_context':sum(item['progress']['needs_context'] for item in items),'automatic_poem_integration':False,'art_review':'待用户审阅'}
+data={'catalog_version':'0.2-progress','date':'2026-10-18','status':'设计映射与实际试画进度，不是模型输出协议',
       'basis':'已保存的新华网统计条目与本项目设计讨论；词义提示不是经过词书核实的文学注释',
-      'source':'docs/sources/quansongci/意象频次.json','families':list(family_map.values()),'items':items}
+      'source':'docs/sources/quansongci/意象频次.json','progress_summary':progress_summary,'families':list(family_map.values()),'items':items}
 (out/'意象目录.json').write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+(out/'progress-data.js').write_text('/* Generated by organize-catalog.py; edit progress-records.json instead. */\nwindow.PoemProgress = '+json.dumps({'summary':progress_summary,'items':items,'tools':manifest['tools'],'sources':manifest['sources']},ensure_ascii=False,indent=2)+';\n',encoding='utf-8')
 counts=Counter(x['treatment'] for x in items)
-lines=['# 流动诗：意象目录与绘画单元','','版本：0.1 设计草案 · 2026-10-18。整体职责仍以 [设计规范](../../docs/设计规范.md) 为准。',
+lines=['# 流动诗：意象目录与绘画单元','','版本：0.2 进度记录 · 2026-10-18。整体职责仍以 [设计规范](../../docs/设计规范.md) 为准。',
 '','## 这次整理的结论','','原始 60 个条目全部保留并逐项安排去向；建议用 **20 类绘画方法**组织，其中 **12 类作为首批范围建议**，并非一次全部实现，也不表示用户已经确认数量。',
 '','语义名称与绘画入口分开：共享绘画代码，不等于合并词义。原统计名称、频次均未改写，也不把它们转换成新合并频次。',
 '','### 优先做的六类','','先从已经有实际源码的 **枝叶、花瓣、水面、云形、舟船、楼亭** 拆独立接口。鸟群已有试作，可并行纳入后续统一接口，但鸟种辨识仍未完成。',
@@ -120,18 +140,24 @@ lines=['# 流动诗：意象目录与绘画单元','','版本：0.1 设计草案
 '- 登高、凭栏：移交动作、视点和关系模块；不作为独立物体。',
 '- 地名、六朝等：保留场景与背景信息；不再为每个名称单独找一张图。',
 '- 鸣声、典故或歧义：进入语境确认，不以随机图形顶替。',
-'','## 二十类绘画方法','','下表的源码只表示“可研究的材料已经存在”。特定树种、花种及独立绘画接口未完成，不能把来源函数直接宣布为已实现意象。',
+'','## 二十类绘画方法','','下表记录方法层面的现状；具体词条进度以六十项总表为准。只有来源源码、通用形态或部分接口，不代表某个具体物种已经实现。',
 '','| 方法 | 建议阶段 | 已有依据与剩余工作 |','| --- | --- | --- |']
 for f in family_map.values():lines.append(f"| {f['name']} | {f['phase']} | {f['status']} |")
 lines += ['','首批 12 类：'+ '、'.join(f['name'] for f in family_map.values() if f['phase']=='首批')+'。',
 '','这些是绘画方法类别，不是 20 种物体。例如“风”属于作用，“露霜”需要附着载体；一条诗句可以组合多种方法。',
-'','## 六十个原始条目的安排','','处理数量：'+'；'.join(f'{k} {v}' for k,v in counts.items())+'。',
+'','## 六十项进度总表','','[打开可筛选的网页进度表](progress.html)。同一份进度记录生成本表和网页，按原统计顺序保留全部 60 项。',
+'','当前：'+'；'.join(f'{stages[key]} {stage_counts[key]}' for key in stages)+f'。另有 {progress_summary["needs_context"]} 项需要具体语境判断；语境标记不代表该项绘画已完成。',
+'','“基础可画”只表示已有该目标的本地形态试画，全部仍待审美确认；“部分支持”表示目标的一部分已实现；通用花、树、鸟的代码不能让未制作的具体物种自动升级。诗句自动组合尚未接入。',
+'','处理数量：'+'；'.join(f'{k} {v}' for k,v in counts.items())+'。',
 '','“待语境”的条目不自动选中某一候选；所有词义提示是本项目的设计审阅提醒，尚未逐条核对词书或原诗，不能作为文学定论。',
-'','| 原条目 | 原频次 | 处理 | 候选方法 | 必须保留的区别 |','| --- | ---: | --- | --- | --- |']
+'','| 原条目 | 原频次 | 进度 | 已有能力／试画 | 剩余工作 | 语义处理 |','| --- | ---: | --- | --- | --- | --- |']
 for x in items:
     fs='、'.join(family_map[k]['name'] for k in x['candidate_families']) or '交其他模块'
-    lines.append(f"| {x['imagery']} | {x['count']:,} | {x['treatment']} | {fs} | {x['note']} |")
-lines += ['','当前工具结构见 [十一类独立工具与来源](drawing/README.md)。登记的工具数量不等于完成的文学意象数量；月形由观看者选择，花鸟尚未区分具体物种，落花尚未连接枝条。','','## 绘画单元需要提供什么','','每个单元后续至少记录：','',
+    pr=x['progress']
+    links='、'.join(f"[{tool_map[t]['name']}](index.html?{urlencode({'tool':t,**pr.get('presets',{}).get(t,{})})}#{t})" for t in pr['tools'])
+    context='；需语境确认' if pr['needs_context'] else ''
+    lines.append(f"| {x['imagery']} | {x['count']:,} | {pr['label']}{context} | {pr['available']} {links} | {pr['remaining']} | {x['treatment']}：{x['note']} |")
+lines += ['',f'当前共 {len(tool_map)} 类工具，见 [独立工具与来源](drawing/README.md)。登记的工具数量不等于完成的文学意象数量；全部试画仍待用户审美确认。','','## 绘画单元需要提供什么','','每个单元后续至少记录：','',
 '1. 身份与变体：原词、规范含义、形态类型，以及同一实体的持续身份。',
 '2. 形态结构：轮廓、局部特征、锚点与边界；花、叶、果实等是否可分离。',
 '3. 可用接口：位置、尺度、方向、笔触疏密；颜色由情感与配色模块统一传入。',
@@ -140,9 +166,10 @@ lines += ['','当前工具结构见 [十一类独立工具与来源](drawing/REA
 '6. 来源和验收：作者、代码入口、许可、实际截图、未实现特征；明确是否能辨认具体花鸟。',
 '','不要为了画面完整，擅自添加鸟、人物、酒杯、火源或默认配对。月体光感不取代情感配色；形态疏密不取代主体数量；单元自身的默认微动也不能覆盖原文否定。',
 '','## 已完成与未完成','','已完成：60 项的覆盖检查、绘画方法归并建议、特殊条目转交规则、源码定位与可读取目录。',
-'','未完成：20 类的实际绘画实现、全部花鸟树种的识别验证、与模型协议 3.0 的字段对齐、任意诗句的自动绘画。`candidate_families` 只是设计数据，不能直接作为运行时绘图指令。',
+'','未完成：表中待制作的专门形态、全部花鸟树种的识别验证、跨工具场景组合、与模型协议 3.0 的字段对齐、任意诗句的自动绘画。`candidate_families` 只是设计数据，不能直接作为运行时绘图指令。',
 '','已取得代码见 [第二轮检索](code-research/README.md)。可读取数据见 [意象目录.json](意象目录.json)。原始提取见 [新华网意象记录](../../docs/sources/quansongci/意象提取.md)。']
 (out/'意象目录.md').write_text('\n'.join(lines)+'\n',encoding='utf-8')
 report={'source_count':len(source['items']),'catalog_count':len(items),'unique_terms':len(rows),'families':len(family_map),'suggested_first_phase':sum(f['phase']=='首批' for f in family_map.values()),'treatments':dict(counts),'missing':[],'unknown_family_ids':[],'code_references_exist':True}
+report['progress_summary']=progress_summary
 (out/'catalog-check.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 print(json.dumps(report,ensure_ascii=False))
