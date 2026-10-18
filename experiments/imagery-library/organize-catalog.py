@@ -11,19 +11,19 @@ source=json.loads((root/'docs/sources/quansongci/意象频次.json').read_text(e
 families=[
 ('airflow','风的作用','首批','experiments/imagery-library/studies.js','已有风控制试作；需要独立作用场，不能一律画出可见风线。'),
 ('atmosphere','云与雾','首批','experiments/imagery-library/code-research/fresco/demos/theatre/cloudGen.js','云形源码已运行；薄雾另需边缘、透明度与遮蔽处理。'),
-('moon','月体','首批',None,'待制作月体与局部光感；圆缺需依据，不默认月亮必为圆月。'),
+('moon','月体','首批','experiments/imagery-library/drawing/tools/moon.js','已有独立静止圆月小样与局部光感；圆缺需依据，不默认月亮必为圆月。'),
 ('water','水面','首批','experiments/imagery-library/code-research/shan-index.html','water 源码与水面示例已运行；需拆接口并支持局部起伏。'),
 ('precipitation','雨雪粒子','首批','experiments/imagery-library/code-research/fresco/demos/theatre/theatre.js','已有降雨示例；雪的粒形、飘落与积雪需单独做。'),
 ('surface_weather','露霜附着','扩展',None,'待制作附着在叶片或地表的颗粒／覆层，不等同于雨雪下落。'),
 ('grass','草叶簇','首批',None,'待制作基础草叶，保留与树枝、竹叶的形态区别。'),
 ('branch','枝干与叶片','首批','experiments/imagery-library/code-research/shan-index.html','tree01–tree08 已有源码；柳、竹、梧桐、松柏等特征仍需专门验证。'),
-('flower','花瓣与花冠','首批','experiments/imagery-library/code-research/flower/index.html','petalPath 已运行；梅、桃、菊、兰、莲不靠换颜色冒充。'),
+('flower','花瓣与花冠','首批','experiments/imagery-library/drawing/tools/flower.js','petalPath 已接入独立花工具；梅、桃、菊、兰、莲仍需专门变体。'),
 ('petal_drift','离枝花瓣与飞絮','首批','experiments/imagery-library/studies.js','只有通用花形及风控制；离枝、飘落、飞絮形态与轨迹尚未实现。'),
 ('bird','鸟体与鸟群','首批','experiments/imagery-library/sources/noc-boid.js','群体运动已试跑；鸟体、物种特征、单体栖息与扑翼仍待细化。'),
 ('fish','鱼体','扩展',None,'待制作轮廓与摆尾；不能直接把鸟群换颜色当鱼群。'),
 ('insect','虫体','扩展',None,'待制作虫体；只有鸣声依据时不自动添加可见虫体。'),
 ('horse','马体','扩展',None,'待制作轮廓、步态与肢体结构；第一版暂缓。'),
-('boat','舟船与桨','首批','experiments/imagery-library/code-research/shan-index.html','boat01 已出图；需将原作组合中的人物设为可选，另做独立桨和载人接口。'),
+('boat','舟船与桨','首批','experiments/imagery-library/drawing/tools/boat.js','已有独立船体与甲板锚点，不自动加船夫；桨、帆与真正载人关系尚未实现。'),
 ('architecture','楼亭与栏杆','首批','experiments/imagery-library/code-research/shan-index.html','已有 arch01–arch04 建筑源码及长卷出图记录；各变体仍需单独检查，楼、亭和栏杆保留不同轮廓。'),
 ('liquid_container','酒液与容器','扩展',None,'先判断画酒液、酒器还是饮酒动作；原文没写杯不能自动补杯。'),
 ('instrument','乐器形体','扩展',None,'琴、瑟、笛分别制作；形体与声音分开，暂不实现音频。'),
@@ -131,7 +131,7 @@ lines += ['','首批 12 类：'+ '、'.join(f['name'] for f in family_map.values
 for x in items:
     fs='、'.join(family_map[k]['name'] for k in x['candidate_families']) or '交其他模块'
     lines.append(f"| {x['imagery']} | {x['count']:,} | {x['treatment']} | {fs} | {x['note']} |")
-lines += ['','## 绘画单元需要提供什么','','每个单元后续至少记录：','',
+lines += ['','当前工具结构见 [七类独立工具与来源](drawing/README.md)。登记的工具数量不等于完成的文学意象数量；月体仍只是圆月小样，花鸟尚未区分具体物种。','','## 绘画单元需要提供什么','','每个单元后续至少记录：','',
 '1. 身份与变体：原词、规范含义、形态类型，以及同一实体的持续身份。',
 '2. 形态结构：轮廓、局部特征、锚点与边界；花、叶、果实等是否可分离。',
 '3. 可用接口：位置、尺度、方向、笔触疏密；颜色由情感与配色模块统一传入。',

@@ -2,6 +2,8 @@
 
 记录日期：2026-10-18。这个目录是独立实验，不表示已接入流动诗正式绘图流程。
 
+**当前结构更新：**各试画迁移到 `drawing/tools/`；NOC 原件保持不变。花已改用 sxywu `petalPath()` 数值曲线的本地适配，新舟取用 Lingdong Huang `Arch.boat01` 的船体轮廓。当前来源登记见 `drawing/sources.js`，取用范围与改动见 [绘画结构记录](drawing/README.md)。下文“花为本项目新写”的描述仅指第一轮旧花瓣版本；现在的茎叶和运动仍为本项目编写。
+
 第二轮新增的山水、花瓣、Fresco 与笔触源码及其依赖，来源与许可证见 [代码检索记录](code-research/README.md)。下面保留第一轮来源，不把第二轮源码误记为 OpenProcessing 下载。
 
 ## 实际使用

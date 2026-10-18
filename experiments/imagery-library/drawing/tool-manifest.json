@@ -1,0 +1,196 @@
+{
+  "status": "passed",
+  "tools": [
+    {
+      "id": "flower",
+      "name": "花",
+      "subtitle": "花瓣有形，风从茎上经过。",
+      "credit": "改编 sxywu 花瓣算法 · MIT；茎叶与运动为本项目试作",
+      "note": "不规则曲线花瓣与固定七株花；尚未区分梅、桃、菊等花种。",
+      "sources": [
+        "sxywu-petals",
+        "project"
+      ],
+      "reference": "ref-flower",
+      "capabilities": [
+        "wind-response",
+        "density-detail",
+        "fixed-count"
+      ]
+    },
+    {
+      "id": "tree",
+      "name": "树",
+      "subtitle": "一根枝条，长出许多不同的树。",
+      "credit": "参考 NOC Recursive Tree · MIT",
+      "note": "固定骨架、局部枝叶与风响应；尚未区分具体树种。",
+      "sources": [
+        "noc-tree",
+        "project"
+      ],
+      "reference": "ref-tree",
+      "capabilities": [
+        "wind-response",
+        "density-detail"
+      ]
+    },
+    {
+      "id": "water",
+      "name": "水",
+      "subtitle": "让线条形成水面，而非填满画面。",
+      "credit": "参考 NOC Wave · MIT",
+      "note": "水纹间距与风致起伏分开控制；尚未实现承载与岸线。",
+      "sources": [
+        "noc-wave",
+        "project"
+      ],
+      "reference": "ref-water",
+      "capabilities": [
+        "wind-response",
+        "density-spacing"
+      ]
+    },
+    {
+      "id": "mist",
+      "name": "云雾",
+      "subtitle": "边缘散开，形体仍然相连。",
+      "credit": "本项目试作 · 柔边色层与平移",
+      "note": "柔边色层；尚未实现实体遮蔽、消散或显露关系。",
+      "sources": [
+        "project"
+      ],
+      "reference": "ref-mist",
+      "capabilities": [
+        "wind-response",
+        "density-detail"
+      ]
+    },
+    {
+      "id": "birds",
+      "name": "鸟群",
+      "subtitle": "相互看见，然后一起改变方向。",
+      "credit": "改编 NOC Boids · Daniel Shiffman / Reynolds · MIT",
+      "note": "固定 22 只鸟；分离、对齐、聚合不等于已区分物种。",
+      "sources": [
+        "noc-boids",
+        "project"
+      ],
+      "reference": "ref-birds",
+      "capabilities": [
+        "wind-response",
+        "density-spacing",
+        "fixed-count",
+        "fixed-step"
+      ]
+    },
+    {
+      "id": "boat",
+      "name": "舟",
+      "subtitle": "先画一叶舟，留出承载的位置。",
+      "credit": "船体曲线改编自 Lingdong Huang / Shan, Shui · MIT",
+      "sources": [
+        "shan-boat",
+        "project"
+      ],
+      "reference": "drawing/README.md#舟",
+      "note": "单独的船体单元，固定一条舟；不自动添加船夫、帆或桨。轻微起伏只是观看小样。",
+      "capabilities": [
+        "wind-response",
+        "anchors",
+        "fixed-count"
+      ]
+    },
+    {
+      "id": "moon",
+      "name": "月",
+      "subtitle": "留一轮月体，让周围保持安静。",
+      "credit": "本项目试作 · 月体与局部光感",
+      "sources": [
+        "project"
+      ],
+      "reference": "drawing/README.md#月",
+      "note": "这一张试圆月轮廓，保持静止；不把圆月、光晕或夜景作为所有“月”字的默认解释。",
+      "capabilities": [
+        "static",
+        "density-detail",
+        "anchors",
+        "fixed-count"
+      ]
+    }
+  ],
+  "sources": {
+    "project": {
+      "id": "project",
+      "author": "本项目",
+      "license": null,
+      "url": null,
+      "originals": [],
+      "licenseFile": null,
+      "kind": "original",
+      "note": "本地新写的形态、运行与交互代码；不声称为社区作品。"
+    },
+    "noc-tree": {
+      "id": "noc-tree",
+      "author": "Daniel Shiffman / The Nature of Code",
+      "license": "MIT",
+      "kind": "adapted",
+      "url": "https://github.com/nature-of-code/noc-examples-p5.js-archived/blob/master/chp08_fractals/NOC_8_06_Tree/sketch.js",
+      "originals": [
+        "sources/noc-tree.js"
+      ],
+      "licenseFile": "sources/NOC-LICENSE.txt",
+      "note": "递归分枝改为预先生成骨架、曲线枝条与局部风响应。"
+    },
+    "noc-wave": {
+      "id": "noc-wave",
+      "author": "Daniel Shiffman / The Nature of Code",
+      "license": "MIT",
+      "kind": "adapted",
+      "url": "https://github.com/nature-of-code/noc-examples-p5.js-archived/blob/master/chp03_oscillation/NOC_3_09_wave/sketch.js",
+      "originals": [
+        "sources/noc-wave.js"
+      ],
+      "licenseFile": "sources/NOC-LICENSE.txt",
+      "note": "正弦波采样改为多层连续水纹；风与笔触疏密分别控制。"
+    },
+    "noc-boids": {
+      "id": "noc-boids",
+      "author": "Daniel Shiffman / The Nature of Code；Boids 思路来自 Craig Reynolds",
+      "license": "MIT",
+      "kind": "adapted",
+      "url": "https://github.com/nature-of-code/noc-examples-p5.js-archived/blob/master/chp06_agents/NOC_6_09_Flocking/boid.js",
+      "originals": [
+        "sources/noc-boid.js"
+      ],
+      "licenseFile": "sources/NOC-LICENSE.txt",
+      "note": "实例绑定、固定步长、同步更新、分离间距参数与新鸟形；固定 22 个个体。"
+    },
+    "sxywu-petals": {
+      "id": "sxywu-petals",
+      "author": "sxywu",
+      "license": "MIT（原 .block 标注）",
+      "kind": "adapted",
+      "url": "https://gist.github.com/sxywu/56728e6cf17ad249ef232c49cd9a90ad",
+      "originals": [
+        "code-research/flower/index.html",
+        "code-research/flower/.block"
+      ],
+      "licenseFile": "code-research/flower/.block",
+      "note": "取 petalPath 的曲线生成，改为数值控制点与 Canvas 绘制；去掉 D3/Lodash 依赖，预生成花瓣，茎叶和风响应由本项目编写。"
+    },
+    "shan-boat": {
+      "id": "shan-boat",
+      "author": "Lingdong Huang",
+      "license": "MIT",
+      "kind": "adapted",
+      "url": "https://github.com/LingDong-/shan-shui-inf",
+      "originals": [
+        "code-research/shan-index.html"
+      ],
+      "licenseFile": "code-research/shan-LICENSE.txt",
+      "note": "只取 Arch.boat01 船体上下轮廓的正弦开方曲线，改为独立 Canvas 船体；不复制 Man.man、船夫、桨、随机笔触或自动场景。"
+    }
+  },
+  "originalFilesChecked": 49,
+  "scope": "元数据、许可文件、来源原件及 SHA-256；不判断文学解释或画面审美。"
+}

@@ -23,8 +23,8 @@
       "id": "moon",
       "name": "月体",
       "phase": "首批",
-      "code_reference": null,
-      "status": "待制作月体与局部光感；圆缺需依据，不默认月亮必为圆月。"
+      "code_reference": "experiments/imagery-library/drawing/tools/moon.js",
+      "status": "已有独立静止圆月小样与局部光感；圆缺需依据，不默认月亮必为圆月。"
     },
     {
       "id": "water",
@@ -65,8 +65,8 @@
       "id": "flower",
       "name": "花瓣与花冠",
       "phase": "首批",
-      "code_reference": "experiments/imagery-library/code-research/flower/index.html",
-      "status": "petalPath 已运行；梅、桃、菊、兰、莲不靠换颜色冒充。"
+      "code_reference": "experiments/imagery-library/drawing/tools/flower.js",
+      "status": "petalPath 已接入独立花工具；梅、桃、菊、兰、莲仍需专门变体。"
     },
     {
       "id": "petal_drift",
@@ -107,8 +107,8 @@
       "id": "boat",
       "name": "舟船与桨",
       "phase": "首批",
-      "code_reference": "experiments/imagery-library/code-research/shan-index.html",
-      "status": "boat01 已出图；需将原作组合中的人物设为可选，另做独立桨和载人接口。"
+      "code_reference": "experiments/imagery-library/drawing/tools/boat.js",
+      "status": "已有独立船体与甲板锚点，不自动加船夫；桨、帆与真正载人关系尚未实现。"
     },
     {
       "id": "architecture",

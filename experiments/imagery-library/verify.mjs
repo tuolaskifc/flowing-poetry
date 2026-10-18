@@ -27,9 +27,11 @@ try {
   await send('Emulation.setDeviceMetricsOverride',{width:1280,height:1000,deviceScaleFactor:1,mobile:false});
   const targetUrl=process.argv.includes('--http')?'http://127.0.0.1:4185/?seed=42':pathToFileURL(resolve(dir,'index.html')).href+'?seed=42';
   await send('Page.navigate',{url:targetUrl});
-  try {await evaluate(`new Promise((resolve,reject)=>{let n=0;const t=setInterval(()=>{if(window.imageryExperiment && document.querySelectorAll('[data-ready="true"]').length===5){clearInterval(t);resolve(true);}else if(++n>100){clearInterval(t);reject(new Error('Canvas readiness timeout'));}},100);})`);}
+  try {await evaluate(`new Promise((resolve,reject)=>{let n=0;const t=setInterval(()=>{if(window.imageryExperiment && document.querySelectorAll('[data-ready="true"]').length===7){clearInterval(t);resolve(true);}else if(++n>100){clearInterval(t);reject(new Error('Canvas readiness timeout'));}},100);})`);}
   catch(e){console.error(JSON.stringify({errors,page:await evaluate(`({url:location.href,text:document.body.innerText.slice(0,1200),p5:typeof p5,ready:document.querySelectorAll('[data-ready="true"]').length})`)}));throw e;}
   const initial=await evaluate('window.imageryExperiment.inspect()');
+  const expected=['flower','tree','water','mist','birds','boat','moon'];
+  if(JSON.stringify(initial.map(x=>x.id).sort())!==JSON.stringify([...expected].sort()))throw new Error('Missing/extra tool registrations');
   await evaluate(`document.getElementById('pause').click()`);
   const pausedBefore=await evaluate('window.imageryExperiment.inspect()');
   await sleep(250);
@@ -43,21 +45,39 @@ try {
   if(settings.wind!==1||settings.density!==1||settings.palette!=='tender')throw new Error('Controls failed');
   // Export via canvas data proves a drawable, untainted image; does not test OS download UI.
   const exportInfo=await evaluate(`Array.from(document.querySelectorAll('canvas'),c=>({width:c.width,height:c.height,png:c.toDataURL('image/png').startsWith('data:image/png;base64,')}))`);
-  if(exportInfo.length!==5||exportInfo.some(x=>!x.png||!x.width))throw new Error('Canvas export failed');
+  if(exportInfo.length!==7||exportInfo.some(x=>!x.png||!x.width))throw new Error('Canvas export failed');
+  const countCheck=await evaluate('window.imageryExperiment.inspect()');
+  if(countCheck.find(x=>x.id==='birds').birdCount!==22||countCheck.find(x=>x.id==='flower').flowerCount!==7||countCheck.find(x=>x.id==='boat').personCount!==0)throw new Error('Density changed entity counts or boat added a person');
+  const isolation=await evaluate(`(async()=>{
+    const ids=['moon',...window.PoemDrawing.definitions().map(d=>d.id)];
+    const hosts=ids.map(()=>document.createElement('div'));hosts.forEach(h=>{h.style.display='none';document.body.append(h);});
+    const controls=hosts.map((h,i)=>window.PoemDrawing.mount(ids[i],h,{wind:0,density:.5,palette:'clear'},777));
+    await new Promise((r,j)=>{let n=0;const t=setInterval(()=>{if(hosts.every(h=>h.dataset.ready==='true')){clearInterval(t);r();}else if(++n>100){clearInterval(t);j(new Error('Isolation setup timeout'));}},20);});
+    controls.forEach(c=>c.pause(true));controls.forEach(c=>c.reset(777));await new Promise(r=>setTimeout(r,50));
+    const hash=()=>hosts.map(h=>{let v=2166136261;for(const c of h.querySelector('canvas').toDataURL('image/png')){v=Math.imul(v^c.charCodeAt(0),16777619);}return (v>>>0).toString(16);});
+    const before=controls.map(c=>c.inspect()),images=hash();controls.forEach(c=>c.reset(777));await new Promise(r=>setTimeout(r,50));
+    const repeatAll=controls.every((c,i)=>c.inspect().geometryKey===before[i].geometryKey)&&hash().every((h,i)=>h===images[i]);
+    controls[0].reset(778);await new Promise(r=>setTimeout(r,30));
+    const changed=controls.map(c=>c.inspect()),changedImages=hash();controls[0].reset(777);await new Promise(r=>setTimeout(r,30));
+    const repeated=controls[0].inspect(),repeatImage=hash()[0],anchors=controls[0].anchors();controls.forEach(c=>c.dispose());
+    const disposed=hosts.every(h=>h.querySelectorAll('canvas').length===0);hosts.forEach(h=>h.remove());
+    return {toolIds:ids,repeatAll,sameSeed:before[0].geometryKey===before.at(-1).geometryKey&&images[0]===images.at(-1),independent:changed.slice(1).every((x,i)=>x.geometryKey===before[i+1].geometryKey&&changedImages[i+1]===images[i+1]),repeated:repeated.geometryKey===before[0].geometryKey&&repeatImage===images[0],differentSeed:changed[0].geometryKey!==before[0].geometryKey,anchors,disposed};
+  })()`);
+  if(!isolation.repeatAll||!isolation.sameSeed||!isolation.independent||!isolation.repeated||!isolation.differentSeed||!isolation.disposed)throw new Error('Tool isolation/reset/disposal failed');
   await evaluate(`document.getElementById('pause').click()`);await sleep(1200);
   const resumed=await evaluate('window.imageryExperiment.inspect()');
-  if(resumed.some(x=>!x.finite||x.time<=0)||resumed[4].birdCount!==22)throw new Error('Animation/bird state failed');
+  if(resumed.some(x=>!x.finite||x.time<=0)||resumed.find(x=>x.id==='birds').birdCount!==22)throw new Error('Animation/bird state failed');
   // Restore the initial viewing controls for a representative screenshot.
   await evaluate(`for(const [id,val] of [['wind',35],['density',45]]){const el=document.getElementById(id);el.value=val;el.dispatchEvent(new Event('input',{bubbles:true}));}const s=document.getElementById('palette');s.value='clear';s.dispatchEvent(new Event('change'));document.getElementById('pause').click()`);await sleep(100);
   const wideLayout=await evaluate(`({viewport:innerWidth,document:document.documentElement.scrollWidth,candidates:document.querySelectorAll('.candidate').length,canvases:document.querySelectorAll('canvas').length})`);
-  const shot=await send('Page.captureScreenshot',{format:'png',captureBeyondViewport:true,clip:{x:0,y:0,width:1280,height:2180,scale:1}});
+  const shot=await send('Page.captureScreenshot',{format:'png',captureBeyondViewport:true,clip:{x:0,y:0,width:1280,height:2820,scale:1}});
   await writeFile(resolve(dir,'preview.png'),Buffer.from(shot.data,'base64'));
   await send('Emulation.setDeviceMetricsOverride',{width:390,height:844,deviceScaleFactor:1,mobile:true});await sleep(150);
   const narrowLayout=await evaluate(`({viewport:innerWidth,document:document.documentElement.scrollWidth,canvases:document.querySelectorAll('canvas').length})`);
   if(narrowLayout.document>narrowLayout.viewport||wideLayout.document>wideLayout.viewport)throw new Error('Horizontal overflow');
   const mobile=await send('Page.captureScreenshot',{format:'png'});await writeFile(resolve(qa,'mobile.png'),Buffer.from(mobile.data,'base64'));
   if(errors.length)throw new Error(JSON.stringify(errors));
-  const report={status:'passed',targetUrl,initial,pausedBefore,pausedAfter,changed,settings,resumed,exportInfo,wideLayout,narrowLayout,runtimeErrors:errors,limitations:['未操作系统下载确认界面；仅验证 canvas 导出 PNG 数据。','本地画面经浏览器截图检查；OpenProcessing 原作未完成视觉检查。']};
+  const report={status:'passed',targetUrl,initial,pausedBefore,pausedAfter,changed,settings,resumed,exportInfo,isolation,wideLayout,narrowLayout,runtimeErrors:errors,limitations:['未操作系统下载确认界面；仅验证 canvas 导出 PNG 数据。','本地画面经浏览器截图检查；OpenProcessing 原作未完成视觉检查。','七类工具检查暂停重置后的重复出图；不等同于运动的跨设备逐帧确定性。']};
   await writeFile(resolve(dir,'verification.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify({status:report.status,wideLayout,narrowLayout,runtimeErrors:errors.length}));
   await send('Browser.close').catch(()=>{});
 }finally{if(ws)ws.close();edge.kill();}

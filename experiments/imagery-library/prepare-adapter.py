@@ -6,7 +6,7 @@ s=s.replace('let desiredseparation = 25.0;', 'let desiredseparation = 38 - 22 * 
 prefix='''/* Adapted from Daniel Shiffman / The Nature of Code, MIT.
  * Original kept at sources/noc-boid.js; full license at sources/NOC-LICENSE.txt.
  * Changes: p5 instance bindings, density-dependent separation, simultaneous
- * updates in studies.js, bird silhouette and bounds supplied by the local study.
+ * updates in drawing/tools/birds.js, bird silhouette and bounds supplied locally.
  */
 window.createPoemBoidClass = function (p) {
   const createVector = (...args) => p.createVector(...args);

@@ -8,7 +8,15 @@
       "time": 0,
       "ticks": 0,
       "paused": false,
-      "finite": true
+      "disposed": false,
+      "ready": true,
+      "sources": [
+        "sxywu-petals",
+        "project"
+      ],
+      "flowerCount": 7,
+      "finite": true,
+      "geometryKey": "9306209f"
     },
     {
       "id": "tree",
@@ -16,7 +24,14 @@
       "time": 0,
       "ticks": 0,
       "paused": false,
-      "finite": true
+      "disposed": false,
+      "ready": true,
+      "sources": [
+        "noc-tree",
+        "project"
+      ],
+      "finite": true,
+      "geometryKey": "26058b5a"
     },
     {
       "id": "water",
@@ -24,7 +39,14 @@
       "time": 0,
       "ticks": 0,
       "paused": false,
-      "finite": true
+      "disposed": false,
+      "ready": true,
+      "sources": [
+        "noc-wave",
+        "project"
+      ],
+      "finite": true,
+      "geometryKey": "d81ef7b3"
     },
     {
       "id": "mist",
@@ -32,7 +54,13 @@
       "time": 0,
       "ticks": 0,
       "paused": false,
-      "finite": true
+      "disposed": false,
+      "ready": true,
+      "sources": [
+        "project"
+      ],
+      "finite": true,
+      "geometryKey": "6023f0a5"
     },
     {
       "id": "birds",
@@ -40,8 +68,47 @@
       "time": 0,
       "ticks": 0,
       "paused": false,
+      "disposed": false,
+      "ready": true,
+      "sources": [
+        "noc-boids",
+        "project"
+      ],
       "birdCount": 22,
-      "finite": true
+      "finite": true,
+      "geometryKey": "746fc849"
+    },
+    {
+      "id": "boat",
+      "seed": 527,
+      "time": 0,
+      "ticks": 0,
+      "paused": false,
+      "disposed": false,
+      "ready": true,
+      "sources": [
+        "shan-boat",
+        "project"
+      ],
+      "boatCount": 1,
+      "personCount": 0,
+      "finite": true,
+      "geometryKey": "301a08ed"
+    },
+    {
+      "id": "moon",
+      "seed": 624,
+      "time": 0,
+      "ticks": 0,
+      "paused": false,
+      "disposed": false,
+      "ready": true,
+      "sources": [
+        "project"
+      ],
+      "moonCount": 1,
+      "finite": true,
+      "geometryKey": "28928f0d"
     }
   ],
   "pausedBefore": [
@@ -51,7 +118,15 @@
       "time": 0,
       "ticks": 0,
       "paused": true,
-      "finite": true
+      "disposed": false,
+      "ready": true,
+      "sources": [
+        "sxywu-petals",
+        "project"
+      ],
+      "flowerCount": 7,
+      "finite": true,
+      "geometryKey": "9306209f"
     },
     {
       "id": "tree",
@@ -59,7 +134,14 @@
       "time": 0,
       "ticks": 0,
       "paused": true,
-      "finite": true
+      "disposed": false,
+      "ready": true,
+      "sources": [
+        "noc-tree",
+        "project"
+      ],
+      "finite": true,
+      "geometryKey": "26058b5a"
     },
     {
       "id": "water",
@@ -67,7 +149,14 @@
       "time": 0,
       "ticks": 0,
       "paused": true,
-      "finite": true
+      "disposed": false,
+      "ready": true,
+      "sources": [
+        "noc-wave",
+        "project"
+      ],
+      "finite": true,
+      "geometryKey": "d81ef7b3"
     },
     {
       "id": "mist",
@@ -75,7 +164,13 @@
       "time": 0,
       "ticks": 0,
       "paused": true,
-      "finite": true
+      "disposed": false,
+      "ready": true,
+      "sources": [
+        "project"
+      ],
+      "finite": true,
+      "geometryKey": "6023f0a5"
     },
     {
       "id": "birds",
@@ -83,8 +178,47 @@
       "time": 0,
       "ticks": 0,
       "paused": true,
+      "disposed": false,
+      "ready": true,
+      "sources": [
+        "noc-boids",
+        "project"
+      ],
       "birdCount": 22,
-      "finite": true
+      "finite": true,
+      "geometryKey": "746fc849"
+    },
+    {
+      "id": "boat",
+      "seed": 527,
+      "time": 0,
+      "ticks": 0,
+      "paused": true,
+      "disposed": false,
+      "ready": true,
+      "sources": [
+        "shan-boat",
+        "project"
+      ],
+      "boatCount": 1,
+      "personCount": 0,
+      "finite": true,
+      "geometryKey": "301a08ed"
+    },
+    {
+      "id": "moon",
+      "seed": 624,
+      "time": 0,
+      "ticks": 0,
+      "paused": true,
+      "disposed": false,
+      "ready": true,
+      "sources": [
+        "project"
+      ],
+      "moonCount": 1,
+      "finite": true,
+      "geometryKey": "28928f0d"
     }
   ],
   "pausedAfter": [
@@ -94,7 +228,15 @@
       "time": 0,
       "ticks": 1,
       "paused": true,
-      "finite": true
+      "disposed": false,
+      "ready": true,
+      "sources": [
+        "sxywu-petals",
+        "project"
+      ],
+      "flowerCount": 7,
+      "finite": true,
+      "geometryKey": "9306209f"
     },
     {
       "id": "tree",
@@ -102,7 +244,14 @@
       "time": 0,
       "ticks": 1,
       "paused": true,
-      "finite": true
+      "disposed": false,
+      "ready": true,
+      "sources": [
+        "noc-tree",
+        "project"
+      ],
+      "finite": true,
+      "geometryKey": "26058b5a"
     },
     {
       "id": "water",
@@ -110,7 +259,14 @@
       "time": 0,
       "ticks": 1,
       "paused": true,
-      "finite": true
+      "disposed": false,
+      "ready": true,
+      "sources": [
+        "noc-wave",
+        "project"
+      ],
+      "finite": true,
+      "geometryKey": "d81ef7b3"
     },
     {
       "id": "mist",
@@ -118,7 +274,13 @@
       "time": 0,
       "ticks": 1,
       "paused": true,
-      "finite": true
+      "disposed": false,
+      "ready": true,
+      "sources": [
+        "project"
+      ],
+      "finite": true,
+      "geometryKey": "6023f0a5"
     },
     {
       "id": "birds",
@@ -126,8 +288,47 @@
       "time": 0,
       "ticks": 1,
       "paused": true,
+      "disposed": false,
+      "ready": true,
+      "sources": [
+        "noc-boids",
+        "project"
+      ],
       "birdCount": 22,
-      "finite": true
+      "finite": true,
+      "geometryKey": "746fc849"
+    },
+    {
+      "id": "boat",
+      "seed": 527,
+      "time": 0,
+      "ticks": 1,
+      "paused": true,
+      "disposed": false,
+      "ready": true,
+      "sources": [
+        "shan-boat",
+        "project"
+      ],
+      "boatCount": 1,
+      "personCount": 0,
+      "finite": true,
+      "geometryKey": "301a08ed"
+    },
+    {
+      "id": "moon",
+      "seed": 624,
+      "time": 0,
+      "ticks": 1,
+      "paused": true,
+      "disposed": false,
+      "ready": true,
+      "sources": [
+        "project"
+      ],
+      "moonCount": 1,
+      "finite": true,
+      "geometryKey": "28928f0d"
     }
   ],
   "changed": [
@@ -137,7 +338,15 @@
       "time": 0,
       "ticks": 4,
       "paused": true,
-      "finite": true
+      "disposed": false,
+      "ready": true,
+      "sources": [
+        "sxywu-petals",
+        "project"
+      ],
+      "flowerCount": 7,
+      "finite": true,
+      "geometryKey": "88fb38d2"
     },
     {
       "id": "tree",
@@ -145,7 +354,14 @@
       "time": 0,
       "ticks": 4,
       "paused": true,
-      "finite": true
+      "disposed": false,
+      "ready": true,
+      "sources": [
+        "noc-tree",
+        "project"
+      ],
+      "finite": true,
+      "geometryKey": "d1e49999"
     },
     {
       "id": "water",
@@ -153,7 +369,14 @@
       "time": 0,
       "ticks": 4,
       "paused": true,
-      "finite": true
+      "disposed": false,
+      "ready": true,
+      "sources": [
+        "noc-wave",
+        "project"
+      ],
+      "finite": true,
+      "geometryKey": "66ecc6c5"
     },
     {
       "id": "mist",
@@ -161,7 +384,13 @@
       "time": 0,
       "ticks": 4,
       "paused": true,
-      "finite": true
+      "disposed": false,
+      "ready": true,
+      "sources": [
+        "project"
+      ],
+      "finite": true,
+      "geometryKey": "721eb261"
     },
     {
       "id": "birds",
@@ -169,8 +398,47 @@
       "time": 0,
       "ticks": 4,
       "paused": true,
+      "disposed": false,
+      "ready": true,
+      "sources": [
+        "noc-boids",
+        "project"
+      ],
       "birdCount": 22,
-      "finite": true
+      "finite": true,
+      "geometryKey": "f3b58de7"
+    },
+    {
+      "id": "boat",
+      "seed": 528,
+      "time": 0,
+      "ticks": 4,
+      "paused": true,
+      "disposed": false,
+      "ready": true,
+      "sources": [
+        "shan-boat",
+        "project"
+      ],
+      "boatCount": 1,
+      "personCount": 0,
+      "finite": true,
+      "geometryKey": "830ad493"
+    },
+    {
+      "id": "moon",
+      "seed": 625,
+      "time": 0,
+      "ticks": 4,
+      "paused": true,
+      "disposed": false,
+      "ready": true,
+      "sources": [
+        "project"
+      ],
+      "moonCount": 1,
+      "finite": true,
+      "geometryKey": "bf1dbeb3"
     }
   ],
   "settings": {
@@ -182,43 +450,110 @@
     {
       "id": "flower",
       "seed": 43,
-      "time": 1.2987,
+      "time": 1.3105999999940396,
       "ticks": 41,
       "paused": false,
-      "finite": true
+      "disposed": false,
+      "ready": true,
+      "sources": [
+        "sxywu-petals",
+        "project"
+      ],
+      "flowerCount": 7,
+      "finite": true,
+      "geometryKey": "88fb38d2"
     },
     {
       "id": "tree",
       "seed": 140,
-      "time": 1.2987,
+      "time": 1.3105000000000002,
       "ticks": 41,
       "paused": false,
-      "finite": true
+      "disposed": false,
+      "ready": true,
+      "sources": [
+        "noc-tree",
+        "project"
+      ],
+      "finite": true,
+      "geometryKey": "d1e49999"
     },
     {
       "id": "water",
       "seed": 237,
-      "time": 1.2987,
+      "time": 1.3105000000000002,
       "ticks": 41,
       "paused": false,
-      "finite": true
+      "disposed": false,
+      "ready": true,
+      "sources": [
+        "noc-wave",
+        "project"
+      ],
+      "finite": true,
+      "geometryKey": "66ecc6c5"
     },
     {
       "id": "mist",
       "seed": 334,
-      "time": 1.2987,
+      "time": 1.3105000000000002,
       "ticks": 41,
       "paused": false,
-      "finite": true
+      "disposed": false,
+      "ready": true,
+      "sources": [
+        "project"
+      ],
+      "finite": true,
+      "geometryKey": "721eb261"
     },
     {
       "id": "birds",
       "seed": 431,
-      "time": 1.2987,
+      "time": 1.3105000000000002,
       "ticks": 41,
       "paused": false,
+      "disposed": false,
+      "ready": true,
+      "sources": [
+        "noc-boids",
+        "project"
+      ],
       "birdCount": 22,
-      "finite": true
+      "finite": true,
+      "geometryKey": "f3b58de7"
+    },
+    {
+      "id": "boat",
+      "seed": 528,
+      "time": 1.3105000000000002,
+      "ticks": 41,
+      "paused": false,
+      "disposed": false,
+      "ready": true,
+      "sources": [
+        "shan-boat",
+        "project"
+      ],
+      "boatCount": 1,
+      "personCount": 0,
+      "finite": true,
+      "geometryKey": "830ad493"
+    },
+    {
+      "id": "moon",
+      "seed": 625,
+      "time": 1.3105000000000002,
+      "ticks": 41,
+      "paused": false,
+      "disposed": false,
+      "ready": true,
+      "sources": [
+        "project"
+      ],
+      "moonCount": 1,
+      "finite": true,
+      "geometryKey": "bf1dbeb3"
     }
   ],
   "exportInfo": [
@@ -246,22 +581,58 @@
       "width": 640,
       "height": 388,
       "png": true
+    },
+    {
+      "width": 640,
+      "height": 388,
+      "png": true
+    },
+    {
+      "width": 640,
+      "height": 388,
+      "png": true
     }
   ],
+  "isolation": {
+    "toolIds": [
+      "moon",
+      "flower",
+      "tree",
+      "water",
+      "mist",
+      "birds",
+      "boat",
+      "moon"
+    ],
+    "repeatAll": true,
+    "sameSeed": true,
+    "independent": true,
+    "repeated": true,
+    "differentSeed": true,
+    "anchors": [
+      {
+        "id": "center",
+        "x": 320,
+        "y": 175
+      }
+    ],
+    "disposed": true
+  },
   "wideLayout": {
     "viewport": 1280,
     "document": 1265,
     "candidates": 10,
-    "canvases": 5
+    "canvases": 7
   },
   "narrowLayout": {
     "viewport": 390,
     "document": 390,
-    "canvases": 5
+    "canvases": 7
   },
   "runtimeErrors": [],
   "limitations": [
     "未操作系统下载确认界面；仅验证 canvas 导出 PNG 数据。",
-    "本地画面经浏览器截图检查；OpenProcessing 原作未完成视觉检查。"
+    "本地画面经浏览器截图检查；OpenProcessing 原作未完成视觉检查。",
+    "七类工具检查暂停重置后的重复出图；不等同于运动的跨设备逐帧确定性。"
   ]
 }
