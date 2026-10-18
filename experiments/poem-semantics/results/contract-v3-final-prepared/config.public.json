@@ -1,0 +1,15 @@
+{
+  "endpoint": "https://llmapi.paratera.com/v1/chat/completions",
+  "model": "DeepSeek-V4.1-Flash",
+  "parameters": {
+    "temperature": 0.2,
+    "max_tokens": 4096,
+    "stream": false,
+    "response_format": {
+      "type": "json_object"
+    },
+    "thinking": {
+      "type": "disabled"
+    }
+  }
+}

@@ -1,0 +1,184 @@
+{
+  "case_id": "06-heldout-negation",
+  "poem": "千山鸟飞绝，万径人踪灭",
+  "model": "DeepSeek-V4.1-Flash",
+  "started_at": "2026-10-18T03:01:26.640Z",
+  "http_status": 200,
+  "usage": {
+    "completion_tokens": 685,
+    "prompt_tokens": 2171,
+    "total_tokens": 2856,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2048
+    }
+  },
+  "finish_reason": "stop",
+  "reasoning_content_present": false,
+  "analysis": {
+    "schema_version": "2.0",
+    "poem": "千山鸟飞绝，万径人踪灭",
+    "core_reading": "群山之中飞鸟已绝迹，万千路径上人的踪迹也已消失；两句以“绝”“灭”写尽空寂无人。",
+    "imagery": [
+      {
+        "id": "i1",
+        "surface": "千山",
+        "concept": "众多的山；山岭",
+        "kind": "place",
+        "presence": "literal",
+        "evidence": [
+          "千山"
+        ]
+      },
+      {
+        "id": "i2",
+        "surface": "鸟",
+        "concept": "飞鸟",
+        "kind": "object",
+        "presence": "negated",
+        "evidence": [
+          "鸟飞绝"
+        ]
+      },
+      {
+        "id": "i3",
+        "surface": "万径",
+        "concept": "众多的路径、小路",
+        "kind": "place",
+        "presence": "literal",
+        "evidence": [
+          "万径"
+        ]
+      },
+      {
+        "id": "i4",
+        "surface": "人踪",
+        "concept": "人的踪迹、行迹",
+        "kind": "object",
+        "presence": "negated",
+        "evidence": [
+          "人踪灭"
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "source": "i2",
+        "target": "i1",
+        "type": "located_in",
+        "description": "鸟本应在千山之中活动，但此句否定其存在。",
+        "evidence": [
+          "千山鸟飞绝"
+        ]
+      },
+      {
+        "source": "i4",
+        "target": "i3",
+        "type": "located_in",
+        "description": "人的踪迹本应留在万径之上，但此句否定其存在。",
+        "evidence": [
+          "万径人踪灭"
+        ]
+      }
+    ],
+    "mood": {
+      "labels": [
+        "空寂",
+        "冷寂"
+      ],
+      "energy": "low",
+      "tension": "low",
+      "spatial_openness": "high",
+      "explanation": "以“千山”“万径”的广阔空间反衬鸟绝、踪灭的空无，气息静寂。",
+      "evidence": [
+        "千山鸟飞绝",
+        "万径人踪灭"
+      ]
+    },
+    "temporal": {
+      "mode": "unspecified",
+      "description": "“绝”“灭”表示动作已完成、状态已形成，但未给出具体时间参照。",
+      "evidence": [
+        "鸟飞绝",
+        "人踪灭"
+      ],
+      "markers": [
+        {
+          "surface": "绝",
+          "meaning": "断绝、穷尽，表示飞鸟活动已终止",
+          "reference_is_clear": true
+        },
+        {
+          "surface": "灭",
+          "meaning": "消失、灭尽，表示人的踪迹已不存在",
+          "reference_is_clear": true
+        }
+      ]
+    },
+    "uncertainties": [
+      {
+        "topic": "“绝”“灭”的时间指向",
+        "alternatives": [
+          "写当下所见的状态",
+          "写某一时点之后的结果"
+        ],
+        "reason": "两句只呈现结果状态，未提供可定位的时间词或前后事件。"
+      }
+    ],
+    "events": [
+      {
+        "id": "e1",
+        "predicate": "飞绝",
+        "meaning": "飞鸟飞翔的活动断绝、消失",
+        "actor": "i2",
+        "patient": null,
+        "location": "i1",
+        "modality": "negated",
+        "basis": "explicit",
+        "evidence": [
+          "鸟飞绝"
+        ]
+      },
+      {
+        "id": "e2",
+        "predicate": "灭",
+        "meaning": "人的踪迹消失、灭尽",
+        "actor": null,
+        "patient": "i4",
+        "location": "i3",
+        "modality": "negated",
+        "basis": "explicit",
+        "evidence": [
+          "人踪灭"
+        ]
+      }
+    ],
+    "attributes": [
+      {
+        "surface": "千",
+        "kind": "quantity",
+        "owner": "i1",
+        "meaning": "极言山之多",
+        "evidence": [
+          "千山"
+        ]
+      },
+      {
+        "surface": "万",
+        "kind": "quantity",
+        "owner": "i3",
+        "meaning": "极言路径之多",
+        "evidence": [
+          "万径"
+        ]
+      }
+    ]
+  },
+  "validation": {
+    "valid": true,
+    "errors": []
+  },
+  "elapsed_seconds": 8.7
+}

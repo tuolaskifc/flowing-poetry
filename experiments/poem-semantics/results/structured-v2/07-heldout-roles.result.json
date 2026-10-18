@@ -1,0 +1,209 @@
+{
+  "case_id": "07-heldout-roles",
+  "poem": "风送归舟，舟载归人",
+  "model": "DeepSeek-V4.1-Flash",
+  "started_at": "2026-10-18T03:01:35.341Z",
+  "http_status": 200,
+  "usage": {
+    "completion_tokens": 833,
+    "prompt_tokens": 2169,
+    "total_tokens": 3002,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2048
+    }
+  },
+  "finish_reason": "stop",
+  "reasoning_content_present": false,
+  "analysis": {
+    "schema_version": "2.0",
+    "poem": "风送归舟，舟载归人",
+    "core_reading": "风推送着归家的船，船承载着归家的人；两句以顶针相连，写归途中的推动与承载关系。",
+    "imagery": [
+      {
+        "id": "i1",
+        "surface": "风",
+        "concept": "风，自然气流",
+        "kind": "environment",
+        "presence": "literal",
+        "evidence": [
+          "风送归舟"
+        ]
+      },
+      {
+        "id": "i2",
+        "surface": "归舟",
+        "concept": "返回的船",
+        "kind": "object",
+        "presence": "literal",
+        "evidence": [
+          "风送归舟"
+        ]
+      },
+      {
+        "id": "i3",
+        "surface": "舟",
+        "concept": "船，此处复指前句的归舟",
+        "kind": "object",
+        "presence": "literal",
+        "evidence": [
+          "舟载归人"
+        ]
+      },
+      {
+        "id": "i4",
+        "surface": "归人",
+        "concept": "归家或返回的人",
+        "kind": "person",
+        "presence": "literal",
+        "evidence": [
+          "舟载归人"
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "source": "i1",
+        "target": "i2",
+        "type": "acts_on",
+        "description": "风推送归舟，是推动归舟的力量。",
+        "evidence": [
+          "风送归舟"
+        ]
+      },
+      {
+        "source": "i3",
+        "target": "i4",
+        "type": "acts_on",
+        "description": "舟承载归人，是承载归人的载体。",
+        "evidence": [
+          "舟载归人"
+        ]
+      },
+      {
+        "source": "i4",
+        "target": "i3",
+        "type": "located_in",
+        "description": "归人位于舟中，由“舟载归人”推知。",
+        "evidence": [
+          "舟载归人"
+        ]
+      },
+      {
+        "source": "i2",
+        "target": "i3",
+        "type": "corresponds_with",
+        "description": "“归舟”与下句“舟”为同一船的顶针复指。",
+        "evidence": [
+          "风送归舟",
+          "舟载归人"
+        ]
+      }
+    ],
+    "mood": {
+      "labels": [
+        "归途",
+        "轻缓",
+        "安稳"
+      ],
+      "energy": "medium",
+      "tension": "low",
+      "spatial_openness": "medium",
+      "explanation": "风送、舟载构成连贯的归途动作，语气平缓，空间感由风与舟暗示，但未明写具体环境。",
+      "evidence": [
+        "风送归舟",
+        "舟载归人"
+      ]
+    },
+    "temporal": {
+      "mode": "progressive",
+      "description": "两句以顶针推进，呈现风送舟、舟载人的连续归程，但未标明具体时间点。",
+      "evidence": [
+        "风送归舟",
+        "舟载归人"
+      ],
+      "markers": [
+        {
+          "surface": "归",
+          "meaning": "返回、归向，暗示行程朝向归处",
+          "reference_is_clear": false
+        }
+      ]
+    },
+    "uncertainties": [
+      {
+        "topic": "归人身份与归处",
+        "alternatives": [
+          "归人可能是舟中乘客，具体身份不明",
+          "归处可能是家乡或某地，未明说"
+        ],
+        "reason": "诗句只出现“归人”“归舟”，未提供人物身份、出发地或目的地。"
+      },
+      {
+        "topic": "风与舟的关系性质",
+        "alternatives": [
+          "风是顺风推送归舟",
+          "风只是伴随归舟的自然环境"
+        ],
+        "reason": "“送”可解为推送、送行，具体是助力还是伴随，单句无法确定。"
+      }
+    ],
+    "events": [
+      {
+        "id": "e1",
+        "predicate": "送",
+        "meaning": "风推送、送行归舟",
+        "actor": "i1",
+        "patient": "i2",
+        "location": null,
+        "modality": "asserted",
+        "basis": "explicit",
+        "evidence": [
+          "风送归舟"
+        ]
+      },
+      {
+        "id": "e2",
+        "predicate": "载",
+        "meaning": "舟承载归人",
+        "actor": "i3",
+        "patient": "i4",
+        "location": "i3",
+        "modality": "asserted",
+        "basis": "explicit",
+        "evidence": [
+          "舟载归人"
+        ]
+      }
+    ],
+    "attributes": [
+      {
+        "surface": "归",
+        "kind": "state",
+        "owner": "i2",
+        "meaning": "返回、归向的状态",
+        "evidence": [
+          "归舟"
+        ]
+      },
+      {
+        "surface": "归",
+        "kind": "state",
+        "owner": "i4",
+        "meaning": "返回、归向的状态",
+        "evidence": [
+          "归人"
+        ]
+      }
+    ]
+  },
+  "validation": {
+    "valid": false,
+    "errors": [
+      "$.relations: located_in target must be a place"
+    ]
+  },
+  "elapsed_seconds": 13.1
+}

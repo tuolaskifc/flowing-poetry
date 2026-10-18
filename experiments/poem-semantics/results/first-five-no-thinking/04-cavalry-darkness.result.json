@@ -1,0 +1,157 @@
+{
+  "case_id": "04-cavalry-darkness",
+  "poem": "坐见幽州骑，长驱河洛昏",
+  "model": "DeepSeek-V4.1-Flash",
+  "started_at": "2026-10-18T02:58:11.183Z",
+  "http_status": 200,
+  "usage": {
+    "completion_tokens": 607,
+    "prompt_tokens": 1394,
+    "total_tokens": 2001,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 1280
+    }
+  },
+  "finish_reason": "stop",
+  "reasoning_content_present": false,
+  "analysis": {
+    "schema_version": "1.0",
+    "poem": "坐见幽州骑，长驱河洛昏",
+    "core_reading": "诗人坐看幽州骑兵长驱直入，河洛一带因此昏暗。写旁观中敌军或边骑深入中原的态势，含无力与动荡之感。",
+    "imagery": [
+      {
+        "id": "i1",
+        "surface": "坐见",
+        "concept": "坐着看见；旁观、目睹",
+        "kind": "person",
+        "presence": "inferred",
+        "evidence": [
+          "坐见"
+        ]
+      },
+      {
+        "id": "i2",
+        "surface": "幽州骑",
+        "concept": "幽州方向的骑兵",
+        "kind": "person",
+        "presence": "literal",
+        "evidence": [
+          "幽州骑"
+        ]
+      },
+      {
+        "id": "i3",
+        "surface": "河洛",
+        "concept": "黄河与洛水一带，泛指中原地区",
+        "kind": "place",
+        "presence": "literal",
+        "evidence": [
+          "河洛"
+        ]
+      },
+      {
+        "id": "i4",
+        "surface": "昏",
+        "concept": "昏暗；也可指局势昏乱",
+        "kind": "environment",
+        "presence": "uncertain",
+        "evidence": [
+          "昏"
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "source": "i1",
+        "target": "i2",
+        "type": "acts_on",
+        "description": "“坐见”表明观看者目睹幽州骑出现，观看者并未主动介入。",
+        "evidence": [
+          "坐见",
+          "幽州骑"
+        ]
+      },
+      {
+        "source": "i2",
+        "target": "i3",
+        "type": "moves_toward",
+        "description": "幽州骑“长驱”向河洛一带深入。",
+        "evidence": [
+          "幽州骑",
+          "长驱",
+          "河洛"
+        ]
+      },
+      {
+        "source": "i2",
+        "target": "i4",
+        "type": "acts_on",
+        "description": "骑兵长驱的行动使河洛一带呈现昏暗。",
+        "evidence": [
+          "长驱",
+          "河洛昏"
+        ]
+      }
+    ],
+    "mood": {
+      "labels": [
+        "动荡",
+        "压抑",
+        "旁观"
+      ],
+      "energy": "high",
+      "tension": "high",
+      "spatial_openness": "medium",
+      "explanation": "“长驱”显示强烈推进感，“昏”使空间与局势显得压抑；观看者“坐见”又带出旁观无力感。",
+      "evidence": [
+        "坐见",
+        "长驱",
+        "河洛昏"
+      ]
+    },
+    "temporal": {
+      "mode": "progressive",
+      "description": "“长驱”表示正在推进、持续深入的动作过程。",
+      "evidence": [
+        "长驱"
+      ]
+    },
+    "uncertainties": [
+      {
+        "topic": "“昏”的所指",
+        "alternatives": [
+          "天色昏暗",
+          "河洛地区因战乱而昏暗",
+          "局势昏乱"
+        ],
+        "reason": "“昏”可指光线，也可引申为局势，原句未明说。"
+      },
+      {
+        "topic": "“坐见”的主体",
+        "alternatives": [
+          "诗人自己",
+          "泛指旁观者",
+          "未明说的某人"
+        ],
+        "reason": "原句只出现“坐见”，没有明确主语。"
+      },
+      {
+        "topic": "“幽州骑”的性质",
+        "alternatives": [
+          "敌方骑兵",
+          "边地军队",
+          "泛指北方骑兵"
+        ],
+        "reason": "原句未交代阵营与背景，只能确定是幽州方向的骑兵。"
+      }
+    ]
+  },
+  "validation": {
+    "valid": true,
+    "errors": []
+  },
+  "elapsed_seconds": 3.8
+}

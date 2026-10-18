@@ -1,0 +1,28 @@
+{
+  "case_id": "01-autumn-town",
+  "poem": "西风酒旗市，细雨菊花天",
+  "model": "DeepSeek-V4.1-Flash",
+  "started_at": "2026-10-18T02:56:49.683Z",
+  "http_status": 200,
+  "usage": {
+    "completion_tokens": 4096,
+    "prompt_tokens": 1417,
+    "total_tokens": 5513,
+    "completion_tokens_details": {
+      "reasoning_tokens": 4096
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  },
+  "finish_reason": "length",
+  "reasoning_content_present": true,
+  "error": "No final text content returned.",
+  "validation": {
+    "valid": false,
+    "errors": [
+      "No final text content returned."
+    ]
+  },
+  "elapsed_seconds": 26.9
+}

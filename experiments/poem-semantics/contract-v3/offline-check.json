@@ -1,0 +1,180 @@
+{
+  "protocol_version": "3.0",
+  "new_api_calls": 0,
+  "origin": "authored_examples_not_model_outputs",
+  "examples": [
+    {
+      "name": "秋日街市",
+      "origin": "手工编写的协议示例，不是本轮 API 输出",
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [
+          "模型保留了不确定性，需要审阅"
+        ],
+        "review_required": true
+      },
+      "historical_observation": {
+        "case_id": "01-autumn-town",
+        "schema_version": "2.0",
+        "original_validation": {
+          "valid": false,
+          "errors": [
+            "$.relations: located_in target must be a place"
+          ]
+        }
+      }
+    },
+    {
+      "name": "兵器与比喻参照",
+      "origin": "手工编写的协议示例，不是本轮 API 输出",
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "review_required": false
+      },
+      "historical_observation": {
+        "case_id": "02-spears-stars",
+        "schema_version": "2.0",
+        "original_validation": {
+          "valid": true,
+          "errors": []
+        }
+      }
+    },
+    {
+      "name": "吹送与可能发生的酣饮",
+      "origin": "手工编写的协议示例，不是本轮 API 输出",
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [
+          "$.relations[1]: 未归类关系需人工确认",
+          "模型保留了不确定性，需要审阅"
+        ],
+        "review_required": true
+      },
+      "historical_observation": {
+        "case_id": "03-wind-geese",
+        "schema_version": "2.0",
+        "original_validation": {
+          "valid": false,
+          "errors": [
+            "$.relations: located_in target must be a place"
+          ]
+        }
+      }
+    },
+    {
+      "name": "目睹与推进",
+      "origin": "手工编写的协议示例，不是本轮 API 输出",
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [
+          "模型保留了不确定性，需要审阅"
+        ],
+        "review_required": true
+      },
+      "historical_observation": {
+        "case_id": "04-cavalry-darkness",
+        "schema_version": "2.0",
+        "original_validation": {
+          "valid": false,
+          "errors": [
+            "$.relations[0].source_id: unexpected field",
+            "$.relations[0].target_id: unexpected field",
+            "$.attributes: owner does not exist"
+          ]
+        }
+      }
+    },
+    {
+      "name": "花期与白发",
+      "origin": "手工编写的协议示例，不是本轮 API 输出",
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [
+          "模型保留了不确定性，需要审阅"
+        ],
+        "review_required": true
+      },
+      "historical_observation": {
+        "case_id": "05-flowers-grey-hair",
+        "schema_version": "2.0",
+        "original_validation": {
+          "valid": false,
+          "errors": [
+            "$.relations: located_in target must be a place"
+          ]
+        }
+      }
+    },
+    {
+      "name": "缺席是消失的结果",
+      "origin": "手工编写的协议示例，不是本轮 API 输出",
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "review_required": false
+      },
+      "historical_observation": {
+        "case_id": "06-heldout-negation",
+        "schema_version": "2.0",
+        "original_validation": {
+          "valid": true,
+          "errors": []
+        }
+      }
+    },
+    {
+      "name": "同一条船的复指",
+      "origin": "手工编写的协议示例，不是本轮 API 输出",
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "review_required": false
+      },
+      "historical_observation": {
+        "case_id": "07-heldout-roles",
+        "schema_version": "2.0",
+        "original_validation": {
+          "valid": false,
+          "errors": [
+            "$.relations: located_in target must be a place"
+          ]
+        }
+      }
+    },
+    {
+      "name": "动作被否定，主体不一定缺席",
+      "origin": "手工编写的协议示例，不是本轮 API 输出",
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "review_required": false
+      },
+      "historical_observation": null
+    },
+    {
+      "name": "假设未被当成已发生",
+      "origin": "手工编写的协议示例，不是本轮 API 输出",
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [
+          "$.entities[0]: 场景主体的出现情况不清楚",
+          "$.entities[1]: 场景主体的出现情况不清楚",
+          "模型保留了不确定性，需要审阅"
+        ],
+        "review_required": true
+      },
+      "historical_observation": null
+    }
+  ]
+}

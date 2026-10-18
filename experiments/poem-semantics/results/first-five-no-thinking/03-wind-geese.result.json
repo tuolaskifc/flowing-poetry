@@ -1,0 +1,142 @@
+{
+  "case_id": "03-wind-geese",
+  "poem": "长风万里送秋雁，对此可以酣高楼",
+  "model": "DeepSeek-V4.1-Flash",
+  "started_at": "2026-10-18T02:58:07.116Z",
+  "http_status": 200,
+  "usage": {
+    "completion_tokens": 587,
+    "prompt_tokens": 1393,
+    "total_tokens": 1980,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 1280
+    }
+  },
+  "finish_reason": "stop",
+  "reasoning_content_present": false,
+  "analysis": {
+    "schema_version": "1.0",
+    "poem": "长风万里送秋雁，对此可以酣高楼",
+    "core_reading": "万里长风送走秋日雁群，面对此景，正可在高楼上畅饮。前句写开阔的秋空动景，后句由景生情，提出登高酣饮的可行之举。",
+    "imagery": [
+      {
+        "id": "i1",
+        "surface": "长风",
+        "concept": "自远处吹来的持续大风",
+        "kind": "environment",
+        "presence": "literal",
+        "evidence": [
+          "长风万里"
+        ]
+      },
+      {
+        "id": "i2",
+        "surface": "万里",
+        "concept": "极远的空间距离",
+        "kind": "place",
+        "presence": "literal",
+        "evidence": [
+          "长风万里"
+        ]
+      },
+      {
+        "id": "i3",
+        "surface": "秋雁",
+        "concept": "秋季南飞的雁群",
+        "kind": "object",
+        "presence": "literal",
+        "evidence": [
+          "送秋雁"
+        ]
+      },
+      {
+        "id": "i4",
+        "surface": "高楼",
+        "concept": "高处的楼阁，登临饮酒之所",
+        "kind": "place",
+        "presence": "literal",
+        "evidence": [
+          "酣高楼"
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "source": "i1",
+        "target": "i3",
+        "type": "acts_on",
+        "description": "长风在万里空间中吹送秋雁，风是送行的动力。",
+        "evidence": [
+          "长风万里送秋雁"
+        ]
+      },
+      {
+        "source": "i1",
+        "target": "i2",
+        "type": "located_in",
+        "description": "长风的活动范围延展至万里之远。",
+        "evidence": [
+          "长风万里"
+        ]
+      },
+      {
+        "source": "i4",
+        "target": null,
+        "type": "located_in",
+        "description": "酣饮之举发生在高楼之上，楼是饮酒的场所。",
+        "evidence": [
+          "酣高楼"
+        ]
+      }
+    ],
+    "mood": {
+      "labels": [
+        "开阔",
+        "豪迈",
+        "秋意"
+      ],
+      "energy": "high",
+      "tension": "low",
+      "spatial_openness": "high",
+      "explanation": "长风万里、秋雁远去构成开阔高远的动景，末句以高楼酣饮承接，气息豪放而不紧张。",
+      "evidence": [
+        "长风万里送秋雁",
+        "对此可以酣高楼"
+      ]
+    },
+    "temporal": {
+      "mode": "unspecified",
+      "description": "诗句以“送”写风雁的动态，以“可以”提出可行的举动，未明确标示时间循环或先后进程。",
+      "evidence": [
+        "长风万里送秋雁",
+        "对此可以酣高楼"
+      ]
+    },
+    "uncertainties": [
+      {
+        "topic": "“对此”的指代",
+        "alternatives": [
+          "指前句长风送秋雁的整个景象",
+          "兼指登楼所见的秋空与雁群"
+        ],
+        "reason": "“此”为指示代词，原文未明说具体所指，只能由上下文推知。"
+      },
+      {
+        "topic": "“可以”的语气",
+        "alternatives": [
+          "表示条件具备、可以这样做",
+          "带有劝饮或自劝的意味"
+        ],
+        "reason": "“可以”表可行性，但是否含劝勉语气，单凭两句难以确定。"
+      }
+    ]
+  },
+  "validation": {
+    "valid": true,
+    "errors": []
+  },
+  "elapsed_seconds": 4.1
+}

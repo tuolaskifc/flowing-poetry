@@ -1,0 +1,406 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Poem semantics v2: entities, actions, attributes, and anchored time cues",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "poem",
+    "core_reading",
+    "imagery",
+    "relations",
+    "mood",
+    "temporal",
+    "uncertainties",
+    "events",
+    "attributes"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "2.0"
+    },
+    "poem": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 200
+    },
+    "core_reading": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 160
+    },
+    "imagery": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 8,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "surface",
+          "concept",
+          "kind",
+          "presence",
+          "evidence"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^i[1-9][0-9]*$"
+          },
+          "surface": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 40
+          },
+          "concept": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100
+          },
+          "kind": {
+            "enum": [
+              "object",
+              "environment",
+              "place",
+              "person"
+            ]
+          },
+          "presence": {
+            "enum": [
+              "literal",
+              "figurative_reference",
+              "inferred",
+              "uncertain",
+              "negated"
+            ]
+          },
+          "evidence": {
+            "$ref": "#/$defs/evidence"
+          }
+        }
+      }
+    },
+    "relations": {
+      "type": "array",
+      "maxItems": 6,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "source",
+          "target",
+          "type",
+          "description",
+          "evidence"
+        ],
+        "properties": {
+          "source": {
+            "type": "string"
+          },
+          "target": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "type": {
+            "enum": [
+              "acts_on",
+              "moves_toward",
+              "moves_away",
+              "located_in",
+              "compared_to",
+              "contrasts_with",
+              "precedes",
+              "corresponds_with",
+              "obscures",
+              "persists"
+            ]
+          },
+          "description": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 160
+          },
+          "evidence": {
+            "$ref": "#/$defs/evidence"
+          }
+        }
+      }
+    },
+    "mood": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "labels",
+        "energy",
+        "tension",
+        "spatial_openness",
+        "explanation",
+        "evidence"
+      ],
+      "properties": {
+        "labels": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 4,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 16
+          }
+        },
+        "energy": {
+          "$ref": "#/$defs/level"
+        },
+        "tension": {
+          "$ref": "#/$defs/level"
+        },
+        "spatial_openness": {
+          "$ref": "#/$defs/level"
+        },
+        "explanation": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200
+        },
+        "evidence": {
+          "$ref": "#/$defs/evidence"
+        }
+      }
+    },
+    "temporal": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "mode",
+        "description",
+        "evidence",
+        "markers"
+      ],
+      "properties": {
+        "mode": {
+          "enum": [
+            "continuous",
+            "cyclic",
+            "progressive",
+            "suspended",
+            "unspecified"
+          ]
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 160
+        },
+        "evidence": {
+          "$ref": "#/$defs/evidence"
+        },
+        "markers": {
+          "type": "array",
+          "maxItems": 5,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "surface",
+              "meaning",
+              "reference_is_clear"
+            ],
+            "properties": {
+              "surface": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 20
+              },
+              "meaning": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 120
+              },
+              "reference_is_clear": {
+                "type": "boolean"
+              }
+            }
+          }
+        }
+      }
+    },
+    "uncertainties": {
+      "type": "array",
+      "maxItems": 4,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "topic",
+          "alternatives",
+          "reason"
+        ],
+        "properties": {
+          "topic": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 80
+          },
+          "alternatives": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 3,
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 120
+            }
+          },
+          "reason": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200
+          }
+        }
+      }
+    },
+    "events": {
+      "type": "array",
+      "maxItems": 6,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "predicate",
+          "meaning",
+          "actor",
+          "patient",
+          "location",
+          "modality",
+          "basis",
+          "evidence"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^e[1-9][0-9]*$"
+          },
+          "predicate": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 20
+          },
+          "meaning": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 120
+          },
+          "actor": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "patient": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "location": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "modality": {
+            "enum": [
+              "asserted",
+              "possible",
+              "conditional",
+              "negated",
+              "unclear"
+            ]
+          },
+          "basis": {
+            "enum": [
+              "explicit",
+              "inferred"
+            ]
+          },
+          "evidence": {
+            "$ref": "#/$defs/evidence"
+          }
+        }
+      }
+    },
+    "attributes": {
+      "type": "array",
+      "maxItems": 8,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "surface",
+          "kind",
+          "owner",
+          "meaning",
+          "evidence"
+        ],
+        "properties": {
+          "surface": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 30
+          },
+          "kind": {
+            "enum": [
+              "time",
+              "season",
+              "distance",
+              "extent",
+              "quantity",
+              "light",
+              "state",
+              "viewpoint"
+            ]
+          },
+          "owner": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "meaning": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 120
+          },
+          "evidence": {
+            "$ref": "#/$defs/evidence"
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "evidence": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 4,
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 80
+      }
+    },
+    "level": {
+      "enum": [
+        "low",
+        "medium",
+        "high",
+        "unclear"
+      ]
+    }
+  }
+}

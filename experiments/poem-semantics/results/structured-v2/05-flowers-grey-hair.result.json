@@ -1,0 +1,214 @@
+{
+  "case_id": "05-flowers-grey-hair",
+  "poem": "黄华自与西风约，白发先从远客生",
+  "model": "DeepSeek-V4.1-Flash",
+  "started_at": "2026-10-18T03:01:20.100Z",
+  "http_status": 200,
+  "usage": {
+    "completion_tokens": 944,
+    "prompt_tokens": 2173,
+    "total_tokens": 3117,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2048
+    }
+  },
+  "finish_reason": "stop",
+  "reasoning_content_present": false,
+  "analysis": {
+    "schema_version": "2.0",
+    "poem": "黄华自与西风约，白发先从远客生",
+    "core_reading": "黄花仿佛自与西风有约而开，白发却先从远行之客身上生出；以花之应节反衬人之早衰，暗含羁旅迟暮之感。",
+    "imagery": [
+      {
+        "id": "i1",
+        "surface": "黄华",
+        "concept": "黄色的花，多指菊花",
+        "kind": "object",
+        "presence": "literal",
+        "evidence": [
+          "黄华自与西风约"
+        ]
+      },
+      {
+        "id": "i2",
+        "surface": "西风",
+        "concept": "秋风",
+        "kind": "environment",
+        "presence": "literal",
+        "evidence": [
+          "黄华自与西风约"
+        ]
+      },
+      {
+        "id": "i3",
+        "surface": "白发",
+        "concept": "白头发，喻衰老",
+        "kind": "object",
+        "presence": "literal",
+        "evidence": [
+          "白发先从远客生"
+        ]
+      },
+      {
+        "id": "i4",
+        "surface": "远客",
+        "concept": "远行在外之人，此处为抒情主体",
+        "kind": "person",
+        "presence": "literal",
+        "evidence": [
+          "白发先从远客生"
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "source": "i1",
+        "target": "i2",
+        "type": "corresponds_with",
+        "description": "黄花与西风相期相约，仿佛彼此呼应",
+        "evidence": [
+          "黄华自与西风约"
+        ]
+      },
+      {
+        "source": "i3",
+        "target": "i4",
+        "type": "located_in",
+        "description": "白发在远客身上生出，以远客为发生处",
+        "evidence": [
+          "白发先从远客生"
+        ]
+      },
+      {
+        "source": "i1",
+        "target": "i3",
+        "type": "contrasts_with",
+        "description": "黄花应秋而开与远客早生白发形成对照",
+        "evidence": [
+          "黄华自与西风约",
+          "白发先从远客生"
+        ]
+      }
+    ],
+    "mood": {
+      "labels": [
+        "羁旅",
+        "迟暮",
+        "感伤"
+      ],
+      "energy": "low",
+      "tension": "medium",
+      "spatial_openness": "unclear",
+      "explanation": "上句写花与秋风相期，气息舒缓；下句转出远客白发，情绪低沉，暗含羁旅迟暮之叹。",
+      "evidence": [
+        "黄华自与西风约",
+        "白发先从远客生"
+      ]
+    },
+    "temporal": {
+      "mode": "unspecified",
+      "description": "“先”提示白发之生先于某种未明说的比较或预期，但参照对象未在句中出现。",
+      "evidence": [
+        "白发先从远客生"
+      ],
+      "markers": [
+        {
+          "surface": "自",
+          "meaning": "自然、本自，表示花与西风相约出于自身",
+          "reference_is_clear": true
+        },
+        {
+          "surface": "先",
+          "meaning": "首先、在先，表示白发之生先于另一未明说的情形",
+          "reference_is_clear": false
+        }
+      ]
+    },
+    "uncertainties": [
+      {
+        "topic": "“先”的比较参照",
+        "alternatives": [
+          "白发先于归期或团聚而生",
+          "白发先于其他衰老迹象而生",
+          "白发先于黄花开放而生"
+        ],
+        "reason": "句中出现“先”但未明说与什么相比，参照对象缺失，只能确定存在先后提示。"
+      },
+      {
+        "topic": "“约”的语义",
+        "alternatives": [
+          "黄花与西风相约，拟人化表达",
+          "黄花自守与西风的约定，指应节而开"
+        ],
+        "reason": "“约”可解为相约，也可解为约定、期约，二者都指向花与秋风的呼应关系。"
+      }
+    ],
+    "events": [
+      {
+        "id": "e1",
+        "predicate": "约",
+        "meaning": "相约、期约，黄花与西风仿佛彼此有约",
+        "actor": "i1",
+        "patient": "i2",
+        "location": null,
+        "modality": "asserted",
+        "basis": "explicit",
+        "evidence": [
+          "黄华自与西风约"
+        ]
+      },
+      {
+        "id": "e2",
+        "predicate": "生",
+        "meaning": "生出、长出，白发从远客身上生出",
+        "actor": "i3",
+        "patient": null,
+        "location": "i4",
+        "modality": "asserted",
+        "basis": "explicit",
+        "evidence": [
+          "白发先从远客生"
+        ]
+      }
+    ],
+    "attributes": [
+      {
+        "surface": "自",
+        "kind": "state",
+        "owner": "i1",
+        "meaning": "自然、本自，强调黄花与西风相约出于自身",
+        "evidence": [
+          "黄华自与西风约"
+        ]
+      },
+      {
+        "surface": "先",
+        "kind": "time",
+        "owner": "i3",
+        "meaning": "首先、在先，表示白发之生先于另一未明说的情形",
+        "evidence": [
+          "白发先从远客生"
+        ]
+      },
+      {
+        "surface": "远",
+        "kind": "distance",
+        "owner": "i4",
+        "meaning": "路途遥远，修饰远行之客",
+        "evidence": [
+          "白发先从远客生"
+        ]
+      }
+    ]
+  },
+  "validation": {
+    "valid": false,
+    "errors": [
+      "$.relations: located_in target must be a place"
+    ]
+  },
+  "elapsed_seconds": 6.5
+}

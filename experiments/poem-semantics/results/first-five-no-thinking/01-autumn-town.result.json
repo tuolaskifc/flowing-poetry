@@ -1,0 +1,199 @@
+{
+  "case_id": "01-autumn-town",
+  "poem": "西风酒旗市，细雨菊花天",
+  "model": "DeepSeek-V4.1-Flash",
+  "started_at": "2026-10-18T02:57:48.767Z",
+  "http_status": 200,
+  "usage": {
+    "completion_tokens": 834,
+    "prompt_tokens": 1392,
+    "total_tokens": 2226,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  },
+  "finish_reason": "stop",
+  "reasoning_content_present": false,
+  "analysis": {
+    "schema_version": "1.0",
+    "poem": "西风酒旗市，细雨菊花天",
+    "core_reading": "西风吹拂着酒旗招展的市集，细雨中菊花盛开，天地间一片秋意。两句并置，写秋日市井与花景的静美。",
+    "imagery": [
+      {
+        "id": "i1",
+        "surface": "西风",
+        "concept": "秋风，多指萧瑟的偏西方向之风",
+        "kind": "environment",
+        "presence": "literal",
+        "evidence": [
+          "西风"
+        ]
+      },
+      {
+        "id": "i2",
+        "surface": "酒旗",
+        "concept": "酒家悬挂的招客布帘、幌子",
+        "kind": "object",
+        "presence": "literal",
+        "evidence": [
+          "酒旗"
+        ]
+      },
+      {
+        "id": "i3",
+        "surface": "市",
+        "concept": "集市、市井街巷",
+        "kind": "place",
+        "presence": "literal",
+        "evidence": [
+          "市"
+        ]
+      },
+      {
+        "id": "i4",
+        "surface": "细雨",
+        "concept": "细密的小雨",
+        "kind": "environment",
+        "presence": "literal",
+        "evidence": [
+          "细雨"
+        ]
+      },
+      {
+        "id": "i5",
+        "surface": "菊花",
+        "concept": "秋季开放的菊，常象征秋意与高洁",
+        "kind": "object",
+        "presence": "literal",
+        "evidence": [
+          "菊花"
+        ]
+      },
+      {
+        "id": "i6",
+        "surface": "天",
+        "concept": "天空、天宇，此处指菊花所处的天时背景",
+        "kind": "environment",
+        "presence": "literal",
+        "evidence": [
+          "天"
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "source": "i1",
+        "target": "i2",
+        "type": "acts_on",
+        "description": "西风吹动酒旗，使旗招展。",
+        "evidence": [
+          "西风酒旗"
+        ]
+      },
+      {
+        "source": "i2",
+        "target": "i3",
+        "type": "located_in",
+        "description": "酒旗立于市集之中，标示酒家的所在。",
+        "evidence": [
+          "酒旗市"
+        ]
+      },
+      {
+        "source": "i4",
+        "target": "i5",
+        "type": "acts_on",
+        "description": "细雨洒落在菊花之上，润泽花枝。",
+        "evidence": [
+          "细雨菊花"
+        ]
+      },
+      {
+        "source": "i5",
+        "target": "i6",
+        "type": "located_in",
+        "description": "菊花处于秋日的天时之下，与天相映。",
+        "evidence": [
+          "菊花天"
+        ]
+      },
+      {
+        "source": "i1",
+        "target": "i4",
+        "type": "corresponds_with",
+        "description": "西风与细雨并置，同属秋日气候，彼此呼应。",
+        "evidence": [
+          "西风",
+          "细雨"
+        ]
+      },
+      {
+        "source": "i3",
+        "target": "i6",
+        "type": "contrasts_with",
+        "description": "市井人事与菊花天象相对，一近一远，构成空间对照。",
+        "evidence": [
+          "市",
+          "天"
+        ]
+      }
+    ],
+    "mood": {
+      "labels": [
+        "清冷",
+        "静美",
+        "秋意"
+      ],
+      "energy": "low",
+      "tension": "low",
+      "spatial_openness": "medium",
+      "explanation": "西风、细雨带来清冷气息，酒旗与菊花静立，动作轻微，整体气息安静而开阔。",
+      "evidence": [
+        "西风酒旗市",
+        "细雨菊花天"
+      ]
+    },
+    "temporal": {
+      "mode": "unspecified",
+      "description": "两句为静态并置的景物描写，未用明确时间词，不强行判定为循环或持续。",
+      "evidence": [
+        "西风酒旗市",
+        "细雨菊花天"
+      ]
+    },
+    "uncertainties": [
+      {
+        "topic": "西风的情感色彩",
+        "alternatives": [
+          "仅指秋风，写实景",
+          "暗含萧瑟、羁旅或时序之感"
+        ],
+        "reason": "西风在古诗中常兼有写实与情绪暗示，单凭本句难以确定。"
+      },
+      {
+        "topic": "酒旗与市的关系",
+        "alternatives": [
+          "酒旗是市集中酒家的招幌",
+          "市泛指市井，酒旗为其一景"
+        ],
+        "reason": "原文未明说酒旗属于哪家酒肆，只能确定二者同处一景。"
+      },
+      {
+        "topic": "菊花天的理解",
+        "alternatives": [
+          "菊花盛开于秋日天空之下",
+          "天指时令，即菊花开放的季节"
+        ],
+        "reason": "“天”可指天空，也可指天时、季节，原文未限定。"
+      }
+    ]
+  },
+  "validation": {
+    "valid": true,
+    "errors": []
+  },
+  "elapsed_seconds": 5.2
+}

@@ -1,0 +1,190 @@
+{
+  "case_id": "04-cavalry-darkness",
+  "poem": "坐见幽州骑，长驱河洛昏",
+  "model": "DeepSeek-V4.1-Flash",
+  "started_at": "2026-10-18T03:01:16.053Z",
+  "http_status": 200,
+  "usage": {
+    "completion_tokens": 706,
+    "prompt_tokens": 2171,
+    "total_tokens": 2877,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2048
+    }
+  },
+  "finish_reason": "stop",
+  "reasoning_content_present": false,
+  "analysis": {
+    "schema_version": "2.0",
+    "poem": "坐见幽州骑，长驱河洛昏",
+    "core_reading": "坐着看见幽州的骑兵，长驱直入使河洛一带昏暗。写目睹敌军骑兵深入、河洛地区陷入昏暗动荡的景象。",
+    "imagery": [
+      {
+        "id": "i1",
+        "surface": "幽州骑",
+        "concept": "幽州来的骑兵，指北方军队",
+        "kind": "person",
+        "presence": "literal",
+        "evidence": [
+          "坐见幽州骑"
+        ]
+      },
+      {
+        "id": "i2",
+        "surface": "河洛",
+        "concept": "黄河与洛水一带，泛指中原地区",
+        "kind": "place",
+        "presence": "literal",
+        "evidence": [
+          "长驱河洛昏"
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "source": "i1",
+        "target": "i2",
+        "type": "moves_toward",
+        "description": "幽州骑兵长驱进入河洛地区",
+        "evidence": [
+          "长驱河洛昏"
+        ],
+        "source_id": "i1",
+        "target_id": "i2"
+      }
+    ],
+    "mood": {
+      "labels": [
+        "动荡",
+        "紧迫"
+      ],
+      "energy": "high",
+      "tension": "high",
+      "spatial_openness": "medium",
+      "explanation": "骑兵长驱、河洛昏暗，呈现紧张动荡的局势。",
+      "evidence": [
+        "长驱河洛昏"
+      ]
+    },
+    "temporal": {
+      "mode": "progressive",
+      "description": "坐见表明目睹正在进行的情状，长驱表示持续深入的行动。",
+      "evidence": [
+        "坐见幽州骑",
+        "长驱河洛昏"
+      ],
+      "markers": [
+        {
+          "surface": "坐",
+          "meaning": "坐着，表示当下目睹的状态",
+          "reference_is_clear": true
+        },
+        {
+          "surface": "长驱",
+          "meaning": "长距离驱驰深入，含持续进行之意",
+          "reference_is_clear": true
+        }
+      ]
+    },
+    "uncertainties": [
+      {
+        "topic": "河洛昏的原因",
+        "alternatives": [
+          "骑兵扬尘使河洛昏暗",
+          "战乱使河洛地区局势昏暗"
+        ],
+        "reason": "昏可指天色昏暗，也可喻局势昏暗，原文未明说。"
+      },
+      {
+        "topic": "坐见的主语",
+        "alternatives": [
+          "诗人自己",
+          "未出场的旁观者"
+        ],
+        "reason": "原文只出现坐见，未交代观看者身份。"
+      }
+    ],
+    "events": [
+      {
+        "id": "e1",
+        "predicate": "坐见",
+        "meaning": "坐着看见",
+        "actor": null,
+        "patient": "i1",
+        "location": null,
+        "modality": "asserted",
+        "basis": "explicit",
+        "evidence": [
+          "坐见幽州骑"
+        ]
+      },
+      {
+        "id": "e2",
+        "predicate": "长驱",
+        "meaning": "长距离驱驰深入",
+        "actor": "i1",
+        "patient": null,
+        "location": "i2",
+        "modality": "asserted",
+        "basis": "explicit",
+        "evidence": [
+          "长驱河洛昏"
+        ]
+      },
+      {
+        "id": "e3",
+        "predicate": "昏",
+        "meaning": "昏暗，指河洛一带变得昏暗",
+        "actor": null,
+        "patient": "i2",
+        "location": "i2",
+        "modality": "asserted",
+        "basis": "explicit",
+        "evidence": [
+          "长驱河洛昏"
+        ]
+      }
+    ],
+    "attributes": [
+      {
+        "surface": "幽州",
+        "kind": "state",
+        "owner": "i1",
+        "meaning": "骑兵的来处或所属，幽州为地名",
+        "evidence": [
+          "坐见幽州骑"
+        ]
+      },
+      {
+        "surface": "长",
+        "kind": "extent",
+        "owner": "e2",
+        "meaning": "长距离、深入",
+        "evidence": [
+          "长驱河洛昏"
+        ]
+      },
+      {
+        "surface": "昏",
+        "kind": "light",
+        "owner": "i2",
+        "meaning": "昏暗",
+        "evidence": [
+          "长驱河洛昏"
+        ]
+      }
+    ]
+  },
+  "validation": {
+    "valid": false,
+    "errors": [
+      "$.relations[0].source_id: unexpected field",
+      "$.relations[0].target_id: unexpected field",
+      "$.attributes: owner does not exist"
+    ]
+  },
+  "elapsed_seconds": 4
+}

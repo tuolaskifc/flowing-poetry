@@ -1,0 +1,116 @@
+{
+  "protocol_revision": "2.1-offline-recheck",
+  "no_new_api_calls": true,
+  "original_responses_unchanged": true,
+  "corrections": [
+    "A location/support reference can point to an object or person, not only a place-kind image. This does not prove that a particular spatial interpretation is correct.",
+    "An attribute can modify an event, e.g. an extent modifier of an action."
+  ],
+  "policy": {
+    "allowPhysicalCarriers": true,
+    "allowEventAttributes": true
+  },
+  "results": [
+    {
+      "case_id": "01-autumn-town",
+      "poem": "西风酒旗市，细雨菊花天",
+      "original": {
+        "valid": false,
+        "errors": [
+          "$.relations: located_in target must be a place"
+        ]
+      },
+      "corrected": {
+        "valid": true,
+        "errors": []
+      }
+    },
+    {
+      "case_id": "02-spears-stars",
+      "poem": "十月到幽州，戈鋋若罗星",
+      "original": {
+        "valid": true,
+        "errors": []
+      },
+      "corrected": {
+        "valid": true,
+        "errors": []
+      }
+    },
+    {
+      "case_id": "03-wind-geese",
+      "poem": "长风万里送秋雁，对此可以酣高楼",
+      "original": {
+        "valid": false,
+        "errors": [
+          "$.relations: located_in target must be a place"
+        ]
+      },
+      "corrected": {
+        "valid": false,
+        "errors": [
+          "$.relations: located_in needs a referenced image; null is not a location"
+        ]
+      }
+    },
+    {
+      "case_id": "04-cavalry-darkness",
+      "poem": "坐见幽州骑，长驱河洛昏",
+      "original": {
+        "valid": false,
+        "errors": [
+          "$.relations[0].source_id: unexpected field",
+          "$.relations[0].target_id: unexpected field",
+          "$.attributes: owner does not exist"
+        ]
+      },
+      "corrected": {
+        "valid": false,
+        "errors": [
+          "$.relations[0].source_id: unexpected field",
+          "$.relations[0].target_id: unexpected field"
+        ]
+      }
+    },
+    {
+      "case_id": "05-flowers-grey-hair",
+      "poem": "黄华自与西风约，白发先从远客生",
+      "original": {
+        "valid": false,
+        "errors": [
+          "$.relations: located_in target must be a place"
+        ]
+      },
+      "corrected": {
+        "valid": true,
+        "errors": []
+      }
+    },
+    {
+      "case_id": "06-heldout-negation",
+      "poem": "千山鸟飞绝，万径人踪灭",
+      "original": {
+        "valid": true,
+        "errors": []
+      },
+      "corrected": {
+        "valid": true,
+        "errors": []
+      }
+    },
+    {
+      "case_id": "07-heldout-roles",
+      "poem": "风送归舟，舟载归人",
+      "original": {
+        "valid": false,
+        "errors": [
+          "$.relations: located_in target must be a place"
+        ]
+      },
+      "corrected": {
+        "valid": true,
+        "errors": []
+      }
+    }
+  ]
+}

@@ -1,4 +1,5 @@
 # Local credentials
+/llm api.txt
 .env
 .env.*
 !.env.example
