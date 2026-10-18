@@ -1,0 +1,34 @@
+flowchart TD
+  root["流动诗<br/>诗句 → 意象 → 图形 → 意境"]
+  root --> input["1  输入与意图<br/>规划 · 待接入"]
+  input --> input1["原句与节选<br/>古诗起步，现代诗与歌词后续"]
+  input --> input2["用户解读<br/>保留特别的艺术选择"]
+  input --> input3["诗库与随机选句<br/>来源后续探索，尚未接入"]
+  root --> semantic["2  语义分析与检查<br/>独立实验 · 未连网页"]
+  semantic --> semantic1["LLM 语义解释<br/>意象、联系、原文依据"]
+  semantic --> semantic2["固定输出协议<br/>3.0 已离线检查，待接口实测"]
+  semantic --> semantic3["依据与引用检查<br/>保留歧义，不执行模型代码"]
+  root --> visual["3  视觉规则<br/>已有规范 · 待实现"]
+  visual --> visual1["意象 → 形态线索<br/>主体、轮廓与比喻参照"]
+  visual --> visual2["情感 → 配色<br/>16 类色彩组合与使用"]
+  visual --> visual3["强度 → 空间<br/>紧密度、利用率，档位待定"]
+  visual --> visual4["关系 → 图形联系<br/>连接、靠近、包围、排斥等"]
+  visual --> visual5["逻辑 → 成立方式<br/>否定、可能、条件与范围"]
+  visual --> visual6["时间 → 变化过程<br/>先后、反复、未然与留痕"]
+  root --> render["4  绘画与交互<br/>固定诗句原型已实现"]
+  render --> render1["持续绘图<br/>p5.js 动态画面"]
+  render --> render2["观看与交互<br/>重演、暂停、导出、沉浸"]
+  render --> render3["任意诗句接入<br/>尚未贯通语义与绘图"]
+  render --> render4["安卓适配<br/>后续方向，尚未实现"]
+  root --> records["5  记录与验证<br/>已有记录 · 持续验证"]
+  records --> records1["Git 版本记录<br/>保存可回查的小步骤"]
+  records --> records2["API 实验与失败<br/>原始回答保留，不改写"]
+  records --> records3["技术与审美检查<br/>结构通过仍需人工判断"]
+  classDef root fill:#244B46,color:#ffffff,stroke:#244B46
+  classDef planned fill:#F4EBDD,stroke:#D6C39C,color:#3D4543
+  classDef partial fill:#E7EFF1,stroke:#A3B9C1,color:#3D4543
+  classDef ready fill:#E7EEE8,stroke:#A7BBA9,color:#3D4543
+  class root root
+  class input,visual planned
+  class semantic partial
+  class render,records ready
