@@ -1,0 +1,309 @@
+{
+  "source": "https://fms.news.cn/swf/2018_sjxw/quansongci/index.html#/",
+  "extracted_on": "2026-10-18",
+  "method": "与网页 FreqLine 相同，逐词牌累加模块 163 的意象计数；不重新分析诗词。",
+  "ci_pattern_count": 1309,
+  "imagery_count": 60,
+  "items": [
+    {
+      "rank": 1,
+      "imagery": "风",
+      "count": 12247
+    },
+    {
+      "rank": 2,
+      "imagery": "云",
+      "count": 7569
+    },
+    {
+      "rank": 3,
+      "imagery": "月",
+      "count": 6920
+    },
+    {
+      "rank": 4,
+      "imagery": "水",
+      "count": 5033
+    },
+    {
+      "rank": 5,
+      "imagery": "雨",
+      "count": 4794
+    },
+    {
+      "rank": 6,
+      "imagery": "酒",
+      "count": 4546
+    },
+    {
+      "rank": 7,
+      "imagery": "楼",
+      "count": 3129
+    },
+    {
+      "rank": 8,
+      "imagery": "梅",
+      "count": 2973
+    },
+    {
+      "rank": 9,
+      "imagery": "柳",
+      "count": 2740
+    },
+    {
+      "rank": 10,
+      "imagery": "雪",
+      "count": 2519
+    },
+    {
+      "rank": 11,
+      "imagery": "露",
+      "count": 2157
+    },
+    {
+      "rank": 12,
+      "imagery": "草",
+      "count": 2128
+    },
+    {
+      "rank": 13,
+      "imagery": "霜",
+      "count": 1541
+    },
+    {
+      "rank": 14,
+      "imagery": "竹",
+      "count": 1480
+    },
+    {
+      "rank": 15,
+      "imagery": "莺",
+      "count": 1435
+    },
+    {
+      "rank": 16,
+      "imagery": "兰",
+      "count": 1316
+    },
+    {
+      "rank": 17,
+      "imagery": "马",
+      "count": 1280
+    },
+    {
+      "rank": 18,
+      "imagery": "舟",
+      "count": 1250
+    },
+    {
+      "rank": 19,
+      "imagery": "鱼",
+      "count": 712
+    },
+    {
+      "rank": 20,
+      "imagery": "船",
+      "count": 673
+    },
+    {
+      "rank": 21,
+      "imagery": "莲",
+      "count": 600
+    },
+    {
+      "rank": 22,
+      "imagery": "鸦",
+      "count": 545
+    },
+    {
+      "rank": 23,
+      "imagery": "桃花",
+      "count": 342
+    },
+    {
+      "rank": 24,
+      "imagery": "蝉",
+      "count": 321
+    },
+    {
+      "rank": 25,
+      "imagery": "长安",
+      "count": 310
+    },
+    {
+      "rank": 26,
+      "imagery": "鸳鸯",
+      "count": 302
+    },
+    {
+      "rank": 27,
+      "imagery": "落花",
+      "count": 276
+    },
+    {
+      "rank": 28,
+      "imagery": "燕子",
+      "count": 272
+    },
+    {
+      "rank": 29,
+      "imagery": "杨花",
+      "count": 175
+    },
+    {
+      "rank": 30,
+      "imagery": "梧桐",
+      "count": 150
+    },
+    {
+      "rank": 31,
+      "imagery": "长亭",
+      "count": 149
+    },
+    {
+      "rank": 32,
+      "imagery": "南浦",
+      "count": 148
+    },
+    {
+      "rank": 33,
+      "imagery": "潇湘",
+      "count": 147
+    },
+    {
+      "rank": 34,
+      "imagery": "杜鹃",
+      "count": 107
+    },
+    {
+      "rank": 35,
+      "imagery": "登高",
+      "count": 102
+    },
+    {
+      "rank": 36,
+      "imagery": "红叶",
+      "count": 96
+    },
+    {
+      "rank": 37,
+      "imagery": "江水",
+      "count": 91
+    },
+    {
+      "rank": 38,
+      "imagery": "菊花",
+      "count": 88
+    },
+    {
+      "rank": 39,
+      "imagery": "桃源",
+      "count": 83
+    },
+    {
+      "rank": 40,
+      "imagery": "柳絮",
+      "count": 77
+    },
+    {
+      "rank": 41,
+      "imagery": "芭蕉",
+      "count": 71
+    },
+    {
+      "rank": 42,
+      "imagery": "眉黛",
+      "count": 65
+    },
+    {
+      "rank": 43,
+      "imagery": "凭栏",
+      "count": 62
+    },
+    {
+      "rank": 44,
+      "imagery": "沙鸥",
+      "count": 57
+    },
+    {
+      "rank": 45,
+      "imagery": "梅子",
+      "count": 56
+    },
+    {
+      "rank": 46,
+      "imagery": "秦楼",
+      "count": 56
+    },
+    {
+      "rank": 47,
+      "imagery": "鹧鸪",
+      "count": 44
+    },
+    {
+      "rank": 48,
+      "imagery": "黄叶",
+      "count": 42
+    },
+    {
+      "rank": 49,
+      "imagery": "六朝",
+      "count": 39
+    },
+    {
+      "rank": 50,
+      "imagery": "兰桡",
+      "count": 38
+    },
+    {
+      "rank": 51,
+      "imagery": "鸿雁",
+      "count": 36
+    },
+    {
+      "rank": 52,
+      "imagery": "青鸟",
+      "count": 35
+    },
+    {
+      "rank": 53,
+      "imagery": "烟雾",
+      "count": 34
+    },
+    {
+      "rank": 54,
+      "imagery": "松柏",
+      "count": 22
+    },
+    {
+      "rank": 55,
+      "imagery": "金陵",
+      "count": 21
+    },
+    {
+      "rank": 56,
+      "imagery": "猿啼",
+      "count": 20
+    },
+    {
+      "rank": 57,
+      "imagery": "羌笛",
+      "count": 17
+    },
+    {
+      "rank": 58,
+      "imagery": "琴瑟",
+      "count": 6
+    },
+    {
+      "rank": 59,
+      "imagery": "蟋蟀",
+      "count": 6
+    },
+    {
+      "rank": 60,
+      "imagery": "哀鸿",
+      "count": 3
+    }
+  ]
+}

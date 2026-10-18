@@ -1,0 +1,24 @@
+{
+  "source_count": 60,
+  "catalog_count": 60,
+  "unique_terms": 60,
+  "families": 20,
+  "suggested_first_phase": 12,
+  "treatments": {
+    "作用": 1,
+    "变体": 23,
+    "形态": 5,
+    "待语境": 12,
+    "组合": 4,
+    "附着": 3,
+    "合并": 2,
+    "场景": 5,
+    "过程": 1,
+    "动作": 2,
+    "背景": 1,
+    "声音": 1
+  },
+  "missing": [],
+  "unknown_family_ids": [],
+  "code_references_exist": true
+}
