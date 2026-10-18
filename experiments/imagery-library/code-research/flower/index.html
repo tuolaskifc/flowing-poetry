@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script src="https://unpkg.com/p5@0.6.0/lib/p5.js"></script>
+  <script src="https://unpkg.com/lodash@4.17.5/lodash.js"></script>
+  <style>
+    body { margin:0;position:fixed;top:0;right:0;bottom:0;left:0; }
+    
+    path { mix-blend-mode: overlay; }  
+		#content { isolation: isolate; }
+  </style>
+</head>
+
+<body>
+  <div id='content' />
+  
+  <script>
+    const petalSize = 100;
+    const numPetals = 5;
+    
+    const svg = d3.select("#content").append("svg")
+      .attr("width", 960).attr("height", 500);
+    const flower = svg.append('g')
+    	.attr('transform', `translate(${[petalSize, petalSize]})`)
+    	.attr('fill-opacity', 0.4);
+    const canvas = d3.select("#content").append('canvas')
+    	.attr("width", 960).attr("height", 500)
+    	.style('position', 'absolute').style('top', 0).style('left', 0);
+    const ctx = canvas.node().getContext('2d');
+    
+    // using processing so let's just do everything in setup
+    
+    
+    const a2lScale = d3.scaleLinear(); // angle to length scale
+    
+    function setup() {
+      const perAngle = 360 / numPetals;
+      const initialAngle = _.random(perAngle);
+      const petalsData = _.times(2 * numPetals, (i) => {
+        return {
+          path: petalPath(),
+          rotate: randomGaussian(i * perAngle + initialAngle, 3),
+          fill: d3.interpolatePlasma(_.random(0.35, 1)),
+        };
+      });
+      const petals = flower.selectAll('path')
+      	.data(petalsData).enter().append('path')
+      	.attr('fill', (d) => d.fill)
+      	.attr('d', d => d.path)
+      	.attr('transform', (d) => `rotate(${d.rotate})`);
+      
+      let xoff = 0;
+      petals.each(function(d) {
+        const length = this.getTotalLength();
+        const numPoints = _.ceil(length, -2);
+        ctx.lineWidth = 2;
+        ctx.fillStyle = '#333';
+        
+        _.times(numPoints, i => {
+          const point = this.getPointAtLength(i / numPoints * length);
+          const angle = (d.rotate / 180) * Math.PI;
+          let {x, y} = rotateVector(point, angle);
+          x += 8 * noise(xoff) + petalSize;
+          y += 8 * noise(xoff) + petalSize;
+          const r = 4 * noise(xoff);
+          
+          ctx.beginPath();
+          ctx.arc(x, y, r, 0, Math.PI, 0);
+          ctx.fill();
+          
+          xoff += 0.01;
+        });
+      });
+    }
+    
+    function petalPath() {
+      const blR = [petalSize * 0.75, petalSize]; // bottom length range
+      const baR = [0.65 * Math.PI, 0.8 * Math.PI]; // bottom angle range
+      const taR = [1.4 * Math.PI, 1.6 * Math.PI];
+      a2lScale.domain(baR).range(blR);
+      
+      let p1 = [0, 0];
+      let p2 = [randomGaussian(0, 5), randomGaussian(0.9 * petalSize, 8)];
+      
+      let cp1a = _.random(baR[0], baR[1]); // first cp angle
+      let cp1l = a2lScale(cp1a);
+      let cp1 = [
+        cp1l * Math.cos(cp1a),
+        cp1l * Math.sin(cp1a),
+      ];
+      
+      let cp2a = _.random(taR[0], taR[1]);
+      let cp2l = Math.max(0.25 * petalSize, petalSize - cp1[1]);
+      let cp2 = [
+        cp2l * Math.cos(cp2a) + p2[0],
+        cp2l * Math.sin(cp2a) + p2[1],
+      ];
+    
+    	let pathD = `M${p1} C${cp1} ${cp2} ${p2} `;
+      
+      // and add the other size
+      p1 = p2;
+      p2 = [0, 0];
+      
+      cp2a = randomGaussian(cp1a, 0.1); // first cp angle
+      cp2l = randomGaussian(cp1l, 5);
+      cp2 = [
+        -cp2l * Math.cos(cp2a),
+        cp2l * Math.sin(cp2a),
+      ];
+      
+      cp1a = _.random(taR[0], taR[1]);
+      cp1l = Math.max(0.25 * petalSize, petalSize - cp2[1]);
+      cp1 = [
+        -cp1l * Math.cos(cp1a) + p1[0],
+        cp1l * Math.sin(cp1a) + p1[1],
+      ];
+      
+      return pathD += `M${p1} C${cp1} ${cp2} ${p2} `;
+    }
+    
+    // taken from https://beta.observablehq.com/@tonyhschu/solidifying-my-intuition-around-matrix-transformations
+    rotateVector = (vector, theta) => {
+      const { x, y } = vector
+
+      // first column of the matrix
+      const xa = x * Math.cos(theta)
+      const xb = x * Math.sin(theta)
+
+      // second column of the matrix
+      const yc = y * -Math.sin(theta)
+      const yd = y * Math.cos(theta)
+
+      // sum the components
+      return {
+      	x: xa + yc,
+        y: xb + yd
+      }
+    }
+    
+
+  </script>
+</body>

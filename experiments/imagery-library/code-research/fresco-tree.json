@@ -1,0 +1,3020 @@
+{
+  "sha": "21374c10d50e9f2d165951558ca2c0aff51dfcc1",
+  "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/trees/21374c10d50e9f2d165951558ca2c0aff51dfcc1",
+  "tree": [
+    {
+      "path": ".DS_Store",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6b2db2fda970a276b90b97ff9bf1b56819d61dce",
+      "size": 8196,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/6b2db2fda970a276b90b97ff9bf1b56819d61dce"
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6b4a2ca9f4922f158011c23a1cddabcb4aa5b6a5",
+      "size": 242,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/6b4a2ca9f4922f158011c23a1cddabcb4aa5b6a5"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+      "size": 11357,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "500209226f24d79aeaf49d656b23abb732f1bd43",
+      "size": 11456,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/500209226f24d79aeaf49d656b23abb732f1bd43"
+    },
+    {
+      "path": "demos",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a2f05a4b8d537f28f6e1777afde6286ae63d2013",
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/trees/a2f05a4b8d537f28f6e1777afde6286ae63d2013"
+    },
+    {
+      "path": "demos/.DS_Store",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7fd43e4d08770a45aefdd81a47d151785cae8dad",
+      "size": 8196,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/7fd43e4d08770a45aefdd81a47d151785cae8dad"
+    },
+    {
+      "path": "demos/2DLightTracer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "993365ca3112f130c8f976d39500b4d36d1b9aff",
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/trees/993365ca3112f130c8f976d39500b4d36d1b9aff"
+    },
+    {
+      "path": "demos/2DLightTracer/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c3041ea637f82768240916f6824a953cad8e5817",
+      "size": 774,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/c3041ea637f82768240916f6824a953cad8e5817"
+    },
+    {
+      "path": "demos/2DLightTracer/lightTracer.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0b6e0daa43b19f71cdb62917ebbc3bbc5d0e737c",
+      "size": 7218,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/0b6e0daa43b19f71cdb62917ebbc3bbc5d0e737c"
+    },
+    {
+      "path": "demos/VdW",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c1c6d52f823bc1b88564eb0b421cb1c404b16651",
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/trees/c1c6d52f823bc1b88564eb0b421cb1c404b16651"
+    },
+    {
+      "path": "demos/VdW/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "47878281ffa6a00f83e8b1e2427a90076d3bd28f",
+      "size": 659,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/47878281ffa6a00f83e8b1e2427a90076d3bd28f"
+    },
+    {
+      "path": "demos/VdW/vdw.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "99c4c2b6004232e31171e665ed6aca9b7a07bfab",
+      "size": 3049,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/99c4c2b6004232e31171e665ed6aca9b7a07bfab"
+    },
+    {
+      "path": "demos/advection_diffusion",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cb9a9b48b5253a89fe1df3dfdf6f69c1b17a0667",
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/trees/cb9a9b48b5253a89fe1df3dfdf6f69c1b17a0667"
+    },
+    {
+      "path": "demos/advection_diffusion/advection_diffusion.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "80dee623065c829fdd9af8ef888fc9b9f3337311",
+      "size": 839,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/80dee623065c829fdd9af8ef888fc9b9f3337311"
+    },
+    {
+      "path": "demos/advection_diffusion/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1e9be754e8680ccf7c32ee1763721f418612fc8e",
+      "size": 483,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/1e9be754e8680ccf7c32ee1763721f418612fc8e"
+    },
+    {
+      "path": "demos/asciiNoise",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1969dd82f22e86a09ed5fbddb35098b533cd67c5",
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/trees/1969dd82f22e86a09ed5fbddb35098b533cd67c5"
+    },
+    {
+      "path": "demos/asciiNoise/ascii.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a9a47f03dd099c9eeddbf2a1722da61aea0983cd",
+      "size": 1264,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/a9a47f03dd099c9eeddbf2a1722da61aea0983cd"
+    },
+    {
+      "path": "demos/asciiNoise/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "29144a18cf2aa032be4119c38d0b52885a33932a",
+      "size": 767,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/29144a18cf2aa032be4119c38d0b52885a33932a"
+    },
+    {
+      "path": "demos/bandana",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "36cadef380a97e5d0ddc066fb6af688594ae1717",
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/trees/36cadef380a97e5d0ddc066fb6af688594ae1717"
+    },
+    {
+      "path": "demos/bandana/bandana.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "753c935e5b2c58dccf3c9ae4f92a8d555b268563",
+      "size": 3673,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/753c935e5b2c58dccf3c9ae4f92a8d555b268563"
+    },
+    {
+      "path": "demos/bandana/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a5223261706f173ff788a1eebd4cc07ecaefaf9d",
+      "size": 568,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/a5223261706f173ff788a1eebd4cc07ecaefaf9d"
+    },
+    {
+      "path": "demos/basic_fountain",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d0ae1830fa44a5491914e42b3cfda2cf7edc2b1c",
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/trees/d0ae1830fa44a5491914e42b3cfda2cf7edc2b1c"
+    },
+    {
+      "path": "demos/basic_fountain/.DS_Store",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5008ddfcf53c02e82d7eee2e57c38e5672ef89f6",
+      "size": 6148,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/5008ddfcf53c02e82d7eee2e57c38e5672ef89f6"
+    },
+    {
+      "path": "demos/basic_fountain/basic_fountain.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "850b483adc54a09c03ffdacb3bfe45df1a3eefde",
+      "size": 714,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/850b483adc54a09c03ffdacb3bfe45df1a3eefde"
+    },
+    {
+      "path": "demos/basic_fountain/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a439fe607b394ebd86bd27a196528c27e1ddd146",
+      "size": 432,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/a439fe607b394ebd86bd27a196528c27e1ddd146"
+    },
+    {
+      "path": "demos/bendLines",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "48564514a63558a61b2be31da31fdec97476faab",
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/trees/48564514a63558a61b2be31da31fdec97476faab"
+    },
+    {
+      "path": "demos/bendLines/.DS_Store",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "20df9f3d9a206eeb2a449018cca42f80d7c64324",
+      "size": 6148,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/20df9f3d9a206eeb2a449018cca42f80d7c64324"
+    },
+    {
+      "path": "demos/bendLines/bendLines.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "37bf0653a42f9db09d3efbe92d42eebbea1e00b9",
+      "size": 1264,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/37bf0653a42f9db09d3efbe92d42eebbea1e00b9"
+    },
+    {
+      "path": "demos/bendLines/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d28267ac21407e5aa94fdf3a14d136560bb5bfa3",
+      "size": 473,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/d28267ac21407e5aa94fdf3a14d136560bb5bfa3"
+    },
+    {
+      "path": "demos/blobs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "81129fd7b9f2ebeebe8dfad9ccc10c63bfaa0a76",
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/trees/81129fd7b9f2ebeebe8dfad9ccc10c63bfaa0a76"
+    },
+    {
+      "path": "demos/blobs/blobs.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "df0fa0a84bfcf68cea5414294ea08603f9ab51af",
+      "size": 1037,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/df0fa0a84bfcf68cea5414294ea08603f9ab51af"
+    },
+    {
+      "path": "demos/blobs/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f0f60b20267dc898fd91d8fa22695f76d29c59db",
+      "size": 773,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/f0f60b20267dc898fd91d8fa22695f76d29c59db"
+    },
+    {
+      "path": "demos/boobs_dark",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "54f356ef5348f1ee363c6ffce128d9f601b9105f",
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/trees/54f356ef5348f1ee363c6ffce128d9f601b9105f"
+    },
+    {
+      "path": "demos/boobs_dark/.DS_Store",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5008ddfcf53c02e82d7eee2e57c38e5672ef89f6",
+      "size": 6148,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/5008ddfcf53c02e82d7eee2e57c38e5672ef89f6"
+    },
+    {
+      "path": "demos/boobs_dark/boobs.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b81d92f254676c1d7228635901c345a2e12d252f",
+      "size": 3371,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/b81d92f254676c1d7228635901c345a2e12d252f"
+    },
+    {
+      "path": "demos/boobs_dark/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "43c717115eb7e614f8751aff021c6c8c4de08f3f",
+      "size": 563,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/43c717115eb7e614f8751aff021c6c8c4de08f3f"
+    },
+    {
+      "path": "demos/boobs_light",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "25106c327e63b87f0560ebea8c08ad0ee3c5ded1",
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/trees/25106c327e63b87f0560ebea8c08ad0ee3c5ded1"
+    },
+    {
+      "path": "demos/boobs_light/boobs.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e3effc11dcc323d2bbcb9763bb5b4405c3f242eb",
+      "size": 3146,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/e3effc11dcc323d2bbcb9763bb5b4405c3f242eb"
+    },
+    {
+      "path": "demos/boobs_light/boobsLight.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "367fdc4bb3a6ae6a54f360b3ac9095973fe6fdda",
+      "size": 525,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/367fdc4bb3a6ae6a54f360b3ac9095973fe6fdda"
+    },
+    {
+      "path": "demos/breathing",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "51242ab2555b725089568cc6b142f54f0c64ddfa",
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/trees/51242ab2555b725089568cc6b142f54f0c64ddfa"
+    },
+    {
+      "path": "demos/breathing/breathing_base.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f3865604c353445f90d5be319b5e923e0a54fce1",
+      "size": 573,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/f3865604c353445f90d5be319b5e923e0a54fce1"
+    },
+    {
+      "path": "demos/breathing/breathing_base.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "29af777207f9355b4c624750807527e229b4e2b1",
+      "size": 3469,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/29af777207f9355b4c624750807527e229b4e2b1"
+    },
+    {
+      "path": "demos/breathing/breathing_tiled.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cd7051c17bdaee63201b8f126659ed5c4f5b8331",
+      "size": 574,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/cd7051c17bdaee63201b8f126659ed5c4f5b8331"
+    },
+    {
+      "path": "demos/breathing/breathing_tiled.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4ebf26e886d381875630c49b0cafeed5bae84c14",
+      "size": 2838,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/4ebf26e886d381875630c49b0cafeed5bae84c14"
+    },
+    {
+      "path": "demos/bubbles",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5bdbf7dfedaf3be7e7b782ba90649a25af7bea1c",
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/trees/5bdbf7dfedaf3be7e7b782ba90649a25af7bea1c"
+    },
+    {
+      "path": "demos/bubbles/bubbles.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0d46d98f7bb8a7b2d120b2e2d9261aedc633da67",
+      "size": 7827,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/0d46d98f7bb8a7b2d120b2e2d9261aedc633da67"
+    },
+    {
+      "path": "demos/bubbles/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8c6b2dfbc0f022364d5243ea897e9c787a883340",
+      "size": 568,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/8c6b2dfbc0f022364d5243ea897e9c787a883340"
+    },
+    {
+      "path": "demos/buddha",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d320e0ee1a1a24d36c2920d3c6bbfb2621c3adf0",
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/trees/d320e0ee1a1a24d36c2920d3c6bbfb2621c3adf0"
+    },
+    {
+      "path": "demos/buddha/buddha.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c80c3f74c4381eaf3bc7926267d5d44812226c41",
+      "size": 3169,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/c80c3f74c4381eaf3bc7926267d5d44812226c41"
+    },
+    {
+      "path": "demos/buddha/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7d72c35c797325bb7a1917a5f3e80899228eb3f9",
+      "size": 567,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/7d72c35c797325bb7a1917a5f3e80899228eb3f9"
+    },
+    {
+      "path": "demos/butterfly",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "99c2ffbb125fd7988c9055a0090bd8ea0943c892",
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/trees/99c2ffbb125fd7988c9055a0090bd8ea0943c892"
+    },
+    {
+      "path": "demos/butterfly/butterfly.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0a5848bafeab166f40d8f02b7a774ddf376f28b0",
+      "size": 2161,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/0a5848bafeab166f40d8f02b7a774ddf376f28b0"
+    },
+    {
+      "path": "demos/butterfly/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "78111eaa5589d1388eeae3f6c1796e233eb5bcd6",
+      "size": 541,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/78111eaa5589d1388eeae3f6c1796e233eb5bcd6"
+    },
+    {
+      "path": "demos/cliffordAttractor",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6421b433b4488073873670e4e440e8f6a813a02f",
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/trees/6421b433b4488073873670e4e440e8f6a813a02f"
+    },
+    {
+      "path": "demos/cliffordAttractor/cliffordAttractor.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "52ea05c1bd1f112b28755ab37fca143d925e93fd",
+      "size": 2801,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/52ea05c1bd1f112b28755ab37fca143d925e93fd"
+    },
+    {
+      "path": "demos/cliffordAttractor/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0b383362ca8480b312938d4ad4b9c1dd154846e1",
+      "size": 572,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/0b383362ca8480b312938d4ad4b9c1dd154846e1"
+    },
+    {
+      "path": "demos/colorLines",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5e3db66c9adeb3928af9dba8ba6363933d1bb035",
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/trees/5e3db66c9adeb3928af9dba8ba6363933d1bb035"
+    },
+    {
+      "path": "demos/colorLines/colorLines.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "caf416296a03de0ff84030a73ed2edb2be82654d",
+      "size": 2403,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/caf416296a03de0ff84030a73ed2edb2be82654d"
+    },
+    {
+      "path": "demos/colorLines/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5d89c19ceed87ad8e2d28cd351d9ce8834cd7888",
+      "size": 480,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/5d89c19ceed87ad8e2d28cd351d9ce8834cd7888"
+    },
+    {
+      "path": "demos/curveForces",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "72589196abb30b434007b784c350d8704d1ffdd5",
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/trees/72589196abb30b434007b784c350d8704d1ffdd5"
+    },
+    {
+      "path": "demos/curveForces/curveForces.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8681affc671b1c4f3be3b60ef4a6d3f00dd10bc9",
+      "size": 3478,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/8681affc671b1c4f3be3b60ef4a6d3f00dd10bc9"
+    },
+    {
+      "path": "demos/curveForces/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "64ac09a5483001c7d76f08a2eb25e0d824f33872",
+      "size": 723,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/64ac09a5483001c7d76f08a2eb25e0d824f33872"
+    },
+    {
+      "path": "demos/darkField",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1aa45019e618f94fa525a0095f8707d7e000399f",
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/trees/1aa45019e618f94fa525a0095f8707d7e000399f"
+    },
+    {
+      "path": "demos/darkField/darkField.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1cc6a71397712cd0fe7015886d93a1f6b2cd8468",
+      "size": 2942,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/1cc6a71397712cd0fe7015886d93a1f6b2cd8468"
+    },
+    {
+      "path": "demos/darkField/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4495cb05e750fbe4d3a98ff7fabbe7f284e88954",
+      "size": 567,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/4495cb05e750fbe4d3a98ff7fabbe7f284e88954"
+    },
+    {
+      "path": "demos/demoTemplate",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2f5676e5b4bc45a68d009d48ea6f488a482339b7",
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/trees/2f5676e5b4bc45a68d009d48ea6f488a482339b7"
+    },
+    {
+      "path": "demos/demoTemplate/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3e416edbcaaf7f9df996bd55e6f60dc6f51459fb",
+      "size": 768,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/3e416edbcaaf7f9df996bd55e6f60dc6f51459fb"
+    },
+    {
+      "path": "demos/demoTemplate/sketch.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3b82abe6bc75758f6d9e26f164bbb6557933a85c",
+      "size": 264,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/3b82abe6bc75758f6d9e26f164bbb6557933a85c"
+    },
+    {
+      "path": "demos/enigma",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "35d32a7fc899ab84ae74812727304f67d3bcba01",
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/trees/35d32a7fc899ab84ae74812727304f67d3bcba01"
+    },
+    {
+      "path": "demos/enigma/enigma.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7518fb5e301abeac32aa6cf4474b7561ab21cec2",
+      "size": 15972,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/7518fb5e301abeac32aa6cf4474b7561ab21cec2"
+    },
+    {
+      "path": "demos/enigma/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f55ecc834ae48494d0cf015a96a0fbbb1376ddba",
+      "size": 767,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/f55ecc834ae48494d0cf015a96a0fbbb1376ddba"
+    },
+    {
+      "path": "demos/fireworks",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "932a756a88305f3fcb69342b2a6ed2c0edecd7e7",
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/trees/932a756a88305f3fcb69342b2a6ed2c0edecd7e7"
+    },
+    {
+      "path": "demos/fireworks/.DS_Store",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5008ddfcf53c02e82d7eee2e57c38e5672ef89f6",
+      "size": 6148,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/5008ddfcf53c02e82d7eee2e57c38e5672ef89f6"
+    },
+    {
+      "path": "demos/fireworks/fireworks.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f22c4a85d8a1891139f3b90082f6b06d8a4de17b",
+      "size": 1502,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/f22c4a85d8a1891139f3b90082f6b06d8a4de17b"
+    },
+    {
+      "path": "demos/fireworks/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5a7a1c85be009aa2eab1c6974d9555510cf0a605",
+      "size": 473,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/5a7a1c85be009aa2eab1c6974d9555510cf0a605"
+    },
+    {
+      "path": "demos/fruitTrees",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e6033b57fb33aa4a0520e3349ff89617f478864b",
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/trees/e6033b57fb33aa4a0520e3349ff89617f478864b"
+    },
+    {
+      "path": "demos/fruitTrees/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3e416edbcaaf7f9df996bd55e6f60dc6f51459fb",
+      "size": 768,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/3e416edbcaaf7f9df996bd55e6f60dc6f51459fb"
+    },
+    {
+      "path": "demos/fruitTrees/sketch.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3e4646ac88d51bfe89750e1cd88c30de90329b92",
+      "size": 10943,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/3e4646ac88d51bfe89750e1cd88c30de90329b92"
+    },
+    {
+      "path": "demos/funWithNoise",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cf9f22a63944ba2173ba6c6a340abdd5dc3e8274",
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/trees/cf9f22a63944ba2173ba6c6a340abdd5dc3e8274"
+    },
+    {
+      "path": "demos/funWithNoise/.DS_Store",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5008ddfcf53c02e82d7eee2e57c38e5672ef89f6",
+      "size": 6148,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/5008ddfcf53c02e82d7eee2e57c38e5672ef89f6"
+    },
+    {
+      "path": "demos/funWithNoise/funWithNoise.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5a19e9e1116264c9b950fcc00dff11a12fa82226",
+      "size": 2002,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/5a19e9e1116264c9b950fcc00dff11a12fa82226"
+    },
+    {
+      "path": "demos/funWithNoise/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0fb686d8fbc115cc9b0a9ab382403d99d4d50352",
+      "size": 476,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/0fb686d8fbc115cc9b0a9ab382403d99d4d50352"
+    },
+    {
+      "path": "demos/hazyMind",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9a92e87e1741c9b160d31467900a1c063affe2be",
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/trees/9a92e87e1741c9b160d31467900a1c063affe2be"
+    },
+    {
+      "path": "demos/hazyMind/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3e416edbcaaf7f9df996bd55e6f60dc6f51459fb",
+      "size": 768,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/3e416edbcaaf7f9df996bd55e6f60dc6f51459fb"
+    },
+    {
+      "path": "demos/hazyMind/sketch.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d7d3479f42341442aee8d2fa022654e5e910c49c",
+      "size": 5430,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/d7d3479f42341442aee8d2fa022654e5e910c49c"
+    },
+    {
+      "path": "demos/hillsAndDunes",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ce499cc472227147ce2128abf625a07710195b61",
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/trees/ce499cc472227147ce2128abf625a07710195b61"
+    },
+    {
+      "path": "demos/hillsAndDunes/dunes.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "85d5fbf1b4dbba936e21174ab05a387d960f6ce0",
+      "size": 531,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/85d5fbf1b4dbba936e21174ab05a387d960f6ce0"
+    },
+    {
+      "path": "demos/hillsAndDunes/dunes.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c6f79e1571c4d744c81ce8de93b68513a73f6dde",
+      "size": 2329,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/c6f79e1571c4d744c81ce8de93b68513a73f6dde"
+    },
+    {
+      "path": "demos/hillsAndDunes/hills.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e739c87587e1f370b3ca49eaf86851ecc6b73c3e",
+      "size": 469,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/e739c87587e1f370b3ca49eaf86851ecc6b73c3e"
+    },
+    {
+      "path": "demos/hillsAndDunes/hills.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5109b290aeb352dfae2f9b06257e772c6c5cb5bd",
+      "size": 3020,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/5109b290aeb352dfae2f9b06257e772c6c5cb5bd"
+    },
+    {
+      "path": "demos/holi",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "79b0941c671afa35f04b4c121fe898fddf8aba30",
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/trees/79b0941c671afa35f04b4c121fe898fddf8aba30"
+    },
+    {
+      "path": "demos/holi/holi.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "79f07f53733595f9281be2b3a4a708a8a1951e60",
+      "size": 11916,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/79f07f53733595f9281be2b3a4a708a8a1951e60"
+    },
+    {
+      "path": "demos/holi/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "440f3c2d6ae48640050277f35ff349e478dcba96",
+      "size": 565,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/440f3c2d6ae48640050277f35ff349e478dcba96"
+    },
+    {
+      "path": "demos/leopardSkin",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "930e1a47140ce319d4b769f1db7c3fbc89122afb",
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/trees/930e1a47140ce319d4b769f1db7c3fbc89122afb"
+    },
+    {
+      "path": "demos/leopardSkin/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a1b4552bf3cf132a5afabe8456a0cb3787520726",
+      "size": 773,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/a1b4552bf3cf132a5afabe8456a0cb3787520726"
+    },
+    {
+      "path": "demos/leopardSkin/leopardSkin.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d14d248c929d5ecf4bc2c5017fc32d2a58fa62f8",
+      "size": 7144,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/d14d248c929d5ecf4bc2c5017fc32d2a58fa62f8"
+    },
+    {
+      "path": "demos/lifeblood",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "246d39f5e66f49e83b5ddcf4e20243be70bc12d3",
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/trees/246d39f5e66f49e83b5ddcf4e20243be70bc12d3"
+    },
+    {
+      "path": "demos/lifeblood/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "41fd50bef72ed2722ebb0c444c3a2c8526c7fcf5",
+      "size": 564,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/41fd50bef72ed2722ebb0c444c3a2c8526c7fcf5"
+    },
+    {
+      "path": "demos/lifeblood/lifeblood.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "813d38414247b1c6e22b12093abfde3e6d6ca1a9",
+      "size": 8093,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/813d38414247b1c6e22b12093abfde3e6d6ca1a9"
+    },
+    {
+      "path": "demos/mantis",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "60000e202d2ca15a8da606af112b4a7214a1a40b",
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/trees/60000e202d2ca15a8da606af112b4a7214a1a40b"
+    },
+    {
+      "path": "demos/mantis/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2b50accb350d106a4d0d527af9874286ee7de5f0",
+      "size": 555,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/2b50accb350d106a4d0d527af9874286ee7de5f0"
+    },
+    {
+      "path": "demos/mantis/mantis.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bb81562cc1ac82ad467dfc4f54385cd94678d0b0",
+      "size": 5516,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/bb81562cc1ac82ad467dfc4f54385cd94678d0b0"
+    },
+    {
+      "path": "demos/mazeForTheSoul",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ca69c1486f8996622255761739fb6e73c694fd73",
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/trees/ca69c1486f8996622255761739fb6e73c694fd73"
+    },
+    {
+      "path": "demos/mazeForTheSoul/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "90b49b7e548bc7981d7fdf09c560e4690d25ea6d",
+      "size": 849,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/90b49b7e548bc7981d7fdf09c560e4690d25ea6d"
+    },
+    {
+      "path": "demos/mazeForTheSoul/p5.min.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "61b45b2c91e83c9b02677b73a6111b8a8929c3cf",
+      "size": 614240,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/61b45b2c91e83c9b02677b73a6111b8a8929c3cf"
+    },
+    {
+      "path": "demos/mazeForTheSoul/randomWalkDrawing.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "68eba5b2dcee9fd64f738a4ef4a04220468d9676",
+      "size": 5908,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/68eba5b2dcee9fd64f738a4ef4a04220468d9676"
+    },
+    {
+      "path": "demos/moonCity",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "719b043c443f6af53ea1637a638a90aed1bc2a88",
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/trees/719b043c443f6af53ea1637a638a90aed1bc2a88"
+    },
+    {
+      "path": "demos/moonCity/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "570598cfbc239a3fb64c59c42ec14845aa039c01",
+      "size": 775,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/570598cfbc239a3fb64c59c42ec14845aa039c01"
+    },
+    {
+      "path": "demos/moonCity/moonCity.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ac7f275e4a4eea3d4aff1619cd4b6e05cb7e7190",
+      "size": 4151,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/ac7f275e4a4eea3d4aff1619cd4b6e05cb7e7190"
+    },
+    {
+      "path": "demos/peacock",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "991485e40f1a4535420461442c5a125e7ce677b2",
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/trees/991485e40f1a4535420461442c5a125e7ce677b2"
+    },
+    {
+      "path": "demos/peacock/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d8636eeb5fdda09bc3751e53930c0a77b0538fd6",
+      "size": 568,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/d8636eeb5fdda09bc3751e53930c0a77b0538fd6"
+    },
+    {
+      "path": "demos/peacock/peacock.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e6bc6939736107ae7e58bafc0d00f858dc7e1dbf",
+      "size": 5323,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/e6bc6939736107ae7e58bafc0d00f858dc7e1dbf"
+    },
+    {
+      "path": "demos/perlinCircleFlow",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "914073f2dc1ff99dac01c9867695788ae8038dec",
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/trees/914073f2dc1ff99dac01c9867695788ae8038dec"
+    },
+    {
+      "path": "demos/perlinCircleFlow/.DS_Store",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4997f6586a65f35a9ac82f1a41d257c53c13a659",
+      "size": 6148,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/4997f6586a65f35a9ac82f1a41d257c53c13a659"
+    },
+    {
+      "path": "demos/perlinCircleFlow/perlinCircleFlow_1",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9156069a4b0edf02de85280d8c000f78edce1312",
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/trees/9156069a4b0edf02de85280d8c000f78edce1312"
+    },
+    {
+      "path": "demos/perlinCircleFlow/perlinCircleFlow_1/.DS_Store",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5008ddfcf53c02e82d7eee2e57c38e5672ef89f6",
+      "size": 6148,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/5008ddfcf53c02e82d7eee2e57c38e5672ef89f6"
+    },
+    {
+      "path": "demos/perlinCircleFlow/perlinCircleFlow_1/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2d9056f5b98c2df0ca92305a1f1744fbab924ab9",
+      "size": 500,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/2d9056f5b98c2df0ca92305a1f1744fbab924ab9"
+    },
+    {
+      "path": "demos/perlinCircleFlow/perlinCircleFlow_1/perlinCircleFlow_1.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "336a6ac6f356bf4af36f2c74f528d18936abdf02",
+      "size": 592,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/336a6ac6f356bf4af36f2c74f528d18936abdf02"
+    },
+    {
+      "path": "demos/perlinCircleFlow/perlinCircleFlow_2",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a413068bbae0161ef789c608e1308f5e778e614f",
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/trees/a413068bbae0161ef789c608e1308f5e778e614f"
+    },
+    {
+      "path": "demos/perlinCircleFlow/perlinCircleFlow_2/.DS_Store",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5008ddfcf53c02e82d7eee2e57c38e5672ef89f6",
+      "size": 6148,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/5008ddfcf53c02e82d7eee2e57c38e5672ef89f6"
+    },
+    {
+      "path": "demos/perlinCircleFlow/perlinCircleFlow_2/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4941787dda7da2cfb9580267d01ad7d01d5556a5",
+      "size": 500,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/4941787dda7da2cfb9580267d01ad7d01d5556a5"
+    },
+    {
+      "path": "demos/perlinCircleFlow/perlinCircleFlow_2/perlinCircleFlow_2.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "962f8c2510a32ad3b4540e5d9745dd1797cd5a65",
+      "size": 2586,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/962f8c2510a32ad3b4540e5d9745dd1797cd5a65"
+    },
+    {
+      "path": "demos/perlinFlowField",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "657e16b3ce1dac1fc374c3936674159ce8f794d3",
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/trees/657e16b3ce1dac1fc374c3936674159ce8f794d3"
+    },
+    {
+      "path": "demos/perlinFlowField/.DS_Store",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5008ddfcf53c02e82d7eee2e57c38e5672ef89f6",
+      "size": 6148,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/5008ddfcf53c02e82d7eee2e57c38e5672ef89f6"
+    },
+    {
+      "path": "demos/perlinFlowField/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e682faccfc3f91e69d346655938560da5f0d29fa",
+      "size": 485,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/e682faccfc3f91e69d346655938560da5f0d29fa"
+    },
+    {
+      "path": "demos/perlinFlowField/perlinFlowField.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ccc47978ce8f9cd9bdea356bd2220b1f7e454e69",
+      "size": 4596,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/ccc47978ce8f9cd9bdea356bd2220b1f7e454e69"
+    },
+    {
+      "path": "demos/pillarsOfEternity",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "106b86e4da4ec49b58aeb9e32cdfa33cbbe627dd",
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/trees/106b86e4da4ec49b58aeb9e32cdfa33cbbe627dd"
+    },
+    {
+      "path": "demos/pillarsOfEternity/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c811508b9157fb83a81caba452969d22cf82bc8e",
+      "size": 578,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/c811508b9157fb83a81caba452969d22cf82bc8e"
+    },
+    {
+      "path": "demos/pillarsOfEternity/pillarsOfEternity.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3f57be0e69c9d246429aafdf2c60a112d8036992",
+      "size": 5688,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/3f57be0e69c9d246429aafdf2c60a112d8036992"
+    },
+    {
+      "path": "demos/poissonSampling",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3608afe29a6a80f82c42b7024185ff347e9c5f1c",
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/trees/3608afe29a6a80f82c42b7024185ff347e9c5f1c"
+    },
+    {
+      "path": "demos/poissonSampling/.gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "59b32ff4ec60df82a29bee95b87acd6e19bc78b0",
+      "size": 84,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/59b32ff4ec60df82a29bee95b87acd6e19bc78b0"
+    },
+    {
+      "path": "demos/poissonSampling/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7c23e5a400aa1f03dba8746f1608bca51e45c993",
+      "size": 834,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/7c23e5a400aa1f03dba8746f1608bca51e45c993"
+    },
+    {
+      "path": "demos/poissonSampling/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d2705c8e672702799dc8ca9b311901be9b8201f1",
+      "size": 554,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/d2705c8e672702799dc8ca9b311901be9b8201f1"
+    },
+    {
+      "path": "demos/poissonSampling/js",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a57fe9c305e3c4706634660c427dbd9c161bae9e",
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/trees/a57fe9c305e3c4706634660c427dbd9c161bae9e"
+    },
+    {
+      "path": "demos/poissonSampling/js/noise.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f1d6447bb14f60052cb5beafebc708056a4b0c50",
+      "size": 14380,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/f1d6447bb14f60052cb5beafebc708056a4b0c50"
+    },
+    {
+      "path": "demos/poissonSampling/js/particles.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6f83c006ac827b02fc51ea75f27fd7764a8fa717",
+      "size": 38826,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/6f83c006ac827b02fc51ea75f27fd7764a8fa717"
+    },
+    {
+      "path": "demos/poissonSampling/js/shape.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dc719a10323e93f820386632fa0fe5e093c08604",
+      "size": 97303,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/dc719a10323e93f820386632fa0fe5e093c08604"
+    },
+    {
+      "path": "demos/poissonSampling/js/utils.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f95af34aec14ed73cbc16db3142995459bad9ede",
+      "size": 11057,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/f95af34aec14ed73cbc16db3142995459bad9ede"
+    },
+    {
+      "path": "demos/poissonSampling/poissonSampling.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eef28bd236df457cbebe8d4dfa0cdfbb4745636c",
+      "size": 4411,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/eef28bd236df457cbebe8d4dfa0cdfbb4745636c"
+    },
+    {
+      "path": "demos/pottery",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "29b0af61d42457ab4d97f9e9c606447529eed2d7",
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/trees/29b0af61d42457ab4d97f9e9c606447529eed2d7"
+    },
+    {
+      "path": "demos/pottery/darkFieldPottery.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f5bf69233d74412081624eda0f3ddfd8a278c8cf",
+      "size": 626,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/f5bf69233d74412081624eda0f3ddfd8a278c8cf"
+    },
+    {
+      "path": "demos/pottery/darkFieldPottery.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a68f157e2c5f337d016b31bc429f7b09fff1a327",
+      "size": 2633,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/a68f157e2c5f337d016b31bc429f7b09fff1a327"
+    },
+    {
+      "path": "demos/pottery/potGenerator.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8d575358e31b27d4add066429bf16bda8d79d97f",
+      "size": 3529,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/8d575358e31b27d4add066429bf16bda8d79d97f"
+    },
+    {
+      "path": "demos/pottery/potMosaic.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f4ef8529b290c480afc89acd39430432880600b8",
+      "size": 614,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/f4ef8529b290c480afc89acd39430432880600b8"
+    },
+    {
+      "path": "demos/pottery/potMosaic.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "161d1a44ef04104a2211768be416bf09fc582124",
+      "size": 1441,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/161d1a44ef04104a2211768be416bf09fc582124"
+    },
+    {
+      "path": "demos/pyramidCity",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "98344cafb8609adae2661bd138981fdbbaf146b1",
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/trees/98344cafb8609adae2661bd138981fdbbaf146b1"
+    },
+    {
+      "path": "demos/pyramidCity/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "349b2ab5fd8053320f3b59fb750b8591a8fe969f",
+      "size": 778,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/349b2ab5fd8053320f3b59fb750b8591a8fe969f"
+    },
+    {
+      "path": "demos/pyramidCity/pyramidCity.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9bd0f8ece81e9479596cb4cde35925202b7ade21",
+      "size": 3619,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/9bd0f8ece81e9479596cb4cde35925202b7ade21"
+    },
+    {
+      "path": "demos/quadraTree",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "bf4797bf566b4fea13dff44592a4a40f07c00513",
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/trees/bf4797bf566b4fea13dff44592a4a40f07c00513"
+    },
+    {
+      "path": "demos/quadraTree/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a492cb56cd4d065d556eba803c30e43715512b6c",
+      "size": 564,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/a492cb56cd4d065d556eba803c30e43715512b6c"
+    },
+    {
+      "path": "demos/quadraTree/quadraTree.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dcc93aeb50bd94a619df475343f9efa6ae18e491",
+      "size": 5621,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/dcc93aeb50bd94a619df475343f9efa6ae18e491"
+    },
+    {
+      "path": "demos/ribs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0ab8767288f78805ea2763ea6d4fc5e20de5c146",
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/trees/0ab8767288f78805ea2763ea6d4fc5e20de5c146"
+    },
+    {
+      "path": "demos/ribs/.DS_Store",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5008ddfcf53c02e82d7eee2e57c38e5672ef89f6",
+      "size": 6148,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/5008ddfcf53c02e82d7eee2e57c38e5672ef89f6"
+    },
+    {
+      "path": "demos/ribs/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "98443614c20ec1296fd8bbd8a1b9a43119570b8e",
+      "size": 564,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/98443614c20ec1296fd8bbd8a1b9a43119570b8e"
+    },
+    {
+      "path": "demos/ribs/ribs.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8606cee38bb31583f7bdd888554cb0578a6c3a84",
+      "size": 2471,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/8606cee38bb31583f7bdd888554cb0578a6c3a84"
+    },
+    {
+      "path": "demos/sailors",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d7398baa9fa53da21da388ed338465eb0b02d0c4",
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/trees/d7398baa9fa53da21da388ed338465eb0b02d0c4"
+    },
+    {
+      "path": "demos/sailors/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0848ba8afc45ad1a2577ff051f45c3694e7b3618",
+      "size": 566,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/0848ba8afc45ad1a2577ff051f45c3694e7b3618"
+    },
+    {
+      "path": "demos/sailors/sailors.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b57879d41ae627fac37c2f87c582b7f784c6041f",
+      "size": 6450,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/b57879d41ae627fac37c2f87c582b7f784c6041f"
+    },
+    {
+      "path": "demos/scales",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "005727b132e64d9d96fba607e49e49358d7a157e",
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/trees/005727b132e64d9d96fba607e49e49358d7a157e"
+    },
+    {
+      "path": "demos/scales/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3e416edbcaaf7f9df996bd55e6f60dc6f51459fb",
+      "size": 768,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/3e416edbcaaf7f9df996bd55e6f60dc6f51459fb"
+    },
+    {
+      "path": "demos/scales/sketch.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "38853c5e113918a6f795e8864e492ca7356a5d44",
+      "size": 1992,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/38853c5e113918a6f795e8864e492ca7356a5d44"
+    },
+    {
+      "path": "demos/sevilla",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7dc05debc7b814305172903aa8895829877f0388",
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/trees/7dc05debc7b814305172903aa8895829877f0388"
+    },
+    {
+      "path": "demos/sevilla/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1fd2ebbe365562c0b10e34ccb3fa21ec6084d731",
+      "size": 567,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/1fd2ebbe365562c0b10e34ccb3fa21ec6084d731"
+    },
+    {
+      "path": "demos/sevilla/sevilla.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d3dff40202322e44ae37de3e76eb43f568d9fe58",
+      "size": 1513,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/d3dff40202322e44ae37de3e76eb43f568d9fe58"
+    },
+    {
+      "path": "demos/sinCity",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b690c314ce14a564069cdc2f267e49dd261c523b",
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/trees/b690c314ce14a564069cdc2f267e49dd261c523b"
+    },
+    {
+      "path": "demos/sinCity/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "19ac7c642a3a07c7aaf1011c15977f536ca5eba2",
+      "size": 774,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/19ac7c642a3a07c7aaf1011c15977f536ca5eba2"
+    },
+    {
+      "path": "demos/sinCity/sinCity.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "42819b7f713103e7d52b9abbf408fb04d3c15caa",
+      "size": 3194,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/42819b7f713103e7d52b9abbf408fb04d3c15caa"
+    },
+    {
+      "path": "demos/sphere",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "14086bfb6d3e834c62dcffdc234c9391e91d6caa",
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/trees/14086bfb6d3e834c62dcffdc234c9391e91d6caa"
+    },
+    {
+      "path": "demos/sphere/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "056c83fcb067565f7d691880c51614b787f4b7ed",
+      "size": 768,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/056c83fcb067565f7d691880c51614b787f4b7ed"
+    },
+    {
+      "path": "demos/sphere/sphere.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ee238184575c6614022dc7a06ac9d5cfb6e756ab",
+      "size": 6213,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/ee238184575c6614022dc7a06ac9d5cfb6e756ab"
+    },
+    {
+      "path": "demos/spinningTriangles",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a0f1fb1eaf499ad5215dbdeddcd63ad5e751f59c",
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/trees/a0f1fb1eaf499ad5215dbdeddcd63ad5e751f59c"
+    },
+    {
+      "path": "demos/spinningTriangles/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "650e4c6a0f5b703119c840a788eb624cf004d92e",
+      "size": 481,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/650e4c6a0f5b703119c840a788eb624cf004d92e"
+    },
+    {
+      "path": "demos/spinningTriangles/spinningTriangles.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4a338bdc1e34d5a7ddb0b95f2d5cb87309ede326",
+      "size": 1710,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/4a338bdc1e34d5a7ddb0b95f2d5cb87309ede326"
+    },
+    {
+      "path": "demos/stableOrbit",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0e6ccd7e299e14690cb2d496808c801a4f0a3422",
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/trees/0e6ccd7e299e14690cb2d496808c801a4f0a3422"
+    },
+    {
+      "path": "demos/stableOrbit/.DS_Store",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5008ddfcf53c02e82d7eee2e57c38e5672ef89f6",
+      "size": 6148,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/5008ddfcf53c02e82d7eee2e57c38e5672ef89f6"
+    },
+    {
+      "path": "demos/stableOrbit/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9f9fbfffa3260baccb8ce725dc8e0a3c87b66d71",
+      "size": 476,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/9f9fbfffa3260baccb8ce725dc8e0a3c87b66d71"
+    },
+    {
+      "path": "demos/stableOrbit/stable_orbit.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "33cfef00421e94c36dc05e95b3bd7eb2a7a9201f",
+      "size": 1263,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/33cfef00421e94c36dc05e95b3bd7eb2a7a9201f"
+    },
+    {
+      "path": "demos/sunflowerSpiral",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "830f6d0d017b03a6a61fd4e9e4ae0028e93f07c3",
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/trees/830f6d0d017b03a6a61fd4e9e4ae0028e93f07c3"
+    },
+    {
+      "path": "demos/sunflowerSpiral/.DS_Store",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5008ddfcf53c02e82d7eee2e57c38e5672ef89f6",
+      "size": 6148,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/5008ddfcf53c02e82d7eee2e57c38e5672ef89f6"
+    },
+    {
+      "path": "demos/sunflowerSpiral/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d179ea823f350bf62158ee53e76575e231a83e0d",
+      "size": 551,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/d179ea823f350bf62158ee53e76575e231a83e0d"
+    },
+    {
+      "path": "demos/sunflowerSpiral/sunflowerSpiral.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6a4a50c0931c1d497e0316b2d514f65b40a46a71",
+      "size": 2480,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/6a4a50c0931c1d497e0316b2d514f65b40a46a71"
+    },
+    {
+      "path": "demos/theatre",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "dfae4007d6fbc49168214a00f3249885e4df4106",
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/trees/dfae4007d6fbc49168214a00f3249885e4df4106"
+    },
+    {
+      "path": "demos/theatre/cloudGen.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7f9ee2351e2a555d2c272a96d4b1ae4da38c0899",
+      "size": 8277,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/7f9ee2351e2a555d2c272a96d4b1ae4da38c0899"
+    },
+    {
+      "path": "demos/theatre/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eac4ee63d4c3bf92ac66b6c3408fdf7d2771fbf2",
+      "size": 606,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/eac4ee63d4c3bf92ac66b6c3408fdf7d2771fbf2"
+    },
+    {
+      "path": "demos/theatre/theatre.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c683d9e62d84f57e3226d525c7c7ab80ea42644c",
+      "size": 10378,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/c683d9e62d84f57e3226d525c7c7ab80ea42644c"
+    },
+    {
+      "path": "demos/trunk",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0ca5fca78473f6abb8312485d2b2662a442b4214",
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/trees/0ca5fca78473f6abb8312485d2b2662a442b4214"
+    },
+    {
+      "path": "demos/trunk/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3e416edbcaaf7f9df996bd55e6f60dc6f51459fb",
+      "size": 768,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/3e416edbcaaf7f9df996bd55e6f60dc6f51459fb"
+    },
+    {
+      "path": "demos/trunk/sketch.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4caaad59b198e85da284b84fb157046734c655a8",
+      "size": 3558,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/4caaad59b198e85da284b84fb157046734c655a8"
+    },
+    {
+      "path": "demos/twinCities",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5ae352bdc4ab24c567bc5eddf43432f3de75d08e",
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/trees/5ae352bdc4ab24c567bc5eddf43432f3de75d08e"
+    },
+    {
+      "path": "demos/twinCities/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e3fbef414f698d9efe59283fbdc713ceffe1638b",
+      "size": 777,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/e3fbef414f698d9efe59283fbdc713ceffe1638b"
+    },
+    {
+      "path": "demos/twinCities/twinCities.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a25697edf44f855d11a4f9b30d94a053e05ceb10",
+      "size": 4231,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/a25697edf44f855d11a4f9b30d94a053e05ceb10"
+    },
+    {
+      "path": "docs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1bc198e6e2ec6dc0aba484be01fa80fef6027014",
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/trees/1bc198e6e2ec6dc0aba484be01fa80fef6027014"
+    },
+    {
+      "path": "docs/Fresco-Fresco.Font.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9b2afa3f41bb1162ed3fdfd9d560161ae37be228",
+      "size": 10933,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/9b2afa3f41bb1162ed3fdfd9d560161ae37be228"
+    },
+    {
+      "path": "docs/Fresco.Arc.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "72a032babe9bc6c0a6b060208b5e05b4b8234770",
+      "size": 10541,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/72a032babe9bc6c0a6b060208b5e05b4b8234770"
+    },
+    {
+      "path": "docs/Fresco.Attractor.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "72dfaea10abbfe8f45c1216145d18a28caed925e",
+      "size": 14325,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/72dfaea10abbfe8f45c1216145d18a28caed925e"
+    },
+    {
+      "path": "docs/Fresco.Burst.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "62b29bb43f5d22051cacb12438d2a68d439b9595",
+      "size": 14651,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/62b29bb43f5d22051cacb12438d2a68d439b9595"
+    },
+    {
+      "path": "docs/Fresco.Circle.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "990944e18d426759fff7e58cc7928dc2009fd734",
+      "size": 92373,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/990944e18d426759fff7e58cc7928dc2009fd734"
+    },
+    {
+      "path": "docs/Fresco.Collection.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8b8cf81016b042a6ad76a8893e3aa555608e5e3d",
+      "size": 20599,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/8b8cf81016b042a6ad76a8893e3aa555608e5e3d"
+    },
+    {
+      "path": "docs/Fresco.Drag.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fcba27470ee96bf4b2806763931b9999f69795ba",
+      "size": 11367,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/fcba27470ee96bf4b2806763931b9999f69795ba"
+    },
+    {
+      "path": "docs/Fresco.Emitter.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0e9f1befe7390686dd3c728f8b8f2923329d9469",
+      "size": 26937,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/0e9f1befe7390686dd3c728f8b8f2923329d9469"
+    },
+    {
+      "path": "docs/Fresco.Force.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "560bc43562559c931a4627273b39d6a8adbce82f",
+      "size": 10583,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/560bc43562559c931a4627273b39d6a8adbce82f"
+    },
+    {
+      "path": "docs/Fresco.Geometry.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6c595e9cbbfd56f5a5fe620ec30698166da964cc",
+      "size": 20312,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/6c595e9cbbfd56f5a5fe620ec30698166da964cc"
+    },
+    {
+      "path": "docs/Fresco.Gravity.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7f3d842f56a7884d88d337696d249fe5acb49717",
+      "size": 9980,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/7f3d842f56a7884d88d337696d249fe5acb49717"
+    },
+    {
+      "path": "docs/Fresco.Line.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1bc2476049cbac3a96a1b516d750f31f4ac614a6",
+      "size": 90771,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/1bc2476049cbac3a96a1b516d750f31f4ac614a6"
+    },
+    {
+      "path": "docs/Fresco.Particle.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "98ba8bef198560c2061b5dd026069f40c727cbd6",
+      "size": 32062,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/98ba8bef198560c2061b5dd026069f40c727cbd6"
+    },
+    {
+      "path": "docs/Fresco.Point.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1897317235f7bad5b5f95e2509bbd5756d6f4f03",
+      "size": 21990,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/1897317235f7bad5b5f95e2509bbd5756d6f4f03"
+    },
+    {
+      "path": "docs/Fresco.PointEmitter.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "270171e26b3e946974e5d7d4e85559f59456556e",
+      "size": 15187,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/270171e26b3e946974e5d7d4e85559f59456556e"
+    },
+    {
+      "path": "docs/Fresco.Polygon.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0ed770e774f9efdef0001a0aa13fce5f6f8dbe20",
+      "size": 91989,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/0ed770e774f9efdef0001a0aa13fce5f6f8dbe20"
+    },
+    {
+      "path": "docs/Fresco.Rect.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "074764cc55d72a043bc33a146172215860b0251d",
+      "size": 90273,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/074764cc55d72a043bc33a146172215860b0251d"
+    },
+    {
+      "path": "docs/Fresco.Shape.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "be4ad932b900fda07d677dd9cc45ea2608f46731",
+      "size": 92735,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/be4ad932b900fda07d677dd9cc45ea2608f46731"
+    },
+    {
+      "path": "docs/Fresco.ShapeEmitter.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b83348864783f67d5b43a151419e42061bbe8953",
+      "size": 17751,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/b83348864783f67d5b43a151419e42061bbe8953"
+    },
+    {
+      "path": "docs/Fresco.Square.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5ee1b433f58f668b7e1b746b17afcb9079fa638c",
+      "size": 89815,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/5ee1b433f58f668b7e1b746b17afcb9079fa638c"
+    },
+    {
+      "path": "docs/Fresco.Voronoi.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "afa82026a6c75c2111134cd6a7c09b7b9df0655c",
+      "size": 18133,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/afa82026a6c75c2111134cd6a7c09b7b9df0655c"
+    },
+    {
+      "path": "docs/Fresco.Worley.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "03c56111bc2a6e2fe70d7a55160f68be6ed6ab23",
+      "size": 14387,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/03c56111bc2a6e2fe70d7a55160f68be6ed6ab23"
+    },
+    {
+      "path": "docs/Fresco.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "919b95e75525e4c4723072a40f9944b6c6d16dfe",
+      "size": 9600,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/919b95e75525e4c4723072a40f9944b6c6d16dfe"
+    },
+    {
+      "path": "docs/fonts.js.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "97e46c0718de6bb00ee3b93e40e8da55e279c6f1",
+      "size": 10825,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/97e46c0718de6bb00ee3b93e40e8da55e279c6f1"
+    },
+    {
+      "path": "docs/fonts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "22e3757303edeea1a2d5853c71db60694b4f661d",
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/trees/22e3757303edeea1a2d5853c71db60694b4f661d"
+    },
+    {
+      "path": "docs/fonts/OpenSans-Bold-webfont.eot",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5d20d916338a5890a033952e2e07ba7380f5a7d3",
+      "size": 19544,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/5d20d916338a5890a033952e2e07ba7380f5a7d3"
+    },
+    {
+      "path": "docs/fonts/OpenSans-Bold-webfont.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3ed7be4bc5b2908326eddde6a32eff453a5cb319",
+      "size": 118259,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/3ed7be4bc5b2908326eddde6a32eff453a5cb319"
+    },
+    {
+      "path": "docs/fonts/OpenSans-Bold-webfont.woff",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1205787b0ed50db71ebd4f8a7f85d106721ff258",
+      "size": 22432,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/1205787b0ed50db71ebd4f8a7f85d106721ff258"
+    },
+    {
+      "path": "docs/fonts/OpenSans-BoldItalic-webfont.eot",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1f639a15ff3cc66d3b22b55a7f28a8cf0d821b03",
+      "size": 20133,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/1f639a15ff3cc66d3b22b55a7f28a8cf0d821b03"
+    },
+    {
+      "path": "docs/fonts/OpenSans-BoldItalic-webfont.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6a2607b9dafcfd369a5440b1e6c2d5e30579ea66",
+      "size": 121112,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/6a2607b9dafcfd369a5440b1e6c2d5e30579ea66"
+    },
+    {
+      "path": "docs/fonts/OpenSans-BoldItalic-webfont.woff",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ed760c0628b6a0026041f5b8bba466a0471fd2e0",
+      "size": 23048,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/ed760c0628b6a0026041f5b8bba466a0471fd2e0"
+    },
+    {
+      "path": "docs/fonts/OpenSans-Italic-webfont.eot",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0c8a0ae06ed09f6a7be1b84defae7ccda65cc2e0",
+      "size": 20265,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/0c8a0ae06ed09f6a7be1b84defae7ccda65cc2e0"
+    },
+    {
+      "path": "docs/fonts/OpenSans-Italic-webfont.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e1075dcc2464f8a8f913383e3891da709b9feeb8",
+      "size": 122495,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/e1075dcc2464f8a8f913383e3891da709b9feeb8"
+    },
+    {
+      "path": "docs/fonts/OpenSans-Italic-webfont.woff",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ff652e64356b538c001423b6aedefcf1ee66cd17",
+      "size": 23188,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/ff652e64356b538c001423b6aedefcf1ee66cd17"
+    },
+    {
+      "path": "docs/fonts/OpenSans-Light-webfont.eot",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "14868406aa7d728a88d63963f119635813b5d30e",
+      "size": 19514,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/14868406aa7d728a88d63963f119635813b5d30e"
+    },
+    {
+      "path": "docs/fonts/OpenSans-Light-webfont.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "11a472ca8a5111187b4269b1407bbfd8dcf8fffd",
+      "size": 117270,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/11a472ca8a5111187b4269b1407bbfd8dcf8fffd"
+    },
+    {
+      "path": "docs/fonts/OpenSans-Light-webfont.woff",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e786074813a27d0a7a249047832988d5bf0fe756",
+      "size": 22248,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/e786074813a27d0a7a249047832988d5bf0fe756"
+    },
+    {
+      "path": "docs/fonts/OpenSans-LightItalic-webfont.eot",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8f445929ffb03b50e98c2a2f7d831a0cb1b276a2",
+      "size": 20535,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/8f445929ffb03b50e98c2a2f7d831a0cb1b276a2"
+    },
+    {
+      "path": "docs/fonts/OpenSans-LightItalic-webfont.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "431d7e35463dc240b890917ddd533219b2a9ae2e",
+      "size": 122968,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/431d7e35463dc240b890917ddd533219b2a9ae2e"
+    },
+    {
+      "path": "docs/fonts/OpenSans-LightItalic-webfont.woff",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "43e8b9e6cc061ff17fd2903075cbde12715512b3",
+      "size": 23400,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/43e8b9e6cc061ff17fd2903075cbde12715512b3"
+    },
+    {
+      "path": "docs/fonts/OpenSans-Regular-webfont.eot",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6bbc3cf58cb011a6b4bf3cb1612ce212608f7274",
+      "size": 19836,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/6bbc3cf58cb011a6b4bf3cb1612ce212608f7274"
+    },
+    {
+      "path": "docs/fonts/OpenSans-Regular-webfont.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "25a3952340fc727f6571e182d63a7938a2f27b32",
+      "size": 119399,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/25a3952340fc727f6571e182d63a7938a2f27b32"
+    },
+    {
+      "path": "docs/fonts/OpenSans-Regular-webfont.woff",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e231183dce4c7b452afc9e7799586fd285e146f4",
+      "size": 22660,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/e231183dce4c7b452afc9e7799586fd285e146f4"
+    },
+    {
+      "path": "docs/global.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b8c90b18516fc67a691e3f789977e2dbfb212f78",
+      "size": 217825,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/b8c90b18516fc67a691e3f789977e2dbfb212f78"
+    },
+    {
+      "path": "docs/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c84c8f0787de4cd2b99f72883f06b6de7582f6d2",
+      "size": 22939,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/c84c8f0787de4cd2b99f72883f06b6de7582f6d2"
+    },
+    {
+      "path": "docs/noise.js.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "94171c60a381b8a7798c71bfe7236186d15a6d2d",
+      "size": 21621,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/94171c60a381b8a7798c71bfe7236186d15a6d2d"
+    },
+    {
+      "path": "docs/particles.js.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b9a632033689d95c55b652628b44c89e5853e3a3",
+      "size": 48083,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/b9a632033689d95c55b652628b44c89e5853e3a3"
+    },
+    {
+      "path": "docs/scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0cf79e001073300faa18c41d193ba53ef0d1ccb2",
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/trees/0cf79e001073300faa18c41d193ba53ef0d1ccb2"
+    },
+    {
+      "path": "docs/scripts/linenumber.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4354785cea73f847d719e42cca760d5714b2e197",
+      "size": 671,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/4354785cea73f847d719e42cca760d5714b2e197"
+    },
+    {
+      "path": "docs/scripts/prettify",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4edd9acf761042137df3a55d87b979f34bf11434",
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/trees/4edd9acf761042137df3a55d87b979f34bf11434"
+    },
+    {
+      "path": "docs/scripts/prettify/Apache-License-2.0.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d645695673349e3947e8e5ae42332d0ac3164cd7",
+      "size": 11358,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/d645695673349e3947e8e5ae42332d0ac3164cd7"
+    },
+    {
+      "path": "docs/scripts/prettify/lang-css.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "041e1f59067977554f29146ed51c13bcf509f0af",
+      "size": 861,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/041e1f59067977554f29146ed51c13bcf509f0af"
+    },
+    {
+      "path": "docs/scripts/prettify/prettify.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eef5ad7e6a07676b3919146d583d1c190bf1e163",
+      "size": 13632,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/eef5ad7e6a07676b3919146d583d1c190bf1e163"
+    },
+    {
+      "path": "docs/shape.js.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "97af5bc5e8f3d595efe379c3600daa086aa7c98d",
+      "size": 116028,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/97af5bc5e8f3d595efe379c3600daa086aa7c98d"
+    },
+    {
+      "path": "docs/styles",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6c4522be206babbbf58c6dc84950bc2d97556829",
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/trees/6c4522be206babbbf58c6dc84950bc2d97556829"
+    },
+    {
+      "path": "docs/styles/jsdoc-default.css",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7d1729dc9bd2936b146531b4c9ca7f91cb8afbb5",
+      "size": 5962,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/7d1729dc9bd2936b146531b4c9ca7f91cb8afbb5"
+    },
+    {
+      "path": "docs/styles/prettify-jsdoc.css",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5a2526e374846d0c80af0c06c25d25215463a0d9",
+      "size": 1535,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/5a2526e374846d0c80af0c06c25d25215463a0d9"
+    },
+    {
+      "path": "docs/styles/prettify-tomorrow.css",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b6f92a78db990ec1dc52e032452a979b8c216a85",
+      "size": 2026,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/b6f92a78db990ec1dc52e032452a979b8c216a85"
+    },
+    {
+      "path": "docs/utils.js.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "32e1a4ffb6097ca97bdc0e128f57b5305b8d9859",
+      "size": 19373,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/32e1a4ffb6097ca97bdc0e128f57b5305b8d9859"
+    },
+    {
+      "path": "gen_docs.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "6f8a46a675d33906043b6495ba9ba49f960bcf39",
+      "size": 49,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/6f8a46a675d33906043b6495ba9ba49f960bcf39"
+    },
+    {
+      "path": "images",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "57aa7346967486422652caed50495cd48b10527d",
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/trees/57aa7346967486422652caed50495cd48b10527d"
+    },
+    {
+      "path": "images/bandana.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bebae18fb82f24af10ac359ee4ca9d872c0fdf9b",
+      "size": 1610932,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/bebae18fb82f24af10ac359ee4ca9d872c0fdf9b"
+    },
+    {
+      "path": "images/boobs.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b63e24ad764f5d49ef1a103599b764673c0d3a6b",
+      "size": 260039,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/b63e24ad764f5d49ef1a103599b764673c0d3a6b"
+    },
+    {
+      "path": "images/brain.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "50167621c93d63f9d88d7ae915201d3b0a305141",
+      "size": 4477401,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/50167621c93d63f9d88d7ae915201d3b0a305141"
+    },
+    {
+      "path": "images/breathing.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f01df8b2156d863d5f9278515f0ceda174746c72",
+      "size": 1165401,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/f01df8b2156d863d5f9278515f0ceda174746c72"
+    },
+    {
+      "path": "images/bubbles.png",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "2ece55a1b42297a080d88b4475024e3eeff2e558",
+      "size": 276161,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/2ece55a1b42297a080d88b4475024e3eeff2e558"
+    },
+    {
+      "path": "images/buddha.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "56417a3c8ba467eb54f5d601f5d6ed35a27b67c5",
+      "size": 1963664,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/56417a3c8ba467eb54f5d601f5d6ed35a27b67c5"
+    },
+    {
+      "path": "images/butterfly.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6f9b63a8ffde0ecf8ef58075d87f7f9ad378372d",
+      "size": 627893,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/6f9b63a8ffde0ecf8ef58075d87f7f9ad378372d"
+    },
+    {
+      "path": "images/dunes.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "73947e732aa9c31b69da8461010da03746f088b6",
+      "size": 7630927,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/73947e732aa9c31b69da8461010da03746f088b6"
+    },
+    {
+      "path": "images/electronicJungle.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "248834d10767b638a9647753487dfc1d9c0859ad",
+      "size": 1770919,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/248834d10767b638a9647753487dfc1d9c0859ad"
+    },
+    {
+      "path": "images/electronicSheep.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ae1b48ea5090e0550dc6cd42458c19110e5b7c6f",
+      "size": 5971477,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/ae1b48ea5090e0550dc6cd42458c19110e5b7c6f"
+    },
+    {
+      "path": "images/holi.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0817688f569ab9add3395ae09b3fbaca4f06d8fd",
+      "size": 482591,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/0817688f569ab9add3395ae09b3fbaca4f06d8fd"
+    },
+    {
+      "path": "images/lifeblood.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "536ad2dc3f80ada9fb69d03b84edb77cd4eee789",
+      "size": 673458,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/536ad2dc3f80ada9fb69d03b84edb77cd4eee789"
+    },
+    {
+      "path": "images/mantis.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1e904914609c0dd860680bd193091d230ed2a203",
+      "size": 284364,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/1e904914609c0dd860680bd193091d230ed2a203"
+    },
+    {
+      "path": "images/moon.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "070836999cb144bf549a5dbbc3b55dd0534b9b1f",
+      "size": 5189223,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/070836999cb144bf549a5dbbc3b55dd0534b9b1f"
+    },
+    {
+      "path": "images/ondulation.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1ff540493352b68f458d5091114e7baec44d45fc",
+      "size": 2693869,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/1ff540493352b68f458d5091114e7baec44d45fc"
+    },
+    {
+      "path": "images/peacock.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ac12a374cd27b2e610fd088ea0003019cf53a799",
+      "size": 1221843,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/ac12a374cd27b2e610fd088ea0003019cf53a799"
+    },
+    {
+      "path": "images/ribs.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e5fcfdfd06eec989e10b13cebeb7259d8a13210d",
+      "size": 302987,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/e5fcfdfd06eec989e10b13cebeb7259d8a13210d"
+    },
+    {
+      "path": "images/rose.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f90a91d41eb7d64d31ed0277d68e7ff0bc6e7748",
+      "size": 2225293,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/f90a91d41eb7d64d31ed0277d68e7ff0bc6e7748"
+    },
+    {
+      "path": "images/sailors.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "891b8a2a08ba16245d35d4060d77082874a79e15",
+      "size": 715635,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/891b8a2a08ba16245d35d4060d77082874a79e15"
+    },
+    {
+      "path": "images/sevilla.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7d14c069e1d2552566b5b23a593ec963bd996fba",
+      "size": 3078805,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/7d14c069e1d2552566b5b23a593ec963bd996fba"
+    },
+    {
+      "path": "images/theatre.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "768619069683d5377fb07d07ee37180f79000b47",
+      "size": 668494,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/768619069683d5377fb07d07ee37180f79000b47"
+    },
+    {
+      "path": "images/windowsToTheSoul.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bfca7965f8ec4a996ce8b9015f0ab204b0163244",
+      "size": 4604132,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/bfca7965f8ec4a996ce8b9015f0ab204b0163244"
+    },
+    {
+      "path": "js",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a6807a54ffa73a8b2a9e58cfb21d4dfe8b5cb24f",
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/trees/a6807a54ffa73a8b2a9e58cfb21d4dfe8b5cb24f"
+    },
+    {
+      "path": "js/external",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "103ed95de76c6c245c920a1e75fc61636e2e36b4",
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/trees/103ed95de76c6c245c920a1e75fc61636e2e36b4"
+    },
+    {
+      "path": "js/external/CCapture.all.min.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bda376d9fa4cb17153041b9ea09f647f22ce5acc",
+      "size": 35077,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/bda376d9fa4cb17153041b9ea09f647f22ce5acc"
+    },
+    {
+      "path": "js/external/p5.js-svg@1.1.1",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e0051cd86cbf4802b3490df3a13fe5b2c92c39a7",
+      "size": 92712,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/e0051cd86cbf4802b3490df3a13fe5b2c92c39a7"
+    },
+    {
+      "path": "js/external/p5.min.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "61b45b2c91e83c9b02677b73a6111b8a8929c3cf",
+      "size": 614240,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/61b45b2c91e83c9b02677b73a6111b8a8929c3cf"
+    },
+    {
+      "path": "js/fonts.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1d543b561fef55150c48a983cfa95e58876fa060",
+      "size": 3856,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/1d543b561fef55150c48a983cfa95e58876fa060"
+    },
+    {
+      "path": "js/futural.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9a2b396f4601d8cd8d7c4ecc202b8db88c4b5211",
+      "size": 129857,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/9a2b396f4601d8cd8d7c4ecc202b8db88c4b5211"
+    },
+    {
+      "path": "js/noise.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "06e1b2b83e94ef00149e17d4fb69e860bc9f0e8a",
+      "size": 14396,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/06e1b2b83e94ef00149e17d4fb69e860bc9f0e8a"
+    },
+    {
+      "path": "js/particles.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cf2bcf1958a3c80bb45452724fb55393c6dc8346",
+      "size": 40991,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/cf2bcf1958a3c80bb45452724fb55393c6dc8346"
+    },
+    {
+      "path": "js/quadtree.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "792e5dde231535469d450f952ed37b6902de9407",
+      "size": 9614,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/792e5dde231535469d450f952ed37b6902de9407"
+    },
+    {
+      "path": "js/shape.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ceede1d34332aef765081d80f1a193724a008ff0",
+      "size": 126896,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/ceede1d34332aef765081d80f1a193724a008ff0"
+    },
+    {
+      "path": "js/shapes3D.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7c1cf3129f26a80b0061c100d75f40e5a54a09e0",
+      "size": 49343,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/7c1cf3129f26a80b0061c100d75f40e5a54a09e0"
+    },
+    {
+      "path": "js/tilers.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4f4d26da4f57ccf21484b56c87a5c01168a01232",
+      "size": 6235,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/4f4d26da4f57ccf21484b56c87a5c01168a01232"
+    },
+    {
+      "path": "js/utils.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b8d887fdb3c93c88f84d54b61abf986389c57055",
+      "size": 14202,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/b8d887fdb3c93c88f84d54b61abf986389c57055"
+    },
+    {
+      "path": "style.css",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ef21ae73a6c25bf51072aca64bd4fb94759159bb",
+      "size": 108,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/ef21ae73a6c25bf51072aca64bd4fb94759159bb"
+    },
+    {
+      "path": "unitTests",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "19aaf89e0e30c96e2cbfe6c5d6f68bd2b216eeaf",
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/trees/19aaf89e0e30c96e2cbfe6c5d6f68bd2b216eeaf"
+    },
+    {
+      "path": "unitTests/.DS_Store",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "72b14fec3d3082f42059d46be127e58838c55e9e",
+      "size": 8196,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/72b14fec3d3082f42059d46be127e58838c55e9e"
+    },
+    {
+      "path": "unitTests/JSONexport_test",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "eab617549d4197337c3950b4ecf4d90c69031967",
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/trees/eab617549d4197337c3950b4ecf4d90c69031967"
+    },
+    {
+      "path": "unitTests/JSONexport_test/JSONexport_test.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d0738d94b1f0ffd6db5954ec49bcb591544f8f22",
+      "size": 475,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/d0738d94b1f0ffd6db5954ec49bcb591544f8f22"
+    },
+    {
+      "path": "unitTests/JSONexport_test/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3da9ea48ee45459aaf454ff1ede2d33cf473b41d",
+      "size": 733,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/3da9ea48ee45459aaf454ff1ede2d33cf473b41d"
+    },
+    {
+      "path": "unitTests/catmullRom_test",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b18453385bcb188b0b635685ad1d2993db232cb4",
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/trees/b18453385bcb188b0b635685ad1d2993db232cb4"
+    },
+    {
+      "path": "unitTests/catmullRom_test/catmullRom_test.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6f023162d2cb9558ddb85f0c3abe26e96fba851c",
+      "size": 1468,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/6f023162d2cb9558ddb85f0c3abe26e96fba851c"
+    },
+    {
+      "path": "unitTests/catmullRom_test/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b714f8df87ea0ad08ceb9b530d6a5ef8995ffba0",
+      "size": 433,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/b714f8df87ea0ad08ceb9b530d6a5ef8995ffba0"
+    },
+    {
+      "path": "unitTests/copyToPoint_test",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9a348609976c5a1ab46f7cea17f0da4e9897a1c4",
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/trees/9a348609976c5a1ab46f7cea17f0da4e9897a1c4"
+    },
+    {
+      "path": "unitTests/copyToPoint_test/.DS_Store",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5008ddfcf53c02e82d7eee2e57c38e5672ef89f6",
+      "size": 6148,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/5008ddfcf53c02e82d7eee2e57c38e5672ef89f6"
+    },
+    {
+      "path": "unitTests/copyToPoint_test/copyToPoint_test.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "770909341514ecb552a7755af4aed9ec2c713085",
+      "size": 453,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/770909341514ecb552a7755af4aed9ec2c713085"
+    },
+    {
+      "path": "unitTests/copyToPoint_test/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "73057319d8bfae69239b00e60aa589c70cc79381",
+      "size": 434,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/73057319d8bfae69239b00e60aa589c70cc79381"
+    },
+    {
+      "path": "unitTests/cubicRoot_test",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7b57ceb8bd51ddd9156556c4487950807bd65ed4",
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/trees/7b57ceb8bd51ddd9156556c4487950807bd65ed4"
+    },
+    {
+      "path": "unitTests/cubicRoot_test/.DS_Store",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "20df9f3d9a206eeb2a449018cca42f80d7c64324",
+      "size": 6148,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/20df9f3d9a206eeb2a449018cca42f80d7c64324"
+    },
+    {
+      "path": "unitTests/cubicRoot_test/cubicRoot_test.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2bc519e6727fe2f857c4859d15bf1019cbcc8d43",
+      "size": 1787,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/2bc519e6727fe2f857c4859d15bf1019cbcc8d43"
+    },
+    {
+      "path": "unitTests/cubicRoot_test/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "43030e6cd30cb148f8120268ae3ed9189448b965",
+      "size": 432,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/43030e6cd30cb148f8120268ae3ed9189448b965"
+    },
+    {
+      "path": "unitTests/distort_test",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c9bf3e2cc231515fdcf66a0ac9a02b09dbe032c0",
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/trees/c9bf3e2cc231515fdcf66a0ac9a02b09dbe032c0"
+    },
+    {
+      "path": "unitTests/distort_test/.DS_Store",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "20df9f3d9a206eeb2a449018cca42f80d7c64324",
+      "size": 6148,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/20df9f3d9a206eeb2a449018cca42f80d7c64324"
+    },
+    {
+      "path": "unitTests/distort_test/distort_test.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "688b703c78b306f8d7610daf0b91c030f5a67520",
+      "size": 2154,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/688b703c78b306f8d7610daf0b91c030f5a67520"
+    },
+    {
+      "path": "unitTests/distort_test/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "36b38509551b871c82aa96bfd2ed6d944c13dbdc",
+      "size": 430,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/36b38509551b871c82aa96bfd2ed6d944c13dbdc"
+    },
+    {
+      "path": "unitTests/divide_test",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "52c9b451fd5fc58c8f1ec60eef8729663718f4d9",
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/trees/52c9b451fd5fc58c8f1ec60eef8729663718f4d9"
+    },
+    {
+      "path": "unitTests/divide_test/.DS_Store",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "20df9f3d9a206eeb2a449018cca42f80d7c64324",
+      "size": 6148,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/20df9f3d9a206eeb2a449018cca42f80d7c64324"
+    },
+    {
+      "path": "unitTests/divide_test/divide_test.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "59158eaa36d66bd6d678cd3181da4296c9e2ea03",
+      "size": 523,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/59158eaa36d66bd6d678cd3181da4296c9e2ea03"
+    },
+    {
+      "path": "unitTests/divide_test/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "417ce6297d6290e189e83e02853d190237fcc271",
+      "size": 429,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/417ce6297d6290e189e83e02853d190237fcc271"
+    },
+    {
+      "path": "unitTests/drawInstantiate_test",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "eeaca0955eddd7739a9885947c632907970e876f",
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/trees/eeaca0955eddd7739a9885947c632907970e876f"
+    },
+    {
+      "path": "unitTests/drawInstantiate_test/.DS_Store",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5008ddfcf53c02e82d7eee2e57c38e5672ef89f6",
+      "size": 6148,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/5008ddfcf53c02e82d7eee2e57c38e5672ef89f6"
+    },
+    {
+      "path": "unitTests/drawInstantiate_test/drawInstantiate_test.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d720b9261298f67482a6118580247a9062efcd84",
+      "size": 966,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/d720b9261298f67482a6118580247a9062efcd84"
+    },
+    {
+      "path": "unitTests/drawInstantiate_test/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c8d55287dfa827964dcc10dd87743249f81fb7bb",
+      "size": 438,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/c8d55287dfa827964dcc10dd87743249f81fb7bb"
+    },
+    {
+      "path": "unitTests/drawShadow_test",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4ace3803fb1270c59da0a0c806ba5938146b634b",
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/trees/4ace3803fb1270c59da0a0c806ba5938146b634b"
+    },
+    {
+      "path": "unitTests/drawShadow_test/drawShadow_test.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a0d558df7d2434f98879f7ad449856dffe59127e",
+      "size": 492,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/a0d558df7d2434f98879f7ad449856dffe59127e"
+    },
+    {
+      "path": "unitTests/drawShadow_test/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "deedbec49caf10598ad7e01ce030d1a637feacb0",
+      "size": 568,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/deedbec49caf10598ad7e01ce030d1a637feacb0"
+    },
+    {
+      "path": "unitTests/fontTest",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "14b6f570765e2f66cecd81af7b6300a07944b18b",
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/trees/14b6f570765e2f66cecd81af7b6300a07944b18b"
+    },
+    {
+      "path": "unitTests/fontTest/fontTest.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "72fb5ab803b1986cc070446f8a88f07646cbcef6",
+      "size": 396,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/72fb5ab803b1986cc070446f8a88f07646cbcef6"
+    },
+    {
+      "path": "unitTests/fontTest/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a0c1d7fa0fbe115ccd3fb08ebf892e2eea5b9b83",
+      "size": 771,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/a0c1d7fa0fbe115ccd3fb08ebf892e2eea5b9b83"
+    },
+    {
+      "path": "unitTests/hatchFill_test",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d1594e8a0322fe621cb81feb126563cc989ff877",
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/trees/d1594e8a0322fe621cb81feb126563cc989ff877"
+    },
+    {
+      "path": "unitTests/hatchFill_test/hatchFill_test.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c247d8425668a06529e159eecbd15dd65cf6b795",
+      "size": 741,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/c247d8425668a06529e159eecbd15dd65cf6b795"
+    },
+    {
+      "path": "unitTests/hatchFill_test/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6ae3908aa5675b203098dbb7799c34b0698166df",
+      "size": 782,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/6ae3908aa5675b203098dbb7799c34b0698166df"
+    },
+    {
+      "path": "unitTests/isInside_test",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ae4b23c5d22c54e50aec2f9b4bf4c5100f37cd79",
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/trees/ae4b23c5d22c54e50aec2f9b4bf4c5100f37cd79"
+    },
+    {
+      "path": "unitTests/isInside_test/.DS_Store",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "20df9f3d9a206eeb2a449018cca42f80d7c64324",
+      "size": 6148,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/20df9f3d9a206eeb2a449018cca42f80d7c64324"
+    },
+    {
+      "path": "unitTests/isInside_test/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6d5285d1e5329d6f399e02efef0f968eb5ba46f2",
+      "size": 431,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/6d5285d1e5329d6f399e02efef0f968eb5ba46f2"
+    },
+    {
+      "path": "unitTests/isInside_test/isInside_test.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9d31f7aac8470c1bab5fa08a05f3d7454310ef8c",
+      "size": 756,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/9d31f7aac8470c1bab5fa08a05f3d7454310ef8c"
+    },
+    {
+      "path": "unitTests/noisyDraw_test",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1fa51da37fbffbdd6d9c94dd6468cff1c69fed43",
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/trees/1fa51da37fbffbdd6d9c94dd6468cff1c69fed43"
+    },
+    {
+      "path": "unitTests/noisyDraw_test/.DS_Store",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "20df9f3d9a206eeb2a449018cca42f80d7c64324",
+      "size": 6148,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/20df9f3d9a206eeb2a449018cca42f80d7c64324"
+    },
+    {
+      "path": "unitTests/noisyDraw_test/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e7f2dba4072c88ee99952c3d99f8818b72080faf",
+      "size": 432,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/e7f2dba4072c88ee99952c3d99f8818b72080faf"
+    },
+    {
+      "path": "unitTests/noisyDraw_test/noisyDraw_test.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7424d4b395cd28ae7ffb06881430b3ff1bb5e127",
+      "size": 379,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/7424d4b395cd28ae7ffb06881430b3ff1bb5e127"
+    },
+    {
+      "path": "unitTests/normals_test",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d5c5a7d12b39c8254e4003f322986ae932375f82",
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/trees/d5c5a7d12b39c8254e4003f322986ae932375f82"
+    },
+    {
+      "path": "unitTests/normals_test/.DS_Store",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "20df9f3d9a206eeb2a449018cca42f80d7c64324",
+      "size": 6148,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/20df9f3d9a206eeb2a449018cca42f80d7c64324"
+    },
+    {
+      "path": "unitTests/normals_test/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2c47b99955b3e1f3669ab682e186aa72d8fe1958",
+      "size": 430,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/2c47b99955b3e1f3669ab682e186aa72d8fe1958"
+    },
+    {
+      "path": "unitTests/normals_test/normals_test.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "79a61efdf3961fe030b1e92c89344eab6e23f799",
+      "size": 752,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/79a61efdf3961fe030b1e92c89344eab6e23f799"
+    },
+    {
+      "path": "unitTests/pathFinder_test",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b858f7fac0133bbcd9cedc721c903ec18212f0ab",
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/trees/b858f7fac0133bbcd9cedc721c903ec18212f0ab"
+    },
+    {
+      "path": "unitTests/pathFinder_test/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0629c70058ce1ccf9ecc15860bb3224fe66cba9d",
+      "size": 688,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/0629c70058ce1ccf9ecc15860bb3224fe66cba9d"
+    },
+    {
+      "path": "unitTests/pathFinder_test/pathFinder_test.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "450530ede057e4058a00d142484d15afb1d6c808",
+      "size": 871,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/450530ede057e4058a00d142484d15afb1d6c808"
+    },
+    {
+      "path": "unitTests/pointEquals_test",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a3d4ec6dce3e524d8fea73537bd5196d55285c19",
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/trees/a3d4ec6dce3e524d8fea73537bd5196d55285c19"
+    },
+    {
+      "path": "unitTests/pointEquals_test/.DS_Store",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "20df9f3d9a206eeb2a449018cca42f80d7c64324",
+      "size": 6148,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/20df9f3d9a206eeb2a449018cca42f80d7c64324"
+    },
+    {
+      "path": "unitTests/pointEquals_test/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b243b90483b5fddff03aadcc5e08063b698c4517",
+      "size": 434,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/b243b90483b5fddff03aadcc5e08063b698c4517"
+    },
+    {
+      "path": "unitTests/pointEquals_test/pointEquals_test.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1840b4e141a591700600034c9e177b94603c9a32",
+      "size": 224,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/1840b4e141a591700600034c9e177b94603c9a32"
+    },
+    {
+      "path": "unitTests/poligonize_test",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6491988e9865b4a3eeab453e31730a789bbb95a0",
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/trees/6491988e9865b4a3eeab453e31730a789bbb95a0"
+    },
+    {
+      "path": "unitTests/poligonize_test/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9f637dfdb7e337257c7efef75264a91324a017b8",
+      "size": 733,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/9f637dfdb7e337257c7efef75264a91324a017b8"
+    },
+    {
+      "path": "unitTests/poligonize_test/poligonize_test.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4ce2a661f7b732b47aa38dae1e43ff5e0169ef99",
+      "size": 502,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/4ce2a661f7b732b47aa38dae1e43ff5e0169ef99"
+    },
+    {
+      "path": "unitTests/projectOnShape",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "36408bd0a3900e4f51456dddb893975e7d43d750",
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/trees/36408bd0a3900e4f51456dddb893975e7d43d750"
+    },
+    {
+      "path": "unitTests/projectOnShape/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "805ccb5728492a644e8613b26d3c28c04800df95",
+      "size": 569,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/805ccb5728492a644e8613b26d3c28c04800df95"
+    },
+    {
+      "path": "unitTests/projectOnShape/projectOnShape.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6c62ec0e66c0e8741502fa2850a54c3f77864b14",
+      "size": 1246,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/6c62ec0e66c0e8741502fa2850a54c3f77864b14"
+    },
+    {
+      "path": "unitTests/quadree_test",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "03417be0d513a2b984cbd3ffbf43859e2934b503",
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/trees/03417be0d513a2b984cbd3ffbf43859e2934b503"
+    },
+    {
+      "path": "unitTests/quadree_test/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ed5f8004f38fb0b287fa5bfba4304136eacb3399",
+      "size": 780,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/ed5f8004f38fb0b287fa5bfba4304136eacb3399"
+    },
+    {
+      "path": "unitTests/quadree_test/quadtree_test.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c2359274c4e18f6ddd088fa4c7689f9dd3b5f9d1",
+      "size": 1903,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/c2359274c4e18f6ddd088fa4c7689f9dd3b5f9d1"
+    },
+    {
+      "path": "unitTests/recording_test",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f246905aae78aea5eb84a0b7bb9f2537b73c783a",
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/trees/f246905aae78aea5eb84a0b7bb9f2537b73c783a"
+    },
+    {
+      "path": "unitTests/recording_test/.DS_Store",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "20df9f3d9a206eeb2a449018cca42f80d7c64324",
+      "size": 6148,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/20df9f3d9a206eeb2a449018cca42f80d7c64324"
+    },
+    {
+      "path": "unitTests/recording_test/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e6227499549a36f9020d28888c82fcd100103f1a",
+      "size": 562,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/e6227499549a36f9020d28888c82fcd100103f1a"
+    },
+    {
+      "path": "unitTests/recording_test/recording_test.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bfc784252ef6051b58bfcb68abd46b514142864a",
+      "size": 278,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/bfc784252ef6051b58bfcb68abd46b514142864a"
+    },
+    {
+      "path": "unitTests/relax_test",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "eafebcb532490df5536474364a93cc721312a1ab",
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/trees/eafebcb532490df5536474364a93cc721312a1ab"
+    },
+    {
+      "path": "unitTests/relax_test/.DS_Store",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "20df9f3d9a206eeb2a449018cca42f80d7c64324",
+      "size": 6148,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/20df9f3d9a206eeb2a449018cca42f80d7c64324"
+    },
+    {
+      "path": "unitTests/relax_test/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ff0923b0e4342b17d36888106d63fc64659d81fd",
+      "size": 474,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/ff0923b0e4342b17d36888106d63fc64659d81fd"
+    },
+    {
+      "path": "unitTests/relax_test/relax_test.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e3e54867be73d2d482b31ab3464fb6b7861aaf75",
+      "size": 622,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/e3e54867be73d2d482b31ab3464fb6b7861aaf75"
+    },
+    {
+      "path": "unitTests/resample_test",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f2ccc52f00bd01da31c5895aea0745f6c8c39ee2",
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/trees/f2ccc52f00bd01da31c5895aea0745f6c8c39ee2"
+    },
+    {
+      "path": "unitTests/resample_test/.DS_Store",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "20df9f3d9a206eeb2a449018cca42f80d7c64324",
+      "size": 6148,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/20df9f3d9a206eeb2a449018cca42f80d7c64324"
+    },
+    {
+      "path": "unitTests/resample_test/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aed336557ca564e9691bc936b139b8e0013a6204",
+      "size": 477,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/aed336557ca564e9691bc936b139b8e0013a6204"
+    },
+    {
+      "path": "unitTests/resample_test/resample_test.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4de057ad513298f52b69f35839233a84b3fa012f",
+      "size": 1087,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/4de057ad513298f52b69f35839233a84b3fa012f"
+    },
+    {
+      "path": "unitTests/sInterpolate_test",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5d46d90f658777b0d6700e3e21b0b8ed9e09cd22",
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/trees/5d46d90f658777b0d6700e3e21b0b8ed9e09cd22"
+    },
+    {
+      "path": "unitTests/sInterpolate_test/.DS_Store",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "20df9f3d9a206eeb2a449018cca42f80d7c64324",
+      "size": 6148,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/20df9f3d9a206eeb2a449018cca42f80d7c64324"
+    },
+    {
+      "path": "unitTests/sInterpolate_test/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "82d04bf6fe33ce98a4e85cc11b35eae1e9936f71",
+      "size": 435,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/82d04bf6fe33ce98a4e85cc11b35eae1e9936f71"
+    },
+    {
+      "path": "unitTests/sInterpolate_test/sInterpolate_test.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "199ec2abcfdebae2c9222bd76ebf1b6333c476fb",
+      "size": 574,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/199ec2abcfdebae2c9222bd76ebf1b6333c476fb"
+    },
+    {
+      "path": "unitTests/scatter_test",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "160e58d058846610133e9910a715cdf97db457bc",
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/trees/160e58d058846610133e9910a715cdf97db457bc"
+    },
+    {
+      "path": "unitTests/scatter_test/.DS_Store",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "20df9f3d9a206eeb2a449018cca42f80d7c64324",
+      "size": 6148,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/20df9f3d9a206eeb2a449018cca42f80d7c64324"
+    },
+    {
+      "path": "unitTests/scatter_test/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "865eb7510ee089cb3ca9350e6ada11e760c92a0d",
+      "size": 430,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/865eb7510ee089cb3ca9350e6ada11e760c92a0d"
+    },
+    {
+      "path": "unitTests/scatter_test/scatter_test.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "369d767889d7002796629a48363081eb41cdebbe",
+      "size": 1030,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/369d767889d7002796629a48363081eb41cdebbe"
+    },
+    {
+      "path": "unitTests/shape3D_test",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e77b1155d917ba7e14d1afcd38058d17b57c5a9b",
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/trees/e77b1155d917ba7e14d1afcd38058d17b57c5a9b"
+    },
+    {
+      "path": "unitTests/shape3D_test/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f9ff2c11059334fb1bb2fe06ac53d0211f5e747c",
+      "size": 779,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/f9ff2c11059334fb1bb2fe06ac53d0211f5e747c"
+    },
+    {
+      "path": "unitTests/shape3D_test/shape3D_test.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "974b685f51a2098d031955ea108c354177a17b7e",
+      "size": 1331,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/974b685f51a2098d031955ea108c354177a17b7e"
+    },
+    {
+      "path": "unitTests/shapeEmitter_test",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5ca4556bad4f240e6e39d82778f773139f95d94f",
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/trees/5ca4556bad4f240e6e39d82778f773139f95d94f"
+    },
+    {
+      "path": "unitTests/shapeEmitter_test/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "33b10e0e0e036efc9f115700a061caa89ea07b08",
+      "size": 481,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/33b10e0e0e036efc9f115700a061caa89ea07b08"
+    },
+    {
+      "path": "unitTests/shapeEmitter_test/shapeEmitter_test.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "843d7a5494a7d6978ea2eba18394c25216c418f4",
+      "size": 408,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/843d7a5494a7d6978ea2eba18394c25216c418f4"
+    },
+    {
+      "path": "unitTests/steeperStep_test",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7cd032f3047487f4f21dc6138bf2453a1cb84a2a",
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/trees/7cd032f3047487f4f21dc6138bf2453a1cb84a2a"
+    },
+    {
+      "path": "unitTests/steeperStep_test/.DS_Store",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a44080e007b3d342fa1faacbe987d426faacb82a",
+      "size": 6148,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/a44080e007b3d342fa1faacbe987d426faacb82a"
+    },
+    {
+      "path": "unitTests/steeperStep_test/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1e0d67d02118dfc47d39739f7aeebd97192b232c",
+      "size": 480,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/1e0d67d02118dfc47d39739f7aeebd97192b232c"
+    },
+    {
+      "path": "unitTests/steeperStep_test/steeperStep_test.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2721786753be75bfeffc2f634d1cffa5e830d529",
+      "size": 465,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/2721786753be75bfeffc2f634d1cffa5e830d529"
+    },
+    {
+      "path": "unitTests/worleyNoise_test",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "323ae8d42d615a195d36e15dbeea4055d061527b",
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/trees/323ae8d42d615a195d36e15dbeea4055d061527b"
+    },
+    {
+      "path": "unitTests/worleyNoise_test/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "db5df8e20ddfe0b26d677d136c1256d8ef047a83",
+      "size": 569,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/db5df8e20ddfe0b26d677d136c1256d8ef047a83"
+    },
+    {
+      "path": "unitTests/worleyNoise_test/worleyNoise_test.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6b587154d47b74924afd4902780acd5b3764edd3",
+      "size": 532,
+      "url": "https://api.github.com/repos/NielsPichon/p5.Fresco/git/blobs/6b587154d47b74924afd4902780acd5b3764edd3"
+    }
+  ],
+  "truncated": false
+}

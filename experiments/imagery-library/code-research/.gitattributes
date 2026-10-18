@@ -1,0 +1,11 @@
+# Keep retrieved originals byte-for-byte, including upstream whitespace.
+fresco/** -text -whitespace
+vendor/** -text -whitespace
+flower/index.html -text -whitespace
+flower/.block -text -whitespace
+flower/README.md -text -whitespace
+flower/local.html -whitespace
+brush/brush.js -text -whitespace
+brush/LICENSE.md -text -whitespace
+brush/standalone.md -text -whitespace
+shan-* -text -whitespace

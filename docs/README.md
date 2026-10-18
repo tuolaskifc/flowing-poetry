@@ -10,6 +10,7 @@
 | 实际调用的结果和问题 | [实验结论](../experiments/poem-semantics/实验结论.md) | 指向真实记录，不随设计改写原始回答 |
 | 外部资源 | [参考资料](参考资料.md) | 保留各项核实状态 |
 | 意象库第一轮试画 | [试画与候选](../experiments/imagery-library/README.md) | 五类本地试画、10 个 OpenProcessing 候选与来源边界 |
+| 已取得的绘画代码 | [代码检索与本地预览](../experiments/imagery-library/code-research/README.md) | 四组源码、八项实际运行结果及许可 |
 | 过去的讨论与开发 | [历史归档](archive/README.md) | 供回溯，设计以主文档为准 |
 
 情感、关系、逻辑、时间单项规范已经合并，原稿仍保留。网页与实验程序在各自目录，整理文档不表示功能已经接通。

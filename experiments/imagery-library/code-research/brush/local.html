@@ -1,0 +1,15 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>p5.brush · 笔触小样</title>
+<style>body{margin:0;background:#eef0e8}canvas{display:block;max-width:100vw;height:auto}p{font:14px sans-serif;padding:0 20px;color:#425e59}</style>
+<script src="brush.js"></script><body><div id="mount"></div><p>p5.brush 原库的本地调用小样：线条、水彩填充与铅笔质感。绘制布局由本项目编写。</p><script>
+try {
+  brush.createCanvas(800,500,{parent:'#mount',pixelDensity:1});
+  brush.clear('#EEF0E8');brush.seed(42);brush.noiseSeed(42);brush.push();brush.translate(-400,-250);
+  for(let i=0;i<3;i++){
+    brush.set(['HB','charcoal','2B'][i],'#425E59',1.2);
+    for(let j=0;j<7;j++)brush.line(60+i*250,90+j*10,230+i*250,70+j*10);
+  }
+  brush.fill('#A3B7B0',75);brush.set('HB','#425E59',1);
+  brush.circle(200,300,100);brush.circle(400,300,85);brush.circle(580,300,65);
+  brush.pop();brush.render();document.body.dataset.ready='true';
+}catch(e){document.body.dataset.error=e.message;throw e;}
+</script></body></html>

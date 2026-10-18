@@ -1,0 +1,387 @@
+{
+  "url": "https://api.github.com/gists/56728e6cf17ad249ef232c49cd9a90ad",
+  "forks_url": "https://api.github.com/gists/56728e6cf17ad249ef232c49cd9a90ad/forks",
+  "commits_url": "https://api.github.com/gists/56728e6cf17ad249ef232c49cd9a90ad/commits",
+  "id": "56728e6cf17ad249ef232c49cd9a90ad",
+  "node_id": "MDQ6R2lzdDU2NzI4ZTZjZjE3YWQyNDllZjIzMmM0OWNkOWE5MGFk",
+  "git_pull_url": "https://gist.github.com/56728e6cf17ad249ef232c49cd9a90ad.git",
+  "git_push_url": "https://gist.github.com/56728e6cf17ad249ef232c49cd9a90ad.git",
+  "html_url": "https://gist.github.com/sxywu/56728e6cf17ad249ef232c49cd9a90ad",
+  "files": {
+    ".block": {
+      "filename": ".block",
+      "type": "text/plain",
+      "language": null,
+      "raw_url": "https://gist.githubusercontent.com/sxywu/56728e6cf17ad249ef232c49cd9a90ad/raw/243230d8f9f80320d839db1f944ac7918ffdaa68/.block",
+      "size": 12,
+      "truncated": false,
+      "content": "license: mit",
+      "encoding": "utf-8"
+    },
+    "README.md": {
+      "filename": "README.md",
+      "type": "text/markdown",
+      "language": "Markdown",
+      "raw_url": "https://gist.githubusercontent.com/sxywu/56728e6cf17ad249ef232c49cd9a90ad/raw/ecf1bf8bf9108c871cc8049a5b270405b5b54fe6/README.md",
+      "size": 54,
+      "truncated": false,
+      "content": "Built with [blockbuilder.org](http://blockbuilder.org)",
+      "encoding": "utf-8"
+    },
+    "index.html": {
+      "filename": "index.html",
+      "type": "text/html",
+      "language": "HTML",
+      "raw_url": "https://gist.githubusercontent.com/sxywu/56728e6cf17ad249ef232c49cd9a90ad/raw/f22abc35bec597a6bb746a2b85a6847220b6086e/index.html",
+      "size": 4312,
+      "truncated": false,
+      "content": "<!DOCTYPE html>\n<head>\n  <meta charset=\"utf-8\">\n  <script src=\"https://d3js.org/d3.v4.min.js\"></script>\n  <script src=\"https://unpkg.com/p5@0.6.0/lib/p5.js\"></script>\n  <script src=\"https://unpkg.com/lodash@4.17.5/lodash.js\"></script>\n  <style>\n    body { margin:0;position:fixed;top:0;right:0;bottom:0;left:0; }\n    \n    path { mix-blend-mode: overlay; }  \n\t\t#content { isolation: isolate; }\n  </style>\n</head>\n\n<body>\n  <div id='content' />\n  \n  <script>\n    const petalSize = 100;\n    const numPetals = 5;\n    \n    const svg = d3.select(\"#content\").append(\"svg\")\n      .attr(\"width\", 960).attr(\"height\", 500);\n    const flower = svg.append('g')\n    \t.attr('transform', `translate(${[petalSize, petalSize]})`)\n    \t.attr('fill-opacity', 0.4);\n    const canvas = d3.select(\"#content\").append('canvas')\n    \t.attr(\"width\", 960).attr(\"height\", 500)\n    \t.style('position', 'absolute').style('top', 0).style('left', 0);\n    const ctx = canvas.node().getContext('2d');\n    \n    // using processing so let's just do everything in setup\n    \n    \n    const a2lScale = d3.scaleLinear(); // angle to length scale\n    \n    function setup() {\n      const perAngle = 360 / numPetals;\n      const initialAngle = _.random(perAngle);\n      const petalsData = _.times(2 * numPetals, (i) => {\n        return {\n          path: petalPath(),\n          rotate: randomGaussian(i * perAngle + initialAngle, 3),\n          fill: d3.interpolatePlasma(_.random(0.35, 1)),\n        };\n      });\n      const petals = flower.selectAll('path')\n      \t.data(petalsData).enter().append('path')\n      \t.attr('fill', (d) => d.fill)\n      \t.attr('d', d => d.path)\n      \t.attr('transform', (d) => `rotate(${d.rotate})`);\n      \n      let xoff = 0;\n      petals.each(function(d) {\n        const length = this.getTotalLength();\n        const numPoints = _.ceil(length, -2);\n        ctx.lineWidth = 2;\n        ctx.fillStyle = '#333';\n        \n        _.times(numPoints, i => {\n          const point = this.getPointAtLength(i / numPoints * length);\n          const angle = (d.rotate / 180) * Math.PI;\n          let {x, y} = rotateVector(point, angle);\n          x += 8 * noise(xoff) + petalSize;\n          y += 8 * noise(xoff) + petalSize;\n          const r = 4 * noise(xoff);\n          \n          ctx.beginPath();\n          ctx.arc(x, y, r, 0, Math.PI, 0);\n          ctx.fill();\n          \n          xoff += 0.01;\n        });\n      });\n    }\n    \n    function petalPath() {\n      const blR = [petalSize * 0.75, petalSize]; // bottom length range\n      const baR = [0.65 * Math.PI, 0.8 * Math.PI]; // bottom angle range\n      const taR = [1.4 * Math.PI, 1.6 * Math.PI];\n      a2lScale.domain(baR).range(blR);\n      \n      let p1 = [0, 0];\n      let p2 = [randomGaussian(0, 5), randomGaussian(0.9 * petalSize, 8)];\n      \n      let cp1a = _.random(baR[0], baR[1]); // first cp angle\n      let cp1l = a2lScale(cp1a);\n      let cp1 = [\n        cp1l * Math.cos(cp1a),\n        cp1l * Math.sin(cp1a),\n      ];\n      \n      let cp2a = _.random(taR[0], taR[1]);\n      let cp2l = Math.max(0.25 * petalSize, petalSize - cp1[1]);\n      let cp2 = [\n        cp2l * Math.cos(cp2a) + p2[0],\n        cp2l * Math.sin(cp2a) + p2[1],\n      ];\n    \n    \tlet pathD = `M${p1} C${cp1} ${cp2} ${p2} `;\n      \n      // and add the other size\n      p1 = p2;\n      p2 = [0, 0];\n      \n      cp2a = randomGaussian(cp1a, 0.1); // first cp angle\n      cp2l = randomGaussian(cp1l, 5);\n      cp2 = [\n        -cp2l * Math.cos(cp2a),\n        cp2l * Math.sin(cp2a),\n      ];\n      \n      cp1a = _.random(taR[0], taR[1]);\n      cp1l = Math.max(0.25 * petalSize, petalSize - cp2[1]);\n      cp1 = [\n        -cp1l * Math.cos(cp1a) + p1[0],\n        cp1l * Math.sin(cp1a) + p1[1],\n      ];\n      \n      return pathD += `M${p1} C${cp1} ${cp2} ${p2} `;\n    }\n    \n    // taken from https://beta.observablehq.com/@tonyhschu/solidifying-my-intuition-around-matrix-transformations\n    rotateVector = (vector, theta) => {\n      const { x, y } = vector\n\n      // first column of the matrix\n      const xa = x * Math.cos(theta)\n      const xb = x * Math.sin(theta)\n\n      // second column of the matrix\n      const yc = y * -Math.sin(theta)\n      const yd = y * Math.cos(theta)\n\n      // sum the components\n      return {\n      \tx: xa + yc,\n        y: xb + yd\n      }\n    }\n    \n\n  </script>\n</body>\n",
+      "encoding": "utf-8"
+    }
+  },
+  "public": true,
+  "created_at": "2018-03-01T10:31:56Z",
+  "updated_at": "2021-03-26T22:53:29Z",
+  "description": "Generative flower experiment #1",
+  "comments": 0,
+  "user": null,
+  "comments_enabled": true,
+  "comments_url": "https://api.github.com/gists/56728e6cf17ad249ef232c49cd9a90ad/comments",
+  "owner": {
+    "login": "sxywu",
+    "id": 1448449,
+    "node_id": "MDQ6VXNlcjE0NDg0NDk=",
+    "avatar_url": "https://avatars.githubusercontent.com/u/1448449?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/sxywu",
+    "html_url": "https://github.com/sxywu",
+    "followers_url": "https://api.github.com/users/sxywu/followers",
+    "following_url": "https://api.github.com/users/sxywu/following{/other_user}",
+    "gists_url": "https://api.github.com/users/sxywu/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/sxywu/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/sxywu/subscriptions",
+    "organizations_url": "https://api.github.com/users/sxywu/orgs",
+    "repos_url": "https://api.github.com/users/sxywu/repos",
+    "events_url": "https://api.github.com/users/sxywu/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/sxywu/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "forks": [
+
+  ],
+  "history": [
+    {
+      "user": {
+        "login": "sxywu",
+        "id": 1448449,
+        "node_id": "MDQ6VXNlcjE0NDg0NDk=",
+        "avatar_url": "https://avatars.githubusercontent.com/u/1448449?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/sxywu",
+        "html_url": "https://github.com/sxywu",
+        "followers_url": "https://api.github.com/users/sxywu/followers",
+        "following_url": "https://api.github.com/users/sxywu/following{/other_user}",
+        "gists_url": "https://api.github.com/users/sxywu/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/sxywu/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/sxywu/subscriptions",
+        "organizations_url": "https://api.github.com/users/sxywu/orgs",
+        "repos_url": "https://api.github.com/users/sxywu/repos",
+        "events_url": "https://api.github.com/users/sxywu/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/sxywu/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "version": "f52167b2c318e840d0d2964146bd3698afb56d90",
+      "committed_at": "2018-03-02T13:13:55Z",
+      "change_status": {
+        "total": 0,
+        "additions": 0,
+        "deletions": 0
+      },
+      "url": "https://api.github.com/gists/56728e6cf17ad249ef232c49cd9a90ad/f52167b2c318e840d0d2964146bd3698afb56d90"
+    },
+    {
+      "user": {
+        "login": "sxywu",
+        "id": 1448449,
+        "node_id": "MDQ6VXNlcjE0NDg0NDk=",
+        "avatar_url": "https://avatars.githubusercontent.com/u/1448449?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/sxywu",
+        "html_url": "https://github.com/sxywu",
+        "followers_url": "https://api.github.com/users/sxywu/followers",
+        "following_url": "https://api.github.com/users/sxywu/following{/other_user}",
+        "gists_url": "https://api.github.com/users/sxywu/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/sxywu/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/sxywu/subscriptions",
+        "organizations_url": "https://api.github.com/users/sxywu/orgs",
+        "repos_url": "https://api.github.com/users/sxywu/repos",
+        "events_url": "https://api.github.com/users/sxywu/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/sxywu/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "version": "72c87265de15db0440e7c10aad6b883ef6c22930",
+      "committed_at": "2018-03-02T08:36:40Z",
+      "change_status": {
+        "total": 2,
+        "additions": 1,
+        "deletions": 1
+      },
+      "url": "https://api.github.com/gists/56728e6cf17ad249ef232c49cd9a90ad/72c87265de15db0440e7c10aad6b883ef6c22930"
+    },
+    {
+      "user": {
+        "login": "sxywu",
+        "id": 1448449,
+        "node_id": "MDQ6VXNlcjE0NDg0NDk=",
+        "avatar_url": "https://avatars.githubusercontent.com/u/1448449?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/sxywu",
+        "html_url": "https://github.com/sxywu",
+        "followers_url": "https://api.github.com/users/sxywu/followers",
+        "following_url": "https://api.github.com/users/sxywu/following{/other_user}",
+        "gists_url": "https://api.github.com/users/sxywu/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/sxywu/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/sxywu/subscriptions",
+        "organizations_url": "https://api.github.com/users/sxywu/orgs",
+        "repos_url": "https://api.github.com/users/sxywu/repos",
+        "events_url": "https://api.github.com/users/sxywu/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/sxywu/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "version": "937b6f6de89e114d7b1f3466b7b54e7c2cb9620c",
+      "committed_at": "2018-03-02T08:36:20Z",
+      "change_status": {
+        "total": 2,
+        "additions": 1,
+        "deletions": 1
+      },
+      "url": "https://api.github.com/gists/56728e6cf17ad249ef232c49cd9a90ad/937b6f6de89e114d7b1f3466b7b54e7c2cb9620c"
+    },
+    {
+      "user": {
+        "login": "sxywu",
+        "id": 1448449,
+        "node_id": "MDQ6VXNlcjE0NDg0NDk=",
+        "avatar_url": "https://avatars.githubusercontent.com/u/1448449?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/sxywu",
+        "html_url": "https://github.com/sxywu",
+        "followers_url": "https://api.github.com/users/sxywu/followers",
+        "following_url": "https://api.github.com/users/sxywu/following{/other_user}",
+        "gists_url": "https://api.github.com/users/sxywu/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/sxywu/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/sxywu/subscriptions",
+        "organizations_url": "https://api.github.com/users/sxywu/orgs",
+        "repos_url": "https://api.github.com/users/sxywu/repos",
+        "events_url": "https://api.github.com/users/sxywu/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/sxywu/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "version": "577e97e8f6eb5745aeafdc3da4b4cc0b17d219c1",
+      "committed_at": "2018-03-02T08:36:02Z",
+      "change_status": {
+        "total": 3,
+        "additions": 2,
+        "deletions": 1
+      },
+      "url": "https://api.github.com/gists/56728e6cf17ad249ef232c49cd9a90ad/577e97e8f6eb5745aeafdc3da4b4cc0b17d219c1"
+    },
+    {
+      "user": {
+        "login": "sxywu",
+        "id": 1448449,
+        "node_id": "MDQ6VXNlcjE0NDg0NDk=",
+        "avatar_url": "https://avatars.githubusercontent.com/u/1448449?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/sxywu",
+        "html_url": "https://github.com/sxywu",
+        "followers_url": "https://api.github.com/users/sxywu/followers",
+        "following_url": "https://api.github.com/users/sxywu/following{/other_user}",
+        "gists_url": "https://api.github.com/users/sxywu/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/sxywu/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/sxywu/subscriptions",
+        "organizations_url": "https://api.github.com/users/sxywu/orgs",
+        "repos_url": "https://api.github.com/users/sxywu/repos",
+        "events_url": "https://api.github.com/users/sxywu/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/sxywu/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "version": "c9fd1bfefe9914fafe8f1a3b42cc4b1ce35c0eb4",
+      "committed_at": "2018-03-02T08:34:54Z",
+      "change_status": {
+        "total": 2,
+        "additions": 1,
+        "deletions": 1
+      },
+      "url": "https://api.github.com/gists/56728e6cf17ad249ef232c49cd9a90ad/c9fd1bfefe9914fafe8f1a3b42cc4b1ce35c0eb4"
+    },
+    {
+      "user": {
+        "login": "sxywu",
+        "id": 1448449,
+        "node_id": "MDQ6VXNlcjE0NDg0NDk=",
+        "avatar_url": "https://avatars.githubusercontent.com/u/1448449?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/sxywu",
+        "html_url": "https://github.com/sxywu",
+        "followers_url": "https://api.github.com/users/sxywu/followers",
+        "following_url": "https://api.github.com/users/sxywu/following{/other_user}",
+        "gists_url": "https://api.github.com/users/sxywu/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/sxywu/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/sxywu/subscriptions",
+        "organizations_url": "https://api.github.com/users/sxywu/orgs",
+        "repos_url": "https://api.github.com/users/sxywu/repos",
+        "events_url": "https://api.github.com/users/sxywu/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/sxywu/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "version": "2f5eebd6c05559578001568f310a415a32120671",
+      "committed_at": "2018-03-02T08:34:31Z",
+      "change_status": {
+        "total": 2,
+        "additions": 1,
+        "deletions": 1
+      },
+      "url": "https://api.github.com/gists/56728e6cf17ad249ef232c49cd9a90ad/2f5eebd6c05559578001568f310a415a32120671"
+    },
+    {
+      "user": {
+        "login": "sxywu",
+        "id": 1448449,
+        "node_id": "MDQ6VXNlcjE0NDg0NDk=",
+        "avatar_url": "https://avatars.githubusercontent.com/u/1448449?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/sxywu",
+        "html_url": "https://github.com/sxywu",
+        "followers_url": "https://api.github.com/users/sxywu/followers",
+        "following_url": "https://api.github.com/users/sxywu/following{/other_user}",
+        "gists_url": "https://api.github.com/users/sxywu/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/sxywu/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/sxywu/subscriptions",
+        "organizations_url": "https://api.github.com/users/sxywu/orgs",
+        "repos_url": "https://api.github.com/users/sxywu/repos",
+        "events_url": "https://api.github.com/users/sxywu/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/sxywu/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "version": "9f129003332d9a4d96e46850d4a22f47f37d02b2",
+      "committed_at": "2018-03-02T08:33:42Z",
+      "change_status": {
+        "total": 2,
+        "additions": 1,
+        "deletions": 1
+      },
+      "url": "https://api.github.com/gists/56728e6cf17ad249ef232c49cd9a90ad/9f129003332d9a4d96e46850d4a22f47f37d02b2"
+    },
+    {
+      "user": {
+        "login": "sxywu",
+        "id": 1448449,
+        "node_id": "MDQ6VXNlcjE0NDg0NDk=",
+        "avatar_url": "https://avatars.githubusercontent.com/u/1448449?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/sxywu",
+        "html_url": "https://github.com/sxywu",
+        "followers_url": "https://api.github.com/users/sxywu/followers",
+        "following_url": "https://api.github.com/users/sxywu/following{/other_user}",
+        "gists_url": "https://api.github.com/users/sxywu/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/sxywu/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/sxywu/subscriptions",
+        "organizations_url": "https://api.github.com/users/sxywu/orgs",
+        "repos_url": "https://api.github.com/users/sxywu/repos",
+        "events_url": "https://api.github.com/users/sxywu/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/sxywu/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "version": "f1db2410864bbaf72bd63e31b7c4b880c8da2974",
+      "committed_at": "2018-03-02T08:33:15Z",
+      "change_status": {
+        "total": 7,
+        "additions": 4,
+        "deletions": 3
+      },
+      "url": "https://api.github.com/gists/56728e6cf17ad249ef232c49cd9a90ad/f1db2410864bbaf72bd63e31b7c4b880c8da2974"
+    },
+    {
+      "user": {
+        "login": "sxywu",
+        "id": 1448449,
+        "node_id": "MDQ6VXNlcjE0NDg0NDk=",
+        "avatar_url": "https://avatars.githubusercontent.com/u/1448449?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/sxywu",
+        "html_url": "https://github.com/sxywu",
+        "followers_url": "https://api.github.com/users/sxywu/followers",
+        "following_url": "https://api.github.com/users/sxywu/following{/other_user}",
+        "gists_url": "https://api.github.com/users/sxywu/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/sxywu/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/sxywu/subscriptions",
+        "organizations_url": "https://api.github.com/users/sxywu/orgs",
+        "repos_url": "https://api.github.com/users/sxywu/repos",
+        "events_url": "https://api.github.com/users/sxywu/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/sxywu/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "version": "f3acf839415634252d576d01027b0f24b9f998f6",
+      "committed_at": "2018-03-01T10:33:59Z",
+      "change_status": {
+        "total": 50,
+        "additions": 2,
+        "deletions": 48
+      },
+      "url": "https://api.github.com/gists/56728e6cf17ad249ef232c49cd9a90ad/f3acf839415634252d576d01027b0f24b9f998f6"
+    },
+    {
+      "user": {
+        "login": "sxywu",
+        "id": 1448449,
+        "node_id": "MDQ6VXNlcjE0NDg0NDk=",
+        "avatar_url": "https://avatars.githubusercontent.com/u/1448449?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/sxywu",
+        "html_url": "https://github.com/sxywu",
+        "followers_url": "https://api.github.com/users/sxywu/followers",
+        "following_url": "https://api.github.com/users/sxywu/following{/other_user}",
+        "gists_url": "https://api.github.com/users/sxywu/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/sxywu/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/sxywu/subscriptions",
+        "organizations_url": "https://api.github.com/users/sxywu/orgs",
+        "repos_url": "https://api.github.com/users/sxywu/repos",
+        "events_url": "https://api.github.com/users/sxywu/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/sxywu/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "version": "9b62032e6a7bf98188a83fff50c9c3534b858287",
+      "committed_at": "2018-03-01T10:31:55Z",
+      "change_status": {
+        "total": 190,
+        "additions": 190,
+        "deletions": 0
+      },
+      "url": "https://api.github.com/gists/56728e6cf17ad249ef232c49cd9a90ad/9b62032e6a7bf98188a83fff50c9c3534b858287"
+    }
+  ],
+  "truncated": false
+}
