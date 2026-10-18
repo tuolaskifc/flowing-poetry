@@ -18,4 +18,4 @@ const server = createServer(async (request, response) => {
   } catch { response.writeHead(404); response.end('Not found'); }
 });
 server.on('error', (error) => { console.error(error.message); process.exitCode = 1; });
-server.listen(port, '127.0.0.1', () => console.log(`句间本地预览：http://127.0.0.1:${port}`));
+server.listen(port, '127.0.0.1', () => console.log(`流动诗本地预览：http://127.0.0.1:${port}`));

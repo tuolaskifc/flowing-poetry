@@ -14,7 +14,7 @@
   function updatePause() {
     byId('pause').textContent = paused ? '继续' : '暂停';
     byId('pause').setAttribute('aria-pressed', String(paused));
-    byId('scene-state').textContent = paused ? '在这一刻停留' : '风正在经过';
+    byId('scene-state').textContent = paused ? '画面已暂停' : '画面正在播放';
     byId('live-dot').classList.toggle('paused', paused);
   }
   function setImmersive(value) {
@@ -53,7 +53,7 @@
     try {
       const link = document.createElement('a');
       link.href = scene.capture();
-      link.download = `句间-越过漫长-${seed}.png`;
+      link.download = `流动诗-${seed}.png`;
       document.body.appendChild(link);
       link.click();
       link.remove();
