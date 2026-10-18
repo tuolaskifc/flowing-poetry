@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#eeeae3">
+  <meta name="description" content="句间：从一句诗出发，探索意象与流动的生成艺术。">
+  <title>句间 · 一首诗的流动练习</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="vendor/p5.min.js"></script>
+  <script defer src="scene.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="wordmark" href="./" aria-label="句间首页">
+      <svg viewBox="0 0 34 34" aria-hidden="true"><path d="M5 12c7-8 17-8 24 0M5 18c7-8 17-8 24 0M5 24c7-8 17-8 24 0"/></svg>
+      <span>句间</span><span class="wordmark-en">BETWEEN THE LINES</span>
+    </a>
+    <span class="header-note">一句话，一次相遇。</span>
+  </header>
+
+  <main class="workspace">
+    <aside class="poem-panel">
+      <div class="intro">
+        <p class="eyebrow"><span class="small-line"></span> 一首诗的练习 <span class="issue">01</span></p>
+        <h1>让诗意，<br>在流动中发生。</h1>
+        <p class="intro-copy">留下几个意象，<br>让它们慢慢靠近彼此。</p>
+      </div>
+
+      <div class="poem-card">
+        <span class="quote-mark" aria-hidden="true">“</span>
+        <p class="poem-text">如果所有土地连在一起，<br>走上一生只为拥抱你。</p>
+        <p class="poem-caption">从你选的这句话开始</p>
+      </div>
+
+      <div class="imagery">
+        <p class="field-label">画面里的意象</p>
+        <div class="imagery-words"><span>土地</span><i></i><span>行走</span><i></i><span>风</span><i></i><span>拥抱</span></div>
+      </div>
+
+      <div class="panel-bottom">
+        <button class="primary-button" id="regenerate" disabled><span>再相遇一次</span><span aria-hidden="true">↗</span></button>
+        <p class="regenerate-note">同一句话，也会有不同的风景。</p>
+        <details class="about"><summary>关于这次练习</summary><p>这是围绕一句固定诗句创作的视觉草稿。地形、行迹、风与相拥的轮廓由绘图规则构成，每次演绎会改变细节。自由输入诗句和诗库将在后续探索。</p></details>
+      </div>
+    </aside>
+
+    <section class="artwork" id="artwork" aria-label="诗句的动态画面">
+      <div class="canvas-mount" id="canvas-mount"></div>
+      <div class="loading" id="loading" role="status">风景正在展开…</div>
+      <div class="artwork-top">
+        <span class="scene-label"><span class="live-dot" id="live-dot"></span><span id="scene-state">风正在经过</span></span>
+        <button class="glass-button" id="immersive" aria-pressed="false" disabled>沉浸观看 <span aria-hidden="true">⤢</span></button>
+      </div>
+      <div class="artwork-bottom">
+        <div class="artwork-caption"><span class="caption-index">I.</span><div><span class="caption-title">越过漫长，靠近你</span><span class="caption-subtitle">让目光停留一会儿</span></div></div>
+        <div class="artwork-actions">
+          <button class="glass-button" id="pause" aria-pressed="false" disabled>暂停</button>
+          <button class="glass-button" id="save" disabled>保存这一刻 <span aria-hidden="true">↓</span></button>
+        </div>
+      </div>
+      <div class="sr-only" id="announcements" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><span>以意象相连，以时间成景。</span><span>移动鼠标，让风经过画面 <span aria-hidden="true">↗</span></span></footer>
+  <noscript><p class="fallback">请在浏览器中启用 JavaScript，以观看动态作品。</p></noscript>
+</body>
+</html>

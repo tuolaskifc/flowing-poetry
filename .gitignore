@@ -24,4 +24,7 @@ build/
 .DS_Store
 Thumbs.db
 
+# Local browser verification output (not coursework records)
+poem-flow/.qa/
+
 # Keep coursework reports, AI interaction records, and validation outputs.
