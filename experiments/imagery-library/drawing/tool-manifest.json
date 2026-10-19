@@ -814,6 +814,145 @@
         "anchors",
         "fixed-count"
       ]
+    },
+    {
+      "id": "orchid",
+      "name": "兰意",
+      "subtitle": "叶线舒展开，花只留几笔。",
+      "credit": "本项目试作 · 兰叶长线、花茎与疏花",
+      "sources": [
+        "project"
+      ],
+      "reference": "drawing/README.md#兰马莲",
+      "note": "长叶与疏花的兰意试画，可看整株或花部；不画花盆、土石或其他伴生物，不作古诗所指植物的鉴定。",
+      "controls": [
+        {
+          "id": "form",
+          "label": "观看",
+          "default": "plant",
+          "choices": [
+            {
+              "value": "plant",
+              "label": "长叶疏花"
+            },
+            {
+              "value": "flower",
+              "label": "花部"
+            }
+          ]
+        }
+      ],
+      "capabilities": [
+        "wind-response",
+        "shape-selection",
+        "density-detail",
+        "anchors",
+        "fixed-count"
+      ]
+    },
+    {
+      "id": "horse",
+      "name": "马意",
+      "subtitle": "背线一弯，四足落定，鬃尾留势。",
+      "credit": "本项目试作 · 马形墨面、肢体与静态姿态",
+      "sources": [
+        "project"
+      ],
+      "reference": "drawing/README.md#兰马莲",
+      "note": "单匹马的静立／低首写意试画，不自动添加骑者、鞍辔、草地或行进动作；比例与姿态仍待审阅。",
+      "controls": [
+        {
+          "id": "pose",
+          "label": "姿态",
+          "default": "stand",
+          "choices": [
+            {
+              "value": "stand",
+              "label": "静立"
+            },
+            {
+              "value": "lower",
+              "label": "低首"
+            }
+          ]
+        },
+        {
+          "id": "facing",
+          "label": "朝向",
+          "default": "right",
+          "choices": [
+            {
+              "value": "right",
+              "label": "向右"
+            },
+            {
+              "value": "left",
+              "label": "向左"
+            }
+          ]
+        }
+      ],
+      "capabilities": [
+        "static",
+        "shape-selection",
+        "density-detail",
+        "anchors",
+        "fixed-count"
+      ]
+    },
+    {
+      "id": "lotus",
+      "name": "莲 · 荷叶",
+      "subtitle": "一茎挑花，一面叶影，分开也成景。",
+      "credit": "本项目试作 · 疏瓣莲意、花茎与荷叶",
+      "sources": [
+        "project"
+      ],
+      "reference": "drawing/README.md#兰马莲",
+      "note": "花茎、荷叶与显式花叶组合分开选择；开放／含苞是静态形态，不自动开花、补池水或添加其他生物。",
+      "controls": [
+        {
+          "id": "form",
+          "label": "观看",
+          "default": "flower",
+          "choices": [
+            {
+              "value": "flower",
+              "label": "花与茎"
+            },
+            {
+              "value": "composition",
+              "label": "花叶组合"
+            },
+            {
+              "value": "leaf",
+              "label": "荷叶"
+            }
+          ]
+        },
+        {
+          "id": "state",
+          "label": "花态",
+          "default": "open",
+          "choices": [
+            {
+              "value": "open",
+              "label": "开放"
+            },
+            {
+              "value": "bud",
+              "label": "含苞"
+            }
+          ]
+        }
+      ],
+      "capabilities": [
+        "wind-response",
+        "shape-selection",
+        "density-detail",
+        "anchors",
+        "fixed-count"
+      ]
     }
   ],
   "sources": {

@@ -77,6 +77,26 @@ test('only an asserted flying bird opens and animates its wings',()=>{
   const denied=buildPlan(fixture('莺未飞',[e],[{...r,modality:'negated',evidence:['莺未飞']}]));assert.equal(denied.layers[0].options.pose,'folded');assert.equal(denied.layers[0].animate,false);
 });
 
+test('lan uses its plant study without reinterpreting boats or another plant as orchids',()=>{
+  const plan=buildPlan(fixture('兰与兰舟、兰桡、木兰',[entity('i1','兰',{kind:'organism'}),entity('i2','兰舟',{kind:'object'}),entity('i3','兰桡',{kind:'object'}),entity('i4','木兰',{kind:'organism'})]));
+  assert.deepEqual(plan.layers.map(l=>l.tool),['boat','orchid']);
+  assert.deepEqual(plan.omitted.map(e=>e.name),['兰桡','木兰']);
+});
+
+test('a horse stays in a static pose and is not invented from hoof sounds or tack',()=>{
+  const plain=buildPlan(fixture('马与草',[entity('i1','马',{kind:'organism'}),entity('i2','草',{kind:'organism'})]));
+  assert.equal(plain.layers.find(l=>l.tool==='horse').options.pose,'stand');
+  const low=buildPlan(fixture('低首马',[entity('i1','低首马',{kind:'organism'})]));assert.equal(low.layers[0].options.pose,'lower');
+  const parts=buildPlan(fixture('马蹄声与马鞍',[entity('i1','马蹄声',{kind:'object'}),entity('i2','马鞍',{kind:'object'})]));assert.equal(parts.layers.length,0);
+});
+
+test('lotus flowers, leaves and buds stay separate, without inventing water or drawing seeds as flowers',()=>{
+  const flower=buildPlan(fixture('莲花',[entity('i1','莲花',{kind:'organism'})]));assert.equal(flower.layers.length,1);assert.equal(flower.layers[0].tool,'lotus');assert.equal(flower.layers[0].options.form,'flower');
+  const leaf=buildPlan(fixture('荷叶',[entity('i1','荷叶',{kind:'organism',concept:'莲花的叶片'})]));assert.equal(leaf.layers[0].options.form,'leaf');
+  const bud=buildPlan(fixture('莲苞',[entity('i1','莲苞',{kind:'organism'})]));assert.equal(bud.layers[0].options.state,'bud');
+  const seed=buildPlan(fixture('莲子',[entity('i1','莲子',{kind:'object',concept:'莲花的果实'})]));assert.equal(seed.layers.length,0);
+});
+
 test('credentials stay in request headers, successful replay uses no new call, failed JSON stays unrendered',async()=>{
   const dir=await mkdtemp(join(tmpdir(),'poem-flow-test-')),path=join(dir,'config.txt'),key='dummy-private-test-value';
   await writeFile(path,'https://example.invalid/v1\n'+key+'\ntest-model\n');let calls=0;

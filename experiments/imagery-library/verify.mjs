@@ -103,7 +103,7 @@ try {
     const snapshot=id=>document.querySelector('#'+id+' canvas').toDataURL();
     const choose=async(id,value)=>{const s=document.getElementById(id);s.value=value;s.dispatchEvent(new Event('change'));await new Promise(r=>setTimeout(r,40));};
     const unique={};
-    for(const id of ['grass','snow','leaves','fish','flower-forms','wine','building','plum-branch','surface-weather','oriole']){
+    for(const id of ['grass','snow','leaves','fish','flower-forms','wine','building','plum-branch','surface-weather','oriole','orchid','horse','lotus']){
       const d=window.PoemDrawing.definitions().find(d=>d.id===id),field=d.controls[0],images=[];
       for(const choice of field.choices){await choose(id+'-'+field.id,choice.value);images.push(snapshot(id));}
       unique[id]=new Set(images).size===field.choices.length;await choose(id+'-'+field.id,field.default);
@@ -152,6 +152,23 @@ try {
     return {eightDistinct:new Set(surfaceImages).size===8,detailNoCarrier:detail.carrierCount===0&&detail.airborneCount===0,facesDiffer,attachedRigidly,anchorsMove,stoneStatic,wingMoves,foldedStill,birdCounts:inspection.birdCount===1&&inspection.perchCount===0};
   })()`);
   if(Object.values(surfaceBirdFeatures).some(v=>v!==true))throw new Error('Surface and bird features failed: '+JSON.stringify(surfaceBirdFeatures));
+  const plantHorseFeatures=await evaluate(`(async()=>{
+    const choose=async(id,value)=>{const s=document.getElementById(id);s.value=value;s.dispatchEvent(new Event('change'));await new Promise(r=>setTimeout(r,40));};
+    const hash=id=>document.querySelector('#'+id+' canvas').toDataURL(),find=id=>window.imageryExperiment.inspect().find(t=>t.id===id);
+    const orchid=find('orchid'),horse=find('horse'),flower=find('lotus'),horseRight=hash('horse');
+    await choose('horse-facing','left');const facingDiffers=horseRight!==hash('horse');await choose('horse-facing','right');
+    const open=hash('lotus');await choose('lotus-state','bud');const budDiffers=open!==hash('lotus');await choose('lotus-state','open');
+    await choose('lotus-form','leaf');const leaf=find('lotus');await choose('lotus-form','composition');const paired=find('lotus');await choose('lotus-form','flower');
+    await choose('orchid-form','flower');const detail=find('orchid');await choose('orchid-form','plant');
+    const before=hash('horse'),wind=document.getElementById('wind');wind.value=0;wind.dispatchEvent(new Event('input'));await new Promise(r=>setTimeout(r,40));const horseStatic=before===hash('horse');wind.value=100;wind.dispatchEvent(new Event('input'));
+    const ids=['orchid','horse','lotus'],hosts=ids.map(()=>document.body.appendChild(document.createElement('div')));hosts.forEach(h=>h.hidden=true);
+    const shared={wind:0},controllers=ids.map((id,i)=>window.PoemDrawing.mount(id,hosts[i],shared,777));await new Promise(r=>setTimeout(r,160));controllers.forEach(c=>c.pause(true));controllers.forEach(c=>c.reset(777));await new Promise(r=>setTimeout(r,50));
+    const a=controllers[0].anchors(),l=controllers[2].anchors();shared.wind=1;controllers.forEach(c=>c.refresh());await new Promise(r=>setTimeout(r,50));const b=controllers[0].anchors(),m=controllers[2].anchors();
+    const moved=(x,y)=>x.some((p,i)=>Math.abs(p.x-y[i].x)+Math.abs(p.y-y[i].y)>.01),anchorMove=moved(a,b)&&moved(l,m);
+    const anchors=controllers.flatMap(c=>c.anchors()),finiteAnchors=anchors.every(q=>Number.isFinite(q.x+q.y)&&q.x>=0&&q.x<=640&&q.y>=0&&q.y<=388);controllers.forEach(c=>c.dispose());hosts.forEach(h=>h.remove());
+    return {orchidCounts:orchid.leafCount===7&&orchid.flowerCount===2&&orchid.potCount===0,orchidDetail:detail.leafCount===0&&detail.flowerCount===1,horseCounts:horse.horseCount===1&&horse.legCount===4&&horse.riderCount===0&&horse.gait===false,horseStatic,facingDiffers,flowerOnly:flower.flowerCount===1&&flower.leafCount===0&&flower.waterCount===0,leafOnly:leaf.flowerCount===0&&leaf.leafCount===1&&leaf.waterCount===0,paired:paired.flowerCount===1&&paired.leafCount===1&&paired.waterCount===0,budDiffers,anchorMove,finiteAnchors};
+  })()`);
+  if(Object.values(plantHorseFeatures).some(v=>v!==true))throw new Error('Orchid horse lotus features failed: '+JSON.stringify(plantHorseFeatures));
   const extensionLifecycle=await evaluate(`(async()=>{
     const ids=['catkins','cloud','fish'],hosts=ids.map(()=>document.body.appendChild(document.createElement('div')));hosts.forEach(h=>h.style.display='none');
     const controls=hosts.map((h,i)=>window.PoemDrawing.mount(ids[i],h,{wind:.8,density:.5,palette:'clear'},777));
@@ -212,6 +229,17 @@ try {
     return canvas.toDataURL();
   })()`);
   await writeFile(resolve(dir,'surface-bird-preview.png'),Buffer.from(surfaceBirdSheet.split(',')[1],'base64'));
+  const plantHorseSheet=await evaluate(`(async()=>{
+    const variants=[['orchid',{form:'plant'},'兰意 · 长叶疏花'],['orchid',{form:'flower'},'兰意 · 花部'],['horse',{pose:'stand',facing:'right'},'马意 · 静立'],['horse',{pose:'lower',facing:'right'},'马意 · 低首'],['horse',{pose:'stand',facing:'left'},'马意 · 向左'],['lotus',{form:'flower',state:'open'},'莲 · 花与茎'],['lotus',{form:'flower',state:'bud'},'莲 · 含苞'],['lotus',{form:'leaf',state:'open'},'荷叶'],['lotus',{form:'composition',state:'open'},'莲 · 显式花叶组合']];
+    const canvas=document.createElement('canvas');canvas.width=1200;canvas.height=810;const c=canvas.getContext('2d');c.fillStyle='#f5f4ed';c.fillRect(0,0,1200,810);
+    for(const [i,[id,patch,label]] of variants.entries()){
+      for(const [field,value] of Object.entries(patch)){const s=document.getElementById(id+'-'+field);s.value=value;s.dispatchEvent(new Event('change'));}await new Promise(r=>setTimeout(r,40));
+      const x=i%3*400,y=Math.floor(i/3)*270;c.drawImage(document.querySelector('#'+id+' canvas'),x,y,400,242.5);c.fillStyle='#344b43';c.font='16px Microsoft YaHei';c.fillText(label,x+16,y+263);
+    }
+    for(const id of ['orchid','horse','lotus'])for(const field of window.PoemDrawing.definitions().find(t=>t.id===id).controls){const s=document.getElementById(id+'-'+field.id);s.value=field.default;s.dispatchEvent(new Event('change'));}
+    return canvas.toDataURL();
+  })()`);
+  await writeFile(resolve(dir,'orchid-horse-lotus-preview.png'),Buffer.from(plantHorseSheet.split(',')[1],'base64'));
   await send('Emulation.setDeviceMetricsOverride',{width:390,height:844,deviceScaleFactor:1,mobile:true});await sleep(150);
   const narrowLayout=await evaluate(`({viewport:innerWidth,document:document.documentElement.scrollWidth,canvases:document.querySelectorAll('canvas').length})`);
   if(narrowLayout.document>narrowLayout.viewport||wideLayout.document>wideLayout.viewport)throw new Error('Horizontal overflow');
@@ -228,10 +256,18 @@ try {
   await writeFile(resolve(dir,'frequency-composition.png'),Buffer.from(composition.png.split(',')[1],'base64'));
   await writeFile(resolve(dir,'frequency-composition.json'),JSON.stringify({source:'project-authored offline fixture; not model output',modelCalls:0,fixture,plan:offlinePlan,state:composition.state,transparentLayers:composition.alpha.length},null,2)+'\n');
   await evaluate('window.PoemTrialScene.dispose()');
+  const newFixture={poem:'本地手工组合：兰、马、莲花',relations:[],entities:[['i1','兰','organism'],['i2','马','organism'],['i3','莲花','organism']].map(([id,text,kind])=>({id,mentions:[text],concept:text,kind,role:'scene',presence:'present',evidence:[text]}))};
+  const newPlan=buildPlan(newFixture);if(newPlan.layers.map(l=>l.tool).join(',')!=='horse,lotus,orchid')throw new Error('New plant/horse fixture mapping failed');
+  await evaluate(`window.PoemTrialScene.render(${JSON.stringify(newPlan)})`);await sleep(120);await evaluate('window.PoemTrialScene.pause(true)');
+  const newScene=await evaluate(`({state:window.PoemTrialScene.inspect(),alpha:Array.from(document.querySelectorAll('#layer-hosts canvas'),c=>c.getContext('2d').getImageData(0,0,1,1).data[3]),png:document.getElementById('scene').toDataURL()})`);
+  if(newScene.alpha.length!==3||newScene.alpha.some(a=>a!==0))throw new Error('New plant/horse transparent scene failed');
+  await writeFile(resolve(dir,'orchid-horse-lotus-scene.png'),Buffer.from(newScene.png.split(',')[1],'base64'));
+  await writeFile(resolve(dir,'orchid-horse-lotus-scene.json'),JSON.stringify({source:'project-authored offline fixture; not model output',modelCalls:0,fixture:newFixture,plan:newPlan,state:newScene.state,transparentLayers:3},null,2)+'\n');await evaluate('window.PoemTrialScene.dispose()');
   if(errors.length)throw new Error(JSON.stringify(errors));
   const report={status:'passed',targetUrl,initial,pausedBefore,pausedAfter,changed,settings,resumed,exportInfo,isolation,variants,architecture,newFeatures,extensionLifecycle,wideLayout,narrowLayout,runtimeErrors:errors,limitations:['未操作系统下载确认界面；仅验证 canvas 导出 PNG 数据。','本地画面经浏览器截图检查；具体花鸟树种尚未做植物学或生物学辨识验收。','所有登记工具检查暂停重置后的重复出图；不等同于运动的跨设备逐帧确定性。']};
   report.frequencyFeatures=frequencyFeatures;
   report.surfaceBirdFeatures=surfaceBirdFeatures;
+  report.plantHorseFeatures=plantHorseFeatures;
   await writeFile(resolve(dir,'verification.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify({status:report.status,wideLayout,narrowLayout,runtimeErrors:errors.length}));
   await send('Browser.close').catch(()=>{});
 }finally{if(ws)ws.close();edge.kill();}

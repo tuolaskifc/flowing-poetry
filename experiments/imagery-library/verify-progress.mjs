@@ -41,7 +41,7 @@ try{
   if(wide.document>wide.width||narrow.document>narrow.width||narrow.table<=narrow.width)throw new Error('Table overflow is not contained');
   const mobile=await send('Page.captureScreenshot',{format:'png'});await writeFile(resolve(qa,'progress-mobile.png'),Buffer.from(mobile.data,'base64'));
   const deepLinks=[];
-  for(const [name,tool,option,value] of [['露','surface-weather','surface','dew'],['霜','surface-weather','surface','frost'],['莺','oriole','pose','folded'],['黄叶','leaves','color','yellow'],['酒','wine','form','liquid'],['楼','building','levels','two'],['梅','plum-branch','form','branch']]){
+  for(const [name,tool,option,value] of [['兰','orchid','form','plant'],['马','horse','pose','stand'],['莲','lotus','form','flower'],['露','surface-weather','surface','dew'],['霜','surface-weather','surface','frost'],['莺','oriole','pose','folded'],['黄叶','leaves','color','yellow'],['酒','wine','form','liquid'],['楼','building','levels','two'],['梅','plum-branch','form','branch']]){
     const href=await evaluate(`Array.from(document.querySelectorAll('#rows tr')).find(r=>r.dataset.imagery===${JSON.stringify(name)}).querySelector('a').href`);
     await send('Page.navigate',{url:href});await waitFor('Boolean(window.imageryExperiment)&&window.imageryExperiment.inspect().every(t=>t.ready)');
     const linked=await evaluate(`({value:document.getElementById(${JSON.stringify(tool+'-'+option)}).value,state:window.imageryExperiment.inspect().find(t=>t.id===${JSON.stringify(tool)})})`);

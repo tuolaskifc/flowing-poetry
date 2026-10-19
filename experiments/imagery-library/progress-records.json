@@ -151,23 +151,26 @@
       "stage": "basic",
       "tools": ["oriole"],
       "available": "单只淡墨莺意：收长的浅黄墨面、后掠细翼与几笔尾喙；不刻画眼、足或逐根羽毛，收翅、展翅、朝向与肩部微动可选。",
-      "remaining": "待审美与形态辨识确认；不是全部古诗莺的物种鉴定。尚无鸟鸣、群体数量、栖枝或跨物体作用。",
+      "remaining": "当前淡墨与翼姿风格已获用户认可；不作原诗鸟种鉴定，尚无鸟鸣、群体数量、栖枝或跨物体作用。",
+      "art_review": "style-accepted-2026-10-19",
       "needs_context": false,
       "presets": {"oriole": {"pose": "folded", "motion": "still"}}
     },
     "兰": {
-      "stage": "todo",
-      "tools": [],
-      "available": "已有通用花瓣方法可复用，但尚无该花种的专门结构。",
-      "remaining": "花与长叶可分层组织；不直接等同于草。",
-      "needs_context": false
+      "stage": "basic",
+      "tools": ["orchid"],
+      "available": "七条舒展长叶与两处疏花的兰意试画，可单看花部；整株随风轻摆，不补花盆土石。",
+      "remaining": "待审美与辨识确认；不作所有古诗兰所指植物的鉴定，未实现生长、开花或具体品种。",
+      "needs_context": false,
+      "presets": {"orchid": {"form": "plant"}}
     },
     "马": {
-      "stage": "todo",
-      "tools": [],
-      "available": "尚无该条目的专用形态试画。",
-      "remaining": "需要独立身体结构和姿态，暂缓专门绘制。",
-      "needs_context": false
+      "stage": "basic",
+      "tools": ["horse"],
+      "available": "单匹写意马形，静立／低首、左右朝向可选；四足、鬃尾和头颈分层，不补骑者或鞍辔。",
+      "remaining": "比例与姿态待审美确认；尚无连续步态、奔跑、骑乘或肢体物理。",
+      "needs_context": false,
+      "presets": {"horse": {"pose": "stand", "facing": "right"}}
     },
     "舟": {
       "stage": "basic",
@@ -197,14 +200,16 @@
       "needs_context": false
     },
     "莲": {
-      "stage": "partial",
+      "stage": "basic",
       "tools": [
+        "lotus",
         "flower-forms"
       ],
-      "available": "尖瓣层叠花冠示意。",
-      "remaining": "尚未做植物学辨识验收；枝叶、整株和具体品种仍缺。",
+      "available": "侧态疏瓣莲花与茎、单独荷叶、显式花叶组合；开放／含苞为可选静态形态，保留旧花冠对照。",
+      "remaining": "待审美与辨识确认；尚无生长开花过程、池塘水面承载或具体品种，不自动补叶与池水。",
       "needs_context": false,
       "presets": {
+        "lotus": {"form": "flower", "state": "open"},
         "flower-forms": {
           "kind": "lotus"
         }

@@ -3,19 +3,19 @@
   "total": 60,
   "summary": {
     "total": 60,
-    "tools": 25,
+    "tools": 28,
     "stages": {
       "basic": {
         "label": "基础可画",
-        "count": 20
+        "count": 23
       },
       "partial": {
         "label": "部分支持",
-        "count": 7
+        "count": 6
       },
       "todo": {
         "label": "待制作",
-        "count": 24
+        "count": 22
       },
       "handoff": {
         "label": "转交其他模块",
@@ -28,9 +28,9 @@
     "art_review": "待用户审阅"
   },
   "filters": {
-    "basic": 20,
-    "partial": 7,
-    "todo": 24,
+    "basic": 23,
+    "partial": 6,
+    "todo": 22,
     "handoff": 9,
     "context": 12,
     "search": true,
@@ -38,6 +38,21 @@
     "reset": true
   },
   "deepLinks": [
+    {
+      "name": "兰",
+      "href": "http://127.0.0.1:4185/experiments/imagery-library/index.html?tool=orchid&form=plant#orchid",
+      "selected": "plant"
+    },
+    {
+      "name": "马",
+      "href": "http://127.0.0.1:4185/experiments/imagery-library/index.html?tool=horse&pose=stand&facing=right#horse",
+      "selected": "stand"
+    },
+    {
+      "name": "莲",
+      "href": "http://127.0.0.1:4185/experiments/imagery-library/index.html?tool=lotus&form=flower&state=open#lotus",
+      "selected": "flower"
+    },
     {
       "name": "露",
       "href": "http://127.0.0.1:4185/experiments/imagery-library/index.html?tool=surface-weather&surface=dew&carrier=leaf#surface-weather",
