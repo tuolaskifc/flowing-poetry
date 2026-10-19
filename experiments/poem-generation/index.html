@@ -23,7 +23,7 @@
   <script defer src="../imagery-library/drawing/tools/wine.js"></script><script defer src="../imagery-library/drawing/tools/building.js"></script><script defer src="../imagery-library/drawing/tools/plum-branch.js"></script>
   <script defer src="../imagery-library/drawing/tools/surface-weather.js"></script><script defer src="../imagery-library/drawing/tools/oriole.js"></script>
   <script defer src="../imagery-library/drawing/tools/orchid.js"></script><script defer src="../imagery-library/drawing/tools/horse.js"></script><script defer src="../imagery-library/drawing/tools/lotus.js"></script>
-  <script defer src="scene.js"></script><script defer src="app.js"></script>
+  <script defer src="scene.js"></script><script defer src="imagery-lexicon.js"></script><script defer src="recommendation.js"></script><script defer src="app.js"></script>
 </head>
 <body>
   <header><a href="/">流动诗 ／ 返回主网页</a><a href="/experiments/imagery-library/progress.html">意象进度表 ↗</a></header>
@@ -34,7 +34,8 @@
       <label for="poem">诗句 <span>1–200 字</span></label><textarea id="poem" rows="3" maxlength="200" placeholder="例如：明月松间照，清泉石上流。"></textarea>
       <p id="source" class="muted"></p>
       <div class="actions"><button id="fetch-poem" type="button">今日诗词取一句</button><button id="sample" type="button">填入试画样句</button><button id="generate" class="primary" type="button">生成画面</button><button id="replay" type="button" hidden>回看上次结果</button></div>
-      <p class="input-note">取句不会自动请求模型；点击“生成画面”才开始分析。相同的上一条结果可直接回看，不重复调用。</p>
+      <details id="candidate-panel" class="candidate-panel" hidden open><summary id="candidate-summary">本轮候选</summary><p class="input-note">按已有画法粗筛，语义仍待生成时分析。</p><div id="candidates" role="group" aria-label="本轮诗句候选"></div></details>
+      <p class="input-note">每轮最多取 5 句，去重并本地初筛，不自动请求模型；点击“生成画面”才开始分析。</p>
       <p id="status" role="status" aria-live="polite">正在连接本地分析服务……</p>
     </section>
     <section id="output" hidden>

@@ -1,24 +1,41 @@
 (() => {
   'use strict';
-  const $=id=>document.getElementById(id),poem=$('poem');let source=null,latest=null,sdkPromise;
+  const $=id=>document.getElementById(id),poem=$('poem');let source=null,latest=null,sdkPromise,candidateBatch=[];
   const status=text=>{$('status').textContent=text;};
   const clearList=id=>{$(id).replaceChildren();};
+  const clearCandidateSelection=()=>{for(const button of document.querySelectorAll('[data-candidate]'))button.setAttribute('aria-pressed','false');};
   function item(id,text){const li=document.createElement('li');li.textContent=text;$(id).append(li);return li;}
-  function busy(value){for(const id of ['generate','fetch-poem','sample','replay','recommend'])if($(id))$(id).disabled=value;poem.disabled=value;poem.setAttribute('aria-busy',String(value));}
+  function busy(value){for(const id of ['generate','fetch-poem','sample','replay','recommend'])if($(id))$(id).disabled=value;for(const button of document.querySelectorAll('[data-candidate]'))button.disabled=value||button.dataset.drawable==='false';poem.disabled=value;poem.setAttribute('aria-busy',String(value));}
+  function chooseCandidate(candidate){
+    poem.value=candidate.poem;source=candidate.source;
+    $('source').textContent=[source.provider,source.dynasty,source.author,source.title&&'《'+source.title+'》'].filter(Boolean).join(' · ');
+    for(const button of document.querySelectorAll('[data-candidate]'))button.setAttribute('aria-pressed',String(candidateBatch[Number(button.dataset.candidate)]===candidate));
+  }
+  function renderCandidates(batch){
+    candidateBatch=batch.candidates;const panel=$('candidate-panel');if(!panel)return;
+    panel.hidden=false;$('candidate-summary').textContent='本轮候选 · '+candidateBatch.length+' 句'+(batch.duplicates?'（已去重 '+batch.duplicates+' 句）':'');$('candidates').replaceChildren();
+    const definitions=window.PoemDrawing.definitions();
+    candidateBatch.forEach((candidate,index)=>{
+      const button=document.createElement('button');button.type='button';button.dataset.candidate=String(index);button.dataset.drawable=String(candidate.selection.toolCount>0);button.setAttribute('aria-pressed','false');
+      const verse=document.createElement('span');verse.textContent=candidate.poem;
+      const note=document.createElement('small'),names=[...new Set(candidate.selection.hits.map(h=>definitions.find(d=>d.id===h.tool)?.name||h.word))];
+      note.textContent=names.length?'初筛 '+names.length+' 类：'+names.join('、')+(candidate.selection.wind?'；另有风线索':''):'未匹配到已有画法';
+      button.append(verse,note);button.disabled=true;button.addEventListener('click',()=>{chooseCandidate(candidate);status('已选择候选诗句，点击“生成画面”进行语义分析。');});$('candidates').append(button);
+    });
+  }
   function sdk(){
     if(window.jinrishici)return Promise.resolve();if(sdkPromise)return sdkPromise;
     sdkPromise=new Promise((resolve,reject)=>{const script=document.createElement('script');script.src='https://sdk.jinrishici.com/v2/browser/jinrishici.js';script.charset='utf-8';script.onload=resolve;script.onerror=()=>reject(new Error('今日诗词暂时连接不上，可以手动输入或使用样句。'));document.head.append(script);}).catch(error=>{sdkPromise=null;throw error;});return sdkPromise;
   }
   async function fetchPoem(){
-    busy(true);status('正在向今日诗词取句……');
+    busy(true);status('正在向今日诗词取候选句……');
     try{
-      const result=await Promise.race([(async()=>{await sdk();return new Promise(resolve=>window.jinrishici.load(resolve));})(),new Promise((_,reject)=>setTimeout(()=>reject(new Error('今日诗词取句超时，可以手动输入或使用样句。')),15000))]);
-      if(result.status!=='success'||typeof result.data?.content!=='string')throw new Error('今日诗词没有返回可用诗句。');
-      if([...result.data.content].length>200)throw new Error('本次推荐超过 200 字，请手动选择节选。');
-      poem.value=result.data.content;const origin=result.data.origin||{};
-      source={provider:'今日诗词',author:origin.author||'',title:origin.title||'',dynasty:origin.dynasty||''};
-      $('source').textContent=[source.provider,source.dynasty,source.author,source.title&&'《'+source.title+'》'].filter(Boolean).join(' · ');
-      status('已取到诗句，点击“生成画面”开始分析。');
+      let timer;try{await Promise.race([sdk(),new Promise((_,reject)=>{timer=setTimeout(()=>reject(new Error('今日诗词连接超时，可以手动输入或使用样句。')),8000);})]);}finally{clearTimeout(timer);}
+      const batch=await window.PoemRecommendation.collectCandidates(()=>new Promise((resolve,reject)=>window.jinrishici.load(resolve,error=>reject(new Error(error?.errMessage||'今日诗词暂时连接不上。')))),{onProgress:({attempts,limit})=>status('正在取候选 '+attempts+'／'+limit+'，随后在本地筛选……')});
+      renderCandidates(batch);
+      const best=candidateBatch.find(c=>c.selection.toolCount>0),prefix=batch.error?'本轮提前结束：'+batch.error+' ':'';
+      if(best){chooseCandidate(best);status(prefix+'已取到 '+candidateBatch.length+' 句不同诗句，优先选择了 '+best.selection.toolCount+' 类可画线索。'+(best.selection.toolCount<2?'本轮匹配较少，可以换一批。':'')+'点击“生成画面”开始分析。');}
+      else status(prefix+'本轮没有匹配到合适的可画意象，已保留原输入。可以手动换一批，或使用本地推荐。');
     }catch(error){status(error.message);}finally{busy(false);}
   }
   async function show(record){
@@ -55,15 +72,15 @@
     {poem:'明月松间照，清泉石上流。',author:'王维',title:'山居秋暝',dynasty:'唐代'},
     {poem:'江南可采莲，莲叶何田田。',author:'汉乐府',title:'江南',dynasty:'两汉'}
   ];let recommendationIndex=0;
-  $('recommend')?.addEventListener('click',()=>{let next=recommendations[recommendationIndex++%recommendations.length];if(next.poem===poem.value)next=recommendations[recommendationIndex++%recommendations.length];poem.value=next.poem;source={provider:'本地推荐',author:next.author,title:next.title,dynasty:next.dynasty};$('source').textContent='本地推荐 · '+next.author+'《'+next.title+'》';status('已选出适合现有画库的诗句，点击“生成画面”开始分析。');});
-  $('sample').addEventListener('click',()=>{poem.value='风乍起，吹皱一池春水。';source={provider:'手动试画样句',author:'冯延巳',title:'谒金门·风乍起',dynasty:'五代'};$('source').textContent='手动试画样句 · 冯延巳《谒金门·风乍起》';status('已填入样句，点击“生成画面”开始分析。');});
-  poem.addEventListener('input',()=>{source=null;$('source').textContent='手动输入';});
+  $('recommend')?.addEventListener('click',()=>{clearCandidateSelection();let next=recommendations[recommendationIndex++%recommendations.length];if(next.poem===poem.value)next=recommendations[recommendationIndex++%recommendations.length];poem.value=next.poem;source={provider:'本地推荐',author:next.author,title:next.title,dynasty:next.dynasty};$('source').textContent='本地推荐 · '+next.author+'《'+next.title+'》';status('已选出适合现有画库的诗句，点击“生成画面”开始分析。');});
+  $('sample').addEventListener('click',()=>{clearCandidateSelection();poem.value='风乍起，吹皱一池春水。';source={provider:'手动试画样句',author:'冯延巳',title:'谒金门·风乍起',dynasty:'五代'};$('source').textContent='手动试画样句 · 冯延巳《谒金门·风乍起》';status('已填入样句，点击“生成画面”开始分析。');});
+  poem.addEventListener('input',()=>{source=null;$('source').textContent='手动输入';clearCandidateSelection();});
   $('generate').addEventListener('click',async()=>{
     if(!poem.value.trim()){status('请先取一句或输入诗句。');return;}
     busy(true);status('正在分析诗句，再由本地规则组织画面……');
     try{const response=await fetch('/api/analyze',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({poem:poem.value,source})}),data=await response.json();if(!data.record)throw new Error(data.error||'分析失败，请稍后手动再试。');await show(data.record);}catch(error){status(error.message);}finally{busy(false);}
   });
-  $('replay').addEventListener('click',async()=>{if(latest){busy(true);try{poem.value=latest.poem;source=latest.source;$('source').textContent=source?[source.provider,source.author,source.title].filter(Boolean).join(' · '):'已保存的诗句';await show({...latest,cached:true});}catch(error){status(error.message);}finally{busy(false);}}});
+  $('replay').addEventListener('click',async()=>{if(latest){busy(true);clearCandidateSelection();try{poem.value=latest.poem;source=latest.source;$('source').textContent=source?[source.provider,source.author,source.title].filter(Boolean).join(' · '):'已保存的诗句';await show({...latest,cached:true});}catch(error){status(error.message);}finally{busy(false);}}});
   $('pause').addEventListener('click',()=>{const paused=$('pause').getAttribute('aria-pressed')!=='true';window.PoemTrialScene.pause(paused);$('pause').textContent=paused?'继续':'暂停';$('pause').setAttribute('aria-pressed',String(paused));});
   $('reseed').addEventListener('click',()=>window.PoemTrialScene.reseed());$('save').addEventListener('click',()=>window.PoemTrialScene.save());
   $('palette').addEventListener('change',e=>window.PoemTrialScene.update({palette:e.target.value}));$('moon-shape').addEventListener('change',e=>window.PoemTrialScene.moon(e.target.value));

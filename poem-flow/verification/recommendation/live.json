@@ -1,0 +1,43 @@
+{
+  "status": "passed",
+  "live": true,
+  "generate": true,
+  "selection": {
+    "poem": "把酒对斜日，无语问西风。",
+    "source": "今日诗词 · 宋代 · 杨炎正 · 《水调歌头·把酒对斜日》",
+    "status": "已取到 4 句不同诗句，优先选择了 1 类可画线索。点击“生成画面”开始分析。",
+    "summary": "本轮候选 · 4 句（已去重 1 句）",
+    "rows": [
+      {
+        "label": "初筛 1 类：酒液与酒器；另有风线索",
+        "selected": "true",
+        "disabled": false
+      },
+      {
+        "label": "初筛 1 类：莲 · 荷叶；另有风线索",
+        "selected": "false",
+        "disabled": false
+      },
+      {
+        "label": "未匹配到已有画法",
+        "selected": "false",
+        "disabled": true
+      },
+      {
+        "label": "未匹配到已有画法",
+        "selected": "false",
+        "disabled": true
+      }
+    ],
+    "calls": null
+  },
+  "checks": {
+    "screeningModelPosts": 0,
+    "sdkResponses": 5,
+    "generatedTools": [
+      "wine"
+    ]
+  },
+  "modelPosts": 1,
+  "runtimeErrors": []
+}

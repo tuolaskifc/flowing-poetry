@@ -1,0 +1,50 @@
+{
+  "title": "把酒对斜日，无语问西风。",
+  "status": "已生成画面。有 1 项尚未绘制，详见“保留的空缺”。",
+  "usage": "记录 2026-10-19T09-17-47-144Z-681ef646；模型 DeepSeek-V4.1-Flash；本次记录 token 2334。用量以本次接口返回为准。",
+  "scene": {
+    "ready": true,
+    "paused": false,
+    "layers": [
+      {
+        "id": "wine",
+        "seed": 1388753940,
+        "time": 0,
+        "ticks": 1,
+        "paused": true,
+        "disposed": false,
+        "ready": true,
+        "options": {
+          "form": "liquid"
+        },
+        "sources": [
+          "project"
+        ],
+        "form": "liquid",
+        "liquidStudy": true,
+        "vesselCount": 0,
+        "personCount": 0,
+        "finite": true,
+        "geometryKey": "6fbe5532"
+      }
+    ],
+    "placements": [
+      {
+        "anchor": [
+          320,
+          244
+        ],
+        "at": [
+          0.57,
+          0.87
+        ],
+        "scale": 0.75
+      }
+    ],
+    "settings": {
+      "wind": 0,
+      "density": 0.45,
+      "palette": "clear"
+    }
+  }
+}

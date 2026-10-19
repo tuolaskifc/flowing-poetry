@@ -2,68 +2,44 @@
   "live": false,
   "poetry": null,
   "state": {
-    "status": "已生成画面。有 3 项尚未绘制，详见“保留的空缺”。",
+    "status": "已生成画面。有 1 项尚未绘制，详见“保留的空缺”。",
     "scene": {
       "ready": true,
       "paused": false,
       "layers": [
         {
-          "id": "willow",
-          "seed": 981621458,
-          "time": 0.1627,
-          "ticks": 5,
-          "paused": false,
+          "id": "wine",
+          "seed": 1388753940,
+          "time": 0,
+          "ticks": 1,
+          "paused": true,
           "disposed": false,
           "ready": true,
-          "options": {},
+          "options": {
+            "form": "liquid"
+          },
           "sources": [
             "project"
           ],
-          "treeCount": 1,
-          "hangingBranchCount": 17,
-          "leafCount": 221,
+          "form": "liquid",
+          "liquidStudy": true,
+          "vesselCount": 0,
+          "personCount": 0,
           "finite": true,
-          "geometryKey": "3dadb538"
-        },
-        {
-          "id": "rain",
-          "seed": 981621555,
-          "time": 0.16260000000596048,
-          "ticks": 5,
-          "paused": false,
-          "disposed": false,
-          "ready": true,
-          "options": {},
-          "sources": [
-            "project"
-          ],
-          "dropCount": 64,
-          "finite": true,
-          "geometryKey": "355d2631"
+          "geometryKey": "6fbe5532"
         }
       ],
       "placements": [
         {
           "anchor": [
             320,
-            340
+            244
           ],
           "at": [
-            0.23,
-            0.88
+            0.57,
+            0.87
           ],
-          "scale": 1
-        },
-        {
-          "anchor": [
-            320,
-            194
-          ],
-          "at": [
-            0.5,
-            0.5
-          ],
-          "scale": 1.55
+          "scale": 0.75
         }
       ],
       "settings": {
@@ -72,18 +48,15 @@
         "palette": "clear"
       }
     },
-    "poem": "渭城朝雨浥轻尘，客舍青青柳色新。",
-    "sceneTitle": "渭城朝雨浥轻尘，客舍青青柳色新。",
-    "usage": "记录 2026-10-19T08-50-20-460Z-ee8a5c8e；模型 DeepSeek-V4.1-Flash；本次记录 token 2385。正在回看，没有新增模型调用。",
-    "reading": "渭城清晨的雨润湿了轻尘，客舍旁柳色青翠如新。",
+    "poem": "把酒对斜日，无语问西风。",
+    "sceneTitle": "把酒对斜日，无语问西风。",
+    "usage": "记录 2026-10-19T09-17-47-144Z-681ef646；模型 DeepSeek-V4.1-Flash；本次记录 token 2334。正在回看，没有新增模型调用。",
+    "reading": "手持酒杯面对西斜的落日，沉默无言地向西风发问。句中有人物动作，但未明说人物是否在场景中现身，只呈现把酒、对日、问风的行为。",
     "omitted": [
-      "渭城：暂未提供该人物、地点或抽象含义的绘画单元",
-      "轻尘：该具体意象尚无可用形态；没有替换成通用树、花或鸟群",
-      "客舍：暂未提供该人物、地点或抽象含义的绘画单元"
+      "斜日：该具体意象尚无可用形态；没有替换成通用树、花或鸟群"
     ],
     "drawn": [
-      "柳色 → 柳",
-      "朝雨 → 雨"
+      "酒 → 酒液与酒器（静止）"
     ]
   },
   "network": [
@@ -119,12 +92,12 @@
     },
     {
       "host": "127.0.0.1",
-      "path": "/experiments/imagery-library/drawing/architecture.js",
+      "path": "/experiments/imagery-library/drawing/cloud-outline.js",
       "status": 200
     },
     {
       "host": "127.0.0.1",
-      "path": "/experiments/imagery-library/drawing/cloud-outline.js",
+      "path": "/experiments/imagery-library/drawing/architecture.js",
       "status": 200
     },
     {
@@ -139,17 +112,17 @@
     },
     {
       "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/tools/water.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
       "path": "/experiments/imagery-library/drawing/tools/flower.js",
       "status": 200
     },
     {
       "host": "127.0.0.1",
       "path": "/experiments/imagery-library/drawing/tools/tree.js",
-      "status": 200
-    },
-    {
-      "host": "127.0.0.1",
-      "path": "/experiments/imagery-library/drawing/tools/water.js",
       "status": 200
     },
     {
@@ -169,17 +142,17 @@
     },
     {
       "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/tools/rain.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
       "path": "/experiments/imagery-library/drawing/tools/moon.js",
       "status": 200
     },
     {
       "host": "127.0.0.1",
       "path": "/experiments/imagery-library/drawing/tools/falling-petals.js",
-      "status": 200
-    },
-    {
-      "host": "127.0.0.1",
-      "path": "/experiments/imagery-library/drawing/tools/rain.js",
       "status": 200
     },
     {
@@ -199,12 +172,12 @@
     },
     {
       "host": "127.0.0.1",
-      "path": "/experiments/imagery-library/drawing/tools/willow.js",
+      "path": "/experiments/imagery-library/drawing/tools/bamboo.js",
       "status": 200
     },
     {
       "host": "127.0.0.1",
-      "path": "/experiments/imagery-library/drawing/tools/bamboo.js",
+      "path": "/experiments/imagery-library/drawing/tools/willow.js",
       "status": 200
     },
     {
@@ -224,6 +197,11 @@
     },
     {
       "host": "127.0.0.1",
+      "path": "/poem-flow/vendor/p5.min.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
       "path": "/experiments/imagery-library/drawing/tools/cloud.js",
       "status": 200
     },
@@ -234,12 +212,12 @@
     },
     {
       "host": "127.0.0.1",
-      "path": "/experiments/imagery-library/drawing/tools/wine.js",
+      "path": "/experiments/imagery-library/drawing/tools/flower-forms.js",
       "status": 200
     },
     {
       "host": "127.0.0.1",
-      "path": "/experiments/imagery-library/drawing/tools/flower-forms.js",
+      "path": "/experiments/imagery-library/drawing/tools/wine.js",
       "status": 200
     },
     {
@@ -259,17 +237,12 @@
     },
     {
       "host": "127.0.0.1",
-      "path": "/experiments/imagery-library/drawing/tools/oriole.js",
-      "status": 200
-    },
-    {
-      "host": "127.0.0.1",
       "path": "/experiments/imagery-library/drawing/tools/orchid.js",
       "status": 200
     },
     {
       "host": "127.0.0.1",
-      "path": "/poem-flow/vendor/p5.min.js",
+      "path": "/experiments/imagery-library/drawing/tools/oriole.js",
       "status": 200
     },
     {
@@ -285,6 +258,16 @@
     {
       "host": "127.0.0.1",
       "path": "/experiments/poem-generation/scene.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/poem-generation/imagery-lexicon.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/poem-generation/recommendation.js",
       "status": 200
     },
     {

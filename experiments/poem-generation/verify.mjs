@@ -24,9 +24,9 @@ try{
   if(live){
     if(curated)await evaluate(`document.getElementById('recommend').click()`);
     if(!sample&&!curated){
-      await evaluate(`document.getElementById('fetch-poem').click()`);await until(`!document.getElementById('fetch-poem').disabled`,20000);
-      poetry=await evaluate(`({poem:document.getElementById('poem').value,source:document.getElementById('source').textContent,status:document.getElementById('status').textContent})`);
-      if(!poetry.status.startsWith('已取到诗句'))throw new Error('Recommendation did not succeed: '+poetry.status);
+      await evaluate(`document.getElementById('fetch-poem').click()`);await until(`!document.getElementById('fetch-poem').disabled`,40000);
+      poetry=await evaluate(`({poem:document.getElementById('poem').value,source:document.getElementById('source').textContent,status:document.getElementById('status').textContent,selected:Boolean(document.querySelector('[data-candidate][aria-pressed="true"]'))})`);
+      if(!poetry.selected)throw new Error('Recommendation did not produce a drawable candidate: '+poetry.status);
     }
     if(sample)await evaluate(`document.getElementById('sample').click()`);
     await evaluate(`document.getElementById('generate').click()`);await until(`!document.getElementById('generate').disabled`,100000);

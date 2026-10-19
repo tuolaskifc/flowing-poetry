@@ -1,0 +1,47 @@
+{
+  "status": "passed",
+  "live": false,
+  "generate": false,
+  "selection": {
+    "poem": "月照水，柳含烟。",
+    "source": "今日诗词 · 测试作者 · 《明确标记的测试数据》",
+    "status": "已取到 4 句不同诗句，优先选择了 3 类可画线索。点击“生成画面”开始分析。",
+    "summary": "本轮候选 · 4 句（已去重 1 句）",
+    "rows": [
+      {
+        "label": "初筛 3 类：月、水、柳",
+        "selected": "true",
+        "disabled": false
+      },
+      {
+        "label": "初筛 1 类：花",
+        "selected": "false",
+        "disabled": false
+      },
+      {
+        "label": "未匹配到已有画法",
+        "selected": "false",
+        "disabled": true
+      },
+      {
+        "label": "未匹配到已有画法",
+        "selected": "false",
+        "disabled": true
+      }
+    ],
+    "calls": 5
+  },
+  "checks": {
+    "screeningModelPosts": 0,
+    "fiveCalls": true,
+    "deduplicated": true,
+    "ranked": true,
+    "manualSelection": true,
+    "noMatchPreservesInput": true,
+    "partialFailureStops": true,
+    "onlySelectedSubmitted": true,
+    "fixtureSubmissions": 1
+  },
+  "modelPosts": 0,
+  "runtimeErrors": []
+}

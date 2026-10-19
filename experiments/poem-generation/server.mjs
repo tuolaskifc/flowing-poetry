@@ -5,7 +5,7 @@ import {fileURLToPath} from 'node:url';
 import {createGenerationService} from './service.mjs';
 const dir=dirname(fileURLToPath(import.meta.url)),root=resolve(dir,'../..');
 const types={'.html':'text/html; charset=utf-8','.css':'text/css; charset=utf-8','.js':'text/javascript; charset=utf-8','.mjs':'text/javascript; charset=utf-8','.json':'application/json; charset=utf-8','.png':'image/png','.md':'text/plain; charset=utf-8','.txt':'text/plain; charset=utf-8'};
-const assets=new Set(['index.html','app.js','scene.js','styles.css']);
+const assets=new Set(['index.html','app.js','scene.js','styles.css','imagery-lexicon.js','recommendation.js']);
 function json(res,status,body){res.writeHead(status,{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store','X-Content-Type-Options':'nosniff'});res.end(JSON.stringify(body));}
 export function createPoemServer({port=4186,service=createGenerationService()}={}){
 const server=createServer(async(req,res)=>{

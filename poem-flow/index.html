@@ -42,6 +42,8 @@
   <script defer src="/experiments/imagery-library/drawing/tools/horse.js"></script>
   <script defer src="/experiments/imagery-library/drawing/tools/lotus.js"></script>
   <script defer src="/experiments/poem-generation/scene.js"></script>
+  <script defer src="/experiments/poem-generation/imagery-lexicon.js"></script>
+  <script defer src="/experiments/poem-generation/recommendation.js"></script>
   <script defer src="/experiments/poem-generation/app.js"></script>
 </head>
 <body>
@@ -52,11 +54,12 @@
       <label for="poem">写下此刻想到的诗句 <span>1–200 字</span></label>
       <textarea id="poem" rows="4" maxlength="200" placeholder="风乍起，吹皱一池春水。"></textarea>
       <p id="source" class="muted"></p>
-      <div class="actions"><button id="recommend" type="button" disabled>推荐可画诗句</button><button id="fetch-poem" type="button" disabled>今日诗词取句</button><button id="sample" type="button" disabled>样句</button></div>
+      <div class="actions"><button id="recommend" type="button" disabled>本地推荐</button><button id="fetch-poem" type="button" disabled>今日诗词 · 筛选</button><button id="sample" type="button" disabled>样句</button></div>
       <button id="generate" class="primary" type="button" disabled>生成画面 <span>↗</span></button>
       <button id="replay" type="button" hidden>回看上次结果</button>
       <p id="status" role="status" aria-live="polite">正在连接本地分析服务……</p>
-      <p class="input-note">取句后点击生成。本地推荐优先选择已有画法的诗句；今日诗词返回的句子可能包含尚未支持的意象。</p>
+      <p class="input-note">今日诗词每轮最多取 5 句，去重后按可画意象初筛；点击生成后才调用 DeepSeek。</p>
+      <details id="candidate-panel" class="candidate-panel" hidden open><summary id="candidate-summary">本轮候选</summary><p class="input-note">按已有画法粗筛，可改选另一句；是否在场、是否为比喻，生成时再分析。</p><div id="candidates" role="group" aria-label="本轮诗句候选"></div></details>
       <details class="scope"><summary>这一版可以做到什么</summary><p>DeepSeek 解读诗句，本地绘画库组合画面。目前先表现基础意象；尚未覆盖的物象会列出，完整关系、情感配色和时间编排仍在扩展。</p></details>
     </aside>
     <section class="picture-panel">
@@ -65,7 +68,7 @@
         <div class="scene-heading"><h2 id="scene-title"></h2><span id="record-info"></span></div>
         <div id="artwork" class="artwork">
           <canvas id="scene" width="960" height="600" role="img" aria-label="诗句生成的动态画面，可拖动可见笔触调整构图"></canvas><div id="layer-hosts" hidden></div>
-          <div id="empty-scene" hidden><p>这句诗，还缺合适的画法。</p><small>已有解读见下方。可以换一条「推荐可画诗句」，再点击生成。</small></div>
+          <div id="empty-scene" hidden><p>这句诗，还缺合适的画法。</p><small>已有解读见下方。可以换一条本地推荐，再点击生成。</small></div>
           <button id="immersive" type="button" aria-pressed="false">沉浸观看 ⤢</button>
         </div>
         <div class="view-controls">

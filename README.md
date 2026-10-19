@@ -30,7 +30,9 @@ npm start
 
 现已统一为：**输入诗句／选取推荐 → DeepSeek 解读 → 本地检查与映射 → 已有绘画工具组成动态图 → 调整与保存**。可暂停、换形态、调风力、切配色与月形、拖动可见笔触调整构图、还原构图、沉浸观看、导出 PNG。打开网页只回放最近保存的成功分析，不会自动调用模型；取句后点击“生成画面”才分析。
 
-“推荐可画诗句”来自本地精选列表；“今日诗词取句”使用官方 SDK，可能取到画库尚不支持的句子。无匹配形态时明确提示并展示解读与缺口，不用别的物象补画。当前是可运行的基础意象生成版，尚未实现全部意象、完整关系、16 类自动情感配色、逻辑时间编排和安卓。
+“本地推荐”来自精选列表；“今日诗词 · 筛选”使用官方 SDK，每轮最多逐次取 5 句、间隔 1 秒，在本地去重并按不同可画类型排序，自动填入优先候选，也可手动改选。筛选不调用 DeepSeek。候选只留在当前页面内存；取句失败时停止本轮，无匹配时保留原输入。字符匹配只是线索，仍可能包含缺席、比喻或尚未支持的物象。
+
+无匹配形态时明确提示并展示解读与缺口，不用别的物象补画。当前是可运行的基础意象生成版，尚未实现全部意象、完整关系、16 类自动情感配色、逻辑时间编排和安卓。
 
 真实通路记录见 [生成实验](experiments/poem-generation/README.md)，主网页浏览器证据在 `poem-flow/verification/`。旧的固定诗句作品保留于 http://127.0.0.1:4173/poem-flow/legacy.html 。
 
@@ -46,6 +48,7 @@ npm start
 - `poem-flow/tools/serve.mjs`：主入口服务，复用生成实验后端；静态资源采用允许列表。
 - `experiments/poem-generation/app.js`、`scene.js`：主网页与实验页共用的交互、透明图层组合。
 - `experiments/poem-generation/service.mjs`、`planner.mjs`：后端模型请求、记录和本地绘画规则。
+- `experiments/poem-generation/imagery-lexicon.js`、`recommendation.js`：筛选与绘画共用词表、候选排序及有上限的取句流程。
 - `experiments/imagery-library/drawing/`：28 个可复用绘画工具及来源登记。
 - `poem-flow/THIRD_PARTY.md`：依赖来源及许可。
 

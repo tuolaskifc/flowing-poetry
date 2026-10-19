@@ -10,7 +10,7 @@ test('one local origin serves main, drawing and progress while keeping backend a
   const origin='http://127.0.0.1:'+server.address().port;
   try{
     const page=await fetch(origin);assert.equal(page.status,200);assert.match(await page.text(),/id="generate"/);
-    for(const path of ['/poem-flow/main.css','/experiments/poem-generation/app.js','/experiments/imagery-library/progress.html','/experiments/imagery-library/progress-data.js','/experiments/imagery-library/style.css','/experiments/imagery-library/drawing/tools/oriole.js'])assert.equal((await fetch(origin+path)).status,200,path);
+    for(const path of ['/poem-flow/main.css','/experiments/poem-generation/app.js','/experiments/poem-generation/imagery-lexicon.js','/experiments/poem-generation/recommendation.js','/experiments/imagery-library/progress.html','/experiments/imagery-library/progress-data.js','/experiments/imagery-library/style.css','/experiments/imagery-library/drawing/tools/oriole.js'])assert.equal((await fetch(origin+path)).status,200,path);
     for(const path of ['/llm%20api.txt','/.git/config','/experiments/poem-generation/service.mjs','/experiments/poem-generation/runs/test/result.json','/poem-flow/tools/serve.mjs'])assert.equal((await fetch(origin+path)).status,403,path);
     assert.equal((await fetch(origin+'/api/status')).status,200);
     const post=(body,headers={})=>fetch(origin+'/api/analyze',{method:'POST',headers:{'Content-Type':'application/json',...headers},body});
