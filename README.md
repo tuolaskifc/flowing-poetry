@@ -17,37 +17,39 @@
 - 开发方式：使用 Codex 辅助，保留实际发生的交互记录。
 - 版本管理：Git 本地仓库。
 
-## 网页原型：流动诗
+## 运行流动诗
 
-入口：`poem-flow/index.html`，可直接用浏览器打开。
-
-也可以在终端中运行：
+在终端运行：
 
 ```powershell
 cd poem-flow
 npm start
 ```
 
-随后打开终端显示的本地地址。无需安装 npm 依赖，p5.js 已随项目保存。
+随后打开 **http://127.0.0.1:4173/**。无需安装 npm 依赖，p5.js 已随项目保存。生成需要本地后端，请通过此地址打开，不能双击 HTML 直接调用模型。后端沿用根目录已忽略的 `llm api.txt` 配置。
 
-第一版围绕用户提供的固定诗句“如果所有土地连在一起，走上一生只为拥抱你”创作。包含动态观看、重新演绎、暂停、导出当前画面与沉浸观看。支持随窗口变化调整画面。
+现已统一为：**输入诗句／选取推荐 → DeepSeek 解读 → 本地检查与映射 → 已有绘画工具组成动态图 → 调整与保存**。可暂停、换形态、调风力、切配色与月形、拖动可见笔触调整构图、还原构图、沉浸观看、导出 PNG。打开网页只回放最近保存的成功分析，不会自动调用模型；取句后点击“生成画面”才分析。
 
-另有 [基础生成试验](experiments/poem-generation/README.md)，已连接今日诗词取句、模型基础意象提取与已有绘画工具组合。完整关系、全部意象和安卓仍未实现；画面尚待审阅。
+“推荐可画诗句”来自本地精选列表；“今日诗词取句”使用官方 SDK，可能取到画库尚不支持的句子。无匹配形态时明确提示并展示解读与缺口，不用别的物象补画。当前是可运行的基础意象生成版，尚未实现全部意象、完整关系、16 类自动情感配色、逻辑时间编排和安卓。
+
+真实通路记录见 [生成实验](experiments/poem-generation/README.md)，主网页浏览器证据在 `poem-flow/verification/`。旧的固定诗句作品保留于 http://127.0.0.1:4173/poem-flow/legacy.html 。
 
 ## 独立的诗句语义实验
 
-模型接口已接入基础生成试验。现行完整实验采用 [语义协议 3.0](experiments/poem-semantics/contract-v3/固定输出结构.md)，但本轮两次完整关系请求未通过；生成页面目前明确采用关系为空的基础意象子模式，不让模型生成绘图代码。16 类情感、空间和完整逻辑尚未贯通，不能将旧字段直接换名使用。
+模型接口已接入主网页。现行完整实验采用 [语义协议 3.0](experiments/poem-semantics/contract-v3/固定输出结构.md)，此前两次完整关系请求未通过；生成页面目前明确采用关系为空的基础意象子模式，不让模型生成绘图代码。16 类情感、空间和完整逻辑尚未贯通，不能将旧字段直接换名使用。
 
-协议说明、提示词、校验器和既往记录在 `experiments/poem-semantics/`；本轮 4 次真实调用、2 次失败、2 次基础模式成功与浏览器出图证据见 `experiments/poem-generation/`。
+协议说明、提示词、校验器和既往记录在 `experiments/poem-semantics/`；历次真实请求、失败及覆盖缺口保留在 `experiments/poem-generation/runs/`，不随网页更新改写。
 
 ## 开发结构
 
-- `poem-flow/scene.js`：绘图与动画，使用归一化坐标。
-- `poem-flow/app.js`：按钮与页面状态。
-- `poem-flow/styles.css`：电脑与窄屏布局。
+- `poem-flow/index.html`、`main.css`：当前主入口和自适应布局。
+- `poem-flow/tools/serve.mjs`：主入口服务，复用生成实验后端；静态资源采用允许列表。
+- `experiments/poem-generation/app.js`、`scene.js`：主网页与实验页共用的交互、透明图层组合。
+- `experiments/poem-generation/service.mjs`、`planner.mjs`：后端模型请求、记录和本地绘画规则。
+- `experiments/imagery-library/drawing/`：28 个可复用绘画工具及来源登记。
 - `poem-flow/THIRD_PARTY.md`：依赖来源及许可。
 
-将绘图与页面控制分开，便于后续替换作品和适配安卓。可用 `?seed=42` 固定初始画面的随机种子；继续运行时画面仍随时间变化。
+旧作品的 `app.js`、`scene.js` 和 `styles.css` 留给 `legacy.html`；旧入口的 `?seed=42` 只适用于固定诗句作品。新入口由诗句确定初始种子，可点击“换一组形态”重画；交互调整不新增模型调用。
 
 ## 记录方式
 

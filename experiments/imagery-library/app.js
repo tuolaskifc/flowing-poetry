@@ -1,5 +1,6 @@
 (() => {
   'use strict';
+  if(location.protocol==='http:'&&location.port!=='4185')document.getElementById('poem-home').href='/';
   const shared={wind:.35,density:.45,palette:'clear'};
   const params=new URLSearchParams(location.search);
   let seed=Number(params.get('seed')||42)>>>0,paused=false;

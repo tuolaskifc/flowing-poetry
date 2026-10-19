@@ -1,6 +1,7 @@
 /* Renders generated progress data. No network calls or model interpretation. */
 (() => {
   'use strict';
+  if(location.protocol==='http:'&&location.port!=='4185')document.getElementById('poem-home').href='/';
   const {items,summary,tools,sources}=window.PoemProgress,toolMap=new Map(tools.map(t=>[t.id,t]));
   const search=document.getElementById('search'),stage=document.getElementById('stage'),context=document.getElementById('context');
   const add=(tag,text,parent,cls)=>{const el=document.createElement(tag);if(text!==undefined)el.textContent=text;if(cls)el.className=cls;parent.append(el);return el;};

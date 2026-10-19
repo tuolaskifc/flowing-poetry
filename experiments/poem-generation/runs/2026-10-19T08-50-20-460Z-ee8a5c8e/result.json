@@ -1,0 +1,213 @@
+{
+  "id": "2026-10-19T08-50-20-460Z-ee8a5c8e",
+  "fingerprint": "ab5732bab67f90fe2a43c55929b6b0878191d82a5e2d389a6cba90a7384394f6",
+  "poem": "渭城朝雨浥轻尘，客舍青青柳色新。",
+  "source": {
+    "provider": "本地推荐",
+    "author": "王维",
+    "title": "送元二使安西",
+    "dynasty": "唐代"
+  },
+  "mode": "imagery-only",
+  "model": "DeepSeek-V4.1-Flash",
+  "started_at": "2026-10-19T08:50:20.462Z",
+  "cached": false,
+  "http_status": 200,
+  "usage": {
+    "completion_tokens": 390,
+    "prompt_tokens": 1995,
+    "total_tokens": 2385,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  },
+  "finish_reason": "stop",
+  "analysis": {
+    "schema_version": "3.0",
+    "poem": "渭城朝雨浥轻尘，客舍青青柳色新。",
+    "reading": "渭城清晨的雨润湿了轻尘，客舍旁柳色青翠如新。",
+    "entities": [
+      {
+        "id": "i1",
+        "mentions": [
+          "渭城"
+        ],
+        "concept": "渭城，地名",
+        "kind": "place",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "渭城朝雨浥轻尘"
+        ]
+      },
+      {
+        "id": "i2",
+        "mentions": [
+          "朝雨"
+        ],
+        "concept": "清晨的雨",
+        "kind": "environment",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "渭城朝雨浥轻尘"
+        ]
+      },
+      {
+        "id": "i3",
+        "mentions": [
+          "轻尘"
+        ],
+        "concept": "轻细的尘土",
+        "kind": "object",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "浥轻尘"
+        ]
+      },
+      {
+        "id": "i4",
+        "mentions": [
+          "客舍"
+        ],
+        "concept": "旅舍，客居之所",
+        "kind": "place",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "客舍青青柳色新"
+        ]
+      },
+      {
+        "id": "i5",
+        "mentions": [
+          "柳色"
+        ],
+        "concept": "柳树的颜色，指柳树",
+        "kind": "organism",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "柳色新"
+        ]
+      }
+    ],
+    "relations": [],
+    "atmosphere": {
+      "labels": [
+        "清新",
+        "湿润",
+        "明净"
+      ],
+      "valence": "positive",
+      "energy": "low",
+      "tension": "low",
+      "openness": "medium",
+      "evidence": [
+        "渭城朝雨浥轻尘",
+        "客舍青青柳色新"
+      ]
+    },
+    "time": {
+      "markers": [
+        {
+          "surface": "朝",
+          "meaning": "清晨，一日之始"
+        }
+      ],
+      "note": null
+    },
+    "uncertainties": [
+      "柳色新是否兼指雨后柳色变化，仅凭本句难以确定。"
+    ]
+  },
+  "validation": {
+    "valid": true,
+    "errors": [],
+    "warnings": [
+      "模型保留了不确定性，需要审阅"
+    ],
+    "review_required": true
+  },
+  "plan": {
+    "version": "trial-4-orchid-horse-lotus",
+    "seed": 981621458,
+    "settings": {
+      "wind": 0,
+      "density": 0.45,
+      "palette": "clear"
+    },
+    "layers": [
+      {
+        "tool": "willow",
+        "entities": [
+          "i5"
+        ],
+        "names": [
+          "柳色"
+        ],
+        "options": {},
+        "animate": true,
+        "placement": {
+          "anchor": [
+            320,
+            340
+          ],
+          "at": [
+            0.23,
+            0.88
+          ],
+          "scale": 1
+        }
+      },
+      {
+        "tool": "rain",
+        "entities": [
+          "i2"
+        ],
+        "names": [
+          "朝雨"
+        ],
+        "options": {},
+        "animate": true,
+        "placement": {
+          "anchor": [
+            320,
+            194
+          ],
+          "at": [
+            0.5,
+            0.5
+          ],
+          "scale": 1.55
+        }
+      }
+    ],
+    "omitted": [
+      {
+        "id": "i1",
+        "name": "渭城",
+        "reason": "暂未提供该人物、地点或抽象含义的绘画单元"
+      },
+      {
+        "id": "i3",
+        "name": "轻尘",
+        "reason": "该具体意象尚无可用形态；没有替换成通用树、花或鸟群"
+      },
+      {
+        "id": "i4",
+        "name": "客舍",
+        "reason": "暂未提供该人物、地点或抽象含义的绘画单元"
+      }
+    ],
+    "notes": [
+      "位置、大小、笔触、固定群体数量与默认微动是本地试画选择；不表示原句给出了这些数值。"
+    ],
+    "relations": []
+  },
+  "elapsed_seconds": 11.9
+}

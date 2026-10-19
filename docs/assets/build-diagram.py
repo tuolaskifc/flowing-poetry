@@ -5,17 +5,17 @@ import xml.etree.ElementTree as ET
 ASSETS = Path(__file__).resolve().parent
 DOCS = ASSETS.parent
 BRANCHES = [
-    ('input', '1  输入与意图', '规划 · 待接入', 'planned', [
+    ('input', '1  输入与意图', '输入与推荐已接通', 'partial', [
         ('原句与节选', '古诗起步，现代诗与歌词后续'),
         ('用户解读', '保留特别的艺术选择'),
-        ('诗库与随机选句', '来源后续探索，尚未接入'),
+        ('诗句推荐', '本地精选与今日诗词 SDK'),
     ]),
-    ('semantic', '2  语义分析与检查', '独立实验 · 未连网页', 'partial', [
+    ('semantic', '2  语义分析与检查', '已连主网页基础生成', 'partial', [
         ('LLM 语义解释', '意象、联系、原文依据'),
-        ('固定输出协议', '3.0 已离线检查，待接口实测'),
+        ('固定输出协议', '基础子模式实测，完整关系待办'),
         ('依据与引用检查', '保留歧义，不执行模型代码'),
     ]),
-    ('visual', '3  视觉规则', '已有规范 · 待实现', 'planned', [
+    ('visual', '3  视觉规则', '基础意象组合已实现', 'partial', [
         ('意象 → 形态线索', '主体、轮廓与比喻参照'),
         ('情感 → 配色', '16 类色彩组合与使用'),
         ('强度 → 空间', '紧密度、利用率，档位待定'),
@@ -23,10 +23,10 @@ BRANCHES = [
         ('逻辑 → 成立方式', '否定、可能、条件与范围'),
         ('时间 → 变化过程', '先后、反复、未然与留痕'),
     ]),
-    ('render', '4  绘画与交互', '固定诗句原型已实现', 'ready', [
+    ('render', '4  绘画与交互', '主网页基础生成版可用', 'ready', [
         ('持续绘图', 'p5.js 动态画面'),
-        ('观看与交互', '重演、暂停、导出、沉浸'),
-        ('任意诗句接入', '尚未贯通语义与绘图'),
+        ('观看与交互', '暂停、拖动、调风、导出、沉浸'),
+        ('诗句接入', '已贯通，覆盖限于现有画库'),
         ('安卓适配', '后续方向，尚未实现'),
     ]),
     ('records', '5  记录与验证', '已有记录 · 持续验证', 'ready', [
@@ -50,7 +50,8 @@ mermaid += [
 ]
 for kind in ['planned', 'partial', 'ready']:
     nodes = ','.join(node for node, _, _, state, _ in BRANCHES if state == kind)
-    mermaid += [f'  class {nodes} {kind}']
+    if nodes:
+        mermaid += [f'  class {nodes} {kind}']
 mermaid_text = '\n'.join(mermaid) + '\n'
 (ASSETS / '模块职能树.mmd').write_text(mermaid_text, encoding='utf-8')
 
@@ -75,7 +76,7 @@ def path(d, color='#B3BDB4', width=2):
 
 rect(0, 0, 1660, 1110, '#F6F3EC', radius=0)
 text(40, 53, '流动诗 · 模块与职能树', 34, weight='bold')
-text(40, 86, '目标结构与当前进度  /  2026-10-18', 18, '#748076')
+text(40, 86, '目标结构与当前进度  /  2026-10-19', 18, '#748076')
 rect(640, 112, 380, 104, '#244B46')
 text(830, 155, '流动诗', 32, '#FFFFFF', 'bold', 'middle')
 text(830, 187, '诗句 → 意象 → 图形 → 意境', 20, '#E5EDE4', anchor='middle')
@@ -100,7 +101,7 @@ for index, (node, title, status, state, leaves) in enumerate(BRANCHES):
         text(x + 38, y + 56, detail, 16, '#748076')
 
 path('M 40 1006 H 1620', '#D6DDD2', 1)
-text(40, 1041, '现状：固定句网页可用；LLM 为独立实验；六指标驱动绘图尚未贯通。', 22)
+text(40, 1041, '现状：输入／推荐 → DeepSeek → 基础意象组合 → 交互已接通；六指标编排待办。', 22)
 text(40, 1077, '职责：LLM 解释文字，本地规则决定画法，用户判断诗意与审美。', 20, '#748076')
 (ASSETS / '模块职能树.svg').write_text(ET.tostring(svg, encoding='unicode') + '\n', encoding='utf-8')
 

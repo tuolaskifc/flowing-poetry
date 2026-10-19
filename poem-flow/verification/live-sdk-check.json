@@ -1,0 +1,273 @@
+{
+  "live": true,
+  "poetry": {
+    "poem": "君子死知己，提剑出燕京。",
+    "source": "今日诗词 · 魏晋 · 陶渊明 · 《咏荆轲》",
+    "status": "已取到诗句，点击“生成画面”开始分析。"
+  },
+  "state": {
+    "status": "分析已完成，但本句尚无可绘制的意象。请换一句或试试样句。",
+    "scene": {
+      "ready": true,
+      "paused": false,
+      "layers": [],
+      "placements": [],
+      "settings": {
+        "wind": 0,
+        "density": 0.45,
+        "palette": "clear"
+      }
+    },
+    "poem": "君子死知己，提剑出燕京。",
+    "sceneTitle": "君子死知己，提剑出燕京。",
+    "usage": "记录 2026-10-19T08-48-41-466Z-3acd3e3d；模型 DeepSeek-V4.1-Flash；本次记录 token 2322。用量以本次接口返回为准。",
+    "reading": "君子为知己而死，提剑离开燕京。文字呈现决绝的赴义与出行，未明说具体人物、事件或结局。",
+    "omitted": [
+      "君子：暂未提供该人物、地点或抽象含义的绘画单元",
+      "知己：出现情况不确定，暂不补画",
+      "剑：该具体意象尚无可用形态；没有替换成通用树、花或鸟群",
+      "燕京：暂未提供该人物、地点或抽象含义的绘画单元"
+    ],
+    "drawn": [
+      "本句没有匹配到现有工具；当前仅有底色，请换一句或试试样句。"
+    ]
+  },
+  "network": [
+    {
+      "host": "127.0.0.1",
+      "path": "/",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/poem-flow/main.css",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/boid-adapter.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/sources.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/core.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/petals.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/cloud-outline.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/architecture.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/ink-brush.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/surface-marks.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/tools/tree.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/tools/flower.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/tools/water.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/tools/mist.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/tools/birds.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/tools/boat.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/tools/rain.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/tools/falling-petals.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/tools/moon.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/tools/rock.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/tools/pavilion.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/tools/grass.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/tools/bamboo.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/tools/willow.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/tools/snow.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/tools/leaves.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/tools/fish.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/tools/cloud.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/tools/catkins.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/tools/flower-forms.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/tools/wine.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/tools/building.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/tools/surface-weather.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/tools/plum-branch.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/tools/oriole.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/tools/orchid.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/tools/lotus.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/tools/horse.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/poem-flow/vendor/p5.min.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/poem-generation/scene.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/poem-generation/app.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/api/status",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/api/latest",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/favicon.ico",
+      "status": 204
+    },
+    {
+      "host": "sdk.jinrishici.com",
+      "path": "/v2/browser/jinrishici.js",
+      "status": 200
+    },
+    {
+      "host": "v2.jinrishici.com",
+      "path": "/one.json",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/api/analyze",
+      "status": 200
+    }
+  ],
+  "runtimeErrors": []
+}

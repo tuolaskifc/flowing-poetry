@@ -1,0 +1,317 @@
+{
+  "live": true,
+  "poetry": null,
+  "state": {
+    "status": "已生成画面。有 3 项尚未绘制，详见“保留的空缺”。",
+    "scene": {
+      "ready": true,
+      "paused": false,
+      "layers": [
+        {
+          "id": "willow",
+          "seed": 981621458,
+          "time": 0.1741000000059612,
+          "ticks": 5,
+          "paused": false,
+          "disposed": false,
+          "ready": true,
+          "options": {},
+          "sources": [
+            "project"
+          ],
+          "treeCount": 1,
+          "hangingBranchCount": 17,
+          "leafCount": 221,
+          "finite": true,
+          "geometryKey": "3dadb538"
+        },
+        {
+          "id": "rain",
+          "seed": 981621555,
+          "time": 0.17390000001788214,
+          "ticks": 5,
+          "paused": false,
+          "disposed": false,
+          "ready": true,
+          "options": {},
+          "sources": [
+            "project"
+          ],
+          "dropCount": 64,
+          "finite": true,
+          "geometryKey": "355d2631"
+        }
+      ],
+      "placements": [
+        {
+          "anchor": [
+            320,
+            340
+          ],
+          "at": [
+            0.23,
+            0.88
+          ],
+          "scale": 1
+        },
+        {
+          "anchor": [
+            320,
+            194
+          ],
+          "at": [
+            0.5,
+            0.5
+          ],
+          "scale": 1.55
+        }
+      ],
+      "settings": {
+        "wind": 0,
+        "density": 0.45,
+        "palette": "clear"
+      }
+    },
+    "poem": "渭城朝雨浥轻尘，客舍青青柳色新。",
+    "sceneTitle": "渭城朝雨浥轻尘，客舍青青柳色新。",
+    "usage": "记录 2026-10-19T08-50-20-460Z-ee8a5c8e；模型 DeepSeek-V4.1-Flash；本次记录 token 2385。用量以本次接口返回为准。",
+    "reading": "渭城清晨的雨润湿了轻尘，客舍旁柳色青翠如新。",
+    "omitted": [
+      "渭城：暂未提供该人物、地点或抽象含义的绘画单元",
+      "轻尘：该具体意象尚无可用形态；没有替换成通用树、花或鸟群",
+      "客舍：暂未提供该人物、地点或抽象含义的绘画单元"
+    ],
+    "drawn": [
+      "柳色 → 柳",
+      "朝雨 → 雨"
+    ]
+  },
+  "network": [
+    {
+      "host": "127.0.0.1",
+      "path": "/",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/poem-flow/main.css",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/boid-adapter.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/sources.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/core.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/petals.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/cloud-outline.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/architecture.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/surface-marks.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/ink-brush.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/tools/flower.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/tools/water.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/tools/tree.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/tools/mist.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/tools/birds.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/tools/boat.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/tools/rain.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/tools/moon.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/tools/rock.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/tools/falling-petals.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/tools/pavilion.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/tools/grass.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/tools/snow.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/tools/bamboo.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/tools/leaves.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/tools/willow.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/tools/cloud.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/tools/fish.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/tools/catkins.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/tools/wine.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/tools/flower-forms.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/tools/building.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/tools/plum-branch.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/tools/surface-weather.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/poem-flow/vendor/p5.min.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/tools/oriole.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/tools/orchid.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/tools/horse.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/poem-generation/scene.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/tools/lotus.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/poem-generation/app.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/api/status",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/api/latest",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/favicon.ico",
+      "status": 204
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/api/analyze",
+      "status": 200
+    }
+  ],
+  "runtimeErrors": []
+}

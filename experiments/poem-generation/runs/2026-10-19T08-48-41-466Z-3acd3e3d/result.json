@@ -1,0 +1,156 @@
+{
+  "id": "2026-10-19T08-48-41-466Z-3acd3e3d",
+  "fingerprint": "80e868cb980389b7dfe342cb66dfc71056b7b1de373f5ee35bc62be46052daac",
+  "poem": "君子死知己，提剑出燕京。",
+  "source": {
+    "provider": "今日诗词",
+    "author": "陶渊明",
+    "title": "咏荆轲",
+    "dynasty": "魏晋"
+  },
+  "mode": "imagery-only",
+  "model": "DeepSeek-V4.1-Flash",
+  "started_at": "2026-10-19T08:48:41.468Z",
+  "cached": false,
+  "http_status": 200,
+  "usage": {
+    "completion_tokens": 333,
+    "prompt_tokens": 1989,
+    "total_tokens": 2322,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 1920
+    }
+  },
+  "finish_reason": "stop",
+  "analysis": {
+    "schema_version": "3.0",
+    "poem": "君子死知己，提剑出燕京。",
+    "reading": "君子为知己而死，提剑离开燕京。文字呈现决绝的赴义与出行，未明说具体人物、事件或结局。",
+    "entities": [
+      {
+        "id": "i1",
+        "mentions": [
+          "君子"
+        ],
+        "concept": "有德义之人",
+        "kind": "person",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "君子死知己"
+        ]
+      },
+      {
+        "id": "i2",
+        "mentions": [
+          "知己"
+        ],
+        "concept": "理解并赏识自己的人",
+        "kind": "person",
+        "role": "scene",
+        "presence": "unclear",
+        "evidence": [
+          "君子死知己"
+        ]
+      },
+      {
+        "id": "i3",
+        "mentions": [
+          "剑"
+        ],
+        "concept": "剑",
+        "kind": "object",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "提剑出燕京"
+        ]
+      },
+      {
+        "id": "i4",
+        "mentions": [
+          "燕京"
+        ],
+        "concept": "燕京，地名",
+        "kind": "place",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "提剑出燕京"
+        ]
+      }
+    ],
+    "relations": [],
+    "atmosphere": {
+      "labels": [
+        "决绝",
+        "肃穆"
+      ],
+      "valence": "mixed",
+      "energy": "medium",
+      "tension": "medium",
+      "openness": "medium",
+      "evidence": [
+        "君子死知己",
+        "提剑出燕京"
+      ]
+    },
+    "time": {
+      "markers": [],
+      "note": null
+    },
+    "uncertainties": [
+      "“死知己”可解作为知己而死，也可解作死于知己之事，具体含义不明。",
+      "“出燕京”只表明离开，未说明去向与目的。"
+    ]
+  },
+  "validation": {
+    "valid": true,
+    "errors": [],
+    "warnings": [
+      "$.entities[1]: 场景主体的出现情况不清楚",
+      "模型保留了不确定性，需要审阅"
+    ],
+    "review_required": true
+  },
+  "plan": {
+    "version": "trial-4-orchid-horse-lotus",
+    "seed": 1468517475,
+    "settings": {
+      "wind": 0,
+      "density": 0.45,
+      "palette": "clear"
+    },
+    "layers": [],
+    "omitted": [
+      {
+        "id": "i1",
+        "name": "君子",
+        "reason": "暂未提供该人物、地点或抽象含义的绘画单元"
+      },
+      {
+        "id": "i2",
+        "name": "知己",
+        "reason": "出现情况不确定，暂不补画"
+      },
+      {
+        "id": "i3",
+        "name": "剑",
+        "reason": "该具体意象尚无可用形态；没有替换成通用树、花或鸟群"
+      },
+      {
+        "id": "i4",
+        "name": "燕京",
+        "reason": "暂未提供该人物、地点或抽象含义的绘画单元"
+      }
+    ],
+    "notes": [
+      "位置、大小、笔触、固定群体数量与默认微动是本地试画选择；不表示原句给出了这些数值。"
+    ],
+    "relations": []
+  },
+  "elapsed_seconds": 12.3
+}

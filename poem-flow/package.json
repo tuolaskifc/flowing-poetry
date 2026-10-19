@@ -1,10 +1,11 @@
 {
   "name": "flowing-poetry",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
-  "description": "A local p5.js study of one sentence and its moving imagery.",
+  "description": "Poem input and recommendations through DeepSeek to interactive local drawings.",
   "scripts": {
     "start": "node tools/serve.mjs",
-    "check": "node --check app.js && node --check scene.js && node --check tools/serve.mjs"
+    "check": "node --check tools/serve.mjs && node --check ../experiments/poem-generation/app.js && node --check ../experiments/poem-generation/scene.js && node --check ../experiments/poem-generation/server.mjs",
+    "test": "node --test ../experiments/poem-generation/flow.test.mjs ../experiments/poem-generation/server.test.mjs ../experiments/poem-semantics/contract-v3/validate.test.mjs"
   }
 }
