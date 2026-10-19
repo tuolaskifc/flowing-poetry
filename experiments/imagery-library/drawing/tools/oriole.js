@@ -34,31 +34,33 @@ window.PoemDrawing.register({
       stroke(v,width,color,opacity*.62,salt+.6);
     }
     function wing(flap,far=false){
-      p.push();p.rotate(flap);
-      if(far)wash([2,-8,15,-38,40,-65,65,-56],5.8,ctx.palette.ink,80,state.phase);
+      // Both wings sweep back from fixed shoulders. Rotate at the attachment,
+      // rather than swinging two long strokes around the body's center.
+      p.push();p.translate(far?8:1,far?-13:-8);p.rotate(flap);
+      if(far)wash([0,0,-3,-26,-23,-49,-44,-48],3.6,ctx.palette.ink,62,state.phase);
       else{
-        wash([-5,-4,-34,-20,-53,-73,-88,-62],10.2,ctx.palette.ink,153,state.phase+1);
-        stroke([-12,-9,-40,-32,-58,-67,-91,-63],1.05,ctx.palette.ink,105,state.phase+2,true);
+        wash([0,0,-16,-33,-46,-55,-81,-60],6.2,ctx.palette.ink,133,state.phase+1);
+        stroke([-1,-2,-19,-32,-49,-53,-82,-60],.65,ctx.palette.ink,70,state.phase+2,true);
       }
       p.pop();
     }
     function draw(){
       p.push();p.translate(W/2,200);p.scale(ctx.options.facing==='left'?-state.scale:state.scale,state.scale);p.rotate(state.gesture);
       const gold=ctx.settings.palette==='tender'?'#C4AB83':'#BDAE6B',ink=ctx.palette.ink;
-      const moving=ctx.options.pose==='spread'&&ctx.options.motion==='flap',flap=moving?Math.sin(ctx.time*4+state.phase)*.2:0;
+      const moving=ctx.options.pose==='spread'&&ctx.options.motion==='flap',flap=moving?Math.sin(ctx.time*4+state.phase)*.12:0;
       // Tail tapers into paper rather than ending in two outlined rectangles.
-      stroke([-24,9,-43,21,-64*state.tail,32,-83*state.tail,41],3.2,ink,140,state.phase,true);
-      stroke([-24,16,-45,27,-62*state.tail,39,-75*state.tail,44],1.25,ink,96,state.phase+1,true);
+      stroke([-26,4,-45,15,-66*state.tail,24,-86*state.tail,32],2.2,ink,115,state.phase,true);
+      stroke([-27,9,-46,20,-65*state.tail,30,-79*state.tail,35],.9,ink,75,state.phase+1,true);
       if(ctx.options.pose==='spread')wing(-flap*.6,true);
       // Head is implied by the rising end of the same wash, without a circle.
-      wash([-35,12,-16,-17,11,-24,33,-15],19,gold,119,state.phase);
-      wash([-22,14,1,27,25,10,33,-13],10,gold,55,state.phase+1);
-      wash([16,-14,27,-34,43,-36,45,-20],9,gold,112,state.phase+2);
+      wash([-35,7,-14,-4,17,-18,35,-16],11.5,gold,96,state.phase);
+      wash([-22,9,-3,13,20,1,34,-14],5.5,gold,32,state.phase+1);
+      wash([23,-17,32,-28,40,-29,44,-21],5.5,gold,86,state.phase+2);
       if(ctx.options.pose==='spread')wing(flap);
       else{
-        wash([4,-12,-8,-20,-27,-7,-34,7],7.5,ink,146,state.phase+2);
-        stroke([1,-12,-11,-12,-24,-1,-32,9],1.3,ink,118,state.phase+3,true);
-        if(ctx.settings.density>.65)stroke([-2,-13,-13,-10,-23,0,-31,6],.65,ink,58,state.phase+4,true);
+        wash([8,-10,-3,-13,-22,-2,-36,4],4.5,ink,128,state.phase+2);
+        stroke([5,-10,-7,-9,-24,0,-35,5],.9,ink,90,state.phase+3,true);
+        if(ctx.settings.density>.65)stroke([3,-10,-10,-8,-24,1,-34,4],.45,ink,45,state.phase+4,true);
       }
       stroke([43,-23,49,-24,54,-25,61,-25],1.1,ink,163,state.phase+3);
       p.pop();

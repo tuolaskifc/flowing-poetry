@@ -1,11 +1,11 @@
 {
   "tool": "oriole",
-  "baselineCommit": "ac9c929",
+  "baselineCommit": "c3c6164",
   "crop": {
-    "x": 119.43298969072166,
-    "y": 65,
-    "w": 371.1340206185567,
-    "h": 225
+    "x": 162.02061855670104,
+    "y": 95,
+    "w": 291.9587628865979,
+    "h": 177
   },
   "states": [
     {
@@ -29,8 +29,12 @@
       "pose": "spread",
       "facing": "right",
       "flapping": false,
+      "style": "suggested-ink",
+      "eyeDetailCount": 0,
+      "footDetailCount": 0,
+      "featherDetailCount": 0,
       "finite": true,
-      "geometryKey": "1706cc19"
+      "geometryKey": "bc95b7ab"
     },
     {
       "id": "oriole",

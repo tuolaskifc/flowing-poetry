@@ -5,7 +5,7 @@
     {
       "id": "flower",
       "seed": 42,
-      "time": 0.037,
+      "time": 0.03589999998807906,
       "ticks": 1,
       "paused": false,
       "disposed": false,
@@ -22,7 +22,7 @@
     {
       "id": "tree",
       "seed": 139,
-      "time": 0.03479999998211861,
+      "time": 0.03359999997615813,
       "ticks": 1,
       "paused": false,
       "disposed": false,
@@ -38,7 +38,7 @@
     {
       "id": "water",
       "seed": 236,
-      "time": 0.0335,
+      "time": 0.03229999999403953,
       "ticks": 1,
       "paused": false,
       "disposed": false,
@@ -54,7 +54,7 @@
     {
       "id": "mist",
       "seed": 333,
-      "time": 0.032099999994039535,
+      "time": 0.03089999998807906,
       "ticks": 1,
       "paused": false,
       "disposed": false,
@@ -69,7 +69,7 @@
     {
       "id": "birds",
       "seed": 430,
-      "time": 0.030299999982118606,
+      "time": 0.029299999994039524,
       "ticks": 1,
       "paused": false,
       "disposed": false,
@@ -86,8 +86,8 @@
     {
       "id": "boat",
       "seed": 527,
-      "time": 0.028900000005960463,
-      "ticks": 1,
+      "time": 0,
+      "ticks": 0,
       "paused": false,
       "disposed": false,
       "ready": true,
@@ -498,7 +498,7 @@
     {
       "id": "flower",
       "seed": 42,
-      "time": 0.0703,
+      "time": 0.06929999998807906,
       "ticks": 3,
       "paused": true,
       "disposed": false,
@@ -515,7 +515,7 @@
     {
       "id": "tree",
       "seed": 139,
-      "time": 0.06809999998211862,
+      "time": 0.06699999997615813,
       "ticks": 3,
       "paused": true,
       "disposed": false,
@@ -531,7 +531,7 @@
     {
       "id": "water",
       "seed": 236,
-      "time": 0.06680000000000001,
+      "time": 0.06569999999403953,
       "ticks": 3,
       "paused": true,
       "disposed": false,
@@ -547,7 +547,7 @@
     {
       "id": "mist",
       "seed": 333,
-      "time": 0.06539999999403955,
+      "time": 0.06429999998807906,
       "ticks": 3,
       "paused": true,
       "disposed": false,
@@ -562,7 +562,7 @@
     {
       "id": "birds",
       "seed": 430,
-      "time": 0.06359999998211861,
+      "time": 0.06269999999403952,
       "ticks": 3,
       "paused": true,
       "disposed": false,
@@ -579,8 +579,8 @@
     {
       "id": "boat",
       "seed": 527,
-      "time": 0.062200000005960474,
-      "ticks": 3,
+      "time": 0.06149999997615813,
+      "ticks": 2,
       "paused": true,
       "disposed": false,
       "ready": true,
@@ -597,7 +597,7 @@
     {
       "id": "moon",
       "seed": 624,
-      "time": 0.06099999998807908,
+      "time": 0.06019999999403953,
       "ticks": 2,
       "paused": true,
       "disposed": false,
@@ -619,7 +619,7 @@
     {
       "id": "rain",
       "seed": 721,
-      "time": 0.05970000000596048,
+      "time": 0.0588999999821186,
       "ticks": 2,
       "paused": true,
       "disposed": false,
@@ -635,7 +635,7 @@
     {
       "id": "falling-petals",
       "seed": 818,
-      "time": 0.05830000000000001,
+      "time": 0.05759999999999999,
       "ticks": 2,
       "paused": true,
       "disposed": false,
@@ -649,14 +649,14 @@
       ],
       "petalCount": 18,
       "landedCount": 0,
-      "poseKey": "f66239fe",
+      "poseKey": "cf70c79c",
       "finite": true,
       "geometryKey": "325a67bb"
     },
     {
       "id": "rock",
       "seed": 915,
-      "time": 0.05509999998211862,
+      "time": 0.05399999997615813,
       "ticks": 2,
       "paused": true,
       "disposed": false,
@@ -676,7 +676,7 @@
     {
       "id": "pavilion",
       "seed": 1012,
-      "time": 0.05389999999403955,
+      "time": 0.05269999999403953,
       "ticks": 2,
       "paused": true,
       "disposed": false,
@@ -699,7 +699,7 @@
     {
       "id": "grass",
       "seed": 1109,
-      "time": 0.05249999998807908,
+      "time": 0.05149999997615814,
       "ticks": 2,
       "paused": true,
       "disposed": false,
@@ -721,7 +721,7 @@
     {
       "id": "bamboo",
       "seed": 1206,
-      "time": 0.05130000000000001,
+      "time": 0.050199999994039526,
       "ticks": 2,
       "paused": true,
       "disposed": false,
@@ -739,7 +739,7 @@
     {
       "id": "willow",
       "seed": 1303,
-      "time": 0.04980000000000001,
+      "time": 0.04879999998807907,
       "ticks": 2,
       "paused": true,
       "disposed": false,
@@ -757,7 +757,7 @@
     {
       "id": "snow",
       "seed": 1400,
-      "time": 0.04859999998211862,
+      "time": 0.047599999999999996,
       "ticks": 2,
       "paused": true,
       "disposed": false,
@@ -776,7 +776,7 @@
     {
       "id": "leaves",
       "seed": 1497,
-      "time": 0.04730000000000001,
+      "time": 0.046299999988079064,
       "ticks": 2,
       "paused": true,
       "disposed": false,
@@ -795,7 +795,7 @@
     {
       "id": "fish",
       "seed": 1594,
-      "time": 0.04589999999403955,
+      "time": 0.045099999999999994,
       "ticks": 2,
       "paused": true,
       "disposed": false,
@@ -814,7 +814,7 @@
     {
       "id": "cloud",
       "seed": 1691,
-      "time": 0.04330000000000001,
+      "time": 0.04249999997615814,
       "ticks": 2,
       "paused": true,
       "disposed": false,
@@ -831,7 +831,7 @@
     {
       "id": "catkins",
       "seed": 1788,
-      "time": 0.041899999994039545,
+      "time": 0.0411,
       "ticks": 2,
       "paused": true,
       "disposed": false,
@@ -843,14 +843,14 @@
         "project"
       ],
       "tuftCount": 18,
-      "poseKey": "b3565c86",
+      "poseKey": "42ca5103",
       "finite": true,
       "geometryKey": "c1f20938"
     },
     {
       "id": "flower-forms",
       "seed": 1885,
-      "time": 0.040700000005960475,
+      "time": 0.0398999999821186,
       "ticks": 2,
       "paused": true,
       "disposed": false,
@@ -870,7 +870,7 @@
     {
       "id": "wine",
       "seed": 1982,
-      "time": 0.03939999999403955,
+      "time": 0.03869999999403953,
       "ticks": 2,
       "paused": true,
       "disposed": false,
@@ -891,7 +891,7 @@
     {
       "id": "building",
       "seed": 2079,
-      "time": 0.03809999998211862,
+      "time": 0.0373999999821186,
       "ticks": 2,
       "paused": true,
       "disposed": false,
@@ -916,7 +916,7 @@
     {
       "id": "plum-branch",
       "seed": 2176,
-      "time": 0.03680000000000001,
+      "time": 0.03599999997615814,
       "ticks": 2,
       "paused": true,
       "disposed": false,
@@ -937,7 +937,7 @@
     {
       "id": "surface-weather",
       "seed": 2273,
-      "time": 0.03549999998807908,
+      "time": 0.03479999998807907,
       "ticks": 2,
       "paused": true,
       "disposed": false,
@@ -961,7 +961,7 @@
     {
       "id": "oriole",
       "seed": 2370,
-      "time": 0.03430000000000001,
+      "time": 0.03359999999999999,
       "ticks": 2,
       "paused": true,
       "disposed": false,
@@ -991,7 +991,7 @@
     {
       "id": "flower",
       "seed": 42,
-      "time": 0.0703,
+      "time": 0.06929999998807906,
       "ticks": 3,
       "paused": true,
       "disposed": false,
@@ -1008,7 +1008,7 @@
     {
       "id": "tree",
       "seed": 139,
-      "time": 0.06809999998211862,
+      "time": 0.06699999997615813,
       "ticks": 3,
       "paused": true,
       "disposed": false,
@@ -1024,7 +1024,7 @@
     {
       "id": "water",
       "seed": 236,
-      "time": 0.06680000000000001,
+      "time": 0.06569999999403953,
       "ticks": 3,
       "paused": true,
       "disposed": false,
@@ -1040,7 +1040,7 @@
     {
       "id": "mist",
       "seed": 333,
-      "time": 0.06539999999403955,
+      "time": 0.06429999998807906,
       "ticks": 3,
       "paused": true,
       "disposed": false,
@@ -1055,7 +1055,7 @@
     {
       "id": "birds",
       "seed": 430,
-      "time": 0.06359999998211861,
+      "time": 0.06269999999403952,
       "ticks": 3,
       "paused": true,
       "disposed": false,
@@ -1072,8 +1072,8 @@
     {
       "id": "boat",
       "seed": 527,
-      "time": 0.062200000005960474,
-      "ticks": 3,
+      "time": 0.06149999997615813,
+      "ticks": 2,
       "paused": true,
       "disposed": false,
       "ready": true,
@@ -1090,7 +1090,7 @@
     {
       "id": "moon",
       "seed": 624,
-      "time": 0.06099999998807908,
+      "time": 0.06019999999403953,
       "ticks": 2,
       "paused": true,
       "disposed": false,
@@ -1112,7 +1112,7 @@
     {
       "id": "rain",
       "seed": 721,
-      "time": 0.05970000000596048,
+      "time": 0.0588999999821186,
       "ticks": 2,
       "paused": true,
       "disposed": false,
@@ -1128,7 +1128,7 @@
     {
       "id": "falling-petals",
       "seed": 818,
-      "time": 0.05830000000000001,
+      "time": 0.05759999999999999,
       "ticks": 2,
       "paused": true,
       "disposed": false,
@@ -1142,14 +1142,14 @@
       ],
       "petalCount": 18,
       "landedCount": 0,
-      "poseKey": "f66239fe",
+      "poseKey": "cf70c79c",
       "finite": true,
       "geometryKey": "325a67bb"
     },
     {
       "id": "rock",
       "seed": 915,
-      "time": 0.05509999998211862,
+      "time": 0.05399999997615813,
       "ticks": 2,
       "paused": true,
       "disposed": false,
@@ -1169,7 +1169,7 @@
     {
       "id": "pavilion",
       "seed": 1012,
-      "time": 0.05389999999403955,
+      "time": 0.05269999999403953,
       "ticks": 2,
       "paused": true,
       "disposed": false,
@@ -1192,7 +1192,7 @@
     {
       "id": "grass",
       "seed": 1109,
-      "time": 0.05249999998807908,
+      "time": 0.05149999997615814,
       "ticks": 2,
       "paused": true,
       "disposed": false,
@@ -1214,7 +1214,7 @@
     {
       "id": "bamboo",
       "seed": 1206,
-      "time": 0.05130000000000001,
+      "time": 0.050199999994039526,
       "ticks": 2,
       "paused": true,
       "disposed": false,
@@ -1232,7 +1232,7 @@
     {
       "id": "willow",
       "seed": 1303,
-      "time": 0.04980000000000001,
+      "time": 0.04879999998807907,
       "ticks": 2,
       "paused": true,
       "disposed": false,
@@ -1250,7 +1250,7 @@
     {
       "id": "snow",
       "seed": 1400,
-      "time": 0.04859999998211862,
+      "time": 0.047599999999999996,
       "ticks": 2,
       "paused": true,
       "disposed": false,
@@ -1269,7 +1269,7 @@
     {
       "id": "leaves",
       "seed": 1497,
-      "time": 0.04730000000000001,
+      "time": 0.046299999988079064,
       "ticks": 2,
       "paused": true,
       "disposed": false,
@@ -1288,7 +1288,7 @@
     {
       "id": "fish",
       "seed": 1594,
-      "time": 0.04589999999403955,
+      "time": 0.045099999999999994,
       "ticks": 2,
       "paused": true,
       "disposed": false,
@@ -1307,7 +1307,7 @@
     {
       "id": "cloud",
       "seed": 1691,
-      "time": 0.04330000000000001,
+      "time": 0.04249999997615814,
       "ticks": 2,
       "paused": true,
       "disposed": false,
@@ -1324,7 +1324,7 @@
     {
       "id": "catkins",
       "seed": 1788,
-      "time": 0.041899999994039545,
+      "time": 0.0411,
       "ticks": 2,
       "paused": true,
       "disposed": false,
@@ -1336,14 +1336,14 @@
         "project"
       ],
       "tuftCount": 18,
-      "poseKey": "b3565c86",
+      "poseKey": "42ca5103",
       "finite": true,
       "geometryKey": "c1f20938"
     },
     {
       "id": "flower-forms",
       "seed": 1885,
-      "time": 0.040700000005960475,
+      "time": 0.0398999999821186,
       "ticks": 2,
       "paused": true,
       "disposed": false,
@@ -1363,7 +1363,7 @@
     {
       "id": "wine",
       "seed": 1982,
-      "time": 0.03939999999403955,
+      "time": 0.03869999999403953,
       "ticks": 2,
       "paused": true,
       "disposed": false,
@@ -1384,7 +1384,7 @@
     {
       "id": "building",
       "seed": 2079,
-      "time": 0.03809999998211862,
+      "time": 0.0373999999821186,
       "ticks": 2,
       "paused": true,
       "disposed": false,
@@ -1409,7 +1409,7 @@
     {
       "id": "plum-branch",
       "seed": 2176,
-      "time": 0.03680000000000001,
+      "time": 0.03599999997615814,
       "ticks": 2,
       "paused": true,
       "disposed": false,
@@ -1430,7 +1430,7 @@
     {
       "id": "surface-weather",
       "seed": 2273,
-      "time": 0.03549999998807908,
+      "time": 0.03479999998807907,
       "ticks": 2,
       "paused": true,
       "disposed": false,
@@ -1454,7 +1454,7 @@
     {
       "id": "oriole",
       "seed": 2370,
-      "time": 0.03430000000000001,
+      "time": 0.03359999999999999,
       "ticks": 2,
       "paused": true,
       "disposed": false,

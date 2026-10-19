@@ -150,7 +150,7 @@
     "莺": {
       "stage": "basic",
       "tools": ["oriole"],
-      "available": "单只淡墨莺意：头身融为浅黄墨面，几笔提示翼、尾与喙，不刻画眼、足或逐根羽毛；收翅、展翅、朝向与微动可选。",
+      "available": "单只淡墨莺意：收长的浅黄墨面、后掠细翼与几笔尾喙；不刻画眼、足或逐根羽毛，收翅、展翅、朝向与肩部微动可选。",
       "remaining": "待审美与形态辨识确认；不是全部古诗莺的物种鉴定。尚无鸟鸣、群体数量、栖枝或跨物体作用。",
       "needs_context": false,
       "presets": {"oriole": {"pose": "folded", "motion": "still"}}
