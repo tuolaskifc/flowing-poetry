@@ -101,7 +101,7 @@ export function buildPlan(analysis){
     if(rule.tool==='wine'&&options.form!=='liquid')notes.push(`${name}按明确提到的容器绘制风格化轮廓，不作历史器型复原。`);
     if(rule.tool==='building')notes.push(`${name}采用二层楼体试画，层数与门窗排列是本地选择；不等同于具体历史建筑，也未实现人物登楼。`);
     if(rule.tool==='surface-weather')notes.push(`${name}只显示露珠或霜层的局部笔触，不自动补草叶、枝条或地面；具体载体附着尚未从诗句自动匹配。`);
-    if(rule.tool==='oriole')notes.push(`${name}使用单只黄身深翼的莺形写意试作，不是对原诗鸟种的鉴定；数量、位置与默认朝向是本地选择，不添加栖枝或同伴。`);
+    if(rule.tool==='oriole')notes.push(`${name}使用单只淡墨莺意，浅黄墨面与几笔深翼、尾喙提示姿态，不刻画眼、足和细羽；数量、位置与默认朝向是本地选择，不添加栖枝或同伴。`);
   }
   layers.sort((a,b)=>order.indexOf(a.tool)-order.indexOf(b.tool));
   if(!analysis.relations.length&&/不|未|无|若|倘|如果/.test(analysis.poem)){

@@ -1,0 +1,70 @@
+{
+  "tool": "oriole",
+  "baselineCommit": "ac9c929",
+  "crop": {
+    "x": 119.43298969072166,
+    "y": 65,
+    "w": 371.1340206185567,
+    "h": 225
+  },
+  "states": [
+    {
+      "id": "oriole-before",
+      "seed": 777,
+      "time": 0,
+      "ticks": 4,
+      "paused": true,
+      "disposed": false,
+      "ready": true,
+      "options": {
+        "pose": "spread",
+        "facing": "right",
+        "motion": "still"
+      },
+      "sources": [
+        "project"
+      ],
+      "birdCount": 1,
+      "perchCount": 0,
+      "pose": "spread",
+      "facing": "right",
+      "flapping": false,
+      "finite": true,
+      "geometryKey": "1706cc19"
+    },
+    {
+      "id": "oriole",
+      "seed": 777,
+      "time": 0,
+      "ticks": 4,
+      "paused": true,
+      "disposed": false,
+      "ready": true,
+      "options": {
+        "pose": "spread",
+        "facing": "right",
+        "motion": "still"
+      },
+      "sources": [
+        "project"
+      ],
+      "birdCount": 1,
+      "perchCount": 0,
+      "pose": "spread",
+      "facing": "right",
+      "flapping": false,
+      "style": "suggested-ink",
+      "eyeDetailCount": 0,
+      "footDetailCount": 0,
+      "featherDetailCount": 0,
+      "finite": true,
+      "geometryKey": "bc95b7ab"
+    }
+  ],
+  "labels": [
+    "收翅",
+    "展翅"
+  ],
+  "modelCalls": 0,
+  "runtimeErrors": []
+}

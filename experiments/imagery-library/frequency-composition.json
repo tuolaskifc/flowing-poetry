@@ -140,8 +140,8 @@
       {
         "id": "building",
         "seed": 3781237684,
-        "time": 0.1446999999940381,
-        "ticks": 4,
+        "time": 0.13019999998212006,
+        "ticks": 5,
         "paused": true,
         "disposed": false,
         "ready": true,
@@ -165,8 +165,8 @@
       {
         "id": "plum-branch",
         "seed": 3781237781,
-        "time": 0.1446999999940381,
-        "ticks": 4,
+        "time": 0.12990000000000146,
+        "ticks": 5,
         "paused": true,
         "disposed": false,
         "ready": true,
@@ -186,8 +186,8 @@
       {
         "id": "wine",
         "seed": 3781237878,
-        "time": 0.1446999999940381,
-        "ticks": 4,
+        "time": 0.12980000000596192,
+        "ticks": 5,
         "paused": true,
         "disposed": false,
         "ready": true,
