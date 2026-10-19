@@ -1,0 +1,214 @@
+{
+  "source": "project-authored offline fixture; not model output",
+  "modelCalls": 0,
+  "fixture": {
+    "poem": "本地手工组合：梅枝、楼、酒杯",
+    "relations": [],
+    "entities": [
+      {
+        "id": "i1",
+        "mentions": [
+          "梅枝"
+        ],
+        "concept": "梅枝",
+        "kind": "organism",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "梅枝"
+        ]
+      },
+      {
+        "id": "i2",
+        "mentions": [
+          "楼"
+        ],
+        "concept": "楼",
+        "kind": "object",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "楼"
+        ]
+      },
+      {
+        "id": "i3",
+        "mentions": [
+          "酒杯"
+        ],
+        "concept": "酒杯",
+        "kind": "object",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "酒杯"
+        ]
+      }
+    ]
+  },
+  "plan": {
+    "version": "trial-2-frequency",
+    "seed": 3781237684,
+    "settings": {
+      "wind": 0,
+      "density": 0.45,
+      "palette": "clear"
+    },
+    "layers": [
+      {
+        "tool": "building",
+        "entities": [
+          "i2"
+        ],
+        "names": [
+          "楼"
+        ],
+        "options": {},
+        "animate": true,
+        "placement": {
+          "anchor": [
+            320,
+            320
+          ],
+          "at": [
+            0.76,
+            0.79
+          ],
+          "scale": 0.9
+        }
+      },
+      {
+        "tool": "plum-branch",
+        "entities": [
+          "i1"
+        ],
+        "names": [
+          "梅枝"
+        ],
+        "options": {},
+        "animate": true,
+        "placement": {
+          "anchor": [
+            120,
+            302
+          ],
+          "at": [
+            0.12,
+            0.87
+          ],
+          "scale": 1
+        }
+      },
+      {
+        "tool": "wine",
+        "entities": [
+          "i3"
+        ],
+        "names": [
+          "酒杯"
+        ],
+        "options": {
+          "form": "cup"
+        },
+        "animate": true,
+        "placement": {
+          "anchor": [
+            320,
+            244
+          ],
+          "at": [
+            0.57,
+            0.87
+          ],
+          "scale": 0.75
+        }
+      }
+    ],
+    "omitted": [],
+    "notes": [
+      "梅枝采用带花与花苞的梅枝试画；枝形和花朵数量是本地选择，未实现整树或离枝落花。",
+      "楼采用二层楼体试画，层数与门窗排列是本地选择；不等同于具体历史建筑，也未实现人物登楼。",
+      "酒杯按明确提到的容器绘制风格化轮廓，不作历史器型复原。",
+      "位置、大小、笔触、固定群体数量与默认微动是本地试画选择；不表示原句给出了这些数值。"
+    ],
+    "relations": []
+  },
+  "state": {
+    "ready": true,
+    "paused": true,
+    "layers": [
+      {
+        "id": "building",
+        "seed": 3781237684,
+        "time": 0.13330000001787995,
+        "ticks": 4,
+        "paused": true,
+        "disposed": false,
+        "ready": true,
+        "options": {
+          "levels": "two",
+          "windows": "lattice"
+        },
+        "sources": [
+          "shan-pavilion",
+          "project"
+        ],
+        "buildingCount": 1,
+        "levelCount": 2,
+        "windowCount": 5,
+        "doorCount": 1,
+        "personCount": 0,
+        "finite": true,
+        "geometryKey": "10a66bcb"
+      },
+      {
+        "id": "plum-branch",
+        "seed": 3781237781,
+        "time": 0.13330000001787995,
+        "ticks": 4,
+        "paused": true,
+        "disposed": false,
+        "ready": true,
+        "options": {
+          "form": "branch"
+        },
+        "sources": [
+          "project"
+        ],
+        "branchCount": 4,
+        "flowerCount": 9,
+        "budCount": 4,
+        "form": "branch",
+        "finite": true,
+        "geometryKey": "8cfdcd9d"
+      },
+      {
+        "id": "wine",
+        "seed": 3781237878,
+        "time": 0.13320000002384041,
+        "ticks": 4,
+        "paused": true,
+        "disposed": false,
+        "ready": true,
+        "options": {
+          "form": "cup"
+        },
+        "sources": [
+          "project"
+        ],
+        "form": "cup",
+        "liquidStudy": false,
+        "vesselCount": 1,
+        "personCount": 0,
+        "finite": true,
+        "geometryKey": "770cb7d8"
+      }
+    ],
+    "settings": {
+      "wind": 0,
+      "density": 0.45,
+      "palette": "clear"
+    }
+  },
+  "transparentLayers": 3
+}

@@ -2,11 +2,11 @@
 window.PoemProgress = {
   "summary": {
     "total": 60,
-    "tools": 20,
+    "tools": 23,
     "stages": {
       "basic": {
         "label": "基础可画",
-        "count": 15
+        "count": 17
       },
       "partial": {
         "label": "部分支持",
@@ -14,7 +14,7 @@ window.PoemProgress = {
       },
       "todo": {
         "label": "待制作",
-        "count": 27
+        "count": 25
       },
       "handoff": {
         "label": "转交其他模块",
@@ -145,12 +145,19 @@ window.PoemProgress = {
       "note": "酒液、酒器、饮酒活动均可能；不自动补出酒杯或饮酒者。",
       "status": "语义映射仍是设计候选，未接入正式诗句生成流程",
       "progress": {
-        "stage": "todo",
-        "tools": [],
-        "available": "尚无该条目的专用形态试画。",
-        "remaining": "酒液、酒器、饮酒活动均可能；不自动补出酒杯或饮酒者。",
+        "stage": "partial",
+        "tools": [
+          "wine"
+        ],
+        "available": "酒液局部抽象试画，另可显式选择杯中酒或酒壶；不自动添人物。",
+        "remaining": "酒液、器物与饮酒活动需按语境区分；仅写酒时不补杯。未实现倾倒、饮用与历史器型。",
         "needs_context": true,
-        "label": "待制作"
+        "presets": {
+          "wine": {
+            "form": "liquid"
+          }
+        },
+        "label": "部分支持"
       }
     },
     {
@@ -164,12 +171,14 @@ window.PoemProgress = {
       "note": "楼体轮廓，和长亭共享建筑方法但保持层高与结构差异。",
       "status": "语义映射仍是设计候选，未接入正式诗句生成流程",
       "progress": {
-        "stage": "todo",
-        "tools": [],
-        "available": "尚无该条目的专用形态试画。",
-        "remaining": "楼体轮廓，和长亭共享建筑方法但保持层高与结构差异。",
+        "stage": "basic",
+        "tools": [
+          "building"
+        ],
+        "available": "独立二层／三层楼体，带门窗、折檐和栏杆，不添加人物。",
+        "remaining": "待审美确认；不是具体历史建筑，楼内活动、视点与登楼关系未实现。",
         "needs_context": false,
-        "label": "待制作"
+        "label": "基础可画"
       }
     },
     {
@@ -184,19 +193,23 @@ window.PoemProgress = {
       "note": "先判断花、枝或整株；可复用枝条与花瓣，仍需梅的辨识特征。",
       "status": "语义映射仍是设计候选，未接入正式诗句生成流程",
       "progress": {
-        "stage": "partial",
+        "stage": "basic",
         "tools": [
+          "plum-branch",
           "flower-forms"
         ],
-        "available": "圆瓣五出花冠示意，和多瓣花形区分。",
-        "remaining": "尚未做植物学辨识验收；枝叶、整株和具体品种仍缺。",
+        "available": "带九朵五瓣花和四个花苞的曲枝；横枝、短枝可选，保留单独花冠对照。",
+        "remaining": "待审美与形态辨识确认；尚无整树、具体品种、开花过程与离枝落花。",
         "needs_context": false,
         "presets": {
+          "plum-branch": {
+            "form": "branch"
+          },
           "flower-forms": {
             "kind": "plum"
           }
         },
-        "label": "部分支持"
+        "label": "基础可画"
       }
     },
     {
@@ -1811,6 +1824,131 @@ window.PoemProgress = {
         "anchors",
         "fixed-count"
       ]
+    },
+    {
+      "id": "wine",
+      "name": "酒液与酒器",
+      "subtitle": "酒液先有自己的形状，器物另作选择。",
+      "credit": "本项目试作 · 酒液局部与杯壶轮廓",
+      "sources": [
+        "project"
+      ],
+      "reference": "drawing/README.md#酒液与酒器",
+      "note": "默认只看酒液局部的抽象示意；杯、壶需明确选择。不自动添人物、桌面或饮酒动作，器型不作历史复原。",
+      "controls": [
+        {
+          "id": "form",
+          "label": "呈现",
+          "default": "liquid",
+          "choices": [
+            {
+              "value": "liquid",
+              "label": "酒液局部"
+            },
+            {
+              "value": "cup",
+              "label": "杯中酒"
+            },
+            {
+              "value": "jar",
+              "label": "酒壶"
+            }
+          ]
+        }
+      ],
+      "capabilities": [
+        "shape-selection",
+        "density-detail",
+        "anchors",
+        "fixed-count",
+        "wind-response"
+      ]
+    },
+    {
+      "id": "building",
+      "name": "楼",
+      "subtitle": "层层檐下，有窗，也有留白。",
+      "credit": "折檐沿用 Lingdong Huang / Shan, Shui · MIT；楼层、门窗与栏杆为本项目编写",
+      "sources": [
+        "shan-pavilion",
+        "project"
+      ],
+      "reference": "drawing/README.md#楼与共用屋顶",
+      "note": "独立的二层／三层楼体，门窗与栏杆可见；不自动添人，不代表某座历史建筑或地名。",
+      "controls": [
+        {
+          "id": "levels",
+          "label": "层数",
+          "default": "two",
+          "choices": [
+            {
+              "value": "two",
+              "label": "二层"
+            },
+            {
+              "value": "three",
+              "label": "三层"
+            }
+          ]
+        },
+        {
+          "id": "windows",
+          "label": "窗格",
+          "default": "lattice",
+          "choices": [
+            {
+              "value": "lattice",
+              "label": "格窗"
+            },
+            {
+              "value": "open",
+              "label": "留空"
+            }
+          ]
+        }
+      ],
+      "capabilities": [
+        "static",
+        "shape-selection",
+        "density-detail",
+        "anchors",
+        "fixed-count"
+      ]
+    },
+    {
+      "id": "plum-branch",
+      "name": "梅枝",
+      "subtitle": "花有着落，枝上也留着未开的苞。",
+      "credit": "本项目试作 · 曲枝、五瓣花与花苞组合",
+      "sources": [
+        "project"
+      ],
+      "reference": "drawing/README.md#梅枝",
+      "note": "风格化梅枝，横枝／短枝可选，花与花苞附在枝上；尚无整树、具体品种或离枝落花，辨识待审阅。",
+      "controls": [
+        {
+          "id": "form",
+          "label": "枝形",
+          "default": "branch",
+          "choices": [
+            {
+              "value": "branch",
+              "label": "横枝"
+            },
+            {
+              "value": "sprig",
+              "label": "短枝"
+            }
+          ]
+        }
+      ],
+      "capabilities": [
+        "wind-response",
+        "shape-selection",
+        "density-detail",
+        "anchors",
+        "fixed-count"
+      ]
     }
   ],
   "sources": {
@@ -1907,7 +2045,7 @@ window.PoemProgress = {
         "code-research/shan-index.html"
       ],
       "licenseFile": "code-research/shan-LICENSE.txt",
-      "note": "取 Arch 内 hut 的幂函数屋顶展开、roof 的屋脊/檐角控制点，以及 rail 的菱形平面；重写柱、栏、屋顶纹理与 Canvas 绘制，不复制 arch01 自动人物。"
+      "note": "取 Arch 内 hut 的幂函数屋顶展开、roof 的屋脊/檐角控制点，以及 rail 的菱形平面；折檐几何提取为 architecture.js，供亭与楼共用。重写柱、栏、屋顶纹理与 Canvas 绘制，不复制 arch01 自动人物；楼层与门窗为本项目编写。"
     },
     "shan-boat": {
       "id": "shan-boat",

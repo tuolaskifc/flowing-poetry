@@ -32,6 +32,28 @@ test('an explicit stone surface can use a rock tool without replacing named plac
   const plan=buildPlan(fixture('石上望长安',[entity('i1','石上',{kind:'place'}),entity('i2','长安',{kind:'place'})]));
   assert.deepEqual(plan.layers.map(l=>l.tool),['rock']);assert.equal(plan.omitted[0].name,'长安');
 });
+
+test('wine keeps an unspecified vessel absent and explicit cups use only the cup option',()=>{
+  const plain=buildPlan(fixture('浊酒',[entity('i1','浊酒',{kind:'object'})]));
+  assert.deepEqual(plain.layers.map(l=>[l.tool,l.options.form]),[['wine','liquid']]);
+  assert(plain.notes.some(n=>n.includes('不补杯')));
+  const cup=buildPlan(fixture('酒杯',[entity('i1','酒杯',{kind:'object'})]));
+  assert.equal(cup.layers[0].options.form,'cup');
+  const activity=buildPlan(fixture('饮酒',[entity('i1','饮酒',{kind:'object'})]));
+  assert.equal(activity.layers.length,0);
+  const overNormalized=buildPlan(fixture('酒',[entity('i1','酒',{kind:'object',concept:'杯中酒'})]));
+  assert.equal(overNormalized.layers[0].options.form,'liquid');
+  const activityAsCup=buildPlan(fixture('饮酒',[entity('i1','饮酒',{kind:'object',concept:'酒杯'})]));
+  assert.equal(activityAsCup.layers.length,0);
+});
+
+test('building and flowering plum use their own units without turning place names or plum fruit into objects',()=>{
+  const plan=buildPlan(fixture('楼前有梅枝',[entity('i1','楼前',{kind:'place'}),entity('i2','梅枝',{kind:'organism'}),entity('i3','金陵',{kind:'place'}),entity('i4','梅子',{kind:'organism'})]));
+  assert.deepEqual(plan.layers.map(l=>l.tool),['building','plum-branch']);
+  assert.deepEqual(plan.omitted.map(e=>e.name),['金陵','梅子']);
+  const rain=buildPlan(fixture('梅雨',[entity('i1','梅雨')]));
+  assert.deepEqual(rain.layers.map(l=>l.tool),['rain']);
+});
 test('credentials stay in request headers, successful replay uses no new call, failed JSON stays unrendered',async()=>{
   const dir=await mkdtemp(join(tmpdir(),'poem-flow-test-')),path=join(dir,'config.txt'),key='dummy-private-test-value';
   await writeFile(path,'https://example.invalid/v1\n'+key+'\ntest-model\n');let calls=0;

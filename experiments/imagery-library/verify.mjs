@@ -4,6 +4,7 @@ import { spawn } from 'node:child_process';
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
+import {buildPlan} from '../poem-generation/planner.mjs';
 const dir=dirname(fileURLToPath(import.meta.url));
 const expected=JSON.parse(await readFile(resolve(dir,'drawing/tool-manifest.json'),'utf8')).tools.map(t=>t.id);
 const qa=resolve(dir,'.qa');await mkdir(qa,{recursive:true});
@@ -102,7 +103,7 @@ try {
     const snapshot=id=>document.querySelector('#'+id+' canvas').toDataURL();
     const choose=async(id,value)=>{const s=document.getElementById(id);s.value=value;s.dispatchEvent(new Event('change'));await new Promise(r=>setTimeout(r,40));};
     const unique={};
-    for(const id of ['grass','snow','leaves','fish','flower-forms']){
+    for(const id of ['grass','snow','leaves','fish','flower-forms','wine','building','plum-branch']){
       const d=window.PoemDrawing.definitions().find(d=>d.id===id),field=d.controls[0],images=[];
       for(const choice of field.choices){await choose(id+'-'+field.id,choice.value);images.push(snapshot(id));}
       unique[id]=new Set(images).size===field.choices.length;await choose(id+'-'+field.id,field.default);
@@ -115,7 +116,23 @@ try {
     const counts=find('grass').bladeCount===54&&find('bamboo').culmCount===3&&find('willow').treeCount===1&&find('fish').fishCount===1&&find('leaves').leafCount===5&&find('catkins').tuftCount===18;
     return {...unique,attachedDew:dew.dewCount===54,attachedFrost:frost.frostBladeCount===54,snowStatic,counts};
   })()`);
-  if(Object.values(newFeatures).some(v=>v!==true))throw new Error('New tool options failed: '+JSON.stringify(newFeatures));
+  if(Object.values(newFeatures).some(v=>v!==true))throw new Error('New tool options failed: '+JSON.stringify({newFeatures,errors}));
+  const frequencyFeatures=await evaluate(`(async()=>{
+    const snapshot=id=>document.querySelector('#'+id+' canvas').toDataURL();
+    const choose=async(id,value)=>{const s=document.getElementById(id);s.value=value;s.dispatchEvent(new Event('change'));await new Promise(r=>setTimeout(r,50));};
+    const find=id=>window.imageryExperiment.inspect().find(t=>t.id===id);
+    const liquid=find('wine');await choose('wine-form','cup');const cup=find('wine');await choose('wine-form','jar');const jar=find('wine');await choose('wine-form','liquid');
+    const two=find('building');await choose('building-levels','three');const three=find('building');await choose('building-levels','two');
+    const lattice=snapshot('building');await choose('building-windows','open');const windowsDiffer=lattice!==snapshot('building');await choose('building-windows','lattice');
+    const plum=find('plum-branch');
+    const wind=document.getElementById('wind'),buildingBefore=snapshot('building'),plumBefore=snapshot('plum-branch');wind.value=0;wind.dispatchEvent(new Event('input'));await new Promise(r=>setTimeout(r,50));
+    const buildingStatic=buildingBefore===snapshot('building'),plumResponds=plumBefore!==snapshot('plum-branch');wind.value=100;wind.dispatchEvent(new Event('input'));
+    const ids=['wine','building','plum-branch'],hosts=ids.map(()=>document.body.appendChild(document.createElement('div')));hosts.forEach(h=>h.hidden=true);
+    const controls=ids.map((id,i)=>window.PoemDrawing.mount(id,hosts[i],{wind:.4},777));await new Promise(r=>setTimeout(r,150));controls.forEach(c=>c.pause(true));
+    const anchors=controls.map(c=>c.anchors());controls.forEach(c=>c.dispose());hosts.forEach(h=>h.remove());
+    return {liquidNoVessel:liquid.vesselCount===0&&liquid.personCount===0,cupOnly:cup.vesselCount===1&&cup.personCount===0,jarOnly:jar.vesselCount===1&&jar.personCount===0,twoFloors:two.levelCount===2&&two.windowCount===5&&two.doorCount===1,threeFloors:three.levelCount===3&&three.windowCount===8&&three.buildingCount===1&&three.personCount===0,windowsDiffer,buildingStatic,plumResponds,plumCounts:plum.flowerCount===9&&plum.budCount===4,anchorsFinite:anchors.every(a=>a.length>=2&&a.every(q=>Number.isFinite(q.x+q.y)&&q.x>=0&&q.x<=640&&q.y>=0&&q.y<=388))};
+  })()`);
+  if(Object.values(frequencyFeatures).some(v=>v!==true))throw new Error('Frequency-priority tools failed: '+JSON.stringify(frequencyFeatures));
   const extensionLifecycle=await evaluate(`(async()=>{
     const ids=['catkins','cloud','fish'],hosts=ids.map(()=>document.body.appendChild(document.createElement('div')));hosts.forEach(h=>h.style.display='none');
     const controls=hosts.map((h,i)=>window.PoemDrawing.mount(ids[i],h,{wind:.8,density:.5,palette:'clear'},777));
@@ -154,12 +171,36 @@ try {
     ids.forEach((id,i)=>{const x=(i%3)*400,y=Math.floor(i/3)*270;c.drawImage(document.querySelector('#'+id+' canvas'),x,y,400,242.5);c.fillStyle='#344b43';c.font='16px Microsoft YaHei';c.fillText(document.querySelector('#'+id+' h3').textContent,x+16,y+263);});return canvas.toDataURL();
   })()`);
   await writeFile(resolve(dir,'new-tools-preview.png'),Buffer.from(newToolSheet.split(',')[1],'base64'));
+  const frequencySheet=await evaluate(`(async()=>{
+    const variants=[['wine','form','liquid'],['wine','form','cup'],['wine','form','jar'],['building','levels','two'],['building','levels','three'],['building','windows','open'],['plum-branch','form','branch'],['plum-branch','form','sprig'],['flower-forms','kind','plum']];
+    const canvas=document.createElement('canvas');canvas.width=1200;canvas.height=810;const c=canvas.getContext('2d');c.fillStyle='#f5f4ed';c.fillRect(0,0,1200,810);
+    for(const [i,[id,field,value]] of variants.entries()){
+      const select=document.getElementById(id+'-'+field);select.value=value;select.dispatchEvent(new Event('change'));await new Promise(r=>setTimeout(r,40));
+      const x=i%3*400,y=Math.floor(i/3)*270;c.drawImage(document.querySelector('#'+id+' canvas'),x,y,400,242.5);c.fillStyle='#344b43';c.font='16px Microsoft YaHei';c.fillText(document.querySelector('#'+id+' h3').textContent+' · '+select.selectedOptions[0].textContent,x+16,y+263);
+    }
+    for(const id of ['wine','building','plum-branch','flower-forms'])for(const field of window.PoemDrawing.definitions().find(t=>t.id===id).controls){const s=document.getElementById(id+'-'+field.id);s.value=field.default;s.dispatchEvent(new Event('change'));}
+    return canvas.toDataURL();
+  })()`);
+  await writeFile(resolve(dir,'frequency-tools-preview.png'),Buffer.from(frequencySheet.split(',')[1],'base64'));
   await send('Emulation.setDeviceMetricsOverride',{width:390,height:844,deviceScaleFactor:1,mobile:true});await sleep(150);
   const narrowLayout=await evaluate(`({viewport:innerWidth,document:document.documentElement.scrollWidth,canvases:document.querySelectorAll('canvas').length})`);
   if(narrowLayout.document>narrowLayout.viewport||wideLayout.document>wideLayout.viewport)throw new Error('Horizontal overflow');
   const mobile=await send('Page.captureScreenshot',{format:'png'});await writeFile(resolve(qa,'mobile.png'),Buffer.from(mobile.data,'base64'));
+  // Explicitly authored offline fixture, separate from poetry/API model runs.
+  const fixture={poem:'本地手工组合：梅枝、楼、酒杯',relations:[],entities:[['i1','梅枝','organism'],['i2','楼','object'],['i3','酒杯','object']].map(([id,text,kind])=>({id,mentions:[text],concept:text,kind,role:'scene',presence:'present',evidence:[text]}))};
+  const offlinePlan=buildPlan(fixture);
+  if(offlinePlan.layers.map(l=>l.tool).join(',')!=='building,plum-branch,wine')throw new Error('Offline fixture mapping failed');
+  await evaluate(`document.body.insertAdjacentHTML('beforeend','<canvas id="scene" width="960" height="600"></canvas><div id="layer-hosts" hidden></div>')`);
+  await evaluate(await readFile(resolve(dir,'../poem-generation/scene.js'),'utf8'));
+  await evaluate(`window.PoemTrialScene.render(${JSON.stringify(offlinePlan)})`);await sleep(120);await evaluate('window.PoemTrialScene.pause(true)');
+  const composition=await evaluate(`({state:window.PoemTrialScene.inspect(),alpha:Array.from(document.querySelectorAll('#layer-hosts canvas'),c=>c.getContext('2d').getImageData(0,0,1,1).data[3]),png:document.getElementById('scene').toDataURL()})`);
+  if(composition.state.layers.length!==3||composition.alpha.some(a=>a!==0))throw new Error('Offline transparent composition failed');
+  await writeFile(resolve(dir,'frequency-composition.png'),Buffer.from(composition.png.split(',')[1],'base64'));
+  await writeFile(resolve(dir,'frequency-composition.json'),JSON.stringify({source:'project-authored offline fixture; not model output',modelCalls:0,fixture,plan:offlinePlan,state:composition.state,transparentLayers:composition.alpha.length},null,2)+'\n');
+  await evaluate('window.PoemTrialScene.dispose()');
   if(errors.length)throw new Error(JSON.stringify(errors));
   const report={status:'passed',targetUrl,initial,pausedBefore,pausedAfter,changed,settings,resumed,exportInfo,isolation,variants,architecture,newFeatures,extensionLifecycle,wideLayout,narrowLayout,runtimeErrors:errors,limitations:['未操作系统下载确认界面；仅验证 canvas 导出 PNG 数据。','本地画面经浏览器截图检查；具体花鸟树种尚未做植物学或生物学辨识验收。','所有登记工具检查暂停重置后的重复出图；不等同于运动的跨设备逐帧确定性。']};
+  report.frequencyFeatures=frequencyFeatures;
   await writeFile(resolve(dir,'verification.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify({status:report.status,wideLayout,narrowLayout,runtimeErrors:errors.length}));
   await send('Browser.close').catch(()=>{});
 }finally{if(ws)ws.close();edge.kill();}

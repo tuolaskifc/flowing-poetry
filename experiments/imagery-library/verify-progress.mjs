@@ -23,6 +23,7 @@ try{
   const full=await evaluate(`({inspection:window.PoemProgressView.inspect(),rows:Array.from(document.querySelectorAll('#rows tr'),r=>({name:r.dataset.imagery,stage:r.dataset.stage,frequency:Number(r.querySelector('th small').textContent.replaceAll(',',''))})),links:Array.from(document.querySelectorAll('#rows a'),a=>a.getAttribute('href'))})`);
   const catalog=JSON.parse(await readFile(resolve(dir,'意象目录.json'),'utf8'));
   if(full.rows.length!==60||new Set(full.rows.map(r=>r.name)).size!==60||catalog.items.some(item=>!full.rows.some(row=>row.name===item.imagery&&row.frequency===item.count&&row.stage===item.progress.stage)))throw new Error('Progress rows differ from canonical catalog');
+  if(full.rows.some((row,i)=>i>0&&row.frequency>full.rows[i-1].frequency))throw new Error('Progress table no longer follows descending original frequency');
   const expected=catalog.progress_summary;
   const filters=await evaluate(`(()=>{
     const stage=document.getElementById('stage'),context=document.getElementById('context'),search=document.getElementById('search'),clear=document.getElementById('clear');
@@ -40,7 +41,7 @@ try{
   if(wide.document>wide.width||narrow.document>narrow.width||narrow.table<=narrow.width)throw new Error('Table overflow is not contained');
   const mobile=await send('Page.captureScreenshot',{format:'png'});await writeFile(resolve(qa,'progress-mobile.png'),Buffer.from(mobile.data,'base64'));
   const deepLinks=[];
-  for(const [name,tool,option,value] of [['露','grass','surface','dew'],['黄叶','leaves','color','yellow']]){
+  for(const [name,tool,option,value] of [['露','grass','surface','dew'],['黄叶','leaves','color','yellow'],['酒','wine','form','liquid'],['楼','building','levels','two'],['梅','plum-branch','form','branch']]){
     const href=await evaluate(`Array.from(document.querySelectorAll('#rows tr')).find(r=>r.dataset.imagery===${JSON.stringify(name)}).querySelector('a').href`);
     await send('Page.navigate',{url:href});await waitFor('Boolean(window.imageryExperiment)&&window.imageryExperiment.inspect().every(t=>t.ready)');
     const linked=await evaluate(`({value:document.getElementById(${JSON.stringify(tool+'-'+option)}).value,state:window.imageryExperiment.inspect().find(t=>t.id===${JSON.stringify(tool)})})`);

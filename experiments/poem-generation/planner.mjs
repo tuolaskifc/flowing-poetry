@@ -1,11 +1,15 @@
 // Local visual policy. The model supplies semantics, never executable drawing code.
 import {createHash} from 'node:crypto';
-export const policyVersion='trial-1';
+export const policyVersion='trial-2-frequency';
 const rules=[
   {words:['柳絮'],tool:'catkins'},
   {words:['落花'],tool:'falling-petals'},
   {words:['菊花','黄华','菊'],tool:'flower-forms',options:{kind:'chrysanthemum'}},
-  {words:['梅花','梅'],tool:'flower-forms',options:{kind:'plum'},exclude:['梅子']},
+  {words:['梅花','梅枝','寒梅','红梅','白梅','梅'],tool:'plum-branch',exclude:['梅子','梅雨']},
+  {words:['酒杯','酒盏','杯中酒'],tool:'wine',options:{form:'cup'}},
+  {words:['酒壶','酒坛'],tool:'wine',options:{form:'jar'}},
+  {words:['酒液','清酒','浊酒','美酒','酒'],tool:'wine',options:{form:'liquid'},exclude:['饮酒','饮','劝酒','醉酒','沽酒','买酒']},
+  {words:['楼阁','楼台','楼宇','楼'],tool:'building'},
   {words:['莲花','荷花','莲'],tool:'flower-forms',options:{kind:'lotus'}},
   {words:['红叶'],tool:'leaves',options:{color:'red'}},
   {words:['黄叶'],tool:'leaves',options:{color:'yellow'}},
@@ -20,7 +24,7 @@ const rules=[
   {words:['石','岩'],tool:'rock'}, {words:['鱼'],tool:'fish'},
   {words:['花'],tool:'flower',exclude:['桃花','兰花','杜鹃','杨花','桂花','槐花','梅子','菊花','莲花','荷花']}
 ];
-const order=['moon','cloud','mist','willow','bamboo','pavilion','water','rock','boat','grass','flower','flower-forms','leaves','fish','falling-petals','catkins','rain','snow'];
+const order=['moon','cloud','mist','building','willow','bamboo','pavilion','water','rock','boat','grass','plum-branch','flower','flower-forms','wine','leaves','fish','falling-petals','catkins','rain','snow'];
 const placements={
   moon:{anchor:[320,175],at:[.76,.2],scale:.85},cloud:{anchor:[320,170],at:[.46,.2],scale:1.05},
   mist:{anchor:[320,190],at:[.5,.48],scale:1.4},water:{anchor:[320,130],at:[.5,.57],scale:1.5},
@@ -30,7 +34,8 @@ const placements={
   fish:{anchor:[320,195],at:[.55,.8],scale:.8},'flower-forms':{anchor:[320,188],at:[.42,.65],scale:.9},
   flower:{anchor:[320,320],at:[.4,.9],scale:.95},leaves:{anchor:[320,190],at:[.52,.54],scale:1.05},
   'falling-petals':{anchor:[320,190],at:[.5,.5],scale:1.3},catkins:{anchor:[320,190],at:[.5,.5],scale:1.3},
-  rain:{anchor:[320,194],at:[.5,.5],scale:1.55},snow:{anchor:[320,194],at:[.5,.5],scale:1.55}
+  rain:{anchor:[320,194],at:[.5,.5],scale:1.55},snow:{anchor:[320,194],at:[.5,.5],scale:1.55},
+  building:{anchor:[320,320],at:[.76,.79],scale:.9},'plum-branch':{anchor:[120,302],at:[.12,.87],scale:1},wine:{anchor:[320,244],at:[.57,.87],scale:.75}
 };
 export function buildPlan(analysis){
   const layers=[],omitted=[],notes=[],entityTools=new Map();let wind=0;
@@ -39,7 +44,7 @@ export function buildPlan(analysis){
     if(entity.role!=='scene'||entity.presence!=='present'){
       omitted.push({id:entity.id,name,reason:entity.role==='reference'?'仅为比喻参照，不当作实景':entity.presence==='absent'?'原文中缺席，不绘制':'出现情况不确定，暂不补画'});continue;
     }
-    const localSurface=entity.kind==='place'&&entity.mentions.some(m=>/^(石上|石间|岩石|石头|水面|江面|亭中|船上|舟中)$/.test(m));
+    const localSurface=entity.kind==='place'&&entity.mentions.some(m=>/^(石上|石间|岩石|石头|水面|江面|亭中|船上|舟中|楼|楼阁|楼台|楼宇|楼中|楼上|楼前)$/.test(m));
     if(entity.kind==='abstract'||entity.kind==='person'||entity.kind==='place'&&!localSurface){
       omitted.push({id:entity.id,name,reason:'暂未提供该人物、地点或抽象含义的绘画单元'});continue;
     }
@@ -55,6 +60,15 @@ export function buildPlan(analysis){
     const rule=specificUnsupported?null:rules.find(r=>r.words.some(word=>text.includes(word))&&!r.exclude?.some(word=>text.includes(word)));
     if(!rule){omitted.push({id:entity.id,name,reason:'该具体意象尚无可用形态；没有替换成通用树、花或鸟群'});continue;}
     const options={...rule.options};
+    if(rule.tool==='wine'){
+      // A normalized concept must not invent a container absent from mentions.
+      const mentions=entity.mentions.join(' ');
+      const explicitCup=/酒杯|酒盏|杯中酒/.test(mentions),explicitJar=/酒壶|酒坛/.test(mentions);
+      if(!explicitCup&&!explicitJar&&/饮酒|饮|劝酒|醉酒|沽酒|买酒/.test(mentions)){
+        omitted.push({id:entity.id,name,reason:'这是饮酒或相关活动线索，未据此补出杯、壶或人物'});continue;
+      }
+      options.form=explicitCup?'cup':explicitJar?'jar':'liquid';
+    }
     if(localSurface)notes.push(`${name}以明确提到的物体轮廓试画，不表示已实现其上的承载或流动关系。`);
     if(rule.tool==='moon'){
       options.shape=/圆月|满月|月满/.test(text)?'full':/半月/.test(text)?'half':'crescent';
@@ -68,6 +82,10 @@ export function buildPlan(analysis){
     entityTools.set(entity.id,rule.tool);
     if(freeze)notes.push(`${name}的动作被否定或尚未成立，保持静止试画。`);
     if(rule.tool==='flower-forms')notes.push(`${name}目前只画花冠示意，未补出枝叶或整株。`);
+    if(rule.tool==='plum-branch')notes.push(`${name}采用带花与花苞的梅枝试画；枝形和花朵数量是本地选择，未实现整树或离枝落花。`);
+    if(rule.tool==='wine'&&options.form==='liquid')notes.push(`${name}仅以酒液局部作抽象试画，不补杯、壶或饮酒者；不表示原文给出了酒液的外形。`);
+    if(rule.tool==='wine'&&options.form!=='liquid')notes.push(`${name}按明确提到的容器绘制风格化轮廓，不作历史器型复原。`);
+    if(rule.tool==='building')notes.push(`${name}采用二层楼体试画，层数与门窗排列是本地选择；不等同于具体历史建筑，也未实现人物登楼。`);
   }
   layers.sort((a,b)=>order.indexOf(a.tool)-order.indexOf(b.tool));
   if(!analysis.relations.length&&/不|未|无|若|倘|如果/.test(analysis.poem)){

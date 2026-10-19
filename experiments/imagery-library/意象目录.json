@@ -1,16 +1,16 @@
 {
-  "catalog_version": "0.2-progress",
-  "date": "2026-10-18",
+  "catalog_version": "0.3-frequency",
+  "date": "2026-10-19",
   "status": "设计映射与实际试画进度，不是模型输出协议",
   "basis": "已保存的新华网统计条目与本项目设计讨论；词义提示不是经过词书核实的文学注释",
   "source": "docs/sources/quansongci/意象频次.json",
   "progress_summary": {
     "total": 60,
-    "tools": 20,
+    "tools": 23,
     "stages": {
       "basic": {
         "label": "基础可画",
-        "count": 15
+        "count": 17
       },
       "partial": {
         "label": "部分支持",
@@ -18,7 +18,7 @@
       },
       "todo": {
         "label": "待制作",
-        "count": 27
+        "count": 25
       },
       "handoff": {
         "label": "转交其他模块",
@@ -91,8 +91,8 @@
       "id": "flower",
       "name": "花瓣与花冠",
       "phase": "首批",
-      "code_reference": "experiments/imagery-library/drawing/tools/flower.js",
-      "status": "已有通用花和梅／菊／莲花冠结构示意；尚缺整株、枝叶组合与辨识验收，桃花、兰仍待做。"
+      "code_reference": "experiments/imagery-library/drawing/tools/plum-branch.js",
+      "status": "已有通用花、带花苞梅枝和梅／菊／莲花冠示意；桃花、兰与其他整株组合仍待做，辨识待审阅。"
     },
     {
       "id": "petal_drift",
@@ -140,15 +140,15 @@
       "id": "architecture",
       "name": "楼亭与栏杆",
       "phase": "首批",
-      "code_reference": "experiments/imagery-library/drawing/tools/pavilion.js",
-      "status": "已有独立空亭、茅顶／折檐与可选栏杆；楼阁多层仍未实现，不将楼、亭视为同一形体。"
+      "code_reference": "experiments/imagery-library/drawing/tools/building.js",
+      "status": "已有独立空亭与二层／三层楼体；共用折檐几何，主体不互相代替，未实现人物登楼或楼内活动。"
     },
     {
       "id": "liquid_container",
       "name": "酒液与容器",
       "phase": "扩展",
-      "code_reference": null,
-      "status": "先判断画酒液、酒器还是饮酒动作；原文没写杯不能自动补杯。"
+      "code_reference": "experiments/imagery-library/drawing/tools/wine.js",
+      "status": "已有酒液局部、杯中酒与酒壶试画；默认不补杯，饮酒活动仍须语境处理。"
     },
     {
       "id": "instrument",
@@ -291,12 +291,19 @@
       "note": "酒液、酒器、饮酒活动均可能；不自动补出酒杯或饮酒者。",
       "status": "语义映射仍是设计候选，未接入正式诗句生成流程",
       "progress": {
-        "stage": "todo",
-        "tools": [],
-        "available": "尚无该条目的专用形态试画。",
-        "remaining": "酒液、酒器、饮酒活动均可能；不自动补出酒杯或饮酒者。",
+        "stage": "partial",
+        "tools": [
+          "wine"
+        ],
+        "available": "酒液局部抽象试画，另可显式选择杯中酒或酒壶；不自动添人物。",
+        "remaining": "酒液、器物与饮酒活动需按语境区分；仅写酒时不补杯。未实现倾倒、饮用与历史器型。",
         "needs_context": true,
-        "label": "待制作"
+        "presets": {
+          "wine": {
+            "form": "liquid"
+          }
+        },
+        "label": "部分支持"
       }
     },
     {
@@ -310,12 +317,14 @@
       "note": "楼体轮廓，和长亭共享建筑方法但保持层高与结构差异。",
       "status": "语义映射仍是设计候选，未接入正式诗句生成流程",
       "progress": {
-        "stage": "todo",
-        "tools": [],
-        "available": "尚无该条目的专用形态试画。",
-        "remaining": "楼体轮廓，和长亭共享建筑方法但保持层高与结构差异。",
+        "stage": "basic",
+        "tools": [
+          "building"
+        ],
+        "available": "独立二层／三层楼体，带门窗、折檐和栏杆，不添加人物。",
+        "remaining": "待审美确认；不是具体历史建筑，楼内活动、视点与登楼关系未实现。",
         "needs_context": false,
-        "label": "待制作"
+        "label": "基础可画"
       }
     },
     {
@@ -330,19 +339,23 @@
       "note": "先判断花、枝或整株；可复用枝条与花瓣，仍需梅的辨识特征。",
       "status": "语义映射仍是设计候选，未接入正式诗句生成流程",
       "progress": {
-        "stage": "partial",
+        "stage": "basic",
         "tools": [
+          "plum-branch",
           "flower-forms"
         ],
-        "available": "圆瓣五出花冠示意，和多瓣花形区分。",
-        "remaining": "尚未做植物学辨识验收；枝叶、整株和具体品种仍缺。",
+        "available": "带九朵五瓣花和四个花苞的曲枝；横枝、短枝可选，保留单独花冠对照。",
+        "remaining": "待审美与形态辨识确认；尚无整树、具体品种、开花过程与离枝落花。",
         "needs_context": false,
         "presets": {
+          "plum-branch": {
+            "form": "branch"
+          },
           "flower-forms": {
             "kind": "plum"
           }
         },
-        "label": "部分支持"
+        "label": "基础可画"
       }
     },
     {

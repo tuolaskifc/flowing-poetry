@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-18",
+  "date": "2026-10-19",
   "records": {
     "风": {
       "stage": "partial",
@@ -49,28 +49,31 @@
       "needs_context": false
     },
     "酒": {
-      "stage": "todo",
-      "tools": [],
-      "available": "尚无该条目的专用形态试画。",
-      "remaining": "酒液、酒器、饮酒活动均可能；不自动补出酒杯或饮酒者。",
-      "needs_context": true
+      "stage": "partial",
+      "tools": ["wine"],
+      "available": "酒液局部抽象试画，另可显式选择杯中酒或酒壶；不自动添人物。",
+      "remaining": "酒液、器物与饮酒活动需按语境区分；仅写酒时不补杯。未实现倾倒、饮用与历史器型。",
+      "needs_context": true,
+      "presets": {"wine": {"form": "liquid"}}
     },
     "楼": {
-      "stage": "todo",
-      "tools": [],
-      "available": "尚无该条目的专用形态试画。",
-      "remaining": "楼体轮廓，和长亭共享建筑方法但保持层高与结构差异。",
+      "stage": "basic",
+      "tools": ["building"],
+      "available": "独立二层／三层楼体，带门窗、折檐和栏杆，不添加人物。",
+      "remaining": "待审美确认；不是具体历史建筑，楼内活动、视点与登楼关系未实现。",
       "needs_context": false
     },
     "梅": {
-      "stage": "partial",
+      "stage": "basic",
       "tools": [
+        "plum-branch",
         "flower-forms"
       ],
-      "available": "圆瓣五出花冠示意，和多瓣花形区分。",
-      "remaining": "尚未做植物学辨识验收；枝叶、整株和具体品种仍缺。",
+      "available": "带九朵五瓣花和四个花苞的曲枝；横枝、短枝可选，保留单独花冠对照。",
+      "remaining": "待审美与形态辨识确认；尚无整树、具体品种、开花过程与离枝落花。",
       "needs_context": false,
       "presets": {
+        "plum-branch": {"form": "branch"},
         "flower-forms": {
           "kind": "plum"
         }

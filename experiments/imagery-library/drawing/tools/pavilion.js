@@ -16,7 +16,7 @@ window.PoemDrawing.register({
     function reset(){state={width:p.random(225,255),rise:p.random(55,68),height:p.random(82,95),texture:Array.from({length:37},()=>p.random(.92,1.06))};}
     function line(points,closed=false){p.beginShape();for(const [x,y] of points)p.vertex(x,y);p.endShape(closed?p.CLOSE:undefined);}
     function draw(){
-      const w=state.width,h=state.rise,eave=190,base=eave+state.height,mid=w*.18,bmid=-w*.18,quat=-w*.16;
+      const w=state.width,h=state.rise,eave=190,base=eave+state.height,mid=w*.18,bmid=-w*.18;
       p.push();p.translate(W/2,0);p.strokeWeight(1);
       // Diamond platform and the four support locations are explicit, no figures.
       p.fill(alpha(p,ctx.palette.main,45));p.stroke(alpha(p,ctx.palette.ink,130));
@@ -29,12 +29,7 @@ window.PoemDrawing.register({
       }
       p.fill(alpha(p,ctx.palette.main,100));p.stroke(alpha(p,ctx.palette.ink,195));p.strokeWeight(1.05);
       if(ctx.options.roof==='tiled'){
-        const ridgeL=[-w*.5+quat,eave-h-3],ridgeR=[mid+quat,eave-h];
-        line([[-w*.5-5,eave],ridgeL,ridgeR,[w*.5+5,eave],[mid+5,eave+8]],true);
-        line([ridgeR,[mid+quat/2,eave-h/2+3],[mid+5,eave+8]]);
-        p.stroke(alpha(p,ctx.palette.ink,55));p.strokeWeight(.6);
-        const n=7+Math.round(ctx.settings.density*14);
-        for(let i=0;i<=n;i++){const t=i/n;p.line(ridgeL[0]+(ridgeR[0]-ridgeL[0])*t,ridgeL[1]+(ridgeR[1]-ridgeL[1])*t,-w*.5+(mid+w*.5)*t,eave+8*t);}
+        window.PoemArchitecture.tiledRoof(ctx,w,h,eave);
       }else{
         // hut's x ~ t^.7 expansion, with seeded per-strand roof heights.
         const apex=eave-h;

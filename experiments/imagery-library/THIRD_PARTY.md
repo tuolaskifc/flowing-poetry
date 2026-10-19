@@ -1,4 +1,4 @@
-> 本轮更新：二十个独立工具；新增云形取用 Niels Pichon / p5.Fresco 的 cloudGen.js（Apache-2.0），保存原件和完整许可未改。草、露霜、竹、柳、雪、红黄叶、鱼、柳絮与新花冠结构为本项目编写。详见 [工具结构与来源](drawing/README.md)。
+> 2026-10-19 更新：二十三个独立工具。酒液与酒器、梅枝为本项目编写；楼的主体为本项目编写，折檐沿用已适配的 Lingdong Huang / Shan, Shui 几何（MIT），与亭共用 architecture.js。没有新下载外部代码；49 个保存原件／依赖的哈希核对不变。详见 [工具结构与来源](drawing/README.md)。
 
 # 意象试画室：第三方来源与改动
 
