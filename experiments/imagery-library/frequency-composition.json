@@ -47,7 +47,7 @@
     ]
   },
   "plan": {
-    "version": "trial-2-frequency",
+    "version": "trial-3-surfaces-and-ying",
     "seed": 3781237684,
     "settings": {
       "wind": 0,
@@ -140,7 +140,7 @@
       {
         "id": "building",
         "seed": 3781237684,
-        "time": 0.13150000001192166,
+        "time": 0.1446999999940381,
         "ticks": 4,
         "paused": true,
         "disposed": false,
@@ -165,7 +165,7 @@
       {
         "id": "plum-branch",
         "seed": 3781237781,
-        "time": 0.13150000001192166,
+        "time": 0.1446999999940381,
         "ticks": 4,
         "paused": true,
         "disposed": false,
@@ -186,7 +186,7 @@
       {
         "id": "wine",
         "seed": 3781237878,
-        "time": 0.13140000001788213,
+        "time": 0.1446999999940381,
         "ticks": 4,
         "paused": true,
         "disposed": false,

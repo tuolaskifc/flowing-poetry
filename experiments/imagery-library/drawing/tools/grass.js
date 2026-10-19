@@ -9,17 +9,16 @@ window.PoemDrawing.register({
     const {p,width:W,alpha}=ctx;let tufts=[];
     function reset(){tufts=Array.from({length:9},(_,i)=>({x:62+i*64+p.random(-9,9),y:p.random(290,325),blades:Array.from({length:6},()=>({length:p.random(60,135),lean:p.random(-43,43),width:p.random(2.5,5),phase:p.random(p.TWO_PI),dewAt:p.random(.6,.9)}))}));}
     function tip(t,b){return {x:t.x+b.lean+ctx.wind.offset(b.phase,18),y:t.y-b.length};}
-    function curve(t,b,q){const end=tip(t,b);return {x:t.x+(end.x-t.x)*q*q,y:t.y-b.length*q};}
+    function curve(t,b,q){const end=tip(t,b);return {x:t.x+(end.x-t.x)*q*q,y:t.y-b.length*(1.05*q-.05*q*q)};}
     function draw(){
       for(const t of tufts)for(const b of t.blades){
         const end=tip(t,b);p.fill(alpha(p,ctx.palette.main,145));p.stroke(alpha(p,ctx.palette.ink,105));p.strokeWeight(.6);
         const c=p.drawingContext;c.beginPath();c.moveTo(t.x-b.width/2,t.y);c.quadraticCurveTo(t.x-b.width,t.y-b.length*.55,end.x,end.y);c.quadraticCurveTo(t.x+b.width,t.y-b.length*.5,t.x+b.width/2,t.y);c.closePath();c.fill();c.stroke();
         if(ctx.settings.density>.3){p.noFill();p.stroke(alpha(p,ctx.palette.ink,55));p.bezier(t.x,t.y,t.x,t.y-b.length*.4,t.x+(end.x-t.x)*.5,end.y+b.length*.25,end.x,end.y);}
         if(ctx.options.surface==='dew'){
-          const q=curve(t,b,b.dewAt);p.fill(alpha(p,ctx.palette.bg,235));p.stroke(alpha(p,ctx.palette.ink,145));p.circle(q.x,q.y,5.5);p.noStroke();p.fill(alpha(p,ctx.palette.accent,245));p.circle(q.x-.9,q.y-1,2);
+          window.PoemSurfaceMarks.dew(ctx,[{...curve(t,b,b.dewAt),r:2.75}]);
         }else if(ctx.options.surface==='frost'){
-          p.stroke(alpha(p,ctx.palette.bg,250));p.strokeWeight(1.6);p.beginShape();for(let i=5;i<=10;i++){const q=curve(t,b,i/10);p.vertex(q.x,q.y);}p.endShape();
-          p.stroke(alpha(p,ctx.palette.ink,48));p.strokeWeight(.45);for(let i=6;i<=9;i++){const q=curve(t,b,i/10);p.line(q.x-2,q.y+1,q.x+2,q.y-1);}
+          window.PoemSurfaceMarks.frost(ctx,[Array.from({length:6},(_,i)=>curve(t,b,(i+5)/10))],Array.from({length:4},(_,i)=>({...curve(t,b,(i+6)/10),r:2})));
         }
       }
     }

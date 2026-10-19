@@ -54,6 +54,29 @@ test('building and flowering plum use their own units without turning place name
   const rain=buildPlan(fixture('梅雨',[entity('i1','梅雨')]));
   assert.deepEqual(rain.layers.map(l=>l.tool),['rain']);
 });
+test('dew and frost without named carriers never introduce grass or a ground object',()=>{
+  const plan=buildPlan(fixture('露与霜',[entity('i1','露'),entity('i2','霜')]));
+  assert.deepEqual(plan.layers.map(l=>[l.tool,l.options.surface,l.options.carrier]),[['surface-weather','dew','detail'],['surface-weather','frost','detail']]);
+  assert(plan.notes.some(n=>n.includes('不自动补草叶')));
+  const normalized=buildPlan(fixture('露',[entity('i1','露',{concept:'草叶上的露珠'})]));
+  assert.deepEqual(normalized.layers.map(l=>[l.tool,l.options.carrier]),[['surface-weather','detail']]);
+});
+
+test('a present ying bird is a single specific study, while sound-only and other species stay omitted',()=>{
+  const seen=buildPlan(fixture('黄莺',[entity('i1','黄莺',{kind:'organism'})]));
+  assert.equal(seen.layers[0].tool,'oriole');assert.equal(seen.layers[0].options.pose,'folded');assert.equal(seen.layers[0].options.motion,'still');
+  const sound=buildPlan(fixture('只闻莺啼',[entity('i1','莺',{kind:'organism',evidence:['只闻莺啼']})]));
+  assert.equal(sound.layers.length,0);assert(sound.omitted[0].reason.includes('听闻'));
+  const other=buildPlan(fixture('夜莺与燕子',[entity('i1','夜莺',{kind:'organism'}),entity('i2','燕子',{kind:'organism'})]));
+  assert.equal(other.layers.length,0);
+});
+
+test('only an asserted flying bird opens and animates its wings',()=>{
+  const e=entity('i1','莺',{kind:'organism'}),r={type:'moves',source:'i1',target:null,meaning:'莺飞',modality:'asserted',basis:'explicit',evidence:['莺飞']};
+  const flight=buildPlan(fixture('莺飞',[e],[r]));assert.equal(flight.layers[0].options.pose,'spread');assert.equal(flight.layers[0].options.motion,'flap');
+  const denied=buildPlan(fixture('莺未飞',[e],[{...r,modality:'negated',evidence:['莺未飞']}]));assert.equal(denied.layers[0].options.pose,'folded');assert.equal(denied.layers[0].animate,false);
+});
+
 test('credentials stay in request headers, successful replay uses no new call, failed JSON stays unrendered',async()=>{
   const dir=await mkdtemp(join(tmpdir(),'poem-flow-test-')),path=join(dir,'config.txt'),key='dummy-private-test-value';
   await writeFile(path,'https://example.invalid/v1\n'+key+'\ntest-model\n');let calls=0;

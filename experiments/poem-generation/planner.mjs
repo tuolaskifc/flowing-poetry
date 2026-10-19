@@ -1,6 +1,6 @@
 // Local visual policy. The model supplies semantics, never executable drawing code.
 import {createHash} from 'node:crypto';
-export const policyVersion='trial-2-frequency';
+export const policyVersion='trial-3-surfaces-and-ying';
 const rules=[
   {words:['柳絮'],tool:'catkins'},
   {words:['落花'],tool:'falling-petals'},
@@ -14,8 +14,10 @@ const rules=[
   {words:['红叶'],tool:'leaves',options:{color:'red'}},
   {words:['黄叶'],tool:'leaves',options:{color:'yellow'}},
   {words:['竹'],tool:'bamboo'}, {words:['柳'],tool:'willow',exclude:['柳絮','杨柳絮']},
-  {words:['草'],tool:'grass'}, {words:['露'],tool:'grass',options:{surface:'dew'}},
-  {words:['霜'],tool:'grass',options:{surface:'frost'}},
+  {words:['草'],tool:'grass'},
+  {words:['露珠','露水','露'],tool:'surface-weather',options:{surface:'dew',carrier:'detail'},exclude:['露出','显露','露面','露宿']},
+  {words:['霜'],tool:'surface-weather',options:{surface:'frost',carrier:'detail'}},
+  {words:['黄莺','莺'],tool:'oriole',exclude:['夜莺']},
   {words:['雪'],tool:'snow',options:{state:'fall'}},
   {words:['明月','月亮','月'],tool:'moon'},
   {words:['烟雾','薄雾','雾'],tool:'mist'}, {words:['云'],tool:'cloud'},
@@ -24,7 +26,7 @@ const rules=[
   {words:['石','岩'],tool:'rock'}, {words:['鱼'],tool:'fish'},
   {words:['花'],tool:'flower',exclude:['桃花','兰花','杜鹃','杨花','桂花','槐花','梅子','菊花','莲花','荷花']}
 ];
-const order=['moon','cloud','mist','building','willow','bamboo','pavilion','water','rock','boat','grass','plum-branch','flower','flower-forms','wine','leaves','fish','falling-petals','catkins','rain','snow'];
+const order=['moon','cloud','mist','building','willow','bamboo','pavilion','water','rock','boat','grass','plum-branch','flower','flower-forms','wine','leaves','surface-weather','fish','oriole','falling-petals','catkins','rain','snow'];
 const placements={
   moon:{anchor:[320,175],at:[.76,.2],scale:.85},cloud:{anchor:[320,170],at:[.46,.2],scale:1.05},
   mist:{anchor:[320,190],at:[.5,.48],scale:1.4},water:{anchor:[320,130],at:[.5,.57],scale:1.5},
@@ -35,7 +37,8 @@ const placements={
   flower:{anchor:[320,320],at:[.4,.9],scale:.95},leaves:{anchor:[320,190],at:[.52,.54],scale:1.05},
   'falling-petals':{anchor:[320,190],at:[.5,.5],scale:1.3},catkins:{anchor:[320,190],at:[.5,.5],scale:1.3},
   rain:{anchor:[320,194],at:[.5,.5],scale:1.55},snow:{anchor:[320,194],at:[.5,.5],scale:1.55},
-  building:{anchor:[320,320],at:[.76,.79],scale:.9},'plum-branch':{anchor:[120,302],at:[.12,.87],scale:1},wine:{anchor:[320,244],at:[.57,.87],scale:.75}
+  building:{anchor:[320,320],at:[.76,.79],scale:.9},'plum-branch':{anchor:[120,302],at:[.12,.87],scale:1},wine:{anchor:[320,244],at:[.57,.87],scale:.75},
+  'surface-weather':{anchor:[320,206],at:[.43,.76],scale:.9},oriole:{anchor:[320,200],at:[.64,.43],scale:.72}
 };
 export function buildPlan(analysis){
   const layers=[],omitted=[],notes=[],entityTools=new Map();let wind=0;
@@ -56,10 +59,21 @@ export function buildPlan(analysis){
       if(!denied)wind=.45;
       notes.push(denied?`${name}的作用未被确认，暂不启用风。`:`${name}作为风参数，不额外画风线；强弱是本次试画选择。`);continue;
     }
-    const specificUnsupported=/(松柏|松树|松林|松间|松|柏|梧桐|芭蕉|桃花|兰花|兰草|杜鹃|杨花|梅子|燕|雁|鸦|莺|鸳鸯|沙鸥|青鸟|鹧鸪|桂花)/.test(text);
-    const rule=specificUnsupported?null:rules.find(r=>r.words.some(word=>text.includes(word))&&!r.exclude?.some(word=>text.includes(word)));
+    const specificUnsupported=/(松柏|松树|松林|松间|松|柏|梧桐|芭蕉|桃花|兰花|兰草|杜鹃|杨花|梅子|燕|雁|鸦|夜莺|鸳鸯|沙鸥|青鸟|鹧鸪|桂花)/.test(text);
+    const findRule=value=>rules.find(r=>r.words.some(word=>value.includes(word))&&!r.exclude?.some(word=>value.includes(word)));
+    const rule=specificUnsupported?null:findRule(entity.mentions.join(' '))||findRule(text);
     if(!rule){omitted.push({id:entity.id,name,reason:'该具体意象尚无可用形态；没有替换成通用树、花或鸟群'});continue;}
     const options={...rule.options};
+    if(rule.tool==='oriole'){
+      const evidence=[...entity.mentions,...entity.evidence].join(' ');
+      const sound=/莺[声啼鸣歌]|[听闻].{0,6}莺/.test(evidence)||/(?:只|但|惟)闻.{0,8}莺/.test(analysis.poem);
+      const sight=/(?:见|看|望).{0,6}莺/.test(evidence);
+      if(sound&&!sight){omitted.push({id:entity.id,name,reason:'目前只有莺声或听闻线索，暂不补出可见鸟体'});continue;}
+      const birdRelations=analysis.relations.filter(r=>r.source===entity.id&&['moves','moves_toward','moves_away'].includes(r.type));
+      const denied=birdRelations.some(r=>r.modality!=='asserted');
+      const flying=!denied&&(/飞|翔|掠/.test(entity.mentions.join(' '))||birdRelations.some(r=>r.modality==='asserted'&&r.evidence.some(e=>/飞|翔|掠/.test(e))));
+      options.pose=flying?'spread':'folded';options.motion=flying?'flap':'still';
+    }
     if(rule.tool==='wine'){
       // A normalized concept must not invent a container absent from mentions.
       const mentions=entity.mentions.join(' ');
@@ -86,6 +100,8 @@ export function buildPlan(analysis){
     if(rule.tool==='wine'&&options.form==='liquid')notes.push(`${name}仅以酒液局部作抽象试画，不补杯、壶或饮酒者；不表示原文给出了酒液的外形。`);
     if(rule.tool==='wine'&&options.form!=='liquid')notes.push(`${name}按明确提到的容器绘制风格化轮廓，不作历史器型复原。`);
     if(rule.tool==='building')notes.push(`${name}采用二层楼体试画，层数与门窗排列是本地选择；不等同于具体历史建筑，也未实现人物登楼。`);
+    if(rule.tool==='surface-weather')notes.push(`${name}只显示露珠或霜层的局部笔触，不自动补草叶、枝条或地面；具体载体附着尚未从诗句自动匹配。`);
+    if(rule.tool==='oriole')notes.push(`${name}使用单只黄身深翼的莺形写意试作，不是对原诗鸟种的鉴定；数量、位置与默认朝向是本地选择，不添加栖枝或同伴。`);
   }
   layers.sort((a,b)=>order.indexOf(a.tool)-order.indexOf(b.tool));
   if(!analysis.relations.length&&/不|未|无|若|倘|如果/.test(analysis.poem)){

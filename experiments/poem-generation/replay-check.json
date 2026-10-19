@@ -96,7 +96,7 @@
     },
     {
       "host": "127.0.0.1",
-      "path": "/experiments/imagery-library/drawing/core.js",
+      "path": "/experiments/imagery-library/drawing/cloud-outline.js",
       "status": 200
     },
     {
@@ -106,12 +106,17 @@
     },
     {
       "host": "127.0.0.1",
-      "path": "/experiments/imagery-library/drawing/petals.js",
+      "path": "/experiments/imagery-library/boid-adapter.js",
       "status": 200
     },
     {
       "host": "127.0.0.1",
-      "path": "/experiments/imagery-library/drawing/cloud-outline.js",
+      "path": "/experiments/imagery-library/drawing/surface-marks.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/core.js",
       "status": 200
     },
     {
@@ -121,27 +126,7 @@
     },
     {
       "host": "127.0.0.1",
-      "path": "/experiments/imagery-library/drawing/tools/flower.js",
-      "status": 200
-    },
-    {
-      "host": "127.0.0.1",
-      "path": "/experiments/imagery-library/drawing/tools/tree.js",
-      "status": 200
-    },
-    {
-      "host": "127.0.0.1",
-      "path": "/experiments/imagery-library/drawing/tools/water.js",
-      "status": 200
-    },
-    {
-      "host": "127.0.0.1",
-      "path": "/experiments/imagery-library/drawing/tools/birds.js",
-      "status": 200
-    },
-    {
-      "host": "127.0.0.1",
-      "path": "/experiments/imagery-library/drawing/tools/mist.js",
+      "path": "/experiments/imagery-library/drawing/petals.js",
       "status": 200
     },
     {
@@ -151,12 +136,22 @@
     },
     {
       "host": "127.0.0.1",
-      "path": "/experiments/imagery-library/drawing/tools/moon.js",
+      "path": "/experiments/imagery-library/drawing/tools/tree.js",
       "status": 200
     },
     {
       "host": "127.0.0.1",
-      "path": "/experiments/imagery-library/drawing/tools/falling-petals.js",
+      "path": "/experiments/imagery-library/drawing/tools/mist.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/tools/flower.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/tools/moon.js",
       "status": 200
     },
     {
@@ -166,12 +161,12 @@
     },
     {
       "host": "127.0.0.1",
-      "path": "/experiments/imagery-library/drawing/tools/rock.js",
+      "path": "/experiments/imagery-library/drawing/tools/water.js",
       "status": 200
     },
     {
       "host": "127.0.0.1",
-      "path": "/experiments/imagery-library/drawing/tools/grass.js",
+      "path": "/experiments/imagery-library/drawing/tools/falling-petals.js",
       "status": 200
     },
     {
@@ -181,7 +176,22 @@
     },
     {
       "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/tools/birds.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/tools/rock.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
       "path": "/experiments/imagery-library/drawing/tools/bamboo.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/tools/grass.js",
       "status": 200
     },
     {
@@ -206,12 +216,12 @@
     },
     {
       "host": "127.0.0.1",
-      "path": "/experiments/imagery-library/drawing/tools/cloud.js",
+      "path": "/experiments/imagery-library/drawing/tools/catkins.js",
       "status": 200
     },
     {
       "host": "127.0.0.1",
-      "path": "/experiments/imagery-library/drawing/tools/catkins.js",
+      "path": "/experiments/imagery-library/drawing/tools/cloud.js",
       "status": 200
     },
     {
@@ -226,22 +236,27 @@
     },
     {
       "host": "127.0.0.1",
-      "path": "/experiments/imagery-library/drawing/tools/building.js",
-      "status": 200
-    },
-    {
-      "host": "127.0.0.1",
       "path": "/experiments/imagery-library/drawing/tools/plum-branch.js",
       "status": 200
     },
     {
       "host": "127.0.0.1",
-      "path": "/experiments/poem-generation/scene.js",
+      "path": "/experiments/imagery-library/drawing/tools/surface-weather.js",
       "status": 200
     },
     {
       "host": "127.0.0.1",
-      "path": "/experiments/imagery-library/boid-adapter.js",
+      "path": "/experiments/imagery-library/drawing/tools/building.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/tools/oriole.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/poem-generation/scene.js",
       "status": 200
     },
     {

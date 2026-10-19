@@ -2,19 +2,19 @@
 window.PoemProgress = {
   "summary": {
     "total": 60,
-    "tools": 23,
+    "tools": 25,
     "stages": {
       "basic": {
         "label": "基础可画",
-        "count": 17
+        "count": 20
       },
       "partial": {
         "label": "部分支持",
-        "count": 9
+        "count": 7
       },
       "todo": {
         "label": "待制作",
-        "count": 25
+        "count": 24
       },
       "handoff": {
         "label": "转交其他模块",
@@ -266,19 +266,24 @@ window.PoemProgress = {
       "note": "附着水珠或局部亮点，需有载体或明确的抽象表达。",
       "status": "语义映射仍是设计候选，未接入正式诗句生成流程",
       "progress": {
-        "stage": "partial",
+        "stage": "basic",
         "tools": [
+          "surface-weather",
           "grass"
         ],
-        "available": "露珠附在草叶表面，随叶片摆动。",
-        "remaining": "当前只支持草叶载体；树叶、花瓣及其他物体附着未接入。",
+        "available": "共用露珠附着层，支持草叶、叶面、枝条、石面和无载体局部试画；露随叶枝一起变换。",
+        "remaining": "待审美确认；尚未支持任意花瓣或载体，未从诗句自动匹配附着对象，也无凝结、滑落与滴落过程。",
         "needs_context": false,
         "presets": {
+          "surface-weather": {
+            "surface": "dew",
+            "carrier": "leaf"
+          },
           "grass": {
             "surface": "dew"
           }
         },
-        "label": "部分支持"
+        "label": "基础可画"
       }
     },
     {
@@ -313,19 +318,24 @@ window.PoemProgress = {
       "note": "附着覆层，不默认持续飘落。",
       "status": "语义映射仍是设计候选，未接入正式诗句生成流程",
       "progress": {
-        "stage": "partial",
+        "stage": "basic",
         "tools": [
+          "surface-weather",
           "grass"
         ],
-        "available": "草叶上部的静止霜线与结晶笔触。",
-        "remaining": "当前只支持草叶载体；地表、树枝覆霜和形成过程未实现。",
+        "available": "共用静止霜纹与结晶笔触，支持草叶、叶面、枝条、石面和无载体局部试画；不作为飘雪。",
+        "remaining": "待审美确认；任意地表和其他载体尚未支持，未从诗句自动匹配附着对象，也无霜层形成过程。",
         "needs_context": false,
         "presets": {
+          "surface-weather": {
+            "surface": "frost",
+            "carrier": "branch"
+          },
           "grass": {
             "surface": "frost"
           }
         },
-        "label": "部分支持"
+        "label": "基础可画"
       }
     },
     {
@@ -360,12 +370,20 @@ window.PoemProgress = {
       "note": "共用鸟体与运动骨架，保留物种名；不靠标签宣称已辨认。",
       "status": "语义映射仍是设计候选，未接入正式诗句生成流程",
       "progress": {
-        "stage": "todo",
-        "tools": [],
-        "available": "已有通用鸟群运动可复用，但尚无该鸟种的专门外形。",
-        "remaining": "共用鸟体与运动骨架，保留物种名；不靠标签宣称已辨认。",
+        "stage": "basic",
+        "tools": [
+          "oriole"
+        ],
+        "available": "单只黄身深翼的莺形写意试画，具喙、眼、翼、尾和足；收翅、展翅、朝向与局部微动可选。",
+        "remaining": "待审美与形态辨识确认；不是全部古诗莺的物种鉴定。尚无鸟鸣、群体数量、栖枝或跨物体作用。",
         "needs_context": false,
-        "label": "待制作"
+        "presets": {
+          "oriole": {
+            "pose": "folded",
+            "motion": "still"
+          }
+        },
+        "label": "基础可画"
       }
     },
     {
@@ -1945,6 +1963,131 @@ window.PoemProgress = {
       "capabilities": [
         "wind-response",
         "shape-selection",
+        "density-detail",
+        "anchors",
+        "fixed-count"
+      ]
+    },
+    {
+      "id": "surface-weather",
+      "name": "露 · 霜附着",
+      "subtitle": "露聚成点，霜铺成纹，跟着载体一起动。",
+      "credit": "本项目试作 · 共用露霜附着层与三类载体",
+      "sources": [
+        "project"
+      ],
+      "reference": "drawing/README.md#露霜附着层",
+      "note": "可看叶面、枝条、石面的露霜，或只看局部笔触。附着不等于飘落；载体须明确选择，诗句只有露霜时不自动补物体。",
+      "controls": [
+        {
+          "id": "surface",
+          "label": "附着",
+          "default": "dew",
+          "choices": [
+            {
+              "value": "dew",
+              "label": "露珠"
+            },
+            {
+              "value": "frost",
+              "label": "霜纹"
+            }
+          ]
+        },
+        {
+          "id": "carrier",
+          "label": "载体",
+          "default": "leaf",
+          "choices": [
+            {
+              "value": "leaf",
+              "label": "叶面"
+            },
+            {
+              "value": "branch",
+              "label": "枝条"
+            },
+            {
+              "value": "stone",
+              "label": "石面"
+            },
+            {
+              "value": "detail",
+              "label": "局部笔触（不补载体）"
+            }
+          ]
+        }
+      ],
+      "capabilities": [
+        "surface-attachment",
+        "wind-response",
+        "shape-selection",
+        "density-detail",
+        "anchors",
+        "fixed-count"
+      ]
+    },
+    {
+      "id": "oriole",
+      "name": "莺形",
+      "subtitle": "一团淡黄，几笔深翼，先画清一只。",
+      "credit": "本项目试作 · 单只莺形、收翅与展翅",
+      "sources": [
+        "project"
+      ],
+      "reference": "drawing/README.md#莺形",
+      "note": "黄身深翼的写意试作，保留单只鸟的喙、眼、翼、尾和足；不是全部古诗莺的物种鉴定。收翅／展翅可选，不自动添树枝、同伴或鸣声。",
+      "controls": [
+        {
+          "id": "pose",
+          "label": "翼姿",
+          "default": "folded",
+          "choices": [
+            {
+              "value": "folded",
+              "label": "收翅"
+            },
+            {
+              "value": "spread",
+              "label": "展翅"
+            }
+          ]
+        },
+        {
+          "id": "facing",
+          "label": "朝向",
+          "default": "right",
+          "choices": [
+            {
+              "value": "right",
+              "label": "向右"
+            },
+            {
+              "value": "left",
+              "label": "向左"
+            }
+          ]
+        },
+        {
+          "id": "motion",
+          "label": "微动",
+          "default": "still",
+          "choices": [
+            {
+              "value": "still",
+              "label": "静止"
+            },
+            {
+              "value": "flap",
+              "label": "展翅微动"
+            }
+          ]
+        }
+      ],
+      "capabilities": [
+        "shape-selection",
+        "imagery-accent",
+        "local-motion",
         "density-detail",
         "anchors",
         "fixed-count"

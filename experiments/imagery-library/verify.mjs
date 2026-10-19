@@ -103,7 +103,7 @@ try {
     const snapshot=id=>document.querySelector('#'+id+' canvas').toDataURL();
     const choose=async(id,value)=>{const s=document.getElementById(id);s.value=value;s.dispatchEvent(new Event('change'));await new Promise(r=>setTimeout(r,40));};
     const unique={};
-    for(const id of ['grass','snow','leaves','fish','flower-forms','wine','building','plum-branch']){
+    for(const id of ['grass','snow','leaves','fish','flower-forms','wine','building','plum-branch','surface-weather','oriole']){
       const d=window.PoemDrawing.definitions().find(d=>d.id===id),field=d.controls[0],images=[];
       for(const choice of field.choices){await choose(id+'-'+field.id,choice.value);images.push(snapshot(id));}
       unique[id]=new Set(images).size===field.choices.length;await choose(id+'-'+field.id,field.default);
@@ -133,6 +133,25 @@ try {
     return {liquidNoVessel:liquid.vesselCount===0&&liquid.personCount===0,cupOnly:cup.vesselCount===1&&cup.personCount===0,jarOnly:jar.vesselCount===1&&jar.personCount===0,twoFloors:two.levelCount===2&&two.windowCount===5&&two.doorCount===1,threeFloors:three.levelCount===3&&three.windowCount===8&&three.buildingCount===1&&three.personCount===0,windowsDiffer,buildingStatic,plumResponds,plumCounts:plum.flowerCount===9&&plum.budCount===4,anchorsFinite:anchors.every(a=>a.length>=2&&a.every(q=>Number.isFinite(q.x+q.y)&&q.x>=0&&q.x<=640&&q.y>=0&&q.y<=388))};
   })()`);
   if(Object.values(frequencyFeatures).some(v=>v!==true))throw new Error('Frequency-priority tools failed: '+JSON.stringify(frequencyFeatures));
+  const surfaceBirdFeatures=await evaluate(`(async()=>{
+    const choose=async(id,value)=>{const s=document.getElementById(id);s.value=value;s.dispatchEvent(new Event('change'));await new Promise(r=>setTimeout(r,40));};
+    const hash=id=>document.querySelector('#'+id+' canvas').toDataURL(),surfaceImages=[];
+    for(const carrier of ['leaf','branch','stone','detail']){await choose('surface-weather-carrier',carrier);for(const surface of ['dew','frost']){await choose('surface-weather-surface',surface);surfaceImages.push(hash('surface-weather'));}}
+    const detail=window.imageryExperiment.inspect().find(t=>t.id==='surface-weather');
+    await choose('surface-weather-carrier','leaf');await choose('surface-weather-surface','dew');
+    const birdBefore=hash('oriole');await choose('oriole-facing','left');const facesDiffer=birdBefore!==hash('oriole');await choose('oriole-facing','right');
+    const hosts=['surface-weather','oriole'].map(()=>document.body.appendChild(document.createElement('div')));hosts.forEach(h=>h.hidden=true);
+    const shared={wind:0,density:.45,palette:'clear'},surface=window.PoemDrawing.mount('surface-weather',hosts[0],shared,777),bird=window.PoemDrawing.mount('oriole',hosts[1],shared,777);
+    await new Promise(r=>setTimeout(r,150));surface.pause(true);bird.pause(true);surface.reset(777);bird.reset(777);await new Promise(r=>setTimeout(r,50));
+    const original=surface.anchors(),snapshot=()=>hosts[0].querySelector('canvas').toDataURL();shared.wind=1;surface.refresh();await new Promise(r=>setTimeout(r,50));const moved=surface.anchors();
+    const d=a=>Math.hypot(a[0].x-a[1].x,a[0].y-a[1].y),attachedRigidly=Math.abs(d(original)-d(moved))<1e-7,anchorsMove=original.some((q,i)=>Math.abs(q.x-moved[i].x)+Math.abs(q.y-moved[i].y)>.01);
+    surface.configure({carrier:'stone'});await new Promise(r=>setTimeout(r,50));const stone=snapshot();shared.wind=0;surface.refresh();await new Promise(r=>setTimeout(r,50));const stoneStatic=stone===snapshot();
+    const birdImage=()=>hosts[1].querySelector('canvas').toDataURL();bird.configure({pose:'spread',motion:'flap'});bird.pause(false);await new Promise(r=>setTimeout(r,80));const flying=birdImage();await new Promise(r=>setTimeout(r,160));const wingMoves=flying!==birdImage();
+    bird.configure({pose:'folded'});await new Promise(r=>setTimeout(r,60));const folded=birdImage();await new Promise(r=>setTimeout(r,160));const foldedStill=folded===birdImage();
+    const inspection=bird.inspect();surface.dispose();bird.dispose();hosts.forEach(h=>h.remove());
+    return {eightDistinct:new Set(surfaceImages).size===8,detailNoCarrier:detail.carrierCount===0&&detail.airborneCount===0,facesDiffer,attachedRigidly,anchorsMove,stoneStatic,wingMoves,foldedStill,birdCounts:inspection.birdCount===1&&inspection.perchCount===0};
+  })()`);
+  if(Object.values(surfaceBirdFeatures).some(v=>v!==true))throw new Error('Surface and bird features failed: '+JSON.stringify(surfaceBirdFeatures));
   const extensionLifecycle=await evaluate(`(async()=>{
     const ids=['catkins','cloud','fish'],hosts=ids.map(()=>document.body.appendChild(document.createElement('div')));hosts.forEach(h=>h.style.display='none');
     const controls=hosts.map((h,i)=>window.PoemDrawing.mount(ids[i],h,{wind:.8,density:.5,palette:'clear'},777));
@@ -182,6 +201,17 @@ try {
     return canvas.toDataURL();
   })()`);
   await writeFile(resolve(dir,'frequency-tools-preview.png'),Buffer.from(frequencySheet.split(',')[1],'base64'));
+  const surfaceBirdSheet=await evaluate(`(async()=>{
+    const variants=[['surface-weather',{carrier:'leaf',surface:'dew'},'叶面 · 露'],['surface-weather',{carrier:'leaf',surface:'frost'},'叶面 · 霜'],['oriole',{pose:'folded',facing:'right'},'莺形 · 收翅'],['surface-weather',{carrier:'branch',surface:'dew'},'枝条 · 露'],['surface-weather',{carrier:'branch',surface:'frost'},'枝条 · 霜'],['oriole',{pose:'spread',facing:'right'},'莺形 · 展翅'],['surface-weather',{carrier:'stone',surface:'dew'},'石面 · 露'],['surface-weather',{carrier:'stone',surface:'frost'},'石面 · 霜'],['oriole',{pose:'folded',facing:'left'},'莺形 · 向左']];
+    const canvas=document.createElement('canvas');canvas.width=1200;canvas.height=810;const c=canvas.getContext('2d');c.fillStyle='#f5f4ed';c.fillRect(0,0,1200,810);
+    for(const [i,[id,patch,label]] of variants.entries()){
+      for(const [field,value] of Object.entries(patch)){const s=document.getElementById(id+'-'+field);s.value=value;s.dispatchEvent(new Event('change'));}await new Promise(r=>setTimeout(r,40));
+      const x=i%3*400,y=Math.floor(i/3)*270;c.drawImage(document.querySelector('#'+id+' canvas'),x,y,400,242.5);c.fillStyle='#344b43';c.font='16px Microsoft YaHei';c.fillText(label,x+16,y+263);
+    }
+    for(const id of ['surface-weather','oriole'])for(const field of window.PoemDrawing.definitions().find(t=>t.id===id).controls){const s=document.getElementById(id+'-'+field.id);s.value=field.default;s.dispatchEvent(new Event('change'));}
+    return canvas.toDataURL();
+  })()`);
+  await writeFile(resolve(dir,'surface-bird-preview.png'),Buffer.from(surfaceBirdSheet.split(',')[1],'base64'));
   await send('Emulation.setDeviceMetricsOverride',{width:390,height:844,deviceScaleFactor:1,mobile:true});await sleep(150);
   const narrowLayout=await evaluate(`({viewport:innerWidth,document:document.documentElement.scrollWidth,canvases:document.querySelectorAll('canvas').length})`);
   if(narrowLayout.document>narrowLayout.viewport||wideLayout.document>wideLayout.viewport)throw new Error('Horizontal overflow');
@@ -201,6 +231,7 @@ try {
   if(errors.length)throw new Error(JSON.stringify(errors));
   const report={status:'passed',targetUrl,initial,pausedBefore,pausedAfter,changed,settings,resumed,exportInfo,isolation,variants,architecture,newFeatures,extensionLifecycle,wideLayout,narrowLayout,runtimeErrors:errors,limitations:['未操作系统下载确认界面；仅验证 canvas 导出 PNG 数据。','本地画面经浏览器截图检查；具体花鸟树种尚未做植物学或生物学辨识验收。','所有登记工具检查暂停重置后的重复出图；不等同于运动的跨设备逐帧确定性。']};
   report.frequencyFeatures=frequencyFeatures;
+  report.surfaceBirdFeatures=surfaceBirdFeatures;
   await writeFile(resolve(dir,'verification.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify({status:report.status,wideLayout,narrowLayout,runtimeErrors:errors.length}));
   await send('Browser.close').catch(()=>{});
 }finally{if(ws)ws.close();edge.kill();}
