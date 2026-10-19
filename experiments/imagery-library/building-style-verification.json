@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "baselineCommit": "d699cc1",
+  "repeat": true,
+  "staticInWind": true,
+  "allSeedsFinite": true,
+  "distinctSeeds": 32,
+  "threeFloors": true,
+  "runtimeErrors": [],
+  "modelCalls": 0
+}

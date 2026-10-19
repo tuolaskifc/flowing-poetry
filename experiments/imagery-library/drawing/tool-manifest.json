@@ -607,14 +607,14 @@
     {
       "id": "building",
       "name": "楼",
-      "subtitle": "层层檐下，有窗，也有留白。",
-      "credit": "折檐沿用 Lingdong Huang / Shan, Shui · MIT；楼层、门窗与栏杆为本项目编写",
+      "subtitle": "檐角挑起，几笔窗影，留一面空墙。",
+      "credit": "屋脊与檐的组织参考 Lingdong Huang / Shan, Shui · MIT；曲面、断笔、楼体与窗影为本项目编写",
       "sources": [
         "shan-pavilion",
         "project"
       ],
       "reference": "drawing/README.md#楼与共用屋顶",
-      "note": "独立的二层／三层楼体，门窗与栏杆可见；不自动添人，不代表某座历史建筑或地名。",
+      "note": "二层／三层写意楼体，以曲檐、疏窗和淡墨留白表现；始终静止，不添人物，不对应具体历史建筑。",
       "controls": [
         {
           "id": "levels",
@@ -633,16 +633,16 @@
         },
         {
           "id": "windows",
-          "label": "窗格",
+          "label": "窗影",
           "default": "lattice",
           "choices": [
             {
               "value": "lattice",
-              "label": "格窗"
+              "label": "疏笔"
             },
             {
               "value": "open",
-              "label": "留空"
+              "label": "留白"
             }
           ]
         }
@@ -785,7 +785,7 @@
         "code-research/shan-index.html"
       ],
       "licenseFile": "code-research/shan-LICENSE.txt",
-      "note": "取 Arch 内 hut 的幂函数屋顶展开、roof 的屋脊/檐角控制点，以及 rail 的菱形平面；折檐几何提取为 architecture.js，供亭与楼共用。重写柱、栏、屋顶纹理与 Canvas 绘制，不复制 arch01 自动人物；楼层与门窗为本项目编写。"
+      "note": "取 Arch 内 hut 的幂函数屋顶展开、roof 的屋脊/檐角控制点，以及 rail 的菱形平面；亭继续使用 architecture.js 的折檐。楼在原适配基础上保留屋脊与檐的组织参考，曲檐墨面、断笔、楼层、窗影均由本项目重写；不复制 arch01 自动人物。"
     },
     "shan-boat": {
       "id": "shan-boat",

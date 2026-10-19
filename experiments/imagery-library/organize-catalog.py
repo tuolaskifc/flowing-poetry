@@ -25,7 +25,7 @@ families=[
 ('insect','虫体','扩展',None,'待制作虫体；只有鸣声依据时不自动添加可见虫体。'),
 ('horse','马体','扩展',None,'待制作轮廓、步态与肢体结构；第一版暂缓。'),
 ('boat','舟船与桨','首批','experiments/imagery-library/drawing/tools/boat.js','已有独立船体与甲板锚点，不自动加船夫；桨、帆与真正载人关系尚未实现。'),
-('architecture','楼亭与栏杆','首批','experiments/imagery-library/drawing/tools/building.js','已有独立空亭与二层／三层楼体；共用折檐几何，主体不互相代替，未实现人物登楼或楼内活动。'),
+('architecture','楼亭与栏杆','首批','experiments/imagery-library/drawing/tools/building.js','已有独立空亭与二层／三层写意楼体；楼用曲檐墨面、断笔和疏窗，亭保留折檐。未实现人物登楼或楼内活动。'),
 ('liquid_container','酒液与容器','扩展','experiments/imagery-library/drawing/tools/wine.js','已有酒液局部、杯中酒与酒壶试画；默认不补杯，饮酒活动仍须语境处理。'),
 ('instrument','乐器形体','扩展',None,'琴、瑟、笛分别制作；形体与声音分开，暂不实现音频。'),
 ('fruit','果实','扩展','experiments/imagery-library/code-research/fresco/demos/fruitTrees/sketch.js','有通用果实示例，不代表已有梅子形态；需确认外形与附着。'),

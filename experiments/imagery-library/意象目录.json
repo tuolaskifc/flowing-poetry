@@ -141,7 +141,7 @@
       "name": "楼亭与栏杆",
       "phase": "首批",
       "code_reference": "experiments/imagery-library/drawing/tools/building.js",
-      "status": "已有独立空亭与二层／三层楼体；共用折檐几何，主体不互相代替，未实现人物登楼或楼内活动。"
+      "status": "已有独立空亭与二层／三层写意楼体；楼用曲檐墨面、断笔和疏窗，亭保留折檐。未实现人物登楼或楼内活动。"
     },
     {
       "id": "liquid_container",
@@ -321,7 +321,7 @@
         "tools": [
           "building"
         ],
-        "available": "独立二层／三层楼体，带门窗、折檐和栏杆，不添加人物。",
+        "available": "二层／三层写意楼体，曲檐墨面、断笔轮廓与疏笔窗影；窗影可留白，不添加人物。",
         "remaining": "待审美确认；不是具体历史建筑，楼内活动、视点与登楼关系未实现。",
         "needs_context": false,
         "label": "基础可画"

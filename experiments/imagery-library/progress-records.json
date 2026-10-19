@@ -59,7 +59,7 @@
     "楼": {
       "stage": "basic",
       "tools": ["building"],
-      "available": "独立二层／三层楼体，带门窗、折檐和栏杆，不添加人物。",
+      "available": "二层／三层写意楼体，曲檐墨面、断笔轮廓与疏笔窗影；窗影可留白，不添加人物。",
       "remaining": "待审美确认；不是具体历史建筑，楼内活动、视点与登楼关系未实现。",
       "needs_context": false
     },

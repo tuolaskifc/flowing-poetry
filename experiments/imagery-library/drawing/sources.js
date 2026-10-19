@@ -47,7 +47,7 @@ window.PoemDrawingSources = Object.freeze({
     id:'shan-pavilion',author:'Lingdong Huang',license:'MIT',kind:'adapted',
     url:'https://github.com/LingDong-/shan-shui-inf',
     originals:['code-research/shan-index.html'],licenseFile:'code-research/shan-LICENSE.txt',
-    note:'取 Arch 内 hut 的幂函数屋顶展开、roof 的屋脊/檐角控制点，以及 rail 的菱形平面；折檐几何提取为 architecture.js，供亭与楼共用。重写柱、栏、屋顶纹理与 Canvas 绘制，不复制 arch01 自动人物；楼层与门窗为本项目编写。'
+    note:'取 Arch 内 hut 的幂函数屋顶展开、roof 的屋脊/檐角控制点，以及 rail 的菱形平面；亭继续使用 architecture.js 的折檐。楼在原适配基础上保留屋脊与檐的组织参考，曲檐墨面、断笔、楼层、窗影均由本项目重写；不复制 arch01 自动人物。'
   }),
   'shan-boat': Object.freeze({
     id:'shan-boat',author:'Lingdong Huang',license:'MIT',kind:'adapted',
