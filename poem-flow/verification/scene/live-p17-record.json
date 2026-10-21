@@ -1,0 +1,524 @@
+{
+  "id": "2026-10-21T12-35-24-384Z-7037c753",
+  "fingerprint": "97c7931cf6b9540fa3b3a63485fa7ca8f20bcaa69ca584ef669f6312b04fde5e",
+  "poem": "江碧鸟逾白，山青花欲燃。",
+  "source": {
+    "provider": "场景通路实测",
+    "author": "杜甫",
+    "title": "绝句二首·其二"
+  },
+  "mode": "scene",
+  "model": "DeepSeek-V4.1-Flash",
+  "started_at": "2026-10-21T12:35:24.385Z",
+  "cached": false,
+  "http_status": 200,
+  "usage": {
+    "completion_tokens": 472,
+    "prompt_tokens": 3221,
+    "total_tokens": 3693,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  },
+  "finish_reason": "stop",
+  "analysis": {
+    "schema_version": "3.2",
+    "poem": "江碧鸟逾白，山青花欲燃。",
+    "reading": "江水碧绿，飞鸟显得更白；山色青翠，花红得仿佛将要燃烧。两句以鲜明色彩对照写春日江山的明丽。",
+    "entities": [
+      {
+        "id": "i1",
+        "mentions": [
+          "江"
+        ],
+        "concept": "江水",
+        "kind": "place",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "江碧"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i2",
+        "mentions": [
+          "鸟"
+        ],
+        "concept": "飞鸟",
+        "kind": "organism",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "鸟逾白"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i3",
+        "mentions": [
+          "山"
+        ],
+        "concept": "青山",
+        "kind": "place",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "山青"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i4",
+        "mentions": [
+          "花"
+        ],
+        "concept": "花",
+        "kind": "organism",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "花欲燃"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      }
+    ],
+    "relations": [],
+    "atmosphere": {
+      "labels": [
+        "明丽",
+        "热烈"
+      ],
+      "valence": "positive",
+      "energy": "medium",
+      "tension": "low",
+      "openness": "high",
+      "evidence": [
+        "江碧鸟逾白",
+        "山青花欲燃"
+      ]
+    },
+    "time": {
+      "markers": [],
+      "note": null
+    },
+    "uncertainties": [
+      "“欲燃”可解为花红似火将燃，也可解为花将开放，此处按前一种理解。",
+      "鸟与花的数量、种类均无原文依据，未作确定。"
+    ],
+    "spatial": []
+  },
+  "validation": {
+    "valid": true,
+    "errors": [],
+    "warnings": [
+      "模型保留了不确定性，需要审阅"
+    ],
+    "review_required": true
+  },
+  "plan": {
+    "version": "scene-composition-1",
+    "seed": 2222229138,
+    "settings": {
+      "wind": 0,
+      "density": 0.45,
+      "palette": "clear"
+    },
+    "layers": [
+      {
+        "tool": "landscape",
+        "entities": [
+          "i3"
+        ],
+        "names": [
+          "山"
+        ],
+        "options": {
+          "form": "mountain"
+        },
+        "animate": false,
+        "placement": {
+          "anchor": [
+            320,
+            194
+          ],
+          "at": [
+            0.5,
+            0.5
+          ],
+          "scale": 1.5
+        },
+        "instances": [
+          {
+            "placement": {
+              "anchor": [
+                320,
+                194
+              ],
+              "at": [
+                0.5,
+                0.4
+              ],
+              "scale": 1.6
+            },
+            "depth": 0,
+            "opacity": 1,
+            "variant": 0
+          }
+        ],
+        "singleUnit": false,
+        "quantity": {
+          "items": [
+            {
+              "entity": "i3",
+              "mode": "unspecified",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "unspecified",
+              "extent": "unspecified",
+              "evidence": [],
+              "basis": "model"
+            }
+          ],
+          "rendered": 1,
+          "exact": false,
+          "collective": false,
+          "partUnsupported": false
+        },
+        "quantityLabel": "整体笔触图层；内部数量尚未适配",
+        "z": -30
+      },
+      {
+        "tool": "water",
+        "entities": [
+          "i1"
+        ],
+        "names": [
+          "江"
+        ],
+        "options": {},
+        "animate": true,
+        "placement": {
+          "anchor": [
+            320,
+            130
+          ],
+          "at": [
+            0.5,
+            0.57
+          ],
+          "scale": 1.5
+        },
+        "instances": [
+          {
+            "placement": {
+              "anchor": [
+                320,
+                135
+              ],
+              "at": [
+                0.5,
+                0.46
+              ],
+              "scale": 1.6
+            },
+            "depth": 0,
+            "opacity": 1,
+            "variant": 0
+          }
+        ],
+        "singleUnit": false,
+        "quantity": {
+          "items": [
+            {
+              "entity": "i1",
+              "mode": "unspecified",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "unspecified",
+              "extent": "unspecified",
+              "evidence": [],
+              "basis": "model"
+            }
+          ],
+          "rendered": 1,
+          "exact": false,
+          "collective": false,
+          "partUnsupported": false
+        },
+        "quantityLabel": "整体笔触图层；内部数量尚未适配",
+        "z": -10,
+        "surface": {
+          "top": 0.46,
+          "bottom": 1
+        }
+      },
+      {
+        "tool": "flower",
+        "entities": [
+          "i4"
+        ],
+        "names": [
+          "花"
+        ],
+        "options": {},
+        "animate": true,
+        "placement": {
+          "anchor": [
+            320,
+            320
+          ],
+          "at": [
+            0.4,
+            0.9
+          ],
+          "scale": 0.95
+        },
+        "instances": [
+          {
+            "placement": {
+              "anchor": [
+                320,
+                388
+              ],
+              "at": [
+                0.15767771499603989,
+                0.666
+              ],
+              "scale": 0.41400000000000003
+            },
+            "depth": 0.05,
+            "opacity": 0.601,
+            "variant": 0
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                388
+              ],
+              "at": [
+                0.6901265667096834,
+                0.6980000000000001
+              ],
+              "scale": 0.482
+            },
+            "depth": 0.15,
+            "opacity": 0.643,
+            "variant": 1
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                388
+              ],
+              "at": [
+                0.3080823059134432,
+                0.73
+              ],
+              "scale": 0.55
+            },
+            "depth": 0.25,
+            "opacity": 0.6849999999999999,
+            "variant": 2
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                388
+              ],
+              "at": [
+                0.9013284323667543,
+                0.762
+              ],
+              "scale": 0.618
+            },
+            "depth": 0.35,
+            "opacity": 0.727,
+            "variant": 0
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                388
+              ],
+              "at": [
+                0.5283859760307267,
+                0.794
+              ],
+              "scale": 0.686
+            },
+            "depth": 0.45,
+            "opacity": 0.7689999999999999,
+            "variant": 1
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                388
+              ],
+              "at": [
+                0.259029923620416,
+                0.8260000000000001
+              ],
+              "scale": 0.754
+            },
+            "depth": 0.55,
+            "opacity": 0.8109999999999999,
+            "variant": 2
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                388
+              ],
+              "at": [
+                0.68816145386666,
+                0.8580000000000001
+              ],
+              "scale": 0.8220000000000001
+            },
+            "depth": 0.65,
+            "opacity": 0.853,
+            "variant": 0
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                388
+              ],
+              "at": [
+                0.45823276817090147,
+                0.89
+              ],
+              "scale": 0.89
+            },
+            "depth": 0.75,
+            "opacity": 0.895,
+            "variant": 1
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                388
+              ],
+              "at": [
+                0.1496154576960078,
+                0.922
+              ],
+              "scale": 0.9580000000000001
+            },
+            "depth": 0.85,
+            "opacity": 0.9369999999999999,
+            "variant": 2
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                388
+              ],
+              "at": [
+                0.5742900164634168,
+                0.954
+              ],
+              "scale": 1.026
+            },
+            "depth": 0.95,
+            "opacity": 0.9789999999999999,
+            "variant": 0
+          }
+        ],
+        "singleUnit": true,
+        "quantity": {
+          "items": [
+            {
+              "entity": "i4",
+              "mode": "unspecified",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "unspecified",
+              "extent": "unspecified",
+              "evidence": [],
+              "basis": "model"
+            }
+          ],
+          "rendered": 10,
+          "exact": false,
+          "collective": false,
+          "partUnsupported": false
+        },
+        "quantityLabel": "数量未精确；本地试画 10 个单元"
+      }
+    ],
+    "spatial": [],
+    "scene": {
+      "kind": "waterside",
+      "notes": [
+        "水面以连续色层和水纹构成空间；水面的范围、视点与水平线是本地构图选择，不自动增加岸或陆地。"
+      ],
+      "waterline": 0.46
+    },
+    "omitted": [
+      {
+        "id": "i2",
+        "name": "鸟",
+        "reason": "该具体意象尚无可用形态；没有替换成通用树、花或鸟群"
+      }
+    ],
+    "notes": [
+      "江虽被归为地点，仍按原文明示的自然景物匹配；具体空间关系另行处理。",
+      "山虽被归为地点，仍按原文明示的自然景物匹配；具体空间关系另行处理。",
+      "位置、大小、笔触与默认微动是本地试画选择；数量解释与本地显示数量分别记录。",
+      "未明说的群落数量、疏密、近中远层次与变体均为本地构图选择；不增加新物种，不把铺展词换算成精确物体数量。",
+      "水面以连续色层和水纹构成空间；水面的范围、视点与水平线是本地构图选择，不自动增加岸或陆地。"
+    ],
+    "relations": []
+  },
+  "elapsed_seconds": 3.6
+}

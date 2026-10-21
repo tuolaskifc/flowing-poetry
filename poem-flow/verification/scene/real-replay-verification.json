@@ -1,0 +1,259 @@
+{
+  "status": "passed",
+  "modelRequests": 0,
+  "savedRecordReplay": true,
+  "beforeCovered": 7,
+  "afterCovered": 14,
+  "entities": 17,
+  "cases": [
+    {
+      "id": "p01",
+      "poem": "明月松间照，清泉石上流。",
+      "basis": "real-model",
+      "record": "2026-10-21T12-31-46-183Z-fe25f4c9",
+      "usage": {
+        "completion_tokens": 544,
+        "prompt_tokens": 3120,
+        "total_tokens": 3664,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "review": "待人工审美确认",
+      "before": {
+        "covered": 3,
+        "total": 4,
+        "tools": [
+          "moon",
+          "water",
+          "rock"
+        ],
+        "instances": 3,
+        "missing": [
+          "松间"
+        ],
+        "spatial": []
+      },
+      "after": {
+        "covered": 4,
+        "total": 4,
+        "tools": [
+          "moon",
+          "tree",
+          "water",
+          "rock"
+        ],
+        "instances": 6,
+        "missing": [],
+        "spatial": [
+          {
+            "type": "among",
+            "source": "i1",
+            "target": "i2",
+            "modality": "asserted",
+            "basis": "explicit",
+            "evidence": [
+              "明月松间照"
+            ],
+            "visualized": true,
+            "reason": "组织月体与树隙，不模拟穿枝照明"
+          },
+          {
+            "type": "on",
+            "source": "i3",
+            "target": "i4",
+            "modality": "asserted",
+            "basis": "explicit",
+            "evidence": [
+              "清泉石上流"
+            ],
+            "visualized": false,
+            "reason": "该空间关系与形态组合尚未适配"
+          }
+        ],
+        "scene": "waterside"
+      }
+    },
+    {
+      "id": "p11",
+      "poem": "野旷天低树，江清月近人。",
+      "basis": "real-model",
+      "record": "2026-10-21T12-31-52-555Z-285246c0",
+      "usage": {
+        "completion_tokens": 623,
+        "prompt_tokens": 3121,
+        "total_tokens": 3744,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "review": "待人工审美确认",
+      "before": {
+        "covered": 1,
+        "total": 5,
+        "tools": [
+          "moon"
+        ],
+        "instances": 1,
+        "missing": [
+          "野",
+          "天",
+          "树",
+          "江",
+          "人"
+        ],
+        "spatial": []
+      },
+      "after": {
+        "covered": 4,
+        "total": 5,
+        "tools": [
+          "landscape",
+          "moon",
+          "tree",
+          "water"
+        ],
+        "instances": 6,
+        "missing": [
+          "天",
+          "人"
+        ],
+        "spatial": [],
+        "scene": "waterside"
+      }
+    },
+    {
+      "id": "p12",
+      "poem": "孤舟蓑笠翁，独钓寒江雪。",
+      "basis": "real-model",
+      "record": "2026-10-21T12-35-16-777Z-c0a9aa8f",
+      "usage": {
+        "completion_tokens": 568,
+        "prompt_tokens": 3222,
+        "total_tokens": 3790,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "review": "待人工审美确认",
+      "before": {
+        "covered": 2,
+        "total": 4,
+        "tools": [
+          "boat",
+          "snow"
+        ],
+        "instances": 2,
+        "missing": [
+          "蓑笠翁",
+          "寒江"
+        ],
+        "spatial": []
+      },
+      "after": {
+        "covered": 3,
+        "total": 4,
+        "tools": [
+          "water",
+          "boat",
+          "snow"
+        ],
+        "instances": 3,
+        "missing": [
+          "蓑笠翁"
+        ],
+        "spatial": [
+          {
+            "type": "on",
+            "source": "i2",
+            "target": "i1",
+            "modality": "asserted",
+            "basis": "inferred",
+            "evidence": [
+              "孤舟蓑笠翁"
+            ],
+            "visualized": false,
+            "reason": "关系的一端缺少独立画法"
+          },
+          {
+            "type": "on",
+            "source": "i1",
+            "target": "i3",
+            "modality": "asserted",
+            "basis": "inferred",
+            "evidence": [
+              "孤舟",
+              "寒江"
+            ],
+            "visualized": true,
+            "reason": "在水面区域定位，尚非物理承载"
+          }
+        ],
+        "scene": "waterside"
+      }
+    },
+    {
+      "id": "p17",
+      "poem": "江碧鸟逾白，山青花欲燃。",
+      "basis": "real-model",
+      "record": "2026-10-21T12-35-24-384Z-7037c753",
+      "usage": {
+        "completion_tokens": 472,
+        "prompt_tokens": 3221,
+        "total_tokens": 3693,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "review": "待人工审美确认",
+      "before": {
+        "covered": 1,
+        "total": 4,
+        "tools": [
+          "flower"
+        ],
+        "instances": 10,
+        "missing": [
+          "江",
+          "鸟",
+          "山"
+        ],
+        "spatial": []
+      },
+      "after": {
+        "covered": 3,
+        "total": 4,
+        "tools": [
+          "landscape",
+          "water",
+          "flower"
+        ],
+        "instances": 12,
+        "missing": [
+          "鸟"
+        ],
+        "spatial": [],
+        "scene": "waterside"
+      }
+    }
+  ],
+  "spatialStudy": {
+    "basis": "authored-semantic-fixture",
+    "outsideGroupsSeparated": true,
+    "reflectionChangesPng": true
+  },
+  "mobileWidth": 390,
+  "runtimeErrors": []
+}

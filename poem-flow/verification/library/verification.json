@@ -3,6 +3,8 @@
   "poems": 20,
   "focus": 5,
   "approved": 0,
+  "sceneReviewItems": 20,
+  "sceneReviewImages": 40,
   "allPoemsSelectable": true,
   "unimplementedScenesSelectable": true,
   "searchAndFilters": true,

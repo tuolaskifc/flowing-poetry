@@ -1,0 +1,486 @@
+{
+  "id": "2026-10-21T12-31-46-183Z-fe25f4c9",
+  "fingerprint": "b4814ef8058ed93ae9e7588c2baca3a18ef46c8d1ca6bc93dae7570bb5b3e271",
+  "poem": "明月松间照，清泉石上流。",
+  "source": {
+    "provider": "场景通路实测",
+    "author": "王维",
+    "title": "山居秋暝"
+  },
+  "mode": "scene",
+  "model": "DeepSeek-V4.1-Flash",
+  "started_at": "2026-10-21T12:31:46.186Z",
+  "cached": false,
+  "http_status": 200,
+  "usage": {
+    "completion_tokens": 544,
+    "prompt_tokens": 3120,
+    "total_tokens": 3664,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  },
+  "finish_reason": "stop",
+  "analysis": {
+    "schema_version": "3.2",
+    "poem": "明月松间照，清泉石上流。",
+    "reading": "月光照入松林之间，清泉在石上流淌；两句各写一处山中清景，明暗与动静相衬。",
+    "entities": [
+      {
+        "id": "i1",
+        "mentions": [
+          "明月"
+        ],
+        "concept": "明亮的月亮",
+        "kind": "object",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "明月松间照"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i2",
+        "mentions": [
+          "松间"
+        ],
+        "concept": "松树之间",
+        "kind": "place",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "明月松间照"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i3",
+        "mentions": [
+          "清泉"
+        ],
+        "concept": "清澈的泉水",
+        "kind": "object",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "清泉石上流"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i4",
+        "mentions": [
+          "石上"
+        ],
+        "concept": "石头表面",
+        "kind": "object",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "清泉石上流"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      }
+    ],
+    "relations": [],
+    "atmosphere": {
+      "labels": [
+        "清幽",
+        "明净"
+      ],
+      "valence": "positive",
+      "energy": "low",
+      "tension": "low",
+      "openness": "medium",
+      "evidence": [
+        "明月松间照",
+        "清泉石上流"
+      ]
+    },
+    "time": {
+      "markers": [],
+      "note": null
+    },
+    "uncertainties": [
+      "“松间”可指松林之间，也可指松枝之间，具体范围不明。",
+      "“石上”未说明是单块石头还是成片岩石。"
+    ],
+    "spatial": [
+      {
+        "type": "among",
+        "source": "i1",
+        "target": "i2",
+        "modality": "asserted",
+        "basis": "explicit",
+        "evidence": [
+          "明月松间照"
+        ]
+      },
+      {
+        "type": "on",
+        "source": "i3",
+        "target": "i4",
+        "modality": "asserted",
+        "basis": "explicit",
+        "evidence": [
+          "清泉石上流"
+        ]
+      }
+    ]
+  },
+  "validation": {
+    "valid": true,
+    "errors": [],
+    "warnings": [
+      "模型保留了不确定性，需要审阅"
+    ],
+    "review_required": true
+  },
+  "plan": {
+    "version": "scene-composition-1",
+    "seed": 410416620,
+    "settings": {
+      "wind": 0,
+      "density": 0.45,
+      "palette": "clear"
+    },
+    "layers": [
+      {
+        "tool": "moon",
+        "entities": [
+          "i1"
+        ],
+        "names": [
+          "明月"
+        ],
+        "options": {
+          "shape": "crescent"
+        },
+        "animate": true,
+        "placement": {
+          "anchor": [
+            320,
+            175
+          ],
+          "at": [
+            0.67,
+            0.22
+          ],
+          "scale": 0.85
+        },
+        "instances": [
+          {
+            "placement": {
+              "anchor": [
+                320,
+                175
+              ],
+              "at": [
+                0.6700000000000002,
+                0.22000000000000003
+              ],
+              "scale": 0.85
+            },
+            "depth": 0,
+            "opacity": 1,
+            "variant": 0
+          }
+        ],
+        "singleUnit": true,
+        "quantity": {
+          "items": [
+            {
+              "entity": "i1",
+              "mode": "unspecified",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "unspecified",
+              "extent": "unspecified",
+              "evidence": [],
+              "basis": "model"
+            }
+          ],
+          "rendered": 1,
+          "exact": false,
+          "collective": false,
+          "partUnsupported": false
+        },
+        "quantityLabel": "数量未精确；本地试画 1 个单元"
+      },
+      {
+        "tool": "tree",
+        "entities": [
+          "i2"
+        ],
+        "names": [
+          "松间"
+        ],
+        "options": {
+          "form": "pine",
+          "crown": "lines"
+        },
+        "animate": true,
+        "placement": {
+          "anchor": [
+            320,
+            388
+          ],
+          "at": [
+            0.18,
+            0.98
+          ],
+          "scale": 1.15
+        },
+        "instances": [
+          {
+            "placement": {
+              "anchor": [
+                320,
+                388
+              ],
+              "at": [
+                0.18,
+                0.9799999999999999
+              ],
+              "scale": 1.4375
+            },
+            "depth": 0,
+            "opacity": 1,
+            "variant": 0
+          }
+        ],
+        "singleUnit": true,
+        "quantity": {
+          "items": [
+            {
+              "entity": "i2",
+              "mode": "unspecified",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "unspecified",
+              "extent": "unspecified",
+              "evidence": [],
+              "basis": "model"
+            }
+          ],
+          "rendered": 1,
+          "exact": false,
+          "collective": false,
+          "partUnsupported": false
+        },
+        "quantityLabel": "数量未精确；本地试画 1 个单元",
+        "z": 8
+      },
+      {
+        "tool": "water",
+        "entities": [
+          "i3"
+        ],
+        "names": [
+          "清泉"
+        ],
+        "options": {},
+        "animate": true,
+        "placement": {
+          "anchor": [
+            320,
+            130
+          ],
+          "at": [
+            0.5,
+            0.57
+          ],
+          "scale": 1.5
+        },
+        "instances": [
+          {
+            "placement": {
+              "anchor": [
+                320,
+                135
+              ],
+              "at": [
+                0.5,
+                0.46
+              ],
+              "scale": 1.6
+            },
+            "depth": 0,
+            "opacity": 1,
+            "variant": 0
+          }
+        ],
+        "singleUnit": false,
+        "quantity": {
+          "items": [
+            {
+              "entity": "i3",
+              "mode": "unspecified",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "unspecified",
+              "extent": "unspecified",
+              "evidence": [],
+              "basis": "model"
+            }
+          ],
+          "rendered": 1,
+          "exact": false,
+          "collective": false,
+          "partUnsupported": false
+        },
+        "quantityLabel": "整体笔触图层；内部数量尚未适配",
+        "z": -10,
+        "surface": {
+          "top": 0.46,
+          "bottom": 1
+        }
+      },
+      {
+        "tool": "rock",
+        "entities": [
+          "i4"
+        ],
+        "names": [
+          "石上"
+        ],
+        "options": {},
+        "animate": true,
+        "placement": {
+          "anchor": [
+            320,
+            245
+          ],
+          "at": [
+            0.23,
+            0.91
+          ],
+          "scale": 0.95
+        },
+        "instances": [
+          {
+            "placement": {
+              "anchor": [
+                320,
+                245
+              ],
+              "at": [
+                0.23000000000000004,
+                0.9099999999999999
+              ],
+              "scale": 1.30967
+            },
+            "depth": 0,
+            "opacity": 1,
+            "variant": 0
+          }
+        ],
+        "singleUnit": true,
+        "quantity": {
+          "items": [
+            {
+              "entity": "i4",
+              "mode": "unspecified",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "unspecified",
+              "extent": "unspecified",
+              "evidence": [],
+              "basis": "model"
+            }
+          ],
+          "rendered": 1,
+          "exact": false,
+          "collective": false,
+          "partUnsupported": false
+        },
+        "quantityLabel": "数量未精确；本地试画 1 个单元"
+      }
+    ],
+    "spatial": [
+      {
+        "type": "among",
+        "source": "i1",
+        "target": "i2",
+        "modality": "asserted",
+        "basis": "explicit",
+        "evidence": [
+          "明月松间照"
+        ],
+        "visualized": true,
+        "reason": "组织月体与树隙，不模拟穿枝照明"
+      },
+      {
+        "type": "on",
+        "source": "i3",
+        "target": "i4",
+        "modality": "asserted",
+        "basis": "explicit",
+        "evidence": [
+          "清泉石上流"
+        ],
+        "visualized": false,
+        "reason": "该空间关系与形态组合尚未适配"
+      }
+    ],
+    "scene": {
+      "kind": "waterside",
+      "notes": [
+        "水面以连续色层和水纹构成空间；水面的范围、视点与水平线是本地构图选择，不自动增加岸或陆地。",
+        "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。"
+      ],
+      "waterline": 0.46
+    },
+    "omitted": [],
+    "notes": [
+      "原句未明确月形，暂用弯月试画；可以手动切换。",
+      "松间虽被归为地点，仍按原文明示的自然景物匹配；具体空间关系另行处理。",
+      "位置、大小、笔触与默认微动是本地试画选择；数量解释与本地显示数量分别记录。",
+      "未明说的群落数量、疏密、近中远层次与变体均为本地构图选择；不增加新物种，不把铺展词换算成精确物体数量。",
+      "水面以连续色层和水纹构成空间；水面的范围、视点与水平线是本地构图选择，不自动增加岸或陆地。",
+      "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。"
+    ],
+    "relations": []
+  },
+  "elapsed_seconds": 4.7
+}

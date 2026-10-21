@@ -66,8 +66,9 @@
     for(const missing of plan.omitted)item('omitted',missing.name+'：'+missing.reason);
     if(!plan.omitted.length)item('omitted','本次列出的场景意象均找到了基础工具；仍不代表全部关系已表现。');
     for(const note of plan.notes)item('notes',note);
+    for(const r of plan.spatial||[])item('relations',(a.entities.find(e=>e.id===r.source)?.mentions.join('／')||r.source)+' → '+(a.entities.find(e=>e.id===r.target)?.mentions.join('／')||r.target)+'：'+r.reason+(r.basis==='inferred'?'（语义推断）':''));
     for(const r of plan.relations)item('relations',r.meaning+'：'+(r.visualized?'以风响应试作表现':'尚未在画面实现'));
-    if(record.mode!=='full')item('relations',record.mode==='quantity'?'本次提取基础意象及数量范围，尚未请求完整关系抽取。':'本次为旧版基础意象模式，未请求完整关系抽取。');
+    if(record.mode!=='full')item('relations',record.mode==='scene'?'本次提取意象、数量与有限空间关系；完整动作和时间关系仍待实现。':record.mode==='quantity'?'本次提取基础意象及数量范围，尚未请求完整关系抽取。':'本次为旧版基础意象模式，未请求完整关系抽取。');
     const sourceIds=[...new Set(plan.layers.flatMap(l=>window.PoemDrawing.definitions().find(d=>d.id===l.tool).sources))];
     for(const id of sourceIds){const s=window.PoemDrawingSources[id],li=item('credits',s.author+(s.license?' · '+s.license:' · 本项目试作')+'。'+s.note);if(s.url){const link=document.createElement('a');link.href=s.url;link.textContent=' 原来源 ↗';link.target='_blank';link.rel='noopener noreferrer';li.append(link);}}
     $('usage').textContent='记录 '+record.id+'；模型 '+record.model+'；本次记录 token '+(record.usage?.total_tokens??'未返回')+'。'+(record.cached?'正在回看，没有新增模型调用。':'用量以本次接口返回为准。');

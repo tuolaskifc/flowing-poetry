@@ -32,6 +32,79 @@
       "capabilities": [
         "wind-response",
         "density-detail"
+      ],
+      "controls": [
+        {
+          "id": "form",
+          "label": "树形",
+          "default": "broadleaf",
+          "choices": [
+            {
+              "value": "broadleaf",
+              "label": "疏叶树"
+            },
+            {
+              "value": "pine",
+              "label": "松意"
+            }
+          ]
+        },
+        {
+          "id": "crown",
+          "label": "树冠",
+          "default": "lines",
+          "choices": [
+            {
+              "value": "lines",
+              "label": "疏叶"
+            },
+            {
+              "value": "wash",
+              "label": "叠墨"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "landscape",
+      "name": "山岸 · 地面",
+      "subtitle": "先定远近，再留出风景之间的空。",
+      "sources": [
+        "project"
+      ],
+      "credit": "本项目 · 山势与地表墨面",
+      "reference": "drawing/README.md",
+      "note": "山、岸、原野与小径的局部写意结构；只画明确选择的类型，不自动附加树、房屋或人物。",
+      "controls": [
+        {
+          "id": "form",
+          "label": "地形",
+          "default": "mountain",
+          "choices": [
+            {
+              "value": "mountain",
+              "label": "层山"
+            },
+            {
+              "value": "shore",
+              "label": "水岸"
+            },
+            {
+              "value": "ground",
+              "label": "原野"
+            },
+            {
+              "value": "path",
+              "label": "小径"
+            }
+          ]
+        }
+      ],
+      "capabilities": [
+        "static",
+        "density-detail",
+        "anchors"
       ]
     },
     {
@@ -48,6 +121,23 @@
       "capabilities": [
         "wind-response",
         "density-spacing"
+      ],
+      "controls": [
+        {
+          "id": "form",
+          "label": "水纹",
+          "default": "waves",
+          "choices": [
+            {
+              "value": "waves",
+              "label": "连续波纹"
+            },
+            {
+              "value": "plane",
+              "label": "疏密水面"
+            }
+          ]
+        }
       ]
     },
     {

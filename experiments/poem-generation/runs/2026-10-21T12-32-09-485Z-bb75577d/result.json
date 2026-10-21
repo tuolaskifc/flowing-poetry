@@ -1,0 +1,174 @@
+{
+  "id": "2026-10-21T12-32-09-485Z-bb75577d",
+  "fingerprint": "919135d9e06c3086e0c7e73f13f4275b7c21cbb8c3a7bf1f46b014668e4d5e7b",
+  "poem": "孤舟蓑笠翁，独钓寒江雪。",
+  "source": {
+    "provider": "场景通路实测",
+    "author": "柳宗元",
+    "title": "江雪"
+  },
+  "mode": "scene",
+  "model": "DeepSeek-V4.1-Flash",
+  "started_at": "2026-10-21T12:32:09.487Z",
+  "cached": false,
+  "http_status": 200,
+  "usage": {
+    "completion_tokens": 528,
+    "prompt_tokens": 3122,
+    "total_tokens": 3650,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 3072
+    }
+  },
+  "finish_reason": "stop",
+  "analysis": {
+    "schema_version": "3.2",
+    "poem": "孤舟蓑笠翁，独钓寒江雪。",
+    "reading": "孤舟上一位披蓑戴笠的老翁，独自在寒冷的江面垂钓，江上正落着雪。",
+    "entities": [
+      {
+        "id": "i1",
+        "mentions": [
+          "孤舟"
+        ],
+        "concept": "孤零零的小船",
+        "kind": "object",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "孤舟"
+        ],
+        "quantity": {
+          "mode": "exact",
+          "min": 1,
+          "max": 1,
+          "unit": null,
+          "scope": "individual",
+          "extent": "local",
+          "evidence": [
+            "孤舟"
+          ]
+        }
+      },
+      {
+        "id": "i2",
+        "mentions": [
+          "蓑笠翁"
+        ],
+        "concept": "披蓑戴笠的老翁",
+        "kind": "person",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "蓑笠翁"
+        ],
+        "quantity": {
+          "mode": "exact",
+          "min": 1,
+          "max": 1,
+          "unit": null,
+          "scope": "individual",
+          "extent": "local",
+          "evidence": [
+            "蓑笠翁"
+          ]
+        }
+      },
+      {
+        "id": "i3",
+        "mentions": [
+          "寒江"
+        ],
+        "concept": "寒冷的江面",
+        "kind": "place",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "寒江"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "spread",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i4",
+        "mentions": [
+          "雪"
+        ],
+        "concept": "飘落的雪",
+        "kind": "environment",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "雪"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "spread",
+          "evidence": []
+        }
+      }
+    ],
+    "relations": [],
+    "atmosphere": {
+      "labels": [
+        "孤寂",
+        "清冷"
+      ],
+      "valence": "neutral",
+      "energy": "low",
+      "tension": "low",
+      "openness": "medium",
+      "evidence": [
+        "孤舟",
+        "独钓",
+        "寒江雪"
+      ]
+    },
+    "time": {
+      "markers": [],
+      "note": null
+    },
+    "uncertainties": [
+      "“独钓寒江雪”可理解为在雪中垂钓，也可理解为钓寒江之雪，动作对象存在歧义。",
+      "蓑笠翁与孤舟的空间关系未明说，仅能推断其在舟上。"
+    ],
+    "spatial": [
+      {
+        "type": "on",
+        "source": "i2",
+        "target": "i1",
+        "modality": "inferred",
+        "basis": "inferred",
+        "evidence": [
+          "孤舟蓑笠翁"
+        ]
+      }
+    ]
+  },
+  "validation": {
+    "valid": false,
+    "errors": [
+      "spatial[0] 枚举不正确"
+    ],
+    "warnings": [
+      "模型保留了不确定性，需要审阅",
+      "spatial[0] 的推断或非确定关系需审阅"
+    ],
+    "review_required": true
+  },
+  "elapsed_seconds": 2.1
+}

@@ -35,11 +35,11 @@ test('large exact counts are bounded with a visible limitation and deterministic
 test('unsupported and absent objects are not invented to fill the page',()=>{
   const a=fixture('满园桃花，水不见。',[{text:'桃花',quantity:quantity({mode:'many',extent:'spread',evidence:['满园桃花']})},{text:'水',kind:'environment',presence:'absent'}]);assert.equal(buildPlan(a).layers.length,0);
 });
-test('default service requests quantity-aware semantics and refuses a legacy answer without repairing it',async()=>{
+test('explicit quantity mode requests quantity-aware semantics and refuses a legacy answer without repairing it',async()=>{
   const dir=await mkdtemp(join(tmpdir(),'poem-quantity-'));try{
     const config=join(dir,'credentials');await writeFile(config,'https://example.invalid/v1\ndummy-quantity-key\ntest-model\n');let calls=0;
     const service=createGenerationService({credentialsPath:config,runsDir:join(dir,'runs'),fetcher:async(_url,options)=>{calls++;const request=JSON.parse(options.body);assert(request.messages[0].content.includes('3.1'));assert(request.messages[0].content.includes('quantity'));return new Response(JSON.stringify({choices:[{finish_reason:'stop',message:{content:JSON.stringify(lotusFixture())}}]}));}});
-    const a=await service.analyze({poem:lotusFixture().poem});assert(a.validation.valid);assert.equal(a.mode,'quantity');await service.analyze({poem:a.poem});assert.equal(calls,1);
-    const broken=createGenerationService({credentialsPath:config,runsDir:join(dir,'bad'),fetcher:async()=>new Response(JSON.stringify({choices:[{finish_reason:'stop',message:{content:JSON.stringify({...lotusFixture(),schema_version:'3.0'})}}]}))});assert.equal((await broken.analyze({poem:a.poem})).validation.valid,false);assert.equal(await broken.latest(),null);
+    const a=await service.analyze({poem:lotusFixture().poem,mode:'quantity'});assert(a.validation.valid);assert.equal(a.mode,'quantity');await service.analyze({poem:a.poem,mode:'quantity'});assert.equal(calls,1);
+    const broken=createGenerationService({credentialsPath:config,runsDir:join(dir,'bad'),fetcher:async()=>new Response(JSON.stringify({choices:[{finish_reason:'stop',message:{content:JSON.stringify({...lotusFixture(),schema_version:'3.0'})}}]}))});assert.equal((await broken.analyze({poem:a.poem,mode:'quantity'})).validation.valid,false);assert.equal(await broken.latest(),null);
   }finally{await rm(dir,{recursive:true,force:true});}
 });

@@ -6,7 +6,7 @@ import {resolve,dirname} from 'node:path';
 import {fileURLToPath,pathToFileURL} from 'node:url';
 const dir=dirname(fileURLToPath(import.meta.url)),main=process.argv.includes('--main'),qa=resolve(dir,'.qa'),out=main?resolve(dir,'../../poem-flow/verification'):dir;await mkdir(qa,{recursive:true});await mkdir(out,{recursive:true});
 const curated=process.argv.includes('--curated'),live=process.argv.includes('--live')||process.argv.includes('--sample')||curated,sample=process.argv.includes('--sample'),checkName=curated?'live-curated':sample?'live-sample':live?'live-sdk':'replay';
-const profile=resolve(qa,'browser-profile'),sleep=ms=>new Promise(r=>setTimeout(r,ms));
+const profile=resolve(qa,'browser-profile-'+Date.now()),sleep=ms=>new Promise(r=>setTimeout(r,ms));
 const browser=spawn('C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe',['--headless=new','--disable-gpu','--no-first-run','--disable-extensions','--remote-debugging-port=0',`--user-data-dir=${profile}`,'about:blank'],{windowsHide:true,stdio:'ignore'});
 let ws;
 try{
@@ -82,8 +82,8 @@ try{
     await until(`document.querySelectorAll('#rows tr').length===60`);
     if(await evaluate(`new URL(document.getElementById('poem-home').href).origin!==location.origin`))throw new Error('Progress return link leaves the main origin');
     await send('Page.navigate',{url:'http://127.0.0.1:4173/experiments/imagery-library/index.html#moon'});
-    await until(`window.imageryExperiment?.inspect().length===28&&window.imageryExperiment.inspect().every(l=>l.ready)`);
-    linkedPages={progressRows:60,readyTools:28,sameOrigin:true};
+    await until(`window.imageryExperiment?.inspect().length===29&&window.imageryExperiment.inspect().every(l=>l.ready)`);
+    linkedPages={progressRows:60,readyTools:29,sameOrigin:true};
   }
   if(process.argv.includes('--diagram')){
     await send('Emulation.setDeviceMetricsOverride',{width:1660,height:1110,deviceScaleFactor:1,mobile:false});

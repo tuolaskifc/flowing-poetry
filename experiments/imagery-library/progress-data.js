@@ -2,7 +2,7 @@
 window.PoemProgress = {
   "summary": {
     "total": 60,
-    "tools": 28,
+    "tools": 29,
     "stages": {
       "basic": {
         "label": "基础可画",
@@ -10,18 +10,18 @@ window.PoemProgress = {
       },
       "partial": {
         "label": "部分支持",
-        "count": 6
+        "count": 7
       },
       "todo": {
         "label": "待制作",
-        "count": 22
+        "count": 21
       },
       "handoff": {
         "label": "转交其他模块",
         "count": 9
       }
     },
-    "needs_context": 12,
+    "needs_context": 13,
     "basic_generation_trial": true,
     "full_semantic_visual_integration": false,
     "art_review": "待用户审阅"
@@ -107,8 +107,8 @@ window.PoemProgress = {
         "tools": [
           "water"
         ],
-        "available": "多层连续水纹、风响应与笔触调整。",
-        "remaining": "待审美确认；岸线、承载与具体流向未实现。",
+        "available": "已有水纹、连续水面色层与本地水域定位。",
+        "remaining": "明确提到岸或渡时可用山岸工具；真实承载、石上流动、流体物理和完整流向仍未做。",
         "needs_context": false,
         "label": "基础可画"
       }
@@ -1180,12 +1180,19 @@ window.PoemProgress = {
       "note": "可共用枝干基础，但名称包含的差别及具体树形仍需语境和变体设计。",
       "status": "语义映射仍是设计候选，未接入正式诗句生成流程",
       "progress": {
-        "stage": "todo",
-        "tools": [],
-        "available": "已有通用枝叶可复用，但尚无该条目的专门形态。",
-        "remaining": "可共用枝干基础，但名称包含的差别及具体树形仍需语境和变体设计。",
-        "needs_context": false,
-        "label": "待制作"
+        "stage": "partial",
+        "tools": [
+          "tree"
+        ],
+        "available": "已有松意的枝干、松针团与树群组合，主网页可按松匹配。",
+        "remaining": "柏尚未制作；松形与群落仍待审美确认，松柏合称需语境选择。",
+        "needs_context": true,
+        "presets": {
+          "tree": {
+            "form": "pine"
+          }
+        },
+        "label": "部分支持"
       }
     },
     {
@@ -1331,6 +1338,79 @@ window.PoemProgress = {
       "capabilities": [
         "wind-response",
         "density-detail"
+      ],
+      "controls": [
+        {
+          "id": "form",
+          "label": "树形",
+          "default": "broadleaf",
+          "choices": [
+            {
+              "value": "broadleaf",
+              "label": "疏叶树"
+            },
+            {
+              "value": "pine",
+              "label": "松意"
+            }
+          ]
+        },
+        {
+          "id": "crown",
+          "label": "树冠",
+          "default": "lines",
+          "choices": [
+            {
+              "value": "lines",
+              "label": "疏叶"
+            },
+            {
+              "value": "wash",
+              "label": "叠墨"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "landscape",
+      "name": "山岸 · 地面",
+      "subtitle": "先定远近，再留出风景之间的空。",
+      "sources": [
+        "project"
+      ],
+      "credit": "本项目 · 山势与地表墨面",
+      "reference": "drawing/README.md",
+      "note": "山、岸、原野与小径的局部写意结构；只画明确选择的类型，不自动附加树、房屋或人物。",
+      "controls": [
+        {
+          "id": "form",
+          "label": "地形",
+          "default": "mountain",
+          "choices": [
+            {
+              "value": "mountain",
+              "label": "层山"
+            },
+            {
+              "value": "shore",
+              "label": "水岸"
+            },
+            {
+              "value": "ground",
+              "label": "原野"
+            },
+            {
+              "value": "path",
+              "label": "小径"
+            }
+          ]
+        }
+      ],
+      "capabilities": [
+        "static",
+        "density-detail",
+        "anchors"
       ]
     },
     {

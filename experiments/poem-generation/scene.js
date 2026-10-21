@@ -10,7 +10,7 @@ window.PoemTrialScene=(()=>{
       const placement=structuredClone(instance.placement),initial=initialPlacements[i];
       placement.at=[placement.at[0]+l.placement.at[0]-initial.at[0],placement.at[1]+l.placement.at[1]-initial.at[1]];
       const sourceIndex=sources.findIndex(s=>s.layer===i&&s.variant===(instance.variant||0));
-      return {tool:l.tool,layer:i,index,sourceIndex,placement,opacity:instance.opacity??1,z:i+(instance.depth||0)};
+      return {tool:l.tool,layer:i,index,sourceIndex,placement,opacity:instance.opacity??1,z:(l.z??i)+(instance.depth||0)};
     })).sort((a,b)=>{
       if(plan.layers[a.layer].tool==='lotus'&&plan.layers[b.layer].tool==='lotus')return a.placement.at[1]-b.placement.at[1];
       return a.z-b.z;
@@ -20,7 +20,10 @@ window.PoemTrialScene=(()=>{
     if(!plan)return;const c=canvas().getContext('2d');c.clearRect(0,0,W,H);c.fillStyle=window.PoemDrawing.paletteFor(shared.palette).bg;c.fillRect(0,0,W,H);
     for(const entry of entries()){
       const source=hosts[entry.sourceIndex]?.querySelector('canvas');if(!source)continue;
-      const {anchor,at,scale}=entry.placement;c.globalAlpha=entry.opacity;c.drawImage(source,at[0]*W-anchor[0]*scale,at[1]*H-anchor[1]*scale,640*scale,388*scale);
+      const {anchor,at,scale}=entry.placement;const layer=plan.layers[entry.layer];
+      c.save();if(layer.surface){const y=layer.surface.top*H;c.beginPath();c.rect(0,y,W,H-y);c.clip();const wash=c.createLinearGradient(0,y,0,H);wash.addColorStop(0,'transparent');wash.addColorStop(1,window.PoemDrawing.paletteFor(shared.palette).main+'70');c.fillStyle=wash;c.fillRect(0,y,W,H-y);}
+      c.globalAlpha=entry.opacity;c.drawImage(source,at[0]*W-anchor[0]*scale,at[1]*H-anchor[1]*scale,640*scale,388*scale);c.restore();
+      if(layer.reflection){const line=layer.reflection.waterline*H;c.save();c.beginPath();for(let y=line;y<H;y+=7)c.rect(0,y,W,4);c.clip();c.globalAlpha=.15*entry.opacity;c.translate(0,2*line);c.scale(1,-1);c.drawImage(source,at[0]*W-anchor[0]*scale,at[1]*H-anchor[1]*scale,640*scale,388*scale);c.restore();}
     }c.globalAlpha=1;
   }
   function loop(){frame();raf=requestAnimationFrame(loop);}

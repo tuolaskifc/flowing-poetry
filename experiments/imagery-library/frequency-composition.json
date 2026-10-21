@@ -47,7 +47,7 @@
     ]
   },
   "plan": {
-    "version": "quantity-composition-1",
+    "version": "scene-composition-1",
     "seed": 3781237684,
     "settings": {
       "wind": 0,
@@ -241,6 +241,12 @@
         "quantityLabel": "数量未精确；本地试画 1 个单元"
       }
     ],
+    "spatial": [],
+    "scene": {
+      "kind": "study",
+      "notes": [],
+      "waterline": null
+    },
     "omitted": [],
     "notes": [
       "梅枝采用带花与花苞的梅枝试画；枝形和花朵数量是本地选择，未实现整树或离枝落花。",
@@ -258,7 +264,7 @@
       {
         "id": "building",
         "seed": 3781237684,
-        "time": 0.13880000002383894,
+        "time": 0.13700000004768662,
         "ticks": 5,
         "paused": true,
         "disposed": false,
@@ -283,7 +289,7 @@
       {
         "id": "plum-branch",
         "seed": 3781237781,
-        "time": 0.13860000003575987,
+        "time": 0.13660000001192385,
         "ticks": 5,
         "paused": true,
         "disposed": false,
@@ -304,7 +310,7 @@
       {
         "id": "wine",
         "seed": 3781237878,
-        "time": 0.13860000003575987,
+        "time": 0.13640000002384478,
         "ticks": 5,
         "paused": true,
         "disposed": false,

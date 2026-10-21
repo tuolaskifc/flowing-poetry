@@ -2,6 +2,12 @@
 // Matching words alone never establishes presence, metaphor or movement.
 (function(root,factory){if(typeof module==='object'&&module.exports)module.exports=factory();else root.PoemImageryLexicon=factory();})(globalThis,()=>{
 const rules=[
+  {words:['松树','松林','松间','松'],tool:'tree',options:{form:'pine'},exclude:['松柏','松江','松花江']},
+  {words:['深林','树林','林','树','木'],tool:'tree',options:{form:'broadleaf'},exclude:['树影','树阴','树荫','木兰','木舟','木船','林逋','木兰舟']},
+  {words:['远山','青山','群山','山'],tool:'landscape',options:{form:'mountain'},exclude:['山居','山园','山西','山东','山城']},
+  {words:['野渡','渡口','江岸','河岸','岸边','岸','沙洲'],tool:'landscape',options:{form:'shore'}},
+  {words:['原野','平野','田野','地面','草地'],tool:'landscape',options:{form:'ground'}},
+  {words:['曲径','野径','小径'],tool:'landscape',options:{form:'path'}},
   {words:['柳絮'],tool:'catkins'},
   {words:['落花'],tool:'falling-petals'},
   {words:['菊花','黄华','菊'],tool:'flower-forms',options:{kind:'chrysanthemum'}},
@@ -24,12 +30,13 @@ const rules=[
   {words:['雪'],tool:'snow',options:{state:'fall'}},
   {words:['明月','月亮','月'],tool:'moon'},
   {words:['烟雾','薄雾','雾'],tool:'mist'}, {words:['云'],tool:'cloud'},
-  {words:['雨'],tool:'rain'}, {words:['江水','流水','清泉','泉水','水','泉','江','溪'],tool:'water'},
+  {words:['舟','船'],tool:'boat'},
+  {words:['雨'],tool:'rain'}, {words:['江水','流水','清泉','泉水','春潮','潮水','潮','水','泉','江','溪','湖','河'],tool:'water'},
   {words:['舟','船'],tool:'boat'}, {words:['长亭','亭'],tool:'pavilion'},
   {words:['石','岩'],tool:'rock'}, {words:['鱼'],tool:'fish'},
   {words:['花'],tool:'flower',exclude:['桃花','兰花','杜鹃','杨花','桂花','槐花','梅子','菊花','莲花','荷花']}
 ];
-const unsupportedTerms=['松柏','松树','松林','松间','松','柏','梧桐','芭蕉','桃花','木兰','兰桡','莲子','莲蓬','杜鹃','杨花','梅子','燕','雁','鸦','夜莺','鸳鸯','沙鸥','青鸟','鹧鸪','桂花'];
+const unsupportedTerms=['松柏','柏','梧桐','芭蕉','桃花','木兰','兰桡','莲子','莲蓬','杜鹃','杨花','梅子','燕','雁','鸦','夜莺','鸳鸯','沙鸥','青鸟','鹧鸪','桂花'];
 function freeze(value){if(value&&typeof value==='object'){Object.values(value).forEach(freeze);Object.freeze(value);}return value;}
 return freeze({rules,unsupportedTerms});
 });

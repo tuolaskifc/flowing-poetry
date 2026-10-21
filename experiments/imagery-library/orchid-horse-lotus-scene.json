@@ -47,7 +47,7 @@
     ]
   },
   "plan": {
-    "version": "quantity-composition-1",
+    "version": "scene-composition-1",
     "seed": 6018448,
     "settings": {
       "wind": 0,
@@ -388,6 +388,12 @@
         "quantityLabel": "数量未精确；本地试画 3 个单元"
       }
     ],
+    "spatial": [],
+    "scene": {
+      "kind": "study",
+      "notes": [],
+      "waterline": null
+    },
     "omitted": [],
     "notes": [
       "兰采用长叶疏花的兰意试画，株式与位置是本地选择，明确的花部计数使用单花；不作植物鉴定，也不自动补花盆或土石。",
@@ -405,7 +411,7 @@
       {
         "id": "horse",
         "seed": 6018448,
-        "time": 0.08400000002384331,
+        "time": 0.1062000000357657,
         "ticks": 3,
         "paused": true,
         "disposed": false,
@@ -429,7 +435,7 @@
       {
         "id": "lotus",
         "seed": 6018545,
-        "time": 0.08380000003576424,
+        "time": 0.10600000004768663,
         "ticks": 3,
         "paused": true,
         "disposed": false,
@@ -454,7 +460,7 @@
       {
         "id": "lotus",
         "seed": 6020088,
-        "time": 0.08370000001192238,
+        "time": 0.10590000002384477,
         "ticks": 3,
         "paused": true,
         "disposed": false,
@@ -479,7 +485,7 @@
       {
         "id": "lotus",
         "seed": 6021631,
-        "time": 0.08359999998808051,
+        "time": 0.10580000000000292,
         "ticks": 3,
         "paused": true,
         "disposed": false,
@@ -504,7 +510,7 @@
       {
         "id": "orchid",
         "seed": 6018642,
-        "time": 0.08330000003576424,
+        "time": 0.1057000000357657,
         "ticks": 3,
         "paused": true,
         "disposed": false,
@@ -526,7 +532,7 @@
       {
         "id": "orchid",
         "seed": 6020185,
-        "time": 0.08309999998808051,
+        "time": 0.10560000001192385,
         "ticks": 3,
         "paused": true,
         "disposed": false,
@@ -548,7 +554,7 @@
       {
         "id": "orchid",
         "seed": 6021728,
-        "time": 0.08309999998808051,
+        "time": 0.10550000004768663,
         "ticks": 3,
         "paused": true,
         "disposed": false,

@@ -15,6 +15,7 @@
   <script defer src="/experiments/imagery-library/drawing/ink-brush.js"></script>
   <script defer src="/experiments/imagery-library/drawing/tools/flower.js"></script>
   <script defer src="/experiments/imagery-library/drawing/tools/tree.js"></script>
+  <script defer src="/experiments/imagery-library/drawing/tools/landscape.js"></script>
   <script defer src="/experiments/imagery-library/drawing/tools/water.js"></script>
   <script defer src="/experiments/imagery-library/drawing/tools/mist.js"></script>
   <script defer src="/experiments/imagery-library/drawing/tools/birds.js"></script>
@@ -48,7 +49,7 @@
   <script defer src="/experiments/poem-generation/app.js"></script>
 </head>
 <body>
-  <header><a class="wordmark" href="/">流动诗<span>FLOWING POETRY</span></a><nav><a href="/poem-flow/library.html">精选诗句库 ↗</a><a href="/experiments/imagery-library/progress.html">意象进度 ↗</a></nav></header>
+  <header><a class="wordmark" href="/">流动诗<span>FLOWING POETRY</span></a><nav><a href="/poem-flow/scene-review.html">场景对照 ↗</a><a href="/poem-flow/library.html">精选诗句库 ↗</a><a href="/experiments/imagery-library/progress.html">意象进度 ↗</a></nav></header>
   <main>
     <aside class="input-panel">
       <p class="eyebrow">A VERSE, A MOVING LANDSCAPE</p><h1>从一句诗<br>走进一幅画。</h1>
@@ -65,7 +66,7 @@
       <details id="library-goal" hidden><summary>这句接下来想改什么</summary><p id="library-goal-text"></p><p id="library-gap" class="muted"></p><a id="library-entry" href="/poem-flow/library.html">看这一组的记录 ↗</a></details>
       <details class="online-poetry"><summary>今日诗词取句（可选）</summary><p class="input-note">每轮最多取 5 句，在本地初筛；选句不调用 DeepSeek。</p><button id="fetch-poem" type="button" disabled>在线取句并筛选</button></details>
       <details id="candidate-panel" class="candidate-panel" hidden open><summary id="candidate-summary">本轮候选</summary><p class="input-note">按已有画法粗筛，可改选另一句；是否在场、是否为比喻，生成时再分析。</p><div id="candidates" role="group" aria-label="本轮诗句候选"></div></details>
-      <details class="scope"><summary>这一版可以做到什么</summary><p>DeepSeek 解读诗句，本地绘画库组合画面。目前先表现基础意象；尚未覆盖的物象会列出，完整关系、情感配色和时间编排仍在扩展。</p></details>
+      <details class="scope"><summary>这一版可以做到什么</summary><p>DeepSeek 解读诗句，本地绘画库组合画面。目前支持基础意象、群落和部分空间关系；尚未覆盖的物象会列出，完整动作、情感配色和时间编排仍在扩展。</p></details>
     </aside>
     <section class="picture-panel">
       <div id="welcome"><span class="welcome-mark">～</span><p>一幅风景，等一句诗。</p><small>输入诗句或取一句推荐，点击「生成画面」开始。</small></div>

@@ -2,10 +2,13 @@
 import {createHash} from 'node:crypto';
 import lexicon from './imagery-lexicon.js';
 import {compose} from './composition.mjs';
-export const policyVersion='quantity-composition-1';
+import {physicalPlace} from './physical-mapping.mjs';
+import {arrangeScene} from './scene-layout.mjs';
+export const policyVersion='scene-composition-1';
 const {rules,unsupportedTerms}=lexicon;
-const order=['moon','cloud','mist','building','willow','bamboo','pavilion','horse','water','rock','boat','lotus','grass','orchid','plum-branch','flower','flower-forms','wine','leaves','surface-weather','fish','oriole','falling-petals','catkins','rain','snow'];
+const order=['landscape','moon','cloud','mist','building','tree','willow','bamboo','pavilion','horse','water','rock','boat','lotus','grass','orchid','plum-branch','flower','flower-forms','wine','leaves','surface-weather','fish','oriole','falling-petals','catkins','rain','snow'];
 const placements={
+  landscape:{anchor:[320,194],at:[.5,.5],scale:1.5},tree:{anchor:[320,388],at:[.25,.9],scale:1.15},
   moon:{anchor:[320,175],at:[.76,.2],scale:.85},cloud:{anchor:[320,170],at:[.46,.2],scale:1.05},
   mist:{anchor:[320,190],at:[.5,.48],scale:1.4},water:{anchor:[320,130],at:[.5,.57],scale:1.5},
   rock:{anchor:[320,245],at:[.3,.78],scale:.95},boat:{anchor:[320,230],at:[.6,.72],scale:.95},
@@ -26,7 +29,7 @@ export function buildPlan(analysis){
     if(entity.role!=='scene'||entity.presence!=='present'){
       omitted.push({id:entity.id,name,reason:entity.role==='reference'?'仅为比喻参照，不当作实景':entity.presence==='absent'?'原文中缺席，不绘制':'出现情况不确定，暂不补画'});continue;
     }
-    const localSurface=entity.kind==='place'&&entity.mentions.some(m=>/^(石上|石间|岩石|石头|水面|江面|亭中|船上|舟中|楼|楼阁|楼台|楼宇|楼中|楼上|楼前)$/.test(m));
+    const localSurface=physicalPlace(entity);
     if(entity.kind==='abstract'||entity.kind==='person'||entity.kind==='place'&&!localSurface){
       omitted.push({id:entity.id,name,reason:'暂未提供该人物、地点或抽象含义的绘画单元'});continue;
     }
@@ -43,6 +46,8 @@ export function buildPlan(analysis){
     const rule=specificUnsupported?null:findRule(entity.mentions.join(' '))||findRule(text);
     if(!rule){omitted.push({id:entity.id,name,reason:'该具体意象尚无可用形态；没有替换成通用树、花或鸟群'});continue;}
     const options={...rule.options};
+    if(rule.tool==='water')options.form='plane';
+    if(rule.tool==='tree')options.crown=entity.mentions.some(m=>/林|夏木/.test(m))||entity.quantity?.mode==='many'?'wash':'lines';
     if(rule.tool==='orchid'&&entity.quantity?.scope==='individual'&&/朵|瓣/.test(entity.quantity.unit||''))options.form='flower';
     if(rule.tool==='horse')options.pose=/低首|低头|俯首|垂首/.test(entity.mentions.join(' '))?'lower':'stand';
     if(rule.tool==='lotus'&&options.form!=='leaf')options.state=/含苞|花苞|荷苞|莲苞/.test(entity.mentions.join(' '))?'bud':'open';
@@ -65,7 +70,7 @@ export function buildPlan(analysis){
       }
       options.form=explicitCup?'cup':explicitJar?'jar':'liquid';
     }
-    if(localSurface)notes.push(`${name}以明确提到的物体轮廓试画，不表示已实现其上的承载或流动关系。`);
+    if(localSurface)notes.push(`${name}虽被归为地点，仍按原文明示的自然景物匹配；具体空间关系另行处理。`);
     if(rule.tool==='moon'){
       options.shape=/圆月|满月|月满/.test(text)?'full':/半月/.test(text)?'half':'crescent';
       if(!/圆月|满月|月满|半月|弯月|新月|残月|月牙/.test(text))notes.push('原句未明确月形，暂用弯月试画；可以手动切换。');
@@ -95,6 +100,6 @@ export function buildPlan(analysis){
   const relations=analysis.relations.map(r=>({type:r.type,meaning:r.meaning,modality:r.modality,visualized:r.type==='acts_on'&&wind>0&&analysis.entities.find(e=>e.id===r.source)?.mentions.some(m=>m.includes('风'))&&entityTools.has(r.target)}));
   if(relations.some(r=>!r.visualized))notes.push('已识别的其他关系保留在解读中；本次未实现承载、遮蔽或完整动作编排。');
   notes.push('位置、大小、笔触与默认微动是本地试画选择；数量解释与本地显示数量分别记录。');
-  const seed=parseInt(createHash('sha256').update(analysis.poem).digest('hex').slice(0,8),16),composition=compose(analysis,layers.map(({key,...l})=>l),seed);
-  return {version:policyVersion,seed,settings:{wind,density:.45,palette:'clear'},layers:composition.layers,omitted,notes:[...new Set([...notes,...composition.notes])],relations};
+  const seed=parseInt(createHash('sha256').update(analysis.poem).digest('hex').slice(0,8),16),composition=compose(analysis,layers.map(({key,...l})=>l),seed),arranged=arrangeScene(analysis,composition.layers);
+  return {version:policyVersion,seed,settings:{wind,density:.45,palette:'clear'},...arranged,omitted,notes:[...new Set([...notes,...composition.notes,...arranged.scene.notes])],relations};
 }

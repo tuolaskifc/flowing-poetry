@@ -14,7 +14,7 @@ test('absent, metaphor and uncertain objects do not become real layers',()=>{
   const plan=buildPlan(value);assert.deepEqual(plan.layers.map(l=>l.tool),['moon']);assert.equal(plan.omitted.length,2);
 });
 test('specific unimplemented organisms do not fall through to generic drawings',()=>{
-  const plan=buildPlan(fixture('松间桃花映梅子',[entity('i1','松'),entity('i2','桃花'),entity('i3','梅子')]));assert.equal(plan.layers.length,0);assert.equal(plan.omitted.length,3);
+  const plan=buildPlan(fixture('柏间桃花映梅子',[entity('i1','柏'),entity('i2','桃花'),entity('i3','梅子')]));assert.equal(plan.layers.length,0);assert.equal(plan.omitted.length,3);
 });
 test('negated wind remains off; negated movement freezes a present fish',()=>{
   const v=fixture('风不起，鱼不游',[entity('i1','风'),entity('i2','鱼',{kind:'organism'})],[{type:'changes',source:'i1',target:null,meaning:'风未起',modality:'negated',basis:'explicit',evidence:['风不起']},{type:'moves',source:'i2',target:null,meaning:'鱼不游',modality:'negated',basis:'explicit',evidence:['鱼不游']}]);

@@ -36,13 +36,15 @@ npm start
 
 无匹配形态时明确提示并展示解读与缺口，不用别的物象补画。当前是可运行的基础意象生成版，尚未实现全部意象、完整关系、16 类自动情感配色、逻辑时间编排和安卓。
 
-生成已增加[数量解释与群落构图](experiments/poem-generation/quantity-composition.md)：区分明确数量、少量、繁多及范围，由本地规则组织近远与疏密。“接天莲叶”可以铺展开，“孤舟”仍只画一舟；页面分别标注提取数量和本地显示份数。局部计数、雨雪内部颗粒与完整空间关系尚未全部适配。
+生成已增加[场景骨架与有限空间关系](experiments/poem-generation/scene-generation.md)：修复自然景物漏画，补山岸、地面与树群，按语义组织部分相对位置。可在[二十句对照页](http://127.0.0.1:4173/poem-flow/scene-review.html)逐幅查看缺口；页面使用手工语义测试样例，不调用模型。
+
+此前的[数量解释与群落构图](experiments/poem-generation/quantity-composition.md)：区分明确数量、少量、繁多及范围，由本地规则组织近远与疏密。“接天莲叶”可以铺展开，“孤舟”仍只画一舟；页面分别标注提取数量和本地显示份数。局部计数、雨雪内部颗粒与完整空间关系尚未全部适配。
 
 真实通路记录见 [生成实验](experiments/poem-generation/README.md)，主网页浏览器证据在 `poem-flow/verification/`。旧的固定诗句作品保留于 http://127.0.0.1:4173/poem-flow/legacy.html 。
 
 ## 独立的诗句语义实验
 
-模型接口已接入主网页。完整实验保留 [冻结语义协议 3.0](experiments/poem-semantics/contract-v3/固定输出结构.md)，此前两次完整关系请求未通过；生成页面现默认使用 [3.1 数量扩展](experiments/poem-generation/quantity-composition.md)，关系仍为空，不让模型生成绘图代码。16 类情感、空间和完整逻辑尚未贯通，不能将旧字段直接换名使用。
+模型接口已接入主网页。完整实验保留 [冻结语义协议 3.0](experiments/poem-semantics/contract-v3/固定输出结构.md)，此前两次完整关系请求未通过；生成页面现默认使用 [3.2 场景扩展](experiments/poem-generation/scene-generation.md)，完整动作关系仍为空，空间关系使用单独的有限字段，不让模型生成绘图代码。16 类情感、空间和完整逻辑尚未贯通，不能将旧字段直接换名使用。
 
 协议说明、提示词、校验器和既往记录在 `experiments/poem-semantics/`；历次真实请求、失败及覆盖缺口保留在 `experiments/poem-generation/runs/`，不随网页更新改写。
 
@@ -55,7 +57,7 @@ npm start
 - `experiments/poem-generation/app.js`、`scene.js`：主网页与实验页共用的交互、透明图层组合。
 - `experiments/poem-generation/service.mjs`、`planner.mjs`：后端模型请求、记录和本地绘画规则。
 - `experiments/poem-generation/imagery-lexicon.js`、`recommendation.js`：筛选与绘画共用词表、候选排序及有上限的取句流程。
-- `experiments/imagery-library/drawing/`：28 个可复用绘画工具及来源登记。
+- `experiments/imagery-library/drawing/`：29 个可复用绘画工具及来源登记。
 - `poem-flow/THIRD_PARTY.md`：依赖来源及许可。
 
 旧作品的 `app.js`、`scene.js` 和 `styles.css` 留给 `legacy.html`；旧入口的 `?seed=42` 只适用于固定诗句作品。新入口由诗句确定初始种子，可点击“换一组形态”重画；交互调整不新增模型调用。

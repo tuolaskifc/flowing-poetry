@@ -24,10 +24,10 @@ const server=createServer(async(req,res)=>{
     if(req.method!=='GET'){json(res,405,{error:'不支持该操作。'});return;}
     if(url.pathname==='/favicon.ico'){res.writeHead(204);res.end();return;}
     const path=decodeURIComponent(url.pathname),file=path==='/'?resolve(root,'poem-flow/index.html'):resolve(root,'.'+path);
-    const mainAssets=['index.html','main.css','library.html','library.js','library.css','legacy.html','styles.css','app.js','scene.js','vendor/p5.min.js','vendor/p5-LICENSE.txt','THIRD_PARTY.md'].map(p=>resolve(root,'poem-flow',p));
+    const mainAssets=['index.html','scene-review.html','main.css','library.html','library.js','library.css','legacy.html','styles.css','app.js','scene.js','vendor/p5.min.js','vendor/p5-LICENSE.txt','THIRD_PARTY.md'].map(p=>resolve(root,'poem-flow',p));
     const library=resolve(root,'experiments/imagery-library');
     const libraryAssets=['index.html','app.js','style.css','studies.js','catalog.js','README.md','progress.html','progress-data.js','progress.js','progress.css','progress-records.json','boid-adapter.js'].map(p=>resolve(library,p));
-    const allowed=(file.startsWith(dir+sep)&&assets.has(file.slice(dir.length+1)))||file.startsWith(resolve(library,'drawing')+sep)&&['.js','.md'].includes(extname(file))||libraryAssets.includes(file)||mainAssets.includes(file);
+    const allowed=(file.startsWith(dir+sep)&&assets.has(file.slice(dir.length+1)))||file.startsWith(resolve(library,'drawing')+sep)&&['.js','.md'].includes(extname(file))||libraryAssets.includes(file)||mainAssets.includes(file)||(file.startsWith(resolve(root,'poem-flow/verification/scene')+sep)&&extname(file)==='.png');
     if(!allowed){res.writeHead(403);res.end('Forbidden');return;}
     if(!(await stat(file)).isFile())throw new Error('not found');
     res.writeHead(200,{'Content-Type':types[extname(file)]||'application/octet-stream','Cache-Control':'no-store','X-Content-Type-Options':'nosniff'});res.end(await readFile(file));

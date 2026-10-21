@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-19",
+  "date": "2026-10-21",
   "records": {
     "风": {
       "stage": "partial",
@@ -35,8 +35,8 @@
       "tools": [
         "water"
       ],
-      "available": "多层连续水纹、风响应与笔触调整。",
-      "remaining": "待审美确认；岸线、承载与具体流向未实现。",
+      "available": "已有水纹、连续水面色层与本地水域定位。",
+      "remaining": "明确提到岸或渡时可用山岸工具；真实承载、石上流动、流体物理和完整流向仍未做。",
       "needs_context": false
     },
     "雨": {
@@ -50,15 +50,23 @@
     },
     "酒": {
       "stage": "partial",
-      "tools": ["wine"],
+      "tools": [
+        "wine"
+      ],
       "available": "酒液局部抽象试画，另可显式选择杯中酒或酒壶；不自动添人物。",
       "remaining": "酒液、器物与饮酒活动需按语境区分；仅写酒时不补杯。未实现倾倒、饮用与历史器型。",
       "needs_context": true,
-      "presets": {"wine": {"form": "liquid"}}
+      "presets": {
+        "wine": {
+          "form": "liquid"
+        }
+      }
     },
     "楼": {
       "stage": "basic",
-      "tools": ["building"],
+      "tools": [
+        "building"
+      ],
       "available": "二层／三层写意楼体，曲檐墨面、断笔轮廓与疏笔窗影；窗影可留白，不添加人物。",
       "remaining": "待审美确认；不是具体历史建筑，楼内活动、视点与登楼关系未实现。",
       "needs_context": false
@@ -73,7 +81,9 @@
       "remaining": "待审美与形态辨识确认；尚无整树、具体品种、开花过程与离枝落花。",
       "needs_context": false,
       "presets": {
-        "plum-branch": {"form": "branch"},
+        "plum-branch": {
+          "form": "branch"
+        },
         "flower-forms": {
           "kind": "plum"
         }
@@ -107,7 +117,10 @@
       "remaining": "待审美确认；尚未支持任意花瓣或载体，未从诗句自动匹配附着对象，也无凝结、滑落与滴落过程。",
       "needs_context": false,
       "presets": {
-        "surface-weather": {"surface": "dew", "carrier": "leaf"},
+        "surface-weather": {
+          "surface": "dew",
+          "carrier": "leaf"
+        },
         "grass": {
           "surface": "dew"
         }
@@ -132,7 +145,10 @@
       "remaining": "待审美确认；任意地表和其他载体尚未支持，未从诗句自动匹配附着对象，也无霜层形成过程。",
       "needs_context": false,
       "presets": {
-        "surface-weather": {"surface": "frost", "carrier": "branch"},
+        "surface-weather": {
+          "surface": "frost",
+          "carrier": "branch"
+        },
         "grass": {
           "surface": "frost"
         }
@@ -149,28 +165,48 @@
     },
     "莺": {
       "stage": "basic",
-      "tools": ["oriole"],
+      "tools": [
+        "oriole"
+      ],
       "available": "单只淡墨莺意：收长的浅黄墨面、后掠细翼与几笔尾喙；不刻画眼、足或逐根羽毛，收翅、展翅、朝向与肩部微动可选。",
       "remaining": "当前淡墨与翼姿风格已获用户认可；不作原诗鸟种鉴定，尚无鸟鸣、群体数量、栖枝或跨物体作用。",
       "art_review": "style-accepted-2026-10-19",
       "needs_context": false,
-      "presets": {"oriole": {"pose": "folded", "motion": "still"}}
+      "presets": {
+        "oriole": {
+          "pose": "folded",
+          "motion": "still"
+        }
+      }
     },
     "兰": {
       "stage": "basic",
-      "tools": ["orchid"],
+      "tools": [
+        "orchid"
+      ],
       "available": "七条舒展长叶与两处疏花的兰意试画，可单看花部；整株随风轻摆，不补花盆土石。",
       "remaining": "待审美与辨识确认；不作所有古诗兰所指植物的鉴定，未实现生长、开花或具体品种。",
       "needs_context": false,
-      "presets": {"orchid": {"form": "plant"}}
+      "presets": {
+        "orchid": {
+          "form": "plant"
+        }
+      }
     },
     "马": {
       "stage": "basic",
-      "tools": ["horse"],
+      "tools": [
+        "horse"
+      ],
       "available": "单匹写意马形，静立／低首、左右朝向可选；四足、鬃尾和头颈分层，不补骑者或鞍辔。",
       "remaining": "比例与姿态待审美确认；尚无连续步态、奔跑、骑乘或肢体物理。",
       "needs_context": false,
-      "presets": {"horse": {"pose": "stand", "facing": "right"}}
+      "presets": {
+        "horse": {
+          "pose": "stand",
+          "facing": "right"
+        }
+      }
     },
     "舟": {
       "stage": "basic",
@@ -209,7 +245,10 @@
       "remaining": "待审美与辨识确认；尚无生长开花过程、池塘水面承载或具体品种，不自动补叶与池水。",
       "needs_context": false,
       "presets": {
-        "lotus": {"form": "flower", "state": "open"},
+        "lotus": {
+          "form": "flower",
+          "state": "open"
+        },
         "flower-forms": {
           "kind": "lotus"
         }
@@ -472,11 +511,18 @@
       "needs_context": false
     },
     "松柏": {
-      "stage": "todo",
-      "tools": [],
-      "available": "已有通用枝叶可复用，但尚无该条目的专门形态。",
-      "remaining": "可共用枝干基础，但名称包含的差别及具体树形仍需语境和变体设计。",
-      "needs_context": false
+      "stage": "partial",
+      "tools": [
+        "tree"
+      ],
+      "available": "已有松意的枝干、松针团与树群组合，主网页可按松匹配。",
+      "remaining": "柏尚未制作；松形与群落仍待审美确认，松柏合称需语境选择。",
+      "needs_context": true,
+      "presets": {
+        "tree": {
+          "form": "pine"
+        }
+      }
     },
     "金陵": {
       "stage": "handoff",

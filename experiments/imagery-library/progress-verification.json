@@ -3,7 +3,7 @@
   "total": 60,
   "summary": {
     "total": 60,
-    "tools": 28,
+    "tools": 29,
     "stages": {
       "basic": {
         "label": "基础可画",
@@ -11,28 +11,28 @@
       },
       "partial": {
         "label": "部分支持",
-        "count": 6
+        "count": 7
       },
       "todo": {
         "label": "待制作",
-        "count": 22
+        "count": 21
       },
       "handoff": {
         "label": "转交其他模块",
         "count": 9
       }
     },
-    "needs_context": 12,
+    "needs_context": 13,
     "basic_generation_trial": true,
     "full_semantic_visual_integration": false,
     "art_review": "待用户审阅"
   },
   "filters": {
     "basic": 23,
-    "partial": 6,
-    "todo": 22,
+    "partial": 7,
+    "todo": 21,
     "handoff": 9,
-    "context": 12,
+    "context": 13,
     "search": true,
     "empty": true,
     "reset": true
@@ -40,52 +40,52 @@
   "deepLinks": [
     {
       "name": "兰",
-      "href": "http://127.0.0.1:4185/experiments/imagery-library/index.html?tool=orchid&form=plant#orchid",
+      "href": "file:///C:/Users/Liu%20Mie/Desktop/%E5%A4%A7%E4%BA%8C%E4%B8%8A/AI%E7%BC%96%E7%A8%8B%E8%BF%9B%E9%98%B6%EF%BC%9A%E6%96%B9%E6%B3%95%E4%B8%8E%E5%AE%9E%E8%B7%B5%20%E9%9F%A9%E6%96%87%E5%BC%BA/experiments/imagery-library/index.html?tool=orchid&form=plant#orchid",
       "selected": "plant"
     },
     {
       "name": "马",
-      "href": "http://127.0.0.1:4185/experiments/imagery-library/index.html?tool=horse&pose=stand&facing=right#horse",
+      "href": "file:///C:/Users/Liu%20Mie/Desktop/%E5%A4%A7%E4%BA%8C%E4%B8%8A/AI%E7%BC%96%E7%A8%8B%E8%BF%9B%E9%98%B6%EF%BC%9A%E6%96%B9%E6%B3%95%E4%B8%8E%E5%AE%9E%E8%B7%B5%20%E9%9F%A9%E6%96%87%E5%BC%BA/experiments/imagery-library/index.html?tool=horse&pose=stand&facing=right#horse",
       "selected": "stand"
     },
     {
       "name": "莲",
-      "href": "http://127.0.0.1:4185/experiments/imagery-library/index.html?tool=lotus&form=flower&state=open#lotus",
+      "href": "file:///C:/Users/Liu%20Mie/Desktop/%E5%A4%A7%E4%BA%8C%E4%B8%8A/AI%E7%BC%96%E7%A8%8B%E8%BF%9B%E9%98%B6%EF%BC%9A%E6%96%B9%E6%B3%95%E4%B8%8E%E5%AE%9E%E8%B7%B5%20%E9%9F%A9%E6%96%87%E5%BC%BA/experiments/imagery-library/index.html?tool=lotus&form=flower&state=open#lotus",
       "selected": "flower"
     },
     {
       "name": "露",
-      "href": "http://127.0.0.1:4185/experiments/imagery-library/index.html?tool=surface-weather&surface=dew&carrier=leaf#surface-weather",
+      "href": "file:///C:/Users/Liu%20Mie/Desktop/%E5%A4%A7%E4%BA%8C%E4%B8%8A/AI%E7%BC%96%E7%A8%8B%E8%BF%9B%E9%98%B6%EF%BC%9A%E6%96%B9%E6%B3%95%E4%B8%8E%E5%AE%9E%E8%B7%B5%20%E9%9F%A9%E6%96%87%E5%BC%BA/experiments/imagery-library/index.html?tool=surface-weather&surface=dew&carrier=leaf#surface-weather",
       "selected": "dew"
     },
     {
       "name": "霜",
-      "href": "http://127.0.0.1:4185/experiments/imagery-library/index.html?tool=surface-weather&surface=frost&carrier=branch#surface-weather",
+      "href": "file:///C:/Users/Liu%20Mie/Desktop/%E5%A4%A7%E4%BA%8C%E4%B8%8A/AI%E7%BC%96%E7%A8%8B%E8%BF%9B%E9%98%B6%EF%BC%9A%E6%96%B9%E6%B3%95%E4%B8%8E%E5%AE%9E%E8%B7%B5%20%E9%9F%A9%E6%96%87%E5%BC%BA/experiments/imagery-library/index.html?tool=surface-weather&surface=frost&carrier=branch#surface-weather",
       "selected": "frost"
     },
     {
       "name": "莺",
-      "href": "http://127.0.0.1:4185/experiments/imagery-library/index.html?tool=oriole&pose=folded&motion=still#oriole",
+      "href": "file:///C:/Users/Liu%20Mie/Desktop/%E5%A4%A7%E4%BA%8C%E4%B8%8A/AI%E7%BC%96%E7%A8%8B%E8%BF%9B%E9%98%B6%EF%BC%9A%E6%96%B9%E6%B3%95%E4%B8%8E%E5%AE%9E%E8%B7%B5%20%E9%9F%A9%E6%96%87%E5%BC%BA/experiments/imagery-library/index.html?tool=oriole&pose=folded&motion=still#oriole",
       "selected": "folded"
     },
     {
       "name": "黄叶",
-      "href": "http://127.0.0.1:4185/experiments/imagery-library/index.html?tool=leaves&color=yellow#leaves",
+      "href": "file:///C:/Users/Liu%20Mie/Desktop/%E5%A4%A7%E4%BA%8C%E4%B8%8A/AI%E7%BC%96%E7%A8%8B%E8%BF%9B%E9%98%B6%EF%BC%9A%E6%96%B9%E6%B3%95%E4%B8%8E%E5%AE%9E%E8%B7%B5%20%E9%9F%A9%E6%96%87%E5%BC%BA/experiments/imagery-library/index.html?tool=leaves&color=yellow#leaves",
       "selected": "yellow"
     },
     {
       "name": "酒",
-      "href": "http://127.0.0.1:4185/experiments/imagery-library/index.html?tool=wine&form=liquid#wine",
+      "href": "file:///C:/Users/Liu%20Mie/Desktop/%E5%A4%A7%E4%BA%8C%E4%B8%8A/AI%E7%BC%96%E7%A8%8B%E8%BF%9B%E9%98%B6%EF%BC%9A%E6%96%B9%E6%B3%95%E4%B8%8E%E5%AE%9E%E8%B7%B5%20%E9%9F%A9%E6%96%87%E5%BC%BA/experiments/imagery-library/index.html?tool=wine&form=liquid#wine",
       "selected": "liquid"
     },
     {
       "name": "楼",
-      "href": "http://127.0.0.1:4185/experiments/imagery-library/index.html?tool=building#building",
+      "href": "file:///C:/Users/Liu%20Mie/Desktop/%E5%A4%A7%E4%BA%8C%E4%B8%8A/AI%E7%BC%96%E7%A8%8B%E8%BF%9B%E9%98%B6%EF%BC%9A%E6%96%B9%E6%B3%95%E4%B8%8E%E5%AE%9E%E8%B7%B5%20%E9%9F%A9%E6%96%87%E5%BC%BA/experiments/imagery-library/index.html?tool=building#building",
       "selected": "two"
     },
     {
       "name": "梅",
-      "href": "http://127.0.0.1:4185/experiments/imagery-library/index.html?tool=plum-branch&form=branch#plum-branch",
+      "href": "file:///C:/Users/Liu%20Mie/Desktop/%E5%A4%A7%E4%BA%8C%E4%B8%8A/AI%E7%BC%96%E7%A8%8B%E8%BF%9B%E9%98%B6%EF%BC%9A%E6%96%B9%E6%B3%95%E4%B8%8E%E5%AE%9E%E8%B7%B5%20%E9%9F%A9%E6%96%87%E5%BC%BA/experiments/imagery-library/index.html?tool=plum-branch&form=branch#plum-branch",
       "selected": "branch"
     }
   ],

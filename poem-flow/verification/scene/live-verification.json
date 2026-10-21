@@ -1,0 +1,132 @@
+{
+  "status": "passed",
+  "modelRequests": 2,
+  "savedRecordReplay": false,
+  "beforeCovered": 3,
+  "afterCovered": 6,
+  "entities": 8,
+  "cases": [
+    {
+      "id": "p12",
+      "poem": "孤舟蓑笠翁，独钓寒江雪。",
+      "basis": "real-model",
+      "record": "2026-10-21T12-35-16-777Z-c0a9aa8f",
+      "usage": {
+        "completion_tokens": 568,
+        "prompt_tokens": 3222,
+        "total_tokens": 3790,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "review": "待人工审美确认",
+      "before": {
+        "covered": 2,
+        "total": 4,
+        "tools": [
+          "boat",
+          "snow"
+        ],
+        "instances": 2,
+        "missing": [
+          "蓑笠翁",
+          "寒江"
+        ],
+        "spatial": []
+      },
+      "after": {
+        "covered": 3,
+        "total": 4,
+        "tools": [
+          "water",
+          "boat",
+          "snow"
+        ],
+        "instances": 3,
+        "missing": [
+          "蓑笠翁"
+        ],
+        "spatial": [
+          {
+            "type": "on",
+            "source": "i2",
+            "target": "i1",
+            "modality": "asserted",
+            "basis": "inferred",
+            "evidence": [
+              "孤舟蓑笠翁"
+            ],
+            "visualized": false,
+            "reason": "关系的一端缺少独立画法"
+          },
+          {
+            "type": "on",
+            "source": "i1",
+            "target": "i3",
+            "modality": "asserted",
+            "basis": "inferred",
+            "evidence": [
+              "孤舟",
+              "寒江"
+            ],
+            "visualized": true,
+            "reason": "在水面区域定位，尚非物理承载"
+          }
+        ],
+        "scene": "waterside"
+      }
+    },
+    {
+      "id": "p17",
+      "poem": "江碧鸟逾白，山青花欲燃。",
+      "basis": "real-model",
+      "record": "2026-10-21T12-35-24-384Z-7037c753",
+      "usage": {
+        "completion_tokens": 472,
+        "prompt_tokens": 3221,
+        "total_tokens": 3693,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "review": "待人工审美确认",
+      "before": {
+        "covered": 1,
+        "total": 4,
+        "tools": [
+          "flower"
+        ],
+        "instances": 10,
+        "missing": [
+          "江",
+          "鸟",
+          "山"
+        ],
+        "spatial": []
+      },
+      "after": {
+        "covered": 3,
+        "total": 4,
+        "tools": [
+          "landscape",
+          "water",
+          "flower"
+        ],
+        "instances": 12,
+        "missing": [
+          "鸟"
+        ],
+        "spatial": [],
+        "scene": "waterside"
+      }
+    }
+  ],
+  "mobileWidth": 390,
+  "runtimeErrors": []
+}

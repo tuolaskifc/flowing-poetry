@@ -4,61 +4,101 @@
   "live": false,
   "poetry": null,
   "state": {
-    "status": "已生成画面。有 2 项尚未绘制，详见“保留的空缺”。",
+    "status": "已生成画面。有 1 项尚未绘制，详见“保留的空缺”。",
     "scene": {
       "ready": true,
       "paused": false,
       "layers": [
         {
-          "id": "boat",
-          "seed": 1799097591,
-          "time": 0.13209999998807903,
-          "ticks": 4,
+          "id": "landscape",
+          "seed": 2222229138,
+          "time": 0,
+          "ticks": 1,
+          "paused": true,
+          "disposed": false,
+          "ready": true,
+          "options": {
+            "form": "mountain"
+          },
+          "sources": [
+            "project"
+          ],
+          "form": "mountain",
+          "finite": true,
+          "geometryKey": "cf3cf8e4"
+        },
+        {
+          "id": "water",
+          "seed": 2222229235,
+          "time": 0.16769999999999996,
+          "ticks": 5,
+          "paused": false,
+          "disposed": false,
+          "ready": true,
+          "options": {
+            "form": "plane"
+          },
+          "sources": [
+            "noc-wave",
+            "project"
+          ],
+          "finite": true,
+          "form": "plane",
+          "geometryKey": "e6afaee3"
+        },
+        {
+          "id": "flower",
+          "seed": 2222229332,
+          "time": 0.16769999999999996,
+          "ticks": 5,
           "paused": false,
           "disposed": false,
           "ready": true,
           "options": {},
           "sources": [
-            "shan-boat",
+            "sxywu-petals",
             "project"
           ],
-          "boatCount": 1,
-          "personCount": 0,
+          "flowerCount": 1,
           "finite": true,
-          "geometryKey": "97c53428"
+          "geometryKey": "1b85ee84"
         },
         {
-          "id": "snow",
-          "seed": 1799097688,
-          "time": 0.1319999999642372,
-          "ticks": 4,
+          "id": "flower",
+          "seed": 2222230875,
+          "time": 0.16769999999999996,
+          "ticks": 5,
           "paused": false,
           "disposed": false,
           "ready": true,
-          "options": {
-            "state": "fall"
-          },
+          "options": {},
           "sources": [
+            "sxywu-petals",
             "project"
           ],
-          "snowParticleCount": 60,
-          "state": "fall",
+          "flowerCount": 1,
           "finite": true,
-          "geometryKey": "2966781d"
+          "geometryKey": "86a693e3"
+        },
+        {
+          "id": "flower",
+          "seed": 2222232418,
+          "time": 0.1675999999761581,
+          "ticks": 5,
+          "paused": false,
+          "disposed": false,
+          "ready": true,
+          "options": {},
+          "sources": [
+            "sxywu-petals",
+            "project"
+          ],
+          "flowerCount": 1,
+          "finite": true,
+          "geometryKey": "95e45b8d"
         }
       ],
       "placements": [
-        {
-          "anchor": [
-            320,
-            230
-          ],
-          "at": [
-            0.6,
-            0.72
-          ],
-          "scale": 0.95
-        },
         {
           "anchor": [
             320,
@@ -68,34 +108,37 @@
             0.5,
             0.5
           ],
-          "scale": 1.55
+          "scale": 1.5
+        },
+        {
+          "anchor": [
+            320,
+            130
+          ],
+          "at": [
+            0.5,
+            0.57
+          ],
+          "scale": 1.5
+        },
+        {
+          "anchor": [
+            320,
+            320
+          ],
+          "at": [
+            0.4,
+            0.9
+          ],
+          "scale": 0.95
         }
       ],
       "instances": [
         {
-          "tool": "boat",
+          "tool": "landscape",
           "layer": 0,
           "index": 0,
           "sourceIndex": 0,
-          "placement": {
-            "anchor": [
-              320,
-              230
-            ],
-            "at": [
-              0.6,
-              0.72
-            ],
-            "scale": 1.159
-          },
-          "opacity": 1,
-          "z": 0
-        },
-        {
-          "tool": "snow",
-          "layer": 1,
-          "index": 0,
-          "sourceIndex": 1,
           "placement": {
             "anchor": [
               320,
@@ -103,12 +146,221 @@
             ],
             "at": [
               0.5,
-              0.5
+              0.4
             ],
-            "scale": 1.55
+            "scale": 1.6
           },
           "opacity": 1,
-          "z": 1
+          "z": -30
+        },
+        {
+          "tool": "water",
+          "layer": 1,
+          "index": 0,
+          "sourceIndex": 1,
+          "placement": {
+            "anchor": [
+              320,
+              135
+            ],
+            "at": [
+              0.5,
+              0.4600000000000001
+            ],
+            "scale": 1.6
+          },
+          "opacity": 1,
+          "z": -10
+        },
+        {
+          "tool": "flower",
+          "layer": 2,
+          "index": 0,
+          "sourceIndex": 2,
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.15767771499603989,
+              0.666
+            ],
+            "scale": 0.41400000000000003
+          },
+          "opacity": 0.601,
+          "z": 2.05
+        },
+        {
+          "tool": "flower",
+          "layer": 2,
+          "index": 1,
+          "sourceIndex": 3,
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.6901265667096833,
+              0.6980000000000001
+            ],
+            "scale": 0.482
+          },
+          "opacity": 0.643,
+          "z": 2.15
+        },
+        {
+          "tool": "flower",
+          "layer": 2,
+          "index": 2,
+          "sourceIndex": 4,
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.3080823059134432,
+              0.7299999999999999
+            ],
+            "scale": 0.55
+          },
+          "opacity": 0.6849999999999999,
+          "z": 2.25
+        },
+        {
+          "tool": "flower",
+          "layer": 2,
+          "index": 3,
+          "sourceIndex": 2,
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.9013284323667542,
+              0.7619999999999999
+            ],
+            "scale": 0.618
+          },
+          "opacity": 0.727,
+          "z": 2.35
+        },
+        {
+          "tool": "flower",
+          "layer": 2,
+          "index": 4,
+          "sourceIndex": 3,
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.5283859760307267,
+              0.7939999999999999
+            ],
+            "scale": 0.686
+          },
+          "opacity": 0.7689999999999999,
+          "z": 2.45
+        },
+        {
+          "tool": "flower",
+          "layer": 2,
+          "index": 5,
+          "sourceIndex": 4,
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.259029923620416,
+              0.826
+            ],
+            "scale": 0.754
+          },
+          "opacity": 0.8109999999999999,
+          "z": 2.55
+        },
+        {
+          "tool": "flower",
+          "layer": 2,
+          "index": 6,
+          "sourceIndex": 2,
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.68816145386666,
+              0.858
+            ],
+            "scale": 0.8220000000000001
+          },
+          "opacity": 0.853,
+          "z": 2.65
+        },
+        {
+          "tool": "flower",
+          "layer": 2,
+          "index": 7,
+          "sourceIndex": 3,
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.4582327681709014,
+              0.89
+            ],
+            "scale": 0.89
+          },
+          "opacity": 0.895,
+          "z": 2.75
+        },
+        {
+          "tool": "flower",
+          "layer": 2,
+          "index": 8,
+          "sourceIndex": 4,
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.14961545769600781,
+              0.922
+            ],
+            "scale": 0.9580000000000001
+          },
+          "opacity": 0.9369999999999999,
+          "z": 2.85
+        },
+        {
+          "tool": "flower",
+          "layer": 2,
+          "index": 9,
+          "sourceIndex": 2,
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.5742900164634168,
+              0.9540000000000001
+            ],
+            "scale": 1.026
+          },
+          "opacity": 0.9789999999999999,
+          "z": 2.95
         }
       ],
       "settings": {
@@ -117,17 +369,17 @@
         "palette": "clear"
       }
     },
-    "poem": "孤舟蓑笠翁，独钓寒江雪。",
-    "sceneTitle": "孤舟蓑笠翁，独钓寒江雪。",
-    "usage": "记录 2026-10-21T11-33-09-247Z-ca41dd7e；模型 DeepSeek-V4.1-Flash；本次记录 token 3041。正在回看，没有新增模型调用。",
-    "reading": "孤舟上一位身披蓑衣、头戴斗笠的老翁，独自在寒冷的江面上垂钓，江天之间唯余雪意。",
+    "poem": "江碧鸟逾白，山青花欲燃。",
+    "sceneTitle": "江碧鸟逾白，山青花欲燃。",
+    "usage": "记录 2026-10-21T12-35-24-384Z-7037c753；模型 DeepSeek-V4.1-Flash；本次记录 token 3693。正在回看，没有新增模型调用。",
+    "reading": "江水碧绿，飞鸟显得更白；山色青翠，花红得仿佛将要燃烧。两句以鲜明色彩对照写春日江山的明丽。",
     "omitted": [
-      "蓑笠翁：暂未提供该人物、地点或抽象含义的绘画单元",
-      "寒江：暂未提供该人物、地点或抽象含义的绘画单元"
+      "鸟：该具体意象尚无可用形态；没有替换成通用树、花或鸟群"
     ],
     "drawn": [
-      "孤舟 → 舟 · 按提取数量绘制 1 个",
-      "雪 → 雪 · 整体笔触图层；内部数量尚未适配"
+      "山 → 山岸 · 地面 · 整体笔触图层；内部数量尚未适配（静止）",
+      "江 → 水 · 整体笔触图层；内部数量尚未适配",
+      "花 → 花 · 数量未精确；本地试画 10 个单元"
     ]
   },
   "interactions": {
@@ -142,10 +394,10 @@
   "rejectedResultPreserved": true,
   "linkedPages": {
     "progressRows": 60,
-    "readyTools": 28,
+    "readyTools": 29,
     "sameOrigin": true
   },
-  "transparentLayers": 2,
+  "transparentLayers": 5,
   "exportPng": true,
   "mobile": {
     "width": 390,

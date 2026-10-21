@@ -1,0 +1,507 @@
+{
+  "id": "2026-10-21T12-31-52-555Z-285246c0",
+  "fingerprint": "3e1fdf66d14b1a4da9b99a75ec4a61dc3d76bac5d793b13333010334849e5f1b",
+  "poem": "野旷天低树，江清月近人。",
+  "source": {
+    "provider": "场景通路实测",
+    "author": "孟浩然",
+    "title": "宿建德江"
+  },
+  "mode": "scene",
+  "model": "DeepSeek-V4.1-Flash",
+  "started_at": "2026-10-21T12:31:52.557Z",
+  "cached": false,
+  "http_status": 200,
+  "usage": {
+    "completion_tokens": 623,
+    "prompt_tokens": 3121,
+    "total_tokens": 3744,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  },
+  "finish_reason": "stop",
+  "analysis": {
+    "schema_version": "3.2",
+    "poem": "野旷天低树，江清月近人。",
+    "reading": "原野空阔，天幕低垂到树梢；江水清澈，月影仿佛靠近了人。两句以旷野、江月写开阔清朗的夜景。",
+    "entities": [
+      {
+        "id": "i1",
+        "mentions": [
+          "野"
+        ],
+        "concept": "空旷的原野",
+        "kind": "place",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "野旷"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "spread",
+          "evidence": [
+            "野旷"
+          ]
+        }
+      },
+      {
+        "id": "i2",
+        "mentions": [
+          "天"
+        ],
+        "concept": "天空",
+        "kind": "environment",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "天低"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "spread",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i3",
+        "mentions": [
+          "树"
+        ],
+        "concept": "树木",
+        "kind": "organism",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "天低树"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i4",
+        "mentions": [
+          "江"
+        ],
+        "concept": "江水",
+        "kind": "place",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "江清"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "spread",
+          "evidence": [
+            "江清"
+          ]
+        }
+      },
+      {
+        "id": "i5",
+        "mentions": [
+          "月"
+        ],
+        "concept": "月亮",
+        "kind": "object",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "月近人"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i6",
+        "mentions": [
+          "人"
+        ],
+        "concept": "人",
+        "kind": "person",
+        "role": "scene",
+        "presence": "unclear",
+        "evidence": [
+          "月近人"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      }
+    ],
+    "relations": [],
+    "atmosphere": {
+      "labels": [
+        "旷远",
+        "清朗",
+        "静谧"
+      ],
+      "valence": "neutral",
+      "energy": "low",
+      "tension": "low",
+      "openness": "high",
+      "evidence": [
+        "野旷",
+        "江清"
+      ]
+    },
+    "time": {
+      "markers": [],
+      "note": null
+    },
+    "uncertainties": [
+      "“人”是否指抒情主体或泛指人物不明，故 presence 记为 unclear。",
+      "“天低树”“月近人”是视觉感受还是实际位置关系，原文未明说。"
+    ],
+    "spatial": []
+  },
+  "validation": {
+    "valid": true,
+    "errors": [],
+    "warnings": [
+      "$.entities[5]: 场景主体的出现情况不清楚",
+      "模型保留了不确定性，需要审阅"
+    ],
+    "review_required": true
+  },
+  "plan": {
+    "version": "scene-composition-1",
+    "seed": 1774374923,
+    "settings": {
+      "wind": 0,
+      "density": 0.45,
+      "palette": "clear"
+    },
+    "layers": [
+      {
+        "tool": "landscape",
+        "entities": [
+          "i1"
+        ],
+        "names": [
+          "野"
+        ],
+        "options": {
+          "form": "ground"
+        },
+        "animate": false,
+        "placement": {
+          "anchor": [
+            320,
+            194
+          ],
+          "at": [
+            0.5,
+            0.5
+          ],
+          "scale": 1.5
+        },
+        "instances": [
+          {
+            "placement": {
+              "anchor": [
+                320,
+                194
+              ],
+              "at": [
+                0.5,
+                0.57
+              ],
+              "scale": 1.6
+            },
+            "depth": 0,
+            "opacity": 1,
+            "variant": 0
+          }
+        ],
+        "singleUnit": false,
+        "quantity": {
+          "items": [
+            {
+              "entity": "i1",
+              "mode": "unspecified",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "unspecified",
+              "extent": "spread",
+              "evidence": [
+                "野旷"
+              ],
+              "basis": "model"
+            }
+          ],
+          "rendered": 1,
+          "exact": false,
+          "collective": true,
+          "partUnsupported": false
+        },
+        "quantityLabel": "整体笔触图层；内部数量尚未适配",
+        "z": 5
+      },
+      {
+        "tool": "moon",
+        "entities": [
+          "i5"
+        ],
+        "names": [
+          "月"
+        ],
+        "options": {
+          "shape": "crescent"
+        },
+        "animate": true,
+        "placement": {
+          "anchor": [
+            320,
+            175
+          ],
+          "at": [
+            0.76,
+            0.2
+          ],
+          "scale": 0.85
+        },
+        "instances": [
+          {
+            "placement": {
+              "anchor": [
+                320,
+                175
+              ],
+              "at": [
+                0.76,
+                0.2
+              ],
+              "scale": 0.85
+            },
+            "depth": 0,
+            "opacity": 1,
+            "variant": 0
+          }
+        ],
+        "singleUnit": true,
+        "quantity": {
+          "items": [
+            {
+              "entity": "i5",
+              "mode": "unspecified",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "unspecified",
+              "extent": "unspecified",
+              "evidence": [],
+              "basis": "model"
+            }
+          ],
+          "rendered": 1,
+          "exact": false,
+          "collective": false,
+          "partUnsupported": false
+        },
+        "quantityLabel": "数量未精确；本地试画 1 个单元"
+      },
+      {
+        "tool": "tree",
+        "entities": [
+          "i3"
+        ],
+        "names": [
+          "树"
+        ],
+        "options": {
+          "form": "broadleaf",
+          "crown": "lines"
+        },
+        "animate": true,
+        "placement": {
+          "anchor": [
+            320,
+            388
+          ],
+          "at": [
+            0.18,
+            0.98
+          ],
+          "scale": 1.15
+        },
+        "instances": [
+          {
+            "placement": {
+              "anchor": [
+                320,
+                388
+              ],
+              "at": [
+                0.18,
+                0.9799999999999999
+              ],
+              "scale": 1.4375
+            },
+            "depth": 0,
+            "opacity": 1,
+            "variant": 0
+          }
+        ],
+        "singleUnit": true,
+        "quantity": {
+          "items": [
+            {
+              "entity": "i3",
+              "mode": "unspecified",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "unspecified",
+              "extent": "unspecified",
+              "evidence": [],
+              "basis": "model"
+            }
+          ],
+          "rendered": 1,
+          "exact": false,
+          "collective": false,
+          "partUnsupported": false
+        },
+        "quantityLabel": "数量未精确；本地试画 1 个单元",
+        "z": 8
+      },
+      {
+        "tool": "water",
+        "entities": [
+          "i4"
+        ],
+        "names": [
+          "江"
+        ],
+        "options": {},
+        "animate": true,
+        "placement": {
+          "anchor": [
+            320,
+            130
+          ],
+          "at": [
+            0.5,
+            0.57
+          ],
+          "scale": 1.5
+        },
+        "instances": [
+          {
+            "placement": {
+              "anchor": [
+                320,
+                135
+              ],
+              "at": [
+                0.5,
+                0.46
+              ],
+              "scale": 1.6
+            },
+            "depth": 0,
+            "opacity": 1,
+            "variant": 0
+          }
+        ],
+        "singleUnit": false,
+        "quantity": {
+          "items": [
+            {
+              "entity": "i4",
+              "mode": "unspecified",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "unspecified",
+              "extent": "spread",
+              "evidence": [
+                "江清"
+              ],
+              "basis": "model"
+            }
+          ],
+          "rendered": 1,
+          "exact": false,
+          "collective": true,
+          "partUnsupported": false
+        },
+        "quantityLabel": "整体笔触图层；内部数量尚未适配",
+        "z": -10,
+        "surface": {
+          "top": 0.46,
+          "bottom": 1
+        }
+      }
+    ],
+    "spatial": [],
+    "scene": {
+      "kind": "waterside",
+      "notes": [
+        "水面以连续色层和水纹构成空间；水面的范围、视点与水平线是本地构图选择，不自动增加岸或陆地。"
+      ],
+      "waterline": 0.46
+    },
+    "omitted": [
+      {
+        "id": "i2",
+        "name": "天",
+        "reason": "该具体意象尚无可用形态；没有替换成通用树、花或鸟群"
+      },
+      {
+        "id": "i6",
+        "name": "人",
+        "reason": "出现情况不确定，暂不补画"
+      }
+    ],
+    "notes": [
+      "野虽被归为地点，仍按原文明示的自然景物匹配；具体空间关系另行处理。",
+      "江虽被归为地点，仍按原文明示的自然景物匹配；具体空间关系另行处理。",
+      "原句未明确月形，暂用弯月试画；可以手动切换。",
+      "位置、大小、笔触与默认微动是本地试画选择；数量解释与本地显示数量分别记录。",
+      "未明说的群落数量、疏密、近中远层次与变体均为本地构图选择；不增加新物种，不把铺展词换算成精确物体数量。",
+      "水面以连续色层和水纹构成空间；水面的范围、视点与水平线是本地构图选择，不自动增加岸或陆地。"
+    ],
+    "relations": []
+  },
+  "elapsed_seconds": 15.8
+}
