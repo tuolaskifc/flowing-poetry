@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "poems": 20,
+  "focus": 5,
+  "approved": 0,
+  "allPoemsSelectable": true,
+  "unimplementedScenesSelectable": true,
+  "searchAndFilters": true,
+  "deepLinkToMain": true,
+  "manualInputClearsSelection": true,
+  "editorialNotesExcludedFromSubmission": true,
+  "fixtureSubmissions": 1,
+  "realModelPosts": 0,
+  "externalRequests": 0,
+  "mobileWidth": 390,
+  "runtimeErrors": []
+}

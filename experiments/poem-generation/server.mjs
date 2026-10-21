@@ -5,7 +5,7 @@ import {fileURLToPath} from 'node:url';
 import {createGenerationService} from './service.mjs';
 const dir=dirname(fileURLToPath(import.meta.url)),root=resolve(dir,'../..');
 const types={'.html':'text/html; charset=utf-8','.css':'text/css; charset=utf-8','.js':'text/javascript; charset=utf-8','.mjs':'text/javascript; charset=utf-8','.json':'application/json; charset=utf-8','.png':'image/png','.md':'text/plain; charset=utf-8','.txt':'text/plain; charset=utf-8'};
-const assets=new Set(['index.html','app.js','scene.js','styles.css','imagery-lexicon.js','recommendation.js']);
+const assets=new Set(['index.html','app.js','scene.js','styles.css','imagery-lexicon.js','recommendation.js','curated-library.js','curated-poems.json']);
 function json(res,status,body){res.writeHead(status,{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store','X-Content-Type-Options':'nosniff'});res.end(JSON.stringify(body));}
 export function createPoemServer({port=4186,service=createGenerationService()}={}){
 const server=createServer(async(req,res)=>{
@@ -24,7 +24,7 @@ const server=createServer(async(req,res)=>{
     if(req.method!=='GET'){json(res,405,{error:'不支持该操作。'});return;}
     if(url.pathname==='/favicon.ico'){res.writeHead(204);res.end();return;}
     const path=decodeURIComponent(url.pathname),file=path==='/'?resolve(root,'poem-flow/index.html'):resolve(root,'.'+path);
-    const mainAssets=['index.html','main.css','legacy.html','styles.css','app.js','scene.js','vendor/p5.min.js','vendor/p5-LICENSE.txt','THIRD_PARTY.md'].map(p=>resolve(root,'poem-flow',p));
+    const mainAssets=['index.html','main.css','library.html','library.js','library.css','legacy.html','styles.css','app.js','scene.js','vendor/p5.min.js','vendor/p5-LICENSE.txt','THIRD_PARTY.md'].map(p=>resolve(root,'poem-flow',p));
     const library=resolve(root,'experiments/imagery-library');
     const libraryAssets=['index.html','app.js','style.css','studies.js','catalog.js','README.md','progress.html','progress-data.js','progress.js','progress.css','progress-records.json','boid-adapter.js'].map(p=>resolve(library,p));
     const allowed=(file.startsWith(dir+sep)&&assets.has(file.slice(dir.length+1)))||file.startsWith(resolve(library,'drawing')+sep)&&['.js','.md'].includes(extname(file))||libraryAssets.includes(file)||mainAssets.includes(file);

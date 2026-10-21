@@ -1,13 +1,27 @@
 (() => {
   'use strict';
-  const $=id=>document.getElementById(id),poem=$('poem');let source=null,latest=null,sdkPromise,candidateBatch=[];
+  const $=id=>document.getElementById(id),poem=$('poem');let source=null,latest=null,sdkPromise,candidateBatch=[],catalog=null;
   const status=text=>{$('status').textContent=text;};
   const clearList=id=>{$(id).replaceChildren();};
   const clearCandidateSelection=()=>{for(const button of document.querySelectorAll('[data-candidate]'))button.setAttribute('aria-pressed','false');};
   function item(id,text){const li=document.createElement('li');li.textContent=text;$(id).append(li);return li;}
-  function busy(value){for(const id of ['generate','fetch-poem','sample','replay','recommend'])if($(id))$(id).disabled=value;for(const button of document.querySelectorAll('[data-candidate]'))button.disabled=value||button.dataset.drawable==='false';poem.disabled=value;poem.setAttribute('aria-busy',String(value));}
+  function busy(value){for(const id of ['generate','fetch-poem','sample','replay','recommend','library-choice'])if($(id))$(id).disabled=value||(!catalog&&['recommend','library-choice'].includes(id));for(const button of document.querySelectorAll('[data-candidate]'))button.disabled=value||button.dataset.drawable==='false';poem.disabled=value;poem.setAttribute('aria-busy',String(value));}
+  function librarySelection(entry){
+    if($('library-choice'))$('library-choice').value=entry?.id||'';
+    if(!$('library-goal'))return;$('library-goal').hidden=!entry;
+    if(entry){$('library-goal-text').textContent=(entry.focus?'首批重点 · ':'')+entry.goal;$('library-gap').textContent='当前缺口：'+entry.gaps.join('；');$('library-entry').href='/poem-flow/library.html#'+entry.id;}
+  }
+  function chooseCurated(entry){
+    if(!entry)return;clearCandidateSelection();poem.value=entry.poem;source=window.PoemCuratedLibrary.sourceFor(entry);librarySelection(entry);
+    $('source').textContent='精选诗句库 · '+entry.dynasty+' · '+entry.author+'《'+entry.title+'》';
+    status((entry.focus?'已选择首批改画样本。':'已选择精选诗句。')+'点击“生成画面”开始分析；选句本身不调用模型。');
+  }
+  function populateLibrary(){
+    const select=$('library-choice');if(!select)return;
+    for(const focus of [true,false]){const entries=catalog.poems.filter(p=>p.focus===focus),group=document.createElement('optgroup');group.label=focus?'首批改画 · '+entries.length+' 组':'其他精选';for(const entry of entries){const option=document.createElement('option');option.value=entry.id;option.textContent=entry.poem+' · '+entry.author;group.append(option);}select.append(group);}
+  }
   function chooseCandidate(candidate){
-    poem.value=candidate.poem;source=candidate.source;
+    poem.value=candidate.poem;source=candidate.source;librarySelection(null);
     $('source').textContent=[source.provider,source.dynasty,source.author,source.title&&'《'+source.title+'》'].filter(Boolean).join(' · ');
     for(const button of document.querySelectorAll('[data-candidate]'))button.setAttribute('aria-pressed',String(candidateBatch[Number(button.dataset.candidate)]===candidate));
   }
@@ -67,20 +81,16 @@
     status(plan.layers.length?'已生成画面。'+(plan.omitted.length?'有 '+plan.omitted.length+' 项尚未绘制，详见“保留的空缺”。':'可以调整风力、构图或保存画面。'):'分析已完成，但本句尚无可绘制的意象。请换一句或试试样句。');
   }
   $('fetch-poem').addEventListener('click',fetchPoem);
-  const recommendations=[
-    {poem:'渭城朝雨浥轻尘，客舍青青柳色新。',author:'王维',title:'送元二使安西',dynasty:'唐代'},
-    {poem:'明月松间照，清泉石上流。',author:'王维',title:'山居秋暝',dynasty:'唐代'},
-    {poem:'江南可采莲，莲叶何田田。',author:'汉乐府',title:'江南',dynasty:'两汉'}
-  ];let recommendationIndex=0;
-  $('recommend')?.addEventListener('click',()=>{clearCandidateSelection();let next=recommendations[recommendationIndex++%recommendations.length];if(next.poem===poem.value)next=recommendations[recommendationIndex++%recommendations.length];poem.value=next.poem;source={provider:'本地推荐',author:next.author,title:next.title,dynasty:next.dynasty};$('source').textContent='本地推荐 · '+next.author+'《'+next.title+'》';status('已选出适合现有画库的诗句，点击“生成画面”开始分析。');});
-  $('sample').addEventListener('click',()=>{clearCandidateSelection();poem.value='风乍起，吹皱一池春水。';source={provider:'手动试画样句',author:'冯延巳',title:'谒金门·风乍起',dynasty:'五代'};$('source').textContent='手动试画样句 · 冯延巳《谒金门·风乍起》';status('已填入样句，点击“生成画面”开始分析。');});
-  poem.addEventListener('input',()=>{source=null;$('source').textContent='手动输入';clearCandidateSelection();});
+  $('recommend')?.addEventListener('click',()=>{if(catalog)chooseCurated(window.PoemCuratedLibrary.next(catalog,poem.value));});
+  $('library-choice')?.addEventListener('change',e=>{const entry=window.PoemCuratedLibrary.find(catalog,e.target.value);if(entry)chooseCurated(entry);});
+  $('sample').addEventListener('click',()=>{clearCandidateSelection();librarySelection(null);poem.value='风乍起，吹皱一池春水。';source={provider:'手动试画样句',author:'冯延巳',title:'谒金门·风乍起',dynasty:'五代'};$('source').textContent='手动试画样句 · 冯延巳《谒金门·风乍起》';status('已填入样句，点击“生成画面”开始分析。');});
+  poem.addEventListener('input',()=>{source=null;librarySelection(null);$('source').textContent='手动输入';clearCandidateSelection();});
   $('generate').addEventListener('click',async()=>{
     if(!poem.value.trim()){status('请先取一句或输入诗句。');return;}
     busy(true);status('正在分析诗句，再由本地规则组织画面……');
     try{const response=await fetch('/api/analyze',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({poem:poem.value,source})}),data=await response.json();if(!data.record)throw new Error(data.error||'分析失败，请稍后手动再试。');await show(data.record);}catch(error){status(error.message);}finally{busy(false);}
   });
-  $('replay').addEventListener('click',async()=>{if(latest){busy(true);clearCandidateSelection();try{poem.value=latest.poem;source=latest.source;$('source').textContent=source?[source.provider,source.author,source.title].filter(Boolean).join(' · '):'已保存的诗句';await show({...latest,cached:true});}catch(error){status(error.message);}finally{busy(false);}}});
+  $('replay').addEventListener('click',async()=>{if(latest){busy(true);clearCandidateSelection();try{poem.value=latest.poem;source=latest.source;librarySelection(catalog?.poems.find(p=>p.poem===latest.poem));$('source').textContent=source?[source.provider,source.author,source.title].filter(Boolean).join(' · '):'已保存的诗句';await show({...latest,cached:true});}catch(error){status(error.message);}finally{busy(false);}}});
   $('pause').addEventListener('click',()=>{const paused=$('pause').getAttribute('aria-pressed')!=='true';window.PoemTrialScene.pause(paused);$('pause').textContent=paused?'继续':'暂停';$('pause').setAttribute('aria-pressed',String(paused));});
   $('reseed').addEventListener('click',()=>window.PoemTrialScene.reseed());$('save').addEventListener('click',()=>window.PoemTrialScene.save());
   $('palette').addEventListener('change',e=>window.PoemTrialScene.update({palette:e.target.value}));$('moon-shape').addEventListener('change',e=>window.PoemTrialScene.moon(e.target.value));
@@ -90,5 +100,10 @@
   $('immersive')?.addEventListener('click',()=>immersive(!document.body.classList.contains('immersive')));
   document.addEventListener('keydown',e=>{if(e.key==='Escape'&&$('immersive'))immersive(false);});
   busy(true);
-  Promise.all([fetch('/api/status').then(r=>r.json()),fetch('/api/latest').then(r=>r.json())]).then(async([config,saved])=>{status(config.configured?'DeepSeek 接口已就绪，先取一句或输入诗句。':'分析接口尚未配置；可先取诗句。');if(saved.record){poem.value=saved.record.poem;source=saved.record.source;$('source').textContent=source?[source.provider,source.author,source.title].filter(Boolean).join(' · '):'已保存的诗句';await show({...saved.record,cached:true});}}).catch(()=>status('请通过本地服务打开本页：在 poem-flow 文件夹运行 npm start。')).finally(()=>busy(false));
+  const loadLibrary=fetch('/experiments/poem-generation/curated-poems.json').then(r=>{if(!r.ok)throw new Error('library unavailable');return r.json();}).then(data=>window.PoemCuratedLibrary.validate(data)).catch(()=>null);
+  Promise.all([fetch('/api/status').then(r=>r.json()),fetch('/api/latest').then(r=>r.json()),loadLibrary]).then(([config,saved,data])=>{
+    catalog=data;if(saved.record){latest=saved.record;$('replay').hidden=false;}
+    if(catalog){populateLibrary();const requested=new URLSearchParams(location.search).get('poem');chooseCurated(window.PoemCuratedLibrary.find(catalog,requested)||window.PoemCuratedLibrary.ordered(catalog)[0]);if(!config.configured)status('精选诗句库已载入；分析接口尚未配置。');}
+    else status('精选诗句库暂未载入，可以手动输入；'+(config.configured?'分析接口已就绪。':'分析接口尚未配置。'));
+  }).catch(()=>status('请通过本地服务打开本页：在 poem-flow 文件夹运行 npm start。')).finally(()=>busy(false));
 })();

@@ -44,21 +44,26 @@
   <script defer src="/experiments/poem-generation/scene.js"></script>
   <script defer src="/experiments/poem-generation/imagery-lexicon.js"></script>
   <script defer src="/experiments/poem-generation/recommendation.js"></script>
+  <script defer src="/experiments/poem-generation/curated-library.js"></script>
   <script defer src="/experiments/poem-generation/app.js"></script>
 </head>
 <body>
-  <header><a class="wordmark" href="/">流动诗<span>FLOWING POETRY</span></a><a href="/experiments/imagery-library/progress.html">意象进度 ↗</a></header>
+  <header><a class="wordmark" href="/">流动诗<span>FLOWING POETRY</span></a><nav><a href="/poem-flow/library.html">精选诗句库 ↗</a><a href="/experiments/imagery-library/progress.html">意象进度 ↗</a></nav></header>
   <main>
     <aside class="input-panel">
       <p class="eyebrow">A VERSE, A MOVING LANDSCAPE</p><h1>从一句诗<br>走进一幅画。</h1>
+      <label for="library-choice">从精选库开始 <a href="/poem-flow/library.html">查看 20 组与改画进度 ↗</a></label>
+      <select id="library-choice" disabled aria-label="精选诗句"><option value="" disabled>选择一组诗句</option></select>
       <label for="poem">写下此刻想到的诗句 <span>1–200 字</span></label>
       <textarea id="poem" rows="4" maxlength="200" placeholder="风乍起，吹皱一池春水。"></textarea>
       <p id="source" class="muted"></p>
-      <div class="actions"><button id="recommend" type="button" disabled>本地推荐</button><button id="fetch-poem" type="button" disabled>今日诗词 · 筛选</button><button id="sample" type="button" disabled>样句</button></div>
+      <div class="actions"><button id="recommend" type="button" disabled>换一句精选</button><button id="sample" type="button" disabled>水面样句</button></div>
       <button id="generate" class="primary" type="button" disabled>生成画面 <span>↗</span></button>
       <button id="replay" type="button" hidden>回看上次结果</button>
       <p id="status" role="status" aria-live="polite">正在连接本地分析服务……</p>
-      <p class="input-note">今日诗词每轮最多取 5 句，去重后按可画意象初筛；点击生成后才调用 DeepSeek。</p>
+      <p class="input-note">先选句，再点击生成。精选库也保留待补画的意象，选入不等于效果已完成。</p>
+      <details id="library-goal" hidden><summary>这句接下来想改什么</summary><p id="library-goal-text"></p><p id="library-gap" class="muted"></p><a id="library-entry" href="/poem-flow/library.html">看这一组的记录 ↗</a></details>
+      <details class="online-poetry"><summary>今日诗词取句（可选）</summary><p class="input-note">每轮最多取 5 句，在本地初筛；选句不调用 DeepSeek。</p><button id="fetch-poem" type="button" disabled>在线取句并筛选</button></details>
       <details id="candidate-panel" class="candidate-panel" hidden open><summary id="candidate-summary">本轮候选</summary><p class="input-note">按已有画法粗筛，可改选另一句；是否在场、是否为比喻，生成时再分析。</p><div id="candidates" role="group" aria-label="本轮诗句候选"></div></details>
       <details class="scope"><summary>这一版可以做到什么</summary><p>DeepSeek 解读诗句，本地绘画库组合画面。目前先表现基础意象；尚未覆盖的物象会列出，完整关系、情感配色和时间编排仍在扩展。</p></details>
     </aside>
@@ -86,7 +91,7 @@
       </section>
     </section>
   </main>
-  <footer><span>流动诗 · 基础意象生成版</span><a href="https://www.jinrishici.com/doc/" target="_blank" rel="noopener noreferrer">诗句推荐来自今日诗词 ↗</a></footer>
+  <footer><span>流动诗 · 精选诗句与绘画练习</span><a href="/poem-flow/library.html">原句出处与改画记录 ↗</a></footer>
   <noscript>请开启 JavaScript，并通过本地服务打开本页。</noscript>
 </body>
 </html>

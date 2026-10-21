@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>流动诗 · 精选诗句与改画记录</title>
+  <link rel="stylesheet" href="/poem-flow/library.css"><script defer src="/experiments/poem-generation/curated-library.js"></script><script defer src="/poem-flow/library.js"></script>
+</head>
+<body>
+  <header><a class="wordmark" href="/">流动诗</a><nav><a href="/">返回生成画面 ↗</a><a href="/experiments/imagery-library/progress.html">意象工具进度 ↗</a></nav></header>
+  <main>
+    <p class="eyebrow">A COLLECTION TO PAINT, COMPARE AND REFINE</p><h1>让同一句诗，逐渐有更好的画。</h1>
+    <p class="intro">固定一批有画面联系的诗句，反复试画与比较。首批 5 组优先打磨，其他候选也保留现阶段画不了的部分。</p>
+    <p id="summary" class="summary" role="status">正在载入精选诗句库……</p>
+    <div class="filters"><label>查找 <input id="search" type="search" placeholder="诗句、作者、意象或改画目标"></label><label>范围 <select id="scope"><option value="all">全部精选</option><option value="focus">首批 5 组</option></select></label><label>效果进度 <select id="review"><option value="all">全部状态</option><option value="待改画">待改画</option><option value="待试画">待试画</option><option value="已认可">已认可</option></select></label><button id="clear" type="button">清除筛选</button></div>
+    <p id="count" role="status" aria-live="polite"></p>
+    <p class="note">“已有画法”是能力盘点；“想表现的画面”是接下来的目标。是否达到效果要逐幅审阅，选入本库不代表已经画好。窄屏可在表内左右滑动。</p>
+    <div class="table-wrap" role="region" aria-label="精选诗句与改画进度表" tabindex="0"><table><thead><tr><th scope="col">原句与出处</th><th scope="col">意象线索</th><th scope="col">想表现的画面</th><th scope="col">当前画法与缺口</th><th scope="col">进度与操作</th></tr></thead><tbody id="rows"></tbody></table></div>
+    <p id="empty" hidden>没有符合条件的诗句，可以清除筛选后重试。</p>
+    <footer><span>来源逐项保留 · 编目与画面目标由本项目整理</span><a href="/">回到流动诗 ↗</a></footer>
+  </main>
+</body>
+</html>
