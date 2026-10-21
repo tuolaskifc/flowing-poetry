@@ -1,0 +1,178 @@
+{
+  "status": "passed",
+  "live": false,
+  "savedRecordReplay": false,
+  "modelRequests": 0,
+  "cases": [
+    {
+      "id": "lotus",
+      "poem": "接天莲叶无穷碧，映日荷花别样红。",
+      "basis": "authored-fixture",
+      "quantity": [
+        {
+          "mentions": [
+            "莲叶"
+          ],
+          "quantity": {
+            "mode": "many",
+            "min": null,
+            "max": null,
+            "unit": null,
+            "scope": "individual",
+            "extent": "spread",
+            "evidence": [
+              "接天莲叶无穷碧"
+            ]
+          }
+        },
+        {
+          "mentions": [
+            "荷花"
+          ],
+          "quantity": {
+            "mode": "many",
+            "min": null,
+            "max": null,
+            "unit": null,
+            "scope": "individual",
+            "extent": "spread",
+            "evidence": [
+              "映日荷花别样红"
+            ]
+          }
+        }
+      ],
+      "before": {
+        "instances": 2,
+        "renderers": 2,
+        "inkCoverage": 0.018069444444444444
+      },
+      "after": {
+        "instances": 56,
+        "renderers": 6,
+        "inkCoverage": 0.38059375
+      }
+    },
+    {
+      "id": "exact",
+      "poem": "两朵花，一叶孤舟。",
+      "basis": "authored-fixture",
+      "quantity": [
+        {
+          "mentions": [
+            "花"
+          ],
+          "quantity": {
+            "mode": "exact",
+            "min": 2,
+            "max": 2,
+            "unit": "朵",
+            "scope": "individual",
+            "extent": "unspecified",
+            "evidence": [
+              "两朵花"
+            ]
+          }
+        },
+        {
+          "mentions": [
+            "孤舟"
+          ],
+          "quantity": {
+            "mode": "exact",
+            "min": 1,
+            "max": 1,
+            "unit": null,
+            "scope": "individual",
+            "extent": "unspecified",
+            "evidence": [
+              "一叶孤舟"
+            ]
+          }
+        }
+      ],
+      "before": {
+        "instances": 2,
+        "renderers": 2,
+        "inkCoverage": 0.04436631944444445
+      },
+      "after": {
+        "instances": 3,
+        "renderers": 3,
+        "inkCoverage": 0.019293402777777777
+      }
+    },
+    {
+      "id": "units",
+      "poem": "两竿竹，两株草，三片红叶。",
+      "basis": "authored-fixture",
+      "quantity": [
+        {
+          "mentions": [
+            "竹"
+          ],
+          "quantity": {
+            "mode": "exact",
+            "min": 2,
+            "max": 2,
+            "unit": "竿",
+            "scope": "individual",
+            "extent": "unspecified",
+            "evidence": [
+              "两竿竹"
+            ]
+          }
+        },
+        {
+          "mentions": [
+            "草"
+          ],
+          "quantity": {
+            "mode": "exact",
+            "min": 2,
+            "max": 2,
+            "unit": "株",
+            "scope": "individual",
+            "extent": "unspecified",
+            "evidence": [
+              "两株草"
+            ]
+          }
+        },
+        {
+          "mentions": [
+            "红叶"
+          ],
+          "quantity": {
+            "mode": "exact",
+            "min": 3,
+            "max": 3,
+            "unit": "片",
+            "scope": "individual",
+            "extent": "unspecified",
+            "evidence": [
+              "三片红叶"
+            ]
+          }
+        }
+      ],
+      "before": {
+        "instances": 3,
+        "renderers": 3,
+        "inkCoverage": 0.06844097222222222
+      },
+      "after": {
+        "instances": 7,
+        "renderers": 7,
+        "inkCoverage": 0.021861111111111112
+      }
+    }
+  ],
+  "pause": true,
+  "groupDrag": true,
+  "resetLayout": true,
+  "reseed": true,
+  "exportPng": true,
+  "mobileWidth": 390,
+  "runtimeErrors": []
+}

@@ -106,7 +106,7 @@ test('credentials stay in request headers, successful replay uses no new call, f
       calls++;assert.equal(url,'https://example.invalid/v1/chat/completions');assert.equal(options.headers.Authorization,'Bearer '+key);assert(!options.body.includes(key));
       return new Response(JSON.stringify({model:'test-model',choices:[{finish_reason:'stop',message:{content:JSON.stringify(analysis)}}],usage:{total_tokens:42}}));
     }});
-    const a=await service.analyze({poem:'月'}),b=await service.analyze({poem:'月'});assert(a.validation.valid);assert.equal(b.cached,true);assert.equal(calls,1);
+    const a=await service.analyze({poem:'月',mode:'imagery-only'}),b=await service.analyze({poem:'月',mode:'imagery-only'});assert(a.validation.valid);assert.equal(b.cached,true);assert.equal(calls,1);
     for(const folder of await readdir(join(dir,'runs')))for(const name of await readdir(join(dir,'runs',folder)))assert(!(await readFile(join(dir,'runs',folder,name),'utf8')).includes(key));
     const broken=createGenerationService({credentialsPath:path,runsDir:join(dir,'bad'),fetcher:async()=>new Response(JSON.stringify({choices:[{finish_reason:'stop',message:{content:'not json'}}]}))});
     const failure=await broken.analyze({poem:'月'});assert.equal(failure.validation.valid,false);assert.equal(failure.plan,undefined);assert.equal(await broken.latest(),null);

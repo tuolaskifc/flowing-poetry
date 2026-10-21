@@ -260,9 +260,9 @@ try {
   const newPlan=buildPlan(newFixture);if(newPlan.layers.map(l=>l.tool).join(',')!=='horse,lotus,orchid')throw new Error('New plant/horse fixture mapping failed');
   await evaluate(`window.PoemTrialScene.render(${JSON.stringify(newPlan)})`);await sleep(120);await evaluate('window.PoemTrialScene.pause(true)');
   const newScene=await evaluate(`({state:window.PoemTrialScene.inspect(),alpha:Array.from(document.querySelectorAll('#layer-hosts canvas'),c=>c.getContext('2d').getImageData(0,0,1,1).data[3]),png:document.getElementById('scene').toDataURL()})`);
-  if(newScene.alpha.length!==3||newScene.alpha.some(a=>a!==0))throw new Error('New plant/horse transparent scene failed');
+  if(newScene.state.placements.length!==3||newScene.alpha.length!==newScene.state.layers.length||newScene.alpha.some(a=>a!==0))throw new Error('New plant/horse transparent scene failed');
   await writeFile(resolve(dir,'orchid-horse-lotus-scene.png'),Buffer.from(newScene.png.split(',')[1],'base64'));
-  await writeFile(resolve(dir,'orchid-horse-lotus-scene.json'),JSON.stringify({source:'project-authored offline fixture; not model output',modelCalls:0,fixture:newFixture,plan:newPlan,state:newScene.state,transparentLayers:3},null,2)+'\n');await evaluate('window.PoemTrialScene.dispose()');
+  await writeFile(resolve(dir,'orchid-horse-lotus-scene.json'),JSON.stringify({source:'project-authored offline fixture; not model output',modelCalls:0,fixture:newFixture,plan:newPlan,state:newScene.state,transparentLayers:newScene.alpha.length},null,2)+'\n');await evaluate('window.PoemTrialScene.dispose()');
   if(errors.length)throw new Error(JSON.stringify(errors));
   const report={status:'passed',targetUrl,initial,pausedBefore,pausedAfter,changed,settings,resumed,exportInfo,isolation,variants,architecture,newFeatures,extensionLifecycle,wideLayout,narrowLayout,runtimeErrors:errors,limitations:['未操作系统下载确认界面；仅验证 canvas 导出 PNG 数据。','本地画面经浏览器截图检查；具体花鸟树种尚未做植物学或生物学辨识验收。','所有登记工具检查暂停重置后的重复出图；不等同于运动的跨设备逐帧确定性。']};
   report.frequencyFeatures=frequencyFeatures;

@@ -36,11 +36,13 @@ npm start
 
 无匹配形态时明确提示并展示解读与缺口，不用别的物象补画。当前是可运行的基础意象生成版，尚未实现全部意象、完整关系、16 类自动情感配色、逻辑时间编排和安卓。
 
+生成已增加[数量解释与群落构图](experiments/poem-generation/quantity-composition.md)：区分明确数量、少量、繁多及范围，由本地规则组织近远与疏密。“接天莲叶”可以铺展开，“孤舟”仍只画一舟；页面分别标注提取数量和本地显示份数。局部计数、雨雪内部颗粒与完整空间关系尚未全部适配。
+
 真实通路记录见 [生成实验](experiments/poem-generation/README.md)，主网页浏览器证据在 `poem-flow/verification/`。旧的固定诗句作品保留于 http://127.0.0.1:4173/poem-flow/legacy.html 。
 
 ## 独立的诗句语义实验
 
-模型接口已接入主网页。现行完整实验采用 [语义协议 3.0](experiments/poem-semantics/contract-v3/固定输出结构.md)，此前两次完整关系请求未通过；生成页面目前明确采用关系为空的基础意象子模式，不让模型生成绘图代码。16 类情感、空间和完整逻辑尚未贯通，不能将旧字段直接换名使用。
+模型接口已接入主网页。完整实验保留 [冻结语义协议 3.0](experiments/poem-semantics/contract-v3/固定输出结构.md)，此前两次完整关系请求未通过；生成页面现默认使用 [3.1 数量扩展](experiments/poem-generation/quantity-composition.md)，关系仍为空，不让模型生成绘图代码。16 类情感、空间和完整逻辑尚未贯通，不能将旧字段直接换名使用。
 
 协议说明、提示词、校验器和既往记录在 `experiments/poem-semantics/`；历次真实请求、失败及覆盖缺口保留在 `experiments/poem-generation/runs/`，不随网页更新改写。
 

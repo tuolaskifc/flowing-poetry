@@ -8,9 +8,9 @@ create(ctx) {
  const {p,width:W,height:H,alpha}=ctx; const shared=ctx.settings;
  let state={},time=0,palette=ctx.palette;
  function reset() {
- state.flowers=Array.from({length:7},(_,i)=>{
+ state.flowers=Array.from({length:ctx.singleUnit?1:7},(_,i)=>{
    const size=p.random(30,46),petals=p.random([5,6,8]);
-   return {x:70+i*82+p.random(-15,15),y:142+p.random(-34,56),size,phase:p.random(p.TWO_PI),petals,lean:p.random(-25,25),petalGeometry:Array.from({length:petals},()=>window.PoemPetalGeometry(p,size))};
+   return {x:ctx.singleUnit?W/2:70+i*82+p.random(-15,15),y:142+p.random(-34,56),size,phase:p.random(p.TWO_PI),petals,lean:p.random(-25,25),petalGeometry:Array.from({length:petals},()=>window.PoemPetalGeometry(p,size))};
  });
  }
 function flower() {

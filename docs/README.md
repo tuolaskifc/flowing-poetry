@@ -8,7 +8,7 @@
 | 运行当前项目 | [主入口与启动说明](../README.md#运行流动诗) | 输入／推荐 → DeepSeek → 本地绘制 → 交互与保存 |
 | 从哪些诗句开始改画 | [精选诗句库说明](../experiments/poem-generation/curated-library.md) | 20 组候选、首批 5 组、出处、画面目标及缺口；主网页优先选用 |
 | 一张图看懂模块 | [模块职能树](assets/模块职能树.png) | 标注现状的目标结构 |
-| 程序现在如何读模型回答 | [语义协议 3.0](../experiments/poem-semantics/contract-v3/固定输出结构.md) | 技术约定，尚未涵盖全部最新设计 |
+| 程序现在如何读模型回答 | [3.1 数量扩展与构图](../experiments/poem-generation/quantity-composition.md)；[冻结完整协议 3.0](../experiments/poem-semantics/contract-v3/固定输出结构.md) | 主网页默认数量扩展；完整关系仍待实现 |
 | 实际调用的结果和问题 | [实验结论](../experiments/poem-semantics/实验结论.md) | 指向真实记录，不随设计改写原始回答 |
 | 外部资源 | [参考资料](参考资料.md) | 保留各项核实状态 |
 | 意象库第一轮试画 | [试画与候选](../experiments/imagery-library/README.md) | 五类本地试画、10 个 OpenProcessing 候选与来源边界 |

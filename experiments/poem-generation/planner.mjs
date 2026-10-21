@@ -1,7 +1,8 @@
 // Local visual policy. The model supplies semantics, never executable drawing code.
 import {createHash} from 'node:crypto';
 import lexicon from './imagery-lexicon.js';
-export const policyVersion='trial-4-orchid-horse-lotus';
+import {compose} from './composition.mjs';
+export const policyVersion='quantity-composition-1';
 const {rules,unsupportedTerms}=lexicon;
 const order=['moon','cloud','mist','building','willow','bamboo','pavilion','horse','water','rock','boat','lotus','grass','orchid','plum-branch','flower','flower-forms','wine','leaves','surface-weather','fish','oriole','falling-petals','catkins','rain','snow'];
 const placements={
@@ -42,6 +43,7 @@ export function buildPlan(analysis){
     const rule=specificUnsupported?null:findRule(entity.mentions.join(' '))||findRule(text);
     if(!rule){omitted.push({id:entity.id,name,reason:'该具体意象尚无可用形态；没有替换成通用树、花或鸟群'});continue;}
     const options={...rule.options};
+    if(rule.tool==='orchid'&&entity.quantity?.scope==='individual'&&/朵|瓣/.test(entity.quantity.unit||''))options.form='flower';
     if(rule.tool==='horse')options.pose=/低首|低头|俯首|垂首/.test(entity.mentions.join(' '))?'lower':'stand';
     if(rule.tool==='lotus'&&options.form!=='leaf')options.state=/含苞|花苞|荷苞|莲苞/.test(entity.mentions.join(' '))?'bud':'open';
     if(rule.tool==='oriole'){
@@ -81,17 +83,18 @@ export function buildPlan(analysis){
     if(rule.tool==='wine'&&options.form!=='liquid')notes.push(`${name}按明确提到的容器绘制风格化轮廓，不作历史器型复原。`);
     if(rule.tool==='building')notes.push(`${name}采用二层楼体试画，层数与门窗排列是本地选择；不等同于具体历史建筑，也未实现人物登楼。`);
     if(rule.tool==='surface-weather')notes.push(`${name}只显示露珠或霜层的局部笔触，不自动补草叶、枝条或地面；具体载体附着尚未从诗句自动匹配。`);
-    if(rule.tool==='oriole')notes.push(`${name}使用单只淡墨莺意，浅黄墨面与几笔深翼、尾喙提示姿态，不刻画眼、足和细羽；数量、位置与默认朝向是本地选择，不添加栖枝或同伴。`);
-    if(rule.tool==='orchid')notes.push(`${name}采用长叶疏花的兰意试画，株式、数量与位置是本地选择，不作原诗所指植物的鉴定，也不自动补花盆或土石。`);
-    if(rule.tool==='horse')notes.push(`${name}目前只画单匹马的静态姿态；不表现奔跑步态，不自动补骑者、鞍辔或草地。`);
+    if(rule.tool==='oriole')notes.push(`${name}以淡墨莺形为单体，浅黄墨面与几笔深翼、尾喙提示姿态，不刻画眼、足和细羽；数量另按语义与构图规则处理，不自动添加栖枝。`);
+    if(rule.tool==='orchid')notes.push(`${name}采用长叶疏花的兰意试画，株式与位置是本地选择，明确的花部计数使用单花；不作植物鉴定，也不自动补花盆或土石。`);
+    if(rule.tool==='horse')notes.push(`${name}以静态马形为单体，数量另行处理；不表现奔跑步态，不自动补骑者、鞍辔或草地。`);
     if(rule.tool==='lotus')notes.push(`${name}按提到的花或叶分别试画；不自动补池水、荷叶或其他生物，默认花态是本地选择，尚无生长或开花过程。`);
   }
   layers.sort((a,b)=>order.indexOf(a.tool)-order.indexOf(b.tool));
-  if(!analysis.relations.length&&/不|未|无|若|倘|如果/.test(analysis.poem)){
+  if(!analysis.relations.length&&/不|未|无|若|倘|如果/.test(analysis.poem.replace(/无穷|无边|无尽|无数|无声|无人/g,''))){
     wind=0;layers.forEach(l=>l.animate=false);notes.push('本句有否定或假设提示，基础意象模式未细分其范围，暂缓动画，不宣称完成逻辑解释。');
   }
   const relations=analysis.relations.map(r=>({type:r.type,meaning:r.meaning,modality:r.modality,visualized:r.type==='acts_on'&&wind>0&&analysis.entities.find(e=>e.id===r.source)?.mentions.some(m=>m.includes('风'))&&entityTools.has(r.target)}));
   if(relations.some(r=>!r.visualized))notes.push('已识别的其他关系保留在解读中；本次未实现承载、遮蔽或完整动作编排。');
-  notes.push('位置、大小、笔触、固定群体数量与默认微动是本地试画选择；不表示原句给出了这些数值。');
-  return {version:policyVersion,seed:parseInt(createHash('sha256').update(analysis.poem).digest('hex').slice(0,8),16),settings:{wind,density:.45,palette:'clear'},layers:layers.map(({key,...l})=>l),omitted,notes:[...new Set(notes)],relations};
+  notes.push('位置、大小、笔触与默认微动是本地试画选择；数量解释与本地显示数量分别记录。');
+  const seed=parseInt(createHash('sha256').update(analysis.poem).digest('hex').slice(0,8),16),composition=compose(analysis,layers.map(({key,...l})=>l),seed);
+  return {version:policyVersion,seed,settings:{wind,density:.45,palette:'clear'},layers:composition.layers,omitted,notes:[...new Set([...notes,...composition.notes])],relations};
 }

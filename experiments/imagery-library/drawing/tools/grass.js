@@ -7,7 +7,7 @@ window.PoemDrawing.register({
   capabilities:['wind-response','surface-attachment','density-detail','anchors','fixed-count'],
   create(ctx){
     const {p,width:W,alpha}=ctx;let tufts=[];
-    function reset(){tufts=Array.from({length:9},(_,i)=>({x:62+i*64+p.random(-9,9),y:p.random(290,325),blades:Array.from({length:6},()=>({length:p.random(60,135),lean:p.random(-43,43),width:p.random(2.5,5),phase:p.random(p.TWO_PI),dewAt:p.random(.6,.9)}))}));}
+    function reset(){tufts=Array.from({length:ctx.singleUnit?1:9},(_,i)=>({x:ctx.singleUnit?W/2:62+i*64+p.random(-9,9),y:ctx.singleUnit?310:p.random(290,325),blades:Array.from({length:6},()=>({length:p.random(60,135),lean:p.random(-43,43),width:p.random(2.5,5),phase:p.random(p.TWO_PI),dewAt:p.random(.6,.9)}))}));}
     function tip(t,b){return {x:t.x+b.lean+ctx.wind.offset(b.phase,18),y:t.y-b.length};}
     function curve(t,b,q){const end=tip(t,b);return {x:t.x+(end.x-t.x)*q*q,y:t.y-b.length*(1.05*q-.05*q*q)};}
     function draw(){
@@ -22,6 +22,6 @@ window.PoemDrawing.register({
         }
       }
     }
-    return {reset,draw,anchors:()=>tufts.map((t,i)=>({id:'root-'+i,x:t.x,y:t.y})),inspect:()=>({tuftCount:9,bladeCount:54,surface:ctx.options.surface,dewCount:ctx.options.surface==='dew'?54:0,frostBladeCount:ctx.options.surface==='frost'?54:0,finite:tufts.every(t=>t.blades.every(b=>Number.isFinite(tip(t,b).x+tip(t,b).y))),geometryKey:ctx.fingerprint(tufts)})};
+    return {reset,draw,anchors:()=>tufts.map((t,i)=>({id:'root-'+i,x:t.x,y:t.y})),inspect:()=>({tuftCount:tufts.length,bladeCount:tufts.length*6,surface:ctx.options.surface,dewCount:ctx.options.surface==='dew'?tufts.length*6:0,frostBladeCount:ctx.options.surface==='frost'?tufts.length*6:0,finite:tufts.every(t=>t.blades.every(b=>Number.isFinite(tip(t,b).x+tip(t,b).y))),geometryKey:ctx.fingerprint(tufts)})};
   }
 });

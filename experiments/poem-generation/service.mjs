@@ -4,6 +4,7 @@ import {fileURLToPath} from 'node:url';
 import {createHash,randomUUID} from 'node:crypto';
 import {validateContract,schema} from '../poem-semantics/contract-v3/validate.mjs';
 import {buildPlan,policyVersion} from './planner.mjs';
+import {schema as quantitySchema,promptAddition,validateQuantityContract} from './quantity-contract.mjs';
 const dir=dirname(fileURLToPath(import.meta.url)),root=resolve(dir,'../..');
 export function parseCredentials(text){
   const lines=text.replace(/^\uFEFF/,'').split(/\r?\n/).map(s=>s.trim()).filter(s=>s&&!s.startsWith('#'));
@@ -29,19 +30,21 @@ export function createGenerationService({fetcher=fetch,credentialsPath=resolve(r
     busy=true;let key='';
     try{
       const config=parseCredentials(await readFile(credentialsPath,'utf8'));key=config.key;
-      const mode=input.mode==='full'?'full':'imagery-only';
-      const requestSchema=structuredClone(schema);
+      const mode=['full','imagery-only'].includes(input.mode)?input.mode:'quantity';
+      const requestSchema=structuredClone(mode==='quantity'?quantitySchema:schema);
       if(mode==='imagery-only')requestSchema.properties.relations.maxItems=0;
-      const poem=input.poem,prompt=(await readFile(promptFile,'utf8'))+(mode==='imagery-only'?'\n\n【本次任务范围：基础意象通路】\n本次只检验 entities 到现有绘画库的连接，尚未请求完整关系抽取。relations 必须为 []，不得输出任何关系项。动作和属性只在 reading 中简述。其余字段仍按协议 3.0 填写。不要把人物想象成在场；保留 presence 与 role 的不确定性。':'\n\n【本轮通路自检补充】\n提交前检查每条关系引用。grows_from、carries、located_in、compared_to 等双对象关系必须给出两个已有实体的 id，不能有 null；缺少第二个实体就不输出该关系。状态或属性可留在 reading 中，不要虚构生长或承载动作。怀念不是观察，observes 只用于实际观看。relations 可以为空数组。');
-      const fingerprint=createHash('sha256').update(JSON.stringify({poem,prompt,schema:requestSchema,model:config.model,endpoint:config.endpoint,policyVersion})).digest('hex');
+      const poem=input.poem,prompt=(await readFile(promptFile,'utf8'))+(mode!=='full'?'\n\n【本次任务范围：基础意象通路】\n本次只检验 entities 到现有绘画库的连接，尚未请求完整关系抽取。relations 必须为 []，不得输出任何关系项。动作和属性只在 reading 中简述。其余字段仍按协议 3.0 填写。不要把人物想象成在场；保留 presence 与 role 的不确定性。':'\n\n【本轮通路自检补充】\n提交前检查每条关系引用。grows_from、carries、located_in、compared_to 等双对象关系必须给出两个已有实体的 id，不能有 null；缺少第二个实体就不输出该关系。状态或属性可留在 reading 中，不要虚构生长或承载动作。怀念不是观察，observes 只用于实际观看。relations 可以为空数组。');
+      const effectivePrompt=mode==='quantity'?prompt+promptAddition:prompt;
+      if(mode==='quantity')requestSchema.properties.relations.maxItems=0;
+      const fingerprint=createHash('sha256').update(JSON.stringify({poem,prompt:effectivePrompt,schema:requestSchema,model:config.model,endpoint:config.endpoint,policyVersion})).digest('hex');
       const last=await latest();if(last?.fingerprint===fingerprint)return last;
       const runId=new Date().toISOString().replace(/[:.]/g,'-')+'-'+randomUUID().slice(0,8),folder=resolve(runsDir,runId);await mkdir(folder,{recursive:true});
       const redact=text=>String(text).split(key).join('[REDACTED]').replace(/\bsk-[a-zA-Z0-9_-]+/g,'[REDACTED]');
       const save=(name,value)=>writeFile(resolve(folder,name),redact(typeof value==='string'?value:JSON.stringify(value,null,2)+'\n'),'utf8');
-      const request={model:config.model,temperature:.2,max_tokens:4096,stream:false,thinking:{type:'disabled'},response_format:{type:'json_object'},messages:[{role:'system',content:prompt+'\n\nJSON Schema:\n'+JSON.stringify(requestSchema)},{role:'user',content:JSON.stringify({poem})}]};
+      const request={model:config.model,temperature:.2,max_tokens:4096,stream:false,thinking:{type:'disabled'},response_format:{type:'json_object'},messages:[{role:'system',content:effectivePrompt+'\n\nJSON Schema:\n'+JSON.stringify(requestSchema)},{role:'user',content:JSON.stringify({poem})}]};
       const source=input.source&&typeof input.source==='object'?Object.fromEntries(['provider','author','title','dynasty'].filter(k=>typeof input.source[k]==='string').map(k=>[k,input.source[k].slice(0,120)])):null;
       const record={id:runId,fingerprint,poem,source,mode,model:config.model,started_at:new Date().toISOString(),cached:false};
-      await save('request.json',request);await save('prompt.txt',prompt);await save('schema.json',requestSchema);
+      await save('request.json',request);await save('prompt.txt',effectivePrompt);await save('schema.json',requestSchema);
       const start=Date.now();
       try{
         const response=await fetcher(config.endpoint,{method:'POST',redirect:'error',signal:AbortSignal.timeout(90000),headers:{Authorization:'Bearer '+key,'Content-Type':'application/json'},body:JSON.stringify(request)});
@@ -52,8 +55,8 @@ export function createGenerationService({fetcher=fetch,credentialsPath=resolve(r
         if(typeof text!=='string'||!text.trim())throw new Error('接口没有返回最终文本。');
         await save('response.txt',text);
         try{record.analysis=JSON.parse(text);}catch{throw new Error('接口回答不是有效 JSON，原始回答已保留，没有自动改写。');}
-        record.validation=validateContract(record.analysis,poem);
-        if(mode==='imagery-only'&&record.analysis.relations?.length){record.validation.valid=false;record.validation.errors.push('基础意象模式要求 relations=[]。');}
+        record.validation=mode==='quantity'?validateQuantityContract(record.analysis,poem):validateContract(record.analysis,poem);
+        if(mode!=='full'&&record.analysis.relations?.length){record.validation.valid=false;record.validation.errors.push('基础意象模式要求 relations=[]。');}
         if(record.finish_reason!=='stop'){record.validation.valid=false;record.validation.errors.push('回答未正常结束。');}
         if(record.validation.valid)record.plan=buildPlan(record.analysis);
       }catch(error){record.error=redact(error.message);record.validation={valid:false,errors:[record.error],warnings:[],review_required:true};}

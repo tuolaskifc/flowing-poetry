@@ -47,7 +47,7 @@
     ]
   },
   "plan": {
-    "version": "trial-4-orchid-horse-lotus",
+    "version": "quantity-composition-1",
     "seed": 6018448,
     "settings": {
       "wind": 0,
@@ -77,7 +77,46 @@
             0.87
           ],
           "scale": 0.88
-        }
+        },
+        "instances": [
+          {
+            "placement": {
+              "anchor": [
+                298,
+                312
+              ],
+              "at": [
+                0.7,
+                0.87
+              ],
+              "scale": 1.0735999999999999
+            },
+            "depth": 0,
+            "opacity": 1,
+            "variant": 0
+          }
+        ],
+        "singleUnit": true,
+        "quantity": {
+          "items": [
+            {
+              "entity": "i2",
+              "mode": "unspecified",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "unspecified",
+              "extent": "unspecified",
+              "evidence": [],
+              "basis": "local-legacy"
+            }
+          ],
+          "rendered": 1,
+          "exact": false,
+          "collective": false,
+          "partUnsupported": false
+        },
+        "quantityLabel": "数量未精确；本地试画 1 个单元"
       },
       {
         "tool": "lotus",
@@ -102,7 +141,158 @@
             0.92
           ],
           "scale": 0.95
-        }
+        },
+        "instances": [
+          {
+            "placement": {
+              "anchor": [
+                328,
+                169
+              ],
+              "at": [
+                0.11443485569730402,
+                0.3584
+              ],
+              "scale": 0.3656
+            },
+            "depth": 0.08,
+            "opacity": 0.5216,
+            "variant": 0
+          },
+          {
+            "placement": {
+              "anchor": [
+                328,
+                169
+              ],
+              "at": [
+                0.7927381020707553,
+                0.4030863727736287
+              ],
+              "scale": 0.441939220154949
+            },
+            "depth": 0.17309660994505977,
+            "opacity": 0.5700102371714311,
+            "variant": 1
+          },
+          {
+            "placement": {
+              "anchor": [
+                328,
+                169
+              ],
+              "at": [
+                0.37981248340113277,
+                0.4708795795598999
+              ],
+              "scale": 0.5577526150814955
+            },
+            "depth": 0.31433245741645804,
+            "opacity": 0.6434528778565581,
+            "variant": 2
+          },
+          {
+            "placement": {
+              "anchor": [
+                328,
+                169
+              ],
+              "at": [
+                -0.04542626792485556,
+                0.5375227333907969
+              ],
+              "scale": 0.6716013362092781
+            },
+            "depth": 0.45317236123082694,
+            "opacity": 0.71564962784003,
+            "variant": 0
+          },
+          {
+            "placement": {
+              "anchor": [
+                328,
+                169
+              ],
+              "at": [
+                0.6366890868781172,
+                0.5821232526456006
+              ],
+              "scale": 0.7477938899362342
+            },
+            "depth": 0.5460901096783345,
+            "opacity": 0.7639668570327339,
+            "variant": 1
+          },
+          {
+            "placement": {
+              "anchor": [
+                328,
+                169
+              ],
+              "at": [
+                0.31298905912596253,
+                0.6617637716801836
+              ],
+              "scale": 0.8838464432869804
+            },
+            "depth": 0.7120078576670493,
+            "opacity": 0.8502440859868656,
+            "variant": 2
+          },
+          {
+            "placement": {
+              "anchor": [
+                328,
+                169
+              ],
+              "at": [
+                0.8811850267858297,
+                0.7269620795836671
+              ],
+              "scale": 0.9952268859554314
+            },
+            "depth": 0.8478376657993066,
+            "opacity": 0.9208755862156395,
+            "variant": 0
+          },
+          {
+            "placement": {
+              "anchor": [
+                328,
+                169
+              ],
+              "at": [
+                0.5586250700882236,
+                0.7634420886638109
+              ],
+              "scale": 1.0575469014673435
+            },
+            "depth": 0.9238376847162726,
+            "opacity": 0.9603955960524617,
+            "variant": 1
+          }
+        ],
+        "singleUnit": true,
+        "quantity": {
+          "items": [
+            {
+              "entity": "i3",
+              "mode": "unspecified",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "unspecified",
+              "extent": "unspecified",
+              "evidence": [],
+              "basis": "local-legacy"
+            }
+          ],
+          "rendered": 8,
+          "exact": false,
+          "collective": false,
+          "partUnsupported": false
+        },
+        "quantityLabel": "数量未精确；本地试画 8 个单元"
       },
       {
         "tool": "orchid",
@@ -124,15 +314,87 @@
             0.91
           ],
           "scale": 0.95
-        }
+        },
+        "instances": [
+          {
+            "placement": {
+              "anchor": [
+                272,
+                331
+              ],
+              "at": [
+                0.11156513091977686,
+                0.7033333333333334
+              ],
+              "scale": 0.49333333333333335
+            },
+            "depth": 0.16666666666666666,
+            "opacity": 0.6499999999999999,
+            "variant": 0
+          },
+          {
+            "placement": {
+              "anchor": [
+                272,
+                331
+              ],
+              "at": [
+                0.6773741588906508,
+                0.81
+              ],
+              "scale": 0.72
+            },
+            "depth": 0.5,
+            "opacity": 0.7899999999999999,
+            "variant": 1
+          },
+          {
+            "placement": {
+              "anchor": [
+                272,
+                331
+              ],
+              "at": [
+                0.2827992222048588,
+                0.9166666666666667
+              ],
+              "scale": 0.9466666666666668
+            },
+            "depth": 0.8333333333333334,
+            "opacity": 0.9299999999999999,
+            "variant": 2
+          }
+        ],
+        "singleUnit": true,
+        "quantity": {
+          "items": [
+            {
+              "entity": "i1",
+              "mode": "unspecified",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "unspecified",
+              "extent": "unspecified",
+              "evidence": [],
+              "basis": "local-legacy"
+            }
+          ],
+          "rendered": 3,
+          "exact": false,
+          "collective": false,
+          "partUnsupported": false
+        },
+        "quantityLabel": "数量未精确；本地试画 3 个单元"
       }
     ],
     "omitted": [],
     "notes": [
-      "兰采用长叶疏花的兰意试画，株式、数量与位置是本地选择，不作原诗所指植物的鉴定，也不自动补花盆或土石。",
-      "马目前只画单匹马的静态姿态；不表现奔跑步态，不自动补骑者、鞍辔或草地。",
+      "兰采用长叶疏花的兰意试画，株式与位置是本地选择，明确的花部计数使用单花；不作植物鉴定，也不自动补花盆或土石。",
+      "马以静态马形为单体，数量另行处理；不表现奔跑步态，不自动补骑者、鞍辔或草地。",
       "莲花按提到的花或叶分别试画；不自动补池水、荷叶或其他生物，默认花态是本地选择，尚无生长或开花过程。",
-      "位置、大小、笔触、固定群体数量与默认微动是本地试画选择；不表示原句给出了这些数值。"
+      "位置、大小、笔触与默认微动是本地试画选择；数量解释与本地显示数量分别记录。",
+      "未明说的群落数量、疏密、近中远层次与变体均为本地构图选择；不增加新物种，不把铺展词换算成精确物体数量。"
     ],
     "relations": []
   },
@@ -143,7 +405,7 @@
       {
         "id": "horse",
         "seed": 6018448,
-        "time": 0.1084999999761567,
+        "time": 0.08400000002384331,
         "ticks": 3,
         "paused": true,
         "disposed": false,
@@ -167,7 +429,7 @@
       {
         "id": "lotus",
         "seed": 6018545,
-        "time": 0.10839999998211716,
+        "time": 0.08380000003576424,
         "ticks": 3,
         "paused": true,
         "disposed": false,
@@ -190,9 +452,59 @@
         "geometryKey": "46427877"
       },
       {
+        "id": "lotus",
+        "seed": 6020088,
+        "time": 0.08370000001192238,
+        "ticks": 3,
+        "paused": true,
+        "disposed": false,
+        "ready": true,
+        "options": {
+          "form": "flower",
+          "state": "open"
+        },
+        "sources": [
+          "project"
+        ],
+        "plantCount": 1,
+        "flowerCount": 1,
+        "leafCount": 0,
+        "petalCount": 7,
+        "waterCount": 0,
+        "form": "flower",
+        "state": "open",
+        "finite": true,
+        "geometryKey": "796ca80f"
+      },
+      {
+        "id": "lotus",
+        "seed": 6021631,
+        "time": 0.08359999998808051,
+        "ticks": 3,
+        "paused": true,
+        "disposed": false,
+        "ready": true,
+        "options": {
+          "form": "flower",
+          "state": "open"
+        },
+        "sources": [
+          "project"
+        ],
+        "plantCount": 1,
+        "flowerCount": 1,
+        "leafCount": 0,
+        "petalCount": 7,
+        "waterCount": 0,
+        "form": "flower",
+        "state": "open",
+        "finite": true,
+        "geometryKey": "a7394fd"
+      },
+      {
         "id": "orchid",
         "seed": 6018642,
-        "time": 0.10829999998807763,
+        "time": 0.08330000003576424,
         "ticks": 3,
         "paused": true,
         "disposed": false,
@@ -210,6 +522,315 @@
         "form": "plant",
         "finite": true,
         "geometryKey": "b906ae34"
+      },
+      {
+        "id": "orchid",
+        "seed": 6020185,
+        "time": 0.08309999998808051,
+        "ticks": 3,
+        "paused": true,
+        "disposed": false,
+        "ready": true,
+        "options": {
+          "form": "plant"
+        },
+        "sources": [
+          "project"
+        ],
+        "plantCount": 1,
+        "leafCount": 7,
+        "flowerCount": 2,
+        "potCount": 0,
+        "form": "plant",
+        "finite": true,
+        "geometryKey": "3cc014ef"
+      },
+      {
+        "id": "orchid",
+        "seed": 6021728,
+        "time": 0.08309999998808051,
+        "ticks": 3,
+        "paused": true,
+        "disposed": false,
+        "ready": true,
+        "options": {
+          "form": "plant"
+        },
+        "sources": [
+          "project"
+        ],
+        "plantCount": 1,
+        "leafCount": 7,
+        "flowerCount": 2,
+        "potCount": 0,
+        "form": "plant",
+        "finite": true,
+        "geometryKey": "ae12ab93"
+      }
+    ],
+    "placements": [
+      {
+        "anchor": [
+          298,
+          312
+        ],
+        "at": [
+          0.7,
+          0.87
+        ],
+        "scale": 0.88
+      },
+      {
+        "anchor": [
+          320,
+          330
+        ],
+        "at": [
+          0.53,
+          0.92
+        ],
+        "scale": 0.95
+      },
+      {
+        "anchor": [
+          272,
+          331
+        ],
+        "at": [
+          0.27,
+          0.91
+        ],
+        "scale": 0.95
+      }
+    ],
+    "instances": [
+      {
+        "tool": "horse",
+        "layer": 0,
+        "index": 0,
+        "sourceIndex": 0,
+        "placement": {
+          "anchor": [
+            298,
+            312
+          ],
+          "at": [
+            0.7,
+            0.87
+          ],
+          "scale": 1.0735999999999999
+        },
+        "opacity": 1,
+        "z": 0
+      },
+      {
+        "tool": "lotus",
+        "layer": 1,
+        "index": 0,
+        "sourceIndex": 1,
+        "placement": {
+          "anchor": [
+            328,
+            169
+          ],
+          "at": [
+            0.11443485569730405,
+            0.35839999999999994
+          ],
+          "scale": 0.3656
+        },
+        "opacity": 0.5216,
+        "z": 1.08
+      },
+      {
+        "tool": "lotus",
+        "layer": 1,
+        "index": 1,
+        "sourceIndex": 2,
+        "placement": {
+          "anchor": [
+            328,
+            169
+          ],
+          "at": [
+            0.7927381020707553,
+            0.4030863727736288
+          ],
+          "scale": 0.441939220154949
+        },
+        "opacity": 0.5700102371714311,
+        "z": 1.1730966099450597
+      },
+      {
+        "tool": "lotus",
+        "layer": 1,
+        "index": 2,
+        "sourceIndex": 3,
+        "placement": {
+          "anchor": [
+            328,
+            169
+          ],
+          "at": [
+            0.3798124834011327,
+            0.4708795795599
+          ],
+          "scale": 0.5577526150814955
+        },
+        "opacity": 0.6434528778565581,
+        "z": 1.314332457416458
+      },
+      {
+        "tool": "lotus",
+        "layer": 1,
+        "index": 3,
+        "sourceIndex": 1,
+        "placement": {
+          "anchor": [
+            328,
+            169
+          ],
+          "at": [
+            -0.045426267924855546,
+            0.5375227333907969
+          ],
+          "scale": 0.6716013362092781
+        },
+        "opacity": 0.71564962784003,
+        "z": 1.453172361230827
+      },
+      {
+        "tool": "lotus",
+        "layer": 1,
+        "index": 4,
+        "sourceIndex": 2,
+        "placement": {
+          "anchor": [
+            328,
+            169
+          ],
+          "at": [
+            0.6366890868781172,
+            0.5821232526456005
+          ],
+          "scale": 0.7477938899362342
+        },
+        "opacity": 0.7639668570327339,
+        "z": 1.5460901096783344
+      },
+      {
+        "tool": "lotus",
+        "layer": 1,
+        "index": 5,
+        "sourceIndex": 3,
+        "placement": {
+          "anchor": [
+            328,
+            169
+          ],
+          "at": [
+            0.31298905912596253,
+            0.6617637716801837
+          ],
+          "scale": 0.8838464432869804
+        },
+        "opacity": 0.8502440859868656,
+        "z": 1.7120078576670492
+      },
+      {
+        "tool": "lotus",
+        "layer": 1,
+        "index": 6,
+        "sourceIndex": 1,
+        "placement": {
+          "anchor": [
+            328,
+            169
+          ],
+          "at": [
+            0.8811850267858297,
+            0.726962079583667
+          ],
+          "scale": 0.9952268859554314
+        },
+        "opacity": 0.9208755862156395,
+        "z": 1.8478376657993065
+      },
+      {
+        "tool": "lotus",
+        "layer": 1,
+        "index": 7,
+        "sourceIndex": 2,
+        "placement": {
+          "anchor": [
+            328,
+            169
+          ],
+          "at": [
+            0.5586250700882236,
+            0.7634420886638108
+          ],
+          "scale": 1.0575469014673435
+        },
+        "opacity": 0.9603955960524617,
+        "z": 1.9238376847162726
+      },
+      {
+        "tool": "orchid",
+        "layer": 2,
+        "index": 0,
+        "sourceIndex": 4,
+        "placement": {
+          "anchor": [
+            272,
+            331
+          ],
+          "at": [
+            0.11156513091977688,
+            0.7033333333333333
+          ],
+          "scale": 0.49333333333333335
+        },
+        "opacity": 0.6499999999999999,
+        "z": 2.1666666666666665
+      },
+      {
+        "tool": "orchid",
+        "layer": 2,
+        "index": 1,
+        "sourceIndex": 5,
+        "placement": {
+          "anchor": [
+            272,
+            331
+          ],
+          "at": [
+            0.6773741588906508,
+            0.8100000000000002
+          ],
+          "scale": 0.72
+        },
+        "opacity": 0.7899999999999999,
+        "z": 2.5
+      },
+      {
+        "tool": "orchid",
+        "layer": 2,
+        "index": 2,
+        "sourceIndex": 6,
+        "placement": {
+          "anchor": [
+            272,
+            331
+          ],
+          "at": [
+            0.28279922220485876,
+            0.9166666666666666
+          ],
+          "scale": 0.9466666666666668
+        },
+        "opacity": 0.9299999999999999,
+        "z": 2.8333333333333335
       }
     ],
     "settings": {
@@ -218,5 +839,5 @@
       "palette": "clear"
     }
   },
-  "transparentLayers": 3
+  "transparentLayers": 7
 }

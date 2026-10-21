@@ -47,7 +47,7 @@
     ]
   },
   "plan": {
-    "version": "trial-4-orchid-horse-lotus",
+    "version": "quantity-composition-1",
     "seed": 3781237684,
     "settings": {
       "wind": 0,
@@ -75,7 +75,46 @@
             0.79
           ],
           "scale": 0.9
-        }
+        },
+        "instances": [
+          {
+            "placement": {
+              "anchor": [
+                320,
+                320
+              ],
+              "at": [
+                0.76,
+                0.79
+              ],
+              "scale": 0.9
+            },
+            "depth": 0,
+            "opacity": 1,
+            "variant": 0
+          }
+        ],
+        "singleUnit": true,
+        "quantity": {
+          "items": [
+            {
+              "entity": "i2",
+              "mode": "unspecified",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "unspecified",
+              "extent": "unspecified",
+              "evidence": [],
+              "basis": "local-legacy"
+            }
+          ],
+          "rendered": 1,
+          "exact": false,
+          "collective": false,
+          "partUnsupported": false
+        },
+        "quantityLabel": "数量未精确；本地试画 1 个单元"
       },
       {
         "tool": "plum-branch",
@@ -97,7 +136,46 @@
             0.87
           ],
           "scale": 1
-        }
+        },
+        "instances": [
+          {
+            "placement": {
+              "anchor": [
+                120,
+                302
+              ],
+              "at": [
+                0.12,
+                0.87
+              ],
+              "scale": 1
+            },
+            "depth": 0,
+            "opacity": 1,
+            "variant": 0
+          }
+        ],
+        "singleUnit": true,
+        "quantity": {
+          "items": [
+            {
+              "entity": "i1",
+              "mode": "unspecified",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "unspecified",
+              "extent": "unspecified",
+              "evidence": [],
+              "basis": "local-legacy"
+            }
+          ],
+          "rendered": 1,
+          "exact": false,
+          "collective": false,
+          "partUnsupported": false
+        },
+        "quantityLabel": "数量未精确；本地试画 1 个单元"
       },
       {
         "tool": "wine",
@@ -121,7 +199,46 @@
             0.87
           ],
           "scale": 0.75
-        }
+        },
+        "instances": [
+          {
+            "placement": {
+              "anchor": [
+                320,
+                244
+              ],
+              "at": [
+                0.57,
+                0.87
+              ],
+              "scale": 0.75
+            },
+            "depth": 0,
+            "opacity": 1,
+            "variant": 0
+          }
+        ],
+        "singleUnit": true,
+        "quantity": {
+          "items": [
+            {
+              "entity": "i3",
+              "mode": "unspecified",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "unspecified",
+              "extent": "unspecified",
+              "evidence": [],
+              "basis": "local-legacy"
+            }
+          ],
+          "rendered": 1,
+          "exact": false,
+          "collective": false,
+          "partUnsupported": false
+        },
+        "quantityLabel": "数量未精确；本地试画 1 个单元"
       }
     ],
     "omitted": [],
@@ -129,7 +246,8 @@
       "梅枝采用带花与花苞的梅枝试画；枝形和花朵数量是本地选择，未实现整树或离枝落花。",
       "楼采用二层楼体试画，层数与门窗排列是本地选择；不等同于具体历史建筑，也未实现人物登楼。",
       "酒杯按明确提到的容器绘制风格化轮廓，不作历史器型复原。",
-      "位置、大小、笔触、固定群体数量与默认微动是本地试画选择；不表示原句给出了这些数值。"
+      "位置、大小、笔触与默认微动是本地试画选择；数量解释与本地显示数量分别记录。",
+      "未明说的群落数量、疏密、近中远层次与变体均为本地构图选择；不增加新物种，不把铺展词换算成精确物体数量。"
     ],
     "relations": []
   },
@@ -140,8 +258,8 @@
       {
         "id": "building",
         "seed": 3781237684,
-        "time": 0.11169999999403808,
-        "ticks": 4,
+        "time": 0.13880000002383894,
+        "ticks": 5,
         "paused": true,
         "disposed": false,
         "ready": true,
@@ -165,8 +283,8 @@
       {
         "id": "plum-branch",
         "seed": 3781237781,
-        "time": 0.11159999999999855,
-        "ticks": 4,
+        "time": 0.13860000003575987,
+        "ticks": 5,
         "paused": true,
         "disposed": false,
         "ready": true,
@@ -186,8 +304,8 @@
       {
         "id": "wine",
         "seed": 3781237878,
-        "time": 0.11139999998211716,
-        "ticks": 4,
+        "time": 0.13860000003575987,
+        "ticks": 5,
         "paused": true,
         "disposed": false,
         "ready": true,
@@ -203,6 +321,100 @@
         "personCount": 0,
         "finite": true,
         "geometryKey": "770cb7d8"
+      }
+    ],
+    "placements": [
+      {
+        "anchor": [
+          320,
+          320
+        ],
+        "at": [
+          0.76,
+          0.79
+        ],
+        "scale": 0.9
+      },
+      {
+        "anchor": [
+          120,
+          302
+        ],
+        "at": [
+          0.12,
+          0.87
+        ],
+        "scale": 1
+      },
+      {
+        "anchor": [
+          320,
+          244
+        ],
+        "at": [
+          0.57,
+          0.87
+        ],
+        "scale": 0.75
+      }
+    ],
+    "instances": [
+      {
+        "tool": "building",
+        "layer": 0,
+        "index": 0,
+        "sourceIndex": 0,
+        "placement": {
+          "anchor": [
+            320,
+            320
+          ],
+          "at": [
+            0.76,
+            0.79
+          ],
+          "scale": 0.9
+        },
+        "opacity": 1,
+        "z": 0
+      },
+      {
+        "tool": "plum-branch",
+        "layer": 1,
+        "index": 0,
+        "sourceIndex": 1,
+        "placement": {
+          "anchor": [
+            120,
+            302
+          ],
+          "at": [
+            0.12,
+            0.87
+          ],
+          "scale": 1
+        },
+        "opacity": 1,
+        "z": 1
+      },
+      {
+        "tool": "wine",
+        "layer": 2,
+        "index": 0,
+        "sourceIndex": 2,
+        "placement": {
+          "anchor": [
+            320,
+            244
+          ],
+          "at": [
+            0.57,
+            0.87
+          ],
+          "scale": 0.75
+        },
+        "opacity": 1,
+        "z": 2
       }
     ],
     "settings": {

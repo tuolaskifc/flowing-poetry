@@ -42,7 +42,7 @@ window.PoemDrawing = (() => {
         if(!colors.has(key)){const c=p.color(color);c.setAlpha(a);colors.set(key,c);}
         return colors.get(key);
       }
-      ctx={p,width,height,settings:safeSettings,options,alpha,fingerprint,
+      ctx={p,width,height,settings:safeSettings,options,alpha,fingerprint,singleUnit:renderOptions.singleUnit===true,
         get time(){return time;},get palette(){return palette;},
         wind:{
           offset(phase=0,amplitude=1,frequency=.7){return Math.sin(time*frequency+phase)*safeSettings.wind*amplitude;},

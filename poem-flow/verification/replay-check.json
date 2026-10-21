@@ -2,44 +2,111 @@
   "live": false,
   "poetry": null,
   "state": {
-    "status": "已生成画面。有 1 项尚未绘制，详见“保留的空缺”。",
+    "status": "已生成画面。有 2 项尚未绘制，详见“保留的空缺”。",
     "scene": {
       "ready": true,
       "paused": false,
       "layers": [
         {
-          "id": "wine",
-          "seed": 1388753940,
-          "time": 0,
-          "ticks": 1,
-          "paused": true,
+          "id": "boat",
+          "seed": 1799097591,
+          "time": 0.13209999998807903,
+          "ticks": 4,
+          "paused": false,
+          "disposed": false,
+          "ready": true,
+          "options": {},
+          "sources": [
+            "shan-boat",
+            "project"
+          ],
+          "boatCount": 1,
+          "personCount": 0,
+          "finite": true,
+          "geometryKey": "97c53428"
+        },
+        {
+          "id": "snow",
+          "seed": 1799097688,
+          "time": 0.1319999999642372,
+          "ticks": 4,
+          "paused": false,
           "disposed": false,
           "ready": true,
           "options": {
-            "form": "liquid"
+            "state": "fall"
           },
           "sources": [
             "project"
           ],
-          "form": "liquid",
-          "liquidStudy": true,
-          "vesselCount": 0,
-          "personCount": 0,
+          "snowParticleCount": 60,
+          "state": "fall",
           "finite": true,
-          "geometryKey": "6fbe5532"
+          "geometryKey": "2966781d"
         }
       ],
       "placements": [
         {
           "anchor": [
             320,
-            244
+            230
           ],
           "at": [
-            0.57,
-            0.87
+            0.6,
+            0.72
           ],
-          "scale": 0.75
+          "scale": 0.95
+        },
+        {
+          "anchor": [
+            320,
+            194
+          ],
+          "at": [
+            0.5,
+            0.5
+          ],
+          "scale": 1.55
+        }
+      ],
+      "instances": [
+        {
+          "tool": "boat",
+          "layer": 0,
+          "index": 0,
+          "sourceIndex": 0,
+          "placement": {
+            "anchor": [
+              320,
+              230
+            ],
+            "at": [
+              0.6,
+              0.72
+            ],
+            "scale": 1.159
+          },
+          "opacity": 1,
+          "z": 0
+        },
+        {
+          "tool": "snow",
+          "layer": 1,
+          "index": 0,
+          "sourceIndex": 1,
+          "placement": {
+            "anchor": [
+              320,
+              194
+            ],
+            "at": [
+              0.5,
+              0.5
+            ],
+            "scale": 1.55
+          },
+          "opacity": 1,
+          "z": 1
         }
       ],
       "settings": {
@@ -48,15 +115,17 @@
         "palette": "clear"
       }
     },
-    "poem": "把酒对斜日，无语问西风。",
-    "sceneTitle": "把酒对斜日，无语问西风。",
-    "usage": "记录 2026-10-19T09-17-47-144Z-681ef646；模型 DeepSeek-V4.1-Flash；本次记录 token 2334。正在回看，没有新增模型调用。",
-    "reading": "手持酒杯面对西斜的落日，沉默无言地向西风发问。句中有人物动作，但未明说人物是否在场景中现身，只呈现把酒、对日、问风的行为。",
+    "poem": "孤舟蓑笠翁，独钓寒江雪。",
+    "sceneTitle": "孤舟蓑笠翁，独钓寒江雪。",
+    "usage": "记录 2026-10-21T11-33-09-247Z-ca41dd7e；模型 DeepSeek-V4.1-Flash；本次记录 token 3041。正在回看，没有新增模型调用。",
+    "reading": "孤舟上一位身披蓑衣、头戴斗笠的老翁，独自在寒冷的江面上垂钓，江天之间唯余雪意。",
     "omitted": [
-      "斜日：该具体意象尚无可用形态；没有替换成通用树、花或鸟群"
+      "蓑笠翁：暂未提供该人物、地点或抽象含义的绘画单元",
+      "寒江：暂未提供该人物、地点或抽象含义的绘画单元"
     ],
     "drawn": [
-      "酒 → 酒液与酒器（静止）"
+      "孤舟 → 舟 · 按提取数量绘制 1 个",
+      "雪 → 雪 · 整体笔触图层；内部数量尚未适配"
     ]
   },
   "network": [
@@ -92,11 +161,6 @@
     },
     {
       "host": "127.0.0.1",
-      "path": "/experiments/imagery-library/drawing/cloud-outline.js",
-      "status": 200
-    },
-    {
-      "host": "127.0.0.1",
       "path": "/experiments/imagery-library/drawing/architecture.js",
       "status": 200
     },
@@ -107,12 +171,12 @@
     },
     {
       "host": "127.0.0.1",
-      "path": "/experiments/imagery-library/drawing/ink-brush.js",
+      "path": "/experiments/imagery-library/drawing/cloud-outline.js",
       "status": 200
     },
     {
       "host": "127.0.0.1",
-      "path": "/experiments/imagery-library/drawing/tools/water.js",
+      "path": "/experiments/imagery-library/drawing/ink-brush.js",
       "status": 200
     },
     {
@@ -127,12 +191,12 @@
     },
     {
       "host": "127.0.0.1",
-      "path": "/experiments/imagery-library/drawing/tools/mist.js",
+      "path": "/experiments/imagery-library/drawing/tools/water.js",
       "status": 200
     },
     {
       "host": "127.0.0.1",
-      "path": "/experiments/imagery-library/drawing/tools/birds.js",
+      "path": "/experiments/imagery-library/drawing/tools/mist.js",
       "status": 200
     },
     {
@@ -142,7 +206,7 @@
     },
     {
       "host": "127.0.0.1",
-      "path": "/experiments/imagery-library/drawing/tools/rain.js",
+      "path": "/experiments/imagery-library/drawing/tools/birds.js",
       "status": 200
     },
     {
@@ -152,17 +216,22 @@
     },
     {
       "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/tools/rain.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
       "path": "/experiments/imagery-library/drawing/tools/falling-petals.js",
       "status": 200
     },
     {
       "host": "127.0.0.1",
-      "path": "/experiments/imagery-library/drawing/tools/rock.js",
+      "path": "/experiments/imagery-library/drawing/tools/pavilion.js",
       "status": 200
     },
     {
       "host": "127.0.0.1",
-      "path": "/experiments/imagery-library/drawing/tools/pavilion.js",
+      "path": "/experiments/imagery-library/drawing/tools/rock.js",
       "status": 200
     },
     {
@@ -197,11 +266,6 @@
     },
     {
       "host": "127.0.0.1",
-      "path": "/poem-flow/vendor/p5.min.js",
-      "status": 200
-    },
-    {
-      "host": "127.0.0.1",
       "path": "/experiments/imagery-library/drawing/tools/cloud.js",
       "status": 200
     },
@@ -232,17 +296,22 @@
     },
     {
       "host": "127.0.0.1",
+      "path": "/poem-flow/vendor/p5.min.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
       "path": "/experiments/imagery-library/drawing/tools/surface-weather.js",
       "status": 200
     },
     {
       "host": "127.0.0.1",
-      "path": "/experiments/imagery-library/drawing/tools/orchid.js",
+      "path": "/experiments/imagery-library/drawing/tools/oriole.js",
       "status": 200
     },
     {
       "host": "127.0.0.1",
-      "path": "/experiments/imagery-library/drawing/tools/oriole.js",
+      "path": "/experiments/imagery-library/drawing/tools/orchid.js",
       "status": 200
     },
     {
@@ -257,12 +326,12 @@
     },
     {
       "host": "127.0.0.1",
-      "path": "/experiments/poem-generation/scene.js",
+      "path": "/experiments/poem-generation/imagery-lexicon.js",
       "status": 200
     },
     {
       "host": "127.0.0.1",
-      "path": "/experiments/poem-generation/imagery-lexicon.js",
+      "path": "/experiments/poem-generation/scene.js",
       "status": 200
     },
     {
@@ -272,7 +341,17 @@
     },
     {
       "host": "127.0.0.1",
+      "path": "/experiments/poem-generation/curated-library.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
       "path": "/experiments/poem-generation/app.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/poem-generation/curated-poems.json",
       "status": 200
     },
     {

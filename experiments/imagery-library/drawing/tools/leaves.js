@@ -9,7 +9,7 @@ window.PoemDrawing.register({
   capabilities:['static','imagery-accent','density-detail','fixed-count'],
   create(ctx){
     const {p,alpha}=ctx;let leaves=[];
-    function reset(){leaves=Array.from({length:5},(_,i)=>({x:100+i*110,y:180+p.random(-30,30),length:p.random(63,85),width:p.random(20,28),rotation:p.random(-.7,.7)}));}
+    function reset(){leaves=Array.from({length:ctx.singleUnit?1:5},(_,i)=>({x:ctx.singleUnit?320:100+i*110,y:ctx.singleUnit?190:180+p.random(-30,30),length:p.random(63,85),width:p.random(20,28),rotation:p.random(-.7,.7)}));}
     function draw(){
       const red=ctx.settings.palette==='tender'?'#B36F6D':'#A86957',yellow=ctx.settings.palette==='tender'?'#C5A15F':'#BBA05F',color=ctx.options.color==='red'?red:yellow;
       for(const leaf of leaves){p.push();p.translate(leaf.x,leaf.y);p.rotate(leaf.rotation);p.stroke(alpha(p,ctx.palette.ink,150));p.strokeWeight(.7);p.fill(alpha(p,color,175));
@@ -17,6 +17,6 @@ window.PoemDrawing.register({
         p.line(0,leaf.length*.57,0,-leaf.length*.5);const n=3+Math.round(ctx.settings.density*4);p.stroke(alpha(p,ctx.palette.ink,65));for(let i=0;i<n;i++){const y=-leaf.length*.35+i*leaf.length*.65/n,breadth=Math.sin((i+1)/(n+1)*Math.PI)*leaf.width*.75;p.line(0,y+8,-breadth,y);p.line(0,y+8,breadth,y);}p.pop();
       }
     }
-    return {reset,draw,inspect:()=>({leafCount:5,color:ctx.options.color,finite:leaves.every(l=>Number.isFinite(l.x+l.y+l.length)),geometryKey:ctx.fingerprint(leaves)})};
+    return {reset,draw,inspect:()=>({leafCount:leaves.length,color:ctx.options.color,finite:leaves.every(l=>Number.isFinite(l.x+l.y+l.length)),geometryKey:ctx.fingerprint(leaves)})};
   }
 });

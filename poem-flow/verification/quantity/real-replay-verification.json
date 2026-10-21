@@ -1,0 +1,199 @@
+{
+  "status": "passed",
+  "live": false,
+  "savedRecordReplay": true,
+  "modelRequests": 0,
+  "cases": [
+    {
+      "id": "lotus",
+      "poem": "接天莲叶无穷碧，映日荷花别样红。",
+      "basis": "real-model",
+      "record": "2026-10-21T11-33-05-323Z-52afa0cc",
+      "usage": {
+        "completion_tokens": 472,
+        "prompt_tokens": 2542,
+        "total_tokens": 3014,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "quantity": [
+        {
+          "mentions": [
+            "莲叶"
+          ],
+          "quantity": {
+            "mode": "many",
+            "min": null,
+            "max": null,
+            "unit": null,
+            "scope": "group",
+            "extent": "spread",
+            "evidence": [
+              "莲叶无穷碧"
+            ]
+          }
+        },
+        {
+          "mentions": [
+            "荷花"
+          ],
+          "quantity": {
+            "mode": "many",
+            "min": null,
+            "max": null,
+            "unit": null,
+            "scope": "group",
+            "extent": "spread",
+            "evidence": [
+              "荷花别样红"
+            ]
+          }
+        },
+        {
+          "mentions": [
+            "天"
+          ],
+          "quantity": {
+            "mode": "unspecified",
+            "min": null,
+            "max": null,
+            "unit": null,
+            "scope": "unspecified",
+            "extent": "unspecified",
+            "evidence": []
+          }
+        },
+        {
+          "mentions": [
+            "日"
+          ],
+          "quantity": {
+            "mode": "exact",
+            "min": 1,
+            "max": 1,
+            "unit": "日",
+            "scope": "individual",
+            "extent": "local",
+            "evidence": [
+              "映日"
+            ]
+          }
+        }
+      ],
+      "before": {
+        "instances": 2,
+        "renderers": 2,
+        "inkCoverage": 0.018069444444444444
+      },
+      "after": {
+        "instances": 56,
+        "renderers": 6,
+        "inkCoverage": 0.38059375
+      }
+    },
+    {
+      "id": "lone-boat",
+      "poem": "孤舟蓑笠翁，独钓寒江雪。",
+      "basis": "real-model",
+      "record": "2026-10-21T11-33-09-247Z-ca41dd7e",
+      "usage": {
+        "completion_tokens": 500,
+        "prompt_tokens": 2541,
+        "total_tokens": 3041,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens_details": {
+          "cached_tokens": 2432
+        }
+      },
+      "quantity": [
+        {
+          "mentions": [
+            "孤舟"
+          ],
+          "quantity": {
+            "mode": "exact",
+            "min": 1,
+            "max": 1,
+            "unit": "舟",
+            "scope": "individual",
+            "extent": "local",
+            "evidence": [
+              "孤舟"
+            ]
+          }
+        },
+        {
+          "mentions": [
+            "蓑笠翁"
+          ],
+          "quantity": {
+            "mode": "exact",
+            "min": 1,
+            "max": 1,
+            "unit": "翁",
+            "scope": "individual",
+            "extent": "local",
+            "evidence": [
+              "蓑笠翁"
+            ]
+          }
+        },
+        {
+          "mentions": [
+            "寒江"
+          ],
+          "quantity": {
+            "mode": "unspecified",
+            "min": null,
+            "max": null,
+            "unit": null,
+            "scope": "unspecified",
+            "extent": "spread",
+            "evidence": [
+              "寒江"
+            ]
+          }
+        },
+        {
+          "mentions": [
+            "雪"
+          ],
+          "quantity": {
+            "mode": "many",
+            "min": null,
+            "max": null,
+            "unit": null,
+            "scope": "group",
+            "extent": "spread",
+            "evidence": [
+              "寒江雪"
+            ]
+          }
+        }
+      ],
+      "before": {
+        "instances": 2,
+        "renderers": 2,
+        "inkCoverage": 0.013904513888888888
+      },
+      "after": {
+        "instances": 2,
+        "renderers": 2,
+        "inkCoverage": 0.01911111111111111
+      }
+    }
+  ],
+  "pause": true,
+  "groupDrag": true,
+  "resetLayout": true,
+  "reseed": true,
+  "exportPng": true,
+  "mobileWidth": 390,
+  "runtimeErrors": []
+}
