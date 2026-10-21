@@ -23,19 +23,19 @@
   "code_references_exist": true,
   "progress_summary": {
     "total": 60,
-    "tools": 29,
+    "tools": 31,
     "stages": {
       "basic": {
         "label": "基础可画",
-        "count": 23
+        "count": 31
       },
       "partial": {
         "label": "部分支持",
-        "count": 7
+        "count": 8
       },
       "todo": {
         "label": "待制作",
-        "count": 21
+        "count": 12
       },
       "handoff": {
         "label": "转交其他模块",

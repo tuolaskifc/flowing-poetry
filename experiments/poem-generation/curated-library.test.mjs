@@ -8,7 +8,8 @@ test('twenty editorial samples retain sources, gaps and five unfinished focus pa
   assert.equal(lib.validate(catalog),catalog);assert.equal(catalog.poems.length,20);assert.equal(catalog.poems.filter(p=>p.focus).length,5);
   const tools=new Set(lexicon.rules.map(r=>r.tool));
   for(const p of catalog.poems){assert(p.imagery.length&&p.gaps.length);assert(p.available_tools.every(t=>tools.has(t)));assert.notEqual(p.review,'已认可');assert(p.source.note);}
-  assert(catalog.poems.some(p=>p.available_tools.length===0),'unimplemented scenes remain in the collection');
+  const unfinished=structuredClone(catalog);unfinished.poems[0].available_tools=[];
+  assert.equal(lib.validate(unfinished).poems[0].available_tools.length,0,'the collection must still permit candidates without tools');
 });
 test('source metadata excludes editorial interpretations and drawing targets',()=>{
   const source=lib.sourceFor(catalog.poems[0]);assert.deepEqual(Object.keys(source).sort(),['author','dynasty','provider','title']);assert.equal(source.provider,'精选诗句库');assert(!JSON.stringify(source).includes(catalog.poems[0].goal));

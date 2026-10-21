@@ -61,7 +61,7 @@
     for(const e of a.entities){const q=e.quantity,scope=q&&{individual:'个体',part:'局部',group:'群体单位',extent:'范围单位',unspecified:'计数对象未明'}[q.scope],quantity=q?(q.mode==='exact'?q.min+(q.unit||'')+'，'+scope:q.mode==='range'?q.min+'–'+q.max+(q.unit||'')+'，'+scope:q.mode==='many'?'繁多／群体':q.mode==='few'?'少量，未精确':'数量未明'):'旧记录未提取数量';item('entities',e.mentions.join('／')+' → '+e.concept+'（'+(e.role==='reference'?'比喻参照':{present:'在场',absent:'缺席',unclear:'出现情况待定'}[e.presence])+'；'+quantity+(q?.extent==='spread'?'；铺展':'')+'）');}
     $('atmosphere').textContent='文字气息：'+(a.atmosphere.labels.join('、')||'未确定')+'。本轮配色由你选择，尚未自动映射全部情感类型。';
     for(const issue of a.uncertainties)item('uncertainties',issue);
-    for(const layer of plan.layers){const def=window.PoemDrawing.definitions().find(d=>d.id===layer.tool);item('drawn',layer.names.join('、')+' → '+def.name+(layer.quantityLabel?' · '+layer.quantityLabel:'')+(layer.animate?'':'（静止）'));}
+    for(const layer of plan.layers){const def=window.PoemDrawing.definitions().find(d=>d.id===layer.tool);item('drawn',layer.names.join('、')+' → '+(layer.drawingLabel||def.name)+(layer.quantityLabel?' · '+layer.quantityLabel:'')+(layer.animate?'':'（静止）'));}
     if(!plan.layers.length)item('drawn','本句没有匹配到现有工具；当前仅有底色，请换一句或试试样句。');
     for(const missing of plan.omitted)item('omitted',missing.name+'：'+missing.reason);
     if(!plan.omitted.length)item('omitted','本次列出的场景意象均找到了基础工具；仍不代表全部关系已表现。');

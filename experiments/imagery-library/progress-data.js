@@ -2,19 +2,19 @@
 window.PoemProgress = {
   "summary": {
     "total": 60,
-    "tools": 29,
+    "tools": 31,
     "stages": {
       "basic": {
         "label": "基础可画",
-        "count": 23
+        "count": 31
       },
       "partial": {
         "label": "部分支持",
-        "count": 7
+        "count": 8
       },
       "todo": {
         "label": "待制作",
-        "count": 21
+        "count": 12
       },
       "handoff": {
         "label": "转交其他模块",
@@ -375,7 +375,7 @@ window.PoemProgress = {
           "oriole"
         ],
         "available": "单只淡墨莺意：收长的浅黄墨面、后掠细翼与几笔尾喙；不刻画眼、足或逐根羽毛，收翅、展翅、朝向与肩部微动可选。",
-        "remaining": "当前淡墨与翼姿风格已获用户认可；不作原诗鸟种鉴定，尚无鸟鸣、群体数量、栖枝或跨物体作用。",
+        "remaining": "原认可的淡墨与翼姿保持；可由鸣声借形并按数量分布，鸣声播放与精确栖枝仍未实现。",
         "art_review": "style-accepted-2026-10-19",
         "needs_context": false,
         "presets": {
@@ -429,7 +429,7 @@ window.PoemProgress = {
         "tools": [
           "horse"
         ],
-        "available": "单匹写意马形，静立／低首、左右朝向可选；四足、鬃尾和头颈分层，不补骑者或鞍辔。",
+        "available": "已有静立／低首的写意马形；马蹄线索可借形为整匹马，局部计数不折算马匹数。",
         "remaining": "比例与姿态待审美确认；尚无连续步态、奔跑、骑乘或肢体物理。",
         "needs_context": false,
         "presets": {
@@ -547,12 +547,20 @@ window.PoemProgress = {
       "note": "保留鸟种与数量，颜色服从意象特征及配色协调。",
       "status": "语义映射仍是设计候选，未接入正式诗句生成流程",
       "progress": {
-        "stage": "todo",
-        "tools": [],
-        "available": "已有通用鸟群运动可复用，但尚无该鸟种的专门外形。",
-        "remaining": "保留鸟种与数量，颜色服从意象特征及配色协调。",
+        "stage": "basic",
+        "tools": [
+          "bird"
+        ],
+        "available": "共用疏笔鸟形，可按数量作零散或队列分布；允许写意概括。",
+        "remaining": "姿态、画面疏密和上下文仍需改画；不以物种辨识作为基础画法前提。",
         "needs_context": false,
-        "label": "待制作"
+        "presets": {
+          "bird": {
+            "pose": "flying",
+            "tone": "ink"
+          }
+        },
+        "label": "基础可画"
       }
     },
     {
@@ -567,12 +575,19 @@ window.PoemProgress = {
       "note": "可借用枝条与花瓣，仍需检验花形与着生方式。",
       "status": "语义映射仍是设计候选，未接入正式诗句生成流程",
       "progress": {
-        "stage": "todo",
-        "tools": [],
-        "available": "已有通用花瓣方法可复用，但尚无该花种的专门结构。",
-        "remaining": "可借用枝条与花瓣，仍需检验花形与着生方式。",
+        "stage": "basic",
+        "tools": [
+          "plum-branch"
+        ],
+        "available": "可借用疏花枝表现桃花，枝数与花朵数分开。",
+        "remaining": "春景配色、姿态和构图仍需改画，不作花种辨识。",
         "needs_context": false,
-        "label": "待制作"
+        "presets": {
+          "plum-branch": {
+            "form": "sprig"
+          }
+        },
+        "label": "基础可画"
       }
     },
     {
@@ -664,12 +679,20 @@ window.PoemProgress = {
       "note": "共用运动方法，尾形与飞行姿态需专门变体。",
       "status": "语义映射仍是设计候选，未接入正式诗句生成流程",
       "progress": {
-        "stage": "todo",
-        "tools": [],
-        "available": "已有通用鸟群运动可复用，但尚无该鸟种的专门外形。",
-        "remaining": "共用运动方法，尾形与飞行姿态需专门变体。",
+        "stage": "basic",
+        "tools": [
+          "bird"
+        ],
+        "available": "共用疏笔鸟形，可按数量作零散或队列分布；允许写意概括。",
+        "remaining": "姿态、画面疏密和上下文仍需改画；不以物种辨识作为基础画法前提。",
         "needs_context": false,
-        "label": "待制作"
+        "presets": {
+          "bird": {
+            "pose": "flying",
+            "tone": "ink"
+          }
+        },
+        "label": "基础可画"
       }
     },
     {
@@ -702,12 +725,19 @@ window.PoemProgress = {
       "note": "树冠、叶片特征待做；共享枝条不代表已有该树种。",
       "status": "语义映射仍是设计候选，未接入正式诗句生成流程",
       "progress": {
-        "stage": "todo",
-        "tools": [],
-        "available": "已有通用枝叶可复用，但尚无该条目的专门形态。",
-        "remaining": "树冠、叶片特征待做；共享枝条不代表已有该树种。",
+        "stage": "basic",
+        "tools": [
+          "tree"
+        ],
+        "available": "可按写意原则借用树木轮廓，保留原意象名称。",
+        "remaining": "树冠、叶片和场景位置仍可继续改画，不要求先制作专门物种。",
         "needs_context": false,
-        "label": "待制作"
+        "presets": {
+          "tree": {
+            "form": "broadleaf"
+          }
+        },
+        "label": "基础可画"
       }
     },
     {
@@ -777,12 +807,15 @@ window.PoemProgress = {
       "note": "可能涉及鸟或花等所指；本目录不代替具体诗句消歧。",
       "status": "语义映射仍是设计候选，未接入正式诗句生成流程",
       "progress": {
-        "stage": "todo",
-        "tools": [],
-        "available": "尚无该条目的专用形态试画。",
-        "remaining": "可能涉及鸟或花等所指；本目录不代替具体诗句消歧。",
+        "stage": "partial",
+        "tools": [
+          "bird",
+          "flower"
+        ],
+        "available": "可依语义选择通用鸟形或通用花形。",
+        "remaining": "鸟与花的歧义仍按具体诗句判断，原词义与借形说明分开。",
         "needs_context": true,
-        "label": "待制作"
+        "label": "部分支持"
       }
     },
     {
@@ -924,12 +957,19 @@ window.PoemProgress = {
       "note": "宽叶与叶柄结构，不能直接由通用树改名得到。",
       "status": "语义映射仍是设计候选，未接入正式诗句生成流程",
       "progress": {
-        "stage": "todo",
-        "tools": [],
-        "available": "已有通用枝叶可复用，但尚无该条目的专门形态。",
-        "remaining": "宽叶与叶柄结构，不能直接由通用树改名得到。",
+        "stage": "basic",
+        "tools": [
+          "tree"
+        ],
+        "available": "可按写意原则借用树木轮廓，保留原意象名称。",
+        "remaining": "树冠、叶片和场景位置仍可继续改画，不要求先制作专门物种。",
         "needs_context": false,
-        "label": "待制作"
+        "presets": {
+          "tree": {
+            "form": "broadleaf"
+          }
+        },
+        "label": "基础可画"
       }
     },
     {
@@ -1040,12 +1080,20 @@ window.PoemProgress = {
       "note": "鸟体与鸣声分开；所指及呈现方式需依具体语境。",
       "status": "语义映射仍是设计候选，未接入正式诗句生成流程",
       "progress": {
-        "stage": "todo",
-        "tools": [],
-        "available": "尚无该条目的专用形态试画。",
-        "remaining": "鸟体与鸣声分开；所指及呈现方式需依具体语境。",
+        "stage": "basic",
+        "tools": [
+          "bird"
+        ],
+        "available": "共用疏笔鸟形，可按数量作零散或队列分布；允许写意概括。",
+        "remaining": "姿态、画面疏密和上下文仍需改画；不以物种辨识作为基础画法前提。",
         "needs_context": true,
-        "label": "待制作"
+        "presets": {
+          "bird": {
+            "pose": "flying",
+            "tone": "ink"
+          }
+        },
+        "label": "基础可画"
       }
     },
     {
@@ -1121,12 +1169,20 @@ window.PoemProgress = {
       "note": "共用鸟体与运动；雁形、队列、传书等含义要分别确认。",
       "status": "语义映射仍是设计候选，未接入正式诗句生成流程",
       "progress": {
-        "stage": "todo",
-        "tools": [],
-        "available": "已有通用鸟群运动可复用，但尚无该鸟种的专门外形。",
-        "remaining": "共用鸟体与运动；雁形、队列、传书等含义要分别确认。",
+        "stage": "basic",
+        "tools": [
+          "bird"
+        ],
+        "available": "共用疏笔鸟形，可按数量作零散或队列分布；允许写意概括。",
+        "remaining": "姿态、画面疏密和上下文仍需改画；不以物种辨识作为基础画法前提。",
         "needs_context": false,
-        "label": "待制作"
+        "presets": {
+          "bird": {
+            "pose": "flying",
+            "tone": "ink"
+          }
+        },
+        "label": "基础可画"
       }
     },
     {
@@ -1140,12 +1196,14 @@ window.PoemProgress = {
       "note": "判断具体鸟体、传信形象或其他用法；不机械画成蓝色小鸟。",
       "status": "语义映射仍是设计候选，未接入正式诗句生成流程",
       "progress": {
-        "stage": "todo",
-        "tools": [],
-        "available": "尚无该条目的专用形态试画。",
-        "remaining": "判断具体鸟体、传信形象或其他用法；不机械画成蓝色小鸟。",
+        "stage": "partial",
+        "tools": [
+          "bird"
+        ],
+        "available": "实景鸟体可用通用鸟形；传信含义保留在解读。",
+        "remaining": "比喻参照不自动当作实景，色彩与姿态是本地选择。",
         "needs_context": true,
-        "label": "待制作"
+        "label": "部分支持"
       }
     },
     {
@@ -1180,19 +1238,19 @@ window.PoemProgress = {
       "note": "可共用枝干基础，但名称包含的差别及具体树形仍需语境和变体设计。",
       "status": "语义映射仍是设计候选，未接入正式诗句生成流程",
       "progress": {
-        "stage": "partial",
+        "stage": "basic",
         "tools": [
           "tree"
         ],
-        "available": "已有松意的枝干、松针团与树群组合，主网页可按松匹配。",
-        "remaining": "柏尚未制作；松形与群落仍待审美确认，松柏合称需语境选择。",
+        "available": "可按写意原则共用针叶树意，保留松柏的原名称。",
+        "remaining": "树冠与场景构图仍待改画，不以松柏物种辨识作为前提。",
         "needs_context": true,
         "presets": {
           "tree": {
             "form": "pine"
           }
         },
-        "label": "部分支持"
+        "label": "基础可画"
       }
     },
     {
@@ -1374,18 +1432,18 @@ window.PoemProgress = {
     },
     {
       "id": "landscape",
-      "name": "山岸 · 地面",
+      "name": "山水 · 场景",
       "subtitle": "先定远近，再留出风景之间的空。",
       "sources": [
         "project"
       ],
-      "credit": "本项目 · 山势与地表墨面",
+      "credit": "本项目 · 山势、地表与光影笔触",
       "reference": "drawing/README.md",
-      "note": "山、岸、原野与小径的局部写意结构；只画明确选择的类型，不自动附加树、房屋或人物。",
+      "note": "山岸、原野、田面、瀑布、天空与光影的写意结构；只画明确选择的类型，不自动附加人物。",
       "controls": [
         {
           "id": "form",
-          "label": "地形",
+          "label": "场景",
           "default": "mountain",
           "choices": [
             {
@@ -1403,12 +1461,52 @@ window.PoemProgress = {
             {
               "value": "path",
               "label": "小径"
+            },
+            {
+              "value": "field",
+              "label": "水田"
+            },
+            {
+              "value": "waterfall",
+              "label": "瀑布"
+            },
+            {
+              "value": "sky",
+              "label": "天空"
+            },
+            {
+              "value": "stars",
+              "label": "星点"
+            },
+            {
+              "value": "sun",
+              "label": "日光"
+            },
+            {
+              "value": "glow",
+              "label": "灯火"
+            },
+            {
+              "value": "shadow",
+              "label": "疏影"
+            },
+            {
+              "value": "moss",
+              "label": "苔意"
+            },
+            {
+              "value": "lightwash",
+              "label": "返照"
+            },
+            {
+              "value": "dust",
+              "label": "轻尘"
             }
           ]
         }
       ],
       "capabilities": [
-        "static",
+        "local-motion",
         "density-detail",
         "anchors"
       ]
@@ -1427,6 +1525,23 @@ window.PoemProgress = {
       "capabilities": [
         "wind-response",
         "density-spacing"
+      ],
+      "controls": [
+        {
+          "id": "form",
+          "label": "水纹",
+          "default": "waves",
+          "choices": [
+            {
+              "value": "waves",
+              "label": "连续波纹"
+            },
+            {
+              "value": "plane",
+              "label": "疏密水面"
+            }
+          ]
+        }
       ]
     },
     {
@@ -2330,6 +2445,107 @@ window.PoemProgress = {
         "shape-selection",
         "density-detail",
         "anchors",
+        "fixed-count"
+      ]
+    },
+    {
+      "id": "dwelling",
+      "name": "房舍 · 寺院",
+      "subtitle": "一片屋檐，几笔墙影，让人知道那里可以停留。",
+      "sources": [
+        "project"
+      ],
+      "credit": "本项目 · 房舍与寺院墨意",
+      "reference": "drawing/README.md",
+      "note": "房舍与寺院的低层屋顶、疏窗和门洞；不添加人物，不区分具体朝代或真实建筑。",
+      "controls": [
+        {
+          "id": "kind",
+          "label": "屋舍",
+          "default": "house",
+          "choices": [
+            {
+              "value": "house",
+              "label": "房舍"
+            },
+            {
+              "value": "temple",
+              "label": "寺院"
+            }
+          ]
+        }
+      ],
+      "capabilities": [
+        "static",
+        "anchors",
+        "shape-selection"
+      ]
+    },
+    {
+      "id": "bird",
+      "name": "鸟意",
+      "subtitle": "几笔收拢，又向空中舒开。",
+      "sources": [
+        "project"
+      ],
+      "credit": "本项目 · 疏笔鸟形",
+      "reference": "drawing/README.md",
+      "note": "通用飞鸟、停鸟与水鸟的写意轮廓；不作物种辨识，不预置整群数量。",
+      "controls": [
+        {
+          "id": "pose",
+          "label": "姿态",
+          "default": "flying",
+          "choices": [
+            {
+              "value": "flying",
+              "label": "飞鸟"
+            },
+            {
+              "value": "resting",
+              "label": "停鸟"
+            },
+            {
+              "value": "waterbird",
+              "label": "水鸟"
+            }
+          ]
+        },
+        {
+          "id": "tone",
+          "label": "墨色",
+          "default": "ink",
+          "choices": [
+            {
+              "value": "ink",
+              "label": "墨鸟"
+            },
+            {
+              "value": "light",
+              "label": "浅鸟"
+            }
+          ]
+        },
+        {
+          "id": "facing",
+          "label": "朝向",
+          "default": "right",
+          "choices": [
+            {
+              "value": "right",
+              "label": "向右"
+            },
+            {
+              "value": "left",
+              "label": "向左"
+            }
+          ]
+        }
+      ],
+      "capabilities": [
+        "local-motion",
+        "anchors",
+        "shape-selection",
         "fixed-count"
       ]
     }

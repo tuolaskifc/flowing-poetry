@@ -47,7 +47,7 @@
     ]
   },
   "plan": {
-    "version": "scene-composition-1",
+    "version": "expressive-scene-1",
     "seed": 6018448,
     "settings": {
       "wind": 0,
@@ -60,6 +60,7 @@
         "entities": [
           "i2"
         ],
+        "projectedEntities": [],
         "names": [
           "马"
         ],
@@ -116,13 +117,15 @@
           "collective": false,
           "partUnsupported": false
         },
-        "quantityLabel": "数量未精确；本地试画 1 个单元"
+        "quantityLabel": "数量未精确；本地试画 1 个单元",
+        "grounding": true
       },
       {
         "tool": "lotus",
         "entities": [
           "i3"
         ],
+        "projectedEntities": [],
         "names": [
           "莲花"
         ],
@@ -299,6 +302,7 @@
         "entities": [
           "i1"
         ],
+        "projectedEntities": [],
         "names": [
           "兰"
         ],
@@ -400,7 +404,7 @@
       "马以静态马形为单体，数量另行处理；不表现奔跑步态，不自动补骑者、鞍辔或草地。",
       "莲花按提到的花或叶分别试画；不自动补池水、荷叶或其他生物，默认花态是本地选择，尚无生长或开花过程。",
       "位置、大小、笔触与默认微动是本地试画选择；数量解释与本地显示数量分别记录。",
-      "未明说的群落数量、疏密、近中远层次与变体均为本地构图选择；不增加新物种，不把铺展词换算成精确物体数量。"
+      "未明说的群落数量、疏密、近中远层次与变体均为本地构图选择；种类可按已声明的写意画法概括，不把铺展词换算成精确物体数量。"
     ],
     "relations": []
   },
@@ -411,7 +415,7 @@
       {
         "id": "horse",
         "seed": 6018448,
-        "time": 0.1062000000357657,
+        "time": 0.1011999999999971,
         "ticks": 3,
         "paused": true,
         "disposed": false,
@@ -435,7 +439,7 @@
       {
         "id": "lotus",
         "seed": 6018545,
-        "time": 0.10600000004768663,
+        "time": 0.10110000003575989,
         "ticks": 3,
         "paused": true,
         "disposed": false,
@@ -460,7 +464,7 @@
       {
         "id": "lotus",
         "seed": 6020088,
-        "time": 0.10590000002384477,
+        "time": 0.10100000001191803,
         "ticks": 3,
         "paused": true,
         "disposed": false,
@@ -485,7 +489,7 @@
       {
         "id": "lotus",
         "seed": 6021631,
-        "time": 0.10580000000000292,
+        "time": 0.10080000002383896,
         "ticks": 3,
         "paused": true,
         "disposed": false,
@@ -510,7 +514,7 @@
       {
         "id": "orchid",
         "seed": 6018642,
-        "time": 0.1057000000357657,
+        "time": 0.1006999999999971,
         "ticks": 3,
         "paused": true,
         "disposed": false,
@@ -532,7 +536,7 @@
       {
         "id": "orchid",
         "seed": 6020185,
-        "time": 0.10560000001192385,
+        "time": 0.1006999999999971,
         "ticks": 3,
         "paused": true,
         "disposed": false,
@@ -554,7 +558,7 @@
       {
         "id": "orchid",
         "seed": 6021728,
-        "time": 0.10550000004768663,
+        "time": 0.10050000001191803,
         "ticks": 3,
         "paused": true,
         "disposed": false,

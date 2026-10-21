@@ -1,9 +1,9 @@
 // Quantity semantics stop at counts/extent. Seeds, repetitions, depth and
 // positions below are local artistic choices, never model coordinates.
-const fieldTools=new Set(['tree','flower','grass','bamboo','orchid','lotus','willow','plum-branch','flower-forms']);
-const singleUnitTools=new Set(['tree','lotus','willow','orchid','horse','oriole','fish','boat','moon','rock','building','pavilion','wine','plum-branch','flower-forms','flower','bamboo','grass','leaves']);
-const defaults={tree:3,flower:10,grass:15,bamboo:6,orchid:3,lotus:8,willow:1};
-const many={tree:14,flower:26,grass:36,bamboo:18,orchid:12,lotus:16,willow:7,'plum-branch':4,'flower-forms':14,fish:9,rock:7,leaves:24};
+const fieldTools=new Set(['dwelling','tree','flower','grass','bamboo','orchid','lotus','willow','plum-branch','flower-forms']);
+const singleUnitTools=new Set(['bird','dwelling','tree','lotus','willow','orchid','horse','oriole','fish','boat','moon','rock','building','pavilion','wine','plum-branch','flower-forms','flower','bamboo','grass','leaves']);
+const defaults={bird:4,oriole:3,dwelling:1,tree:3,flower:10,grass:15,bamboo:6,orchid:3,lotus:8,willow:1};
+const many={dwelling:6,building:4,bird:9,oriole:7,tree:14,flower:26,grass:36,bamboo:18,orchid:12,lotus:16,willow:7,'plum-branch':4,'flower-forms':14,fish:9,rock:7,leaves:24};
 function random(seed){let s=seed>>>0;return ()=>{s+=0x6D2B79F5;let t=s;t=Math.imul(t^t>>>15,t|1);t^=t+Math.imul(t^t>>>7,t|61);return ((t^t>>>14)>>>0)/4294967296;};}
 function legacyQuantity(entity,poem){
   // Old records have no model quantity. Only use a local, clearly labelled
@@ -20,7 +20,9 @@ export function compose(analysis,layers,seed){
     const quantities=entities.map(e=>({entity:e,q:e.quantity||legacyQuantity(e,analysis.poem),basis:e.quantity?'model':'local-legacy'}));
     const woodland=layer.tool==='tree'&&entities.some(e=>e.mentions.some(m=>/林/.test(m)));
     const leaf=layer.tool==='lotus'&&layer.options.form==='leaf';let count=0,exact=true,collective=false,partUnsupported=false;
-    for(const {q} of quantities){
+    const projected=quantities.filter(v=>layer.projectedEntities?.includes(v.entity.id)),counting=quantities.filter(v=>!layer.projectedEntities?.includes(v.entity.id));
+    if(projected.length&&!counting.length){count=1;exact=false;notes.push(`${layer.names.join('、')}以一匹马借形；局部的蹄数不当作马匹数量。`);}
+    for(const {q} of counting){
       if(woodland&&q.mode==='unspecified'){count+=14;collective=true;exact=false;continue;}
       const part=(q.scope==='part'&&!(layer.tool==='plum-branch'&&q.unit==='枝'))||(layer.tool==='plum-branch'&&/朵|瓣/.test(q.unit||''));
       if(part){partUnsupported=true;exact=false;count+=1;continue;}
@@ -41,7 +43,11 @@ export function compose(analysis,layers,seed){
     const instances=[];
     for(let i=0;i<count;i++){
       const placement=structuredClone(layer.placement);let depth=i/count,opacity=1;
-      if(layer.tool==='water')Object.assign(placement,{at:[.5,.46],scale:1.6});
+      if(['bird','oriole'].includes(layer.tool)){
+        const aquatic=layer.options.pose==='waterbird',t=(i+.5)/count;depth=t;placement.anchor=[320,190];placement.at=[.16+((i*.61803398875+rng()*.13)%1)*.68,aquatic?.67+rng()*.19:.18+rng()*.32];placement.scale=(aquatic?.70:.5)+t*.35;opacity=.70+t*.3;
+        if(quantities.some(v=>v.q.scope==='group'&&v.q.unit==='行')){placement.at=[.17+t*.68,.25+Math.sin(t*Math.PI)*.12];placement.scale=.55+t*.25;}
+      }
+      else if(layer.tool==='water')Object.assign(placement,{at:[.5,.46],scale:1.6});
       else if(layer.tool==='willow'&&count===1)Object.assign(placement,{at:[.14,.96],scale:1.7});
       else if(layer.tool==='lotus'){
         // A lotus field uses the glyph's leaf/flower center, not the empty
@@ -72,8 +78,8 @@ export function compose(analysis,layers,seed){
       instances.push({placement,depth,opacity,variant:i%Math.min(3,count)});
     }
     layer.instances=instances;layer.singleUnit=singleUnitTools.has(layer.tool);layer.quantity={items:quantities.map(({entity,q,basis})=>({entity:entity.id,...q,basis})),rendered:count,exact:exact&&count===requested&&!partUnsupported,collective,partUnsupported};
-    layer.quantityLabel=partUnsupported?'局部数量尚未实现':!countable?'整体笔触图层；内部数量尚未适配':layer.quantity.exact?`按提取数量绘制 ${count} 个`:collective?`成片分布；本地试画 ${count} 个单元`:quantities.every(v=>v.q.mode==='exact')?`计数目标 ${requested}；受限显示 ${count} 个`:quantities.some(v=>v.q.mode==='range')?`原文为数量范围；本地试画 ${count} 个`:`数量未精确；本地试画 ${count} 个单元`;
+    layer.quantityLabel=projected.length&&!counting.length?'由马蹄借形为一匹马，马匹数未明':partUnsupported?'局部数量尚未实现':!countable?'整体笔触图层；内部数量尚未适配':layer.quantity.exact?`按提取数量绘制 ${count} 个`:collective?`成片分布；本地试画 ${count} 个单元`:quantities.every(v=>v.q.mode==='exact')?`计数目标 ${requested}；受限显示 ${count} 个`:quantities.some(v=>v.q.mode==='range')?`原文为数量范围；本地试画 ${count} 个`:`数量未精确；本地试画 ${count} 个单元`;
   }
-  notes.push('未明说的群落数量、疏密、近中远层次与变体均为本地构图选择；不增加新物种，不把铺展词换算成精确物体数量。');
+  notes.push('未明说的群落数量、疏密、近中远层次与变体均为本地构图选择；种类可按已声明的写意画法概括，不把铺展词换算成精确物体数量。');
   return {layers,notes};
 }

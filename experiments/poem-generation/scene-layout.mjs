@@ -9,8 +9,14 @@ export function arrangeScene(analysis,layers){
   const groupWidth=(layer,x,width)=>{const xs=layer.instances.map(v=>v.placement.at[0]),lo=Math.min(...xs),hi=Math.max(...xs);for(const v of layer.instances)v.placement.at[0]=hi===lo?x:x-width/2+(v.placement.at[0]-lo)/(hi-lo)*width;};
   for(const layer of layers){
     if(layer.tool==='landscape'){
-      layer.animate=false;layer.instances[0].placement={anchor:[320,194],at:[.5,layer.options.form==='mountain'?.4:.57],scale:1.6};
-      layer.z=layer.options.form==='mountain'?-30:water?5:-20;
+      const f=layer.options.form;layer.animate=f==='waterfall';layer.instances[0].placement={anchor:[320,194],at:[.5,f==='mountain'?.4:['sky','stars','sun'].includes(f)?.5:.57],scale:1.6};
+      layer.z=f==='sky'?-45:f==='stars'||f==='sun'?-40:f==='mountain'?-30:water?5:-20;
+      if(f==='glow'){const boat=layers.find(l=>l.tool==='boat');layer.instances[0].placement={anchor:[320,210],at:boat?[.62,.72]:[.7,.6],scale:1.2};layer.z=30;}
+    }
+    if(layer.tool==='dwelling'){move(layer,.66,.73,1.1);layer.z=5;layer.grounding=true;notes.push('房舍下方的淡墨承托是本地构图，不把它当作诗句额外明说的地面或投影。');}
+    if(layer.tool==='horse')layer.grounding=true;
+    if(layer.tool==='bird'){layer.z=25;if(layer.options.pose==='waterbird'){const surface=water||land.some(l=>l.options.form==='field');for(const v of layer.instances){v.placement.at[1]=surface?.68+(v.depth||0)*.15:.76;}notes.push('水鸟以通用轮廓概括，水域或田面中的分布是本地构图选择。');}
+      if(land.some(l=>l.options.form==='field')&&layer.options.pose==='flying'){for(const [i,v] of layer.instances.entries()){const t=(i+.5)/layer.instances.length;v.placement.at=[layer.options.tone==='light'?.12+t*.5:.70+t*.22,layer.options.tone==='light'?.20+Math.sin(t*5)*.06:.34+Math.sin(t*5)*.07];}}
     }
     if(layer.tool==='water'){
       layer.z=-10;layer.surface={top:.46,bottom:1};
@@ -21,6 +27,7 @@ export function arrangeScene(analysis,layers){
       layer.z=8;
       if(layer.instances.length===1)move(layer,.18,.98,1.25);
       else if(water){for(const [i,v] of layer.instances.entries()){v.placement.at[0]=i%2?.84+(i%3)*.045:.04+(i%4)*.055;v.placement.at[1]=.67+(i/layer.instances.length)*.3;v.placement.scale*=.82;}}
+      else if(land.some(l=>l.options.form==='field')){for(const [i,v] of layer.instances.entries()){const t=(i+.5)/layer.instances.length;v.placement.at=[.76+((i*.618)%1)*.36,.64+t*.33];v.placement.scale=.42+t*.8;}}
     }
     if(water&&['boat','fish'].includes(layer.tool)){
       move(layer,layer.tool==='boat'?.62:.48,layer.tool==='boat'?.76:.85,.95);
@@ -35,8 +42,10 @@ export function arrangeScene(analysis,layers){
     if(r.modality!=='asserted'){view.reason='非确定关系仅保留解读';return view;}
     if(!source||!target||source===target){view.reason='关系的一端缺少独立画法';return view;}
     const [tx,ty]=center(target);
-    if(r.type==='on'&&target.tool==='water'&&['boat','fish'].includes(source.tool)){
-      move(source,clamp(center(source)[0]),source.tool==='boat'?.76:.85);source.z=12;view.visualized=true;view.reason='在水面区域定位，尚非物理承载';
+    if(r.type==='on'&&target.tool==='water'&&['boat','fish','bird'].includes(source.tool)){
+      move(source,clamp(center(source)[0]),source.tool==='boat'?.76:source.tool==='bird'?.72:.85);source.z=26;view.visualized=true;view.reason='在水面区域定位，尚非物理承载';
+    }else if(r.type==='on'&&['tree','willow','bamboo'].includes(target.tool)&&['bird','oriole'].includes(source.tool)){
+      const branch=target.instances[Math.floor(target.instances.length/2)].placement;move(source,clamp(branch.at[0]),clamp(branch.at[1]-.4*branch.scale,.18,.6));groupWidth(source,clamp(branch.at[0]),.17);source.z=(target.z??10)+1;view.visualized=true;view.reason='在树冠或枝叶区域停鸟试画，不作精确爪枝贴合';
     }else if(['behind','in_front_of'].includes(r.type)&&!['water','landscape'].includes(source.tool)){
       const back=r.type==='behind';source.z=(target.z??10)+(back?-1:1);move(source,clamp(center(source)[0]),clamp(ty+(back?-.13:.1),.2,.98),back?.8:1.1);view.visualized=true;view.reason='以相对层次、大小和高低试画';
     }else if(['outside','beside'].includes(r.type)&&!['water','landscape'].includes(source.tool)){

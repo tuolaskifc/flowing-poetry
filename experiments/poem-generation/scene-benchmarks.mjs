@@ -16,6 +16,8 @@ const plural=new Set(['深林','夏木','莲叶','荷花','花','浅草','竹'])
 const relation=(type,source,target,evidence,basis='explicit')=>({type,source,target,modality:'asserted',basis,evidence:[evidence]});
 export const benchmarks=catalog.poems.map((entry,i)=>{
   const analysis={...fixture(entry.poem,sets[i].map(text=>({text,concept:text==='野'?'原野':text,kind:places.has(text)?'place':organisms.has(text)?'organism':['人','蓑笠翁'].includes(text)?'person':abstracts.has(text)?'abstract':'environment',role:text==='银河'?'reference':'scene',presence:text==='银河'?'unclear':'present',quantity:text==='孤舟'?quantity({mode:'exact',min:1,max:1,scope:'individual',extent:'local',evidence:['孤舟']}):plural.has(text)?quantity({mode:'many',extent:'spread',evidence:[entry.poem]}):quantity()}))),schema_version:'3.2',spatial:[]};
+  if(i===6){analysis.entities[0].quantity=quantity({mode:'exact',min:2,max:2,unit:'个',scope:'individual',evidence:['两个黄鹂']});analysis.entities[2].quantity=quantity({mode:'exact',min:1,max:1,unit:'行',scope:'group',evidence:['一行白鹭']});}
+  if(i===7)analysis.entities[1].quantity=quantity({mode:'range',min:2,max:3,unit:'枝',scope:'part',evidence:['竹外桃花三两枝']});
   const id=text=>analysis.entities.find(e=>e.mentions.includes(text)).id;
   if(i===0)analysis.spatial=[relation('among',id('明月'),id('松'),'明月松间照'),relation('on',id('清泉'),id('石'),'清泉石上流')];
   if(i===2)analysis.spatial=[relation('on',id('舟'),id('春潮'),entry.poem,'inferred')];

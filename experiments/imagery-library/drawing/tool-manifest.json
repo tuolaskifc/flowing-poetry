@@ -68,18 +68,18 @@
     },
     {
       "id": "landscape",
-      "name": "山岸 · 地面",
+      "name": "山水 · 场景",
       "subtitle": "先定远近，再留出风景之间的空。",
       "sources": [
         "project"
       ],
-      "credit": "本项目 · 山势与地表墨面",
+      "credit": "本项目 · 山势、地表与光影笔触",
       "reference": "drawing/README.md",
-      "note": "山、岸、原野与小径的局部写意结构；只画明确选择的类型，不自动附加树、房屋或人物。",
+      "note": "山岸、原野、田面、瀑布、天空与光影的写意结构；只画明确选择的类型，不自动附加人物。",
       "controls": [
         {
           "id": "form",
-          "label": "地形",
+          "label": "场景",
           "default": "mountain",
           "choices": [
             {
@@ -97,12 +97,52 @@
             {
               "value": "path",
               "label": "小径"
+            },
+            {
+              "value": "field",
+              "label": "水田"
+            },
+            {
+              "value": "waterfall",
+              "label": "瀑布"
+            },
+            {
+              "value": "sky",
+              "label": "天空"
+            },
+            {
+              "value": "stars",
+              "label": "星点"
+            },
+            {
+              "value": "sun",
+              "label": "日光"
+            },
+            {
+              "value": "glow",
+              "label": "灯火"
+            },
+            {
+              "value": "shadow",
+              "label": "疏影"
+            },
+            {
+              "value": "moss",
+              "label": "苔意"
+            },
+            {
+              "value": "lightwash",
+              "label": "返照"
+            },
+            {
+              "value": "dust",
+              "label": "轻尘"
             }
           ]
         }
       ],
       "capabilities": [
-        "static",
+        "local-motion",
         "density-detail",
         "anchors"
       ]
@@ -1041,6 +1081,107 @@
         "shape-selection",
         "density-detail",
         "anchors",
+        "fixed-count"
+      ]
+    },
+    {
+      "id": "dwelling",
+      "name": "房舍 · 寺院",
+      "subtitle": "一片屋檐，几笔墙影，让人知道那里可以停留。",
+      "sources": [
+        "project"
+      ],
+      "credit": "本项目 · 房舍与寺院墨意",
+      "reference": "drawing/README.md",
+      "note": "房舍与寺院的低层屋顶、疏窗和门洞；不添加人物，不区分具体朝代或真实建筑。",
+      "controls": [
+        {
+          "id": "kind",
+          "label": "屋舍",
+          "default": "house",
+          "choices": [
+            {
+              "value": "house",
+              "label": "房舍"
+            },
+            {
+              "value": "temple",
+              "label": "寺院"
+            }
+          ]
+        }
+      ],
+      "capabilities": [
+        "static",
+        "anchors",
+        "shape-selection"
+      ]
+    },
+    {
+      "id": "bird",
+      "name": "鸟意",
+      "subtitle": "几笔收拢，又向空中舒开。",
+      "sources": [
+        "project"
+      ],
+      "credit": "本项目 · 疏笔鸟形",
+      "reference": "drawing/README.md",
+      "note": "通用飞鸟、停鸟与水鸟的写意轮廓；不作物种辨识，不预置整群数量。",
+      "controls": [
+        {
+          "id": "pose",
+          "label": "姿态",
+          "default": "flying",
+          "choices": [
+            {
+              "value": "flying",
+              "label": "飞鸟"
+            },
+            {
+              "value": "resting",
+              "label": "停鸟"
+            },
+            {
+              "value": "waterbird",
+              "label": "水鸟"
+            }
+          ]
+        },
+        {
+          "id": "tone",
+          "label": "墨色",
+          "default": "ink",
+          "choices": [
+            {
+              "value": "ink",
+              "label": "墨鸟"
+            },
+            {
+              "value": "light",
+              "label": "浅鸟"
+            }
+          ]
+        },
+        {
+          "id": "facing",
+          "label": "朝向",
+          "default": "right",
+          "choices": [
+            {
+              "value": "right",
+              "label": "向右"
+            },
+            {
+              "value": "left",
+              "label": "向左"
+            }
+          ]
+        }
+      ],
+      "capabilities": [
+        "local-motion",
+        "anchors",
+        "shape-selection",
         "fixed-count"
       ]
     }

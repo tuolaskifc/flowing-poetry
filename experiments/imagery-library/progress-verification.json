@@ -3,19 +3,19 @@
   "total": 60,
   "summary": {
     "total": 60,
-    "tools": 29,
+    "tools": 31,
     "stages": {
       "basic": {
         "label": "基础可画",
-        "count": 23
+        "count": 31
       },
       "partial": {
         "label": "部分支持",
-        "count": 7
+        "count": 8
       },
       "todo": {
         "label": "待制作",
-        "count": 21
+        "count": 12
       },
       "handoff": {
         "label": "转交其他模块",
@@ -28,9 +28,9 @@
     "art_review": "待用户审阅"
   },
   "filters": {
-    "basic": 23,
-    "partial": 7,
-    "todo": 21,
+    "basic": 31,
+    "partial": 8,
+    "todo": 12,
     "handoff": 9,
     "context": 13,
     "search": true,

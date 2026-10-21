@@ -1,0 +1,584 @@
+{
+  "id": "2026-10-21T13-19-36-603Z-190db80a",
+  "fingerprint": "95e4258da3e1d3186c23da80a8cbc6076b7c67ead782f602d1ea7e40ab416fa1",
+  "poem": "两个黄鹂鸣翠柳，一行白鹭上青天。",
+  "source": {
+    "provider": "写意归类实测",
+    "author": "杜甫",
+    "title": "绝句"
+  },
+  "mode": "scene",
+  "model": "DeepSeek-V4.1-Flash",
+  "started_at": "2026-10-21T13:19:36.606Z",
+  "cached": false,
+  "http_status": 200,
+  "usage": {
+    "completion_tokens": 535,
+    "prompt_tokens": 3224,
+    "total_tokens": 3759,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 3200
+    }
+  },
+  "finish_reason": "stop",
+  "analysis": {
+    "schema_version": "3.2",
+    "poem": "两个黄鹂鸣翠柳，一行白鹭上青天。",
+    "reading": "两只黄鹂在翠绿的柳树间鸣叫，一行白鹭飞向青天。",
+    "entities": [
+      {
+        "id": "i1",
+        "mentions": [
+          "两个黄鹂"
+        ],
+        "concept": "黄鹂鸟",
+        "kind": "organism",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "两个黄鹂"
+        ],
+        "quantity": {
+          "mode": "exact",
+          "min": 2,
+          "max": 2,
+          "unit": "个",
+          "scope": "individual",
+          "extent": "local",
+          "evidence": [
+            "两个黄鹂"
+          ]
+        }
+      },
+      {
+        "id": "i2",
+        "mentions": [
+          "翠柳"
+        ],
+        "concept": "翠绿的柳树",
+        "kind": "organism",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "翠柳"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i3",
+        "mentions": [
+          "一行白鹭"
+        ],
+        "concept": "白鹭鸟群",
+        "kind": "organism",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "一行白鹭"
+        ],
+        "quantity": {
+          "mode": "exact",
+          "min": 1,
+          "max": 1,
+          "unit": "行",
+          "scope": "group",
+          "extent": "spread",
+          "evidence": [
+            "一行白鹭"
+          ]
+        }
+      },
+      {
+        "id": "i4",
+        "mentions": [
+          "青天"
+        ],
+        "concept": "青色的天空",
+        "kind": "environment",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "青天"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      }
+    ],
+    "relations": [],
+    "atmosphere": {
+      "labels": [
+        "明快",
+        "开阔"
+      ],
+      "valence": "positive",
+      "energy": "medium",
+      "tension": "low",
+      "openness": "high",
+      "evidence": [
+        "两个黄鹂鸣翠柳",
+        "一行白鹭上青天"
+      ]
+    },
+    "time": {
+      "markers": [],
+      "note": null
+    },
+    "uncertainties": [
+      "“上”表示飞向还是已在高处，方向细节不明确。"
+    ],
+    "spatial": [
+      {
+        "type": "among",
+        "source": "i1",
+        "target": "i2",
+        "modality": "asserted",
+        "basis": "inferred",
+        "evidence": [
+          "两个黄鹂鸣翠柳"
+        ]
+      },
+      {
+        "type": "on",
+        "source": "i3",
+        "target": "i4",
+        "modality": "asserted",
+        "basis": "inferred",
+        "evidence": [
+          "一行白鹭上青天"
+        ]
+      }
+    ]
+  },
+  "validation": {
+    "valid": true,
+    "errors": [],
+    "warnings": [
+      "模型保留了不确定性，需要审阅",
+      "spatial[0] 的推断或非确定关系需审阅",
+      "spatial[1] 的推断或非确定关系需审阅"
+    ],
+    "review_required": true
+  },
+  "plan": {
+    "version": "expressive-scene-1",
+    "seed": 3064409756,
+    "settings": {
+      "wind": 0,
+      "density": 0.45,
+      "palette": "clear"
+    },
+    "layers": [
+      {
+        "tool": "willow",
+        "entities": [
+          "i2"
+        ],
+        "projectedEntities": [],
+        "names": [
+          "翠柳"
+        ],
+        "options": {},
+        "animate": true,
+        "placement": {
+          "anchor": [
+            320,
+            340
+          ],
+          "at": [
+            0.23,
+            0.88
+          ],
+          "scale": 1
+        },
+        "instances": [
+          {
+            "placement": {
+              "anchor": [
+                320,
+                340
+              ],
+              "at": [
+                0.14,
+                0.96
+              ],
+              "scale": 1.7
+            },
+            "depth": 0,
+            "opacity": 1,
+            "variant": 0
+          }
+        ],
+        "singleUnit": true,
+        "quantity": {
+          "items": [
+            {
+              "entity": "i2",
+              "mode": "unspecified",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "unspecified",
+              "extent": "unspecified",
+              "evidence": [],
+              "basis": "model"
+            }
+          ],
+          "rendered": 1,
+          "exact": false,
+          "collective": false,
+          "partUnsupported": false
+        },
+        "quantityLabel": "数量未精确；本地试画 1 个单元"
+      },
+      {
+        "tool": "bird",
+        "entities": [
+          "i1"
+        ],
+        "projectedEntities": [],
+        "names": [
+          "两个黄鹂"
+        ],
+        "options": {
+          "pose": "flying",
+          "tone": "ink",
+          "facing": "right"
+        },
+        "animate": true,
+        "placement": {
+          "anchor": [
+            320,
+            190
+          ],
+          "at": [
+            0.62,
+            0.34
+          ],
+          "scale": 0.78
+        },
+        "instances": [
+          {
+            "placement": {
+              "anchor": [
+                320,
+                190
+              ],
+              "at": [
+                0.23021192082986236,
+                0.27621655732393263
+              ],
+              "scale": 0.5875
+            },
+            "depth": 0.25,
+            "opacity": 0.7749999999999999,
+            "variant": 0
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                190
+              ],
+              "at": [
+                0.5842025326019209,
+                0.3172599839419127
+              ],
+              "scale": 0.7625
+            },
+            "depth": 0.75,
+            "opacity": 0.9249999999999999,
+            "variant": 1
+          }
+        ],
+        "singleUnit": true,
+        "quantity": {
+          "items": [
+            {
+              "entity": "i1",
+              "mode": "exact",
+              "min": 2,
+              "max": 2,
+              "unit": "个",
+              "scope": "individual",
+              "extent": "local",
+              "evidence": [
+                "两个黄鹂"
+              ],
+              "basis": "model"
+            }
+          ],
+          "rendered": 2,
+          "exact": true,
+          "collective": false,
+          "partUnsupported": false
+        },
+        "quantityLabel": "按提取数量绘制 2 个",
+        "z": 25
+      },
+      {
+        "tool": "bird",
+        "entities": [
+          "i3"
+        ],
+        "projectedEntities": [],
+        "names": [
+          "一行白鹭"
+        ],
+        "options": {
+          "pose": "flying",
+          "tone": "light",
+          "facing": "right"
+        },
+        "animate": true,
+        "placement": {
+          "anchor": [
+            320,
+            190
+          ],
+          "at": [
+            0.62,
+            0.34
+          ],
+          "scale": 0.78
+        },
+        "instances": [
+          {
+            "placement": {
+              "anchor": [
+                320,
+                190
+              ],
+              "at": [
+                0.20777777777777778,
+                0.27083778132003167
+              ],
+              "scale": 0.5638888888888889
+            },
+            "depth": 0.05555555555555555,
+            "opacity": 0.7166666666666667,
+            "variant": 0
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                190
+              ],
+              "at": [
+                0.2833333333333333,
+                0.31
+              ],
+              "scale": 0.5916666666666667
+            },
+            "depth": 0.16666666666666666,
+            "opacity": 0.75,
+            "variant": 1
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                190
+              ],
+              "at": [
+                0.3588888888888889,
+                0.34192533317427737
+              ],
+              "scale": 0.6194444444444445
+            },
+            "depth": 0.2777777777777778,
+            "opacity": 0.7833333333333333,
+            "variant": 2
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                190
+              ],
+              "at": [
+                0.4344444444444445,
+                0.362763114494309
+              ],
+              "scale": 0.6472222222222223
+            },
+            "depth": 0.3888888888888889,
+            "opacity": 0.8166666666666667,
+            "variant": 0
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                190
+              ],
+              "at": [
+                0.51,
+                0.37
+              ],
+              "scale": 0.675
+            },
+            "depth": 0.5,
+            "opacity": 0.85,
+            "variant": 1
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                190
+              ],
+              "at": [
+                0.5855555555555556,
+                0.362763114494309
+              ],
+              "scale": 0.7027777777777778
+            },
+            "depth": 0.6111111111111112,
+            "opacity": 0.8833333333333333,
+            "variant": 2
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                190
+              ],
+              "at": [
+                0.6611111111111112,
+                0.34192533317427737
+              ],
+              "scale": 0.7305555555555556
+            },
+            "depth": 0.7222222222222222,
+            "opacity": 0.9166666666666666,
+            "variant": 0
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                190
+              ],
+              "at": [
+                0.7366666666666668,
+                0.31
+              ],
+              "scale": 0.7583333333333334
+            },
+            "depth": 0.8333333333333334,
+            "opacity": 0.95,
+            "variant": 1
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                190
+              ],
+              "at": [
+                0.8122222222222223,
+                0.27083778132003167
+              ],
+              "scale": 0.7861111111111112
+            },
+            "depth": 0.9444444444444444,
+            "opacity": 0.9833333333333333,
+            "variant": 2
+          }
+        ],
+        "singleUnit": true,
+        "quantity": {
+          "items": [
+            {
+              "entity": "i3",
+              "mode": "exact",
+              "min": 1,
+              "max": 1,
+              "unit": "行",
+              "scope": "group",
+              "extent": "spread",
+              "evidence": [
+                "一行白鹭"
+              ],
+              "basis": "model"
+            }
+          ],
+          "rendered": 9,
+          "exact": false,
+          "collective": true,
+          "partUnsupported": false
+        },
+        "quantityLabel": "成片分布；本地试画 9 个单元",
+        "z": 25
+      }
+    ],
+    "spatial": [
+      {
+        "type": "among",
+        "source": "i1",
+        "target": "i2",
+        "modality": "asserted",
+        "basis": "inferred",
+        "evidence": [
+          "两个黄鹂鸣翠柳"
+        ],
+        "visualized": false,
+        "reason": "该空间关系与形态组合尚未适配"
+      },
+      {
+        "type": "on",
+        "source": "i3",
+        "target": "i4",
+        "modality": "asserted",
+        "basis": "inferred",
+        "evidence": [
+          "一行白鹭上青天"
+        ],
+        "visualized": false,
+        "reason": "关系的一端缺少独立画法"
+      }
+    ],
+    "scene": {
+      "kind": "study",
+      "notes": [
+        "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。"
+      ],
+      "waterline": null
+    },
+    "omitted": [
+      {
+        "id": "i4",
+        "name": "青天",
+        "reason": "该意象尚无合适的写意画法"
+      }
+    ],
+    "notes": [
+      "两个黄鹂：以通用写意鸟形表现，不细分物种。这是本地写意借形，保留原词义。",
+      "一行白鹭：以通用写意鸟形表现，不细分物种。这是本地写意借形，保留原词义。",
+      "位置、大小、笔触与默认微动是本地试画选择；数量解释与本地显示数量分别记录。",
+      "未明说的群落数量、疏密、近中远层次与变体均为本地构图选择；种类可按已声明的写意画法概括，不把铺展词换算成精确物体数量。",
+      "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。"
+    ],
+    "relations": []
+  },
+  "elapsed_seconds": 3.7
+}

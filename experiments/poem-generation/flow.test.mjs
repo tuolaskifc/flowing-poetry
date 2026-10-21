@@ -13,8 +13,8 @@ test('absent, metaphor and uncertain objects do not become real layers',()=>{
   const value=fixture('月如霜，水不见',[entity('i1','月'),entity('i2','霜',{role:'reference',presence:'unclear'}),entity('i3','水',{presence:'absent'})]);
   const plan=buildPlan(value);assert.deepEqual(plan.layers.map(l=>l.tool),['moon']);assert.equal(plan.omitted.length,2);
 });
-test('specific unimplemented organisms do not fall through to generic drawings',()=>{
-  const plan=buildPlan(fixture('柏间桃花映梅子',[entity('i1','柏'),entity('i2','桃花'),entity('i3','梅子')]));assert.equal(plan.layers.length,0);assert.equal(plan.omitted.length,3);
+test('foliage and flowers may borrow shapes while unsupported fruit remains a gap',()=>{
+  const plan=buildPlan(fixture('柏间桃花映梅子',[entity('i1','柏'),entity('i2','桃花'),entity('i3','梅子')]));assert.deepEqual(plan.layers.map(l=>l.tool),['tree','plum-branch']);assert.deepEqual(plan.omitted.map(e=>e.name),['梅子']);assert(plan.notes.some(n=>n.includes('写意借形')));
 });
 test('negated wind remains off; negated movement freezes a present fish',()=>{
   const v=fixture('风不起，鱼不游',[entity('i1','风'),entity('i2','鱼',{kind:'organism'})],[{type:'changes',source:'i1',target:null,meaning:'风未起',modality:'negated',basis:'explicit',evidence:['风不起']},{type:'moves',source:'i2',target:null,meaning:'鱼不游',modality:'negated',basis:'explicit',evidence:['鱼不游']}]);
@@ -62,13 +62,13 @@ test('dew and frost without named carriers never introduce grass or a ground obj
   assert.deepEqual(normalized.layers.map(l=>[l.tool,l.options.carrier]),[['surface-weather','detail']]);
 });
 
-test('a present ying bird is a single specific study, while sound-only and other species stay omitted',()=>{
+test('the accepted oriole shape is retained and bird calls can inspire a local bird symbol',()=>{
   const seen=buildPlan(fixture('黄莺',[entity('i1','黄莺',{kind:'organism'})]));
   assert.equal(seen.layers[0].tool,'oriole');assert.equal(seen.layers[0].options.pose,'folded');assert.equal(seen.layers[0].options.motion,'still');
   const sound=buildPlan(fixture('只闻莺啼',[entity('i1','莺',{kind:'organism',evidence:['只闻莺啼']})]));
-  assert.equal(sound.layers.length,0);assert(sound.omitted[0].reason.includes('听闻'));
+  assert.equal(sound.layers[0].tool,'oriole');assert(sound.notes.some(n=>n.includes('鸟鸣线索')));
   const other=buildPlan(fixture('夜莺与燕子',[entity('i1','夜莺',{kind:'organism'}),entity('i2','燕子',{kind:'organism'})]));
-  assert.equal(other.layers.length,0);
+  assert.deepEqual(other.layers.map(l=>l.tool),['bird']);assert(other.notes.some(n=>n.includes('通用写意鸟形')));
 });
 
 test('only an asserted flying bird opens and animates its wings',()=>{
@@ -79,15 +79,15 @@ test('only an asserted flying bird opens and animates its wings',()=>{
 
 test('lan uses its plant study without reinterpreting boats or another plant as orchids',()=>{
   const plan=buildPlan(fixture('兰与兰舟、兰桡、木兰',[entity('i1','兰',{kind:'organism'}),entity('i2','兰舟',{kind:'object'}),entity('i3','兰桡',{kind:'object'}),entity('i4','木兰',{kind:'organism'})]));
-  assert.deepEqual(plan.layers.map(l=>l.tool),['boat','orchid']);
-  assert.deepEqual(plan.omitted.map(e=>e.name),['兰桡','木兰']);
+  assert.deepEqual(plan.layers.map(l=>l.tool),['tree','boat','orchid']);
+  assert.deepEqual(plan.omitted.map(e=>e.name),['兰桡']);
 });
 
-test('a horse stays in a static pose and is not invented from hoof sounds or tack',()=>{
+test('a hoof cue may borrow a whole horse, while tack alone stays omitted',()=>{
   const plain=buildPlan(fixture('马与草',[entity('i1','马',{kind:'organism'}),entity('i2','草',{kind:'organism'})]));
   assert.equal(plain.layers.find(l=>l.tool==='horse').options.pose,'stand');
   const low=buildPlan(fixture('低首马',[entity('i1','低首马',{kind:'organism'})]));assert.equal(low.layers[0].options.pose,'lower');
-  const parts=buildPlan(fixture('马蹄声与马鞍',[entity('i1','马蹄声',{kind:'object'}),entity('i2','马鞍',{kind:'object'})]));assert.equal(parts.layers.length,0);
+  const parts=buildPlan(fixture('马蹄声与马鞍',[entity('i1','马蹄声',{kind:'object'}),entity('i2','马鞍',{kind:'object'})]));assert.deepEqual(parts.layers.map(l=>l.tool),['horse']);assert.deepEqual(parts.omitted.map(e=>e.name),['马鞍']);
 });
 
 test('lotus flowers, leaves and buds stay separate, without inventing water or drawing seeds as flowers',()=>{

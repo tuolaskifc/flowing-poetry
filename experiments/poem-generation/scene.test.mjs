@@ -9,9 +9,9 @@ import {fixture,quantity} from './quantity-fixtures.mjs';
 import {buildPlan} from './planner.mjs';
 import {createGenerationService} from './service.mjs';
 test('twenty fixed scene fixtures preserve source quotations and bounded spatial evidence',()=>{for(const b of benchmarks){const r=validateSceneContract(b.analysis,b.poem);assert(r.valid,b.id+': '+r.errors.join(';'));}});
-test('natural places use physical tools while named places and unsupported water shapes stay gaps',()=>{
+test('natural places use physical tools while named places stay gaps and waterfalls use a vertical shape',()=>{
  const a=fixture('寒江望长安，野渡见瀑布。',[{text:'寒江',kind:'place'},{text:'长安',kind:'place'},{text:'野渡',kind:'place'},{text:'瀑布',kind:'place'}]);
- const p=buildPlan(a);assert(p.layers.some(l=>l.tool==='water'));assert(p.layers.some(l=>l.tool==='landscape'&&l.options.form==='shore'));assert.deepEqual(p.omitted.map(e=>e.name),['长安','瀑布']);
+ const p=buildPlan(a);assert(p.layers.some(l=>l.tool==='water'));assert(p.layers.some(l=>l.tool==='landscape'&&l.options.form==='shore'));assert.deepEqual(p.omitted.map(e=>e.name),['长安']);assert(p.layers.some(l=>l.options.form==='waterfall'));
  const variants=fixture('山中松下，河畔望松江。',[{text:'山中',kind:'place'},{text:'松下',kind:'place'},{text:'河畔',kind:'place'},{text:'松江',kind:'place'}]);const v=buildPlan(variants);assert.deepEqual(v.omitted.map(e=>e.name),['松江']);assert(v.layers.some(l=>l.tool==='tree'));
 });
 test('natural scenery is never invented solely from a normalized concept or missing presence',()=>{
@@ -19,7 +19,7 @@ test('natural scenery is never invented solely from a normalized concept or miss
 });
 test('pine, woods, ground and mountain form distinct structures without adding extra scenery',()=>{
  const p=buildPlan(benchmarks[0].analysis);assert.equal(p.layers.find(l=>l.tool==='tree').options.form,'pine');assert(!p.layers.some(l=>l.tool==='landscape'));assert(p.spatial[0].visualized);assert(!p.spatial[1].visualized);
- const woods=buildPlan(benchmarks[8].analysis);assert(woods.layers.find(l=>l.tool==='tree').instances.length>5);assert(woods.omitted.some(e=>e.name==='青苔'));
+ const woods=buildPlan(benchmarks[8].analysis);assert(woods.layers.find(l=>l.tool==='tree').instances.length>5);assert(woods.layers.some(l=>l.options.form==='moss'));
  const range=buildPlan(benchmarks[16].analysis);assert(range.layers.some(l=>l.tool==='landscape'&&l.options.form==='mountain'));
 });
 test('boat is kept singular, placed in water, and compound river-boat names do not become water',()=>{

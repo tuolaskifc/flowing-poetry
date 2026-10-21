@@ -2,12 +2,35 @@
 // Matching words alone never establishes presence, metaphor or movement.
 (function(root,factory){if(typeof module==='object'&&module.exports)module.exports=factory();else root.PoemImageryLexicon=factory();})(globalThis,()=>{
 const rules=[
+  {words:['天空','青天','九天','天'],tool:'landscape',options:{form:'sky'},exclude:['天津','天涯','天下','天真','天命']},
+  {words:['轻尘','尘土'],tool:'landscape',options:{form:'dust'},approximation:'以静态地表颗粒概括，不自动绘成扬尘'},
+  {words:['木兰舟','木兰船','柏舟'],tool:'boat'},
+  {words:['桂花酒','梅子酒'],tool:'wine',options:{form:'liquid'}},
+  {words:['马蹄莲'],tool:'flower',approximation:'马蹄莲按花意处理，不当作马蹄'},
+  {words:['疏影','树阴','树荫','树影','倒影'],tool:'landscape',options:{form:'shadow'},approximation:'以局部影痕表现，不额外增加整棵树'},
+  {words:['青苔','苔藓','苔'],tool:'landscape',options:{form:'moss'}},
+  {words:['返景','返照','夕照'],tool:'landscape',options:{form:'lightwash'}},
+  {words:['禅房','禅院','寺院','寺庙','古寺','佛寺','山寺','庙','寺'],tool:'dwelling',options:{kind:'temple'},approximation:'以寺院屋舍概括，不作具体建筑复原'},
+  {words:['客舍','茅舍','茅屋','草堂','人家','村舍','房舍','房屋','屋舍','屋','房'],tool:'dwelling',options:{kind:'house'},exclude:['房玄龄'],approximation:'以低层房舍概括用途不同的屋舍'},
+  {words:['白鹭','黄鹂','燕子','雁','鸦','夜莺','鸳鸯','沙鸥','青鸟','鹧鸪','鹤','鹊','雀','鸟','燕','鹭','鸥','鸭','鸿'],tool:'bird',exclude:['燕子楼','燕京','燕赵','燕山','燕国','鸿儒','杜鹃花'],approximation:'以通用写意鸟形表现，不细分物种'},
+  {words:['杜鹃'],tool:'bird',exclude:['杜鹃花'],approximation:'杜鹃按语义中的鸟或花选择画法'},
+  {words:['马蹄','蹄'],tool:'horse',projection:'whole-from-part',approximation:'以整匹马表现马蹄的主体，蹄数不折算马匹数'},
+  {words:['水田','稻田','田畴'],tool:'landscape',options:{form:'field'}},
+  {words:['瀑布','飞瀑','飞流'],tool:'landscape',options:{form:'waterfall'}},
+  {words:['星空','星辰','星光','星'],tool:'landscape',options:{form:'stars'},exclude:['星期','明星','星巴克']},
+  {words:['日光','阳光','夕阳','落日','斜日','朝阳','太阳','日'],tool:'landscape',options:{form:'sun'},exclude:['今日','明日','昨日','日夜','终日']},
+  {words:['火光','灯火','渔火','灯','火'],tool:'landscape',options:{form:'glow'},exclude:['欲燃','火红','火烧云']},
+  {words:['桃花','杏花'],tool:'plum-branch',options:{form:'sprig'},approximation:'以已有疏花枝概括春花，不细分花种'},
+  {words:['桂花','槐花','杜鹃花'],tool:'flower',approximation:'以通用花形概括，不细分花种'},
+  {words:['杨花'],tool:'catkins',approximation:'按飞絮意象借用细丝飞絮画法'},
+  {words:['松柏','柏'],tool:'tree',options:{form:'pine'},approximation:'以针叶树意概括松柏'},
+  {words:['梧桐','芭蕉','木兰'],tool:'tree',options:{form:'broadleaf'},approximation:'以树木轮廓概括，不作叶形辨识'},
   {words:['松树','松林','松间','松'],tool:'tree',options:{form:'pine'},exclude:['松柏','松江','松花江']},
   {words:['深林','树林','林','树','木'],tool:'tree',options:{form:'broadleaf'},exclude:['树影','树阴','树荫','木兰','木舟','木船','林逋','木兰舟']},
   {words:['远山','青山','群山','山'],tool:'landscape',options:{form:'mountain'},exclude:['山居','山园','山西','山东','山城']},
   {words:['野渡','渡口','江岸','河岸','岸边','岸','沙洲'],tool:'landscape',options:{form:'shore'}},
   {words:['原野','平野','田野','地面','草地'],tool:'landscape',options:{form:'ground'}},
-  {words:['曲径','野径','小径'],tool:'landscape',options:{form:'path'}},
+  {words:['曲径','野径','小径','深巷','小巷','巷'],tool:'landscape',options:{form:'path'}},
   {words:['柳絮'],tool:'catkins'},
   {words:['落花'],tool:'falling-petals'},
   {words:['菊花','黄华','菊'],tool:'flower-forms',options:{kind:'chrysanthemum'}},
@@ -17,7 +40,7 @@ const rules=[
   {words:['酒液','清酒','浊酒','美酒','酒'],tool:'wine',options:{form:'liquid'},exclude:['饮酒','饮','劝酒','醉酒','沽酒','买酒']},
   {words:['楼阁','楼台','楼宇','楼'],tool:'building'},
   {words:['兰花','兰草','兰'],tool:'orchid',exclude:['木兰','兰桡','兰舟','兰陵','兰台','兰亭']},
-  {words:['马'],tool:'horse',exclude:['司马','驸马','马蹄','马鞍','马车','马嵬','竹马']},
+  {words:['马'],tool:'horse',exclude:['司马','驸马','马鞍','马车','马嵬','竹马']},
   {words:['荷叶','莲叶'],tool:'lotus',options:{form:'leaf'}},
   {words:['莲花','荷花','荷苞','莲苞','莲'],tool:'lotus',options:{form:'flower'},exclude:['莲子','莲蓬','莲步','金莲','莲座']},
   {words:['红叶'],tool:'leaves',options:{color:'red'}},
@@ -31,12 +54,12 @@ const rules=[
   {words:['明月','月亮','月'],tool:'moon'},
   {words:['烟雾','薄雾','雾'],tool:'mist'}, {words:['云'],tool:'cloud'},
   {words:['舟','船'],tool:'boat'},
-  {words:['雨'],tool:'rain'}, {words:['江水','流水','清泉','泉水','春潮','潮水','潮','水','泉','江','溪','湖','河'],tool:'water'},
-  {words:['舟','船'],tool:'boat'}, {words:['长亭','亭'],tool:'pavilion'},
+  {words:['雨'],tool:'rain'}, {words:['江水','流水','细流','清泉','泉水','春潮','潮水','潮','水','泉','江','溪','湖','河'],tool:'water'},
+  {words:['长亭','亭'],tool:'pavilion'},
   {words:['石','岩'],tool:'rock'}, {words:['鱼'],tool:'fish'},
   {words:['花'],tool:'flower',exclude:['桃花','兰花','杜鹃','杨花','桂花','槐花','梅子','菊花','莲花','荷花']}
 ];
-const unsupportedTerms=['松柏','柏','梧桐','芭蕉','桃花','木兰','兰桡','莲子','莲蓬','杜鹃','杨花','梅子','燕','雁','鸦','夜莺','鸳鸯','沙鸥','青鸟','鹧鸪','桂花'];
+const unsupportedTerms=['兰桡','莲子','莲蓬','梅子'];
 function freeze(value){if(value&&typeof value==='object'){Object.values(value).forEach(freeze);Object.freeze(value);}return value;}
 return freeze({rules,unsupportedTerms});
 });

@@ -82,8 +82,8 @@ try{
     await until(`document.querySelectorAll('#rows tr').length===60`);
     if(await evaluate(`new URL(document.getElementById('poem-home').href).origin!==location.origin`))throw new Error('Progress return link leaves the main origin');
     await send('Page.navigate',{url:'http://127.0.0.1:4173/experiments/imagery-library/index.html#moon'});
-    await until(`window.imageryExperiment?.inspect().length===29&&window.imageryExperiment.inspect().every(l=>l.ready)`);
-    linkedPages={progressRows:60,readyTools:29,sameOrigin:true};
+    await until(`window.imageryExperiment?.inspect().length===31&&window.imageryExperiment.inspect().every(l=>l.ready)`);
+    linkedPages={progressRows:60,readyTools:31,sameOrigin:true};
   }
   if(process.argv.includes('--diagram')){
     await send('Emulation.setDeviceMetricsOverride',{width:1660,height:1110,deviceScaleFactor:1,mobile:false});

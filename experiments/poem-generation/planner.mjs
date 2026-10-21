@@ -3,11 +3,13 @@ import {createHash} from 'node:crypto';
 import lexicon from './imagery-lexicon.js';
 import {compose} from './composition.mjs';
 import {physicalPlace} from './physical-mapping.mjs';
+import {expressiveRule} from './expressive-mapping.mjs';
 import {arrangeScene} from './scene-layout.mjs';
-export const policyVersion='scene-composition-1';
+export const policyVersion='expressive-scene-1';
 const {rules,unsupportedTerms}=lexicon;
-const order=['landscape','moon','cloud','mist','building','tree','willow','bamboo','pavilion','horse','water','rock','boat','lotus','grass','orchid','plum-branch','flower','flower-forms','wine','leaves','surface-weather','fish','oriole','falling-petals','catkins','rain','snow'];
+const order=['landscape','moon','cloud','mist','dwelling','building','tree','willow','bamboo','pavilion','horse','water','rock','boat','lotus','grass','orchid','plum-branch','flower','flower-forms','wine','leaves','surface-weather','fish','bird','oriole','falling-petals','catkins','rain','snow'];
 const placements={
+  bird:{anchor:[320,190],at:[.62,.34],scale:.78},dwelling:{anchor:[320,307],at:[.66,.74],scale:1.05},
   landscape:{anchor:[320,194],at:[.5,.5],scale:1.5},tree:{anchor:[320,388],at:[.25,.9],scale:1.15},
   moon:{anchor:[320,175],at:[.76,.2],scale:.85},cloud:{anchor:[320,170],at:[.46,.2],scale:1.05},
   mist:{anchor:[320,190],at:[.5,.48],scale:1.4},water:{anchor:[320,130],at:[.5,.57],scale:1.5},
@@ -29,12 +31,8 @@ export function buildPlan(analysis){
     if(entity.role!=='scene'||entity.presence!=='present'){
       omitted.push({id:entity.id,name,reason:entity.role==='reference'?'仅为比喻参照，不当作实景':entity.presence==='absent'?'原文中缺席，不绘制':'出现情况不确定，暂不补画'});continue;
     }
-    const localSurface=physicalPlace(entity);
-    if(entity.kind==='abstract'||entity.kind==='person'||entity.kind==='place'&&!localSurface){
-      omitted.push({id:entity.id,name,reason:'暂未提供该人物、地点或抽象含义的绘画单元'});continue;
-    }
-    // Prefer exact source mentions. Concepts may normalize inflected mentions,
-    // but a specific unsupported organism never falls through to a generic one.
+    // Source mentions choose a pictorial family. Species and part names may
+    // borrow a declared local symbol; presence and reference roles stay semantic.
     const text=entity.mentions.join(' ')+' '+entity.concept;
     if(/风/.test(text)&&entity.kind==='environment'){
       const denied=analysis.relations.some(r=>r.source===entity.id&&['negated','conditional','possible','unclear'].includes(r.modality));
@@ -42,9 +40,11 @@ export function buildPlan(analysis){
       notes.push(denied?`${name}的作用未被确认，暂不启用风。`:`${name}作为风参数，不额外画风线；强弱是本次试画选择。`);continue;
     }
     const specificUnsupported=unsupportedTerms.some(word=>text.includes(word));
-    const findRule=value=>rules.find(r=>r.words.some(word=>value.includes(word))&&!r.exclude?.some(word=>value.includes(word)));
-    const rule=specificUnsupported?null:findRule(entity.mentions.join(' '))||findRule(text);
-    if(!rule){omitted.push({id:entity.id,name,reason:'该具体意象尚无可用形态；没有替换成通用树、花或鸟群'});continue;}
+    const findRule=value=>{let best=null,length=0;for(const r of rules){if(r.exclude?.some(word=>value.includes(word)))continue;for(const word of r.words)if(value.includes(word)&&word.length>length){best=r;length=word.length;}}return best;};
+    const rawRule=findRule(entity.mentions.join(' ')),rule=expressiveRule(entity,specificUnsupported?null:rawRule||findRule(text),analysis.poem);
+    const localSurface=physicalPlace(entity),physicalAbstract=entity.mentions.some(m=>/^(飞流|飞瀑|瀑布|水田|稻田|客舍|禅房|火光|灯火|渔火|返景|返照|夕照|疏影|树阴|树荫|树影|倒影|马蹄声|蹄声|马蹄)$/.test(m)||/^(莺|鸟|黄鹂|燕|雁|鹭|鸥|鸦|杜鹃|鹧鸪)(声|啼|鸣)$/.test(m));
+    if(entity.kind==='abstract'&&!physicalAbstract||entity.kind==='person'||entity.kind==='place'&&!localSurface){omitted.push({id:entity.id,name,reason:'该人物、地名或抽象含义暂不作实景补画'});continue;}
+    if(!rule){omitted.push({id:entity.id,name,reason:'该意象尚无合适的写意画法'});continue;}
     const options={...rule.options};
     if(rule.tool==='water')options.form='plane';
     if(rule.tool==='tree')options.crown=entity.mentions.some(m=>/林|夏木/.test(m))||entity.quantity?.mode==='many'?'wash':'lines';
@@ -55,7 +55,7 @@ export function buildPlan(analysis){
       const evidence=[...entity.mentions,...entity.evidence].join(' ');
       const sound=/莺[声啼鸣歌]|[听闻].{0,6}莺/.test(evidence)||/(?:只|但|惟)闻.{0,8}莺/.test(analysis.poem);
       const sight=/(?:见|看|望).{0,6}莺/.test(evidence);
-      if(sound&&!sight){omitted.push({id:entity.id,name,reason:'目前只有莺声或听闻线索，暂不补出可见鸟体'});continue;}
+      if(sound&&!sight)notes.push(`${name}借鸟鸣线索作鸟形联想，不声称原句明确给出了可见姿态。`);
       const birdRelations=analysis.relations.filter(r=>r.source===entity.id&&['moves','moves_toward','moves_away'].includes(r.type));
       const denied=birdRelations.some(r=>r.modality!=='asserted');
       const flying=!denied&&(/飞|翔|掠/.test(entity.mentions.join(' '))||birdRelations.some(r=>r.modality==='asserted'&&r.evidence.some(e=>/飞|翔|掠/.test(e))));
@@ -78,9 +78,13 @@ export function buildPlan(analysis){
     if(rule.tool==='snow'&&/积雪|雪地|覆雪/.test(text))options.state='settled';
     const freeze=analysis.relations.some(r=>r.source===entity.id&&['moves','moves_toward','moves_away','changes','disappears'].includes(r.type)&&r.modality!=='asserted');
     const key=rule.tool+JSON.stringify(options),existing=layers.find(l=>l.key===key);
-    if(existing){existing.entities.push(entity.id);existing.names.push(name);if(freeze)existing.animate=false;}
-    else layers.push({key,tool:rule.tool,entities:[entity.id],names:[name],options,animate:!freeze,placement:placements[rule.tool]});
+    if(existing){existing.entities.push(entity.id);existing.names.push(name);if(rule.projection)existing.projectedEntities.push(entity.id);if(freeze)existing.animate=false;}
+    else layers.push({key,tool:rule.tool,entities:[entity.id],projectedEntities:rule.projection?[entity.id]:[],names:[name],options,animate:!freeze,placement:placements[rule.tool]});
     entityTools.set(entity.id,rule.tool);
+    const drawnLayer=existing||layers[layers.length-1];
+    if(rule.approximation)drawnLayer.drawingLabel=({bird:'鸟意（写意借形）',tree:'树意（写意借形）','plum-branch':'疏花枝（写意借形）',flower:'花意（写意借形）',horse:'马意（由马蹄借形）',dwelling:options.kind==='temple'?'寺院屋舍':'房舍'})[rule.tool]||undefined;
+    if(rule.approximation)notes.push(`${name}：${rule.approximation}。这是本地写意借形，保留原词义。`);
+    if(rule.tool==='bird'&&/[声啼鸣]/.test([...entity.mentions,...entity.evidence].join(' ')))notes.push(`${name}可由鸣声借鸟形联想，不把绘出的姿态当作原文已明确看见的动作。`);
     if(freeze)notes.push(`${name}的动作被否定或尚未成立，保持静止试画。`);
     if(rule.tool==='flower-forms')notes.push(`${name}目前只画花冠示意，未补出枝叶或整株。`);
     if(rule.tool==='plum-branch')notes.push(`${name}采用带花与花苞的梅枝试画；枝形和花朵数量是本地选择，未实现整树或离枝落花。`);

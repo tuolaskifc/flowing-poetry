@@ -1,0 +1,839 @@
+{
+  "status": "passed",
+  "modelRequests": 0,
+  "savedRecordReplay": false,
+  "beforeCovered": 45,
+  "afterCovered": 72,
+  "entities": 75,
+  "cases": [
+    {
+      "id": "p01",
+      "poem": "明月松间照，清泉石上流。",
+      "basis": "authored-semantic-fixture",
+      "review": "待人工审美确认",
+      "before": {
+        "covered": 4,
+        "total": 4,
+        "tools": [
+          "moon",
+          "tree",
+          "water",
+          "rock"
+        ],
+        "instances": 6,
+        "missing": [],
+        "spatial": [
+          {
+            "type": "among",
+            "source": "i1",
+            "target": "i2",
+            "modality": "asserted",
+            "basis": "explicit",
+            "evidence": [
+              "明月松间照"
+            ],
+            "visualized": true,
+            "reason": "组织月体与树隙，不模拟穿枝照明"
+          },
+          {
+            "type": "on",
+            "source": "i3",
+            "target": "i4",
+            "modality": "asserted",
+            "basis": "explicit",
+            "evidence": [
+              "清泉石上流"
+            ],
+            "visualized": false,
+            "reason": "该空间关系与形态组合尚未适配"
+          }
+        ],
+        "scene": "waterside"
+      },
+      "after": {
+        "covered": 4,
+        "total": 4,
+        "tools": [
+          "moon",
+          "tree",
+          "water",
+          "rock"
+        ],
+        "instances": 6,
+        "missing": [],
+        "spatial": [
+          {
+            "type": "among",
+            "source": "i1",
+            "target": "i2",
+            "modality": "asserted",
+            "basis": "explicit",
+            "evidence": [
+              "明月松间照"
+            ],
+            "visualized": true,
+            "reason": "组织月体与树隙，不模拟穿枝照明"
+          },
+          {
+            "type": "on",
+            "source": "i3",
+            "target": "i4",
+            "modality": "asserted",
+            "basis": "explicit",
+            "evidence": [
+              "清泉石上流"
+            ],
+            "visualized": false,
+            "reason": "该空间关系与形态组合尚未适配"
+          }
+        ],
+        "scene": "waterside"
+      }
+    },
+    {
+      "id": "p02",
+      "poem": "渭城朝雨浥轻尘，客舍青青柳色新。",
+      "basis": "authored-semantic-fixture",
+      "review": "待人工审美确认",
+      "before": {
+        "covered": 2,
+        "total": 4,
+        "tools": [
+          "willow",
+          "rain"
+        ],
+        "instances": 2,
+        "missing": [
+          "轻尘",
+          "客舍"
+        ],
+        "spatial": [],
+        "scene": "study"
+      },
+      "after": {
+        "covered": 4,
+        "total": 4,
+        "tools": [
+          "landscape",
+          "dwelling",
+          "willow",
+          "rain"
+        ],
+        "instances": 4,
+        "missing": [],
+        "spatial": [],
+        "scene": "landscape"
+      }
+    },
+    {
+      "id": "p03",
+      "poem": "春潮带雨晚来急，野渡无人舟自横。",
+      "basis": "authored-semantic-fixture",
+      "review": "待人工审美确认",
+      "before": {
+        "covered": 4,
+        "total": 4,
+        "tools": [
+          "landscape",
+          "water",
+          "boat",
+          "rain"
+        ],
+        "instances": 4,
+        "missing": [],
+        "spatial": [
+          {
+            "type": "on",
+            "source": "i4",
+            "target": "i1",
+            "modality": "asserted",
+            "basis": "inferred",
+            "evidence": [
+              "春潮带雨晚来急，野渡无人舟自横。"
+            ],
+            "visualized": true,
+            "reason": "在水面区域定位，尚非物理承载"
+          }
+        ],
+        "scene": "waterside"
+      },
+      "after": {
+        "covered": 4,
+        "total": 4,
+        "tools": [
+          "landscape",
+          "water",
+          "boat",
+          "rain"
+        ],
+        "instances": 4,
+        "missing": [],
+        "spatial": [
+          {
+            "type": "on",
+            "source": "i4",
+            "target": "i1",
+            "modality": "asserted",
+            "basis": "inferred",
+            "evidence": [
+              "春潮带雨晚来急，野渡无人舟自横。"
+            ],
+            "visualized": true,
+            "reason": "在水面区域定位，尚非物理承载"
+          }
+        ],
+        "scene": "waterside"
+      }
+    },
+    {
+      "id": "p04",
+      "poem": "接天莲叶无穷碧，映日荷花别样红。",
+      "basis": "authored-semantic-fixture",
+      "review": "待人工审美确认",
+      "before": {
+        "covered": 2,
+        "total": 3,
+        "tools": [
+          "lotus",
+          "lotus"
+        ],
+        "instances": 56,
+        "missing": [
+          "日"
+        ],
+        "spatial": [],
+        "scene": "study"
+      },
+      "after": {
+        "covered": 3,
+        "total": 3,
+        "tools": [
+          "landscape",
+          "lotus",
+          "lotus"
+        ],
+        "instances": 57,
+        "missing": [],
+        "spatial": [],
+        "scene": "landscape"
+      }
+    },
+    {
+      "id": "p05",
+      "poem": "疏影横斜水清浅，暗香浮动月黄昏。",
+      "basis": "authored-semantic-fixture",
+      "review": "待人工审美确认",
+      "before": {
+        "covered": 1,
+        "total": 3,
+        "tools": [
+          "moon"
+        ],
+        "instances": 1,
+        "missing": [
+          "疏影",
+          "水",
+          "暗香"
+        ],
+        "spatial": [],
+        "scene": "study"
+      },
+      "after": {
+        "covered": 3,
+        "total": 3,
+        "tools": [
+          "landscape",
+          "moon",
+          "water"
+        ],
+        "instances": 3,
+        "missing": [
+          "暗香"
+        ],
+        "spatial": [],
+        "scene": "waterside"
+      }
+    },
+    {
+      "id": "p06",
+      "poem": "乱花渐欲迷人眼，浅草才能没马蹄。",
+      "basis": "authored-semantic-fixture",
+      "review": "待人工审美确认",
+      "before": {
+        "covered": 2,
+        "total": 3,
+        "tools": [
+          "grass",
+          "flower"
+        ],
+        "instances": 62,
+        "missing": [
+          "马蹄"
+        ],
+        "spatial": [],
+        "scene": "study"
+      },
+      "after": {
+        "covered": 3,
+        "total": 3,
+        "tools": [
+          "horse",
+          "grass",
+          "flower"
+        ],
+        "instances": 63,
+        "missing": [],
+        "spatial": [],
+        "scene": "study"
+      }
+    },
+    {
+      "id": "p07",
+      "poem": "两个黄鹂鸣翠柳，一行白鹭上青天。",
+      "basis": "authored-semantic-fixture",
+      "review": "待人工审美确认",
+      "before": {
+        "covered": 1,
+        "total": 4,
+        "tools": [
+          "willow"
+        ],
+        "instances": 1,
+        "missing": [
+          "黄鹂",
+          "白鹭",
+          "天"
+        ],
+        "spatial": [],
+        "scene": "study"
+      },
+      "after": {
+        "covered": 4,
+        "total": 4,
+        "tools": [
+          "landscape",
+          "willow",
+          "bird",
+          "bird"
+        ],
+        "instances": 13,
+        "missing": [],
+        "spatial": [],
+        "scene": "landscape"
+      }
+    },
+    {
+      "id": "p08",
+      "poem": "竹外桃花三两枝，春江水暖鸭先知。",
+      "basis": "authored-semantic-fixture",
+      "review": "待人工审美确认",
+      "before": {
+        "covered": 2,
+        "total": 4,
+        "tools": [
+          "bamboo",
+          "water"
+        ],
+        "instances": 19,
+        "missing": [
+          "桃花",
+          "鸭"
+        ],
+        "spatial": [
+          {
+            "type": "outside",
+            "source": "i2",
+            "target": "i1",
+            "modality": "asserted",
+            "basis": "explicit",
+            "evidence": [
+              "竹外桃花三两枝"
+            ],
+            "visualized": false,
+            "reason": "关系的一端缺少独立画法"
+          }
+        ],
+        "scene": "waterside"
+      },
+      "after": {
+        "covered": 4,
+        "total": 4,
+        "tools": [
+          "bamboo",
+          "water",
+          "plum-branch",
+          "bird"
+        ],
+        "instances": 26,
+        "missing": [],
+        "spatial": [
+          {
+            "type": "outside",
+            "source": "i2",
+            "target": "i1",
+            "modality": "asserted",
+            "basis": "explicit",
+            "evidence": [
+              "竹外桃花三两枝"
+            ],
+            "visualized": true,
+            "reason": "表现邻接或外侧；左右方向为本地选择"
+          }
+        ],
+        "scene": "waterside"
+      }
+    },
+    {
+      "id": "p09",
+      "poem": "返景入深林，复照青苔上。",
+      "basis": "authored-semantic-fixture",
+      "review": "待人工审美确认",
+      "before": {
+        "covered": 1,
+        "total": 3,
+        "tools": [
+          "tree"
+        ],
+        "instances": 14,
+        "missing": [
+          "返景",
+          "青苔"
+        ],
+        "spatial": [],
+        "scene": "woodland"
+      },
+      "after": {
+        "covered": 3,
+        "total": 3,
+        "tools": [
+          "landscape",
+          "landscape",
+          "tree"
+        ],
+        "instances": 16,
+        "missing": [],
+        "spatial": [],
+        "scene": "woodland"
+      }
+    },
+    {
+      "id": "p10",
+      "poem": "曲径通幽处，禅房花木深。",
+      "basis": "authored-semantic-fixture",
+      "review": "待人工审美确认",
+      "before": {
+        "covered": 3,
+        "total": 4,
+        "tools": [
+          "landscape",
+          "tree",
+          "flower"
+        ],
+        "instances": 30,
+        "missing": [
+          "禅房"
+        ],
+        "spatial": [],
+        "scene": "woodland"
+      },
+      "after": {
+        "covered": 4,
+        "total": 4,
+        "tools": [
+          "landscape",
+          "dwelling",
+          "tree",
+          "flower"
+        ],
+        "instances": 31,
+        "missing": [],
+        "spatial": [],
+        "scene": "woodland"
+      }
+    },
+    {
+      "id": "p11",
+      "poem": "野旷天低树，江清月近人。",
+      "basis": "authored-semantic-fixture",
+      "review": "待人工审美确认",
+      "before": {
+        "covered": 4,
+        "total": 6,
+        "tools": [
+          "landscape",
+          "moon",
+          "tree",
+          "water"
+        ],
+        "instances": 6,
+        "missing": [
+          "天",
+          "人"
+        ],
+        "spatial": [],
+        "scene": "waterside"
+      },
+      "after": {
+        "covered": 5,
+        "total": 6,
+        "tools": [
+          "landscape",
+          "landscape",
+          "moon",
+          "tree",
+          "water"
+        ],
+        "instances": 7,
+        "missing": [
+          "人"
+        ],
+        "spatial": [],
+        "scene": "waterside"
+      }
+    },
+    {
+      "id": "p12",
+      "poem": "孤舟蓑笠翁，独钓寒江雪。",
+      "basis": "authored-semantic-fixture",
+      "review": "待人工审美确认",
+      "before": {
+        "covered": 3,
+        "total": 4,
+        "tools": [
+          "water",
+          "boat",
+          "snow"
+        ],
+        "instances": 3,
+        "missing": [
+          "蓑笠翁"
+        ],
+        "spatial": [
+          {
+            "type": "on",
+            "source": "i1",
+            "target": "i3",
+            "modality": "asserted",
+            "basis": "inferred",
+            "evidence": [
+              "孤舟蓑笠翁，独钓寒江雪。"
+            ],
+            "visualized": true,
+            "reason": "在水面区域定位，尚非物理承载"
+          }
+        ],
+        "scene": "waterside"
+      },
+      "after": {
+        "covered": 3,
+        "total": 4,
+        "tools": [
+          "water",
+          "boat",
+          "snow"
+        ],
+        "instances": 3,
+        "missing": [
+          "蓑笠翁"
+        ],
+        "spatial": [
+          {
+            "type": "on",
+            "source": "i1",
+            "target": "i3",
+            "modality": "asserted",
+            "basis": "inferred",
+            "evidence": [
+              "孤舟蓑笠翁，独钓寒江雪。"
+            ],
+            "visualized": true,
+            "reason": "在水面区域定位，尚非物理承载"
+          }
+        ],
+        "scene": "waterside"
+      }
+    },
+    {
+      "id": "p13",
+      "poem": "小楼一夜听春雨，深巷明朝卖杏花。",
+      "basis": "authored-semantic-fixture",
+      "review": "待人工审美确认",
+      "before": {
+        "covered": 3,
+        "total": 4,
+        "tools": [
+          "building",
+          "flower",
+          "rain"
+        ],
+        "instances": 12,
+        "missing": [
+          "深巷"
+        ],
+        "spatial": [],
+        "scene": "study"
+      },
+      "after": {
+        "covered": 4,
+        "total": 4,
+        "tools": [
+          "landscape",
+          "building",
+          "plum-branch",
+          "rain"
+        ],
+        "instances": 4,
+        "missing": [],
+        "spatial": [],
+        "scene": "landscape"
+      }
+    },
+    {
+      "id": "p14",
+      "poem": "野径云俱黑，江船火独明。",
+      "basis": "authored-semantic-fixture",
+      "review": "待人工审美确认",
+      "before": {
+        "covered": 3,
+        "total": 4,
+        "tools": [
+          "landscape",
+          "cloud",
+          "boat"
+        ],
+        "instances": 3,
+        "missing": [
+          "火"
+        ],
+        "spatial": [],
+        "scene": "landscape"
+      },
+      "after": {
+        "covered": 4,
+        "total": 4,
+        "tools": [
+          "landscape",
+          "landscape",
+          "cloud",
+          "boat"
+        ],
+        "instances": 4,
+        "missing": [],
+        "spatial": [],
+        "scene": "landscape"
+      }
+    },
+    {
+      "id": "p15",
+      "poem": "飞流直下三千尺，疑是银河落九天。",
+      "basis": "authored-semantic-fixture",
+      "review": "待人工审美确认",
+      "before": {
+        "covered": 0,
+        "total": 2,
+        "tools": [],
+        "instances": 0,
+        "missing": [
+          "飞流",
+          "银河",
+          "九天"
+        ],
+        "spatial": [],
+        "scene": "study"
+      },
+      "after": {
+        "covered": 2,
+        "total": 2,
+        "tools": [
+          "landscape",
+          "landscape"
+        ],
+        "instances": 2,
+        "missing": [
+          "银河"
+        ],
+        "spatial": [],
+        "scene": "landscape"
+      }
+    },
+    {
+      "id": "p16",
+      "poem": "泉眼无声惜细流，树阴照水爱晴柔。",
+      "basis": "authored-semantic-fixture",
+      "review": "待人工审美确认",
+      "before": {
+        "covered": 1,
+        "total": 4,
+        "tools": [
+          "water"
+        ],
+        "instances": 1,
+        "missing": [
+          "细流",
+          "树阴",
+          "水"
+        ],
+        "spatial": [],
+        "scene": "waterside"
+      },
+      "after": {
+        "covered": 4,
+        "total": 4,
+        "tools": [
+          "landscape",
+          "water"
+        ],
+        "instances": 2,
+        "missing": [],
+        "spatial": [],
+        "scene": "waterside"
+      }
+    },
+    {
+      "id": "p17",
+      "poem": "江碧鸟逾白，山青花欲燃。",
+      "basis": "authored-semantic-fixture",
+      "review": "待人工审美确认",
+      "before": {
+        "covered": 3,
+        "total": 4,
+        "tools": [
+          "landscape",
+          "water",
+          "flower"
+        ],
+        "instances": 28,
+        "missing": [
+          "鸟"
+        ],
+        "spatial": [],
+        "scene": "waterside"
+      },
+      "after": {
+        "covered": 4,
+        "total": 4,
+        "tools": [
+          "landscape",
+          "water",
+          "flower",
+          "bird"
+        ],
+        "instances": 32,
+        "missing": [],
+        "spatial": [],
+        "scene": "waterside"
+      }
+    },
+    {
+      "id": "p18",
+      "poem": "星垂平野阔，月涌大江流。",
+      "basis": "authored-semantic-fixture",
+      "review": "待人工审美确认",
+      "before": {
+        "covered": 3,
+        "total": 4,
+        "tools": [
+          "landscape",
+          "moon",
+          "water"
+        ],
+        "instances": 3,
+        "missing": [
+          "星"
+        ],
+        "spatial": [],
+        "scene": "waterside"
+      },
+      "after": {
+        "covered": 4,
+        "total": 4,
+        "tools": [
+          "landscape",
+          "landscape",
+          "moon",
+          "water"
+        ],
+        "instances": 4,
+        "missing": [],
+        "spatial": [],
+        "scene": "waterside"
+      }
+    },
+    {
+      "id": "p19",
+      "poem": "荷风送香气，竹露滴清响。",
+      "basis": "authored-semantic-fixture",
+      "review": "待人工审美确认",
+      "before": {
+        "covered": 2,
+        "total": 3,
+        "tools": [
+          "bamboo",
+          "surface-weather"
+        ],
+        "instances": 19,
+        "missing": [
+          "香气"
+        ],
+        "spatial": [],
+        "scene": "study"
+      },
+      "after": {
+        "covered": 2,
+        "total": 3,
+        "tools": [
+          "bamboo",
+          "surface-weather"
+        ],
+        "instances": 19,
+        "missing": [
+          "香气"
+        ],
+        "spatial": [],
+        "scene": "study"
+      }
+    },
+    {
+      "id": "p20",
+      "poem": "漠漠水田飞白鹭，阴阴夏木啭黄鹂。",
+      "basis": "authored-semantic-fixture",
+      "review": "待人工审美确认",
+      "before": {
+        "covered": 1,
+        "total": 4,
+        "tools": [
+          "tree"
+        ],
+        "instances": 14,
+        "missing": [
+          "水田",
+          "白鹭",
+          "黄鹂"
+        ],
+        "spatial": [],
+        "scene": "woodland"
+      },
+      "after": {
+        "covered": 4,
+        "total": 4,
+        "tools": [
+          "landscape",
+          "tree",
+          "bird",
+          "bird"
+        ],
+        "instances": 23,
+        "missing": [],
+        "spatial": [],
+        "scene": "woodland"
+      }
+    }
+  ],
+  "spatialStudy": {
+    "basis": "authored-semantic-fixture",
+    "outsideGroupsSeparated": true,
+    "reflectionChangesPng": true
+  },
+  "mobileWidth": 390,
+  "runtimeErrors": []
+}

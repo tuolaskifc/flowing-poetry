@@ -47,7 +47,7 @@
     ]
   },
   "plan": {
-    "version": "scene-composition-1",
+    "version": "expressive-scene-1",
     "seed": 3781237684,
     "settings": {
       "wind": 0,
@@ -60,6 +60,7 @@
         "entities": [
           "i2"
         ],
+        "projectedEntities": [],
         "names": [
           "楼"
         ],
@@ -121,6 +122,7 @@
         "entities": [
           "i1"
         ],
+        "projectedEntities": [],
         "names": [
           "梅枝"
         ],
@@ -182,6 +184,7 @@
         "entities": [
           "i3"
         ],
+        "projectedEntities": [],
         "names": [
           "酒杯"
         ],
@@ -253,7 +256,7 @@
       "楼采用二层楼体试画，层数与门窗排列是本地选择；不等同于具体历史建筑，也未实现人物登楼。",
       "酒杯按明确提到的容器绘制风格化轮廓，不作历史器型复原。",
       "位置、大小、笔触与默认微动是本地试画选择；数量解释与本地显示数量分别记录。",
-      "未明说的群落数量、疏密、近中远层次与变体均为本地构图选择；不增加新物种，不把铺展词换算成精确物体数量。"
+      "未明说的群落数量、疏密、近中远层次与变体均为本地构图选择；种类可按已声明的写意画法概括，不把铺展词换算成精确物体数量。"
     ],
     "relations": []
   },
@@ -264,8 +267,8 @@
       {
         "id": "building",
         "seed": 3781237684,
-        "time": 0.13700000004768662,
-        "ticks": 5,
+        "time": 0.11360000001192384,
+        "ticks": 4,
         "paused": true,
         "disposed": false,
         "ready": true,
@@ -289,8 +292,8 @@
       {
         "id": "plum-branch",
         "seed": 3781237781,
-        "time": 0.13660000001192385,
-        "ticks": 5,
+        "time": 0.11330000000000291,
+        "ticks": 4,
         "paused": true,
         "disposed": false,
         "ready": true,
@@ -310,8 +313,8 @@
       {
         "id": "wine",
         "seed": 3781237878,
-        "time": 0.13640000002384478,
-        "ticks": 5,
+        "time": 0.11310000001192384,
+        "ticks": 4,
         "paused": true,
         "disposed": false,
         "ready": true,

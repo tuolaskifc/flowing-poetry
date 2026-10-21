@@ -21,6 +21,7 @@ window.PoemTrialScene=(()=>{
     for(const entry of entries()){
       const source=hosts[entry.sourceIndex]?.querySelector('canvas');if(!source)continue;
       const {anchor,at,scale}=entry.placement;const layer=plan.layers[entry.layer];
+      if(layer.grounding){c.save();c.translate(at[0]*W,at[1]*H+5);c.scale(scale*1.8,scale*.24);const g=c.createRadialGradient(0,0,4,0,0,95);g.addColorStop(0,window.PoemDrawing.paletteFor(shared.palette).main+'50');g.addColorStop(1,'transparent');c.fillStyle=g;c.fillRect(-100,-100,200,200);c.restore();}
       c.save();if(layer.surface){const y=layer.surface.top*H;c.beginPath();c.rect(0,y,W,H-y);c.clip();const wash=c.createLinearGradient(0,y,0,H);wash.addColorStop(0,'transparent');wash.addColorStop(1,window.PoemDrawing.paletteFor(shared.palette).main+'70');c.fillStyle=wash;c.fillRect(0,y,W,H-y);}
       c.globalAlpha=entry.opacity;c.drawImage(source,at[0]*W-anchor[0]*scale,at[1]*H-anchor[1]*scale,640*scale,388*scale);c.restore();
       if(layer.reflection){const line=layer.reflection.waterline*H;c.save();c.beginPath();for(let y=line;y<H;y+=7)c.rect(0,y,W,4);c.clip();c.globalAlpha=.15*entry.opacity;c.translate(0,2*line);c.scale(1,-1);c.drawImage(source,at[0]*W-anchor[0]*scale,at[1]*H-anchor[1]*scale,640*scale,388*scale);c.restore();}
