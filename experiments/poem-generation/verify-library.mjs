@@ -23,7 +23,7 @@ try{
   const screenshot=async(name,height=1300)=>{const shot=await send('Page.captureScreenshot',{format:'png',captureBeyondViewport:true,clip:{x:0,y:0,width:1280,height,scale:1}});await writeFile(resolve(out,name+'.png'),Buffer.from(shot.data,'base64'));};
   await send('Runtime.enable');await send('Page.enable');await send('Network.enable');await send('Emulation.setDeviceMetricsOverride',{width:1280,height:1000,deviceScaleFactor:1,mobile:false});
   await navigate('/');await until(`!document.getElementById('generate').disabled`);
-  assert.equal(await evaluate(`document.getElementById('library-choice').value`),'p01');assert.equal(await evaluate(`document.getElementById('library-choice').options.length`),21);assert(await evaluate(`document.getElementById('output').hidden`));
+  assert.equal(await evaluate(`document.getElementById('library-choice').value`),'p01');assert.equal(await evaluate(`document.getElementById('library-choice').options.length`),33);assert.equal(await evaluate(`Array.from(document.getElementById('library-choice').options).filter(o=>/^[g][0-9]+$/.test(o.value)).length`),12);assert(await evaluate(`document.getElementById('output').hidden`));
   assert.equal(await evaluate(`document.querySelector('.online-poetry').open`),false);
   const visited=await evaluate(`(()=>{const ids=[];for(let i=0;i<20;i++){ids.push(document.getElementById('library-choice').value);document.getElementById('recommend').click();}return ids;})()`);assert.equal(new Set(visited).size,20);assert.equal(modelPosts,0);
   await navigate('/poem-flow/library.html');await until(`document.querySelectorAll('#rows tr').length===20`);

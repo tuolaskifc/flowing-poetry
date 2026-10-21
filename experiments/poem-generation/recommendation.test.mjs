@@ -19,7 +19,7 @@ test('months, named places and unsupported compounds do not become drawable subs
 });
 test('ranking deduplicates poems and rewards drawable diversity instead of repetition or metadata',()=>{
   const ranked=rankCandidates([{poem:'花花花花花',source:{title:'明月清泉柳絮'}},{poem:'提剑出燕京'},{poem:'月照水，柳含烟。'},{poem:'月照水柳含烟'}]);
-  assert.equal(ranked.length,3);assert.equal(ranked[0].selection.toolCount,3);assert.equal(ranked[1].selection.toolCount,1);assert.equal(ranked[2].selection.toolCount,0);
+  assert.equal(ranked.length,3);assert.equal(ranked[0].selection.toolCount,4);assert(ranked[0].selection.hits.some(h=>h.tool==='mist'));assert.equal(ranked[1].selection.toolCount,1);assert.equal(ranked[2].selection.toolCount,0);
   assert.equal(scorePoem('花花花花花').score,scorePoem('花').score);
   assert.equal(scorePoem('月水柳竹草').score,scorePoem('月水柳竹').score);
 });

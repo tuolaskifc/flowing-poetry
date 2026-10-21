@@ -4,13 +4,16 @@ const frac=n=>n-Math.floor(n);
 export function organizeRegions(analysis,layers,scene){
  const get=(tool,form)=>layers.find(l=>l.tool===tool&&(!form||l.options.form===form));
  const water=get('water'),pine=get('tree','pine'),blossom=get('tree','blossom'),forest=layers.find(l=>l.tool==='tree'&&l.options.form!=='blossom'),willow=get('willow'),bamboo=get('bamboo'),house=get('dwelling'),building=get('building'),boat=get('boat'),figure=get('figure'),field=get('landscape','field'),fall=get('landscape','waterfall'),light=get('landscape','lightwash'),path=get('landscape','path'),rock=get('rock');
- const setting=fall?'mountain-waterfall':field?'paddy-woodland':light&&forest?'forest-light':house?.options.kind==='temple'&&forest?'woodland-retreat':blossom&&bamboo&&water?'blossom-river':pine&&rock&&water?'mountain-stream':(house&&willow)||(building&&blossom)?'settlement':boat&&get('snow')?'winter-fishing':figure&&water?'riverside-view':null;
+ const mountain=get('landscape','mountain'),sun=get('landscape','sun'),mist=get('mist'),grass=get('grass');
+ const village=house?.names.some(m=>/^(孤|荒|山|小)?村(庄|落)?$/.test(m));
+ const opposing=mountain?.names.some(m=>/两岸/.test(m));
+ const setting=fall?'mountain-waterfall':field&&water?'field-river':field?'paddy-woodland':pine&&rock&&water?'mountain-stream':light&&forest?'forest-light':house?.options.kind==='temple'&&forest?'woodland-retreat':blossom&&bamboo&&water?'blossom-river':(house&&willow)||(building&&blossom)?'settlement':village?'village':opposing&&boat?'mountain-channel':bamboo&&mountain&&sun?'bamboo-hillside':bamboo&&forest?'mixed-woodland':water&&grass?.options.form==='reed'?'reed-bank':water&&forest&&grass?'wooded-creek':blossom&&!water?'flowering-grove':mountain&&path?'mountain-trails':boat&&get('snow')?'winter-fishing':figure&&water?'riverside-view':null;
  if(!setting)return;
  scene.kind=setting;scene.basis='local-context';scene.regions={};scene.supports=[];
  scene.notes.push('先划分承托地形、群落与主体活动区域；场景密度和背景依托是本地构图推断，不冒充原文明示意象。');
  const region=(name,polygon)=>{scene.regions[name]=polygon;return polygon;};
  const place=(l,placements,z)=>{if(!l)return;for(const [i,v] of l.instances.entries()){Object.assign(v.placement,placements(i,l.instances.length));v.depth=i/l.instances.length*.6;}l.placement={...l.placement,at:[...l.instances[0].placement.at]};if(z!==undefined)l.z=z;};
- const density=(l,n)=>{if(!l||l.quantity.exact||l.quantity.items.some(q=>q.mode==='exact'&&q.scope==='individual'))return;const source=structuredClone(l.instances);l.instances=Array.from({length:n},(_,i)=>({...structuredClone(source[i%source.length]),variant:i%Math.min(3,n)}));l.quantity.rendered=n;l.quantity.exact=false;l.quantityLabel=`依场景疏密试画 ${n} 个单元；原文未给精确株数`;};
+ const density=(l,n)=>{if(!l||l.quantity.exact||l.quantity.items.some(q=>q.mode==='exact'&&q.scope==='individual'))return;const source=structuredClone(l.instances);l.instances=Array.from({length:n},(_,i)=>({...structuredClone(source[i%source.length]),variant:i%Math.min(3,n)}));l.quantity.rendered=n;l.quantity.exact=false;l.quantityLabel=`依场景疏密试画 ${n} 个单元；原文未给精确个体数`;};
  const support=(form,at,scale,z,reason,clip)=>{
   if(get('landscape',form))return get('landscape',form);
   const placement={anchor:[320,194],at,scale},l={tool:'landscape',names:[`构图依托·${form==='mountain'?'山势':'地面'}`],entities:[],projectedEntities:[],options:{form},animate:false,placement:structuredClone(placement),instances:[{placement:structuredClone(placement),variant:0,depth:0,opacity:1}],singleUnit:false,inferred:true,provenance:{basis:'local-context',reason},quantity:{rendered:1,exact:false,items:[]},quantityLabel:'背景依托，不计入意象覆盖',z,...(clip?{clip}:{})};layers.push(l);scene.supports.push({form,reason});return l;
@@ -22,6 +25,61 @@ export function organizeRegions(analysis,layers,scene){
   density(pine,6);place(pine,(i,n)=>{const split=Math.ceil(n/2),left=i<split,t=left?i/Math.max(1,split-1):(i-split)/Math.max(1,n-split-1);return {at:left?[.1+t*.26,.72+t*.14]:[.80+t*.18,.66+t*.2],scale:left?.9+t*.24:.65+t*.16};},8);
   density(rock,5);place(rock,(i,n)=>({at:n<=5?[[.50,.68],[.67,.76],[.61,.87],[.85,.95],[.43,.77]][i]:[.48+frac(i*.618)*.38,.64+i/n*.33],scale:(n>5?.35:.48)+(i%3)*.13}),12);
   const moon=get('moon');place(moon,()=>({at:[.60,.21],scale:.65}),-5);
+  if(light)place(light,()=>({anchor:[320,275],at:[.58,.76],scale:.9}),18);
+ }
+ if(setting==='village'){
+  ground('村落房舍和环村树木共同落地');region('village',[[.32,.58],[.75,.58],[.82,.85],[.28,.85]]);
+  place(house,(i,n)=>({at:[.38+(i+.5)/n*.37,.70+Math.sin(i*2.3)*.04],scale:.60+(i%2)*.12}),6);
+  if(forest){density(forest,12);place(forest,(i,n)=>({anchor:[320,388],at:i<n/2?[.04+i/(n/2)*.23,.72+frac(i*.618)*.24]:[.79+frac(i*.618)*.19,.68+frac(i*.4)*.27],scale:.72+frac(i*.41)*.43}),9);forest.regionalRelation='outside';}
+  if(sun)place(sun,()=>({anchor:[320,95],at:[.66,.30],scale:.8}),-25);
+  if(mist)place(mist,()=>({at:[.5,.45],scale:1.4}),-5);
+ }
+ if(setting==='flowering-grove'){
+  ground('疏花树的树根与地表相接');region('grove',[[.15,.6],[.85,.6],[1,1],[0,1]]);
+  place(blossom,(i,n)=>({anchor:[320,388],at:n===1?[.50,.93]:[.16+(i+.5)/n*.72,.78+frac(i*.618)*.17],scale:n===1?1.6:.85}),10);
+ }
+ if(setting==='mixed-woodland'){
+  ground('竹深树密共同组成林地');region('woodland',[[0,.2],[1,.2],[1,1],[0,1]]);
+  density(forest,17);place(forest,(i,n)=>({anchor:[320,388],at:[frac(i*.618+.04),.66+i/n*.35],scale:.85+i/n*.72+Math.sin(i*2.1)*.33}),7);
+  density(bamboo,14);place(bamboo,(i,n)=>({at:[.03+frac(i*.618)*.49,.76+i/n*.25],scale:.8+frac(i*.31)*.4}),12);
+ }
+ if(setting==='wooded-creek'){
+  ground('树根与幽草生于溪岸，溪流另分水域');region('bank',[[0,.6],[.43,.6],[.58,1],[0,1]]);
+  water.clip=region('water',[[.48,.46],[.66,.46],[.55,.67],[.83,1.1],[.48,1.1],[.37,.70]]);
+  density(forest,12);place(forest,(i,n)=>({anchor:[320,388],at:i<n/2?[.03+frac(i*.618)*.28,.66+i/n*.35]:[.8+frac(i*.618)*.19,.73+frac(i*.31)*.24],scale:.9+frac(i*.4)*.48}),8);
+  place(grass,(i,n)=>({at:[.08+frac(i*.618)*.35,.74+i/n*.24],scale:.38+i/n*.32}),13);
+  for(const birds of layers.filter(l=>['bird','oriole'].includes(l.tool))){if(birds.tool==='bird'&&!/飞|翔/.test(analysis.poem))birds.options.pose='resting';place(birds,(i,n)=>({at:[.12+i/n*.17,.43+frac(i*.618)*.16],scale:.43+i/n*.15}),16);}
+ }
+ if(setting==='reed-bank'){
+  const bank=region('bank',[[0,.62],[.25,.62],[.40,.83],[.28,1.1],[0,1.1]]);const g=ground('芦穗与人影位于近岸，水域留给惊起的鸟');g.clip=bank;
+  water.clip=region('water',[[.25,.46],[1.1,.46],[1.1,1.1],[.28,1.1],[.40,.83],[.25,.62]]);
+  density(grass,14);place(grass,(i,n)=>({at:[.04+frac(i*.618)*.31,.75+i/n*.26],scale:.76+frac(i*.31)*.4}),13);
+  for(const birds of layers.filter(l=>l.tool==='bird'))place(birds,(i,n)=>({at:[.50+(i+.5)/n*.29,.60-i/n*.12],scale:.65}),20);
+  if(figure)place(figure,()=>({at:[.19,.84],scale:.55}),22);
+  scene.notes.push('本次鸟姿取惊起后的飞态；从临水站立到飞入芦丛的时间编排尚未实现。');
+ }
+ if(setting==='bamboo-hillside'){
+  ground('山间竹林有共同坡面');region('bamboo',[[.4,.5],[1,.5],[1,1],[.4,1]]);
+  place(bamboo,(i,n)=>({at:[.43+frac(i*.618)*.55,.74+i/n*.26],scale:.88+frac(i*.31)*.42}),8);
+  place(sun,()=>({anchor:[320,95],at:[.63,.45],scale:.85}),-20);sun.regionalRelation='among';
+  if(mist){place(mist,()=>({at:[.43,.42],scale:1.4}),-15);mist.regionalRelation='outside';}
+ }
+ if(setting==='mountain-channel'){
+  ground('两岸间留出水路，作为孤帆所指舟身的依托');
+  mountain.options.relief='single';density(mountain,2);place(mountain,(i,n)=>({anchor:[320,330],at:[.20+i/Math.max(1,n-1)*.6,.61],scale:1.18}),-30);
+  const placement={anchor:[320,135],at:[.5,.46],scale:1.6};const inferred={tool:'water',entities:[],projectedEntities:[],names:['构图依托·两岸间水域'],options:{form:'plane'},animate:false,placement:structuredClone(placement),instances:[{placement:structuredClone(placement),variant:0,depth:0,opacity:1}],quantity:{rendered:1,exact:false,items:[]},quantityLabel:'由两岸及帆的场景推断，不计入意象覆盖',inferred:true,provenance:{basis:'local-context',reason:'两岸与帆共同暗示水路'},surface:{top:.46,bottom:1},clip:region('channel',[[.46,.46],[.58,.46],[.61,.65],[.72,.84],[.90,1.1],[.38,1.1],[.43,.77],[.44,.6]]),z:-10};layers.push(inferred);
+  place(boat,()=>({at:[.51,.70],scale:.70}),20);if(sun)place(sun,()=>({anchor:[320,95],at:[.55,.34],scale:.55}),-25);
+ }
+ if(setting==='mountain-trails'){
+  ground('山势下方承托路径');region('trails',[[0,.6],[1,.6],[1,1],[0,1]]);
+  density(path,3);place(path,(i,n)=>({anchor:[310,255],at:[.12+(i+.5)/n*.76,.68-(i%2)*.05],scale:1.1+(i%2)*.3}),2);
+ }
+ if(setting==='field-river'){
+  ground('田面和绕田水道之外仍有连贯地表');
+  region('field',[[0,.44],[.62,.44],[.59,.66],[.33,1.1],[0,1.1]]);field.clip=scene.regions.field;
+  place(field,()=>({anchor:[320,194],at:[.40,.47],scale:1.9}),-12);
+  water.clip=region('river',[[.66,.43],[.81,.43],[.74,.63],[.57,.85],[.23,1.1],[-.05,1.1],[.40,.83],[.59,.61]]);
+  if(mountain)place(mountain,(i,n)=>({anchor:[320,330],at:[.22+i/Math.max(1,n-1)*.55,.46],scale:.94}),-30);
  }
  if(setting==='settlement'){
   ground('屋舍、巷道与树根共享可见地面');region('land',[[0,.55],[1,.55],[1,1],[0,1]]);

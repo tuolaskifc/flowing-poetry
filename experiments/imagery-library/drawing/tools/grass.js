@@ -2,8 +2,8 @@
 window.PoemDrawing.register({
   id:'grass',name:'草 · 露 · 霜',subtitle:'风经过草尖，露与霜留在叶上。',
   credit:'本项目试作 · 草叶曲线与附着层',sources:['project'],reference:'drawing/README.md#本轮植物与天气',
-  note:'固定 9 簇、每簇 6 片草叶；露珠和霜线按选择附在叶面，不在空中降落。当前载体仅为草叶。',
-  controls:[{id:'surface',label:'叶面',default:'plain',choices:[{value:'plain',label:'草叶'},{value:'dew',label:'带露'},{value:'frost',label:'覆霜'}]}],
+  note:'默认 9 簇、每簇 6 片草叶；新增项目原生长茎芦穗变体。露珠和霜线附于草叶，不在空中降落。',
+  controls:[{id:'surface',label:'叶面',default:'plain',choices:[{value:'plain',label:'草叶'},{value:'dew',label:'带露'},{value:'frost',label:'覆霜'}]},{id:'form',label:'形态',default:'meadow',choices:[{value:'meadow',label:'草叶簇'},{value:'reed',label:'芦穗'}]}],
   capabilities:['wind-response','surface-attachment','density-detail','anchors','fixed-count'],
   create(ctx){
     const {p,width:W,alpha}=ctx;let tufts=[];
@@ -13,6 +13,10 @@ window.PoemDrawing.register({
     function draw(){
       for(const t of tufts)for(const b of t.blades){
         const end=tip(t,b);p.fill(alpha(p,ctx.palette.main,145));p.stroke(alpha(p,ctx.palette.ink,105));p.strokeWeight(.6);
+        if(ctx.options.form==='reed'){
+          p.noFill();p.stroke(alpha(p,ctx.palette.ink,145));p.bezier(t.x,t.y,t.x,t.y-b.length*.45,end.x,end.y+20,end.x,end.y);
+          for(let j=0;j<12;j++){const y=end.y-j*2.4,x=end.x+Math.sin(j*.6+b.phase)*2;p.stroke(alpha(p,ctx.palette.ink,45));p.line(x,y,x+(j%2?1:-1)*(5+j*.35),y+8);p.stroke(alpha(p,ctx.palette.bg,210));p.strokeWeight(1.7);p.line(x,y,x+(j%2?1:-1)*(3+j*.27),y+6);}continue;
+        }
         const c=p.drawingContext;c.beginPath();c.moveTo(t.x-b.width/2,t.y);c.quadraticCurveTo(t.x-b.width,t.y-b.length*.55,end.x,end.y);c.quadraticCurveTo(t.x+b.width,t.y-b.length*.5,t.x+b.width/2,t.y);c.closePath();c.fill();c.stroke();
         if(ctx.settings.density>.3){p.noFill();p.stroke(alpha(p,ctx.palette.ink,55));p.bezier(t.x,t.y,t.x,t.y-b.length*.4,t.x+(end.x-t.x)*.5,end.y+b.length*.25,end.x,end.y);}
         if(ctx.options.surface==='dew'){

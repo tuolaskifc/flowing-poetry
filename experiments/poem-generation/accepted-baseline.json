@@ -1,0 +1,90 @@
+{
+  "commit": "a497b2a",
+  "date": "2026-10-21",
+  "scope": "basic-composition",
+  "userStatement": "进步很大！现在的这些我基本满意了！",
+  "status": "baseline-basically-accepted",
+  "finalArtworkApproval": false,
+  "images": [
+    {
+      "path": "poem-flow/verification/expressive/fixtures-p01-after.png",
+      "sha256": "695def80d39a4dbffb2431f6cd3ca731f012fbe91552150cde5012c02038db47"
+    },
+    {
+      "path": "poem-flow/verification/expressive/fixtures-p02-after.png",
+      "sha256": "b2472109c199c3fbfc5503bd20bef17a493de0068cba2228035ab06c2c507a63"
+    },
+    {
+      "path": "poem-flow/verification/expressive/fixtures-p03-after.png",
+      "sha256": "dae06cf74ca62e9e8a702e77329ec2cc488e63cb6e55c0ee83457aa1c197dd2f"
+    },
+    {
+      "path": "poem-flow/verification/expressive/fixtures-p04-after.png",
+      "sha256": "19172cf690a1e6fb6b90bdcf35e5c1e2c278a1d7f6076cf877e0680c59bcb38f"
+    },
+    {
+      "path": "poem-flow/verification/expressive/fixtures-p05-after.png",
+      "sha256": "827de8419fb14c408c3625cce8d6c1cc10bd6cb62f5bea59bfd09c764e1b37ec"
+    },
+    {
+      "path": "poem-flow/verification/expressive/fixtures-p06-after.png",
+      "sha256": "c9836b8166dd9e1f65aae1f5575c8be53901f01aba4dde9a09b41bf7c842efd8"
+    },
+    {
+      "path": "poem-flow/verification/expressive/fixtures-p07-after.png",
+      "sha256": "17f7044f77ffbaafed5274e7b54b9798700657478893eea2049eddceec8468da"
+    },
+    {
+      "path": "poem-flow/verification/expressive/fixtures-p08-after.png",
+      "sha256": "73954432a339cf9043b088c8f687fc2f01aae1ce7fa48bb1a93f657cf12cf273"
+    },
+    {
+      "path": "poem-flow/verification/expressive/fixtures-p09-after.png",
+      "sha256": "d003f21b31ea41ae7c376d39f586345af69ab04170130f7d45c00b7c3cab1f3f"
+    },
+    {
+      "path": "poem-flow/verification/expressive/fixtures-p10-after.png",
+      "sha256": "7214ada99ffbf868ffb470cb37bd5bc06d1fc8e5bd768a3a815d8972ea919719"
+    },
+    {
+      "path": "poem-flow/verification/expressive/fixtures-p11-after.png",
+      "sha256": "b0811dc1bd02a13cc36caaa4d4f3bf56777535d00490637ccefb62b858383fa0"
+    },
+    {
+      "path": "poem-flow/verification/expressive/fixtures-p12-after.png",
+      "sha256": "d80f3eacaa5983117f2586bfb8293d54bfd0228272a90a845f72b316543a059f"
+    },
+    {
+      "path": "poem-flow/verification/expressive/fixtures-p13-after.png",
+      "sha256": "5c8b88ace71de0fdbcfaa397667df2d44ff755cbe4090093e25bfb5a1ec2f60d"
+    },
+    {
+      "path": "poem-flow/verification/expressive/fixtures-p14-after.png",
+      "sha256": "4eaa01353a79628de7eb5f0fcd19c87e200a4e0377ff6c54a2f7028fb875497e"
+    },
+    {
+      "path": "poem-flow/verification/expressive/fixtures-p15-after.png",
+      "sha256": "f6c24fc7a0628b06b3e38994c4d613044bfbb080ee3bc562989a40b309fb30f4"
+    },
+    {
+      "path": "poem-flow/verification/expressive/fixtures-p16-after.png",
+      "sha256": "46324c769b79f1b8d30d90e4d417a42730b79e4be6bfda99f5258a7765ab1d51"
+    },
+    {
+      "path": "poem-flow/verification/expressive/fixtures-p17-after.png",
+      "sha256": "d27594631ca025a54f15b1e80e79238054bc1a22a2b07229f049e9c8ccf45c60"
+    },
+    {
+      "path": "poem-flow/verification/expressive/fixtures-p18-after.png",
+      "sha256": "ba1259f32b0c1278b5a62c71bad08237f0ce5f2fe22c021fbcd92555c7218c1b"
+    },
+    {
+      "path": "poem-flow/verification/expressive/fixtures-p19-after.png",
+      "sha256": "937c7f661e008dc514b75d771de7b095b7f7e37a9b7f84c45b6017030a624e54"
+    },
+    {
+      "path": "poem-flow/verification/expressive/fixtures-p20-after.png",
+      "sha256": "1a94ddbfda724027be1be4cdf1059e85141eb66e3f4ae7d66da2b2474594b738"
+    }
+  ]
+}

@@ -1,0 +1,410 @@
+{
+  "id": "2026-10-21T15-04-31-631Z-149062aa",
+  "fingerprint": "b6535637381710efed36317bde6beefd4be36808276a11752d3f8922008124cd",
+  "poem": "泉声咽危石，日色冷青松。",
+  "source": {
+    "provider": "泛化新句试验",
+    "author": "王维",
+    "title": "过香积寺",
+    "dynasty": "唐代"
+  },
+  "mode": "scene",
+  "model": "DeepSeek-V4.1-Flash",
+  "started_at": "2026-10-21T15:04:31.634Z",
+  "cached": false,
+  "http_status": 200,
+  "usage": {
+    "completion_tokens": 495,
+    "prompt_tokens": 3221,
+    "total_tokens": 3716,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 3200
+    }
+  },
+  "finish_reason": "stop",
+  "analysis": {
+    "schema_version": "3.2",
+    "poem": "泉声咽危石，日色冷青松。",
+    "reading": "泉水声在高险的岩石间幽咽，日光落在青松上显得清冷。两句以听觉与触觉写山间幽寂寒凉的氛围。",
+    "entities": [
+      {
+        "id": "i1",
+        "mentions": [
+          "泉声"
+        ],
+        "concept": "泉水的声音",
+        "kind": "abstract",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "泉声咽危石"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i2",
+        "mentions": [
+          "危石"
+        ],
+        "concept": "高险的岩石",
+        "kind": "object",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "泉声咽危石"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i3",
+        "mentions": [
+          "日色"
+        ],
+        "concept": "日光",
+        "kind": "environment",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "日色冷青松"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i4",
+        "mentions": [
+          "青松"
+        ],
+        "concept": "青翠的松树",
+        "kind": "organism",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "日色冷青松"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      }
+    ],
+    "relations": [],
+    "atmosphere": {
+      "labels": [
+        "幽寂",
+        "清冷"
+      ],
+      "valence": "neutral",
+      "energy": "low",
+      "tension": "low",
+      "openness": "unclear",
+      "evidence": [
+        "泉声咽危石",
+        "日色冷青松"
+      ]
+    },
+    "time": {
+      "markers": [],
+      "note": null
+    },
+    "uncertainties": [
+      "“咽”与“冷”是拟人化或通感用法，具体动作与感受强度难以确定。",
+      "泉声与危石、日色与青松的空间位置关系未明说。"
+    ],
+    "spatial": []
+  },
+  "validation": {
+    "valid": true,
+    "errors": [],
+    "warnings": [
+      "模型保留了不确定性，需要审阅"
+    ],
+    "review_required": true
+  },
+  "plan": {
+    "version": "regional-scene-2",
+    "seed": 160605610,
+    "settings": {
+      "wind": 0,
+      "density": 0.45,
+      "palette": "clear"
+    },
+    "layers": [
+      {
+        "tool": "landscape",
+        "entities": [
+          "i3"
+        ],
+        "projectedEntities": [],
+        "names": [
+          "日色"
+        ],
+        "options": {
+          "form": "sun"
+        },
+        "animate": false,
+        "placement": {
+          "anchor": [
+            320,
+            194
+          ],
+          "at": [
+            0.5,
+            0.5
+          ],
+          "scale": 1.5
+        },
+        "instances": [
+          {
+            "placement": {
+              "anchor": [
+                320,
+                194
+              ],
+              "at": [
+                0.5,
+                0.5
+              ],
+              "scale": 1.6
+            },
+            "depth": 0,
+            "opacity": 1,
+            "variant": 0
+          }
+        ],
+        "singleUnit": false,
+        "quantity": {
+          "items": [
+            {
+              "entity": "i3",
+              "mode": "unspecified",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "unspecified",
+              "extent": "unspecified",
+              "evidence": [],
+              "basis": "model"
+            }
+          ],
+          "rendered": 1,
+          "exact": false,
+          "collective": false,
+          "partUnsupported": false
+        },
+        "quantityLabel": "整体笔触图层；内部数量尚未适配",
+        "z": -40
+      },
+      {
+        "tool": "tree",
+        "entities": [
+          "i4"
+        ],
+        "projectedEntities": [],
+        "names": [
+          "青松"
+        ],
+        "options": {
+          "form": "pine",
+          "crown": "lines"
+        },
+        "animate": true,
+        "placement": {
+          "anchor": [
+            320,
+            388
+          ],
+          "at": [
+            0.25,
+            0.9
+          ],
+          "scale": 1.15
+        },
+        "instances": [
+          {
+            "placement": {
+              "anchor": [
+                320,
+                388
+              ],
+              "at": [
+                0.09420949442498386,
+                0.6749999999999999
+              ],
+              "scale": 0.6833333333333333
+            },
+            "depth": 0.16666666666666666,
+            "opacity": 0.7083333333333334,
+            "variant": 0
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                388
+              ],
+              "at": [
+                0.6228778191394687,
+                0.825
+              ],
+              "scale": 1.15
+            },
+            "depth": 0.5,
+            "opacity": 0.825,
+            "variant": 1
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                388
+              ],
+              "at": [
+                0.3111290785743952,
+                0.975
+              ],
+              "scale": 1.6166666666666667
+            },
+            "depth": 0.8333333333333334,
+            "opacity": 0.9416666666666667,
+            "variant": 2
+          }
+        ],
+        "singleUnit": true,
+        "quantity": {
+          "items": [
+            {
+              "entity": "i4",
+              "mode": "unspecified",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "unspecified",
+              "extent": "unspecified",
+              "evidence": [],
+              "basis": "model"
+            }
+          ],
+          "rendered": 3,
+          "exact": false,
+          "collective": false,
+          "partUnsupported": false
+        },
+        "quantityLabel": "数量未精确；本地试画 3 个单元",
+        "z": 8
+      },
+      {
+        "tool": "rock",
+        "entities": [
+          "i2"
+        ],
+        "projectedEntities": [],
+        "names": [
+          "危石"
+        ],
+        "options": {},
+        "animate": true,
+        "placement": {
+          "anchor": [
+            320,
+            245
+          ],
+          "at": [
+            0.3,
+            0.78
+          ],
+          "scale": 0.95
+        },
+        "instances": [
+          {
+            "placement": {
+              "anchor": [
+                320,
+                245
+              ],
+              "at": [
+                0.3,
+                0.78
+              ],
+              "scale": 1.159
+            },
+            "depth": 0,
+            "opacity": 1,
+            "variant": 0
+          }
+        ],
+        "singleUnit": true,
+        "quantity": {
+          "items": [
+            {
+              "entity": "i2",
+              "mode": "unspecified",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "unspecified",
+              "extent": "unspecified",
+              "evidence": [],
+              "basis": "model"
+            }
+          ],
+          "rendered": 1,
+          "exact": false,
+          "collective": false,
+          "partUnsupported": false
+        },
+        "quantityLabel": "数量未精确；本地试画 1 个单元"
+      }
+    ],
+    "spatial": [],
+    "scene": {
+      "kind": "woodland",
+      "notes": [],
+      "waterline": null
+    },
+    "omitted": [
+      {
+        "id": "i1",
+        "name": "泉声",
+        "reason": "该专名人物、地名或抽象含义暂不作实景补画"
+      }
+    ],
+    "notes": [
+      "位置、大小、笔触与默认微动是本地试画选择；数量解释与本地显示数量分别记录。",
+      "未明说的群落数量、疏密、近中远层次与变体均为本地构图选择；种类可按已声明的写意画法概括，不把铺展词换算成精确物体数量。"
+    ],
+    "relations": []
+  },
+  "elapsed_seconds": 7
+}

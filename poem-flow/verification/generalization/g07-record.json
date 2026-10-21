@@ -1,0 +1,202 @@
+{
+  "id": "2026-10-21T15-04-00-836Z-c83cbb8c",
+  "fingerprint": "abe49bd9228adb963e23cb93de34e5d525b38ed6358a7fa6a15ec55889eac429",
+  "poem": "千山鸟飞绝，万径人踪灭。",
+  "source": {
+    "provider": "泛化新句试验",
+    "author": "柳宗元",
+    "title": "江雪",
+    "dynasty": "唐代"
+  },
+  "mode": "scene",
+  "model": "DeepSeek-V4.1-Flash",
+  "started_at": "2026-10-21T15:04:00.840Z",
+  "cached": false,
+  "http_status": 200,
+  "usage": {
+    "completion_tokens": 448,
+    "prompt_tokens": 3221,
+    "total_tokens": 3669,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 3200
+    }
+  },
+  "finish_reason": "stop",
+  "analysis": {
+    "schema_version": "3.2",
+    "poem": "千山鸟飞绝，万径人踪灭。",
+    "reading": "群山之间鸟飞已绝，众多路径上人的踪迹也已消失，呈现空寂无人的景象。",
+    "entities": [
+      {
+        "id": "i1",
+        "mentions": [
+          "千山"
+        ],
+        "concept": "连绵的群山",
+        "kind": "place",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "千山"
+        ],
+        "quantity": {
+          "mode": "many",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "group",
+          "extent": "spread",
+          "evidence": [
+            "千山"
+          ]
+        }
+      },
+      {
+        "id": "i2",
+        "mentions": [
+          "鸟"
+        ],
+        "concept": "飞鸟",
+        "kind": "organism",
+        "role": "scene",
+        "presence": "absent",
+        "evidence": [
+          "鸟飞绝"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i3",
+        "mentions": [
+          "万径"
+        ],
+        "concept": "众多小路",
+        "kind": "place",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "万径"
+        ],
+        "quantity": {
+          "mode": "many",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "group",
+          "extent": "spread",
+          "evidence": [
+            "万径"
+          ]
+        }
+      },
+      {
+        "id": "i4",
+        "mentions": [
+          "人踪"
+        ],
+        "concept": "人的踪迹",
+        "kind": "abstract",
+        "role": "scene",
+        "presence": "absent",
+        "evidence": [
+          "人踪灭"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      }
+    ],
+    "relations": [],
+    "atmosphere": {
+      "labels": [
+        "空寂",
+        "清冷"
+      ],
+      "valence": "neutral",
+      "energy": "low",
+      "tension": "low",
+      "openness": "high",
+      "evidence": [
+        "千山鸟飞绝",
+        "万径人踪灭"
+      ]
+    },
+    "time": {
+      "markers": [],
+      "note": null
+    },
+    "uncertainties": [
+      "“绝”“灭”表示鸟与人踪已不在场，但未说明发生时间与过程。"
+    ],
+    "spatial": []
+  },
+  "validation": {
+    "valid": true,
+    "errors": [],
+    "warnings": [
+      "模型保留了不确定性，需要审阅"
+    ],
+    "review_required": true
+  },
+  "plan": {
+    "version": "regional-scene-2",
+    "seed": 3500184589,
+    "settings": {
+      "wind": 0,
+      "density": 0.45,
+      "palette": "clear"
+    },
+    "layers": [],
+    "spatial": [],
+    "scene": {
+      "kind": "study",
+      "notes": [],
+      "waterline": null
+    },
+    "omitted": [
+      {
+        "id": "i1",
+        "name": "千山",
+        "reason": "该专名人物、地名或抽象含义暂不作实景补画"
+      },
+      {
+        "id": "i2",
+        "name": "鸟",
+        "reason": "原文中缺席，不绘制"
+      },
+      {
+        "id": "i3",
+        "name": "万径",
+        "reason": "该专名人物、地名或抽象含义暂不作实景补画"
+      },
+      {
+        "id": "i4",
+        "name": "人踪",
+        "reason": "原文中缺席，不绘制"
+      }
+    ],
+    "notes": [
+      "位置、大小、笔触与默认微动是本地试画选择；数量解释与本地显示数量分别记录。",
+      "未明说的群落数量、疏密、近中远层次与变体均为本地构图选择；种类可按已声明的写意画法概括，不把铺展词换算成精确物体数量。"
+    ],
+    "relations": []
+  },
+  "elapsed_seconds": 19.5
+}

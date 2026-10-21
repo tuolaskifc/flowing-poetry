@@ -301,8 +301,8 @@ window.PoemProgress = {
         "tools": [
           "grass"
         ],
-        "available": "固定草簇、细长叶片与局部风响应。",
-        "remaining": "待审美确认；地表扩展与其他草种尚未制作。",
+        "available": "固定草簇、细长叶片与局部风响应；新增原生长茎芦穗变体，草与芦穗可沿溪岸或水岸布局。",
+        "remaining": "新变体待审美确认；尚未区分更多草种，植物与真实地形的精确附着未实现。",
         "needs_context": false,
         "label": "基础可画"
       }
@@ -1543,6 +1543,21 @@ window.PoemProgress = {
               "label": "轻尘"
             }
           ]
+        },
+        {
+          "id": "relief",
+          "label": "山势",
+          "default": "layered",
+          "choices": [
+            {
+              "value": "layered",
+              "label": "层山"
+            },
+            {
+              "value": "single",
+              "label": "单峰"
+            }
+          ]
         }
       ],
       "capabilities": [
@@ -1844,7 +1859,7 @@ window.PoemProgress = {
         "project"
       ],
       "reference": "drawing/README.md#本轮植物与天气",
-      "note": "固定 9 簇、每簇 6 片草叶；露珠和霜线按选择附在叶面，不在空中降落。当前载体仅为草叶。",
+      "note": "默认 9 簇、每簇 6 片草叶；新增项目原生长茎芦穗变体。露珠和霜线附于草叶，不在空中降落。",
       "controls": [
         {
           "id": "surface",
@@ -1862,6 +1877,21 @@ window.PoemProgress = {
             {
               "value": "frost",
               "label": "覆霜"
+            }
+          ]
+        },
+        {
+          "id": "form",
+          "label": "形态",
+          "default": "meadow",
+          "choices": [
+            {
+              "value": "meadow",
+              "label": "草叶簇"
+            },
+            {
+              "value": "reed",
+              "label": "芦穗"
             }
           ]
         }

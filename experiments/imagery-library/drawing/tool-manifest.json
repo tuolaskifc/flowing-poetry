@@ -178,6 +178,21 @@
               "label": "轻尘"
             }
           ]
+        },
+        {
+          "id": "relief",
+          "label": "山势",
+          "default": "layered",
+          "choices": [
+            {
+              "value": "layered",
+              "label": "层山"
+            },
+            {
+              "value": "single",
+              "label": "单峰"
+            }
+          ]
         }
       ],
       "capabilities": [
@@ -479,7 +494,7 @@
         "project"
       ],
       "reference": "drawing/README.md#本轮植物与天气",
-      "note": "固定 9 簇、每簇 6 片草叶；露珠和霜线按选择附在叶面，不在空中降落。当前载体仅为草叶。",
+      "note": "默认 9 簇、每簇 6 片草叶；新增项目原生长茎芦穗变体。露珠和霜线附于草叶，不在空中降落。",
       "controls": [
         {
           "id": "surface",
@@ -497,6 +512,21 @@
             {
               "value": "frost",
               "label": "覆霜"
+            }
+          ]
+        },
+        {
+          "id": "form",
+          "label": "形态",
+          "default": "meadow",
+          "choices": [
+            {
+              "value": "meadow",
+              "label": "草叶簇"
+            },
+            {
+              "value": "reed",
+              "label": "芦穗"
             }
           ]
         }

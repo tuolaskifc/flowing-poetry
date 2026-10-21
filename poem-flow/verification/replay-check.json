@@ -2,15 +2,15 @@
   "live": false,
   "poetry": null,
   "state": {
-    "status": "已生成画面。可以调整风力、构图或保存画面。",
+    "status": "已生成画面。有 1 项尚未绘制，详见“保留的空缺”。",
     "scene": {
       "ready": true,
       "paused": false,
       "layers": [
         {
           "id": "water",
-          "seed": 2749528309,
-          "time": 0.13780000001192091,
+          "seed": 614970754,
+          "time": 0.13839999996423716,
           "ticks": 4,
           "paused": false,
           "disposed": false,
@@ -24,7 +24,139 @@
           ],
           "finite": true,
           "form": "plane",
-          "geometryKey": "dfc0510c"
+          "geometryKey": "89e6a00a"
+        },
+        {
+          "id": "grass",
+          "seed": 614970851,
+          "time": 0.13829999999999995,
+          "ticks": 4,
+          "paused": false,
+          "disposed": false,
+          "ready": true,
+          "options": {
+            "surface": "plain",
+            "form": "reed"
+          },
+          "sources": [
+            "project"
+          ],
+          "tuftCount": 1,
+          "bladeCount": 6,
+          "surface": "plain",
+          "dewCount": 0,
+          "frostBladeCount": 0,
+          "finite": true,
+          "geometryKey": "4cf994c4"
+        },
+        {
+          "id": "grass",
+          "seed": 614972394,
+          "time": 0.13829999999999995,
+          "ticks": 4,
+          "paused": false,
+          "disposed": false,
+          "ready": true,
+          "options": {
+            "surface": "plain",
+            "form": "reed"
+          },
+          "sources": [
+            "project"
+          ],
+          "tuftCount": 1,
+          "bladeCount": 6,
+          "surface": "plain",
+          "dewCount": 0,
+          "frostBladeCount": 0,
+          "finite": true,
+          "geometryKey": "f42e8963"
+        },
+        {
+          "id": "grass",
+          "seed": 614973937,
+          "time": 0.13829999999999995,
+          "ticks": 4,
+          "paused": false,
+          "disposed": false,
+          "ready": true,
+          "options": {
+            "surface": "plain",
+            "form": "reed"
+          },
+          "sources": [
+            "project"
+          ],
+          "tuftCount": 1,
+          "bladeCount": 6,
+          "surface": "plain",
+          "dewCount": 0,
+          "frostBladeCount": 0,
+          "finite": true,
+          "geometryKey": "33636bae"
+        },
+        {
+          "id": "bird",
+          "seed": 614970948,
+          "time": 0.13829999999999995,
+          "ticks": 4,
+          "paused": false,
+          "disposed": false,
+          "ready": true,
+          "options": {
+            "pose": "flying",
+            "tone": "light",
+            "facing": "right"
+          },
+          "sources": [
+            "project"
+          ],
+          "birdCount": 1,
+          "pose": "flying",
+          "tone": "light",
+          "finite": true,
+          "geometryKey": "5c2d2ba8"
+        },
+        {
+          "id": "bird",
+          "seed": 614972491,
+          "time": 0.13829999999999995,
+          "ticks": 4,
+          "paused": false,
+          "disposed": false,
+          "ready": true,
+          "options": {
+            "pose": "flying",
+            "tone": "light",
+            "facing": "right"
+          },
+          "sources": [
+            "project"
+          ],
+          "birdCount": 1,
+          "pose": "flying",
+          "tone": "light",
+          "finite": true,
+          "geometryKey": "fc9de905"
+        },
+        {
+          "id": "landscape",
+          "seed": 614971045,
+          "time": 0,
+          "ticks": 1,
+          "paused": true,
+          "disposed": false,
+          "ready": true,
+          "options": {
+            "form": "ground",
+            "relief": "layered"
+          },
+          "sources": [
+            "project"
+          ],
+          "form": "ground",
+          "finite": true,
+          "geometryKey": "6cae9496"
         }
       ],
       "placements": [
@@ -38,9 +170,61 @@
             0.57
           ],
           "scale": 1.5
+        },
+        {
+          "anchor": [
+            320,
+            315
+          ],
+          "at": [
+            0.04,
+            0.75
+          ],
+          "scale": 1
+        },
+        {
+          "anchor": [
+            320,
+            190
+          ],
+          "at": [
+            0.5725,
+            0.6
+          ],
+          "scale": 0.78
+        },
+        {
+          "anchor": [
+            320,
+            194
+          ],
+          "at": [
+            0.5,
+            0.48
+          ],
+          "scale": 1.6
         }
       ],
       "instances": [
+        {
+          "tool": "landscape",
+          "layer": 3,
+          "index": 0,
+          "sourceIndex": 6,
+          "placement": {
+            "anchor": [
+              320,
+              194
+            ],
+            "at": [
+              0.5,
+              0.48
+            ],
+            "scale": 1.6
+          },
+          "opacity": 1,
+          "z": -18
+        },
         {
           "tool": "water",
           "layer": 0,
@@ -59,23 +243,330 @@
           },
           "opacity": 1,
           "z": -10
+        },
+        {
+          "tool": "grass",
+          "layer": 1,
+          "index": 0,
+          "sourceIndex": 1,
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.04,
+              0.75
+            ],
+            "scale": 0.76
+          },
+          "opacity": 0.5858333333333333,
+          "z": 13
+        },
+        {
+          "tool": "grass",
+          "layer": 1,
+          "index": 1,
+          "sourceIndex": 2,
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.23157999999999998,
+              0.7685714285714287
+            ],
+            "scale": 0.884
+          },
+          "opacity": 0.5974999999999999,
+          "z": 13.042857142857143
+        },
+        {
+          "tool": "grass",
+          "layer": 1,
+          "index": 2,
+          "sourceIndex": 3,
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.11315999999999998,
+              0.7871428571428571
+            ],
+            "scale": 1.008
+          },
+          "opacity": 0.6091666666666666,
+          "z": 13.085714285714285
+        },
+        {
+          "tool": "grass",
+          "layer": 1,
+          "index": 3,
+          "sourceIndex": 1,
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.30474,
+              0.8057142857142856
+            ],
+            "scale": 1.1320000000000001
+          },
+          "opacity": 0.6208333333333333,
+          "z": 13.128571428571428
+        },
+        {
+          "tool": "grass",
+          "layer": 1,
+          "index": 4,
+          "sourceIndex": 2,
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.18631999999999999,
+              0.8242857142857143
+            ],
+            "scale": 0.856
+          },
+          "opacity": 0.6325,
+          "z": 13.17142857142857
+        },
+        {
+          "tool": "grass",
+          "layer": 1,
+          "index": 5,
+          "sourceIndex": 3,
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.06789999999999996,
+              0.842857142857143
+            ],
+            "scale": 0.98
+          },
+          "opacity": 0.6441666666666667,
+          "z": 13.214285714285714
+        },
+        {
+          "tool": "grass",
+          "layer": 1,
+          "index": 6,
+          "sourceIndex": 1,
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.25948000000000004,
+              0.8614285714285714
+            ],
+            "scale": 1.104
+          },
+          "opacity": 0.6558333333333333,
+          "z": 13.257142857142856
+        },
+        {
+          "tool": "grass",
+          "layer": 1,
+          "index": 7,
+          "sourceIndex": 2,
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.14105999999999988,
+              0.8799999999999999
+            ],
+            "scale": 0.828
+          },
+          "opacity": 0.6675,
+          "z": 13.3
+        },
+        {
+          "tool": "grass",
+          "layer": 1,
+          "index": 8,
+          "sourceIndex": 3,
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.33263999999999994,
+              0.8985714285714286
+            ],
+            "scale": 0.952
+          },
+          "opacity": 0.6791666666666666,
+          "z": 13.342857142857143
+        },
+        {
+          "tool": "grass",
+          "layer": 1,
+          "index": 9,
+          "sourceIndex": 1,
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.2142200000000001,
+              0.9171428571428573
+            ],
+            "scale": 1.076
+          },
+          "opacity": 0.6908333333333333,
+          "z": 13.385714285714286
+        },
+        {
+          "tool": "grass",
+          "layer": 1,
+          "index": 10,
+          "sourceIndex": 2,
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.09579999999999991,
+              0.9357142857142857
+            ],
+            "scale": 0.8
+          },
+          "opacity": 0.7024999999999999,
+          "z": 13.428571428571429
+        },
+        {
+          "tool": "grass",
+          "layer": 1,
+          "index": 11,
+          "sourceIndex": 3,
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.28738,
+              0.9542857142857142
+            ],
+            "scale": 0.924
+          },
+          "opacity": 0.7141666666666666,
+          "z": 13.471428571428572
+        },
+        {
+          "tool": "grass",
+          "layer": 1,
+          "index": 12,
+          "sourceIndex": 1,
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.1689600000000001,
+              0.9728571428571429
+            ],
+            "scale": 1.048
+          },
+          "opacity": 0.7258333333333333,
+          "z": 13.514285714285714
+        },
+        {
+          "tool": "grass",
+          "layer": 1,
+          "index": 13,
+          "sourceIndex": 2,
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.05054000000000022,
+              0.9914285714285715
+            ],
+            "scale": 0.7720000000000001
+          },
+          "opacity": 0.7374999999999999,
+          "z": 13.557142857142857
+        },
+        {
+          "tool": "bird",
+          "layer": 2,
+          "index": 0,
+          "sourceIndex": 4,
+          "placement": {
+            "anchor": [
+              320,
+              190
+            ],
+            "at": [
+              0.5725,
+              0.6
+            ],
+            "scale": 0.65
+          },
+          "opacity": 0.7749999999999999,
+          "z": 20
+        },
+        {
+          "tool": "bird",
+          "layer": 2,
+          "index": 1,
+          "sourceIndex": 5,
+          "placement": {
+            "anchor": [
+              320,
+              190
+            ],
+            "at": [
+              0.7175,
+              0.5400000000000001
+            ],
+            "scale": 0.65
+          },
+          "opacity": 0.9249999999999999,
+          "z": 20.3
         }
       ],
       "settings": {
-        "wind": 0.45,
+        "wind": 0,
         "density": 0.45,
         "palette": "clear"
       }
     },
-    "poem": "风乍起，吹皱一池春水。",
-    "sceneTitle": "风乍起，吹皱一池春水。",
-    "usage": "记录 2026-10-21T13-52-35-595Z-7658fb71；模型 DeepSeek-V4.1-Flash；本次记录 token 3508。正在回看，没有新增模型调用。",
-    "reading": "风忽然吹起，使一池春水泛起波纹。",
+    "poem": "白鸟一双临水立，见人惊起入芦花。",
+    "sceneTitle": "白鸟一双临水立，见人惊起入芦花。",
+    "usage": "记录 2026-10-21T15-17-05-559Z-bbcaedbb；模型 DeepSeek-V4.1-Flash；本次记录 token 3012。正在回看，没有新增模型调用。",
+    "reading": "一双白鸟临水而立，见人惊起，飞入芦花丛中。",
     "omitted": [
-      "本次列出的场景意象均找到了基础工具；仍不代表全部关系已表现。"
+      "人：出现情况不确定，暂不补画"
     ],
     "drawn": [
-      "一池春水 → 水 · 整体笔触图层；内部数量尚未适配"
+      "水 → 水 · 整体笔触图层；内部数量尚未适配",
+      "芦花 → 草 · 露 · 霜 · 依场景疏密试画 14 个单元；原文未给精确个体数",
+      "白鸟／一双 → 鸟意（写意借形） · 按提取数量绘制 2 个",
+      "构图依托·地面 → 山水 · 场景 · 背景依托，不计入意象覆盖（静止）"
     ]
   },
   "network": [
@@ -91,6 +582,11 @@
     },
     {
       "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/boid-adapter.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
       "path": "/experiments/imagery-library/drawing/sources.js",
       "status": 200
     },
@@ -101,32 +597,7 @@
     },
     {
       "host": "127.0.0.1",
-      "path": "/experiments/imagery-library/boid-adapter.js",
-      "status": 200
-    },
-    {
-      "host": "127.0.0.1",
       "path": "/experiments/imagery-library/drawing/petals.js",
-      "status": 200
-    },
-    {
-      "host": "127.0.0.1",
-      "path": "/experiments/imagery-library/drawing/surface-marks.js",
-      "status": 200
-    },
-    {
-      "host": "127.0.0.1",
-      "path": "/experiments/imagery-library/drawing/ink-brush.js",
-      "status": 200
-    },
-    {
-      "host": "127.0.0.1",
-      "path": "/experiments/imagery-library/drawing/architecture.js",
-      "status": 200
-    },
-    {
-      "host": "127.0.0.1",
-      "path": "/experiments/imagery-library/drawing/tools/flower.js",
       "status": 200
     },
     {
@@ -136,17 +607,42 @@
     },
     {
       "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/architecture.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/surface-marks.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/poem-flow/vendor/p5.min.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/ink-brush.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/tools/flower.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
       "path": "/experiments/imagery-library/drawing/tools/tree.js",
       "status": 200
     },
     {
       "host": "127.0.0.1",
-      "path": "/experiments/imagery-library/drawing/tools/water.js",
+      "path": "/experiments/imagery-library/drawing/tools/landscape.js",
       "status": 200
     },
     {
       "host": "127.0.0.1",
-      "path": "/experiments/imagery-library/drawing/tools/landscape.js",
+      "path": "/experiments/imagery-library/drawing/tools/water.js",
       "status": 200
     },
     {
@@ -161,17 +657,17 @@
     },
     {
       "host": "127.0.0.1",
+      "path": "/experiments/imagery-library/drawing/tools/boat.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
       "path": "/experiments/imagery-library/drawing/tools/moon.js",
       "status": 200
     },
     {
       "host": "127.0.0.1",
       "path": "/experiments/imagery-library/drawing/tools/rain.js",
-      "status": 200
-    },
-    {
-      "host": "127.0.0.1",
-      "path": "/experiments/imagery-library/drawing/tools/boat.js",
       "status": 200
     },
     {
@@ -201,12 +697,12 @@
     },
     {
       "host": "127.0.0.1",
-      "path": "/experiments/imagery-library/drawing/tools/willow.js",
+      "path": "/experiments/imagery-library/drawing/tools/snow.js",
       "status": 200
     },
     {
       "host": "127.0.0.1",
-      "path": "/experiments/imagery-library/drawing/tools/snow.js",
+      "path": "/experiments/imagery-library/drawing/tools/willow.js",
       "status": 200
     },
     {
@@ -241,12 +737,12 @@
     },
     {
       "host": "127.0.0.1",
-      "path": "/experiments/imagery-library/drawing/tools/building.js",
+      "path": "/experiments/imagery-library/drawing/tools/plum-branch.js",
       "status": 200
     },
     {
       "host": "127.0.0.1",
-      "path": "/poem-flow/vendor/p5.min.js",
+      "path": "/experiments/imagery-library/drawing/tools/building.js",
       "status": 200
     },
     {
@@ -261,22 +757,17 @@
     },
     {
       "host": "127.0.0.1",
-      "path": "/experiments/imagery-library/drawing/tools/plum-branch.js",
-      "status": 200
-    },
-    {
-      "host": "127.0.0.1",
       "path": "/experiments/imagery-library/drawing/tools/orchid.js",
       "status": 200
     },
     {
       "host": "127.0.0.1",
-      "path": "/experiments/imagery-library/drawing/tools/lotus.js",
+      "path": "/experiments/imagery-library/drawing/tools/horse.js",
       "status": 200
     },
     {
       "host": "127.0.0.1",
-      "path": "/experiments/imagery-library/drawing/tools/horse.js",
+      "path": "/experiments/imagery-library/drawing/tools/lotus.js",
       "status": 200
     },
     {
@@ -291,22 +782,22 @@
     },
     {
       "host": "127.0.0.1",
-      "path": "/experiments/poem-generation/scene.js",
-      "status": 200
-    },
-    {
-      "host": "127.0.0.1",
       "path": "/experiments/imagery-library/drawing/tools/figure.js",
       "status": 200
     },
     {
       "host": "127.0.0.1",
-      "path": "/experiments/poem-generation/recommendation.js",
+      "path": "/experiments/poem-generation/scene.js",
       "status": 200
     },
     {
       "host": "127.0.0.1",
       "path": "/experiments/poem-generation/imagery-lexicon.js",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/poem-generation/recommendation.js",
       "status": 200
     },
     {
@@ -321,7 +812,12 @@
     },
     {
       "host": "127.0.0.1",
-      "path": "/api/latest",
+      "path": "/experiments/poem-generation/generalization-cases.json",
+      "status": 200
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/experiments/poem-generation/curated-poems.json",
       "status": 200
     },
     {
@@ -331,7 +827,7 @@
     },
     {
       "host": "127.0.0.1",
-      "path": "/experiments/poem-generation/curated-poems.json",
+      "path": "/api/latest",
       "status": 200
     },
     {

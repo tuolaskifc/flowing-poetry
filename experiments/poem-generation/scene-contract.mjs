@@ -12,6 +12,9 @@ spatial 每项固定 type,source,target,modality,basis,evidence；source/target 
 严格区分字段：modality 只能填 asserted / negated / possible / conditional / unclear；绝不能填 inferred 或 explicit。basis 只能填 explicit / inferred。推断成立的关系可以 modality=asserted,basis=inferred；把握不足用 modality=unclear。示例：{"type":"on","source":"i1","target":"i2","modality":"asserted","basis":"inferred","evidence":["舟在水面"]}。最终逐项核对枚举。
 例：舟在江上可为 舟 on 江；竹外桃花为 桃花 outside 竹；树阴照水若实体为树与水，可为 树 reflects_on 水（basis=inferred）；仅有树阴不补整棵树。月在松间可为 月 among 松；这是诗句的视觉位置，不推断月亮实际生长在树中。没有倒影线索不补 reflects_on，仅同句出现不能自动当作明确关系。
 地理自然景物如寒江、深林、远山可以是 place，它们仍是可见物象；不要把地名补成建筑。只提取输入原文出现的主体，不用常识补岸、山、人物、光源。声音与气味不自动变成可见主体；夕阳/日光不当成月亮。保留缺口和不确定性。
+空间证据提交前自检：每项 evidence 合起来必须含 source 的至少一个原始 mention，也含 target 的至少一个原始 mention。只写“深树鸣”“入芦花”而遗漏鸟的原文称谓，不足以证明两端；可扩大为含两端的完整原句，仍须逐字连续引用。不要为通过检查而往 mentions 添加无关原词。无法找到关联两端的原文就删去该关系。
+确定关系自检：modality=asserted 的两端都必须 role=scene、presence=present；缺席、出现不明或比喻参照不能用于确定关系。不确定的“门”等不得为了充实空间关系改写为在场，更不得补出拟人动作的执行人。优先少提可靠关系。
+成对计数自检：一双鸟若按个体解释，可 min=max=2、scope=individual、unit=null；若记 min=max=1、scope=group、unit="双"，则是一个二体群体。不要把两种计数口径混在同一 quantity 中。
 `;
 export function validateSceneContract(value,poem){
   if(!value||typeof value!=='object')return validateQuantityContract(value,poem);

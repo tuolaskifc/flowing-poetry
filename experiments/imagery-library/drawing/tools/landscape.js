@@ -4,7 +4,7 @@
 window.PoemDrawing.register({
   id:'landscape',name:'山水 · 场景',subtitle:'先定远近，再留出风景之间的空。',sources:['project'],credit:'本项目 · 山势、地表与光影笔触',reference:'drawing/README.md',
   note:'山岸、原野、田面、瀑布、天空与光影的写意结构；只画明确选择的类型，不自动附加人物。',
-  controls:[{id:'form',label:'场景',default:'mountain',choices:[{value:'mountain',label:'层山'},{value:'shore',label:'水岸'},{value:'ground',label:'原野'},{value:'path',label:'小径'},{value:'field',label:'水田'},{value:'waterfall',label:'瀑布'},{value:'sky',label:'天空'},{value:'stars',label:'星点'},{value:'sun',label:'日光'},{value:'glow',label:'灯火'},{value:'shadow',label:'疏影'},{value:'moss',label:'苔意'},{value:'lightwash',label:'返照'},{value:'dust',label:'轻尘'}]}],capabilities:['local-motion','density-detail','anchors'],
+  controls:[{id:'form',label:'场景',default:'mountain',choices:[{value:'mountain',label:'层山'},{value:'shore',label:'水岸'},{value:'ground',label:'原野'},{value:'path',label:'小径'},{value:'field',label:'水田'},{value:'waterfall',label:'瀑布'},{value:'sky',label:'天空'},{value:'stars',label:'星点'},{value:'sun',label:'日光'},{value:'glow',label:'灯火'},{value:'shadow',label:'疏影'},{value:'moss',label:'苔意'},{value:'lightwash',label:'返照'},{value:'dust',label:'轻尘'}]},{id:'relief',label:'山势',default:'layered',choices:[{value:'layered',label:'层山'},{value:'single',label:'单峰'}]}],capabilities:['local-motion','density-detail','anchors'],
   create(ctx){
     const {p,alpha}=ctx;let ridges=[],marks=[],stars=[];
     function reset(){
@@ -63,6 +63,13 @@ window.PoemDrawing.register({
         }return;
       }
       if(form==='mountain'){
+        if(ctx.options.relief==='single'){
+          const peak=290+ridges[0][10].y%57,height=230+ridges[0][14].y%38;
+          const profile=x=>335-height*Math.exp(-Math.pow((x-peak)/(x<peak?100:170),2))+(p.noise(x*.028)-.5)*28;
+          const points=ridges[0].map(q=>({x:q.x,y:profile(q.x)}));
+          c.beginPath();c.moveTo(-30,388);points.forEach(q=>c.lineTo(q.x,q.y));c.lineTo(670,388);c.closePath();const g=c.createLinearGradient(0,70,0,388);g.addColorStop(0,String(alpha(p,ctx.palette.ink,85)));g.addColorStop(1,String(alpha(p,ctx.palette.main,4)));c.fillStyle=g;c.fill();p.noFill();p.stroke(alpha(p,ctx.palette.ink,95));p.strokeWeight(.85);trace(points);
+          for(const m of marks){const y=profile(m.x);if(y<280){p.stroke(alpha(p,ctx.palette.ink,16+m.a*20));p.strokeWeight(.6);p.bezier(m.x,y+8,m.x+7,y+20,m.x+9,y+31,m.x+17,y+47);}}return;
+        }
         for(const [j,points] of ridges.entries()){
           c.beginPath();c.moveTo(-40,388);points.forEach(q=>c.lineTo(q.x,q.y));c.lineTo(680,388);c.closePath();
           const wash=c.createLinearGradient(0,100+j*35,0,388);wash.addColorStop(0,String(alpha(p,ctx.palette.ink,30+j*13)));wash.addColorStop(1,String(alpha(p,ctx.palette.main,4)));c.fillStyle=wash;c.fill();

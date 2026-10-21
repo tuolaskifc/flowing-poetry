@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "selected_on": "2026-10-21",
+  "baseline_commit": "a497b2a",
+  "note": "首轮调用之前固定的十二句新组合。目标与检查点仅用于本地评审，不发送给模型；原二十句保持独立基线。这些不是调参后的独立测试集，修复后只能称同批回归。",
+  "cases": [
+    {"id":"g01","poem":"绿树村边合，青山郭外斜。","author":"孟浩然","title":"过故人庄","dynasty":"唐代","goal":"检验树群、村落与远山能否形成有承托的田园空间。","checks":["village-ground","tree-groups"],"source":{"url":"https://cd.edb.gov.hk/chi/resource/ncs/download/js_list/JS_guogurenzhuang.pdf","verified_on":"2026-10-21","note":"香港教育局篇章；繁体转简体，核对本联及作者。"}},
+    {"id":"g02","poem":"独怜幽草涧边生，上有黄鹂深树鸣。","author":"韦应物","title":"滁州西涧","dynasty":"唐代","goal":"检验溪涧、岸草、深树与鸣鸟的上下及栖息区域。","checks":["creek-bank","bird-canopy"],"source":{"url":"https://m.gushiwen.cn/mingju/juv_dfab7baf22ff.aspx","verified_on":"2026-10-21","note":"核对本联及作者篇名；与库内同诗另一联分开测试。"}},
+    {"id":"g03","poem":"桃花一簇开无主，可爱深红爱浅红？","author":"杜甫","title":"江畔独步寻花·其五","dynasty":"唐代","goal":"检验一簇的群体计数及花树落点；深浅红色仍单独记录为表达缺口。","checks":["one-cluster","plant-ground"],"source":{"url":"https://m.gushiwen.cn/mingju/juv_a9b0bb32a8aa.aspx","verified_on":"2026-10-21","note":"采用页面问号，不静默改为句号。"}},
+    {"id":"g04","poem":"竹深树密虫鸣处，时有微凉不是风。","author":"杨万里","title":"夏夜追凉","dynasty":"宋代","goal":"检验混合密林的组织与否定风；缺少虫体时不得改画成鸟。","checks":["mixed-woodland","negated-wind","no-substitute-bird"],"source":{"url":"https://m.gushiwen.cn/mingju/juv_d8e135a24d75.aspx","verified_on":"2026-10-21","note":"核对本联及作者篇名；不从全文补画月亮或人。"}},
+    {"id":"g05","poem":"两岸青山相对出，孤帆一片日边来。","author":"李白","title":"望天门山","dynasty":"唐代","goal":"检验两岸山势、中央通道与孤帆借形；不能按片数复制一群舟。","checks":["opposing-banks","single-boat"],"source":{"url":"https://www.gushiwen.cn/mingju/juv.aspx?id=a21ac17fad86","verified_on":"2026-10-21","note":"核对本联与李白望天门山。"}},
+    {"id":"g06","poem":"野水无人渡，孤舟尽日横。","author":"寇准","title":"春日登楼怀归","dynasty":"宋代","goal":"检验孤舟与水面，并保留无人这个缺席条件。","checks":["single-boat","absent-person"],"source":{"url":"https://m.gushiwen.cn/mingju/juv_f207368b6ba2.aspx","verified_on":"2026-10-21","note":"采用野水这一版本；不从篇名补楼。"}},
+    {"id":"g07","poem":"千山鸟飞绝，万径人踪灭。","author":"柳宗元","title":"江雪","dynasty":"唐代","goal":"检验铺展山径与鸟、人缺席；不能从全文自动添孤舟、翁或雪。","checks":["absent-bird-person","no-full-poem-fill"],"source":{"url":"https://m.gushiwen.cn/mingju/juv_6c5cdd5d8c4c.aspx","verified_on":"2026-10-21","note":"仅取上联；与库内下联保持独立，不用全文补意象。"}},
+    {"id":"g08","poem":"孤村落日残霞，轻烟老树寒鸦。","author":"白朴","title":"天净沙·秋","dynasty":"元代","goal":"检验村落、树群和鸟与夕景的层次；六个意象用于观察协议容量边界。","checks":["village-ground","sky-placement"],"source":{"url":"https://cd.edb.gov.hk/chi/resource/ncs/download/js_list/JS_tainjingshaqiu.pdf","verified_on":"2026-10-21","note":"香港教育局篇章；只取前两句，不补下一句的飞鸿。"}},
+    {"id":"g09","poem":"泉声咽危石，日色冷青松。","author":"王维","title":"过香积寺","dynasty":"唐代","goal":"检验泉声到泉水的声明借形，以及石、松的山溪空间。","checks":["spring-sound","mountain-stream"],"source":{"url":"https://m.gushiwen.cn/mingju/juv_e7022f3c0682.aspx","verified_on":"2026-10-21","note":"核对本联与作者篇名；不因诗题自动添寺。"}},
+    {"id":"g10","poem":"山际见来烟，竹中窥落日。","author":"吴均","title":"山中杂诗","dynasty":"南北朝","goal":"检验山际烟与竹间落日的远近，避免日体悬在原默认高处。","checks":["bamboo-sun","mountain-mist"],"source":{"url":"https://www.gushiwen.cn/mingju/juv_fb1136c9556e.aspx","verified_on":"2026-10-21","note":"核对本联与吴均山中杂诗；不补后两句的鸟和窗。"}},
+    {"id":"g11","poem":"一水护田将绿绕，两山排闼送青来。","author":"王安石","title":"书湖阴先生壁·其一","dynasty":"宋代","goal":"检验田、水相绕和两山的数量；排闼不应变成人物推门。","checks":["field-river","two-mountains","no-personification-person"],"source":{"url":"https://m.gushiwen.cn/mingju/juv_bf54173ee828.aspx","verified_on":"2026-10-21","note":"固定采用将绿绕；不补上一联的茅檐、苔或花木。"}},
+    {"id":"g12","poem":"白鸟一双临水立，见人惊起入芦花。","author":"戴复古","title":"江村晚眺","dynasty":"宋代","goal":"检验一双白鸟的计数与水岸位置；站立到惊起的时序单独标注。","checks":["pair-birds","reed-bank","action-sequence-gap"],"source":{"url":"https://www.gushiwen.cn/mingju/juv_9b0d0043b094.aspx","verified_on":"2026-10-21","note":"核对本联及戴复古江村晚眺；不补上联的船。"}}
+  ]
+}

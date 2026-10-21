@@ -14,7 +14,7 @@ test('absent, metaphor and uncertain objects do not become real layers',()=>{
   const plan=buildPlan(value);assert.deepEqual(plan.layers.map(l=>l.tool),['moon']);assert.equal(plan.omitted.length,2);
 });
 test('foliage and flowers may borrow shapes while unsupported fruit remains a gap',()=>{
-  const plan=buildPlan(fixture('柏间桃花映梅子',[entity('i1','柏'),entity('i2','桃花'),entity('i3','梅子')]));assert.deepEqual(plan.layers.map(l=>l.tool),['tree','tree']);assert.deepEqual(plan.omitted.map(e=>e.name),['梅子']);assert(plan.notes.some(n=>n.includes('写意借形')));
+  const plan=buildPlan(fixture('柏间桃花映梅子',[entity('i1','柏'),entity('i2','桃花'),entity('i3','梅子')]));assert.deepEqual(plan.layers.filter(l=>!l.inferred).map(l=>l.tool),['tree','tree']);assert(plan.layers.filter(l=>l.inferred).every(l=>l.options.form==='ground'&&!l.entities.length));assert.deepEqual(plan.omitted.map(e=>e.name),['梅子']);assert(plan.notes.some(n=>n.includes('写意借形')));
 });
 test('negated wind remains off; negated movement freezes a present fish',()=>{
   const v=fixture('风不起，鱼不游',[entity('i1','风'),entity('i2','鱼',{kind:'organism'})],[{type:'changes',source:'i1',target:null,meaning:'风未起',modality:'negated',basis:'explicit',evidence:['风不起']},{type:'moves',source:'i2',target:null,meaning:'鱼不游',modality:'negated',basis:'explicit',evidence:['鱼不游']}]);

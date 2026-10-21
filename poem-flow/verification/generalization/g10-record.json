@@ -1,0 +1,656 @@
+{
+  "id": "2026-10-21T15-04-38-719Z-ebde6433",
+  "fingerprint": "a34c33a5b09e7f7e6e4b8a7fe862b378c42215503c557cab3d72313a1d00a70f",
+  "poem": "山际见来烟，竹中窥落日。",
+  "source": {
+    "provider": "泛化新句试验",
+    "author": "吴均",
+    "title": "山中杂诗",
+    "dynasty": "南北朝"
+  },
+  "mode": "scene",
+  "model": "DeepSeek-V4.1-Flash",
+  "started_at": "2026-10-21T15:04:38.722Z",
+  "cached": false,
+  "http_status": 200,
+  "usage": {
+    "completion_tokens": 601,
+    "prompt_tokens": 3220,
+    "total_tokens": 3821,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 3200
+    }
+  },
+  "finish_reason": "stop",
+  "analysis": {
+    "schema_version": "3.2",
+    "poem": "山际见来烟，竹中窥落日。",
+    "reading": "山边望见飘来的烟霭，竹丛之间窥见落日；两句写远望与窥看中的山、烟、竹、日，视线被竹与山际部分遮挡。",
+    "entities": [
+      {
+        "id": "i1",
+        "mentions": [
+          "山际"
+        ],
+        "concept": "山边、山与天相接处",
+        "kind": "place",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "山际见来烟"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i2",
+        "mentions": [
+          "来烟"
+        ],
+        "concept": "飘来的烟霭",
+        "kind": "object",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "山际见来烟"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i3",
+        "mentions": [
+          "竹中",
+          "竹"
+        ],
+        "concept": "竹林",
+        "kind": "organism",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "竹中窥落日"
+        ],
+        "quantity": {
+          "mode": "many",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "group",
+          "extent": "spread",
+          "evidence": [
+            "竹中"
+          ]
+        }
+      },
+      {
+        "id": "i4",
+        "mentions": [
+          "落日"
+        ],
+        "concept": "西沉的太阳",
+        "kind": "object",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "竹中窥落日"
+        ],
+        "quantity": {
+          "mode": "exact",
+          "min": 1,
+          "max": 1,
+          "unit": null,
+          "scope": "individual",
+          "extent": "local",
+          "evidence": [
+            "落日"
+          ]
+        }
+      }
+    ],
+    "relations": [],
+    "atmosphere": {
+      "labels": [
+        "幽静",
+        "远望",
+        "暮色"
+      ],
+      "valence": "neutral",
+      "energy": "low",
+      "tension": "low",
+      "openness": "medium",
+      "evidence": [
+        "山际见来烟",
+        "竹中窥落日"
+      ]
+    },
+    "time": {
+      "markers": [
+        {
+          "surface": "落日",
+          "meaning": "日落时分，暗示傍晚"
+        }
+      ],
+      "note": "仅由“落日”提示暮时，未见其他时间标记。"
+    },
+    "uncertainties": [
+      "“见”与“窥”的观察者未在原文中出现，无法确定是谁在看。",
+      "“来烟”是烟霭飘来还是山间烟气升起，原文未明说。"
+    ],
+    "spatial": [
+      {
+        "type": "outside",
+        "source": "i2",
+        "target": "i1",
+        "modality": "asserted",
+        "basis": "inferred",
+        "evidence": [
+          "山际见来烟"
+        ]
+      },
+      {
+        "type": "among",
+        "source": "i4",
+        "target": "i3",
+        "modality": "asserted",
+        "basis": "inferred",
+        "evidence": [
+          "竹中窥落日"
+        ]
+      }
+    ]
+  },
+  "validation": {
+    "valid": true,
+    "errors": [],
+    "warnings": [
+      "模型保留了不确定性，需要审阅",
+      "spatial[0] 的推断或非确定关系需审阅",
+      "spatial[1] 的推断或非确定关系需审阅"
+    ],
+    "review_required": true
+  },
+  "plan": {
+    "version": "regional-scene-2",
+    "seed": 366685528,
+    "settings": {
+      "wind": 0,
+      "density": 0.45,
+      "palette": "clear"
+    },
+    "layers": [
+      {
+        "tool": "landscape",
+        "entities": [
+          "i4"
+        ],
+        "projectedEntities": [],
+        "names": [
+          "落日"
+        ],
+        "options": {
+          "form": "sun"
+        },
+        "animate": false,
+        "placement": {
+          "anchor": [
+            320,
+            194
+          ],
+          "at": [
+            0.5,
+            0.5
+          ],
+          "scale": 1.5
+        },
+        "instances": [
+          {
+            "placement": {
+              "anchor": [
+                320,
+                194
+              ],
+              "at": [
+                0.5,
+                0.5
+              ],
+              "scale": 1.6
+            },
+            "depth": 0,
+            "opacity": 1,
+            "variant": 0
+          }
+        ],
+        "singleUnit": false,
+        "quantity": {
+          "items": [
+            {
+              "entity": "i4",
+              "mode": "exact",
+              "min": 1,
+              "max": 1,
+              "unit": null,
+              "scope": "individual",
+              "extent": "local",
+              "evidence": [
+                "落日"
+              ],
+              "basis": "model"
+            }
+          ],
+          "rendered": 1,
+          "exact": false,
+          "collective": false,
+          "partUnsupported": false
+        },
+        "quantityLabel": "整体笔触图层；内部数量尚未适配",
+        "z": -40
+      },
+      {
+        "tool": "bamboo",
+        "entities": [
+          "i3"
+        ],
+        "projectedEntities": [],
+        "names": [
+          "竹中／竹"
+        ],
+        "options": {},
+        "animate": true,
+        "placement": {
+          "anchor": [
+            320,
+            335
+          ],
+          "at": [
+            0.24,
+            0.88
+          ],
+          "scale": 1
+        },
+        "instances": [
+          {
+            "placement": {
+              "anchor": [
+                320,
+                335
+              ],
+              "at": [
+                0.12569118321314454,
+                0.6588888888888889
+              ],
+              "scale": 0.3988888888888889
+            },
+            "depth": 0.027777777777777776,
+            "opacity": 0.5916666666666667,
+            "variant": 0
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                335
+              ],
+              "at": [
+                0.6916545768301126,
+                0.6766666666666666
+              ],
+              "scale": 0.43666666666666665
+            },
+            "depth": 0.08333333333333333,
+            "opacity": 0.615,
+            "variant": 1
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                335
+              ],
+              "at": [
+                0.2829710276941084,
+                0.6944444444444444
+              ],
+              "scale": 0.47444444444444445
+            },
+            "depth": 0.1388888888888889,
+            "opacity": 0.6383333333333333,
+            "variant": 2
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                335
+              ],
+              "at": [
+                0.8316716605435495,
+                0.7122222222222222
+              ],
+              "scale": 0.5122222222222222
+            },
+            "depth": 0.19444444444444445,
+            "opacity": 0.6616666666666666,
+            "variant": 0
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                335
+              ],
+              "at": [
+                0.5734696009548872,
+                0.73
+              ],
+              "scale": 0.55
+            },
+            "depth": 0.25,
+            "opacity": 0.6849999999999999,
+            "variant": 1
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                335
+              ],
+              "at": [
+                0.15830429808010002,
+                0.7477777777777778
+              ],
+              "scale": 0.5877777777777778
+            },
+            "depth": 0.3055555555555556,
+            "opacity": 0.7083333333333333,
+            "variant": 2
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                335
+              ],
+              "at": [
+                0.7583435838826736,
+                0.7655555555555555
+              ],
+              "scale": 0.6255555555555556
+            },
+            "depth": 0.3611111111111111,
+            "opacity": 0.7316666666666667,
+            "variant": 0
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                335
+              ],
+              "at": [
+                0.44011108603067056,
+                0.7833333333333333
+              ],
+              "scale": 0.6633333333333333
+            },
+            "depth": 0.4166666666666667,
+            "opacity": 0.7549999999999999,
+            "variant": 1
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                335
+              ],
+              "at": [
+                0.8797192291728273,
+                0.8011111111111111
+              ],
+              "scale": 0.7011111111111111
+            },
+            "depth": 0.4722222222222222,
+            "opacity": 0.7783333333333333,
+            "variant": 2
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                335
+              ],
+              "at": [
+                0.5543650909301067,
+                0.8188888888888889
+              ],
+              "scale": 0.7388888888888889
+            },
+            "depth": 0.5277777777777778,
+            "opacity": 0.8016666666666666,
+            "variant": 0
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                335
+              ],
+              "at": [
+                0.330183717997682,
+                0.8366666666666667
+              ],
+              "scale": 0.7766666666666667
+            },
+            "depth": 0.5833333333333334,
+            "opacity": 0.825,
+            "variant": 1
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                335
+              ],
+              "at": [
+                0.8655200561773453,
+                0.8544444444444445
+              ],
+              "scale": 0.8144444444444445
+            },
+            "depth": 0.6388888888888888,
+            "opacity": 0.8483333333333333,
+            "variant": 2
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                335
+              ],
+              "at": [
+                0.4659839194288089,
+                0.8722222222222222
+              ],
+              "scale": 0.8522222222222222
+            },
+            "depth": 0.6944444444444444,
+            "opacity": 0.8716666666666666,
+            "variant": 0
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                335
+              ],
+              "at": [
+                0.2240195321815749,
+                0.89
+              ],
+              "scale": 0.89
+            },
+            "depth": 0.75,
+            "opacity": 0.895,
+            "variant": 1
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                335
+              ],
+              "at": [
+                0.6873143517656126,
+                0.9077777777777778
+              ],
+              "scale": 0.9277777777777778
+            },
+            "depth": 0.8055555555555556,
+            "opacity": 0.9183333333333332,
+            "variant": 2
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                335
+              ],
+              "at": [
+                0.3100682435101821,
+                0.9255555555555556
+              ],
+              "scale": 0.9655555555555556
+            },
+            "depth": 0.8611111111111112,
+            "opacity": 0.9416666666666667,
+            "variant": 0
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                335
+              ],
+              "at": [
+                0.08572741646823609,
+                0.9433333333333334
+              ],
+              "scale": 1.0033333333333334
+            },
+            "depth": 0.9166666666666666,
+            "opacity": 0.9649999999999999,
+            "variant": 1
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                335
+              ],
+              "at": [
+                0.5741668713343565,
+                0.9611111111111111
+              ],
+              "scale": 1.0411111111111113
+            },
+            "depth": 0.9722222222222222,
+            "opacity": 0.9883333333333333,
+            "variant": 2
+          }
+        ],
+        "singleUnit": true,
+        "quantity": {
+          "items": [
+            {
+              "entity": "i3",
+              "mode": "many",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "group",
+              "extent": "spread",
+              "evidence": [
+                "竹中"
+              ],
+              "basis": "model"
+            }
+          ],
+          "rendered": 18,
+          "exact": false,
+          "collective": true,
+          "partUnsupported": false
+        },
+        "quantityLabel": "成片分布；本地试画 18 个单元"
+      }
+    ],
+    "spatial": [
+      {
+        "type": "outside",
+        "source": "i2",
+        "target": "i1",
+        "modality": "asserted",
+        "basis": "inferred",
+        "evidence": [
+          "山际见来烟"
+        ],
+        "visualized": false,
+        "reason": "关系的一端缺少独立画法"
+      },
+      {
+        "type": "among",
+        "source": "i4",
+        "target": "i3",
+        "modality": "asserted",
+        "basis": "inferred",
+        "evidence": [
+          "竹中窥落日"
+        ],
+        "visualized": false,
+        "reason": "该空间关系与形态组合尚未适配"
+      }
+    ],
+    "scene": {
+      "kind": "landscape",
+      "notes": [
+        "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。"
+      ],
+      "waterline": null
+    },
+    "omitted": [
+      {
+        "id": "i1",
+        "name": "山际",
+        "reason": "该专名人物、地名或抽象含义暂不作实景补画"
+      },
+      {
+        "id": "i2",
+        "name": "来烟",
+        "reason": "该意象尚无合适的写意画法"
+      }
+    ],
+    "notes": [
+      "位置、大小、笔触与默认微动是本地试画选择；数量解释与本地显示数量分别记录。",
+      "落日的数量解释已保留，当前工具以整体图层表现，内部笔触尚未按数量逐个适配。",
+      "未明说的群落数量、疏密、近中远层次与变体均为本地构图选择；种类可按已声明的写意画法概括，不把铺展词换算成精确物体数量。",
+      "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。"
+    ],
+    "relations": []
+  },
+  "elapsed_seconds": 4.3
+}

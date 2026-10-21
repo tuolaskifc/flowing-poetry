@@ -1,0 +1,245 @@
+{
+  "id": "2026-10-21T15-03-58-544Z-61108ad8",
+  "fingerprint": "599c79b3266590b7e2c13276308feccdd96854c41e030535d57ab83800646000",
+  "poem": "野水无人渡，孤舟尽日横。",
+  "source": {
+    "provider": "泛化新句试验",
+    "author": "寇准",
+    "title": "春日登楼怀归",
+    "dynasty": "宋代"
+  },
+  "mode": "scene",
+  "model": "DeepSeek-V4.1-Flash",
+  "started_at": "2026-10-21T15:03:58.546Z",
+  "cached": false,
+  "http_status": 200,
+  "usage": {
+    "completion_tokens": 371,
+    "prompt_tokens": 3220,
+    "total_tokens": 3591,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 3200
+    }
+  },
+  "finish_reason": "stop",
+  "analysis": {
+    "schema_version": "3.2",
+    "poem": "野水无人渡，孤舟尽日横。",
+    "reading": "野外的水面上没有渡河的人，一条孤舟整日横泊。",
+    "entities": [
+      {
+        "id": "i1",
+        "mentions": [
+          "野水"
+        ],
+        "concept": "野外的水面",
+        "kind": "place",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "野水无人渡"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "spread",
+          "evidence": [
+            "野水"
+          ]
+        }
+      },
+      {
+        "id": "i2",
+        "mentions": [
+          "孤舟"
+        ],
+        "concept": "孤零零的小船",
+        "kind": "object",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "孤舟尽日横"
+        ],
+        "quantity": {
+          "mode": "exact",
+          "min": 1,
+          "max": 1,
+          "unit": null,
+          "scope": "individual",
+          "extent": "local",
+          "evidence": [
+            "孤舟"
+          ]
+        }
+      }
+    ],
+    "relations": [],
+    "atmosphere": {
+      "labels": [
+        "空寂",
+        "闲静"
+      ],
+      "valence": "neutral",
+      "energy": "low",
+      "tension": "low",
+      "openness": "high",
+      "evidence": [
+        "野水无人渡",
+        "孤舟尽日横"
+      ]
+    },
+    "time": {
+      "markers": [
+        {
+          "surface": "尽日",
+          "meaning": "整日、从早到晚，表示持续一整天"
+        }
+      ],
+      "note": null
+    },
+    "uncertainties": [
+      "“无人”未指明是否曾有渡者，也未交代舟主身份。",
+      "“横”可指横泊或横斜，具体姿态不明。"
+    ],
+    "spatial": [
+      {
+        "type": "on",
+        "source": "i2",
+        "target": "i1",
+        "modality": "asserted",
+        "basis": "inferred",
+        "evidence": [
+          "野水无人渡",
+          "孤舟尽日横"
+        ]
+      }
+    ]
+  },
+  "validation": {
+    "valid": true,
+    "errors": [],
+    "warnings": [
+      "模型保留了不确定性，需要审阅",
+      "spatial[0] 的推断或非确定关系需审阅"
+    ],
+    "review_required": true
+  },
+  "plan": {
+    "version": "regional-scene-2",
+    "seed": 4161293165,
+    "settings": {
+      "wind": 0,
+      "density": 0.45,
+      "palette": "clear"
+    },
+    "layers": [
+      {
+        "tool": "boat",
+        "entities": [
+          "i2"
+        ],
+        "projectedEntities": [],
+        "names": [
+          "孤舟"
+        ],
+        "options": {},
+        "animate": true,
+        "placement": {
+          "anchor": [
+            320,
+            230
+          ],
+          "at": [
+            0.6,
+            0.72
+          ],
+          "scale": 0.95
+        },
+        "instances": [
+          {
+            "placement": {
+              "anchor": [
+                320,
+                230
+              ],
+              "at": [
+                0.6,
+                0.72
+              ],
+              "scale": 1.159
+            },
+            "depth": 0,
+            "opacity": 1,
+            "variant": 0
+          }
+        ],
+        "singleUnit": true,
+        "quantity": {
+          "items": [
+            {
+              "entity": "i2",
+              "mode": "exact",
+              "min": 1,
+              "max": 1,
+              "unit": null,
+              "scope": "individual",
+              "extent": "local",
+              "evidence": [
+                "孤舟"
+              ],
+              "basis": "model"
+            }
+          ],
+          "rendered": 1,
+          "exact": true,
+          "collective": false,
+          "partUnsupported": false
+        },
+        "quantityLabel": "按提取数量绘制 1 个"
+      }
+    ],
+    "spatial": [
+      {
+        "type": "on",
+        "source": "i2",
+        "target": "i1",
+        "modality": "asserted",
+        "basis": "inferred",
+        "evidence": [
+          "野水无人渡",
+          "孤舟尽日横"
+        ],
+        "visualized": false,
+        "reason": "关系的一端缺少独立画法"
+      }
+    ],
+    "scene": {
+      "kind": "study",
+      "notes": [
+        "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。"
+      ],
+      "waterline": null
+    },
+    "omitted": [
+      {
+        "id": "i1",
+        "name": "野水",
+        "reason": "该专名人物、地名或抽象含义暂不作实景补画"
+      }
+    ],
+    "notes": [
+      "孤舟：按舟船这个主体选择画法，材质或修饰词不另画成植物。这是本地写意借形，保留原词义。",
+      "位置、大小、笔触与默认微动是本地试画选择；数量解释与本地显示数量分别记录。",
+      "未明说的群落数量、疏密、近中远层次与变体均为本地构图选择；种类可按已声明的写意画法概括，不把铺展词换算成精确物体数量。",
+      "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。"
+    ],
+    "relations": []
+  },
+  "elapsed_seconds": 2.2
+}

@@ -1,0 +1,183 @@
+{
+  "id": "2026-10-21T15-04-47-576Z-7b92d9f3",
+  "fingerprint": "c4ff5813867a3efbfbab5d296ca74618f5c27ceb8a2857eaf6f3bfdcc24f2e7b",
+  "poem": "白鸟一双临水立，见人惊起入芦花。",
+  "source": {
+    "provider": "泛化新句试验",
+    "author": "戴复古",
+    "title": "江村晚眺",
+    "dynasty": "宋代"
+  },
+  "mode": "scene",
+  "model": "DeepSeek-V4.1-Flash",
+  "started_at": "2026-10-21T15:04:47.579Z",
+  "cached": false,
+  "http_status": 200,
+  "usage": {
+    "completion_tokens": 549,
+    "prompt_tokens": 3224,
+    "total_tokens": 3773,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 3200
+    }
+  },
+  "finish_reason": "stop",
+  "analysis": {
+    "schema_version": "3.2",
+    "poem": "白鸟一双临水立，见人惊起入芦花。",
+    "reading": "一双白鸟临水而立，见人惊起，飞入芦花丛中。",
+    "entities": [
+      {
+        "id": "i1",
+        "mentions": [
+          "白鸟",
+          "一双"
+        ],
+        "concept": "白色水鸟",
+        "kind": "organism",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "白鸟一双临水立"
+        ],
+        "quantity": {
+          "mode": "exact",
+          "min": 2,
+          "max": 2,
+          "unit": "双",
+          "scope": "individual",
+          "extent": "local",
+          "evidence": [
+            "白鸟一双"
+          ]
+        }
+      },
+      {
+        "id": "i2",
+        "mentions": [
+          "水"
+        ],
+        "concept": "水面",
+        "kind": "place",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "临水立"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i3",
+        "mentions": [
+          "人"
+        ],
+        "concept": "人",
+        "kind": "person",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "见人惊起"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i4",
+        "mentions": [
+          "芦花"
+        ],
+        "concept": "芦苇花丛",
+        "kind": "organism",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "入芦花"
+        ],
+        "quantity": {
+          "mode": "many",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "group",
+          "extent": "spread",
+          "evidence": [
+            "芦花"
+          ]
+        }
+      }
+    ],
+    "relations": [],
+    "atmosphere": {
+      "labels": [
+        "惊动",
+        "清冷"
+      ],
+      "valence": "neutral",
+      "energy": "medium",
+      "tension": "medium",
+      "openness": "medium",
+      "evidence": [
+        "见人惊起入芦花"
+      ]
+    },
+    "time": {
+      "markers": [],
+      "note": null
+    },
+    "uncertainties": [
+      "“见人”的观察者未明说，可能是白鸟见人，也可能是人见鸟。",
+      "“惊起”与“入芦花”的先后关系由句序暗示，但未用明确时间词标记。"
+    ],
+    "spatial": [
+      {
+        "type": "beside",
+        "source": "i1",
+        "target": "i2",
+        "modality": "asserted",
+        "basis": "explicit",
+        "evidence": [
+          "白鸟一双临水立"
+        ]
+      },
+      {
+        "type": "among",
+        "source": "i1",
+        "target": "i4",
+        "modality": "asserted",
+        "basis": "explicit",
+        "evidence": [
+          "入芦花"
+        ]
+      }
+    ]
+  },
+  "validation": {
+    "valid": false,
+    "errors": [
+      "spatial[1] 依据未关联关系两端"
+    ],
+    "warnings": [
+      "模型保留了不确定性，需要审阅"
+    ],
+    "review_required": true
+  },
+  "elapsed_seconds": 2.5
+}

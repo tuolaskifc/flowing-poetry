@@ -1,6 +1,6 @@
 (() => {
   'use strict';
-  const $=id=>document.getElementById(id),names={moon:'月',water:'水',rock:'石',rain:'雨',willow:'柳',lotus:'莲花与荷叶',flower:'通用花',grass:'草',bamboo:'竹',boat:'舟',snow:'雪',building:'楼',cloud:'云','surface-weather':'露与霜局部'};
+  const $=id=>document.getElementById(id),names={moon:'月',water:'水',rock:'石',rain:'雨',willow:'柳',lotus:'莲花与荷叶',flower:'通用花',grass:'草与芦穗',bamboo:'竹',boat:'舟',snow:'雪',building:'楼',cloud:'云',tree:'树',dwelling:'房舍与寺院',bird:'鸟',figure:'淡墨人物',landscape:'地形与光色',orchid:'兰',horse:'马',oriole:'莺',mist:'薄烟雾',pavilion:'亭','plum-branch':'疏花枝','flower-forms':'花冠',wine:'酒液与器物',leaves:'叶','falling-petals':'落花',catkins:'飞絮','surface-weather':'露与霜局部'};
   const add=(tag,text,parent)=>{const node=document.createElement(tag);if(text!==undefined)node.textContent=text;parent.append(node);return node;};
   function link(text,href,parent,external=false){const a=add('a',text,parent);a.href=href;if(external){a.target='_blank';a.rel='noopener noreferrer';}return a;}
   fetch('/experiments/poem-generation/curated-poems.json').then(r=>{if(!r.ok)throw new Error();return r.json();}).then(data=>{

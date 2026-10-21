@@ -11,6 +11,7 @@ export function arrangeScene(analysis,layers){
   for(const layer of layers){
     if(layer.tool==='landscape'){
       const f=layer.options.form;layer.animate=f==='waterfall';layer.instances[0].placement={anchor:[320,194],at:[.5,f==='mountain'?.4:['sky','stars','sun'].includes(f)?.5:.57],scale:1.6};
+      if(f==='mountain'&&layer.options.relief==='single')for(const [i,v] of layer.instances.entries())v.placement={anchor:[320,330],at:[(i+.5)/layer.instances.length,.52],scale:1.05};
       layer.z=f==='sky'?-45:f==='stars'||f==='sun'?-40:f==='mountain'?-30:water?5:-20;
       if(f==='glow'){const boat=layers.find(l=>l.tool==='boat');layer.instances[0].placement={anchor:[320,210],at:boat?[.62,.72]:[.7,.6],scale:1.2};layer.z=30;}
     }
@@ -44,7 +45,7 @@ export function arrangeScene(analysis,layers){
     if(r.modality!=='asserted'){view.reason='非确定关系仅保留解读';return view;}
     if(!source||!target||source===target){view.reason='关系的一端缺少独立画法';return view;}
     const [tx,ty]=center(target);
-    if(source.regionalRelation===r.type){view.visualized=true;view.reason='在场景岸面中安排外侧花树与内侧竹丛；方向和间距为本地选择';return view;}
+    if(source.regionalRelation===r.type){view.visualized=true;view.reason='关系已由场景区域布局承接；方向、尺度和间距为本地选择';return view;}
     if(scene.kind==='mountain-stream'&&r.type==='on'&&source.tool==='water'&&target.tool==='rock'){view.visualized=true;view.reason='溪流区域与错落溪石相交，不模拟流体';return view;}
     if(r.type==='on'&&target.tool==='water'&&['boat','fish','bird'].includes(source.tool)){
       move(source,clamp(center(source)[0]),source.tool==='boat'?.76:source.tool==='bird'?.72:.85);source.z=26;view.visualized=true;view.reason='在水面区域定位，尚非物理承载';

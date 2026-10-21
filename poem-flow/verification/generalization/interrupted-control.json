@@ -1,0 +1,10 @@
+{
+  "run": "2026-10-21T15-15-11-394Z-828652e2",
+  "case": "g12",
+  "mode": "quantity",
+  "status": "interrupted",
+  "reason": "开发服务在请求期间热更新，客户端收到 ECONNRESET；未收到模型最终回答。",
+  "usage": null,
+  "counts_as_success": false,
+  "billing_unknown": true
+}

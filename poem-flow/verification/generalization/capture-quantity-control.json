@@ -1,0 +1,14 @@
+{
+  "baseline": "a497b2a",
+  "casesHash": "e5808b3d5dcf5339ee47f6cd061bb3d466b41fe14658959931b431583beb2e76",
+  "cases": [
+    {
+      "case": "g12",
+      "record": "2026-10-21T15-17-05-559Z-bbcaedbb",
+      "valid": true,
+      "errors": [],
+      "seconds": 4.5,
+      "tokens": 3012
+    }
+  ]
+}

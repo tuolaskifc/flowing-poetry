@@ -1,0 +1,108 @@
+{
+  "baseline": "a497b2a",
+  "casesHash": "e5808b3d5dcf5339ee47f6cd061bb3d466b41fe14658959931b431583beb2e76",
+  "cases": [
+    {
+      "case": "g01",
+      "record": "2026-10-21T15-03-29-717Z-05a4c95e",
+      "valid": true,
+      "errors": [],
+      "seconds": 4.1,
+      "tokens": 3762
+    },
+    {
+      "case": "g02",
+      "record": "2026-10-21T15-03-33-953Z-23339ec0",
+      "valid": false,
+      "errors": [
+        "spatial[1] 依据未关联关系两端"
+      ],
+      "seconds": 9.9,
+      "tokens": 3784
+    },
+    {
+      "case": "g03",
+      "record": "2026-10-21T15-03-43-967Z-cc45f88b",
+      "valid": true,
+      "errors": [],
+      "seconds": 3,
+      "tokens": 3556
+    },
+    {
+      "case": "g04",
+      "record": "2026-10-21T15-03-47-026Z-4c24f744",
+      "valid": true,
+      "errors": [],
+      "seconds": 3.8,
+      "tokens": 3765
+    },
+    {
+      "case": "g05",
+      "record": "2026-10-21T15-03-50-858Z-234139dd",
+      "valid": true,
+      "errors": [],
+      "seconds": 7.6,
+      "tokens": 3611
+    },
+    {
+      "case": "g06",
+      "record": "2026-10-21T15-03-58-544Z-61108ad8",
+      "valid": true,
+      "errors": [],
+      "seconds": 2.2,
+      "tokens": 3591
+    },
+    {
+      "case": "g07",
+      "record": "2026-10-21T15-04-00-836Z-c83cbb8c",
+      "valid": true,
+      "errors": [],
+      "seconds": 19.5,
+      "tokens": 3669
+    },
+    {
+      "case": "g08",
+      "record": "2026-10-21T15-04-20-402Z-40bacaa4",
+      "valid": true,
+      "errors": [],
+      "seconds": 11.1,
+      "tokens": 3911
+    },
+    {
+      "case": "g09",
+      "record": "2026-10-21T15-04-31-631Z-149062aa",
+      "valid": true,
+      "errors": [],
+      "seconds": 7,
+      "tokens": 3716
+    },
+    {
+      "case": "g10",
+      "record": "2026-10-21T15-04-38-719Z-ebde6433",
+      "valid": true,
+      "errors": [],
+      "seconds": 4.3,
+      "tokens": 3821
+    },
+    {
+      "case": "g11",
+      "record": "2026-10-21T15-04-43-055Z-aed3ed8c",
+      "valid": false,
+      "errors": [
+        "spatial[1] 确定的空间关系不能使用缺席或比喻参照主体"
+      ],
+      "seconds": 4.4,
+      "tokens": 3977
+    },
+    {
+      "case": "g12",
+      "record": "2026-10-21T15-04-47-576Z-7b92d9f3",
+      "valid": false,
+      "errors": [
+        "spatial[1] 依据未关联关系两端"
+      ],
+      "seconds": 2.5,
+      "tokens": 3773
+    }
+  ]
+}

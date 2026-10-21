@@ -21,8 +21,10 @@ export function compose(analysis,layers,seed){
     const woodland=layer.tool==='tree'&&entities.some(e=>e.mentions.some(m=>/林/.test(m)));
     const leaf=layer.tool==='lotus'&&layer.options.form==='leaf';let count=0,exact=true,collective=false,partUnsupported=false;
     const projected=quantities.filter(v=>layer.projectedEntities?.includes(v.entity.id)),counting=quantities.filter(v=>!layer.projectedEntities?.includes(v.entity.id));
-    if(projected.length&&!counting.length){count=1;exact=false;notes.push(`${layer.names.join('、')}以一匹马借形；局部的蹄数不当作马匹数量。`);}
+    if(projected.length&&!counting.length){count=1;exact=false;notes.push(layer.tool==='boat'?`${layer.names.join('、')}以一舟借形，尚未单画帆；多帆与船数不能机械等同。`:`${layer.names.join('、')}以一匹马借形；局部的蹄数不当作马匹数量。`);}
     for(const {q} of counting){
+      if(layer.tool==='dwelling'&&entities.some(e=>e.mentions.some(m=>/^(孤|荒|山|小)?村(庄|落)?$/.test(m)))){count+=3;exact=false;collective=true;continue;}
+      if(['bird','oriole'].includes(layer.tool)&&q.scope==='group'&&['双','对'].includes(q.unit)&&['exact','range'].includes(q.mode)){count+=Math.round((q.min+q.max)/2)*2;exact&&=q.mode==='exact';continue;}
       if(layer.options.form==='blossom'&&!(q.scope==='individual'&&['株','树','棵'].includes(q.unit))){const grove=q.scope!=='part'&&(q.mode==='many'||q.extent==='spread');count+=grove?7:1;collective||=grove;exact=false;continue;}
       if(woodland&&q.mode==='unspecified'){count+=14;collective=true;exact=false;continue;}
       const part=(q.scope==='part'&&!(layer.tool==='plum-branch'&&q.unit==='枝'))||(layer.tool==='plum-branch'&&/朵|瓣/.test(q.unit||''));
@@ -35,7 +37,7 @@ export function compose(analysis,layers,seed){
         count+=leaf?40:many[layer.tool]||1;collective=true;exact=false;
       }else{count+=leaf?18:defaults[layer.tool]||1;exact=false;}
     }
-    const countable=singleUnitTools.has(layer.tool);
+    const countable=singleUnitTools.has(layer.tool)||layer.tool==='landscape'&&layer.options.relief==='single';
     if(!countable){count=1;exact=false;}
     const requested=count;count=Math.max(1,Math.min(count,48,Math.max(1,budget-(layers.length-layerIndex-1))));budget-=count;
     if(count!==requested)notes.push(`${layer.names.join('、')}本地构图原拟画 ${requested} 个单元，受预算限制本次显示 ${count} 个；语义数量仍保留在解读中。`);
@@ -78,8 +80,8 @@ export function compose(analysis,layers,seed){
       if(layer.tool==='orchid'&&layer.options.form==='flower')placement.anchor=[320,192];
       instances.push({placement,depth,opacity,variant:i%Math.min(3,count)});
     }
-    layer.instances=instances;layer.singleUnit=singleUnitTools.has(layer.tool);layer.quantity={items:quantities.map(({entity,q,basis})=>({entity:entity.id,...q,basis})),rendered:count,exact:exact&&count===requested&&!partUnsupported,collective,partUnsupported};
-    layer.quantityLabel=projected.length&&!counting.length?'由马蹄借形为一匹马，马匹数未明':partUnsupported?'局部数量尚未实现':!countable?'整体笔触图层；内部数量尚未适配':layer.quantity.exact?`按提取数量绘制 ${count} 个`:collective?`成片分布；本地试画 ${count} 个单元`:quantities.every(v=>v.q.mode==='exact')?`计数目标 ${requested}；受限显示 ${count} 个`:quantities.some(v=>v.q.mode==='range')?`原文为数量范围；本地试画 ${count} 个`:`数量未精确；本地试画 ${count} 个单元`;
+    layer.instances=instances;layer.singleUnit=countable;layer.quantity={items:quantities.map(({entity,q,basis})=>({entity:entity.id,...q,basis})),rendered:count,exact:exact&&count===requested&&!partUnsupported,collective,partUnsupported};
+    layer.quantityLabel=projected.length&&!counting.length?(layer.tool==='boat'?'由帆借形为一舟，帆面尚未绘制':'由马蹄借形为一匹马，马匹数未明'):partUnsupported?'局部数量尚未实现':!countable?'整体笔触图层；内部数量尚未适配':layer.quantity.exact?`按提取数量绘制 ${count} 个`:collective?`成片分布；本地试画 ${count} 个单元`:quantities.every(v=>v.q.mode==='exact')?`计数目标 ${requested}；受限显示 ${count} 个`:quantities.some(v=>v.q.mode==='range')?`原文为数量范围；本地试画 ${count} 个`:`数量未精确；本地试画 ${count} 个单元`;
   }
   notes.push('未明说的群落数量、疏密、近中远层次与变体均为本地构图选择；种类可按已声明的写意画法概括，不把铺展词换算成精确物体数量。');
   return {layers,notes};

@@ -1,0 +1,32 @@
+{
+  "baseline": "a497b2a",
+  "casesHash": "e5808b3d5dcf5339ee47f6cd061bb3d466b41fe14658959931b431583beb2e76",
+  "cases": [
+    {
+      "case": "g02",
+      "record": "2026-10-21T15-07-46-383Z-a618c586",
+      "valid": true,
+      "errors": [],
+      "seconds": 7.4,
+      "tokens": 3936
+    },
+    {
+      "case": "g11",
+      "record": "2026-10-21T15-07-53-830Z-dabcb453",
+      "valid": true,
+      "errors": [],
+      "seconds": 4,
+      "tokens": 4094
+    },
+    {
+      "case": "g12",
+      "record": "2026-10-21T15-07-57-898Z-84685e24",
+      "valid": false,
+      "errors": [
+        "spatial[1] 依据未关联关系两端"
+      ],
+      "seconds": 9.2,
+      "tokens": 4003
+    }
+  ]
+}

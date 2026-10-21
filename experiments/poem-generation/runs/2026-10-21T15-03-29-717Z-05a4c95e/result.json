@@ -1,0 +1,584 @@
+{
+  "id": "2026-10-21T15-03-29-717Z-05a4c95e",
+  "fingerprint": "62c532faa6ffeb8f5c994d7d80653678ed8b01354931436a9e135c3cd97055ee",
+  "poem": "绿树村边合，青山郭外斜。",
+  "source": {
+    "provider": "泛化新句试验",
+    "author": "孟浩然",
+    "title": "过故人庄",
+    "dynasty": "唐代"
+  },
+  "mode": "scene",
+  "model": "DeepSeek-V4.1-Flash",
+  "started_at": "2026-10-21T15:03:29.728Z",
+  "cached": false,
+  "http_status": 200,
+  "usage": {
+    "completion_tokens": 542,
+    "prompt_tokens": 3220,
+    "total_tokens": 3762,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 3200
+    }
+  },
+  "finish_reason": "stop",
+  "analysis": {
+    "schema_version": "3.2",
+    "poem": "绿树村边合，青山郭外斜。",
+    "reading": "绿树环绕在村庄边，青山在城郭外斜延；两句写村郭外围的树与山，空间由近及远。",
+    "entities": [
+      {
+        "id": "i1",
+        "mentions": [
+          "绿树"
+        ],
+        "concept": "绿色的树木",
+        "kind": "organism",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "绿树村边合"
+        ],
+        "quantity": {
+          "mode": "many",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "group",
+          "extent": "spread",
+          "evidence": [
+            "绿树村边合"
+          ]
+        }
+      },
+      {
+        "id": "i2",
+        "mentions": [
+          "村"
+        ],
+        "concept": "村庄",
+        "kind": "place",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "绿树村边合"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i3",
+        "mentions": [
+          "青山"
+        ],
+        "concept": "青翠的山",
+        "kind": "place",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "青山郭外斜"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i4",
+        "mentions": [
+          "郭"
+        ],
+        "concept": "外城、城郭",
+        "kind": "place",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "青山郭外斜"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      }
+    ],
+    "relations": [],
+    "atmosphere": {
+      "labels": [
+        "清幽",
+        "开阔"
+      ],
+      "valence": "positive",
+      "energy": "low",
+      "tension": "low",
+      "openness": "high",
+      "evidence": [
+        "绿树村边合",
+        "青山郭外斜"
+      ]
+    },
+    "time": {
+      "markers": [],
+      "note": null
+    },
+    "uncertainties": [
+      "“合”与“斜”的具体空间关系未明说，只能从字面推断树绕村、山在郭外斜延。"
+    ],
+    "spatial": [
+      {
+        "type": "outside",
+        "source": "i1",
+        "target": "i2",
+        "modality": "asserted",
+        "basis": "inferred",
+        "evidence": [
+          "绿树村边合"
+        ]
+      },
+      {
+        "type": "outside",
+        "source": "i3",
+        "target": "i4",
+        "modality": "asserted",
+        "basis": "inferred",
+        "evidence": [
+          "青山郭外斜"
+        ]
+      }
+    ]
+  },
+  "validation": {
+    "valid": true,
+    "errors": [],
+    "warnings": [
+      "模型保留了不确定性，需要审阅",
+      "spatial[0] 的推断或非确定关系需审阅",
+      "spatial[1] 的推断或非确定关系需审阅"
+    ],
+    "review_required": true
+  },
+  "plan": {
+    "version": "regional-scene-2",
+    "seed": 2674075558,
+    "settings": {
+      "wind": 0,
+      "density": 0.45,
+      "palette": "clear"
+    },
+    "layers": [
+      {
+        "tool": "landscape",
+        "entities": [
+          "i3"
+        ],
+        "projectedEntities": [],
+        "names": [
+          "青山"
+        ],
+        "options": {
+          "form": "mountain"
+        },
+        "animate": false,
+        "placement": {
+          "anchor": [
+            320,
+            194
+          ],
+          "at": [
+            0.5,
+            0.5
+          ],
+          "scale": 1.5
+        },
+        "instances": [
+          {
+            "placement": {
+              "anchor": [
+                320,
+                194
+              ],
+              "at": [
+                0.5,
+                0.4
+              ],
+              "scale": 1.6
+            },
+            "depth": 0,
+            "opacity": 1,
+            "variant": 0
+          }
+        ],
+        "singleUnit": false,
+        "quantity": {
+          "items": [
+            {
+              "entity": "i3",
+              "mode": "unspecified",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "unspecified",
+              "extent": "unspecified",
+              "evidence": [],
+              "basis": "model"
+            }
+          ],
+          "rendered": 1,
+          "exact": false,
+          "collective": false,
+          "partUnsupported": false
+        },
+        "quantityLabel": "整体笔触图层；内部数量尚未适配",
+        "z": -30
+      },
+      {
+        "tool": "tree",
+        "entities": [
+          "i1"
+        ],
+        "projectedEntities": [],
+        "names": [
+          "绿树"
+        ],
+        "options": {
+          "form": "broadleaf",
+          "crown": "wash"
+        },
+        "animate": true,
+        "placement": {
+          "anchor": [
+            320,
+            388
+          ],
+          "at": [
+            0.25,
+            0.9
+          ],
+          "scale": 1.15
+        },
+        "instances": [
+          {
+            "placement": {
+              "anchor": [
+                320,
+                388
+              ],
+              "at": [
+                0.09063804118847474,
+                0.6160714285714286
+              ],
+              "scale": 0.5
+            },
+            "depth": 0.03571428571428571,
+            "opacity": 0.6625,
+            "variant": 0
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                388
+              ],
+              "at": [
+                0.6631899799364203,
+                0.6482142857142856
+              ],
+              "scale": 0.6
+            },
+            "depth": 0.10714285714285714,
+            "opacity": 0.6875,
+            "variant": 1
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                388
+              ],
+              "at": [
+                0.3338238620524394,
+                0.6803571428571429
+              ],
+              "scale": 0.7
+            },
+            "depth": 0.17857142857142858,
+            "opacity": 0.7125,
+            "variant": 2
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                388
+              ],
+              "at": [
+                0.8628207074062579,
+                0.7125
+              ],
+              "scale": 0.8
+            },
+            "depth": 0.25,
+            "opacity": 0.7375,
+            "variant": 0
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                388
+              ],
+              "at": [
+                0.49767756854539846,
+                0.7446428571428572
+              ],
+              "scale": 0.9
+            },
+            "depth": 0.32142857142857145,
+            "opacity": 0.7625000000000001,
+            "variant": 1
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                388
+              ],
+              "at": [
+                0.11642340624125347,
+                0.7767857142857143
+              ],
+              "scale": 1
+            },
+            "depth": 0.39285714285714285,
+            "opacity": 0.7875,
+            "variant": 2
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                388
+              ],
+              "at": [
+                0.6982029762246941,
+                0.8089285714285714
+              ],
+              "scale": 1.1
+            },
+            "depth": 0.4642857142857143,
+            "opacity": 0.8125,
+            "variant": 0
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                388
+              ],
+              "at": [
+                0.4147688439192134,
+                0.8410714285714286
+              ],
+              "scale": 1.2
+            },
+            "depth": 0.5357142857142857,
+            "opacity": 0.8375,
+            "variant": 1
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                388
+              ],
+              "at": [
+                0.92387619408373,
+                0.8732142857142857
+              ],
+              "scale": 1.2999999999999998
+            },
+            "depth": 0.6071428571428571,
+            "opacity": 0.8625,
+            "variant": 2
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                388
+              ],
+              "at": [
+                0.5914544753200348,
+                0.9053571428571429
+              ],
+              "scale": 1.4
+            },
+            "depth": 0.6785714285714286,
+            "opacity": 0.8875,
+            "variant": 0
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                388
+              ],
+              "at": [
+                0.21177336942735453,
+                0.9375
+              ],
+              "scale": 1.4999999999999998
+            },
+            "depth": 0.75,
+            "opacity": 0.9125,
+            "variant": 1
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                388
+              ],
+              "at": [
+                0.8652028733659615,
+                0.9696428571428571
+              ],
+              "scale": 1.5999999999999999
+            },
+            "depth": 0.8214285714285714,
+            "opacity": 0.9375,
+            "variant": 2
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                388
+              ],
+              "at": [
+                0.43790064335378187,
+                1.0017857142857143
+              ],
+              "scale": 1.7
+            },
+            "depth": 0.8928571428571429,
+            "opacity": 0.9625,
+            "variant": 0
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                388
+              ],
+              "at": [
+                0.12446810510793582,
+                1.0339285714285715
+              ],
+              "scale": 1.7999999999999998
+            },
+            "depth": 0.9642857142857143,
+            "opacity": 0.9875,
+            "variant": 1
+          }
+        ],
+        "singleUnit": true,
+        "quantity": {
+          "items": [
+            {
+              "entity": "i1",
+              "mode": "many",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "group",
+              "extent": "spread",
+              "evidence": [
+                "绿树村边合"
+              ],
+              "basis": "model"
+            }
+          ],
+          "rendered": 14,
+          "exact": false,
+          "collective": true,
+          "partUnsupported": false
+        },
+        "quantityLabel": "成片分布；本地试画 14 个单元",
+        "z": 8
+      }
+    ],
+    "spatial": [
+      {
+        "type": "outside",
+        "source": "i1",
+        "target": "i2",
+        "modality": "asserted",
+        "basis": "inferred",
+        "evidence": [
+          "绿树村边合"
+        ],
+        "visualized": false,
+        "reason": "关系的一端缺少独立画法"
+      },
+      {
+        "type": "outside",
+        "source": "i3",
+        "target": "i4",
+        "modality": "asserted",
+        "basis": "inferred",
+        "evidence": [
+          "青山郭外斜"
+        ],
+        "visualized": false,
+        "reason": "关系的一端缺少独立画法"
+      }
+    ],
+    "scene": {
+      "kind": "woodland",
+      "notes": [
+        "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。"
+      ],
+      "waterline": null
+    },
+    "omitted": [
+      {
+        "id": "i2",
+        "name": "村",
+        "reason": "该专名人物、地名或抽象含义暂不作实景补画"
+      },
+      {
+        "id": "i4",
+        "name": "郭",
+        "reason": "该专名人物、地名或抽象含义暂不作实景补画"
+      }
+    ],
+    "notes": [
+      "青山虽被归为地点，仍按原文明示的自然景物匹配；具体空间关系另行处理。",
+      "位置、大小、笔触与默认微动是本地试画选择；数量解释与本地显示数量分别记录。",
+      "未明说的群落数量、疏密、近中远层次与变体均为本地构图选择；种类可按已声明的写意画法概括，不把铺展词换算成精确物体数量。",
+      "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。"
+    ],
+    "relations": []
+  },
+  "elapsed_seconds": 4.1
+}

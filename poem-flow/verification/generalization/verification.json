@@ -1,0 +1,823 @@
+{
+  "modelCalls": 0,
+  "initialValid": 9,
+  "currentStrictValid": 11,
+  "total": 12,
+  "quantityControls": 1,
+  "failedChecks": [],
+  "runtimeErrors": [],
+  "mobileWidth": 390,
+  "baselinePoemsPreserved": true,
+  "cases": [
+    {
+      "id": "g01",
+      "poem": "绿树村边合，青山郭外斜。",
+      "first": {
+        "record": "2026-10-21T15-03-29-717Z-05a4c95e",
+        "valid": true,
+        "errors": [],
+        "picture": {
+          "tools": [
+            "landscape",
+            "tree"
+          ],
+          "scene": "woodland",
+          "instances": 15,
+          "omitted": [
+            {
+              "id": "i2",
+              "name": "村",
+              "reason": "该专名人物、地名或抽象含义暂不作实景补画"
+            },
+            {
+              "id": "i4",
+              "name": "郭",
+              "reason": "该专名人物、地名或抽象含义暂不作实景补画"
+            }
+          ],
+          "spatial": [
+            {
+              "type": "outside",
+              "source": "i1",
+              "target": "i2",
+              "modality": "asserted",
+              "basis": "inferred",
+              "evidence": [
+                "绿树村边合"
+              ],
+              "visualized": false,
+              "reason": "关系的一端缺少独立画法"
+            },
+            {
+              "type": "outside",
+              "source": "i3",
+              "target": "i4",
+              "modality": "asserted",
+              "basis": "inferred",
+              "evidence": [
+                "青山郭外斜"
+              ],
+              "visualized": false,
+              "reason": "关系的一端缺少独立画法"
+            }
+          ],
+          "checks": {
+            "village": false,
+            "ground": false
+          }
+        }
+      },
+      "current": {
+        "record": "2026-10-21T15-03-29-717Z-05a4c95e",
+        "valid": true,
+        "errors": [],
+        "picture": {
+          "tools": [
+            "landscape",
+            "dwelling",
+            "tree",
+            "landscape"
+          ],
+          "scene": "village",
+          "instances": 17,
+          "omitted": [
+            {
+              "id": "i4",
+              "name": "郭",
+              "reason": "该专名人物、地名或抽象含义暂不作实景补画"
+            }
+          ],
+          "spatial": [
+            {
+              "type": "outside",
+              "source": "i1",
+              "target": "i2",
+              "modality": "asserted",
+              "basis": "inferred",
+              "evidence": [
+                "绿树村边合"
+              ],
+              "visualized": true,
+              "reason": "关系已由场景区域布局承接；方向、尺度和间距为本地选择"
+            },
+            {
+              "type": "outside",
+              "source": "i3",
+              "target": "i4",
+              "modality": "asserted",
+              "basis": "inferred",
+              "evidence": [
+                "青山郭外斜"
+              ],
+              "visualized": false,
+              "reason": "关系的一端缺少独立画法"
+            }
+          ],
+          "checks": {
+            "village": true,
+            "ground": true
+          }
+        }
+      },
+      "review": "待用户审阅"
+    },
+    {
+      "id": "g02",
+      "poem": "独怜幽草涧边生，上有黄鹂深树鸣。",
+      "first": {
+        "record": "2026-10-21T15-03-33-953Z-23339ec0",
+        "valid": false,
+        "errors": [
+          "spatial[1] 依据未关联关系两端"
+        ]
+      },
+      "current": {
+        "record": "2026-10-21T15-07-46-383Z-a618c586",
+        "valid": true,
+        "errors": [],
+        "picture": {
+          "tools": [
+            "tree",
+            "water",
+            "grass",
+            "bird",
+            "landscape"
+          ],
+          "scene": "wooded-creek",
+          "instances": 33,
+          "omitted": [],
+          "spatial": [],
+          "checks": {
+            "water": true,
+            "grass": true,
+            "woodedCreek": true
+          }
+        }
+      },
+      "review": "待用户审阅"
+    },
+    {
+      "id": "g03",
+      "poem": "桃花一簇开无主，可爱深红爱浅红？",
+      "first": {
+        "record": "2026-10-21T15-03-43-967Z-cc45f88b",
+        "valid": true,
+        "errors": [],
+        "picture": {
+          "tools": [
+            "tree"
+          ],
+          "scene": "woodland",
+          "instances": 1,
+          "omitted": [
+            {
+              "id": "i2",
+              "name": "深红／浅红",
+              "reason": "该专名人物、地名或抽象含义暂不作实景补画"
+            }
+          ],
+          "spatial": [],
+          "checks": {
+            "oneTree": true,
+            "ground": false
+          }
+        }
+      },
+      "current": {
+        "record": "2026-10-21T15-03-43-967Z-cc45f88b",
+        "valid": true,
+        "errors": [],
+        "picture": {
+          "tools": [
+            "tree",
+            "landscape"
+          ],
+          "scene": "flowering-grove",
+          "instances": 2,
+          "omitted": [
+            {
+              "id": "i2",
+              "name": "深红／浅红",
+              "reason": "该专名人物、地名或抽象含义暂不作实景补画"
+            }
+          ],
+          "spatial": [],
+          "checks": {
+            "oneTree": true,
+            "ground": true
+          }
+        }
+      },
+      "review": "待用户审阅"
+    },
+    {
+      "id": "g04",
+      "poem": "竹深树密虫鸣处，时有微凉不是风。",
+      "first": {
+        "record": "2026-10-21T15-03-47-026Z-4c24f744",
+        "valid": true,
+        "errors": [],
+        "picture": {
+          "tools": [
+            "tree",
+            "bamboo"
+          ],
+          "scene": "woodland",
+          "instances": 32,
+          "omitted": [
+            {
+              "id": "i3",
+              "name": "虫",
+              "reason": "该意象尚无合适的写意画法"
+            },
+            {
+              "id": "i4",
+              "name": "微凉",
+              "reason": "该专名人物、地名或抽象含义暂不作实景补画"
+            },
+            {
+              "id": "i5",
+              "name": "风",
+              "reason": "原文中缺席，不绘制"
+            }
+          ],
+          "spatial": [],
+          "checks": {
+            "noWind": true,
+            "noBird": true,
+            "woodland": false
+          }
+        }
+      },
+      "current": {
+        "record": "2026-10-21T15-03-47-026Z-4c24f744",
+        "valid": true,
+        "errors": [],
+        "picture": {
+          "tools": [
+            "tree",
+            "bamboo",
+            "landscape"
+          ],
+          "scene": "mixed-woodland",
+          "instances": 32,
+          "omitted": [
+            {
+              "id": "i3",
+              "name": "虫",
+              "reason": "该意象尚无合适的写意画法"
+            },
+            {
+              "id": "i4",
+              "name": "微凉",
+              "reason": "该专名人物、地名或抽象含义暂不作实景补画"
+            },
+            {
+              "id": "i5",
+              "name": "风",
+              "reason": "原文中缺席，不绘制"
+            }
+          ],
+          "spatial": [],
+          "checks": {
+            "noWind": true,
+            "noBird": true,
+            "woodland": true
+          }
+        }
+      },
+      "review": "待用户审阅"
+    },
+    {
+      "id": "g05",
+      "poem": "两岸青山相对出，孤帆一片日边来。",
+      "first": {
+        "record": "2026-10-21T15-03-50-858Z-234139dd",
+        "valid": true,
+        "errors": [],
+        "picture": {
+          "tools": [
+            "landscape"
+          ],
+          "scene": "landscape",
+          "instances": 1,
+          "omitted": [
+            {
+              "id": "i1",
+              "name": "两岸青山",
+              "reason": "该专名人物、地名或抽象含义暂不作实景补画"
+            },
+            {
+              "id": "i2",
+              "name": "孤帆一片／孤帆",
+              "reason": "该意象尚无合适的写意画法"
+            }
+          ],
+          "spatial": [],
+          "checks": {
+            "oneBoat": false,
+            "channel": false
+          }
+        }
+      },
+      "current": {
+        "record": "2026-10-21T15-03-50-858Z-234139dd",
+        "valid": true,
+        "errors": [],
+        "picture": {
+          "tools": [
+            "landscape",
+            "landscape",
+            "boat",
+            "landscape",
+            "water"
+          ],
+          "scene": "mountain-channel",
+          "instances": 6,
+          "omitted": [],
+          "spatial": [],
+          "checks": {
+            "oneBoat": true,
+            "channel": true
+          }
+        }
+      },
+      "review": "待用户审阅"
+    },
+    {
+      "id": "g06",
+      "poem": "野水无人渡，孤舟尽日横。",
+      "first": {
+        "record": "2026-10-21T15-03-58-544Z-61108ad8",
+        "valid": true,
+        "errors": [],
+        "picture": {
+          "tools": [
+            "boat"
+          ],
+          "scene": "study",
+          "instances": 1,
+          "omitted": [
+            {
+              "id": "i1",
+              "name": "野水",
+              "reason": "该专名人物、地名或抽象含义暂不作实景补画"
+            }
+          ],
+          "spatial": [
+            {
+              "type": "on",
+              "source": "i2",
+              "target": "i1",
+              "modality": "asserted",
+              "basis": "inferred",
+              "evidence": [
+                "野水无人渡",
+                "孤舟尽日横"
+              ],
+              "visualized": false,
+              "reason": "关系的一端缺少独立画法"
+            }
+          ],
+          "checks": {
+            "oneBoat": true,
+            "water": false,
+            "noPerson": true
+          }
+        }
+      },
+      "current": {
+        "record": "2026-10-21T15-03-58-544Z-61108ad8",
+        "valid": true,
+        "errors": [],
+        "picture": {
+          "tools": [
+            "water",
+            "boat"
+          ],
+          "scene": "waterside",
+          "instances": 2,
+          "omitted": [],
+          "spatial": [
+            {
+              "type": "on",
+              "source": "i2",
+              "target": "i1",
+              "modality": "asserted",
+              "basis": "inferred",
+              "evidence": [
+                "野水无人渡",
+                "孤舟尽日横"
+              ],
+              "visualized": true,
+              "reason": "在水面区域定位，尚非物理承载"
+            }
+          ],
+          "checks": {
+            "oneBoat": true,
+            "water": true,
+            "noPerson": true
+          }
+        }
+      },
+      "review": "待用户审阅"
+    },
+    {
+      "id": "g07",
+      "poem": "千山鸟飞绝，万径人踪灭。",
+      "first": {
+        "record": "2026-10-21T15-04-00-836Z-c83cbb8c",
+        "valid": true,
+        "errors": [],
+        "picture": {
+          "tools": [],
+          "scene": "study",
+          "instances": 0,
+          "omitted": [
+            {
+              "id": "i1",
+              "name": "千山",
+              "reason": "该专名人物、地名或抽象含义暂不作实景补画"
+            },
+            {
+              "id": "i2",
+              "name": "鸟",
+              "reason": "原文中缺席，不绘制"
+            },
+            {
+              "id": "i3",
+              "name": "万径",
+              "reason": "该专名人物、地名或抽象含义暂不作实景补画"
+            },
+            {
+              "id": "i4",
+              "name": "人踪",
+              "reason": "原文中缺席，不绘制"
+            }
+          ],
+          "spatial": [],
+          "checks": {
+            "mountain": false,
+            "noAbsentBodies": true
+          }
+        }
+      },
+      "current": {
+        "record": "2026-10-21T15-04-00-836Z-c83cbb8c",
+        "valid": true,
+        "errors": [],
+        "picture": {
+          "tools": [
+            "landscape",
+            "landscape",
+            "landscape"
+          ],
+          "scene": "mountain-trails",
+          "instances": 5,
+          "omitted": [
+            {
+              "id": "i2",
+              "name": "鸟",
+              "reason": "原文中缺席，不绘制"
+            },
+            {
+              "id": "i4",
+              "name": "人踪",
+              "reason": "原文中缺席，不绘制"
+            }
+          ],
+          "spatial": [],
+          "checks": {
+            "mountain": true,
+            "noAbsentBodies": true
+          }
+        }
+      },
+      "review": "待用户审阅"
+    },
+    {
+      "id": "g08",
+      "poem": "孤村落日残霞，轻烟老树寒鸦。",
+      "first": {
+        "record": "2026-10-21T15-04-20-402Z-40bacaa4",
+        "valid": true,
+        "errors": [],
+        "picture": {
+          "tools": [
+            "landscape",
+            "mist",
+            "tree",
+            "bird"
+          ],
+          "scene": "woodland",
+          "instances": 9,
+          "omitted": [
+            {
+              "id": "i1",
+              "name": "孤村",
+              "reason": "该专名人物、地名或抽象含义暂不作实景补画"
+            },
+            {
+              "id": "i3",
+              "name": "残霞",
+              "reason": "该意象尚无合适的写意画法"
+            }
+          ],
+          "spatial": [],
+          "checks": {
+            "village": false,
+            "sky": false
+          }
+        }
+      },
+      "current": {
+        "record": "2026-10-21T15-04-20-402Z-40bacaa4",
+        "valid": true,
+        "errors": [],
+        "picture": {
+          "tools": [
+            "landscape",
+            "landscape",
+            "mist",
+            "dwelling",
+            "tree",
+            "bird",
+            "landscape"
+          ],
+          "scene": "village",
+          "instances": 23,
+          "omitted": [],
+          "spatial": [],
+          "checks": {
+            "village": true,
+            "sky": true
+          }
+        }
+      },
+      "review": "待用户审阅"
+    },
+    {
+      "id": "g09",
+      "poem": "泉声咽危石，日色冷青松。",
+      "first": {
+        "record": "2026-10-21T15-04-31-631Z-149062aa",
+        "valid": true,
+        "errors": [],
+        "picture": {
+          "tools": [
+            "landscape",
+            "tree",
+            "rock"
+          ],
+          "scene": "woodland",
+          "instances": 5,
+          "omitted": [
+            {
+              "id": "i1",
+              "name": "泉声",
+              "reason": "该专名人物、地名或抽象含义暂不作实景补画"
+            }
+          ],
+          "spatial": [],
+          "checks": {
+            "spring": false,
+            "stream": false,
+            "noInventedSun": false
+          }
+        }
+      },
+      "current": {
+        "record": "2026-10-21T15-04-31-631Z-149062aa",
+        "valid": true,
+        "errors": [],
+        "picture": {
+          "tools": [
+            "landscape",
+            "tree",
+            "water",
+            "rock",
+            "landscape",
+            "landscape"
+          ],
+          "scene": "mountain-stream",
+          "instances": 15,
+          "omitted": [],
+          "spatial": [],
+          "checks": {
+            "spring": true,
+            "stream": true,
+            "noInventedSun": true
+          }
+        }
+      },
+      "review": "待用户审阅"
+    },
+    {
+      "id": "g10",
+      "poem": "山际见来烟，竹中窥落日。",
+      "first": {
+        "record": "2026-10-21T15-04-38-719Z-ebde6433",
+        "valid": true,
+        "errors": [],
+        "picture": {
+          "tools": [
+            "landscape",
+            "bamboo"
+          ],
+          "scene": "landscape",
+          "instances": 19,
+          "omitted": [
+            {
+              "id": "i1",
+              "name": "山际",
+              "reason": "该专名人物、地名或抽象含义暂不作实景补画"
+            },
+            {
+              "id": "i2",
+              "name": "来烟",
+              "reason": "该意象尚无合适的写意画法"
+            }
+          ],
+          "spatial": [
+            {
+              "type": "outside",
+              "source": "i2",
+              "target": "i1",
+              "modality": "asserted",
+              "basis": "inferred",
+              "evidence": [
+                "山际见来烟"
+              ],
+              "visualized": false,
+              "reason": "关系的一端缺少独立画法"
+            },
+            {
+              "type": "among",
+              "source": "i4",
+              "target": "i3",
+              "modality": "asserted",
+              "basis": "inferred",
+              "evidence": [
+                "竹中窥落日"
+              ],
+              "visualized": false,
+              "reason": "该空间关系与形态组合尚未适配"
+            }
+          ],
+          "checks": {
+            "mountain": false,
+            "mist": false,
+            "bambooHillside": false
+          }
+        }
+      },
+      "current": {
+        "record": "2026-10-21T15-04-38-719Z-ebde6433",
+        "valid": true,
+        "errors": [],
+        "picture": {
+          "tools": [
+            "landscape",
+            "landscape",
+            "mist",
+            "bamboo",
+            "landscape"
+          ],
+          "scene": "bamboo-hillside",
+          "instances": 22,
+          "omitted": [],
+          "spatial": [
+            {
+              "type": "outside",
+              "source": "i2",
+              "target": "i1",
+              "modality": "asserted",
+              "basis": "inferred",
+              "evidence": [
+                "山际见来烟"
+              ],
+              "visualized": true,
+              "reason": "关系已由场景区域布局承接；方向、尺度和间距为本地选择"
+            },
+            {
+              "type": "among",
+              "source": "i4",
+              "target": "i3",
+              "modality": "asserted",
+              "basis": "inferred",
+              "evidence": [
+                "竹中窥落日"
+              ],
+              "visualized": true,
+              "reason": "关系已由场景区域布局承接；方向、尺度和间距为本地选择"
+            }
+          ],
+          "checks": {
+            "mountain": true,
+            "mist": true,
+            "bambooHillside": true
+          }
+        }
+      },
+      "review": "待用户审阅"
+    },
+    {
+      "id": "g11",
+      "poem": "一水护田将绿绕，两山排闼送青来。",
+      "first": {
+        "record": "2026-10-21T15-04-43-055Z-aed3ed8c",
+        "valid": false,
+        "errors": [
+          "spatial[1] 确定的空间关系不能使用缺席或比喻参照主体"
+        ]
+      },
+      "current": {
+        "record": "2026-10-21T15-07-53-830Z-dabcb453",
+        "valid": true,
+        "errors": [],
+        "picture": {
+          "tools": [
+            "landscape",
+            "landscape",
+            "water",
+            "landscape"
+          ],
+          "scene": "field-river",
+          "instances": 5,
+          "omitted": [
+            {
+              "id": "i3",
+              "name": "绿",
+              "reason": "该专名人物、地名或抽象含义暂不作实景补画"
+            },
+            {
+              "id": "i5",
+              "name": "闼",
+              "reason": "出现情况不确定，暂不补画"
+            },
+            {
+              "id": "i6",
+              "name": "青",
+              "reason": "该专名人物、地名或抽象含义暂不作实景补画"
+            }
+          ],
+          "spatial": [],
+          "checks": {
+            "field": true,
+            "water": true,
+            "twoPeaks": true,
+            "noPerson": true
+          }
+        }
+      },
+      "review": "待用户审阅"
+    },
+    {
+      "id": "g12",
+      "poem": "白鸟一双临水立，见人惊起入芦花。",
+      "first": {
+        "record": "2026-10-21T15-04-47-576Z-7b92d9f3",
+        "valid": false,
+        "errors": [
+          "spatial[1] 依据未关联关系两端"
+        ]
+      },
+      "current": {
+        "record": "2026-10-21T15-07-57-898Z-84685e24",
+        "valid": false,
+        "errors": [
+          "spatial[1] 依据未关联关系两端"
+        ]
+      },
+      "review": "待用户审阅",
+      "quantityControl": {
+        "record": "2026-10-21T15-17-05-559Z-bbcaedbb",
+        "mode": "quantity",
+        "valid": true,
+        "picture": {
+          "tools": [
+            "water",
+            "grass",
+            "bird",
+            "landscape"
+          ],
+          "scene": "reed-bank",
+          "instances": 18,
+          "omitted": [
+            {
+              "id": "i3",
+              "name": "人",
+              "reason": "出现情况不确定，暂不补画"
+            }
+          ],
+          "spatial": [],
+          "checks": {
+            "twoBirds": true,
+            "reeds": true,
+            "noAddedBoat": true
+          }
+        }
+      }
+    }
+  ]
+}

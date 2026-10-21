@@ -2,6 +2,13 @@
 // Matching words alone never establishes presence, metaphor or movement.
 (function(root,factory){if(typeof module==='object'&&module.exports)module.exports=factory();else root.PoemImageryLexicon=factory();})(globalThis,()=>{
 const rules=[
+  {words:['村庄','村落','孤村','荒村','村'],tool:'dwelling',options:{kind:'house'},approximation:'以一组低矮房舍借形村落，不把村的数量当作房屋栋数'},
+  {words:['孤帆','帆'],tool:'boat',projection:'whole-from-sail',approximation:'以舟身借形帆所指的船，当前不补帆布；帆的数量与船数分别保留'},
+  {words:['芦花','芦苇','蒹葭'],tool:'grass',options:{form:'reed'},approximation:'以长茎疏叶与白色穗意概括岸边芦苇，不画成园中花冠'},
+  {words:['残霞','晚霞','朝霞','霞'],tool:'landscape',options:{form:'sky'},approximation:'以天际薄色层借形霞，局部冷暖色尚未自动适配'},
+  {words:['泉声'],tool:'water',approximation:'由明确泉声线索借泉水形，不声称原文明确看见了水体'},
+  {words:['日色'],tool:'landscape',options:{form:'lightwash'},approximation:'以局部光色借形日色，不额外画太阳圆盘'},
+  {words:['田'],tool:'landscape',options:{form:'field'},exclude:['田家','田园','田野']},
   {words:['天空','青天','九天','天'],tool:'landscape',options:{form:'sky'},exclude:['天津','天涯','天下','天真','天命']},
   {words:['轻尘','尘土'],tool:'landscape',options:{form:'dust'},approximation:'以静态地表颗粒概括，不自动绘成扬尘'},
   {words:['木兰舟','木兰船','柏舟'],tool:'boat'},
@@ -30,7 +37,7 @@ const rules=[
   {words:['远山','青山','群山','山'],tool:'landscape',options:{form:'mountain'},exclude:['山居','山园','山西','山东','山城']},
   {words:['野渡','渡口','江岸','河岸','岸边','岸','沙洲'],tool:'landscape',options:{form:'shore'}},
   {words:['原野','平野','田野','地面','草地'],tool:'landscape',options:{form:'ground'}},
-  {words:['曲径','野径','小径','深巷','小巷','巷'],tool:'landscape',options:{form:'path'}},
+  {words:['曲径','野径','小径','深巷','小巷','巷','径'],tool:'landscape',options:{form:'path'}},
   {words:['柳絮'],tool:'catkins'},
   {words:['落花'],tool:'falling-petals'},
   {words:['菊花','黄华','菊'],tool:'flower-forms',options:{kind:'chrysanthemum'}},
@@ -52,9 +59,9 @@ const rules=[
   {words:['黄莺','莺'],tool:'oriole',exclude:['夜莺']},
   {words:['雪'],tool:'snow',options:{state:'fall'}},
   {words:['明月','月亮','月'],tool:'moon'},
-  {words:['烟雾','薄雾','雾'],tool:'mist'}, {words:['云'],tool:'cloud'},
+  {words:['烟雾','薄雾','来烟','烟','雾'],tool:'mist'}, {words:['云'],tool:'cloud'},
   {words:['舟','船'],tool:'boat'},
-  {words:['雨'],tool:'rain'}, {words:['江水','流水','细流','清泉','泉水','春潮','潮水','潮','水','泉','江','溪','湖','河'],tool:'water'},
+  {words:['雨'],tool:'rain'}, {words:['江水','流水','细流','清泉','泉水','春潮','潮水','潮','水','泉','江','溪','涧','湖','河'],tool:'water'},
   {words:['长亭','亭'],tool:'pavilion'},
   {words:['石','岩'],tool:'rock'}, {words:['鱼'],tool:'fish'},
   {words:['花'],tool:'flower',exclude:['桃花','兰花','杜鹃','杨花','桂花','槐花','梅子','菊花','莲花','荷花']}

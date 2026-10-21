@@ -1,0 +1,687 @@
+{
+  "id": "2026-10-21T15-07-46-383Z-a618c586",
+  "fingerprint": "7611d35f0a7f65c96b3aa3da3c7062059073108bcba550ae1ed22923df021818",
+  "poem": "独怜幽草涧边生，上有黄鹂深树鸣。",
+  "source": {
+    "provider": "泛化新句试验·证据修订",
+    "author": "韦应物",
+    "title": "滁州西涧",
+    "dynasty": "唐代"
+  },
+  "mode": "scene",
+  "model": "DeepSeek-V4.1-Flash",
+  "started_at": "2026-10-21T15:07:46.388Z",
+  "cached": false,
+  "http_status": 200,
+  "usage": {
+    "completion_tokens": 490,
+    "prompt_tokens": 3446,
+    "total_tokens": 3936,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  },
+  "finish_reason": "stop",
+  "analysis": {
+    "schema_version": "3.2",
+    "poem": "独怜幽草涧边生，上有黄鹂深树鸣。",
+    "reading": "幽草在涧边生长，黄鹂在深树间鸣叫；两句写涧边幽静而带生机的景象。",
+    "entities": [
+      {
+        "id": "i1",
+        "mentions": [
+          "幽草"
+        ],
+        "concept": "幽草",
+        "kind": "organism",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "幽草涧边生"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i2",
+        "mentions": [
+          "涧"
+        ],
+        "concept": "山涧",
+        "kind": "place",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "幽草涧边生"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i3",
+        "mentions": [
+          "黄鹂"
+        ],
+        "concept": "黄鹂",
+        "kind": "organism",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "上有黄鹂深树鸣"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i4",
+        "mentions": [
+          "深树"
+        ],
+        "concept": "深树",
+        "kind": "organism",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "上有黄鹂深树鸣"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      }
+    ],
+    "relations": [],
+    "atmosphere": {
+      "labels": [
+        "幽静",
+        "生机"
+      ],
+      "valence": "neutral",
+      "energy": "low",
+      "tension": "low",
+      "openness": "medium",
+      "evidence": [
+        "幽草涧边生",
+        "上有黄鹂深树鸣"
+      ]
+    },
+    "time": {
+      "markers": [],
+      "note": null
+    },
+    "uncertainties": [
+      "“上”指黄鹂在树上还是涧的上方，位置关系不够明确。",
+      "“独怜”的主语未出现，无法确定是谁在怜爱幽草。"
+    ],
+    "spatial": []
+  },
+  "validation": {
+    "valid": true,
+    "errors": [],
+    "warnings": [
+      "模型保留了不确定性，需要审阅"
+    ],
+    "review_required": true
+  },
+  "plan": {
+    "version": "regional-scene-2",
+    "seed": 1811762214,
+    "settings": {
+      "wind": 0,
+      "density": 0.45,
+      "palette": "clear"
+    },
+    "layers": [
+      {
+        "tool": "tree",
+        "entities": [
+          "i4"
+        ],
+        "projectedEntities": [],
+        "names": [
+          "深树"
+        ],
+        "options": {
+          "form": "broadleaf",
+          "crown": "lines"
+        },
+        "animate": true,
+        "placement": {
+          "anchor": [
+            320,
+            388
+          ],
+          "at": [
+            0.25,
+            0.9
+          ],
+          "scale": 1.15
+        },
+        "instances": [
+          {
+            "placement": {
+              "anchor": [
+                320,
+                388
+              ],
+              "at": [
+                0.07859109505033121,
+                0.6749999999999999
+              ],
+              "scale": 0.6833333333333333
+            },
+            "depth": 0.16666666666666666,
+            "opacity": 0.7083333333333334,
+            "variant": 0
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                388
+              ],
+              "at": [
+                0.7028631430398257,
+                0.825
+              ],
+              "scale": 1.15
+            },
+            "depth": 0.5,
+            "opacity": 0.825,
+            "variant": 1
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                388
+              ],
+              "at": [
+                0.32005958689787484,
+                0.975
+              ],
+              "scale": 1.6166666666666667
+            },
+            "depth": 0.8333333333333334,
+            "opacity": 0.9416666666666667,
+            "variant": 2
+          }
+        ],
+        "singleUnit": true,
+        "quantity": {
+          "items": [
+            {
+              "entity": "i4",
+              "mode": "unspecified",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "unspecified",
+              "extent": "unspecified",
+              "evidence": [],
+              "basis": "model"
+            }
+          ],
+          "rendered": 3,
+          "exact": false,
+          "collective": false,
+          "partUnsupported": false
+        },
+        "quantityLabel": "数量未精确；本地试画 3 个单元",
+        "z": 8
+      },
+      {
+        "tool": "grass",
+        "entities": [
+          "i1"
+        ],
+        "projectedEntities": [],
+        "names": [
+          "幽草"
+        ],
+        "options": {},
+        "animate": true,
+        "placement": {
+          "anchor": [
+            320,
+            315
+          ],
+          "at": [
+            0.42,
+            0.92
+          ],
+          "scale": 1
+        },
+        "instances": [
+          {
+            "placement": {
+              "anchor": [
+                320,
+                310
+              ],
+              "at": [
+                0.10513966165408492,
+                0.6606666666666667
+              ],
+              "scale": 0.4026666666666667
+            },
+            "depth": 0.03333333333333333,
+            "opacity": 0.594,
+            "variant": 0
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                310
+              ],
+              "at": [
+                0.6486693764764007,
+                0.682
+              ],
+              "scale": 0.448
+            },
+            "depth": 0.1,
+            "opacity": 0.622,
+            "variant": 1
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                310
+              ],
+              "at": [
+                0.32805525100010124,
+                0.7033333333333334
+              ],
+              "scale": 0.49333333333333335
+            },
+            "depth": 0.16666666666666666,
+            "opacity": 0.6499999999999999,
+            "variant": 2
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                310
+              ],
+              "at": [
+                0.9030442616314995,
+                0.7246666666666667
+              ],
+              "scale": 0.5386666666666666
+            },
+            "depth": 0.23333333333333334,
+            "opacity": 0.6779999999999999,
+            "variant": 0
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                310
+              ],
+              "at": [
+                0.5385624850223334,
+                0.746
+              ],
+              "scale": 0.5840000000000001
+            },
+            "depth": 0.3,
+            "opacity": 0.706,
+            "variant": 1
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                310
+              ],
+              "at": [
+                0.19686399142366484,
+                0.7673333333333333
+              ],
+              "scale": 0.6293333333333333
+            },
+            "depth": 0.36666666666666664,
+            "opacity": 0.734,
+            "variant": 2
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                310
+              ],
+              "at": [
+                0.7497345534053437,
+                0.7886666666666667
+              ],
+              "scale": 0.6746666666666667
+            },
+            "depth": 0.43333333333333335,
+            "opacity": 0.762,
+            "variant": 0
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                310
+              ],
+              "at": [
+                0.4425798748660768,
+                0.81
+              ],
+              "scale": 0.72
+            },
+            "depth": 0.5,
+            "opacity": 0.7899999999999999,
+            "variant": 1
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                310
+              ],
+              "at": [
+                0.8830286776731775,
+                0.8313333333333334
+              ],
+              "scale": 0.7653333333333334
+            },
+            "depth": 0.5666666666666667,
+            "opacity": 0.818,
+            "variant": 2
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                310
+              ],
+              "at": [
+                0.6053574099032383,
+                0.8526666666666667
+              ],
+              "scale": 0.8106666666666666
+            },
+            "depth": 0.6333333333333333,
+            "opacity": 0.8459999999999999,
+            "variant": 0
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                310
+              ],
+              "at": [
+                0.2506321234726654,
+                0.874
+              ],
+              "scale": 0.856
+            },
+            "depth": 0.7,
+            "opacity": 0.8739999999999999,
+            "variant": 1
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                310
+              ],
+              "at": [
+                0.791636345456583,
+                0.8953333333333333
+              ],
+              "scale": 0.9013333333333334
+            },
+            "depth": 0.7666666666666667,
+            "opacity": 0.9019999999999999,
+            "variant": 2
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                310
+              ],
+              "at": [
+                0.5292783579231781,
+                0.9166666666666667
+              ],
+              "scale": 0.9466666666666668
+            },
+            "depth": 0.8333333333333334,
+            "opacity": 0.9299999999999999,
+            "variant": 0
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                310
+              ],
+              "at": [
+                0.14872075581538619,
+                0.9380000000000001
+              ],
+              "scale": 0.9920000000000001
+            },
+            "depth": 0.9,
+            "opacity": 0.958,
+            "variant": 1
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                310
+              ],
+              "at": [
+                0.6815232852537061,
+                0.9593333333333334
+              ],
+              "scale": 1.0373333333333334
+            },
+            "depth": 0.9666666666666667,
+            "opacity": 0.986,
+            "variant": 2
+          }
+        ],
+        "singleUnit": true,
+        "quantity": {
+          "items": [
+            {
+              "entity": "i1",
+              "mode": "unspecified",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "unspecified",
+              "extent": "unspecified",
+              "evidence": [],
+              "basis": "model"
+            }
+          ],
+          "rendered": 15,
+          "exact": false,
+          "collective": false,
+          "partUnsupported": false
+        },
+        "quantityLabel": "数量未精确；本地试画 15 个单元"
+      },
+      {
+        "tool": "bird",
+        "entities": [
+          "i3"
+        ],
+        "projectedEntities": [],
+        "names": [
+          "黄鹂"
+        ],
+        "options": {
+          "pose": "flying",
+          "tone": "ink",
+          "facing": "right"
+        },
+        "animate": true,
+        "placement": {
+          "anchor": [
+            320,
+            190
+          ],
+          "at": [
+            0.62,
+            0.34
+          ],
+          "scale": 0.78
+        },
+        "drawingLabel": "鸟意（写意借形）",
+        "instances": [
+          {
+            "placement": {
+              "anchor": [
+                320,
+                190
+              ],
+              "at": [
+                0.18998351882388814,
+                0.3121016795933247
+              ],
+              "scale": 0.54375
+            },
+            "depth": 0.125,
+            "opacity": 0.7374999999999999,
+            "variant": 0
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                190
+              ],
+              "at": [
+                0.5874387874516714,
+                0.38621072731912137
+              ],
+              "scale": 0.63125
+            },
+            "depth": 0.375,
+            "opacity": 0.8125,
+            "variant": 1
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                190
+              ],
+              "at": [
+                0.32647787112948656,
+                0.3895815749466419
+              ],
+              "scale": 0.71875
+            },
+            "depth": 0.625,
+            "opacity": 0.8875,
+            "variant": 2
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                190
+              ],
+              "at": [
+                0.7808702046718615,
+                0.2979537486284971
+              ],
+              "scale": 0.8062499999999999
+            },
+            "depth": 0.875,
+            "opacity": 0.9624999999999999,
+            "variant": 0
+          }
+        ],
+        "singleUnit": true,
+        "quantity": {
+          "items": [
+            {
+              "entity": "i3",
+              "mode": "unspecified",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "unspecified",
+              "extent": "unspecified",
+              "evidence": [],
+              "basis": "model"
+            }
+          ],
+          "rendered": 4,
+          "exact": false,
+          "collective": false,
+          "partUnsupported": false
+        },
+        "quantityLabel": "数量未精确；本地试画 4 个单元",
+        "z": 25
+      }
+    ],
+    "spatial": [],
+    "scene": {
+      "kind": "woodland",
+      "notes": [],
+      "waterline": null
+    },
+    "omitted": [
+      {
+        "id": "i2",
+        "name": "涧",
+        "reason": "该专名人物、地名或抽象含义暂不作实景补画"
+      }
+    ],
+    "notes": [
+      "黄鹂：以通用写意鸟形表现，不细分物种。这是本地写意借形，保留原词义。",
+      "黄鹂可由鸣声借鸟形联想，不把绘出的姿态当作原文已明确看见的动作。",
+      "位置、大小、笔触与默认微动是本地试画选择；数量解释与本地显示数量分别记录。",
+      "未明说的群落数量、疏密、近中远层次与变体均为本地构图选择；种类可按已声明的写意画法概括，不把铺展词换算成精确物体数量。"
+    ],
+    "relations": []
+  },
+  "elapsed_seconds": 7.4
+}

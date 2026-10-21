@@ -1,0 +1,217 @@
+{
+  "id": "2026-10-21T15-03-43-967Z-cc45f88b",
+  "fingerprint": "3bd9421d0dffd65710d78a610052d334dc3224e96fe7128ec3fdbfe4873ab610",
+  "poem": "桃花一簇开无主，可爱深红爱浅红？",
+  "source": {
+    "provider": "泛化新句试验",
+    "author": "杜甫",
+    "title": "江畔独步寻花·其五",
+    "dynasty": "唐代"
+  },
+  "mode": "scene",
+  "model": "DeepSeek-V4.1-Flash",
+  "started_at": "2026-10-21T15:03:43.970Z",
+  "cached": false,
+  "http_status": 200,
+  "usage": {
+    "completion_tokens": 333,
+    "prompt_tokens": 3223,
+    "total_tokens": 3556,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 3200
+    }
+  },
+  "finish_reason": "stop",
+  "analysis": {
+    "schema_version": "3.2",
+    "poem": "桃花一簇开无主，可爱深红爱浅红？",
+    "reading": "一簇桃花自在地开放，没有主人照管；深红与浅红都惹人喜爱，令人难以取舍。",
+    "entities": [
+      {
+        "id": "i1",
+        "mentions": [
+          "桃花"
+        ],
+        "concept": "桃花",
+        "kind": "organism",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "桃花一簇开无主"
+        ],
+        "quantity": {
+          "mode": "few",
+          "min": null,
+          "max": null,
+          "unit": "簇",
+          "scope": "group",
+          "extent": "local",
+          "evidence": [
+            "桃花一簇"
+          ]
+        }
+      },
+      {
+        "id": "i2",
+        "mentions": [
+          "深红",
+          "浅红"
+        ],
+        "concept": "桃花的深浅红色",
+        "kind": "abstract",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "可爱深红爱浅红"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      }
+    ],
+    "relations": [],
+    "atmosphere": {
+      "labels": [
+        "明丽",
+        "闲适",
+        "流连"
+      ],
+      "valence": "positive",
+      "energy": "low",
+      "tension": "low",
+      "openness": "medium",
+      "evidence": [
+        "桃花一簇开无主",
+        "可爱深红爱浅红"
+      ]
+    },
+    "time": {
+      "markers": [],
+      "note": null
+    },
+    "uncertainties": [
+      "“无主”可指无人照管或没有归属，具体含义不明。",
+      "“深红”“浅红”是花色还是花本身，未明说。"
+    ],
+    "spatial": []
+  },
+  "validation": {
+    "valid": true,
+    "errors": [],
+    "warnings": [
+      "模型保留了不确定性，需要审阅"
+    ],
+    "review_required": true
+  },
+  "plan": {
+    "version": "regional-scene-2",
+    "seed": 3672958447,
+    "settings": {
+      "wind": 0,
+      "density": 0.45,
+      "palette": "clear"
+    },
+    "layers": [
+      {
+        "tool": "tree",
+        "entities": [
+          "i1"
+        ],
+        "projectedEntities": [],
+        "names": [
+          "桃花"
+        ],
+        "options": {
+          "form": "blossom",
+          "branches": "7",
+          "crown": "lines"
+        },
+        "animate": false,
+        "placement": {
+          "anchor": [
+            320,
+            388
+          ],
+          "at": [
+            0.18,
+            0.98
+          ],
+          "scale": 1.15
+        },
+        "drawingLabel": "树意（写意借形）",
+        "instances": [
+          {
+            "placement": {
+              "anchor": [
+                320,
+                388
+              ],
+              "at": [
+                0.18,
+                0.9799999999999999
+              ],
+              "scale": 1.4375
+            },
+            "depth": 0,
+            "opacity": 1,
+            "variant": 0
+          }
+        ],
+        "singleUnit": true,
+        "quantity": {
+          "items": [
+            {
+              "entity": "i1",
+              "mode": "few",
+              "min": null,
+              "max": null,
+              "unit": "簇",
+              "scope": "group",
+              "extent": "local",
+              "evidence": [
+                "桃花一簇"
+              ],
+              "basis": "model"
+            }
+          ],
+          "rendered": 1,
+          "exact": false,
+          "collective": false,
+          "partUnsupported": false
+        },
+        "quantityLabel": "数量未精确；本地试画 1 个单元",
+        "z": 8
+      }
+    ],
+    "spatial": [],
+    "scene": {
+      "kind": "woodland",
+      "notes": [],
+      "waterline": null
+    },
+    "omitted": [
+      {
+        "id": "i2",
+        "name": "深红／浅红",
+        "reason": "该专名人物、地名或抽象含义暂不作实景补画"
+      }
+    ],
+    "notes": [
+      "桃花：以一树疏花组织花枝；整株轮廓是本地写意借形，明确枝数只约束主花枝。这是本地写意借形，保留原词义。",
+      "本句有否定或假设提示，基础意象模式未细分其范围，暂缓动画，不宣称完成逻辑解释。",
+      "位置、大小、笔触与默认微动是本地试画选择；数量解释与本地显示数量分别记录。",
+      "未明说的群落数量、疏密、近中远层次与变体均为本地构图选择；种类可按已声明的写意画法概括，不把铺展词换算成精确物体数量。"
+    ],
+    "relations": []
+  },
+  "elapsed_seconds": 3
+}

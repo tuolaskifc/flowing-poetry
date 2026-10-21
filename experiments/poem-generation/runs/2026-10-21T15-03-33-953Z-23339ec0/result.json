@@ -1,0 +1,180 @@
+{
+  "id": "2026-10-21T15-03-33-953Z-23339ec0",
+  "fingerprint": "0284f75fcfa8ca8c5021f412fe1f1470d6497e061e84a9ed643a3d1835a2befa",
+  "poem": "独怜幽草涧边生，上有黄鹂深树鸣。",
+  "source": {
+    "provider": "泛化新句试验",
+    "author": "韦应物",
+    "title": "滁州西涧",
+    "dynasty": "唐代"
+  },
+  "mode": "scene",
+  "model": "DeepSeek-V4.1-Flash",
+  "started_at": "2026-10-21T15:03:33.958Z",
+  "cached": false,
+  "http_status": 200,
+  "usage": {
+    "completion_tokens": 559,
+    "prompt_tokens": 3225,
+    "total_tokens": 3784,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 3200
+    }
+  },
+  "finish_reason": "stop",
+  "analysis": {
+    "schema_version": "3.2",
+    "poem": "独怜幽草涧边生，上有黄鹂深树鸣。",
+    "reading": "涧边幽草自生，上方深树间有黄鹂鸣叫；两句写幽静山涧中的草木与鸟声，含怜爱之意。",
+    "entities": [
+      {
+        "id": "i1",
+        "mentions": [
+          "幽草"
+        ],
+        "concept": "涧边幽静的草",
+        "kind": "organism",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "幽草涧边生"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i2",
+        "mentions": [
+          "涧"
+        ],
+        "concept": "山涧",
+        "kind": "place",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "涧边生"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i3",
+        "mentions": [
+          "黄鹂"
+        ],
+        "concept": "黄鹂鸟",
+        "kind": "organism",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "上有黄鹂深树鸣"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i4",
+        "mentions": [
+          "深树"
+        ],
+        "concept": "茂密的树丛",
+        "kind": "organism",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "深树鸣"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      }
+    ],
+    "relations": [],
+    "atmosphere": {
+      "labels": [
+        "幽静",
+        "清幽"
+      ],
+      "valence": "positive",
+      "energy": "low",
+      "tension": "low",
+      "openness": "medium",
+      "evidence": [
+        "幽草涧边生",
+        "深树鸣"
+      ]
+    },
+    "time": {
+      "markers": [],
+      "note": null
+    },
+    "uncertainties": [
+      "“上”指涧边上方还是树冠上方，位置参照不明。",
+      "“独怜”的怜爱对象是否仅指幽草，未明说。"
+    ],
+    "spatial": [
+      {
+        "type": "beside",
+        "source": "i1",
+        "target": "i2",
+        "modality": "asserted",
+        "basis": "explicit",
+        "evidence": [
+          "幽草涧边生"
+        ]
+      },
+      {
+        "type": "among",
+        "source": "i3",
+        "target": "i4",
+        "modality": "asserted",
+        "basis": "inferred",
+        "evidence": [
+          "深树鸣"
+        ]
+      }
+    ]
+  },
+  "validation": {
+    "valid": false,
+    "errors": [
+      "spatial[1] 依据未关联关系两端"
+    ],
+    "warnings": [
+      "模型保留了不确定性，需要审阅",
+      "spatial[1] 的推断或非确定关系需审阅"
+    ],
+    "review_required": true
+  },
+  "elapsed_seconds": 9.9
+}
