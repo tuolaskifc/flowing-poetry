@@ -4,7 +4,7 @@
   "savedRecordReplay": false,
   "beforeCovered": 26,
   "afterCovered": 45,
-  "entities": 77,
+  "entities": 75,
   "cases": [
     {
       "id": "p01",
@@ -187,7 +187,7 @@
       "review": "待人工审美确认",
       "before": {
         "covered": 1,
-        "total": 4,
+        "total": 3,
         "tools": [
           "moon"
         ],
@@ -201,7 +201,7 @@
       },
       "after": {
         "covered": 1,
-        "total": 4,
+        "total": 3,
         "tools": [
           "moon"
         ],
@@ -698,7 +698,7 @@
       "review": "待人工审美确认",
       "before": {
         "covered": 2,
-        "total": 4,
+        "total": 3,
         "tools": [
           "bamboo",
           "surface-weather"
@@ -711,7 +711,7 @@
       },
       "after": {
         "covered": 2,
-        "total": 4,
+        "total": 3,
         "tools": [
           "bamboo",
           "surface-weather"

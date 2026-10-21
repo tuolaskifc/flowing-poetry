@@ -11,7 +11,7 @@ const sets=[
 ];
 const places=new Set(['清泉','石','春潮','野渡','水','春江','深林','曲径','野','江','寒江','深巷','野径','山','平野','大江','水田']);
 const organisms=new Set(['松','柳','莲叶','荷花','花','浅草','黄鹂','白鹭','竹','桃花','鸭','深林','木','树','鸟','青苔','夏木']);
-const abstracts=new Set(['轻尘','疏影','暗香','返景','火','香气','树阴','九天']);
+const abstracts=new Set(['暗香','香气']);
 const plural=new Set(['深林','夏木','莲叶','荷花','花','浅草','竹']);
 const relation=(type,source,target,evidence,basis='explicit')=>({type,source,target,modality:'asserted',basis,evidence:[evidence]});
 export const benchmarks=catalog.poems.map((entry,i)=>{
