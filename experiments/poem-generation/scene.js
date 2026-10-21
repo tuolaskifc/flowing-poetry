@@ -9,6 +9,7 @@ window.PoemTrialScene=(()=>{
     return plan.layers.flatMap((l,i)=>(l.instances||[{placement:l.placement,variant:0,depth:0,opacity:1}]).map((instance,index)=>{
       const placement=structuredClone(instance.placement),initial=initialPlacements[i];
       placement.at=[placement.at[0]+l.placement.at[0]-initial.at[0],placement.at[1]+l.placement.at[1]-initial.at[1]];
+      if(l.attachment){const parent=plan.layers.findIndex(v=>v.entities.includes(l.attachment.target));if(parent>=0){placement.at[0]+=plan.layers[parent].placement.at[0]-initialPlacements[parent].at[0];placement.at[1]+=plan.layers[parent].placement.at[1]-initialPlacements[parent].at[1];}}
       const sourceIndex=sources.findIndex(s=>s.layer===i&&s.variant===(instance.variant||0));
       return {tool:l.tool,layer:i,index,sourceIndex,placement,opacity:instance.opacity??1,z:(l.z??i)+(instance.depth||0)};
     })).sort((a,b)=>{
@@ -22,7 +23,12 @@ window.PoemTrialScene=(()=>{
       const source=hosts[entry.sourceIndex]?.querySelector('canvas');if(!source)continue;
       const {anchor,at,scale}=entry.placement;const layer=plan.layers[entry.layer];
       if(layer.grounding){c.save();c.translate(at[0]*W,at[1]*H+5);c.scale(scale*1.8,scale*.24);const g=c.createRadialGradient(0,0,4,0,0,95);g.addColorStop(0,window.PoemDrawing.paletteFor(shared.palette).main+'50');g.addColorStop(1,'transparent');c.fillStyle=g;c.fillRect(-100,-100,200,200);c.restore();}
-      c.save();if(layer.surface){const y=layer.surface.top*H;c.beginPath();c.rect(0,y,W,H-y);c.clip();const wash=c.createLinearGradient(0,y,0,H);wash.addColorStop(0,'transparent');wash.addColorStop(1,window.PoemDrawing.paletteFor(shared.palette).main+'70');c.fillStyle=wash;c.fillRect(0,y,W,H-y);}
+      c.save();if(layer.clip){
+        const dx=layer.placement.at[0]-initialPlacements[entry.layer].at[0],dy=layer.placement.at[1]-initialPlacements[entry.layer].at[1];
+        const points=layer.clip.map(([x,y])=>[(x+dx)*W,(y+dy)*H]);c.beginPath();
+        const last=points.at(-1),first=points[0];c.moveTo((last[0]+first[0])/2,(last[1]+first[1])/2);
+        points.forEach(([x,y],i)=>{const next=points[(i+1)%points.length];if(x<=0||x>=W||y<=0||y>=H){c.lineTo(x,y);c.lineTo((x+next[0])/2,(y+next[1])/2);}else c.quadraticCurveTo(x,y,(x+next[0])/2,(y+next[1])/2);});c.closePath();c.clip();
+      }if(layer.surface){const y=layer.surface.top*H;c.beginPath();c.rect(0,y,W,H-y);c.clip();const wash=c.createLinearGradient(0,y,0,H);wash.addColorStop(0,'transparent');wash.addColorStop(1,window.PoemDrawing.paletteFor(shared.palette).main+'70');c.fillStyle=wash;c.fillRect(0,y,W,H-y);}
       c.globalAlpha=entry.opacity;c.drawImage(source,at[0]*W-anchor[0]*scale,at[1]*H-anchor[1]*scale,640*scale,388*scale);c.restore();
       if(layer.reflection){const line=layer.reflection.waterline*H;c.save();c.beginPath();for(let y=line;y<H;y+=7)c.rect(0,y,W,4);c.clip();c.globalAlpha=.15*entry.opacity;c.translate(0,2*line);c.scale(1,-1);c.drawImage(source,at[0]*W-anchor[0]*scale,at[1]*H-anchor[1]*scale,640*scale,388*scale);c.restore();}
     }c.globalAlpha=1;
@@ -38,6 +44,7 @@ window.PoemTrialScene=(()=>{
         const p=entry.placement,source=hosts[entry.sourceIndex]?.querySelector('canvas');if(!source)continue;
         const x=Math.floor((pos[0]-p.at[0]*W)/p.scale+p.anchor[0]),y=Math.floor((pos[1]-p.at[1]*H)/p.scale+p.anchor[1]),radius=Math.min(8,Math.ceil(4*W/el.getBoundingClientRect().width/p.scale));
         const left=Math.max(0,x-radius),top=Math.max(0,y-radius),right=Math.min(source.width,x+radius+1),bottom=Math.min(source.height,y+radius+1);if(right<=left||bottom<=top)continue;
+        if(plan.layers[entry.layer].inferred)continue;
         const pixels=source.getContext('2d').getImageData(left,top,right-left,bottom-top).data;
         if(pixels.some((v,j)=>j%4===3&&v>8)){drag={i:entry.layer,id:e.pointerId,start:pos,at:[...plan.layers[entry.layer].placement.at]};el.setPointerCapture(e.pointerId);e.preventDefault();break;}
       }

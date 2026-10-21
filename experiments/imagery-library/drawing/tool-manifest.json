@@ -46,6 +46,45 @@
             {
               "value": "pine",
               "label": "松意"
+            },
+            {
+              "value": "blossom",
+              "label": "疏花树"
+            }
+          ]
+        },
+        {
+          "id": "branches",
+          "label": "主花枝",
+          "default": "7",
+          "choices": [
+            {
+              "value": "1",
+              "label": "1"
+            },
+            {
+              "value": "2",
+              "label": "2"
+            },
+            {
+              "value": "3",
+              "label": "3"
+            },
+            {
+              "value": "4",
+              "label": "4"
+            },
+            {
+              "value": "5",
+              "label": "5"
+            },
+            {
+              "value": "6",
+              "label": "6"
+            },
+            {
+              "value": "7",
+              "label": "7"
             }
           ]
         },
@@ -1183,6 +1222,37 @@
         "anchors",
         "shape-selection",
         "fixed-count"
+      ]
+    },
+    {
+      "id": "figure",
+      "name": "人意",
+      "subtitle": "一抹衣影，几笔见人。",
+      "sources": [
+        "project"
+      ],
+      "credit": "本项目 · 淡墨人物",
+      "reference": "drawing/README.md#人意",
+      "note": "以衣形、头部笔点和笠沿提示人物；钓者只加一根疏线，不刻画五官。",
+      "capabilities": [
+        "anchors"
+      ],
+      "controls": [
+        {
+          "id": "pose",
+          "label": "姿态",
+          "default": "fisher",
+          "choices": [
+            {
+              "value": "fisher",
+              "label": "蓑笠钓者"
+            },
+            {
+              "value": "standing",
+              "label": "立人"
+            }
+          ]
+        }
       ]
     }
   ],

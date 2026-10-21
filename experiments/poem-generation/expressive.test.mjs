@@ -40,3 +40,35 @@ test('screening recognizes new pictorial families while blocking names and unrel
  assert.equal(recommendation.scorePoem('客舍黄鹂马蹄').toolCount,3);
  for(const text of ['司马','燕京','鸿儒','房玄龄','星期'])assert.equal(recommendation.scorePoem(text).toolCount,0,text);
 });
+
+test('contextual settings add declared support without claiming extra semantic coverage',()=>{
+ for(const [index,kind] of [[0,'mountain-stream'],[1,'settlement'],[7,'blossom-river'],[8,'forest-light'],[9,'woodland-retreat'],[11,'winter-fishing'],[12,'settlement'],[14,'mountain-waterfall'],[19,'paddy-woodland']]){
+  const p=buildPlan(benchmarks[index].analysis);assert.equal(p.scene.kind,kind);assert(Object.keys(p.scene.regions).length>0||kind==='winter-fishing');
+  for(const l of p.layers.filter(l=>l.inferred)){assert.equal(l.entities.length,0);assert.equal(l.provenance.basis,'local-context');assert(l.provenance.reason);}
+  for(const v of p.layers.flatMap(l=>l.instances))assert(v.placement.at.every(Number.isFinite)&&Number.isFinite(v.placement.scale));
+ }
+});
+
+test('settlement willows are a varied grove; precise solitary counts remain authoritative',()=>{
+ const a=structuredClone(benchmarks[1].analysis),p=buildPlan(a),grove=p.layers.find(l=>l.tool==='willow');assert(grove.instances.length>=3);assert(Math.max(...grove.instances.map(v=>v.placement.scale))<1);
+ a.entities.find(e=>e.mentions.includes('柳')).quantity=quantity({mode:'exact',min:1,max:1,unit:'株',scope:'individual',evidence:['柳']});assert.equal(buildPlan(a).layers.find(l=>l.tool==='willow').instances.length,1);
+});
+
+test('blossom branches belong to one tree outside the bamboo habitat rather than three whole trees',()=>{
+ const p=buildPlan(benchmarks[7].analysis),tree=p.layers.find(l=>l.options.form==='blossom'),bamboo=p.layers.find(l=>l.tool==='bamboo');assert.equal(tree.instances.length,1);assert.equal(tree.options.branches,'3');assert(!tree.quantity.exact);assert(!tree.quantity.partUnsupported);assert(p.spatial[0].visualized);
+ assert(tree.instances[0].placement.at[0]>Math.max(...bamboo.instances.map(v=>v.placement.at[0])));
+ const alley=buildPlan(benchmarks[12].analysis);assert(alley.layers.some(l=>l.tool==='tree'&&l.options.form==='blossom'));assert(alley.layers.some(l=>l.inferred&&l.options.form==='ground'));
+ const heads=buildPlan(fixture('三朵桃花。',[{text:'桃花',quantity:quantity({mode:'exact',min:3,max:3,scope:'individual',unit:'朵',evidence:['三朵桃花']})}]));assert.equal(heads.layers[0].tool,'flower-forms');assert.equal(heads.layers[0].instances.length,3);assert(heads.layers[0].quantity.exact);
+ const orchard=buildPlan(fixture('满园桃花。',[{text:'桃花',quantity:quantity({mode:'many',extent:'spread',evidence:['满园桃花']})}]));assert(orchard.layers[0].instances.length>1);assert(!orchard.layers[0].quantity.exact);
+});
+
+test('fisher is loosely attached to the single boat; absent people and portrait names remain gaps',()=>{
+ const a=structuredClone(benchmarks[11].analysis),p=buildPlan(a),person=p.layers.find(l=>l.tool==='figure'),boat=p.layers.find(l=>l.tool==='boat');assert.equal(person.instances.length,1);assert.equal(boat.instances.length,1);assert.equal(person.attachment.target,boat.entities[0]);assert(Math.abs(person.instances[0].placement.at[1]-boat.instances[0].placement.at[1])<.03);
+ a.entities.find(e=>e.kind==='person').presence='absent';assert(!buildPlan(a).layers.some(l=>l.tool==='figure'));
+ assert(!buildPlan(fixture('司马。',[{text:'司马',kind:'person'}])).layers.length);
+});
+
+test('deep woods surround the retreat and broad fields keep the foreground open for water and egrets',()=>{
+ const p=buildPlan(benchmarks[9].analysis),woods=p.layers.find(l=>l.tool==='tree');assert(woods.instances.length>=20);assert(woods.instances.some(v=>v.placement.at[0]<.3));assert(woods.instances.some(v=>v.placement.at[0]>.8));
+ const q=buildPlan(benchmarks[19].analysis),field=q.layers.find(l=>l.options.form==='field'),trees=q.layers.find(l=>l.tool==='tree');assert(Math.min(...field.clip.map(v=>v[1]))<.45);assert(trees.instances.some(v=>v.placement.at[1]<.5));assert(trees.instances.filter(v=>v.placement.at[1]>.6).every(v=>v.placement.at[0]>.8));
+});

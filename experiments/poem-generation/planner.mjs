@@ -5,11 +5,11 @@ import {compose} from './composition.mjs';
 import {physicalPlace} from './physical-mapping.mjs';
 import {expressiveRule} from './expressive-mapping.mjs';
 import {arrangeScene} from './scene-layout.mjs';
-export const policyVersion='expressive-scene-1';
+export const policyVersion='regional-scene-2';
 const {rules,unsupportedTerms}=lexicon;
 const order=['landscape','moon','cloud','mist','dwelling','building','tree','willow','bamboo','pavilion','horse','water','rock','boat','lotus','grass','orchid','plum-branch','flower','flower-forms','wine','leaves','surface-weather','fish','bird','oriole','falling-petals','catkins','rain','snow'];
 const placements={
-  bird:{anchor:[320,190],at:[.62,.34],scale:.78},dwelling:{anchor:[320,307],at:[.66,.74],scale:1.05},
+  figure:{anchor:[320,310],at:[.6,.76],scale:.6},bird:{anchor:[320,190],at:[.62,.34],scale:.78},dwelling:{anchor:[320,307],at:[.66,.74],scale:1.05},
   landscape:{anchor:[320,194],at:[.5,.5],scale:1.5},tree:{anchor:[320,388],at:[.25,.9],scale:1.15},
   moon:{anchor:[320,175],at:[.76,.2],scale:.85},cloud:{anchor:[320,170],at:[.46,.2],scale:1.05},
   mist:{anchor:[320,190],at:[.5,.48],scale:1.4},water:{anchor:[320,130],at:[.5,.57],scale:1.5},
@@ -43,7 +43,7 @@ export function buildPlan(analysis){
     const findRule=value=>{let best=null,length=0;for(const r of rules){if(r.exclude?.some(word=>value.includes(word)))continue;for(const word of r.words)if(value.includes(word)&&word.length>length){best=r;length=word.length;}}return best;};
     const rawRule=findRule(entity.mentions.join(' ')),rule=expressiveRule(entity,specificUnsupported?null:rawRule||findRule(text),analysis.poem);
     const localSurface=physicalPlace(entity),physicalAbstract=entity.mentions.some(m=>/^(飞流|飞瀑|瀑布|水田|稻田|客舍|禅房|火光|灯火|渔火|返景|返照|夕照|疏影|树阴|树荫|树影|倒影|马蹄声|蹄声|马蹄)$/.test(m)||/^(莺|鸟|黄鹂|燕|雁|鹭|鸥|鸦|杜鹃|鹧鸪)(声|啼|鸣)$/.test(m));
-    if(entity.kind==='abstract'&&!physicalAbstract||entity.kind==='person'||entity.kind==='place'&&!localSurface){omitted.push({id:entity.id,name,reason:'该人物、地名或抽象含义暂不作实景补画'});continue;}
+    if(entity.kind==='abstract'&&!physicalAbstract||entity.kind==='person'&&rule?.tool!=='figure'||entity.kind==='place'&&!localSurface){omitted.push({id:entity.id,name,reason:'该专名人物、地名或抽象含义暂不作实景补画'});continue;}
     if(!rule){omitted.push({id:entity.id,name,reason:'该意象尚无合适的写意画法'});continue;}
     const options={...rule.options};
     if(rule.tool==='water')options.form='plane';

@@ -17,8 +17,8 @@ test('natural places use physical tools while named places stay gaps and waterfa
 test('natural scenery is never invented solely from a normalized concept or missing presence',()=>{
  const a=fixture('长安，树不见。',[{text:'长安',kind:'place',concept:'江边的楼'},{text:'树',presence:'absent',kind:'organism'}]);assert.equal(buildPlan(a).layers.length,0);
 });
-test('pine, woods, ground and mountain form distinct structures without adding extra scenery',()=>{
- const p=buildPlan(benchmarks[0].analysis);assert.equal(p.layers.find(l=>l.tool==='tree').options.form,'pine');assert(!p.layers.some(l=>l.tool==='landscape'));assert(p.spatial[0].visualized);assert(!p.spatial[1].visualized);
+test('pine streams infer declared mountain support while original entities remain distinct',()=>{
+ const p=buildPlan(benchmarks[0].analysis);assert.equal(p.layers.find(l=>l.tool==='tree').options.form,'pine');assert(p.layers.some(l=>l.inferred&&l.options.form==='mountain'&&l.entities.length===0));assert(p.spatial.every(r=>r.visualized));
  const woods=buildPlan(benchmarks[8].analysis);assert(woods.layers.find(l=>l.tool==='tree').instances.length>5);assert(woods.layers.some(l=>l.options.form==='moss'));
  const range=buildPlan(benchmarks[16].analysis);assert(range.layers.some(l=>l.tool==='landscape'&&l.options.form==='mountain'));
 });

@@ -10,7 +10,7 @@ import {buildPlan} from './planner.mjs';
 import {fixture,quantity} from './quantity-fixtures.mjs';
 const dir=dirname(fileURLToPath(import.meta.url)),root=resolve(dir,'../..'),qa=resolve(dir,'.qa/expressive'),out=resolve(root,'poem-flow/verification/expressive');await mkdir(qa,{recursive:true});await mkdir(out,{recursive:true});
 const live=process.argv.includes('--live'),saved=process.argv.includes('--saved'),prefix=live?'live':saved?'real-replay':'fixtures';assert(!(live&&saved));
-for(const file of ['planner.mjs','composition.mjs','imagery-lexicon.js','physical-mapping.mjs','scene-layout.mjs'])await writeFile(resolve(qa,file),execFileSync('git',['show','ccfc34c:experiments/poem-generation/'+file],{cwd:root}));
+for(const file of ['planner.mjs','composition.mjs','imagery-lexicon.js','physical-mapping.mjs','scene-layout.mjs','expressive-mapping.mjs'])await writeFile(resolve(qa,file),execFileSync('git',['show','716f8ac:experiments/poem-generation/'+file],{cwd:root}));
 const {buildPlan:beforePlan}=await import(pathToFileURL(resolve(qa,'planner.mjs')).href);
 const sleep=ms=>new Promise(r=>setTimeout(r,ms)),profile=resolve(qa,'browser-'+Date.now());await mkdir(profile,{recursive:true});
 const browser=spawn('C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe',['--headless=new','--disable-gpu','--no-first-run','--disable-extensions','--remote-debugging-port=0',`--user-data-dir=${profile}`,'about:blank'],{windowsHide:true,stdio:'ignore'});let ws;
@@ -23,22 +23,29 @@ try{
  const until=async exp=>{for(let i=0;i<200;i++){if(await evaluate(exp))return;await sleep(100);}throw new Error('Timeout '+exp);};
  await send('Runtime.enable');await send('Page.enable');await send('Emulation.setDeviceMetricsOverride',{width:1280,height:1000,deviceScaleFactor:1,mobile:false});await send('Page.navigate',{url:'http://127.0.0.1:4173/'});await until(`window.PoemTrialScene&&!document.getElementById('generate').disabled`);
  const selection=process.argv.find(a=>a.startsWith('--cases='))?.slice(8).split(',');
- const samples=(live||saved?benchmarks.filter(b=>['p06','p07','p10','p20'].includes(b.id)):benchmarks).filter(b=>!selection||selection.includes(b.id));assert(samples.length);
+ const samples=(live?benchmarks.filter(b=>['p06','p07','p10','p20'].includes(b.id)):saved?benchmarks.filter(b=>['p01','p06','p07','p10','p11','p12','p17','p20'].includes(b.id)):benchmarks).filter(b=>!selection||selection.includes(b.id));assert(samples.length);
  const report=[];let requests=0;
  for(const sample of samples){
   let analysis=sample.analysis,record=null;
-  if(saved){record=JSON.parse(await readFile(resolve(out,'live-'+sample.id+'-record.json'),'utf8'));analysis=record.analysis;}
-  if(live){requests++;const response=await fetch('http://127.0.0.1:4173/api/analyze',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({poem:sample.poem,source:{provider:'写意归类实测',...sample.source}}),signal:AbortSignal.timeout(110000)});const body=await response.json();record=body.record;await writeFile(resolve(out,'live-'+sample.id+'-record.json'),JSON.stringify(record||body,null,2)+'\n');assert(record?.validation?.valid,JSON.stringify(record?.validation||body));analysis=record.analysis;}
+  if(saved){record=JSON.parse(await readFile(resolve(['p06','p07','p10','p20'].includes(sample.id)?out:resolve(root,'poem-flow/verification/scene'),'live-'+sample.id+'-record.json'),'utf8'));analysis=record.analysis;}
+  if(live){requests++;const response=await fetch('http://127.0.0.1:4173/api/analyze',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({poem:sample.poem,source:{provider:'写意归类实测',...sample.source}}),signal:AbortSignal.timeout(110000)});const body=await response.json();record=body.record;await writeFile(resolve(['p06','p07','p10','p20'].includes(sample.id)?out:resolve(root,'poem-flow/verification/scene'),'live-'+sample.id+'-record.json'),JSON.stringify(record||body,null,2)+'\n');assert(record?.validation?.valid,JSON.stringify(record?.validation||body));analysis=record.analysis;}
   const pair={},pictures={};
   for(const [version,plan] of Object.entries({before:beforePlan(analysis),after:buildPlan(analysis)})){
    await evaluate(`document.getElementById('output').hidden=false;document.getElementById('welcome').hidden=true;window.PoemTrialScene.render(${JSON.stringify(plan)})`);await until(`window.PoemTrialScene.inspect().layers.every(c=>c.ticks>0)`);await evaluate('window.PoemTrialScene.pause(true)');await sleep(35);
    const state=await evaluate('window.PoemTrialScene.inspect()');assert(state.ready&&state.layers.every(l=>l.finite!==false));
-   const png=await evaluate(`document.getElementById('scene').toDataURL()`);pictures[version]=png;await writeFile(resolve(out,`${prefix}-${sample.id}-${version}.png`),Buffer.from(png.split(',')[1],'base64'));
+   let png=await evaluate(`document.getElementById('scene').toDataURL()`);if(version==='before'&&!live&&!saved)png='data:image/png;base64,'+execFileSync('git',['show',`716f8ac:poem-flow/verification/expressive/fixtures-${sample.id}-after.png`],{cwd:root,maxBuffer:8000000}).toString('base64');pictures[version]=png;await writeFile(resolve(out,`${prefix}-${sample.id}-${version}.png`),Buffer.from(png.split(',')[1],'base64'));
    const visible=analysis.entities.filter(e=>e.role==='scene'&&e.presence==='present'&&e.kind!=='abstract'),covered=new Set(plan.layers.flatMap(l=>l.entities));
    pair[version]={covered:visible.filter(e=>covered.has(e.id)).length,total:visible.length,tools:plan.layers.map(l=>l.tool),instances:state.instances.length,missing:plan.omitted.map(e=>e.name),spatial:plan.spatial||[],scene:plan.scene?.kind};
    if(version==='after'){
     const before=state.layers.map(l=>l.time);await sleep(50);assert.deepEqual((await evaluate('window.PoemTrialScene.inspect()')).layers.map(l=>l.time),before);
     if(sample.id==='p12'){assert(state.layers.some(l=>l.id==='water'));assert.equal(state.instances.filter(l=>l.tool==='boat').length,1);}
+    if(sample.id==='p12'){
+     assert.equal(state.instances.filter(v=>v.tool==='figure').length,1);
+     const before=state.instances,boat=before.find(v=>v.tool==='boat');
+     const hit=await evaluate(`(()=>{const c=document.getElementById('scene');c.scrollIntoView({block:'center'});const b=c.getBoundingClientRect();return {x:b.left+${boat.placement.at[0]}*b.width,y:b.top+${boat.placement.at[1]+.018}*b.height};})()`);
+     await send('Input.dispatchMouseEvent',{type:'mousePressed',x:hit.x,y:hit.y,button:'left',clickCount:1});await send('Input.dispatchMouseEvent',{type:'mouseMoved',x:hit.x+30,y:hit.y+8,button:'left',buttons:1});await send('Input.dispatchMouseEvent',{type:'mouseReleased',x:hit.x+30,y:hit.y+8,button:'left',clickCount:1});
+     const after=(await evaluate('window.PoemTrialScene.inspect()')).instances,dx=after.find(v=>v.tool==='boat').placement.at[0]-boat.placement.at[0];assert(Math.abs(dx)>.01,'boat gesture must move the hull');assert(Math.abs(after.find(v=>v.tool==='figure').placement.at[0]-before.find(v=>v.tool==='figure').placement.at[0]-dx)<1e-8,'boat drag must carry the figure');await evaluate('window.PoemTrialScene.resetLayout()');
+    }
     if(sample.id==='p02')assert(plan.layers.some(l=>l.tool==='dwelling'&&l.options.kind==='house'));
     if(sample.id==='p10')assert(plan.layers.some(l=>l.tool==='dwelling'&&l.options.kind==='temple'));
     if(sample.id==='p06')assert.equal(state.instances.filter(l=>l.tool==='horse').length,1);
@@ -47,8 +54,8 @@ try{
     if(sample.id==='p01')assert(state.layers.some(l=>l.id==='tree'&&l.form==='pine'));
    }
   }
-  if(['p02','p06','p07','p08','p09','p10','p15','p20'].includes(sample.id)){
-   const comparison=await evaluate(`(async()=>{const c=document.createElement('canvas');c.width=1920;c.height=660;const x=c.getContext('2d');x.fillStyle='#eeeae3';x.fillRect(0,0,1920,660);x.fillStyle='#344b43';x.font='23px SimSun';x.fillText('修改前：逐种意象的严格匹配',25,38);x.fillText('修改后：写意归类、房舍鸟群与场景扩展',985,38);for(const [i,url] of ${JSON.stringify(Object.values(pictures))}.entries()){const img=new Image();img.src=url;await img.decode();x.drawImage(img,i*960,60);}return c.toDataURL();})()`);await writeFile(resolve(out,`${prefix}-${sample.id}-comparison.png`),Buffer.from(comparison.split(',')[1],'base64'));
+  if(['p01','p02','p06','p07','p08','p09','p10','p12','p13','p15','p20'].includes(sample.id)){
+   const comparison=await evaluate(`(async()=>{const c=document.createElement('canvas');c.width=1920;c.height=660;const x=c.getContext('2d');x.fillStyle='#eeeae3';x.fillRect(0,0,1920,660);x.fillStyle='#344b43';x.font='23px SimSun';x.fillText('修改前：意象各自分布',25,38);x.fillText('修改后：地形依托、群落与相对尺度',985,38);for(const [i,url] of ${JSON.stringify(Object.values(pictures))}.entries()){const img=new Image();img.src=url;await img.decode();x.drawImage(img,i*960,60);}return c.toDataURL();})()`);await writeFile(resolve(out,`${prefix}-${sample.id}-comparison.png`),Buffer.from(comparison.split(',')[1],'base64'));
   }
   report.push({id:sample.id,poem:sample.poem,basis:record?'real-model':'authored-semantic-fixture',record:record?.id,usage:record?.usage,review:'待人工审美确认',...pair});
  }
@@ -60,8 +67,24 @@ try{
  const summary={status:'passed',modelRequests:requests,savedRecordReplay:saved,beforeCovered:report.reduce((n,r)=>n+r.before.covered,0),afterCovered:report.reduce((n,r)=>n+r.after.covered,0),entities:report.reduce((n,r)=>n+r.after.total,0),cases:report,spatialStudy:{basis:'authored-semantic-fixture',outsideGroupsSeparated:true,reflectionChangesPng:true},mobileWidth:390,runtimeErrors:errors};
  await writeFile(resolve(out,prefix+'-verification.json'),JSON.stringify(summary,null,2)+'\n');
  if(!live&&!saved){
-  const cards=report.map(r=>`<article><h2>${r.id} · ${r.poem}</h2><p>基础物象覆盖 ${r.before.covered}/${r.before.total} → ${r.after.covered}/${r.after.total} · 待审美确认</p><div class="pair"><figure><img loading="lazy" src="verification/expressive/fixtures-${r.id}-before.png"><figcaption>修改前</figcaption></figure><figure><img loading="lazy" src="verification/expressive/fixtures-${r.id}-after.png"><figcaption>修改后</figcaption></figure></div><p>仍未画出：${r.after.missing.join('、')||'本样例主体均有基础画法；完整关系仍需检查'}</p></article>`).join('\n');
-  await writeFile(resolve(root,'poem-flow/expressive-review.html'),`<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>流动诗 · 场景对照</title><style>body{margin:0 auto;max-width:1400px;padding:28px;background:#f5f3ec;color:#344b43;font:16px/1.7 system-ui}a{color:inherit}h1{font-size:32px}h2{font-size:21px}article{border-top:1px solid #cbd1c7;padding:20px 0}.pair{display:grid;grid-template-columns:1fr 1fr;gap:12px}figure{margin:0}img{display:block;width:100%}figcaption{font-size:14px;color:#666}@media(max-width:650px){.pair{grid-template-columns:1fr}body{padding:16px}}</style><a href="/">← 返回生成器</a><h1>写意归类后，逐幅看场景</h1><p>固定诗句与人工编写的语义测试样例，零模型调用。对照使用同一份语义及当前工具，修改前为 ccfc34c 的规划规则。覆盖只统计测试中列出的非抽象在场主体是否有基础画法，香气等非视觉内容不计入分母，不代表整句理解或审美通过。</p><p>基础物象覆盖 ${summary.beforeCovered}/${summary.entities} → ${summary.afterCovered}/${summary.entities}。未支持的主体保留为空缺，不自动补背景物种。</p>${cards}</html>`);
+  const catalog=JSON.parse(await readFile(resolve(dir,'curated-poems.json'),'utf8'));
+  const labels={'mountain-stream':'山间溪流与两侧松群',settlement:'地面承托、屋舍与树群','blossom-river':'竹丛、花树与岸面','forest-light':'深林、苔面与碎光','woodland-retreat':'曲径、密林与寺院','winter-fishing':'寒江、孤舟与钓者','riverside-view':'近岸人影与江月','mountain-waterfall':'山体、岩壁与瀑流','paddy-woodland':'开阔水田与远近林带'};
+  const cards=report.map(r=>`<article id="${r.id}"><h2>${r.id} · ${r.poem}</h2><p>${labels[r.after.scene]||'基础意象组合'} · 待审美确认</p><div class="pair"><figure><img loading="lazy" src="verification/expressive/fixtures-${r.id}-before.png"><figcaption>修改前</figcaption></figure><figure><img loading="lazy" src="verification/expressive/fixtures-${r.id}-after.png"><figcaption>修改后</figcaption></figure></div><p>${catalog.poems.find(p=>p.id===r.id).gaps.join('；')}</p><details><summary>查看通路检查</summary><p>测试物象匹配 ${r.before.covered}/${r.before.total} → ${r.after.covered}/${r.after.total}，不评价构图好坏。仍未画出：${r.after.missing.join('、')||'本样例主体均有基础画法；完整关系仍需检查'}</p></details></article>`).join('\n');
+  await writeFile(resolve(root,'poem-flow/expressive-review.html'),`<!doctype html>
+<html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>流动诗 · 场景对照</title>
+<style>
+body{margin:0 auto;max-width:1400px;padding:28px;background:#f5f3ec;color:#344b43;font:16px/1.7 system-ui}
+a{color:inherit}h1{font-size:32px}h2{font-size:21px}article{border-top:1px solid #cbd1c7;padding:20px 0}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:12px}figure{margin:0}img{display:block;width:100%}
+figcaption,details{font-size:14px;color:#666}nav{display:flex;flex-wrap:wrap;gap:12px;margin:20px 0}
+@media(max-width:650px){.pair{grid-template-columns:1fr}body{padding:16px}}
+</style><a href="/">← 返回生成器</a>
+<h1>先构成一景，再安排意象</h1>
+<p>这轮重点改地形承托、群落密度与相对尺度。左边为上次保存的画面，右边为当前试画；每幅继续保留待改之处。</p>
+<p>本页使用人工编写的固定语义样例，零模型调用。背景依托是本地构图推断，明确数量优先于场景疏密；自动检查通过不代表审美通过。</p>
+<nav aria-label="跳到诗句">${report.map(r=>`<a href="#${r.id}">${r.id}</a>`).join('')}</nav>
+${cards}</html>`);
  }
  console.log(JSON.stringify({status:'passed',cases:report.length,requests,beforeCovered:summary.beforeCovered,afterCovered:summary.afterCovered,entities:summary.entities,records:report.flatMap(r=>r.record?[r.record]:[])}));await send('Browser.close').catch(()=>{});
 }finally{ws?.close();browser.kill();}

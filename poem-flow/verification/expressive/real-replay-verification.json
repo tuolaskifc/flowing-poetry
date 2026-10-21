@@ -2,10 +2,108 @@
   "status": "passed",
   "modelRequests": 0,
   "savedRecordReplay": true,
-  "beforeCovered": 7,
-  "afterCovered": 15,
-  "entities": 16,
+  "beforeCovered": 31,
+  "afterCovered": 32,
+  "entities": 33,
   "cases": [
+    {
+      "id": "p01",
+      "poem": "明月松间照，清泉石上流。",
+      "basis": "real-model",
+      "record": "2026-10-21T12-31-46-183Z-fe25f4c9",
+      "usage": {
+        "completion_tokens": 544,
+        "prompt_tokens": 3120,
+        "total_tokens": 3664,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "review": "待人工审美确认",
+      "before": {
+        "covered": 4,
+        "total": 4,
+        "tools": [
+          "moon",
+          "tree",
+          "water",
+          "rock"
+        ],
+        "instances": 6,
+        "missing": [],
+        "spatial": [
+          {
+            "type": "among",
+            "source": "i1",
+            "target": "i2",
+            "modality": "asserted",
+            "basis": "explicit",
+            "evidence": [
+              "明月松间照"
+            ],
+            "visualized": true,
+            "reason": "组织月体与树隙，不模拟穿枝照明"
+          },
+          {
+            "type": "on",
+            "source": "i3",
+            "target": "i4",
+            "modality": "asserted",
+            "basis": "explicit",
+            "evidence": [
+              "清泉石上流"
+            ],
+            "visualized": false,
+            "reason": "该空间关系与形态组合尚未适配"
+          }
+        ],
+        "scene": "waterside"
+      },
+      "after": {
+        "covered": 4,
+        "total": 4,
+        "tools": [
+          "moon",
+          "tree",
+          "water",
+          "rock",
+          "landscape",
+          "landscape"
+        ],
+        "instances": 15,
+        "missing": [],
+        "spatial": [
+          {
+            "type": "among",
+            "source": "i1",
+            "target": "i2",
+            "modality": "asserted",
+            "basis": "explicit",
+            "evidence": [
+              "明月松间照"
+            ],
+            "visualized": true,
+            "reason": "组织月体与树隙，不模拟穿枝照明"
+          },
+          {
+            "type": "on",
+            "source": "i3",
+            "target": "i4",
+            "modality": "asserted",
+            "basis": "explicit",
+            "evidence": [
+              "清泉石上流"
+            ],
+            "visualized": true,
+            "reason": "溪流区域与错落溪石相交，不模拟流体"
+          }
+        ],
+        "scene": "mountain-stream"
+      }
+    },
     {
       "id": "p06",
       "poem": "乱花渐欲迷人眼，浅草才能没马蹄。",
@@ -24,16 +122,15 @@
       },
       "review": "待人工审美确认",
       "before": {
-        "covered": 3,
+        "covered": 4,
         "total": 4,
         "tools": [
+          "horse",
           "grass",
           "flower"
         ],
-        "instances": 72,
-        "missing": [
-          "马蹄"
-        ],
+        "instances": 73,
+        "missing": [],
         "spatial": [],
         "scene": "study"
       },
@@ -69,17 +166,16 @@
       },
       "review": "待人工审美确认",
       "before": {
-        "covered": 1,
+        "covered": 4,
         "total": 4,
         "tools": [
-          "willow"
+          "landscape",
+          "willow",
+          "bird",
+          "bird"
         ],
-        "instances": 1,
-        "missing": [
-          "两个黄鹂",
-          "一行白鹭",
-          "青天"
-        ],
+        "instances": 13,
+        "missing": [],
         "spatial": [
           {
             "type": "among",
@@ -91,7 +187,7 @@
               "两个黄鹂鸣翠柳"
             ],
             "visualized": false,
-            "reason": "关系的一端缺少独立画法"
+            "reason": "该空间关系与形态组合尚未适配"
           },
           {
             "type": "on",
@@ -103,10 +199,10 @@
               "一行白鹭上青天"
             ],
             "visualized": false,
-            "reason": "关系的一端缺少独立画法"
+            "reason": "该空间关系与形态组合尚未适配"
           }
         ],
-        "scene": "study"
+        "scene": "landscape"
       },
       "after": {
         "covered": 4,
@@ -117,7 +213,7 @@
           "bird",
           "bird"
         ],
-        "instances": 13,
+        "instances": 16,
         "missing": [],
         "spatial": [
           {
@@ -166,34 +262,6 @@
       },
       "review": "待人工审美确认",
       "before": {
-        "covered": 2,
-        "total": 4,
-        "tools": [
-          "landscape",
-          "tree"
-        ],
-        "instances": 15,
-        "missing": [
-          "幽处",
-          "禅房"
-        ],
-        "spatial": [
-          {
-            "type": "outside",
-            "source": "i3",
-            "target": "i4",
-            "modality": "unclear",
-            "basis": "inferred",
-            "evidence": [
-              "禅房花木深"
-            ],
-            "visualized": false,
-            "reason": "非确定关系仅保留解读"
-          }
-        ],
-        "scene": "woodland"
-      },
-      "after": {
         "covered": 3,
         "total": 4,
         "tools": [
@@ -220,6 +288,233 @@
           }
         ],
         "scene": "woodland"
+      },
+      "after": {
+        "covered": 3,
+        "total": 4,
+        "tools": [
+          "landscape",
+          "dwelling",
+          "tree",
+          "landscape"
+        ],
+        "instances": 26,
+        "missing": [
+          "幽处"
+        ],
+        "spatial": [
+          {
+            "type": "outside",
+            "source": "i3",
+            "target": "i4",
+            "modality": "unclear",
+            "basis": "inferred",
+            "evidence": [
+              "禅房花木深"
+            ],
+            "visualized": false,
+            "reason": "非确定关系仅保留解读"
+          }
+        ],
+        "scene": "woodland-retreat"
+      }
+    },
+    {
+      "id": "p11",
+      "poem": "野旷天低树，江清月近人。",
+      "basis": "real-model",
+      "record": "2026-10-21T12-31-52-555Z-285246c0",
+      "usage": {
+        "completion_tokens": 623,
+        "prompt_tokens": 3121,
+        "total_tokens": 3744,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "review": "待人工审美确认",
+      "before": {
+        "covered": 5,
+        "total": 5,
+        "tools": [
+          "landscape",
+          "landscape",
+          "moon",
+          "tree",
+          "water"
+        ],
+        "instances": 7,
+        "missing": [
+          "人"
+        ],
+        "spatial": [],
+        "scene": "waterside"
+      },
+      "after": {
+        "covered": 5,
+        "total": 5,
+        "tools": [
+          "landscape",
+          "landscape",
+          "moon",
+          "tree",
+          "water"
+        ],
+        "instances": 7,
+        "missing": [
+          "人"
+        ],
+        "spatial": [],
+        "scene": "waterside"
+      }
+    },
+    {
+      "id": "p12",
+      "poem": "孤舟蓑笠翁，独钓寒江雪。",
+      "basis": "real-model",
+      "record": "2026-10-21T12-35-16-777Z-c0a9aa8f",
+      "usage": {
+        "completion_tokens": 568,
+        "prompt_tokens": 3222,
+        "total_tokens": 3790,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "review": "待人工审美确认",
+      "before": {
+        "covered": 3,
+        "total": 4,
+        "tools": [
+          "water",
+          "boat",
+          "snow"
+        ],
+        "instances": 3,
+        "missing": [
+          "蓑笠翁"
+        ],
+        "spatial": [
+          {
+            "type": "on",
+            "source": "i2",
+            "target": "i1",
+            "modality": "asserted",
+            "basis": "inferred",
+            "evidence": [
+              "孤舟蓑笠翁"
+            ],
+            "visualized": false,
+            "reason": "关系的一端缺少独立画法"
+          },
+          {
+            "type": "on",
+            "source": "i1",
+            "target": "i3",
+            "modality": "asserted",
+            "basis": "inferred",
+            "evidence": [
+              "孤舟",
+              "寒江"
+            ],
+            "visualized": true,
+            "reason": "在水面区域定位，尚非物理承载"
+          }
+        ],
+        "scene": "waterside"
+      },
+      "after": {
+        "covered": 4,
+        "total": 4,
+        "tools": [
+          "figure",
+          "water",
+          "boat",
+          "snow",
+          "landscape"
+        ],
+        "instances": 5,
+        "missing": [],
+        "spatial": [
+          {
+            "type": "on",
+            "source": "i2",
+            "target": "i1",
+            "modality": "asserted",
+            "basis": "inferred",
+            "evidence": [
+              "孤舟蓑笠翁"
+            ],
+            "visualized": false,
+            "reason": "该空间关系与形态组合尚未适配"
+          },
+          {
+            "type": "on",
+            "source": "i1",
+            "target": "i3",
+            "modality": "asserted",
+            "basis": "inferred",
+            "evidence": [
+              "孤舟",
+              "寒江"
+            ],
+            "visualized": true,
+            "reason": "在水面区域定位，尚非物理承载"
+          }
+        ],
+        "scene": "winter-fishing"
+      }
+    },
+    {
+      "id": "p17",
+      "poem": "江碧鸟逾白，山青花欲燃。",
+      "basis": "real-model",
+      "record": "2026-10-21T12-35-24-384Z-7037c753",
+      "usage": {
+        "completion_tokens": 472,
+        "prompt_tokens": 3221,
+        "total_tokens": 3693,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "review": "待人工审美确认",
+      "before": {
+        "covered": 4,
+        "total": 4,
+        "tools": [
+          "landscape",
+          "water",
+          "flower",
+          "bird"
+        ],
+        "instances": 16,
+        "missing": [],
+        "spatial": [],
+        "scene": "waterside"
+      },
+      "after": {
+        "covered": 4,
+        "total": 4,
+        "tools": [
+          "landscape",
+          "water",
+          "flower",
+          "bird"
+        ],
+        "instances": 16,
+        "missing": [],
+        "spatial": [],
+        "scene": "waterside"
       }
     },
     {
@@ -240,46 +535,6 @@
       },
       "review": "待人工审美确认",
       "before": {
-        "covered": 1,
-        "total": 4,
-        "tools": [
-          "tree"
-        ],
-        "instances": 14,
-        "missing": [
-          "水田",
-          "白鹭",
-          "黄鹂"
-        ],
-        "spatial": [
-          {
-            "type": "on",
-            "source": "i2",
-            "target": "i1",
-            "modality": "unclear",
-            "basis": "inferred",
-            "evidence": [
-              "漠漠水田飞白鹭"
-            ],
-            "visualized": false,
-            "reason": "非确定关系仅保留解读"
-          },
-          {
-            "type": "among",
-            "source": "i4",
-            "target": "i3",
-            "modality": "asserted",
-            "basis": "inferred",
-            "evidence": [
-              "阴阴夏木啭黄鹂"
-            ],
-            "visualized": false,
-            "reason": "关系的一端缺少独立画法"
-          }
-        ],
-        "scene": "woodland"
-      },
-      "after": {
         "covered": 4,
         "total": 4,
         "tools": [
@@ -317,6 +572,45 @@
           }
         ],
         "scene": "woodland"
+      },
+      "after": {
+        "covered": 4,
+        "total": 4,
+        "tools": [
+          "landscape",
+          "tree",
+          "bird",
+          "bird"
+        ],
+        "instances": 25,
+        "missing": [],
+        "spatial": [
+          {
+            "type": "on",
+            "source": "i2",
+            "target": "i1",
+            "modality": "unclear",
+            "basis": "inferred",
+            "evidence": [
+              "漠漠水田飞白鹭"
+            ],
+            "visualized": false,
+            "reason": "非确定关系仅保留解读"
+          },
+          {
+            "type": "among",
+            "source": "i4",
+            "target": "i3",
+            "modality": "asserted",
+            "basis": "inferred",
+            "evidence": [
+              "阴阴夏木啭黄鹂"
+            ],
+            "visualized": false,
+            "reason": "该空间关系与形态组合尚未适配"
+          }
+        ],
+        "scene": "paddy-woodland"
       }
     }
   ],

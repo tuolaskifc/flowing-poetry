@@ -2,8 +2,8 @@
   "status": "passed",
   "modelRequests": 0,
   "savedRecordReplay": false,
-  "beforeCovered": 45,
-  "afterCovered": 72,
+  "beforeCovered": 72,
+  "afterCovered": 74,
   "entities": 75,
   "cases": [
     {
@@ -57,9 +57,11 @@
           "moon",
           "tree",
           "water",
-          "rock"
+          "rock",
+          "landscape",
+          "landscape"
         ],
-        "instances": 6,
+        "instances": 15,
         "missing": [],
         "spatial": [
           {
@@ -83,11 +85,11 @@
             "evidence": [
               "清泉石上流"
             ],
-            "visualized": false,
-            "reason": "该空间关系与形态组合尚未适配"
+            "visualized": true,
+            "reason": "溪流区域与错落溪石相交，不模拟流体"
           }
         ],
-        "scene": "waterside"
+        "scene": "mountain-stream"
       }
     },
     {
@@ -96,21 +98,6 @@
       "basis": "authored-semantic-fixture",
       "review": "待人工审美确认",
       "before": {
-        "covered": 2,
-        "total": 4,
-        "tools": [
-          "willow",
-          "rain"
-        ],
-        "instances": 2,
-        "missing": [
-          "轻尘",
-          "客舍"
-        ],
-        "spatial": [],
-        "scene": "study"
-      },
-      "after": {
         "covered": 4,
         "total": 4,
         "tools": [
@@ -123,6 +110,21 @@
         "missing": [],
         "spatial": [],
         "scene": "landscape"
+      },
+      "after": {
+        "covered": 4,
+        "total": 4,
+        "tools": [
+          "landscape",
+          "dwelling",
+          "willow",
+          "rain",
+          "landscape"
+        ],
+        "instances": 8,
+        "missing": [],
+        "spatial": [],
+        "scene": "settlement"
       }
     },
     {
@@ -191,18 +193,17 @@
       "basis": "authored-semantic-fixture",
       "review": "待人工审美确认",
       "before": {
-        "covered": 2,
+        "covered": 3,
         "total": 3,
         "tools": [
+          "landscape",
           "lotus",
           "lotus"
         ],
-        "instances": 56,
-        "missing": [
-          "日"
-        ],
+        "instances": 57,
+        "missing": [],
         "spatial": [],
-        "scene": "study"
+        "scene": "landscape"
       },
       "after": {
         "covered": 3,
@@ -224,19 +225,19 @@
       "basis": "authored-semantic-fixture",
       "review": "待人工审美确认",
       "before": {
-        "covered": 1,
+        "covered": 3,
         "total": 3,
         "tools": [
-          "moon"
+          "landscape",
+          "moon",
+          "water"
         ],
-        "instances": 1,
+        "instances": 3,
         "missing": [
-          "疏影",
-          "水",
           "暗香"
         ],
         "spatial": [],
-        "scene": "study"
+        "scene": "waterside"
       },
       "after": {
         "covered": 3,
@@ -260,16 +261,15 @@
       "basis": "authored-semantic-fixture",
       "review": "待人工审美确认",
       "before": {
-        "covered": 2,
+        "covered": 3,
         "total": 3,
         "tools": [
+          "horse",
           "grass",
           "flower"
         ],
-        "instances": 62,
-        "missing": [
-          "马蹄"
-        ],
+        "instances": 63,
+        "missing": [],
         "spatial": [],
         "scene": "study"
       },
@@ -293,21 +293,6 @@
       "basis": "authored-semantic-fixture",
       "review": "待人工审美确认",
       "before": {
-        "covered": 1,
-        "total": 4,
-        "tools": [
-          "willow"
-        ],
-        "instances": 1,
-        "missing": [
-          "黄鹂",
-          "白鹭",
-          "天"
-        ],
-        "spatial": [],
-        "scene": "study"
-      },
-      "after": {
         "covered": 4,
         "total": 4,
         "tools": [
@@ -320,6 +305,20 @@
         "missing": [],
         "spatial": [],
         "scene": "landscape"
+      },
+      "after": {
+        "covered": 4,
+        "total": 4,
+        "tools": [
+          "landscape",
+          "willow",
+          "bird",
+          "bird"
+        ],
+        "instances": 16,
+        "missing": [],
+        "spatial": [],
+        "scene": "landscape"
       }
     },
     {
@@ -328,34 +327,6 @@
       "basis": "authored-semantic-fixture",
       "review": "待人工审美确认",
       "before": {
-        "covered": 2,
-        "total": 4,
-        "tools": [
-          "bamboo",
-          "water"
-        ],
-        "instances": 19,
-        "missing": [
-          "桃花",
-          "鸭"
-        ],
-        "spatial": [
-          {
-            "type": "outside",
-            "source": "i2",
-            "target": "i1",
-            "modality": "asserted",
-            "basis": "explicit",
-            "evidence": [
-              "竹外桃花三两枝"
-            ],
-            "visualized": false,
-            "reason": "关系的一端缺少独立画法"
-          }
-        ],
-        "scene": "waterside"
-      },
-      "after": {
         "covered": 4,
         "total": 4,
         "tools": [
@@ -381,6 +352,34 @@
           }
         ],
         "scene": "waterside"
+      },
+      "after": {
+        "covered": 4,
+        "total": 4,
+        "tools": [
+          "tree",
+          "bamboo",
+          "water",
+          "bird",
+          "landscape"
+        ],
+        "instances": 25,
+        "missing": [],
+        "spatial": [
+          {
+            "type": "outside",
+            "source": "i2",
+            "target": "i1",
+            "modality": "asserted",
+            "basis": "explicit",
+            "evidence": [
+              "竹外桃花三两枝"
+            ],
+            "visualized": true,
+            "reason": "在场景岸面中安排外侧花树与内侧竹丛；方向和间距为本地选择"
+          }
+        ],
+        "scene": "blossom-river"
       }
     },
     {
@@ -389,20 +388,6 @@
       "basis": "authored-semantic-fixture",
       "review": "待人工审美确认",
       "before": {
-        "covered": 1,
-        "total": 3,
-        "tools": [
-          "tree"
-        ],
-        "instances": 14,
-        "missing": [
-          "返景",
-          "青苔"
-        ],
-        "spatial": [],
-        "scene": "woodland"
-      },
-      "after": {
         "covered": 3,
         "total": 3,
         "tools": [
@@ -414,6 +399,20 @@
         "missing": [],
         "spatial": [],
         "scene": "woodland"
+      },
+      "after": {
+        "covered": 3,
+        "total": 3,
+        "tools": [
+          "landscape",
+          "landscape",
+          "tree",
+          "landscape"
+        ],
+        "instances": 23,
+        "missing": [],
+        "spatial": [],
+        "scene": "forest-light"
       }
     },
     {
@@ -422,21 +421,6 @@
       "basis": "authored-semantic-fixture",
       "review": "待人工审美确认",
       "before": {
-        "covered": 3,
-        "total": 4,
-        "tools": [
-          "landscape",
-          "tree",
-          "flower"
-        ],
-        "instances": 30,
-        "missing": [
-          "禅房"
-        ],
-        "spatial": [],
-        "scene": "woodland"
-      },
-      "after": {
         "covered": 4,
         "total": 4,
         "tools": [
@@ -449,6 +433,21 @@
         "missing": [],
         "spatial": [],
         "scene": "woodland"
+      },
+      "after": {
+        "covered": 4,
+        "total": 4,
+        "tools": [
+          "landscape",
+          "dwelling",
+          "tree",
+          "flower",
+          "landscape"
+        ],
+        "instances": 52,
+        "missing": [],
+        "spatial": [],
+        "scene": "woodland-retreat"
       }
     },
     {
@@ -457,23 +456,6 @@
       "basis": "authored-semantic-fixture",
       "review": "待人工审美确认",
       "before": {
-        "covered": 4,
-        "total": 6,
-        "tools": [
-          "landscape",
-          "moon",
-          "tree",
-          "water"
-        ],
-        "instances": 6,
-        "missing": [
-          "天",
-          "人"
-        ],
-        "spatial": [],
-        "scene": "waterside"
-      },
-      "after": {
         "covered": 5,
         "total": 6,
         "tools": [
@@ -489,6 +471,22 @@
         ],
         "spatial": [],
         "scene": "waterside"
+      },
+      "after": {
+        "covered": 6,
+        "total": 6,
+        "tools": [
+          "figure",
+          "landscape",
+          "landscape",
+          "moon",
+          "tree",
+          "water"
+        ],
+        "instances": 8,
+        "missing": [],
+        "spatial": [],
+        "scene": "riverside-view"
       }
     },
     {
@@ -525,17 +523,17 @@
         "scene": "waterside"
       },
       "after": {
-        "covered": 3,
+        "covered": 4,
         "total": 4,
         "tools": [
+          "figure",
           "water",
           "boat",
-          "snow"
+          "snow",
+          "landscape"
         ],
-        "instances": 3,
-        "missing": [
-          "蓑笠翁"
-        ],
+        "instances": 5,
+        "missing": [],
         "spatial": [
           {
             "type": "on",
@@ -550,7 +548,7 @@
             "reason": "在水面区域定位，尚非物理承载"
           }
         ],
-        "scene": "waterside"
+        "scene": "winter-fishing"
       }
     },
     {
@@ -559,21 +557,6 @@
       "basis": "authored-semantic-fixture",
       "review": "待人工审美确认",
       "before": {
-        "covered": 3,
-        "total": 4,
-        "tools": [
-          "building",
-          "flower",
-          "rain"
-        ],
-        "instances": 12,
-        "missing": [
-          "深巷"
-        ],
-        "spatial": [],
-        "scene": "study"
-      },
-      "after": {
         "covered": 4,
         "total": 4,
         "tools": [
@@ -586,6 +569,21 @@
         "missing": [],
         "spatial": [],
         "scene": "landscape"
+      },
+      "after": {
+        "covered": 4,
+        "total": 4,
+        "tools": [
+          "landscape",
+          "building",
+          "tree",
+          "rain",
+          "landscape"
+        ],
+        "instances": 5,
+        "missing": [],
+        "spatial": [],
+        "scene": "settlement"
       }
     },
     {
@@ -594,17 +592,16 @@
       "basis": "authored-semantic-fixture",
       "review": "待人工审美确认",
       "before": {
-        "covered": 3,
+        "covered": 4,
         "total": 4,
         "tools": [
+          "landscape",
           "landscape",
           "cloud",
           "boat"
         ],
-        "instances": 3,
-        "missing": [
-          "火"
-        ],
+        "instances": 4,
+        "missing": [],
         "spatial": [],
         "scene": "landscape"
       },
@@ -629,19 +626,6 @@
       "basis": "authored-semantic-fixture",
       "review": "待人工审美确认",
       "before": {
-        "covered": 0,
-        "total": 2,
-        "tools": [],
-        "instances": 0,
-        "missing": [
-          "飞流",
-          "银河",
-          "九天"
-        ],
-        "spatial": [],
-        "scene": "study"
-      },
-      "after": {
         "covered": 2,
         "total": 2,
         "tools": [
@@ -654,6 +638,21 @@
         ],
         "spatial": [],
         "scene": "landscape"
+      },
+      "after": {
+        "covered": 2,
+        "total": 2,
+        "tools": [
+          "landscape",
+          "landscape",
+          "landscape"
+        ],
+        "instances": 3,
+        "missing": [
+          "银河"
+        ],
+        "spatial": [],
+        "scene": "mountain-waterfall"
       }
     },
     {
@@ -662,17 +661,14 @@
       "basis": "authored-semantic-fixture",
       "review": "待人工审美确认",
       "before": {
-        "covered": 1,
+        "covered": 4,
         "total": 4,
         "tools": [
+          "landscape",
           "water"
         ],
-        "instances": 1,
-        "missing": [
-          "细流",
-          "树阴",
-          "水"
-        ],
+        "instances": 2,
+        "missing": [],
         "spatial": [],
         "scene": "waterside"
       },
@@ -695,17 +691,16 @@
       "basis": "authored-semantic-fixture",
       "review": "待人工审美确认",
       "before": {
-        "covered": 3,
+        "covered": 4,
         "total": 4,
         "tools": [
           "landscape",
           "water",
-          "flower"
+          "flower",
+          "bird"
         ],
-        "instances": 28,
-        "missing": [
-          "鸟"
-        ],
+        "instances": 32,
+        "missing": [],
         "spatial": [],
         "scene": "waterside"
       },
@@ -730,17 +725,16 @@
       "basis": "authored-semantic-fixture",
       "review": "待人工审美确认",
       "before": {
-        "covered": 3,
+        "covered": 4,
         "total": 4,
         "tools": [
+          "landscape",
           "landscape",
           "moon",
           "water"
         ],
-        "instances": 3,
-        "missing": [
-          "星"
-        ],
+        "instances": 4,
+        "missing": [],
         "spatial": [],
         "scene": "waterside"
       },
@@ -799,21 +793,6 @@
       "basis": "authored-semantic-fixture",
       "review": "待人工审美确认",
       "before": {
-        "covered": 1,
-        "total": 4,
-        "tools": [
-          "tree"
-        ],
-        "instances": 14,
-        "missing": [
-          "水田",
-          "白鹭",
-          "黄鹂"
-        ],
-        "spatial": [],
-        "scene": "woodland"
-      },
-      "after": {
         "covered": 4,
         "total": 4,
         "tools": [
@@ -826,6 +805,20 @@
         "missing": [],
         "spatial": [],
         "scene": "woodland"
+      },
+      "after": {
+        "covered": 4,
+        "total": 4,
+        "tools": [
+          "landscape",
+          "tree",
+          "bird",
+          "bird"
+        ],
+        "instances": 25,
+        "missing": [],
+        "spatial": [],
+        "scene": "paddy-woodland"
       }
     }
   ],

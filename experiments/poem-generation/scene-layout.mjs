@@ -1,3 +1,4 @@
+import {organizeRegions} from './scene-regions.mjs';
 // Code-owned composition. Shared ground, water planes and relative placements
 // are artistic choices; only supplied spatial statements are model semantics.
 const clamp=(n,a=.08,b=.92)=>Math.max(a,Math.min(b,n));
@@ -36,12 +37,15 @@ export function arrangeScene(analysis,layers){
     if(water&&layer.tool==='willow')move(layer,.07,.92,.92);
     if(water&&layer.tool==='rock')move(layer,.23,.91,1.13);
   }
+  organizeRegions(analysis,layers,scene);
   const spatial=(analysis.spatial||[]).map(r=>{
     const source=layers.find(l=>l.entities.includes(r.source)),target=layers.find(l=>l.entities.includes(r.target));
     const view={...r,visualized:false,reason:''};
     if(r.modality!=='asserted'){view.reason='非确定关系仅保留解读';return view;}
     if(!source||!target||source===target){view.reason='关系的一端缺少独立画法';return view;}
     const [tx,ty]=center(target);
+    if(source.regionalRelation===r.type){view.visualized=true;view.reason='在场景岸面中安排外侧花树与内侧竹丛；方向和间距为本地选择';return view;}
+    if(scene.kind==='mountain-stream'&&r.type==='on'&&source.tool==='water'&&target.tool==='rock'){view.visualized=true;view.reason='溪流区域与错落溪石相交，不模拟流体';return view;}
     if(r.type==='on'&&target.tool==='water'&&['boat','fish','bird'].includes(source.tool)){
       move(source,clamp(center(source)[0]),source.tool==='boat'?.76:source.tool==='bird'?.72:.85);source.z=26;view.visualized=true;view.reason='在水面区域定位，尚非物理承载';
     }else if(r.type==='on'&&['tree','willow','bamboo'].includes(target.tool)&&['bird','oriole'].includes(source.tool)){
@@ -51,7 +55,7 @@ export function arrangeScene(analysis,layers){
     }else if(['outside','beside'].includes(r.type)&&!['water','landscape'].includes(source.tool)){
       const sx=clamp(tx>.5?tx-.37:tx+.37);move(source,sx,clamp(ty,.4,.96));groupWidth(target,tx,.22);groupWidth(source,sx,.22);source.z=(target.z??10)+1;view.visualized=true;view.reason='表现邻接或外侧；左右方向为本地选择';
     }else if(r.type==='among'&&['tree','bamboo','willow'].includes(target.tool)&&source.tool==='moon'){
-      move(source,.67,.22);view.visualized=true;view.reason='组织月体与树隙，不模拟穿枝照明';
+      if(scene.kind!=='mountain-stream')move(source,.67,.22);view.visualized=true;view.reason='组织月体与树隙，不模拟穿枝照明';
     }else if(r.type==='reflects_on'&&target.tool==='water'&&source.tool==='moon'){
       source.reflection={target:target.entities[0],waterline:.46};view.visualized=true;view.reason='水面裁切的倒置淡影，尚非光学反射模拟';
     }else view.reason='该空间关系与形态组合尚未适配';

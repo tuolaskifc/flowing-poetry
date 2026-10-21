@@ -48,6 +48,7 @@ try{
     await evaluate(`document.getElementById('palette').value='tender';document.getElementById('palette').dispatchEvent(new Event('change'))`);
     if(await evaluate('window.PoemTrialScene.inspect().settings.palette')!=='tender')throw new Error('Palette failed');
     await evaluate(`document.getElementById('palette').value='clear';document.getElementById('palette').dispatchEvent(new Event('change'));document.getElementById('wind').value='${state.scene.settings.wind}';document.getElementById('wind').dispatchEvent(new Event('input'))`);
+    await sleep(120); // Paused source canvases redraw asynchronously after palette/wind changes.
     const hit=await evaluate(`(()=>{const scene=document.getElementById('scene'),b=scene.getBoundingClientRect(),hosts=[...document.querySelectorAll('#layer-hosts canvas')],instances=window.PoemTrialScene.inspect().instances;for(const entry of [...instances].reverse()){const c=hosts[entry.sourceIndex],d=c.getContext('2d').getImageData(0,0,640,388).data,p=entry.placement;for(let y=10;y<378;y+=3)for(let x=10;x<630;x+=3)if(d[(y*640+x)*4+3]>30){const sx=p.at[0]*960+(x+.5-p.anchor[0])*p.scale,sy=p.at[1]*600+(y+.5-p.anchor[1])*p.scale;if(sx>25&&sx<880&&sy>50&&sy<530)return {x:b.left+sx*b.width/960,y:b.top+sy*b.height/600};}}return null;})()`);
     if(!hit)throw new Error('No visible draggable ink');
     const hitTarget=await evaluate(`document.elementFromPoint(${hit.x},${hit.y})?.id`);
@@ -82,8 +83,8 @@ try{
     await until(`document.querySelectorAll('#rows tr').length===60`);
     if(await evaluate(`new URL(document.getElementById('poem-home').href).origin!==location.origin`))throw new Error('Progress return link leaves the main origin');
     await send('Page.navigate',{url:'http://127.0.0.1:4173/experiments/imagery-library/index.html#moon'});
-    await until(`window.imageryExperiment?.inspect().length===31&&window.imageryExperiment.inspect().every(l=>l.ready)`);
-    linkedPages={progressRows:60,readyTools:31,sameOrigin:true};
+    await until(`window.imageryExperiment?.inspect().length===32&&window.imageryExperiment.inspect().every(l=>l.ready)`);
+    linkedPages={progressRows:60,readyTools:32,sameOrigin:true};
   }
   if(process.argv.includes('--diagram')){
     await send('Emulation.setDeviceMetricsOverride',{width:1660,height:1110,deviceScaleFactor:1,mobile:false});

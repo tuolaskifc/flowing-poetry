@@ -2,11 +2,11 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 import lib from './curated-library.js';
-import lexicon from './imagery-lexicon.js';
 const catalog=JSON.parse(await readFile(new URL('./curated-poems.json',import.meta.url),'utf8'));
+const registry=JSON.parse(await readFile(new URL('../imagery-library/drawing/tool-manifest.json',import.meta.url),'utf8'));
 test('twenty editorial samples retain sources, gaps and five unfinished focus paintings',()=>{
   assert.equal(lib.validate(catalog),catalog);assert.equal(catalog.poems.length,20);assert.equal(catalog.poems.filter(p=>p.focus).length,5);
-  const tools=new Set(lexicon.rules.map(r=>r.tool));
+  const tools=new Set(registry.tools.map(r=>r.id));
   for(const p of catalog.poems){assert(p.imagery.length&&p.gaps.length);assert(p.available_tools.every(t=>tools.has(t)));assert.notEqual(p.review,'已认可');assert(p.source.note);}
   const unfinished=structuredClone(catalog);unfinished.poems[0].available_tools=[];
   assert.equal(lib.validate(unfinished).poems[0].available_tools.length,0,'the collection must still permit candidates without tools');

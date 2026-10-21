@@ -10,722 +10,74 @@
       "paused": false,
       "layers": [
         {
-          "id": "landscape",
-          "seed": 1302040933,
-          "time": 0,
-          "ticks": 1,
-          "paused": true,
-          "disposed": false,
-          "ready": true,
-          "options": {
-            "form": "field"
-          },
-          "sources": [
-            "project"
-          ],
-          "form": "field",
-          "finite": true,
-          "geometryKey": "4f0960f3"
-        },
-        {
-          "id": "tree",
-          "seed": 1302041030,
-          "time": 0.18539999999999998,
-          "ticks": 5,
+          "id": "water",
+          "seed": 2749528309,
+          "time": 0.13780000001192091,
+          "ticks": 4,
           "paused": false,
           "disposed": false,
           "ready": true,
           "options": {
-            "form": "broadleaf",
-            "crown": "wash"
+            "form": "plane"
           },
           "sources": [
-            "noc-tree",
+            "noc-wave",
             "project"
           ],
           "finite": true,
-          "treeCount": 1,
-          "form": "broadleaf",
-          "geometryKey": "d0097ed7"
-        },
-        {
-          "id": "tree",
-          "seed": 1302042573,
-          "time": 0.18539999999999998,
-          "ticks": 5,
-          "paused": false,
-          "disposed": false,
-          "ready": true,
-          "options": {
-            "form": "broadleaf",
-            "crown": "wash"
-          },
-          "sources": [
-            "noc-tree",
-            "project"
-          ],
-          "finite": true,
-          "treeCount": 1,
-          "form": "broadleaf",
-          "geometryKey": "2dc548f9"
-        },
-        {
-          "id": "tree",
-          "seed": 1302044116,
-          "time": 0.18539999999999998,
-          "ticks": 5,
-          "paused": false,
-          "disposed": false,
-          "ready": true,
-          "options": {
-            "form": "broadleaf",
-            "crown": "wash"
-          },
-          "sources": [
-            "noc-tree",
-            "project"
-          ],
-          "finite": true,
-          "treeCount": 1,
-          "form": "broadleaf",
-          "geometryKey": "e9784dfa"
-        },
-        {
-          "id": "bird",
-          "seed": 1302041127,
-          "time": 0.18539999999999998,
-          "ticks": 5,
-          "paused": false,
-          "disposed": false,
-          "ready": true,
-          "options": {
-            "pose": "flying",
-            "tone": "light",
-            "facing": "right"
-          },
-          "sources": [
-            "project"
-          ],
-          "birdCount": 1,
-          "pose": "flying",
-          "tone": "light",
-          "finite": true,
-          "geometryKey": "24eca080"
-        },
-        {
-          "id": "bird",
-          "seed": 1302042670,
-          "time": 0.18539999999999998,
-          "ticks": 5,
-          "paused": false,
-          "disposed": false,
-          "ready": true,
-          "options": {
-            "pose": "flying",
-            "tone": "light",
-            "facing": "right"
-          },
-          "sources": [
-            "project"
-          ],
-          "birdCount": 1,
-          "pose": "flying",
-          "tone": "light",
-          "finite": true,
-          "geometryKey": "603fe6e7"
-        },
-        {
-          "id": "bird",
-          "seed": 1302044213,
-          "time": 0.18539999999999998,
-          "ticks": 5,
-          "paused": false,
-          "disposed": false,
-          "ready": true,
-          "options": {
-            "pose": "flying",
-            "tone": "light",
-            "facing": "right"
-          },
-          "sources": [
-            "project"
-          ],
-          "birdCount": 1,
-          "pose": "flying",
-          "tone": "light",
-          "finite": true,
-          "geometryKey": "a39b937"
-        },
-        {
-          "id": "bird",
-          "seed": 1302041224,
-          "time": 0.18539999999999998,
-          "ticks": 5,
-          "paused": false,
-          "disposed": false,
-          "ready": true,
-          "options": {
-            "pose": "flying",
-            "tone": "ink",
-            "facing": "right"
-          },
-          "sources": [
-            "project"
-          ],
-          "birdCount": 1,
-          "pose": "flying",
-          "tone": "ink",
-          "finite": true,
-          "geometryKey": "d25f4a68"
-        },
-        {
-          "id": "bird",
-          "seed": 1302042767,
-          "time": 0.18539999999999998,
-          "ticks": 5,
-          "paused": false,
-          "disposed": false,
-          "ready": true,
-          "options": {
-            "pose": "flying",
-            "tone": "ink",
-            "facing": "right"
-          },
-          "sources": [
-            "project"
-          ],
-          "birdCount": 1,
-          "pose": "flying",
-          "tone": "ink",
-          "finite": true,
-          "geometryKey": "45cb07a"
-        },
-        {
-          "id": "bird",
-          "seed": 1302044310,
-          "time": 0.18529999997615812,
-          "ticks": 5,
-          "paused": false,
-          "disposed": false,
-          "ready": true,
-          "options": {
-            "pose": "flying",
-            "tone": "ink",
-            "facing": "right"
-          },
-          "sources": [
-            "project"
-          ],
-          "birdCount": 1,
-          "pose": "flying",
-          "tone": "ink",
-          "finite": true,
-          "geometryKey": "824658a6"
+          "form": "plane",
+          "geometryKey": "dfc0510c"
         }
       ],
       "placements": [
         {
           "anchor": [
             320,
-            194
+            130
           ],
           "at": [
             0.5,
-            0.5
+            0.57
           ],
           "scale": 1.5
-        },
-        {
-          "anchor": [
-            320,
-            388
-          ],
-          "at": [
-            0.25,
-            0.9
-          ],
-          "scale": 1.15
-        },
-        {
-          "anchor": [
-            320,
-            190
-          ],
-          "at": [
-            0.62,
-            0.34
-          ],
-          "scale": 0.78
-        },
-        {
-          "anchor": [
-            320,
-            190
-          ],
-          "at": [
-            0.62,
-            0.34
-          ],
-          "scale": 0.78
         }
       ],
       "instances": [
         {
-          "tool": "landscape",
+          "tool": "water",
           "layer": 0,
           "index": 0,
           "sourceIndex": 0,
           "placement": {
             "anchor": [
               320,
-              194
+              135
             ],
             "at": [
               0.5,
-              0.5699999999999998
+              0.4600000000000001
             ],
             "scale": 1.6
           },
           "opacity": 1,
-          "z": -20
-        },
-        {
-          "tool": "tree",
-          "layer": 1,
-          "index": 0,
-          "sourceIndex": 1,
-          "placement": {
-            "anchor": [
-              320,
-              388
-            ],
-            "at": [
-              0.76,
-              0.6517857142857143
-            ],
-            "scale": 0.44857142857142857
-          },
-          "opacity": 0.6625,
-          "z": 8.035714285714286
-        },
-        {
-          "tool": "tree",
-          "layer": 1,
-          "index": 1,
-          "sourceIndex": 2,
-          "placement": {
-            "anchor": [
-              320,
-              388
-            ],
-            "at": [
-              0.98248,
-              0.6753571428571429
-            ],
-            "scale": 0.5057142857142857
-          },
-          "opacity": 0.6875,
-          "z": 8.107142857142858
-        },
-        {
-          "tool": "tree",
-          "layer": 1,
-          "index": 2,
-          "sourceIndex": 3,
-          "placement": {
-            "anchor": [
-              320,
-              388
-            ],
-            "at": [
-              0.8449599999999999,
-              0.6989285714285715
-            ],
-            "scale": 0.5628571428571428
-          },
-          "opacity": 0.7125,
-          "z": 8.178571428571429
-        },
-        {
-          "tool": "tree",
-          "layer": 1,
-          "index": 3,
-          "sourceIndex": 1,
-          "placement": {
-            "anchor": [
-              320,
-              388
-            ],
-            "at": [
-              1.06744,
-              0.7225
-            ],
-            "scale": 0.62
-          },
-          "opacity": 0.7375,
-          "z": 8.25
-        },
-        {
-          "tool": "tree",
-          "layer": 1,
-          "index": 4,
-          "sourceIndex": 2,
-          "placement": {
-            "anchor": [
-              320,
-              388
-            ],
-            "at": [
-              0.9299200000000001,
-              0.7460714285714286
-            ],
-            "scale": 0.6771428571428572
-          },
-          "opacity": 0.7625000000000001,
-          "z": 8.321428571428571
-        },
-        {
-          "tool": "tree",
-          "layer": 1,
-          "index": 5,
-          "sourceIndex": 3,
-          "placement": {
-            "anchor": [
-              320,
-              388
-            ],
-            "at": [
-              0.7924,
-              0.7696428571428572
-            ],
-            "scale": 0.7342857142857142
-          },
-          "opacity": 0.7875,
-          "z": 8.392857142857142
-        },
-        {
-          "tool": "tree",
-          "layer": 1,
-          "index": 6,
-          "sourceIndex": 1,
-          "placement": {
-            "anchor": [
-              320,
-              388
-            ],
-            "at": [
-              1.01488,
-              0.7932142857142858
-            ],
-            "scale": 0.7914285714285714
-          },
-          "opacity": 0.8125,
-          "z": 8.464285714285714
-        },
-        {
-          "tool": "tree",
-          "layer": 1,
-          "index": 7,
-          "sourceIndex": 2,
-          "placement": {
-            "anchor": [
-              320,
-              388
-            ],
-            "at": [
-              0.8773599999999999,
-              0.8167857142857143
-            ],
-            "scale": 0.8485714285714285
-          },
-          "opacity": 0.8375,
-          "z": 8.535714285714286
-        },
-        {
-          "tool": "tree",
-          "layer": 1,
-          "index": 8,
-          "sourceIndex": 3,
-          "placement": {
-            "anchor": [
-              320,
-              388
-            ],
-            "at": [
-              1.09984,
-              0.8403571428571429
-            ],
-            "scale": 0.9057142857142857
-          },
-          "opacity": 0.8625,
-          "z": 8.607142857142858
-        },
-        {
-          "tool": "tree",
-          "layer": 1,
-          "index": 9,
-          "sourceIndex": 1,
-          "placement": {
-            "anchor": [
-              320,
-              388
-            ],
-            "at": [
-              0.9623200000000001,
-              0.8639285714285715
-            ],
-            "scale": 0.9628571428571429
-          },
-          "opacity": 0.8875,
-          "z": 8.678571428571429
-        },
-        {
-          "tool": "tree",
-          "layer": 1,
-          "index": 10,
-          "sourceIndex": 2,
-          "placement": {
-            "anchor": [
-              320,
-              388
-            ],
-            "at": [
-              0.8247999999999998,
-              0.8875000000000001
-            ],
-            "scale": 1.02
-          },
-          "opacity": 0.9125,
-          "z": 8.75
-        },
-        {
-          "tool": "tree",
-          "layer": 1,
-          "index": 11,
-          "sourceIndex": 3,
-          "placement": {
-            "anchor": [
-              320,
-              388
-            ],
-            "at": [
-              1.04728,
-              0.9110714285714286
-            ],
-            "scale": 1.0771428571428572
-          },
-          "opacity": 0.9375,
-          "z": 8.821428571428571
-        },
-        {
-          "tool": "tree",
-          "layer": 1,
-          "index": 12,
-          "sourceIndex": 1,
-          "placement": {
-            "anchor": [
-              320,
-              388
-            ],
-            "at": [
-              0.9097600000000001,
-              0.9346428571428572
-            ],
-            "scale": 1.1342857142857143
-          },
-          "opacity": 0.9625,
-          "z": 8.892857142857142
-        },
-        {
-          "tool": "tree",
-          "layer": 1,
-          "index": 13,
-          "sourceIndex": 2,
-          "placement": {
-            "anchor": [
-              320,
-              388
-            ],
-            "at": [
-              0.7722400000000003,
-              0.9582142857142858
-            ],
-            "scale": 1.1914285714285715
-          },
-          "opacity": 0.9875,
-          "z": 8.964285714285714
-        },
-        {
-          "tool": "bird",
-          "layer": 2,
-          "index": 0,
-          "sourceIndex": 4,
-          "placement": {
-            "anchor": [
-              320,
-              190
-            ],
-            "at": [
-              0.1825,
-              0.23510583637642773
-            ],
-            "scale": 0.54375
-          },
-          "opacity": 0.7374999999999999,
-          "z": 25.125
-        },
-        {
-          "tool": "bird",
-          "layer": 3,
-          "index": 0,
-          "sourceIndex": 7,
-          "placement": {
-            "anchor": [
-              320,
-              190
-            ],
-            "at": [
-              0.7274999999999999,
-              0.38095680910583246
-            ],
-            "scale": 0.54375
-          },
-          "opacity": 0.7374999999999999,
-          "z": 25.125
-        },
-        {
-          "tool": "bird",
-          "layer": 2,
-          "index": 1,
-          "sourceIndex": 5,
-          "placement": {
-            "anchor": [
-              320,
-              190
-            ],
-            "at": [
-              0.3075,
-              0.25724514689658157
-            ],
-            "scale": 0.63125
-          },
-          "opacity": 0.8125,
-          "z": 25.375
-        },
-        {
-          "tool": "bird",
-          "layer": 3,
-          "index": 1,
-          "sourceIndex": 8,
-          "placement": {
-            "anchor": [
-              320,
-              190
-            ],
-            "at": [
-              0.7824999999999999,
-              0.4067860047126786
-            ],
-            "scale": 0.63125
-          },
-          "opacity": 0.8125,
-          "z": 25.375
-        },
-        {
-          "tool": "bird",
-          "layer": 2,
-          "index": 2,
-          "sourceIndex": 6,
-          "placement": {
-            "anchor": [
-              320,
-              190
-            ],
-            "at": [
-              0.4325,
-              0.20099551353376094
-            ],
-            "scale": 0.71875
-          },
-          "opacity": 0.8875,
-          "z": 25.625
-        },
-        {
-          "tool": "bird",
-          "layer": 3,
-          "index": 2,
-          "sourceIndex": 9,
-          "placement": {
-            "anchor": [
-              320,
-              190
-            ],
-            "at": [
-              0.8375,
-              0.3411614324560544
-            ],
-            "scale": 0.71875
-          },
-          "opacity": 0.8875,
-          "z": 25.625
-        },
-        {
-          "tool": "bird",
-          "layer": 2,
-          "index": 3,
-          "sourceIndex": 4,
-          "placement": {
-            "anchor": [
-              320,
-              190
-            ],
-            "at": [
-              0.5575,
-              0.14338266846194225
-            ],
-            "scale": 0.8062499999999999
-          },
-          "opacity": 0.9624999999999999,
-          "z": 25.875
-        },
-        {
-          "tool": "bird",
-          "layer": 3,
-          "index": 3,
-          "sourceIndex": 7,
-          "placement": {
-            "anchor": [
-              320,
-              190
-            ],
-            "at": [
-              0.8925,
-              0.2739464465389326
-            ],
-            "scale": 0.8062499999999999
-          },
-          "opacity": 0.9624999999999999,
-          "z": 25.875
+          "z": -10
         }
       ],
       "settings": {
-        "wind": 0,
+        "wind": 0.45,
         "density": 0.45,
         "palette": "clear"
       }
     },
-    "poem": "漠漠水田飞白鹭，阴阴夏木啭黄鹂。",
-    "sceneTitle": "漠漠水田飞白鹭，阴阴夏木啭黄鹂。",
-    "usage": "记录 2026-10-21T13-19-48-545Z-7cb7f774；模型 DeepSeek-V4.1-Flash；本次记录 token 3814。正在回看，没有新增模型调用。",
-    "reading": "水田广布，白鹭飞过；夏日树荫浓密，黄鹂在其中鸣啭。两句写夏日田野的动静与幽深。",
+    "poem": "风乍起，吹皱一池春水。",
+    "sceneTitle": "风乍起，吹皱一池春水。",
+    "usage": "记录 2026-10-21T13-52-35-595Z-7658fb71；模型 DeepSeek-V4.1-Flash；本次记录 token 3508。正在回看，没有新增模型调用。",
+    "reading": "风忽然吹起，使一池春水泛起波纹。",
     "omitted": [
       "本次列出的场景意象均找到了基础工具；仍不代表全部关系已表现。"
     ],
     "drawn": [
-      "水田 → 山水 · 场景 · 整体笔触图层；内部数量尚未适配（静止）",
-      "夏木 → 树 · 成片分布；本地试画 14 个单元",
-      "白鹭 → 鸟意（写意借形） · 数量未精确；本地试画 4 个单元",
-      "黄鹂 → 鸟意（写意借形） · 数量未精确；本地试画 4 个单元"
+      "一池春水 → 水 · 整体笔触图层；内部数量尚未适配"
     ]
   },
   "interactions": {
@@ -740,10 +92,10 @@
   "rejectedResultPreserved": true,
   "linkedPages": {
     "progressRows": 60,
-    "readyTools": 31,
+    "readyTools": 32,
     "sameOrigin": true
   },
-  "transparentLayers": 10,
+  "transparentLayers": 1,
   "exportPng": true,
   "mobile": {
     "width": 390,

@@ -1,8 +1,8 @@
 // Quantity semantics stop at counts/extent. Seeds, repetitions, depth and
 // positions below are local artistic choices, never model coordinates.
 const fieldTools=new Set(['dwelling','tree','flower','grass','bamboo','orchid','lotus','willow','plum-branch','flower-forms']);
-const singleUnitTools=new Set(['bird','dwelling','tree','lotus','willow','orchid','horse','oriole','fish','boat','moon','rock','building','pavilion','wine','plum-branch','flower-forms','flower','bamboo','grass','leaves']);
-const defaults={bird:4,oriole:3,dwelling:1,tree:3,flower:10,grass:15,bamboo:6,orchid:3,lotus:8,willow:1};
+const singleUnitTools=new Set(['figure','bird','dwelling','tree','lotus','willow','orchid','horse','oriole','fish','boat','moon','rock','building','pavilion','wine','plum-branch','flower-forms','flower','bamboo','grass','leaves']);
+const defaults={figure:1,bird:4,oriole:3,dwelling:1,tree:3,flower:10,grass:15,bamboo:6,orchid:3,lotus:8,willow:4};
 const many={dwelling:6,building:4,bird:9,oriole:7,tree:14,flower:26,grass:36,bamboo:18,orchid:12,lotus:16,willow:7,'plum-branch':4,'flower-forms':14,fish:9,rock:7,leaves:24};
 function random(seed){let s=seed>>>0;return ()=>{s+=0x6D2B79F5;let t=s;t=Math.imul(t^t>>>15,t|1);t^=t+Math.imul(t^t>>>7,t|61);return ((t^t>>>14)>>>0)/4294967296;};}
 function legacyQuantity(entity,poem){
@@ -23,6 +23,7 @@ export function compose(analysis,layers,seed){
     const projected=quantities.filter(v=>layer.projectedEntities?.includes(v.entity.id)),counting=quantities.filter(v=>!layer.projectedEntities?.includes(v.entity.id));
     if(projected.length&&!counting.length){count=1;exact=false;notes.push(`${layer.names.join('、')}以一匹马借形；局部的蹄数不当作马匹数量。`);}
     for(const {q} of counting){
+      if(layer.options.form==='blossom'&&!(q.scope==='individual'&&['株','树','棵'].includes(q.unit))){const grove=q.scope!=='part'&&(q.mode==='many'||q.extent==='spread');count+=grove?7:1;collective||=grove;exact=false;continue;}
       if(woodland&&q.mode==='unspecified'){count+=14;collective=true;exact=false;continue;}
       const part=(q.scope==='part'&&!(layer.tool==='plum-branch'&&q.unit==='枝'))||(layer.tool==='plum-branch'&&/朵|瓣/.test(q.unit||''));
       if(part){partUnsupported=true;exact=false;count+=1;continue;}

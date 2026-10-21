@@ -2,7 +2,7 @@
 window.PoemProgress = {
   "summary": {
     "total": 60,
-    "tools": 31,
+    "tools": 32,
     "stages": {
       "basic": {
         "label": "基础可画",
@@ -107,7 +107,7 @@ window.PoemProgress = {
         "tools": [
           "water"
         ],
-        "available": "已有水纹、连续水面色层与本地水域定位。",
+        "available": "水纹与连续色层；山溪、竹桃岸景按曲线区域裁切，区分水域和树根所在岸面。",
         "remaining": "明确提到岸或渡时可用山岸工具；真实承载、石上流动、流体物理和完整流向仍未做。",
         "needs_context": false,
         "label": "基础可画"
@@ -227,8 +227,8 @@ window.PoemProgress = {
         "tools": [
           "willow"
         ],
-        "available": "弯干、长枝下垂、细叶与风中摆动。",
-        "remaining": "待审美与形态辨识确认；枝叶分离与季节变化未实现。",
+        "available": "柳形已有风中摆动；村舍场景按几株较小的柳树组织高低、远近，不再默认一株巨大柳树。",
+        "remaining": "待审美确认；明确一株时保留单株，树根与具体坡面的精确贴合仍需改进。",
         "needs_context": false,
         "label": "基础可画"
       }
@@ -456,8 +456,8 @@ window.PoemProgress = {
         "tools": [
           "boat"
         ],
-        "available": "独立船体、轻微起伏、船首船尾与甲板锚点。",
-        "remaining": "待审美确认；帆、桨、人物及真正承载未实现。",
+        "available": "独立船体与甲板锚点；原句明确有钓者时，可接淡墨人物，拖舟时人物随行。",
+        "remaining": "待审美确认；人物为独立原创工具，不自动加乘客。帆、桨、坐姿及物理承载未实现。",
         "needs_context": false,
         "label": "基础可画"
       }
@@ -577,14 +577,15 @@ window.PoemProgress = {
       "progress": {
         "stage": "basic",
         "tools": [
-          "plum-branch"
+          "tree"
         ],
-        "available": "可借用疏花枝表现桃花，枝数与花朵数分开。",
-        "remaining": "春景配色、姿态和构图仍需改画，不作花种辨识。",
+        "available": "原生疏花树骨架把花枝归于整株；三两枝约束主花枝，不复制成三棵树。竹外桃花沿岸面安排竹丛内外位置。",
+        "remaining": "待审美确认；借形不作花种辨识，枝头遮挡和自然分叉仍可打磨。",
         "needs_context": false,
         "presets": {
-          "plum-branch": {
-            "form": "sprig"
+          "tree": {
+            "form": "blossom",
+            "branches": "3"
           }
         },
         "label": "基础可画"
@@ -1242,7 +1243,7 @@ window.PoemProgress = {
         "tools": [
           "tree"
         ],
-        "available": "可按写意原则共用针叶树意，保留松柏的原名称。",
+        "available": "共用针叶树意；松、石、泉同场时按山间溪流组织松群、溪石与窄水域。",
         "remaining": "树冠与场景构图仍待改画，不以松柏物种辨识作为前提。",
         "needs_context": true,
         "presets": {
@@ -1410,6 +1411,45 @@ window.PoemProgress = {
             {
               "value": "pine",
               "label": "松意"
+            },
+            {
+              "value": "blossom",
+              "label": "疏花树"
+            }
+          ]
+        },
+        {
+          "id": "branches",
+          "label": "主花枝",
+          "default": "7",
+          "choices": [
+            {
+              "value": "1",
+              "label": "1"
+            },
+            {
+              "value": "2",
+              "label": "2"
+            },
+            {
+              "value": "3",
+              "label": "3"
+            },
+            {
+              "value": "4",
+              "label": "4"
+            },
+            {
+              "value": "5",
+              "label": "5"
+            },
+            {
+              "value": "6",
+              "label": "6"
+            },
+            {
+              "value": "7",
+              "label": "7"
             }
           ]
         },
@@ -2547,6 +2587,37 @@ window.PoemProgress = {
         "anchors",
         "shape-selection",
         "fixed-count"
+      ]
+    },
+    {
+      "id": "figure",
+      "name": "人意",
+      "subtitle": "一抹衣影，几笔见人。",
+      "sources": [
+        "project"
+      ],
+      "credit": "本项目 · 淡墨人物",
+      "reference": "drawing/README.md#人意",
+      "note": "以衣形、头部笔点和笠沿提示人物；钓者只加一根疏线，不刻画五官。",
+      "capabilities": [
+        "anchors"
+      ],
+      "controls": [
+        {
+          "id": "pose",
+          "label": "姿态",
+          "default": "fisher",
+          "choices": [
+            {
+              "value": "fisher",
+              "label": "蓑笠钓者"
+            },
+            {
+              "value": "standing",
+              "label": "立人"
+            }
+          ]
+        }
       ]
     }
   ],

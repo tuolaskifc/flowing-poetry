@@ -16,7 +16,8 @@
 | 意象库第一轮试画 | [试画与候选](../experiments/imagery-library/README.md) | 五类本地试画、10 个 OpenProcessing 候选与来源边界 |
 | 已取得的绘画代码 | [代码检索与本地预览](../experiments/imagery-library/code-research/README.md) | 四组源码、八项实际运行结果及许可 |
 | 意象如何合并与分工 | [意象目录](../experiments/imagery-library/意象目录.md) | 60 个原始条目、20 类绘画方法及首批建议 |
-| 绘画工具怎么扩展 | [结构与来源登记](../experiments/imagery-library/drawing/README.md) | 三十一个独立工具、来源追溯、运行接口与扩展步骤 |
+| 如何构成一景 | [场景区域与依托](../experiments/poem-generation/regional-composition.md) | 地形承托、群落密度、相对尺度、疏花树与舟上钓者 |
+| 绘画工具怎么扩展 | [结构与来源登记](../experiments/imagery-library/drawing/README.md) | 三十二个独立工具、来源追溯、运行接口与扩展步骤 |
 | 每个意象完善多少 | [六十项进度总表](../experiments/imagery-library/progress.html) | 单表记录已有能力、缺口、试画入口与语境标记 |
 | 取诗句到出画面是否跑通 | [第一轮通路记录](../experiments/poem-generation/README.md) | 今日诗词取句、真实模型请求、基础组合画面与完整关系失败记录 |
 | 过去的讨论与开发 | [历史归档](archive/README.md) | 供回溯，设计以主文档为准 |

@@ -33,7 +33,7 @@ test('large exact counts are bounded with a visible limitation and deterministic
   const a=fixture('百朵花。',[{text:'花',quantity:quantity({mode:'exact',min:100,max:100,unit:'朵',scope:'individual',evidence:['百朵花']})}]);const p=buildPlan(a);assert.equal(p.layers[0].instances.length,48);assert(!p.layers[0].quantity.exact);assert(p.notes.some(n=>n.includes('预算')));assert.deepEqual(p,buildPlan(a));
 });
 test('unsupported and absent objects are not invented to fill the page',()=>{
-  const a=fixture('满园桃花，水不见。',[{text:'桃花',quantity:quantity({mode:'many',extent:'spread',evidence:['满园桃花']})},{text:'水',kind:'environment',presence:'absent'}]);assert.deepEqual(buildPlan(a).layers.map(l=>l.tool),['plum-branch']);assert(buildPlan(a).omitted.some(e=>e.name==='水'));
+  const a=fixture('满园桃花，水不见。',[{text:'桃花',quantity:quantity({mode:'many',extent:'spread',evidence:['满园桃花']})},{text:'水',kind:'environment',presence:'absent'}]);assert.deepEqual(buildPlan(a).layers.map(l=>l.tool),['tree']);assert(buildPlan(a).omitted.some(e=>e.name==='水'));
 });
 test('explicit quantity mode requests quantity-aware semantics and refuses a legacy answer without repairing it',async()=>{
   const dir=await mkdtemp(join(tmpdir(),'poem-quantity-'));try{
