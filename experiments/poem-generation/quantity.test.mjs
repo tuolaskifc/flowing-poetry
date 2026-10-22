@@ -13,10 +13,10 @@ test('3.1 requires quantity and checks evidence, references and finite count ran
 });
 test('explicit exact quantities make distinct units while an isolated boat stays one',()=>{
   const e=fixture('两朵花，一叶孤舟。',[{text:'花',quantity:quantity({mode:'exact',min:2,max:2,unit:'朵',scope:'individual',evidence:['两朵花']})},{text:'孤舟',kind:'object',quantity:quantity({mode:'exact',min:1,max:1,unit:null,scope:'individual',extent:'local',evidence:['一叶孤舟']})}]);
-  assert(validateQuantityContract(e,e.poem).valid);const p=buildPlan(e);assert.equal(p.layers.find(l=>l.tool==='flower').instances.length,2);assert.equal(p.layers.find(l=>l.tool==='boat').instances.length,1);assert(p.layers.every(l=>l.quantity.exact));assert.notDeepEqual(p.layers.find(l=>l.tool==='flower').instances[0].placement,p.layers.find(l=>l.tool==='flower').instances[1].placement);
+  assert(validateQuantityContract(e,e.poem).valid);const p=buildPlan(e);assert.equal(p.layers.find(l=>l.tool==='flower').instances.length,2);assert.equal(p.layers.find(l=>l.tool==='boat').instances.length,1);assert(p.layers.filter(l=>!l.inferred).every(l=>l.quantity.exact));assert.notDeepEqual(p.layers.find(l=>l.tool==='flower').instances[0].placement,p.layers.find(l=>l.tool==='flower').instances[1].placement);
 });
-test('a lotus field has broad, layered coverage without inventing water, and no-qiong does not freeze it',()=>{
-  const p=buildPlan(lotusFixture());assert.deepEqual(p.layers.map(l=>l.tool),['lotus','lotus']);assert(p.layers.every(l=>l.instances.length>8&&l.animate));assert(p.layers.every(l=>l.quantity.collective&&!l.quantity.exact));
+test('a lotus field has broad layered coverage, declares contextual water, and no-qiong does not freeze it',()=>{
+  const p=buildPlan(lotusFixture()),plants=p.layers.filter(l=>!l.inferred);assert.deepEqual(plants.map(l=>l.tool),['lotus','lotus']);assert(plants.every(l=>l.instances.length>8&&l.animate));assert(plants.every(l=>l.quantity.collective&&!l.quantity.exact));assert(p.layers.some(l=>l.tool==='water'&&l.inferred&&l.entities.length===0));
   const leaves=p.layers[0].instances;assert(Math.max(...leaves.map(i=>i.placement.at[0]))-Math.min(...leaves.map(i=>i.placement.at[0]))>.8);assert(Math.max(...leaves.map(i=>i.placement.scale))/Math.min(...leaves.map(i=>i.placement.scale))>2);assert.equal(new Set(leaves.map(i=>i.variant)).size,3);
 });
 test('scope keeps distance, groups and branch counts separate from individual counts',()=>{

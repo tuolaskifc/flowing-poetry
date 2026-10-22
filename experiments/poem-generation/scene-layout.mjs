@@ -49,6 +49,10 @@ export function arrangeScene(analysis,layers){
     if(scene.kind==='mountain-stream'&&r.type==='on'&&source.tool==='water'&&target.tool==='rock'){view.visualized=true;view.reason='溪流区域与错落溪石相交，不模拟流体';return view;}
     if(r.type==='on'&&target.tool==='water'&&['boat','fish','bird'].includes(source.tool)){
       move(source,clamp(center(source)[0]),source.tool==='boat'?.76:source.tool==='bird'?.72:.85);source.z=26;view.visualized=true;view.reason='在水面区域定位，尚非物理承载';
+    }else if(r.type==='on'&&target.tool==='landscape'&&['ground','shore','field'].includes(target.options.form)&&['tree','willow','bamboo','grass','horse','figure','dwelling'].includes(source.tool)){
+      view.visualized=true;view.reason='主体以地表为共同依托；具体落点由本地场景区域安排';
+    }else if(r.type==='on'&&source.tool==='mist'&&target.tool==='landscape'&&target.options.form==='mountain'){
+      view.visualized=true;view.reason='烟意安排在山势下方；有村舍时在其附近起烟，源点为本地构图选择';
     }else if(r.type==='on'&&['tree','willow','bamboo'].includes(target.tool)&&['bird','oriole'].includes(source.tool)){
       const branch=target.instances[Math.floor(target.instances.length/2)].placement;move(source,clamp(branch.at[0]),clamp(branch.at[1]-.4*branch.scale,.18,.6));groupWidth(source,clamp(branch.at[0]),.17);source.z=(target.z??10)+1;view.visualized=true;view.reason='在树冠或枝叶区域停鸟试画，不作精确爪枝贴合';
     }else if(['behind','in_front_of'].includes(r.type)&&!['water','landscape'].includes(source.tool)){

@@ -1,0 +1,665 @@
+{
+  "version": "scene-organization-1",
+  "seed": 3977769721,
+  "settings": {
+    "wind": 0,
+    "density": 0.45,
+    "palette": "clear"
+  },
+  "layers": [
+    {
+      "tool": "landscape",
+      "entities": [
+        "i3"
+      ],
+      "projectedEntities": [],
+      "names": [
+        "山"
+      ],
+      "options": {
+        "form": "mountain"
+      },
+      "animate": false,
+      "placement": {
+        "anchor": [
+          320,
+          194
+        ],
+        "at": [
+          0.5,
+          0.4
+        ],
+        "scale": 1.5
+      },
+      "instances": [
+        {
+          "placement": {
+            "anchor": [
+              320,
+              194
+            ],
+            "at": [
+              0.5,
+              0.4
+            ],
+            "scale": 1.6
+          },
+          "depth": 0,
+          "opacity": 1,
+          "variant": 0
+        }
+      ],
+      "singleUnit": false,
+      "quantity": {
+        "items": [
+          {
+            "entity": "i3",
+            "mode": "unspecified",
+            "min": null,
+            "max": null,
+            "unit": null,
+            "scope": "unspecified",
+            "extent": "unspecified",
+            "evidence": [],
+            "basis": "model"
+          }
+        ],
+        "rendered": 1,
+        "exact": false,
+        "collective": false,
+        "partUnsupported": false
+      },
+      "quantityLabel": "整体笔触图层；内部数量尚未适配",
+      "z": -30
+    },
+    {
+      "tool": "willow",
+      "entities": [
+        "i1"
+      ],
+      "projectedEntities": [],
+      "names": [
+        "柳"
+      ],
+      "options": {},
+      "animate": true,
+      "placement": {
+        "anchor": [
+          320,
+          340
+        ],
+        "at": [
+          0.20458294240624997,
+          0.784625
+        ],
+        "scale": 1
+      },
+      "instances": [
+        {
+          "placement": {
+            "anchor": [
+              320,
+              340
+            ],
+            "at": [
+              0.2917791769625,
+              0.641875
+            ],
+            "scale": 0.6487378174125
+          },
+          "depth": 0.125,
+          "opacity": 0.77020679775,
+          "variant": 0
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              340
+            ],
+            "at": [
+              0.188648353925,
+              0.705625
+            ],
+            "scale": 0.560885634825
+          },
+          "depth": 0.375,
+          "opacity": 0.6938135955,
+          "variant": 1
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              340
+            ],
+            "at": [
+              0.08551753088749994,
+              0.95625
+            ],
+            "scale": 0.7130334522375
+          },
+          "depth": 0.625,
+          "opacity": 0.8536783539249999,
+          "variant": 2
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              340
+            ],
+            "at": [
+              0.25238670785,
+              0.83475
+            ],
+            "scale": 0.8551812696500001
+          },
+          "depth": 0.875,
+          "opacity": 0.9649244719,
+          "variant": 0
+        }
+      ],
+      "singleUnit": true,
+      "quantity": {
+        "items": [
+          {
+            "entity": "i1",
+            "mode": "unspecified",
+            "min": null,
+            "max": null,
+            "unit": null,
+            "scope": "unspecified",
+            "extent": "unspecified",
+            "evidence": [],
+            "basis": "model"
+          }
+        ],
+        "rendered": 4,
+        "exact": false,
+        "collective": false,
+        "partUnsupported": false
+      },
+      "quantityLabel": "数量未精确；本地试画 4 个单元",
+      "z": 8
+    },
+    {
+      "tool": "boat",
+      "entities": [
+        "i2"
+      ],
+      "projectedEntities": [],
+      "names": [
+        "舟"
+      ],
+      "options": {},
+      "animate": true,
+      "placement": {
+        "anchor": [
+          320,
+          230
+        ],
+        "at": [
+          0.675,
+          0.755
+        ],
+        "scale": 0.95
+      },
+      "instances": [
+        {
+          "placement": {
+            "anchor": [
+              320,
+              230
+            ],
+            "at": [
+              0.63,
+              0.72
+            ],
+            "scale": 0.72
+          },
+          "depth": 0.075,
+          "opacity": 1,
+          "variant": 0
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              230
+            ],
+            "at": [
+              0.72,
+              0.79
+            ],
+            "scale": 0.72
+          },
+          "depth": 0.22499999999999998,
+          "opacity": 1,
+          "variant": 1
+        }
+      ],
+      "singleUnit": true,
+      "quantity": {
+        "items": [
+          {
+            "entity": "i2",
+            "mode": "exact",
+            "min": 2,
+            "max": 2,
+            "unit": null,
+            "scope": "individual",
+            "extent": "unspecified",
+            "evidence": [],
+            "basis": "model"
+          }
+        ],
+        "rendered": 2,
+        "exact": true,
+        "collective": false,
+        "partUnsupported": false
+      },
+      "quantityLabel": "按提取数量绘制 2 个",
+      "z": 22
+    },
+    {
+      "tool": "landscape",
+      "entities": [],
+      "projectedEntities": [],
+      "names": [
+        "构图依托·地面"
+      ],
+      "options": {
+        "form": "ground",
+        "edge": "soft"
+      },
+      "animate": false,
+      "placement": {
+        "anchor": [
+          320,
+          194
+        ],
+        "at": [
+          0.5,
+          0.54
+        ],
+        "scale": 1.6
+      },
+      "instances": [
+        {
+          "placement": {
+            "anchor": [
+              320,
+              265
+            ],
+            "at": [
+              0.5,
+              0.54
+            ],
+            "scale": 2.5
+          },
+          "variant": 0,
+          "depth": 0,
+          "opacity": 1
+        }
+      ],
+      "singleUnit": false,
+      "inferred": true,
+      "provenance": {
+        "basis": "local-context",
+        "reason": "生长物、房舍和陆上主体需要共同地表；这是本地构图依托"
+      },
+      "quantity": {
+        "rendered": 1,
+        "exact": false,
+        "items": []
+      },
+      "quantityLabel": "本地环境依托，不计入原文意象覆盖",
+      "z": -18,
+      "clip": [
+        [
+          -0.04,
+          0.48
+        ],
+        [
+          0.34,
+          0.48
+        ],
+        [
+          0.35,
+          0.62
+        ],
+        [
+          0.47,
+          0.79
+        ],
+        [
+          0.28,
+          1.04
+        ],
+        [
+          -0.04,
+          1.04
+        ]
+      ]
+    },
+    {
+      "tool": "water",
+      "entities": [],
+      "projectedEntities": [],
+      "names": [
+        "构图依托·水域"
+      ],
+      "options": {
+        "form": "plane"
+      },
+      "animate": false,
+      "placement": {
+        "anchor": [
+          320,
+          135
+        ],
+        "at": [
+          0.5,
+          0.45
+        ],
+        "scale": 1.6
+      },
+      "instances": [
+        {
+          "placement": {
+            "anchor": [
+              320,
+              135
+            ],
+            "at": [
+              0.5,
+              0.45
+            ],
+            "scale": 1.65
+          },
+          "variant": 0,
+          "depth": 0,
+          "opacity": 1
+        }
+      ],
+      "singleUnit": false,
+      "inferred": true,
+      "provenance": {
+        "basis": "local-context",
+        "reason": "舟、游鱼、水生植物或渡口水岸需要水域；水形和范围是本地选择"
+      },
+      "quantity": {
+        "rendered": 1,
+        "exact": false,
+        "items": []
+      },
+      "quantityLabel": "本地环境依托，不计入原文意象覆盖",
+      "z": -10,
+      "clip": [
+        [
+          0.38,
+          0.45
+        ],
+        [
+          1.04,
+          0.45
+        ],
+        [
+          1.04,
+          1.04
+        ],
+        [
+          0.28,
+          1.04
+        ],
+        [
+          0.47,
+          0.79
+        ],
+        [
+          0.35,
+          0.62
+        ]
+      ],
+      "surface": {
+        "top": 0.45,
+        "bottom": 1
+      }
+    }
+  ],
+  "spatial": [],
+  "scene": {
+    "kind": "landscape",
+    "notes": [
+      "通用场景层先组织地面、水域、群落和主体，再比较三个布局的依托、相对位置、尺度与遮挡；检查通过不代表审美已通过。"
+    ],
+    "waterline": null,
+    "organization": {
+      "version": "1.0",
+      "strategy": "general-constraints",
+      "regions": {
+        "water": [
+          [
+            0.38,
+            0.45
+          ],
+          [
+            1.04,
+            0.45
+          ],
+          [
+            1.04,
+            1.04
+          ],
+          [
+            0.28,
+            1.04
+          ],
+          [
+            0.47,
+            0.79
+          ],
+          [
+            0.35,
+            0.62
+          ]
+        ],
+        "land": [
+          [
+            -0.04,
+            0.48
+          ],
+          [
+            0.34,
+            0.48
+          ],
+          [
+            0.35,
+            0.62
+          ],
+          [
+            0.47,
+            0.79
+          ],
+          [
+            0.28,
+            1.04
+          ],
+          [
+            -0.04,
+            1.04
+          ]
+        ]
+      },
+      "candidates": [
+        {
+          "layout": 2,
+          "orientation": "left-bank",
+          "errors": 0,
+          "cost": 2.29,
+          "metrics": {
+            "overlapPenalty": 0.014,
+            "balancePenalty": 0.265,
+            "motifFootprint": 0.451,
+            "landArea": 0.234
+          }
+        },
+        {
+          "layout": 0,
+          "orientation": "left-bank",
+          "errors": 0,
+          "cost": 2.619,
+          "metrics": {
+            "overlapPenalty": 0.014,
+            "balancePenalty": 0.307,
+            "motifFootprint": 0.411,
+            "landArea": 0.234
+          }
+        },
+        {
+          "layout": 1,
+          "orientation": "right-bank",
+          "errors": 0,
+          "cost": 6.256,
+          "metrics": {
+            "overlapPenalty": 0.325,
+            "balancePenalty": 0.295,
+            "motifFootprint": 0.431,
+            "landArea": 0.234
+          }
+        }
+      ],
+      "repairs": [
+        {
+          "type": "support-added",
+          "reason": "生长物、房舍和陆上主体需要共同地表；这是本地构图依托"
+        },
+        {
+          "type": "support-added",
+          "reason": "舟、游鱼、水生植物或渡口水岸需要水域；水形和范围是本地选择"
+        }
+      ],
+      "limitations": [
+        "几何检查不判定诗意理解或审美合格",
+        "动作时序与整首诗的场景切换尚未编排"
+      ],
+      "layout": 2,
+      "orientation": "left-bank",
+      "audit": {
+        "scope": "implemented-geometry-and-drawing-gaps",
+        "coverage": {
+          "scope": "extracted-entities-only",
+          "present": 3,
+          "mapped": 3,
+          "parameters": [],
+          "missing": []
+        },
+        "checks": [
+          "presence",
+          "count",
+          "finite",
+          "support",
+          "scale",
+          "relative-position",
+          "depth",
+          "grove-spread",
+          "drawing-gaps"
+        ],
+        "status": "checks-passed",
+        "errors": 0,
+        "review": 0,
+        "issues": [],
+        "metrics": {
+          "overlapPenalty": 0.014,
+          "balancePenalty": 0.265,
+          "motifFootprint": 0.451,
+          "landArea": 0.234
+        },
+        "cost": 2.29,
+        "aestheticAcceptance": "pending-user"
+      },
+      "graph": {
+        "nodes": [
+          {
+            "id": "l0",
+            "entities": [
+              "i3"
+            ],
+            "tool": "landscape",
+            "role": "terrain",
+            "habitat": null,
+            "inferred": false,
+            "support": null
+          },
+          {
+            "id": "l1",
+            "entities": [
+              "i1"
+            ],
+            "tool": "willow",
+            "role": "vegetation",
+            "habitat": "land",
+            "inferred": false,
+            "support": "l3"
+          },
+          {
+            "id": "l2",
+            "entities": [
+              "i2"
+            ],
+            "tool": "boat",
+            "role": "subject",
+            "habitat": "water",
+            "inferred": false,
+            "support": "l4"
+          },
+          {
+            "id": "l3",
+            "entities": [],
+            "tool": "landscape",
+            "role": "terrain",
+            "habitat": null,
+            "inferred": true,
+            "support": null
+          },
+          {
+            "id": "l4",
+            "entities": [],
+            "tool": "water",
+            "role": "water",
+            "habitat": null,
+            "inferred": true,
+            "support": null
+          }
+        ],
+        "edges": [
+          {
+            "type": "supported-by",
+            "source": "l1",
+            "target": "l3",
+            "basis": "local-composition",
+            "habitat": "land"
+          },
+          {
+            "type": "supported-by",
+            "source": "l2",
+            "target": "l4",
+            "basis": "local-composition",
+            "habitat": "water"
+          }
+        ],
+        "setting": "landscape"
+      }
+    }
+  },
+  "omitted": [],
+  "notes": [
+    "舟：按舟船这个主体选择画法，材质或修饰词不另画成植物。这是本地写意借形，保留原词义。",
+    "山虽被归为地点，仍按原文明示的自然景物匹配；具体空间关系另行处理。",
+    "位置、大小、笔触与默认微动是本地试画选择；数量解释与本地显示数量分别记录。",
+    "未明说的群落数量、疏密、近中远层次与变体均为本地构图选择；种类可按已声明的写意画法概括，不把铺展词换算成精确物体数量。",
+    "通用场景层先组织地面、水域、群落和主体，再比较三个布局的依托、相对位置、尺度与遮挡；检查通过不代表审美已通过。"
+  ],
+  "relations": []
+}

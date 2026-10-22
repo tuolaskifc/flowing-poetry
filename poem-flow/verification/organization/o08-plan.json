@@ -1,0 +1,478 @@
+{
+  "version": "scene-organization-1",
+  "seed": 1520419434,
+  "settings": {
+    "wind": 0,
+    "density": 0.45,
+    "palette": "clear"
+  },
+  "layers": [
+    {
+      "tool": "moon",
+      "entities": [
+        "i3"
+      ],
+      "projectedEntities": [],
+      "names": [
+        "月"
+      ],
+      "options": {
+        "shape": "crescent"
+      },
+      "animate": true,
+      "placement": {
+        "anchor": [
+          320,
+          175
+        ],
+        "at": [
+          0.72,
+          0.22
+        ],
+        "scale": 0.85
+      },
+      "instances": [
+        {
+          "placement": {
+            "anchor": [
+              320,
+              175
+            ],
+            "at": [
+              0.72,
+              0.22
+            ],
+            "scale": 0.64
+          },
+          "depth": 0,
+          "opacity": 1,
+          "variant": 0
+        }
+      ],
+      "singleUnit": true,
+      "quantity": {
+        "items": [
+          {
+            "entity": "i3",
+            "mode": "unspecified",
+            "min": null,
+            "max": null,
+            "unit": null,
+            "scope": "unspecified",
+            "extent": "unspecified",
+            "evidence": [],
+            "basis": "model"
+          }
+        ],
+        "rendered": 1,
+        "exact": false,
+        "collective": false,
+        "partUnsupported": false
+      },
+      "quantityLabel": "数量未精确；本地试画 1 个单元",
+      "z": -5
+    },
+    {
+      "tool": "lotus",
+      "entities": [
+        "i1"
+      ],
+      "projectedEntities": [],
+      "names": [
+        "荷叶"
+      ],
+      "options": {
+        "form": "leaf"
+      },
+      "animate": true,
+      "placement": {
+        "anchor": [
+          320,
+          330
+        ],
+        "at": [
+          0.5037899101,
+          0.785
+        ],
+        "scale": 0.95
+      },
+      "instances": [
+        {
+          "placement": {
+            "anchor": [
+              320,
+              218
+            ],
+            "at": [
+              0.5037899101,
+              0.785
+            ],
+            "scale": 0.63
+          },
+          "depth": 0.5,
+          "opacity": 0.8180000000000001,
+          "variant": 0
+        }
+      ],
+      "singleUnit": true,
+      "quantity": {
+        "items": [
+          {
+            "entity": "i1",
+            "mode": "exact",
+            "min": 1,
+            "max": 1,
+            "unit": null,
+            "scope": "individual",
+            "extent": "unspecified",
+            "evidence": [],
+            "basis": "model"
+          }
+        ],
+        "rendered": 1,
+        "exact": true,
+        "collective": false,
+        "partUnsupported": false
+      },
+      "quantityLabel": "按提取数量绘制 1 个",
+      "z": 18
+    },
+    {
+      "tool": "lotus",
+      "entities": [
+        "i2"
+      ],
+      "projectedEntities": [],
+      "names": [
+        "莲花"
+      ],
+      "options": {
+        "form": "flower",
+        "state": "open"
+      },
+      "animate": true,
+      "placement": {
+        "anchor": [
+          320,
+          330
+        ],
+        "at": [
+          0.7337899100999999,
+          0.675
+        ],
+        "scale": 0.95
+      },
+      "instances": [
+        {
+          "placement": {
+            "anchor": [
+              328,
+              169
+            ],
+            "at": [
+              0.7337899100999999,
+              0.675
+            ],
+            "scale": 0.63
+          },
+          "depth": 0.5,
+          "opacity": 0.8180000000000001,
+          "variant": 0
+        }
+      ],
+      "singleUnit": true,
+      "quantity": {
+        "items": [
+          {
+            "entity": "i2",
+            "mode": "exact",
+            "min": 1,
+            "max": 1,
+            "unit": null,
+            "scope": "individual",
+            "extent": "unspecified",
+            "evidence": [],
+            "basis": "model"
+          }
+        ],
+        "rendered": 1,
+        "exact": true,
+        "collective": false,
+        "partUnsupported": false
+      },
+      "quantityLabel": "按提取数量绘制 1 个",
+      "z": 19
+    },
+    {
+      "tool": "water",
+      "entities": [],
+      "projectedEntities": [],
+      "names": [
+        "构图依托·水域"
+      ],
+      "options": {
+        "form": "plane"
+      },
+      "animate": false,
+      "placement": {
+        "anchor": [
+          320,
+          135
+        ],
+        "at": [
+          0.5,
+          0.45
+        ],
+        "scale": 1.6
+      },
+      "instances": [
+        {
+          "placement": {
+            "anchor": [
+              320,
+              135
+            ],
+            "at": [
+              0.5,
+              0.45
+            ],
+            "scale": 1.65
+          },
+          "variant": 0,
+          "depth": 0,
+          "opacity": 1
+        }
+      ],
+      "singleUnit": false,
+      "inferred": true,
+      "provenance": {
+        "basis": "local-context",
+        "reason": "舟、游鱼、水生植物或渡口水岸需要水域；水形和范围是本地选择"
+      },
+      "quantity": {
+        "rendered": 1,
+        "exact": false,
+        "items": []
+      },
+      "quantityLabel": "本地环境依托，不计入原文意象覆盖",
+      "z": -10,
+      "clip": [
+        [
+          0,
+          0.45
+        ],
+        [
+          1,
+          0.45
+        ],
+        [
+          1,
+          1.04
+        ],
+        [
+          0,
+          1.04
+        ]
+      ],
+      "surface": {
+        "top": 0.45,
+        "bottom": 1
+      }
+    }
+  ],
+  "spatial": [],
+  "scene": {
+    "kind": "study",
+    "notes": [
+      "通用场景层先组织地面、水域、群落和主体，再比较三个布局的依托、相对位置、尺度与遮挡；检查通过不代表审美已通过。"
+    ],
+    "waterline": null,
+    "organization": {
+      "version": "1.0",
+      "strategy": "general-constraints",
+      "regions": {
+        "water": [
+          [
+            0,
+            0.45
+          ],
+          [
+            1,
+            0.45
+          ],
+          [
+            1,
+            1.04
+          ],
+          [
+            0,
+            1.04
+          ]
+        ]
+      },
+      "candidates": [
+        {
+          "layout": 0,
+          "orientation": "open",
+          "errors": 0,
+          "cost": 0.95,
+          "metrics": {
+            "overlapPenalty": 0,
+            "balancePenalty": 0.119,
+            "motifFootprint": 0.046,
+            "landArea": 0
+          }
+        },
+        {
+          "layout": 1,
+          "orientation": "open",
+          "errors": 0,
+          "cost": 1.464,
+          "metrics": {
+            "overlapPenalty": 0,
+            "balancePenalty": 0.183,
+            "motifFootprint": 0.046,
+            "landArea": 0
+          }
+        },
+        {
+          "layout": 2,
+          "orientation": "open",
+          "errors": 0,
+          "cost": 1.978,
+          "metrics": {
+            "overlapPenalty": 0,
+            "balancePenalty": 0.247,
+            "motifFootprint": 0.046,
+            "landArea": 0
+          }
+        }
+      ],
+      "repairs": [
+        {
+          "type": "support-added",
+          "reason": "舟、游鱼、水生植物或渡口水岸需要水域；水形和范围是本地选择"
+        }
+      ],
+      "limitations": [
+        "几何检查不判定诗意理解或审美合格",
+        "动作时序与整首诗的场景切换尚未编排"
+      ],
+      "layout": 0,
+      "orientation": "open",
+      "audit": {
+        "scope": "implemented-geometry-and-drawing-gaps",
+        "coverage": {
+          "scope": "extracted-entities-only",
+          "present": 3,
+          "mapped": 3,
+          "parameters": [],
+          "missing": []
+        },
+        "checks": [
+          "presence",
+          "count",
+          "finite",
+          "support",
+          "scale",
+          "relative-position",
+          "depth",
+          "grove-spread",
+          "drawing-gaps"
+        ],
+        "status": "checks-passed",
+        "errors": 0,
+        "review": 0,
+        "issues": [],
+        "metrics": {
+          "overlapPenalty": 0,
+          "balancePenalty": 0.119,
+          "motifFootprint": 0.046,
+          "landArea": 0
+        },
+        "cost": 0.95,
+        "aestheticAcceptance": "pending-user"
+      },
+      "graph": {
+        "nodes": [
+          {
+            "id": "l0",
+            "entities": [
+              "i3"
+            ],
+            "tool": "moon",
+            "role": "sky",
+            "habitat": "air",
+            "inferred": false,
+            "support": null
+          },
+          {
+            "id": "l1",
+            "entities": [
+              "i1"
+            ],
+            "tool": "lotus",
+            "role": "aquatic-vegetation",
+            "habitat": "water",
+            "inferred": false,
+            "support": "l3"
+          },
+          {
+            "id": "l2",
+            "entities": [
+              "i2"
+            ],
+            "tool": "lotus",
+            "role": "aquatic-vegetation",
+            "habitat": "water",
+            "inferred": false,
+            "support": "l3"
+          },
+          {
+            "id": "l3",
+            "entities": [],
+            "tool": "water",
+            "role": "water",
+            "habitat": null,
+            "inferred": true,
+            "support": null
+          }
+        ],
+        "edges": [
+          {
+            "type": "supported-by",
+            "source": "l0",
+            "target": null,
+            "basis": "local-composition",
+            "habitat": "air"
+          },
+          {
+            "type": "supported-by",
+            "source": "l1",
+            "target": "l3",
+            "basis": "local-composition",
+            "habitat": "water"
+          },
+          {
+            "type": "supported-by",
+            "source": "l2",
+            "target": "l3",
+            "basis": "local-composition",
+            "habitat": "water"
+          }
+        ],
+        "setting": "study"
+      }
+    }
+  },
+  "omitted": [],
+  "notes": [
+    "荷叶的单体画笔只画选定的花或叶，环境依托另由场景组织层决定；默认花态是本地选择，尚无生长或开花过程。",
+    "莲花的单体画笔只画选定的花或叶，环境依托另由场景组织层决定；默认花态是本地选择，尚无生长或开花过程。",
+    "原句未明确月形，暂用弯月试画；可以手动切换。",
+    "位置、大小、笔触与默认微动是本地试画选择；数量解释与本地显示数量分别记录。",
+    "未明说的群落数量、疏密、近中远层次与变体均为本地构图选择；种类可按已声明的写意画法概括，不把铺展词换算成精确物体数量。",
+    "通用场景层先组织地面、水域、群落和主体，再比较三个布局的依托、相对位置、尺度与遮挡；检查通过不代表审美已通过。"
+  ],
+  "relations": []
+}

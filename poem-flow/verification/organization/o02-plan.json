@@ -1,0 +1,1345 @@
+{
+  "version": "scene-organization-1",
+  "seed": 645788587,
+  "settings": {
+    "wind": 0,
+    "density": 0.45,
+    "palette": "clear"
+  },
+  "layers": [
+    {
+      "tool": "dwelling",
+      "entities": [
+        "i4"
+      ],
+      "projectedEntities": [],
+      "names": [
+        "房舍"
+      ],
+      "options": {
+        "kind": "house"
+      },
+      "animate": true,
+      "placement": {
+        "anchor": [
+          320,
+          307
+        ],
+        "at": [
+          0.43,
+          0.73
+        ],
+        "scale": 1.05
+      },
+      "drawingLabel": "房舍",
+      "instances": [
+        {
+          "placement": {
+            "anchor": [
+              320,
+              307
+            ],
+            "at": [
+              0.43,
+              0.73
+            ],
+            "scale": 0.78
+          },
+          "depth": 0.15,
+          "opacity": 1,
+          "variant": 0
+        }
+      ],
+      "singleUnit": true,
+      "quantity": {
+        "items": [
+          {
+            "entity": "i4",
+            "mode": "unspecified",
+            "min": null,
+            "max": null,
+            "unit": null,
+            "scope": "unspecified",
+            "extent": "unspecified",
+            "evidence": [],
+            "basis": "model"
+          }
+        ],
+        "rendered": 1,
+        "exact": false,
+        "collective": false,
+        "partUnsupported": false
+      },
+      "quantityLabel": "数量未精确；本地试画 1 个单元",
+      "z": 12,
+      "grounding": true
+    },
+    {
+      "tool": "tree",
+      "entities": [
+        "i3"
+      ],
+      "projectedEntities": [],
+      "names": [
+        "树"
+      ],
+      "options": {
+        "form": "broadleaf",
+        "crown": "wash"
+      },
+      "animate": true,
+      "placement": {
+        "anchor": [
+          320,
+          388
+        ],
+        "at": [
+          0.1835113763750001,
+          0.6456999999999999
+        ],
+        "scale": 1.15
+      },
+      "instances": [
+        {
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.25868951685,
+              0.61255
+            ],
+            "scale": 0.6096378174125
+          },
+          "depth": 0.01,
+          "opacity": 0.73620679775,
+          "variant": 0
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.15173903369999997,
+              0.61765
+            ],
+            "scale": 0.521785634825
+          },
+          "depth": 0.03,
+          "opacity": 0.6598135955,
+          "variant": 1
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.04478855054999995,
+              0.62275
+            ],
+            "scale": 0.43393345223749996
+          },
+          "depth": 0.05,
+          "opacity": 0.58342039325,
+          "variant": 2
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.21783806740000003,
+              0.62785
+            ],
+            "scale": 0.57608126965
+          },
+          "depth": 0.07,
+          "opacity": 0.707027191,
+          "variant": 0
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.11088758425000003,
+              0.63295
+            ],
+            "scale": 0.4882290870625
+          },
+          "depth": 0.09,
+          "opacity": 0.63063398875,
+          "variant": 1
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.2839371011,
+              0.63805
+            ],
+            "scale": 0.6303769044749999
+          },
+          "depth": 0.11,
+          "opacity": 0.7542407864999999,
+          "variant": 2
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.17698661795000026,
+              0.64315
+            ],
+            "scale": 0.5425247218875002
+          },
+          "depth": 0.13,
+          "opacity": 0.6778475842500001,
+          "variant": 0
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.07003613480000016,
+              0.64825
+            ],
+            "scale": 0.4546725393000001
+          },
+          "depth": 0.15,
+          "opacity": 0.6014543820000001,
+          "variant": 1
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.2430856516500001,
+              0.65335
+            ],
+            "scale": 0.5968203567125001
+          },
+          "depth": 0.17,
+          "opacity": 0.7250611797500001,
+          "variant": 2
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.13613516850000026,
+              0.65845
+            ],
+            "scale": 0.5089681741250002
+          },
+          "depth": 0.19,
+          "opacity": 0.6486679775000002,
+          "variant": 0
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.30918468535000015,
+              0.66355
+            ],
+            "scale": 0.6511159915375001
+          },
+          "depth": 0.21,
+          "opacity": 0.7722747752500001,
+          "variant": 1
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.2022342022000001,
+              0.66865
+            ],
+            "scale": 0.5632638089500001
+          },
+          "depth": 0.23,
+          "opacity": 0.6958815730000001,
+          "variant": 2
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.09528371905000001,
+              0.67375
+            ],
+            "scale": 0.4754116263625
+          },
+          "depth": 0.25,
+          "opacity": 0.61948837075,
+          "variant": 0
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.2683332359000004,
+              0.67885
+            ],
+            "scale": 0.6175594437750004
+          },
+          "depth": 0.27,
+          "opacity": 0.7430951685000002,
+          "variant": 1
+        }
+      ],
+      "singleUnit": true,
+      "quantity": {
+        "items": [
+          {
+            "entity": "i3",
+            "mode": "many",
+            "min": null,
+            "max": null,
+            "unit": null,
+            "scope": "unspecified",
+            "extent": "spread",
+            "evidence": [],
+            "basis": "model"
+          }
+        ],
+        "rendered": 14,
+        "exact": false,
+        "collective": true,
+        "partUnsupported": false
+      },
+      "quantityLabel": "成片分布；本地试画 14 个单元",
+      "z": 8
+    },
+    {
+      "tool": "horse",
+      "entities": [
+        "i2"
+      ],
+      "projectedEntities": [],
+      "names": [
+        "马"
+      ],
+      "options": {
+        "pose": "stand"
+      },
+      "animate": true,
+      "placement": {
+        "anchor": [
+          298,
+          312
+        ],
+        "at": [
+          0.65,
+          0.8174999999999999
+        ],
+        "scale": 0.88
+      },
+      "instances": [
+        {
+          "placement": {
+            "anchor": [
+              298,
+              312
+            ],
+            "at": [
+              0.595,
+              0.7949999999999999
+            ],
+            "scale": 0.5815344185375
+          },
+          "depth": 0.075,
+          "opacity": 1,
+          "variant": 0
+        },
+        {
+          "placement": {
+            "anchor": [
+              298,
+              312
+            ],
+            "at": [
+              0.7050000000000001,
+              0.84
+            ],
+            "scale": 0.5318788370749999
+          },
+          "depth": 0.22499999999999998,
+          "opacity": 1,
+          "variant": 1
+        }
+      ],
+      "singleUnit": true,
+      "quantity": {
+        "items": [
+          {
+            "entity": "i2",
+            "mode": "exact",
+            "min": 2,
+            "max": 2,
+            "unit": null,
+            "scope": "individual",
+            "extent": "unspecified",
+            "evidence": [],
+            "basis": "model"
+          }
+        ],
+        "rendered": 2,
+        "exact": true,
+        "collective": false,
+        "partUnsupported": false
+      },
+      "quantityLabel": "按提取数量绘制 2 个",
+      "grounding": true,
+      "z": 12
+    },
+    {
+      "tool": "grass",
+      "entities": [
+        "i1"
+      ],
+      "projectedEntities": [],
+      "names": [
+        "草"
+      ],
+      "options": {},
+      "animate": true,
+      "placement": {
+        "anchor": [
+          320,
+          315
+        ],
+        "at": [
+          0.6300383001861112,
+          0.8201891666666666
+        ],
+        "scale": 1
+      },
+      "instances": [
+        {
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.25868951685,
+              0.68395
+            ],
+            "scale": 0.3115344185375
+          },
+          "depth": 0.29,
+          "opacity": 0.73620679775,
+          "variant": 0
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.15173903369999997,
+              0.6890499999999999
+            ],
+            "scale": 0.261878837075
+          },
+          "depth": 0.31,
+          "opacity": 0.6598135955,
+          "variant": 1
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.04478855054999995,
+              0.69415
+            ],
+            "scale": 0.21222325561249997
+          },
+          "depth": 0.33,
+          "opacity": 0.58342039325,
+          "variant": 2
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.21783806740000003,
+              0.6992499999999999
+            ],
+            "scale": 0.29256767415
+          },
+          "depth": 0.35,
+          "opacity": 0.707027191,
+          "variant": 0
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.11088758425000003,
+              0.70435
+            ],
+            "scale": 0.24291209268750003
+          },
+          "depth": 0.37,
+          "opacity": 0.63063398875,
+          "variant": 1
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.2839371011,
+              0.70945
+            ],
+            "scale": 0.323256511225
+          },
+          "depth": 0.39,
+          "opacity": 0.7542407864999999,
+          "variant": 2
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.17698661795000026,
+              0.71455
+            ],
+            "scale": 0.2736009297625001
+          },
+          "depth": 0.41,
+          "opacity": 0.6778475842500001,
+          "variant": 0
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.07003613480000016,
+              0.71965
+            ],
+            "scale": 0.22394534830000007
+          },
+          "depth": 0.43,
+          "opacity": 0.6014543820000001,
+          "variant": 1
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.2430856516500001,
+              0.72475
+            ],
+            "scale": 0.30428976683750003
+          },
+          "depth": 0.45,
+          "opacity": 0.7250611797500001,
+          "variant": 2
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.13613516850000026,
+              0.72985
+            ],
+            "scale": 0.2546341853750001
+          },
+          "depth": 0.47,
+          "opacity": 0.6486679775000002,
+          "variant": 0
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.30918468535000015,
+              0.73495
+            ],
+            "scale": 0.33497860391250006
+          },
+          "depth": 0.49,
+          "opacity": 0.7722747752500001,
+          "variant": 1
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.2022342022000001,
+              0.74005
+            ],
+            "scale": 0.28532302245
+          },
+          "depth": 0.51,
+          "opacity": 0.6958815730000001,
+          "variant": 2
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.7773860449,
+              0.74515
+            ],
+            "scale": 0.2356674409875
+          },
+          "depth": 0.53,
+          "opacity": 0.61948837075,
+          "variant": 0
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.9257142022000003,
+              0.75025
+            ],
+            "scale": 0.3160118595250002
+          },
+          "depth": 0.55,
+          "opacity": 0.7430951685000002,
+          "variant": 1
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.8340423595000003,
+              0.75535
+            ],
+            "scale": 0.2663562780625002
+          },
+          "depth": 0.57,
+          "opacity": 0.6667019662500002,
+          "variant": 2
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.7423705168000002,
+              0.94806
+            ],
+            "scale": 0.3267006966000001
+          },
+          "depth": 0.59,
+          "opacity": 0.8292778876000001,
+          "variant": 0
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.8906986741000001,
+              0.95274
+            ],
+            "scale": 0.4070451151375001
+          },
+          "depth": 0.61,
+          "opacity": 0.940524005575,
+          "variant": 1
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.7990268314000001,
+              0.95742
+            ],
+            "scale": 0.35738953367500004
+          },
+          "depth": 0.63,
+          "opacity": 0.87177012355,
+          "variant": 2
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.9473549887000003,
+              0.9621000000000001
+            ],
+            "scale": 0.4377339522125002
+          },
+          "depth": 0.65,
+          "opacity": 0.9830162415250003,
+          "variant": 0
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.8556831460000003,
+              0.9667800000000001
+            ],
+            "scale": 0.3880783707500002
+          },
+          "depth": 0.67,
+          "opacity": 0.9142623595000002,
+          "variant": 1
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.7640113033000002,
+              0.97146
+            ],
+            "scale": 0.3384227892875002
+          },
+          "depth": 0.69,
+          "opacity": 0.8455084774750001,
+          "variant": 2
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.9123394606000002,
+              0.97614
+            ],
+            "scale": 0.4187672078250001
+          },
+          "depth": 0.71,
+          "opacity": 0.9567545954500001,
+          "variant": 0
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.8206676179000001,
+              0.98082
+            ],
+            "scale": 0.3691116263625001
+          },
+          "depth": 0.73,
+          "opacity": 0.8880007134250001,
+          "variant": 1
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.9689957752,
+              0.9855
+            ],
+            "scale": 0.4494560449
+          },
+          "depth": 0.75,
+          "opacity": 0.9992468314,
+          "variant": 2
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.8773239325000004,
+              0.8101800000000001
+            ],
+            "scale": 0.39980046343750025
+          },
+          "depth": 0.77,
+          "opacity": 0.9304929493750003,
+          "variant": 0
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.7856520897999999,
+              0.81486
+            ],
+            "scale": 0.350144881975
+          },
+          "depth": 0.79,
+          "opacity": 0.8617390673499999,
+          "variant": 1
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.9339802471000007,
+              0.81954
+            ],
+            "scale": 0.4304893005125004
+          },
+          "depth": 0.81,
+          "opacity": 0.9729851853250004,
+          "variant": 2
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.8423084044000007,
+              0.8242200000000001
+            ],
+            "scale": 0.38083371905000035
+          },
+          "depth": 0.83,
+          "opacity": 0.9042313033000005,
+          "variant": 0
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.7506365617000006,
+              0.8289000000000001
+            ],
+            "scale": 0.3311781375875003
+          },
+          "depth": 0.85,
+          "opacity": 0.8354774212750004,
+          "variant": 1
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.8989647190000005,
+              0.8335800000000001
+            ],
+            "scale": 0.41152255612500027
+          },
+          "depth": 0.87,
+          "opacity": 0.9467235392500003,
+          "variant": 2
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.8072928763000005,
+              0.83826
+            ],
+            "scale": 0.36186697466250023
+          },
+          "depth": 0.89,
+          "opacity": 0.8779696572250003,
+          "variant": 0
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.9556210336000004,
+              0.84294
+            ],
+            "scale": 0.44221139320000025
+          },
+          "depth": 0.91,
+          "opacity": 0.9892157752000003,
+          "variant": 1
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.8639491909000003,
+              0.84762
+            ],
+            "scale": 0.3925558117375002
+          },
+          "depth": 0.93,
+          "opacity": 0.9204618931750002,
+          "variant": 2
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.7722773482000003,
+              0.8523000000000001
+            ],
+            "scale": 0.34290023027500016
+          },
+          "depth": 0.95,
+          "opacity": 0.8517080111500002,
+          "variant": 0
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.9206055055000002,
+              0.8569800000000001
+            ],
+            "scale": 0.4232446488125001
+          },
+          "depth": 0.97,
+          "opacity": 0.9629541291250001,
+          "variant": 1
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.8289336628,
+              0.8616600000000001
+            ],
+            "scale": 0.3735890673500001
+          },
+          "depth": 0.99,
+          "opacity": 0.8942002471,
+          "variant": 2
+        }
+      ],
+      "singleUnit": true,
+      "quantity": {
+        "items": [
+          {
+            "entity": "i1",
+            "mode": "many",
+            "min": null,
+            "max": null,
+            "unit": null,
+            "scope": "unspecified",
+            "extent": "spread",
+            "evidence": [],
+            "basis": "model"
+          }
+        ],
+        "rendered": 36,
+        "exact": false,
+        "collective": true,
+        "partUnsupported": false
+      },
+      "quantityLabel": "成片分布；本地试画 36 个单元",
+      "z": 14
+    },
+    {
+      "tool": "landscape",
+      "entities": [],
+      "projectedEntities": [],
+      "names": [
+        "构图依托·地面"
+      ],
+      "options": {
+        "form": "ground",
+        "edge": "soft"
+      },
+      "animate": false,
+      "placement": {
+        "anchor": [
+          320,
+          194
+        ],
+        "at": [
+          0.5,
+          0.54
+        ],
+        "scale": 1.6
+      },
+      "instances": [
+        {
+          "placement": {
+            "anchor": [
+              320,
+              265
+            ],
+            "at": [
+              0.5,
+              0.54
+            ],
+            "scale": 2.5
+          },
+          "variant": 0,
+          "depth": 0,
+          "opacity": 1
+        }
+      ],
+      "singleUnit": false,
+      "inferred": true,
+      "provenance": {
+        "basis": "local-context",
+        "reason": "生长物、房舍和陆上主体需要共同地表；这是本地构图依托"
+      },
+      "quantity": {
+        "rendered": 1,
+        "exact": false,
+        "items": []
+      },
+      "quantityLabel": "本地环境依托，不计入原文意象覆盖",
+      "z": -18,
+      "clip": [
+        [
+          0,
+          0.5
+        ],
+        [
+          1,
+          0.5
+        ],
+        [
+          1,
+          1.04
+        ],
+        [
+          0,
+          1.04
+        ]
+      ]
+    }
+  ],
+  "spatial": [],
+  "scene": {
+    "kind": "woodland",
+    "notes": [
+      "房舍下方的淡墨承托是本地构图，不把它当作诗句额外明说的地面或投影。",
+      "通用场景层先组织地面、水域、群落和主体，再比较三个布局的依托、相对位置、尺度与遮挡；检查通过不代表审美已通过。"
+    ],
+    "waterline": null,
+    "organization": {
+      "version": "1.0",
+      "strategy": "general-constraints",
+      "regions": {
+        "land": [
+          [
+            0,
+            0.5
+          ],
+          [
+            1,
+            0.5
+          ],
+          [
+            1,
+            1.04
+          ],
+          [
+            0,
+            1.04
+          ]
+        ]
+      },
+      "candidates": [
+        {
+          "layout": 2,
+          "orientation": "open",
+          "errors": 0,
+          "cost": 48.228,
+          "metrics": {
+            "overlapPenalty": 3.897,
+            "balancePenalty": 0.182,
+            "motifFootprint": 1.143,
+            "landArea": 0.54
+          }
+        },
+        {
+          "layout": 0,
+          "orientation": "open",
+          "errors": 0,
+          "cost": 55.049,
+          "metrics": {
+            "overlapPenalty": 4.464,
+            "balancePenalty": 0.185,
+            "motifFootprint": 1.137,
+            "landArea": 0.54
+          }
+        },
+        {
+          "layout": 1,
+          "orientation": "open",
+          "errors": 0,
+          "cost": 57.117,
+          "metrics": {
+            "overlapPenalty": 4.636,
+            "balancePenalty": 0.186,
+            "motifFootprint": 1.138,
+            "landArea": 0.54
+          }
+        }
+      ],
+      "repairs": [
+        {
+          "type": "support-added",
+          "reason": "生长物、房舍和陆上主体需要共同地表；这是本地构图依托"
+        }
+      ],
+      "limitations": [
+        "几何检查不判定诗意理解或审美合格",
+        "动作时序与整首诗的场景切换尚未编排"
+      ],
+      "layout": 2,
+      "orientation": "open",
+      "audit": {
+        "scope": "implemented-geometry-and-drawing-gaps",
+        "coverage": {
+          "scope": "extracted-entities-only",
+          "present": 4,
+          "mapped": 4,
+          "parameters": [],
+          "missing": []
+        },
+        "checks": [
+          "presence",
+          "count",
+          "finite",
+          "support",
+          "scale",
+          "relative-position",
+          "depth",
+          "grove-spread",
+          "drawing-gaps"
+        ],
+        "status": "checks-passed",
+        "errors": 0,
+        "review": 0,
+        "issues": [],
+        "metrics": {
+          "overlapPenalty": 3.897,
+          "balancePenalty": 0.182,
+          "motifFootprint": 1.143,
+          "landArea": 0.54
+        },
+        "cost": 48.228,
+        "aestheticAcceptance": "pending-user"
+      },
+      "graph": {
+        "nodes": [
+          {
+            "id": "l0",
+            "entities": [
+              "i4"
+            ],
+            "tool": "dwelling",
+            "role": "subject",
+            "habitat": "land",
+            "inferred": false,
+            "support": "l4"
+          },
+          {
+            "id": "l1",
+            "entities": [
+              "i3"
+            ],
+            "tool": "tree",
+            "role": "vegetation",
+            "habitat": "land",
+            "inferred": false,
+            "support": "l4"
+          },
+          {
+            "id": "l2",
+            "entities": [
+              "i2"
+            ],
+            "tool": "horse",
+            "role": "subject",
+            "habitat": "land",
+            "inferred": false,
+            "support": "l4"
+          },
+          {
+            "id": "l3",
+            "entities": [
+              "i1"
+            ],
+            "tool": "grass",
+            "role": "vegetation",
+            "habitat": "land",
+            "inferred": false,
+            "support": "l4"
+          },
+          {
+            "id": "l4",
+            "entities": [],
+            "tool": "landscape",
+            "role": "terrain",
+            "habitat": null,
+            "inferred": true,
+            "support": null
+          }
+        ],
+        "edges": [
+          {
+            "type": "supported-by",
+            "source": "l0",
+            "target": "l4",
+            "basis": "local-composition",
+            "habitat": "land"
+          },
+          {
+            "type": "supported-by",
+            "source": "l1",
+            "target": "l4",
+            "basis": "local-composition",
+            "habitat": "land"
+          },
+          {
+            "type": "supported-by",
+            "source": "l2",
+            "target": "l4",
+            "basis": "local-composition",
+            "habitat": "land"
+          },
+          {
+            "type": "supported-by",
+            "source": "l3",
+            "target": "l4",
+            "basis": "local-composition",
+            "habitat": "land"
+          }
+        ],
+        "setting": "woodland"
+      }
+    }
+  },
+  "omitted": [],
+  "notes": [
+    "马以静态马形为单体，数量另行处理；不表现奔跑步态，不自动补骑者、鞍辔或草地。",
+    "房舍虽被归为地点，仍按原文明示的自然景物匹配；具体空间关系另行处理。",
+    "房舍：以低层房舍概括用途不同的屋舍。这是本地写意借形，保留原词义。",
+    "位置、大小、笔触与默认微动是本地试画选择；数量解释与本地显示数量分别记录。",
+    "未明说的群落数量、疏密、近中远层次与变体均为本地构图选择；种类可按已声明的写意画法概括，不把铺展词换算成精确物体数量。",
+    "房舍下方的淡墨承托是本地构图，不把它当作诗句额外明说的地面或投影。",
+    "通用场景层先组织地面、水域、群落和主体，再比较三个布局的依托、相对位置、尺度与遮挡；检查通过不代表审美已通过。"
+  ],
+  "relations": []
+}

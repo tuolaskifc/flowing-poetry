@@ -5,7 +5,7 @@ export function organizeRegions(analysis,layers,scene){
  const get=(tool,form)=>layers.find(l=>l.tool===tool&&(!form||l.options.form===form));
  const water=get('water'),pine=get('tree','pine'),blossom=get('tree','blossom'),forest=layers.find(l=>l.tool==='tree'&&l.options.form!=='blossom'),willow=get('willow'),bamboo=get('bamboo'),house=get('dwelling'),building=get('building'),boat=get('boat'),figure=get('figure'),field=get('landscape','field'),fall=get('landscape','waterfall'),light=get('landscape','lightwash'),path=get('landscape','path'),rock=get('rock');
  const mountain=get('landscape','mountain'),sun=get('landscape','sun'),mist=get('mist'),grass=get('grass');
- const village=house?.names.some(m=>/^(孤|荒|山|小)?村(庄|落)?$/.test(m));
+ const village=house?.names.some(m=>/^(?:(?:孤|荒|山|小|远|近)?村(?:庄|落)?|墟里)$/.test(m));
  const opposing=mountain?.names.some(m=>/两岸/.test(m));
  const setting=fall?'mountain-waterfall':field&&water?'field-river':field?'paddy-woodland':pine&&rock&&water?'mountain-stream':light&&forest?'forest-light':house?.options.kind==='temple'&&forest?'woodland-retreat':blossom&&bamboo&&water?'blossom-river':(house&&willow)||(building&&blossom)?'settlement':village?'village':opposing&&boat?'mountain-channel':bamboo&&mountain&&sun?'bamboo-hillside':bamboo&&forest?'mixed-woodland':water&&grass?.options.form==='reed'?'reed-bank':water&&forest&&grass?'wooded-creek':blossom&&!water?'flowering-grove':mountain&&path?'mountain-trails':boat&&get('snow')?'winter-fishing':figure&&water?'riverside-view':null;
  if(!setting)return;

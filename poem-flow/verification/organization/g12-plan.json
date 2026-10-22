@@ -1,0 +1,787 @@
+{
+  "version": "scene-organization-1",
+  "seed": 614970754,
+  "settings": {
+    "wind": 0,
+    "density": 0.45,
+    "palette": "clear"
+  },
+  "layers": [
+    {
+      "tool": "water",
+      "entities": [
+        "i2"
+      ],
+      "projectedEntities": [],
+      "names": [
+        "水"
+      ],
+      "options": {
+        "form": "plane"
+      },
+      "animate": true,
+      "placement": {
+        "anchor": [
+          320,
+          130
+        ],
+        "at": [
+          0.5,
+          0.57
+        ],
+        "scale": 1.5
+      },
+      "instances": [
+        {
+          "placement": {
+            "anchor": [
+              320,
+              135
+            ],
+            "at": [
+              0.5,
+              0.46
+            ],
+            "scale": 1.6
+          },
+          "depth": 0,
+          "opacity": 1,
+          "variant": 0
+        }
+      ],
+      "singleUnit": false,
+      "quantity": {
+        "items": [
+          {
+            "entity": "i2",
+            "mode": "unspecified",
+            "min": null,
+            "max": null,
+            "unit": null,
+            "scope": "unspecified",
+            "extent": "unspecified",
+            "evidence": [],
+            "basis": "model"
+          }
+        ],
+        "rendered": 1,
+        "exact": false,
+        "collective": false,
+        "partUnsupported": false
+      },
+      "quantityLabel": "整体笔触图层；内部数量尚未适配",
+      "z": -10,
+      "surface": {
+        "top": 0.46,
+        "bottom": 1
+      },
+      "clip": [
+        [
+          0.25,
+          0.46
+        ],
+        [
+          1.1,
+          0.46
+        ],
+        [
+          1.1,
+          1.1
+        ],
+        [
+          0.28,
+          1.1
+        ],
+        [
+          0.4,
+          0.83
+        ],
+        [
+          0.25,
+          0.62
+        ]
+      ]
+    },
+    {
+      "tool": "grass",
+      "entities": [
+        "i4"
+      ],
+      "projectedEntities": [],
+      "names": [
+        "芦花"
+      ],
+      "options": {
+        "form": "reed"
+      },
+      "animate": true,
+      "placement": {
+        "anchor": [
+          320,
+          315
+        ],
+        "at": [
+          0.04,
+          0.75
+        ],
+        "scale": 1
+      },
+      "instances": [
+        {
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.04,
+              0.75
+            ],
+            "scale": 0.76
+          },
+          "depth": 0,
+          "opacity": 0.5858333333333333,
+          "variant": 0
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.23158,
+              0.7685714285714286
+            ],
+            "scale": 0.884
+          },
+          "depth": 0.04285714285714285,
+          "opacity": 0.5974999999999999,
+          "variant": 1
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.11315999999999998,
+              0.7871428571428571
+            ],
+            "scale": 1.008
+          },
+          "depth": 0.0857142857142857,
+          "opacity": 0.6091666666666666,
+          "variant": 2
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.30474,
+              0.8057142857142857
+            ],
+            "scale": 1.1320000000000001
+          },
+          "depth": 0.12857142857142856,
+          "opacity": 0.6208333333333333,
+          "variant": 0
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.18631999999999999,
+              0.8242857142857143
+            ],
+            "scale": 0.856
+          },
+          "depth": 0.1714285714285714,
+          "opacity": 0.6325,
+          "variant": 1
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.06789999999999996,
+              0.8428571428571429
+            ],
+            "scale": 0.98
+          },
+          "depth": 0.21428571428571427,
+          "opacity": 0.6441666666666667,
+          "variant": 2
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.25948000000000004,
+              0.8614285714285714
+            ],
+            "scale": 1.104
+          },
+          "depth": 0.2571428571428571,
+          "opacity": 0.6558333333333333,
+          "variant": 0
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.14105999999999988,
+              0.88
+            ],
+            "scale": 0.828
+          },
+          "depth": 0.3,
+          "opacity": 0.6675,
+          "variant": 1
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.33263999999999994,
+              0.8985714285714286
+            ],
+            "scale": 0.952
+          },
+          "depth": 0.3428571428571428,
+          "opacity": 0.6791666666666666,
+          "variant": 2
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.2142200000000001,
+              0.9171428571428571
+            ],
+            "scale": 1.076
+          },
+          "depth": 0.38571428571428573,
+          "opacity": 0.6908333333333333,
+          "variant": 0
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.09579999999999991,
+              0.9357142857142857
+            ],
+            "scale": 0.8
+          },
+          "depth": 0.42857142857142855,
+          "opacity": 0.7024999999999999,
+          "variant": 1
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.28738,
+              0.9542857142857143
+            ],
+            "scale": 0.924
+          },
+          "depth": 0.4714285714285714,
+          "opacity": 0.7141666666666666,
+          "variant": 2
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.1689600000000001,
+              0.9728571428571429
+            ],
+            "scale": 1.048
+          },
+          "depth": 0.5142857142857142,
+          "opacity": 0.7258333333333333,
+          "variant": 0
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.05054000000000022,
+              0.9914285714285714
+            ],
+            "scale": 0.7720000000000001
+          },
+          "depth": 0.5571428571428572,
+          "opacity": 0.7374999999999999,
+          "variant": 1
+        }
+      ],
+      "singleUnit": true,
+      "quantity": {
+        "items": [
+          {
+            "entity": "i4",
+            "mode": "many",
+            "min": null,
+            "max": null,
+            "unit": null,
+            "scope": "group",
+            "extent": "spread",
+            "evidence": [
+              "芦花"
+            ],
+            "basis": "model"
+          }
+        ],
+        "rendered": 14,
+        "exact": false,
+        "collective": true,
+        "partUnsupported": false
+      },
+      "quantityLabel": "依场景疏密试画 14 个单元；原文未给精确个体数",
+      "z": 13
+    },
+    {
+      "tool": "bird",
+      "entities": [
+        "i1"
+      ],
+      "projectedEntities": [],
+      "names": [
+        "白鸟／一双"
+      ],
+      "options": {
+        "pose": "flying",
+        "tone": "light",
+        "facing": "right"
+      },
+      "animate": true,
+      "placement": {
+        "anchor": [
+          320,
+          190
+        ],
+        "at": [
+          0.5725,
+          0.6
+        ],
+        "scale": 0.78
+      },
+      "drawingLabel": "鸟意（写意借形）",
+      "instances": [
+        {
+          "placement": {
+            "anchor": [
+              320,
+              190
+            ],
+            "at": [
+              0.5725,
+              0.6
+            ],
+            "scale": 0.65
+          },
+          "depth": 0,
+          "opacity": 0.7749999999999999,
+          "variant": 0
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              190
+            ],
+            "at": [
+              0.7175,
+              0.54
+            ],
+            "scale": 0.65
+          },
+          "depth": 0.3,
+          "opacity": 0.9249999999999999,
+          "variant": 1
+        }
+      ],
+      "singleUnit": true,
+      "quantity": {
+        "items": [
+          {
+            "entity": "i1",
+            "mode": "exact",
+            "min": 2,
+            "max": 2,
+            "unit": "双",
+            "scope": "individual",
+            "extent": "local",
+            "evidence": [
+              "白鸟一双"
+            ],
+            "basis": "model"
+          }
+        ],
+        "rendered": 2,
+        "exact": true,
+        "collective": false,
+        "partUnsupported": false
+      },
+      "quantityLabel": "按提取数量绘制 2 个",
+      "z": 20
+    },
+    {
+      "tool": "landscape",
+      "names": [
+        "构图依托·地面"
+      ],
+      "entities": [],
+      "projectedEntities": [],
+      "options": {
+        "form": "ground"
+      },
+      "animate": false,
+      "placement": {
+        "anchor": [
+          320,
+          194
+        ],
+        "at": [
+          0.5,
+          0.48
+        ],
+        "scale": 1.6
+      },
+      "instances": [
+        {
+          "placement": {
+            "anchor": [
+              320,
+              194
+            ],
+            "at": [
+              0.5,
+              0.48
+            ],
+            "scale": 1.6
+          },
+          "variant": 0,
+          "depth": 0,
+          "opacity": 1
+        }
+      ],
+      "singleUnit": false,
+      "inferred": true,
+      "provenance": {
+        "basis": "local-context",
+        "reason": "芦穗与人影位于近岸，水域留给惊起的鸟"
+      },
+      "quantity": {
+        "rendered": 1,
+        "exact": false,
+        "items": []
+      },
+      "quantityLabel": "背景依托，不计入意象覆盖",
+      "z": -18,
+      "clip": [
+        [
+          0,
+          0.62
+        ],
+        [
+          0.25,
+          0.62
+        ],
+        [
+          0.4,
+          0.83
+        ],
+        [
+          0.28,
+          1.1
+        ],
+        [
+          0,
+          1.1
+        ]
+      ]
+    }
+  ],
+  "spatial": [],
+  "scene": {
+    "kind": "reed-bank",
+    "notes": [
+      "水面以连续色层和水纹构成空间；水面的范围、视点与水平线是本地构图选择，不自动增加岸或陆地。",
+      "先划分承托地形、群落与主体活动区域；场景密度和背景依托是本地构图推断，不冒充原文明示意象。",
+      "本次鸟姿取惊起后的飞态；从临水站立到飞入芦丛的时间编排尚未实现。"
+    ],
+    "waterline": 0.46,
+    "basis": "local-context",
+    "regions": {
+      "bank": [
+        [
+          0,
+          0.62
+        ],
+        [
+          0.25,
+          0.62
+        ],
+        [
+          0.4,
+          0.83
+        ],
+        [
+          0.28,
+          1.1
+        ],
+        [
+          0,
+          1.1
+        ]
+      ],
+      "water": [
+        [
+          0.25,
+          0.46
+        ],
+        [
+          1.1,
+          0.46
+        ],
+        [
+          1.1,
+          1.1
+        ],
+        [
+          0.28,
+          1.1
+        ],
+        [
+          0.4,
+          0.83
+        ],
+        [
+          0.25,
+          0.62
+        ]
+      ]
+    },
+    "supports": [
+      {
+        "form": "ground",
+        "reason": "芦穗与人影位于近岸，水域留给惊起的鸟"
+      }
+    ],
+    "organization": {
+      "version": "1.0",
+      "strategy": "regional-proposal",
+      "regions": {
+        "bank": [
+          [
+            0,
+            0.62
+          ],
+          [
+            0.25,
+            0.62
+          ],
+          [
+            0.4,
+            0.83
+          ],
+          [
+            0.28,
+            1.1
+          ],
+          [
+            0,
+            1.1
+          ]
+        ],
+        "water": [
+          [
+            0.25,
+            0.46
+          ],
+          [
+            1.1,
+            0.46
+          ],
+          [
+            1.1,
+            1.1
+          ],
+          [
+            0.28,
+            1.1
+          ],
+          [
+            0.4,
+            0.83
+          ],
+          [
+            0.25,
+            0.62
+          ]
+        ]
+      },
+      "candidates": [
+        {
+          "layout": "existing",
+          "errors": 0,
+          "cost": 2.417
+        }
+      ],
+      "repairs": [],
+      "limitations": [
+        "几何检查不判定诗意理解或审美合格",
+        "动作时序与整首诗的场景切换尚未编排"
+      ],
+      "graph": {
+        "nodes": [
+          {
+            "id": "l0",
+            "entities": [
+              "i2"
+            ],
+            "tool": "water",
+            "role": "water",
+            "habitat": null,
+            "inferred": false,
+            "support": null
+          },
+          {
+            "id": "l1",
+            "entities": [
+              "i4"
+            ],
+            "tool": "grass",
+            "role": "vegetation",
+            "habitat": "land",
+            "inferred": false,
+            "support": "l3"
+          },
+          {
+            "id": "l2",
+            "entities": [
+              "i1"
+            ],
+            "tool": "bird",
+            "role": "fauna",
+            "habitat": "air",
+            "inferred": false,
+            "support": null
+          },
+          {
+            "id": "l3",
+            "entities": [],
+            "tool": "landscape",
+            "role": "terrain",
+            "habitat": null,
+            "inferred": true,
+            "support": null
+          }
+        ],
+        "edges": [
+          {
+            "type": "supported-by",
+            "source": "l1",
+            "target": "l3",
+            "basis": "local-composition",
+            "habitat": "land"
+          },
+          {
+            "type": "supported-by",
+            "source": "l2",
+            "target": null,
+            "basis": "local-composition",
+            "habitat": "air"
+          }
+        ],
+        "setting": "reed-bank"
+      },
+      "audit": {
+        "scope": "implemented-geometry-and-drawing-gaps",
+        "coverage": {
+          "scope": "extracted-entities-only",
+          "present": 3,
+          "mapped": 3,
+          "parameters": [],
+          "missing": []
+        },
+        "checks": [
+          "presence",
+          "count",
+          "finite",
+          "water-support",
+          "cliff-support",
+          "grove-spread",
+          "drawing-gaps"
+        ],
+        "status": "checks-passed",
+        "errors": 0,
+        "review": 0,
+        "issues": [],
+        "metrics": {
+          "overlapPenalty": 0,
+          "balancePenalty": 0.302,
+          "motifFootprint": 0.583,
+          "landArea": 0
+        },
+        "cost": 2.417,
+        "aestheticAcceptance": "pending-user"
+      }
+    }
+  },
+  "omitted": [
+    {
+      "id": "i3",
+      "name": "人",
+      "reason": "出现情况不确定，暂不补画"
+    }
+  ],
+  "notes": [
+    "白鸟／一双：以通用写意鸟形表现，不细分物种。这是本地写意借形，保留原词义。",
+    "芦花：以长茎疏叶与白色穗意概括岸边芦苇，不画成园中花冠。这是本地写意借形，保留原词义。",
+    "位置、大小、笔触与默认微动是本地试画选择；数量解释与本地显示数量分别记录。",
+    "未明说的群落数量、疏密、近中远层次与变体均为本地构图选择；种类可按已声明的写意画法概括，不把铺展词换算成精确物体数量。",
+    "水面以连续色层和水纹构成空间；水面的范围、视点与水平线是本地构图选择，不自动增加岸或陆地。",
+    "先划分承托地形、群落与主体活动区域；场景密度和背景依托是本地构图推断，不冒充原文明示意象。",
+    "本次鸟姿取惊起后的飞态；从临水站立到飞入芦丛的时间编排尚未实现。"
+  ],
+  "relations": []
+}

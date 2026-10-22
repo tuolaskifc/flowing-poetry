@@ -72,6 +72,16 @@
     for(const missing of plan.omitted)item('omitted',missing.name+'：'+missing.reason);
     if(!plan.omitted.length)item('omitted','本次列出的场景意象均找到了基础工具；仍不代表全部关系已表现。');
     for(const note of plan.notes)item('notes',note);
+    const organization=plan.scene?.organization;
+    if($('organization-summary')){
+      const audit=organization?.audit;
+      $('organization-summary').textContent=organization?({
+        'general-constraints':'已先划分环境与活动区域，并比较三种布局。',
+        'regional-proposal':'沿用已有的场景构图，并检查数量与依托。',
+        'isolated-study':'这次以局部意象练习呈现。'
+      }[organization.strategy]||'')+(audit?.errors?'还有 '+audit.errors+' 项构图问题。':audit?.review?'还有 '+audit.review+' 项需要复核。':'已通过当前适用的构图检查。'):'这条旧记录尚无构图检查。';
+      clearList('organization-issues');for(const issue of audit?.issues||[])item('organization-issues',issue.message);
+    }
     for(const r of plan.spatial||[])item('relations',(a.entities.find(e=>e.id===r.source)?.mentions.join('／')||r.source)+' → '+(a.entities.find(e=>e.id===r.target)?.mentions.join('／')||r.target)+'：'+r.reason+(r.basis==='inferred'?'（语义推断）':''));
     for(const r of plan.relations)item('relations',r.meaning+'：'+(r.visualized?'以风响应试作表现':'尚未在画面实现'));
     if(record.mode!=='full')item('relations',record.mode==='scene'?'本次提取意象、数量与有限空间关系；完整动作和时间关系仍待实现。':record.mode==='quantity'?'本次提取基础意象及数量范围，尚未请求完整关系抽取。':'本次为旧版基础意象模式，未请求完整关系抽取。');
@@ -85,7 +95,7 @@
     latest=record;$('replay').hidden=false;if($('welcome'))$('welcome').hidden=true;
     if($('empty-scene'))$('empty-scene').hidden=plan.layers.length>0;
     if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){window.PoemTrialScene.pause(true);$('pause').textContent='继续';$('pause').setAttribute('aria-pressed','true');}
-    status(plan.layers.length?'已生成画面。'+(plan.omitted.length?'有 '+plan.omitted.length+' 项尚未绘制，详见“保留的空缺”。':'可以调整风力、构图或保存画面。'):'分析已完成，但本句尚无可绘制的意象。请换一句或试试样句。');
+    status(plan.layers.length?(organization?.audit?.errors?'已生成试画，构图仍有问题，详见“画面组织与检查”。':'已生成画面。')+(plan.omitted.length?'有 '+plan.omitted.length+' 项尚未绘制，详见“保留的空缺”。':'可以调整风力、构图或保存画面。'):'分析已完成，但本句尚无可绘制的意象。请换一句或试试样句。');
   }
   $('fetch-poem').addEventListener('click',fetchPoem);
   $('recommend')?.addEventListener('click',()=>{if(catalog)chooseCurated(window.PoemCuratedLibrary.next(catalog,poem.value));});

@@ -1,0 +1,826 @@
+{
+  "id": "2026-10-22T14-05-30-714Z-3c40bee5",
+  "fingerprint": "77c8c9213a0b927c9c1b43ba940e2b02be1cfeaacab989fadea8c6a3dead6a58",
+  "poem": "山下孤烟远村，天边独树高原。",
+  "source": {
+    "provider": "场景组织层·新诗实测",
+    "author": "王维",
+    "title": "田园乐七首·其五",
+    "dynasty": "唐"
+  },
+  "mode": "scene",
+  "model": "DeepSeek-V4.1-Flash",
+  "started_at": "2026-10-22T14:05:30.714Z",
+  "cached": false,
+  "http_status": 200,
+  "usage": {
+    "completion_tokens": 728,
+    "prompt_tokens": 3442,
+    "total_tokens": 4170,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 3328
+    }
+  },
+  "finish_reason": "stop",
+  "analysis": {
+    "schema_version": "3.2",
+    "poem": "山下孤烟远村，天边独树高原。",
+    "reading": "山脚下有一缕孤烟，远处是村落；天边立着一棵孤树，所在是高原。两句以远景铺开，孤烟与独树相对，显出空旷、疏落的意味。",
+    "entities": [
+      {
+        "id": "i1",
+        "mentions": [
+          "山下"
+        ],
+        "concept": "山脚一带",
+        "kind": "place",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "山下孤烟远村"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i2",
+        "mentions": [
+          "孤烟"
+        ],
+        "concept": "一缕炊烟或烟气",
+        "kind": "object",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "山下孤烟远村"
+        ],
+        "quantity": {
+          "mode": "exact",
+          "min": 1,
+          "max": 1,
+          "unit": null,
+          "scope": "individual",
+          "extent": "local",
+          "evidence": [
+            "孤烟"
+          ]
+        }
+      },
+      {
+        "id": "i3",
+        "mentions": [
+          "远村"
+        ],
+        "concept": "远处的村落",
+        "kind": "place",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "山下孤烟远村"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i4",
+        "mentions": [
+          "天边"
+        ],
+        "concept": "天际、天边一带",
+        "kind": "place",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "天边独树高原"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i5",
+        "mentions": [
+          "独树"
+        ],
+        "concept": "一棵孤立的树",
+        "kind": "organism",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "天边独树高原"
+        ],
+        "quantity": {
+          "mode": "exact",
+          "min": 1,
+          "max": 1,
+          "unit": null,
+          "scope": "individual",
+          "extent": "local",
+          "evidence": [
+            "独树"
+          ]
+        }
+      },
+      {
+        "id": "i6",
+        "mentions": [
+          "高原"
+        ],
+        "concept": "高而平的地势",
+        "kind": "place",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "天边独树高原"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      }
+    ],
+    "relations": [],
+    "atmosphere": {
+      "labels": [
+        "空旷",
+        "疏落",
+        "静远"
+      ],
+      "valence": "neutral",
+      "energy": "low",
+      "tension": "low",
+      "openness": "high",
+      "evidence": [
+        "山下孤烟远村",
+        "天边独树高原"
+      ]
+    },
+    "time": {
+      "markers": [],
+      "note": null
+    },
+    "uncertainties": [
+      "“孤烟”具体是炊烟还是其他烟气，原文未明说。",
+      "“远村”与“高原”的边界和范围没有明确交代。"
+    ],
+    "spatial": [
+      {
+        "type": "on",
+        "source": "i2",
+        "target": "i1",
+        "modality": "asserted",
+        "basis": "inferred",
+        "evidence": [
+          "山下孤烟远村"
+        ]
+      },
+      {
+        "type": "on",
+        "source": "i5",
+        "target": "i6",
+        "modality": "asserted",
+        "basis": "inferred",
+        "evidence": [
+          "天边独树高原"
+        ]
+      }
+    ]
+  },
+  "validation": {
+    "valid": true,
+    "errors": [],
+    "warnings": [
+      "模型保留了不确定性，需要审阅",
+      "spatial[0] 的推断或非确定关系需审阅",
+      "spatial[1] 的推断或非确定关系需审阅"
+    ],
+    "review_required": true
+  },
+  "plan": {
+    "version": "scene-organization-1",
+    "seed": 140027766,
+    "settings": {
+      "wind": 0,
+      "density": 0.45,
+      "palette": "clear"
+    },
+    "layers": [
+      {
+        "tool": "landscape",
+        "entities": [
+          "i1"
+        ],
+        "projectedEntities": [],
+        "names": [
+          "山下"
+        ],
+        "options": {
+          "form": "mountain"
+        },
+        "animate": false,
+        "placement": {
+          "anchor": [
+            320,
+            194
+          ],
+          "at": [
+            0.5,
+            0.4
+          ],
+          "scale": 1.5
+        },
+        "instances": [
+          {
+            "placement": {
+              "anchor": [
+                320,
+                194
+              ],
+              "at": [
+                0.5,
+                0.4
+              ],
+              "scale": 1.6
+            },
+            "depth": 0,
+            "opacity": 1,
+            "variant": 0
+          }
+        ],
+        "singleUnit": false,
+        "quantity": {
+          "items": [
+            {
+              "entity": "i1",
+              "mode": "unspecified",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "unspecified",
+              "extent": "unspecified",
+              "evidence": [],
+              "basis": "model"
+            }
+          ],
+          "rendered": 1,
+          "exact": false,
+          "collective": false,
+          "partUnsupported": false
+        },
+        "quantityLabel": "整体笔触图层；内部数量尚未适配",
+        "z": -30
+      },
+      {
+        "tool": "landscape",
+        "entities": [
+          "i4"
+        ],
+        "projectedEntities": [],
+        "names": [
+          "天边"
+        ],
+        "options": {
+          "form": "sky"
+        },
+        "animate": false,
+        "placement": {
+          "anchor": [
+            320,
+            194
+          ],
+          "at": [
+            0.5,
+            0.5
+          ],
+          "scale": 1.5
+        },
+        "instances": [
+          {
+            "placement": {
+              "anchor": [
+                320,
+                194
+              ],
+              "at": [
+                0.5,
+                0.5
+              ],
+              "scale": 1.6
+            },
+            "depth": 0,
+            "opacity": 1,
+            "variant": 0
+          }
+        ],
+        "singleUnit": false,
+        "quantity": {
+          "items": [
+            {
+              "entity": "i4",
+              "mode": "unspecified",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "unspecified",
+              "extent": "unspecified",
+              "evidence": [],
+              "basis": "model"
+            }
+          ],
+          "rendered": 1,
+          "exact": false,
+          "collective": false,
+          "partUnsupported": false
+        },
+        "quantityLabel": "整体笔触图层；内部数量尚未适配",
+        "z": -45
+      },
+      {
+        "tool": "mist",
+        "entities": [
+          "i2"
+        ],
+        "projectedEntities": [],
+        "names": [
+          "孤烟"
+        ],
+        "options": {},
+        "animate": true,
+        "placement": {
+          "anchor": [
+            320,
+            190
+          ],
+          "at": [
+            0.5,
+            0.48
+          ],
+          "scale": 1.4
+        },
+        "instances": [
+          {
+            "placement": {
+              "anchor": [
+                320,
+                190
+              ],
+              "at": [
+                0.5,
+                0.48
+              ],
+              "scale": 1.4
+            },
+            "depth": 0,
+            "opacity": 1,
+            "variant": 0
+          }
+        ],
+        "singleUnit": false,
+        "quantity": {
+          "items": [
+            {
+              "entity": "i2",
+              "mode": "exact",
+              "min": 1,
+              "max": 1,
+              "unit": null,
+              "scope": "individual",
+              "extent": "local",
+              "evidence": [
+                "孤烟"
+              ],
+              "basis": "model"
+            }
+          ],
+          "rendered": 1,
+          "exact": false,
+          "collective": false,
+          "partUnsupported": false
+        },
+        "quantityLabel": "整体笔触图层；内部数量尚未适配"
+      },
+      {
+        "tool": "tree",
+        "entities": [
+          "i5"
+        ],
+        "projectedEntities": [],
+        "names": [
+          "独树"
+        ],
+        "options": {
+          "form": "broadleaf",
+          "crown": "lines"
+        },
+        "animate": true,
+        "placement": {
+          "anchor": [
+            320,
+            388
+          ],
+          "at": [
+            0.25868951685,
+            0.7375
+          ],
+          "scale": 1.15
+        },
+        "instances": [
+          {
+            "placement": {
+              "anchor": [
+                320,
+                388
+              ],
+              "at": [
+                0.25868951685,
+                0.7375
+              ],
+              "scale": 0.6096378174125
+            },
+            "depth": 0.5,
+            "opacity": 0.73620679775,
+            "variant": 0
+          }
+        ],
+        "singleUnit": true,
+        "quantity": {
+          "items": [
+            {
+              "entity": "i5",
+              "mode": "exact",
+              "min": 1,
+              "max": 1,
+              "unit": null,
+              "scope": "individual",
+              "extent": "local",
+              "evidence": [
+                "独树"
+              ],
+              "basis": "model"
+            }
+          ],
+          "rendered": 1,
+          "exact": true,
+          "collective": false,
+          "partUnsupported": false
+        },
+        "quantityLabel": "按提取数量绘制 1 个",
+        "z": 8
+      },
+      {
+        "tool": "landscape",
+        "entities": [],
+        "projectedEntities": [],
+        "names": [
+          "构图依托·地面"
+        ],
+        "options": {
+          "form": "ground",
+          "edge": "soft"
+        },
+        "animate": false,
+        "placement": {
+          "anchor": [
+            320,
+            194
+          ],
+          "at": [
+            0.5,
+            0.54
+          ],
+          "scale": 1.6
+        },
+        "instances": [
+          {
+            "placement": {
+              "anchor": [
+                320,
+                265
+              ],
+              "at": [
+                0.5,
+                0.54
+              ],
+              "scale": 2.5
+            },
+            "variant": 0,
+            "depth": 0,
+            "opacity": 1
+          }
+        ],
+        "singleUnit": false,
+        "inferred": true,
+        "provenance": {
+          "basis": "local-context",
+          "reason": "生长物、房舍和陆上主体需要共同地表；这是本地构图依托"
+        },
+        "quantity": {
+          "rendered": 1,
+          "exact": false,
+          "items": []
+        },
+        "quantityLabel": "本地环境依托，不计入原文意象覆盖",
+        "z": -18,
+        "clip": [
+          [
+            0,
+            0.5
+          ],
+          [
+            1,
+            0.5
+          ],
+          [
+            1,
+            1.04
+          ],
+          [
+            0,
+            1.04
+          ]
+        ]
+      }
+    ],
+    "spatial": [
+      {
+        "type": "on",
+        "source": "i2",
+        "target": "i1",
+        "modality": "asserted",
+        "basis": "inferred",
+        "evidence": [
+          "山下孤烟远村"
+        ],
+        "visualized": false,
+        "reason": "该空间关系与形态组合尚未适配"
+      },
+      {
+        "type": "on",
+        "source": "i5",
+        "target": "i6",
+        "modality": "asserted",
+        "basis": "inferred",
+        "evidence": [
+          "天边独树高原"
+        ],
+        "visualized": false,
+        "reason": "关系的一端缺少独立画法"
+      }
+    ],
+    "scene": {
+      "kind": "woodland",
+      "notes": [
+        "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。",
+        "通用场景层先组织地面、水域、群落和主体，再比较三个布局的依托、相对位置、尺度与遮挡；检查通过不代表审美已通过。"
+      ],
+      "waterline": null,
+      "organization": {
+        "version": "1.0",
+        "strategy": "general-constraints",
+        "regions": {
+          "land": [
+            [
+              0,
+              0.5
+            ],
+            [
+              1,
+              0.5
+            ],
+            [
+              1,
+              1.04
+            ],
+            [
+              0,
+              1.04
+            ]
+          ]
+        },
+        "candidates": [
+          {
+            "layout": 2,
+            "orientation": "open",
+            "errors": 0,
+            "cost": 61.93,
+            "metrics": {
+              "overlapPenalty": 0,
+              "balancePenalty": 0.241,
+              "motifFootprint": 0.075,
+              "landArea": 0.54
+            }
+          },
+          {
+            "layout": 1,
+            "orientation": "open",
+            "errors": 0,
+            "cost": 62.094,
+            "metrics": {
+              "overlapPenalty": 0,
+              "balancePenalty": 0.262,
+              "motifFootprint": 0.071,
+              "landArea": 0.54
+            }
+          },
+          {
+            "layout": 0,
+            "orientation": "open",
+            "errors": 0,
+            "cost": 62.258,
+            "metrics": {
+              "overlapPenalty": 0,
+              "balancePenalty": 0.282,
+              "motifFootprint": 0.067,
+              "landArea": 0.54
+            }
+          }
+        ],
+        "repairs": [
+          {
+            "type": "support-added",
+            "reason": "生长物、房舍和陆上主体需要共同地表；这是本地构图依托"
+          }
+        ],
+        "limitations": [
+          "几何检查不判定诗意理解或审美合格",
+          "动作时序与整首诗的场景切换尚未编排"
+        ],
+        "layout": 2,
+        "orientation": "open",
+        "audit": {
+          "scope": "implemented-geometry-only",
+          "checks": [
+            "presence",
+            "count",
+            "finite",
+            "support",
+            "scale",
+            "relative-position",
+            "depth",
+            "grove-spread"
+          ],
+          "status": "needs-review",
+          "errors": 0,
+          "review": 2,
+          "issues": [
+            {
+              "code": "unresolved-relation",
+              "severity": "review",
+              "message": "有空间关系尚无对应布局画法"
+            },
+            {
+              "code": "unresolved-relation",
+              "severity": "review",
+              "message": "有空间关系尚无对应布局画法"
+            }
+          ],
+          "metrics": {
+            "overlapPenalty": 0,
+            "balancePenalty": 0.241,
+            "motifFootprint": 0.075,
+            "landArea": 0.54
+          },
+          "cost": 61.93,
+          "aestheticAcceptance": "pending-user"
+        },
+        "graph": {
+          "nodes": [
+            {
+              "id": "l0",
+              "entities": [
+                "i1"
+              ],
+              "tool": "landscape",
+              "role": "terrain",
+              "habitat": null,
+              "inferred": false,
+              "support": null
+            },
+            {
+              "id": "l1",
+              "entities": [
+                "i4"
+              ],
+              "tool": "landscape",
+              "role": "sky",
+              "habitat": null,
+              "inferred": false,
+              "support": null
+            },
+            {
+              "id": "l2",
+              "entities": [
+                "i2"
+              ],
+              "tool": "mist",
+              "role": "atmosphere",
+              "habitat": null,
+              "inferred": false,
+              "support": "l0"
+            },
+            {
+              "id": "l3",
+              "entities": [
+                "i5"
+              ],
+              "tool": "tree",
+              "role": "vegetation",
+              "habitat": "land",
+              "inferred": false,
+              "support": "l4"
+            },
+            {
+              "id": "l4",
+              "entities": [],
+              "tool": "landscape",
+              "role": "terrain",
+              "habitat": null,
+              "inferred": true,
+              "support": null
+            }
+          ],
+          "edges": [
+            {
+              "type": "supported-by",
+              "source": "l3",
+              "target": "l4",
+              "basis": "local-composition",
+              "habitat": "land"
+            },
+            {
+              "type": "on",
+              "source": "l2",
+              "target": "l0",
+              "basis": "inferred",
+              "modality": "asserted",
+              "evidence": [
+                "山下孤烟远村"
+              ]
+            },
+            {
+              "type": "on",
+              "source": "l3",
+              "basis": "inferred",
+              "modality": "asserted",
+              "evidence": [
+                "天边独树高原"
+              ]
+            }
+          ],
+          "setting": "woodland"
+        }
+      }
+    },
+    "omitted": [
+      {
+        "id": "i3",
+        "name": "远村",
+        "reason": "该专名人物、地名或抽象含义暂不作实景补画"
+      },
+      {
+        "id": "i6",
+        "name": "高原",
+        "reason": "该专名人物、地名或抽象含义暂不作实景补画"
+      }
+    ],
+    "notes": [
+      "山下虽被归为地点，仍按原文明示的自然景物匹配；具体空间关系另行处理。",
+      "天边虽被归为地点，仍按原文明示的自然景物匹配；具体空间关系另行处理。",
+      "位置、大小、笔触与默认微动是本地试画选择；数量解释与本地显示数量分别记录。",
+      "孤烟的数量解释已保留，当前工具以整体图层表现，内部笔触尚未按数量逐个适配。",
+      "未明说的群落数量、疏密、近中远层次与变体均为本地构图选择；种类可按已声明的写意画法概括，不把铺展词换算成精确物体数量。",
+      "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。",
+      "通用场景层先组织地面、水域、群落和主体，再比较三个布局的依托、相对位置、尺度与遮挡；检查通过不代表审美已通过。"
+    ],
+    "relations": []
+  },
+  "elapsed_seconds": 6.5
+}

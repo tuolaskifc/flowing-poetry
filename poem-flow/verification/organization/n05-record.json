@@ -1,0 +1,183 @@
+{
+  "id": "2026-10-22T14-05-42-820Z-f5c30932",
+  "fingerprint": "c7e3a484190df2368b8f0fa30ae3f9b2443a6298cb63697de1c799ffa2ce5c32",
+  "poem": "池上碧苔三四点，叶底黄鹂一两声。",
+  "source": {
+    "provider": "场景组织层·新诗实测",
+    "author": "晏殊",
+    "title": "破阵子·春景",
+    "dynasty": "宋"
+  },
+  "mode": "scene",
+  "model": "DeepSeek-V4.1-Flash",
+  "started_at": "2026-10-22T14:05:42.821Z",
+  "cached": false,
+  "http_status": 200,
+  "usage": {
+    "completion_tokens": 573,
+    "prompt_tokens": 3445,
+    "total_tokens": 4018,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 3328
+    }
+  },
+  "finish_reason": "stop",
+  "analysis": {
+    "schema_version": "3.2",
+    "poem": "池上碧苔三四点，叶底黄鹂一两声。",
+    "reading": "池面上点缀着几点碧绿的苔痕，树叶深处传来一两声黄鹂的啼鸣。上句写静景，下句以稀疏鸟声衬出环境的幽静。",
+    "entities": [
+      {
+        "id": "i1",
+        "mentions": [
+          "池"
+        ],
+        "concept": "池塘水面",
+        "kind": "place",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "池上碧苔三四点"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i2",
+        "mentions": [
+          "碧苔"
+        ],
+        "concept": "碧绿的苔藓",
+        "kind": "organism",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "池上碧苔三四点"
+        ],
+        "quantity": {
+          "mode": "few",
+          "min": null,
+          "max": null,
+          "unit": "点",
+          "scope": "part",
+          "extent": "local",
+          "evidence": [
+            "碧苔三四点"
+          ]
+        }
+      },
+      {
+        "id": "i3",
+        "mentions": [
+          "叶"
+        ],
+        "concept": "树叶",
+        "kind": "organism",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "叶底黄鹂一两声"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i4",
+        "mentions": [
+          "黄鹂"
+        ],
+        "concept": "黄鹂鸟",
+        "kind": "organism",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "叶底黄鹂一两声"
+        ],
+        "quantity": {
+          "mode": "few",
+          "min": null,
+          "max": null,
+          "unit": "声",
+          "scope": "part",
+          "extent": "local",
+          "evidence": [
+            "一两声"
+          ]
+        }
+      }
+    ],
+    "relations": [],
+    "atmosphere": {
+      "labels": [
+        "清幽",
+        "静谧"
+      ],
+      "valence": "positive",
+      "energy": "low",
+      "tension": "low",
+      "openness": "medium",
+      "evidence": [
+        "池上碧苔三四点",
+        "叶底黄鹂一两声"
+      ]
+    },
+    "time": {
+      "markers": [],
+      "note": null
+    },
+    "uncertainties": [
+      "黄鹂只以鸣声出现，是否可见不明。",
+      "“一两声”是声音数量，不能确定黄鹂的个体数目。"
+    ],
+    "spatial": [
+      {
+        "type": "on",
+        "source": "i2",
+        "target": "i1",
+        "modality": "asserted",
+        "basis": "explicit",
+        "evidence": [
+          "池上碧苔三四点"
+        ]
+      },
+      {
+        "type": "among",
+        "source": "i4",
+        "target": "i3",
+        "modality": "asserted",
+        "basis": "explicit",
+        "evidence": [
+          "叶底黄鹂一两声"
+        ]
+      }
+    ]
+  },
+  "validation": {
+    "valid": false,
+    "errors": [
+      "i4.quantity 数量依据未关联本实体"
+    ],
+    "warnings": [
+      "模型保留了不确定性，需要审阅"
+    ],
+    "review_required": true
+  },
+  "elapsed_seconds": 4
+}

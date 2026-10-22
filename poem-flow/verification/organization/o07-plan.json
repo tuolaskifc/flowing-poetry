@@ -1,0 +1,447 @@
+{
+  "version": "scene-organization-1",
+  "seed": 3545086239,
+  "settings": {
+    "wind": 0,
+    "density": 0.45,
+    "palette": "clear"
+  },
+  "layers": [
+    {
+      "tool": "willow",
+      "entities": [
+        "i1"
+      ],
+      "projectedEntities": [],
+      "names": [
+        "柳"
+      ],
+      "options": {},
+      "animate": false,
+      "placement": {
+        "anchor": [
+          320,
+          340
+        ],
+        "at": [
+          0.5597214129125,
+          0.784625
+        ],
+        "scale": 1
+      },
+      "instances": [
+        {
+          "placement": {
+            "anchor": [
+              320,
+              340
+            ],
+            "at": [
+              0.25112951685,
+              0.641875
+            ],
+            "scale": 0.6034278174125001
+          },
+          "depth": 0.125,
+          "opacity": 0.73080679775,
+          "variant": 0
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              340
+            ],
+            "at": [
+              0.14417903370000001,
+              0.705625
+            ],
+            "scale": 0.515575634825
+          },
+          "depth": 0.375,
+          "opacity": 0.6544135955,
+          "variant": 1
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              340
+            ],
+            "at": [
+              0.9676244719,
+              0.95625
+            ],
+            "scale": 0.8977234522375
+          },
+          "depth": 0.625,
+          "opacity": 0.998218353925,
+          "variant": 2
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              340
+            ],
+            "at": [
+              0.8759526292,
+              0.83475
+            ],
+            "scale": 0.8098712696500001
+          },
+          "depth": 0.875,
+          "opacity": 0.9294644719,
+          "variant": 0
+        }
+      ],
+      "singleUnit": true,
+      "quantity": {
+        "items": [
+          {
+            "entity": "i1",
+            "mode": "unspecified",
+            "min": null,
+            "max": null,
+            "unit": null,
+            "scope": "unspecified",
+            "extent": "unspecified",
+            "evidence": [],
+            "basis": "model"
+          }
+        ],
+        "rendered": 4,
+        "exact": false,
+        "collective": false,
+        "partUnsupported": false
+      },
+      "quantityLabel": "数量未精确；本地试画 4 个单元",
+      "z": 8
+    },
+    {
+      "tool": "boat",
+      "entities": [
+        "i2"
+      ],
+      "projectedEntities": [],
+      "names": [
+        "舟"
+      ],
+      "options": {},
+      "animate": false,
+      "placement": {
+        "anchor": [
+          320,
+          230
+        ],
+        "at": [
+          0.52,
+          0.72
+        ],
+        "scale": 0.95
+      },
+      "instances": [
+        {
+          "placement": {
+            "anchor": [
+              320,
+              230
+            ],
+            "at": [
+              0.52,
+              0.72
+            ],
+            "scale": 0.72
+          },
+          "depth": 0.15,
+          "opacity": 1,
+          "variant": 0
+        }
+      ],
+      "singleUnit": true,
+      "quantity": {
+        "items": [
+          {
+            "entity": "i2",
+            "mode": "unspecified",
+            "min": null,
+            "max": null,
+            "unit": null,
+            "scope": "unspecified",
+            "extent": "unspecified",
+            "evidence": [],
+            "basis": "model"
+          }
+        ],
+        "rendered": 1,
+        "exact": false,
+        "collective": false,
+        "partUnsupported": false
+      },
+      "quantityLabel": "数量未精确；本地试画 1 个单元",
+      "z": 22
+    },
+    {
+      "tool": "landscape",
+      "entities": [],
+      "projectedEntities": [],
+      "names": [
+        "构图依托·地面"
+      ],
+      "options": {
+        "form": "ground",
+        "edge": "soft"
+      },
+      "animate": false,
+      "placement": {
+        "anchor": [
+          320,
+          194
+        ],
+        "at": [
+          0.5,
+          0.54
+        ],
+        "scale": 1.6
+      },
+      "instances": [
+        {
+          "placement": {
+            "anchor": [
+              320,
+              265
+            ],
+            "at": [
+              0.5,
+              0.54
+            ],
+            "scale": 2.5
+          },
+          "variant": 0,
+          "depth": 0,
+          "opacity": 1
+        }
+      ],
+      "singleUnit": false,
+      "inferred": true,
+      "provenance": {
+        "basis": "local-context",
+        "reason": "生长物、房舍和陆上主体需要共同地表；这是本地构图依托"
+      },
+      "quantity": {
+        "rendered": 1,
+        "exact": false,
+        "items": []
+      },
+      "quantityLabel": "本地环境依托，不计入原文意象覆盖",
+      "z": -18,
+      "clip": [
+        [
+          0,
+          0.5
+        ],
+        [
+          1,
+          0.5
+        ],
+        [
+          1,
+          1.04
+        ],
+        [
+          0,
+          1.04
+        ]
+      ]
+    }
+  ],
+  "spatial": [],
+  "scene": {
+    "kind": "study",
+    "notes": [
+      "通用场景层先组织地面、水域、群落和主体，再比较三个布局的依托、相对位置、尺度与遮挡；检查通过不代表审美已通过。"
+    ],
+    "waterline": null,
+    "organization": {
+      "version": "1.0",
+      "strategy": "general-constraints",
+      "regions": {
+        "land": [
+          [
+            0,
+            0.5
+          ],
+          [
+            1,
+            0.5
+          ],
+          [
+            1,
+            1.04
+          ],
+          [
+            0,
+            1.04
+          ]
+        ]
+      },
+      "candidates": [
+        {
+          "layout": 0,
+          "orientation": "open",
+          "errors": 0,
+          "cost": 31.634,
+          "metrics": {
+            "overlapPenalty": 0,
+            "balancePenalty": 0.204,
+            "motifFootprint": 0.463,
+            "landArea": 0.54
+          }
+        },
+        {
+          "layout": 1,
+          "orientation": "open",
+          "errors": 0,
+          "cost": 31.661,
+          "metrics": {
+            "overlapPenalty": 0.067,
+            "balancePenalty": 0.107,
+            "motifFootprint": 0.404,
+            "landArea": 0.54
+          }
+        },
+        {
+          "layout": 2,
+          "orientation": "open",
+          "errors": 0,
+          "cost": 38.223,
+          "metrics": {
+            "overlapPenalty": 0.601,
+            "balancePenalty": 0.127,
+            "motifFootprint": 0.424,
+            "landArea": 0.54
+          }
+        }
+      ],
+      "repairs": [
+        {
+          "type": "support-added",
+          "reason": "生长物、房舍和陆上主体需要共同地表；这是本地构图依托"
+        }
+      ],
+      "limitations": [
+        "几何检查不判定诗意理解或审美合格",
+        "动作时序与整首诗的场景切换尚未编排"
+      ],
+      "layout": 0,
+      "orientation": "open",
+      "audit": {
+        "scope": "implemented-geometry-and-drawing-gaps",
+        "coverage": {
+          "scope": "extracted-entities-only",
+          "present": 2,
+          "mapped": 2,
+          "parameters": [],
+          "missing": []
+        },
+        "checks": [
+          "presence",
+          "count",
+          "finite",
+          "support",
+          "scale",
+          "relative-position",
+          "depth",
+          "grove-spread",
+          "drawing-gaps"
+        ],
+        "status": "needs-review",
+        "errors": 0,
+        "review": 1,
+        "issues": [
+          {
+            "code": "missing-water",
+            "severity": "review",
+            "message": "水上主体缺少可用水域；未擅自覆盖原文的缺席信息",
+            "layer": 1
+          }
+        ],
+        "metrics": {
+          "overlapPenalty": 0,
+          "balancePenalty": 0.204,
+          "motifFootprint": 0.463,
+          "landArea": 0.54
+        },
+        "cost": 31.634,
+        "aestheticAcceptance": "pending-user"
+      },
+      "graph": {
+        "nodes": [
+          {
+            "id": "l0",
+            "entities": [
+              "i1"
+            ],
+            "tool": "willow",
+            "role": "vegetation",
+            "habitat": "land",
+            "inferred": false,
+            "support": "l2"
+          },
+          {
+            "id": "l1",
+            "entities": [
+              "i2"
+            ],
+            "tool": "boat",
+            "role": "subject",
+            "habitat": "water",
+            "inferred": false,
+            "support": null
+          },
+          {
+            "id": "l2",
+            "entities": [],
+            "tool": "landscape",
+            "role": "terrain",
+            "habitat": null,
+            "inferred": true,
+            "support": null
+          }
+        ],
+        "edges": [
+          {
+            "type": "supported-by",
+            "source": "l0",
+            "target": "l2",
+            "basis": "local-composition",
+            "habitat": "land"
+          },
+          {
+            "type": "supported-by",
+            "source": "l1",
+            "target": null,
+            "basis": "local-composition",
+            "habitat": "water"
+          }
+        ],
+        "setting": "study"
+      }
+    }
+  },
+  "omitted": [
+    {
+      "id": "i3",
+      "name": "水",
+      "reason": "原文中缺席，不绘制"
+    }
+  ],
+  "notes": [
+    "舟：按舟船这个主体选择画法，材质或修饰词不另画成植物。这是本地写意借形，保留原词义。",
+    "本句有否定或假设提示，基础意象模式未细分其范围，暂缓动画，不宣称完成逻辑解释。",
+    "位置、大小、笔触与默认微动是本地试画选择；数量解释与本地显示数量分别记录。",
+    "未明说的群落数量、疏密、近中远层次与变体均为本地构图选择；种类可按已声明的写意画法概括，不把铺展词换算成精确物体数量。",
+    "通用场景层先组织地面、水域、群落和主体，再比较三个布局的依托、相对位置、尺度与遮挡；检查通过不代表审美已通过。"
+  ],
+  "relations": []
+}

@@ -193,6 +193,21 @@
               "label": "单峰"
             }
           ]
+        },
+        {
+          "id": "edge",
+          "label": "地表边缘",
+          "default": "defined",
+          "choices": [
+            {
+              "value": "defined",
+              "label": "勾线"
+            },
+            {
+              "value": "soft",
+              "label": "淡化"
+            }
+          ]
         }
       ],
       "capabilities": [
@@ -247,6 +262,23 @@
       "capabilities": [
         "wind-response",
         "density-detail"
+      ],
+      "controls": [
+        {
+          "id": "form",
+          "label": "烟雾",
+          "default": "haze",
+          "choices": [
+            {
+              "value": "haze",
+              "label": "薄雾"
+            },
+            {
+              "value": "plume",
+              "label": "一缕烟"
+            }
+          ]
+        }
       ]
     },
     {

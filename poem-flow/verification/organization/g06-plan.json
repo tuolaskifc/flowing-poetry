@@ -1,0 +1,351 @@
+{
+  "version": "scene-organization-1",
+  "seed": 4161293165,
+  "settings": {
+    "wind": 0,
+    "density": 0.45,
+    "palette": "clear"
+  },
+  "layers": [
+    {
+      "tool": "water",
+      "entities": [
+        "i1"
+      ],
+      "projectedEntities": [],
+      "names": [
+        "野水"
+      ],
+      "options": {
+        "form": "plane"
+      },
+      "animate": true,
+      "placement": {
+        "anchor": [
+          320,
+          130
+        ],
+        "at": [
+          0.5,
+          0.45
+        ],
+        "scale": 1.5
+      },
+      "instances": [
+        {
+          "placement": {
+            "anchor": [
+              320,
+              135
+            ],
+            "at": [
+              0.5,
+              0.45
+            ],
+            "scale": 1.65
+          },
+          "depth": 0,
+          "opacity": 1,
+          "variant": 0
+        }
+      ],
+      "singleUnit": false,
+      "quantity": {
+        "items": [
+          {
+            "entity": "i1",
+            "mode": "unspecified",
+            "min": null,
+            "max": null,
+            "unit": null,
+            "scope": "unspecified",
+            "extent": "spread",
+            "evidence": [
+              "野水"
+            ],
+            "basis": "model"
+          }
+        ],
+        "rendered": 1,
+        "exact": false,
+        "collective": true,
+        "partUnsupported": false
+      },
+      "quantityLabel": "整体笔触图层；内部数量尚未适配",
+      "z": -10,
+      "surface": {
+        "top": 0.45,
+        "bottom": 1
+      },
+      "clip": [
+        [
+          0,
+          0.45
+        ],
+        [
+          1,
+          0.45
+        ],
+        [
+          1,
+          1.04
+        ],
+        [
+          0,
+          1.04
+        ]
+      ]
+    },
+    {
+      "tool": "boat",
+      "entities": [
+        "i2"
+      ],
+      "projectedEntities": [],
+      "names": [
+        "孤舟"
+      ],
+      "options": {},
+      "animate": true,
+      "placement": {
+        "anchor": [
+          320,
+          230
+        ],
+        "at": [
+          0.52,
+          0.72
+        ],
+        "scale": 0.95
+      },
+      "instances": [
+        {
+          "placement": {
+            "anchor": [
+              320,
+              230
+            ],
+            "at": [
+              0.52,
+              0.72
+            ],
+            "scale": 0.72
+          },
+          "depth": 0.15,
+          "opacity": 1,
+          "variant": 0
+        }
+      ],
+      "singleUnit": true,
+      "quantity": {
+        "items": [
+          {
+            "entity": "i2",
+            "mode": "exact",
+            "min": 1,
+            "max": 1,
+            "unit": null,
+            "scope": "individual",
+            "extent": "local",
+            "evidence": [
+              "孤舟"
+            ],
+            "basis": "model"
+          }
+        ],
+        "rendered": 1,
+        "exact": true,
+        "collective": false,
+        "partUnsupported": false
+      },
+      "quantityLabel": "按提取数量绘制 1 个",
+      "z": 22
+    }
+  ],
+  "spatial": [
+    {
+      "type": "on",
+      "source": "i2",
+      "target": "i1",
+      "modality": "asserted",
+      "basis": "inferred",
+      "evidence": [
+        "野水无人渡",
+        "孤舟尽日横"
+      ],
+      "visualized": true,
+      "reason": "由通用场景约束组织；具体方向、距离与尺度属于本地构图"
+    }
+  ],
+  "scene": {
+    "kind": "waterside",
+    "notes": [
+      "水面以连续色层和水纹构成空间；水面的范围、视点与水平线是本地构图选择，不自动增加岸或陆地。",
+      "孤舟与水同场时先按水面区域组织；此项是本地试画安排，不宣称已识别承载关系。",
+      "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。",
+      "通用场景层先组织地面、水域、群落和主体，再比较三个布局的依托、相对位置、尺度与遮挡；检查通过不代表审美已通过。"
+    ],
+    "waterline": 0.46,
+    "organization": {
+      "version": "1.0",
+      "strategy": "general-constraints",
+      "regions": {
+        "water": [
+          [
+            0,
+            0.45
+          ],
+          [
+            1,
+            0.45
+          ],
+          [
+            1,
+            1.04
+          ],
+          [
+            0,
+            1.04
+          ]
+        ]
+      },
+      "candidates": [
+        {
+          "layout": 0,
+          "orientation": "open",
+          "errors": 0,
+          "cost": 0.16,
+          "metrics": {
+            "overlapPenalty": 0,
+            "balancePenalty": 0.02,
+            "motifFootprint": 0.013,
+            "landArea": 0
+          }
+        },
+        {
+          "layout": 1,
+          "orientation": "open",
+          "errors": 0,
+          "cost": 0.16,
+          "metrics": {
+            "overlapPenalty": 0,
+            "balancePenalty": 0.02,
+            "motifFootprint": 0.013,
+            "landArea": 0
+          }
+        },
+        {
+          "layout": 2,
+          "orientation": "open",
+          "errors": 0,
+          "cost": 1.04,
+          "metrics": {
+            "overlapPenalty": 0,
+            "balancePenalty": 0.13,
+            "motifFootprint": 0.013,
+            "landArea": 0
+          }
+        }
+      ],
+      "repairs": [],
+      "limitations": [
+        "几何检查不判定诗意理解或审美合格",
+        "动作时序与整首诗的场景切换尚未编排"
+      ],
+      "layout": 0,
+      "orientation": "open",
+      "audit": {
+        "scope": "implemented-geometry-and-drawing-gaps",
+        "coverage": {
+          "scope": "extracted-entities-only",
+          "present": 2,
+          "mapped": 2,
+          "parameters": [],
+          "missing": []
+        },
+        "checks": [
+          "presence",
+          "count",
+          "finite",
+          "support",
+          "scale",
+          "relative-position",
+          "depth",
+          "grove-spread",
+          "drawing-gaps"
+        ],
+        "status": "checks-passed",
+        "errors": 0,
+        "review": 0,
+        "issues": [],
+        "metrics": {
+          "overlapPenalty": 0,
+          "balancePenalty": 0.02,
+          "motifFootprint": 0.013,
+          "landArea": 0
+        },
+        "cost": 0.16,
+        "aestheticAcceptance": "pending-user"
+      },
+      "graph": {
+        "nodes": [
+          {
+            "id": "l0",
+            "entities": [
+              "i1"
+            ],
+            "tool": "water",
+            "role": "water",
+            "habitat": null,
+            "inferred": false,
+            "support": null
+          },
+          {
+            "id": "l1",
+            "entities": [
+              "i2"
+            ],
+            "tool": "boat",
+            "role": "subject",
+            "habitat": "water",
+            "inferred": false,
+            "support": "l0"
+          }
+        ],
+        "edges": [
+          {
+            "type": "supported-by",
+            "source": "l1",
+            "target": "l0",
+            "basis": "local-composition",
+            "habitat": "water"
+          },
+          {
+            "type": "on",
+            "source": "l1",
+            "target": "l0",
+            "basis": "inferred",
+            "modality": "asserted",
+            "evidence": [
+              "野水无人渡",
+              "孤舟尽日横"
+            ]
+          }
+        ],
+        "setting": "waterside"
+      }
+    }
+  },
+  "omitted": [],
+  "notes": [
+    "野水虽被归为地点，仍按原文明示的自然景物匹配；具体空间关系另行处理。",
+    "孤舟：按舟船这个主体选择画法，材质或修饰词不另画成植物。这是本地写意借形，保留原词义。",
+    "位置、大小、笔触与默认微动是本地试画选择；数量解释与本地显示数量分别记录。",
+    "未明说的群落数量、疏密、近中远层次与变体均为本地构图选择；种类可按已声明的写意画法概括，不把铺展词换算成精确物体数量。",
+    "水面以连续色层和水纹构成空间；水面的范围、视点与水平线是本地构图选择，不自动增加岸或陆地。",
+    "孤舟与水同场时先按水面区域组织；此项是本地试画安排，不宣称已识别承载关系。",
+    "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。",
+    "通用场景层先组织地面、水域、群落和主体，再比较三个布局的依托、相对位置、尺度与遮挡；检查通过不代表审美已通过。"
+  ],
+  "relations": []
+}

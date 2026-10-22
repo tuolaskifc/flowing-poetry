@@ -1,0 +1,724 @@
+{
+  "version": "scene-organization-1",
+  "seed": 3139168849,
+  "settings": {
+    "wind": 0,
+    "density": 0.45,
+    "palette": "clear"
+  },
+  "layers": [
+    {
+      "tool": "tree",
+      "entities": [
+        "i1"
+      ],
+      "projectedEntities": [],
+      "names": [
+        "深林"
+      ],
+      "options": {
+        "form": "broadleaf",
+        "crown": "wash"
+      },
+      "animate": true,
+      "placement": {
+        "anchor": [
+          320,
+          388
+        ],
+        "at": [
+          0.5113724702785716,
+          0.7775714285714284
+        ],
+        "scale": 1.15
+      },
+      "instances": [
+        {
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.27016951685000007,
+              0.6191071428571429
+            ],
+            "scale": 0.6190678174125
+          },
+          "depth": 0.03571428571428571,
+          "opacity": 0.74440679775,
+          "variant": 0
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.16321903370000002,
+              0.6373214285714286
+            ],
+            "scale": 0.531215634825
+          },
+          "depth": 0.10714285714285714,
+          "opacity": 0.6680135955,
+          "variant": 1
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.05626855055000006,
+              0.6555357142857142
+            ],
+            "scale": 0.44336345223750007
+          },
+          "depth": 0.17857142857142858,
+          "opacity": 0.59162039325,
+          "variant": 2
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.22931806740000013,
+              0.67375
+            ],
+            "scale": 0.5855112696500001
+          },
+          "depth": 0.25,
+          "opacity": 0.7152271910000001,
+          "variant": 0
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.12236758425000016,
+              0.6919642857142857
+            ],
+            "scale": 0.4976590870625001
+          },
+          "depth": 0.32142857142857145,
+          "opacity": 0.6388339887500001,
+          "variant": 1
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.2954171011000001,
+              0.7101785714285714
+            ],
+            "scale": 0.6398069044750001
+          },
+          "depth": 0.39285714285714285,
+          "opacity": 0.7624407865,
+          "variant": 2
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.1884666179500001,
+              0.7283928571428571
+            ],
+            "scale": 0.5519547218875
+          },
+          "depth": 0.4642857142857143,
+          "opacity": 0.68604758425,
+          "variant": 0
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.7655852584,
+              0.7466071428571428
+            ],
+            "scale": 0.4641025393
+          },
+          "depth": 0.5357142857142857,
+          "opacity": 0.609654382,
+          "variant": 1
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.9139134157,
+              0.9520714285714287
+            ],
+            "scale": 0.8462503567124999
+          },
+          "depth": 0.6071428571428571,
+          "opacity": 0.9579350617749999,
+          "variant": 2
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.8222415730000001,
+              0.9687857142857144
+            ],
+            "scale": 0.7583981741250001
+          },
+          "depth": 0.6785714285714286,
+          "opacity": 0.88918117975,
+          "variant": 0
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.7305697303,
+              0.9855
+            ],
+            "scale": 0.6705459915375
+          },
+          "depth": 0.75,
+          "opacity": 0.820427297725,
+          "variant": 1
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.8788978876,
+              0.8222142857142858
+            ],
+            "scale": 0.81269380895
+          },
+          "depth": 0.8214285714285714,
+          "opacity": 0.9316734157,
+          "variant": 2
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.7872260449,
+              0.8389285714285715
+            ],
+            "scale": 0.7248416263625002
+          },
+          "depth": 0.8928571428571429,
+          "opacity": 0.862919533675,
+          "variant": 0
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.9355542022000004,
+              0.8556428571428571
+            ],
+            "scale": 0.8669894437750005
+          },
+          "depth": 0.9642857142857143,
+          "opacity": 0.9741656516500002,
+          "variant": 1
+        }
+      ],
+      "singleUnit": true,
+      "quantity": {
+        "items": [
+          {
+            "entity": "i1",
+            "mode": "many",
+            "min": null,
+            "max": null,
+            "unit": null,
+            "scope": "unspecified",
+            "extent": "spread",
+            "evidence": [],
+            "basis": "model"
+          }
+        ],
+        "rendered": 14,
+        "exact": false,
+        "collective": true,
+        "partUnsupported": false
+      },
+      "quantityLabel": "成片分布；本地试画 14 个单元",
+      "z": 8
+    },
+    {
+      "tool": "pavilion",
+      "entities": [
+        "i2"
+      ],
+      "projectedEntities": [],
+      "names": [
+        "亭"
+      ],
+      "options": {},
+      "animate": true,
+      "placement": {
+        "anchor": [
+          320,
+          280
+        ],
+        "at": [
+          0.43,
+          0.73
+        ],
+        "scale": 0.85
+      },
+      "instances": [
+        {
+          "placement": {
+            "anchor": [
+              320,
+              280
+            ],
+            "at": [
+              0.43,
+              0.73
+            ],
+            "scale": 0.78
+          },
+          "depth": 0.15,
+          "opacity": 1,
+          "variant": 0
+        }
+      ],
+      "singleUnit": true,
+      "quantity": {
+        "items": [
+          {
+            "entity": "i2",
+            "mode": "unspecified",
+            "min": null,
+            "max": null,
+            "unit": null,
+            "scope": "unspecified",
+            "extent": "unspecified",
+            "evidence": [],
+            "basis": "model"
+          }
+        ],
+        "rendered": 1,
+        "exact": false,
+        "collective": false,
+        "partUnsupported": false
+      },
+      "quantityLabel": "数量未精确；本地试画 1 个单元",
+      "z": 12
+    },
+    {
+      "tool": "bird",
+      "entities": [
+        "i3"
+      ],
+      "projectedEntities": [],
+      "names": [
+        "鸟"
+      ],
+      "options": {
+        "pose": "resting",
+        "tone": "ink",
+        "facing": "right"
+      },
+      "animate": true,
+      "placement": {
+        "anchor": [
+          320,
+          190
+        ],
+        "at": [
+          0.7655852584,
+          0.5980943302811428
+        ],
+        "scale": 0.78
+      },
+      "drawingLabel": "鸟意（写意借形）",
+      "instances": [
+        {
+          "placement": {
+            "anchor": [
+              320,
+              190
+            ],
+            "at": [
+              0.7380852584,
+              0.5980943302811428
+            ],
+            "scale": 0.37
+          },
+          "depth": 0.25,
+          "opacity": 0.7749999999999999,
+          "variant": 0
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              190
+            ],
+            "at": [
+              0.7930852584,
+              0.5980943302811428
+            ],
+            "scale": 0.37
+          },
+          "depth": 0.75,
+          "opacity": 0.9249999999999999,
+          "variant": 1
+        }
+      ],
+      "singleUnit": true,
+      "quantity": {
+        "items": [
+          {
+            "entity": "i3",
+            "mode": "exact",
+            "min": 2,
+            "max": 2,
+            "unit": null,
+            "scope": "individual",
+            "extent": "unspecified",
+            "evidence": [],
+            "basis": "model"
+          }
+        ],
+        "rendered": 2,
+        "exact": true,
+        "collective": false,
+        "partUnsupported": false
+      },
+      "quantityLabel": "按提取数量绘制 2 个",
+      "z": 10
+    },
+    {
+      "tool": "landscape",
+      "entities": [],
+      "projectedEntities": [],
+      "names": [
+        "构图依托·地面"
+      ],
+      "options": {
+        "form": "ground",
+        "edge": "soft"
+      },
+      "animate": false,
+      "placement": {
+        "anchor": [
+          320,
+          194
+        ],
+        "at": [
+          0.5,
+          0.54
+        ],
+        "scale": 1.6
+      },
+      "instances": [
+        {
+          "placement": {
+            "anchor": [
+              320,
+              265
+            ],
+            "at": [
+              0.5,
+              0.54
+            ],
+            "scale": 2.5
+          },
+          "variant": 0,
+          "depth": 0,
+          "opacity": 1
+        }
+      ],
+      "singleUnit": false,
+      "inferred": true,
+      "provenance": {
+        "basis": "local-context",
+        "reason": "生长物、房舍和陆上主体需要共同地表；这是本地构图依托"
+      },
+      "quantity": {
+        "rendered": 1,
+        "exact": false,
+        "items": []
+      },
+      "quantityLabel": "本地环境依托，不计入原文意象覆盖",
+      "z": -18,
+      "clip": [
+        [
+          0,
+          0.5
+        ],
+        [
+          1,
+          0.5
+        ],
+        [
+          1,
+          1.04
+        ],
+        [
+          0,
+          1.04
+        ]
+      ]
+    }
+  ],
+  "spatial": [
+    {
+      "type": "on",
+      "source": "i3",
+      "target": "i1",
+      "modality": "asserted",
+      "basis": "explicit",
+      "evidence": [
+        "深林围着亭子，鸟栖树间。"
+      ],
+      "visualized": true,
+      "reason": "由通用场景约束组织；具体方向、距离与尺度属于本地构图"
+    }
+  ],
+  "scene": {
+    "kind": "woodland",
+    "notes": [
+      "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。",
+      "通用场景层先组织地面、水域、群落和主体，再比较三个布局的依托、相对位置、尺度与遮挡；检查通过不代表审美已通过。"
+    ],
+    "waterline": null,
+    "organization": {
+      "version": "1.0",
+      "strategy": "general-constraints",
+      "regions": {
+        "land": [
+          [
+            0,
+            0.5
+          ],
+          [
+            1,
+            0.5
+          ],
+          [
+            1,
+            1.04
+          ],
+          [
+            0,
+            1.04
+          ]
+        ]
+      },
+      "candidates": [
+        {
+          "layout": 0,
+          "orientation": "open",
+          "errors": 0,
+          "cost": 134.891,
+          "metrics": {
+            "overlapPenalty": 11.166,
+            "balancePenalty": 0.113,
+            "motifFootprint": 1.277,
+            "landArea": 0.54
+          }
+        },
+        {
+          "layout": 1,
+          "orientation": "open",
+          "errors": 0,
+          "cost": 142.923,
+          "metrics": {
+            "overlapPenalty": 11.825,
+            "balancePenalty": 0.129,
+            "motifFootprint": 1.338,
+            "landArea": 0.54
+          }
+        },
+        {
+          "layout": 2,
+          "orientation": "open",
+          "errors": 0,
+          "cost": 156.573,
+          "metrics": {
+            "overlapPenalty": 12.973,
+            "balancePenalty": 0.113,
+            "motifFootprint": 1.277,
+            "landArea": 0.54
+          }
+        }
+      ],
+      "repairs": [
+        {
+          "type": "support-added",
+          "reason": "生长物、房舍和陆上主体需要共同地表；这是本地构图依托"
+        }
+      ],
+      "limitations": [
+        "几何检查不判定诗意理解或审美合格",
+        "动作时序与整首诗的场景切换尚未编排"
+      ],
+      "layout": 0,
+      "orientation": "open",
+      "audit": {
+        "scope": "implemented-geometry-and-drawing-gaps",
+        "coverage": {
+          "scope": "extracted-entities-only",
+          "present": 3,
+          "mapped": 3,
+          "parameters": [],
+          "missing": []
+        },
+        "checks": [
+          "presence",
+          "count",
+          "finite",
+          "support",
+          "scale",
+          "relative-position",
+          "depth",
+          "grove-spread",
+          "drawing-gaps"
+        ],
+        "status": "checks-passed",
+        "errors": 0,
+        "review": 0,
+        "issues": [],
+        "metrics": {
+          "overlapPenalty": 11.166,
+          "balancePenalty": 0.113,
+          "motifFootprint": 1.277,
+          "landArea": 0.54
+        },
+        "cost": 134.891,
+        "aestheticAcceptance": "pending-user"
+      },
+      "graph": {
+        "nodes": [
+          {
+            "id": "l0",
+            "entities": [
+              "i1"
+            ],
+            "tool": "tree",
+            "role": "vegetation",
+            "habitat": "land",
+            "inferred": false,
+            "support": "l3"
+          },
+          {
+            "id": "l1",
+            "entities": [
+              "i2"
+            ],
+            "tool": "pavilion",
+            "role": "subject",
+            "habitat": "land",
+            "inferred": false,
+            "support": "l3"
+          },
+          {
+            "id": "l2",
+            "entities": [
+              "i3"
+            ],
+            "tool": "bird",
+            "role": "fauna",
+            "habitat": "canopy",
+            "inferred": false,
+            "support": "l0"
+          },
+          {
+            "id": "l3",
+            "entities": [],
+            "tool": "landscape",
+            "role": "terrain",
+            "habitat": null,
+            "inferred": true,
+            "support": null
+          }
+        ],
+        "edges": [
+          {
+            "type": "supported-by",
+            "source": "l0",
+            "target": "l3",
+            "basis": "local-composition",
+            "habitat": "land"
+          },
+          {
+            "type": "supported-by",
+            "source": "l1",
+            "target": "l3",
+            "basis": "local-composition",
+            "habitat": "land"
+          },
+          {
+            "type": "supported-by",
+            "source": "l2",
+            "target": "l0",
+            "basis": "local-composition",
+            "habitat": "canopy"
+          },
+          {
+            "type": "on",
+            "source": "l2",
+            "target": "l0",
+            "basis": "explicit",
+            "modality": "asserted",
+            "evidence": [
+              "深林围着亭子，鸟栖树间。"
+            ]
+          }
+        ],
+        "setting": "woodland"
+      }
+    }
+  },
+  "omitted": [],
+  "notes": [
+    "深林虽被归为地点，仍按原文明示的自然景物匹配；具体空间关系另行处理。",
+    "鸟：以通用写意鸟形表现，不细分物种。这是本地写意借形，保留原词义。",
+    "位置、大小、笔触与默认微动是本地试画选择；数量解释与本地显示数量分别记录。",
+    "未明说的群落数量、疏密、近中远层次与变体均为本地构图选择；种类可按已声明的写意画法概括，不把铺展词换算成精确物体数量。",
+    "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。",
+    "通用场景层先组织地面、水域、群落和主体，再比较三个布局的依托、相对位置、尺度与遮挡；检查通过不代表审美已通过。"
+  ],
+  "relations": []
+}

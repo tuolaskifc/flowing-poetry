@@ -1,0 +1,855 @@
+{
+  "version": "scene-organization-1",
+  "seed": 3669110292,
+  "settings": {
+    "wind": 0,
+    "density": 0.45,
+    "palette": "clear"
+  },
+  "layers": [
+    {
+      "tool": "tree",
+      "entities": [
+        "i2"
+      ],
+      "projectedEntities": [],
+      "names": [
+        "树"
+      ],
+      "options": {
+        "form": "broadleaf",
+        "crown": "wash"
+      },
+      "animate": false,
+      "placement": {
+        "anchor": [
+          320,
+          388
+        ],
+        "at": [
+          0.04,
+          0.66
+        ],
+        "scale": 1.15
+      },
+      "instances": [
+        {
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.04,
+              0.66
+            ],
+            "scale": 0.85
+          },
+          "depth": 0,
+          "opacity": 0.6625,
+          "variant": 0
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.658,
+              0.6805882352941177
+            ],
+            "scale": 1.177212032170599
+          },
+          "depth": 0.03529411764705882,
+          "opacity": 0.6875,
+          "variant": 1
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.276,
+              0.7011764705882353
+            ],
+            "scale": 0.6470858774564571
+          },
+          "depth": 0.07058823529411765,
+          "opacity": 0.7125,
+          "variant": 2
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.8940000000000001,
+              0.721764705882353
+            ],
+            "scale": 0.9826074106892475
+          },
+          "depth": 0.10588235294117647,
+          "opacity": 0.7375,
+          "variant": 0
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.512,
+              0.7423529411764707
+            ],
+            "scale": 1.3014294043750148
+          },
+          "depth": 0.1411764705882353,
+          "opacity": 0.7625000000000001,
+          "variant": 1
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.1299999999999999,
+              0.7629411764705882
+            ],
+            "scale": 0.7714651050917019
+          },
+          "depth": 0.17647058823529413,
+          "opacity": 0.7875,
+          "variant": 2
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.7480000000000002,
+              0.7835294117647059
+            ],
+            "scale": 1.115213252641799
+          },
+          "depth": 0.21176470588235294,
+          "opacity": 0.8125,
+          "variant": 0
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.36599999999999966,
+              0.8041176470588236
+            ],
+            "scale": 1.425567042512462
+          },
+          "depth": 0.24705882352941175,
+          "opacity": 0.8375,
+          "variant": 1
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.984,
+              0.8247058823529412
+            ],
+            "scale": 0.8959264083298681
+          },
+          "depth": 0.2823529411764706,
+          "opacity": 0.8625,
+          "variant": 2
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.6020000000000003,
+              0.8452941176470589
+            ],
+            "scale": 1.2478159575644843
+          },
+          "depth": 0.3176470588235294,
+          "opacity": 0.8875,
+          "variant": 0
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.21999999999999975,
+              0.8658823529411765
+            ],
+            "scale": 1.5496257724816043
+          },
+          "depth": 0.35294117647058826,
+          "opacity": 0.9125,
+          "variant": 1
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.8380000000000001,
+              0.8864705882352941
+            ],
+            "scale": 1.0204705215606815
+          },
+          "depth": 0.38823529411764707,
+          "opacity": 0.9375,
+          "variant": 2
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.4560000000000004,
+              0.9070588235294118
+            ],
+            "scale": 1.380413958051055
+          },
+          "depth": 0.4235294117647059,
+          "opacity": 0.9625,
+          "variant": 0
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.07399999999999984,
+              0.9276470588235294
+            ],
+            "scale": 1.6736064424905925
+          },
+          "depth": 0.45882352941176463,
+          "opacity": 0.9875,
+          "variant": 1
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.6919999999999984,
+              0.9482352941176471
+            ],
+            "scale": 1.1450981557612265
+          },
+          "depth": 0.4941176470588235,
+          "opacity": 0.6625,
+          "variant": 2
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.3099999999999987,
+              0.9688235294117646
+            ],
+            "scale": 1.5130056880253353
+          },
+          "depth": 0.5294117647058824,
+          "opacity": 0.6875,
+          "variant": 0
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.927999999999999,
+              0.9894117647058824
+            ],
+            "scale": 1.7975099228172553
+          },
+          "depth": 0.5647058823529412,
+          "opacity": 0.7125,
+          "variant": 1
+        }
+      ],
+      "singleUnit": true,
+      "quantity": {
+        "items": [
+          {
+            "entity": "i2",
+            "mode": "many",
+            "min": null,
+            "max": null,
+            "unit": null,
+            "scope": "group",
+            "extent": "spread",
+            "evidence": [
+              "树密"
+            ],
+            "basis": "model"
+          }
+        ],
+        "rendered": 17,
+        "exact": false,
+        "collective": true,
+        "partUnsupported": false
+      },
+      "quantityLabel": "依场景疏密试画 17 个单元；原文未给精确个体数",
+      "z": 7
+    },
+    {
+      "tool": "bamboo",
+      "entities": [
+        "i1"
+      ],
+      "projectedEntities": [],
+      "names": [
+        "竹"
+      ],
+      "options": {},
+      "animate": false,
+      "placement": {
+        "anchor": [
+          320,
+          335
+        ],
+        "at": [
+          0.03,
+          0.76
+        ],
+        "scale": 1
+      },
+      "instances": [
+        {
+          "placement": {
+            "anchor": [
+              320,
+              335
+            ],
+            "at": [
+              0.03,
+              0.76
+            ],
+            "scale": 0.8
+          },
+          "depth": 0,
+          "opacity": 0.5916666666666667,
+          "variant": 0
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              335
+            ],
+            "at": [
+              0.33282,
+              0.7778571428571429
+            ],
+            "scale": 0.924
+          },
+          "depth": 0.04285714285714285,
+          "opacity": 0.615,
+          "variant": 1
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              335
+            ],
+            "at": [
+              0.14564,
+              0.7957142857142857
+            ],
+            "scale": 1.048
+          },
+          "depth": 0.0857142857142857,
+          "opacity": 0.6383333333333333,
+          "variant": 2
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              335
+            ],
+            "at": [
+              0.4484600000000001,
+              0.8135714285714286
+            ],
+            "scale": 1.1720000000000002
+          },
+          "depth": 0.12857142857142856,
+          "opacity": 0.6616666666666666,
+          "variant": 0
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              335
+            ],
+            "at": [
+              0.26127999999999996,
+              0.8314285714285714
+            ],
+            "scale": 0.896
+          },
+          "depth": 0.1714285714285714,
+          "opacity": 0.6849999999999999,
+          "variant": 1
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              335
+            ],
+            "at": [
+              0.07409999999999993,
+              0.8492857142857143
+            ],
+            "scale": 1.02
+          },
+          "depth": 0.21428571428571427,
+          "opacity": 0.7083333333333333,
+          "variant": 2
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              335
+            ],
+            "at": [
+              0.37692000000000003,
+              0.8671428571428571
+            ],
+            "scale": 1.1440000000000001
+          },
+          "depth": 0.2571428571428571,
+          "opacity": 0.7316666666666667,
+          "variant": 0
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              335
+            ],
+            "at": [
+              0.1897399999999998,
+              0.885
+            ],
+            "scale": 0.868
+          },
+          "depth": 0.3,
+          "opacity": 0.7549999999999999,
+          "variant": 1
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              335
+            ],
+            "at": [
+              0.49256,
+              0.9028571428571428
+            ],
+            "scale": 0.992
+          },
+          "depth": 0.3428571428571428,
+          "opacity": 0.7783333333333333,
+          "variant": 2
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              335
+            ],
+            "at": [
+              0.3053800000000001,
+              0.9207142857142857
+            ],
+            "scale": 1.116
+          },
+          "depth": 0.38571428571428573,
+          "opacity": 0.8016666666666666,
+          "variant": 0
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              335
+            ],
+            "at": [
+              0.11819999999999986,
+              0.9385714285714286
+            ],
+            "scale": 0.8400000000000001
+          },
+          "depth": 0.42857142857142855,
+          "opacity": 0.825,
+          "variant": 1
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              335
+            ],
+            "at": [
+              0.42102000000000006,
+              0.9564285714285714
+            ],
+            "scale": 0.9640000000000001
+          },
+          "depth": 0.4714285714285714,
+          "opacity": 0.8483333333333333,
+          "variant": 2
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              335
+            ],
+            "at": [
+              0.2338400000000002,
+              0.9742857142857143
+            ],
+            "scale": 1.088
+          },
+          "depth": 0.5142857142857142,
+          "opacity": 0.8716666666666666,
+          "variant": 0
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              335
+            ],
+            "at": [
+              0.04666000000000034,
+              0.9921428571428572
+            ],
+            "scale": 0.8120000000000002
+          },
+          "depth": 0.5571428571428572,
+          "opacity": 0.895,
+          "variant": 1
+        }
+      ],
+      "singleUnit": true,
+      "quantity": {
+        "items": [
+          {
+            "entity": "i1",
+            "mode": "many",
+            "min": null,
+            "max": null,
+            "unit": null,
+            "scope": "group",
+            "extent": "spread",
+            "evidence": [
+              "竹深"
+            ],
+            "basis": "model"
+          }
+        ],
+        "rendered": 14,
+        "exact": false,
+        "collective": true,
+        "partUnsupported": false
+      },
+      "quantityLabel": "依场景疏密试画 14 个单元；原文未给精确个体数",
+      "z": 12
+    },
+    {
+      "tool": "landscape",
+      "names": [
+        "构图依托·地面"
+      ],
+      "entities": [],
+      "projectedEntities": [],
+      "options": {
+        "form": "ground"
+      },
+      "animate": false,
+      "placement": {
+        "anchor": [
+          320,
+          194
+        ],
+        "at": [
+          0.5,
+          0.48
+        ],
+        "scale": 1.6
+      },
+      "instances": [
+        {
+          "placement": {
+            "anchor": [
+              320,
+              194
+            ],
+            "at": [
+              0.5,
+              0.48
+            ],
+            "scale": 1.6
+          },
+          "variant": 0,
+          "depth": 0,
+          "opacity": 1
+        }
+      ],
+      "singleUnit": false,
+      "inferred": true,
+      "provenance": {
+        "basis": "local-context",
+        "reason": "竹深树密共同组成林地"
+      },
+      "quantity": {
+        "rendered": 1,
+        "exact": false,
+        "items": []
+      },
+      "quantityLabel": "背景依托，不计入意象覆盖",
+      "z": -18
+    }
+  ],
+  "spatial": [],
+  "scene": {
+    "kind": "mixed-woodland",
+    "notes": [
+      "先划分承托地形、群落与主体活动区域；场景密度和背景依托是本地构图推断，不冒充原文明示意象。"
+    ],
+    "waterline": null,
+    "basis": "local-context",
+    "regions": {
+      "woodland": [
+        [
+          0,
+          0.2
+        ],
+        [
+          1,
+          0.2
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ]
+    },
+    "supports": [
+      {
+        "form": "ground",
+        "reason": "竹深树密共同组成林地"
+      }
+    ],
+    "organization": {
+      "version": "1.0",
+      "strategy": "regional-proposal",
+      "regions": {
+        "woodland": [
+          [
+            0,
+            0.2
+          ],
+          [
+            1,
+            0.2
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ]
+      },
+      "candidates": [
+        {
+          "layout": "existing",
+          "errors": 0,
+          "cost": 30.405
+        }
+      ],
+      "repairs": [],
+      "limitations": [
+        "几何检查不判定诗意理解或审美合格",
+        "动作时序与整首诗的场景切换尚未编排"
+      ],
+      "graph": {
+        "nodes": [
+          {
+            "id": "l0",
+            "entities": [
+              "i2"
+            ],
+            "tool": "tree",
+            "role": "vegetation",
+            "habitat": "land",
+            "inferred": false,
+            "support": "l2"
+          },
+          {
+            "id": "l1",
+            "entities": [
+              "i1"
+            ],
+            "tool": "bamboo",
+            "role": "vegetation",
+            "habitat": "land",
+            "inferred": false,
+            "support": "l2"
+          },
+          {
+            "id": "l2",
+            "entities": [],
+            "tool": "landscape",
+            "role": "terrain",
+            "habitat": null,
+            "inferred": true,
+            "support": null
+          }
+        ],
+        "edges": [
+          {
+            "type": "supported-by",
+            "source": "l0",
+            "target": "l2",
+            "basis": "local-composition",
+            "habitat": "land"
+          },
+          {
+            "type": "supported-by",
+            "source": "l1",
+            "target": "l2",
+            "basis": "local-composition",
+            "habitat": "land"
+          }
+        ],
+        "setting": "mixed-woodland"
+      },
+      "audit": {
+        "scope": "implemented-geometry-and-drawing-gaps",
+        "coverage": {
+          "scope": "extracted-entities-only",
+          "present": 4,
+          "mapped": 2,
+          "parameters": [],
+          "missing": [
+            {
+              "id": "i3",
+              "name": "虫"
+            },
+            {
+              "id": "i4",
+              "name": "微凉"
+            }
+          ]
+        },
+        "checks": [
+          "presence",
+          "count",
+          "finite",
+          "water-support",
+          "cliff-support",
+          "grove-spread",
+          "drawing-gaps"
+        ],
+        "status": "needs-review",
+        "errors": 0,
+        "review": 1,
+        "issues": [
+          {
+            "code": "drawing-gaps",
+            "severity": "review",
+            "message": "还有 2 项已提取线索尚未转成画面：虫、微凉"
+          }
+        ],
+        "metrics": {
+          "overlapPenalty": 0,
+          "balancePenalty": 0.051,
+          "motifFootprint": 6.957,
+          "landArea": 0
+        },
+        "cost": 30.405,
+        "aestheticAcceptance": "pending-user"
+      }
+    }
+  },
+  "omitted": [
+    {
+      "id": "i3",
+      "name": "虫",
+      "reason": "该意象尚无合适的写意画法"
+    },
+    {
+      "id": "i4",
+      "name": "微凉",
+      "reason": "该专名人物、地名或抽象含义暂不作实景补画"
+    },
+    {
+      "id": "i5",
+      "name": "风",
+      "reason": "原文中缺席，不绘制"
+    }
+  ],
+  "notes": [
+    "本句有否定或假设提示，基础意象模式未细分其范围，暂缓动画，不宣称完成逻辑解释。",
+    "位置、大小、笔触与默认微动是本地试画选择；数量解释与本地显示数量分别记录。",
+    "未明说的群落数量、疏密、近中远层次与变体均为本地构图选择；种类可按已声明的写意画法概括，不把铺展词换算成精确物体数量。",
+    "先划分承托地形、群落与主体活动区域；场景密度和背景依托是本地构图推断，不冒充原文明示意象。"
+  ],
+  "relations": []
+}

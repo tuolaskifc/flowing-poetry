@@ -20,14 +20,14 @@ test('twelve new quotations have traceable sources and editorial goals stay out 
  for(const c of data.cases){assert(!benchmarks.some(b=>b.poem===c.poem));assert(c.source.url.startsWith('https://'));assert(c.author&&c.title&&c.source.note);const r=await record(c.id),req=JSON.parse(await readFile(resolve(dir,'runs',r.id,'request.json'),'utf8'));assert.deepEqual(JSON.parse(req.messages.at(-1).content),{poem:c.poem});assert(!Object.hasOwn(lib.sourceFor(c),'goal'));}
 });
 
-test('the twenty basically accepted images and their quantity and geometry remain frozen',async()=>{
+test('accepted reference images stay frozen; established regional proposals retain geometry and quantities',async()=>{
  const manifest=JSON.parse(await readFile(resolve(dir,'accepted-baseline.json'),'utf8'));assert.equal(manifest.images.length,20);assert.equal(manifest.finalArtworkApproval,false);
  for(const f of manifest.images)assert.equal(createHash('sha256').update(await readFile(resolve(root,f.path))).digest('hex'),f.sha256,f.path);
  const qa=resolve(dir,'.qa/generalization-baseline');await mkdir(qa,{recursive:true});
  for(const f of ['planner.mjs','composition.mjs','imagery-lexicon.js','physical-mapping.mjs','expressive-mapping.mjs','scene-layout.mjs','scene-regions.mjs'])await writeFile(resolve(qa,f),execFileSync('git',['show','a497b2a:experiments/poem-generation/'+f],{cwd:root}));
  const old=await import(pathToFileURL(resolve(qa,'planner.mjs')).href);
  const geometry=p=>p.layers.map(l=>({tool:l.tool,entities:l.entities,options:l.options,instances:l.instances,z:l.z,clip:l.clip,surface:l.surface,reflection:l.reflection,rendered:l.quantity.rendered,exact:l.quantity.exact}));
- for(const b of benchmarks){const a=old.buildPlan(b.analysis),p=buildPlan(b.analysis);assert.deepEqual(geometry(p),geometry(a),b.id);assert.deepEqual(p.settings,a.settings);}
+ for(const b of benchmarks){const a=old.buildPlan(b.analysis),p=buildPlan(b.analysis);if(p.scene.organization.strategy==='regional-proposal')assert.deepEqual(geometry(p),geometry(a),b.id);assert.deepEqual(p.settings,a.settings);assert.deepEqual(p.layers.filter(l=>!l.inferred).map(l=>[l.entities,l.quantity.rendered,l.quantity.exact]),a.layers.filter(l=>!l.inferred).map(l=>[l.entities,l.quantity.rendered,l.quantity.exact]));assert.equal(p.scene.organization.audit.errors,0,b.id);}
 });
 
 test('real 3.2 failures remain rejected and the 3.1 white-bird control is separate',async()=>{

@@ -1,0 +1,297 @@
+{
+  "version": "scene-organization-1",
+  "seed": 3672958447,
+  "settings": {
+    "wind": 0,
+    "density": 0.45,
+    "palette": "clear"
+  },
+  "layers": [
+    {
+      "tool": "tree",
+      "entities": [
+        "i1"
+      ],
+      "projectedEntities": [],
+      "names": [
+        "桃花"
+      ],
+      "options": {
+        "form": "blossom",
+        "branches": "7",
+        "crown": "lines"
+      },
+      "animate": false,
+      "placement": {
+        "anchor": [
+          320,
+          388
+        ],
+        "at": [
+          0.5,
+          0.93
+        ],
+        "scale": 1.15
+      },
+      "drawingLabel": "树意（写意借形）",
+      "instances": [
+        {
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.5,
+              0.93
+            ],
+            "scale": 1.6
+          },
+          "depth": 0,
+          "opacity": 1,
+          "variant": 0
+        }
+      ],
+      "singleUnit": true,
+      "quantity": {
+        "items": [
+          {
+            "entity": "i1",
+            "mode": "few",
+            "min": null,
+            "max": null,
+            "unit": "簇",
+            "scope": "group",
+            "extent": "local",
+            "evidence": [
+              "桃花一簇"
+            ],
+            "basis": "model"
+          }
+        ],
+        "rendered": 1,
+        "exact": false,
+        "collective": false,
+        "partUnsupported": false
+      },
+      "quantityLabel": "数量未精确；本地试画 1 个单元",
+      "z": 10
+    },
+    {
+      "tool": "landscape",
+      "names": [
+        "构图依托·地面"
+      ],
+      "entities": [],
+      "projectedEntities": [],
+      "options": {
+        "form": "ground"
+      },
+      "animate": false,
+      "placement": {
+        "anchor": [
+          320,
+          194
+        ],
+        "at": [
+          0.5,
+          0.48
+        ],
+        "scale": 1.6
+      },
+      "instances": [
+        {
+          "placement": {
+            "anchor": [
+              320,
+              194
+            ],
+            "at": [
+              0.5,
+              0.48
+            ],
+            "scale": 1.6
+          },
+          "variant": 0,
+          "depth": 0,
+          "opacity": 1
+        }
+      ],
+      "singleUnit": false,
+      "inferred": true,
+      "provenance": {
+        "basis": "local-context",
+        "reason": "疏花树的树根与地表相接"
+      },
+      "quantity": {
+        "rendered": 1,
+        "exact": false,
+        "items": []
+      },
+      "quantityLabel": "背景依托，不计入意象覆盖",
+      "z": -18
+    }
+  ],
+  "spatial": [],
+  "scene": {
+    "kind": "flowering-grove",
+    "notes": [
+      "先划分承托地形、群落与主体活动区域；场景密度和背景依托是本地构图推断，不冒充原文明示意象。"
+    ],
+    "waterline": null,
+    "basis": "local-context",
+    "regions": {
+      "grove": [
+        [
+          0.15,
+          0.6
+        ],
+        [
+          0.85,
+          0.6
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ]
+    },
+    "supports": [
+      {
+        "form": "ground",
+        "reason": "疏花树的树根与地表相接"
+      }
+    ],
+    "organization": {
+      "version": "1.0",
+      "strategy": "regional-proposal",
+      "regions": {
+        "grove": [
+          [
+            0.15,
+            0.6
+          ],
+          [
+            0.85,
+            0.6
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ]
+      },
+      "candidates": [
+        {
+          "layout": "existing",
+          "errors": 0,
+          "cost": 30
+        }
+      ],
+      "repairs": [],
+      "limitations": [
+        "几何检查不判定诗意理解或审美合格",
+        "动作时序与整首诗的场景切换尚未编排"
+      ],
+      "graph": {
+        "nodes": [
+          {
+            "id": "l0",
+            "entities": [
+              "i1"
+            ],
+            "tool": "tree",
+            "role": "vegetation",
+            "habitat": "land",
+            "inferred": false,
+            "support": "l1"
+          },
+          {
+            "id": "l1",
+            "entities": [],
+            "tool": "landscape",
+            "role": "terrain",
+            "habitat": null,
+            "inferred": true,
+            "support": null
+          }
+        ],
+        "edges": [
+          {
+            "type": "supported-by",
+            "source": "l0",
+            "target": "l1",
+            "basis": "local-composition",
+            "habitat": "land"
+          }
+        ],
+        "setting": "flowering-grove"
+      },
+      "audit": {
+        "scope": "implemented-geometry-and-drawing-gaps",
+        "coverage": {
+          "scope": "extracted-entities-only",
+          "present": 2,
+          "mapped": 1,
+          "parameters": [],
+          "missing": [
+            {
+              "id": "i2",
+              "name": "深红／浅红"
+            }
+          ]
+        },
+        "checks": [
+          "presence",
+          "count",
+          "finite",
+          "water-support",
+          "cliff-support",
+          "grove-spread",
+          "drawing-gaps"
+        ],
+        "status": "needs-review",
+        "errors": 0,
+        "review": 1,
+        "issues": [
+          {
+            "code": "drawing-gaps",
+            "severity": "review",
+            "message": "还有 1 项已提取线索尚未转成画面：深红／浅红"
+          }
+        ],
+        "metrics": {
+          "overlapPenalty": 0,
+          "balancePenalty": 0,
+          "motifFootprint": 0.514,
+          "landArea": 0
+        },
+        "cost": 30,
+        "aestheticAcceptance": "pending-user"
+      }
+    }
+  },
+  "omitted": [
+    {
+      "id": "i2",
+      "name": "深红／浅红",
+      "reason": "该专名人物、地名或抽象含义暂不作实景补画"
+    }
+  ],
+  "notes": [
+    "桃花：以一树疏花组织花枝；整株轮廓是本地写意借形，明确枝数只约束主花枝。这是本地写意借形，保留原词义。",
+    "本句有否定或假设提示，基础意象模式未细分其范围，暂缓动画，不宣称完成逻辑解释。",
+    "位置、大小、笔触与默认微动是本地试画选择；数量解释与本地显示数量分别记录。",
+    "未明说的群落数量、疏密、近中远层次与变体均为本地构图选择；种类可按已声明的写意画法概括，不把铺展词换算成精确物体数量。",
+    "先划分承托地形、群落与主体活动区域；场景密度和背景依托是本地构图推断，不冒充原文明示意象。"
+  ],
+  "relations": []
+}

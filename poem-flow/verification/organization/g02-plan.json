@@ -1,0 +1,1052 @@
+{
+  "version": "scene-organization-1",
+  "seed": 1811762214,
+  "settings": {
+    "wind": 0,
+    "density": 0.45,
+    "palette": "clear"
+  },
+  "layers": [
+    {
+      "tool": "tree",
+      "entities": [
+        "i4"
+      ],
+      "projectedEntities": [],
+      "names": [
+        "深树"
+      ],
+      "options": {
+        "form": "broadleaf",
+        "crown": "lines"
+      },
+      "animate": true,
+      "placement": {
+        "anchor": [
+          320,
+          388
+        ],
+        "at": [
+          0.03,
+          0.66
+        ],
+        "scale": 1.15
+      },
+      "instances": [
+        {
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.03,
+              0.66
+            ],
+            "scale": 0.9
+          },
+          "depth": 0,
+          "opacity": 0.7083333333333334,
+          "variant": 0
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.20304000000000003,
+              0.6891666666666667
+            ],
+            "scale": 1.092
+          },
+          "depth": 0.049999999999999996,
+          "opacity": 0.825,
+          "variant": 1
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.09608,
+              0.7183333333333334
+            ],
+            "scale": 1.284
+          },
+          "depth": 0.09999999999999999,
+          "opacity": 0.9416666666666667,
+          "variant": 2
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.26912,
+              0.7475
+            ],
+            "scale": 0.9960000000000001
+          },
+          "depth": 0.15,
+          "opacity": 0.7083333333333334,
+          "variant": 0
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.16216,
+              0.7766666666666667
+            ],
+            "scale": 1.1880000000000002
+          },
+          "depth": 0.19999999999999998,
+          "opacity": 0.825,
+          "variant": 1
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.05519999999999996,
+              0.8058333333333334
+            ],
+            "scale": 0.9
+          },
+          "depth": 0.25,
+          "opacity": 0.9416666666666667,
+          "variant": 2
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.93452,
+              0.9363999999999999
+            ],
+            "scale": 1.092
+          },
+          "depth": 0.3,
+          "opacity": 0.7083333333333334,
+          "variant": 0
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.8619399999999999,
+              0.7707999999999999
+            ],
+            "scale": 1.2840000000000003
+          },
+          "depth": 0.35000000000000003,
+          "opacity": 0.825,
+          "variant": 1
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.97936,
+              0.8452
+            ],
+            "scale": 0.9960000000000001
+          },
+          "depth": 0.39999999999999997,
+          "opacity": 0.9416666666666667,
+          "variant": 2
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.9067800000000001,
+              0.9196
+            ],
+            "scale": 1.1880000000000002
+          },
+          "depth": 0.44999999999999996,
+          "opacity": 0.7083333333333334,
+          "variant": 0
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.8341999999999999,
+              0.754
+            ],
+            "scale": 0.9
+          },
+          "depth": 0.5,
+          "opacity": 0.825,
+          "variant": 1
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.95162,
+              0.8284
+            ],
+            "scale": 1.092
+          },
+          "depth": 0.5499999999999999,
+          "opacity": 0.9416666666666667,
+          "variant": 2
+        }
+      ],
+      "singleUnit": true,
+      "quantity": {
+        "items": [
+          {
+            "entity": "i4",
+            "mode": "unspecified",
+            "min": null,
+            "max": null,
+            "unit": null,
+            "scope": "unspecified",
+            "extent": "unspecified",
+            "evidence": [],
+            "basis": "model"
+          }
+        ],
+        "rendered": 12,
+        "exact": false,
+        "collective": false,
+        "partUnsupported": false
+      },
+      "quantityLabel": "依场景疏密试画 12 个单元；原文未给精确个体数",
+      "z": 8
+    },
+    {
+      "tool": "water",
+      "entities": [
+        "i2"
+      ],
+      "projectedEntities": [],
+      "names": [
+        "涧"
+      ],
+      "options": {
+        "form": "plane"
+      },
+      "animate": true,
+      "placement": {
+        "anchor": [
+          320,
+          130
+        ],
+        "at": [
+          0.5,
+          0.57
+        ],
+        "scale": 1.5
+      },
+      "instances": [
+        {
+          "placement": {
+            "anchor": [
+              320,
+              135
+            ],
+            "at": [
+              0.5,
+              0.46
+            ],
+            "scale": 1.6
+          },
+          "depth": 0,
+          "opacity": 1,
+          "variant": 0
+        }
+      ],
+      "singleUnit": false,
+      "quantity": {
+        "items": [
+          {
+            "entity": "i2",
+            "mode": "unspecified",
+            "min": null,
+            "max": null,
+            "unit": null,
+            "scope": "unspecified",
+            "extent": "unspecified",
+            "evidence": [],
+            "basis": "model"
+          }
+        ],
+        "rendered": 1,
+        "exact": false,
+        "collective": false,
+        "partUnsupported": false
+      },
+      "quantityLabel": "整体笔触图层；内部数量尚未适配",
+      "z": -10,
+      "surface": {
+        "top": 0.46,
+        "bottom": 1
+      },
+      "clip": [
+        [
+          0.48,
+          0.46
+        ],
+        [
+          0.66,
+          0.46
+        ],
+        [
+          0.55,
+          0.67
+        ],
+        [
+          0.83,
+          1.1
+        ],
+        [
+          0.48,
+          1.1
+        ],
+        [
+          0.37,
+          0.7
+        ]
+      ]
+    },
+    {
+      "tool": "grass",
+      "entities": [
+        "i1"
+      ],
+      "projectedEntities": [],
+      "names": [
+        "幽草"
+      ],
+      "options": {},
+      "animate": true,
+      "placement": {
+        "anchor": [
+          320,
+          315
+        ],
+        "at": [
+          0.08,
+          0.74
+        ],
+        "scale": 1
+      },
+      "instances": [
+        {
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.08,
+              0.74
+            ],
+            "scale": 0.38
+          },
+          "depth": 0,
+          "opacity": 0.594,
+          "variant": 0
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.2963,
+              0.756
+            ],
+            "scale": 0.4013333333333333
+          },
+          "depth": 0.04,
+          "opacity": 0.622,
+          "variant": 1
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.1626,
+              0.772
+            ],
+            "scale": 0.4226666666666667
+          },
+          "depth": 0.08,
+          "opacity": 0.6499999999999999,
+          "variant": 2
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.3789,
+              0.788
+            ],
+            "scale": 0.444
+          },
+          "depth": 0.12,
+          "opacity": 0.6779999999999999,
+          "variant": 0
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.24519999999999997,
+              0.804
+            ],
+            "scale": 0.4653333333333333
+          },
+          "depth": 0.16,
+          "opacity": 0.706,
+          "variant": 1
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.11149999999999996,
+              0.82
+            ],
+            "scale": 0.4866666666666667
+          },
+          "depth": 0.19999999999999998,
+          "opacity": 0.734,
+          "variant": 2
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.32780000000000004,
+              0.836
+            ],
+            "scale": 0.508
+          },
+          "depth": 0.24,
+          "opacity": 0.762,
+          "variant": 0
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.19409999999999986,
+              0.852
+            ],
+            "scale": 0.5293333333333333
+          },
+          "depth": 0.27999999999999997,
+          "opacity": 0.7899999999999999,
+          "variant": 1
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.4104,
+              0.868
+            ],
+            "scale": 0.5506666666666666
+          },
+          "depth": 0.32,
+          "opacity": 0.818,
+          "variant": 2
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.2767000000000001,
+              0.884
+            ],
+            "scale": 0.5720000000000001
+          },
+          "depth": 0.36,
+          "opacity": 0.8459999999999999,
+          "variant": 0
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.1429999999999999,
+              0.8999999999999999
+            ],
+            "scale": 0.5933333333333333
+          },
+          "depth": 0.39999999999999997,
+          "opacity": 0.8739999999999999,
+          "variant": 1
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.3593,
+              0.9159999999999999
+            ],
+            "scale": 0.6146666666666667
+          },
+          "depth": 0.43999999999999995,
+          "opacity": 0.9019999999999999,
+          "variant": 2
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.22560000000000013,
+              0.9319999999999999
+            ],
+            "scale": 0.636
+          },
+          "depth": 0.48,
+          "opacity": 0.9299999999999999,
+          "variant": 0
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.09190000000000025,
+              0.948
+            ],
+            "scale": 0.6573333333333333
+          },
+          "depth": 0.52,
+          "opacity": 0.958,
+          "variant": 1
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.3081999999999997,
+              0.964
+            ],
+            "scale": 0.6786666666666668
+          },
+          "depth": 0.5599999999999999,
+          "opacity": 0.986,
+          "variant": 2
+        }
+      ],
+      "singleUnit": true,
+      "quantity": {
+        "items": [
+          {
+            "entity": "i1",
+            "mode": "unspecified",
+            "min": null,
+            "max": null,
+            "unit": null,
+            "scope": "unspecified",
+            "extent": "unspecified",
+            "evidence": [],
+            "basis": "model"
+          }
+        ],
+        "rendered": 15,
+        "exact": false,
+        "collective": false,
+        "partUnsupported": false
+      },
+      "quantityLabel": "数量未精确；本地试画 15 个单元",
+      "z": 13
+    },
+    {
+      "tool": "bird",
+      "entities": [
+        "i3"
+      ],
+      "projectedEntities": [],
+      "names": [
+        "黄鹂"
+      ],
+      "options": {
+        "pose": "resting",
+        "tone": "ink",
+        "facing": "right"
+      },
+      "animate": true,
+      "placement": {
+        "anchor": [
+          320,
+          190
+        ],
+        "at": [
+          0.12,
+          0.43
+        ],
+        "scale": 0.78
+      },
+      "drawingLabel": "鸟意（写意借形）",
+      "instances": [
+        {
+          "placement": {
+            "anchor": [
+              320,
+              190
+            ],
+            "at": [
+              0.12,
+              0.43
+            ],
+            "scale": 0.43
+          },
+          "depth": 0,
+          "opacity": 0.7374999999999999,
+          "variant": 0
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              190
+            ],
+            "at": [
+              0.1625,
+              0.52888
+            ],
+            "scale": 0.46749999999999997
+          },
+          "depth": 0.15,
+          "opacity": 0.8125,
+          "variant": 1
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              190
+            ],
+            "at": [
+              0.20500000000000002,
+              0.46776
+            ],
+            "scale": 0.505
+          },
+          "depth": 0.3,
+          "opacity": 0.8875,
+          "variant": 2
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              190
+            ],
+            "at": [
+              0.2475,
+              0.56664
+            ],
+            "scale": 0.5425
+          },
+          "depth": 0.44999999999999996,
+          "opacity": 0.9624999999999999,
+          "variant": 0
+        }
+      ],
+      "singleUnit": true,
+      "quantity": {
+        "items": [
+          {
+            "entity": "i3",
+            "mode": "unspecified",
+            "min": null,
+            "max": null,
+            "unit": null,
+            "scope": "unspecified",
+            "extent": "unspecified",
+            "evidence": [],
+            "basis": "model"
+          }
+        ],
+        "rendered": 4,
+        "exact": false,
+        "collective": false,
+        "partUnsupported": false
+      },
+      "quantityLabel": "数量未精确；本地试画 4 个单元",
+      "z": 16
+    },
+    {
+      "tool": "landscape",
+      "names": [
+        "构图依托·地面"
+      ],
+      "entities": [],
+      "projectedEntities": [],
+      "options": {
+        "form": "ground"
+      },
+      "animate": false,
+      "placement": {
+        "anchor": [
+          320,
+          194
+        ],
+        "at": [
+          0.5,
+          0.48
+        ],
+        "scale": 1.6
+      },
+      "instances": [
+        {
+          "placement": {
+            "anchor": [
+              320,
+              194
+            ],
+            "at": [
+              0.5,
+              0.48
+            ],
+            "scale": 1.6
+          },
+          "variant": 0,
+          "depth": 0,
+          "opacity": 1
+        }
+      ],
+      "singleUnit": false,
+      "inferred": true,
+      "provenance": {
+        "basis": "local-context",
+        "reason": "树根与幽草生于溪岸，溪流另分水域"
+      },
+      "quantity": {
+        "rendered": 1,
+        "exact": false,
+        "items": []
+      },
+      "quantityLabel": "背景依托，不计入意象覆盖",
+      "z": -18
+    }
+  ],
+  "spatial": [],
+  "scene": {
+    "kind": "wooded-creek",
+    "notes": [
+      "水面以连续色层和水纹构成空间；水面的范围、视点与水平线是本地构图选择，不自动增加岸或陆地。",
+      "先划分承托地形、群落与主体活动区域；场景密度和背景依托是本地构图推断，不冒充原文明示意象。"
+    ],
+    "waterline": 0.46,
+    "basis": "local-context",
+    "regions": {
+      "bank": [
+        [
+          0,
+          0.6
+        ],
+        [
+          0.43,
+          0.6
+        ],
+        [
+          0.58,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "water": [
+        [
+          0.48,
+          0.46
+        ],
+        [
+          0.66,
+          0.46
+        ],
+        [
+          0.55,
+          0.67
+        ],
+        [
+          0.83,
+          1.1
+        ],
+        [
+          0.48,
+          1.1
+        ],
+        [
+          0.37,
+          0.7
+        ]
+      ]
+    },
+    "supports": [
+      {
+        "form": "ground",
+        "reason": "树根与幽草生于溪岸，溪流另分水域"
+      }
+    ],
+    "organization": {
+      "version": "1.0",
+      "strategy": "regional-proposal",
+      "regions": {
+        "bank": [
+          [
+            0,
+            0.6
+          ],
+          [
+            0.43,
+            0.6
+          ],
+          [
+            0.58,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "water": [
+          [
+            0.48,
+            0.46
+          ],
+          [
+            0.66,
+            0.46
+          ],
+          [
+            0.55,
+            0.67
+          ],
+          [
+            0.83,
+            1.1
+          ],
+          [
+            0.48,
+            1.1
+          ],
+          [
+            0.37,
+            0.7
+          ]
+        ]
+      },
+      "candidates": [
+        {
+          "layout": "existing",
+          "errors": 0,
+          "cost": 245.486
+        }
+      ],
+      "repairs": [],
+      "limitations": [
+        "几何检查不判定诗意理解或审美合格",
+        "动作时序与整首诗的场景切换尚未编排"
+      ],
+      "graph": {
+        "nodes": [
+          {
+            "id": "l0",
+            "entities": [
+              "i4"
+            ],
+            "tool": "tree",
+            "role": "vegetation",
+            "habitat": "land",
+            "inferred": false,
+            "support": "l4"
+          },
+          {
+            "id": "l1",
+            "entities": [
+              "i2"
+            ],
+            "tool": "water",
+            "role": "water",
+            "habitat": null,
+            "inferred": false,
+            "support": null
+          },
+          {
+            "id": "l2",
+            "entities": [
+              "i1"
+            ],
+            "tool": "grass",
+            "role": "vegetation",
+            "habitat": "land",
+            "inferred": false,
+            "support": "l4"
+          },
+          {
+            "id": "l3",
+            "entities": [
+              "i3"
+            ],
+            "tool": "bird",
+            "role": "fauna",
+            "habitat": "air",
+            "inferred": false,
+            "support": null
+          },
+          {
+            "id": "l4",
+            "entities": [],
+            "tool": "landscape",
+            "role": "terrain",
+            "habitat": null,
+            "inferred": true,
+            "support": null
+          }
+        ],
+        "edges": [
+          {
+            "type": "supported-by",
+            "source": "l0",
+            "target": "l4",
+            "basis": "local-composition",
+            "habitat": "land"
+          },
+          {
+            "type": "supported-by",
+            "source": "l2",
+            "target": "l4",
+            "basis": "local-composition",
+            "habitat": "land"
+          },
+          {
+            "type": "supported-by",
+            "source": "l3",
+            "target": null,
+            "basis": "local-composition",
+            "habitat": "air"
+          }
+        ],
+        "setting": "wooded-creek"
+      },
+      "audit": {
+        "scope": "implemented-geometry-and-drawing-gaps",
+        "coverage": {
+          "scope": "extracted-entities-only",
+          "present": 4,
+          "mapped": 4,
+          "parameters": [],
+          "missing": []
+        },
+        "checks": [
+          "presence",
+          "count",
+          "finite",
+          "water-support",
+          "cliff-support",
+          "grove-spread",
+          "drawing-gaps"
+        ],
+        "status": "checks-passed",
+        "errors": 0,
+        "review": 0,
+        "issues": [],
+        "metrics": {
+          "overlapPenalty": 20.447,
+          "balancePenalty": 0.016,
+          "motifFootprint": 3.039,
+          "landArea": 0
+        },
+        "cost": 245.486,
+        "aestheticAcceptance": "pending-user"
+      }
+    }
+  },
+  "omitted": [],
+  "notes": [
+    "涧虽被归为地点，仍按原文明示的自然景物匹配；具体空间关系另行处理。",
+    "黄鹂：以通用写意鸟形表现，不细分物种。这是本地写意借形，保留原词义。",
+    "黄鹂可由鸣声借鸟形联想，不把绘出的姿态当作原文已明确看见的动作。",
+    "位置、大小、笔触与默认微动是本地试画选择；数量解释与本地显示数量分别记录。",
+    "未明说的群落数量、疏密、近中远层次与变体均为本地构图选择；种类可按已声明的写意画法概括，不把铺展词换算成精确物体数量。",
+    "水面以连续色层和水纹构成空间；水面的范围、视点与水平线是本地构图选择，不自动增加岸或陆地。",
+    "先划分承托地形、群落与主体活动区域；场景密度和背景依托是本地构图推断，不冒充原文明示意象。"
+  ],
+  "relations": []
+}

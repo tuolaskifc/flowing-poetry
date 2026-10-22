@@ -1,0 +1,396 @@
+{
+  "id": "2026-10-22T14-05-21-268Z-d7719e4b",
+  "fingerprint": "f131205fccd4f5757741d1ca881472cba4a90b373c16ac0438dc7ca1eb0a48ac",
+  "poem": "渡头馀落日，墟里上孤烟。",
+  "source": {
+    "provider": "场景组织层·新诗实测",
+    "author": "王维",
+    "title": "辋川闲居赠裴秀才迪",
+    "dynasty": "唐"
+  },
+  "mode": "scene",
+  "model": "DeepSeek-V4.1-Flash",
+  "started_at": "2026-10-22T14:05:21.270Z",
+  "cached": false,
+  "http_status": 200,
+  "usage": {
+    "completion_tokens": 498,
+    "prompt_tokens": 3441,
+    "total_tokens": 3939,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  },
+  "finish_reason": "stop",
+  "analysis": {
+    "schema_version": "3.2",
+    "poem": "渡头馀落日，墟里上孤烟。",
+    "reading": "渡口边还留着落日余晖，村落里升起一缕孤烟。两句写黄昏时分的江边村景，一静一动，显出空旷与孤寂。",
+    "entities": [
+      {
+        "id": "i1",
+        "mentions": [
+          "渡头"
+        ],
+        "concept": "渡口",
+        "kind": "place",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "渡头馀落日"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i2",
+        "mentions": [
+          "落日"
+        ],
+        "concept": "落日",
+        "kind": "object",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "渡头馀落日"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i3",
+        "mentions": [
+          "墟里"
+        ],
+        "concept": "村落",
+        "kind": "place",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "墟里上孤烟"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i4",
+        "mentions": [
+          "孤烟"
+        ],
+        "concept": "炊烟",
+        "kind": "object",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "墟里上孤烟"
+        ],
+        "quantity": {
+          "mode": "exact",
+          "min": 1,
+          "max": 1,
+          "unit": null,
+          "scope": "individual",
+          "extent": "local",
+          "evidence": [
+            "孤烟"
+          ]
+        }
+      }
+    ],
+    "relations": [],
+    "atmosphere": {
+      "labels": [
+        "黄昏",
+        "空旷",
+        "孤寂"
+      ],
+      "valence": "neutral",
+      "energy": "low",
+      "tension": "low",
+      "openness": "high",
+      "evidence": [
+        "渡头馀落日",
+        "墟里上孤烟"
+      ]
+    },
+    "time": {
+      "markers": [
+        {
+          "surface": "落日",
+          "meaning": "日落时分，黄昏"
+        }
+      ],
+      "note": null
+    },
+    "uncertainties": [
+      "“上”可理解为炊烟升起，也可理解为烟向上升腾的方向，动作细节不明确。",
+      "“馀”表示落日尚存余晖，但余晖的具体形态与范围未明。"
+    ],
+    "spatial": []
+  },
+  "validation": {
+    "valid": true,
+    "errors": [],
+    "warnings": [
+      "模型保留了不确定性，需要审阅"
+    ],
+    "review_required": true
+  },
+  "plan": {
+    "version": "scene-organization-1",
+    "seed": 2344149650,
+    "settings": {
+      "wind": 0,
+      "density": 0.45,
+      "palette": "clear"
+    },
+    "layers": [
+      {
+        "tool": "landscape",
+        "entities": [
+          "i2"
+        ],
+        "projectedEntities": [],
+        "names": [
+          "落日"
+        ],
+        "options": {
+          "form": "sun"
+        },
+        "animate": false,
+        "placement": {
+          "anchor": [
+            320,
+            194
+          ],
+          "at": [
+            0.5,
+            0.5
+          ],
+          "scale": 1.5
+        },
+        "instances": [
+          {
+            "placement": {
+              "anchor": [
+                320,
+                194
+              ],
+              "at": [
+                0.5,
+                0.5
+              ],
+              "scale": 1.6
+            },
+            "depth": 0,
+            "opacity": 1,
+            "variant": 0
+          }
+        ],
+        "singleUnit": false,
+        "quantity": {
+          "items": [
+            {
+              "entity": "i2",
+              "mode": "unspecified",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "unspecified",
+              "extent": "unspecified",
+              "evidence": [],
+              "basis": "model"
+            }
+          ],
+          "rendered": 1,
+          "exact": false,
+          "collective": false,
+          "partUnsupported": false
+        },
+        "quantityLabel": "整体笔触图层；内部数量尚未适配",
+        "z": -40
+      },
+      {
+        "tool": "mist",
+        "entities": [
+          "i4"
+        ],
+        "projectedEntities": [],
+        "names": [
+          "孤烟"
+        ],
+        "options": {},
+        "animate": true,
+        "placement": {
+          "anchor": [
+            320,
+            190
+          ],
+          "at": [
+            0.5,
+            0.48
+          ],
+          "scale": 1.4
+        },
+        "instances": [
+          {
+            "placement": {
+              "anchor": [
+                320,
+                190
+              ],
+              "at": [
+                0.5,
+                0.48
+              ],
+              "scale": 1.4
+            },
+            "depth": 0,
+            "opacity": 1,
+            "variant": 0
+          }
+        ],
+        "singleUnit": false,
+        "quantity": {
+          "items": [
+            {
+              "entity": "i4",
+              "mode": "exact",
+              "min": 1,
+              "max": 1,
+              "unit": null,
+              "scope": "individual",
+              "extent": "local",
+              "evidence": [
+                "孤烟"
+              ],
+              "basis": "model"
+            }
+          ],
+          "rendered": 1,
+          "exact": false,
+          "collective": false,
+          "partUnsupported": false
+        },
+        "quantityLabel": "整体笔触图层；内部数量尚未适配"
+      }
+    ],
+    "spatial": [],
+    "scene": {
+      "kind": "landscape",
+      "notes": [],
+      "waterline": null,
+      "organization": {
+        "version": "1.0",
+        "strategy": "isolated-study",
+        "regions": {},
+        "candidates": [
+          {
+            "layout": "existing",
+            "errors": 0,
+            "cost": 0
+          }
+        ],
+        "repairs": [],
+        "limitations": [
+          "几何检查不判定诗意理解或审美合格",
+          "动作时序与整首诗的场景切换尚未编排"
+        ],
+        "graph": {
+          "nodes": [
+            {
+              "id": "l0",
+              "entities": [
+                "i2"
+              ],
+              "tool": "landscape",
+              "role": "sky",
+              "habitat": null,
+              "inferred": false,
+              "support": null
+            },
+            {
+              "id": "l1",
+              "entities": [
+                "i4"
+              ],
+              "tool": "mist",
+              "role": "atmosphere",
+              "habitat": null,
+              "inferred": false,
+              "support": null
+            }
+          ],
+          "edges": [],
+          "setting": "landscape"
+        },
+        "audit": {
+          "scope": "implemented-geometry-only",
+          "checks": [
+            "presence",
+            "count",
+            "finite",
+            "water-support",
+            "cliff-support",
+            "grove-spread"
+          ],
+          "status": "checks-passed",
+          "errors": 0,
+          "review": 0,
+          "issues": [],
+          "metrics": {
+            "overlapPenalty": 0,
+            "balancePenalty": 0,
+            "motifFootprint": 0,
+            "landArea": 0
+          },
+          "cost": 0,
+          "aestheticAcceptance": "pending-user"
+        }
+      }
+    },
+    "omitted": [
+      {
+        "id": "i1",
+        "name": "渡头",
+        "reason": "该专名人物、地名或抽象含义暂不作实景补画"
+      },
+      {
+        "id": "i3",
+        "name": "墟里",
+        "reason": "该专名人物、地名或抽象含义暂不作实景补画"
+      }
+    ],
+    "notes": [
+      "位置、大小、笔触与默认微动是本地试画选择；数量解释与本地显示数量分别记录。",
+      "孤烟的数量解释已保留，当前工具以整体图层表现，内部笔触尚未按数量逐个适配。",
+      "未明说的群落数量、疏密、近中远层次与变体均为本地构图选择；种类可按已声明的写意画法概括，不把铺展词换算成精确物体数量。"
+    ],
+    "relations": []
+  },
+  "elapsed_seconds": 5.5
+}

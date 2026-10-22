@@ -79,7 +79,7 @@ test('only an asserted flying bird opens and animates its wings',()=>{
 
 test('lan uses its plant study without reinterpreting boats or another plant as orchids',()=>{
   const plan=buildPlan(fixture('兰与兰舟、兰桡、木兰',[entity('i1','兰',{kind:'organism'}),entity('i2','兰舟',{kind:'object'}),entity('i3','兰桡',{kind:'object'}),entity('i4','木兰',{kind:'organism'})]));
-  assert.deepEqual(plan.layers.map(l=>l.tool),['tree','boat','orchid']);
+  assert.deepEqual(plan.layers.filter(l=>!l.inferred).map(l=>l.tool),['tree','boat','orchid']);
   assert.deepEqual(plan.omitted.map(e=>e.name),['兰桡']);
 });
 

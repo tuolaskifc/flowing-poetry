@@ -1,0 +1,1154 @@
+{
+  "version": "scene-organization-1",
+  "seed": 3820029434,
+  "settings": {
+    "wind": 0,
+    "density": 0.45,
+    "palette": "clear"
+  },
+  "layers": [
+    {
+      "tool": "landscape",
+      "entities": [
+        "i4"
+      ],
+      "projectedEntities": [],
+      "names": [
+        "小径"
+      ],
+      "options": {
+        "form": "path"
+      },
+      "animate": false,
+      "placement": {
+        "anchor": [
+          320,
+          194
+        ],
+        "at": [
+          0.5,
+          0.57
+        ],
+        "scale": 1.5
+      },
+      "instances": [
+        {
+          "placement": {
+            "anchor": [
+              320,
+              194
+            ],
+            "at": [
+              0.5,
+              0.57
+            ],
+            "scale": 1.6
+          },
+          "depth": 0,
+          "opacity": 1,
+          "variant": 0
+        }
+      ],
+      "singleUnit": false,
+      "quantity": {
+        "items": [
+          {
+            "entity": "i4",
+            "mode": "unspecified",
+            "min": null,
+            "max": null,
+            "unit": null,
+            "scope": "unspecified",
+            "extent": "unspecified",
+            "evidence": [],
+            "basis": "model"
+          }
+        ],
+        "rendered": 1,
+        "exact": false,
+        "collective": false,
+        "partUnsupported": false
+      },
+      "quantityLabel": "整体笔触图层；内部数量尚未适配",
+      "z": -20
+    },
+    {
+      "tool": "dwelling",
+      "entities": [
+        "i2"
+      ],
+      "projectedEntities": [],
+      "names": [
+        "屋"
+      ],
+      "options": {
+        "kind": "house"
+      },
+      "animate": true,
+      "placement": {
+        "anchor": [
+          320,
+          307
+        ],
+        "at": [
+          0.43,
+          0.73
+        ],
+        "scale": 1.05
+      },
+      "drawingLabel": "房舍",
+      "instances": [
+        {
+          "placement": {
+            "anchor": [
+              320,
+              307
+            ],
+            "at": [
+              0.43,
+              0.73
+            ],
+            "scale": 0.78
+          },
+          "depth": 0.15,
+          "opacity": 1,
+          "variant": 0
+        }
+      ],
+      "singleUnit": true,
+      "quantity": {
+        "items": [
+          {
+            "entity": "i2",
+            "mode": "unspecified",
+            "min": null,
+            "max": null,
+            "unit": null,
+            "scope": "unspecified",
+            "extent": "unspecified",
+            "evidence": [],
+            "basis": "model"
+          }
+        ],
+        "rendered": 1,
+        "exact": false,
+        "collective": false,
+        "partUnsupported": false
+      },
+      "quantityLabel": "数量未精确；本地试画 1 个单元",
+      "z": 12,
+      "grounding": true
+    },
+    {
+      "tool": "tree",
+      "entities": [
+        "i1"
+      ],
+      "projectedEntities": [],
+      "names": [
+        "树"
+      ],
+      "options": {
+        "form": "broadleaf",
+        "crown": "lines"
+      },
+      "animate": true,
+      "placement": {
+        "anchor": [
+          320,
+          388
+        ],
+        "at": [
+          0.77,
+          0.7299999999999999
+        ],
+        "scale": 1.15
+      },
+      "instances": [
+        {
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.823475241575,
+              0.7266447368421052
+            ],
+            "scale": 0.6057278174125
+          },
+          "depth": 0.013157894736842105,
+          "opacity": 0.73280679775,
+          "variant": 0
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.716524758425,
+              0.7333552631578946
+            ],
+            "scale": 0.517875634825
+          },
+          "depth": 0.039473684210526314,
+          "opacity": 0.6564135955,
+          "variant": 1
+        }
+      ],
+      "singleUnit": true,
+      "quantity": {
+        "items": [
+          {
+            "entity": "i1",
+            "mode": "exact",
+            "min": 2,
+            "max": 2,
+            "unit": null,
+            "scope": "individual",
+            "extent": "unspecified",
+            "evidence": [],
+            "basis": "model"
+          }
+        ],
+        "rendered": 2,
+        "exact": true,
+        "collective": false,
+        "partUnsupported": false
+      },
+      "quantityLabel": "按提取数量绘制 2 个",
+      "z": 8
+    },
+    {
+      "tool": "grass",
+      "entities": [
+        "i3"
+      ],
+      "projectedEntities": [],
+      "names": [
+        "草"
+      ],
+      "options": {},
+      "animate": true,
+      "placement": {
+        "anchor": [
+          320,
+          315
+        ],
+        "at": [
+          0.5133462568013892,
+          0.7807309941520467
+        ],
+        "scale": 1
+      },
+      "instances": [
+        {
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.25392951685000004,
+              0.6267763157894737
+            ],
+            "scale": 0.30932441853750003
+          },
+          "depth": 0.06578947368421052,
+          "opacity": 0.73280679775,
+          "variant": 0
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.1469790337,
+              0.6334868421052632
+            ],
+            "scale": 0.259668837075
+          },
+          "depth": 0.09210526315789473,
+          "opacity": 0.6564135955,
+          "variant": 1
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.04002855054999998,
+              0.6401973684210526
+            ],
+            "scale": 0.21001325561249998
+          },
+          "depth": 0.11842105263157894,
+          "opacity": 0.58002039325,
+          "variant": 2
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.21307806740000004,
+              0.6469078947368421
+            ],
+            "scale": 0.29035767415
+          },
+          "depth": 0.14473684210526316,
+          "opacity": 0.703627191,
+          "variant": 0
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.10612758425000007,
+              0.6536184210526316
+            ],
+            "scale": 0.24070209268750004
+          },
+          "depth": 0.17105263157894737,
+          "opacity": 0.62723398875,
+          "variant": 1
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.2791771011,
+              0.6603289473684211
+            ],
+            "scale": 0.321046511225
+          },
+          "depth": 0.19736842105263158,
+          "opacity": 0.7508407865,
+          "variant": 2
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.17222661795000016,
+              0.6670394736842105
+            ],
+            "scale": 0.27139092976250007
+          },
+          "depth": 0.2236842105263158,
+          "opacity": 0.6744475842500001,
+          "variant": 0
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.06527613480000007,
+              0.67375
+            ],
+            "scale": 0.22173534830000002
+          },
+          "depth": 0.25,
+          "opacity": 0.598054382,
+          "variant": 1
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.23832565165,
+              0.6804605263157895
+            ],
+            "scale": 0.3020797668375
+          },
+          "depth": 0.27631578947368424,
+          "opacity": 0.72166117975,
+          "variant": 2
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.13137516850000017,
+              0.687171052631579
+            ],
+            "scale": 0.25242418537500005
+          },
+          "depth": 0.3026315789473684,
+          "opacity": 0.6452679775000001,
+          "variant": 0
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.30442468535000006,
+              0.6938815789473685
+            ],
+            "scale": 0.3327686039125
+          },
+          "depth": 0.32894736842105265,
+          "opacity": 0.76887477525,
+          "variant": 1
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.1974742022,
+              0.7005921052631578
+            ],
+            "scale": 0.28311302245
+          },
+          "depth": 0.35526315789473684,
+          "opacity": 0.692481573,
+          "variant": 2
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.09052371905000016,
+              0.7073026315789473
+            ],
+            "scale": 0.23345744098750007
+          },
+          "depth": 0.3815789473684211,
+          "opacity": 0.6160883707500001,
+          "variant": 0
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.2635732359000006,
+              0.7140131578947368
+            ],
+            "scale": 0.3138018595250003
+          },
+          "depth": 0.40789473684210525,
+          "opacity": 0.7396951685000004,
+          "variant": 1
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.1566227527500005,
+              0.7207236842105263
+            ],
+            "scale": 0.26414627806250024
+          },
+          "depth": 0.4342105263157895,
+          "opacity": 0.6633019662500004,
+          "variant": 2
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.04967226960000041,
+              0.7274342105263157
+            ],
+            "scale": 0.21449069660000017
+          },
+          "depth": 0.4605263157894737,
+          "opacity": 0.5869087640000002,
+          "variant": 0
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.22272178645000035,
+              0.7341447368421052
+            ],
+            "scale": 0.29483511513750016
+          },
+          "depth": 0.4868421052631579,
+          "opacity": 0.7105155617500002,
+          "variant": 1
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.11577130330000024,
+              0.7408552631578947
+            ],
+            "scale": 0.24517953367500012
+          },
+          "depth": 0.5131578947368421,
+          "opacity": 0.6341223595000002,
+          "variant": 2
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.9432749887000005,
+              0.7475657894736842
+            ],
+            "scale": 0.3255239522125003
+          },
+          "depth": 0.5394736842105263,
+          "opacity": 0.7577291572500005,
+          "variant": 0
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.8516031460000004,
+              0.7542763157894736
+            ],
+            "scale": 0.27586837075000026
+          },
+          "depth": 0.5657894736842105,
+          "opacity": 0.6813359550000004,
+          "variant": 1
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.7599313033000004,
+              0.9485526315789474
+            ],
+            "scale": 0.33621278928750026
+          },
+          "depth": 0.5921052631578947,
+          "opacity": 0.8424484774750003,
+          "variant": 2
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.9082594606000003,
+              0.9547105263157896
+            ],
+            "scale": 0.4165572078250002
+          },
+          "depth": 0.618421052631579,
+          "opacity": 0.9536945954500002,
+          "variant": 0
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.8165876179000002,
+              0.9608684210526316
+            ],
+            "scale": 0.3669016263625002
+          },
+          "depth": 0.6447368421052632,
+          "opacity": 0.8849407134250001,
+          "variant": 1
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.9649157752000002,
+              0.9670263157894737
+            ],
+            "scale": 0.44724604490000014
+          },
+          "depth": 0.6710526315789473,
+          "opacity": 0.9961868314000001,
+          "variant": 2
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.8732439325000005,
+              0.9731842105263159
+            ],
+            "scale": 0.3975904634375003
+          },
+          "depth": 0.6973684210526315,
+          "opacity": 0.9274329493750004,
+          "variant": 0
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.7815720898,
+              0.9793421052631579
+            ],
+            "scale": 0.34793488197500005
+          },
+          "depth": 0.7236842105263158,
+          "opacity": 0.85867906735,
+          "variant": 1
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.9299002471000009,
+              0.9855
+            ],
+            "scale": 0.42827930051250046
+          },
+          "depth": 0.75,
+          "opacity": 0.9699251853250006,
+          "variant": 2
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.8382284044000008,
+              0.8116578947368421
+            ],
+            "scale": 0.3786237190500004
+          },
+          "depth": 0.7763157894736842,
+          "opacity": 0.9011713033000005,
+          "variant": 0
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.7465565617000007,
+              0.8178157894736843
+            ],
+            "scale": 0.3289681375875004
+          },
+          "depth": 0.8026315789473685,
+          "opacity": 0.8324174212750005,
+          "variant": 1
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.8948847190000007,
+              0.8239736842105264
+            ],
+            "scale": 0.40931255612500034
+          },
+          "depth": 0.8289473684210527,
+          "opacity": 0.9436635392500005,
+          "variant": 2
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.8032128763000006,
+              0.8301315789473684
+            ],
+            "scale": 0.3596569746625003
+          },
+          "depth": 0.8552631578947368,
+          "opacity": 0.8749096572250004,
+          "variant": 0
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.9515410336000005,
+              0.8362894736842106
+            ],
+            "scale": 0.4400013932000003
+          },
+          "depth": 0.881578947368421,
+          "opacity": 0.9861557752000003,
+          "variant": 1
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.8598691909000005,
+              0.8424473684210527
+            ],
+            "scale": 0.39034581173750027
+          },
+          "depth": 0.9078947368421053,
+          "opacity": 0.9174018931750003,
+          "variant": 2
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.7681973482000003,
+              0.8486052631578948
+            ],
+            "scale": 0.3406902302750002
+          },
+          "depth": 0.9342105263157895,
+          "opacity": 0.8486480111500002,
+          "variant": 0
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.9165255055000003,
+              0.8547631578947369
+            ],
+            "scale": 0.4210346488125002
+          },
+          "depth": 0.9605263157894737,
+          "opacity": 0.9598941291250002,
+          "variant": 1
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.8248536628000002,
+              0.860921052631579
+            ],
+            "scale": 0.37137906735000015
+          },
+          "depth": 0.9868421052631579,
+          "opacity": 0.8911402471000001,
+          "variant": 2
+        }
+      ],
+      "singleUnit": true,
+      "quantity": {
+        "items": [
+          {
+            "entity": "i3",
+            "mode": "many",
+            "min": null,
+            "max": null,
+            "unit": null,
+            "scope": "unspecified",
+            "extent": "spread",
+            "evidence": [],
+            "basis": "model"
+          }
+        ],
+        "rendered": 36,
+        "exact": false,
+        "collective": true,
+        "partUnsupported": false
+      },
+      "quantityLabel": "成片分布；本地试画 36 个单元",
+      "z": 14
+    },
+    {
+      "tool": "landscape",
+      "entities": [],
+      "projectedEntities": [],
+      "names": [
+        "构图依托·地面"
+      ],
+      "options": {
+        "form": "ground",
+        "edge": "soft"
+      },
+      "animate": false,
+      "placement": {
+        "anchor": [
+          320,
+          194
+        ],
+        "at": [
+          0.5,
+          0.54
+        ],
+        "scale": 1.6
+      },
+      "instances": [
+        {
+          "placement": {
+            "anchor": [
+              320,
+              265
+            ],
+            "at": [
+              0.5,
+              0.54
+            ],
+            "scale": 2.5
+          },
+          "variant": 0,
+          "depth": 0,
+          "opacity": 1
+        }
+      ],
+      "singleUnit": false,
+      "inferred": true,
+      "provenance": {
+        "basis": "local-context",
+        "reason": "生长物、房舍和陆上主体需要共同地表；这是本地构图依托"
+      },
+      "quantity": {
+        "rendered": 1,
+        "exact": false,
+        "items": []
+      },
+      "quantityLabel": "本地环境依托，不计入原文意象覆盖",
+      "z": -18,
+      "clip": [
+        [
+          0,
+          0.5
+        ],
+        [
+          1,
+          0.5
+        ],
+        [
+          1,
+          1.04
+        ],
+        [
+          0,
+          1.04
+        ]
+      ]
+    }
+  ],
+  "spatial": [
+    {
+      "type": "outside",
+      "source": "i1",
+      "target": "i2",
+      "modality": "asserted",
+      "basis": "explicit",
+      "evidence": [
+        "两树在屋外，草地留有小径。"
+      ],
+      "visualized": true,
+      "reason": "由通用场景约束组织；具体方向、距离与尺度属于本地构图"
+    }
+  ],
+  "scene": {
+    "kind": "woodland",
+    "notes": [
+      "房舍下方的淡墨承托是本地构图，不把它当作诗句额外明说的地面或投影。",
+      "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。",
+      "通用场景层先组织地面、水域、群落和主体，再比较三个布局的依托、相对位置、尺度与遮挡；检查通过不代表审美已通过。"
+    ],
+    "waterline": null,
+    "organization": {
+      "version": "1.0",
+      "strategy": "general-constraints",
+      "regions": {
+        "land": [
+          [
+            0,
+            0.5
+          ],
+          [
+            1,
+            0.5
+          ],
+          [
+            1,
+            1.04
+          ],
+          [
+            0,
+            1.04
+          ]
+        ]
+      },
+      "candidates": [
+        {
+          "layout": 2,
+          "orientation": "open",
+          "errors": 0,
+          "cost": 8.896,
+          "metrics": {
+            "overlapPenalty": 0.637,
+            "balancePenalty": 0.156,
+            "motifFootprint": 0.363,
+            "landArea": 0.54
+          }
+        },
+        {
+          "layout": 0,
+          "orientation": "open",
+          "errors": 0,
+          "cost": 12.183,
+          "metrics": {
+            "overlapPenalty": 0.918,
+            "balancePenalty": 0.147,
+            "motifFootprint": 0.347,
+            "landArea": 0.54
+          }
+        },
+        {
+          "layout": 1,
+          "orientation": "open",
+          "errors": 0,
+          "cost": 15.522,
+          "metrics": {
+            "overlapPenalty": 1.193,
+            "balancePenalty": 0.15,
+            "motifFootprint": 0.356,
+            "landArea": 0.54
+          }
+        }
+      ],
+      "repairs": [
+        {
+          "type": "support-added",
+          "reason": "生长物、房舍和陆上主体需要共同地表；这是本地构图依托"
+        }
+      ],
+      "limitations": [
+        "几何检查不判定诗意理解或审美合格",
+        "动作时序与整首诗的场景切换尚未编排"
+      ],
+      "layout": 2,
+      "orientation": "open",
+      "audit": {
+        "scope": "implemented-geometry-and-drawing-gaps",
+        "coverage": {
+          "scope": "extracted-entities-only",
+          "present": 4,
+          "mapped": 4,
+          "parameters": [],
+          "missing": []
+        },
+        "checks": [
+          "presence",
+          "count",
+          "finite",
+          "support",
+          "scale",
+          "relative-position",
+          "depth",
+          "grove-spread",
+          "drawing-gaps"
+        ],
+        "status": "checks-passed",
+        "errors": 0,
+        "review": 0,
+        "issues": [],
+        "metrics": {
+          "overlapPenalty": 0.637,
+          "balancePenalty": 0.156,
+          "motifFootprint": 0.363,
+          "landArea": 0.54
+        },
+        "cost": 8.896,
+        "aestheticAcceptance": "pending-user"
+      },
+      "graph": {
+        "nodes": [
+          {
+            "id": "l0",
+            "entities": [
+              "i4"
+            ],
+            "tool": "landscape",
+            "role": "terrain",
+            "habitat": null,
+            "inferred": false,
+            "support": null
+          },
+          {
+            "id": "l1",
+            "entities": [
+              "i2"
+            ],
+            "tool": "dwelling",
+            "role": "subject",
+            "habitat": "land",
+            "inferred": false,
+            "support": "l4"
+          },
+          {
+            "id": "l2",
+            "entities": [
+              "i1"
+            ],
+            "tool": "tree",
+            "role": "vegetation",
+            "habitat": "land",
+            "inferred": false,
+            "support": "l4"
+          },
+          {
+            "id": "l3",
+            "entities": [
+              "i3"
+            ],
+            "tool": "grass",
+            "role": "vegetation",
+            "habitat": "land",
+            "inferred": false,
+            "support": "l4"
+          },
+          {
+            "id": "l4",
+            "entities": [],
+            "tool": "landscape",
+            "role": "terrain",
+            "habitat": null,
+            "inferred": true,
+            "support": null
+          }
+        ],
+        "edges": [
+          {
+            "type": "supported-by",
+            "source": "l1",
+            "target": "l4",
+            "basis": "local-composition",
+            "habitat": "land"
+          },
+          {
+            "type": "supported-by",
+            "source": "l2",
+            "target": "l4",
+            "basis": "local-composition",
+            "habitat": "land"
+          },
+          {
+            "type": "supported-by",
+            "source": "l3",
+            "target": "l4",
+            "basis": "local-composition",
+            "habitat": "land"
+          },
+          {
+            "type": "outside",
+            "source": "l2",
+            "target": "l1",
+            "basis": "explicit",
+            "modality": "asserted",
+            "evidence": [
+              "两树在屋外，草地留有小径。"
+            ]
+          }
+        ],
+        "setting": "woodland"
+      }
+    }
+  },
+  "omitted": [],
+  "notes": [
+    "屋虽被归为地点，仍按原文明示的自然景物匹配；具体空间关系另行处理。",
+    "屋：以低层房舍概括用途不同的屋舍。这是本地写意借形，保留原词义。",
+    "小径虽被归为地点，仍按原文明示的自然景物匹配；具体空间关系另行处理。",
+    "位置、大小、笔触与默认微动是本地试画选择；数量解释与本地显示数量分别记录。",
+    "未明说的群落数量、疏密、近中远层次与变体均为本地构图选择；种类可按已声明的写意画法概括，不把铺展词换算成精确物体数量。",
+    "房舍下方的淡墨承托是本地构图，不把它当作诗句额外明说的地面或投影。",
+    "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。",
+    "通用场景层先组织地面、水域、群落和主体，再比较三个布局的依托、相对位置、尺度与遮挡；检查通过不代表审美已通过。"
+  ],
+  "relations": []
+}

@@ -23,7 +23,7 @@ export function compose(analysis,layers,seed){
     const projected=quantities.filter(v=>layer.projectedEntities?.includes(v.entity.id)),counting=quantities.filter(v=>!layer.projectedEntities?.includes(v.entity.id));
     if(projected.length&&!counting.length){count=1;exact=false;notes.push(layer.tool==='boat'?`${layer.names.join('、')}以一舟借形，尚未单画帆；多帆与船数不能机械等同。`:`${layer.names.join('、')}以一匹马借形；局部的蹄数不当作马匹数量。`);}
     for(const {q} of counting){
-      if(layer.tool==='dwelling'&&entities.some(e=>e.mentions.some(m=>/^(孤|荒|山|小)?村(庄|落)?$/.test(m)))){count+=3;exact=false;collective=true;continue;}
+      if(layer.tool==='dwelling'&&entities.some(e=>e.mentions.some(m=>/^(?:(?:孤|荒|山|小|远|近)?村(?:庄|落)?|墟里)$/.test(m)))){count+=3;exact=false;collective=true;continue;}
       if(['bird','oriole'].includes(layer.tool)&&q.scope==='group'&&['双','对'].includes(q.unit)&&['exact','range'].includes(q.mode)){count+=Math.round((q.min+q.max)/2)*2;exact&&=q.mode==='exact';continue;}
       if(layer.options.form==='blossom'&&!(q.scope==='individual'&&['株','树','棵'].includes(q.unit))){const grove=q.scope!=='part'&&(q.mode==='many'||q.extent==='spread');count+=grove?7:1;collective||=grove;exact=false;continue;}
       if(woodland&&q.mode==='unspecified'){count+=14;collective=true;exact=false;continue;}

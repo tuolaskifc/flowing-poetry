@@ -6,7 +6,7 @@ import {buildPlan} from './planner.mjs';
 import recommendation from './recommendation.js';
 test('lodging and named temples share dwelling symbols without materializing city names',()=>{
  const a=fixture('客舍禅房寒山寺，长安望燕京。',[{text:'客舍',kind:'place'},{text:'禅房',kind:'place'},{text:'寒山寺',kind:'place'},{text:'长安',kind:'place'},{text:'燕京',kind:'place'}]);
- const p=buildPlan(a);assert.deepEqual(p.layers.map(l=>[l.tool,l.options.kind]),[['dwelling','house'],['dwelling','temple']]);assert.deepEqual(p.omitted.map(e=>e.name),['长安','燕京']);assert(p.notes.some(n=>n.includes('写意借形')));
+ const p=buildPlan(a);assert.deepEqual(p.layers.filter(l=>!l.inferred).map(l=>[l.tool,l.options.kind]),[['dwelling','house'],['dwelling','temple']]);assert.deepEqual(p.omitted.map(e=>e.name),['长安','燕京']);assert(p.notes.some(n=>n.includes('写意借形')));
  const village=fixture('村舍成片。',[{text:'村舍',kind:'place',quantity:quantity({mode:'many',scope:'group',extent:'spread',evidence:['村舍成片']})}]);const houses=buildPlan(village).layers[0];assert(houses.instances.length>1);assert(!houses.quantity.exact);
 });
 test('species names share birds while original quantities and group units stay distinct',()=>{
@@ -15,7 +15,7 @@ test('species names share birds while original quantities and group units stay d
  const xs=egrets.instances.map(v=>v.placement.at[0]);assert(Math.max(...xs)-Math.min(...xs)>.5);
 });
 test('unspecified birds are sparse individual gestures and ducks have a waterbird option',()=>{
- const a=fixture('鸭与鸦。',[{text:'鸭',kind:'organism'},{text:'鸦',kind:'organism'}]),p=buildPlan(a);assert(p.layers.every(l=>l.instances.length>=3&&l.instances.length<=6));assert(p.layers.some(l=>l.options.pose==='waterbird'));assert(p.layers.some(l=>l.options.pose==='flying'));
+ const a=fixture('鸭与鸦。',[{text:'鸭',kind:'organism'},{text:'鸦',kind:'organism'}]),p=buildPlan(a);assert(p.layers.filter(l=>!l.inferred).every(l=>l.instances.length>=3&&l.instances.length<=6));assert(p.layers.some(l=>l.options.pose==='waterbird'));assert(p.layers.some(l=>l.options.pose==='flying'));
  const b=fixture('鸟未飞。',[{text:'鸟',kind:'organism',evidence:['鸟未飞']}]);assert.equal(buildPlan(b).layers[0].options.pose,'resting');
 });
 test('four hooves project one horse, and a separate whole-horse mention does not duplicate it',()=>{
@@ -24,7 +24,7 @@ test('four hooves project one horse, and a separate whole-horse mention does not
  a.entities.push({id:'i2',mentions:['马'],concept:'马',kind:'organism',role:'scene',presence:'present',evidence:['马'],quantity:quantity({mode:'exact',min:1,max:1,scope:'individual',evidence:['马来']})});p=buildPlan(a);assert.equal(p.layers[0].instances.length,1);assert.equal(p.layers[0].entities.length,2);
 });
 test('literal sound cues may inspire bodies but absence, comparison and named people remain excluded',()=>{
- const a=fixture('鸟声马蹄声，司马望燕京。',[{text:'鸟声',kind:'abstract'},{text:'马蹄声',kind:'abstract'},{text:'司马',kind:'person'},{text:'燕京',kind:'place'}]);assert.deepEqual(buildPlan(a).layers.map(l=>l.tool),['horse','bird']);
+ const a=fixture('鸟声马蹄声，司马望燕京。',[{text:'鸟声',kind:'abstract'},{text:'马蹄声',kind:'abstract'},{text:'司马',kind:'person'},{text:'燕京',kind:'place'}]);assert.deepEqual(buildPlan(a).layers.filter(l=>!l.inferred).map(l=>l.tool),['horse','bird']);
  a.entities[0].presence='absent';a.entities[1].role='reference';assert.equal(buildPlan(a).layers.length,0);
 });
 test('compound plants and ambiguous cuckoos are not blindly mapped to animals',()=>{

@@ -1,0 +1,551 @@
+{
+  "id": "2026-10-22T14-05-46-808Z-f3f5e2e8",
+  "fingerprint": "a0135a12db0978429d8079bd4a76ad8e960f47bf30d28ac58947cf2d61daf42d",
+  "poem": "漠漠帆来重，冥冥鸟去迟。",
+  "source": {
+    "provider": "场景组织层·新诗实测",
+    "author": "韦应物",
+    "title": "赋得暮雨送李胄",
+    "dynasty": "唐"
+  },
+  "mode": "scene",
+  "model": "DeepSeek-V4.1-Flash",
+  "started_at": "2026-10-22T14:05:46.808Z",
+  "cached": false,
+  "http_status": 200,
+  "usage": {
+    "completion_tokens": 351,
+    "prompt_tokens": 3442,
+    "total_tokens": 3793,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 3328
+    }
+  },
+  "finish_reason": "stop",
+  "analysis": {
+    "schema_version": "3.2",
+    "poem": "漠漠帆来重，冥冥鸟去迟。",
+    "reading": "在迷蒙昏暗的背景下，船帆驶来显得沉重，鸟儿飞去显得迟缓。两句以对举写出行进中的迟重感，氛围幽暗而低缓。",
+    "entities": [
+      {
+        "id": "i1",
+        "mentions": [
+          "帆"
+        ],
+        "concept": "船帆",
+        "kind": "object",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "漠漠帆来重"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i2",
+        "mentions": [
+          "鸟"
+        ],
+        "concept": "飞鸟",
+        "kind": "organism",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "冥冥鸟去迟"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      }
+    ],
+    "relations": [],
+    "atmosphere": {
+      "labels": [
+        "迷蒙",
+        "沉重",
+        "迟缓"
+      ],
+      "valence": "neutral",
+      "energy": "low",
+      "tension": "low",
+      "openness": "unclear",
+      "evidence": [
+        "漠漠帆来重",
+        "冥冥鸟去迟"
+      ]
+    },
+    "time": {
+      "markers": [],
+      "note": null
+    },
+    "uncertainties": [
+      "“漠漠”“冥冥”的具体所指不明，可能指天色、水气或视野昏暗。",
+      "“帆”与“鸟”的数量均无原文依据，只能视为未定。",
+      "“来”“去”的方向参照未在句中明说。"
+    ],
+    "spatial": []
+  },
+  "validation": {
+    "valid": true,
+    "errors": [],
+    "warnings": [
+      "模型保留了不确定性，需要审阅"
+    ],
+    "review_required": true
+  },
+  "plan": {
+    "version": "scene-organization-1",
+    "seed": 4153575622,
+    "settings": {
+      "wind": 0,
+      "density": 0.45,
+      "palette": "clear"
+    },
+    "layers": [
+      {
+        "tool": "boat",
+        "entities": [
+          "i1"
+        ],
+        "projectedEntities": [
+          "i1"
+        ],
+        "names": [
+          "帆"
+        ],
+        "options": {},
+        "animate": true,
+        "placement": {
+          "anchor": [
+            320,
+            230
+          ],
+          "at": [
+            0.52,
+            0.72
+          ],
+          "scale": 0.95
+        },
+        "instances": [
+          {
+            "placement": {
+              "anchor": [
+                320,
+                230
+              ],
+              "at": [
+                0.52,
+                0.72
+              ],
+              "scale": 0.72
+            },
+            "depth": 0.15,
+            "opacity": 1,
+            "variant": 0
+          }
+        ],
+        "singleUnit": true,
+        "quantity": {
+          "items": [
+            {
+              "entity": "i1",
+              "mode": "unspecified",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "unspecified",
+              "extent": "unspecified",
+              "evidence": [],
+              "basis": "model"
+            }
+          ],
+          "rendered": 1,
+          "exact": false,
+          "collective": false,
+          "partUnsupported": false
+        },
+        "quantityLabel": "由帆借形为一舟，帆面尚未绘制",
+        "z": 22
+      },
+      {
+        "tool": "bird",
+        "entities": [
+          "i2"
+        ],
+        "projectedEntities": [],
+        "names": [
+          "鸟"
+        ],
+        "options": {
+          "pose": "flying",
+          "tone": "ink",
+          "facing": "right"
+        },
+        "animate": true,
+        "placement": {
+          "anchor": [
+            320,
+            190
+          ],
+          "at": [
+            0.51,
+            0.29558843586204675
+          ],
+          "scale": 0.78
+        },
+        "drawingLabel": "鸟意（写意借形）",
+        "instances": [
+          {
+            "placement": {
+              "anchor": [
+                320,
+                190
+              ],
+              "at": [
+                0.2775,
+                0.2753552859917767
+              ],
+              "scale": 0.37875
+            },
+            "depth": 0.125,
+            "opacity": 0.7374999999999999,
+            "variant": 0
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                190
+              ],
+              "at": [
+                0.4325,
+                0.33522273465450847
+              ],
+              "scale": 0.41625
+            },
+            "depth": 0.375,
+            "opacity": 0.8125,
+            "variant": 1
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                190
+              ],
+              "at": [
+                0.5875,
+                0.32353517688002975
+              ],
+              "scale": 0.45375
+            },
+            "depth": 0.625,
+            "opacity": 0.8875,
+            "variant": 2
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                190
+              ],
+              "at": [
+                0.7424999999999999,
+                0.24824054592187209
+              ],
+              "scale": 0.49124999999999996
+            },
+            "depth": 0.875,
+            "opacity": 0.9624999999999999,
+            "variant": 0
+          }
+        ],
+        "singleUnit": true,
+        "quantity": {
+          "items": [
+            {
+              "entity": "i2",
+              "mode": "unspecified",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "unspecified",
+              "extent": "unspecified",
+              "evidence": [],
+              "basis": "model"
+            }
+          ],
+          "rendered": 4,
+          "exact": false,
+          "collective": false,
+          "partUnsupported": false
+        },
+        "quantityLabel": "数量未精确；本地试画 4 个单元",
+        "z": 24
+      },
+      {
+        "tool": "water",
+        "entities": [],
+        "projectedEntities": [],
+        "names": [
+          "构图依托·水域"
+        ],
+        "options": {
+          "form": "plane"
+        },
+        "animate": false,
+        "placement": {
+          "anchor": [
+            320,
+            135
+          ],
+          "at": [
+            0.5,
+            0.45
+          ],
+          "scale": 1.6
+        },
+        "instances": [
+          {
+            "placement": {
+              "anchor": [
+                320,
+                135
+              ],
+              "at": [
+                0.5,
+                0.45
+              ],
+              "scale": 1.65
+            },
+            "variant": 0,
+            "depth": 0,
+            "opacity": 1
+          }
+        ],
+        "singleUnit": false,
+        "inferred": true,
+        "provenance": {
+          "basis": "local-context",
+          "reason": "舟、游鱼或水生植物的活动需要水域；水形和范围是本地选择"
+        },
+        "quantity": {
+          "rendered": 1,
+          "exact": false,
+          "items": []
+        },
+        "quantityLabel": "本地环境依托，不计入原文意象覆盖",
+        "z": -10,
+        "clip": [
+          [
+            0,
+            0.45
+          ],
+          [
+            1,
+            0.45
+          ],
+          [
+            1,
+            1.04
+          ],
+          [
+            0,
+            1.04
+          ]
+        ],
+        "surface": {
+          "top": 0.45,
+          "bottom": 1
+        }
+      }
+    ],
+    "spatial": [],
+    "scene": {
+      "kind": "study",
+      "notes": [
+        "通用场景层先组织地面、水域、群落和主体，再比较三个布局的依托、相对位置、尺度与遮挡；检查通过不代表审美已通过。"
+      ],
+      "waterline": null,
+      "organization": {
+        "version": "1.0",
+        "strategy": "general-constraints",
+        "regions": {
+          "water": [
+            [
+              0,
+              0.45
+            ],
+            [
+              1,
+              0.45
+            ],
+            [
+              1,
+              1.04
+            ],
+            [
+              0,
+              1.04
+            ]
+          ]
+        },
+        "candidates": [
+          {
+            "layout": 0,
+            "orientation": "open",
+            "errors": 0,
+            "cost": 0.227,
+            "metrics": {
+              "overlapPenalty": 0,
+              "balancePenalty": 0.028,
+              "motifFootprint": 0.02,
+              "landArea": 0
+            }
+          },
+          {
+            "layout": 1,
+            "orientation": "open",
+            "errors": 0,
+            "cost": 0.227,
+            "metrics": {
+              "overlapPenalty": 0,
+              "balancePenalty": 0.028,
+              "motifFootprint": 0.02,
+              "landArea": 0
+            }
+          },
+          {
+            "layout": 2,
+            "orientation": "open",
+            "errors": 0,
+            "cost": 0.789,
+            "metrics": {
+              "overlapPenalty": 0,
+              "balancePenalty": 0.099,
+              "motifFootprint": 0.02,
+              "landArea": 0
+            }
+          }
+        ],
+        "repairs": [
+          {
+            "type": "support-added",
+            "reason": "舟、游鱼或水生植物的活动需要水域；水形和范围是本地选择"
+          }
+        ],
+        "limitations": [
+          "几何检查不判定诗意理解或审美合格",
+          "动作时序与整首诗的场景切换尚未编排"
+        ],
+        "layout": 0,
+        "orientation": "open",
+        "audit": {
+          "scope": "implemented-geometry-only",
+          "checks": [
+            "presence",
+            "count",
+            "finite",
+            "support",
+            "scale",
+            "relative-position",
+            "depth",
+            "grove-spread"
+          ],
+          "status": "checks-passed",
+          "errors": 0,
+          "review": 0,
+          "issues": [],
+          "metrics": {
+            "overlapPenalty": 0,
+            "balancePenalty": 0.028,
+            "motifFootprint": 0.02,
+            "landArea": 0
+          },
+          "cost": 0.227,
+          "aestheticAcceptance": "pending-user"
+        },
+        "graph": {
+          "nodes": [
+            {
+              "id": "l0",
+              "entities": [
+                "i1"
+              ],
+              "tool": "boat",
+              "role": "subject",
+              "habitat": "water",
+              "inferred": false,
+              "support": "l2"
+            },
+            {
+              "id": "l1",
+              "entities": [
+                "i2"
+              ],
+              "tool": "bird",
+              "role": "fauna",
+              "habitat": "air",
+              "inferred": false,
+              "support": null
+            },
+            {
+              "id": "l2",
+              "entities": [],
+              "tool": "water",
+              "role": "water",
+              "habitat": null,
+              "inferred": true,
+              "support": null
+            }
+          ],
+          "edges": [
+            {
+              "type": "supported-by",
+              "source": "l0",
+              "target": "l2",
+              "basis": "local-composition",
+              "habitat": "water"
+            },
+            {
+              "type": "supported-by",
+              "source": "l1",
+              "target": null,
+              "basis": "local-composition",
+              "habitat": "air"
+            }
+          ],
+          "setting": "study"
+        }
+      }
+    },
+    "omitted": [],
+    "notes": [
+      "帆：以舟身借形帆所指的船，当前不补帆布；帆的数量与船数分别保留。这是本地写意借形，保留原词义。",
+      "鸟：以通用写意鸟形表现，不细分物种。这是本地写意借形，保留原词义。",
+      "位置、大小、笔触与默认微动是本地试画选择；数量解释与本地显示数量分别记录。",
+      "帆以一舟借形，尚未单画帆；多帆与船数不能机械等同。",
+      "未明说的群落数量、疏密、近中远层次与变体均为本地构图选择；种类可按已声明的写意画法概括，不把铺展词换算成精确物体数量。",
+      "通用场景层先组织地面、水域、群落和主体，再比较三个布局的依托、相对位置、尺度与遮挡；检查通过不代表审美已通过。"
+    ],
+    "relations": []
+  },
+  "elapsed_seconds": 3.4
+}

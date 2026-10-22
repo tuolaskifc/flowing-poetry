@@ -1,0 +1,13 @@
+{
+  "baseline_commit": "659f3e4",
+  "selection": "六句未用于本轮组合练习或布局调试的新诗；调用前固定，结果不自动重试。只传原句与出处元数据，不传目标或人工解读。",
+  "source_checked": "2026-10-22",
+  "cases": [
+    {"id":"n01","poem":"渡头馀落日，墟里上孤烟。","author":"王维","title":"辋川闲居赠裴秀才迪","dynasty":"唐","source":{"url":"https://www.gushiwen.cn/mingju/juv.aspx?id=9ffda3fc1be4","note":"核对原句与作者；仅取这两句，不回填全诗其余景物。"}},
+    {"id":"n02","poem":"细雨鱼儿出，微风燕子斜。","author":"杜甫","title":"水槛遣心·其一","dynasty":"唐","source":{"url":"https://paper.people.com.cn/rmrbhwb/html/2016-10/27/content_1721884.htm","note":"人民日报海外版刊载原诗；本轮只提交这一联。"}},
+    {"id":"n03","poem":"山下孤烟远村，天边独树高原。","author":"王维","title":"田园乐七首·其五","dynasty":"唐","source":{"url":"https://www.shidianguji.com/book/SBCK134/chapter/SBCK134_182","note":"识典古籍《王维集》原文条目。"}},
+    {"id":"n04","poem":"松下茅亭五月凉，汀沙云树晚苍苍。","author":"戴叔伦","title":"题稚川山水","dynasty":"唐","source":{"url":"https://www.gushiwen.cn/mingju/juv_6df5a0708877.aspx","note":"核对原句与作者，不提交全诗下半。"}},
+    {"id":"n05","poem":"池上碧苔三四点，叶底黄鹂一两声。","author":"晏殊","title":"破阵子·春景","dynasty":"宋","source":{"url":"https://app.xinhuanet.com/news/article.html?articleId=107ba8e7-f964-4a5b-91cf-b0c2c5d0dce8","note":"新华网未来讲堂刊载原词；声音次数不能直接等同鸟只数。"}},
+    {"id":"n06","poem":"漠漠帆来重，冥冥鸟去迟。","author":"韦应物","title":"赋得暮雨送李胄","dynasty":"唐","source":{"url":"https://m.gushiwen.cn/shiwenv_40920344347d.aspx","note":"核对原句；不从题目或全诗补写未提交的雨、江或钟。"}}
+  ]
+}

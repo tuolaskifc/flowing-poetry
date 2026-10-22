@@ -4,7 +4,7 @@
 window.PoemDrawing.register({
   id:'landscape',name:'山水 · 场景',subtitle:'先定远近，再留出风景之间的空。',sources:['project'],credit:'本项目 · 山势、地表与光影笔触',reference:'drawing/README.md',
   note:'山岸、原野、田面、瀑布、天空与光影的写意结构；只画明确选择的类型，不自动附加人物。',
-  controls:[{id:'form',label:'场景',default:'mountain',choices:[{value:'mountain',label:'层山'},{value:'shore',label:'水岸'},{value:'ground',label:'原野'},{value:'path',label:'小径'},{value:'field',label:'水田'},{value:'waterfall',label:'瀑布'},{value:'sky',label:'天空'},{value:'stars',label:'星点'},{value:'sun',label:'日光'},{value:'glow',label:'灯火'},{value:'shadow',label:'疏影'},{value:'moss',label:'苔意'},{value:'lightwash',label:'返照'},{value:'dust',label:'轻尘'}]},{id:'relief',label:'山势',default:'layered',choices:[{value:'layered',label:'层山'},{value:'single',label:'单峰'}]}],capabilities:['local-motion','density-detail','anchors'],
+  controls:[{id:'form',label:'场景',default:'mountain',choices:[{value:'mountain',label:'层山'},{value:'shore',label:'水岸'},{value:'ground',label:'原野'},{value:'path',label:'小径'},{value:'field',label:'水田'},{value:'waterfall',label:'瀑布'},{value:'sky',label:'天空'},{value:'stars',label:'星点'},{value:'sun',label:'日光'},{value:'glow',label:'灯火'},{value:'shadow',label:'疏影'},{value:'moss',label:'苔意'},{value:'lightwash',label:'返照'},{value:'dust',label:'轻尘'}]},{id:'relief',label:'山势',default:'layered',choices:[{value:'layered',label:'层山'},{value:'single',label:'单峰'}]},{id:'edge',label:'地表边缘',default:'defined',choices:[{value:'defined',label:'勾线'},{value:'soft',label:'淡化'}]}],capabilities:['local-motion','density-detail','anchors'],
   create(ctx){
     const {p,alpha}=ctx;let ridges=[],marks=[],stars=[];
     function reset(){
@@ -80,7 +80,7 @@ window.PoemDrawing.register({
         const shore=form==='shore';
         c.beginPath();c.moveTo(0,shore?235:265);c.bezierCurveTo(170,shore?207:245,360,shore?325:275,640,shore?295:245);c.lineTo(640,388);c.lineTo(0,388);c.closePath();
         const wash=c.createLinearGradient(0,220,0,388);wash.addColorStop(0,String(alpha(p,ctx.palette.main,55)));wash.addColorStop(1,String(alpha(p,ctx.palette.ink,35)));c.fillStyle=wash;c.fill();
-        p.noFill();p.stroke(alpha(p,ctx.palette.ink,115));p.strokeWeight(1);p.bezier(0,shore?235:265,170,shore?207:245,360,shore?325:275,640,shore?295:245);
+        if(ctx.options.edge!=='soft'){p.noFill();p.stroke(alpha(p,ctx.palette.ink,115));p.strokeWeight(1);p.bezier(0,shore?235:265,170,shore?207:245,360,shore?325:275,640,shore?295:245);}
         for(const m of marks)if(m.y>300&&m.a<.25+ctx.settings.density*.6){p.stroke(alpha(p,ctx.palette.ink,30*m.a));p.strokeWeight(.7);p.line(m.x,m.y,m.x+m.w,m.y-1);}
       }
     }

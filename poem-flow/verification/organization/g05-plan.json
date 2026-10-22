@@ -1,0 +1,582 @@
+{
+  "version": "scene-organization-1",
+  "seed": 3388076201,
+  "settings": {
+    "wind": 0,
+    "density": 0.45,
+    "palette": "clear"
+  },
+  "layers": [
+    {
+      "tool": "landscape",
+      "entities": [
+        "i1"
+      ],
+      "projectedEntities": [],
+      "names": [
+        "两岸青山"
+      ],
+      "options": {
+        "form": "mountain",
+        "relief": "single"
+      },
+      "animate": false,
+      "placement": {
+        "anchor": [
+          320,
+          194
+        ],
+        "at": [
+          0.2,
+          0.61
+        ],
+        "scale": 1.5
+      },
+      "instances": [
+        {
+          "placement": {
+            "anchor": [
+              320,
+              330
+            ],
+            "at": [
+              0.2,
+              0.61
+            ],
+            "scale": 1.18
+          },
+          "depth": 0,
+          "opacity": 1,
+          "variant": 0
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              330
+            ],
+            "at": [
+              0.8,
+              0.61
+            ],
+            "scale": 1.18
+          },
+          "depth": 0.3,
+          "opacity": 1,
+          "variant": 1
+        }
+      ],
+      "singleUnit": false,
+      "quantity": {
+        "items": [
+          {
+            "entity": "i1",
+            "mode": "many",
+            "min": null,
+            "max": null,
+            "unit": null,
+            "scope": "group",
+            "extent": "spread",
+            "evidence": [
+              "两岸青山"
+            ],
+            "basis": "model"
+          }
+        ],
+        "rendered": 2,
+        "exact": false,
+        "collective": true,
+        "partUnsupported": false
+      },
+      "quantityLabel": "依场景疏密试画 2 个单元；原文未给精确个体数",
+      "z": -30
+    },
+    {
+      "tool": "landscape",
+      "entities": [
+        "i3"
+      ],
+      "projectedEntities": [],
+      "names": [
+        "日"
+      ],
+      "options": {
+        "form": "sun"
+      },
+      "animate": false,
+      "placement": {
+        "anchor": [
+          320,
+          194
+        ],
+        "at": [
+          0.55,
+          0.34
+        ],
+        "scale": 1.5
+      },
+      "instances": [
+        {
+          "placement": {
+            "anchor": [
+              320,
+              95
+            ],
+            "at": [
+              0.55,
+              0.34
+            ],
+            "scale": 0.55
+          },
+          "depth": 0,
+          "opacity": 1,
+          "variant": 0
+        }
+      ],
+      "singleUnit": false,
+      "quantity": {
+        "items": [
+          {
+            "entity": "i3",
+            "mode": "unspecified",
+            "min": null,
+            "max": null,
+            "unit": null,
+            "scope": "unspecified",
+            "extent": "unspecified",
+            "evidence": [],
+            "basis": "model"
+          }
+        ],
+        "rendered": 1,
+        "exact": false,
+        "collective": false,
+        "partUnsupported": false
+      },
+      "quantityLabel": "整体笔触图层；内部数量尚未适配",
+      "z": -25
+    },
+    {
+      "tool": "boat",
+      "entities": [
+        "i2"
+      ],
+      "projectedEntities": [
+        "i2"
+      ],
+      "names": [
+        "孤帆一片／孤帆"
+      ],
+      "options": {},
+      "animate": true,
+      "placement": {
+        "anchor": [
+          320,
+          230
+        ],
+        "at": [
+          0.51,
+          0.7
+        ],
+        "scale": 0.95
+      },
+      "instances": [
+        {
+          "placement": {
+            "anchor": [
+              320,
+              230
+            ],
+            "at": [
+              0.51,
+              0.7
+            ],
+            "scale": 0.7
+          },
+          "depth": 0,
+          "opacity": 1,
+          "variant": 0
+        }
+      ],
+      "singleUnit": true,
+      "quantity": {
+        "items": [
+          {
+            "entity": "i2",
+            "mode": "exact",
+            "min": 1,
+            "max": 1,
+            "unit": "片",
+            "scope": "individual",
+            "extent": "local",
+            "evidence": [
+              "孤帆一片"
+            ],
+            "basis": "model"
+          }
+        ],
+        "rendered": 1,
+        "exact": false,
+        "collective": false,
+        "partUnsupported": false
+      },
+      "quantityLabel": "由帆借形为一舟，帆面尚未绘制",
+      "z": 20
+    },
+    {
+      "tool": "landscape",
+      "names": [
+        "构图依托·地面"
+      ],
+      "entities": [],
+      "projectedEntities": [],
+      "options": {
+        "form": "ground"
+      },
+      "animate": false,
+      "placement": {
+        "anchor": [
+          320,
+          194
+        ],
+        "at": [
+          0.5,
+          0.48
+        ],
+        "scale": 1.6
+      },
+      "instances": [
+        {
+          "placement": {
+            "anchor": [
+              320,
+              194
+            ],
+            "at": [
+              0.5,
+              0.48
+            ],
+            "scale": 1.6
+          },
+          "variant": 0,
+          "depth": 0,
+          "opacity": 1
+        }
+      ],
+      "singleUnit": false,
+      "inferred": true,
+      "provenance": {
+        "basis": "local-context",
+        "reason": "两岸间留出水路，作为孤帆所指舟身的依托"
+      },
+      "quantity": {
+        "rendered": 1,
+        "exact": false,
+        "items": []
+      },
+      "quantityLabel": "背景依托，不计入意象覆盖",
+      "z": -18
+    },
+    {
+      "tool": "water",
+      "entities": [],
+      "projectedEntities": [],
+      "names": [
+        "构图依托·两岸间水域"
+      ],
+      "options": {
+        "form": "plane"
+      },
+      "animate": false,
+      "placement": {
+        "anchor": [
+          320,
+          135
+        ],
+        "at": [
+          0.5,
+          0.46
+        ],
+        "scale": 1.6
+      },
+      "instances": [
+        {
+          "placement": {
+            "anchor": [
+              320,
+              135
+            ],
+            "at": [
+              0.5,
+              0.46
+            ],
+            "scale": 1.6
+          },
+          "variant": 0,
+          "depth": 0,
+          "opacity": 1
+        }
+      ],
+      "quantity": {
+        "rendered": 1,
+        "exact": false,
+        "items": []
+      },
+      "quantityLabel": "由两岸及帆的场景推断，不计入意象覆盖",
+      "inferred": true,
+      "provenance": {
+        "basis": "local-context",
+        "reason": "两岸与帆共同暗示水路"
+      },
+      "surface": {
+        "top": 0.46,
+        "bottom": 1
+      },
+      "clip": [
+        [
+          0.46,
+          0.46
+        ],
+        [
+          0.58,
+          0.46
+        ],
+        [
+          0.61,
+          0.65
+        ],
+        [
+          0.72,
+          0.84
+        ],
+        [
+          0.9,
+          1.1
+        ],
+        [
+          0.38,
+          1.1
+        ],
+        [
+          0.43,
+          0.77
+        ],
+        [
+          0.44,
+          0.6
+        ]
+      ],
+      "z": -10
+    }
+  ],
+  "spatial": [],
+  "scene": {
+    "kind": "mountain-channel",
+    "notes": [
+      "先划分承托地形、群落与主体活动区域；场景密度和背景依托是本地构图推断，不冒充原文明示意象。"
+    ],
+    "waterline": null,
+    "basis": "local-context",
+    "regions": {
+      "channel": [
+        [
+          0.46,
+          0.46
+        ],
+        [
+          0.58,
+          0.46
+        ],
+        [
+          0.61,
+          0.65
+        ],
+        [
+          0.72,
+          0.84
+        ],
+        [
+          0.9,
+          1.1
+        ],
+        [
+          0.38,
+          1.1
+        ],
+        [
+          0.43,
+          0.77
+        ],
+        [
+          0.44,
+          0.6
+        ]
+      ]
+    },
+    "supports": [
+      {
+        "form": "ground",
+        "reason": "两岸间留出水路，作为孤帆所指舟身的依托"
+      }
+    ],
+    "organization": {
+      "version": "1.0",
+      "strategy": "regional-proposal",
+      "regions": {
+        "channel": [
+          [
+            0.46,
+            0.46
+          ],
+          [
+            0.58,
+            0.46
+          ],
+          [
+            0.61,
+            0.65
+          ],
+          [
+            0.72,
+            0.84
+          ],
+          [
+            0.9,
+            1.1
+          ],
+          [
+            0.38,
+            1.1
+          ],
+          [
+            0.43,
+            0.77
+          ],
+          [
+            0.44,
+            0.6
+          ]
+        ]
+      },
+      "candidates": [
+        {
+          "layout": "existing",
+          "errors": 0,
+          "cost": 0.08
+        }
+      ],
+      "repairs": [],
+      "limitations": [
+        "几何检查不判定诗意理解或审美合格",
+        "动作时序与整首诗的场景切换尚未编排"
+      ],
+      "graph": {
+        "nodes": [
+          {
+            "id": "l0",
+            "entities": [
+              "i1"
+            ],
+            "tool": "landscape",
+            "role": "terrain",
+            "habitat": null,
+            "inferred": false,
+            "support": null
+          },
+          {
+            "id": "l1",
+            "entities": [
+              "i3"
+            ],
+            "tool": "landscape",
+            "role": "sky",
+            "habitat": null,
+            "inferred": false,
+            "support": null
+          },
+          {
+            "id": "l2",
+            "entities": [
+              "i2"
+            ],
+            "tool": "boat",
+            "role": "subject",
+            "habitat": "water",
+            "inferred": false,
+            "support": "l4"
+          },
+          {
+            "id": "l3",
+            "entities": [],
+            "tool": "landscape",
+            "role": "terrain",
+            "habitat": null,
+            "inferred": true,
+            "support": null
+          },
+          {
+            "id": "l4",
+            "entities": [],
+            "tool": "water",
+            "role": "water",
+            "habitat": null,
+            "inferred": true,
+            "support": null
+          }
+        ],
+        "edges": [
+          {
+            "type": "supported-by",
+            "source": "l2",
+            "target": "l4",
+            "basis": "local-composition",
+            "habitat": "water"
+          }
+        ],
+        "setting": "mountain-channel"
+      },
+      "audit": {
+        "scope": "implemented-geometry-and-drawing-gaps",
+        "coverage": {
+          "scope": "extracted-entities-only",
+          "present": 3,
+          "mapped": 3,
+          "parameters": [],
+          "missing": []
+        },
+        "checks": [
+          "presence",
+          "count",
+          "finite",
+          "water-support",
+          "cliff-support",
+          "grove-spread",
+          "drawing-gaps"
+        ],
+        "status": "checks-passed",
+        "errors": 0,
+        "review": 0,
+        "issues": [],
+        "metrics": {
+          "overlapPenalty": 0,
+          "balancePenalty": 0.01,
+          "motifFootprint": 0.012,
+          "landArea": 0
+        },
+        "cost": 0.08,
+        "aestheticAcceptance": "pending-user"
+      }
+    }
+  },
+  "omitted": [],
+  "notes": [
+    "两岸青山虽被归为地点，仍按原文明示的自然景物匹配；具体空间关系另行处理。",
+    "孤帆一片／孤帆：以舟身借形帆所指的船，当前不补帆布；帆的数量与船数分别保留。这是本地写意借形，保留原词义。",
+    "位置、大小、笔触与默认微动是本地试画选择；数量解释与本地显示数量分别记录。",
+    "两岸青山的数量解释已保留，当前工具以整体图层表现，内部笔触尚未按数量逐个适配。",
+    "孤帆一片／孤帆以一舟借形，尚未单画帆；多帆与船数不能机械等同。",
+    "未明说的群落数量、疏密、近中远层次与变体均为本地构图选择；种类可按已声明的写意画法概括，不把铺展词换算成精确物体数量。",
+    "先划分承托地形、群落与主体活动区域；场景密度和背景依托是本地构图推断，不冒充原文明示意象。"
+  ],
+  "relations": []
+}

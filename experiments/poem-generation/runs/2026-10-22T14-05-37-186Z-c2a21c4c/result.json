@@ -1,0 +1,25 @@
+{
+  "id": "2026-10-22T14-05-37-186Z-c2a21c4c",
+  "fingerprint": "7bfc4d7125dfa3d4a01e5e8308592bfc22e902a2fd13833bbed698b436af39d2",
+  "poem": "松下茅亭五月凉，汀沙云树晚苍苍。",
+  "source": {
+    "provider": "场景组织层·新诗实测",
+    "author": "戴叔伦",
+    "title": "题稚川山水",
+    "dynasty": "唐"
+  },
+  "mode": "scene",
+  "model": "DeepSeek-V4.1-Flash",
+  "started_at": "2026-10-22T14:05:37.187Z",
+  "cached": false,
+  "error": "fetch failed",
+  "validation": {
+    "valid": false,
+    "errors": [
+      "fetch failed"
+    ],
+    "warnings": [],
+    "review_required": true
+  },
+  "elapsed_seconds": 5.6
+}

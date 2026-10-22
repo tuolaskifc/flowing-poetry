@@ -1,0 +1,824 @@
+{
+  "version": "scene-organization-1",
+  "seed": 366685528,
+  "settings": {
+    "wind": 0,
+    "density": 0.45,
+    "palette": "clear"
+  },
+  "layers": [
+    {
+      "tool": "landscape",
+      "entities": [
+        "i1"
+      ],
+      "projectedEntities": [],
+      "names": [
+        "山际"
+      ],
+      "options": {
+        "form": "mountain"
+      },
+      "animate": false,
+      "placement": {
+        "anchor": [
+          320,
+          194
+        ],
+        "at": [
+          0.5,
+          0.5
+        ],
+        "scale": 1.5
+      },
+      "instances": [
+        {
+          "placement": {
+            "anchor": [
+              320,
+              194
+            ],
+            "at": [
+              0.5,
+              0.4
+            ],
+            "scale": 1.6
+          },
+          "depth": 0,
+          "opacity": 1,
+          "variant": 0
+        }
+      ],
+      "singleUnit": false,
+      "quantity": {
+        "items": [
+          {
+            "entity": "i1",
+            "mode": "unspecified",
+            "min": null,
+            "max": null,
+            "unit": null,
+            "scope": "unspecified",
+            "extent": "unspecified",
+            "evidence": [],
+            "basis": "model"
+          }
+        ],
+        "rendered": 1,
+        "exact": false,
+        "collective": false,
+        "partUnsupported": false
+      },
+      "quantityLabel": "整体笔触图层；内部数量尚未适配",
+      "z": -30
+    },
+    {
+      "tool": "landscape",
+      "entities": [
+        "i4"
+      ],
+      "projectedEntities": [],
+      "names": [
+        "落日"
+      ],
+      "options": {
+        "form": "sun"
+      },
+      "animate": false,
+      "placement": {
+        "anchor": [
+          320,
+          194
+        ],
+        "at": [
+          0.63,
+          0.45
+        ],
+        "scale": 1.5
+      },
+      "instances": [
+        {
+          "placement": {
+            "anchor": [
+              320,
+              95
+            ],
+            "at": [
+              0.63,
+              0.45
+            ],
+            "scale": 0.85
+          },
+          "depth": 0,
+          "opacity": 1,
+          "variant": 0
+        }
+      ],
+      "singleUnit": false,
+      "quantity": {
+        "items": [
+          {
+            "entity": "i4",
+            "mode": "exact",
+            "min": 1,
+            "max": 1,
+            "unit": null,
+            "scope": "individual",
+            "extent": "local",
+            "evidence": [
+              "落日"
+            ],
+            "basis": "model"
+          }
+        ],
+        "rendered": 1,
+        "exact": false,
+        "collective": false,
+        "partUnsupported": false
+      },
+      "quantityLabel": "整体笔触图层；内部数量尚未适配",
+      "z": -20,
+      "regionalRelation": "among"
+    },
+    {
+      "tool": "mist",
+      "entities": [
+        "i2"
+      ],
+      "projectedEntities": [],
+      "names": [
+        "来烟"
+      ],
+      "options": {},
+      "animate": true,
+      "placement": {
+        "anchor": [
+          320,
+          190
+        ],
+        "at": [
+          0.43,
+          0.42
+        ],
+        "scale": 1.4
+      },
+      "instances": [
+        {
+          "placement": {
+            "anchor": [
+              320,
+              190
+            ],
+            "at": [
+              0.43,
+              0.42
+            ],
+            "scale": 1.4
+          },
+          "depth": 0,
+          "opacity": 1,
+          "variant": 0
+        }
+      ],
+      "singleUnit": false,
+      "quantity": {
+        "items": [
+          {
+            "entity": "i2",
+            "mode": "unspecified",
+            "min": null,
+            "max": null,
+            "unit": null,
+            "scope": "unspecified",
+            "extent": "unspecified",
+            "evidence": [],
+            "basis": "model"
+          }
+        ],
+        "rendered": 1,
+        "exact": false,
+        "collective": false,
+        "partUnsupported": false
+      },
+      "quantityLabel": "整体笔触图层；内部数量尚未适配",
+      "z": -15,
+      "regionalRelation": "outside"
+    },
+    {
+      "tool": "bamboo",
+      "entities": [
+        "i3"
+      ],
+      "projectedEntities": [],
+      "names": [
+        "竹中／竹"
+      ],
+      "options": {},
+      "animate": true,
+      "placement": {
+        "anchor": [
+          320,
+          335
+        ],
+        "at": [
+          0.43,
+          0.74
+        ],
+        "scale": 1
+      },
+      "instances": [
+        {
+          "placement": {
+            "anchor": [
+              320,
+              335
+            ],
+            "at": [
+              0.43,
+              0.74
+            ],
+            "scale": 0.88
+          },
+          "depth": 0,
+          "opacity": 0.5916666666666667,
+          "variant": 0
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              335
+            ],
+            "at": [
+              0.7699,
+              0.7544444444444445
+            ],
+            "scale": 1.0102
+          },
+          "depth": 0.03333333333333333,
+          "opacity": 0.615,
+          "variant": 1
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              335
+            ],
+            "at": [
+              0.5598,
+              0.7688888888888888
+            ],
+            "scale": 1.1404
+          },
+          "depth": 0.06666666666666667,
+          "opacity": 0.6383333333333333,
+          "variant": 2
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              335
+            ],
+            "at": [
+              0.8997,
+              0.7833333333333333
+            ],
+            "scale": 1.2706
+          },
+          "depth": 0.09999999999999999,
+          "opacity": 0.6616666666666666,
+          "variant": 0
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              335
+            ],
+            "at": [
+              0.6896,
+              0.7977777777777778
+            ],
+            "scale": 0.9808
+          },
+          "depth": 0.13333333333333333,
+          "opacity": 0.6849999999999999,
+          "variant": 1
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              335
+            ],
+            "at": [
+              0.4794999999999999,
+              0.8122222222222222
+            ],
+            "scale": 1.111
+          },
+          "depth": 0.16666666666666666,
+          "opacity": 0.7083333333333333,
+          "variant": 2
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              335
+            ],
+            "at": [
+              0.8194000000000001,
+              0.8266666666666667
+            ],
+            "scale": 1.2411999999999999
+          },
+          "depth": 0.19999999999999998,
+          "opacity": 0.7316666666666667,
+          "variant": 0
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              335
+            ],
+            "at": [
+              0.6092999999999998,
+              0.8411111111111111
+            ],
+            "scale": 0.9514
+          },
+          "depth": 0.23333333333333334,
+          "opacity": 0.7549999999999999,
+          "variant": 1
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              335
+            ],
+            "at": [
+              0.9492,
+              0.8555555555555555
+            ],
+            "scale": 1.0816
+          },
+          "depth": 0.26666666666666666,
+          "opacity": 0.7783333333333333,
+          "variant": 2
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              335
+            ],
+            "at": [
+              0.7391000000000001,
+              0.87
+            ],
+            "scale": 1.2118
+          },
+          "depth": 0.3,
+          "opacity": 0.8016666666666666,
+          "variant": 0
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              335
+            ],
+            "at": [
+              0.5289999999999998,
+              0.8844444444444445
+            ],
+            "scale": 0.922
+          },
+          "depth": 0.3333333333333333,
+          "opacity": 0.825,
+          "variant": 1
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              335
+            ],
+            "at": [
+              0.8689,
+              0.8988888888888888
+            ],
+            "scale": 1.0522
+          },
+          "depth": 0.3666666666666667,
+          "opacity": 0.8483333333333333,
+          "variant": 2
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              335
+            ],
+            "at": [
+              0.6588000000000003,
+              0.9133333333333333
+            ],
+            "scale": 1.1824
+          },
+          "depth": 0.39999999999999997,
+          "opacity": 0.8716666666666666,
+          "variant": 0
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              335
+            ],
+            "at": [
+              0.4487000000000004,
+              0.9277777777777778
+            ],
+            "scale": 0.8926000000000001
+          },
+          "depth": 0.4333333333333333,
+          "opacity": 0.895,
+          "variant": 1
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              335
+            ],
+            "at": [
+              0.7885999999999996,
+              0.9422222222222222
+            ],
+            "scale": 1.0228
+          },
+          "depth": 0.4666666666666667,
+          "opacity": 0.9183333333333332,
+          "variant": 2
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              335
+            ],
+            "at": [
+              0.5784999999999998,
+              0.9566666666666667
+            ],
+            "scale": 1.153
+          },
+          "depth": 0.5,
+          "opacity": 0.9416666666666667,
+          "variant": 0
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              335
+            ],
+            "at": [
+              0.9184,
+              0.971111111111111
+            ],
+            "scale": 1.2832
+          },
+          "depth": 0.5333333333333333,
+          "opacity": 0.9649999999999999,
+          "variant": 1
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              335
+            ],
+            "at": [
+              0.7083000000000002,
+              0.9855555555555555
+            ],
+            "scale": 0.9933999999999998
+          },
+          "depth": 0.5666666666666667,
+          "opacity": 0.9883333333333333,
+          "variant": 2
+        }
+      ],
+      "singleUnit": true,
+      "quantity": {
+        "items": [
+          {
+            "entity": "i3",
+            "mode": "many",
+            "min": null,
+            "max": null,
+            "unit": null,
+            "scope": "group",
+            "extent": "spread",
+            "evidence": [
+              "竹中"
+            ],
+            "basis": "model"
+          }
+        ],
+        "rendered": 18,
+        "exact": false,
+        "collective": true,
+        "partUnsupported": false
+      },
+      "quantityLabel": "成片分布；本地试画 18 个单元",
+      "z": 8
+    },
+    {
+      "tool": "landscape",
+      "names": [
+        "构图依托·地面"
+      ],
+      "entities": [],
+      "projectedEntities": [],
+      "options": {
+        "form": "ground"
+      },
+      "animate": false,
+      "placement": {
+        "anchor": [
+          320,
+          194
+        ],
+        "at": [
+          0.5,
+          0.48
+        ],
+        "scale": 1.6
+      },
+      "instances": [
+        {
+          "placement": {
+            "anchor": [
+              320,
+              194
+            ],
+            "at": [
+              0.5,
+              0.48
+            ],
+            "scale": 1.6
+          },
+          "variant": 0,
+          "depth": 0,
+          "opacity": 1
+        }
+      ],
+      "singleUnit": false,
+      "inferred": true,
+      "provenance": {
+        "basis": "local-context",
+        "reason": "山间竹林有共同坡面"
+      },
+      "quantity": {
+        "rendered": 1,
+        "exact": false,
+        "items": []
+      },
+      "quantityLabel": "背景依托，不计入意象覆盖",
+      "z": -18
+    }
+  ],
+  "spatial": [
+    {
+      "type": "outside",
+      "source": "i2",
+      "target": "i1",
+      "modality": "asserted",
+      "basis": "inferred",
+      "evidence": [
+        "山际见来烟"
+      ],
+      "visualized": true,
+      "reason": "关系已由场景区域布局承接；方向、尺度和间距为本地选择"
+    },
+    {
+      "type": "among",
+      "source": "i4",
+      "target": "i3",
+      "modality": "asserted",
+      "basis": "inferred",
+      "evidence": [
+        "竹中窥落日"
+      ],
+      "visualized": true,
+      "reason": "关系已由场景区域布局承接；方向、尺度和间距为本地选择"
+    }
+  ],
+  "scene": {
+    "kind": "bamboo-hillside",
+    "notes": [
+      "先划分承托地形、群落与主体活动区域；场景密度和背景依托是本地构图推断，不冒充原文明示意象。",
+      "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。"
+    ],
+    "waterline": null,
+    "basis": "local-context",
+    "regions": {
+      "bamboo": [
+        [
+          0.4,
+          0.5
+        ],
+        [
+          1,
+          0.5
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          0.4,
+          1
+        ]
+      ]
+    },
+    "supports": [
+      {
+        "form": "ground",
+        "reason": "山间竹林有共同坡面"
+      }
+    ],
+    "organization": {
+      "version": "1.0",
+      "strategy": "regional-proposal",
+      "regions": {
+        "bamboo": [
+          [
+            0.4,
+            0.5
+          ],
+          [
+            1,
+            0.5
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            0.4,
+            1
+          ]
+        ]
+      },
+      "candidates": [
+        {
+          "layout": "existing",
+          "errors": 0,
+          "cost": 1.696
+        }
+      ],
+      "repairs": [],
+      "limitations": [
+        "几何检查不判定诗意理解或审美合格",
+        "动作时序与整首诗的场景切换尚未编排"
+      ],
+      "graph": {
+        "nodes": [
+          {
+            "id": "l0",
+            "entities": [
+              "i1"
+            ],
+            "tool": "landscape",
+            "role": "terrain",
+            "habitat": null,
+            "inferred": false,
+            "support": null
+          },
+          {
+            "id": "l1",
+            "entities": [
+              "i4"
+            ],
+            "tool": "landscape",
+            "role": "sky",
+            "habitat": null,
+            "inferred": false,
+            "support": null
+          },
+          {
+            "id": "l2",
+            "entities": [
+              "i2"
+            ],
+            "tool": "mist",
+            "role": "atmosphere",
+            "habitat": null,
+            "inferred": false,
+            "support": null
+          },
+          {
+            "id": "l3",
+            "entities": [
+              "i3"
+            ],
+            "tool": "bamboo",
+            "role": "vegetation",
+            "habitat": "land",
+            "inferred": false,
+            "support": "l4"
+          },
+          {
+            "id": "l4",
+            "entities": [],
+            "tool": "landscape",
+            "role": "terrain",
+            "habitat": null,
+            "inferred": true,
+            "support": null
+          }
+        ],
+        "edges": [
+          {
+            "type": "supported-by",
+            "source": "l3",
+            "target": "l4",
+            "basis": "local-composition",
+            "habitat": "land"
+          },
+          {
+            "type": "outside",
+            "source": "l2",
+            "target": "l0",
+            "basis": "inferred",
+            "modality": "asserted",
+            "evidence": [
+              "山际见来烟"
+            ]
+          },
+          {
+            "type": "among",
+            "source": "l1",
+            "target": "l3",
+            "basis": "inferred",
+            "modality": "asserted",
+            "evidence": [
+              "竹中窥落日"
+            ]
+          }
+        ],
+        "setting": "bamboo-hillside"
+      },
+      "audit": {
+        "scope": "implemented-geometry-and-drawing-gaps",
+        "coverage": {
+          "scope": "extracted-entities-only",
+          "present": 4,
+          "mapped": 4,
+          "parameters": [],
+          "missing": []
+        },
+        "checks": [
+          "presence",
+          "count",
+          "finite",
+          "water-support",
+          "cliff-support",
+          "grove-spread",
+          "drawing-gaps"
+        ],
+        "status": "checks-passed",
+        "errors": 0,
+        "review": 0,
+        "issues": [],
+        "metrics": {
+          "overlapPenalty": 0,
+          "balancePenalty": 0.212,
+          "motifFootprint": 2.589,
+          "landArea": 0
+        },
+        "cost": 1.696,
+        "aestheticAcceptance": "pending-user"
+      }
+    }
+  },
+  "omitted": [],
+  "notes": [
+    "山际虽被归为地点，仍按原文明示的自然景物匹配；具体空间关系另行处理。",
+    "位置、大小、笔触与默认微动是本地试画选择；数量解释与本地显示数量分别记录。",
+    "落日的数量解释已保留，当前工具以整体图层表现，内部笔触尚未按数量逐个适配。",
+    "未明说的群落数量、疏密、近中远层次与变体均为本地构图选择；种类可按已声明的写意画法概括，不把铺展词换算成精确物体数量。",
+    "先划分承托地形、群落与主体活动区域；场景密度和背景依托是本地构图推断，不冒充原文明示意象。",
+    "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。"
+  ],
+  "relations": []
+}

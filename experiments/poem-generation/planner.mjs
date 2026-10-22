@@ -5,7 +5,8 @@ import {compose} from './composition.mjs';
 import {physicalPlace} from './physical-mapping.mjs';
 import {expressiveRule} from './expressive-mapping.mjs';
 import {arrangeScene} from './scene-layout.mjs';
-export const policyVersion='generalized-scene-3';
+import {organizeScene} from './scene-organization.mjs';
+export const policyVersion='scene-organization-1';
 const {rules,unsupportedTerms}=lexicon;
 const order=['landscape','moon','cloud','mist','dwelling','building','tree','willow','bamboo','pavilion','horse','water','rock','boat','lotus','grass','orchid','plum-branch','flower','flower-forms','wine','leaves','surface-weather','fish','bird','oriole','falling-petals','catkins','rain','snow'];
 const placements={
@@ -96,7 +97,7 @@ export function buildPlan(analysis){
     if(rule.tool==='oriole')notes.push(`${name}以淡墨莺形为单体，浅黄墨面与几笔深翼、尾喙提示姿态，不刻画眼、足和细羽；数量另按语义与构图规则处理，不自动添加栖枝。`);
     if(rule.tool==='orchid')notes.push(`${name}采用长叶疏花的兰意试画，株式与位置是本地选择，明确的花部计数使用单花；不作植物鉴定，也不自动补花盆或土石。`);
     if(rule.tool==='horse')notes.push(`${name}以静态马形为单体，数量另行处理；不表现奔跑步态，不自动补骑者、鞍辔或草地。`);
-    if(rule.tool==='lotus')notes.push(`${name}按提到的花或叶分别试画；不自动补池水、荷叶或其他生物，默认花态是本地选择，尚无生长或开花过程。`);
+    if(rule.tool==='lotus')notes.push(`${name}的单体画笔只画选定的花或叶，环境依托另由场景组织层决定；默认花态是本地选择，尚无生长或开花过程。`);
   }
   layers.sort((a,b)=>order.indexOf(a.tool)-order.indexOf(b.tool));
   if(!analysis.relations.length&&/不|未|无|若|倘|如果/.test(analysis.poem.replace(/无穷|无边|无尽|无数|无声|无人/g,''))){
@@ -105,6 +106,6 @@ export function buildPlan(analysis){
   const relations=analysis.relations.map(r=>({type:r.type,meaning:r.meaning,modality:r.modality,visualized:r.type==='acts_on'&&wind>0&&analysis.entities.find(e=>e.id===r.source)?.mentions.some(m=>m.includes('风'))&&entityTools.has(r.target)}));
   if(relations.some(r=>!r.visualized))notes.push('已识别的其他关系保留在解读中；本次未实现承载、遮蔽或完整动作编排。');
   notes.push('位置、大小、笔触与默认微动是本地试画选择；数量解释与本地显示数量分别记录。');
-  const seed=parseInt(createHash('sha256').update(analysis.poem).digest('hex').slice(0,8),16),composition=compose(analysis,layers.map(({key,...l})=>l),seed),arranged=arrangeScene(analysis,composition.layers);
+  const seed=parseInt(createHash('sha256').update(analysis.poem).digest('hex').slice(0,8),16),composition=compose(analysis,layers.map(({key,...l})=>l),seed),arranged=organizeScene(analysis,arrangeScene(analysis,composition.layers));
   return {version:policyVersion,seed,settings:{wind,density:.45,palette:'clear'},...arranged,omitted,notes:[...new Set([...notes,...composition.notes,...arranged.scene.notes])],relations};
 }

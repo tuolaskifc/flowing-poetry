@@ -1,0 +1,392 @@
+{
+  "version": "scene-organization-1",
+  "seed": 3500184589,
+  "settings": {
+    "wind": 0,
+    "density": 0.45,
+    "palette": "clear"
+  },
+  "layers": [
+    {
+      "tool": "landscape",
+      "entities": [
+        "i1"
+      ],
+      "projectedEntities": [],
+      "names": [
+        "千山"
+      ],
+      "options": {
+        "form": "mountain"
+      },
+      "animate": false,
+      "placement": {
+        "anchor": [
+          320,
+          194
+        ],
+        "at": [
+          0.5,
+          0.5
+        ],
+        "scale": 1.5
+      },
+      "instances": [
+        {
+          "placement": {
+            "anchor": [
+              320,
+              194
+            ],
+            "at": [
+              0.5,
+              0.4
+            ],
+            "scale": 1.6
+          },
+          "depth": 0,
+          "opacity": 1,
+          "variant": 0
+        }
+      ],
+      "singleUnit": false,
+      "quantity": {
+        "items": [
+          {
+            "entity": "i1",
+            "mode": "many",
+            "min": null,
+            "max": null,
+            "unit": null,
+            "scope": "group",
+            "extent": "spread",
+            "evidence": [
+              "千山"
+            ],
+            "basis": "model"
+          }
+        ],
+        "rendered": 1,
+        "exact": false,
+        "collective": true,
+        "partUnsupported": false
+      },
+      "quantityLabel": "整体笔触图层；内部数量尚未适配",
+      "z": -30
+    },
+    {
+      "tool": "landscape",
+      "entities": [
+        "i3"
+      ],
+      "projectedEntities": [],
+      "names": [
+        "万径"
+      ],
+      "options": {
+        "form": "path"
+      },
+      "animate": false,
+      "placement": {
+        "anchor": [
+          320,
+          194
+        ],
+        "at": [
+          0.24666666666666665,
+          0.68
+        ],
+        "scale": 1.5
+      },
+      "instances": [
+        {
+          "placement": {
+            "anchor": [
+              310,
+              255
+            ],
+            "at": [
+              0.24666666666666665,
+              0.68
+            ],
+            "scale": 1.1
+          },
+          "depth": 0,
+          "opacity": 1,
+          "variant": 0
+        },
+        {
+          "placement": {
+            "anchor": [
+              310,
+              255
+            ],
+            "at": [
+              0.5,
+              0.63
+            ],
+            "scale": 1.4000000000000001
+          },
+          "depth": 0.19999999999999998,
+          "opacity": 1,
+          "variant": 1
+        },
+        {
+          "placement": {
+            "anchor": [
+              310,
+              255
+            ],
+            "at": [
+              0.7533333333333334,
+              0.68
+            ],
+            "scale": 1.1
+          },
+          "depth": 0.39999999999999997,
+          "opacity": 1,
+          "variant": 2
+        }
+      ],
+      "singleUnit": false,
+      "quantity": {
+        "items": [
+          {
+            "entity": "i3",
+            "mode": "many",
+            "min": null,
+            "max": null,
+            "unit": null,
+            "scope": "group",
+            "extent": "spread",
+            "evidence": [
+              "万径"
+            ],
+            "basis": "model"
+          }
+        ],
+        "rendered": 3,
+        "exact": false,
+        "collective": true,
+        "partUnsupported": false
+      },
+      "quantityLabel": "依场景疏密试画 3 个单元；原文未给精确个体数",
+      "z": 2
+    },
+    {
+      "tool": "landscape",
+      "names": [
+        "构图依托·地面"
+      ],
+      "entities": [],
+      "projectedEntities": [],
+      "options": {
+        "form": "ground"
+      },
+      "animate": false,
+      "placement": {
+        "anchor": [
+          320,
+          194
+        ],
+        "at": [
+          0.5,
+          0.48
+        ],
+        "scale": 1.6
+      },
+      "instances": [
+        {
+          "placement": {
+            "anchor": [
+              320,
+              194
+            ],
+            "at": [
+              0.5,
+              0.48
+            ],
+            "scale": 1.6
+          },
+          "variant": 0,
+          "depth": 0,
+          "opacity": 1
+        }
+      ],
+      "singleUnit": false,
+      "inferred": true,
+      "provenance": {
+        "basis": "local-context",
+        "reason": "山势下方承托路径"
+      },
+      "quantity": {
+        "rendered": 1,
+        "exact": false,
+        "items": []
+      },
+      "quantityLabel": "背景依托，不计入意象覆盖",
+      "z": -18
+    }
+  ],
+  "spatial": [],
+  "scene": {
+    "kind": "mountain-trails",
+    "notes": [
+      "先划分承托地形、群落与主体活动区域；场景密度和背景依托是本地构图推断，不冒充原文明示意象。"
+    ],
+    "waterline": null,
+    "basis": "local-context",
+    "regions": {
+      "trails": [
+        [
+          0,
+          0.6
+        ],
+        [
+          1,
+          0.6
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ]
+    },
+    "supports": [
+      {
+        "form": "ground",
+        "reason": "山势下方承托路径"
+      }
+    ],
+    "organization": {
+      "version": "1.0",
+      "strategy": "regional-proposal",
+      "regions": {
+        "trails": [
+          [
+            0,
+            0.6
+          ],
+          [
+            1,
+            0.6
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ]
+      },
+      "candidates": [
+        {
+          "layout": "existing",
+          "errors": 0,
+          "cost": 0
+        }
+      ],
+      "repairs": [],
+      "limitations": [
+        "几何检查不判定诗意理解或审美合格",
+        "动作时序与整首诗的场景切换尚未编排"
+      ],
+      "graph": {
+        "nodes": [
+          {
+            "id": "l0",
+            "entities": [
+              "i1"
+            ],
+            "tool": "landscape",
+            "role": "terrain",
+            "habitat": null,
+            "inferred": false,
+            "support": null
+          },
+          {
+            "id": "l1",
+            "entities": [
+              "i3"
+            ],
+            "tool": "landscape",
+            "role": "terrain",
+            "habitat": null,
+            "inferred": false,
+            "support": null
+          },
+          {
+            "id": "l2",
+            "entities": [],
+            "tool": "landscape",
+            "role": "terrain",
+            "habitat": null,
+            "inferred": true,
+            "support": null
+          }
+        ],
+        "edges": [],
+        "setting": "mountain-trails"
+      },
+      "audit": {
+        "scope": "implemented-geometry-and-drawing-gaps",
+        "coverage": {
+          "scope": "extracted-entities-only",
+          "present": 2,
+          "mapped": 2,
+          "parameters": [],
+          "missing": []
+        },
+        "checks": [
+          "presence",
+          "count",
+          "finite",
+          "water-support",
+          "cliff-support",
+          "grove-spread",
+          "drawing-gaps"
+        ],
+        "status": "checks-passed",
+        "errors": 0,
+        "review": 0,
+        "issues": [],
+        "metrics": {
+          "overlapPenalty": 0,
+          "balancePenalty": 0,
+          "motifFootprint": 0,
+          "landArea": 0
+        },
+        "cost": 0,
+        "aestheticAcceptance": "pending-user"
+      }
+    }
+  },
+  "omitted": [
+    {
+      "id": "i2",
+      "name": "鸟",
+      "reason": "原文中缺席，不绘制"
+    },
+    {
+      "id": "i4",
+      "name": "人踪",
+      "reason": "原文中缺席，不绘制"
+    }
+  ],
+  "notes": [
+    "千山虽被归为地点，仍按原文明示的自然景物匹配；具体空间关系另行处理。",
+    "万径虽被归为地点，仍按原文明示的自然景物匹配；具体空间关系另行处理。",
+    "位置、大小、笔触与默认微动是本地试画选择；数量解释与本地显示数量分别记录。",
+    "千山的数量解释已保留，当前工具以整体图层表现，内部笔触尚未按数量逐个适配。",
+    "万径的数量解释已保留，当前工具以整体图层表现，内部笔触尚未按数量逐个适配。",
+    "未明说的群落数量、疏密、近中远层次与变体均为本地构图选择；种类可按已声明的写意画法概括，不把铺展词换算成精确物体数量。",
+    "先划分承托地形、群落与主体活动区域；场景密度和背景依托是本地构图推断，不冒充原文明示意象。"
+  ],
+  "relations": []
+}

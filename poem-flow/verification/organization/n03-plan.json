@@ -1,0 +1,692 @@
+{
+  "version": "scene-organization-1",
+  "seed": 140027766,
+  "settings": {
+    "wind": 0,
+    "density": 0.45,
+    "palette": "clear"
+  },
+  "layers": [
+    {
+      "tool": "landscape",
+      "entities": [
+        "i1"
+      ],
+      "projectedEntities": [],
+      "names": [
+        "山下"
+      ],
+      "options": {
+        "form": "mountain"
+      },
+      "animate": false,
+      "placement": {
+        "anchor": [
+          320,
+          194
+        ],
+        "at": [
+          0.5,
+          0.5
+        ],
+        "scale": 1.5
+      },
+      "instances": [
+        {
+          "placement": {
+            "anchor": [
+              320,
+              194
+            ],
+            "at": [
+              0.5,
+              0.4
+            ],
+            "scale": 1.6
+          },
+          "depth": 0,
+          "opacity": 1,
+          "variant": 0
+        }
+      ],
+      "singleUnit": false,
+      "quantity": {
+        "items": [
+          {
+            "entity": "i1",
+            "mode": "unspecified",
+            "min": null,
+            "max": null,
+            "unit": null,
+            "scope": "unspecified",
+            "extent": "unspecified",
+            "evidence": [],
+            "basis": "model"
+          }
+        ],
+        "rendered": 1,
+        "exact": false,
+        "collective": false,
+        "partUnsupported": false
+      },
+      "quantityLabel": "整体笔触图层；内部数量尚未适配",
+      "z": -30
+    },
+    {
+      "tool": "landscape",
+      "entities": [
+        "i4"
+      ],
+      "projectedEntities": [],
+      "names": [
+        "天边"
+      ],
+      "options": {
+        "form": "sky"
+      },
+      "animate": false,
+      "placement": {
+        "anchor": [
+          320,
+          194
+        ],
+        "at": [
+          0.5,
+          0.5
+        ],
+        "scale": 1.5
+      },
+      "instances": [
+        {
+          "placement": {
+            "anchor": [
+              320,
+              194
+            ],
+            "at": [
+              0.5,
+              0.5
+            ],
+            "scale": 1.6
+          },
+          "depth": 0,
+          "opacity": 1,
+          "variant": 0
+        }
+      ],
+      "singleUnit": false,
+      "quantity": {
+        "items": [
+          {
+            "entity": "i4",
+            "mode": "unspecified",
+            "min": null,
+            "max": null,
+            "unit": null,
+            "scope": "unspecified",
+            "extent": "unspecified",
+            "evidence": [],
+            "basis": "model"
+          }
+        ],
+        "rendered": 1,
+        "exact": false,
+        "collective": false,
+        "partUnsupported": false
+      },
+      "quantityLabel": "整体笔触图层；内部数量尚未适配",
+      "z": -45
+    },
+    {
+      "tool": "landscape",
+      "entities": [
+        "i6"
+      ],
+      "projectedEntities": [],
+      "names": [
+        "高原"
+      ],
+      "options": {
+        "form": "ground"
+      },
+      "animate": false,
+      "placement": {
+        "anchor": [
+          320,
+          194
+        ],
+        "at": [
+          0.5,
+          0.5
+        ],
+        "scale": 1.5
+      },
+      "instances": [
+        {
+          "placement": {
+            "anchor": [
+              320,
+              194
+            ],
+            "at": [
+              0.5,
+              0.57
+            ],
+            "scale": 1.6
+          },
+          "depth": 0,
+          "opacity": 1,
+          "variant": 0
+        }
+      ],
+      "singleUnit": false,
+      "quantity": {
+        "items": [
+          {
+            "entity": "i6",
+            "mode": "unspecified",
+            "min": null,
+            "max": null,
+            "unit": null,
+            "scope": "unspecified",
+            "extent": "unspecified",
+            "evidence": [],
+            "basis": "model"
+          }
+        ],
+        "rendered": 1,
+        "exact": false,
+        "collective": false,
+        "partUnsupported": false
+      },
+      "quantityLabel": "整体笔触图层；内部数量尚未适配",
+      "z": -20
+    },
+    {
+      "tool": "mist",
+      "entities": [
+        "i2"
+      ],
+      "projectedEntities": [],
+      "names": [
+        "孤烟"
+      ],
+      "options": {
+        "form": "plume"
+      },
+      "animate": true,
+      "placement": {
+        "anchor": [
+          320,
+          190
+        ],
+        "at": [
+          0.585,
+          0.5930282084870687
+        ],
+        "scale": 1.4
+      },
+      "instances": [
+        {
+          "placement": {
+            "anchor": [
+              320,
+              320
+            ],
+            "at": [
+              0.585,
+              0.5930282084870687
+            ],
+            "scale": 0.8
+          },
+          "depth": 0,
+          "opacity": 1,
+          "variant": 0
+        }
+      ],
+      "singleUnit": false,
+      "quantity": {
+        "items": [
+          {
+            "entity": "i2",
+            "mode": "exact",
+            "min": 1,
+            "max": 1,
+            "unit": null,
+            "scope": "individual",
+            "extent": "local",
+            "evidence": [
+              "孤烟"
+            ],
+            "basis": "model"
+          }
+        ],
+        "rendered": 1,
+        "exact": false,
+        "collective": false,
+        "partUnsupported": false
+      },
+      "quantityLabel": "整体笔触图层；内部数量尚未适配",
+      "z": 8,
+      "attachment": {
+        "target": "i3",
+        "anchor": "roof",
+        "basis": "local-context"
+      }
+    },
+    {
+      "tool": "dwelling",
+      "entities": [
+        "i3"
+      ],
+      "projectedEntities": [],
+      "names": [
+        "远村"
+      ],
+      "options": {
+        "kind": "house"
+      },
+      "animate": true,
+      "placement": {
+        "anchor": [
+          320,
+          307
+        ],
+        "at": [
+          0.44166666666666665,
+          0.7
+        ],
+        "scale": 1.05
+      },
+      "drawingLabel": "房舍",
+      "instances": [
+        {
+          "placement": {
+            "anchor": [
+              320,
+              307
+            ],
+            "at": [
+              0.44166666666666665,
+              0.7
+            ],
+            "scale": 0.6
+          },
+          "depth": 0,
+          "opacity": 0.6499999999999999,
+          "variant": 0
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              307
+            ],
+            "at": [
+              0.565,
+              0.7298282084870688
+            ],
+            "scale": 0.72
+          },
+          "depth": 0.19999999999999998,
+          "opacity": 0.7899999999999999,
+          "variant": 1
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              307
+            ],
+            "at": [
+              0.6883333333333334,
+              0.6602523598546614
+            ],
+            "scale": 0.6
+          },
+          "depth": 0.39999999999999997,
+          "opacity": 0.9299999999999999,
+          "variant": 2
+        }
+      ],
+      "singleUnit": true,
+      "quantity": {
+        "items": [
+          {
+            "entity": "i3",
+            "mode": "unspecified",
+            "min": null,
+            "max": null,
+            "unit": null,
+            "scope": "unspecified",
+            "extent": "unspecified",
+            "evidence": [],
+            "basis": "model"
+          }
+        ],
+        "rendered": 3,
+        "exact": false,
+        "collective": true,
+        "partUnsupported": false
+      },
+      "quantityLabel": "成片分布；本地试画 3 个单元",
+      "z": 6,
+      "grounding": true
+    },
+    {
+      "tool": "tree",
+      "entities": [
+        "i5"
+      ],
+      "projectedEntities": [],
+      "names": [
+        "独树"
+      ],
+      "options": {
+        "form": "broadleaf",
+        "crown": "lines"
+      },
+      "animate": true,
+      "placement": {
+        "anchor": [
+          320,
+          388
+        ],
+        "at": [
+          0.04,
+          0.72
+        ],
+        "scale": 1.15
+      },
+      "instances": [
+        {
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.04,
+              0.72
+            ],
+            "scale": 0.72
+          },
+          "depth": 0,
+          "opacity": 1,
+          "variant": 0
+        }
+      ],
+      "singleUnit": true,
+      "quantity": {
+        "items": [
+          {
+            "entity": "i5",
+            "mode": "exact",
+            "min": 1,
+            "max": 1,
+            "unit": null,
+            "scope": "individual",
+            "extent": "local",
+            "evidence": [
+              "独树"
+            ],
+            "basis": "model"
+          }
+        ],
+        "rendered": 1,
+        "exact": true,
+        "collective": false,
+        "partUnsupported": false
+      },
+      "quantityLabel": "按提取数量绘制 1 个",
+      "z": 9,
+      "regionalRelation": "outside"
+    }
+  ],
+  "spatial": [
+    {
+      "type": "on",
+      "source": "i2",
+      "target": "i1",
+      "modality": "asserted",
+      "basis": "inferred",
+      "evidence": [
+        "山下孤烟远村"
+      ],
+      "visualized": true,
+      "reason": "烟意安排在山势下方；有村舍时在其附近起烟，源点为本地构图选择"
+    },
+    {
+      "type": "on",
+      "source": "i5",
+      "target": "i6",
+      "modality": "asserted",
+      "basis": "inferred",
+      "evidence": [
+        "天边独树高原"
+      ],
+      "visualized": true,
+      "reason": "主体以地表为共同依托；具体落点由本地场景区域安排"
+    }
+  ],
+  "scene": {
+    "kind": "village",
+    "notes": [
+      "房舍下方的淡墨承托是本地构图，不把它当作诗句额外明说的地面或投影。",
+      "先划分承托地形、群落与主体活动区域；场景密度和背景依托是本地构图推断，不冒充原文明示意象。",
+      "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。"
+    ],
+    "waterline": null,
+    "basis": "local-context",
+    "regions": {
+      "village": [
+        [
+          0.32,
+          0.58
+        ],
+        [
+          0.75,
+          0.58
+        ],
+        [
+          0.82,
+          0.85
+        ],
+        [
+          0.28,
+          0.85
+        ]
+      ]
+    },
+    "supports": [],
+    "organization": {
+      "version": "1.0",
+      "strategy": "regional-proposal",
+      "regions": {
+        "village": [
+          [
+            0.32,
+            0.58
+          ],
+          [
+            0.75,
+            0.58
+          ],
+          [
+            0.82,
+            0.85
+          ],
+          [
+            0.28,
+            0.85
+          ]
+        ]
+      },
+      "candidates": [
+        {
+          "layout": "existing",
+          "errors": 0,
+          "cost": 11.319
+        }
+      ],
+      "repairs": [],
+      "limitations": [
+        "几何检查不判定诗意理解或审美合格",
+        "动作时序与整首诗的场景切换尚未编排"
+      ],
+      "graph": {
+        "nodes": [
+          {
+            "id": "l0",
+            "entities": [
+              "i1"
+            ],
+            "tool": "landscape",
+            "role": "terrain",
+            "habitat": null,
+            "inferred": false,
+            "support": null
+          },
+          {
+            "id": "l1",
+            "entities": [
+              "i4"
+            ],
+            "tool": "landscape",
+            "role": "sky",
+            "habitat": null,
+            "inferred": false,
+            "support": null
+          },
+          {
+            "id": "l2",
+            "entities": [
+              "i6"
+            ],
+            "tool": "landscape",
+            "role": "terrain",
+            "habitat": null,
+            "inferred": false,
+            "support": null
+          },
+          {
+            "id": "l3",
+            "entities": [
+              "i2"
+            ],
+            "tool": "mist",
+            "role": "atmosphere",
+            "habitat": null,
+            "inferred": false,
+            "support": "l0"
+          },
+          {
+            "id": "l4",
+            "entities": [
+              "i3"
+            ],
+            "tool": "dwelling",
+            "role": "subject",
+            "habitat": "land",
+            "inferred": false,
+            "support": "l2"
+          },
+          {
+            "id": "l5",
+            "entities": [
+              "i5"
+            ],
+            "tool": "tree",
+            "role": "vegetation",
+            "habitat": "land",
+            "inferred": false,
+            "support": "l2"
+          }
+        ],
+        "edges": [
+          {
+            "type": "supported-by",
+            "source": "l4",
+            "target": "l2",
+            "basis": "local-composition",
+            "habitat": "land"
+          },
+          {
+            "type": "supported-by",
+            "source": "l5",
+            "target": "l2",
+            "basis": "local-composition",
+            "habitat": "land"
+          },
+          {
+            "type": "on",
+            "source": "l3",
+            "target": "l0",
+            "basis": "inferred",
+            "modality": "asserted",
+            "evidence": [
+              "山下孤烟远村"
+            ]
+          },
+          {
+            "type": "on",
+            "source": "l5",
+            "target": "l2",
+            "basis": "inferred",
+            "modality": "asserted",
+            "evidence": [
+              "天边独树高原"
+            ]
+          }
+        ],
+        "setting": "village"
+      },
+      "audit": {
+        "scope": "implemented-geometry-and-drawing-gaps",
+        "coverage": {
+          "scope": "extracted-entities-only",
+          "present": 6,
+          "mapped": 6,
+          "parameters": [],
+          "missing": []
+        },
+        "checks": [
+          "presence",
+          "count",
+          "finite",
+          "water-support",
+          "cliff-support",
+          "grove-spread",
+          "drawing-gaps"
+        ],
+        "status": "checks-passed",
+        "errors": 0,
+        "review": 0,
+        "issues": [],
+        "metrics": {
+          "overlapPenalty": 0.817,
+          "balancePenalty": 0.189,
+          "motifFootprint": 0.215,
+          "landArea": 0
+        },
+        "cost": 11.319,
+        "aestheticAcceptance": "pending-user"
+      }
+    }
+  },
+  "omitted": [],
+  "notes": [
+    "山下虽被归为地点，仍按原文明示的自然景物匹配；具体空间关系另行处理。",
+    "远村虽被归为地点，仍按原文明示的自然景物匹配；具体空间关系另行处理。",
+    "远村：以一组低矮房舍借形村落，不把村的数量当作房屋栋数。这是本地写意借形，保留原词义。",
+    "天边虽被归为地点，仍按原文明示的自然景物匹配；具体空间关系另行处理。",
+    "高原虽被归为地点，仍按原文明示的自然景物匹配；具体空间关系另行处理。",
+    "位置、大小、笔触与默认微动是本地试画选择；数量解释与本地显示数量分别记录。",
+    "孤烟的数量解释已保留，当前工具以整体图层表现，内部笔触尚未按数量逐个适配。",
+    "未明说的群落数量、疏密、近中远层次与变体均为本地构图选择；种类可按已声明的写意画法概括，不把铺展词换算成精确物体数量。",
+    "房舍下方的淡墨承托是本地构图，不把它当作诗句额外明说的地面或投影。",
+    "先划分承托地形、群落与主体活动区域；场景密度和背景依托是本地构图推断，不冒充原文明示意象。",
+    "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。"
+  ],
+  "relations": []
+}

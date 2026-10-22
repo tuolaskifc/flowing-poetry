@@ -1,0 +1,79 @@
+{
+  "startedAt": "2026-10-22T14:05:21.258Z",
+  "frozenHashes": {
+    "organization-live-cases.json": "b91b4fff14f5c7d78de41b5961bcd6362abcfa6ab55149661a34f9a812f67775",
+    "scene-organization.mjs": "3c6b60631af1174e6c49e4addd6546c025d8e2cae5993f4fbd88ba133ba6f3d1",
+    "planner.mjs": "6f6359e4926f4cb7faaea9722fe7800e05ed29078d1bb1c9dac75b87d2e1471b",
+    "scene-contract.mjs": "5a2620a608a539dee959ffa962de0f7ede3e9b7796883fc98124480324b0dd0c",
+    "scene-layout.mjs": "dc5c700487d9163605440a1e7627587b7bfdd4b23b3ca6f7dd7e13c05559112e",
+    "scene-regions.mjs": "f8657432ce8785c0281f87e2485de13c125dae50cec1c76631247affd3344f44",
+    "composition.mjs": "c4b1cb1f07f06d8f3814d7d79e47b434318f460ea24147504ec2399b469de2ef",
+    "imagery-lexicon.js": "fd90d657c479154c669e8dc28d72f205d0f724329bdf54bedcbd06b99e82b2cd",
+    "../imagery-library/drawing/tools/landscape.js": "1de52af6dd265962c0693f0a753e5bee37b5f4f535b40bc252d1bce757353545"
+  },
+  "calls": [
+    {
+      "case": "n01",
+      "record": "2026-10-22T14-05-21-268Z-d7719e4b",
+      "valid": true,
+      "errors": [],
+      "seconds": 5.5,
+      "tokens": 3939,
+      "geometryErrors": 0,
+      "geometryReview": 0
+    },
+    {
+      "case": "n02",
+      "record": "2026-10-22T14-05-26-778Z-190ec9e9",
+      "valid": true,
+      "errors": [],
+      "seconds": 3.9,
+      "tokens": 3890,
+      "geometryErrors": 0,
+      "geometryReview": 0
+    },
+    {
+      "case": "n03",
+      "record": "2026-10-22T14-05-30-714Z-3c40bee5",
+      "valid": true,
+      "errors": [],
+      "seconds": 6.5,
+      "tokens": 4170,
+      "geometryErrors": 0,
+      "geometryReview": 2
+    },
+    {
+      "case": "n04",
+      "record": "2026-10-22T14-05-37-186Z-c2a21c4c",
+      "valid": false,
+      "errors": [
+        "fetch failed"
+      ],
+      "seconds": 5.6
+    },
+    {
+      "case": "n05",
+      "record": "2026-10-22T14-05-42-820Z-f5c30932",
+      "valid": false,
+      "errors": [
+        "i4.quantity 数量依据未关联本实体"
+      ],
+      "seconds": 4,
+      "tokens": 4018
+    },
+    {
+      "case": "n06",
+      "record": "2026-10-22T14-05-46-808Z-f3f5e2e8",
+      "valid": true,
+      "errors": [],
+      "seconds": 3.4,
+      "tokens": 3793,
+      "geometryErrors": 0,
+      "geometryReview": 0
+    }
+  ],
+  "noAutomaticRetry": true,
+  "finishedAt": "2026-10-22T14:05:50.202Z",
+  "rulesUnchanged": true,
+  "totalTokens": 19810
+}
