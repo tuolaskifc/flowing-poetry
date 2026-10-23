@@ -1,0 +1,1148 @@
+{
+  "version": "semantic-composition-3.3",
+  "seed": 958039947,
+  "settings": {
+    "wind": 0,
+    "density": 0.6,
+    "palette": "twilight"
+  },
+  "layers": [
+    {
+      "tool": "landscape",
+      "entities": [
+        "i1"
+      ],
+      "projectedEntities": [],
+      "names": [
+        "返景"
+      ],
+      "options": {
+        "form": "lightwash"
+      },
+      "animate": false,
+      "placement": {
+        "anchor": [
+          320,
+          194
+        ],
+        "at": [
+          0.58,
+          0.8
+        ],
+        "scale": 1.5
+      },
+      "semanticGroup": {
+        "members": [
+          "i1"
+        ],
+        "role": "subject",
+        "pattern": "single",
+        "depth": "unspecified",
+        "basis": "inferred",
+        "evidence": [
+          "返景入深林",
+          "复照青苔上"
+        ],
+        "index": 2
+      },
+      "semanticEffects": [
+        {
+          "path": "scene.actions[0].state",
+          "consumer": "动作画法",
+          "effect": "当前工具尚无对应动作状态",
+          "status": "unsupported"
+        },
+        {
+          "path": "scene.groups[2].role",
+          "consumer": "主次布局",
+          "effect": "主体相对突出",
+          "status": "applied"
+        },
+        {
+          "path": "scene.groups[2].pattern",
+          "consumer": "群落布局",
+          "effect": "按 single 组织显示单元；不覆盖明确数量",
+          "status": "applied"
+        },
+        {
+          "path": "scene.groups[2].depth",
+          "consumer": "远近布局",
+          "effect": "远近未明，保持本地默认",
+          "status": "skipped"
+        }
+      ],
+      "semanticEnergy": false,
+      "timeScale": 0,
+      "semanticAction": {
+        "entity": "i1",
+        "state": "fall",
+        "pace": "slow",
+        "direction": "down",
+        "modality": "asserted",
+        "basis": "inferred",
+        "evidence": [
+          "返景入深林",
+          "复照青苔上"
+        ]
+      },
+      "instances": [
+        {
+          "placement": {
+            "anchor": [
+              320,
+              275
+            ],
+            "at": [
+              0.58,
+              0.8
+            ],
+            "scale": 1.2544000000000002
+          },
+          "depth": 0.05,
+          "opacity": 0.84,
+          "variant": 0
+        }
+      ],
+      "singleUnit": false,
+      "quantity": {
+        "items": [
+          {
+            "entity": "i1",
+            "mode": "unspecified",
+            "min": null,
+            "max": null,
+            "unit": null,
+            "scope": "unspecified",
+            "extent": "unspecified",
+            "evidence": [],
+            "basis": "model"
+          }
+        ],
+        "rendered": 1,
+        "exact": false,
+        "collective": false,
+        "partUnsupported": false
+      },
+      "quantityLabel": "整体笔触图层；内部数量尚未适配",
+      "z": 18
+    },
+    {
+      "tool": "landscape",
+      "entities": [
+        "i3"
+      ],
+      "projectedEntities": [],
+      "names": [
+        "青苔"
+      ],
+      "options": {
+        "form": "moss"
+      },
+      "animate": false,
+      "placement": {
+        "anchor": [
+          320,
+          194
+        ],
+        "at": [
+          0.57,
+          0.86
+        ],
+        "scale": 1.5
+      },
+      "semanticGroup": {
+        "members": [
+          "i3"
+        ],
+        "role": "accent",
+        "pattern": "field",
+        "depth": "near",
+        "basis": "inferred",
+        "evidence": [
+          "复照青苔上"
+        ],
+        "index": 1
+      },
+      "semanticEffects": [
+        {
+          "path": "scene.groups[1].role",
+          "consumer": "主次布局",
+          "effect": "点景缩小淡化",
+          "status": "applied"
+        },
+        {
+          "path": "scene.groups[1].pattern",
+          "consumer": "群落布局",
+          "effect": "按 field 组织显示单元；不覆盖明确数量",
+          "status": "applied"
+        },
+        {
+          "path": "scene.groups[1].depth",
+          "consumer": "远近布局",
+          "effect": "将 near 转为相对大小、透明度与允许区域内的落点",
+          "status": "applied"
+        }
+      ],
+      "semanticEnergy": false,
+      "timeScale": 0.45,
+      "instances": [
+        {
+          "placement": {
+            "anchor": [
+              320,
+              290
+            ],
+            "at": [
+              0.57,
+              0.86
+            ],
+            "scale": 0.94468
+          },
+          "depth": 0.3,
+          "opacity": 0.6552,
+          "variant": 0
+        }
+      ],
+      "singleUnit": false,
+      "quantity": {
+        "items": [
+          {
+            "entity": "i3",
+            "mode": "unspecified",
+            "min": null,
+            "max": null,
+            "unit": null,
+            "scope": "unspecified",
+            "extent": "spread",
+            "evidence": [
+              "青苔"
+            ],
+            "basis": "model"
+          }
+        ],
+        "rendered": 1,
+        "exact": false,
+        "collective": true,
+        "partUnsupported": false
+      },
+      "quantityLabel": "整体笔触图层；内部数量尚未适配",
+      "z": 14,
+      "semanticSupport": {
+        "surface": "ground",
+        "target": null,
+        "path": "scene.supports[0]"
+      }
+    },
+    {
+      "tool": "tree",
+      "entities": [
+        "i2"
+      ],
+      "projectedEntities": [],
+      "names": [
+        "深林"
+      ],
+      "options": {
+        "form": "broadleaf",
+        "crown": "wash"
+      },
+      "animate": true,
+      "placement": {
+        "anchor": [
+          320,
+          388
+        ],
+        "at": [
+          0.49151337500000014,
+          0.8231499999999999
+        ],
+        "scale": 1.15
+      },
+      "semanticGroup": {
+        "members": [
+          "i2"
+        ],
+        "role": "environment",
+        "pattern": "grove",
+        "depth": "unspecified",
+        "basis": "inferred",
+        "evidence": [
+          "返景入深林"
+        ],
+        "index": 0
+      },
+      "semanticEffects": [
+        {
+          "path": "scene.groups[0].role",
+          "consumer": "主次布局",
+          "effect": "保留环境群落层次",
+          "status": "applied"
+        },
+        {
+          "path": "scene.groups[0].pattern",
+          "consumer": "群落布局",
+          "effect": "按 grove 组织显示单元；不覆盖明确数量",
+          "status": "applied"
+        },
+        {
+          "path": "scene.groups[0].depth",
+          "consumer": "远近布局",
+          "effect": "远近未明，保持本地默认",
+          "status": "skipped"
+        }
+      ],
+      "semanticEnergy": true,
+      "timeScale": 0.45,
+      "instances": [
+        {
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.07947250000000006,
+              0.62075
+            ],
+            "scale": 0.77375
+          },
+          "depth": 0.0025000000000000005,
+          "opacity": 0.36119999999999997,
+          "variant": 0
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.6835674999999999,
+              0.64225
+            ],
+            "scale": 1.0002192509224128
+          },
+          "depth": 0.0075,
+          "opacity": 0.38346,
+          "variant": 1
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.31016250000000006,
+              0.66375
+            ],
+            "scale": 0.6302641591279685
+          },
+          "depth": 0.0125,
+          "opacity": 0.40571999999999997,
+          "variant": 2
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.9142575000000002,
+              0.68525
+            ],
+            "scale": 1.0550755434531678
+          },
+          "depth": 0.017499999999999998,
+          "opacity": 0.42797999999999997,
+          "variant": 0
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.5408524999999998,
+              0.70675
+            ],
+            "scale": 1.0172435793840595
+          },
+          "depth": 0.022500000000000003,
+          "opacity": 0.45024000000000003,
+          "variant": 1
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.16744749999999975,
+              0.72825
+            ],
+            "scale": 0.8011414780747772
+          },
+          "depth": 0.027500000000000004,
+          "opacity": 0.4725,
+          "variant": 2
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.7715425,
+              0.74975
+            ],
+            "scale": 1.22
+          },
+          "depth": 0.0325,
+          "opacity": 0.49476,
+          "variant": 0
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.3981374999999999,
+              0.77125
+            ],
+            "scale": 1.0145528598758387
+          },
+          "depth": 0.037500000000000006,
+          "opacity": 0.5170199999999999,
+          "variant": 1
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.035,
+              0.79275
+            ],
+            "scale": 1.049454250702745
+          },
+          "depth": 0.0425,
+          "opacity": 0.53928,
+          "variant": 2
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.6288275000000005,
+              0.8142499999999999
+            ],
+            "scale": 1.22
+          },
+          "depth": 0.0475,
+          "opacity": 0.5615399999999999,
+          "variant": 0
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.2554225,
+              0.83575
+            ],
+            "scale": 1.045657102997959
+          },
+          "depth": 0.052500000000000005,
+          "opacity": 0.5838,
+          "variant": 1
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.8595175000000003,
+              0.85725
+            ],
+            "scale": 1.22
+          },
+          "depth": 0.057499999999999996,
+          "opacity": 0.60606,
+          "variant": 2
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.48611250000000067,
+              0.8787499999999999
+            ],
+            "scale": 1.22
+          },
+          "depth": 0.0625,
+          "opacity": 0.62832,
+          "variant": 0
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.11270750000000102,
+              0.90025
+            ],
+            "scale": 1.1516111926406845
+          },
+          "depth": 0.0675,
+          "opacity": 0.6505799999999999,
+          "variant": 1
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.7168024999999996,
+              0.92175
+            ],
+            "scale": 1.22
+          },
+          "depth": 0.0725,
+          "opacity": 0.6728399999999999,
+          "variant": 2
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.3433974999999999,
+              0.9432499999999999
+            ],
+            "scale": 1.22
+          },
+          "depth": 0.07750000000000001,
+          "opacity": 0.6950999999999999,
+          "variant": 0
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.9474925000000002,
+              0.96475
+            ],
+            "scale": 1.22
+          },
+          "depth": 0.0825,
+          "opacity": 0.71736,
+          "variant": 1
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.5740875000000005,
+              0.98625
+            ],
+            "scale": 1.22
+          },
+          "depth": 0.08750000000000001,
+          "opacity": 0.73962,
+          "variant": 2
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.20068250000000087,
+              1
+            ],
+            "scale": 1.22
+          },
+          "depth": 0.09250000000000001,
+          "opacity": 0.76188,
+          "variant": 0
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.8047774999999994,
+              1
+            ],
+            "scale": 1.22
+          },
+          "depth": 0.0975,
+          "opacity": 0.78414,
+          "variant": 1
+        }
+      ],
+      "singleUnit": true,
+      "quantity": {
+        "items": [
+          {
+            "entity": "i2",
+            "mode": "unspecified",
+            "min": null,
+            "max": null,
+            "unit": null,
+            "scope": "unspecified",
+            "extent": "spread",
+            "evidence": [
+              "深林"
+            ],
+            "basis": "model"
+          }
+        ],
+        "rendered": 20,
+        "exact": false,
+        "collective": true,
+        "partUnsupported": false
+      },
+      "quantityLabel": "依场景疏密试画 20 个单元；原文未给精确个体数",
+      "z": 5
+    },
+    {
+      "tool": "landscape",
+      "names": [
+        "构图依托·地面"
+      ],
+      "entities": [],
+      "projectedEntities": [],
+      "options": {
+        "form": "ground"
+      },
+      "animate": false,
+      "placement": {
+        "anchor": [
+          320,
+          194
+        ],
+        "at": [
+          0.5,
+          0.48
+        ],
+        "scale": 1.6
+      },
+      "instances": [
+        {
+          "placement": {
+            "anchor": [
+              320,
+              194
+            ],
+            "at": [
+              0.5,
+              0.48
+            ],
+            "scale": 1.6
+          },
+          "variant": 0,
+          "depth": 0,
+          "opacity": 0.84
+        }
+      ],
+      "singleUnit": false,
+      "inferred": true,
+      "provenance": {
+        "basis": "local-context",
+        "reason": "林下地表承接树根、苔意和小径"
+      },
+      "quantity": {
+        "rendered": 1,
+        "exact": false,
+        "items": []
+      },
+      "quantityLabel": "背景依托，不计入意象覆盖",
+      "z": -18,
+      "semanticEffects": [],
+      "semanticEnergy": false
+    }
+  ],
+  "spatial": [
+    {
+      "type": "on",
+      "source": "i1",
+      "target": "i3",
+      "modality": "asserted",
+      "basis": "explicit",
+      "evidence": [
+        "返景入深林，复照青苔上。"
+      ],
+      "visualized": false,
+      "reason": "该空间关系与形态组合尚未适配"
+    },
+    {
+      "type": "among",
+      "source": "i1",
+      "target": "i2",
+      "modality": "asserted",
+      "basis": "inferred",
+      "evidence": [
+        "返景入深林"
+      ],
+      "visualized": false,
+      "reason": "该空间关系与形态组合尚未适配"
+    }
+  ],
+  "scene": {
+    "kind": "forest-light",
+    "notes": [
+      "先划分承托地形、群落与主体活动区域；场景密度和背景依托是本地构图推断，不冒充原文明示意象。",
+      "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。"
+    ],
+    "waterline": null,
+    "basis": "local-context",
+    "regions": {
+      "forest": [
+        [
+          0,
+          0.2
+        ],
+        [
+          1,
+          0.2
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ]
+    },
+    "supports": [
+      {
+        "form": "ground",
+        "reason": "林下地表承接树根、苔意和小径"
+      }
+    ],
+    "semanticSetting": {
+      "kind": "woodland",
+      "basis": "explicit",
+      "evidence": [
+        "返景入深林"
+      ]
+    },
+    "semanticEffects": [
+      {
+        "path": "scene.supports[0]",
+        "consumer": "场景依托",
+        "status": "applied",
+        "effect": "必要环境以独立推断背景表示，不新增原文实体"
+      }
+    ],
+    "organization": {
+      "version": "1.0",
+      "strategy": "regional-proposal",
+      "regions": {
+        "forest": [
+          [
+            0,
+            0.2
+          ],
+          [
+            1,
+            0.2
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ]
+      },
+      "candidates": [
+        {
+          "layout": "existing",
+          "errors": 0,
+          "cost": 60.242
+        }
+      ],
+      "repairs": [],
+      "limitations": [
+        "几何检查不判定诗意理解或审美合格",
+        "动作时序与整首诗的场景切换尚未编排"
+      ],
+      "graph": {
+        "nodes": [
+          {
+            "id": "l0",
+            "entities": [
+              "i1"
+            ],
+            "tool": "landscape",
+            "role": "detail",
+            "habitat": null,
+            "inferred": false,
+            "support": "l1"
+          },
+          {
+            "id": "l1",
+            "entities": [
+              "i3"
+            ],
+            "tool": "landscape",
+            "role": "detail",
+            "habitat": null,
+            "inferred": false,
+            "support": null
+          },
+          {
+            "id": "l2",
+            "entities": [
+              "i2"
+            ],
+            "tool": "tree",
+            "role": "vegetation",
+            "habitat": "land",
+            "inferred": false,
+            "support": "l3"
+          },
+          {
+            "id": "l3",
+            "entities": [],
+            "tool": "landscape",
+            "role": "terrain",
+            "habitat": null,
+            "inferred": true,
+            "support": null
+          }
+        ],
+        "edges": [
+          {
+            "type": "supported-by",
+            "source": "l2",
+            "target": "l3",
+            "basis": "local-composition",
+            "habitat": "land"
+          },
+          {
+            "type": "on",
+            "source": "l0",
+            "target": "l1",
+            "basis": "explicit",
+            "modality": "asserted",
+            "evidence": [
+              "返景入深林，复照青苔上。"
+            ]
+          },
+          {
+            "type": "among",
+            "source": "l0",
+            "target": "l2",
+            "basis": "inferred",
+            "modality": "asserted",
+            "evidence": [
+              "返景入深林"
+            ]
+          }
+        ],
+        "setting": "forest-light"
+      },
+      "audit": {
+        "scope": "implemented-geometry-and-drawing-gaps",
+        "coverage": {
+          "scope": "extracted-entities-only",
+          "present": 3,
+          "mapped": 3,
+          "parameters": [],
+          "missing": []
+        },
+        "checks": [
+          "presence",
+          "count",
+          "finite",
+          "water-support",
+          "cliff-support",
+          "grove-spread",
+          "drawing-gaps"
+        ],
+        "status": "needs-review",
+        "errors": 0,
+        "review": 2,
+        "issues": [
+          {
+            "code": "unresolved-relation",
+            "severity": "review",
+            "message": "有空间关系尚无对应布局画法"
+          },
+          {
+            "code": "unresolved-relation",
+            "severity": "review",
+            "message": "有空间关系尚无对应布局画法"
+          }
+        ],
+        "metrics": {
+          "overlapPenalty": 0,
+          "balancePenalty": 0.03,
+          "motifFootprint": 4.859,
+          "landArea": 0
+        },
+        "cost": 60.242,
+        "aestheticAcceptance": "pending-user"
+      }
+    }
+  },
+  "omitted": [],
+  "notes": [
+    "深林虽被归为地点，仍按原文明示的自然景物匹配；具体空间关系另行处理。",
+    "位置、大小、笔触与默认微动是本地试画选择；数量解释与本地显示数量分别记录。",
+    "深林未明说精确数量，按模型的 grove 群落解释选择本地显示密度。",
+    "未明说的群落数量、疏密、近中远层次与变体均为本地构图选择；种类可按已声明的写意画法概括，不把铺展词换算成精确物体数量。",
+    "先划分承托地形、群落与主体活动区域；场景密度和背景依托是本地构图推断，不冒充原文明示意象。",
+    "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。",
+    "语义保留：scene.actions[0].state，当前工具尚无对应动作状态",
+    "整体场景、主次、远近、依托和支持的动作状态来自本次模型解释；具体布局、颜色和时钟倍率由本地视觉策略选择。",
+    "动作动画只表现受支持的主导状态与有限观看微动，未完成先后事件、完整因果或人物行走步态。"
+  ],
+  "relations": [],
+  "semanticConsumption": {
+    "version": "3.3",
+    "items": [
+      {
+        "path": "scene.setting",
+        "status": "applied",
+        "consumer": "本地视觉策略",
+        "effect": "整体环境进入场景提案选择",
+        "basis": "explicit",
+        "evidence": [
+          "返景入深林"
+        ]
+      },
+      {
+        "path": "scene.groups[0].role",
+        "status": "applied",
+        "consumer": "主次布局",
+        "effect": "保留环境群落层次",
+        "basis": "inferred",
+        "evidence": [
+          "返景入深林"
+        ]
+      },
+      {
+        "path": "scene.groups[0].pattern",
+        "status": "applied",
+        "consumer": "群落布局",
+        "effect": "按 grove 组织显示单元；不覆盖明确数量",
+        "basis": "inferred",
+        "evidence": [
+          "返景入深林"
+        ]
+      },
+      {
+        "path": "scene.groups[0].depth",
+        "status": "skipped",
+        "consumer": "远近布局",
+        "effect": "远近未明，保持本地默认",
+        "basis": "inferred",
+        "evidence": [
+          "返景入深林"
+        ]
+      },
+      {
+        "path": "scene.groups[1].role",
+        "status": "applied",
+        "consumer": "主次布局",
+        "effect": "点景缩小淡化",
+        "basis": "inferred",
+        "evidence": [
+          "复照青苔上"
+        ]
+      },
+      {
+        "path": "scene.groups[1].pattern",
+        "status": "applied",
+        "consumer": "群落布局",
+        "effect": "按 field 组织显示单元；不覆盖明确数量",
+        "basis": "inferred",
+        "evidence": [
+          "复照青苔上"
+        ]
+      },
+      {
+        "path": "scene.groups[1].depth",
+        "status": "applied",
+        "consumer": "远近布局",
+        "effect": "将 near 转为相对大小、透明度与允许区域内的落点",
+        "basis": "inferred",
+        "evidence": [
+          "复照青苔上"
+        ]
+      },
+      {
+        "path": "scene.groups[2].role",
+        "status": "applied",
+        "consumer": "主次布局",
+        "effect": "主体相对突出",
+        "basis": "inferred",
+        "evidence": [
+          "返景入深林",
+          "复照青苔上"
+        ]
+      },
+      {
+        "path": "scene.groups[2].pattern",
+        "status": "applied",
+        "consumer": "群落布局",
+        "effect": "按 single 组织显示单元；不覆盖明确数量",
+        "basis": "inferred",
+        "evidence": [
+          "返景入深林",
+          "复照青苔上"
+        ]
+      },
+      {
+        "path": "scene.groups[2].depth",
+        "status": "skipped",
+        "consumer": "远近布局",
+        "effect": "远近未明，保持本地默认",
+        "basis": "inferred",
+        "evidence": [
+          "返景入深林",
+          "复照青苔上"
+        ]
+      },
+      {
+        "path": "scene.supports[0]",
+        "status": "applied",
+        "consumer": "场景依托",
+        "effect": "必要环境以独立推断背景表示，不新增原文实体",
+        "basis": "inferred",
+        "evidence": [
+          "复照青苔上"
+        ]
+      },
+      {
+        "path": "scene.actions[0].state",
+        "status": "unsupported",
+        "consumer": "动作画法",
+        "effect": "当前工具尚无对应动作状态",
+        "basis": "inferred",
+        "evidence": [
+          "返景入深林",
+          "复照青苔上"
+        ]
+      },
+      {
+        "path": "scene.actions[0].pace",
+        "status": "skipped",
+        "consumer": "本地视觉策略",
+        "effect": "该工具尚不支持此动作分量",
+        "basis": "inferred",
+        "evidence": [
+          "返景入深林",
+          "复照青苔上"
+        ]
+      },
+      {
+        "path": "scene.actions[0].direction",
+        "status": "skipped",
+        "consumer": "本地视觉策略",
+        "effect": "该工具尚不支持此动作分量",
+        "basis": "inferred",
+        "evidence": [
+          "返景入深林",
+          "复照青苔上"
+        ]
+      },
+      {
+        "path": "scene.atmosphere.visibility",
+        "status": "applied",
+        "consumer": "画布色层与远景",
+        "effect": "可见度 dark；迷蒙或昏暗时淡化非光源图层",
+        "basis": "inferred",
+        "evidence": [
+          "返景入深林",
+          "复照青苔上"
+        ]
+      },
+      {
+        "path": "scene.atmosphere.illumination",
+        "status": "applied",
+        "consumer": "有限配色",
+        "effect": "照明 twilight 映射为本地 twilight 配色；用户仍可手动覆盖",
+        "basis": "inferred",
+        "evidence": [
+          "返景入深林",
+          "复照青苔上"
+        ]
+      },
+      {
+        "path": "atmosphere.energy",
+        "status": "applied",
+        "consumer": "绘画时钟",
+        "effect": "没有明确动作节奏时，气息强弱控制已有微动的默认时钟"
+      },
+      {
+        "path": "atmosphere.openness",
+        "status": "applied",
+        "consumer": "群落分布与笔触密度",
+        "effect": "开阔度转换为本地间距与工具笔触密度，不等于原文数量"
+      },
+      {
+        "path": "atmosphere.valence",
+        "status": "skipped",
+        "consumer": "有限配色",
+        "effect": "照明策略优先，本次不另套情绪配色"
+      },
+      {
+        "path": "time.markers",
+        "status": "retained",
+        "consumer": "原始记录与解读",
+        "effect": "保留原文时间标记；本版照明由 scene.atmosphere 转换，多阶段时间逻辑未执行"
+      }
+    ],
+    "summary": {
+      "applied": 13,
+      "partial": 0,
+      "unsupported": 1,
+      "skipped": 5,
+      "retained": 1
+    },
+    "aestheticAcceptance": "pending-user"
+  }
+}

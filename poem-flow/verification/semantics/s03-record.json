@@ -1,0 +1,249 @@
+{
+  "id": "2026-10-23T01-04-03-041Z-c3aaf670",
+  "fingerprint": "2b9c736088725a53432e6941b14aa732a92c335241d9844fe946be44c3061f9e",
+  "poem": "返景入深林，复照青苔上。",
+  "source": {
+    "provider": "整体场景语义3.3实测",
+    "author": "王维",
+    "title": "鹿柴",
+    "dynasty": "唐代"
+  },
+  "mode": "composition",
+  "model": "DeepSeek-V4.1-Flash",
+  "started_at": "2026-10-23T01:04:03.043Z",
+  "cached": false,
+  "http_status": 200,
+  "usage": {
+    "completion_tokens": 772,
+    "prompt_tokens": 4896,
+    "total_tokens": 5668,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 4864
+    }
+  },
+  "finish_reason": "stop",
+  "analysis": {
+    "schema_version": "3.3",
+    "poem": "返景入深林，复照青苔上。",
+    "reading": "返照的日光斜射入深林，又落在青苔上；写林间幽暗处的一抹余晖。",
+    "entities": [
+      {
+        "id": "i1",
+        "mentions": [
+          "返景"
+        ],
+        "concept": "返照的日光",
+        "kind": "environment",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "返景入深林"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i2",
+        "mentions": [
+          "深林"
+        ],
+        "concept": "幽深的树林",
+        "kind": "place",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "返景入深林"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "spread",
+          "evidence": [
+            "深林"
+          ]
+        }
+      },
+      {
+        "id": "i3",
+        "mentions": [
+          "青苔"
+        ],
+        "concept": "青色的苔藓",
+        "kind": "organism",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "复照青苔上"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "spread",
+          "evidence": [
+            "青苔"
+          ]
+        }
+      }
+    ],
+    "relations": [],
+    "atmosphere": {
+      "labels": [
+        "幽静",
+        "清寂"
+      ],
+      "valence": "neutral",
+      "energy": "low",
+      "tension": "low",
+      "openness": "low",
+      "evidence": [
+        "返景入深林",
+        "复照青苔上"
+      ]
+    },
+    "time": {
+      "markers": [
+        {
+          "surface": "复",
+          "meaning": "表示动作再次发生，日光又一次照落"
+        }
+      ],
+      "note": "未明写具体时辰，仅由返照暗示日暮前后。"
+    },
+    "uncertainties": [
+      "“返景”是日光返照还是光影本身，原文未明说。",
+      "深林与青苔的具体空间关系未明写，只能推断日光穿林照到苔上。"
+    ],
+    "spatial": [
+      {
+        "type": "on",
+        "source": "i1",
+        "target": "i3",
+        "modality": "asserted",
+        "basis": "explicit",
+        "evidence": [
+          "复照青苔上"
+        ]
+      },
+      {
+        "type": "among",
+        "source": "i1",
+        "target": "i2",
+        "modality": "asserted",
+        "basis": "inferred",
+        "evidence": [
+          "返景入深林"
+        ]
+      }
+    ],
+    "scene": {
+      "setting": {
+        "kind": "woodland",
+        "basis": "explicit",
+        "evidence": [
+          "返景入深林"
+        ]
+      },
+      "groups": [
+        {
+          "members": [
+            "i2"
+          ],
+          "role": "environment",
+          "pattern": "grove",
+          "depth": "unspecified",
+          "basis": "inferred",
+          "evidence": [
+            "返景入深林"
+          ]
+        },
+        {
+          "members": [
+            "i3"
+          ],
+          "role": "accent",
+          "pattern": "field",
+          "depth": "near",
+          "basis": "inferred",
+          "evidence": [
+            "复照青苔上"
+          ]
+        },
+        {
+          "members": [
+            "i1"
+          ],
+          "role": "subject",
+          "pattern": "single",
+          "depth": "unspecified",
+          "basis": "inferred",
+          "evidence": [
+            "返景入深林",
+            "复照青苔上"
+          ]
+        }
+      ],
+      "supports": [
+        {
+          "entity": "i3",
+          "surface": "ground",
+          "target": null,
+          "basis": "inferred",
+          "evidence": [
+            "复照青苔上"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "entity": "i1",
+          "state": "fall",
+          "pace": "slow",
+          "direction": "down",
+          "modality": "asserted",
+          "basis": "inferred",
+          "evidence": [
+            "返景入深林",
+            "复照青苔上"
+          ]
+        }
+      ],
+      "atmosphere": {
+        "visibility": "dark",
+        "illumination": "twilight",
+        "basis": "inferred",
+        "evidence": [
+          "返景入深林",
+          "复照青苔上"
+        ]
+      }
+    }
+  },
+  "validation": {
+    "valid": false,
+    "errors": [
+      "spatial[0] 依据未关联关系两端"
+    ],
+    "warnings": [
+      "模型保留了不确定性，需要审阅",
+      "spatial[1] 的推断或非确定关系需审阅"
+    ],
+    "review_required": true
+  },
+  "elapsed_seconds": 3.9
+}

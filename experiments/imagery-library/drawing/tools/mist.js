@@ -16,7 +16,7 @@ function mist() {
           // built into the glyph; the scene layer chooses its contextual base.
           const c=p.color(palette.ink);
           for(let i=0;i<19;i++){
-            const t=i/18,x=320+Math.sin(t*5.5+state.banks[0].phase)*t*23+ctx.wind.offset(state.banks[0].phase,18,.17)*t,y=320-t*220,rx=8+t*28,ry=13+t*6;
+            const t=(i/19+time*.035)%1,x=320+Math.sin(t*5.5+state.banks[0].phase)*t*23+ctx.wind.offset(state.banks[0].phase,18,.17)*t,y=320-t*220,rx=8+t*28,ry=13+t*6;
             canvasContext.save();canvasContext.translate(x,y);canvasContext.scale(rx,ry);
             const g=canvasContext.createRadialGradient(0,0,0,0,0,1);g.addColorStop(0,`rgba(${p.red(c)},${p.green(c)},${p.blue(c)},${.11-t*.075})`);g.addColorStop(1,`rgba(${p.red(c)},${p.green(c)},${p.blue(c)},0)`);canvasContext.fillStyle=g;canvasContext.fillRect(-1,-1,2,2);canvasContext.restore();
           }return;

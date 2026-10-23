@@ -5,13 +5,15 @@
 | 需要了解什么 | 入口 | 定位 |
 | --- | --- | --- |
 | 整体设计与分工 | [设计规范](设计规范.md) | 当前唯一设计主文档 |
+| 现在实际运行的架构 | [架构页面](../poem-flow/architecture.html) · [SVG](../poem-flow/architecture.svg) | 当前 3.3 链路，已连接和待实现分别标记 |
+| 模型解释如何改变画面 | [3.3 语义消费约定](../experiments/poem-generation/composition-semantics.md) · [同回答开关对照](../poem-flow/semantic-review.html) | 主次、远近、依托、动作与照明；原始失败和引用展开单列 |
 | 运行当前项目 | [主入口与启动说明](../README.md#运行流动诗) | 输入／推荐 → DeepSeek → 本地绘制 → 交互与保存 |
 | 从哪些诗句开始改画 | [精选诗句库说明](../experiments/poem-generation/curated-library.md) | 20 组候选、首批 5 组、出处、画面目标及缺口；主网页优先选用 |
 | 固定诗句的画面进步 | [写意归类对照](../poem-flow/expressive-review.html) | 同一份手工语义重绘前后规划；覆盖与审美分别检查 |
 | 换新句能否生成 | [十二句真实试验](../experiments/poem-generation/generalization-trial.md) | 首轮、修订、失败、数量对照与实际图片；不把同批回归称为独立成功率 |
 | 一张图看懂模块 | [模块职能树](assets/模块职能树.png) | 标注现状的目标结构 |
 | 写意借形如何处理 | [写意归类与场景](../experiments/poem-generation/expressive-generation.md) | 房寺、鸟类、马蹄等共享画法，保留原词义及数量边界 |
-| 程序现在如何读模型回答 | [3.2 场景与空间关系](../experiments/poem-generation/scene-generation.md)；[冻结完整协议 3.0](../experiments/poem-semantics/contract-v3/固定输出结构.md) | 主网页默认数量与有限空间关系；完整动作仍待实现 |
+| 程序现在如何读模型回答 | [3.3 整体场景](../experiments/poem-generation/composition-semantics.md)；[冻结完整协议 3.0](../experiments/poem-semantics/contract-v3/固定输出结构.md) | 默认整体场景语义，支持主导动作；完整动作因果与时间仍待实现 |
 | 实际调用的结果和问题 | [实验结论](../experiments/poem-semantics/实验结论.md) | 指向真实记录，不随设计改写原始回答 |
 | 外部资源 | [参考资料](参考资料.md) | 保留各项核实状态 |
 | 意象库第一轮试画 | [试画与候选](../experiments/imagery-library/README.md) | 五类本地试画、10 个 OpenProcessing 候选与来源边界 |

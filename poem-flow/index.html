@@ -52,7 +52,7 @@
   <script defer src="/experiments/poem-generation/app.js"></script>
 </head>
 <body>
-  <header><a class="wordmark" href="/">流动诗<span>FLOWING POETRY</span></a><nav><a href="/poem-flow/organization-review.html">场景组织对照 ↗</a><a href="/poem-flow/generalization-review.html">新句试验 ↗</a><a href="/poem-flow/expressive-review.html">已认可基线 ↗</a><a href="/poem-flow/library.html">精选诗句库 ↗</a><a href="/experiments/imagery-library/progress.html">意象进度 ↗</a></nav></header>
+  <header><a class="wordmark" href="/">流动诗<span>FLOWING POETRY</span></a><nav><a href="/poem-flow/architecture.html">当前架构 ↗</a><a href="/poem-flow/semantic-review.html">语义贯通实测 ↗</a><a href="/poem-flow/expressive-review.html">已认可基线 ↗</a><a href="/poem-flow/library.html">精选诗句库 ↗</a><a href="/experiments/imagery-library/progress.html">意象进度 ↗</a></nav></header>
   <main>
     <aside class="input-panel">
       <p class="eyebrow">A VERSE, A MOVING LANDSCAPE</p><h1>从一句诗<br>走进一幅画。</h1>
@@ -69,7 +69,7 @@
       <details id="library-goal" hidden><summary>这句接下来想改什么</summary><p id="library-goal-text"></p><p id="library-gap" class="muted"></p><a id="library-entry" href="/poem-flow/library.html">看这一组的记录 ↗</a></details>
       <details class="online-poetry"><summary>今日诗词取句（可选）</summary><p class="input-note">每轮最多取 5 句，在本地初筛；选句不调用 DeepSeek。</p><button id="fetch-poem" type="button" disabled>在线取句并筛选</button></details>
       <details id="candidate-panel" class="candidate-panel" hidden open><summary id="candidate-summary">本轮候选</summary><p class="input-note">按已有画法粗筛，可改选另一句；是否在场、是否为比喻，生成时再分析。</p><div id="candidates" role="group" aria-label="本轮诗句候选"></div></details>
-      <details class="scope"><summary>这一版可以做到什么</summary><p>DeepSeek 解读诗句，本地绘画库组合画面。目前支持基础意象、群落和部分空间关系；尚未覆盖的物象会列出，完整动作、情感配色和时间编排仍在扩展。</p></details>
+      <details class="scope"><summary>这一版可以做到什么</summary><p>DeepSeek 解释整体环境、主次群落、远近、依托和动作气息，本地规则组织画面、姿态、节奏与有限配色。解读与未支持部分可以展开查看；完整动作因果、时间编排和情感色谱仍在扩展。</p></details>
     </aside>
     <section class="picture-panel">
       <div id="welcome"><span class="welcome-mark">～</span><p>一幅风景，等一句诗。</p><small>输入诗句或取一句推荐，点击「生成画面」开始。</small></div>
@@ -82,7 +82,7 @@
         </div>
         <div class="view-controls">
           <button id="pause" type="button" aria-pressed="false">暂停</button><button id="reseed" type="button">换一组形态</button><button id="reset-layout" type="button">还原构图</button><button id="save" type="button">保存画面 ↓</button>
-          <label>配色 <select id="palette"><option value="clear">清寂澄明</option><option value="tender">温柔缱绻</option></select></label>
+          <label>配色 <select id="palette"><option value="clear">清寂澄明</option><option value="tender">温柔缱绻</option><option value="twilight">暮色微暖</option><option value="night">夜色淡墨</option></select></label>
           <label>风力 <input id="wind" type="range" min="0" max="1" step="0.05" value="0"></label>
           <label id="moon-control" hidden>月形 <select id="moon-shape"><option value="crescent">弯月</option><option value="half">半月</option><option value="gibbous">凸月</option><option value="full">满月</option><option value="dark">暗月</option></select></label>
         </div>
@@ -90,6 +90,7 @@
         <details class="interpretation" open><summary>这幅画与诗句</summary>
           <div class="reading-grid"><article><h3>文字解读</h3><p id="reading"></p><ul id="entities"></ul><p id="atmosphere" class="muted"></p><ul id="uncertainties"></ul></article><article><h3>画出的意象</h3><ul id="drawn"></ul><h3>保留的空缺</h3><ul id="omitted"></ul></article></div>
         </details>
+        <details><summary>诗意怎样进入画面</summary><p id="semantic-summary"></p><ul id="semantic-applied"></ul><h3>仍保留的解释与空缺</h3><ul id="semantic-pending"></ul></details>
         <details><summary>画面组织与检查</summary><p id="organization-summary"></p><ul id="organization-issues"></ul><p class="muted">自动检查只覆盖已实现的依托、数量与位置规则；画面是否传达诗意，仍需观看判断。</p><ul id="notes"></ul><ul id="relations"></ul></details>
         <details><summary>来源与本次生成记录</summary><p id="usage"></p><ul id="credits"></ul></details>
       </section>

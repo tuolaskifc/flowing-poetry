@@ -7,7 +7,9 @@ window.PoemDrawing = (() => {
   const registry=new Map();
   const palettes=Object.freeze({
     clear:Object.freeze({bg:'#EEF0E8',main:'#A3B7B0',ink:'#425E59',accent:'#CEBF8A'}),
-    tender:Object.freeze({bg:'#F6EAE1',main:'#CFA2A0',ink:'#9E91AB',accent:'#D8B77F'})
+    tender:Object.freeze({bg:'#F6EAE1',main:'#CFA2A0',ink:'#9E91AB',accent:'#D8B77F'}),
+    twilight:Object.freeze({bg:'#EEE6D9',main:'#9BA69B',ink:'#485553',accent:'#C49668'}),
+    night:Object.freeze({bg:'#E3E9EC',main:'#849AA2',ink:'#314C58',accent:'#C6C4A7'})
   });
   const clamp=(v,min=0,max=1)=>Math.max(min,Math.min(max,v));
   const number=(v,fallback)=>Number.isFinite(Number(v))?Number(v):fallback;
@@ -31,6 +33,7 @@ window.PoemDrawing = (() => {
     const definition=registry.get(id);
     if(!definition)throw new Error(`Unknown drawing tool: ${id}`);
     let instance,tool,ctx,time=0,ticks=0,paused=false,disposed=false,seed=number(initialSeed,42)>>>0;
+    const timeScale=clamp(number(renderOptions.timeScale,1),0,2);
     const safeSettings=settings(shared);
     const options=Object.fromEntries((definition.controls||[]).map(c=>[c.id,c.default]));
     let palette=palettes[safeSettings.palette];
@@ -59,7 +62,7 @@ window.PoemDrawing = (() => {
       };
       p.draw=()=>{
         if(disposed||!tool)return;
-        sync();const dt=paused?0:clamp(p.deltaTime/1000,0,.1);time+=dt;ticks++;
+        sync();const dt=paused?0:clamp(p.deltaTime/1000,0,.1)*timeScale;time+=dt;ticks++;
         tool.update?.(dt);
         if(renderOptions.transparent)p.clear();else p.background(palette.bg);p.push();
         try{p.strokeCap(p.ROUND);p.strokeJoin(p.ROUND);tool.draw();}finally{p.pop();}
@@ -79,7 +82,7 @@ window.PoemDrawing = (() => {
       },
       reset(next=seed){if(disposed)return;seed=number(next,seed)>>>0;sync();time=0;ticks=0;if(tool){instance.randomSeed(seed);instance.noiseSeed(seed);tool.reset();if(paused)instance.redraw();}},
       save(){if(!disposed)instance.saveCanvas(`流动诗-${id}-${seed}`,'png');},
-      inspect(){return {id,seed,time,ticks,paused,disposed,ready:Boolean(tool),options:{...options},sources:[...definition.sources],...tool?.inspect?.()};},
+      inspect(){return {id,seed,time,timeScale,ticks,paused,disposed,ready:Boolean(tool),options:{...options},sources:[...definition.sources],...tool?.inspect?.()};},
       anchors(){return disposed?[]:tool?.anchors?.()||[];},
       dispose(){if(!disposed){disposed=true;tool?.dispose?.();instance.remove();host.dataset.ready='false';}}
     };

@@ -35,10 +35,10 @@ test('only asserted supported relationships alter geometry or add an explicitly 
  assert(validateSceneContract(a,a.poem).valid);const p=buildPlan(a);assert(p.spatial.every(r=>r.visualized));assert(p.layers.find(l=>l.tool==='moon').reflection);assert.equal(p.layers.find(l=>l.tool==='flower').instances.length,2);
  a.spatial.forEach(r=>r.modality='possible');const q=buildPlan(a);assert(q.spatial.every(r=>!r.visualized));assert(!q.layers.find(l=>l.tool==='moon').reflection);
 });
-test('default service requests 3.2 spatial semantics and rejects an old reply without repair',async()=>{
+test('explicit legacy scene mode requests 3.2 and rejects an old reply without repair',async()=>{
  const dir=await mkdtemp(join(tmpdir(),'poem-scene-'));try{const path=join(dir,'config');await writeFile(path,'https://example.invalid/v1\ndummy-scene-value\nmodel\n');let calls=0;
  const good=benchmarks[0].analysis,service=createGenerationService({credentialsPath:path,runsDir:join(dir,'runs'),fetcher:async(_url,options)=>{calls++;const request=JSON.parse(options.body);assert(request.messages[0].content.includes('spatial'));assert(request.messages[0].content.includes('3.2'));return new Response(JSON.stringify({choices:[{finish_reason:'stop',message:{content:JSON.stringify(good)}}]}));}});
- const r=await service.analyze({poem:good.poem});assert(r.validation.valid);assert.equal(r.mode,'scene');await service.analyze({poem:good.poem});assert.equal(calls,1);
+ const r=await service.analyze({poem:good.poem,mode:'scene'});assert(r.validation.valid);assert.equal(r.mode,'scene');await service.analyze({poem:good.poem,mode:'scene'});assert.equal(calls,1);
  const bad=createGenerationService({credentialsPath:path,runsDir:join(dir,'bad'),fetcher:async()=>new Response(JSON.stringify({choices:[{finish_reason:'stop',message:{content:JSON.stringify({...good,schema_version:'3.1'})}}]}))});assert(!(await bad.analyze({poem:good.poem})).validation.valid);assert.equal(await bad.latest(),null);
  }finally{await rm(dir,{force:true,recursive:true});}
 });

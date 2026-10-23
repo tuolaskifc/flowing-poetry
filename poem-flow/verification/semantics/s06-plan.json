@@ -1,0 +1,1382 @@
+{
+  "version": "semantic-composition-3.3",
+  "seed": 1302040933,
+  "settings": {
+    "wind": 0,
+    "density": 0.45,
+    "palette": "tender"
+  },
+  "layers": [
+    {
+      "tool": "landscape",
+      "entities": [
+        "i1"
+      ],
+      "projectedEntities": [],
+      "names": [
+        "水田"
+      ],
+      "options": {
+        "form": "field"
+      },
+      "animate": false,
+      "placement": {
+        "anchor": [
+          320,
+          194
+        ],
+        "at": [
+          0.43,
+          0.39
+        ],
+        "scale": 1.5
+      },
+      "semanticGroup": {
+        "members": [
+          "i1"
+        ],
+        "role": "environment",
+        "pattern": "field",
+        "depth": "middle",
+        "basis": "inferred",
+        "evidence": [
+          "漠漠水田飞白鹭"
+        ],
+        "index": 0
+      },
+      "semanticEffects": [
+        {
+          "path": "scene.groups[0].role",
+          "consumer": "主次布局",
+          "effect": "保留环境画布范围，主次不改变地形边界",
+          "status": "applied"
+        },
+        {
+          "path": "scene.groups[0].pattern",
+          "consumer": "群落布局",
+          "effect": "按 field 组织显示单元；不覆盖明确数量",
+          "status": "applied"
+        },
+        {
+          "path": "scene.groups[0].depth",
+          "consumer": "远近布局",
+          "effect": "将 middle 转为相对大小、透明度与允许区域内的落点",
+          "status": "applied"
+        }
+      ],
+      "semanticEnergy": false,
+      "timeScale": 0.8,
+      "instances": [
+        {
+          "placement": {
+            "anchor": [
+              320,
+              194
+            ],
+            "at": [
+              0.43,
+              0.39
+            ],
+            "scale": 1.95
+          },
+          "depth": 0.05,
+          "opacity": 1,
+          "variant": 0
+        }
+      ],
+      "singleUnit": false,
+      "quantity": {
+        "items": [
+          {
+            "entity": "i1",
+            "mode": "many",
+            "min": null,
+            "max": null,
+            "unit": null,
+            "scope": "extent",
+            "extent": "spread",
+            "evidence": [
+              "漠漠水田"
+            ],
+            "basis": "model"
+          }
+        ],
+        "rendered": 1,
+        "exact": false,
+        "collective": true,
+        "partUnsupported": false
+      },
+      "quantityLabel": "整体笔触图层；内部数量尚未适配",
+      "z": -12,
+      "clip": [
+        [
+          0,
+          0.39
+        ],
+        [
+          0.75,
+          0.39
+        ],
+        [
+          0.89,
+          0.62
+        ],
+        [
+          0.81,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "tool": "tree",
+      "entities": [
+        "i3"
+      ],
+      "projectedEntities": [],
+      "names": [
+        "夏木"
+      ],
+      "options": {
+        "form": "broadleaf",
+        "crown": "wash"
+      },
+      "animate": true,
+      "placement": {
+        "anchor": [
+          320,
+          388
+        ],
+        "at": [
+          0.6170118886439321,
+          0.6637500000000001
+        ],
+        "scale": 1.15
+      },
+      "semanticGroup": {
+        "members": [
+          "i3"
+        ],
+        "role": "environment",
+        "pattern": "grove",
+        "depth": "middle",
+        "basis": "inferred",
+        "evidence": [
+          "阴阴夏木啭黄鹂"
+        ],
+        "index": 2
+      },
+      "semanticEffects": [
+        {
+          "path": "scene.groups[2].role",
+          "consumer": "主次布局",
+          "effect": "保留环境群落层次",
+          "status": "applied"
+        },
+        {
+          "path": "scene.groups[2].pattern",
+          "consumer": "群落布局",
+          "effect": "按 grove 组织显示单元；不覆盖明确数量",
+          "status": "applied"
+        },
+        {
+          "path": "scene.groups[2].depth",
+          "consumer": "远近布局",
+          "effect": "将 middle 转为相对大小、透明度与允许区域内的落点",
+          "status": "applied"
+        }
+      ],
+      "semanticEnergy": true,
+      "timeScale": 0.8,
+      "instances": [
+        {
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.035,
+              0.55
+            ],
+            "scale": 0.387
+          },
+          "depth": 0.003125,
+          "opacity": 0.5565,
+          "variant": 0
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.057446556907796875,
+              0.55
+            ],
+            "scale": 0.441
+          },
+          "depth": 0.009375000000000001,
+          "opacity": 0.5775,
+          "variant": 1
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.13157901616889128,
+              0.55
+            ],
+            "scale": 0.49500000000000005
+          },
+          "depth": 0.015625,
+          "opacity": 0.5985,
+          "variant": 2
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.24794458990254814,
+              0.55
+            ],
+            "scale": 0.387
+          },
+          "depth": 0.021875000000000002,
+          "opacity": 0.6195,
+          "variant": 0
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.36349542852497135,
+              0.55
+            ],
+            "scale": 0.441
+          },
+          "depth": 0.028125,
+          "opacity": 0.6405000000000001,
+          "variant": 1
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.43763578436920614,
+              0.55
+            ],
+            "scale": 0.49500000000000005
+          },
+          "depth": 0.034375,
+          "opacity": 0.6615,
+          "variant": 2
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.5544027171650103,
+              0.55
+            ],
+            "scale": 0.387
+          },
+          "depth": 0.040625,
+          "opacity": 0.6825,
+          "variant": 0
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.6695404100861513,
+              0.55
+            ],
+            "scale": 0.441
+          },
+          "depth": 0.046875,
+          "opacity": 0.7035,
+          "variant": 1
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.7436965568640878,
+              0.55
+            ],
+            "scale": 0.49500000000000005
+          },
+          "depth": 0.053125000000000006,
+          "opacity": 0.7245,
+          "variant": 2
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.965,
+              0.62
+            ],
+            "scale": 0.7200000000000001
+          },
+          "depth": 0.059375000000000004,
+          "opacity": 0.7454999999999999,
+          "variant": 0
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.9270363861047499,
+              0.6833333333333333
+            ],
+            "scale": 0.789
+          },
+          "depth": 0.065625,
+          "opacity": 0.7665,
+          "variant": 1
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.965,
+              0.7466666666666666
+            ],
+            "scale": 0.8580000000000001
+          },
+          "depth": 0.07187500000000001,
+          "opacity": 0.7875,
+          "variant": 2
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.965,
+              0.81
+            ],
+            "scale": 0.927
+          },
+          "depth": 0.078125,
+          "opacity": 0.8085,
+          "variant": 0
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.9018513861047501,
+              0.8733333333333333
+            ],
+            "scale": 0.996
+          },
+          "depth": 0.084375,
+          "opacity": 0.8295,
+          "variant": 1
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.965,
+              0.9366666666666668
+            ],
+            "scale": 1.065
+          },
+          "depth": 0.09062500000000001,
+          "opacity": 0.5565,
+          "variant": 2
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.9425613861047499,
+              1
+            ],
+            "scale": 1.1340000000000001
+          },
+          "depth": 0.096875,
+          "opacity": 0.5775,
+          "variant": 0
+        }
+      ],
+      "singleUnit": true,
+      "quantity": {
+        "items": [
+          {
+            "entity": "i3",
+            "mode": "many",
+            "min": null,
+            "max": null,
+            "unit": null,
+            "scope": "group",
+            "extent": "spread",
+            "evidence": [
+              "阴阴夏木"
+            ],
+            "basis": "model"
+          }
+        ],
+        "rendered": 16,
+        "exact": false,
+        "collective": true,
+        "partUnsupported": false
+      },
+      "quantityLabel": "依场景疏密试画 16 个单元；原文未给精确个体数",
+      "z": 8
+    },
+    {
+      "tool": "bird",
+      "entities": [
+        "i2"
+      ],
+      "projectedEntities": [],
+      "names": [
+        "白鹭"
+      ],
+      "options": {
+        "pose": "flying",
+        "tone": "light",
+        "facing": "right"
+      },
+      "animate": true,
+      "placement": {
+        "anchor": [
+          320,
+          190
+        ],
+        "at": [
+          0.34500000000000003,
+          0.5697291063397052
+        ],
+        "scale": 0.78
+      },
+      "drawingLabel": "鸟意（写意借形）",
+      "semanticGroup": {
+        "members": [
+          "i2"
+        ],
+        "role": "accent",
+        "pattern": "single",
+        "depth": "middle",
+        "basis": "inferred",
+        "evidence": [
+          "漠漠水田飞白鹭"
+        ],
+        "index": 1
+      },
+      "semanticEffects": [
+        {
+          "path": "scene.actions[0].state",
+          "consumer": "形态与绘画时钟",
+          "effect": "启用工具支持的 fly 状态",
+          "status": "applied"
+        },
+        {
+          "path": "scene.actions[0].pace",
+          "consumer": "绘画时钟",
+          "effect": "定性节奏映射为本地时钟倍率 0.8",
+          "status": "applied"
+        },
+        {
+          "path": "scene.actions[0].direction",
+          "consumer": "画布合成",
+          "effect": "方向未明，仅用本地小幅微动",
+          "status": "applied"
+        },
+        {
+          "path": "scene.groups[1].role",
+          "consumer": "主次布局",
+          "effect": "点景缩小淡化",
+          "status": "applied"
+        },
+        {
+          "path": "scene.groups[1].pattern",
+          "consumer": "群落布局",
+          "effect": "按 single 组织显示单元；不覆盖明确数量",
+          "status": "applied"
+        },
+        {
+          "path": "scene.groups[1].depth",
+          "consumer": "远近布局",
+          "effect": "将 middle 转为相对大小、透明度与允许区域内的落点",
+          "status": "applied"
+        }
+      ],
+      "semanticEnergy": true,
+      "timeScale": 0.8,
+      "semanticAction": {
+        "entity": "i2",
+        "state": "fly",
+        "pace": "unspecified",
+        "direction": "unspecified",
+        "modality": "asserted",
+        "basis": "explicit",
+        "evidence": [
+          "漠漠水田飞白鹭"
+        ]
+      },
+      "motion": {
+        "kind": "drift",
+        "direction": "unspecified",
+        "rate": 0.8,
+        "state": "fly"
+      },
+      "instances": [
+        {
+          "placement": {
+            "anchor": [
+              320,
+              190
+            ],
+            "at": [
+              0.15,
+              0.55
+            ],
+            "scale": 0.31464000000000003
+          },
+          "depth": 0.0125,
+          "opacity": 0.4832099999999999,
+          "variant": 0
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              190
+            ],
+            "at": [
+              0.28,
+              0.6289164253588209
+            ],
+            "scale": 0.34542000000000006
+          },
+          "depth": 0.037500000000000006,
+          "opacity": 0.53235,
+          "variant": 1
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              190
+            ],
+            "at": [
+              0.41000000000000003,
+              0.55
+            ],
+            "scale": 0.37620000000000003
+          },
+          "depth": 0.0625,
+          "opacity": 0.58149,
+          "variant": 2
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              190
+            ],
+            "at": [
+              0.54,
+              0.55
+            ],
+            "scale": 0.40698
+          },
+          "depth": 0.08750000000000001,
+          "opacity": 0.6306299999999999,
+          "variant": 0
+        }
+      ],
+      "singleUnit": true,
+      "quantity": {
+        "items": [
+          {
+            "entity": "i2",
+            "mode": "unspecified",
+            "min": null,
+            "max": null,
+            "unit": null,
+            "scope": "unspecified",
+            "extent": "unspecified",
+            "evidence": [],
+            "basis": "model"
+          }
+        ],
+        "rendered": 4,
+        "exact": false,
+        "collective": false,
+        "partUnsupported": false
+      },
+      "quantityLabel": "数量未精确；本地试画 4 个单元",
+      "z": 20,
+      "semanticSupport": {
+        "surface": "water",
+        "target": "i1",
+        "path": "scene.supports[0]"
+      }
+    },
+    {
+      "tool": "bird",
+      "entities": [
+        "i4"
+      ],
+      "projectedEntities": [],
+      "names": [
+        "黄鹂"
+      ],
+      "options": {
+        "pose": "flying",
+        "tone": "ink",
+        "facing": "right"
+      },
+      "animate": false,
+      "placement": {
+        "anchor": [
+          320,
+          190
+        ],
+        "at": [
+          0.7436965568640876,
+          0.39160000000000006
+        ],
+        "scale": 0.78
+      },
+      "drawingLabel": "鸟意（写意借形）",
+      "semanticGroup": {
+        "members": [
+          "i4"
+        ],
+        "role": "accent",
+        "pattern": "single",
+        "depth": "middle",
+        "basis": "inferred",
+        "evidence": [
+          "阴阴夏木啭黄鹂"
+        ],
+        "index": 3
+      },
+      "semanticEffects": [
+        {
+          "path": "scene.actions[1].state",
+          "consumer": "动作边界",
+          "effect": "动作未明，保留静态形态",
+          "status": "skipped"
+        },
+        {
+          "path": "scene.groups[3].role",
+          "consumer": "主次布局",
+          "effect": "点景缩小淡化",
+          "status": "applied"
+        },
+        {
+          "path": "scene.groups[3].pattern",
+          "consumer": "群落布局",
+          "effect": "按 single 组织显示单元；不覆盖明确数量",
+          "status": "applied"
+        },
+        {
+          "path": "scene.groups[3].depth",
+          "consumer": "远近布局",
+          "effect": "将 middle 转为相对大小、透明度与允许区域内的落点",
+          "status": "applied"
+        }
+      ],
+      "semanticEnergy": false,
+      "timeScale": 0,
+      "semanticAction": {
+        "entity": "i4",
+        "state": "unclear",
+        "pace": "unspecified",
+        "direction": "unspecified",
+        "modality": "asserted",
+        "basis": "explicit",
+        "evidence": [
+          "阴阴夏木啭黄鹂"
+        ]
+      },
+      "instances": [
+        {
+          "placement": {
+            "anchor": [
+              320,
+              190
+            ],
+            "at": [
+              0.6761965568640877,
+              0.39160000000000006
+            ],
+            "scale": 0.25992
+          },
+          "depth": 0.0125,
+          "opacity": 0.4832099999999999,
+          "variant": 0
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              190
+            ],
+            "at": [
+              0.7211965568640878,
+              0.39160000000000006
+            ],
+            "scale": 0.28728
+          },
+          "depth": 0.037500000000000006,
+          "opacity": 0.53235,
+          "variant": 1
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              190
+            ],
+            "at": [
+              0.7661965568640877,
+              0.39160000000000006
+            ],
+            "scale": 0.31464000000000003
+          },
+          "depth": 0.0625,
+          "opacity": 0.58149,
+          "variant": 2
+        },
+        {
+          "placement": {
+            "anchor": [
+              320,
+              190
+            ],
+            "at": [
+              0.8111965568640878,
+              0.39160000000000006
+            ],
+            "scale": 0.342
+          },
+          "depth": 0.08750000000000001,
+          "opacity": 0.6306299999999999,
+          "variant": 0
+        }
+      ],
+      "singleUnit": true,
+      "quantity": {
+        "items": [
+          {
+            "entity": "i4",
+            "mode": "unspecified",
+            "min": null,
+            "max": null,
+            "unit": null,
+            "scope": "unspecified",
+            "extent": "unspecified",
+            "evidence": [],
+            "basis": "model"
+          }
+        ],
+        "rendered": 4,
+        "exact": false,
+        "collective": false,
+        "partUnsupported": false
+      },
+      "quantityLabel": "数量未精确；本地试画 4 个单元",
+      "z": 10,
+      "semanticSupport": {
+        "surface": "vegetation",
+        "target": "i3",
+        "path": "scene.supports[1]"
+      }
+    }
+  ],
+  "spatial": [
+    {
+      "type": "on",
+      "source": "i2",
+      "target": "i1",
+      "modality": "asserted",
+      "basis": "inferred",
+      "evidence": [
+        "漠漠水田飞白鹭"
+      ],
+      "visualized": false,
+      "reason": "该空间关系与形态组合尚未适配"
+    },
+    {
+      "type": "among",
+      "source": "i4",
+      "target": "i3",
+      "modality": "asserted",
+      "basis": "inferred",
+      "evidence": [
+        "阴阴夏木啭黄鹂"
+      ],
+      "visualized": false,
+      "reason": "该空间关系与形态组合尚未适配"
+    }
+  ],
+  "scene": {
+    "kind": "paddy-woodland",
+    "notes": [
+      "先划分承托地形、群落与主体活动区域；场景密度和背景依托是本地构图推断，不冒充原文明示意象。",
+      "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。"
+    ],
+    "waterline": null,
+    "basis": "local-context",
+    "regions": {
+      "field": [
+        [
+          0,
+          0.39
+        ],
+        [
+          0.75,
+          0.39
+        ],
+        [
+          0.89,
+          0.62
+        ],
+        [
+          0.81,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ]
+    },
+    "supports": [],
+    "semanticSetting": {
+      "kind": "mixed",
+      "basis": "inferred",
+      "evidence": [
+        "漠漠水田飞白鹭",
+        "阴阴夏木啭黄鹂"
+      ]
+    },
+    "semanticEffects": [
+      {
+        "path": "scene.supports[0]",
+        "consumer": "场景依托",
+        "status": "applied",
+        "effect": "使用已提取主体的现有承托画法"
+      },
+      {
+        "path": "scene.supports[1]",
+        "consumer": "场景依托",
+        "status": "applied",
+        "effect": "使用已提取主体的现有承托画法"
+      }
+    ],
+    "organization": {
+      "version": "1.0",
+      "strategy": "regional-proposal",
+      "regions": {
+        "field": [
+          [
+            0,
+            0.39
+          ],
+          [
+            0.75,
+            0.39
+          ],
+          [
+            0.89,
+            0.62
+          ],
+          [
+            0.81,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ]
+      },
+      "candidates": [
+        {
+          "layout": "existing",
+          "errors": 0,
+          "cost": 226.212
+        }
+      ],
+      "repairs": [],
+      "limitations": [
+        "几何检查不判定诗意理解或审美合格",
+        "动作时序与整首诗的场景切换尚未编排"
+      ],
+      "graph": {
+        "nodes": [
+          {
+            "id": "l0",
+            "entities": [
+              "i1"
+            ],
+            "tool": "landscape",
+            "role": "terrain",
+            "habitat": null,
+            "inferred": false,
+            "support": null
+          },
+          {
+            "id": "l1",
+            "entities": [
+              "i3"
+            ],
+            "tool": "tree",
+            "role": "vegetation",
+            "habitat": "land",
+            "inferred": false,
+            "support": "l0"
+          },
+          {
+            "id": "l2",
+            "entities": [
+              "i2"
+            ],
+            "tool": "bird",
+            "role": "fauna",
+            "habitat": "air",
+            "inferred": false,
+            "support": "l0"
+          },
+          {
+            "id": "l3",
+            "entities": [
+              "i4"
+            ],
+            "tool": "bird",
+            "role": "fauna",
+            "habitat": "air",
+            "inferred": false,
+            "support": null
+          }
+        ],
+        "edges": [
+          {
+            "type": "supported-by",
+            "source": "l1",
+            "target": "l0",
+            "basis": "local-composition",
+            "habitat": "land"
+          },
+          {
+            "type": "supported-by",
+            "source": "l2",
+            "target": "l0",
+            "basis": "local-composition",
+            "habitat": "air"
+          },
+          {
+            "type": "supported-by",
+            "source": "l3",
+            "target": null,
+            "basis": "local-composition",
+            "habitat": "air"
+          },
+          {
+            "type": "on",
+            "source": "l2",
+            "target": "l0",
+            "basis": "inferred",
+            "modality": "asserted",
+            "evidence": [
+              "漠漠水田飞白鹭"
+            ]
+          },
+          {
+            "type": "among",
+            "source": "l3",
+            "target": "l1",
+            "basis": "inferred",
+            "modality": "asserted",
+            "evidence": [
+              "阴阴夏木啭黄鹂"
+            ]
+          }
+        ],
+        "setting": "paddy-woodland"
+      },
+      "audit": {
+        "scope": "implemented-geometry-and-drawing-gaps",
+        "coverage": {
+          "scope": "extracted-entities-only",
+          "present": 4,
+          "mapped": 4,
+          "parameters": [],
+          "missing": []
+        },
+        "checks": [
+          "presence",
+          "count",
+          "finite",
+          "water-support",
+          "cliff-support",
+          "grove-spread",
+          "drawing-gaps"
+        ],
+        "status": "needs-review",
+        "errors": 0,
+        "review": 2,
+        "issues": [
+          {
+            "code": "unresolved-relation",
+            "severity": "review",
+            "message": "有空间关系尚无对应布局画法"
+          },
+          {
+            "code": "unresolved-relation",
+            "severity": "review",
+            "message": "有空间关系尚无对应布局画法"
+          }
+        ],
+        "metrics": {
+          "overlapPenalty": 13.64,
+          "balancePenalty": 0.317,
+          "motifFootprint": 1.597,
+          "landArea": 0
+        },
+        "cost": 226.212,
+        "aestheticAcceptance": "pending-user"
+      }
+    }
+  },
+  "omitted": [],
+  "notes": [
+    "水田虽被归为地点，仍按原文明示的自然景物匹配；具体空间关系另行处理。",
+    "白鹭：以通用写意鸟形表现，不细分物种。这是本地写意借形，保留原词义。",
+    "黄鹂：以通用写意鸟形表现，不细分物种。这是本地写意借形，保留原词义。",
+    "位置、大小、笔触与默认微动是本地试画选择；数量解释与本地显示数量分别记录。",
+    "水田的数量解释已保留，当前工具以整体图层表现，内部笔触尚未按数量逐个适配。",
+    "未明说的群落数量、疏密、近中远层次与变体均为本地构图选择；种类可按已声明的写意画法概括，不把铺展词换算成精确物体数量。",
+    "先划分承托地形、群落与主体活动区域；场景密度和背景依托是本地构图推断，不冒充原文明示意象。",
+    "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。",
+    "整体场景、主次、远近、依托和支持的动作状态来自本次模型解释；具体布局、颜色和时钟倍率由本地视觉策略选择。",
+    "动作动画只表现受支持的主导状态与有限观看微动，未完成先后事件、完整因果或人物行走步态。"
+  ],
+  "relations": [],
+  "semanticConsumption": {
+    "version": "3.3",
+    "items": [
+      {
+        "path": "scene.setting",
+        "status": "applied",
+        "consumer": "本地视觉策略",
+        "effect": "整体环境进入场景提案选择",
+        "basis": "inferred",
+        "evidence": [
+          "漠漠水田飞白鹭",
+          "阴阴夏木啭黄鹂"
+        ]
+      },
+      {
+        "path": "scene.groups[0].role",
+        "status": "applied",
+        "consumer": "主次布局",
+        "effect": "保留环境画布范围，主次不改变地形边界",
+        "basis": "inferred",
+        "evidence": [
+          "漠漠水田飞白鹭"
+        ]
+      },
+      {
+        "path": "scene.groups[0].pattern",
+        "status": "applied",
+        "consumer": "群落布局",
+        "effect": "按 field 组织显示单元；不覆盖明确数量",
+        "basis": "inferred",
+        "evidence": [
+          "漠漠水田飞白鹭"
+        ]
+      },
+      {
+        "path": "scene.groups[0].depth",
+        "status": "applied",
+        "consumer": "远近布局",
+        "effect": "将 middle 转为相对大小、透明度与允许区域内的落点",
+        "basis": "inferred",
+        "evidence": [
+          "漠漠水田飞白鹭"
+        ]
+      },
+      {
+        "path": "scene.groups[1].role",
+        "status": "applied",
+        "consumer": "主次布局",
+        "effect": "点景缩小淡化",
+        "basis": "inferred",
+        "evidence": [
+          "漠漠水田飞白鹭"
+        ]
+      },
+      {
+        "path": "scene.groups[1].pattern",
+        "status": "applied",
+        "consumer": "群落布局",
+        "effect": "按 single 组织显示单元；不覆盖明确数量",
+        "basis": "inferred",
+        "evidence": [
+          "漠漠水田飞白鹭"
+        ]
+      },
+      {
+        "path": "scene.groups[1].depth",
+        "status": "applied",
+        "consumer": "远近布局",
+        "effect": "将 middle 转为相对大小、透明度与允许区域内的落点",
+        "basis": "inferred",
+        "evidence": [
+          "漠漠水田飞白鹭"
+        ]
+      },
+      {
+        "path": "scene.groups[2].role",
+        "status": "applied",
+        "consumer": "主次布局",
+        "effect": "保留环境群落层次",
+        "basis": "inferred",
+        "evidence": [
+          "阴阴夏木啭黄鹂"
+        ]
+      },
+      {
+        "path": "scene.groups[2].pattern",
+        "status": "applied",
+        "consumer": "群落布局",
+        "effect": "按 grove 组织显示单元；不覆盖明确数量",
+        "basis": "inferred",
+        "evidence": [
+          "阴阴夏木啭黄鹂"
+        ]
+      },
+      {
+        "path": "scene.groups[2].depth",
+        "status": "applied",
+        "consumer": "远近布局",
+        "effect": "将 middle 转为相对大小、透明度与允许区域内的落点",
+        "basis": "inferred",
+        "evidence": [
+          "阴阴夏木啭黄鹂"
+        ]
+      },
+      {
+        "path": "scene.groups[3].role",
+        "status": "applied",
+        "consumer": "主次布局",
+        "effect": "点景缩小淡化",
+        "basis": "inferred",
+        "evidence": [
+          "阴阴夏木啭黄鹂"
+        ]
+      },
+      {
+        "path": "scene.groups[3].pattern",
+        "status": "applied",
+        "consumer": "群落布局",
+        "effect": "按 single 组织显示单元；不覆盖明确数量",
+        "basis": "inferred",
+        "evidence": [
+          "阴阴夏木啭黄鹂"
+        ]
+      },
+      {
+        "path": "scene.groups[3].depth",
+        "status": "applied",
+        "consumer": "远近布局",
+        "effect": "将 middle 转为相对大小、透明度与允许区域内的落点",
+        "basis": "inferred",
+        "evidence": [
+          "阴阴夏木啭黄鹂"
+        ]
+      },
+      {
+        "path": "scene.supports[0]",
+        "status": "applied",
+        "consumer": "场景依托",
+        "effect": "使用已提取主体的现有承托画法",
+        "basis": "inferred",
+        "evidence": [
+          "漠漠水田飞白鹭"
+        ]
+      },
+      {
+        "path": "scene.supports[1]",
+        "status": "applied",
+        "consumer": "场景依托",
+        "effect": "使用已提取主体的现有承托画法",
+        "basis": "inferred",
+        "evidence": [
+          "阴阴夏木啭黄鹂"
+        ]
+      },
+      {
+        "path": "scene.actions[0].state",
+        "status": "applied",
+        "consumer": "形态与绘画时钟",
+        "effect": "启用工具支持的 fly 状态",
+        "basis": "explicit",
+        "evidence": [
+          "漠漠水田飞白鹭"
+        ]
+      },
+      {
+        "path": "scene.actions[0].pace",
+        "status": "applied",
+        "consumer": "绘画时钟",
+        "effect": "定性节奏映射为本地时钟倍率 0.8",
+        "basis": "explicit",
+        "evidence": [
+          "漠漠水田飞白鹭"
+        ]
+      },
+      {
+        "path": "scene.actions[0].direction",
+        "status": "applied",
+        "consumer": "画布合成",
+        "effect": "方向未明，仅用本地小幅微动",
+        "basis": "explicit",
+        "evidence": [
+          "漠漠水田飞白鹭"
+        ]
+      },
+      {
+        "path": "scene.actions[1].state",
+        "status": "skipped",
+        "consumer": "动作边界",
+        "effect": "动作未明，保留静态形态",
+        "basis": "explicit",
+        "evidence": [
+          "阴阴夏木啭黄鹂"
+        ]
+      },
+      {
+        "path": "scene.actions[1].pace",
+        "status": "skipped",
+        "consumer": "本地视觉策略",
+        "effect": "该工具尚不支持此动作分量",
+        "basis": "explicit",
+        "evidence": [
+          "阴阴夏木啭黄鹂"
+        ]
+      },
+      {
+        "path": "scene.actions[1].direction",
+        "status": "skipped",
+        "consumer": "本地视觉策略",
+        "effect": "该工具尚不支持此动作分量",
+        "basis": "explicit",
+        "evidence": [
+          "阴阴夏木啭黄鹂"
+        ]
+      },
+      {
+        "path": "scene.atmosphere.visibility",
+        "status": "applied",
+        "consumer": "画布色层与远景",
+        "effect": "可见度 clear；迷蒙或昏暗时淡化非光源图层",
+        "basis": "inferred",
+        "evidence": [
+          "漠漠水田飞白鹭",
+          "阴阴夏木啭黄鹂"
+        ]
+      },
+      {
+        "path": "scene.atmosphere.illumination",
+        "status": "applied",
+        "consumer": "有限配色",
+        "effect": "照明 day 映射为本地 tender 配色；用户仍可手动覆盖",
+        "basis": "inferred",
+        "evidence": [
+          "漠漠水田飞白鹭",
+          "阴阴夏木啭黄鹂"
+        ]
+      },
+      {
+        "path": "atmosphere.energy",
+        "status": "applied",
+        "consumer": "绘画时钟",
+        "effect": "没有明确动作节奏时，气息强弱控制已有微动的默认时钟"
+      },
+      {
+        "path": "atmosphere.openness",
+        "status": "applied",
+        "consumer": "群落分布与笔触密度",
+        "effect": "开阔度转换为本地间距与工具笔触密度，不等于原文数量"
+      },
+      {
+        "path": "atmosphere.valence",
+        "status": "applied",
+        "consumer": "有限配色",
+        "effect": "正向感受暂用 tender，其余用 clear；尚非完整情感色谱"
+      },
+      {
+        "path": "time.markers",
+        "status": "retained",
+        "consumer": "原始记录与解读",
+        "effect": "保留原文时间标记；本版照明由 scene.atmosphere 转换，多阶段时间逻辑未执行"
+      }
+    ],
+    "summary": {
+      "applied": 23,
+      "partial": 0,
+      "unsupported": 0,
+      "skipped": 3,
+      "retained": 1
+    },
+    "aestheticAcceptance": "pending-user"
+  }
+}

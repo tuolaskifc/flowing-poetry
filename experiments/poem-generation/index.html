@@ -46,11 +46,12 @@
       <div class="scene-heading"><h2 id="scene-title">这一次的试画</h2><span id="record-info"></span></div>
       <canvas id="scene" width="960" height="600" role="img" aria-label="根据诗句组合的动态试画"></canvas><div id="layer-hosts" hidden></div>
       <div class="view-controls">
-        <label>配色 <select id="palette"><option value="clear">清寂澄明</option><option value="tender">温柔缱绻</option></select></label>
+        <label>配色 <select id="palette"><option value="clear">清寂澄明</option><option value="tender">温柔缱绻</option><option value="twilight">暮色微暖</option><option value="night">夜色淡墨</option></select></label>
         <label id="moon-control" hidden>月形 <select id="moon-shape"><option value="crescent">弯月</option><option value="half">半月</option><option value="gibbous">凸月</option><option value="full">满月</option><option value="dark">暗月</option></select></label>
         <button id="pause" type="button" aria-pressed="false">暂停</button><button id="reseed" type="button">换一组形态</button><button id="save" type="button">保存画面</button>
       </div>
       <div class="reading-grid"><article><h2>文字怎样被理解</h2><p id="reading"></p><ul id="entities"></ul><p id="atmosphere" class="muted"></p><ul id="uncertainties"></ul></article><article><h2>这次画了什么</h2><ul id="drawn"></ul><h3>保留的空缺</h3><ul id="omitted"></ul></article></div>
+      <details><summary>诗意怎样进入画面</summary><p id="semantic-summary"></p><ul id="semantic-applied"></ul><h3>仍保留的解释与空缺</h3><ul id="semantic-pending"></ul></details>
       <details><summary>画面选择与尚未表现的关系</summary><ul id="notes"></ul><ul id="relations"></ul></details>
       <details><summary>来源与用量记录</summary><p id="usage"></p><ul id="credits"></ul></details>
     </section>

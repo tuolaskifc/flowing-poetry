@@ -2,16 +2,32 @@
  * locally placed motifs. Semantic entity count and p5 renderer count differ.
  */
 window.PoemTrialScene=(()=>{
-  let controllers=[],hosts=[],sources=[],plan,shared,paused=false,raf,seed=0,ready=false,drag=null,initialPlacements=[];
+  let controllers=[],hosts=[],sources=[],plan,shared,paused=false,raf,seed=0,ready=false,drag=null,initialPlacements=[],elapsed=0,lastFrame=null;
   const canvas=()=>document.getElementById('scene'),W=960,H=600;
+  function motion(layer,at){
+    const m=layer.motion;if(!m)return {dx:0,dy:0,scale:1,alpha:1};
+    if(m.kind==='depth'){
+      const t=(elapsed*m.rate/70)%1,recede=m.direction==='recede',toward=layer.tool==='boat'?[.67,.52]:[.5,.18];
+      return {dx:recede?(toward[0]-at[0])*t*.45:(at[0]-.5)*t*.08,dy:recede?(toward[1]-at[1])*t*.45:.025*t,scale:recede?1-.45*t:1+.3*t,alpha:t>.88?(1-t)/.12:1};
+    }
+    const phase=elapsed*m.rate*.22;
+    return {dx:m.state==='float'?Math.sin(phase)*.008:Math.sin(phase)*.025,dy:Math.sin(phase*.8)*(m.state==='float'?.006:.009),scale:1,alpha:1};
+  }
   function entries(){
     if(!plan)return [];
     return plan.layers.flatMap((l,i)=>(l.instances||[{placement:l.placement,variant:0,depth:0,opacity:1}]).map((instance,index)=>{
       const placement=structuredClone(instance.placement),initial=initialPlacements[i];
       placement.at=[placement.at[0]+l.placement.at[0]-initial.at[0],placement.at[1]+l.placement.at[1]-initial.at[1]];
-      if(l.attachment){const parent=plan.layers.findIndex(v=>v.entities.includes(l.attachment.target));if(parent>=0){placement.at[0]+=plan.layers[parent].placement.at[0]-initialPlacements[parent].at[0];placement.at[1]+=plan.layers[parent].placement.at[1]-initialPlacements[parent].at[1];}}
+      let parentOpacity=1;
+      if(l.attachment){const parent=plan.layers.findIndex(v=>v.entities.includes(l.attachment.target));if(parent>=0){
+        const p=plan.layers[parent],delta=[p.placement.at[0]-initialPlacements[parent].at[0],p.placement.at[1]-initialPlacements[parent].at[1]];
+        placement.at[0]+=delta[0];placement.at[1]+=delta[1];
+        const base=p.instances[0].placement.at.map((v,i)=>v+delta[i]),shift=motion(p,base);
+        placement.at=[base[0]+shift.dx+(placement.at[0]-base[0])*shift.scale,base[1]+shift.dy+(placement.at[1]-base[1])*shift.scale];placement.scale*=shift.scale;parentOpacity=shift.alpha;
+      }}
+      const shift=motion(l,placement.at);placement.at=[placement.at[0]+shift.dx,placement.at[1]+shift.dy];placement.scale*=shift.scale;
       const sourceIndex=sources.findIndex(s=>s.layer===i&&s.variant===(instance.variant||0));
-      return {tool:l.tool,layer:i,index,sourceIndex,placement,opacity:instance.opacity??1,z:(l.z??i)+(instance.depth||0)};
+      return {tool:l.tool,layer:i,index,sourceIndex,placement,opacity:(instance.opacity??1)*shift.alpha*parentOpacity,z:(l.z??i)+(instance.depth||0)};
     })).sort((a,b)=>{
       if(plan.layers[a.layer].tool==='lotus'&&plan.layers[b.layer].tool==='lotus')return a.placement.at[1]-b.placement.at[1];
       return a.z-b.z;
@@ -33,8 +49,8 @@ window.PoemTrialScene=(()=>{
       if(layer.reflection){const line=layer.reflection.waterline*H;c.save();c.beginPath();for(let y=line;y<H;y+=7)c.rect(0,y,W,4);c.clip();c.globalAlpha=.15*entry.opacity;c.translate(0,2*line);c.scale(1,-1);c.drawImage(source,at[0]*W-anchor[0]*scale,at[1]*H-anchor[1]*scale,640*scale,388*scale);c.restore();}
     }c.globalAlpha=1;
   }
-  function loop(){frame();raf=requestAnimationFrame(loop);}
-  function dispose(){ready=false;drag=null;cancelAnimationFrame(raf);controllers.forEach(c=>c.dispose());hosts.forEach(h=>h.remove());controllers=[];hosts=[];sources=[];plan=null;}
+  function loop(timestamp){if(lastFrame!==null)elapsed+=Math.max(0,Math.min(.1,(timestamp-lastFrame)/1000));lastFrame=timestamp;frame();raf=requestAnimationFrame(loop);}
+  function dispose(){ready=false;drag=null;elapsed=0;lastFrame=null;cancelAnimationFrame(raf);controllers.forEach(c=>c.dispose());hosts.forEach(h=>h.remove());controllers=[];hosts=[];sources=[];plan=null;}
   function bindDrag(){
     const el=canvas();if(el.dataset.draggable)return;el.dataset.draggable='true';
     const point=e=>{const b=el.getBoundingClientRect();return [(e.clientX-b.left)*W/b.width,(e.clientY-b.top)*H/b.height];};
@@ -59,18 +75,18 @@ window.PoemTrialScene=(()=>{
       const variants=Math.max(1,...(layer.instances||[]).map(v=>(v.variant||0)+1));
       for(let variant=0;variant<variants;variant++){
         const host=document.createElement('div');host.hidden=true;document.getElementById('layer-hosts').append(host);hosts.push(host);sources.push({layer:i,variant});
-        const controller=window.PoemDrawing.mount(layer.tool,host,shared,seed+i*97+variant*1543,{transparent:true,singleUnit:layer.singleUnit});controller.configure(layer.options);controllers.push(controller);
+        const controller=window.PoemDrawing.mount(layer.tool,host,shared,seed+i*97+variant*1543,{transparent:true,singleUnit:layer.singleUnit,timeScale:layer.timeScale});controller.configure(layer.options);controllers.push(controller);
       }
     }
     const start=Date.now();while(controllers.some(c=>!c.inspect().ready)){if(Date.now()-start>15000)throw new Error('绘画工具加载超时');await new Promise(r=>setTimeout(r,20));}
-    controllers.forEach((c,i)=>{if(!plan.layers[sources[i].layer].animate)c.pause(true);});ready=true;frame();loop();return inspect();
+    controllers.forEach((c,i)=>{if(!plan.layers[sources[i].layer].animate)c.pause(true);});ready=true;frame();raf=requestAnimationFrame(loop);return inspect();
   }
-  function inspect(){return {ready,paused,layers:controllers.map(c=>c.inspect()),placements:plan?.layers.map(l=>structuredClone(l.placement)),instances:entries(),settings:shared&&{...shared}};}
+  function inspect(){return {ready,paused,elapsed,layers:controllers.map(c=>c.inspect()),placements:plan?.layers.map(l=>structuredClone(l.placement)),instances:entries(),settings:shared&&{...shared}};}
   return Object.freeze({render,dispose,inspect,
-    pause(value){paused=Boolean(value);controllers.forEach((c,i)=>c.pause(paused||!plan.layers[sources[i].layer].animate));cancelAnimationFrame(raf);if(paused)frame();else loop();},
+    pause(value){paused=Boolean(value);controllers.forEach((c,i)=>c.pause(paused||!plan.layers[sources[i].layer].animate));cancelAnimationFrame(raf);lastFrame=null;if(paused)frame();else raf=requestAnimationFrame(loop);},
     update(patch){if(!shared)return;Object.assign(shared,patch);controllers.forEach(c=>c.refresh());setTimeout(frame,40);},
     moon(shape){controllers.forEach((c,i)=>{if(plan.layers[sources[i].layer].tool==='moon')c.configure({shape});});setTimeout(frame,40);},
-    reseed(){if(!plan)return;seed++;controllers.forEach((c,i)=>c.reset(seed+sources[i].layer*97+sources[i].variant*1543));setTimeout(frame,40);},
+    reseed(){if(!plan)return;seed++;elapsed=0;lastFrame=null;controllers.forEach((c,i)=>c.reset(seed+sources[i].layer*97+sources[i].variant*1543));setTimeout(frame,40);},
     resetLayout(){if(!plan)return;plan.layers.forEach((l,i)=>{l.placement=structuredClone(initialPlacements[i]);});frame();},
     save(){frame();const a=document.createElement('a');a.download='流动诗.png';a.href=canvas().toDataURL('image/png');a.click();}
   });

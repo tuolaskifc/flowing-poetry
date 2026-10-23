@@ -1,0 +1,957 @@
+{
+  "id": "2026-10-23T01-03-51-390Z-1f3b7557",
+  "fingerprint": "6257abf0ae4a9cecfe183d2e957dbc676b72ba5293b75076110bc410e8ba3d26",
+  "poem": "漠漠帆来重，冥冥鸟去迟。",
+  "source": {
+    "provider": "整体场景语义3.3实测",
+    "author": "韦应物",
+    "title": "赋得暮雨送李胄",
+    "dynasty": "唐"
+  },
+  "mode": "composition",
+  "model": "DeepSeek-V4.1-Flash",
+  "started_at": "2026-10-23T01:03:51.392Z",
+  "cached": false,
+  "http_status": 200,
+  "usage": {
+    "completion_tokens": 564,
+    "prompt_tokens": 4896,
+    "total_tokens": 5460,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  },
+  "finish_reason": "stop",
+  "analysis": {
+    "schema_version": "3.3",
+    "poem": "漠漠帆来重，冥冥鸟去迟。",
+    "reading": "江面迷蒙，帆影驶来显得沉重；天色昏暗，飞鸟离去显得迟缓。",
+    "entities": [
+      {
+        "id": "i1",
+        "mentions": [
+          "帆"
+        ],
+        "concept": "船帆",
+        "kind": "object",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "漠漠帆来重"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i2",
+        "mentions": [
+          "鸟"
+        ],
+        "concept": "飞鸟",
+        "kind": "organism",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "冥冥鸟去迟"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      }
+    ],
+    "relations": [],
+    "atmosphere": {
+      "labels": [
+        "迷蒙",
+        "昏暗",
+        "迟缓"
+      ],
+      "valence": "neutral",
+      "energy": "low",
+      "tension": "low",
+      "openness": "medium",
+      "evidence": [
+        "漠漠帆来重",
+        "冥冥鸟去迟"
+      ]
+    },
+    "time": {
+      "markers": [],
+      "note": null
+    },
+    "uncertainties": [
+      "“漠漠”“冥冥”的具体所指（江面、天色或雨雾）未明。",
+      "帆与鸟的数量、远近及彼此关系均无原文依据。"
+    ],
+    "spatial": [],
+    "scene": {
+      "setting": {
+        "kind": "waterside",
+        "basis": "inferred",
+        "evidence": [
+          "漠漠帆来重"
+        ]
+      },
+      "groups": [
+        {
+          "members": [
+            "i1"
+          ],
+          "role": "subject",
+          "pattern": "single",
+          "depth": "unspecified",
+          "basis": "inferred",
+          "evidence": [
+            "漠漠帆来重"
+          ]
+        },
+        {
+          "members": [
+            "i2"
+          ],
+          "role": "subject",
+          "pattern": "single",
+          "depth": "unspecified",
+          "basis": "inferred",
+          "evidence": [
+            "冥冥鸟去迟"
+          ]
+        }
+      ],
+      "supports": [
+        {
+          "entity": "i1",
+          "surface": "water",
+          "target": null,
+          "basis": "inferred",
+          "evidence": [
+            "漠漠帆来重"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "entity": "i1",
+          "state": "float",
+          "pace": "slow",
+          "direction": "approach",
+          "modality": "asserted",
+          "basis": "inferred",
+          "evidence": [
+            "漠漠帆来重"
+          ]
+        },
+        {
+          "entity": "i2",
+          "state": "fly",
+          "pace": "slow",
+          "direction": "recede",
+          "modality": "asserted",
+          "basis": "inferred",
+          "evidence": [
+            "冥冥鸟去迟"
+          ]
+        }
+      ],
+      "atmosphere": {
+        "visibility": "hazy",
+        "illumination": "unclear",
+        "basis": "inferred",
+        "evidence": [
+          "漠漠帆来重",
+          "冥冥鸟去迟"
+        ]
+      }
+    }
+  },
+  "validation": {
+    "valid": true,
+    "errors": [],
+    "warnings": [
+      "模型保留了不确定性，需要审阅",
+      "scene.setting 为语义推断，绘画选择需与原文明示区分",
+      "scene.groups[0] 为语义推断，绘画选择需与原文明示区分",
+      "scene.groups[1] 为语义推断，绘画选择需与原文明示区分",
+      "scene.supports[0] 为语义推断，绘画选择需与原文明示区分",
+      "scene.actions[0] 为语义推断，绘画选择需与原文明示区分",
+      "scene.actions[1] 为语义推断，绘画选择需与原文明示区分",
+      "scene.atmosphere 为语义推断，绘画选择需与原文明示区分"
+    ],
+    "review_required": true
+  },
+  "plan": {
+    "version": "semantic-composition-3.3",
+    "seed": 4153575622,
+    "settings": {
+      "wind": 0,
+      "density": 0.45,
+      "palette": "clear"
+    },
+    "layers": [
+      {
+        "tool": "boat",
+        "entities": [
+          "i1"
+        ],
+        "projectedEntities": [
+          "i1"
+        ],
+        "names": [
+          "帆"
+        ],
+        "options": {},
+        "animate": true,
+        "placement": {
+          "anchor": [
+            320,
+            230
+          ],
+          "at": [
+            0.52,
+            0.72
+          ],
+          "scale": 0.95
+        },
+        "semanticGroup": {
+          "members": [
+            "i1"
+          ],
+          "role": "subject",
+          "pattern": "single",
+          "depth": "unspecified",
+          "basis": "inferred",
+          "evidence": [
+            "漠漠帆来重"
+          ],
+          "index": 0
+        },
+        "semanticEffects": [
+          {
+            "path": "scene.actions[0].state",
+            "consumer": "形态与绘画时钟",
+            "effect": "启用工具支持的 float 状态",
+            "status": "applied"
+          },
+          {
+            "path": "scene.actions[0].pace",
+            "consumer": "绘画时钟",
+            "effect": "定性节奏映射为本地时钟倍率 0.35",
+            "status": "applied"
+          },
+          {
+            "path": "scene.actions[0].direction",
+            "consumer": "画布合成",
+            "effect": "按定性方向作有限观看动画；不表示完整动作过程",
+            "status": "applied"
+          },
+          {
+            "path": "scene.groups[0].role",
+            "consumer": "主次布局",
+            "effect": "主体相对突出",
+            "status": "applied"
+          },
+          {
+            "path": "scene.groups[0].pattern",
+            "consumer": "群落布局",
+            "effect": "按 single 组织显示单元；不覆盖明确数量",
+            "status": "applied"
+          },
+          {
+            "path": "scene.groups[0].depth",
+            "consumer": "远近布局",
+            "effect": "远近未明，保持本地默认",
+            "status": "skipped"
+          }
+        ],
+        "timeScale": 0.35,
+        "semanticAction": {
+          "entity": "i1",
+          "state": "float",
+          "pace": "slow",
+          "direction": "approach",
+          "modality": "asserted",
+          "basis": "inferred",
+          "evidence": [
+            "漠漠帆来重"
+          ]
+        },
+        "motion": {
+          "kind": "depth",
+          "direction": "approach",
+          "rate": 0.35,
+          "state": "float"
+        },
+        "instances": [
+          {
+            "placement": {
+              "anchor": [
+                320,
+                230
+              ],
+              "at": [
+                0.52,
+                0.72
+              ],
+              "scale": 0.8064
+            },
+            "depth": 0.05,
+            "opacity": 0.84,
+            "variant": 0
+          }
+        ],
+        "singleUnit": true,
+        "quantity": {
+          "items": [
+            {
+              "entity": "i1",
+              "mode": "unspecified",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "unspecified",
+              "extent": "unspecified",
+              "evidence": [],
+              "basis": "model"
+            }
+          ],
+          "rendered": 1,
+          "exact": false,
+          "collective": false,
+          "partUnsupported": false
+        },
+        "quantityLabel": "由帆借形为一舟，帆面尚未绘制",
+        "semanticSupport": {
+          "surface": "water",
+          "target": null,
+          "path": "scene.supports[0]"
+        },
+        "z": 22
+      },
+      {
+        "tool": "bird",
+        "entities": [
+          "i2"
+        ],
+        "projectedEntities": [],
+        "names": [
+          "鸟"
+        ],
+        "options": {
+          "pose": "flying",
+          "tone": "ink",
+          "facing": "right"
+        },
+        "animate": true,
+        "placement": {
+          "anchor": [
+            320,
+            190
+          ],
+          "at": [
+            0.51,
+            0.33908312914977157
+          ],
+          "scale": 0.78
+        },
+        "drawingLabel": "鸟意（写意借形）",
+        "semanticGroup": {
+          "members": [
+            "i2"
+          ],
+          "role": "subject",
+          "pattern": "single",
+          "depth": "unspecified",
+          "basis": "inferred",
+          "evidence": [
+            "冥冥鸟去迟"
+          ],
+          "index": 1
+        },
+        "semanticEffects": [
+          {
+            "path": "scene.actions[1].state",
+            "consumer": "形态与绘画时钟",
+            "effect": "启用工具支持的 fly 状态",
+            "status": "applied"
+          },
+          {
+            "path": "scene.actions[1].pace",
+            "consumer": "绘画时钟",
+            "effect": "定性节奏映射为本地时钟倍率 0.35",
+            "status": "applied"
+          },
+          {
+            "path": "scene.actions[1].direction",
+            "consumer": "画布合成",
+            "effect": "按定性方向作有限观看动画；不表示完整动作过程",
+            "status": "applied"
+          },
+          {
+            "path": "scene.groups[1].role",
+            "consumer": "主次布局",
+            "effect": "主体相对突出",
+            "status": "applied"
+          },
+          {
+            "path": "scene.groups[1].pattern",
+            "consumer": "群落布局",
+            "effect": "按 single 组织显示单元；不覆盖明确数量",
+            "status": "applied"
+          },
+          {
+            "path": "scene.groups[1].depth",
+            "consumer": "远近布局",
+            "effect": "远近未明，保持本地默认",
+            "status": "skipped"
+          }
+        ],
+        "timeScale": 0.35,
+        "semanticAction": {
+          "entity": "i2",
+          "state": "fly",
+          "pace": "slow",
+          "direction": "recede",
+          "modality": "asserted",
+          "basis": "inferred",
+          "evidence": [
+            "冥冥鸟去迟"
+          ]
+        },
+        "motion": {
+          "kind": "depth",
+          "direction": "recede",
+          "rate": 0.35,
+          "state": "fly"
+        },
+        "instances": [
+          {
+            "placement": {
+              "anchor": [
+                320,
+                190
+              ],
+              "at": [
+                0.51,
+                0.33908312914977157
+              ],
+              "scale": 0.4872
+            },
+            "depth": 0.05,
+            "opacity": 0.714,
+            "variant": 0
+          }
+        ],
+        "singleUnit": true,
+        "quantity": {
+          "items": [
+            {
+              "entity": "i2",
+              "mode": "unspecified",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "unspecified",
+              "extent": "unspecified",
+              "evidence": [],
+              "basis": "model"
+            }
+          ],
+          "rendered": 1,
+          "exact": false,
+          "collective": false,
+          "partUnsupported": false
+        },
+        "quantityLabel": "数量未精确；本地试画 1 个单元",
+        "z": 24
+      },
+      {
+        "tool": "water",
+        "entities": [],
+        "projectedEntities": [],
+        "names": [
+          "构图依托·水域"
+        ],
+        "options": {
+          "form": "plane"
+        },
+        "animate": false,
+        "placement": {
+          "anchor": [
+            320,
+            135
+          ],
+          "at": [
+            0.5,
+            0.45
+          ],
+          "scale": 1.6
+        },
+        "instances": [
+          {
+            "placement": {
+              "anchor": [
+                320,
+                135
+              ],
+              "at": [
+                0.5,
+                0.45
+              ],
+              "scale": 1.65
+            },
+            "variant": 0,
+            "depth": 0,
+            "opacity": 0.84
+          }
+        ],
+        "singleUnit": false,
+        "inferred": true,
+        "provenance": {
+          "basis": "local-context",
+          "reason": "模型解释的必要依托，依据：漠漠帆来重",
+          "semanticPath": "scene.supports[0]"
+        },
+        "quantity": {
+          "rendered": 1,
+          "exact": false,
+          "items": []
+        },
+        "quantityLabel": "本地环境依托，不计入原文意象覆盖",
+        "z": -10,
+        "clip": [
+          [
+            0,
+            0.45
+          ],
+          [
+            1,
+            0.45
+          ],
+          [
+            1,
+            1.04
+          ],
+          [
+            0,
+            1.04
+          ]
+        ],
+        "surface": {
+          "top": 0.45,
+          "bottom": 1
+        }
+      }
+    ],
+    "spatial": [],
+    "scene": {
+      "kind": "study",
+      "notes": [
+        "通用场景层先组织地面、水域、群落和主体，再比较三个布局的依托、相对位置、尺度与遮挡；检查通过不代表审美已通过。"
+      ],
+      "waterline": null,
+      "semanticSetting": {
+        "kind": "waterside",
+        "basis": "inferred",
+        "evidence": [
+          "漠漠帆来重"
+        ]
+      },
+      "semanticEffects": [
+        {
+          "path": "scene.supports[0]",
+          "consumer": "场景依托",
+          "status": "applied",
+          "effect": "必要环境以独立推断背景表示，不新增原文实体"
+        }
+      ],
+      "organization": {
+        "version": "1.0",
+        "strategy": "general-constraints",
+        "regions": {
+          "water": [
+            [
+              0,
+              0.45
+            ],
+            [
+              1,
+              0.45
+            ],
+            [
+              1,
+              1.04
+            ],
+            [
+              0,
+              1.04
+            ]
+          ]
+        },
+        "candidates": [
+          {
+            "layout": 0,
+            "orientation": "open",
+            "errors": 0,
+            "cost": 0.15,
+            "metrics": {
+              "overlapPenalty": 0,
+              "balancePenalty": 0.019,
+              "motifFootprint": 0.019,
+              "landArea": 0
+            }
+          },
+          {
+            "layout": 1,
+            "orientation": "open",
+            "errors": 0,
+            "cost": 0.15,
+            "metrics": {
+              "overlapPenalty": 0,
+              "balancePenalty": 0.019,
+              "motifFootprint": 0.019,
+              "landArea": 0
+            }
+          },
+          {
+            "layout": 2,
+            "orientation": "open",
+            "errors": 0,
+            "cost": 0.922,
+            "metrics": {
+              "overlapPenalty": 0,
+              "balancePenalty": 0.115,
+              "motifFootprint": 0.019,
+              "landArea": 0
+            }
+          }
+        ],
+        "repairs": [
+          {
+            "type": "support-added",
+            "reason": "模型解释的必要依托，依据：漠漠帆来重"
+          }
+        ],
+        "limitations": [
+          "几何检查不判定诗意理解或审美合格",
+          "动作时序与整首诗的场景切换尚未编排"
+        ],
+        "layout": 0,
+        "orientation": "open",
+        "audit": {
+          "scope": "implemented-geometry-and-drawing-gaps",
+          "coverage": {
+            "scope": "extracted-entities-only",
+            "present": 2,
+            "mapped": 2,
+            "parameters": [],
+            "missing": []
+          },
+          "checks": [
+            "presence",
+            "count",
+            "finite",
+            "support",
+            "scale",
+            "relative-position",
+            "depth",
+            "grove-spread",
+            "drawing-gaps"
+          ],
+          "status": "checks-passed",
+          "errors": 0,
+          "review": 0,
+          "issues": [],
+          "metrics": {
+            "overlapPenalty": 0,
+            "balancePenalty": 0.019,
+            "motifFootprint": 0.019,
+            "landArea": 0
+          },
+          "cost": 0.15,
+          "aestheticAcceptance": "pending-user"
+        },
+        "graph": {
+          "nodes": [
+            {
+              "id": "l0",
+              "entities": [
+                "i1"
+              ],
+              "tool": "boat",
+              "role": "subject",
+              "habitat": "water",
+              "inferred": false,
+              "support": "l2"
+            },
+            {
+              "id": "l1",
+              "entities": [
+                "i2"
+              ],
+              "tool": "bird",
+              "role": "fauna",
+              "habitat": "air",
+              "inferred": false,
+              "support": null
+            },
+            {
+              "id": "l2",
+              "entities": [],
+              "tool": "water",
+              "role": "water",
+              "habitat": null,
+              "inferred": true,
+              "support": null
+            }
+          ],
+          "edges": [
+            {
+              "type": "supported-by",
+              "source": "l0",
+              "target": "l2",
+              "basis": "local-composition",
+              "habitat": "water"
+            },
+            {
+              "type": "supported-by",
+              "source": "l1",
+              "target": null,
+              "basis": "local-composition",
+              "habitat": "air"
+            }
+          ],
+          "setting": "study"
+        }
+      }
+    },
+    "omitted": [],
+    "notes": [
+      "帆：以舟身借形帆所指的船，当前不补帆布；帆的数量与船数分别保留。这是本地写意借形，保留原词义。",
+      "鸟：以通用写意鸟形表现，不细分物种。这是本地写意借形，保留原词义。",
+      "位置、大小、笔触与默认微动是本地试画选择；数量解释与本地显示数量分别记录。",
+      "帆以一舟借形，尚未单画帆；多帆与船数不能机械等同。",
+      "鸟未明说精确数量，按模型的 single 群落解释选择本地显示密度。",
+      "未明说的群落数量、疏密、近中远层次与变体均为本地构图选择；种类可按已声明的写意画法概括，不把铺展词换算成精确物体数量。",
+      "通用场景层先组织地面、水域、群落和主体，再比较三个布局的依托、相对位置、尺度与遮挡；检查通过不代表审美已通过。",
+      "整体场景、主次、远近、依托和支持的动作状态来自本次模型解释；具体布局、颜色和时钟倍率由本地视觉策略选择。",
+      "动作动画只表现受支持的主导状态与有限观看微动，未完成先后事件、完整因果或人物行走步态。"
+    ],
+    "relations": [],
+    "semanticConsumption": {
+      "version": "3.3",
+      "items": [
+        {
+          "path": "scene.setting",
+          "status": "applied",
+          "consumer": "本地视觉策略",
+          "effect": "整体环境进入场景提案选择",
+          "basis": "inferred",
+          "evidence": [
+            "漠漠帆来重"
+          ]
+        },
+        {
+          "path": "scene.groups[0].role",
+          "status": "applied",
+          "consumer": "主次布局",
+          "effect": "主体相对突出",
+          "basis": "inferred",
+          "evidence": [
+            "漠漠帆来重"
+          ]
+        },
+        {
+          "path": "scene.groups[0].pattern",
+          "status": "applied",
+          "consumer": "群落布局",
+          "effect": "按 single 组织显示单元；不覆盖明确数量",
+          "basis": "inferred",
+          "evidence": [
+            "漠漠帆来重"
+          ]
+        },
+        {
+          "path": "scene.groups[0].depth",
+          "status": "skipped",
+          "consumer": "远近布局",
+          "effect": "远近未明，保持本地默认",
+          "basis": "inferred",
+          "evidence": [
+            "漠漠帆来重"
+          ]
+        },
+        {
+          "path": "scene.groups[1].role",
+          "status": "applied",
+          "consumer": "主次布局",
+          "effect": "主体相对突出",
+          "basis": "inferred",
+          "evidence": [
+            "冥冥鸟去迟"
+          ]
+        },
+        {
+          "path": "scene.groups[1].pattern",
+          "status": "applied",
+          "consumer": "群落布局",
+          "effect": "按 single 组织显示单元；不覆盖明确数量",
+          "basis": "inferred",
+          "evidence": [
+            "冥冥鸟去迟"
+          ]
+        },
+        {
+          "path": "scene.groups[1].depth",
+          "status": "skipped",
+          "consumer": "远近布局",
+          "effect": "远近未明，保持本地默认",
+          "basis": "inferred",
+          "evidence": [
+            "冥冥鸟去迟"
+          ]
+        },
+        {
+          "path": "scene.supports[0]",
+          "status": "applied",
+          "consumer": "场景依托",
+          "effect": "必要环境以独立推断背景表示，不新增原文实体",
+          "basis": "inferred",
+          "evidence": [
+            "漠漠帆来重"
+          ]
+        },
+        {
+          "path": "scene.actions[0].state",
+          "status": "applied",
+          "consumer": "形态与绘画时钟",
+          "effect": "启用工具支持的 float 状态",
+          "basis": "inferred",
+          "evidence": [
+            "漠漠帆来重"
+          ]
+        },
+        {
+          "path": "scene.actions[0].pace",
+          "status": "applied",
+          "consumer": "绘画时钟",
+          "effect": "定性节奏映射为本地时钟倍率 0.35",
+          "basis": "inferred",
+          "evidence": [
+            "漠漠帆来重"
+          ]
+        },
+        {
+          "path": "scene.actions[0].direction",
+          "status": "applied",
+          "consumer": "画布合成",
+          "effect": "按定性方向作有限观看动画；不表示完整动作过程",
+          "basis": "inferred",
+          "evidence": [
+            "漠漠帆来重"
+          ]
+        },
+        {
+          "path": "scene.actions[1].state",
+          "status": "applied",
+          "consumer": "形态与绘画时钟",
+          "effect": "启用工具支持的 fly 状态",
+          "basis": "inferred",
+          "evidence": [
+            "冥冥鸟去迟"
+          ]
+        },
+        {
+          "path": "scene.actions[1].pace",
+          "status": "applied",
+          "consumer": "绘画时钟",
+          "effect": "定性节奏映射为本地时钟倍率 0.35",
+          "basis": "inferred",
+          "evidence": [
+            "冥冥鸟去迟"
+          ]
+        },
+        {
+          "path": "scene.actions[1].direction",
+          "status": "applied",
+          "consumer": "画布合成",
+          "effect": "按定性方向作有限观看动画；不表示完整动作过程",
+          "basis": "inferred",
+          "evidence": [
+            "冥冥鸟去迟"
+          ]
+        },
+        {
+          "path": "scene.atmosphere.visibility",
+          "status": "applied",
+          "consumer": "画布色层与远景",
+          "effect": "可见度 hazy；迷蒙或昏暗时淡化非光源图层",
+          "basis": "inferred",
+          "evidence": [
+            "漠漠帆来重",
+            "冥冥鸟去迟"
+          ]
+        },
+        {
+          "path": "scene.atmosphere.illumination",
+          "status": "skipped",
+          "consumer": "有限配色",
+          "effect": "照明 unclear 映射为本地 clear 配色；用户仍可手动覆盖",
+          "basis": "inferred",
+          "evidence": [
+            "漠漠帆来重",
+            "冥冥鸟去迟"
+          ]
+        },
+        {
+          "path": "atmosphere.energy",
+          "status": "applied",
+          "consumer": "绘画时钟",
+          "effect": "没有明确动作节奏时，气息强弱控制已有微动的默认时钟"
+        },
+        {
+          "path": "atmosphere.openness",
+          "status": "applied",
+          "consumer": "群落分布与笔触密度",
+          "effect": "开阔度转换为本地间距与工具笔触密度，不等于原文数量"
+        },
+        {
+          "path": "atmosphere.valence",
+          "status": "applied",
+          "consumer": "有限配色",
+          "effect": "正向感受暂用 tender，其余用 clear；尚非完整情感色谱"
+        },
+        {
+          "path": "time.markers",
+          "status": "retained",
+          "consumer": "原始记录与解读",
+          "effect": "保留原文时间标记；本版照明由 scene.atmosphere 转换，多阶段时间逻辑未执行"
+        }
+      ],
+      "summary": {
+        "applied": 16,
+        "partial": 0,
+        "unsupported": 0,
+        "skipped": 3,
+        "retained": 1
+      },
+      "aestheticAcceptance": "pending-user"
+    }
+  },
+  "elapsed_seconds": 3.3
+}

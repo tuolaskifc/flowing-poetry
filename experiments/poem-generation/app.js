@@ -60,12 +60,12 @@
   }
   async function show(record){
     if(!record.validation?.valid){status('本次分析没有通过检查，未生成新画面；下方如有画面仍为上次结果。问题记录已保存，可以换一句或稍后再试。');return;}
-    const {analysis:a,plan}=record;
+    const a=record.effectiveAnalysis||record.analysis,{plan}=record;
     $('output').hidden=false;$('reading').textContent=a.reading;$('scene-title').textContent=record.poem;
-    $('record-info').textContent=(record.cached?'回看已保存结果':'本次实际分析')+' · '+record.elapsed_seconds+' 秒';
+    $('record-info').textContent=(record.cached?'回看已保存结果':'本次实际分析')+' · '+record.elapsed_seconds+' 秒'+(record.sourceContext?.applied?' · 引用范围已展开，解读待复核':'');
     for(const id of ['entities','uncertainties','drawn','omitted','notes','relations','credits'])clearList(id);
     for(const e of a.entities){const q=e.quantity,scope=q&&{individual:'个体',part:'局部',group:'群体单位',extent:'范围单位',unspecified:'计数对象未明'}[q.scope],quantity=q?(q.mode==='exact'?q.min+(q.unit||'')+'，'+scope:q.mode==='range'?q.min+'–'+q.max+(q.unit||'')+'，'+scope:q.mode==='many'?'繁多／群体':q.mode==='few'?'少量，未精确':'数量未明'):'旧记录未提取数量';item('entities',e.mentions.join('／')+' → '+e.concept+'（'+(e.role==='reference'?'比喻参照':{present:'在场',absent:'缺席',unclear:'出现情况待定'}[e.presence])+'；'+quantity+(q?.extent==='spread'?'；铺展':'')+'）');}
-    $('atmosphere').textContent='文字气息：'+(a.atmosphere.labels.join('、')||'未确定')+'。本轮配色由你选择，尚未自动映射全部情感类型。';
+    $('atmosphere').textContent='文字气息：'+(a.atmosphere.labels.join('、')||'未确定')+(plan.semanticConsumption?'。气息已参与有限配色、远景淡化和节奏；你仍可手动调整。':'。本轮配色由你选择，尚未自动映射全部情感类型。');
     for(const issue of a.uncertainties)item('uncertainties',issue);
     for(const layer of plan.layers){const def=window.PoemDrawing.definitions().find(d=>d.id===layer.tool);item('drawn',layer.names.join('、')+' → '+(layer.drawingLabel||def.name)+(layer.quantityLabel?' · '+layer.quantityLabel:'')+(layer.animate?'':'（静止）'));}
     if(!plan.layers.length)item('drawn','本句没有匹配到现有工具；当前仅有底色，请换一句或试试样句。');
@@ -73,6 +73,18 @@
     if(!plan.omitted.length)item('omitted','本次列出的场景意象均找到了基础工具；仍不代表全部关系已表现。');
     for(const note of plan.notes)item('notes',note);
     const organization=plan.scene?.organization;
+    if($('semantic-summary')){
+      const consumption=plan.semanticConsumption;
+      clearList('semantic-applied');clearList('semantic-pending');
+      $('semantic-summary').textContent=consumption?'本次有 '+consumption.summary.applied+' 项解释用于画面，'+(consumption.summary.unsupported+consumption.summary.partial)+' 项尚未充分表现。原文明示与推断保留区分。':'这条旧记录没有整体场景语义；回看仍使用已有的本地构图。';
+      const label=path=>path==='scene.setting'?'整体环境':path.startsWith('scene.groups')?({role:'主次',pattern:'群落',depth:'远近'}[path.split('.').at(-1)]||'分组'):path.startsWith('scene.supports')?'依托':path.startsWith('scene.actions')?({state:'动作状态',pace:'节奏',direction:'趋向'}[path.split('.').at(-1)]||'动作'):path.includes('visibility')?'可见度':path.includes('illumination')?'照明':path==='atmosphere.energy'?'气息强度':path==='atmosphere.openness'?'开阔度':path==='atmosphere.valence'?'感受倾向':'时间线索';
+      const words={fly:'飞行',flow:'水流',float:'浮动',sway:'摇曳',fall:'飘落',rise:'上升',still:'静止',single:'单体',cluster:'丛组',grove:'树丛',flock:'群体',field:'铺展',scattered:'分散',near:'近景',middle:'中景',far:'远景',hazy:'迷蒙',dark:'昏暗',clear:'清明',twilight:'暮色',night:'夜色',day:'白昼',unclear:'未明',tender:'暖柔'};
+      const translate=text=>text.replace(/\b[a-z_]+\b/g,w=>words[w]||w);
+      for(const entry of consumption?.items||[]){
+        const target=entry.status==='applied'?'semantic-applied':'semantic-pending',li=item(target,label(entry.path)+'：'+translate(entry.effect)+(entry.basis==='inferred'?'（解读推断）':''));
+        if(entry.evidence?.length){const evidence=document.createElement('small');evidence.textContent=' 依据：'+entry.evidence.join('／');li.append(evidence);}
+      }
+    }
     if($('organization-summary')){
       const audit=organization?.audit;
       $('organization-summary').textContent=organization?({
@@ -84,7 +96,7 @@
     }
     for(const r of plan.spatial||[])item('relations',(a.entities.find(e=>e.id===r.source)?.mentions.join('／')||r.source)+' → '+(a.entities.find(e=>e.id===r.target)?.mentions.join('／')||r.target)+'：'+r.reason+(r.basis==='inferred'?'（语义推断）':''));
     for(const r of plan.relations)item('relations',r.meaning+'：'+(r.visualized?'以风响应试作表现':'尚未在画面实现'));
-    if(record.mode!=='full')item('relations',record.mode==='scene'?'本次提取意象、数量与有限空间关系；完整动作和时间关系仍待实现。':record.mode==='quantity'?'本次提取基础意象及数量范围，尚未请求完整关系抽取。':'本次为旧版基础意象模式，未请求完整关系抽取。');
+    if(record.mode!=='full')item('relations',record.mode==='composition'?'本次整体场景语义已参与分组、远近、依托、有限动作与气息；多阶段事件和完整因果仍待实现。':record.mode==='scene'?'本次提取意象、数量与有限空间关系；完整动作和时间关系仍待实现。':record.mode==='quantity'?'本次提取基础意象及数量范围，尚未请求完整关系抽取。':'本次为旧版基础意象模式，未请求完整关系抽取。');
     const sourceIds=[...new Set(plan.layers.flatMap(l=>window.PoemDrawing.definitions().find(d=>d.id===l.tool).sources))];
     for(const id of sourceIds){const s=window.PoemDrawingSources[id],li=item('credits',s.author+(s.license?' · '+s.license:' · 本项目试作')+'。'+s.note);if(s.url){const link=document.createElement('a');link.href=s.url;link.textContent=' 原来源 ↗';link.target='_blank';link.rel='noopener noreferrer';li.append(link);}}
     $('usage').textContent='记录 '+record.id+'；模型 '+record.model+'；本次记录 token '+(record.usage?.total_tokens??'未返回')+'。'+(record.cached?'正在回看，没有新增模型调用。':'用量以本次接口返回为准。');

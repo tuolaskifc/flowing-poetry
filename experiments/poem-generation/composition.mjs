@@ -26,6 +26,11 @@ export function compose(analysis,layers,seed){
       if(layer.tool==='dwelling'&&entities.some(e=>e.mentions.some(m=>/^(?:(?:孤|荒|山|小|远|近)?村(?:庄|落)?|墟里)$/.test(m)))){count+=3;exact=false;collective=true;continue;}
       if(['bird','oriole'].includes(layer.tool)&&q.scope==='group'&&['双','对'].includes(q.unit)&&['exact','range'].includes(q.mode)){count+=Math.round((q.min+q.max)/2)*2;exact&&=q.mode==='exact';continue;}
       if(layer.options.form==='blossom'&&!(q.scope==='individual'&&['株','树','棵'].includes(q.unit))){const grove=q.scope!=='part'&&(q.mode==='many'||q.extent==='spread');count+=grove?7:1;collective||=grove;exact=false;continue;}
+      if(q.mode==='unspecified'&&layer.semanticGroup){
+        const pattern=layer.semanticGroup.pattern;
+        const semanticDefault=pattern==='grove'&&['tree','bamboo','willow'].includes(layer.tool)?many[layer.tool]||8:pattern==='flock'&&['bird','oriole','fish'].includes(layer.tool)?7:pattern==='field'&&fieldTools.has(layer.tool)?many[layer.tool]||12:pattern==='cluster'&&fieldTools.has(layer.tool)?5:null;
+        if(semanticDefault!==null){count+=semanticDefault;collective||=semanticDefault>1;exact=false;notes.push(`${layer.names.join('、')}未明说精确数量，按模型的 ${pattern} 群落解释选择本地显示密度。`);continue;}
+      }
       if(woodland&&q.mode==='unspecified'){count+=14;collective=true;exact=false;continue;}
       const part=(q.scope==='part'&&!(layer.tool==='plum-branch'&&q.unit==='枝'))||(layer.tool==='plum-branch'&&/朵|瓣/.test(q.unit||''));
       if(part){partUnsupported=true;exact=false;count+=1;continue;}

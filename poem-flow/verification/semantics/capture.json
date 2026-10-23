@@ -1,0 +1,88 @@
+{
+  "version": "3.3",
+  "startedAt": "2026-10-23T01:03:51.360Z",
+  "frozenHashes": {
+    "semantic-live-cases.json": "e0d4a484623f15341fee22eec614e37cd9e321e338263cf75f6663dd026efbd3",
+    "composition-contract.mjs": "ac534e804d458ca9d53d2b464517a2af7c0a096959208ec22115094dd6dbf06a",
+    "scene-contract.mjs": "5a2620a608a539dee959ffa962de0f7ede3e9b7796883fc98124480324b0dd0c",
+    "quantity-contract.mjs": "a67ede1bfda86d53d58644e261d00642d421dcfc34e82bef437cd30162a35ffb",
+    "semantic-policy.mjs": "92096f9fb06e2afad3a7a8577a89409abcd65fdc2de266a4d172988d77cb7ac0",
+    "scene-organization.mjs": "9e34b085c7b737931bd047726a903aa7f9b2662a0b9d021274be47e15aae9417",
+    "planner.mjs": "0faafbfb0a2fc743cda10c5efca51e1cc18dabbd3feacfcb154f4b3421624f12",
+    "composition.mjs": "4c7d2843a77f9112513e50921a10c023e0b2c8d7626c8c436981f4507eac29e1",
+    "service.mjs": "e4eae510cc08ee95355036e2dc78f5d7fcb577202d23a38ca953e86c9d2b9418",
+    "scene.js": "15c6bece26de4b4b2b8981fcf4cb10423bfa3edf36d4f4047919a564ded5e524",
+    "../imagery-library/drawing/core.js": "26900baff48cb4c31414c240f62944b9a15041124cf1448a2e0bd5e0b4e45260",
+    "../imagery-library/drawing/tools/mist.js": "33f52ac2a534945661aad43e9634fce07b29c40d989d67eb1d1f3ea08dd711ed"
+  },
+  "noAutomaticRetry": true,
+  "calls": [
+    {
+      "case": "s01",
+      "record": "2026-10-23T01-03-51-390Z-1f3b7557",
+      "valid": true,
+      "errors": [],
+      "tokens": 5460,
+      "seconds": 3.3,
+      "applied": 16,
+      "unsupported": 0,
+      "geometryErrors": 0
+    },
+    {
+      "case": "s02",
+      "record": "2026-10-23T01-03-54-710Z-efdb6d76",
+      "valid": true,
+      "errors": [],
+      "tokens": 5681,
+      "seconds": 8.2,
+      "applied": 10,
+      "unsupported": 1,
+      "geometryErrors": 0
+    },
+    {
+      "case": "s03",
+      "record": "2026-10-23T01-04-03-041Z-c3aaf670",
+      "valid": false,
+      "errors": [
+        "spatial[0] 依据未关联关系两端"
+      ],
+      "tokens": 5668,
+      "seconds": 3.9
+    },
+    {
+      "case": "s04",
+      "record": "2026-10-23T01-04-07-000Z-d3d73dba",
+      "valid": false,
+      "errors": [
+        "spatial[1] 依据未关联关系两端"
+      ],
+      "tokens": 6100,
+      "seconds": 4.9
+    },
+    {
+      "case": "s05",
+      "record": "2026-10-23T01-04-11-989Z-dc1950c4",
+      "valid": true,
+      "errors": [],
+      "tokens": 5699,
+      "seconds": 7.5,
+      "applied": 16,
+      "unsupported": 0,
+      "geometryErrors": 0
+    },
+    {
+      "case": "s06",
+      "record": "2026-10-23T01-04-19-645Z-f44972c5",
+      "valid": true,
+      "errors": [],
+      "tokens": 5907,
+      "seconds": 13.5,
+      "applied": 22,
+      "unsupported": 2,
+      "geometryErrors": 0
+    }
+  ],
+  "finishedAt": "2026-10-23T01:04:33.219Z",
+  "rulesUnchanged": true,
+  "totalTokens": 34515
+}

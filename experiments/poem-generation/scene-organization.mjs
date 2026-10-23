@@ -1,5 +1,6 @@
 // Code-owned scene graph, candidate layouts and bounded geometric supervision.
 // These checks measure implemented constraints, never literary truth or beauty.
+import {applySemanticSupports,applySemanticLayout} from './semantic-policy.mjs';
 const frac=n=>n-Math.floor(n);
 const clamp=(n,a,b)=>Math.max(a,Math.min(b,n));
 const plants=new Set(['tree','willow','bamboo','grass','flower','orchid']);
@@ -51,7 +52,8 @@ function supportVeto(analysis,form){
 }
 function addSupport(layers,form,reason){
  const tool=form==='water'?'water':'landscape',placement={anchor:form==='water'?[320,135]:[320,194],at:[.5,.46],scale:1.6};
- const l={tool,entities:[],projectedEntities:[],names:[form==='water'?'构图依托·水域':'构图依托·地面'],options:{form:form==='water'?'plane':form,...(form==='ground'?{edge:'soft'}:{})},animate:false,placement:structuredClone(placement),instances:[{placement:structuredClone(placement),variant:0,depth:0,opacity:1}],singleUnit:false,inferred:true,provenance:{basis:'local-context',reason},quantity:{rendered:1,exact:false,items:[]},quantityLabel:'本地环境依托，不计入原文意象覆盖',z:form==='water'?-10:-18};
+ if(form==='mountain')Object.assign(placement,{at:[.5,.4],scale:1.7});
+ const l={tool,entities:[],projectedEntities:[],names:[form==='water'?'构图依托·水域':form==='mountain'?'构图依托·山势':'构图依托·地面'],options:{form:form==='water'?'plane':form,...(form==='ground'?{edge:'soft'}:{})},animate:false,placement:structuredClone(placement),instances:[{placement:structuredClone(placement),variant:0,depth:0,opacity:1}],singleUnit:false,inferred:true,provenance:{basis:'local-context',reason},quantity:{rendered:1,exact:false,items:[]},quantityLabel:'本地环境依托，不计入原文意象覆盖',z:form==='water'?-10:form==='mountain'?-32:-18};
  layers.push(l);return l;
 }
 function graphFor(analysis,layers,scene){
@@ -103,6 +105,10 @@ function candidate(analysis,base,index){
   regions.water=landNeeded?[[flip(.38),.45],[flip(1.04),.45],[flip(1.04),1.04],[flip(.28),1.04],[flip(.47),.79],[flip(.35),.62]]:[[0,.45],[1,.45],[1,1.04],[0,1.04]];
   if(landNeeded)regions.land=[[flip(-.04),.48],[flip(.34),.48],[flip(.35),.62],[flip(.47),.79],[flip(.28),1.04],[flip(-.04),1.04]];
   water.clip=regions.water;water.surface={top:.45,bottom:1};water.instances[0].placement={anchor:[320,135],at:[.5,.45],scale:1.65};water.z=-10;
+  if(scene.semanticSetting?.kind==='mountain_stream'){
+   regions.water=[[.54,.45],[.66,.45],[.62,.64],[.76,.84],[1.04,1.04],[.72,1.04],[.43,.72],[.46,.59]];
+   regions.land=[[0,.48],[.43,.48],[.40,.68],[.45,.81],[.60,1.04],[0,1.04]];water.clip=regions.water;
+  }
  }else if(landNeeded)regions.land=[[0,.50],[1,.50],[1,1.04],[0,1.04]];
  if(ground){ground.clip=regions.land;ground.options.edge='soft';ground.z=-18;ground.instances[0].placement={anchor:[320,265],at:[.5,.54],scale:2.5};}
  for(const l of layers.filter(l=>l.tool==='landscape'&&l.options.form==='shore')){l.clip=regions.land;l.options.edge='soft';}
@@ -115,7 +121,7 @@ function candidate(analysis,base,index){
    const t=(i+.5)/n,u=frac((i+1)*.61803398875+offset+index*.073);
    if(plants.has(l.tool)){
     const global=(plantIndex+i+.5)/Math.max(1,total),far=global<.58;
-    const cluster=water?flip(.035+u*.27):global<.52?.04+u*.28:.73+u*.24;
+    const cluster=water?flip(.035+u*.27):scene.semanticSetting?.kind==='woodland'?.03+u*.94:global<.52?.04+u*.28:.73+u*.24;
     const y=far?.61+frac(global*1.7)*.15:.81+frac(global*1.3)*.18;
     v.placement.at=regions.land?pointIn(regions.land,cluster,y):[cluster,y];
     v.placement.scale=['grass','flower'].includes(l.tool)?(far?.21:.32)+u*.13:l.tool==='orchid'?(far?.30:.43)+u*.15:(far?.43:.67)+u*.23;
@@ -149,6 +155,7 @@ function candidate(analysis,base,index){
   if(plants.has(l.tool))plantIndex+=n;sync(l);
  }
  scene.organization.regions=regions;scene.organization.layout=index;scene.organization.orientation=water&&landNeeded?(left?'left-bank':'right-bank'):'open';
+ applySemanticLayout(analysis,result,{pointIn,sync});
  applyRelations(analysis,layers,spatial,regions);
  // Reproject roots after relative moves; this may expose an unsatisfied relation
  // in the audit instead of silently treating impossible constraints as solved.
@@ -248,12 +255,13 @@ export function repairOrganization(analysis,input,{maxPasses=2}={}){
 export function organizeScene(analysis,arranged){
  const base=structuredClone(arranged),{layers,scene}=base;
  for(let i=layers.length-1;i>=0;i--){const l=layers[i],form=l.tool==='water'?'water':l.options.form;if(l.inferred&&supportVeto(analysis,form)){layers.splice(i,1);scene.notes.push('原文有缺席、参照或不确定的环境线索，未额外补画'+l.names.join('、'));}}
+ applySemanticSupports(analysis,layers,scene,{addSupport:(form,reason)=>addSupport(layers,form,reason),veto:form=>supportVeto(analysis,form)});
  // Preserve established regional compositions as reusable proposals. They still
  // receive the same audit, but are not restyled just to improve a scalar score.
  const needsWater=layers.some(l=>['boat','fish','lotus'].includes(l.tool)||l.tool==='bird'&&l.options.pose==='waterbird'||l.tool==='landscape'&&l.options.form==='shore');
  const established=scene.basis==='local-context'&&!(needsWater&&!layers.some(l=>l.tool==='water')&&!waterVeto(analysis));
  const sceneLayers=layers.filter(l=>!l.inferred&&physical(l)!=='detail'&&physical(l)!=='atmosphere');
- const contextual=sceneLayers.length>=2||sceneLayers.some(l=>['tree','bamboo','willow'].includes(l.tool)&&l.quantity.collective);
+ const contextual=sceneLayers.length>=2||sceneLayers.some(l=>['tree','bamboo','willow'].includes(l.tool)&&l.quantity.collective)||analysis.schema_version==='3.3'&&sceneLayers.length>0;
  scene.organization={version:'1.0',strategy:established?'regional-proposal':contextual?'general-constraints':'isolated-study',regions:structuredClone(scene.regions||{}),candidates:[],repairs:[],limitations:['几何检查不判定诗意理解或审美合格','动作时序与整首诗的场景切换尚未编排']};
  if(!established&&contextual){
   if(layers.some(l=>grounded.has(l.tool)&&!l.attachment)&&!layers.some(l=>l.tool==='landscape'&&['ground','shore','field'].includes(l.options.form))&&!supportVeto(analysis,'ground'))addSupport(layers,'ground','生长物、房舍和陆上主体需要共同地表；这是本地构图依托');
@@ -266,6 +274,15 @@ export function organizeScene(analysis,arranged){
   chosen.scene.organization.repairs.push(...chosen.layers.filter(l=>l.inferred&&!arranged.layers.some(old=>old.tool===l.tool&&old.options.form===l.options.form)).map(l=>({type:'support-added',reason:l.provenance.reason})));
   chosen.scene.notes.push('通用场景层先组织地面、水域、群落和主体，再比较三个布局的依托、相对位置、尺度与遮挡；检查通过不代表审美已通过。');
   return chosen;
+ }
+ if(established&&analysis.schema_version==='3.3'){
+  const regions=scene.organization.regions,water=layers.find(l=>l.tool==='water');
+  if(water&&!regions.water)regions.water=water.clip||waterRegion(water,scene);
+  applySemanticLayout(analysis,base,{pointIn,sync});
+  for(const l of layers.filter(l=>l.tool==='figure'&&l.attachment)){
+   const parent=layers.find(p=>p.entities.includes(l.attachment.target));if(!parent)continue;
+   const p=parent.instances[0].placement;for(const v of l.instances){v.placement.at=[p.at[0]-.018,p.at[1]-.012];v.placement.scale=p.scale*.72;}sync(l);
+  }
  }
  attachSmoke(layers);scene.organization.graph=graphFor(analysis,layers,scene);scene.organization.audit=inspectOrganization(analysis,base);
  scene.organization.candidates=[{layout:'existing',errors:scene.organization.audit.errors,cost:scene.organization.audit.cost}];

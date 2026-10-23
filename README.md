@@ -30,7 +30,9 @@ npm start
 
 现已统一为：**精选库选句／手动输入 → DeepSeek 解读 → 本地检查与映射 → 已有绘画工具组成动态图 → 调整与保存**。可暂停、换形态、调风力、切配色与月形、拖动可见笔触调整构图、还原构图、沉浸观看、导出 PNG。打开网页默认选中精选库的第一组，不自动调用模型，也不自动展开上次画面；旧结果可点击“回看上次结果”。点击“生成画面”才分析。
 
-新增[场景组织层与自查](experiments/poem-generation/scene-organization.md)：未匹配组合先安排地面、水域、群落与主体，比较三种布局并作有限几何修正，检查仍无画法的线索。可打开[26 组前后对照](http://127.0.0.1:4173/poem-flow/organization-review.html)，分别标注人工练习、旧回答重放及新诗真实调用。六次新诗请求四次语义有效，另有网络与证据失败；后续改图属于同批回归，审美仍待观看。85 项本地检查通过，原二十张参考图保留。
+2026-10-23 已贯通 [3.3 整体场景语义](experiments/poem-generation/composition-semantics.md)：整体环境、主次群落、远近、依托、主导动作与定性节奏、照明和迷蒙度进入本地构图与绘画时钟。每项解释有应用或缺口记录；人物步态、完整因果和多阶段时间未完成。[当前架构图](http://127.0.0.1:4173/poem-flow/architecture.html)与[同回答开关对照](http://127.0.0.1:4173/poem-flow/semantic-review.html)已连接主网页。本轮六次真实调用原始校验 4/6 通过，另两份仅展开相邻原句引用后重放，原始失败保留；95 项检查通过，审美仍待观看。
+
+此前的[场景组织层与自查](experiments/poem-generation/scene-organization.md)：未匹配组合先安排地面、水域、群落与主体，比较三种布局并作有限几何修正，检查仍无画法的线索。[26 组前后对照](http://127.0.0.1:4173/poem-flow/organization-review.html)分别标注人工练习、旧回答重放及当轮新诗真实调用；旧数字保持为历史记录，原二十张参考图保留。
 
 当前主要来源是 [20 组精选诗句库](http://127.0.0.1:4173/poem-flow/library.html)：逐项列出原句出处、意象线索、画面目标、当前缺口与效果进度，首批 5 组优先改画。主网页可直接选择或“换一句精选”，总表也可带入指定诗句。仍保留当前画不了的候选；编入精选库不代表效果已完成。数据与维护说明见 [精选库说明](experiments/poem-generation/curated-library.md)。
 
@@ -50,7 +52,7 @@ npm start
 
 ## 独立的诗句语义实验
 
-模型接口已接入主网页。完整实验保留 [冻结语义协议 3.0](experiments/poem-semantics/contract-v3/固定输出结构.md)，此前两次完整关系请求未通过；生成页面现默认使用 [3.2 场景扩展](experiments/poem-generation/scene-generation.md)，完整动作关系仍为空，空间关系使用单独的有限字段，不让模型生成绘图代码。16 类情感、空间和完整逻辑尚未贯通，不能将旧字段直接换名使用。
+模型接口已接入主网页。完整实验保留 [冻结语义协议 3.0](experiments/poem-semantics/contract-v3/固定输出结构.md)，此前两次完整关系请求未通过；生成页面现默认使用 [3.3 整体场景语义](experiments/poem-generation/composition-semantics.md)，以 scene.actions 表达有限主导状态，完整 relations 仍为空，空间关系沿用 spatial。不让模型生成绘图代码；16 类情感、完整因果与时间编排尚未贯通。
 
 协议说明、提示词、校验器和既往记录在 `experiments/poem-semantics/`；历次真实请求、失败及覆盖缺口保留在 `experiments/poem-generation/runs/`，不随网页更新改写。
 

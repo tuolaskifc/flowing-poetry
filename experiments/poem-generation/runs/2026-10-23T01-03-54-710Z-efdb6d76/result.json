@@ -1,0 +1,1583 @@
+{
+  "id": "2026-10-23T01-03-54-710Z-efdb6d76",
+  "fingerprint": "85a51e4cd288234b245d1317cba181c9ad0e47dd636a4545df4952f6d99ef29b",
+  "poem": "明月松间照，清泉石上流。",
+  "source": {
+    "provider": "整体场景语义3.3实测",
+    "author": "王维",
+    "title": "山居秋暝",
+    "dynasty": "唐代"
+  },
+  "mode": "composition",
+  "model": "DeepSeek-V4.1-Flash",
+  "started_at": "2026-10-23T01:03:54.712Z",
+  "cached": false,
+  "http_status": 200,
+  "usage": {
+    "completion_tokens": 786,
+    "prompt_tokens": 4895,
+    "total_tokens": 5681,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  },
+  "finish_reason": "stop",
+  "analysis": {
+    "schema_version": "3.3",
+    "poem": "明月松间照，清泉石上流。",
+    "reading": "月光穿过松林洒落，清泉在石上流淌，写出山中夜晚清幽明净的动静之景。",
+    "entities": [
+      {
+        "id": "i1",
+        "mentions": [
+          "明月"
+        ],
+        "concept": "明月",
+        "kind": "object",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "明月松间照"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i2",
+        "mentions": [
+          "松"
+        ],
+        "concept": "松树",
+        "kind": "organism",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "明月松间照"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i3",
+        "mentions": [
+          "清泉"
+        ],
+        "concept": "清泉",
+        "kind": "object",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "清泉石上流"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i4",
+        "mentions": [
+          "石"
+        ],
+        "concept": "石头",
+        "kind": "object",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "清泉石上流"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      }
+    ],
+    "relations": [],
+    "atmosphere": {
+      "labels": [
+        "清幽",
+        "明净",
+        "静谧"
+      ],
+      "valence": "positive",
+      "energy": "low",
+      "tension": "low",
+      "openness": "medium",
+      "evidence": [
+        "明月松间照",
+        "清泉石上流"
+      ]
+    },
+    "time": {
+      "markers": [],
+      "note": null
+    },
+    "uncertainties": [
+      "月光是穿过松林还是照在松间，原文未明说。",
+      "泉水流向未交代，只知在石上流动。"
+    ],
+    "spatial": [
+      {
+        "type": "among",
+        "source": "i1",
+        "target": "i2",
+        "modality": "asserted",
+        "basis": "inferred",
+        "evidence": [
+          "明月松间照"
+        ]
+      },
+      {
+        "type": "on",
+        "source": "i3",
+        "target": "i4",
+        "modality": "asserted",
+        "basis": "explicit",
+        "evidence": [
+          "清泉石上流"
+        ]
+      }
+    ],
+    "scene": {
+      "setting": {
+        "kind": "woodland",
+        "basis": "inferred",
+        "evidence": [
+          "明月松间照",
+          "清泉石上流"
+        ]
+      },
+      "groups": [
+        {
+          "members": [
+            "i1",
+            "i2"
+          ],
+          "role": "subject",
+          "pattern": "unspecified",
+          "depth": "unspecified",
+          "basis": "inferred",
+          "evidence": [
+            "明月松间照"
+          ]
+        },
+        {
+          "members": [
+            "i3",
+            "i4"
+          ],
+          "role": "subject",
+          "pattern": "unspecified",
+          "depth": "unspecified",
+          "basis": "inferred",
+          "evidence": [
+            "清泉石上流"
+          ]
+        }
+      ],
+      "supports": [
+        {
+          "entity": "i3",
+          "surface": "ground",
+          "target": "i4",
+          "basis": "explicit",
+          "evidence": [
+            "清泉石上流"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "entity": "i1",
+          "state": "still",
+          "pace": "unspecified",
+          "direction": "unspecified",
+          "modality": "asserted",
+          "basis": "inferred",
+          "evidence": [
+            "明月松间照"
+          ]
+        },
+        {
+          "entity": "i3",
+          "state": "flow",
+          "pace": "unspecified",
+          "direction": "unspecified",
+          "modality": "asserted",
+          "basis": "explicit",
+          "evidence": [
+            "清泉石上流"
+          ]
+        }
+      ],
+      "atmosphere": {
+        "visibility": "clear",
+        "illumination": "night",
+        "basis": "inferred",
+        "evidence": [
+          "明月松间照"
+        ]
+      }
+    }
+  },
+  "validation": {
+    "valid": true,
+    "errors": [],
+    "warnings": [
+      "模型保留了不确定性，需要审阅",
+      "spatial[0] 的推断或非确定关系需审阅",
+      "scene.setting 为语义推断，绘画选择需与原文明示区分",
+      "scene.groups[0] 为语义推断，绘画选择需与原文明示区分",
+      "scene.groups[1] 为语义推断，绘画选择需与原文明示区分",
+      "scene.actions[0] 为语义推断，绘画选择需与原文明示区分",
+      "scene.atmosphere 为语义推断，绘画选择需与原文明示区分"
+    ],
+    "review_required": true
+  },
+  "plan": {
+    "version": "semantic-composition-3.3",
+    "seed": 410416620,
+    "settings": {
+      "wind": 0,
+      "density": 0.45,
+      "palette": "night"
+    },
+    "layers": [
+      {
+        "tool": "moon",
+        "entities": [
+          "i1"
+        ],
+        "projectedEntities": [],
+        "names": [
+          "明月"
+        ],
+        "options": {
+          "shape": "crescent"
+        },
+        "animate": false,
+        "placement": {
+          "anchor": [
+            320,
+            175
+          ],
+          "at": [
+            0.25697670785000004,
+            0.58087075563696
+          ],
+          "scale": 0.85
+        },
+        "semanticGroup": {
+          "members": [
+            "i1",
+            "i2"
+          ],
+          "role": "subject",
+          "pattern": "unspecified",
+          "depth": "unspecified",
+          "basis": "inferred",
+          "evidence": [
+            "明月松间照"
+          ],
+          "index": 0
+        },
+        "semanticEffects": [
+          {
+            "path": "scene.actions[0].state",
+            "consumer": "形态与绘画时钟",
+            "effect": "静止姿态并停止该图层时钟",
+            "status": "applied"
+          },
+          {
+            "path": "scene.groups[0].role",
+            "consumer": "主次布局",
+            "effect": "主体相对突出",
+            "status": "applied"
+          },
+          {
+            "path": "scene.groups[0].pattern",
+            "consumer": "群落布局",
+            "effect": "群落形式未明，保持本地默认",
+            "status": "skipped"
+          },
+          {
+            "path": "scene.groups[0].depth",
+            "consumer": "远近布局",
+            "effect": "远近未明，保持本地默认",
+            "status": "skipped"
+          }
+        ],
+        "timeScale": 0,
+        "semanticAction": {
+          "entity": "i1",
+          "state": "still",
+          "pace": "unspecified",
+          "direction": "unspecified",
+          "modality": "asserted",
+          "basis": "inferred",
+          "evidence": [
+            "明月松间照"
+          ]
+        },
+        "instances": [
+          {
+            "placement": {
+              "anchor": [
+                320,
+                175
+              ],
+              "at": [
+                0.25697670785000004,
+                0.58087075563696
+              ],
+              "scale": 0.7168000000000001
+            },
+            "depth": 0.05,
+            "opacity": 1,
+            "variant": 0
+          }
+        ],
+        "singleUnit": true,
+        "quantity": {
+          "items": [
+            {
+              "entity": "i1",
+              "mode": "unspecified",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "unspecified",
+              "extent": "unspecified",
+              "evidence": [],
+              "basis": "model"
+            }
+          ],
+          "rendered": 1,
+          "exact": false,
+          "collective": false,
+          "partUnsupported": false
+        },
+        "quantityLabel": "数量未精确；本地试画 1 个单元",
+        "z": -5
+      },
+      {
+        "tool": "tree",
+        "entities": [
+          "i2"
+        ],
+        "projectedEntities": [],
+        "names": [
+          "松"
+        ],
+        "options": {
+          "form": "pine",
+          "crown": "lines"
+        },
+        "animate": true,
+        "placement": {
+          "anchor": [
+            320,
+            388
+          ],
+          "at": [
+            0.17354211936875008,
+            0.799625
+          ],
+          "scale": 1.15
+        },
+        "semanticGroup": {
+          "members": [
+            "i1",
+            "i2"
+          ],
+          "role": "subject",
+          "pattern": "unspecified",
+          "depth": "unspecified",
+          "basis": "inferred",
+          "evidence": [
+            "明月松间照"
+          ],
+          "index": 0
+        },
+        "semanticEffects": [
+          {
+            "path": "scene.groups[0].role",
+            "consumer": "主次布局",
+            "effect": "主体相对突出",
+            "status": "applied"
+          },
+          {
+            "path": "scene.groups[0].pattern",
+            "consumer": "群落布局",
+            "effect": "群落形式未明，保持本地默认",
+            "status": "skipped"
+          },
+          {
+            "path": "scene.groups[0].depth",
+            "consumer": "远近布局",
+            "effect": "远近未明，保持本地默认",
+            "status": "skipped"
+          }
+        ],
+        "timeScale": 0.45,
+        "instances": [
+          {
+            "placement": {
+              "anchor": [
+                320,
+                388
+              ],
+              "at": [
+                0.2963691769625001,
+                0.63125
+              ],
+              "scale": 0.730965555502
+            },
+            "depth": 0.008333333333333333,
+            "opacity": 0.77360679775,
+            "variant": 0
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                388
+              ],
+              "at": [
+                0.193238353925,
+                0.67375
+              ],
+              "scale": 0.632571111004
+            },
+            "depth": 0.025,
+            "opacity": 0.6972135955,
+            "variant": 1
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                388
+              ],
+              "at": [
+                0.09010753088750004,
+                0.7162499999999999
+              ],
+              "scale": 0.534176666506
+            },
+            "depth": 0.04166666666666667,
+            "opacity": 0.6208203932499999,
+            "variant": 2
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                388
+              ],
+              "at": [
+                0.2569767078500001,
+                0.9465000000000001
+              ],
+              "scale": 0.9621822220080003
+            },
+            "depth": 0.05833333333333334,
+            "opacity": 0.9679844719,
+            "variant": 0
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                388
+              ],
+              "at": [
+                0.1538458848125001,
+                0.9855
+              ],
+              "scale": 0.8637877775100002
+            },
+            "depth": 0.07500000000000001,
+            "opacity": 0.899230589875,
+            "variant": 1
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                388
+              ],
+              "at": [
+                0.05071506177500015,
+                0.8445
+              ],
+              "scale": 0.7653933330120003
+            },
+            "depth": 0.09166666666666667,
+            "opacity": 0.83047670785,
+            "variant": 2
+          }
+        ],
+        "singleUnit": true,
+        "quantity": {
+          "items": [
+            {
+              "entity": "i2",
+              "mode": "unspecified",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "unspecified",
+              "extent": "unspecified",
+              "evidence": [],
+              "basis": "model"
+            }
+          ],
+          "rendered": 6,
+          "exact": false,
+          "collective": false,
+          "partUnsupported": false
+        },
+        "quantityLabel": "依场景疏密试画 6 个单元；原文未给精确个体数",
+        "z": 8
+      },
+      {
+        "tool": "water",
+        "entities": [
+          "i3"
+        ],
+        "projectedEntities": [],
+        "names": [
+          "清泉"
+        ],
+        "options": {
+          "form": "plane"
+        },
+        "animate": true,
+        "placement": {
+          "anchor": [
+            320,
+            130
+          ],
+          "at": [
+            0.5,
+            0.45
+          ],
+          "scale": 1.5
+        },
+        "semanticGroup": {
+          "members": [
+            "i3",
+            "i4"
+          ],
+          "role": "subject",
+          "pattern": "unspecified",
+          "depth": "unspecified",
+          "basis": "inferred",
+          "evidence": [
+            "清泉石上流"
+          ],
+          "index": 1
+        },
+        "semanticEffects": [
+          {
+            "path": "scene.actions[1].state",
+            "consumer": "形态与绘画时钟",
+            "effect": "启用工具支持的 flow 状态",
+            "status": "applied"
+          },
+          {
+            "path": "scene.actions[1].pace",
+            "consumer": "绘画时钟",
+            "effect": "定性节奏映射为本地时钟倍率 0.45",
+            "status": "applied"
+          },
+          {
+            "path": "scene.groups[1].role",
+            "consumer": "主次布局",
+            "effect": "保留环境画布范围，主次不改变地形边界",
+            "status": "applied"
+          },
+          {
+            "path": "scene.groups[1].pattern",
+            "consumer": "群落布局",
+            "effect": "群落形式未明，保持本地默认",
+            "status": "skipped"
+          },
+          {
+            "path": "scene.groups[1].depth",
+            "consumer": "远近布局",
+            "effect": "远近未明，保持本地默认",
+            "status": "skipped"
+          }
+        ],
+        "timeScale": 0.45,
+        "semanticAction": {
+          "entity": "i3",
+          "state": "flow",
+          "pace": "unspecified",
+          "direction": "unspecified",
+          "modality": "asserted",
+          "basis": "explicit",
+          "evidence": [
+            "清泉石上流"
+          ]
+        },
+        "instances": [
+          {
+            "placement": {
+              "anchor": [
+                320,
+                135
+              ],
+              "at": [
+                0.5,
+                0.45
+              ],
+              "scale": 1.65
+            },
+            "depth": 0.05,
+            "opacity": 1,
+            "variant": 0
+          }
+        ],
+        "singleUnit": false,
+        "quantity": {
+          "items": [
+            {
+              "entity": "i3",
+              "mode": "unspecified",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "unspecified",
+              "extent": "unspecified",
+              "evidence": [],
+              "basis": "model"
+            }
+          ],
+          "rendered": 1,
+          "exact": false,
+          "collective": false,
+          "partUnsupported": false
+        },
+        "quantityLabel": "整体笔触图层；内部数量尚未适配",
+        "z": -10,
+        "surface": {
+          "top": 0.45,
+          "bottom": 1
+        },
+        "clip": [
+          [
+            0.38,
+            0.45
+          ],
+          [
+            1.04,
+            0.45
+          ],
+          [
+            1.04,
+            1.04
+          ],
+          [
+            0.28,
+            1.04
+          ],
+          [
+            0.47,
+            0.79
+          ],
+          [
+            0.35,
+            0.62
+          ]
+        ]
+      },
+      {
+        "tool": "rock",
+        "entities": [
+          "i4"
+        ],
+        "projectedEntities": [],
+        "names": [
+          "石"
+        ],
+        "options": {},
+        "animate": true,
+        "placement": {
+          "anchor": [
+            320,
+            245
+          ],
+          "at": [
+            0.26310753088750005,
+            0.8699999999999999
+          ],
+          "scale": 0.95
+        },
+        "semanticGroup": {
+          "members": [
+            "i3",
+            "i4"
+          ],
+          "role": "subject",
+          "pattern": "unspecified",
+          "depth": "unspecified",
+          "basis": "inferred",
+          "evidence": [
+            "清泉石上流"
+          ],
+          "index": 1
+        },
+        "semanticEffects": [
+          {
+            "path": "scene.groups[1].role",
+            "consumer": "主次布局",
+            "effect": "主体相对突出",
+            "status": "applied"
+          },
+          {
+            "path": "scene.groups[1].pattern",
+            "consumer": "群落布局",
+            "effect": "群落形式未明，保持本地默认",
+            "status": "skipped"
+          },
+          {
+            "path": "scene.groups[1].depth",
+            "consumer": "远近布局",
+            "effect": "远近未明，保持本地默认",
+            "status": "skipped"
+          }
+        ],
+        "timeScale": 0.45,
+        "instances": [
+          {
+            "placement": {
+              "anchor": [
+                320,
+                245
+              ],
+              "at": [
+                0.36136917696250004,
+                0.79
+              ],
+              "scale": 0.6767556521320002
+            },
+            "depth": 0.010000000000000002,
+            "opacity": 1,
+            "variant": 0
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                245
+              ],
+              "at": [
+                0.258238353925,
+                0.8300000000000001
+              ],
+              "scale": 0.599751304264
+            },
+            "depth": 0.03,
+            "opacity": 1,
+            "variant": 1
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                245
+              ],
+              "at": [
+                0.15510753088750004,
+                0.87
+              ],
+              "scale": 0.5227469563960001
+            },
+            "depth": 0.05,
+            "opacity": 1,
+            "variant": 2
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                245
+              ],
+              "at": [
+                0.3219767078500001,
+                0.91
+              ],
+              "scale": 0.6473426085280001
+            },
+            "depth": 0.06999999999999999,
+            "opacity": 1,
+            "variant": 0
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                245
+              ],
+              "at": [
+                0.2188458848125001,
+                0.9500000000000001
+              ],
+              "scale": 0.57033826066
+            },
+            "depth": 0.09000000000000001,
+            "opacity": 1,
+            "variant": 1
+          }
+        ],
+        "singleUnit": true,
+        "quantity": {
+          "items": [
+            {
+              "entity": "i4",
+              "mode": "unspecified",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "unspecified",
+              "extent": "unspecified",
+              "evidence": [],
+              "basis": "model"
+            }
+          ],
+          "rendered": 5,
+          "exact": false,
+          "collective": false,
+          "partUnsupported": false
+        },
+        "quantityLabel": "依场景疏密试画 5 个单元；原文未给精确个体数",
+        "z": 13
+      },
+      {
+        "tool": "landscape",
+        "names": [
+          "构图依托·山势"
+        ],
+        "entities": [],
+        "projectedEntities": [],
+        "options": {
+          "form": "mountain"
+        },
+        "animate": false,
+        "placement": {
+          "anchor": [
+            320,
+            194
+          ],
+          "at": [
+            0.5,
+            0.45
+          ],
+          "scale": 1.7
+        },
+        "instances": [
+          {
+            "placement": {
+              "anchor": [
+                320,
+                194
+              ],
+              "at": [
+                0.5,
+                0.45
+              ],
+              "scale": 1.65
+            },
+            "variant": 0,
+            "depth": 0,
+            "opacity": 1
+          }
+        ],
+        "singleUnit": false,
+        "inferred": true,
+        "provenance": {
+          "basis": "local-context",
+          "reason": "松、石与清泉共同指向山间溪景"
+        },
+        "quantity": {
+          "rendered": 1,
+          "exact": false,
+          "items": []
+        },
+        "quantityLabel": "背景依托，不计入意象覆盖",
+        "z": -32,
+        "semanticEffects": []
+      },
+      {
+        "tool": "landscape",
+        "names": [
+          "构图依托·地面"
+        ],
+        "entities": [],
+        "projectedEntities": [],
+        "options": {
+          "form": "ground",
+          "edge": "soft"
+        },
+        "animate": false,
+        "placement": {
+          "anchor": [
+            320,
+            194
+          ],
+          "at": [
+            0.5,
+            0.54
+          ],
+          "scale": 1.6
+        },
+        "instances": [
+          {
+            "placement": {
+              "anchor": [
+                320,
+                265
+              ],
+              "at": [
+                0.5,
+                0.54
+              ],
+              "scale": 2.5
+            },
+            "variant": 0,
+            "depth": 0,
+            "opacity": 1
+          }
+        ],
+        "singleUnit": false,
+        "inferred": true,
+        "provenance": {
+          "basis": "local-context",
+          "reason": "溪岸承托松根与石块"
+        },
+        "quantity": {
+          "rendered": 1,
+          "exact": false,
+          "items": []
+        },
+        "quantityLabel": "背景依托，不计入意象覆盖",
+        "z": -18,
+        "semanticEffects": [],
+        "clip": [
+          [
+            -0.04,
+            0.48
+          ],
+          [
+            0.34,
+            0.48
+          ],
+          [
+            0.35,
+            0.62
+          ],
+          [
+            0.47,
+            0.79
+          ],
+          [
+            0.28,
+            1.04
+          ],
+          [
+            -0.04,
+            1.04
+          ]
+        ]
+      }
+    ],
+    "spatial": [
+      {
+        "type": "among",
+        "source": "i1",
+        "target": "i2",
+        "modality": "asserted",
+        "basis": "inferred",
+        "evidence": [
+          "明月松间照"
+        ],
+        "visualized": true,
+        "reason": "由通用场景约束组织；具体方向、距离与尺度属于本地构图"
+      },
+      {
+        "type": "on",
+        "source": "i3",
+        "target": "i4",
+        "modality": "asserted",
+        "basis": "explicit",
+        "evidence": [
+          "清泉石上流"
+        ],
+        "visualized": true,
+        "reason": "溪流区域与错落溪石相交，不模拟流体"
+      }
+    ],
+    "scene": {
+      "kind": "mountain-stream",
+      "notes": [
+        "水面以连续色层和水纹构成空间；水面的范围、视点与水平线是本地构图选择，不自动增加岸或陆地。",
+        "先划分承托地形、群落与主体活动区域；场景密度和背景依托是本地构图推断，不冒充原文明示意象。",
+        "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。",
+        "通用场景层先组织地面、水域、群落和主体，再比较三个布局的依托、相对位置、尺度与遮挡；检查通过不代表审美已通过。"
+      ],
+      "waterline": 0.46,
+      "basis": "local-context",
+      "regions": {
+        "stream": [
+          [
+            0.57,
+            0.48
+          ],
+          [
+            0.7,
+            0.48
+          ],
+          [
+            0.64,
+            0.66
+          ],
+          [
+            0.79,
+            0.82
+          ],
+          [
+            1.1,
+            1.1
+          ],
+          [
+            0.74,
+            1.1
+          ],
+          [
+            0.48,
+            0.73
+          ],
+          [
+            0.49,
+            0.61
+          ]
+        ]
+      },
+      "supports": [
+        {
+          "form": "mountain",
+          "reason": "松、石与清泉共同指向山间溪景"
+        },
+        {
+          "form": "ground",
+          "reason": "溪岸承托松根与石块"
+        }
+      ],
+      "semanticSetting": {
+        "kind": "woodland",
+        "basis": "inferred",
+        "evidence": [
+          "明月松间照",
+          "清泉石上流"
+        ]
+      },
+      "semanticEffects": [
+        {
+          "path": "scene.supports[0]",
+          "consumer": "场景依托",
+          "status": "unsupported",
+          "effect": "承托对象的现有画法不匹配该依托"
+        }
+      ],
+      "organization": {
+        "version": "1.0",
+        "strategy": "general-constraints",
+        "regions": {
+          "water": [
+            [
+              0.38,
+              0.45
+            ],
+            [
+              1.04,
+              0.45
+            ],
+            [
+              1.04,
+              1.04
+            ],
+            [
+              0.28,
+              1.04
+            ],
+            [
+              0.47,
+              0.79
+            ],
+            [
+              0.35,
+              0.62
+            ]
+          ],
+          "land": [
+            [
+              -0.04,
+              0.48
+            ],
+            [
+              0.34,
+              0.48
+            ],
+            [
+              0.35,
+              0.62
+            ],
+            [
+              0.47,
+              0.79
+            ],
+            [
+              0.28,
+              1.04
+            ],
+            [
+              -0.04,
+              1.04
+            ]
+          ]
+        },
+        "candidates": [
+          {
+            "layout": 2,
+            "orientation": "left-bank",
+            "errors": 0,
+            "cost": 105.38,
+            "metrics": {
+              "overlapPenalty": 8.576,
+              "balancePenalty": 0.308,
+              "motifFootprint": 0.757,
+              "landArea": 0.234
+            }
+          },
+          {
+            "layout": 0,
+            "orientation": "left-bank",
+            "errors": 0,
+            "cost": 128.29,
+            "metrics": {
+              "overlapPenalty": 10.494,
+              "balancePenalty": 0.295,
+              "motifFootprint": 0.774,
+              "landArea": 0.234
+            }
+          },
+          {
+            "layout": 1,
+            "orientation": "right-bank",
+            "errors": 0,
+            "cost": 129.835,
+            "metrics": {
+              "overlapPenalty": 10.636,
+              "balancePenalty": 0.276,
+              "motifFootprint": 0.811,
+              "landArea": 0.234
+            }
+          }
+        ],
+        "repairs": [],
+        "limitations": [
+          "几何检查不判定诗意理解或审美合格",
+          "动作时序与整首诗的场景切换尚未编排"
+        ],
+        "layout": 2,
+        "orientation": "left-bank",
+        "audit": {
+          "scope": "implemented-geometry-and-drawing-gaps",
+          "coverage": {
+            "scope": "extracted-entities-only",
+            "present": 4,
+            "mapped": 4,
+            "parameters": [],
+            "missing": []
+          },
+          "checks": [
+            "presence",
+            "count",
+            "finite",
+            "support",
+            "scale",
+            "relative-position",
+            "depth",
+            "grove-spread",
+            "drawing-gaps"
+          ],
+          "status": "checks-passed",
+          "errors": 0,
+          "review": 0,
+          "issues": [],
+          "metrics": {
+            "overlapPenalty": 8.576,
+            "balancePenalty": 0.308,
+            "motifFootprint": 0.757,
+            "landArea": 0.234
+          },
+          "cost": 105.38,
+          "aestheticAcceptance": "pending-user"
+        },
+        "graph": {
+          "nodes": [
+            {
+              "id": "l0",
+              "entities": [
+                "i1"
+              ],
+              "tool": "moon",
+              "role": "sky",
+              "habitat": "air",
+              "inferred": false,
+              "support": null
+            },
+            {
+              "id": "l1",
+              "entities": [
+                "i2"
+              ],
+              "tool": "tree",
+              "role": "vegetation",
+              "habitat": "land",
+              "inferred": false,
+              "support": "l5"
+            },
+            {
+              "id": "l2",
+              "entities": [
+                "i3"
+              ],
+              "tool": "water",
+              "role": "water",
+              "habitat": null,
+              "inferred": false,
+              "support": "l3"
+            },
+            {
+              "id": "l3",
+              "entities": [
+                "i4"
+              ],
+              "tool": "rock",
+              "role": "detail",
+              "habitat": "land",
+              "inferred": false,
+              "support": "l5"
+            },
+            {
+              "id": "l4",
+              "entities": [],
+              "tool": "landscape",
+              "role": "terrain",
+              "habitat": null,
+              "inferred": true,
+              "support": null
+            },
+            {
+              "id": "l5",
+              "entities": [],
+              "tool": "landscape",
+              "role": "terrain",
+              "habitat": null,
+              "inferred": true,
+              "support": null
+            }
+          ],
+          "edges": [
+            {
+              "type": "supported-by",
+              "source": "l0",
+              "target": null,
+              "basis": "local-composition",
+              "habitat": "air"
+            },
+            {
+              "type": "supported-by",
+              "source": "l1",
+              "target": "l5",
+              "basis": "local-composition",
+              "habitat": "land"
+            },
+            {
+              "type": "supported-by",
+              "source": "l3",
+              "target": "l5",
+              "basis": "local-composition",
+              "habitat": "land"
+            },
+            {
+              "type": "among",
+              "source": "l0",
+              "target": "l1",
+              "basis": "inferred",
+              "modality": "asserted",
+              "evidence": [
+                "明月松间照"
+              ]
+            },
+            {
+              "type": "on",
+              "source": "l2",
+              "target": "l3",
+              "basis": "explicit",
+              "modality": "asserted",
+              "evidence": [
+                "清泉石上流"
+              ]
+            }
+          ],
+          "setting": "mountain-stream"
+        }
+      }
+    },
+    "omitted": [],
+    "notes": [
+      "原句未明确月形，暂用弯月试画；可以手动切换。",
+      "位置、大小、笔触与默认微动是本地试画选择；数量解释与本地显示数量分别记录。",
+      "未明说的群落数量、疏密、近中远层次与变体均为本地构图选择；种类可按已声明的写意画法概括，不把铺展词换算成精确物体数量。",
+      "水面以连续色层和水纹构成空间；水面的范围、视点与水平线是本地构图选择，不自动增加岸或陆地。",
+      "先划分承托地形、群落与主体活动区域；场景密度和背景依托是本地构图推断，不冒充原文明示意象。",
+      "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。",
+      "通用场景层先组织地面、水域、群落和主体，再比较三个布局的依托、相对位置、尺度与遮挡；检查通过不代表审美已通过。",
+      "语义保留：scene.supports[0]，承托对象的现有画法不匹配该依托",
+      "整体场景、主次、远近、依托和支持的动作状态来自本次模型解释；具体布局、颜色和时钟倍率由本地视觉策略选择。",
+      "动作动画只表现受支持的主导状态与有限观看微动，未完成先后事件、完整因果或人物行走步态。"
+    ],
+    "relations": [],
+    "semanticConsumption": {
+      "version": "3.3",
+      "items": [
+        {
+          "path": "scene.setting",
+          "status": "applied",
+          "consumer": "本地视觉策略",
+          "effect": "整体环境进入场景提案选择",
+          "basis": "inferred",
+          "evidence": [
+            "明月松间照",
+            "清泉石上流"
+          ]
+        },
+        {
+          "path": "scene.groups[0].role",
+          "status": "applied",
+          "consumer": "主次布局",
+          "effect": "主体相对突出",
+          "basis": "inferred",
+          "evidence": [
+            "明月松间照"
+          ]
+        },
+        {
+          "path": "scene.groups[0].pattern",
+          "status": "skipped",
+          "consumer": "群落布局",
+          "effect": "群落形式未明，保持本地默认",
+          "basis": "inferred",
+          "evidence": [
+            "明月松间照"
+          ]
+        },
+        {
+          "path": "scene.groups[0].depth",
+          "status": "skipped",
+          "consumer": "远近布局",
+          "effect": "远近未明，保持本地默认",
+          "basis": "inferred",
+          "evidence": [
+            "明月松间照"
+          ]
+        },
+        {
+          "path": "scene.groups[1].role",
+          "status": "applied",
+          "consumer": "主次布局",
+          "effect": "保留环境画布范围，主次不改变地形边界；主体相对突出",
+          "basis": "inferred",
+          "evidence": [
+            "清泉石上流"
+          ]
+        },
+        {
+          "path": "scene.groups[1].pattern",
+          "status": "skipped",
+          "consumer": "群落布局",
+          "effect": "群落形式未明，保持本地默认",
+          "basis": "inferred",
+          "evidence": [
+            "清泉石上流"
+          ]
+        },
+        {
+          "path": "scene.groups[1].depth",
+          "status": "skipped",
+          "consumer": "远近布局",
+          "effect": "远近未明，保持本地默认",
+          "basis": "inferred",
+          "evidence": [
+            "清泉石上流"
+          ]
+        },
+        {
+          "path": "scene.supports[0]",
+          "status": "unsupported",
+          "consumer": "场景依托",
+          "effect": "承托对象的现有画法不匹配该依托",
+          "basis": "explicit",
+          "evidence": [
+            "清泉石上流"
+          ]
+        },
+        {
+          "path": "scene.actions[0].state",
+          "status": "applied",
+          "consumer": "形态与绘画时钟",
+          "effect": "静止姿态并停止该图层时钟",
+          "basis": "inferred",
+          "evidence": [
+            "明月松间照"
+          ]
+        },
+        {
+          "path": "scene.actions[0].pace",
+          "status": "skipped",
+          "consumer": "本地视觉策略",
+          "effect": "静止状态不推进时钟或位置",
+          "basis": "inferred",
+          "evidence": [
+            "明月松间照"
+          ]
+        },
+        {
+          "path": "scene.actions[0].direction",
+          "status": "skipped",
+          "consumer": "本地视觉策略",
+          "effect": "静止状态不推进时钟或位置",
+          "basis": "inferred",
+          "evidence": [
+            "明月松间照"
+          ]
+        },
+        {
+          "path": "scene.actions[1].state",
+          "status": "applied",
+          "consumer": "形态与绘画时钟",
+          "effect": "启用工具支持的 flow 状态",
+          "basis": "explicit",
+          "evidence": [
+            "清泉石上流"
+          ]
+        },
+        {
+          "path": "scene.actions[1].pace",
+          "status": "applied",
+          "consumer": "绘画时钟",
+          "effect": "定性节奏映射为本地时钟倍率 0.45",
+          "basis": "explicit",
+          "evidence": [
+            "清泉石上流"
+          ]
+        },
+        {
+          "path": "scene.actions[1].direction",
+          "status": "skipped",
+          "consumer": "本地视觉策略",
+          "effect": "该工具尚不支持此动作分量",
+          "basis": "explicit",
+          "evidence": [
+            "清泉石上流"
+          ]
+        },
+        {
+          "path": "scene.atmosphere.visibility",
+          "status": "applied",
+          "consumer": "画布色层与远景",
+          "effect": "可见度 clear；迷蒙或昏暗时淡化非光源图层",
+          "basis": "inferred",
+          "evidence": [
+            "明月松间照"
+          ]
+        },
+        {
+          "path": "scene.atmosphere.illumination",
+          "status": "applied",
+          "consumer": "有限配色",
+          "effect": "照明 night 映射为本地 night 配色；用户仍可手动覆盖",
+          "basis": "inferred",
+          "evidence": [
+            "明月松间照"
+          ]
+        },
+        {
+          "path": "atmosphere.energy",
+          "status": "applied",
+          "consumer": "绘画时钟",
+          "effect": "没有明确动作节奏时，气息强弱控制已有微动的默认时钟"
+        },
+        {
+          "path": "atmosphere.openness",
+          "status": "applied",
+          "consumer": "群落分布与笔触密度",
+          "effect": "开阔度转换为本地间距与工具笔触密度，不等于原文数量"
+        },
+        {
+          "path": "atmosphere.valence",
+          "status": "skipped",
+          "consumer": "有限配色",
+          "effect": "照明策略优先，本次不另套情绪配色"
+        },
+        {
+          "path": "time.markers",
+          "status": "retained",
+          "consumer": "原始记录与解读",
+          "effect": "保留原文时间标记；本版照明由 scene.atmosphere 转换，多阶段时间逻辑未执行"
+        }
+      ],
+      "summary": {
+        "applied": 10,
+        "partial": 0,
+        "unsupported": 1,
+        "skipped": 8,
+        "retained": 1
+      },
+      "aestheticAcceptance": "pending-user"
+    }
+  },
+  "elapsed_seconds": 8.2
+}

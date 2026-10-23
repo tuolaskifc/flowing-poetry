@@ -1,0 +1,6381 @@
+{
+  "modelCalls": 0,
+  "browserErrors": [],
+  "networkPosts": [],
+  "clocks": [
+    {
+      "pace": "slow",
+      "timeScale": 0.35,
+      "delta": 0.24496499999999996
+    },
+    {
+      "pace": "fast",
+      "timeScale": 1.35,
+      "delta": 0.8999100000000004
+    }
+  ],
+  "pause": true,
+  "parentMotion": [
+    0.00032822981737512524,
+    0.00019699900734149178
+  ],
+  "dragWithAttachment": [
+    0.06006682434208055,
+    0.015377222489187936
+  ],
+  "download": {
+    "name": "流动诗.png",
+    "png": true
+  },
+  "mobileWidth": 390,
+  "cases": [
+    {
+      "id": "c01",
+      "poem": "漠漠帆来重，冥冥鸟去迟。",
+      "basis": "authored-calibration",
+      "sourceContext": null,
+      "before": {
+        "settings": {
+          "wind": 0,
+          "density": 0.45,
+          "palette": "clear"
+        },
+        "organization": {
+          "version": "1.0",
+          "strategy": "general-constraints",
+          "regions": {
+            "water": [
+              [
+                0,
+                0.45
+              ],
+              [
+                1,
+                0.45
+              ],
+              [
+                1,
+                1.04
+              ],
+              [
+                0,
+                1.04
+              ]
+            ]
+          },
+          "candidates": [
+            {
+              "layout": 0,
+              "orientation": "open",
+              "errors": 0,
+              "cost": 0.227,
+              "metrics": {
+                "overlapPenalty": 0,
+                "balancePenalty": 0.028,
+                "motifFootprint": 0.02,
+                "landArea": 0
+              }
+            },
+            {
+              "layout": 1,
+              "orientation": "open",
+              "errors": 0,
+              "cost": 0.227,
+              "metrics": {
+                "overlapPenalty": 0,
+                "balancePenalty": 0.028,
+                "motifFootprint": 0.02,
+                "landArea": 0
+              }
+            },
+            {
+              "layout": 2,
+              "orientation": "open",
+              "errors": 0,
+              "cost": 0.789,
+              "metrics": {
+                "overlapPenalty": 0,
+                "balancePenalty": 0.099,
+                "motifFootprint": 0.02,
+                "landArea": 0
+              }
+            }
+          ],
+          "repairs": [
+            {
+              "type": "support-added",
+              "reason": "舟、游鱼、水生植物或渡口水岸需要水域；水形和范围是本地选择"
+            }
+          ],
+          "limitations": [
+            "几何检查不判定诗意理解或审美合格",
+            "动作时序与整首诗的场景切换尚未编排"
+          ],
+          "layout": 0,
+          "orientation": "open",
+          "audit": {
+            "scope": "implemented-geometry-and-drawing-gaps",
+            "coverage": {
+              "scope": "extracted-entities-only",
+              "present": 2,
+              "mapped": 2,
+              "parameters": [],
+              "missing": []
+            },
+            "checks": [
+              "presence",
+              "count",
+              "finite",
+              "support",
+              "scale",
+              "relative-position",
+              "depth",
+              "grove-spread",
+              "drawing-gaps"
+            ],
+            "status": "checks-passed",
+            "errors": 0,
+            "review": 0,
+            "issues": [],
+            "metrics": {
+              "overlapPenalty": 0,
+              "balancePenalty": 0.028,
+              "motifFootprint": 0.02,
+              "landArea": 0
+            },
+            "cost": 0.227,
+            "aestheticAcceptance": "pending-user"
+          },
+          "graph": {
+            "nodes": [
+              {
+                "id": "l0",
+                "entities": [
+                  "i1"
+                ],
+                "tool": "boat",
+                "role": "subject",
+                "habitat": "water",
+                "inferred": false,
+                "support": "l2"
+              },
+              {
+                "id": "l1",
+                "entities": [
+                  "i2"
+                ],
+                "tool": "bird",
+                "role": "fauna",
+                "habitat": "air",
+                "inferred": false,
+                "support": null
+              },
+              {
+                "id": "l2",
+                "entities": [],
+                "tool": "water",
+                "role": "water",
+                "habitat": null,
+                "inferred": true,
+                "support": null
+              }
+            ],
+            "edges": [
+              {
+                "type": "supported-by",
+                "source": "l0",
+                "target": "l2",
+                "basis": "local-composition",
+                "habitat": "water"
+              },
+              {
+                "type": "supported-by",
+                "source": "l1",
+                "target": null,
+                "basis": "local-composition",
+                "habitat": "air"
+              }
+            ],
+            "setting": "study"
+          }
+        },
+        "tools": [
+          {
+            "id": "boat",
+            "timeScale": 1,
+            "paused": true,
+            "options": {}
+          },
+          {
+            "id": "bird",
+            "timeScale": 1,
+            "paused": true,
+            "options": {
+              "pose": "flying",
+              "tone": "ink",
+              "facing": "right"
+            }
+          },
+          {
+            "id": "bird",
+            "timeScale": 1,
+            "paused": true,
+            "options": {
+              "pose": "flying",
+              "tone": "ink",
+              "facing": "right"
+            }
+          },
+          {
+            "id": "bird",
+            "timeScale": 1,
+            "paused": true,
+            "options": {
+              "pose": "flying",
+              "tone": "ink",
+              "facing": "right"
+            }
+          },
+          {
+            "id": "water",
+            "timeScale": 1,
+            "paused": true,
+            "options": {
+              "form": "plane"
+            }
+          }
+        ],
+        "instances": 6
+      },
+      "after": {
+        "settings": {
+          "wind": 0,
+          "density": 0.35,
+          "palette": "twilight"
+        },
+        "organization": {
+          "version": "1.0",
+          "strategy": "general-constraints",
+          "regions": {
+            "water": [
+              [
+                0,
+                0.45
+              ],
+              [
+                1,
+                0.45
+              ],
+              [
+                1,
+                1.04
+              ],
+              [
+                0,
+                1.04
+              ]
+            ]
+          },
+          "candidates": [
+            {
+              "layout": 0,
+              "orientation": "open",
+              "errors": 0,
+              "cost": 0.181,
+              "metrics": {
+                "overlapPenalty": 0,
+                "balancePenalty": 0.023,
+                "motifFootprint": 0.016,
+                "landArea": 0
+              }
+            },
+            {
+              "layout": 1,
+              "orientation": "open",
+              "errors": 0,
+              "cost": 0.181,
+              "metrics": {
+                "overlapPenalty": 0,
+                "balancePenalty": 0.023,
+                "motifFootprint": 0.016,
+                "landArea": 0
+              }
+            },
+            {
+              "layout": 2,
+              "orientation": "open",
+              "errors": 0,
+              "cost": 0.892,
+              "metrics": {
+                "overlapPenalty": 0,
+                "balancePenalty": 0.112,
+                "motifFootprint": 0.016,
+                "landArea": 0
+              }
+            }
+          ],
+          "repairs": [
+            {
+              "type": "support-added",
+              "reason": "模型解释的必要依托，依据：漠漠帆来重"
+            }
+          ],
+          "limitations": [
+            "几何检查不判定诗意理解或审美合格",
+            "动作时序与整首诗的场景切换尚未编排"
+          ],
+          "layout": 0,
+          "orientation": "open",
+          "audit": {
+            "scope": "implemented-geometry-and-drawing-gaps",
+            "coverage": {
+              "scope": "extracted-entities-only",
+              "present": 2,
+              "mapped": 2,
+              "parameters": [],
+              "missing": []
+            },
+            "checks": [
+              "presence",
+              "count",
+              "finite",
+              "support",
+              "scale",
+              "relative-position",
+              "depth",
+              "grove-spread",
+              "drawing-gaps"
+            ],
+            "status": "checks-passed",
+            "errors": 0,
+            "review": 0,
+            "issues": [],
+            "metrics": {
+              "overlapPenalty": 0,
+              "balancePenalty": 0.023,
+              "motifFootprint": 0.016,
+              "landArea": 0
+            },
+            "cost": 0.181,
+            "aestheticAcceptance": "pending-user"
+          },
+          "graph": {
+            "nodes": [
+              {
+                "id": "l0",
+                "entities": [
+                  "i1"
+                ],
+                "tool": "boat",
+                "role": "subject",
+                "habitat": "water",
+                "inferred": false,
+                "support": "l2"
+              },
+              {
+                "id": "l1",
+                "entities": [
+                  "i2"
+                ],
+                "tool": "bird",
+                "role": "fauna",
+                "habitat": "air",
+                "inferred": false,
+                "support": null
+              },
+              {
+                "id": "l2",
+                "entities": [],
+                "tool": "water",
+                "role": "water",
+                "habitat": null,
+                "inferred": true,
+                "support": null
+              }
+            ],
+            "edges": [
+              {
+                "type": "supported-by",
+                "source": "l0",
+                "target": "l2",
+                "basis": "local-composition",
+                "habitat": "water"
+              },
+              {
+                "type": "supported-by",
+                "source": "l1",
+                "target": null,
+                "basis": "local-composition",
+                "habitat": "air"
+              }
+            ],
+            "setting": "study"
+          }
+        },
+        "semanticConsumption": {
+          "version": "3.3",
+          "items": [
+            {
+              "path": "scene.setting",
+              "status": "applied",
+              "consumer": "本地视觉策略",
+              "effect": "整体环境进入场景提案选择",
+              "basis": "inferred",
+              "evidence": [
+                "漠漠帆来重，冥冥鸟去迟。"
+              ]
+            },
+            {
+              "path": "scene.groups[0].role",
+              "status": "applied",
+              "consumer": "主次布局",
+              "effect": "主体相对突出",
+              "basis": "inferred",
+              "evidence": [
+                "漠漠帆来重"
+              ]
+            },
+            {
+              "path": "scene.groups[0].pattern",
+              "status": "applied",
+              "consumer": "群落布局",
+              "effect": "按 single 组织显示单元；不覆盖明确数量",
+              "basis": "inferred",
+              "evidence": [
+                "漠漠帆来重"
+              ]
+            },
+            {
+              "path": "scene.groups[0].depth",
+              "status": "applied",
+              "consumer": "远近布局",
+              "effect": "将 middle 转为相对大小、透明度与允许区域内的落点",
+              "basis": "inferred",
+              "evidence": [
+                "漠漠帆来重"
+              ]
+            },
+            {
+              "path": "scene.groups[1].role",
+              "status": "applied",
+              "consumer": "主次布局",
+              "effect": "点景缩小淡化",
+              "basis": "inferred",
+              "evidence": [
+                "冥冥鸟去迟"
+              ]
+            },
+            {
+              "path": "scene.groups[1].pattern",
+              "status": "applied",
+              "consumer": "群落布局",
+              "effect": "按 flock 组织显示单元；不覆盖明确数量",
+              "basis": "inferred",
+              "evidence": [
+                "冥冥鸟去迟"
+              ]
+            },
+            {
+              "path": "scene.groups[1].depth",
+              "status": "applied",
+              "consumer": "远近布局",
+              "effect": "将 far 转为相对大小、透明度与允许区域内的落点",
+              "basis": "inferred",
+              "evidence": [
+                "冥冥鸟去迟"
+              ]
+            },
+            {
+              "path": "scene.supports[0]",
+              "status": "applied",
+              "consumer": "场景依托",
+              "effect": "必要环境以独立推断背景表示，不新增原文实体",
+              "basis": "inferred",
+              "evidence": [
+                "漠漠帆来重"
+              ]
+            },
+            {
+              "path": "scene.actions[0].state",
+              "status": "applied",
+              "consumer": "形态与绘画时钟",
+              "effect": "启用工具支持的 float 状态",
+              "basis": "inferred",
+              "evidence": [
+                "漠漠帆来重"
+              ]
+            },
+            {
+              "path": "scene.actions[0].pace",
+              "status": "applied",
+              "consumer": "绘画时钟",
+              "effect": "定性节奏映射为本地时钟倍率 0.35",
+              "basis": "inferred",
+              "evidence": [
+                "漠漠帆来重"
+              ]
+            },
+            {
+              "path": "scene.actions[0].direction",
+              "status": "applied",
+              "consumer": "画布合成",
+              "effect": "按定性方向作有限观看动画；不表示完整动作过程",
+              "basis": "inferred",
+              "evidence": [
+                "漠漠帆来重"
+              ]
+            },
+            {
+              "path": "scene.actions[1].state",
+              "status": "applied",
+              "consumer": "形态与绘画时钟",
+              "effect": "启用工具支持的 fly 状态",
+              "basis": "inferred",
+              "evidence": [
+                "冥冥鸟去迟"
+              ]
+            },
+            {
+              "path": "scene.actions[1].pace",
+              "status": "applied",
+              "consumer": "绘画时钟",
+              "effect": "定性节奏映射为本地时钟倍率 0.35",
+              "basis": "inferred",
+              "evidence": [
+                "冥冥鸟去迟"
+              ]
+            },
+            {
+              "path": "scene.actions[1].direction",
+              "status": "applied",
+              "consumer": "画布合成",
+              "effect": "按定性方向作有限观看动画；不表示完整动作过程",
+              "basis": "inferred",
+              "evidence": [
+                "冥冥鸟去迟"
+              ]
+            },
+            {
+              "path": "scene.atmosphere.visibility",
+              "status": "applied",
+              "consumer": "画布色层与远景",
+              "effect": "可见度 hazy；迷蒙或昏暗时淡化非光源图层",
+              "basis": "inferred",
+              "evidence": [
+                "漠漠帆来重，冥冥鸟去迟。"
+              ]
+            },
+            {
+              "path": "scene.atmosphere.illumination",
+              "status": "applied",
+              "consumer": "有限配色",
+              "effect": "照明 twilight 映射为本地 twilight 配色；用户仍可手动覆盖",
+              "basis": "inferred",
+              "evidence": [
+                "漠漠帆来重，冥冥鸟去迟。"
+              ]
+            },
+            {
+              "path": "atmosphere.energy",
+              "status": "skipped",
+              "consumer": "绘画时钟",
+              "effect": "没有明确动作节奏时，气息强弱控制已有微动的默认时钟"
+            },
+            {
+              "path": "atmosphere.openness",
+              "status": "applied",
+              "consumer": "群落分布与笔触密度",
+              "effect": "开阔度转换为本地间距与工具笔触密度，不等于原文数量"
+            },
+            {
+              "path": "atmosphere.valence",
+              "status": "skipped",
+              "consumer": "有限配色",
+              "effect": "照明策略优先，本次不另套情绪配色"
+            },
+            {
+              "path": "time.markers",
+              "status": "retained",
+              "consumer": "原始记录与解读",
+              "effect": "保留原文时间标记；本版照明由 scene.atmosphere 转换，多阶段时间逻辑未执行"
+            }
+          ],
+          "summary": {
+            "applied": 17,
+            "partial": 0,
+            "unsupported": 0,
+            "skipped": 2,
+            "retained": 1
+          },
+          "aestheticAcceptance": "pending-user"
+        },
+        "tools": [
+          {
+            "id": "boat",
+            "timeScale": 0.35,
+            "paused": true,
+            "options": {}
+          },
+          {
+            "id": "bird",
+            "timeScale": 0.35,
+            "paused": true,
+            "options": {
+              "pose": "flying",
+              "tone": "ink",
+              "facing": "right"
+            }
+          },
+          {
+            "id": "bird",
+            "timeScale": 0.35,
+            "paused": true,
+            "options": {
+              "pose": "flying",
+              "tone": "ink",
+              "facing": "right"
+            }
+          },
+          {
+            "id": "bird",
+            "timeScale": 0.35,
+            "paused": true,
+            "options": {
+              "pose": "flying",
+              "tone": "ink",
+              "facing": "right"
+            }
+          },
+          {
+            "id": "water",
+            "timeScale": 1,
+            "paused": true,
+            "options": {
+              "form": "plane"
+            }
+          }
+        ],
+        "instances": 9
+      }
+    },
+    {
+      "id": "c02",
+      "poem": "返景入深林，复照青苔上。",
+      "basis": "authored-calibration",
+      "sourceContext": null,
+      "before": {
+        "settings": {
+          "wind": 0,
+          "density": 0.45,
+          "palette": "clear"
+        },
+        "organization": {
+          "version": "1.0",
+          "strategy": "regional-proposal",
+          "regions": {
+            "forest": [
+              [
+                0,
+                0.2
+              ],
+              [
+                1,
+                0.2
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                0,
+                1
+              ]
+            ]
+          },
+          "candidates": [
+            {
+              "layout": "existing",
+              "errors": 0,
+              "cost": 0.371
+            }
+          ],
+          "repairs": [],
+          "limitations": [
+            "几何检查不判定诗意理解或审美合格",
+            "动作时序与整首诗的场景切换尚未编排"
+          ],
+          "graph": {
+            "nodes": [
+              {
+                "id": "l0",
+                "entities": [
+                  "i1"
+                ],
+                "tool": "landscape",
+                "role": "detail",
+                "habitat": null,
+                "inferred": false,
+                "support": null
+              },
+              {
+                "id": "l1",
+                "entities": [
+                  "i3"
+                ],
+                "tool": "landscape",
+                "role": "detail",
+                "habitat": null,
+                "inferred": false,
+                "support": null
+              },
+              {
+                "id": "l2",
+                "entities": [
+                  "i2"
+                ],
+                "tool": "tree",
+                "role": "vegetation",
+                "habitat": "land",
+                "inferred": false,
+                "support": "l3"
+              },
+              {
+                "id": "l3",
+                "entities": [],
+                "tool": "landscape",
+                "role": "terrain",
+                "habitat": null,
+                "inferred": true,
+                "support": null
+              }
+            ],
+            "edges": [
+              {
+                "type": "supported-by",
+                "source": "l2",
+                "target": "l3",
+                "basis": "local-composition",
+                "habitat": "land"
+              }
+            ],
+            "setting": "forest-light"
+          },
+          "audit": {
+            "scope": "implemented-geometry-and-drawing-gaps",
+            "coverage": {
+              "scope": "extracted-entities-only",
+              "present": 3,
+              "mapped": 3,
+              "parameters": [],
+              "missing": []
+            },
+            "checks": [
+              "presence",
+              "count",
+              "finite",
+              "water-support",
+              "cliff-support",
+              "grove-spread",
+              "drawing-gaps"
+            ],
+            "status": "checks-passed",
+            "errors": 0,
+            "review": 0,
+            "issues": [],
+            "metrics": {
+              "overlapPenalty": 0,
+              "balancePenalty": 0.046,
+              "motifFootprint": 6.389,
+              "landArea": 0
+            },
+            "cost": 0.371,
+            "aestheticAcceptance": "pending-user"
+          }
+        },
+        "tools": [
+          {
+            "id": "landscape",
+            "timeScale": 1,
+            "paused": true,
+            "options": {
+              "form": "lightwash",
+              "relief": "layered",
+              "edge": "defined"
+            }
+          },
+          {
+            "id": "landscape",
+            "timeScale": 1,
+            "paused": true,
+            "options": {
+              "form": "moss",
+              "relief": "layered",
+              "edge": "defined"
+            }
+          },
+          {
+            "id": "tree",
+            "timeScale": 1,
+            "paused": true,
+            "options": {
+              "form": "broadleaf",
+              "branches": "7",
+              "crown": "wash"
+            }
+          },
+          {
+            "id": "tree",
+            "timeScale": 1,
+            "paused": true,
+            "options": {
+              "form": "broadleaf",
+              "branches": "7",
+              "crown": "wash"
+            }
+          },
+          {
+            "id": "tree",
+            "timeScale": 1,
+            "paused": true,
+            "options": {
+              "form": "broadleaf",
+              "branches": "7",
+              "crown": "wash"
+            }
+          },
+          {
+            "id": "landscape",
+            "timeScale": 1,
+            "paused": true,
+            "options": {
+              "form": "ground",
+              "relief": "layered",
+              "edge": "defined"
+            }
+          }
+        ],
+        "instances": 23
+      },
+      "after": {
+        "settings": {
+          "wind": 0,
+          "density": 0.35,
+          "palette": "twilight"
+        },
+        "organization": {
+          "version": "1.0",
+          "strategy": "regional-proposal",
+          "regions": {
+            "forest": [
+              [
+                0,
+                0.2
+              ],
+              [
+                1,
+                0.2
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                0,
+                1
+              ]
+            ]
+          },
+          "candidates": [
+            {
+              "layout": "existing",
+              "errors": 0,
+              "cost": 0.417
+            }
+          ],
+          "repairs": [],
+          "limitations": [
+            "几何检查不判定诗意理解或审美合格",
+            "动作时序与整首诗的场景切换尚未编排"
+          ],
+          "graph": {
+            "nodes": [
+              {
+                "id": "l0",
+                "entities": [
+                  "i1"
+                ],
+                "tool": "landscape",
+                "role": "detail",
+                "habitat": null,
+                "inferred": false,
+                "support": null
+              },
+              {
+                "id": "l1",
+                "entities": [
+                  "i3"
+                ],
+                "tool": "landscape",
+                "role": "detail",
+                "habitat": null,
+                "inferred": false,
+                "support": null
+              },
+              {
+                "id": "l2",
+                "entities": [
+                  "i2"
+                ],
+                "tool": "tree",
+                "role": "vegetation",
+                "habitat": "land",
+                "inferred": false,
+                "support": "l3"
+              },
+              {
+                "id": "l3",
+                "entities": [],
+                "tool": "landscape",
+                "role": "terrain",
+                "habitat": null,
+                "inferred": true,
+                "support": null
+              }
+            ],
+            "edges": [
+              {
+                "type": "supported-by",
+                "source": "l2",
+                "target": "l3",
+                "basis": "local-composition",
+                "habitat": "land"
+              }
+            ],
+            "setting": "forest-light"
+          },
+          "audit": {
+            "scope": "implemented-geometry-and-drawing-gaps",
+            "coverage": {
+              "scope": "extracted-entities-only",
+              "present": 3,
+              "mapped": 3,
+              "parameters": [],
+              "missing": []
+            },
+            "checks": [
+              "presence",
+              "count",
+              "finite",
+              "water-support",
+              "cliff-support",
+              "grove-spread",
+              "drawing-gaps"
+            ],
+            "status": "checks-passed",
+            "errors": 0,
+            "review": 0,
+            "issues": [],
+            "metrics": {
+              "overlapPenalty": 0,
+              "balancePenalty": 0.052,
+              "motifFootprint": 4.46,
+              "landArea": 0
+            },
+            "cost": 0.417,
+            "aestheticAcceptance": "pending-user"
+          }
+        },
+        "semanticConsumption": {
+          "version": "3.3",
+          "items": [
+            {
+              "path": "scene.setting",
+              "status": "applied",
+              "consumer": "本地视觉策略",
+              "effect": "整体环境进入场景提案选择",
+              "basis": "inferred",
+              "evidence": [
+                "返景入深林，复照青苔上。"
+              ]
+            },
+            {
+              "path": "scene.groups[0].role",
+              "status": "applied",
+              "consumer": "主次布局",
+              "effect": "点景缩小淡化",
+              "basis": "inferred",
+              "evidence": [
+                "返景入深林，复照青苔上。"
+              ]
+            },
+            {
+              "path": "scene.groups[0].pattern",
+              "status": "applied",
+              "consumer": "群落布局",
+              "effect": "按 single 组织显示单元；不覆盖明确数量",
+              "basis": "inferred",
+              "evidence": [
+                "返景入深林，复照青苔上。"
+              ]
+            },
+            {
+              "path": "scene.groups[0].depth",
+              "status": "applied",
+              "consumer": "远近布局",
+              "effect": "将 near 转为相对大小、透明度与允许区域内的落点",
+              "basis": "inferred",
+              "evidence": [
+                "返景入深林，复照青苔上。"
+              ]
+            },
+            {
+              "path": "scene.groups[1].role",
+              "status": "applied",
+              "consumer": "主次布局",
+              "effect": "保留环境群落层次",
+              "basis": "inferred",
+              "evidence": [
+                "返景入深林，复照青苔上。"
+              ]
+            },
+            {
+              "path": "scene.groups[1].pattern",
+              "status": "applied",
+              "consumer": "群落布局",
+              "effect": "按 grove 组织显示单元；不覆盖明确数量",
+              "basis": "inferred",
+              "evidence": [
+                "返景入深林，复照青苔上。"
+              ]
+            },
+            {
+              "path": "scene.groups[1].depth",
+              "status": "applied",
+              "consumer": "远近布局",
+              "effect": "将 middle 转为相对大小、透明度与允许区域内的落点",
+              "basis": "inferred",
+              "evidence": [
+                "返景入深林，复照青苔上。"
+              ]
+            },
+            {
+              "path": "scene.groups[2].role",
+              "status": "applied",
+              "consumer": "主次布局",
+              "effect": "点景缩小淡化",
+              "basis": "inferred",
+              "evidence": [
+                "返景入深林，复照青苔上。"
+              ]
+            },
+            {
+              "path": "scene.groups[2].pattern",
+              "status": "applied",
+              "consumer": "群落布局",
+              "effect": "按 field 组织显示单元；不覆盖明确数量",
+              "basis": "inferred",
+              "evidence": [
+                "返景入深林，复照青苔上。"
+              ]
+            },
+            {
+              "path": "scene.groups[2].depth",
+              "status": "applied",
+              "consumer": "远近布局",
+              "effect": "将 near 转为相对大小、透明度与允许区域内的落点",
+              "basis": "inferred",
+              "evidence": [
+                "返景入深林，复照青苔上。"
+              ]
+            },
+            {
+              "path": "scene.supports[0]",
+              "status": "applied",
+              "consumer": "场景依托",
+              "effect": "必要环境以独立推断背景表示，不新增原文实体",
+              "basis": "inferred",
+              "evidence": [
+                "返景入深林，复照青苔上。"
+              ]
+            },
+            {
+              "path": "scene.atmosphere.visibility",
+              "status": "applied",
+              "consumer": "画布色层与远景",
+              "effect": "可见度 clear；迷蒙或昏暗时淡化非光源图层",
+              "basis": "inferred",
+              "evidence": [
+                "返景入深林，复照青苔上。"
+              ]
+            },
+            {
+              "path": "scene.atmosphere.illumination",
+              "status": "applied",
+              "consumer": "有限配色",
+              "effect": "照明 twilight 映射为本地 twilight 配色；用户仍可手动覆盖",
+              "basis": "inferred",
+              "evidence": [
+                "返景入深林，复照青苔上。"
+              ]
+            },
+            {
+              "path": "atmosphere.energy",
+              "status": "applied",
+              "consumer": "绘画时钟",
+              "effect": "没有明确动作节奏时，气息强弱控制已有微动的默认时钟"
+            },
+            {
+              "path": "atmosphere.openness",
+              "status": "applied",
+              "consumer": "群落分布与笔触密度",
+              "effect": "开阔度转换为本地间距与工具笔触密度，不等于原文数量"
+            },
+            {
+              "path": "atmosphere.valence",
+              "status": "skipped",
+              "consumer": "有限配色",
+              "effect": "照明策略优先，本次不另套情绪配色"
+            },
+            {
+              "path": "time.markers",
+              "status": "retained",
+              "consumer": "原始记录与解读",
+              "effect": "保留原文时间标记；本版照明由 scene.atmosphere 转换，多阶段时间逻辑未执行"
+            }
+          ],
+          "summary": {
+            "applied": 15,
+            "partial": 0,
+            "unsupported": 0,
+            "skipped": 1,
+            "retained": 1
+          },
+          "aestheticAcceptance": "pending-user"
+        },
+        "tools": [
+          {
+            "id": "landscape",
+            "timeScale": 0.45,
+            "paused": true,
+            "options": {
+              "form": "lightwash",
+              "relief": "layered",
+              "edge": "defined"
+            }
+          },
+          {
+            "id": "landscape",
+            "timeScale": 0.45,
+            "paused": true,
+            "options": {
+              "form": "moss",
+              "relief": "layered",
+              "edge": "defined"
+            }
+          },
+          {
+            "id": "tree",
+            "timeScale": 0.45,
+            "paused": true,
+            "options": {
+              "form": "broadleaf",
+              "branches": "7",
+              "crown": "wash"
+            }
+          },
+          {
+            "id": "tree",
+            "timeScale": 0.45,
+            "paused": true,
+            "options": {
+              "form": "broadleaf",
+              "branches": "7",
+              "crown": "wash"
+            }
+          },
+          {
+            "id": "tree",
+            "timeScale": 0.45,
+            "paused": true,
+            "options": {
+              "form": "broadleaf",
+              "branches": "7",
+              "crown": "wash"
+            }
+          },
+          {
+            "id": "landscape",
+            "timeScale": 1,
+            "paused": true,
+            "options": {
+              "form": "ground",
+              "relief": "layered",
+              "edge": "defined"
+            }
+          }
+        ],
+        "instances": 23
+      }
+    },
+    {
+      "id": "c03",
+      "poem": "孤舟蓑笠翁，独钓寒江雪。",
+      "basis": "authored-calibration",
+      "sourceContext": null,
+      "before": {
+        "settings": {
+          "wind": 0,
+          "density": 0.45,
+          "palette": "clear"
+        },
+        "organization": {
+          "version": "1.0",
+          "strategy": "regional-proposal",
+          "regions": {},
+          "candidates": [
+            {
+              "layout": "existing",
+              "errors": 0,
+              "cost": 0.525
+            }
+          ],
+          "repairs": [],
+          "limitations": [
+            "几何检查不判定诗意理解或审美合格",
+            "动作时序与整首诗的场景切换尚未编排"
+          ],
+          "graph": {
+            "nodes": [
+              {
+                "id": "l0",
+                "entities": [
+                  "i2"
+                ],
+                "tool": "figure",
+                "role": "subject",
+                "habitat": "deck",
+                "inferred": false,
+                "support": null
+              },
+              {
+                "id": "l1",
+                "entities": [
+                  "i3"
+                ],
+                "tool": "water",
+                "role": "water",
+                "habitat": null,
+                "inferred": false,
+                "support": null
+              },
+              {
+                "id": "l2",
+                "entities": [
+                  "i1"
+                ],
+                "tool": "boat",
+                "role": "subject",
+                "habitat": "water",
+                "inferred": false,
+                "support": "l1"
+              },
+              {
+                "id": "l3",
+                "entities": [
+                  "i4"
+                ],
+                "tool": "snow",
+                "role": "atmosphere",
+                "habitat": null,
+                "inferred": false,
+                "support": null
+              },
+              {
+                "id": "l4",
+                "entities": [],
+                "tool": "landscape",
+                "role": "terrain",
+                "habitat": null,
+                "inferred": true,
+                "support": null
+              }
+            ],
+            "edges": [
+              {
+                "type": "supported-by",
+                "source": "l0",
+                "target": null,
+                "basis": "local-composition",
+                "habitat": "deck"
+              },
+              {
+                "type": "supported-by",
+                "source": "l2",
+                "target": "l1",
+                "basis": "local-composition",
+                "habitat": "water"
+              },
+              {
+                "type": "on",
+                "source": "l2",
+                "target": "l1",
+                "basis": "inferred",
+                "modality": "asserted",
+                "evidence": [
+                  "孤舟蓑笠翁，独钓寒江雪。"
+                ]
+              }
+            ],
+            "setting": "winter-fishing"
+          },
+          "audit": {
+            "scope": "implemented-geometry-and-drawing-gaps",
+            "coverage": {
+              "scope": "extracted-entities-only",
+              "present": 4,
+              "mapped": 4,
+              "parameters": [],
+              "missing": []
+            },
+            "checks": [
+              "presence",
+              "count",
+              "finite",
+              "water-support",
+              "cliff-support",
+              "grove-spread",
+              "drawing-gaps"
+            ],
+            "status": "checks-passed",
+            "errors": 0,
+            "review": 0,
+            "issues": [],
+            "metrics": {
+              "overlapPenalty": 0,
+              "balancePenalty": 0.066,
+              "motifFootprint": 0.034,
+              "landArea": 0
+            },
+            "cost": 0.525,
+            "aestheticAcceptance": "pending-user"
+          }
+        },
+        "tools": [
+          {
+            "id": "figure",
+            "timeScale": 1,
+            "paused": true,
+            "options": {
+              "pose": "fisher"
+            }
+          },
+          {
+            "id": "water",
+            "timeScale": 1,
+            "paused": true,
+            "options": {
+              "form": "plane"
+            }
+          },
+          {
+            "id": "boat",
+            "timeScale": 1,
+            "paused": true,
+            "options": {}
+          },
+          {
+            "id": "snow",
+            "timeScale": 1,
+            "paused": true,
+            "options": {
+              "state": "fall"
+            }
+          },
+          {
+            "id": "landscape",
+            "timeScale": 1,
+            "paused": true,
+            "options": {
+              "form": "mountain",
+              "relief": "layered",
+              "edge": "defined"
+            }
+          }
+        ],
+        "instances": 5
+      },
+      "after": {
+        "settings": {
+          "wind": 0,
+          "density": 0.35,
+          "palette": "clear"
+        },
+        "organization": {
+          "version": "1.0",
+          "strategy": "regional-proposal",
+          "regions": {
+            "water": [
+              [
+                0,
+                0.46
+              ],
+              [
+                1,
+                0.46
+              ],
+              [
+                1,
+                1.04
+              ],
+              [
+                0,
+                1.04
+              ]
+            ]
+          },
+          "candidates": [
+            {
+              "layout": "existing",
+              "errors": 0,
+              "cost": 0.525
+            }
+          ],
+          "repairs": [],
+          "limitations": [
+            "几何检查不判定诗意理解或审美合格",
+            "动作时序与整首诗的场景切换尚未编排"
+          ],
+          "graph": {
+            "nodes": [
+              {
+                "id": "l0",
+                "entities": [
+                  "i2"
+                ],
+                "tool": "figure",
+                "role": "subject",
+                "habitat": "deck",
+                "inferred": false,
+                "support": null
+              },
+              {
+                "id": "l1",
+                "entities": [
+                  "i3"
+                ],
+                "tool": "water",
+                "role": "water",
+                "habitat": null,
+                "inferred": false,
+                "support": null
+              },
+              {
+                "id": "l2",
+                "entities": [
+                  "i1"
+                ],
+                "tool": "boat",
+                "role": "subject",
+                "habitat": "water",
+                "inferred": false,
+                "support": "l1"
+              },
+              {
+                "id": "l3",
+                "entities": [
+                  "i4"
+                ],
+                "tool": "snow",
+                "role": "atmosphere",
+                "habitat": null,
+                "inferred": false,
+                "support": null
+              },
+              {
+                "id": "l4",
+                "entities": [],
+                "tool": "landscape",
+                "role": "terrain",
+                "habitat": null,
+                "inferred": true,
+                "support": null
+              }
+            ],
+            "edges": [
+              {
+                "type": "supported-by",
+                "source": "l0",
+                "target": null,
+                "basis": "local-composition",
+                "habitat": "deck"
+              },
+              {
+                "type": "supported-by",
+                "source": "l2",
+                "target": "l1",
+                "basis": "local-composition",
+                "habitat": "water"
+              },
+              {
+                "type": "on",
+                "source": "l2",
+                "target": "l1",
+                "basis": "inferred",
+                "modality": "asserted",
+                "evidence": [
+                  "孤舟蓑笠翁，独钓寒江雪。"
+                ]
+              }
+            ],
+            "setting": "winter-fishing"
+          },
+          "audit": {
+            "scope": "implemented-geometry-and-drawing-gaps",
+            "coverage": {
+              "scope": "extracted-entities-only",
+              "present": 4,
+              "mapped": 4,
+              "parameters": [],
+              "missing": []
+            },
+            "checks": [
+              "presence",
+              "count",
+              "finite",
+              "water-support",
+              "cliff-support",
+              "grove-spread",
+              "drawing-gaps"
+            ],
+            "status": "checks-passed",
+            "errors": 0,
+            "review": 0,
+            "issues": [],
+            "metrics": {
+              "overlapPenalty": 0,
+              "balancePenalty": 0.066,
+              "motifFootprint": 0.035,
+              "landArea": 0
+            },
+            "cost": 0.525,
+            "aestheticAcceptance": "pending-user"
+          }
+        },
+        "semanticConsumption": {
+          "version": "3.3",
+          "items": [
+            {
+              "path": "scene.setting",
+              "status": "applied",
+              "consumer": "本地视觉策略",
+              "effect": "整体环境进入场景提案选择",
+              "basis": "inferred",
+              "evidence": [
+                "孤舟蓑笠翁，独钓寒江雪。"
+              ]
+            },
+            {
+              "path": "scene.groups[0].role",
+              "status": "applied",
+              "consumer": "主次布局",
+              "effect": "主体相对突出",
+              "basis": "inferred",
+              "evidence": [
+                "孤舟蓑笠翁，独钓寒江雪。"
+              ]
+            },
+            {
+              "path": "scene.groups[0].pattern",
+              "status": "applied",
+              "consumer": "群落布局",
+              "effect": "按 single 组织显示单元；不覆盖明确数量",
+              "basis": "inferred",
+              "evidence": [
+                "孤舟蓑笠翁，独钓寒江雪。"
+              ]
+            },
+            {
+              "path": "scene.groups[0].depth",
+              "status": "applied",
+              "consumer": "远近布局",
+              "effect": "将 middle 转为相对大小、透明度与允许区域内的落点",
+              "basis": "inferred",
+              "evidence": [
+                "孤舟蓑笠翁，独钓寒江雪。"
+              ]
+            },
+            {
+              "path": "scene.groups[1].role",
+              "status": "applied",
+              "consumer": "主次布局",
+              "effect": "保留环境画布范围，主次不改变地形边界",
+              "basis": "inferred",
+              "evidence": [
+                "孤舟蓑笠翁，独钓寒江雪。"
+              ]
+            },
+            {
+              "path": "scene.groups[1].pattern",
+              "status": "applied",
+              "consumer": "群落布局",
+              "effect": "按 field 组织显示单元；不覆盖明确数量",
+              "basis": "inferred",
+              "evidence": [
+                "孤舟蓑笠翁，独钓寒江雪。"
+              ]
+            },
+            {
+              "path": "scene.groups[1].depth",
+              "status": "applied",
+              "consumer": "远近布局",
+              "effect": "将 middle 转为相对大小、透明度与允许区域内的落点",
+              "basis": "inferred",
+              "evidence": [
+                "孤舟蓑笠翁，独钓寒江雪。"
+              ]
+            },
+            {
+              "path": "scene.groups[2].role",
+              "status": "applied",
+              "consumer": "主次布局",
+              "effect": "点景缩小淡化",
+              "basis": "inferred",
+              "evidence": [
+                "孤舟蓑笠翁，独钓寒江雪。"
+              ]
+            },
+            {
+              "path": "scene.groups[2].pattern",
+              "status": "applied",
+              "consumer": "群落布局",
+              "effect": "按 field 组织显示单元；不覆盖明确数量",
+              "basis": "inferred",
+              "evidence": [
+                "孤舟蓑笠翁，独钓寒江雪。"
+              ]
+            },
+            {
+              "path": "scene.groups[2].depth",
+              "status": "skipped",
+              "consumer": "远近布局",
+              "effect": "远近未明，保持本地默认",
+              "basis": "inferred",
+              "evidence": [
+                "孤舟蓑笠翁，独钓寒江雪。"
+              ]
+            },
+            {
+              "path": "scene.supports[0]",
+              "status": "applied",
+              "consumer": "场景依托",
+              "effect": "使用已提取主体的现有承托画法",
+              "basis": "inferred",
+              "evidence": [
+                "孤舟蓑笠翁，独钓寒江雪。"
+              ]
+            },
+            {
+              "path": "scene.supports[1]",
+              "status": "applied",
+              "consumer": "场景依托",
+              "effect": "使用已提取主体的现有承托画法",
+              "basis": "inferred",
+              "evidence": [
+                "孤舟蓑笠翁，独钓寒江雪。"
+              ]
+            },
+            {
+              "path": "scene.actions[0].state",
+              "status": "applied",
+              "consumer": "形态与绘画时钟",
+              "effect": "启用工具支持的 float 状态",
+              "basis": "inferred",
+              "evidence": [
+                "孤舟蓑笠翁，独钓寒江雪。"
+              ]
+            },
+            {
+              "path": "scene.actions[0].pace",
+              "status": "applied",
+              "consumer": "绘画时钟",
+              "effect": "定性节奏映射为本地时钟倍率 0.35",
+              "basis": "inferred",
+              "evidence": [
+                "孤舟蓑笠翁，独钓寒江雪。"
+              ]
+            },
+            {
+              "path": "scene.actions[0].direction",
+              "status": "applied",
+              "consumer": "画布合成",
+              "effect": "方向未明，仅用本地小幅微动",
+              "basis": "inferred",
+              "evidence": [
+                "孤舟蓑笠翁，独钓寒江雪。"
+              ]
+            },
+            {
+              "path": "scene.actions[1].state",
+              "status": "applied",
+              "consumer": "形态与绘画时钟",
+              "effect": "静止姿态并停止该图层时钟",
+              "basis": "inferred",
+              "evidence": [
+                "孤舟蓑笠翁，独钓寒江雪。"
+              ]
+            },
+            {
+              "path": "scene.actions[1].pace",
+              "status": "skipped",
+              "consumer": "本地视觉策略",
+              "effect": "静止状态不推进时钟或位置",
+              "basis": "inferred",
+              "evidence": [
+                "孤舟蓑笠翁，独钓寒江雪。"
+              ]
+            },
+            {
+              "path": "scene.actions[1].direction",
+              "status": "skipped",
+              "consumer": "本地视觉策略",
+              "effect": "静止状态不推进时钟或位置",
+              "basis": "inferred",
+              "evidence": [
+                "孤舟蓑笠翁，独钓寒江雪。"
+              ]
+            },
+            {
+              "path": "scene.actions[2].state",
+              "status": "applied",
+              "consumer": "形态与绘画时钟",
+              "effect": "启用工具支持的 fall 状态",
+              "basis": "inferred",
+              "evidence": [
+                "孤舟蓑笠翁，独钓寒江雪。"
+              ]
+            },
+            {
+              "path": "scene.actions[2].pace",
+              "status": "applied",
+              "consumer": "绘画时钟",
+              "effect": "定性节奏映射为本地时钟倍率 0.35",
+              "basis": "inferred",
+              "evidence": [
+                "孤舟蓑笠翁，独钓寒江雪。"
+              ]
+            },
+            {
+              "path": "scene.actions[2].direction",
+              "status": "applied",
+              "consumer": "工具原生运动",
+              "effect": "使用原生向上／向下运动，不平移依托锚点",
+              "basis": "inferred",
+              "evidence": [
+                "孤舟蓑笠翁，独钓寒江雪。"
+              ]
+            },
+            {
+              "path": "scene.atmosphere.visibility",
+              "status": "applied",
+              "consumer": "画布色层与远景",
+              "effect": "可见度 hazy；迷蒙或昏暗时淡化非光源图层",
+              "basis": "inferred",
+              "evidence": [
+                "孤舟蓑笠翁，独钓寒江雪。"
+              ]
+            },
+            {
+              "path": "scene.atmosphere.illumination",
+              "status": "applied",
+              "consumer": "有限配色",
+              "effect": "照明 day 映射为本地 clear 配色；用户仍可手动覆盖",
+              "basis": "inferred",
+              "evidence": [
+                "孤舟蓑笠翁，独钓寒江雪。"
+              ]
+            },
+            {
+              "path": "atmosphere.energy",
+              "status": "applied",
+              "consumer": "绘画时钟",
+              "effect": "没有明确动作节奏时，气息强弱控制已有微动的默认时钟"
+            },
+            {
+              "path": "atmosphere.openness",
+              "status": "applied",
+              "consumer": "群落分布与笔触密度",
+              "effect": "开阔度转换为本地间距与工具笔触密度，不等于原文数量"
+            },
+            {
+              "path": "atmosphere.valence",
+              "status": "applied",
+              "consumer": "有限配色",
+              "effect": "正向感受暂用 tender，其余用 clear；尚非完整情感色谱"
+            },
+            {
+              "path": "time.markers",
+              "status": "retained",
+              "consumer": "原始记录与解读",
+              "effect": "保留原文时间标记；本版照明由 scene.atmosphere 转换，多阶段时间逻辑未执行"
+            }
+          ],
+          "summary": {
+            "applied": 23,
+            "partial": 0,
+            "unsupported": 0,
+            "skipped": 3,
+            "retained": 1
+          },
+          "aestheticAcceptance": "pending-user"
+        },
+        "tools": [
+          {
+            "id": "figure",
+            "timeScale": 0,
+            "paused": true,
+            "options": {
+              "pose": "fisher"
+            }
+          },
+          {
+            "id": "water",
+            "timeScale": 0.45,
+            "paused": true,
+            "options": {
+              "form": "plane"
+            }
+          },
+          {
+            "id": "boat",
+            "timeScale": 0.35,
+            "paused": true,
+            "options": {}
+          },
+          {
+            "id": "snow",
+            "timeScale": 0.35,
+            "paused": true,
+            "options": {
+              "state": "fall"
+            }
+          },
+          {
+            "id": "landscape",
+            "timeScale": 1,
+            "paused": true,
+            "options": {
+              "form": "mountain",
+              "relief": "layered",
+              "edge": "defined"
+            }
+          }
+        ],
+        "instances": 5
+      }
+    },
+    {
+      "id": "s01",
+      "poem": "漠漠帆来重，冥冥鸟去迟。",
+      "basis": "real-raw-valid",
+      "record": "2026-10-23T01-03-51-390Z-1f3b7557",
+      "rawValidation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [
+          "模型保留了不确定性，需要审阅",
+          "scene.setting 为语义推断，绘画选择需与原文明示区分",
+          "scene.groups[0] 为语义推断，绘画选择需与原文明示区分",
+          "scene.groups[1] 为语义推断，绘画选择需与原文明示区分",
+          "scene.supports[0] 为语义推断，绘画选择需与原文明示区分",
+          "scene.actions[0] 为语义推断，绘画选择需与原文明示区分",
+          "scene.actions[1] 为语义推断，绘画选择需与原文明示区分",
+          "scene.atmosphere 为语义推断，绘画选择需与原文明示区分"
+        ],
+        "review_required": true
+      },
+      "sourceContext": null,
+      "before": {
+        "settings": {
+          "wind": 0,
+          "density": 0.45,
+          "palette": "clear"
+        },
+        "organization": {
+          "version": "1.0",
+          "strategy": "general-constraints",
+          "regions": {
+            "water": [
+              [
+                0,
+                0.45
+              ],
+              [
+                1,
+                0.45
+              ],
+              [
+                1,
+                1.04
+              ],
+              [
+                0,
+                1.04
+              ]
+            ]
+          },
+          "candidates": [
+            {
+              "layout": 0,
+              "orientation": "open",
+              "errors": 0,
+              "cost": 0.227,
+              "metrics": {
+                "overlapPenalty": 0,
+                "balancePenalty": 0.028,
+                "motifFootprint": 0.02,
+                "landArea": 0
+              }
+            },
+            {
+              "layout": 1,
+              "orientation": "open",
+              "errors": 0,
+              "cost": 0.227,
+              "metrics": {
+                "overlapPenalty": 0,
+                "balancePenalty": 0.028,
+                "motifFootprint": 0.02,
+                "landArea": 0
+              }
+            },
+            {
+              "layout": 2,
+              "orientation": "open",
+              "errors": 0,
+              "cost": 0.789,
+              "metrics": {
+                "overlapPenalty": 0,
+                "balancePenalty": 0.099,
+                "motifFootprint": 0.02,
+                "landArea": 0
+              }
+            }
+          ],
+          "repairs": [
+            {
+              "type": "support-added",
+              "reason": "舟、游鱼、水生植物或渡口水岸需要水域；水形和范围是本地选择"
+            }
+          ],
+          "limitations": [
+            "几何检查不判定诗意理解或审美合格",
+            "动作时序与整首诗的场景切换尚未编排"
+          ],
+          "layout": 0,
+          "orientation": "open",
+          "audit": {
+            "scope": "implemented-geometry-and-drawing-gaps",
+            "coverage": {
+              "scope": "extracted-entities-only",
+              "present": 2,
+              "mapped": 2,
+              "parameters": [],
+              "missing": []
+            },
+            "checks": [
+              "presence",
+              "count",
+              "finite",
+              "support",
+              "scale",
+              "relative-position",
+              "depth",
+              "grove-spread",
+              "drawing-gaps"
+            ],
+            "status": "checks-passed",
+            "errors": 0,
+            "review": 0,
+            "issues": [],
+            "metrics": {
+              "overlapPenalty": 0,
+              "balancePenalty": 0.028,
+              "motifFootprint": 0.02,
+              "landArea": 0
+            },
+            "cost": 0.227,
+            "aestheticAcceptance": "pending-user"
+          },
+          "graph": {
+            "nodes": [
+              {
+                "id": "l0",
+                "entities": [
+                  "i1"
+                ],
+                "tool": "boat",
+                "role": "subject",
+                "habitat": "water",
+                "inferred": false,
+                "support": "l2"
+              },
+              {
+                "id": "l1",
+                "entities": [
+                  "i2"
+                ],
+                "tool": "bird",
+                "role": "fauna",
+                "habitat": "air",
+                "inferred": false,
+                "support": null
+              },
+              {
+                "id": "l2",
+                "entities": [],
+                "tool": "water",
+                "role": "water",
+                "habitat": null,
+                "inferred": true,
+                "support": null
+              }
+            ],
+            "edges": [
+              {
+                "type": "supported-by",
+                "source": "l0",
+                "target": "l2",
+                "basis": "local-composition",
+                "habitat": "water"
+              },
+              {
+                "type": "supported-by",
+                "source": "l1",
+                "target": null,
+                "basis": "local-composition",
+                "habitat": "air"
+              }
+            ],
+            "setting": "study"
+          }
+        },
+        "tools": [
+          {
+            "id": "boat",
+            "timeScale": 1,
+            "paused": true,
+            "options": {}
+          },
+          {
+            "id": "bird",
+            "timeScale": 1,
+            "paused": true,
+            "options": {
+              "pose": "flying",
+              "tone": "ink",
+              "facing": "right"
+            }
+          },
+          {
+            "id": "bird",
+            "timeScale": 1,
+            "paused": true,
+            "options": {
+              "pose": "flying",
+              "tone": "ink",
+              "facing": "right"
+            }
+          },
+          {
+            "id": "bird",
+            "timeScale": 1,
+            "paused": true,
+            "options": {
+              "pose": "flying",
+              "tone": "ink",
+              "facing": "right"
+            }
+          },
+          {
+            "id": "water",
+            "timeScale": 1,
+            "paused": true,
+            "options": {
+              "form": "plane"
+            }
+          }
+        ],
+        "instances": 6
+      },
+      "after": {
+        "settings": {
+          "wind": 0,
+          "density": 0.45,
+          "palette": "clear"
+        },
+        "organization": {
+          "version": "1.0",
+          "strategy": "general-constraints",
+          "regions": {
+            "water": [
+              [
+                0,
+                0.45
+              ],
+              [
+                1,
+                0.45
+              ],
+              [
+                1,
+                1.04
+              ],
+              [
+                0,
+                1.04
+              ]
+            ]
+          },
+          "candidates": [
+            {
+              "layout": 0,
+              "orientation": "open",
+              "errors": 0,
+              "cost": 0.227,
+              "metrics": {
+                "overlapPenalty": 0,
+                "balancePenalty": 0.028,
+                "motifFootprint": 0.025,
+                "landArea": 0
+              }
+            },
+            {
+              "layout": 1,
+              "orientation": "open",
+              "errors": 0,
+              "cost": 0.227,
+              "metrics": {
+                "overlapPenalty": 0,
+                "balancePenalty": 0.028,
+                "motifFootprint": 0.025,
+                "landArea": 0
+              }
+            },
+            {
+              "layout": 2,
+              "orientation": "open",
+              "errors": 0,
+              "cost": 0.789,
+              "metrics": {
+                "overlapPenalty": 0,
+                "balancePenalty": 0.099,
+                "motifFootprint": 0.025,
+                "landArea": 0
+              }
+            }
+          ],
+          "repairs": [
+            {
+              "type": "support-added",
+              "reason": "模型解释的必要依托，依据：漠漠帆来重"
+            }
+          ],
+          "limitations": [
+            "几何检查不判定诗意理解或审美合格",
+            "动作时序与整首诗的场景切换尚未编排"
+          ],
+          "layout": 0,
+          "orientation": "open",
+          "audit": {
+            "scope": "implemented-geometry-and-drawing-gaps",
+            "coverage": {
+              "scope": "extracted-entities-only",
+              "present": 2,
+              "mapped": 2,
+              "parameters": [],
+              "missing": []
+            },
+            "checks": [
+              "presence",
+              "count",
+              "finite",
+              "support",
+              "scale",
+              "relative-position",
+              "depth",
+              "grove-spread",
+              "drawing-gaps"
+            ],
+            "status": "checks-passed",
+            "errors": 0,
+            "review": 0,
+            "issues": [],
+            "metrics": {
+              "overlapPenalty": 0,
+              "balancePenalty": 0.028,
+              "motifFootprint": 0.025,
+              "landArea": 0
+            },
+            "cost": 0.227,
+            "aestheticAcceptance": "pending-user"
+          },
+          "graph": {
+            "nodes": [
+              {
+                "id": "l0",
+                "entities": [
+                  "i1"
+                ],
+                "tool": "boat",
+                "role": "subject",
+                "habitat": "water",
+                "inferred": false,
+                "support": "l2"
+              },
+              {
+                "id": "l1",
+                "entities": [
+                  "i2"
+                ],
+                "tool": "bird",
+                "role": "fauna",
+                "habitat": "air",
+                "inferred": false,
+                "support": null
+              },
+              {
+                "id": "l2",
+                "entities": [],
+                "tool": "water",
+                "role": "water",
+                "habitat": null,
+                "inferred": true,
+                "support": null
+              }
+            ],
+            "edges": [
+              {
+                "type": "supported-by",
+                "source": "l0",
+                "target": "l2",
+                "basis": "local-composition",
+                "habitat": "water"
+              },
+              {
+                "type": "supported-by",
+                "source": "l1",
+                "target": null,
+                "basis": "local-composition",
+                "habitat": "air"
+              }
+            ],
+            "setting": "study"
+          }
+        },
+        "semanticConsumption": {
+          "version": "3.3",
+          "items": [
+            {
+              "path": "scene.setting",
+              "status": "applied",
+              "consumer": "本地视觉策略",
+              "effect": "整体环境进入场景提案选择",
+              "basis": "inferred",
+              "evidence": [
+                "漠漠帆来重"
+              ]
+            },
+            {
+              "path": "scene.groups[0].role",
+              "status": "applied",
+              "consumer": "主次布局",
+              "effect": "主体相对突出",
+              "basis": "inferred",
+              "evidence": [
+                "漠漠帆来重"
+              ]
+            },
+            {
+              "path": "scene.groups[0].pattern",
+              "status": "applied",
+              "consumer": "群落布局",
+              "effect": "按 single 组织显示单元；不覆盖明确数量",
+              "basis": "inferred",
+              "evidence": [
+                "漠漠帆来重"
+              ]
+            },
+            {
+              "path": "scene.groups[0].depth",
+              "status": "skipped",
+              "consumer": "远近布局",
+              "effect": "远近未明，保持本地默认",
+              "basis": "inferred",
+              "evidence": [
+                "漠漠帆来重"
+              ]
+            },
+            {
+              "path": "scene.groups[1].role",
+              "status": "applied",
+              "consumer": "主次布局",
+              "effect": "主体相对突出",
+              "basis": "inferred",
+              "evidence": [
+                "冥冥鸟去迟"
+              ]
+            },
+            {
+              "path": "scene.groups[1].pattern",
+              "status": "applied",
+              "consumer": "群落布局",
+              "effect": "按 single 组织显示单元；不覆盖明确数量",
+              "basis": "inferred",
+              "evidence": [
+                "冥冥鸟去迟"
+              ]
+            },
+            {
+              "path": "scene.groups[1].depth",
+              "status": "skipped",
+              "consumer": "远近布局",
+              "effect": "远近未明，保持本地默认",
+              "basis": "inferred",
+              "evidence": [
+                "冥冥鸟去迟"
+              ]
+            },
+            {
+              "path": "scene.supports[0]",
+              "status": "applied",
+              "consumer": "场景依托",
+              "effect": "必要环境以独立推断背景表示，不新增原文实体",
+              "basis": "inferred",
+              "evidence": [
+                "漠漠帆来重"
+              ]
+            },
+            {
+              "path": "scene.actions[0].state",
+              "status": "applied",
+              "consumer": "形态与绘画时钟",
+              "effect": "启用工具支持的 float 状态",
+              "basis": "inferred",
+              "evidence": [
+                "漠漠帆来重"
+              ]
+            },
+            {
+              "path": "scene.actions[0].pace",
+              "status": "applied",
+              "consumer": "绘画时钟",
+              "effect": "定性节奏映射为本地时钟倍率 0.35",
+              "basis": "inferred",
+              "evidence": [
+                "漠漠帆来重"
+              ]
+            },
+            {
+              "path": "scene.actions[0].direction",
+              "status": "applied",
+              "consumer": "画布合成",
+              "effect": "按定性方向作有限观看动画；不表示完整动作过程",
+              "basis": "inferred",
+              "evidence": [
+                "漠漠帆来重"
+              ]
+            },
+            {
+              "path": "scene.actions[1].state",
+              "status": "applied",
+              "consumer": "形态与绘画时钟",
+              "effect": "启用工具支持的 fly 状态",
+              "basis": "inferred",
+              "evidence": [
+                "冥冥鸟去迟"
+              ]
+            },
+            {
+              "path": "scene.actions[1].pace",
+              "status": "applied",
+              "consumer": "绘画时钟",
+              "effect": "定性节奏映射为本地时钟倍率 0.35",
+              "basis": "inferred",
+              "evidence": [
+                "冥冥鸟去迟"
+              ]
+            },
+            {
+              "path": "scene.actions[1].direction",
+              "status": "applied",
+              "consumer": "画布合成",
+              "effect": "按定性方向作有限观看动画；不表示完整动作过程",
+              "basis": "inferred",
+              "evidence": [
+                "冥冥鸟去迟"
+              ]
+            },
+            {
+              "path": "scene.atmosphere.visibility",
+              "status": "applied",
+              "consumer": "画布色层与远景",
+              "effect": "可见度 hazy；迷蒙或昏暗时淡化非光源图层",
+              "basis": "inferred",
+              "evidence": [
+                "漠漠帆来重",
+                "冥冥鸟去迟"
+              ]
+            },
+            {
+              "path": "scene.atmosphere.illumination",
+              "status": "skipped",
+              "consumer": "有限配色",
+              "effect": "照明 unclear 映射为本地 clear 配色；用户仍可手动覆盖",
+              "basis": "inferred",
+              "evidence": [
+                "漠漠帆来重",
+                "冥冥鸟去迟"
+              ]
+            },
+            {
+              "path": "atmosphere.energy",
+              "status": "skipped",
+              "consumer": "绘画时钟",
+              "effect": "没有明确动作节奏时，气息强弱控制已有微动的默认时钟"
+            },
+            {
+              "path": "atmosphere.openness",
+              "status": "applied",
+              "consumer": "群落分布与笔触密度",
+              "effect": "开阔度转换为本地间距与工具笔触密度，不等于原文数量"
+            },
+            {
+              "path": "atmosphere.valence",
+              "status": "applied",
+              "consumer": "有限配色",
+              "effect": "正向感受暂用 tender，其余用 clear；尚非完整情感色谱"
+            },
+            {
+              "path": "time.markers",
+              "status": "retained",
+              "consumer": "原始记录与解读",
+              "effect": "保留原文时间标记；本版照明由 scene.atmosphere 转换，多阶段时间逻辑未执行"
+            }
+          ],
+          "summary": {
+            "applied": 15,
+            "partial": 0,
+            "unsupported": 0,
+            "skipped": 4,
+            "retained": 1
+          },
+          "aestheticAcceptance": "pending-user"
+        },
+        "tools": [
+          {
+            "id": "boat",
+            "timeScale": 0.35,
+            "paused": true,
+            "options": {}
+          },
+          {
+            "id": "bird",
+            "timeScale": 0.35,
+            "paused": true,
+            "options": {
+              "pose": "flying",
+              "tone": "ink",
+              "facing": "right"
+            }
+          },
+          {
+            "id": "bird",
+            "timeScale": 0.35,
+            "paused": true,
+            "options": {
+              "pose": "flying",
+              "tone": "ink",
+              "facing": "right"
+            }
+          },
+          {
+            "id": "bird",
+            "timeScale": 0.35,
+            "paused": true,
+            "options": {
+              "pose": "flying",
+              "tone": "ink",
+              "facing": "right"
+            }
+          },
+          {
+            "id": "water",
+            "timeScale": 1,
+            "paused": true,
+            "options": {
+              "form": "plane"
+            }
+          }
+        ],
+        "instances": 6
+      }
+    },
+    {
+      "id": "s02",
+      "poem": "明月松间照，清泉石上流。",
+      "basis": "real-raw-valid",
+      "record": "2026-10-23T01-03-54-710Z-efdb6d76",
+      "rawValidation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [
+          "模型保留了不确定性，需要审阅",
+          "spatial[0] 的推断或非确定关系需审阅",
+          "scene.setting 为语义推断，绘画选择需与原文明示区分",
+          "scene.groups[0] 为语义推断，绘画选择需与原文明示区分",
+          "scene.groups[1] 为语义推断，绘画选择需与原文明示区分",
+          "scene.actions[0] 为语义推断，绘画选择需与原文明示区分",
+          "scene.atmosphere 为语义推断，绘画选择需与原文明示区分"
+        ],
+        "review_required": true
+      },
+      "sourceContext": null,
+      "before": {
+        "settings": {
+          "wind": 0,
+          "density": 0.45,
+          "palette": "clear"
+        },
+        "organization": {
+          "version": "1.0",
+          "strategy": "regional-proposal",
+          "regions": {
+            "stream": [
+              [
+                0.57,
+                0.48
+              ],
+              [
+                0.7,
+                0.48
+              ],
+              [
+                0.64,
+                0.66
+              ],
+              [
+                0.79,
+                0.82
+              ],
+              [
+                1.1,
+                1.1
+              ],
+              [
+                0.74,
+                1.1
+              ],
+              [
+                0.48,
+                0.73
+              ],
+              [
+                0.49,
+                0.61
+              ]
+            ]
+          },
+          "candidates": [
+            {
+              "layout": "existing",
+              "errors": 0,
+              "cost": 29.586
+            }
+          ],
+          "repairs": [],
+          "limitations": [
+            "几何检查不判定诗意理解或审美合格",
+            "动作时序与整首诗的场景切换尚未编排"
+          ],
+          "graph": {
+            "nodes": [
+              {
+                "id": "l0",
+                "entities": [
+                  "i1"
+                ],
+                "tool": "moon",
+                "role": "sky",
+                "habitat": "air",
+                "inferred": false,
+                "support": null
+              },
+              {
+                "id": "l1",
+                "entities": [
+                  "i2"
+                ],
+                "tool": "tree",
+                "role": "vegetation",
+                "habitat": "land",
+                "inferred": false,
+                "support": "l5"
+              },
+              {
+                "id": "l2",
+                "entities": [
+                  "i3"
+                ],
+                "tool": "water",
+                "role": "water",
+                "habitat": null,
+                "inferred": false,
+                "support": "l3"
+              },
+              {
+                "id": "l3",
+                "entities": [
+                  "i4"
+                ],
+                "tool": "rock",
+                "role": "detail",
+                "habitat": "land",
+                "inferred": false,
+                "support": "l5"
+              },
+              {
+                "id": "l4",
+                "entities": [],
+                "tool": "landscape",
+                "role": "terrain",
+                "habitat": null,
+                "inferred": true,
+                "support": null
+              },
+              {
+                "id": "l5",
+                "entities": [],
+                "tool": "landscape",
+                "role": "terrain",
+                "habitat": null,
+                "inferred": true,
+                "support": null
+              }
+            ],
+            "edges": [
+              {
+                "type": "supported-by",
+                "source": "l0",
+                "target": null,
+                "basis": "local-composition",
+                "habitat": "air"
+              },
+              {
+                "type": "supported-by",
+                "source": "l1",
+                "target": "l5",
+                "basis": "local-composition",
+                "habitat": "land"
+              },
+              {
+                "type": "supported-by",
+                "source": "l3",
+                "target": "l5",
+                "basis": "local-composition",
+                "habitat": "land"
+              },
+              {
+                "type": "among",
+                "source": "l0",
+                "target": "l1",
+                "basis": "inferred",
+                "modality": "asserted",
+                "evidence": [
+                  "明月松间照"
+                ]
+              },
+              {
+                "type": "on",
+                "source": "l2",
+                "target": "l3",
+                "basis": "explicit",
+                "modality": "asserted",
+                "evidence": [
+                  "清泉石上流"
+                ]
+              }
+            ],
+            "setting": "mountain-stream"
+          },
+          "audit": {
+            "scope": "implemented-geometry-and-drawing-gaps",
+            "coverage": {
+              "scope": "extracted-entities-only",
+              "present": 4,
+              "mapped": 4,
+              "parameters": [],
+              "missing": []
+            },
+            "checks": [
+              "presence",
+              "count",
+              "finite",
+              "water-support",
+              "cliff-support",
+              "grove-spread",
+              "drawing-gaps"
+            ],
+            "status": "checks-passed",
+            "errors": 0,
+            "review": 0,
+            "issues": [],
+            "metrics": {
+              "overlapPenalty": 2.451,
+              "balancePenalty": 0.022,
+              "motifFootprint": 1.012,
+              "landArea": 0
+            },
+            "cost": 29.586,
+            "aestheticAcceptance": "pending-user"
+          }
+        },
+        "tools": [
+          {
+            "id": "moon",
+            "timeScale": 1,
+            "paused": true,
+            "options": {
+              "shape": "crescent",
+              "lightSide": "right"
+            }
+          },
+          {
+            "id": "tree",
+            "timeScale": 1,
+            "paused": true,
+            "options": {
+              "form": "pine",
+              "branches": "7",
+              "crown": "lines"
+            }
+          },
+          {
+            "id": "tree",
+            "timeScale": 1,
+            "paused": true,
+            "options": {
+              "form": "pine",
+              "branches": "7",
+              "crown": "lines"
+            }
+          },
+          {
+            "id": "tree",
+            "timeScale": 1,
+            "paused": true,
+            "options": {
+              "form": "pine",
+              "branches": "7",
+              "crown": "lines"
+            }
+          },
+          {
+            "id": "water",
+            "timeScale": 1,
+            "paused": true,
+            "options": {
+              "form": "plane"
+            }
+          },
+          {
+            "id": "rock",
+            "timeScale": 1,
+            "paused": true,
+            "options": {
+              "profile": "low"
+            }
+          },
+          {
+            "id": "rock",
+            "timeScale": 1,
+            "paused": true,
+            "options": {
+              "profile": "low"
+            }
+          },
+          {
+            "id": "rock",
+            "timeScale": 1,
+            "paused": true,
+            "options": {
+              "profile": "low"
+            }
+          },
+          {
+            "id": "landscape",
+            "timeScale": 1,
+            "paused": true,
+            "options": {
+              "form": "mountain",
+              "relief": "layered",
+              "edge": "defined"
+            }
+          },
+          {
+            "id": "landscape",
+            "timeScale": 1,
+            "paused": true,
+            "options": {
+              "form": "ground",
+              "relief": "layered",
+              "edge": "defined"
+            }
+          }
+        ],
+        "instances": 15
+      },
+      "after": {
+        "settings": {
+          "wind": 0,
+          "density": 0.45,
+          "palette": "night"
+        },
+        "organization": {
+          "version": "1.0",
+          "strategy": "regional-proposal",
+          "regions": {
+            "stream": [
+              [
+                0.57,
+                0.48
+              ],
+              [
+                0.7,
+                0.48
+              ],
+              [
+                0.64,
+                0.66
+              ],
+              [
+                0.79,
+                0.82
+              ],
+              [
+                1.1,
+                1.1
+              ],
+              [
+                0.74,
+                1.1
+              ],
+              [
+                0.48,
+                0.73
+              ],
+              [
+                0.49,
+                0.61
+              ]
+            ],
+            "water": [
+              [
+                0.57,
+                0.48
+              ],
+              [
+                0.7,
+                0.48
+              ],
+              [
+                0.64,
+                0.66
+              ],
+              [
+                0.79,
+                0.82
+              ],
+              [
+                1.1,
+                1.1
+              ],
+              [
+                0.74,
+                1.1
+              ],
+              [
+                0.48,
+                0.73
+              ],
+              [
+                0.49,
+                0.61
+              ]
+            ]
+          },
+          "candidates": [
+            {
+              "layout": "existing",
+              "errors": 0,
+              "cost": 32.757
+            }
+          ],
+          "repairs": [],
+          "limitations": [
+            "几何检查不判定诗意理解或审美合格",
+            "动作时序与整首诗的场景切换尚未编排"
+          ],
+          "graph": {
+            "nodes": [
+              {
+                "id": "l0",
+                "entities": [
+                  "i1"
+                ],
+                "tool": "moon",
+                "role": "sky",
+                "habitat": "air",
+                "inferred": false,
+                "support": null
+              },
+              {
+                "id": "l1",
+                "entities": [
+                  "i2"
+                ],
+                "tool": "tree",
+                "role": "vegetation",
+                "habitat": "land",
+                "inferred": false,
+                "support": "l5"
+              },
+              {
+                "id": "l2",
+                "entities": [
+                  "i3"
+                ],
+                "tool": "water",
+                "role": "water",
+                "habitat": null,
+                "inferred": false,
+                "support": "l3"
+              },
+              {
+                "id": "l3",
+                "entities": [
+                  "i4"
+                ],
+                "tool": "rock",
+                "role": "detail",
+                "habitat": "land",
+                "inferred": false,
+                "support": "l5"
+              },
+              {
+                "id": "l4",
+                "entities": [],
+                "tool": "landscape",
+                "role": "terrain",
+                "habitat": null,
+                "inferred": true,
+                "support": null
+              },
+              {
+                "id": "l5",
+                "entities": [],
+                "tool": "landscape",
+                "role": "terrain",
+                "habitat": null,
+                "inferred": true,
+                "support": null
+              }
+            ],
+            "edges": [
+              {
+                "type": "supported-by",
+                "source": "l0",
+                "target": null,
+                "basis": "local-composition",
+                "habitat": "air"
+              },
+              {
+                "type": "supported-by",
+                "source": "l1",
+                "target": "l5",
+                "basis": "local-composition",
+                "habitat": "land"
+              },
+              {
+                "type": "supported-by",
+                "source": "l3",
+                "target": "l5",
+                "basis": "local-composition",
+                "habitat": "land"
+              },
+              {
+                "type": "among",
+                "source": "l0",
+                "target": "l1",
+                "basis": "inferred",
+                "modality": "asserted",
+                "evidence": [
+                  "明月松间照"
+                ]
+              },
+              {
+                "type": "on",
+                "source": "l2",
+                "target": "l3",
+                "basis": "explicit",
+                "modality": "asserted",
+                "evidence": [
+                  "清泉石上流"
+                ]
+              }
+            ],
+            "setting": "mountain-stream"
+          },
+          "audit": {
+            "scope": "implemented-geometry-and-drawing-gaps",
+            "coverage": {
+              "scope": "extracted-entities-only",
+              "present": 4,
+              "mapped": 4,
+              "parameters": [],
+              "missing": []
+            },
+            "checks": [
+              "presence",
+              "count",
+              "finite",
+              "water-support",
+              "cliff-support",
+              "grove-spread",
+              "drawing-gaps"
+            ],
+            "status": "checks-passed",
+            "errors": 0,
+            "review": 0,
+            "issues": [],
+            "metrics": {
+              "overlapPenalty": 2.716,
+              "balancePenalty": 0.021,
+              "motifFootprint": 1.24,
+              "landArea": 0
+            },
+            "cost": 32.757,
+            "aestheticAcceptance": "pending-user"
+          }
+        },
+        "semanticConsumption": {
+          "version": "3.3",
+          "items": [
+            {
+              "path": "scene.setting",
+              "status": "applied",
+              "consumer": "本地视觉策略",
+              "effect": "整体环境进入场景提案选择",
+              "basis": "inferred",
+              "evidence": [
+                "明月松间照",
+                "清泉石上流"
+              ]
+            },
+            {
+              "path": "scene.groups[0].role",
+              "status": "applied",
+              "consumer": "主次布局",
+              "effect": "主体相对突出",
+              "basis": "inferred",
+              "evidence": [
+                "明月松间照"
+              ]
+            },
+            {
+              "path": "scene.groups[0].pattern",
+              "status": "skipped",
+              "consumer": "群落布局",
+              "effect": "群落形式未明，保持本地默认",
+              "basis": "inferred",
+              "evidence": [
+                "明月松间照"
+              ]
+            },
+            {
+              "path": "scene.groups[0].depth",
+              "status": "skipped",
+              "consumer": "远近布局",
+              "effect": "远近未明，保持本地默认",
+              "basis": "inferred",
+              "evidence": [
+                "明月松间照"
+              ]
+            },
+            {
+              "path": "scene.groups[1].role",
+              "status": "applied",
+              "consumer": "主次布局",
+              "effect": "保留环境画布范围，主次不改变地形边界；主体相对突出",
+              "basis": "inferred",
+              "evidence": [
+                "清泉石上流"
+              ]
+            },
+            {
+              "path": "scene.groups[1].pattern",
+              "status": "skipped",
+              "consumer": "群落布局",
+              "effect": "群落形式未明，保持本地默认",
+              "basis": "inferred",
+              "evidence": [
+                "清泉石上流"
+              ]
+            },
+            {
+              "path": "scene.groups[1].depth",
+              "status": "skipped",
+              "consumer": "远近布局",
+              "effect": "远近未明，保持本地默认",
+              "basis": "inferred",
+              "evidence": [
+                "清泉石上流"
+              ]
+            },
+            {
+              "path": "scene.supports[0]",
+              "status": "partial",
+              "consumer": "场景依托",
+              "effect": "溪水与石共用空间依托；尚未模拟水流越过石面的流体形变",
+              "basis": "explicit",
+              "evidence": [
+                "清泉石上流"
+              ]
+            },
+            {
+              "path": "scene.actions[0].state",
+              "status": "applied",
+              "consumer": "形态与绘画时钟",
+              "effect": "静止姿态并停止该图层时钟",
+              "basis": "inferred",
+              "evidence": [
+                "明月松间照"
+              ]
+            },
+            {
+              "path": "scene.actions[0].pace",
+              "status": "skipped",
+              "consumer": "本地视觉策略",
+              "effect": "静止状态不推进时钟或位置",
+              "basis": "inferred",
+              "evidence": [
+                "明月松间照"
+              ]
+            },
+            {
+              "path": "scene.actions[0].direction",
+              "status": "skipped",
+              "consumer": "本地视觉策略",
+              "effect": "静止状态不推进时钟或位置",
+              "basis": "inferred",
+              "evidence": [
+                "明月松间照"
+              ]
+            },
+            {
+              "path": "scene.actions[1].state",
+              "status": "applied",
+              "consumer": "形态与绘画时钟",
+              "effect": "启用工具支持的 flow 状态",
+              "basis": "explicit",
+              "evidence": [
+                "清泉石上流"
+              ]
+            },
+            {
+              "path": "scene.actions[1].pace",
+              "status": "applied",
+              "consumer": "绘画时钟",
+              "effect": "定性节奏映射为本地时钟倍率 0.45",
+              "basis": "explicit",
+              "evidence": [
+                "清泉石上流"
+              ]
+            },
+            {
+              "path": "scene.actions[1].direction",
+              "status": "skipped",
+              "consumer": "本地视觉策略",
+              "effect": "该工具尚不支持此动作分量",
+              "basis": "explicit",
+              "evidence": [
+                "清泉石上流"
+              ]
+            },
+            {
+              "path": "scene.atmosphere.visibility",
+              "status": "applied",
+              "consumer": "画布色层与远景",
+              "effect": "可见度 clear；迷蒙或昏暗时淡化非光源图层",
+              "basis": "inferred",
+              "evidence": [
+                "明月松间照"
+              ]
+            },
+            {
+              "path": "scene.atmosphere.illumination",
+              "status": "applied",
+              "consumer": "有限配色",
+              "effect": "照明 night 映射为本地 night 配色；用户仍可手动覆盖",
+              "basis": "inferred",
+              "evidence": [
+                "明月松间照"
+              ]
+            },
+            {
+              "path": "atmosphere.energy",
+              "status": "applied",
+              "consumer": "绘画时钟",
+              "effect": "没有明确动作节奏时，气息强弱控制已有微动的默认时钟"
+            },
+            {
+              "path": "atmosphere.openness",
+              "status": "applied",
+              "consumer": "群落分布与笔触密度",
+              "effect": "开阔度转换为本地间距与工具笔触密度，不等于原文数量"
+            },
+            {
+              "path": "atmosphere.valence",
+              "status": "skipped",
+              "consumer": "有限配色",
+              "effect": "照明策略优先，本次不另套情绪配色"
+            },
+            {
+              "path": "time.markers",
+              "status": "retained",
+              "consumer": "原始记录与解读",
+              "effect": "保留原文时间标记；本版照明由 scene.atmosphere 转换，多阶段时间逻辑未执行"
+            }
+          ],
+          "summary": {
+            "applied": 10,
+            "partial": 1,
+            "unsupported": 0,
+            "skipped": 8,
+            "retained": 1
+          },
+          "aestheticAcceptance": "pending-user"
+        },
+        "tools": [
+          {
+            "id": "moon",
+            "timeScale": 0,
+            "paused": true,
+            "options": {
+              "shape": "crescent",
+              "lightSide": "right"
+            }
+          },
+          {
+            "id": "tree",
+            "timeScale": 0.45,
+            "paused": true,
+            "options": {
+              "form": "pine",
+              "branches": "7",
+              "crown": "lines"
+            }
+          },
+          {
+            "id": "tree",
+            "timeScale": 0.45,
+            "paused": true,
+            "options": {
+              "form": "pine",
+              "branches": "7",
+              "crown": "lines"
+            }
+          },
+          {
+            "id": "tree",
+            "timeScale": 0.45,
+            "paused": true,
+            "options": {
+              "form": "pine",
+              "branches": "7",
+              "crown": "lines"
+            }
+          },
+          {
+            "id": "water",
+            "timeScale": 0.45,
+            "paused": true,
+            "options": {
+              "form": "plane"
+            }
+          },
+          {
+            "id": "rock",
+            "timeScale": 0.45,
+            "paused": true,
+            "options": {
+              "profile": "low"
+            }
+          },
+          {
+            "id": "rock",
+            "timeScale": 0.45,
+            "paused": true,
+            "options": {
+              "profile": "low"
+            }
+          },
+          {
+            "id": "rock",
+            "timeScale": 0.45,
+            "paused": true,
+            "options": {
+              "profile": "low"
+            }
+          },
+          {
+            "id": "landscape",
+            "timeScale": 1,
+            "paused": true,
+            "options": {
+              "form": "mountain",
+              "relief": "layered",
+              "edge": "defined"
+            }
+          },
+          {
+            "id": "landscape",
+            "timeScale": 1,
+            "paused": true,
+            "options": {
+              "form": "ground",
+              "relief": "layered",
+              "edge": "defined"
+            }
+          }
+        ],
+        "instances": 15
+      }
+    },
+    {
+      "id": "s03",
+      "poem": "返景入深林，复照青苔上。",
+      "basis": "real-source-expanded",
+      "record": "2026-10-23T01-04-03-041Z-c3aaf670",
+      "rawValidation": {
+        "valid": false,
+        "errors": [
+          "spatial[0] 依据未关联关系两端"
+        ],
+        "warnings": [
+          "模型保留了不确定性，需要审阅",
+          "spatial[1] 的推断或非确定关系需审阅"
+        ],
+        "review_required": true
+      },
+      "sourceContext": {
+        "changes": [
+          {
+            "path": "spatial[0].evidence",
+            "original": [
+              "复照青苔上"
+            ],
+            "expanded": [
+              "返景入深林，复照青苔上。"
+            ],
+            "clauses": [
+              "c1",
+              "c2"
+            ]
+          }
+        ],
+        "reviewRequired": true
+      },
+      "before": {
+        "settings": {
+          "wind": 0,
+          "density": 0.45,
+          "palette": "clear"
+        },
+        "organization": {
+          "version": "1.0",
+          "strategy": "regional-proposal",
+          "regions": {
+            "forest": [
+              [
+                0,
+                0.2
+              ],
+              [
+                1,
+                0.2
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                0,
+                1
+              ]
+            ]
+          },
+          "candidates": [
+            {
+              "layout": "existing",
+              "errors": 0,
+              "cost": 60.371
+            }
+          ],
+          "repairs": [],
+          "limitations": [
+            "几何检查不判定诗意理解或审美合格",
+            "动作时序与整首诗的场景切换尚未编排"
+          ],
+          "graph": {
+            "nodes": [
+              {
+                "id": "l0",
+                "entities": [
+                  "i1"
+                ],
+                "tool": "landscape",
+                "role": "detail",
+                "habitat": null,
+                "inferred": false,
+                "support": "l1"
+              },
+              {
+                "id": "l1",
+                "entities": [
+                  "i3"
+                ],
+                "tool": "landscape",
+                "role": "detail",
+                "habitat": null,
+                "inferred": false,
+                "support": null
+              },
+              {
+                "id": "l2",
+                "entities": [
+                  "i2"
+                ],
+                "tool": "tree",
+                "role": "vegetation",
+                "habitat": "land",
+                "inferred": false,
+                "support": "l3"
+              },
+              {
+                "id": "l3",
+                "entities": [],
+                "tool": "landscape",
+                "role": "terrain",
+                "habitat": null,
+                "inferred": true,
+                "support": null
+              }
+            ],
+            "edges": [
+              {
+                "type": "supported-by",
+                "source": "l2",
+                "target": "l3",
+                "basis": "local-composition",
+                "habitat": "land"
+              },
+              {
+                "type": "on",
+                "source": "l0",
+                "target": "l1",
+                "basis": "explicit",
+                "modality": "asserted",
+                "evidence": [
+                  "返景入深林，复照青苔上。"
+                ]
+              },
+              {
+                "type": "among",
+                "source": "l0",
+                "target": "l2",
+                "basis": "inferred",
+                "modality": "asserted",
+                "evidence": [
+                  "返景入深林"
+                ]
+              }
+            ],
+            "setting": "forest-light"
+          },
+          "audit": {
+            "scope": "implemented-geometry-and-drawing-gaps",
+            "coverage": {
+              "scope": "extracted-entities-only",
+              "present": 3,
+              "mapped": 3,
+              "parameters": [],
+              "missing": []
+            },
+            "checks": [
+              "presence",
+              "count",
+              "finite",
+              "water-support",
+              "cliff-support",
+              "grove-spread",
+              "drawing-gaps"
+            ],
+            "status": "needs-review",
+            "errors": 0,
+            "review": 2,
+            "issues": [
+              {
+                "code": "unresolved-relation",
+                "severity": "review",
+                "message": "有空间关系尚无对应布局画法"
+              },
+              {
+                "code": "unresolved-relation",
+                "severity": "review",
+                "message": "有空间关系尚无对应布局画法"
+              }
+            ],
+            "metrics": {
+              "overlapPenalty": 0,
+              "balancePenalty": 0.046,
+              "motifFootprint": 6.389,
+              "landArea": 0
+            },
+            "cost": 60.371,
+            "aestheticAcceptance": "pending-user"
+          }
+        },
+        "tools": [
+          {
+            "id": "landscape",
+            "timeScale": 1,
+            "paused": true,
+            "options": {
+              "form": "lightwash",
+              "relief": "layered",
+              "edge": "defined"
+            }
+          },
+          {
+            "id": "landscape",
+            "timeScale": 1,
+            "paused": true,
+            "options": {
+              "form": "moss",
+              "relief": "layered",
+              "edge": "defined"
+            }
+          },
+          {
+            "id": "tree",
+            "timeScale": 1,
+            "paused": true,
+            "options": {
+              "form": "broadleaf",
+              "branches": "7",
+              "crown": "wash"
+            }
+          },
+          {
+            "id": "tree",
+            "timeScale": 1,
+            "paused": true,
+            "options": {
+              "form": "broadleaf",
+              "branches": "7",
+              "crown": "wash"
+            }
+          },
+          {
+            "id": "tree",
+            "timeScale": 1,
+            "paused": true,
+            "options": {
+              "form": "broadleaf",
+              "branches": "7",
+              "crown": "wash"
+            }
+          },
+          {
+            "id": "landscape",
+            "timeScale": 1,
+            "paused": true,
+            "options": {
+              "form": "ground",
+              "relief": "layered",
+              "edge": "defined"
+            }
+          }
+        ],
+        "instances": 23
+      },
+      "after": {
+        "settings": {
+          "wind": 0,
+          "density": 0.6,
+          "palette": "twilight"
+        },
+        "organization": {
+          "version": "1.0",
+          "strategy": "regional-proposal",
+          "regions": {
+            "forest": [
+              [
+                0,
+                0.2
+              ],
+              [
+                1,
+                0.2
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                0,
+                1
+              ]
+            ]
+          },
+          "candidates": [
+            {
+              "layout": "existing",
+              "errors": 0,
+              "cost": 60.242
+            }
+          ],
+          "repairs": [],
+          "limitations": [
+            "几何检查不判定诗意理解或审美合格",
+            "动作时序与整首诗的场景切换尚未编排"
+          ],
+          "graph": {
+            "nodes": [
+              {
+                "id": "l0",
+                "entities": [
+                  "i1"
+                ],
+                "tool": "landscape",
+                "role": "detail",
+                "habitat": null,
+                "inferred": false,
+                "support": "l1"
+              },
+              {
+                "id": "l1",
+                "entities": [
+                  "i3"
+                ],
+                "tool": "landscape",
+                "role": "detail",
+                "habitat": null,
+                "inferred": false,
+                "support": null
+              },
+              {
+                "id": "l2",
+                "entities": [
+                  "i2"
+                ],
+                "tool": "tree",
+                "role": "vegetation",
+                "habitat": "land",
+                "inferred": false,
+                "support": "l3"
+              },
+              {
+                "id": "l3",
+                "entities": [],
+                "tool": "landscape",
+                "role": "terrain",
+                "habitat": null,
+                "inferred": true,
+                "support": null
+              }
+            ],
+            "edges": [
+              {
+                "type": "supported-by",
+                "source": "l2",
+                "target": "l3",
+                "basis": "local-composition",
+                "habitat": "land"
+              },
+              {
+                "type": "on",
+                "source": "l0",
+                "target": "l1",
+                "basis": "explicit",
+                "modality": "asserted",
+                "evidence": [
+                  "返景入深林，复照青苔上。"
+                ]
+              },
+              {
+                "type": "among",
+                "source": "l0",
+                "target": "l2",
+                "basis": "inferred",
+                "modality": "asserted",
+                "evidence": [
+                  "返景入深林"
+                ]
+              }
+            ],
+            "setting": "forest-light"
+          },
+          "audit": {
+            "scope": "implemented-geometry-and-drawing-gaps",
+            "coverage": {
+              "scope": "extracted-entities-only",
+              "present": 3,
+              "mapped": 3,
+              "parameters": [],
+              "missing": []
+            },
+            "checks": [
+              "presence",
+              "count",
+              "finite",
+              "water-support",
+              "cliff-support",
+              "grove-spread",
+              "drawing-gaps"
+            ],
+            "status": "needs-review",
+            "errors": 0,
+            "review": 2,
+            "issues": [
+              {
+                "code": "unresolved-relation",
+                "severity": "review",
+                "message": "有空间关系尚无对应布局画法"
+              },
+              {
+                "code": "unresolved-relation",
+                "severity": "review",
+                "message": "有空间关系尚无对应布局画法"
+              }
+            ],
+            "metrics": {
+              "overlapPenalty": 0,
+              "balancePenalty": 0.03,
+              "motifFootprint": 4.859,
+              "landArea": 0
+            },
+            "cost": 60.242,
+            "aestheticAcceptance": "pending-user"
+          }
+        },
+        "semanticConsumption": {
+          "version": "3.3",
+          "items": [
+            {
+              "path": "scene.setting",
+              "status": "applied",
+              "consumer": "本地视觉策略",
+              "effect": "整体环境进入场景提案选择",
+              "basis": "explicit",
+              "evidence": [
+                "返景入深林"
+              ]
+            },
+            {
+              "path": "scene.groups[0].role",
+              "status": "applied",
+              "consumer": "主次布局",
+              "effect": "保留环境群落层次",
+              "basis": "inferred",
+              "evidence": [
+                "返景入深林"
+              ]
+            },
+            {
+              "path": "scene.groups[0].pattern",
+              "status": "applied",
+              "consumer": "群落布局",
+              "effect": "按 grove 组织显示单元；不覆盖明确数量",
+              "basis": "inferred",
+              "evidence": [
+                "返景入深林"
+              ]
+            },
+            {
+              "path": "scene.groups[0].depth",
+              "status": "skipped",
+              "consumer": "远近布局",
+              "effect": "远近未明，保持本地默认",
+              "basis": "inferred",
+              "evidence": [
+                "返景入深林"
+              ]
+            },
+            {
+              "path": "scene.groups[1].role",
+              "status": "applied",
+              "consumer": "主次布局",
+              "effect": "点景缩小淡化",
+              "basis": "inferred",
+              "evidence": [
+                "复照青苔上"
+              ]
+            },
+            {
+              "path": "scene.groups[1].pattern",
+              "status": "applied",
+              "consumer": "群落布局",
+              "effect": "按 field 组织显示单元；不覆盖明确数量",
+              "basis": "inferred",
+              "evidence": [
+                "复照青苔上"
+              ]
+            },
+            {
+              "path": "scene.groups[1].depth",
+              "status": "applied",
+              "consumer": "远近布局",
+              "effect": "将 near 转为相对大小、透明度与允许区域内的落点",
+              "basis": "inferred",
+              "evidence": [
+                "复照青苔上"
+              ]
+            },
+            {
+              "path": "scene.groups[2].role",
+              "status": "applied",
+              "consumer": "主次布局",
+              "effect": "主体相对突出",
+              "basis": "inferred",
+              "evidence": [
+                "返景入深林",
+                "复照青苔上"
+              ]
+            },
+            {
+              "path": "scene.groups[2].pattern",
+              "status": "applied",
+              "consumer": "群落布局",
+              "effect": "按 single 组织显示单元；不覆盖明确数量",
+              "basis": "inferred",
+              "evidence": [
+                "返景入深林",
+                "复照青苔上"
+              ]
+            },
+            {
+              "path": "scene.groups[2].depth",
+              "status": "skipped",
+              "consumer": "远近布局",
+              "effect": "远近未明，保持本地默认",
+              "basis": "inferred",
+              "evidence": [
+                "返景入深林",
+                "复照青苔上"
+              ]
+            },
+            {
+              "path": "scene.supports[0]",
+              "status": "applied",
+              "consumer": "场景依托",
+              "effect": "必要环境以独立推断背景表示，不新增原文实体",
+              "basis": "inferred",
+              "evidence": [
+                "复照青苔上"
+              ]
+            },
+            {
+              "path": "scene.actions[0].state",
+              "status": "unsupported",
+              "consumer": "动作画法",
+              "effect": "当前工具尚无对应动作状态",
+              "basis": "inferred",
+              "evidence": [
+                "返景入深林",
+                "复照青苔上"
+              ]
+            },
+            {
+              "path": "scene.actions[0].pace",
+              "status": "skipped",
+              "consumer": "本地视觉策略",
+              "effect": "该工具尚不支持此动作分量",
+              "basis": "inferred",
+              "evidence": [
+                "返景入深林",
+                "复照青苔上"
+              ]
+            },
+            {
+              "path": "scene.actions[0].direction",
+              "status": "skipped",
+              "consumer": "本地视觉策略",
+              "effect": "该工具尚不支持此动作分量",
+              "basis": "inferred",
+              "evidence": [
+                "返景入深林",
+                "复照青苔上"
+              ]
+            },
+            {
+              "path": "scene.atmosphere.visibility",
+              "status": "applied",
+              "consumer": "画布色层与远景",
+              "effect": "可见度 dark；迷蒙或昏暗时淡化非光源图层",
+              "basis": "inferred",
+              "evidence": [
+                "返景入深林",
+                "复照青苔上"
+              ]
+            },
+            {
+              "path": "scene.atmosphere.illumination",
+              "status": "applied",
+              "consumer": "有限配色",
+              "effect": "照明 twilight 映射为本地 twilight 配色；用户仍可手动覆盖",
+              "basis": "inferred",
+              "evidence": [
+                "返景入深林",
+                "复照青苔上"
+              ]
+            },
+            {
+              "path": "atmosphere.energy",
+              "status": "applied",
+              "consumer": "绘画时钟",
+              "effect": "没有明确动作节奏时，气息强弱控制已有微动的默认时钟"
+            },
+            {
+              "path": "atmosphere.openness",
+              "status": "applied",
+              "consumer": "群落分布与笔触密度",
+              "effect": "开阔度转换为本地间距与工具笔触密度，不等于原文数量"
+            },
+            {
+              "path": "atmosphere.valence",
+              "status": "skipped",
+              "consumer": "有限配色",
+              "effect": "照明策略优先，本次不另套情绪配色"
+            },
+            {
+              "path": "time.markers",
+              "status": "retained",
+              "consumer": "原始记录与解读",
+              "effect": "保留原文时间标记；本版照明由 scene.atmosphere 转换，多阶段时间逻辑未执行"
+            }
+          ],
+          "summary": {
+            "applied": 13,
+            "partial": 0,
+            "unsupported": 1,
+            "skipped": 5,
+            "retained": 1
+          },
+          "aestheticAcceptance": "pending-user"
+        },
+        "tools": [
+          {
+            "id": "landscape",
+            "timeScale": 0,
+            "paused": true,
+            "options": {
+              "form": "lightwash",
+              "relief": "layered",
+              "edge": "defined"
+            }
+          },
+          {
+            "id": "landscape",
+            "timeScale": 0.45,
+            "paused": true,
+            "options": {
+              "form": "moss",
+              "relief": "layered",
+              "edge": "defined"
+            }
+          },
+          {
+            "id": "tree",
+            "timeScale": 0.45,
+            "paused": true,
+            "options": {
+              "form": "broadleaf",
+              "branches": "7",
+              "crown": "wash"
+            }
+          },
+          {
+            "id": "tree",
+            "timeScale": 0.45,
+            "paused": true,
+            "options": {
+              "form": "broadleaf",
+              "branches": "7",
+              "crown": "wash"
+            }
+          },
+          {
+            "id": "tree",
+            "timeScale": 0.45,
+            "paused": true,
+            "options": {
+              "form": "broadleaf",
+              "branches": "7",
+              "crown": "wash"
+            }
+          },
+          {
+            "id": "landscape",
+            "timeScale": 1,
+            "paused": true,
+            "options": {
+              "form": "ground",
+              "relief": "layered",
+              "edge": "defined"
+            }
+          }
+        ],
+        "instances": 23
+      }
+    },
+    {
+      "id": "s04",
+      "poem": "孤舟蓑笠翁，独钓寒江雪。",
+      "basis": "real-source-expanded",
+      "record": "2026-10-23T01-04-07-000Z-d3d73dba",
+      "rawValidation": {
+        "valid": false,
+        "errors": [
+          "spatial[1] 依据未关联关系两端"
+        ],
+        "warnings": [
+          "模型保留了不确定性，需要审阅",
+          "spatial[0] 的推断或非确定关系需审阅",
+          "spatial[1] 的推断或非确定关系需审阅"
+        ],
+        "review_required": true
+      },
+      "sourceContext": {
+        "changes": [
+          {
+            "path": "spatial[1].evidence",
+            "original": [
+              "独钓寒江雪"
+            ],
+            "expanded": [
+              "孤舟蓑笠翁，独钓寒江雪。"
+            ],
+            "clauses": [
+              "c1",
+              "c2"
+            ]
+          },
+          {
+            "path": "scene.supports[1].evidence",
+            "original": [
+              "独钓寒江雪"
+            ],
+            "expanded": [
+              "孤舟蓑笠翁，独钓寒江雪。"
+            ],
+            "clauses": [
+              "c1",
+              "c2"
+            ]
+          },
+          {
+            "path": "scene.actions[0].evidence",
+            "original": [
+              "独钓寒江雪"
+            ],
+            "expanded": [
+              "孤舟蓑笠翁，独钓寒江雪。"
+            ],
+            "clauses": [
+              "c1",
+              "c2"
+            ]
+          }
+        ],
+        "reviewRequired": true
+      },
+      "before": {
+        "settings": {
+          "wind": 0,
+          "density": 0.45,
+          "palette": "clear"
+        },
+        "organization": {
+          "version": "1.0",
+          "strategy": "regional-proposal",
+          "regions": {},
+          "candidates": [
+            {
+              "layout": "existing",
+              "errors": 0,
+              "cost": 30.525
+            }
+          ],
+          "repairs": [],
+          "limitations": [
+            "几何检查不判定诗意理解或审美合格",
+            "动作时序与整首诗的场景切换尚未编排"
+          ],
+          "graph": {
+            "nodes": [
+              {
+                "id": "l0",
+                "entities": [
+                  "i2"
+                ],
+                "tool": "figure",
+                "role": "subject",
+                "habitat": "deck",
+                "inferred": false,
+                "support": "l2"
+              },
+              {
+                "id": "l1",
+                "entities": [
+                  "i3"
+                ],
+                "tool": "water",
+                "role": "water",
+                "habitat": null,
+                "inferred": false,
+                "support": null
+              },
+              {
+                "id": "l2",
+                "entities": [
+                  "i1"
+                ],
+                "tool": "boat",
+                "role": "subject",
+                "habitat": "water",
+                "inferred": false,
+                "support": "l1"
+              },
+              {
+                "id": "l3",
+                "entities": [
+                  "i4"
+                ],
+                "tool": "snow",
+                "role": "atmosphere",
+                "habitat": null,
+                "inferred": false,
+                "support": null
+              },
+              {
+                "id": "l4",
+                "entities": [],
+                "tool": "landscape",
+                "role": "terrain",
+                "habitat": null,
+                "inferred": true,
+                "support": null
+              }
+            ],
+            "edges": [
+              {
+                "type": "supported-by",
+                "source": "l0",
+                "target": "l2",
+                "basis": "local-composition",
+                "habitat": "deck"
+              },
+              {
+                "type": "supported-by",
+                "source": "l2",
+                "target": "l1",
+                "basis": "local-composition",
+                "habitat": "water"
+              },
+              {
+                "type": "on",
+                "source": "l0",
+                "target": "l2",
+                "basis": "inferred",
+                "modality": "asserted",
+                "evidence": [
+                  "孤舟蓑笠翁"
+                ]
+              },
+              {
+                "type": "on",
+                "source": "l2",
+                "target": "l1",
+                "basis": "inferred",
+                "modality": "asserted",
+                "evidence": [
+                  "孤舟蓑笠翁，独钓寒江雪。"
+                ]
+              }
+            ],
+            "setting": "winter-fishing"
+          },
+          "audit": {
+            "scope": "implemented-geometry-and-drawing-gaps",
+            "coverage": {
+              "scope": "extracted-entities-only",
+              "present": 4,
+              "mapped": 4,
+              "parameters": [],
+              "missing": []
+            },
+            "checks": [
+              "presence",
+              "count",
+              "finite",
+              "water-support",
+              "cliff-support",
+              "grove-spread",
+              "drawing-gaps"
+            ],
+            "status": "needs-review",
+            "errors": 0,
+            "review": 1,
+            "issues": [
+              {
+                "code": "unresolved-relation",
+                "severity": "review",
+                "message": "有空间关系尚无对应布局画法"
+              }
+            ],
+            "metrics": {
+              "overlapPenalty": 0,
+              "balancePenalty": 0.066,
+              "motifFootprint": 0.034,
+              "landArea": 0
+            },
+            "cost": 30.525,
+            "aestheticAcceptance": "pending-user"
+          }
+        },
+        "tools": [
+          {
+            "id": "figure",
+            "timeScale": 1,
+            "paused": true,
+            "options": {
+              "pose": "fisher"
+            }
+          },
+          {
+            "id": "water",
+            "timeScale": 1,
+            "paused": true,
+            "options": {
+              "form": "plane"
+            }
+          },
+          {
+            "id": "boat",
+            "timeScale": 1,
+            "paused": true,
+            "options": {}
+          },
+          {
+            "id": "snow",
+            "timeScale": 1,
+            "paused": true,
+            "options": {
+              "state": "fall"
+            }
+          },
+          {
+            "id": "landscape",
+            "timeScale": 1,
+            "paused": true,
+            "options": {
+              "form": "mountain",
+              "relief": "layered",
+              "edge": "defined"
+            }
+          }
+        ],
+        "instances": 5
+      },
+      "after": {
+        "settings": {
+          "wind": 0,
+          "density": 0.35,
+          "palette": "clear"
+        },
+        "organization": {
+          "version": "1.0",
+          "strategy": "regional-proposal",
+          "regions": {
+            "water": [
+              [
+                0,
+                0.46
+              ],
+              [
+                1,
+                0.46
+              ],
+              [
+                1,
+                1.04
+              ],
+              [
+                0,
+                1.04
+              ]
+            ]
+          },
+          "candidates": [
+            {
+              "layout": "existing",
+              "errors": 0,
+              "cost": 30.525
+            }
+          ],
+          "repairs": [],
+          "limitations": [
+            "几何检查不判定诗意理解或审美合格",
+            "动作时序与整首诗的场景切换尚未编排"
+          ],
+          "graph": {
+            "nodes": [
+              {
+                "id": "l0",
+                "entities": [
+                  "i2"
+                ],
+                "tool": "figure",
+                "role": "subject",
+                "habitat": "deck",
+                "inferred": false,
+                "support": "l2"
+              },
+              {
+                "id": "l1",
+                "entities": [
+                  "i3"
+                ],
+                "tool": "water",
+                "role": "water",
+                "habitat": null,
+                "inferred": false,
+                "support": null
+              },
+              {
+                "id": "l2",
+                "entities": [
+                  "i1"
+                ],
+                "tool": "boat",
+                "role": "subject",
+                "habitat": "water",
+                "inferred": false,
+                "support": "l1"
+              },
+              {
+                "id": "l3",
+                "entities": [
+                  "i4"
+                ],
+                "tool": "snow",
+                "role": "atmosphere",
+                "habitat": null,
+                "inferred": false,
+                "support": null
+              },
+              {
+                "id": "l4",
+                "entities": [],
+                "tool": "landscape",
+                "role": "terrain",
+                "habitat": null,
+                "inferred": true,
+                "support": null
+              }
+            ],
+            "edges": [
+              {
+                "type": "supported-by",
+                "source": "l0",
+                "target": "l2",
+                "basis": "local-composition",
+                "habitat": "deck"
+              },
+              {
+                "type": "supported-by",
+                "source": "l2",
+                "target": "l1",
+                "basis": "local-composition",
+                "habitat": "water"
+              },
+              {
+                "type": "on",
+                "source": "l0",
+                "target": "l2",
+                "basis": "inferred",
+                "modality": "asserted",
+                "evidence": [
+                  "孤舟蓑笠翁"
+                ]
+              },
+              {
+                "type": "on",
+                "source": "l2",
+                "target": "l1",
+                "basis": "inferred",
+                "modality": "asserted",
+                "evidence": [
+                  "孤舟蓑笠翁，独钓寒江雪。"
+                ]
+              }
+            ],
+            "setting": "winter-fishing"
+          },
+          "audit": {
+            "scope": "implemented-geometry-and-drawing-gaps",
+            "coverage": {
+              "scope": "extracted-entities-only",
+              "present": 4,
+              "mapped": 4,
+              "parameters": [],
+              "missing": []
+            },
+            "checks": [
+              "presence",
+              "count",
+              "finite",
+              "water-support",
+              "cliff-support",
+              "grove-spread",
+              "drawing-gaps"
+            ],
+            "status": "needs-review",
+            "errors": 0,
+            "review": 1,
+            "issues": [
+              {
+                "code": "unresolved-relation",
+                "severity": "review",
+                "message": "有空间关系尚无对应布局画法"
+              }
+            ],
+            "metrics": {
+              "overlapPenalty": 0,
+              "balancePenalty": 0.066,
+              "motifFootprint": 0.055,
+              "landArea": 0
+            },
+            "cost": 30.525,
+            "aestheticAcceptance": "pending-user"
+          }
+        },
+        "semanticConsumption": {
+          "version": "3.3",
+          "items": [
+            {
+              "path": "scene.setting",
+              "status": "applied",
+              "consumer": "本地视觉策略",
+              "effect": "整体环境进入场景提案选择",
+              "basis": "inferred",
+              "evidence": [
+                "独钓寒江雪"
+              ]
+            },
+            {
+              "path": "scene.groups[0].role",
+              "status": "applied",
+              "consumer": "主次布局",
+              "effect": "主体相对突出",
+              "basis": "inferred",
+              "evidence": [
+                "孤舟蓑笠翁"
+              ]
+            },
+            {
+              "path": "scene.groups[0].pattern",
+              "status": "applied",
+              "consumer": "群落布局",
+              "effect": "按 single 组织显示单元；不覆盖明确数量",
+              "basis": "inferred",
+              "evidence": [
+                "孤舟蓑笠翁"
+              ]
+            },
+            {
+              "path": "scene.groups[0].depth",
+              "status": "applied",
+              "consumer": "远近布局",
+              "effect": "将 near 转为相对大小、透明度与允许区域内的落点",
+              "basis": "inferred",
+              "evidence": [
+                "孤舟蓑笠翁"
+              ]
+            },
+            {
+              "path": "scene.groups[1].role",
+              "status": "applied",
+              "consumer": "主次布局",
+              "effect": "保留环境画布范围，主次不改变地形边界；保留环境群落层次",
+              "basis": "inferred",
+              "evidence": [
+                "独钓寒江雪"
+              ]
+            },
+            {
+              "path": "scene.groups[1].pattern",
+              "status": "applied",
+              "consumer": "群落布局",
+              "effect": "按 field 组织显示单元；不覆盖明确数量",
+              "basis": "inferred",
+              "evidence": [
+                "独钓寒江雪"
+              ]
+            },
+            {
+              "path": "scene.groups[1].depth",
+              "status": "applied",
+              "consumer": "远近布局",
+              "effect": "将 middle 转为相对大小、透明度与允许区域内的落点",
+              "basis": "inferred",
+              "evidence": [
+                "独钓寒江雪"
+              ]
+            },
+            {
+              "path": "scene.supports[0]",
+              "status": "applied",
+              "consumer": "场景依托",
+              "effect": "使用已提取主体的现有承托画法",
+              "basis": "inferred",
+              "evidence": [
+                "孤舟蓑笠翁"
+              ]
+            },
+            {
+              "path": "scene.supports[1]",
+              "status": "applied",
+              "consumer": "场景依托",
+              "effect": "使用已提取主体的现有承托画法",
+              "basis": "inferred",
+              "evidence": [
+                "孤舟蓑笠翁，独钓寒江雪。"
+              ]
+            },
+            {
+              "path": "scene.actions[0].state",
+              "status": "applied",
+              "consumer": "形态与绘画时钟",
+              "effect": "静止姿态并停止该图层时钟",
+              "basis": "inferred",
+              "evidence": [
+                "孤舟蓑笠翁，独钓寒江雪。"
+              ]
+            },
+            {
+              "path": "scene.actions[0].pace",
+              "status": "skipped",
+              "consumer": "本地视觉策略",
+              "effect": "静止状态不推进时钟或位置",
+              "basis": "inferred",
+              "evidence": [
+                "孤舟蓑笠翁，独钓寒江雪。"
+              ]
+            },
+            {
+              "path": "scene.actions[0].direction",
+              "status": "skipped",
+              "consumer": "本地视觉策略",
+              "effect": "静止状态不推进时钟或位置",
+              "basis": "inferred",
+              "evidence": [
+                "孤舟蓑笠翁，独钓寒江雪。"
+              ]
+            },
+            {
+              "path": "scene.atmosphere.visibility",
+              "status": "applied",
+              "consumer": "画布色层与远景",
+              "effect": "可见度 clear；迷蒙或昏暗时淡化非光源图层",
+              "basis": "inferred",
+              "evidence": [
+                "独钓寒江雪"
+              ]
+            },
+            {
+              "path": "scene.atmosphere.illumination",
+              "status": "applied",
+              "consumer": "有限配色",
+              "effect": "照明 day 映射为本地 clear 配色；用户仍可手动覆盖",
+              "basis": "inferred",
+              "evidence": [
+                "独钓寒江雪"
+              ]
+            },
+            {
+              "path": "atmosphere.energy",
+              "status": "applied",
+              "consumer": "绘画时钟",
+              "effect": "没有明确动作节奏时，气息强弱控制已有微动的默认时钟"
+            },
+            {
+              "path": "atmosphere.openness",
+              "status": "applied",
+              "consumer": "群落分布与笔触密度",
+              "effect": "开阔度转换为本地间距与工具笔触密度，不等于原文数量"
+            },
+            {
+              "path": "atmosphere.valence",
+              "status": "applied",
+              "consumer": "有限配色",
+              "effect": "正向感受暂用 tender，其余用 clear；尚非完整情感色谱"
+            },
+            {
+              "path": "time.markers",
+              "status": "retained",
+              "consumer": "原始记录与解读",
+              "effect": "保留原文时间标记；本版照明由 scene.atmosphere 转换，多阶段时间逻辑未执行"
+            }
+          ],
+          "summary": {
+            "applied": 15,
+            "partial": 0,
+            "unsupported": 0,
+            "skipped": 2,
+            "retained": 1
+          },
+          "aestheticAcceptance": "pending-user"
+        },
+        "tools": [
+          {
+            "id": "figure",
+            "timeScale": 0,
+            "paused": true,
+            "options": {
+              "pose": "fisher"
+            }
+          },
+          {
+            "id": "water",
+            "timeScale": 0.45,
+            "paused": true,
+            "options": {
+              "form": "plane"
+            }
+          },
+          {
+            "id": "boat",
+            "timeScale": 0.45,
+            "paused": true,
+            "options": {}
+          },
+          {
+            "id": "snow",
+            "timeScale": 0.45,
+            "paused": true,
+            "options": {
+              "state": "fall"
+            }
+          },
+          {
+            "id": "landscape",
+            "timeScale": 1,
+            "paused": true,
+            "options": {
+              "form": "mountain",
+              "relief": "layered",
+              "edge": "defined"
+            }
+          }
+        ],
+        "instances": 5
+      }
+    },
+    {
+      "id": "s05",
+      "poem": "渡头馀落日，墟里上孤烟。",
+      "basis": "real-raw-valid",
+      "record": "2026-10-23T01-04-11-989Z-dc1950c4",
+      "rawValidation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [
+          "模型保留了不确定性，需要审阅",
+          "spatial[0] 的推断或非确定关系需审阅",
+          "spatial[1] 的推断或非确定关系需审阅",
+          "scene.setting 为语义推断，绘画选择需与原文明示区分",
+          "scene.groups[0] 为语义推断，绘画选择需与原文明示区分",
+          "scene.groups[1] 为语义推断，绘画选择需与原文明示区分",
+          "scene.supports[0] 为语义推断，绘画选择需与原文明示区分",
+          "scene.supports[1] 为语义推断，绘画选择需与原文明示区分",
+          "scene.actions[0] 为语义推断，绘画选择需与原文明示区分",
+          "scene.atmosphere 为语义推断，绘画选择需与原文明示区分"
+        ],
+        "review_required": true
+      },
+      "sourceContext": null,
+      "before": {
+        "settings": {
+          "wind": 0,
+          "density": 0.45,
+          "palette": "clear"
+        },
+        "organization": {
+          "version": "1.0",
+          "strategy": "general-constraints",
+          "regions": {
+            "water": [
+              [
+                0.38,
+                0.45
+              ],
+              [
+                1.04,
+                0.45
+              ],
+              [
+                1.04,
+                1.04
+              ],
+              [
+                0.28,
+                1.04
+              ],
+              [
+                0.47,
+                0.79
+              ],
+              [
+                0.35,
+                0.62
+              ]
+            ],
+            "land": [
+              [
+                -0.04,
+                0.48
+              ],
+              [
+                0.34,
+                0.48
+              ],
+              [
+                0.35,
+                0.62
+              ],
+              [
+                0.47,
+                0.79
+              ],
+              [
+                0.28,
+                1.04
+              ],
+              [
+                -0.04,
+                1.04
+              ]
+            ]
+          },
+          "candidates": [
+            {
+              "layout": 0,
+              "orientation": "left-bank",
+              "errors": 0,
+              "cost": 75.838,
+              "metrics": {
+                "overlapPenalty": 1.117,
+                "balancePenalty": 0.304,
+                "motifFootprint": 0.078,
+                "landArea": 0.234
+              }
+            },
+            {
+              "layout": 1,
+              "orientation": "right-bank",
+              "errors": 0,
+              "cost": 76.214,
+              "metrics": {
+                "overlapPenalty": 1.149,
+                "balancePenalty": 0.303,
+                "motifFootprint": 0.081,
+                "landArea": 0.234
+              }
+            },
+            {
+              "layout": 2,
+              "orientation": "left-bank",
+              "errors": 0,
+              "cost": 76.578,
+              "metrics": {
+                "overlapPenalty": 1.179,
+                "balancePenalty": 0.303,
+                "motifFootprint": 0.084,
+                "landArea": 0.234
+              }
+            }
+          ],
+          "repairs": [
+            {
+              "type": "support-added",
+              "reason": "舟、游鱼、水生植物或渡口水岸需要水域；水形和范围是本地选择"
+            }
+          ],
+          "limitations": [
+            "几何检查不判定诗意理解或审美合格",
+            "动作时序与整首诗的场景切换尚未编排"
+          ],
+          "layout": 0,
+          "orientation": "left-bank",
+          "audit": {
+            "scope": "implemented-geometry-and-drawing-gaps",
+            "coverage": {
+              "scope": "extracted-entities-only",
+              "present": 4,
+              "mapped": 4,
+              "parameters": [],
+              "missing": []
+            },
+            "checks": [
+              "presence",
+              "count",
+              "finite",
+              "support",
+              "scale",
+              "relative-position",
+              "depth",
+              "grove-spread",
+              "drawing-gaps"
+            ],
+            "status": "needs-review",
+            "errors": 0,
+            "review": 2,
+            "issues": [
+              {
+                "code": "unresolved-relation",
+                "severity": "review",
+                "message": "有空间关系尚无对应布局画法"
+              },
+              {
+                "code": "unresolved-relation",
+                "severity": "review",
+                "message": "有空间关系尚无对应布局画法"
+              }
+            ],
+            "metrics": {
+              "overlapPenalty": 1.117,
+              "balancePenalty": 0.304,
+              "motifFootprint": 0.078,
+              "landArea": 0.234
+            },
+            "cost": 75.838,
+            "aestheticAcceptance": "pending-user"
+          },
+          "graph": {
+            "nodes": [
+              {
+                "id": "l0",
+                "entities": [
+                  "i1"
+                ],
+                "tool": "landscape",
+                "role": "terrain",
+                "habitat": null,
+                "inferred": false,
+                "support": null
+              },
+              {
+                "id": "l1",
+                "entities": [
+                  "i2"
+                ],
+                "tool": "landscape",
+                "role": "sky",
+                "habitat": null,
+                "inferred": false,
+                "support": "l0"
+              },
+              {
+                "id": "l2",
+                "entities": [
+                  "i4"
+                ],
+                "tool": "mist",
+                "role": "atmosphere",
+                "habitat": null,
+                "inferred": false,
+                "support": "l3"
+              },
+              {
+                "id": "l3",
+                "entities": [
+                  "i3"
+                ],
+                "tool": "dwelling",
+                "role": "subject",
+                "habitat": "land",
+                "inferred": false,
+                "support": "l0"
+              },
+              {
+                "id": "l4",
+                "entities": [],
+                "tool": "landscape",
+                "role": "terrain",
+                "habitat": null,
+                "inferred": true,
+                "support": null
+              },
+              {
+                "id": "l5",
+                "entities": [],
+                "tool": "water",
+                "role": "water",
+                "habitat": null,
+                "inferred": true,
+                "support": null
+              }
+            ],
+            "edges": [
+              {
+                "type": "supported-by",
+                "source": "l3",
+                "target": "l0",
+                "basis": "local-composition",
+                "habitat": "land"
+              },
+              {
+                "type": "on",
+                "source": "l1",
+                "target": "l0",
+                "basis": "inferred",
+                "modality": "asserted",
+                "evidence": [
+                  "渡头馀落日"
+                ]
+              },
+              {
+                "type": "on",
+                "source": "l2",
+                "target": "l3",
+                "basis": "inferred",
+                "modality": "asserted",
+                "evidence": [
+                  "墟里上孤烟"
+                ]
+              }
+            ],
+            "setting": "village"
+          }
+        },
+        "tools": [
+          {
+            "id": "landscape",
+            "timeScale": 1,
+            "paused": true,
+            "options": {
+              "form": "shore",
+              "relief": "layered",
+              "edge": "soft"
+            }
+          },
+          {
+            "id": "landscape",
+            "timeScale": 1,
+            "paused": true,
+            "options": {
+              "form": "sun",
+              "relief": "layered",
+              "edge": "defined"
+            }
+          },
+          {
+            "id": "mist",
+            "timeScale": 1,
+            "paused": true,
+            "options": {
+              "form": "plume"
+            }
+          },
+          {
+            "id": "dwelling",
+            "timeScale": 1,
+            "paused": true,
+            "options": {
+              "kind": "house"
+            }
+          },
+          {
+            "id": "dwelling",
+            "timeScale": 1,
+            "paused": true,
+            "options": {
+              "kind": "house"
+            }
+          },
+          {
+            "id": "dwelling",
+            "timeScale": 1,
+            "paused": true,
+            "options": {
+              "kind": "house"
+            }
+          },
+          {
+            "id": "landscape",
+            "timeScale": 1,
+            "paused": true,
+            "options": {
+              "form": "ground",
+              "relief": "layered",
+              "edge": "soft"
+            }
+          },
+          {
+            "id": "water",
+            "timeScale": 1,
+            "paused": true,
+            "options": {
+              "form": "plane"
+            }
+          }
+        ],
+        "instances": 8
+      },
+      "after": {
+        "settings": {
+          "wind": 0,
+          "density": 0.45,
+          "palette": "twilight"
+        },
+        "organization": {
+          "version": "1.0",
+          "strategy": "regional-proposal",
+          "regions": {
+            "village": [
+              [
+                0.32,
+                0.58
+              ],
+              [
+                0.75,
+                0.58
+              ],
+              [
+                0.82,
+                0.85
+              ],
+              [
+                0.28,
+                0.85
+              ]
+            ],
+            "water": [
+              [
+                0,
+                0.46
+              ],
+              [
+                1,
+                0.46
+              ],
+              [
+                1,
+                1.04
+              ],
+              [
+                0,
+                1.04
+              ]
+            ]
+          },
+          "candidates": [
+            {
+              "layout": "existing",
+              "errors": 0,
+              "cost": 64.665
+            }
+          ],
+          "repairs": [],
+          "limitations": [
+            "几何检查不判定诗意理解或审美合格",
+            "动作时序与整首诗的场景切换尚未编排"
+          ],
+          "graph": {
+            "nodes": [
+              {
+                "id": "l0",
+                "entities": [
+                  "i1"
+                ],
+                "tool": "landscape",
+                "role": "terrain",
+                "habitat": null,
+                "inferred": false,
+                "support": null
+              },
+              {
+                "id": "l1",
+                "entities": [
+                  "i2"
+                ],
+                "tool": "landscape",
+                "role": "sky",
+                "habitat": null,
+                "inferred": false,
+                "support": "l0"
+              },
+              {
+                "id": "l2",
+                "entities": [
+                  "i4"
+                ],
+                "tool": "mist",
+                "role": "atmosphere",
+                "habitat": null,
+                "inferred": false,
+                "support": "l3"
+              },
+              {
+                "id": "l3",
+                "entities": [
+                  "i3"
+                ],
+                "tool": "dwelling",
+                "role": "subject",
+                "habitat": "land",
+                "inferred": false,
+                "support": "l0"
+              },
+              {
+                "id": "l4",
+                "entities": [],
+                "tool": "landscape",
+                "role": "terrain",
+                "habitat": null,
+                "inferred": true,
+                "support": null
+              },
+              {
+                "id": "l5",
+                "entities": [],
+                "tool": "water",
+                "role": "water",
+                "habitat": null,
+                "inferred": true,
+                "support": null
+              }
+            ],
+            "edges": [
+              {
+                "type": "supported-by",
+                "source": "l3",
+                "target": "l0",
+                "basis": "local-composition",
+                "habitat": "land"
+              },
+              {
+                "type": "on",
+                "source": "l1",
+                "target": "l0",
+                "basis": "inferred",
+                "modality": "asserted",
+                "evidence": [
+                  "渡头馀落日"
+                ]
+              },
+              {
+                "type": "on",
+                "source": "l2",
+                "target": "l3",
+                "basis": "inferred",
+                "modality": "asserted",
+                "evidence": [
+                  "墟里上孤烟"
+                ]
+              }
+            ],
+            "setting": "village"
+          },
+          "audit": {
+            "scope": "implemented-geometry-and-drawing-gaps",
+            "coverage": {
+              "scope": "extracted-entities-only",
+              "present": 4,
+              "mapped": 4,
+              "parameters": [],
+              "missing": []
+            },
+            "checks": [
+              "presence",
+              "count",
+              "finite",
+              "water-support",
+              "cliff-support",
+              "grove-spread",
+              "drawing-gaps"
+            ],
+            "status": "needs-review",
+            "errors": 0,
+            "review": 2,
+            "issues": [
+              {
+                "code": "unresolved-relation",
+                "severity": "review",
+                "message": "有空间关系尚无对应布局画法"
+              },
+              {
+                "code": "unresolved-relation",
+                "severity": "review",
+                "message": "有空间关系尚无对应布局画法"
+              }
+            ],
+            "metrics": {
+              "overlapPenalty": 0.345,
+              "balancePenalty": 0.065,
+              "motifFootprint": 0.059,
+              "landArea": 0
+            },
+            "cost": 64.665,
+            "aestheticAcceptance": "pending-user"
+          }
+        },
+        "semanticConsumption": {
+          "version": "3.3",
+          "items": [
+            {
+              "path": "scene.setting",
+              "status": "applied",
+              "consumer": "场景依托",
+              "effect": "必要环境以独立推断背景表示，不新增原文实体",
+              "basis": "inferred",
+              "evidence": [
+                "渡头馀落日",
+                "墟里上孤烟"
+              ]
+            },
+            {
+              "path": "scene.groups[0].role",
+              "status": "applied",
+              "consumer": "主次布局",
+              "effect": "保留环境画布范围，主次不改变地形边界；主体相对突出",
+              "basis": "inferred",
+              "evidence": [
+                "渡头馀落日"
+              ]
+            },
+            {
+              "path": "scene.groups[0].pattern",
+              "status": "applied",
+              "consumer": "群落布局",
+              "effect": "按 single 组织显示单元；不覆盖明确数量",
+              "basis": "inferred",
+              "evidence": [
+                "渡头馀落日"
+              ]
+            },
+            {
+              "path": "scene.groups[0].depth",
+              "status": "applied",
+              "consumer": "远近布局",
+              "effect": "将 middle 转为相对大小、透明度与允许区域内的落点",
+              "basis": "inferred",
+              "evidence": [
+                "渡头馀落日"
+              ]
+            },
+            {
+              "path": "scene.groups[1].role",
+              "status": "applied",
+              "consumer": "主次布局",
+              "effect": "主体相对突出",
+              "basis": "inferred",
+              "evidence": [
+                "墟里上孤烟"
+              ]
+            },
+            {
+              "path": "scene.groups[1].pattern",
+              "status": "applied",
+              "consumer": "群落布局",
+              "effect": "按 single 组织显示单元；不覆盖明确数量",
+              "basis": "inferred",
+              "evidence": [
+                "墟里上孤烟"
+              ]
+            },
+            {
+              "path": "scene.groups[1].depth",
+              "status": "applied",
+              "consumer": "远近布局",
+              "effect": "将 far 转为相对大小、透明度与允许区域内的落点",
+              "basis": "inferred",
+              "evidence": [
+                "墟里上孤烟"
+              ]
+            },
+            {
+              "path": "scene.supports[0]",
+              "status": "unsupported",
+              "consumer": "场景依托",
+              "effect": "光源不作地面上的实体，未执行该依托判断",
+              "basis": "inferred",
+              "evidence": [
+                "渡头馀落日"
+              ]
+            },
+            {
+              "path": "scene.supports[1]",
+              "status": "partial",
+              "consumer": "场景依托",
+              "effect": "烟与已有屋舍建立屋顶锚点；未把烟当作落地实体",
+              "basis": "inferred",
+              "evidence": [
+                "墟里上孤烟"
+              ]
+            },
+            {
+              "path": "scene.actions[0].state",
+              "status": "applied",
+              "consumer": "形态与绘画时钟",
+              "effect": "启用工具支持的 rise 状态",
+              "basis": "inferred",
+              "evidence": [
+                "墟里上孤烟"
+              ]
+            },
+            {
+              "path": "scene.actions[0].pace",
+              "status": "applied",
+              "consumer": "绘画时钟",
+              "effect": "定性节奏映射为本地时钟倍率 0.35",
+              "basis": "inferred",
+              "evidence": [
+                "墟里上孤烟"
+              ]
+            },
+            {
+              "path": "scene.actions[0].direction",
+              "status": "applied",
+              "consumer": "工具原生运动",
+              "effect": "使用原生向上／向下运动，不平移依托锚点",
+              "basis": "inferred",
+              "evidence": [
+                "墟里上孤烟"
+              ]
+            },
+            {
+              "path": "scene.atmosphere.visibility",
+              "status": "applied",
+              "consumer": "画布色层与远景",
+              "effect": "可见度 clear；迷蒙或昏暗时淡化非光源图层",
+              "basis": "inferred",
+              "evidence": [
+                "渡头馀落日"
+              ]
+            },
+            {
+              "path": "scene.atmosphere.illumination",
+              "status": "applied",
+              "consumer": "有限配色",
+              "effect": "照明 twilight 映射为本地 twilight 配色；用户仍可手动覆盖",
+              "basis": "inferred",
+              "evidence": [
+                "渡头馀落日"
+              ]
+            },
+            {
+              "path": "atmosphere.energy",
+              "status": "applied",
+              "consumer": "绘画时钟",
+              "effect": "没有明确动作节奏时，气息强弱控制已有微动的默认时钟"
+            },
+            {
+              "path": "atmosphere.openness",
+              "status": "applied",
+              "consumer": "群落分布与笔触密度",
+              "effect": "开阔度转换为本地间距与工具笔触密度，不等于原文数量"
+            },
+            {
+              "path": "atmosphere.valence",
+              "status": "skipped",
+              "consumer": "有限配色",
+              "effect": "照明策略优先，本次不另套情绪配色"
+            },
+            {
+              "path": "time.markers",
+              "status": "retained",
+              "consumer": "原始记录与解读",
+              "effect": "保留原文时间标记；本版照明由 scene.atmosphere 转换，多阶段时间逻辑未执行"
+            }
+          ],
+          "summary": {
+            "applied": 14,
+            "partial": 1,
+            "unsupported": 1,
+            "skipped": 1,
+            "retained": 1
+          },
+          "aestheticAcceptance": "pending-user"
+        },
+        "tools": [
+          {
+            "id": "landscape",
+            "timeScale": 0.45,
+            "paused": true,
+            "options": {
+              "form": "shore",
+              "relief": "layered",
+              "edge": "defined"
+            }
+          },
+          {
+            "id": "landscape",
+            "timeScale": 0.45,
+            "paused": true,
+            "options": {
+              "form": "sun",
+              "relief": "layered",
+              "edge": "defined"
+            }
+          },
+          {
+            "id": "mist",
+            "timeScale": 0.35,
+            "paused": true,
+            "options": {
+              "form": "plume"
+            }
+          },
+          {
+            "id": "dwelling",
+            "timeScale": 0.45,
+            "paused": true,
+            "options": {
+              "kind": "house"
+            }
+          },
+          {
+            "id": "dwelling",
+            "timeScale": 0.45,
+            "paused": true,
+            "options": {
+              "kind": "house"
+            }
+          },
+          {
+            "id": "dwelling",
+            "timeScale": 0.45,
+            "paused": true,
+            "options": {
+              "kind": "house"
+            }
+          },
+          {
+            "id": "landscape",
+            "timeScale": 1,
+            "paused": true,
+            "options": {
+              "form": "ground",
+              "relief": "layered",
+              "edge": "defined"
+            }
+          },
+          {
+            "id": "water",
+            "timeScale": 1,
+            "paused": true,
+            "options": {
+              "form": "plane"
+            }
+          }
+        ],
+        "instances": 8
+      }
+    },
+    {
+      "id": "s06",
+      "poem": "漠漠水田飞白鹭，阴阴夏木啭黄鹂。",
+      "basis": "real-raw-valid",
+      "record": "2026-10-23T01-04-19-645Z-f44972c5",
+      "rawValidation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [
+          "模型保留了不确定性，需要审阅",
+          "spatial[0] 的推断或非确定关系需审阅",
+          "spatial[1] 的推断或非确定关系需审阅",
+          "scene.setting 为语义推断，绘画选择需与原文明示区分",
+          "scene.groups[0] 为语义推断，绘画选择需与原文明示区分",
+          "scene.groups[1] 为语义推断，绘画选择需与原文明示区分",
+          "scene.groups[2] 为语义推断，绘画选择需与原文明示区分",
+          "scene.groups[3] 为语义推断，绘画选择需与原文明示区分",
+          "scene.supports[0] 为语义推断，绘画选择需与原文明示区分",
+          "scene.supports[1] 为语义推断，绘画选择需与原文明示区分",
+          "scene.atmosphere 为语义推断，绘画选择需与原文明示区分"
+        ],
+        "review_required": true
+      },
+      "sourceContext": null,
+      "before": {
+        "settings": {
+          "wind": 0,
+          "density": 0.45,
+          "palette": "clear"
+        },
+        "organization": {
+          "version": "1.0",
+          "strategy": "regional-proposal",
+          "regions": {
+            "field": [
+              [
+                0,
+                0.39
+              ],
+              [
+                0.75,
+                0.39
+              ],
+              [
+                0.89,
+                0.62
+              ],
+              [
+                0.81,
+                1
+              ],
+              [
+                0,
+                1
+              ]
+            ]
+          },
+          "candidates": [
+            {
+              "layout": "existing",
+              "errors": 0,
+              "cost": 440.194
+            }
+          ],
+          "repairs": [],
+          "limitations": [
+            "几何检查不判定诗意理解或审美合格",
+            "动作时序与整首诗的场景切换尚未编排"
+          ],
+          "graph": {
+            "nodes": [
+              {
+                "id": "l0",
+                "entities": [
+                  "i1"
+                ],
+                "tool": "landscape",
+                "role": "terrain",
+                "habitat": null,
+                "inferred": false,
+                "support": null
+              },
+              {
+                "id": "l1",
+                "entities": [
+                  "i3"
+                ],
+                "tool": "tree",
+                "role": "vegetation",
+                "habitat": "land",
+                "inferred": false,
+                "support": "l0"
+              },
+              {
+                "id": "l2",
+                "entities": [
+                  "i2"
+                ],
+                "tool": "bird",
+                "role": "fauna",
+                "habitat": "air",
+                "inferred": false,
+                "support": "l0"
+              },
+              {
+                "id": "l3",
+                "entities": [
+                  "i4"
+                ],
+                "tool": "bird",
+                "role": "fauna",
+                "habitat": "air",
+                "inferred": false,
+                "support": null
+              }
+            ],
+            "edges": [
+              {
+                "type": "supported-by",
+                "source": "l1",
+                "target": "l0",
+                "basis": "local-composition",
+                "habitat": "land"
+              },
+              {
+                "type": "supported-by",
+                "source": "l2",
+                "target": "l0",
+                "basis": "local-composition",
+                "habitat": "air"
+              },
+              {
+                "type": "supported-by",
+                "source": "l3",
+                "target": null,
+                "basis": "local-composition",
+                "habitat": "air"
+              },
+              {
+                "type": "on",
+                "source": "l2",
+                "target": "l0",
+                "basis": "inferred",
+                "modality": "asserted",
+                "evidence": [
+                  "漠漠水田飞白鹭"
+                ]
+              },
+              {
+                "type": "among",
+                "source": "l3",
+                "target": "l1",
+                "basis": "inferred",
+                "modality": "asserted",
+                "evidence": [
+                  "阴阴夏木啭黄鹂"
+                ]
+              }
+            ],
+            "setting": "paddy-woodland"
+          },
+          "audit": {
+            "scope": "implemented-geometry-and-drawing-gaps",
+            "coverage": {
+              "scope": "extracted-entities-only",
+              "present": 4,
+              "mapped": 4,
+              "parameters": [],
+              "missing": []
+            },
+            "checks": [
+              "presence",
+              "count",
+              "finite",
+              "water-support",
+              "cliff-support",
+              "grove-spread",
+              "drawing-gaps"
+            ],
+            "status": "needs-review",
+            "errors": 0,
+            "review": 2,
+            "issues": [
+              {
+                "code": "unresolved-relation",
+                "severity": "review",
+                "message": "有空间关系尚无对应布局画法"
+              },
+              {
+                "code": "unresolved-relation",
+                "severity": "review",
+                "message": "有空间关系尚无对应布局画法"
+              }
+            ],
+            "metrics": {
+              "overlapPenalty": 31.482,
+              "balancePenalty": 0.302,
+              "motifFootprint": 1.979,
+              "landArea": 0
+            },
+            "cost": 440.194,
+            "aestheticAcceptance": "pending-user"
+          }
+        },
+        "tools": [
+          {
+            "id": "landscape",
+            "timeScale": 1,
+            "paused": true,
+            "options": {
+              "form": "field",
+              "relief": "layered",
+              "edge": "defined"
+            }
+          },
+          {
+            "id": "tree",
+            "timeScale": 1,
+            "paused": true,
+            "options": {
+              "form": "broadleaf",
+              "branches": "7",
+              "crown": "wash"
+            }
+          },
+          {
+            "id": "tree",
+            "timeScale": 1,
+            "paused": true,
+            "options": {
+              "form": "broadleaf",
+              "branches": "7",
+              "crown": "wash"
+            }
+          },
+          {
+            "id": "tree",
+            "timeScale": 1,
+            "paused": true,
+            "options": {
+              "form": "broadleaf",
+              "branches": "7",
+              "crown": "wash"
+            }
+          },
+          {
+            "id": "bird",
+            "timeScale": 1,
+            "paused": true,
+            "options": {
+              "pose": "flying",
+              "tone": "light",
+              "facing": "right"
+            }
+          },
+          {
+            "id": "bird",
+            "timeScale": 1,
+            "paused": true,
+            "options": {
+              "pose": "flying",
+              "tone": "light",
+              "facing": "right"
+            }
+          },
+          {
+            "id": "bird",
+            "timeScale": 1,
+            "paused": true,
+            "options": {
+              "pose": "flying",
+              "tone": "light",
+              "facing": "right"
+            }
+          },
+          {
+            "id": "bird",
+            "timeScale": 1,
+            "paused": true,
+            "options": {
+              "pose": "flying",
+              "tone": "ink",
+              "facing": "right"
+            }
+          },
+          {
+            "id": "bird",
+            "timeScale": 1,
+            "paused": true,
+            "options": {
+              "pose": "flying",
+              "tone": "ink",
+              "facing": "right"
+            }
+          },
+          {
+            "id": "bird",
+            "timeScale": 1,
+            "paused": true,
+            "options": {
+              "pose": "flying",
+              "tone": "ink",
+              "facing": "right"
+            }
+          }
+        ],
+        "instances": 25
+      },
+      "after": {
+        "settings": {
+          "wind": 0,
+          "density": 0.45,
+          "palette": "tender"
+        },
+        "organization": {
+          "version": "1.0",
+          "strategy": "regional-proposal",
+          "regions": {
+            "field": [
+              [
+                0,
+                0.39
+              ],
+              [
+                0.75,
+                0.39
+              ],
+              [
+                0.89,
+                0.62
+              ],
+              [
+                0.81,
+                1
+              ],
+              [
+                0,
+                1
+              ]
+            ]
+          },
+          "candidates": [
+            {
+              "layout": "existing",
+              "errors": 0,
+              "cost": 226.212
+            }
+          ],
+          "repairs": [],
+          "limitations": [
+            "几何检查不判定诗意理解或审美合格",
+            "动作时序与整首诗的场景切换尚未编排"
+          ],
+          "graph": {
+            "nodes": [
+              {
+                "id": "l0",
+                "entities": [
+                  "i1"
+                ],
+                "tool": "landscape",
+                "role": "terrain",
+                "habitat": null,
+                "inferred": false,
+                "support": null
+              },
+              {
+                "id": "l1",
+                "entities": [
+                  "i3"
+                ],
+                "tool": "tree",
+                "role": "vegetation",
+                "habitat": "land",
+                "inferred": false,
+                "support": "l0"
+              },
+              {
+                "id": "l2",
+                "entities": [
+                  "i2"
+                ],
+                "tool": "bird",
+                "role": "fauna",
+                "habitat": "air",
+                "inferred": false,
+                "support": "l0"
+              },
+              {
+                "id": "l3",
+                "entities": [
+                  "i4"
+                ],
+                "tool": "bird",
+                "role": "fauna",
+                "habitat": "air",
+                "inferred": false,
+                "support": null
+              }
+            ],
+            "edges": [
+              {
+                "type": "supported-by",
+                "source": "l1",
+                "target": "l0",
+                "basis": "local-composition",
+                "habitat": "land"
+              },
+              {
+                "type": "supported-by",
+                "source": "l2",
+                "target": "l0",
+                "basis": "local-composition",
+                "habitat": "air"
+              },
+              {
+                "type": "supported-by",
+                "source": "l3",
+                "target": null,
+                "basis": "local-composition",
+                "habitat": "air"
+              },
+              {
+                "type": "on",
+                "source": "l2",
+                "target": "l0",
+                "basis": "inferred",
+                "modality": "asserted",
+                "evidence": [
+                  "漠漠水田飞白鹭"
+                ]
+              },
+              {
+                "type": "among",
+                "source": "l3",
+                "target": "l1",
+                "basis": "inferred",
+                "modality": "asserted",
+                "evidence": [
+                  "阴阴夏木啭黄鹂"
+                ]
+              }
+            ],
+            "setting": "paddy-woodland"
+          },
+          "audit": {
+            "scope": "implemented-geometry-and-drawing-gaps",
+            "coverage": {
+              "scope": "extracted-entities-only",
+              "present": 4,
+              "mapped": 4,
+              "parameters": [],
+              "missing": []
+            },
+            "checks": [
+              "presence",
+              "count",
+              "finite",
+              "water-support",
+              "cliff-support",
+              "grove-spread",
+              "drawing-gaps"
+            ],
+            "status": "needs-review",
+            "errors": 0,
+            "review": 2,
+            "issues": [
+              {
+                "code": "unresolved-relation",
+                "severity": "review",
+                "message": "有空间关系尚无对应布局画法"
+              },
+              {
+                "code": "unresolved-relation",
+                "severity": "review",
+                "message": "有空间关系尚无对应布局画法"
+              }
+            ],
+            "metrics": {
+              "overlapPenalty": 13.64,
+              "balancePenalty": 0.317,
+              "motifFootprint": 1.597,
+              "landArea": 0
+            },
+            "cost": 226.212,
+            "aestheticAcceptance": "pending-user"
+          }
+        },
+        "semanticConsumption": {
+          "version": "3.3",
+          "items": [
+            {
+              "path": "scene.setting",
+              "status": "applied",
+              "consumer": "本地视觉策略",
+              "effect": "整体环境进入场景提案选择",
+              "basis": "inferred",
+              "evidence": [
+                "漠漠水田飞白鹭",
+                "阴阴夏木啭黄鹂"
+              ]
+            },
+            {
+              "path": "scene.groups[0].role",
+              "status": "applied",
+              "consumer": "主次布局",
+              "effect": "保留环境画布范围，主次不改变地形边界",
+              "basis": "inferred",
+              "evidence": [
+                "漠漠水田飞白鹭"
+              ]
+            },
+            {
+              "path": "scene.groups[0].pattern",
+              "status": "applied",
+              "consumer": "群落布局",
+              "effect": "按 field 组织显示单元；不覆盖明确数量",
+              "basis": "inferred",
+              "evidence": [
+                "漠漠水田飞白鹭"
+              ]
+            },
+            {
+              "path": "scene.groups[0].depth",
+              "status": "applied",
+              "consumer": "远近布局",
+              "effect": "将 middle 转为相对大小、透明度与允许区域内的落点",
+              "basis": "inferred",
+              "evidence": [
+                "漠漠水田飞白鹭"
+              ]
+            },
+            {
+              "path": "scene.groups[1].role",
+              "status": "applied",
+              "consumer": "主次布局",
+              "effect": "点景缩小淡化",
+              "basis": "inferred",
+              "evidence": [
+                "漠漠水田飞白鹭"
+              ]
+            },
+            {
+              "path": "scene.groups[1].pattern",
+              "status": "applied",
+              "consumer": "群落布局",
+              "effect": "按 single 组织显示单元；不覆盖明确数量",
+              "basis": "inferred",
+              "evidence": [
+                "漠漠水田飞白鹭"
+              ]
+            },
+            {
+              "path": "scene.groups[1].depth",
+              "status": "applied",
+              "consumer": "远近布局",
+              "effect": "将 middle 转为相对大小、透明度与允许区域内的落点",
+              "basis": "inferred",
+              "evidence": [
+                "漠漠水田飞白鹭"
+              ]
+            },
+            {
+              "path": "scene.groups[2].role",
+              "status": "applied",
+              "consumer": "主次布局",
+              "effect": "保留环境群落层次",
+              "basis": "inferred",
+              "evidence": [
+                "阴阴夏木啭黄鹂"
+              ]
+            },
+            {
+              "path": "scene.groups[2].pattern",
+              "status": "applied",
+              "consumer": "群落布局",
+              "effect": "按 grove 组织显示单元；不覆盖明确数量",
+              "basis": "inferred",
+              "evidence": [
+                "阴阴夏木啭黄鹂"
+              ]
+            },
+            {
+              "path": "scene.groups[2].depth",
+              "status": "applied",
+              "consumer": "远近布局",
+              "effect": "将 middle 转为相对大小、透明度与允许区域内的落点",
+              "basis": "inferred",
+              "evidence": [
+                "阴阴夏木啭黄鹂"
+              ]
+            },
+            {
+              "path": "scene.groups[3].role",
+              "status": "applied",
+              "consumer": "主次布局",
+              "effect": "点景缩小淡化",
+              "basis": "inferred",
+              "evidence": [
+                "阴阴夏木啭黄鹂"
+              ]
+            },
+            {
+              "path": "scene.groups[3].pattern",
+              "status": "applied",
+              "consumer": "群落布局",
+              "effect": "按 single 组织显示单元；不覆盖明确数量",
+              "basis": "inferred",
+              "evidence": [
+                "阴阴夏木啭黄鹂"
+              ]
+            },
+            {
+              "path": "scene.groups[3].depth",
+              "status": "applied",
+              "consumer": "远近布局",
+              "effect": "将 middle 转为相对大小、透明度与允许区域内的落点",
+              "basis": "inferred",
+              "evidence": [
+                "阴阴夏木啭黄鹂"
+              ]
+            },
+            {
+              "path": "scene.supports[0]",
+              "status": "applied",
+              "consumer": "场景依托",
+              "effect": "使用已提取主体的现有承托画法",
+              "basis": "inferred",
+              "evidence": [
+                "漠漠水田飞白鹭"
+              ]
+            },
+            {
+              "path": "scene.supports[1]",
+              "status": "applied",
+              "consumer": "场景依托",
+              "effect": "使用已提取主体的现有承托画法",
+              "basis": "inferred",
+              "evidence": [
+                "阴阴夏木啭黄鹂"
+              ]
+            },
+            {
+              "path": "scene.actions[0].state",
+              "status": "applied",
+              "consumer": "形态与绘画时钟",
+              "effect": "启用工具支持的 fly 状态",
+              "basis": "explicit",
+              "evidence": [
+                "漠漠水田飞白鹭"
+              ]
+            },
+            {
+              "path": "scene.actions[0].pace",
+              "status": "applied",
+              "consumer": "绘画时钟",
+              "effect": "定性节奏映射为本地时钟倍率 0.8",
+              "basis": "explicit",
+              "evidence": [
+                "漠漠水田飞白鹭"
+              ]
+            },
+            {
+              "path": "scene.actions[0].direction",
+              "status": "applied",
+              "consumer": "画布合成",
+              "effect": "方向未明，仅用本地小幅微动",
+              "basis": "explicit",
+              "evidence": [
+                "漠漠水田飞白鹭"
+              ]
+            },
+            {
+              "path": "scene.actions[1].state",
+              "status": "skipped",
+              "consumer": "动作边界",
+              "effect": "动作未明，保留静态形态",
+              "basis": "explicit",
+              "evidence": [
+                "阴阴夏木啭黄鹂"
+              ]
+            },
+            {
+              "path": "scene.actions[1].pace",
+              "status": "skipped",
+              "consumer": "本地视觉策略",
+              "effect": "该工具尚不支持此动作分量",
+              "basis": "explicit",
+              "evidence": [
+                "阴阴夏木啭黄鹂"
+              ]
+            },
+            {
+              "path": "scene.actions[1].direction",
+              "status": "skipped",
+              "consumer": "本地视觉策略",
+              "effect": "该工具尚不支持此动作分量",
+              "basis": "explicit",
+              "evidence": [
+                "阴阴夏木啭黄鹂"
+              ]
+            },
+            {
+              "path": "scene.atmosphere.visibility",
+              "status": "applied",
+              "consumer": "画布色层与远景",
+              "effect": "可见度 clear；迷蒙或昏暗时淡化非光源图层",
+              "basis": "inferred",
+              "evidence": [
+                "漠漠水田飞白鹭",
+                "阴阴夏木啭黄鹂"
+              ]
+            },
+            {
+              "path": "scene.atmosphere.illumination",
+              "status": "applied",
+              "consumer": "有限配色",
+              "effect": "照明 day 映射为本地 tender 配色；用户仍可手动覆盖",
+              "basis": "inferred",
+              "evidence": [
+                "漠漠水田飞白鹭",
+                "阴阴夏木啭黄鹂"
+              ]
+            },
+            {
+              "path": "atmosphere.energy",
+              "status": "applied",
+              "consumer": "绘画时钟",
+              "effect": "没有明确动作节奏时，气息强弱控制已有微动的默认时钟"
+            },
+            {
+              "path": "atmosphere.openness",
+              "status": "applied",
+              "consumer": "群落分布与笔触密度",
+              "effect": "开阔度转换为本地间距与工具笔触密度，不等于原文数量"
+            },
+            {
+              "path": "atmosphere.valence",
+              "status": "applied",
+              "consumer": "有限配色",
+              "effect": "正向感受暂用 tender，其余用 clear；尚非完整情感色谱"
+            },
+            {
+              "path": "time.markers",
+              "status": "retained",
+              "consumer": "原始记录与解读",
+              "effect": "保留原文时间标记；本版照明由 scene.atmosphere 转换，多阶段时间逻辑未执行"
+            }
+          ],
+          "summary": {
+            "applied": 23,
+            "partial": 0,
+            "unsupported": 0,
+            "skipped": 3,
+            "retained": 1
+          },
+          "aestheticAcceptance": "pending-user"
+        },
+        "tools": [
+          {
+            "id": "landscape",
+            "timeScale": 0.8,
+            "paused": true,
+            "options": {
+              "form": "field",
+              "relief": "layered",
+              "edge": "defined"
+            }
+          },
+          {
+            "id": "tree",
+            "timeScale": 0.8,
+            "paused": true,
+            "options": {
+              "form": "broadleaf",
+              "branches": "7",
+              "crown": "wash"
+            }
+          },
+          {
+            "id": "tree",
+            "timeScale": 0.8,
+            "paused": true,
+            "options": {
+              "form": "broadleaf",
+              "branches": "7",
+              "crown": "wash"
+            }
+          },
+          {
+            "id": "tree",
+            "timeScale": 0.8,
+            "paused": true,
+            "options": {
+              "form": "broadleaf",
+              "branches": "7",
+              "crown": "wash"
+            }
+          },
+          {
+            "id": "bird",
+            "timeScale": 0.8,
+            "paused": true,
+            "options": {
+              "pose": "flying",
+              "tone": "light",
+              "facing": "right"
+            }
+          },
+          {
+            "id": "bird",
+            "timeScale": 0.8,
+            "paused": true,
+            "options": {
+              "pose": "flying",
+              "tone": "light",
+              "facing": "right"
+            }
+          },
+          {
+            "id": "bird",
+            "timeScale": 0.8,
+            "paused": true,
+            "options": {
+              "pose": "flying",
+              "tone": "light",
+              "facing": "right"
+            }
+          },
+          {
+            "id": "bird",
+            "timeScale": 0,
+            "paused": true,
+            "options": {
+              "pose": "flying",
+              "tone": "ink",
+              "facing": "right"
+            }
+          },
+          {
+            "id": "bird",
+            "timeScale": 0,
+            "paused": true,
+            "options": {
+              "pose": "flying",
+              "tone": "ink",
+              "facing": "right"
+            }
+          },
+          {
+            "id": "bird",
+            "timeScale": 0,
+            "paused": true,
+            "options": {
+              "pose": "flying",
+              "tone": "ink",
+              "facing": "right"
+            }
+          }
+        ],
+        "instances": 25
+      }
+    }
+  ],
+  "summary": {
+    "cases": 9,
+    "rawApiPass": 4,
+    "rawApiTotal": 6,
+    "sourceExpandedReplays": 2,
+    "geometryErrors": 0,
+    "sameBatchRefinement": true,
+    "aestheticAcceptance": "pending-user"
+  }
+}

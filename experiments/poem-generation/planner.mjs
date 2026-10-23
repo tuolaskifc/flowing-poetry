@@ -6,7 +6,8 @@ import {physicalPlace} from './physical-mapping.mjs';
 import {expressiveRule} from './expressive-mapping.mjs';
 import {arrangeScene} from './scene-layout.mjs';
 import {organizeScene} from './scene-organization.mjs';
-export const policyVersion='scene-organization-1';
+import {prepareSemanticLayers,finishSemanticPlan} from './semantic-policy.mjs';
+export const policyVersion='semantic-composition-3.3';
 const {rules,unsupportedTerms}=lexicon;
 const order=['landscape','moon','cloud','mist','dwelling','building','tree','willow','bamboo','pavilion','horse','water','rock','boat','lotus','grass','orchid','plum-branch','flower','flower-forms','wine','leaves','surface-weather','fish','bird','oriole','falling-petals','catkins','rain','snow'];
 const placements={
@@ -79,7 +80,7 @@ export function buildPlan(analysis){
     }
     if(rule.tool==='snow'&&/积雪|雪地|覆雪/.test(text))options.state='settled';
     const freeze=analysis.relations.some(r=>r.source===entity.id&&['moves','moves_toward','moves_away','changes','disappears'].includes(r.type)&&r.modality!=='asserted');
-    const key=rule.tool+JSON.stringify(options),existing=layers.find(l=>l.key===key);
+    const key=rule.tool+JSON.stringify(options)+(analysis.schema_version==='3.3'?':'+entity.id:''),existing=layers.find(l=>l.key===key);
     if(existing){existing.entities.push(entity.id);existing.names.push(name);if(rule.projection)existing.projectedEntities.push(entity.id);if(freeze)existing.animate=false;}
     else layers.push({key,tool:rule.tool,entities:[entity.id],projectedEntities:rule.projection?[entity.id]:[],names:[name],options,animate:!freeze,placement:placements[rule.tool]});
     entityTools.set(entity.id,rule.tool);
@@ -100,12 +101,16 @@ export function buildPlan(analysis){
     if(rule.tool==='lotus')notes.push(`${name}的单体画笔只画选定的花或叶，环境依托另由场景组织层决定；默认花态是本地选择，尚无生长或开花过程。`);
   }
   layers.sort((a,b)=>order.indexOf(a.tool)-order.indexOf(b.tool));
-  if(!analysis.relations.length&&/不|未|无|若|倘|如果/.test(analysis.poem.replace(/无穷|无边|无尽|无数|无声|无人/g,''))){
+  if(analysis.schema_version!=='3.3'&&!analysis.relations.length&&/不|未|无|若|倘|如果/.test(analysis.poem.replace(/无穷|无边|无尽|无数|无声|无人/g,''))){
     wind=0;layers.forEach(l=>l.animate=false);notes.push('本句有否定或假设提示，基础意象模式未细分其范围，暂缓动画，不宣称完成逻辑解释。');
   }
   const relations=analysis.relations.map(r=>({type:r.type,meaning:r.meaning,modality:r.modality,visualized:r.type==='acts_on'&&wind>0&&analysis.entities.find(e=>e.id===r.source)?.mentions.some(m=>m.includes('风'))&&entityTools.has(r.target)}));
   if(relations.some(r=>!r.visualized))notes.push('已识别的其他关系保留在解读中；本次未实现承载、遮蔽或完整动作编排。');
   notes.push('位置、大小、笔触与默认微动是本地试画选择；数量解释与本地显示数量分别记录。');
-  const seed=parseInt(createHash('sha256').update(analysis.poem).digest('hex').slice(0,8),16),composition=compose(analysis,layers.map(({key,...l})=>l),seed),arranged=organizeScene(analysis,arrangeScene(analysis,composition.layers));
-  return {version:policyVersion,seed,settings:{wind,density:.45,palette:'clear'},...arranged,omitted,notes:[...new Set([...notes,...composition.notes,...arranged.scene.notes])],relations};
+  prepareSemanticLayers(analysis,layers);
+  const seed=parseInt(createHash('sha256').update(analysis.poem).digest('hex').slice(0,8),16),composition=compose(analysis,layers.map(({key,...l})=>l),seed),proposal=arrangeScene(analysis,composition.layers);
+  prepareSemanticLayers(analysis,proposal.layers);
+  const arranged=organizeScene(analysis,proposal);
+  const plan={version:policyVersion,seed,settings:{wind,density:.45,palette:'clear'},...arranged,omitted,notes:[...new Set([...notes,...composition.notes,...arranged.scene.notes])],relations};
+  return finishSemanticPlan(analysis,plan);
 }

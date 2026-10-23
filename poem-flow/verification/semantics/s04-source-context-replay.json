@@ -1,0 +1,305 @@
+{
+  "modelCalls": 0,
+  "rawRecord": "2026-10-23T01-04-07-000Z-d3d73dba",
+  "applied": true,
+  "rawValidation": {
+    "valid": false,
+    "errors": [
+      "spatial[1] 依据未关联关系两端"
+    ],
+    "warnings": [
+      "模型保留了不确定性，需要审阅",
+      "spatial[0] 的推断或非确定关系需审阅",
+      "spatial[1] 的推断或非确定关系需审阅"
+    ],
+    "review_required": true
+  },
+  "validation": {
+    "valid": true,
+    "errors": [],
+    "warnings": [
+      "模型保留了不确定性，需要审阅",
+      "spatial[0] 的推断或非确定关系需审阅",
+      "spatial[1] 的推断或非确定关系需审阅",
+      "scene.setting 为语义推断，绘画选择需与原文明示区分",
+      "scene.groups[0] 为语义推断，绘画选择需与原文明示区分",
+      "scene.groups[1] 为语义推断，绘画选择需与原文明示区分",
+      "scene.supports[0] 为语义推断，绘画选择需与原文明示区分",
+      "scene.supports[1] 为语义推断，绘画选择需与原文明示区分",
+      "scene.actions[0] 为语义推断，绘画选择需与原文明示区分",
+      "scene.atmosphere 为语义推断，绘画选择需与原文明示区分",
+      "引用范围由程序按同句或相邻原句展开；未改写语义，关联是否合理仍需复核"
+    ],
+    "review_required": true
+  },
+  "changes": [
+    {
+      "path": "spatial[1].evidence",
+      "original": [
+        "独钓寒江雪"
+      ],
+      "expanded": [
+        "孤舟蓑笠翁，独钓寒江雪。"
+      ],
+      "clauses": [
+        "c1",
+        "c2"
+      ]
+    },
+    {
+      "path": "scene.supports[1].evidence",
+      "original": [
+        "独钓寒江雪"
+      ],
+      "expanded": [
+        "孤舟蓑笠翁，独钓寒江雪。"
+      ],
+      "clauses": [
+        "c1",
+        "c2"
+      ]
+    },
+    {
+      "path": "scene.actions[0].evidence",
+      "original": [
+        "独钓寒江雪"
+      ],
+      "expanded": [
+        "孤舟蓑笠翁，独钓寒江雪。"
+      ],
+      "clauses": [
+        "c1",
+        "c2"
+      ]
+    }
+  ],
+  "reviewRequired": true,
+  "effectiveAnalysis": {
+    "schema_version": "3.3",
+    "poem": "孤舟蓑笠翁，独钓寒江雪。",
+    "reading": "孤舟上一位披蓑戴笠的老翁，独自在寒江雪中垂钓。",
+    "entities": [
+      {
+        "id": "i1",
+        "mentions": [
+          "孤舟"
+        ],
+        "concept": "孤舟",
+        "kind": "object",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "孤舟蓑笠翁"
+        ],
+        "quantity": {
+          "mode": "exact",
+          "min": 1,
+          "max": 1,
+          "unit": null,
+          "scope": "individual",
+          "extent": "local",
+          "evidence": [
+            "孤舟"
+          ]
+        }
+      },
+      {
+        "id": "i2",
+        "mentions": [
+          "蓑笠翁"
+        ],
+        "concept": "披蓑戴笠的老翁",
+        "kind": "person",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "孤舟蓑笠翁"
+        ],
+        "quantity": {
+          "mode": "exact",
+          "min": 1,
+          "max": 1,
+          "unit": null,
+          "scope": "individual",
+          "extent": "local",
+          "evidence": [
+            "蓑笠翁"
+          ]
+        }
+      },
+      {
+        "id": "i3",
+        "mentions": [
+          "寒江"
+        ],
+        "concept": "寒冷的江",
+        "kind": "place",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "独钓寒江雪"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "spread",
+          "evidence": [
+            "寒江"
+          ]
+        }
+      },
+      {
+        "id": "i4",
+        "mentions": [
+          "雪"
+        ],
+        "concept": "雪",
+        "kind": "environment",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "独钓寒江雪"
+        ],
+        "quantity": {
+          "mode": "many",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "spread",
+          "evidence": [
+            "寒江雪"
+          ]
+        }
+      }
+    ],
+    "relations": [],
+    "atmosphere": {
+      "labels": [
+        "孤寂",
+        "清寒"
+      ],
+      "valence": "negative",
+      "energy": "low",
+      "tension": "low",
+      "openness": "high",
+      "evidence": [
+        "孤舟蓑笠翁",
+        "独钓寒江雪"
+      ]
+    },
+    "time": {
+      "markers": [],
+      "note": null
+    },
+    "uncertainties": [
+      "“独钓”可理解为独自垂钓，但未明说钓的具体动作状态。",
+      "“寒江雪”可指江上落雪或江雪并置，雪的具体落点未明。"
+    ],
+    "spatial": [
+      {
+        "type": "on",
+        "source": "i2",
+        "target": "i1",
+        "modality": "asserted",
+        "basis": "inferred",
+        "evidence": [
+          "孤舟蓑笠翁"
+        ]
+      },
+      {
+        "type": "on",
+        "source": "i1",
+        "target": "i3",
+        "modality": "asserted",
+        "basis": "inferred",
+        "evidence": [
+          "孤舟蓑笠翁，独钓寒江雪。"
+        ]
+      }
+    ],
+    "scene": {
+      "setting": {
+        "kind": "waterside",
+        "basis": "inferred",
+        "evidence": [
+          "独钓寒江雪"
+        ]
+      },
+      "groups": [
+        {
+          "members": [
+            "i1",
+            "i2"
+          ],
+          "role": "subject",
+          "pattern": "single",
+          "depth": "near",
+          "basis": "inferred",
+          "evidence": [
+            "孤舟蓑笠翁"
+          ]
+        },
+        {
+          "members": [
+            "i3",
+            "i4"
+          ],
+          "role": "environment",
+          "pattern": "field",
+          "depth": "middle",
+          "basis": "inferred",
+          "evidence": [
+            "独钓寒江雪"
+          ]
+        }
+      ],
+      "supports": [
+        {
+          "entity": "i2",
+          "surface": "boat",
+          "target": "i1",
+          "basis": "inferred",
+          "evidence": [
+            "孤舟蓑笠翁"
+          ]
+        },
+        {
+          "entity": "i1",
+          "surface": "water",
+          "target": "i3",
+          "basis": "inferred",
+          "evidence": [
+            "孤舟蓑笠翁，独钓寒江雪。"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "entity": "i2",
+          "state": "still",
+          "pace": "slow",
+          "direction": "unspecified",
+          "modality": "asserted",
+          "basis": "inferred",
+          "evidence": [
+            "孤舟蓑笠翁，独钓寒江雪。"
+          ]
+        }
+      ],
+      "atmosphere": {
+        "visibility": "clear",
+        "illumination": "day",
+        "basis": "inferred",
+        "evidence": [
+          "独钓寒江雪"
+        ]
+      }
+    }
+  },
+  "scope": "source-range-only",
+  "note": "仅机械展开原文引用，不证明文学解读正确；原始回答与原始失败保留"
+}
