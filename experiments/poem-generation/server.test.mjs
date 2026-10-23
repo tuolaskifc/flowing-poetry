@@ -15,6 +15,8 @@ test('one local origin serves main, drawing and progress while keeping backend a
     assert.equal((await fetch(origin+'/poem-flow/verification/color-motion/mineral.png')).status,200);
     assert.equal((await fetch(origin+'/poem-flow/verification/color-motion/verification.json')).status,403);
     assert.equal((await fetch(origin+'/poem-flow/landscape-review.html')).status,200);
+    for(const path of ['/poem-flow/abstract.html','/poem-flow/abstract.css','/poem-flow/abstract-app.js','/poem-flow/abstract-studies.json','/poem-flow/abstract-review.html','/experiments/poem-generation/abstract-scene.js','/poem-flow/verification/abstract/a03-0.png'])assert.equal((await fetch(origin+path)).status,200,path);
+    for(const path of ['/poem-flow/verification/abstract/a01-record.json','/poem-flow/verification/abstract/a01-request.json','/poem-flow/verification/abstract/a01-response.txt','/experiments/poem-generation/abstract-contract.mjs'])assert.equal((await fetch(origin+path)).status,403,path);
     const studies=await fetch(origin+'/poem-flow/landscape-studies.json');assert.equal(studies.status,200);const replay=await studies.json();assert.equal(replay.cases.length,5);assert.equal(replay.modelCalls,0);
     assert.equal((await fetch(origin+'/poem-flow/verification/landscape/s02-0.png')).status,200);
     assert.equal((await fetch(origin+'/poem-flow/verification/landscape/verification.json')).status,403);

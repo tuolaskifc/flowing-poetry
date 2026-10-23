@@ -1,0 +1,50 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>流动诗 · 抽象试画</title><link rel="stylesheet" href="abstract.css">
+<script defer src="/poem-flow/vendor/p5.min.js"></script>
+<script defer src="/experiments/imagery-library/boid-adapter.js"></script>
+<script defer src="/experiments/imagery-library/drawing/sources.js"></script>
+<script defer src="/experiments/imagery-library/drawing/core.js"></script>
+<script defer src="/experiments/imagery-library/drawing/petals.js"></script>
+<script defer src="/experiments/imagery-library/drawing/cloud-outline.js"></script>
+<script defer src="/experiments/imagery-library/drawing/architecture.js"></script>
+<script defer src="/experiments/imagery-library/drawing/surface-marks.js"></script>
+<script defer src="/experiments/imagery-library/drawing/ink-brush.js"></script>
+<script defer src="/experiments/imagery-library/drawing/tools/flower.js"></script>
+<script defer src="/experiments/imagery-library/drawing/tools/tree.js"></script>
+<script defer src="/experiments/imagery-library/drawing/tools/landscape.js"></script>
+<script defer src="/experiments/imagery-library/drawing/tools/water.js"></script>
+<script defer src="/experiments/imagery-library/drawing/tools/mist.js"></script>
+<script defer src="/experiments/imagery-library/drawing/tools/birds.js"></script>
+<script defer src="/experiments/imagery-library/drawing/tools/boat.js"></script>
+<script defer src="/experiments/imagery-library/drawing/tools/moon.js"></script>
+<script defer src="/experiments/imagery-library/drawing/tools/rain.js"></script>
+<script defer src="/experiments/imagery-library/drawing/tools/falling-petals.js"></script>
+<script defer src="/experiments/imagery-library/drawing/tools/rock.js"></script>
+<script defer src="/experiments/imagery-library/drawing/tools/pavilion.js"></script>
+<script defer src="/experiments/imagery-library/drawing/tools/grass.js"></script>
+<script defer src="/experiments/imagery-library/drawing/tools/bamboo.js"></script>
+<script defer src="/experiments/imagery-library/drawing/tools/willow.js"></script>
+<script defer src="/experiments/imagery-library/drawing/tools/snow.js"></script>
+<script defer src="/experiments/imagery-library/drawing/tools/leaves.js"></script>
+<script defer src="/experiments/imagery-library/drawing/tools/fish.js"></script>
+<script defer src="/experiments/imagery-library/drawing/tools/cloud.js"></script>
+<script defer src="/experiments/imagery-library/drawing/tools/catkins.js"></script>
+<script defer src="/experiments/imagery-library/drawing/tools/flower-forms.js"></script>
+<script defer src="/experiments/imagery-library/drawing/tools/wine.js"></script>
+<script defer src="/experiments/imagery-library/drawing/tools/building.js"></script>
+<script defer src="/experiments/imagery-library/drawing/tools/plum-branch.js"></script>
+<script defer src="/experiments/imagery-library/drawing/tools/surface-weather.js"></script>
+<script defer src="/experiments/imagery-library/drawing/tools/oriole.js"></script>
+<script defer src="/experiments/imagery-library/drawing/tools/orchid.js"></script>
+<script defer src="/experiments/imagery-library/drawing/tools/horse.js"></script>
+<script defer src="/experiments/imagery-library/drawing/tools/lotus.js"></script>
+<script defer src="/experiments/imagery-library/drawing/tools/dwelling.js"></script>
+<script defer src="/experiments/imagery-library/drawing/tools/bird.js"></script>
+<script defer src="/experiments/imagery-library/drawing/tools/figure.js"></script>
+<script defer src="/experiments/poem-generation/scene.js"></script>
+<script defer src="/experiments/poem-generation/abstract-scene.js"></script><script defer src="abstract-app.js"></script></head><body>
+<header><a class="brand" href="/">流动诗<span>EXPRESSION STUDIES</span></a><nav><a href="/">风景生成器 ↗</a><a href="abstract-review.html">本轮画面对照 ↗</a><a href="architecture.html">当前架构 ↗</a></nav></header>
+<main><section class="intro"><div><span class="eyebrow">抽象试画 · 01</span><h1>让诗意留下形状。</h1><p>让关系形成空间，让变化留下时间。拖动一个形态，看看它与其他形态怎样相连；也可以换一组笔触和种子。</p></div><p class="small">三句抽象表达，一句月楼与心境。<br>已有解读可直接观看，输入新句后点击分析才请求模型。</p></section>
+<div class="workspace"><aside class="panel"><label>先试一句<select id="sample"></select></label><label>或写下你的诗句<textarea id="poem" maxlength="200" spellcheck="false" aria-label="待分析的诗句"></textarea></label><button class="primary" id="generate" disabled>分析新句 · 开始绘画</button><p class="small" id="source"></p><details open><summary>调一调观看方式</summary><label><span>动态程度</span><input id="motion" type="range" min="0" max="2" step=".05" value="1"></label><label><span>笔触疏密</span><input id="density" type="range" min="0" max="1" step=".05" value=".55"></label><label><span>拖动留痕</span><input id="trace" type="range" min="0" max="1" step=".05" value=".55"></label><label class="check"><input id="hybrid" type="checkbox" disabled>叠加诗中已有的景物</label><p class="small">候选以淡轮廓提示，缺席保留为空缺，比喻只借抽象特征。留痕时长与观看节奏属于本次画法选择。</p></details></aside>
+<section class="stage"><div class="toolbar"><label>画法<select id="style"></select></label><label>配色<select id="palette"></select></label><button id="reseed">换一种生成</button><span class="seed" id="seed-label"></span></div><canvas id="art" width="960" height="600" role="img" aria-label="可以逐个拖动、留下痕迹的抽象诗句画面"></canvas><div class="caption"><strong id="poem-title">正在准备画面</strong><span class="small" id="palette-name"></span></div><div class="buttons"><button id="pause" aria-pressed="false">暂停</button><button id="restart">从头观看／还原</button><button id="save">保存 PNG</button></div><p id="status" role="status">正在载入已保存的真实解读……</p><p id="review-note" class="notice" hidden></p><details open><summary>这次怎样理解诗句</summary><p id="reading"></p><ul id="relations"></ul><ul id="processes"></ul></details><details><summary>歧义与待复核</summary><ul id="uncertainties"></ul></details><details><summary>本次画法的选择</summary><ul id="choices"></ul></details></section></div>
+<section class="samples"><h2>同一句诗，也可以这样画</h2><p class="small">点击切换到对应的画法和种子，继续观看动态；不会再次请求模型。</p><div class="variants" id="variants"></div></section><footer>抽象试验采用独立语义协议；模型解释文字，本地程序负责画法。原诗、画笔来源和失败记录均保留；当前表达不是唯一解读，也仍待审阅。</footer></main>
+<div class="drawing-hosts"><canvas id="scene" width="960" height="600"></canvas><div id="layer-hosts"></div></div></body></html>

@@ -1,0 +1,89 @@
+{
+  "schema": "abstract-1.0",
+  "noAutomaticRetry": true,
+  "calls": [
+    {
+      "id": "a01",
+      "poem": "此情可待成追忆，只是当时已惘然。",
+      "record": "2026-10-23T14-59-51-857Z-16d65a90",
+      "valid": true,
+      "errors": [],
+      "cached": false,
+      "usage": {
+        "completion_tokens": 653,
+        "prompt_tokens": 1394,
+        "total_tokens": 2047,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "elapsed": 9
+    },
+    {
+      "id": "a02",
+      "poem": "此中有真意，欲辩已忘言。",
+      "record": "2026-10-23T15-00-00-888Z-fcd87b57",
+      "valid": false,
+      "errors": [
+        "relations[2] 非在场主体不能执行确定过程",
+        "processes[2] 非在场主体不能执行确定过程"
+      ],
+      "cached": false,
+      "usage": {
+        "completion_tokens": 647,
+        "prompt_tokens": 1391,
+        "total_tokens": 2038,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "elapsed": 7.2
+    },
+    {
+      "id": "a03",
+      "poem": "剪不断，理还乱，是离愁。",
+      "record": "2026-10-23T15-00-08-145Z-fd557e2b",
+      "valid": true,
+      "errors": [],
+      "cached": false,
+      "usage": {
+        "completion_tokens": 609,
+        "prompt_tokens": 1391,
+        "total_tokens": 2000,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens_details": {
+          "cached_tokens": 1280
+        }
+      },
+      "elapsed": 12.3
+    },
+    {
+      "id": "a04",
+      "poem": "从此无心爱良夜，任他明月下西楼。",
+      "record": "2026-10-23T15-00-20-450Z-e9a3dcde",
+      "valid": true,
+      "errors": [],
+      "cached": false,
+      "usage": {
+        "completion_tokens": 863,
+        "prompt_tokens": 1393,
+        "total_tokens": 2256,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens_details": {
+          "cached_tokens": 1280
+        }
+      },
+      "elapsed": 10.8
+    }
+  ]
+}

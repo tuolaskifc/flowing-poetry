@@ -1,0 +1,1767 @@
+{
+  "schema": "abstract-1.0",
+  "policy": "abstract-expression-1.0",
+  "scope": "four-real-first-requests-and-local-variants",
+  "newModelCalls": 0,
+  "cases": [
+    {
+      "id": "a01",
+      "poem": "此情可待成追忆，只是当时已惘然。",
+      "author": "李商隐",
+      "title": "锦瑟",
+      "url": "https://zh.wikisource.org/wiki/錦瑟",
+      "rawValid": true,
+      "rawRecord": "2026-10-23T14-59-51-857Z-16d65a90",
+      "record": {
+        "id": "2026-10-23T14-59-51-857Z-16d65a90",
+        "poem": "此情可待成追忆，只是当时已惘然。",
+        "source": {
+          "provider": "抽象诗句首次试验",
+          "author": "李商隐",
+          "title": "锦瑟"
+        },
+        "mode": "abstract",
+        "analysis": {
+          "schema_version": "abstract-1.0",
+          "poem": "此情可待成追忆，只是当时已惘然。",
+          "reading": "此句写一种情感与追忆之间的张力：情感似乎可以留待日后成为追忆，但当时已经惘然，说明追忆并非清晰把握，而带有迷惘与失落。",
+          "subjects": [
+            {
+              "id": "a1",
+              "mentions": [
+                "此情"
+              ],
+              "meaning": "指当下或彼时的一种情感、情愫，具体内容未明。",
+              "kind": "abstract",
+              "role": "scene",
+              "presence": "present",
+              "evidence": [
+                "此情可待成追忆"
+              ]
+            },
+            {
+              "id": "a2",
+              "mentions": [
+                "追忆"
+              ],
+              "meaning": "日后对往事的回想与追念。",
+              "kind": "abstract",
+              "role": "scene",
+              "presence": "unclear",
+              "evidence": [
+                "此情可待成追忆"
+              ]
+            },
+            {
+              "id": "a3",
+              "mentions": [
+                "当时"
+              ],
+              "meaning": "指事情发生或情感所在的彼时。",
+              "kind": "abstract",
+              "role": "scene",
+              "presence": "present",
+              "evidence": [
+                "只是当时已惘然"
+              ]
+            },
+            {
+              "id": "a4",
+              "mentions": [
+                "惘然"
+              ],
+              "meaning": "迷惘、若有所失而难以言明的心理状态。",
+              "kind": "abstract",
+              "role": "scene",
+              "presence": "present",
+              "evidence": [
+                "只是当时已惘然"
+              ]
+            }
+          ],
+          "relations": [
+            {
+              "source": "a1",
+              "target": "a2",
+              "kind": "approach",
+              "modality": "possible",
+              "basis": "explicit",
+              "evidence": [
+                "此情可待成追忆"
+              ]
+            },
+            {
+              "source": "a1",
+              "target": "a4",
+              "kind": "interweave",
+              "modality": "asserted",
+              "basis": "explicit",
+              "evidence": [
+                "此情可待成追忆",
+                "只是当时已惘然"
+              ]
+            },
+            {
+              "source": "a3",
+              "target": "a4",
+              "kind": "connect",
+              "modality": "asserted",
+              "basis": "explicit",
+              "evidence": [
+                "只是当时已惘然"
+              ]
+            }
+          ],
+          "processes": [
+            {
+              "subject": "a1",
+              "kind": "persist",
+              "temporal": "not_yet",
+              "modality": "possible",
+              "basis": "explicit",
+              "evidence": [
+                "此情可待成追忆"
+              ]
+            },
+            {
+              "subject": "a2",
+              "kind": "emerge",
+              "temporal": "not_yet",
+              "modality": "possible",
+              "basis": "explicit",
+              "evidence": [
+                "此情可待成追忆"
+              ]
+            },
+            {
+              "subject": "a4",
+              "kind": "persist",
+              "temporal": "already",
+              "modality": "asserted",
+              "basis": "explicit",
+              "evidence": [
+                "只是当时已惘然"
+              ]
+            }
+          ],
+          "atmosphere": {
+            "labels": [
+              "迷惘",
+              "追怀",
+              "低回"
+            ],
+            "valence": "mixed",
+            "openness": "medium",
+            "illumination": "unclear",
+            "evidence": [
+              "此情可待成追忆",
+              "只是当时已惘然"
+            ]
+          },
+          "uncertainties": [
+            "“可待”可理解为可以等待日后成为追忆，也可带有反问或未必能成的语气，存在歧义。",
+            "“此情”的具体所指未明，不宜补出具体人事。",
+            "“惘然”是当时已如此，还是追忆时回望当时而觉惘然，句法上可有两解。"
+          ]
+        },
+        "validation": {
+          "valid": true,
+          "errors": [],
+          "warnings": [
+            "a3 为纯时间线索，本地不独立造形；解读待复核"
+          ],
+          "review_required": true
+        },
+        "plan": {
+          "version": "abstract-expression-1.0",
+          "poem": "此情可待成追忆，只是当时已惘然。",
+          "seed": 2205578360,
+          "nodes": [
+            {
+              "id": "a1",
+              "label": "此情",
+              "meaning": "指当下或彼时的一种情感、情愫，具体内容未明。",
+              "kind": "abstract",
+              "mode": "present"
+            },
+            {
+              "id": "a2",
+              "label": "追忆",
+              "meaning": "日后对往事的回想与追念。",
+              "kind": "abstract",
+              "mode": "candidate"
+            },
+            {
+              "id": "a4",
+              "label": "惘然",
+              "meaning": "迷惘、若有所失而难以言明的心理状态。",
+              "kind": "abstract",
+              "mode": "present"
+            }
+          ],
+          "relations": [
+            {
+              "source": "a1",
+              "target": "a2",
+              "kind": "approach",
+              "modality": "possible",
+              "basis": "explicit",
+              "evidence": [
+                "此情可待成追忆"
+              ]
+            },
+            {
+              "source": "a1",
+              "target": "a4",
+              "kind": "interweave",
+              "modality": "asserted",
+              "basis": "explicit",
+              "evidence": [
+                "此情可待成追忆",
+                "只是当时已惘然"
+              ]
+            }
+          ],
+          "processes": [
+            {
+              "subject": "a1",
+              "kind": "persist",
+              "temporal": "not_yet",
+              "modality": "possible",
+              "basis": "explicit",
+              "evidence": [
+                "此情可待成追忆"
+              ]
+            },
+            {
+              "subject": "a2",
+              "kind": "emerge",
+              "temporal": "not_yet",
+              "modality": "possible",
+              "basis": "explicit",
+              "evidence": [
+                "此情可待成追忆"
+              ]
+            },
+            {
+              "subject": "a4",
+              "kind": "persist",
+              "temporal": "already",
+              "modality": "asserted",
+              "basis": "explicit",
+              "evidence": [
+                "只是当时已惘然"
+              ]
+            }
+          ],
+          "omitted": [
+            {
+              "id": "a3",
+              "label": "当时",
+              "reason": "纯时间线索保留在解读，不独立造形"
+            }
+          ],
+          "atmosphere": {
+            "labels": [
+              "迷惘",
+              "追怀",
+              "低回"
+            ],
+            "valence": "mixed",
+            "openness": "medium",
+            "illumination": "unclear",
+            "evidence": [
+              "此情可待成追忆",
+              "只是当时已惘然"
+            ]
+          },
+          "concretePlan": null,
+          "notes": [
+            "形态、笔触数量、配色变体、布局与观看节奏为本地艺术选择，不表示原文物体数或发生概率。",
+            "非确定关系只作候选或边界提示；未完成不固定为永久无法完成。",
+            "一次性过程在播放时段内演化，不自动循环成诗句的事实；可手动重放。"
+          ],
+          "aestheticAcceptance": "pending-user"
+        },
+        "cached": true
+      },
+      "failure": null
+    },
+    {
+      "id": "a02",
+      "poem": "此中有真意，欲辩已忘言。",
+      "author": "陶渊明",
+      "title": "饮酒·其五",
+      "url": "https://zh.wikisource.org/wiki/飲酒二十首#其五",
+      "note": "依所列来源采用“辩”字，另有“辨”字版本。",
+      "rawValid": false,
+      "rawRecord": "2026-10-23T15-00-00-888Z-fcd87b57",
+      "record": {
+        "id": "2026-10-23T15-00-00-888Z-fcd87b57",
+        "poem": "此中有真意，欲辩已忘言。",
+        "source": {
+          "provider": "抽象诗句首次试验",
+          "author": "陶渊明",
+          "title": "饮酒·其五"
+        },
+        "mode": "abstract",
+        "analysis": {
+          "schema_version": "abstract-1.0",
+          "poem": "此中有真意，欲辩已忘言。",
+          "reading": "此中蕴含一种真意，想要辨析言说，却已经忘了言语。诗节把内在领会与言说困境并置：真意可感而难名，欲辩的冲动与忘言的沉默相互牵制，呈现一种含蓄、内敛而略带迟疑的体悟状态。",
+          "subjects": [
+            {
+              "id": "a1",
+              "mentions": [
+                "此中"
+              ],
+              "meaning": "指当下所处的境域或体验内部，是下文真意所寄之处。",
+              "kind": "abstract",
+              "role": "scene",
+              "presence": "present",
+              "evidence": [
+                "此中有真意"
+              ]
+            },
+            {
+              "id": "a2",
+              "mentions": [
+                "真意"
+              ],
+              "meaning": "真实、本真的意趣或领会，非日常可轻易言明的意思。",
+              "kind": "abstract",
+              "role": "scene",
+              "presence": "present",
+              "evidence": [
+                "此中有真意"
+              ]
+            },
+            {
+              "id": "a3",
+              "mentions": [
+                "欲辩"
+              ],
+              "meaning": "想要辨析、说明或论说的意愿与动作倾向。",
+              "kind": "abstract",
+              "role": "scene",
+              "presence": "present",
+              "evidence": [
+                "欲辩已忘言"
+              ]
+            },
+            {
+              "id": "a4",
+              "mentions": [
+                "言"
+              ],
+              "meaning": "言语、言辞，作为表达真意的媒介。",
+              "kind": "abstract",
+              "role": "scene",
+              "presence": "absent",
+              "evidence": [
+                "欲辩已忘言"
+              ]
+            }
+          ],
+          "relations": [
+            {
+              "source": "a1",
+              "target": "a2",
+              "kind": "surround",
+              "modality": "asserted",
+              "basis": "explicit",
+              "evidence": [
+                "此中有真意"
+              ]
+            },
+            {
+              "source": "a3",
+              "target": "a4",
+              "kind": "approach",
+              "modality": "possible",
+              "basis": "explicit",
+              "evidence": [
+                "欲辩已忘言"
+              ]
+            },
+            {
+              "source": "a3",
+              "target": "a4",
+              "kind": "block",
+              "modality": "asserted",
+              "basis": "explicit",
+              "evidence": [
+                "欲辩已忘言"
+              ]
+            }
+          ],
+          "processes": [
+            {
+              "subject": "a2",
+              "kind": "emerge",
+              "temporal": "already",
+              "modality": "asserted",
+              "basis": "explicit",
+              "evidence": [
+                "此中有真意"
+              ]
+            },
+            {
+              "subject": "a3",
+              "kind": "emerge",
+              "temporal": "not_yet",
+              "modality": "possible",
+              "basis": "explicit",
+              "evidence": [
+                "欲辩已忘言"
+              ]
+            },
+            {
+              "subject": "a4",
+              "kind": "fade",
+              "temporal": "already",
+              "modality": "asserted",
+              "basis": "explicit",
+              "evidence": [
+                "欲辩已忘言"
+              ]
+            }
+          ],
+          "atmosphere": {
+            "labels": [
+              "内敛",
+              "静默",
+              "含蓄"
+            ],
+            "valence": "mixed",
+            "openness": "low",
+            "illumination": "unclear",
+            "evidence": [
+              "此中有真意",
+              "欲辩已忘言"
+            ]
+          },
+          "uncertainties": [
+            "“欲辩”是尚未实现的意愿，还是刚要开口便已止住，原文未明。",
+            "“忘言”可指言语一时无从组织，也可指有意不再言说，二者难以截然区分。",
+            "“真意”的具体内容未被展开，保持为一种可感而不可确指的内在领会。"
+          ]
+        },
+        "validation": {
+          "valid": true,
+          "errors": [],
+          "warnings": [],
+          "review_required": true
+        },
+        "plan": {
+          "version": "abstract-expression-1.0",
+          "poem": "此中有真意，欲辩已忘言。",
+          "seed": 1471135998,
+          "nodes": [
+            {
+              "id": "a1",
+              "label": "此中",
+              "meaning": "指当下所处的境域或体验内部，是下文真意所寄之处。",
+              "kind": "abstract",
+              "mode": "present"
+            },
+            {
+              "id": "a2",
+              "label": "真意",
+              "meaning": "真实、本真的意趣或领会，非日常可轻易言明的意思。",
+              "kind": "abstract",
+              "mode": "present"
+            },
+            {
+              "id": "a3",
+              "label": "欲辩",
+              "meaning": "想要辨析、说明或论说的意愿与动作倾向。",
+              "kind": "abstract",
+              "mode": "present"
+            },
+            {
+              "id": "a4",
+              "label": "言",
+              "meaning": "言语、言辞，作为表达真意的媒介。",
+              "kind": "abstract",
+              "mode": "gap"
+            }
+          ],
+          "relations": [
+            {
+              "source": "a1",
+              "target": "a2",
+              "kind": "surround",
+              "modality": "asserted",
+              "basis": "explicit",
+              "evidence": [
+                "此中有真意"
+              ]
+            },
+            {
+              "source": "a3",
+              "target": "a4",
+              "kind": "approach",
+              "modality": "possible",
+              "basis": "explicit",
+              "evidence": [
+                "欲辩已忘言"
+              ]
+            },
+            {
+              "source": "a3",
+              "target": "a4",
+              "kind": "block",
+              "modality": "asserted",
+              "basis": "explicit",
+              "evidence": [
+                "欲辩已忘言"
+              ]
+            }
+          ],
+          "processes": [
+            {
+              "subject": "a2",
+              "kind": "emerge",
+              "temporal": "already",
+              "modality": "asserted",
+              "basis": "explicit",
+              "evidence": [
+                "此中有真意"
+              ]
+            },
+            {
+              "subject": "a3",
+              "kind": "emerge",
+              "temporal": "not_yet",
+              "modality": "possible",
+              "basis": "explicit",
+              "evidence": [
+                "欲辩已忘言"
+              ]
+            },
+            {
+              "subject": "a4",
+              "kind": "fade",
+              "temporal": "already",
+              "modality": "asserted",
+              "basis": "explicit",
+              "evidence": [
+                "欲辩已忘言"
+              ]
+            }
+          ],
+          "omitted": [],
+          "atmosphere": {
+            "labels": [
+              "内敛",
+              "静默",
+              "含蓄"
+            ],
+            "valence": "mixed",
+            "openness": "low",
+            "illumination": "unclear",
+            "evidence": [
+              "此中有真意",
+              "欲辩已忘言"
+            ]
+          },
+          "concretePlan": null,
+          "notes": [
+            "形态、笔触数量、配色变体、布局与观看节奏为本地艺术选择，不表示原文物体数或发生概率。",
+            "非确定关系只作候选或边界提示；未完成不固定为永久无法完成。",
+            "一次性过程在播放时段内演化，不自动循环成诗句的事实；可手动重放。"
+          ],
+          "aestheticAcceptance": "pending-user"
+        },
+        "cached": true,
+        "localRevalidation": {
+          "revision": "absence-result-1.1",
+          "rawValid": false,
+          "changedSemanticFields": 0,
+          "modelCalls": 0,
+          "reason": "已消退的结果缺席可保留为缺口；受阻目标可缺席，但不能变成在场形态"
+        }
+      },
+      "failure": null
+    },
+    {
+      "id": "a03",
+      "poem": "剪不断，理还乱，是离愁。",
+      "author": "李煜",
+      "title": "相见欢·无言独上西楼",
+      "url": "https://zh.wikisource.org/wiki/相見歡_(無言獨上西樓,_李煜)",
+      "rawValid": true,
+      "rawRecord": "2026-10-23T15-00-08-145Z-fd557e2b",
+      "record": {
+        "id": "2026-10-23T15-00-08-145Z-fd557e2b",
+        "poem": "剪不断，理还乱，是离愁。",
+        "source": {
+          "provider": "抽象诗句首次试验",
+          "author": "李煜",
+          "title": "相见欢·无言独上西楼"
+        },
+        "mode": "abstract",
+        "analysis": {
+          "schema_version": "abstract-1.0",
+          "poem": "剪不断，理还乱，是离愁。",
+          "reading": "以剪不断、理还乱的动作与状态，写离愁的纠缠难解；愁绪既无法切断，也无法理清，反而越理越乱。",
+          "subjects": [
+            {
+              "id": "a1",
+              "mentions": [
+                "离愁"
+              ],
+              "meaning": "离别带来的愁绪，是整句所指向的核心情感。",
+              "kind": "abstract",
+              "role": "scene",
+              "presence": "present",
+              "evidence": [
+                "是离愁"
+              ]
+            },
+            {
+              "id": "a2",
+              "mentions": [
+                "剪不断"
+              ],
+              "meaning": "以剪的动作表现愁绪无法被切断。",
+              "kind": "abstract",
+              "role": "reference",
+              "presence": "present",
+              "evidence": [
+                "剪不断"
+              ]
+            },
+            {
+              "id": "a3",
+              "mentions": [
+                "理还乱"
+              ],
+              "meaning": "以整理的动作表现愁绪越理越乱。",
+              "kind": "abstract",
+              "role": "reference",
+              "presence": "present",
+              "evidence": [
+                "理还乱"
+              ]
+            }
+          ],
+          "relations": [
+            {
+              "source": "a2",
+              "target": "a1",
+              "kind": "block",
+              "modality": "negated",
+              "basis": "explicit",
+              "evidence": [
+                "剪不断",
+                "是离愁"
+              ]
+            },
+            {
+              "source": "a3",
+              "target": "a1",
+              "kind": "interweave",
+              "modality": "asserted",
+              "basis": "explicit",
+              "evidence": [
+                "理还乱",
+                "是离愁"
+              ]
+            }
+          ],
+          "processes": [
+            {
+              "subject": "a1",
+              "kind": "persist",
+              "temporal": "ongoing",
+              "modality": "asserted",
+              "basis": "explicit",
+              "evidence": [
+                "剪不断",
+                "理还乱",
+                "是离愁"
+              ]
+            }
+          ],
+          "atmosphere": {
+            "labels": [
+              "纠缠",
+              "难解"
+            ],
+            "valence": "negative",
+            "openness": "unclear",
+            "illumination": "unclear",
+            "evidence": [
+              "剪不断",
+              "理还乱",
+              "是离愁"
+            ]
+          },
+          "uncertainties": [
+            "剪不断与理还乱是并列描写离愁的两种状态，还是存在先后递进关系，原文未明。",
+            "离愁是抽象情感，剪与理的动作可视为比喻性表达，而非实际动作。"
+          ]
+        },
+        "validation": {
+          "valid": true,
+          "errors": [],
+          "warnings": [],
+          "review_required": true
+        },
+        "plan": {
+          "version": "abstract-expression-1.0",
+          "poem": "剪不断，理还乱，是离愁。",
+          "seed": 2819797886,
+          "nodes": [
+            {
+              "id": "a1",
+              "label": "离愁",
+              "meaning": "离别带来的愁绪，是整句所指向的核心情感。",
+              "kind": "abstract",
+              "mode": "present"
+            },
+            {
+              "id": "a2",
+              "label": "剪不断",
+              "meaning": "以剪的动作表现愁绪无法被切断。",
+              "kind": "abstract",
+              "mode": "reference"
+            },
+            {
+              "id": "a3",
+              "label": "理还乱",
+              "meaning": "以整理的动作表现愁绪越理越乱。",
+              "kind": "abstract",
+              "mode": "reference"
+            }
+          ],
+          "relations": [
+            {
+              "source": "a2",
+              "target": "a1",
+              "kind": "block",
+              "modality": "negated",
+              "basis": "explicit",
+              "evidence": [
+                "剪不断",
+                "是离愁"
+              ]
+            },
+            {
+              "source": "a3",
+              "target": "a1",
+              "kind": "interweave",
+              "modality": "asserted",
+              "basis": "explicit",
+              "evidence": [
+                "理还乱",
+                "是离愁"
+              ]
+            }
+          ],
+          "processes": [
+            {
+              "subject": "a1",
+              "kind": "persist",
+              "temporal": "ongoing",
+              "modality": "asserted",
+              "basis": "explicit",
+              "evidence": [
+                "剪不断",
+                "理还乱",
+                "是离愁"
+              ]
+            }
+          ],
+          "omitted": [],
+          "atmosphere": {
+            "labels": [
+              "纠缠",
+              "难解"
+            ],
+            "valence": "negative",
+            "openness": "unclear",
+            "illumination": "unclear",
+            "evidence": [
+              "剪不断",
+              "理还乱",
+              "是离愁"
+            ]
+          },
+          "concretePlan": null,
+          "notes": [
+            "形态、笔触数量、配色变体、布局与观看节奏为本地艺术选择，不表示原文物体数或发生概率。",
+            "非确定关系只作候选或边界提示；未完成不固定为永久无法完成。",
+            "一次性过程在播放时段内演化，不自动循环成诗句的事实；可手动重放。"
+          ],
+          "aestheticAcceptance": "pending-user"
+        },
+        "cached": true
+      },
+      "failure": null
+    },
+    {
+      "id": "a04",
+      "poem": "从此无心爱良夜，任他明月下西楼。",
+      "author": "李益",
+      "title": "写情",
+      "url": "https://zh.wikisource.org/wiki/寫情",
+      "rawValid": true,
+      "rawRecord": "2026-10-23T15-00-20-450Z-e9a3dcde",
+      "record": {
+        "id": "2026-10-23T15-00-20-450Z-e9a3dcde",
+        "poem": "从此无心爱良夜，任他明月下西楼。",
+        "source": {
+          "provider": "抽象诗句首次试验",
+          "author": "李益",
+          "title": "写情"
+        },
+        "mode": "abstract",
+        "analysis": {
+          "schema_version": "abstract-1.0",
+          "poem": "从此无心爱良夜，任他明月下西楼。",
+          "reading": "诗句写一种心境转折：从某一刻起，对良夜不再有爱赏之心，任凭明月西沉、离开西楼。重点不在夜景本身，而在“无心”与“任他”所呈现的疏离、放任与情感退潮。",
+          "subjects": [
+            {
+              "id": "a1",
+              "mentions": [
+                "无心"
+              ],
+              "meaning": "没有爱赏、眷恋或投入的心绪，指向主体内在情感状态的退去。",
+              "kind": "abstract",
+              "role": "scene",
+              "presence": "present",
+              "evidence": [
+                "从此无心爱良夜"
+              ]
+            },
+            {
+              "id": "a2",
+              "mentions": [
+                "良夜"
+              ],
+              "meaning": "美好的夜晚，本可引发爱赏的时段与氛围。",
+              "kind": "abstract",
+              "role": "scene",
+              "presence": "present",
+              "evidence": [
+                "从此无心爱良夜"
+              ]
+            },
+            {
+              "id": "a3",
+              "mentions": [
+                "明月"
+              ],
+              "meaning": "明亮的月亮，诗中作为夜景与推移的焦点。",
+              "kind": "concrete",
+              "role": "scene",
+              "presence": "present",
+              "evidence": [
+                "任他明月下西楼"
+              ]
+            },
+            {
+              "id": "a4",
+              "mentions": [
+                "西楼"
+              ],
+              "meaning": "西边的楼，明月下沉所离开的位置。",
+              "kind": "concrete",
+              "role": "scene",
+              "presence": "present",
+              "evidence": [
+                "任他明月下西楼"
+              ]
+            }
+          ],
+          "relations": [
+            {
+              "source": "a1",
+              "target": "a2",
+              "kind": "separate",
+              "modality": "asserted",
+              "basis": "explicit",
+              "evidence": [
+                "从此无心爱良夜"
+              ]
+            },
+            {
+              "source": "a1",
+              "target": "a3",
+              "kind": "separate",
+              "modality": "asserted",
+              "basis": "inferred",
+              "evidence": [
+                "从此无心爱良夜",
+                "任他明月下西楼"
+              ]
+            },
+            {
+              "source": "a3",
+              "target": "a4",
+              "kind": "separate",
+              "modality": "asserted",
+              "basis": "explicit",
+              "evidence": [
+                "任他明月下西楼"
+              ]
+            }
+          ],
+          "processes": [
+            {
+              "subject": "a1",
+              "kind": "fade",
+              "temporal": "already",
+              "modality": "asserted",
+              "basis": "explicit",
+              "evidence": [
+                "从此无心爱良夜"
+              ]
+            },
+            {
+              "subject": "a3",
+              "kind": "fade",
+              "temporal": "ongoing",
+              "modality": "asserted",
+              "basis": "explicit",
+              "evidence": [
+                "任他明月下西楼"
+              ]
+            }
+          ],
+          "atmosphere": {
+            "labels": [
+              "疏离",
+              "放任",
+              "夜境"
+            ],
+            "valence": "negative",
+            "openness": "medium",
+            "illumination": "night",
+            "evidence": [
+              "从此无心爱良夜",
+              "任他明月下西楼"
+            ]
+          },
+          "uncertainties": [
+            "“从此”的起点未明说，只能确定是某一转折之后。",
+            "“无心”是永久断绝还是当下心境，文本未作限定。",
+            "“任他”可解为放任、听任，也可带轻微无奈，语气不完全确定。",
+            "明月“下西楼”是正在下沉还是已经西沉，时间阶段有歧义。"
+          ]
+        },
+        "validation": {
+          "valid": true,
+          "errors": [],
+          "warnings": [
+            "relations[1] 为解读推断"
+          ],
+          "review_required": true
+        },
+        "plan": {
+          "version": "abstract-expression-1.0",
+          "poem": "从此无心爱良夜，任他明月下西楼。",
+          "seed": 723713584,
+          "nodes": [
+            {
+              "id": "a1",
+              "label": "无心",
+              "meaning": "没有爱赏、眷恋或投入的心绪，指向主体内在情感状态的退去。",
+              "kind": "abstract",
+              "mode": "present"
+            },
+            {
+              "id": "a2",
+              "label": "良夜",
+              "meaning": "美好的夜晚，本可引发爱赏的时段与氛围。",
+              "kind": "abstract",
+              "mode": "present"
+            },
+            {
+              "id": "a3",
+              "label": "明月",
+              "meaning": "明亮的月亮，诗中作为夜景与推移的焦点。",
+              "kind": "concrete",
+              "mode": "present"
+            },
+            {
+              "id": "a4",
+              "label": "西楼",
+              "meaning": "西边的楼，明月下沉所离开的位置。",
+              "kind": "concrete",
+              "mode": "present"
+            }
+          ],
+          "relations": [
+            {
+              "source": "a1",
+              "target": "a2",
+              "kind": "separate",
+              "modality": "asserted",
+              "basis": "explicit",
+              "evidence": [
+                "从此无心爱良夜"
+              ]
+            },
+            {
+              "source": "a1",
+              "target": "a3",
+              "kind": "separate",
+              "modality": "asserted",
+              "basis": "inferred",
+              "evidence": [
+                "从此无心爱良夜",
+                "任他明月下西楼"
+              ]
+            },
+            {
+              "source": "a3",
+              "target": "a4",
+              "kind": "separate",
+              "modality": "asserted",
+              "basis": "explicit",
+              "evidence": [
+                "任他明月下西楼"
+              ]
+            }
+          ],
+          "processes": [
+            {
+              "subject": "a1",
+              "kind": "fade",
+              "temporal": "already",
+              "modality": "asserted",
+              "basis": "explicit",
+              "evidence": [
+                "从此无心爱良夜"
+              ]
+            },
+            {
+              "subject": "a3",
+              "kind": "fade",
+              "temporal": "ongoing",
+              "modality": "asserted",
+              "basis": "explicit",
+              "evidence": [
+                "任他明月下西楼"
+              ]
+            }
+          ],
+          "omitted": [],
+          "atmosphere": {
+            "labels": [
+              "疏离",
+              "放任",
+              "夜境"
+            ],
+            "valence": "negative",
+            "openness": "medium",
+            "illumination": "night",
+            "evidence": [
+              "从此无心爱良夜",
+              "任他明月下西楼"
+            ]
+          },
+          "concretePlan": {
+            "version": "semantic-composition-3.3-world-instances",
+            "seed": 723713584,
+            "settings": {
+              "wind": 0,
+              "density": 0.45,
+              "palette": "indigo"
+            },
+            "layers": [
+              {
+                "tool": "moon",
+                "entities": [
+                  "a3"
+                ],
+                "projectedEntities": [],
+                "names": [
+                  "明月"
+                ],
+                "options": {
+                  "shape": "crescent"
+                },
+                "animate": false,
+                "placement": {
+                  "anchor": [
+                    320,
+                    175
+                  ],
+                  "at": [
+                    0.72,
+                    0.22
+                  ],
+                  "scale": 0.85
+                },
+                "instances": [
+                  {
+                    "placement": {
+                      "anchor": [
+                        320,
+                        175
+                      ],
+                      "at": [
+                        0.72,
+                        0.22
+                      ],
+                      "scale": 0.64
+                    },
+                    "depth": 0,
+                    "opacity": 1,
+                    "variant": 0
+                  }
+                ],
+                "singleUnit": true,
+                "quantity": {
+                  "items": [
+                    {
+                      "entity": "a3",
+                      "mode": "unspecified",
+                      "min": null,
+                      "max": null,
+                      "unit": null,
+                      "scope": "unspecified",
+                      "extent": "unspecified",
+                      "evidence": [],
+                      "basis": "local-legacy"
+                    }
+                  ],
+                  "rendered": 1,
+                  "exact": false,
+                  "collective": false,
+                  "partUnsupported": false
+                },
+                "quantityLabel": "数量未精确；本地试画 1 个单元",
+                "z": -5
+              },
+              {
+                "tool": "building",
+                "entities": [
+                  "a4"
+                ],
+                "projectedEntities": [],
+                "names": [
+                  "西楼"
+                ],
+                "options": {},
+                "animate": false,
+                "placement": {
+                  "anchor": [
+                    320,
+                    320
+                  ],
+                  "at": [
+                    0.43,
+                    0.73
+                  ],
+                  "scale": 0.9
+                },
+                "instances": [
+                  {
+                    "placement": {
+                      "anchor": [
+                        320,
+                        320
+                      ],
+                      "at": [
+                        0.43,
+                        0.73
+                      ],
+                      "scale": 0.78
+                    },
+                    "depth": 0.15,
+                    "opacity": 1,
+                    "variant": 0
+                  }
+                ],
+                "singleUnit": true,
+                "quantity": {
+                  "items": [
+                    {
+                      "entity": "a4",
+                      "mode": "unspecified",
+                      "min": null,
+                      "max": null,
+                      "unit": null,
+                      "scope": "unspecified",
+                      "extent": "unspecified",
+                      "evidence": [],
+                      "basis": "local-legacy"
+                    }
+                  ],
+                  "rendered": 1,
+                  "exact": false,
+                  "collective": false,
+                  "partUnsupported": false
+                },
+                "quantityLabel": "数量未精确；本地试画 1 个单元",
+                "z": 12
+              },
+              {
+                "tool": "landscape",
+                "entities": [],
+                "projectedEntities": [],
+                "names": [
+                  "构图依托·地面"
+                ],
+                "options": {
+                  "form": "ground",
+                  "edge": "soft"
+                },
+                "animate": false,
+                "placement": {
+                  "anchor": [
+                    320,
+                    194
+                  ],
+                  "at": [
+                    0.5,
+                    0.54
+                  ],
+                  "scale": 1.6
+                },
+                "instances": [
+                  {
+                    "placement": {
+                      "anchor": [
+                        320,
+                        265
+                      ],
+                      "at": [
+                        0.5,
+                        0.54
+                      ],
+                      "scale": 2.5
+                    },
+                    "variant": 0,
+                    "depth": 0,
+                    "opacity": 1
+                  }
+                ],
+                "singleUnit": false,
+                "inferred": true,
+                "provenance": {
+                  "basis": "local-context",
+                  "reason": "生长物、房舍和陆上主体需要共同地表；这是本地构图依托"
+                },
+                "quantity": {
+                  "rendered": 1,
+                  "exact": false,
+                  "items": []
+                },
+                "quantityLabel": "本地环境依托，不计入原文意象覆盖",
+                "z": -18,
+                "clip": [
+                  [
+                    0,
+                    0.5
+                  ],
+                  [
+                    1,
+                    0.5
+                  ],
+                  [
+                    1,
+                    1.04
+                  ],
+                  [
+                    0,
+                    1.04
+                  ]
+                ]
+              }
+            ],
+            "spatial": [],
+            "scene": {
+              "kind": "study",
+              "notes": [
+                "通用场景层先组织地面、水域、群落和主体，再比较三个布局的依托、相对位置、尺度与遮挡；检查通过不代表审美已通过。"
+              ],
+              "waterline": null,
+              "organization": {
+                "version": "1.0",
+                "strategy": "general-constraints",
+                "regions": {
+                  "land": [
+                    [
+                      0,
+                      0.5
+                    ],
+                    [
+                      1,
+                      0.5
+                    ],
+                    [
+                      1,
+                      1.04
+                    ],
+                    [
+                      0,
+                      1.04
+                    ]
+                  ]
+                },
+                "candidates": [
+                  {
+                    "layout": 0,
+                    "orientation": "open",
+                    "errors": 0,
+                    "cost": 0.56,
+                    "score": 1.54,
+                    "metrics": {
+                      "overlapPenalty": 0,
+                      "balancePenalty": 0.07,
+                      "motifFootprint": 0.091,
+                      "landArea": 0.54
+                    }
+                  },
+                  {
+                    "layout": 1,
+                    "orientation": "open",
+                    "errors": 0,
+                    "cost": 0.56,
+                    "score": 1.54,
+                    "metrics": {
+                      "overlapPenalty": 0,
+                      "balancePenalty": 0.07,
+                      "motifFootprint": 0.091,
+                      "landArea": 0.54
+                    }
+                  },
+                  {
+                    "layout": 2,
+                    "orientation": "open",
+                    "errors": 0,
+                    "cost": 0.56,
+                    "score": 1.54,
+                    "metrics": {
+                      "overlapPenalty": 0,
+                      "balancePenalty": 0.07,
+                      "motifFootprint": 0.091,
+                      "landArea": 0.54
+                    }
+                  }
+                ],
+                "repairs": [
+                  {
+                    "type": "support-added",
+                    "reason": "生长物、房舍和陆上主体需要共同地表；这是本地构图依托"
+                  }
+                ],
+                "limitations": [
+                  "几何检查不判定诗意理解或审美合格",
+                  "动作时序与整首诗的场景切换尚未编排"
+                ],
+                "layout": 0,
+                "orientation": "open",
+                "audit": {
+                  "scope": "implemented-geometry-and-drawing-gaps",
+                  "coverage": {
+                    "scope": "extracted-entities-only",
+                    "present": 2,
+                    "mapped": 2,
+                    "parameters": [],
+                    "missing": []
+                  },
+                  "checks": [
+                    "presence",
+                    "count",
+                    "finite",
+                    "support",
+                    "scale",
+                    "relative-position",
+                    "depth",
+                    "grove-spread",
+                    "drawing-gaps"
+                  ],
+                  "status": "checks-passed",
+                  "errors": 0,
+                  "review": 0,
+                  "issues": [],
+                  "metrics": {
+                    "overlapPenalty": 0,
+                    "balancePenalty": 0.07,
+                    "motifFootprint": 0.091,
+                    "landArea": 0.54
+                  },
+                  "cost": 0.56,
+                  "aestheticAcceptance": "pending-user"
+                },
+                "graph": {
+                  "nodes": [
+                    {
+                      "id": "l0",
+                      "entities": [
+                        "a3"
+                      ],
+                      "tool": "moon",
+                      "role": "sky",
+                      "habitat": "air",
+                      "inferred": false,
+                      "support": null
+                    },
+                    {
+                      "id": "l1",
+                      "entities": [
+                        "a4"
+                      ],
+                      "tool": "building",
+                      "role": "subject",
+                      "habitat": "land",
+                      "inferred": false,
+                      "support": "l2"
+                    },
+                    {
+                      "id": "l2",
+                      "entities": [],
+                      "tool": "landscape",
+                      "role": "terrain",
+                      "habitat": null,
+                      "inferred": true,
+                      "support": null
+                    }
+                  ],
+                  "edges": [
+                    {
+                      "type": "supported-by",
+                      "source": "l0",
+                      "target": null,
+                      "basis": "local-composition",
+                      "habitat": "air"
+                    },
+                    {
+                      "type": "supported-by",
+                      "source": "l1",
+                      "target": "l2",
+                      "basis": "local-composition",
+                      "habitat": "land"
+                    }
+                  ],
+                  "setting": "study"
+                }
+              }
+            },
+            "omitted": [],
+            "notes": [
+              "原句未明确月形，暂用弯月试画；可以手动切换。",
+              "西楼采用二层楼体试画，层数与门窗排列是本地选择；不等同于具体历史建筑，也未实现人物登楼。",
+              "本句有否定或假设提示，基础意象模式未细分其范围，暂缓动画，不宣称完成逻辑解释。",
+              "位置、大小、笔触与默认微动是本地试画选择；数量解释与本地显示数量分别记录。",
+              "未明说的群落数量、疏密、近中远层次与变体均为本地构图选择；种类可按已声明的写意画法概括，不把铺展词换算成精确物体数量。",
+              "通用场景层先组织地面、水域、群落和主体，再比较三个布局的依托、相对位置、尺度与遮挡；检查通过不代表审美已通过。"
+            ],
+            "relations": [],
+            "provenance": {
+              "basis": "local-semantic-adapter",
+              "source": "abstract-1.0 concrete subjects only"
+            }
+          },
+          "notes": [
+            "形态、笔触数量、配色变体、布局与观看节奏为本地艺术选择，不表示原文物体数或发生概率。",
+            "非确定关系只作候选或边界提示；未完成不固定为永久无法完成。",
+            "一次性过程在播放时段内演化，不自动循环成诗句的事实；可手动重放。",
+            "景物叠加借用原文中已有景物的画笔；景物本身保持原画笔，关系与时间由抽象层提示；精确数量、景物下移与复杂遮挡尚未接入此试验。"
+          ],
+          "aestheticAcceptance": "pending-user"
+        },
+        "cached": true
+      },
+      "failure": null
+    }
+  ],
+  "variants": [
+    {
+      "case": "a01",
+      "style": "auto",
+      "seed": 565046833,
+      "palette": "auto",
+      "hybrid": false,
+      "file": "a01-0.png",
+      "label": "交融 · 抽象表达"
+    },
+    {
+      "case": "a01",
+      "style": "flow",
+      "seed": 3219482602,
+      "palette": "auto",
+      "hybrid": false,
+      "file": "a01-1.png",
+      "label": "流线 · 抽象表达"
+    },
+    {
+      "case": "a01",
+      "style": "ink",
+      "seed": 1578951075,
+      "palette": "auto",
+      "hybrid": false,
+      "file": "a01-2.png",
+      "label": "墨晕 · 抽象表达"
+    },
+    {
+      "case": "a01",
+      "style": "shards",
+      "seed": 4233386844,
+      "palette": "auto",
+      "hybrid": false,
+      "file": "a01-3.png",
+      "label": "碎片 · 抽象表达"
+    },
+    {
+      "case": "a01",
+      "style": "ribbons",
+      "seed": 2592855317,
+      "palette": "auto",
+      "hybrid": false,
+      "file": "a01-4.png",
+      "label": "丝带 · 抽象表达"
+    },
+    {
+      "case": "a01",
+      "style": "ripples",
+      "seed": 952323790,
+      "palette": "auto",
+      "hybrid": false,
+      "file": "a01-5.png",
+      "label": "涟漪 · 抽象表达"
+    },
+    {
+      "case": "a01",
+      "style": "dust",
+      "seed": 3606759559,
+      "palette": "auto",
+      "hybrid": false,
+      "file": "a01-6.png",
+      "label": "微粒 · 抽象表达"
+    },
+    {
+      "case": "a01",
+      "style": "contours",
+      "seed": 1966228032,
+      "palette": "auto",
+      "hybrid": false,
+      "file": "a01-7.png",
+      "label": "等高纹 · 抽象表达"
+    },
+    {
+      "case": "a02",
+      "style": "ink",
+      "seed": 4125571767,
+      "palette": "auto",
+      "hybrid": false,
+      "file": "a02-0.png",
+      "label": "墨晕 · 抽象表达"
+    },
+    {
+      "case": "a02",
+      "style": "shards",
+      "seed": 2485040240,
+      "palette": "auto",
+      "hybrid": false,
+      "file": "a02-1.png",
+      "label": "碎片 · 抽象表达"
+    },
+    {
+      "case": "a02",
+      "style": "ribbons",
+      "seed": 844508713,
+      "palette": "auto",
+      "hybrid": false,
+      "file": "a02-2.png",
+      "label": "丝带 · 抽象表达"
+    },
+    {
+      "case": "a02",
+      "style": "ripples",
+      "seed": 3498944482,
+      "palette": "auto",
+      "hybrid": false,
+      "file": "a02-3.png",
+      "label": "涟漪 · 抽象表达"
+    },
+    {
+      "case": "a02",
+      "style": "dust",
+      "seed": 1858412955,
+      "palette": "auto",
+      "hybrid": false,
+      "file": "a02-4.png",
+      "label": "微粒 · 抽象表达"
+    },
+    {
+      "case": "a02",
+      "style": "contours",
+      "seed": 217881428,
+      "palette": "auto",
+      "hybrid": false,
+      "file": "a02-5.png",
+      "label": "等高纹 · 抽象表达"
+    },
+    {
+      "case": "a02",
+      "style": "echoes",
+      "seed": 2872317197,
+      "palette": "auto",
+      "hybrid": false,
+      "file": "a02-6.png",
+      "label": "叠影 · 抽象表达"
+    },
+    {
+      "case": "a02",
+      "style": "weave",
+      "seed": 1231785670,
+      "palette": "auto",
+      "hybrid": false,
+      "file": "a02-7.png",
+      "label": "网织 · 抽象表达"
+    },
+    {
+      "case": "a03",
+      "style": "ribbons",
+      "seed": 1179266359,
+      "palette": "auto",
+      "hybrid": false,
+      "file": "a03-0.png",
+      "label": "丝带 · 抽象表达"
+    },
+    {
+      "case": "a03",
+      "style": "ripples",
+      "seed": 3833702128,
+      "palette": "auto",
+      "hybrid": false,
+      "file": "a03-1.png",
+      "label": "涟漪 · 抽象表达"
+    },
+    {
+      "case": "a03",
+      "style": "dust",
+      "seed": 2193170601,
+      "palette": "auto",
+      "hybrid": false,
+      "file": "a03-2.png",
+      "label": "微粒 · 抽象表达"
+    },
+    {
+      "case": "a03",
+      "style": "contours",
+      "seed": 552639074,
+      "palette": "auto",
+      "hybrid": false,
+      "file": "a03-3.png",
+      "label": "等高纹 · 抽象表达"
+    },
+    {
+      "case": "a03",
+      "style": "echoes",
+      "seed": 3207074843,
+      "palette": "auto",
+      "hybrid": false,
+      "file": "a03-4.png",
+      "label": "叠影 · 抽象表达"
+    },
+    {
+      "case": "a03",
+      "style": "weave",
+      "seed": 1566543316,
+      "palette": "auto",
+      "hybrid": false,
+      "file": "a03-5.png",
+      "label": "网织 · 抽象表达"
+    },
+    {
+      "case": "a03",
+      "style": "auto",
+      "seed": 4220979085,
+      "palette": "auto",
+      "hybrid": false,
+      "file": "a03-6.png",
+      "label": "交融 · 抽象表达"
+    },
+    {
+      "case": "a03",
+      "style": "flow",
+      "seed": 2580447558,
+      "palette": "auto",
+      "hybrid": false,
+      "file": "a03-7.png",
+      "label": "流线 · 抽象表达"
+    },
+    {
+      "case": "a04",
+      "style": "dust",
+      "seed": 3378149353,
+      "palette": "auto",
+      "hybrid": true,
+      "file": "a04-0.png",
+      "label": "微粒 · 景物叠加"
+    },
+    {
+      "case": "a04",
+      "style": "contours",
+      "seed": 1737617826,
+      "palette": "auto",
+      "hybrid": true,
+      "file": "a04-1.png",
+      "label": "等高纹 · 景物叠加"
+    },
+    {
+      "case": "a04",
+      "style": "echoes",
+      "seed": 97086299,
+      "palette": "auto",
+      "hybrid": true,
+      "file": "a04-2.png",
+      "label": "叠影 · 景物叠加"
+    },
+    {
+      "case": "a04",
+      "style": "weave",
+      "seed": 2751522068,
+      "palette": "auto",
+      "hybrid": true,
+      "file": "a04-3.png",
+      "label": "网织 · 景物叠加"
+    },
+    {
+      "case": "a04",
+      "style": "auto",
+      "seed": 1110990541,
+      "palette": "auto",
+      "hybrid": false,
+      "file": "a04-4.png",
+      "label": "交融 · 抽象表达"
+    },
+    {
+      "case": "a04",
+      "style": "flow",
+      "seed": 3765426310,
+      "palette": "auto",
+      "hybrid": false,
+      "file": "a04-5.png",
+      "label": "流线 · 抽象表达"
+    },
+    {
+      "case": "a04",
+      "style": "ink",
+      "seed": 2124894783,
+      "palette": "auto",
+      "hybrid": false,
+      "file": "a04-6.png",
+      "label": "墨晕 · 抽象表达"
+    },
+    {
+      "case": "a04",
+      "style": "shards",
+      "seed": 484363256,
+      "palette": "auto",
+      "hybrid": false,
+      "file": "a04-7.png",
+      "label": "碎片 · 抽象表达"
+    }
+  ]
+}

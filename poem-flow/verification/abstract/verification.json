@@ -1,0 +1,352 @@
+{
+  "scope": "same-four-answers-local-replays",
+  "newModelCalls": 0,
+  "hashes": {
+    "abstract-contract.mjs": "41f22abbc34431a24c0f9a7df2da223c0003932e7ed502c18c76041b80ba21da",
+    "abstract-plan.mjs": "e8ab0db415af47c20c40e9d663c453f3f2321d9e7eeab555dc6e89e4e04c2b7a",
+    "abstract-scene.js": "9e1be5097d6b39d5641d3da0f8c7c010d056bb4050f4d4bf027818b7af73b6c4",
+    "abstract-cases.mjs": "e620ceda7781e000451b99b2b80c294b842b97fcf8b07640bd59ebe554e3b2a0",
+    "service.mjs": "08b70eb5f791920d9feeacfb29bd6bebc263f8657bb1ba5a7ba9fa6a80814a2a",
+    "server.mjs": "975f9699cd92226ed3190ae784ca75dadef6f5684e90a15dd093be277a1de18c",
+    "../../poem-flow/abstract-app.js": "37e1128b6498838fb1f7e0def2db079eac2b29f46fa60e5c0eeecec7f45801d9",
+    "../../poem-flow/abstract.html": "7a8b386c9ae9afd7fe08f9f05ffd987b0135852cae2d790c37602d2cbe16df39"
+  },
+  "variants": [
+    {
+      "case": "a01",
+      "file": "a01-0.png",
+      "style": "auto",
+      "seed": 565046833,
+      "hybrid": false,
+      "palette": "tide",
+      "geometryKey": "4ab8693d",
+      "nonblank": 0.2176736111111111
+    },
+    {
+      "case": "a01",
+      "file": "a01-1.png",
+      "style": "flow",
+      "seed": 3219482602,
+      "hybrid": false,
+      "palette": "ember",
+      "geometryKey": "eea53719",
+      "nonblank": 0.169375
+    },
+    {
+      "case": "a01",
+      "file": "a01-2.png",
+      "style": "ink",
+      "seed": 1578951075,
+      "hybrid": false,
+      "palette": "mist",
+      "geometryKey": "59df892b",
+      "nonblank": 0.12615277777777778
+    },
+    {
+      "case": "a01",
+      "file": "a01-3.png",
+      "style": "shards",
+      "seed": 4233386844,
+      "hybrid": false,
+      "palette": "ember",
+      "geometryKey": "516b9a50",
+      "nonblank": 0.24668055555555554
+    },
+    {
+      "case": "a01",
+      "file": "a01-4.png",
+      "style": "ribbons",
+      "seed": 2592855317,
+      "hybrid": false,
+      "palette": "rose",
+      "geometryKey": "747428d1",
+      "nonblank": 0.09347222222222222
+    },
+    {
+      "case": "a01",
+      "file": "a01-5.png",
+      "style": "ripples",
+      "seed": 952323790,
+      "hybrid": false,
+      "palette": "lapis",
+      "geometryKey": "c5609e4c",
+      "nonblank": 0.1949375
+    },
+    {
+      "case": "a01",
+      "file": "a01-6.png",
+      "style": "dust",
+      "seed": 3606759559,
+      "hybrid": false,
+      "palette": "rose",
+      "geometryKey": "e08f22e7",
+      "nonblank": 0.03429861111111111
+    },
+    {
+      "case": "a01",
+      "file": "a01-7.png",
+      "style": "contours",
+      "seed": 1966228032,
+      "hybrid": false,
+      "palette": "ember",
+      "geometryKey": "e45e9d47",
+      "nonblank": 0.19275
+    },
+    {
+      "case": "a02",
+      "file": "a02-0.png",
+      "style": "ink",
+      "seed": 4125571767,
+      "hybrid": false,
+      "palette": "tide",
+      "geometryKey": "6d9d64a",
+      "nonblank": 0.3413888888888889
+    },
+    {
+      "case": "a02",
+      "file": "a02-1.png",
+      "style": "shards",
+      "seed": 2485040240,
+      "hybrid": false,
+      "palette": "ember",
+      "geometryKey": "ebb6cfaf",
+      "nonblank": 0.2366736111111111
+    },
+    {
+      "case": "a02",
+      "file": "a02-2.png",
+      "style": "ribbons",
+      "seed": 844508713,
+      "hybrid": false,
+      "palette": "lapis",
+      "geometryKey": "cb5cb4c2",
+      "nonblank": 0.22916666666666666
+    },
+    {
+      "case": "a02",
+      "file": "a02-3.png",
+      "style": "ripples",
+      "seed": 3498944482,
+      "hybrid": false,
+      "palette": "ember",
+      "geometryKey": "d40a8711",
+      "nonblank": 0.2915277777777778
+    },
+    {
+      "case": "a02",
+      "file": "a02-4.png",
+      "style": "dust",
+      "seed": 1858412955,
+      "hybrid": false,
+      "palette": "paper",
+      "geometryKey": "9669ab1f",
+      "nonblank": 0.015298611111111112
+    },
+    {
+      "case": "a02",
+      "file": "a02-5.png",
+      "style": "contours",
+      "seed": 217881428,
+      "hybrid": false,
+      "palette": "rose",
+      "geometryKey": "d86ecfc1",
+      "nonblank": 0.0965
+    },
+    {
+      "case": "a02",
+      "file": "a02-6.png",
+      "style": "echoes",
+      "seed": 2872317197,
+      "hybrid": false,
+      "palette": "violet",
+      "geometryKey": "49ed7f51",
+      "nonblank": 0.1766111111111111
+    },
+    {
+      "case": "a02",
+      "file": "a02-7.png",
+      "style": "weave",
+      "seed": 1231785670,
+      "hybrid": false,
+      "palette": "mist",
+      "geometryKey": "b2cfcb86",
+      "nonblank": 0.18438888888888888
+    },
+    {
+      "case": "a03",
+      "file": "a03-0.png",
+      "style": "ribbons",
+      "seed": 1179266359,
+      "hybrid": false,
+      "palette": "mineral",
+      "geometryKey": "a5674b9",
+      "nonblank": 0.10373611111111111
+    },
+    {
+      "case": "a03",
+      "file": "a03-1.png",
+      "style": "ripples",
+      "seed": 3833702128,
+      "hybrid": false,
+      "palette": "rose",
+      "geometryKey": "d48c1e91",
+      "nonblank": 0.09400694444444445
+    },
+    {
+      "case": "a03",
+      "file": "a03-2.png",
+      "style": "dust",
+      "seed": 2193170601,
+      "hybrid": false,
+      "palette": "lapis",
+      "geometryKey": "d560fea5",
+      "nonblank": 0.24894444444444444
+    },
+    {
+      "case": "a03",
+      "file": "a03-3.png",
+      "style": "contours",
+      "seed": 552639074,
+      "hybrid": false,
+      "palette": "ember",
+      "geometryKey": "14c226ab",
+      "nonblank": 0.1258402777777778
+    },
+    {
+      "case": "a03",
+      "file": "a03-4.png",
+      "style": "echoes",
+      "seed": 3207074843,
+      "hybrid": false,
+      "palette": "tide",
+      "geometryKey": "5c46b3c9",
+      "nonblank": 0.16361805555555556
+    },
+    {
+      "case": "a03",
+      "file": "a03-5.png",
+      "style": "weave",
+      "seed": 1566543316,
+      "hybrid": false,
+      "palette": "tide",
+      "geometryKey": "c3286093",
+      "nonblank": 0.22917361111111112
+    },
+    {
+      "case": "a03",
+      "file": "a03-6.png",
+      "style": "auto",
+      "seed": 4220979085,
+      "hybrid": false,
+      "palette": "mineral",
+      "geometryKey": "a2a8c6b8",
+      "nonblank": 0.15070833333333333
+    },
+    {
+      "case": "a03",
+      "file": "a03-7.png",
+      "style": "flow",
+      "seed": 2580447558,
+      "hybrid": false,
+      "palette": "violet",
+      "geometryKey": "d7a404e0",
+      "nonblank": 0.2552638888888889
+    },
+    {
+      "case": "a04",
+      "file": "a04-0.png",
+      "style": "dust",
+      "seed": 3378149353,
+      "hybrid": true,
+      "palette": "violet",
+      "geometryKey": "835a70c6",
+      "nonblank": 1
+    },
+    {
+      "case": "a04",
+      "file": "a04-1.png",
+      "style": "contours",
+      "seed": 1737617826,
+      "hybrid": true,
+      "palette": "tide",
+      "geometryKey": "3d6d9cf0",
+      "nonblank": 0.5523055555555556
+    },
+    {
+      "case": "a04",
+      "file": "a04-2.png",
+      "style": "echoes",
+      "seed": 97086299,
+      "hybrid": true,
+      "palette": "violet",
+      "geometryKey": "f2df30f8",
+      "nonblank": 1
+    },
+    {
+      "case": "a04",
+      "file": "a04-3.png",
+      "style": "weave",
+      "seed": 2751522068,
+      "hybrid": true,
+      "palette": "tide",
+      "geometryKey": "a0b7390d",
+      "nonblank": 0.6115069444444444
+    },
+    {
+      "case": "a04",
+      "file": "a04-4.png",
+      "style": "auto",
+      "seed": 1110990541,
+      "hybrid": false,
+      "palette": "violet",
+      "geometryKey": "cedf7cd8",
+      "nonblank": 0.3297847222222222
+    },
+    {
+      "case": "a04",
+      "file": "a04-5.png",
+      "style": "flow",
+      "seed": 3765426310,
+      "hybrid": false,
+      "palette": "ember",
+      "geometryKey": "78cf8a4d",
+      "nonblank": 0.25500694444444444
+    },
+    {
+      "case": "a04",
+      "file": "a04-6.png",
+      "style": "ink",
+      "seed": 2124894783,
+      "hybrid": false,
+      "palette": "ember",
+      "geometryKey": "f56edfd3",
+      "nonblank": 0.32238194444444446
+    },
+    {
+      "case": "a04",
+      "file": "a04-7.png",
+      "style": "shards",
+      "seed": 484363256,
+      "hybrid": false,
+      "palette": "lapis",
+      "geometryKey": "71143cf",
+      "nonblank": 0.33843055555555557
+    }
+  ],
+  "pixelReproducibility": true,
+  "individualDrag": true,
+  "surroundGroupDrag": true,
+  "dragHistory": true,
+  "restart": true,
+  "seedChange": true,
+  "styleChange": true,
+  "animation": true,
+  "pause": true,
+  "png": true,
+  "hybrid": true,
+  "hybridColorFollows": true,
+  "mobile": 390,
+  "browserErrors": [],
+  "networkPosts": [],
+  "aestheticAcceptance": "pending-user"
+}

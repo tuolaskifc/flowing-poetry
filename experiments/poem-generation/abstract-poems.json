@@ -1,0 +1,10 @@
+{
+  "version": "1.0",
+  "sourcePolicy": "原诗公有领域，正文取原文节选并转简体；来源页用于核对文字与作者，不把篇外语境加入解读。",
+  "cases": [
+    {"id":"a01","poem":"此情可待成追忆，只是当时已惘然。","author":"李商隐","title":"锦瑟","url":"https://zh.wikisource.org/wiki/錦瑟"},
+    {"id":"a02","poem":"此中有真意，欲辩已忘言。","author":"陶渊明","title":"饮酒·其五","url":"https://zh.wikisource.org/wiki/飲酒二十首#其五","note":"依所列来源采用“辩”字，另有“辨”字版本。"},
+    {"id":"a03","poem":"剪不断，理还乱，是离愁。","author":"李煜","title":"相见欢·无言独上西楼","url":"https://zh.wikisource.org/wiki/相見歡_(無言獨上西樓,_李煜)"},
+    {"id":"a04","poem":"从此无心爱良夜，任他明月下西楼。","author":"李益","title":"写情","url":"https://zh.wikisource.org/wiki/寫情"}
+  ]
+}
