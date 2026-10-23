@@ -18,7 +18,7 @@ window.PoemDrawing.register({
       }
       for(const f of flakes){
         const y=(f.y+ctx.time*f.speed)%(H+12)-6,x=((f.x+ctx.time*ctx.wind.strength*20+Math.sin(ctx.time*.5+f.phase)*ctx.wind.strength*14)%(W+16)+W+16)%(W+16)-8;
-        p.stroke(alpha(p,ctx.palette.ink,85));p.strokeWeight(.5);p.fill(alpha(p,ctx.palette.bg,255));p.circle(x,y,f.radius*2);
+        p.stroke(alpha(p,ctx.palette.ink,85));p.strokeWeight(.5);p.fill(alpha(p,ctx.palette.light||ctx.palette.bg,255));p.circle(x,y,f.radius*2);
         if(ctx.settings.density>.5){p.stroke(alpha(p,ctx.palette.main,160));p.line(x-f.radius,y,x+f.radius,y);p.line(x,y-f.radius,x,y+f.radius);}
       }
     }

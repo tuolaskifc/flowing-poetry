@@ -35,6 +35,27 @@ window.PoemDrawing = (() => {
   const paletteOptions=()=>paletteGroups.flatMap(([group,items])=>items.map(([id,label])=>({id,label,group,colors:{...palettes[id]}})));
   const clamp=(v,min=0,max=1)=>Math.max(min,Math.min(max,v));
   const number=(v,fallback)=>Number.isFinite(Number(v))?Number(v):fallback;
+  const tonalCache=new Map();
+  const mix=(a,b,t)=>'#'+[1,3,5].map(i=>Math.round(parseInt(a.slice(i,i+2),16)*(1-t)+parseInt(b.slice(i,i+2),16)*t).toString(16).padStart(2,'0')).join('').toUpperCase();
+  function paletteFor(name,visual){
+    const base=palettes[name]||palettes.clear;if(!visual?.role)return base;
+    const {role,depth='middle'}=visual,key=name+':'+role+':'+depth;if(tonalCache.has(key))return tonalCache.get(key);
+    const local=name==='mineral'?{mountain:{main:'#7C9EA9',ink:'#476E89',accent:'#BED1BF'},vegetation:{main:'#3D8D66',ink:'#284F49',accent:'#CBAC63'},water:{main:'#8BBDB5',ink:'#3D8492',accent:'#DADAB3'},ground:{main:'#BCC9A2',ink:'#718A69',accent:'#CBBE89'},architecture:{main:'#BBAE8A',ink:'#48605C',accent:'#D5AB64'},rock:{main:'#8DAF9F',ink:'#4A7777',accent:'#B4C2A5'}}[role]:null;
+    const p={...base,...local};
+    if(!local){
+      if(role==='mountain')Object.assign(p,{main:mix(base.ink,base.bg,.64),ink:mix(base.ink,base.main,.35)});
+      if(role==='water')Object.assign(p,{main:mix(base.main,base.bg,.36),ink:mix(base.ink,base.main,.38)});
+      if(role==='ground')Object.assign(p,{main:mix(base.main,base.accent,.28),ink:mix(base.ink,base.main,.2)});
+      if(role==='architecture')p.main=mix(base.main,base.accent,.38);
+      if(role==='blossom')Object.assign(p,{main:mix(base.main,base.accent,.58),flower:base.accent});
+    }
+    if(role==='blossom')p.flower=base.accent;
+    if(role==='figure')p.light=mix('#FFFBEF',base.bg,.08);
+    if(role==='snow'){p.light=mix('#F6F8FF',base.bg,.12);p.ink=mix('#EAF1F6',base.bg,.18);}
+    const fade=depth==='far'?.22:depth==='middle'?.06:0;
+    p.main=mix(p.main,base.bg,fade);p.ink=mix(p.ink,base.bg,fade*.8);
+    tonalCache.set(key,Object.freeze(p));return tonalCache.get(key);
+  }
   function settings(input={}) {
     return {wind:clamp(number(input.wind,.35)),density:clamp(number(input.density,.45)),motion:clamp(number(input.motion,1),0,2),palette:Object.hasOwn(palettes,input.palette)?input.palette:'clear'};
   }
@@ -58,8 +79,9 @@ window.PoemDrawing = (() => {
     const timeScale=clamp(number(renderOptions.timeScale,1),0,2);
     const safeSettings=settings(shared);
     const options=Object.fromEntries((definition.controls||[]).map(c=>[c.id,c.default]));
-    let palette=palettes[safeSettings.palette];
-    function sync(){Object.assign(safeSettings,settings(shared));palette=palettes[safeSettings.palette];}
+    let palette=paletteFor(safeSettings.palette,renderOptions.visual);
+    const windAmplitude=clamp(number(renderOptions.performance?.amplitude,1),0,2),windPhase=number(renderOptions.performance?.phase,0);
+    function sync(){Object.assign(safeSettings,settings(shared));palette=paletteFor(safeSettings.palette,renderOptions.visual);}
     const sketch=p=>{
       const colors=new Map();
       function alpha(_p,color,value){
@@ -70,7 +92,7 @@ window.PoemDrawing = (() => {
       ctx={p,width,height,settings:safeSettings,options,alpha,fingerprint,singleUnit:renderOptions.singleUnit===true,
         get time(){return time;},get palette(){return palette;},
         wind:{
-          offset(phase=0,amplitude=1,frequency=.7){const m=safeSettings.motion,gain=m<=1?m:1+(m-1)*2;return Math.sin(time*frequency+phase)*safeSettings.wind*amplitude*gain;},
+          offset(phase=0,amplitude=1,frequency=.7){const m=safeSettings.motion,gain=m<=1?m:1+(m-1)*2,gust=renderOptions.performance?.rhythm==='gust'?.8+.2*Math.sin(time*.24+windPhase):1;return Math.sin(time*frequency+phase)*safeSettings.wind*amplitude*gain*windAmplitude*gust;},
           get strength(){return safeSettings.wind;}
         }
       };
@@ -104,10 +126,10 @@ window.PoemDrawing = (() => {
       },
       reset(next=seed){if(disposed)return;seed=number(next,seed)>>>0;sync();time=0;ticks=0;if(tool){instance.randomSeed(seed);instance.noiseSeed(seed);tool.reset();if(paused)instance.redraw();}},
       save(){if(!disposed)instance.saveCanvas(`流动诗-${id}-${seed}`,'png');},
-      inspect(){return {id,seed,time,timeScale,ticks,paused,disposed,ready:Boolean(tool),options:{...options},sources:[...definition.sources],...tool?.inspect?.()};},
+      inspect(){return {id,seed,time,timeScale,ticks,paused,disposed,ready:Boolean(tool),visual:renderOptions.visual&&{...renderOptions.visual},performance:renderOptions.performance&&{...renderOptions.performance},palette:{...palette},options:{...options},sources:[...definition.sources],...tool?.inspect?.()};},
       anchors(){return disposed?[]:tool?.anchors?.()||[];},
       dispose(){if(!disposed){disposed=true;tool?.dispose?.();instance.remove();host.dataset.ready='false';}}
     };
   }
-  return Object.freeze({register,definitions,mount,settings,paletteOptions,width,height,paletteFor:name=>palettes[name]||palettes.clear});
+  return Object.freeze({register,definitions,mount,settings,paletteOptions,width,height,paletteFor});
 })();

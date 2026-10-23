@@ -7,7 +7,8 @@ import {expressiveRule} from './expressive-mapping.mjs';
 import {arrangeScene} from './scene-layout.mjs';
 import {organizeScene} from './scene-organization.mjs';
 import {prepareSemanticLayers,finishSemanticPlan} from './semantic-policy.mjs';
-export const policyVersion='semantic-composition-3.3-color-motion';
+import {developLandscape} from './landscape-development.mjs';
+export const policyVersion='semantic-composition-3.3-landscape';
 const {rules,unsupportedTerms}=lexicon;
 const order=['landscape','moon','cloud','mist','dwelling','building','tree','willow','bamboo','pavilion','horse','water','rock','boat','lotus','grass','orchid','plum-branch','flower','flower-forms','wine','leaves','surface-weather','fish','bird','oriole','falling-petals','catkins','rain','snow'];
 const placements={
@@ -26,7 +27,7 @@ const placements={
   'surface-weather':{anchor:[320,206],at:[.43,.76],scale:.9},oriole:{anchor:[320,200],at:[.64,.43],scale:.72},
   orchid:{anchor:[272,331],at:[.27,.91],scale:.95},horse:{anchor:[298,312],at:[.7,.87],scale:.88},lotus:{anchor:[320,330],at:[.53,.92],scale:.95}
 };
-export function buildPlan(analysis){
+export function buildPlan(analysis,{landscape=true}={}){
   const layers=[],omitted=[],notes=[],entityTools=new Map();let wind=0;
   for(const entity of analysis.entities){
     const name=entity.mentions.join('／');
@@ -112,5 +113,6 @@ export function buildPlan(analysis){
   prepareSemanticLayers(analysis,proposal.layers);
   const arranged=organizeScene(analysis,proposal);
   const plan={version:policyVersion,seed,settings:{wind,density:.45,palette:'clear'},...arranged,omitted,notes:[...new Set([...notes,...composition.notes,...arranged.scene.notes])],relations};
-  return finishSemanticPlan(analysis,plan);
+  const finished=finishSemanticPlan(analysis,plan);
+  return landscape?developLandscape(analysis,finished):finished;
 }

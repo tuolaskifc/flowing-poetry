@@ -48,7 +48,7 @@ export function prepareSemanticLayers(analysis,layers){
    if(['fly','float'].includes(state))l.motion={kind:['approach','recede'].includes(action.direction)?'depth':'drift',direction:['up','down'].includes(action.direction)?'unspecified':action.direction,rate:l.timeScale,state};
   }
   record(l,path+'.state','形态与绘画时钟',state==='still'?'静止姿态并停止该图层时钟':'启用工具支持的 '+state+' 状态');
-  if(state!=='still')record(l,path+'.pace','绘画时钟',`定性节奏映射为本地时钟倍率 ${l.timeScale}`);
+  if(state!=='still')record(l,path+'.pace','绘画时钟',`定性节奏映射为语义基准时钟倍率 ${l.timeScale}；观看动态与景物节奏另行调节`);
   if(l.motion)record(l,path+'.direction','画布合成',['up','down'].includes(action.direction)?'该工具尚无向上／向下位移，只保留本地微动':action.direction==='unspecified'?'方向未明，仅用本地小幅微动':'按定性方向作有限观看动画；不表示完整动作过程',['up','down'].includes(action.direction)?'unsupported':'applied');
   else if(state==='rise'&&action.direction==='up'||state==='fall'&&action.direction==='down')record(l,path+'.direction','工具原生运动','使用原生向上／向下运动，不平移依托锚点');
  }

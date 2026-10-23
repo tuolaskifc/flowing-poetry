@@ -43,8 +43,8 @@ function blossomTree(){
   const branch=pine[i],side=i%2?-1:1,rootY=306-i*19,endX=320+side*(82+(i%3)*37),endY=109+(i%4)*29;
   b.stroke([320,rootY,320+side*20,rootY-55,endX-side*22,endY+10,endX,endY],1.1,palette.ink,155,i,false);
   for(let j=0;j<21;j++){const t=.25+(j/21)*.75,note=branch.needles[j],x=320+(endX-320)*t+note.x*24+ctx.wind.offset(branch.phase,1,.6),y=rootY+(endY-rootY)*t+note.y*.9;
-   p.noStroke();p.fill(alpha(p,'#CA9492',25));p.ellipse(x,y,11,8);
-   for(let k=0;k<5;k++){const a=k*p.TWO_PI/5;p.fill(alpha(p,j%3?'#C79198':palette.bg,155));p.ellipse(x+Math.cos(a)*3,y+Math.sin(a)*3,5,4);}p.fill(alpha(p,palette.ink,95));p.circle(x,y,1.8);
+   p.noStroke();p.fill(alpha(p,palette.flower||'#CA9492',25));p.ellipse(x,y,11,8);
+   for(let k=0;k<5;k++){const a=k*p.TWO_PI/5;p.fill(alpha(p,j%3?(palette.flower||'#C79198'):palette.bg,155));p.ellipse(x+Math.cos(a)*3,y+Math.sin(a)*3,5,4);}p.fill(alpha(p,palette.ink,95));p.circle(x,y,1.8);
   }
  }
 }

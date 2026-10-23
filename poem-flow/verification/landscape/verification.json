@@ -1,0 +1,2711 @@
+{
+  "modelCalls": 0,
+  "policyVersion": "semantic-composition-3.3-landscape",
+  "hashes": {
+    "landscape-development.mjs": "ed7d35f29b483e685b7d501c6d457b956032e55cf9fc409af6ddf26b03a4e2b0",
+    "planner.mjs": "5ab4caf7625dc6122fe7ad1f5d5cade2861a80d9a43f6ab8ef3b14c7801eb2d4",
+    "scene.js": "1330904b3ec99f1de21a2ac5dc51b504f94f07083b69ef9113e49da9e904ab0e",
+    "app.js": "9b82f77cdc8d170e3d9578b02d771e193368efdbf0f5a6953f0600b94bf77c26",
+    "semantic-policy.mjs": "32a749460e254e784752be3d367eb05183706d81345aaf43285e5eb094cd95c4",
+    "../imagery-library/drawing/core.js": "ccb6188b1543e8da8d1ed9998c1365067d0c046bbbdc279837c99855980db0e7",
+    "../imagery-library/drawing/tools/tree.js": "23f43c9510411b2fefdb1693e179faa1ba06675cc80673b65b65eeea2d59a579",
+    "../imagery-library/drawing/tools/bird.js": "7641ec49c428a6a6d1ce709eb47572de63ae203508c7e6af9f25810cbc638e7e",
+    "../imagery-library/drawing/tools/snow.js": "7cb3ae803491fea807054b16830209d343d89e5be4daeb03693cc8896e545d90"
+  },
+  "cases": [
+    {
+      "id": "s02",
+      "poem": "明月松间照，清泉石上流。",
+      "rawRecord": "2026-10-23T01-03-54-710Z-efdb6d76",
+      "sourceExpanded": false,
+      "before": {
+        "file": "s02-before",
+        "sourceCanvases": 10,
+        "instances": 15,
+        "colors": [
+          {
+            "tool": "moon",
+            "palette": {
+              "bg": "#E8E6D1",
+              "main": "#2C9A82",
+              "ink": "#184E68",
+              "accent": "#DEA742"
+            },
+            "timeScale": 0
+          },
+          {
+            "tool": "tree",
+            "palette": {
+              "bg": "#E8E6D1",
+              "main": "#2C9A82",
+              "ink": "#184E68",
+              "accent": "#DEA742"
+            },
+            "timeScale": 0.45
+          },
+          {
+            "tool": "tree",
+            "palette": {
+              "bg": "#E8E6D1",
+              "main": "#2C9A82",
+              "ink": "#184E68",
+              "accent": "#DEA742"
+            },
+            "timeScale": 0.45
+          },
+          {
+            "tool": "tree",
+            "palette": {
+              "bg": "#E8E6D1",
+              "main": "#2C9A82",
+              "ink": "#184E68",
+              "accent": "#DEA742"
+            },
+            "timeScale": 0.45
+          },
+          {
+            "tool": "water",
+            "palette": {
+              "bg": "#E8E6D1",
+              "main": "#2C9A82",
+              "ink": "#184E68",
+              "accent": "#DEA742"
+            },
+            "timeScale": 0.45
+          },
+          {
+            "tool": "rock",
+            "palette": {
+              "bg": "#E8E6D1",
+              "main": "#2C9A82",
+              "ink": "#184E68",
+              "accent": "#DEA742"
+            },
+            "timeScale": 0.45
+          },
+          {
+            "tool": "rock",
+            "palette": {
+              "bg": "#E8E6D1",
+              "main": "#2C9A82",
+              "ink": "#184E68",
+              "accent": "#DEA742"
+            },
+            "timeScale": 0.45
+          },
+          {
+            "tool": "rock",
+            "palette": {
+              "bg": "#E8E6D1",
+              "main": "#2C9A82",
+              "ink": "#184E68",
+              "accent": "#DEA742"
+            },
+            "timeScale": 0.45
+          },
+          {
+            "tool": "landscape",
+            "palette": {
+              "bg": "#E8E6D1",
+              "main": "#2C9A82",
+              "ink": "#184E68",
+              "accent": "#DEA742"
+            },
+            "timeScale": 1
+          },
+          {
+            "tool": "landscape",
+            "palette": {
+              "bg": "#E8E6D1",
+              "main": "#2C9A82",
+              "ink": "#184E68",
+              "accent": "#DEA742"
+            },
+            "timeScale": 1
+          }
+        ],
+        "geometryErrors": 0,
+        "landscapeErrors": 0
+      },
+      "variants": [
+        {
+          "file": "s02-0",
+          "sourceCanvases": 9,
+          "instances": 15,
+          "colors": [
+            {
+              "tool": "moon",
+              "visual": {
+                "role": "light",
+                "depth": "far"
+              },
+              "palette": {
+                "bg": "#E8E6D1",
+                "main": "#55AB93",
+                "ink": "#3D697A",
+                "accent": "#DEA742"
+              },
+              "timeScale": 0,
+              "performance": {
+                "rhythm": "steady",
+                "rate": 1,
+                "amplitude": 1,
+                "phase": 0
+              }
+            },
+            {
+              "tool": "tree",
+              "visual": {
+                "role": "vegetation",
+                "depth": "far"
+              },
+              "palette": {
+                "bg": "#E8E6D1",
+                "main": "#63A17E",
+                "ink": "#4A6A61",
+                "accent": "#CBAC63"
+              },
+              "timeScale": 0.279,
+              "performance": {
+                "rhythm": "gust",
+                "rate": 0.62,
+                "amplitude": 0.65,
+                "phase": 3.8830085198369844
+              }
+            },
+            {
+              "tool": "tree",
+              "visual": {
+                "role": "vegetation",
+                "depth": "middle"
+              },
+              "palette": {
+                "bg": "#E8E6D1",
+                "main": "#47926C",
+                "ink": "#315650",
+                "accent": "#CBAC63"
+              },
+              "timeScale": 0.279,
+              "performance": {
+                "rhythm": "gust",
+                "rate": 0.62,
+                "amplitude": 0.65,
+                "phase": 3.8830085198369844
+              }
+            },
+            {
+              "tool": "tree",
+              "visual": {
+                "role": "vegetation",
+                "depth": "near"
+              },
+              "palette": {
+                "bg": "#E8E6D1",
+                "main": "#3D8D66",
+                "ink": "#284F49",
+                "accent": "#CBAC63"
+              },
+              "timeScale": 0.279,
+              "performance": {
+                "rhythm": "gust",
+                "rate": 0.62,
+                "amplitude": 0.65,
+                "phase": 3.8830085198369844
+              }
+            },
+            {
+              "tool": "water",
+              "visual": {
+                "role": "water",
+                "depth": "far"
+              },
+              "palette": {
+                "bg": "#E8E6D1",
+                "main": "#9FC6BB",
+                "ink": "#5B959D",
+                "accent": "#DADAB3"
+              },
+              "timeScale": 0.405,
+              "performance": {
+                "rhythm": "continuous",
+                "rate": 0.9,
+                "amplitude": 0.9,
+                "phase": 1.4828317324943823
+              }
+            },
+            {
+              "tool": "rock",
+              "visual": {
+                "role": "rock",
+                "depth": "middle"
+              },
+              "palette": {
+                "bg": "#E8E6D1",
+                "main": "#92B2A2",
+                "ink": "#527C7B",
+                "accent": "#B4C2A5"
+              },
+              "timeScale": 0.45,
+              "performance": {
+                "rhythm": "steady",
+                "rate": 1,
+                "amplitude": 1,
+                "phase": 5.365840252331367
+              }
+            },
+            {
+              "tool": "rock",
+              "visual": {
+                "role": "rock",
+                "depth": "near"
+              },
+              "palette": {
+                "bg": "#E8E6D1",
+                "main": "#8DAF9F",
+                "ink": "#4A7777",
+                "accent": "#B4C2A5"
+              },
+              "timeScale": 0.45,
+              "performance": {
+                "rhythm": "steady",
+                "rate": 1,
+                "amplitude": 1,
+                "phase": 5.365840252331367
+              }
+            },
+            {
+              "tool": "landscape",
+              "visual": {
+                "role": "mountain",
+                "depth": "far"
+              },
+              "palette": {
+                "bg": "#E8E6D1",
+                "main": "#94AEB2",
+                "ink": "#638396",
+                "accent": "#BED1BF"
+              },
+              "timeScale": 1,
+              "performance": {
+                "rhythm": "steady",
+                "rate": 1,
+                "amplitude": 1,
+                "phase": 2.9656634649887645
+              }
+            },
+            {
+              "tool": "landscape",
+              "visual": {
+                "role": "ground",
+                "depth": "middle"
+              },
+              "palette": {
+                "bg": "#E8E6D1",
+                "main": "#BFCBA5",
+                "ink": "#778E6E",
+                "accent": "#CBBE89"
+              },
+              "timeScale": 1,
+              "performance": {
+                "rhythm": "steady",
+                "rate": 1,
+                "amplitude": 1,
+                "phase": 0.5654866776461619
+              }
+            }
+          ],
+          "geometryErrors": 0,
+          "landscapeErrors": 0
+        },
+        {
+          "file": "s02-1",
+          "sourceCanvases": 9,
+          "instances": 15,
+          "colors": [
+            {
+              "tool": "moon",
+              "visual": {
+                "role": "light",
+                "depth": "far"
+              },
+              "palette": {
+                "bg": "#E8E6D1",
+                "main": "#55AB93",
+                "ink": "#3D697A",
+                "accent": "#DEA742"
+              },
+              "timeScale": 0,
+              "performance": {
+                "rhythm": "steady",
+                "rate": 1,
+                "amplitude": 1,
+                "phase": 0
+              }
+            },
+            {
+              "tool": "tree",
+              "visual": {
+                "role": "vegetation",
+                "depth": "far"
+              },
+              "palette": {
+                "bg": "#E8E6D1",
+                "main": "#63A17E",
+                "ink": "#4A6A61",
+                "accent": "#CBAC63"
+              },
+              "timeScale": 0.279,
+              "performance": {
+                "rhythm": "gust",
+                "rate": 0.62,
+                "amplitude": 0.65,
+                "phase": 3.8830085198369844
+              }
+            },
+            {
+              "tool": "tree",
+              "visual": {
+                "role": "vegetation",
+                "depth": "middle"
+              },
+              "palette": {
+                "bg": "#E8E6D1",
+                "main": "#47926C",
+                "ink": "#315650",
+                "accent": "#CBAC63"
+              },
+              "timeScale": 0.279,
+              "performance": {
+                "rhythm": "gust",
+                "rate": 0.62,
+                "amplitude": 0.65,
+                "phase": 3.8830085198369844
+              }
+            },
+            {
+              "tool": "tree",
+              "visual": {
+                "role": "vegetation",
+                "depth": "near"
+              },
+              "palette": {
+                "bg": "#E8E6D1",
+                "main": "#3D8D66",
+                "ink": "#284F49",
+                "accent": "#CBAC63"
+              },
+              "timeScale": 0.279,
+              "performance": {
+                "rhythm": "gust",
+                "rate": 0.62,
+                "amplitude": 0.65,
+                "phase": 3.8830085198369844
+              }
+            },
+            {
+              "tool": "water",
+              "visual": {
+                "role": "water",
+                "depth": "far"
+              },
+              "palette": {
+                "bg": "#E8E6D1",
+                "main": "#9FC6BB",
+                "ink": "#5B959D",
+                "accent": "#DADAB3"
+              },
+              "timeScale": 0.405,
+              "performance": {
+                "rhythm": "continuous",
+                "rate": 0.9,
+                "amplitude": 0.9,
+                "phase": 1.4828317324943823
+              }
+            },
+            {
+              "tool": "rock",
+              "visual": {
+                "role": "rock",
+                "depth": "middle"
+              },
+              "palette": {
+                "bg": "#E8E6D1",
+                "main": "#92B2A2",
+                "ink": "#527C7B",
+                "accent": "#B4C2A5"
+              },
+              "timeScale": 0.45,
+              "performance": {
+                "rhythm": "steady",
+                "rate": 1,
+                "amplitude": 1,
+                "phase": 5.365840252331367
+              }
+            },
+            {
+              "tool": "rock",
+              "visual": {
+                "role": "rock",
+                "depth": "near"
+              },
+              "palette": {
+                "bg": "#E8E6D1",
+                "main": "#8DAF9F",
+                "ink": "#4A7777",
+                "accent": "#B4C2A5"
+              },
+              "timeScale": 0.45,
+              "performance": {
+                "rhythm": "steady",
+                "rate": 1,
+                "amplitude": 1,
+                "phase": 5.365840252331367
+              }
+            },
+            {
+              "tool": "landscape",
+              "visual": {
+                "role": "mountain",
+                "depth": "far"
+              },
+              "palette": {
+                "bg": "#E8E6D1",
+                "main": "#94AEB2",
+                "ink": "#638396",
+                "accent": "#BED1BF"
+              },
+              "timeScale": 1,
+              "performance": {
+                "rhythm": "steady",
+                "rate": 1,
+                "amplitude": 1,
+                "phase": 2.9656634649887645
+              }
+            },
+            {
+              "tool": "landscape",
+              "visual": {
+                "role": "ground",
+                "depth": "middle"
+              },
+              "palette": {
+                "bg": "#E8E6D1",
+                "main": "#BFCBA5",
+                "ink": "#778E6E",
+                "accent": "#CBBE89"
+              },
+              "timeScale": 1,
+              "performance": {
+                "rhythm": "steady",
+                "rate": 1,
+                "amplitude": 1,
+                "phase": 0.5654866776461619
+              }
+            }
+          ],
+          "geometryErrors": 0,
+          "landscapeErrors": 0
+        },
+        {
+          "file": "s02-2",
+          "sourceCanvases": 9,
+          "instances": 15,
+          "colors": [
+            {
+              "tool": "moon",
+              "visual": {
+                "role": "light",
+                "depth": "far"
+              },
+              "palette": {
+                "bg": "#E8E6D1",
+                "main": "#55AB93",
+                "ink": "#3D697A",
+                "accent": "#DEA742"
+              },
+              "timeScale": 0,
+              "performance": {
+                "rhythm": "steady",
+                "rate": 1,
+                "amplitude": 1,
+                "phase": 0
+              }
+            },
+            {
+              "tool": "tree",
+              "visual": {
+                "role": "vegetation",
+                "depth": "far"
+              },
+              "palette": {
+                "bg": "#E8E6D1",
+                "main": "#63A17E",
+                "ink": "#4A6A61",
+                "accent": "#CBAC63"
+              },
+              "timeScale": 0.279,
+              "performance": {
+                "rhythm": "gust",
+                "rate": 0.62,
+                "amplitude": 0.65,
+                "phase": 3.8830085198369844
+              }
+            },
+            {
+              "tool": "tree",
+              "visual": {
+                "role": "vegetation",
+                "depth": "middle"
+              },
+              "palette": {
+                "bg": "#E8E6D1",
+                "main": "#47926C",
+                "ink": "#315650",
+                "accent": "#CBAC63"
+              },
+              "timeScale": 0.279,
+              "performance": {
+                "rhythm": "gust",
+                "rate": 0.62,
+                "amplitude": 0.65,
+                "phase": 3.8830085198369844
+              }
+            },
+            {
+              "tool": "tree",
+              "visual": {
+                "role": "vegetation",
+                "depth": "near"
+              },
+              "palette": {
+                "bg": "#E8E6D1",
+                "main": "#3D8D66",
+                "ink": "#284F49",
+                "accent": "#CBAC63"
+              },
+              "timeScale": 0.279,
+              "performance": {
+                "rhythm": "gust",
+                "rate": 0.62,
+                "amplitude": 0.65,
+                "phase": 3.8830085198369844
+              }
+            },
+            {
+              "tool": "water",
+              "visual": {
+                "role": "water",
+                "depth": "far"
+              },
+              "palette": {
+                "bg": "#E8E6D1",
+                "main": "#9FC6BB",
+                "ink": "#5B959D",
+                "accent": "#DADAB3"
+              },
+              "timeScale": 0.405,
+              "performance": {
+                "rhythm": "continuous",
+                "rate": 0.9,
+                "amplitude": 0.9,
+                "phase": 1.4828317324943823
+              }
+            },
+            {
+              "tool": "rock",
+              "visual": {
+                "role": "rock",
+                "depth": "middle"
+              },
+              "palette": {
+                "bg": "#E8E6D1",
+                "main": "#92B2A2",
+                "ink": "#527C7B",
+                "accent": "#B4C2A5"
+              },
+              "timeScale": 0.45,
+              "performance": {
+                "rhythm": "steady",
+                "rate": 1,
+                "amplitude": 1,
+                "phase": 5.365840252331367
+              }
+            },
+            {
+              "tool": "rock",
+              "visual": {
+                "role": "rock",
+                "depth": "near"
+              },
+              "palette": {
+                "bg": "#E8E6D1",
+                "main": "#8DAF9F",
+                "ink": "#4A7777",
+                "accent": "#B4C2A5"
+              },
+              "timeScale": 0.45,
+              "performance": {
+                "rhythm": "steady",
+                "rate": 1,
+                "amplitude": 1,
+                "phase": 5.365840252331367
+              }
+            },
+            {
+              "tool": "landscape",
+              "visual": {
+                "role": "mountain",
+                "depth": "far"
+              },
+              "palette": {
+                "bg": "#E8E6D1",
+                "main": "#94AEB2",
+                "ink": "#638396",
+                "accent": "#BED1BF"
+              },
+              "timeScale": 1,
+              "performance": {
+                "rhythm": "steady",
+                "rate": 1,
+                "amplitude": 1,
+                "phase": 2.9656634649887645
+              }
+            },
+            {
+              "tool": "landscape",
+              "visual": {
+                "role": "ground",
+                "depth": "middle"
+              },
+              "palette": {
+                "bg": "#E8E6D1",
+                "main": "#BFCBA5",
+                "ink": "#778E6E",
+                "accent": "#CBBE89"
+              },
+              "timeScale": 1,
+              "performance": {
+                "rhythm": "steady",
+                "rate": 1,
+                "amplitude": 1,
+                "phase": 0.5654866776461619
+              }
+            }
+          ],
+          "geometryErrors": 0,
+          "landscapeErrors": 0
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "poem": "返景入深林，复照青苔上。",
+      "rawRecord": "2026-10-23T01-04-03-041Z-c3aaf670",
+      "sourceExpanded": true,
+      "before": {
+        "file": "s03-before",
+        "sourceCanvases": 6,
+        "instances": 23,
+        "colors": [
+          {
+            "tool": "landscape",
+            "palette": {
+              "bg": "#E8E6D1",
+              "main": "#2C9A82",
+              "ink": "#184E68",
+              "accent": "#DEA742"
+            },
+            "timeScale": 0
+          },
+          {
+            "tool": "landscape",
+            "palette": {
+              "bg": "#E8E6D1",
+              "main": "#2C9A82",
+              "ink": "#184E68",
+              "accent": "#DEA742"
+            },
+            "timeScale": 0.45
+          },
+          {
+            "tool": "tree",
+            "palette": {
+              "bg": "#E8E6D1",
+              "main": "#2C9A82",
+              "ink": "#184E68",
+              "accent": "#DEA742"
+            },
+            "timeScale": 0.45
+          },
+          {
+            "tool": "tree",
+            "palette": {
+              "bg": "#E8E6D1",
+              "main": "#2C9A82",
+              "ink": "#184E68",
+              "accent": "#DEA742"
+            },
+            "timeScale": 0.45
+          },
+          {
+            "tool": "tree",
+            "palette": {
+              "bg": "#E8E6D1",
+              "main": "#2C9A82",
+              "ink": "#184E68",
+              "accent": "#DEA742"
+            },
+            "timeScale": 0.45
+          },
+          {
+            "tool": "landscape",
+            "palette": {
+              "bg": "#E8E6D1",
+              "main": "#2C9A82",
+              "ink": "#184E68",
+              "accent": "#DEA742"
+            },
+            "timeScale": 1
+          }
+        ],
+        "geometryErrors": 0,
+        "landscapeErrors": 0
+      },
+      "variants": [
+        {
+          "file": "s03-0",
+          "sourceCanvases": 6,
+          "instances": 23,
+          "colors": [
+            {
+              "tool": "landscape",
+              "visual": {
+                "role": "light",
+                "depth": "middle"
+              },
+              "palette": {
+                "bg": "#E8E6D1",
+                "main": "#379F87",
+                "ink": "#22556D",
+                "accent": "#DEA742"
+              },
+              "timeScale": 0,
+              "performance": {
+                "rhythm": "steady",
+                "rate": 1,
+                "amplitude": 1,
+                "phase": 0
+              }
+            },
+            {
+              "tool": "landscape",
+              "visual": {
+                "role": "vegetation",
+                "depth": "near"
+              },
+              "palette": {
+                "bg": "#E8E6D1",
+                "main": "#3D8D66",
+                "ink": "#284F49",
+                "accent": "#CBAC63"
+              },
+              "timeScale": 0.45,
+              "performance": {
+                "rhythm": "steady",
+                "rate": 1,
+                "amplitude": 1,
+                "phase": 3.8830085198369844
+              }
+            },
+            {
+              "tool": "tree",
+              "visual": {
+                "role": "vegetation",
+                "depth": "far"
+              },
+              "palette": {
+                "bg": "#E8E6D1",
+                "main": "#63A17E",
+                "ink": "#4A6A61",
+                "accent": "#CBAC63"
+              },
+              "timeScale": 0.279,
+              "performance": {
+                "rhythm": "gust",
+                "rate": 0.62,
+                "amplitude": 0.65,
+                "phase": 1.4828317324943823
+              }
+            },
+            {
+              "tool": "tree",
+              "visual": {
+                "role": "vegetation",
+                "depth": "middle"
+              },
+              "palette": {
+                "bg": "#E8E6D1",
+                "main": "#47926C",
+                "ink": "#315650",
+                "accent": "#CBAC63"
+              },
+              "timeScale": 0.279,
+              "performance": {
+                "rhythm": "gust",
+                "rate": 0.62,
+                "amplitude": 0.65,
+                "phase": 1.4828317324943823
+              }
+            },
+            {
+              "tool": "tree",
+              "visual": {
+                "role": "vegetation",
+                "depth": "near"
+              },
+              "palette": {
+                "bg": "#E8E6D1",
+                "main": "#3D8D66",
+                "ink": "#284F49",
+                "accent": "#CBAC63"
+              },
+              "timeScale": 0.279,
+              "performance": {
+                "rhythm": "gust",
+                "rate": 0.62,
+                "amplitude": 0.65,
+                "phase": 1.4828317324943823
+              }
+            },
+            {
+              "tool": "landscape",
+              "visual": {
+                "role": "ground",
+                "depth": "middle"
+              },
+              "palette": {
+                "bg": "#E8E6D1",
+                "main": "#BFCBA5",
+                "ink": "#778E6E",
+                "accent": "#CBBE89"
+              },
+              "timeScale": 1,
+              "performance": {
+                "rhythm": "steady",
+                "rate": 1,
+                "amplitude": 1,
+                "phase": 5.365840252331367
+              }
+            }
+          ],
+          "geometryErrors": 0,
+          "landscapeErrors": 0
+        },
+        {
+          "file": "s03-1",
+          "sourceCanvases": 6,
+          "instances": 23,
+          "colors": [
+            {
+              "tool": "landscape",
+              "visual": {
+                "role": "light",
+                "depth": "middle"
+              },
+              "palette": {
+                "bg": "#E8E6D1",
+                "main": "#379F87",
+                "ink": "#22556D",
+                "accent": "#DEA742"
+              },
+              "timeScale": 0,
+              "performance": {
+                "rhythm": "steady",
+                "rate": 1,
+                "amplitude": 1,
+                "phase": 0
+              }
+            },
+            {
+              "tool": "landscape",
+              "visual": {
+                "role": "vegetation",
+                "depth": "near"
+              },
+              "palette": {
+                "bg": "#E8E6D1",
+                "main": "#3D8D66",
+                "ink": "#284F49",
+                "accent": "#CBAC63"
+              },
+              "timeScale": 0.45,
+              "performance": {
+                "rhythm": "steady",
+                "rate": 1,
+                "amplitude": 1,
+                "phase": 3.8830085198369844
+              }
+            },
+            {
+              "tool": "tree",
+              "visual": {
+                "role": "vegetation",
+                "depth": "far"
+              },
+              "palette": {
+                "bg": "#E8E6D1",
+                "main": "#63A17E",
+                "ink": "#4A6A61",
+                "accent": "#CBAC63"
+              },
+              "timeScale": 0.279,
+              "performance": {
+                "rhythm": "gust",
+                "rate": 0.62,
+                "amplitude": 0.65,
+                "phase": 1.4828317324943823
+              }
+            },
+            {
+              "tool": "tree",
+              "visual": {
+                "role": "vegetation",
+                "depth": "middle"
+              },
+              "palette": {
+                "bg": "#E8E6D1",
+                "main": "#47926C",
+                "ink": "#315650",
+                "accent": "#CBAC63"
+              },
+              "timeScale": 0.279,
+              "performance": {
+                "rhythm": "gust",
+                "rate": 0.62,
+                "amplitude": 0.65,
+                "phase": 1.4828317324943823
+              }
+            },
+            {
+              "tool": "tree",
+              "visual": {
+                "role": "vegetation",
+                "depth": "near"
+              },
+              "palette": {
+                "bg": "#E8E6D1",
+                "main": "#3D8D66",
+                "ink": "#284F49",
+                "accent": "#CBAC63"
+              },
+              "timeScale": 0.279,
+              "performance": {
+                "rhythm": "gust",
+                "rate": 0.62,
+                "amplitude": 0.65,
+                "phase": 1.4828317324943823
+              }
+            },
+            {
+              "tool": "landscape",
+              "visual": {
+                "role": "ground",
+                "depth": "middle"
+              },
+              "palette": {
+                "bg": "#E8E6D1",
+                "main": "#BFCBA5",
+                "ink": "#778E6E",
+                "accent": "#CBBE89"
+              },
+              "timeScale": 1,
+              "performance": {
+                "rhythm": "steady",
+                "rate": 1,
+                "amplitude": 1,
+                "phase": 5.365840252331367
+              }
+            }
+          ],
+          "geometryErrors": 0,
+          "landscapeErrors": 0
+        },
+        {
+          "file": "s03-2",
+          "sourceCanvases": 6,
+          "instances": 23,
+          "colors": [
+            {
+              "tool": "landscape",
+              "visual": {
+                "role": "light",
+                "depth": "middle"
+              },
+              "palette": {
+                "bg": "#E8E6D1",
+                "main": "#379F87",
+                "ink": "#22556D",
+                "accent": "#DEA742"
+              },
+              "timeScale": 0,
+              "performance": {
+                "rhythm": "steady",
+                "rate": 1,
+                "amplitude": 1,
+                "phase": 0
+              }
+            },
+            {
+              "tool": "landscape",
+              "visual": {
+                "role": "vegetation",
+                "depth": "near"
+              },
+              "palette": {
+                "bg": "#E8E6D1",
+                "main": "#3D8D66",
+                "ink": "#284F49",
+                "accent": "#CBAC63"
+              },
+              "timeScale": 0.45,
+              "performance": {
+                "rhythm": "steady",
+                "rate": 1,
+                "amplitude": 1,
+                "phase": 3.8830085198369844
+              }
+            },
+            {
+              "tool": "tree",
+              "visual": {
+                "role": "vegetation",
+                "depth": "far"
+              },
+              "palette": {
+                "bg": "#E8E6D1",
+                "main": "#63A17E",
+                "ink": "#4A6A61",
+                "accent": "#CBAC63"
+              },
+              "timeScale": 0.279,
+              "performance": {
+                "rhythm": "gust",
+                "rate": 0.62,
+                "amplitude": 0.65,
+                "phase": 1.4828317324943823
+              }
+            },
+            {
+              "tool": "tree",
+              "visual": {
+                "role": "vegetation",
+                "depth": "middle"
+              },
+              "palette": {
+                "bg": "#E8E6D1",
+                "main": "#47926C",
+                "ink": "#315650",
+                "accent": "#CBAC63"
+              },
+              "timeScale": 0.279,
+              "performance": {
+                "rhythm": "gust",
+                "rate": 0.62,
+                "amplitude": 0.65,
+                "phase": 1.4828317324943823
+              }
+            },
+            {
+              "tool": "tree",
+              "visual": {
+                "role": "vegetation",
+                "depth": "near"
+              },
+              "palette": {
+                "bg": "#E8E6D1",
+                "main": "#3D8D66",
+                "ink": "#284F49",
+                "accent": "#CBAC63"
+              },
+              "timeScale": 0.279,
+              "performance": {
+                "rhythm": "gust",
+                "rate": 0.62,
+                "amplitude": 0.65,
+                "phase": 1.4828317324943823
+              }
+            },
+            {
+              "tool": "landscape",
+              "visual": {
+                "role": "ground",
+                "depth": "middle"
+              },
+              "palette": {
+                "bg": "#E8E6D1",
+                "main": "#BFCBA5",
+                "ink": "#778E6E",
+                "accent": "#CBBE89"
+              },
+              "timeScale": 1,
+              "performance": {
+                "rhythm": "steady",
+                "rate": 1,
+                "amplitude": 1,
+                "phase": 5.365840252331367
+              }
+            }
+          ],
+          "geometryErrors": 0,
+          "landscapeErrors": 0
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "poem": "渡头馀落日，墟里上孤烟。",
+      "rawRecord": "2026-10-23T01-04-11-989Z-dc1950c4",
+      "sourceExpanded": false,
+      "before": {
+        "file": "s05-before",
+        "sourceCanvases": 8,
+        "instances": 8,
+        "colors": [
+          {
+            "tool": "landscape",
+            "palette": {
+              "bg": "#FFE5BD",
+              "main": "#D36544",
+              "ink": "#69395D",
+              "accent": "#E2B74E"
+            },
+            "timeScale": 0.45
+          },
+          {
+            "tool": "landscape",
+            "palette": {
+              "bg": "#FFE5BD",
+              "main": "#D36544",
+              "ink": "#69395D",
+              "accent": "#E2B74E"
+            },
+            "timeScale": 0.45
+          },
+          {
+            "tool": "mist",
+            "palette": {
+              "bg": "#FFE5BD",
+              "main": "#D36544",
+              "ink": "#69395D",
+              "accent": "#E2B74E"
+            },
+            "timeScale": 0.35
+          },
+          {
+            "tool": "dwelling",
+            "palette": {
+              "bg": "#FFE5BD",
+              "main": "#D36544",
+              "ink": "#69395D",
+              "accent": "#E2B74E"
+            },
+            "timeScale": 0.45
+          },
+          {
+            "tool": "dwelling",
+            "palette": {
+              "bg": "#FFE5BD",
+              "main": "#D36544",
+              "ink": "#69395D",
+              "accent": "#E2B74E"
+            },
+            "timeScale": 0.45
+          },
+          {
+            "tool": "dwelling",
+            "palette": {
+              "bg": "#FFE5BD",
+              "main": "#D36544",
+              "ink": "#69395D",
+              "accent": "#E2B74E"
+            },
+            "timeScale": 0.45
+          },
+          {
+            "tool": "landscape",
+            "palette": {
+              "bg": "#FFE5BD",
+              "main": "#D36544",
+              "ink": "#69395D",
+              "accent": "#E2B74E"
+            },
+            "timeScale": 1
+          },
+          {
+            "tool": "water",
+            "palette": {
+              "bg": "#FFE5BD",
+              "main": "#D36544",
+              "ink": "#69395D",
+              "accent": "#E2B74E"
+            },
+            "timeScale": 1
+          }
+        ],
+        "geometryErrors": 0,
+        "landscapeErrors": 0
+      },
+      "variants": [
+        {
+          "file": "s05-0",
+          "sourceCanvases": 7,
+          "instances": 8,
+          "colors": [
+            {
+              "tool": "landscape",
+              "visual": {
+                "role": "ground",
+                "depth": "middle"
+              },
+              "palette": {
+                "bg": "#FFE5BD",
+                "main": "#D9824E",
+                "ink": "#844A5D",
+                "accent": "#E2B74E"
+              },
+              "timeScale": 0.45,
+              "performance": {
+                "rhythm": "steady",
+                "rate": 1,
+                "amplitude": 1,
+                "phase": 0
+              }
+            },
+            {
+              "tool": "landscape",
+              "visual": {
+                "role": "light",
+                "depth": "far"
+              },
+              "palette": {
+                "bg": "#FFE5BD",
+                "main": "#DD815F",
+                "ink": "#83576E",
+                "accent": "#E2B74E"
+              },
+              "timeScale": 0.45,
+              "performance": {
+                "rhythm": "steady",
+                "rate": 1,
+                "amplitude": 1,
+                "phase": 3.8830085198369844
+              }
+            },
+            {
+              "tool": "mist",
+              "visual": {
+                "role": "atmosphere",
+                "depth": "middle"
+              },
+              "palette": {
+                "bg": "#FFE5BD",
+                "main": "#D66D4B",
+                "ink": "#704162",
+                "accent": "#E2B74E"
+              },
+              "timeScale": 0.13299999999999998,
+              "performance": {
+                "rhythm": "slow-drift",
+                "rate": 0.38,
+                "amplitude": 0.8,
+                "phase": 1.4828317324943823
+              }
+            },
+            {
+              "tool": "dwelling",
+              "visual": {
+                "role": "architecture",
+                "depth": "far"
+              },
+              "palette": {
+                "bg": "#FFE5BD",
+                "main": "#E19962",
+                "ink": "#83576E",
+                "accent": "#E2B74E"
+              },
+              "timeScale": 0.45,
+              "performance": {
+                "rhythm": "steady",
+                "rate": 1,
+                "amplitude": 1,
+                "phase": 5.365840252331367
+              }
+            },
+            {
+              "tool": "dwelling",
+              "visual": {
+                "role": "architecture",
+                "depth": "middle"
+              },
+              "palette": {
+                "bg": "#FFE5BD",
+                "main": "#DB8A4F",
+                "ink": "#704162",
+                "accent": "#E2B74E"
+              },
+              "timeScale": 0.45,
+              "performance": {
+                "rhythm": "steady",
+                "rate": 1,
+                "amplitude": 1,
+                "phase": 5.365840252331367
+              }
+            },
+            {
+              "tool": "landscape",
+              "visual": {
+                "role": "ground",
+                "depth": "middle"
+              },
+              "palette": {
+                "bg": "#FFE5BD",
+                "main": "#D9824E",
+                "ink": "#844A5D",
+                "accent": "#E2B74E"
+              },
+              "timeScale": 1,
+              "performance": {
+                "rhythm": "steady",
+                "rate": 1,
+                "amplitude": 1,
+                "phase": 2.9656634649887645
+              }
+            },
+            {
+              "tool": "water",
+              "visual": {
+                "role": "water",
+                "depth": "middle"
+              },
+              "palette": {
+                "bg": "#FFE5BD",
+                "main": "#E59875",
+                "ink": "#965159",
+                "accent": "#E2B74E"
+              },
+              "timeScale": 0.9,
+              "performance": {
+                "rhythm": "continuous",
+                "rate": 0.9,
+                "amplitude": 0.9,
+                "phase": 0.5654866776461619
+              }
+            }
+          ],
+          "geometryErrors": 0,
+          "landscapeErrors": 0
+        },
+        {
+          "file": "s05-1",
+          "sourceCanvases": 7,
+          "instances": 8,
+          "colors": [
+            {
+              "tool": "landscape",
+              "visual": {
+                "role": "ground",
+                "depth": "middle"
+              },
+              "palette": {
+                "bg": "#FFE5BD",
+                "main": "#D9824E",
+                "ink": "#844A5D",
+                "accent": "#E2B74E"
+              },
+              "timeScale": 0.45,
+              "performance": {
+                "rhythm": "steady",
+                "rate": 1,
+                "amplitude": 1,
+                "phase": 0
+              }
+            },
+            {
+              "tool": "landscape",
+              "visual": {
+                "role": "light",
+                "depth": "far"
+              },
+              "palette": {
+                "bg": "#FFE5BD",
+                "main": "#DD815F",
+                "ink": "#83576E",
+                "accent": "#E2B74E"
+              },
+              "timeScale": 0.45,
+              "performance": {
+                "rhythm": "steady",
+                "rate": 1,
+                "amplitude": 1,
+                "phase": 3.8830085198369844
+              }
+            },
+            {
+              "tool": "mist",
+              "visual": {
+                "role": "atmosphere",
+                "depth": "middle"
+              },
+              "palette": {
+                "bg": "#FFE5BD",
+                "main": "#D66D4B",
+                "ink": "#704162",
+                "accent": "#E2B74E"
+              },
+              "timeScale": 0.13299999999999998,
+              "performance": {
+                "rhythm": "slow-drift",
+                "rate": 0.38,
+                "amplitude": 0.8,
+                "phase": 1.4828317324943823
+              }
+            },
+            {
+              "tool": "dwelling",
+              "visual": {
+                "role": "architecture",
+                "depth": "far"
+              },
+              "palette": {
+                "bg": "#FFE5BD",
+                "main": "#E19962",
+                "ink": "#83576E",
+                "accent": "#E2B74E"
+              },
+              "timeScale": 0.45,
+              "performance": {
+                "rhythm": "steady",
+                "rate": 1,
+                "amplitude": 1,
+                "phase": 5.365840252331367
+              }
+            },
+            {
+              "tool": "dwelling",
+              "visual": {
+                "role": "architecture",
+                "depth": "middle"
+              },
+              "palette": {
+                "bg": "#FFE5BD",
+                "main": "#DB8A4F",
+                "ink": "#704162",
+                "accent": "#E2B74E"
+              },
+              "timeScale": 0.45,
+              "performance": {
+                "rhythm": "steady",
+                "rate": 1,
+                "amplitude": 1,
+                "phase": 5.365840252331367
+              }
+            },
+            {
+              "tool": "landscape",
+              "visual": {
+                "role": "ground",
+                "depth": "middle"
+              },
+              "palette": {
+                "bg": "#FFE5BD",
+                "main": "#D9824E",
+                "ink": "#844A5D",
+                "accent": "#E2B74E"
+              },
+              "timeScale": 1,
+              "performance": {
+                "rhythm": "steady",
+                "rate": 1,
+                "amplitude": 1,
+                "phase": 2.9656634649887645
+              }
+            },
+            {
+              "tool": "water",
+              "visual": {
+                "role": "water",
+                "depth": "middle"
+              },
+              "palette": {
+                "bg": "#FFE5BD",
+                "main": "#E59875",
+                "ink": "#965159",
+                "accent": "#E2B74E"
+              },
+              "timeScale": 0.9,
+              "performance": {
+                "rhythm": "continuous",
+                "rate": 0.9,
+                "amplitude": 0.9,
+                "phase": 0.5654866776461619
+              }
+            }
+          ],
+          "geometryErrors": 0,
+          "landscapeErrors": 0
+        },
+        {
+          "file": "s05-2",
+          "sourceCanvases": 7,
+          "instances": 8,
+          "colors": [
+            {
+              "tool": "landscape",
+              "visual": {
+                "role": "ground",
+                "depth": "middle"
+              },
+              "palette": {
+                "bg": "#FFE5BD",
+                "main": "#D9824E",
+                "ink": "#844A5D",
+                "accent": "#E2B74E"
+              },
+              "timeScale": 0.45,
+              "performance": {
+                "rhythm": "steady",
+                "rate": 1,
+                "amplitude": 1,
+                "phase": 0
+              }
+            },
+            {
+              "tool": "landscape",
+              "visual": {
+                "role": "light",
+                "depth": "far"
+              },
+              "palette": {
+                "bg": "#FFE5BD",
+                "main": "#DD815F",
+                "ink": "#83576E",
+                "accent": "#E2B74E"
+              },
+              "timeScale": 0.45,
+              "performance": {
+                "rhythm": "steady",
+                "rate": 1,
+                "amplitude": 1,
+                "phase": 3.8830085198369844
+              }
+            },
+            {
+              "tool": "mist",
+              "visual": {
+                "role": "atmosphere",
+                "depth": "middle"
+              },
+              "palette": {
+                "bg": "#FFE5BD",
+                "main": "#D66D4B",
+                "ink": "#704162",
+                "accent": "#E2B74E"
+              },
+              "timeScale": 0.13299999999999998,
+              "performance": {
+                "rhythm": "slow-drift",
+                "rate": 0.38,
+                "amplitude": 0.8,
+                "phase": 1.4828317324943823
+              }
+            },
+            {
+              "tool": "dwelling",
+              "visual": {
+                "role": "architecture",
+                "depth": "far"
+              },
+              "palette": {
+                "bg": "#FFE5BD",
+                "main": "#E19962",
+                "ink": "#83576E",
+                "accent": "#E2B74E"
+              },
+              "timeScale": 0.45,
+              "performance": {
+                "rhythm": "steady",
+                "rate": 1,
+                "amplitude": 1,
+                "phase": 5.365840252331367
+              }
+            },
+            {
+              "tool": "dwelling",
+              "visual": {
+                "role": "architecture",
+                "depth": "middle"
+              },
+              "palette": {
+                "bg": "#FFE5BD",
+                "main": "#DB8A4F",
+                "ink": "#704162",
+                "accent": "#E2B74E"
+              },
+              "timeScale": 0.45,
+              "performance": {
+                "rhythm": "steady",
+                "rate": 1,
+                "amplitude": 1,
+                "phase": 5.365840252331367
+              }
+            },
+            {
+              "tool": "landscape",
+              "visual": {
+                "role": "ground",
+                "depth": "middle"
+              },
+              "palette": {
+                "bg": "#FFE5BD",
+                "main": "#D9824E",
+                "ink": "#844A5D",
+                "accent": "#E2B74E"
+              },
+              "timeScale": 1,
+              "performance": {
+                "rhythm": "steady",
+                "rate": 1,
+                "amplitude": 1,
+                "phase": 2.9656634649887645
+              }
+            },
+            {
+              "tool": "water",
+              "visual": {
+                "role": "water",
+                "depth": "middle"
+              },
+              "palette": {
+                "bg": "#FFE5BD",
+                "main": "#E59875",
+                "ink": "#965159",
+                "accent": "#E2B74E"
+              },
+              "timeScale": 0.9,
+              "performance": {
+                "rhythm": "continuous",
+                "rate": 0.9,
+                "amplitude": 0.9,
+                "phase": 0.5654866776461619
+              }
+            }
+          ],
+          "geometryErrors": 0,
+          "landscapeErrors": 0
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "poem": "孤舟蓑笠翁，独钓寒江雪。",
+      "rawRecord": "2026-10-23T01-04-07-000Z-d3d73dba",
+      "sourceExpanded": true,
+      "before": {
+        "file": "s04-before",
+        "sourceCanvases": 5,
+        "instances": 5,
+        "colors": [
+          {
+            "tool": "figure",
+            "palette": {
+              "bg": "#18294B",
+              "main": "#496EAE",
+              "ink": "#D2E4E9",
+              "accent": "#E8B569"
+            },
+            "timeScale": 0
+          },
+          {
+            "tool": "water",
+            "palette": {
+              "bg": "#18294B",
+              "main": "#496EAE",
+              "ink": "#D2E4E9",
+              "accent": "#E8B569"
+            },
+            "timeScale": 0.45
+          },
+          {
+            "tool": "boat",
+            "palette": {
+              "bg": "#18294B",
+              "main": "#496EAE",
+              "ink": "#D2E4E9",
+              "accent": "#E8B569"
+            },
+            "timeScale": 0.45
+          },
+          {
+            "tool": "snow",
+            "palette": {
+              "bg": "#18294B",
+              "main": "#496EAE",
+              "ink": "#D2E4E9",
+              "accent": "#E8B569"
+            },
+            "timeScale": 0.45
+          },
+          {
+            "tool": "landscape",
+            "palette": {
+              "bg": "#18294B",
+              "main": "#496EAE",
+              "ink": "#D2E4E9",
+              "accent": "#E8B569"
+            },
+            "timeScale": 1
+          }
+        ],
+        "geometryErrors": 0,
+        "landscapeErrors": 0
+      },
+      "variants": [
+        {
+          "file": "s04-0",
+          "sourceCanvases": 5,
+          "instances": 5,
+          "colors": [
+            {
+              "tool": "figure",
+              "visual": {
+                "role": "figure",
+                "depth": "near"
+              },
+              "palette": {
+                "bg": "#18294B",
+                "main": "#496EAE",
+                "ink": "#D2E4E9",
+                "accent": "#E8B569",
+                "light": "#EDEAE2"
+              },
+              "timeScale": 0,
+              "performance": {
+                "rhythm": "steady",
+                "rate": 1,
+                "amplitude": 1,
+                "phase": 0
+              }
+            },
+            {
+              "tool": "water",
+              "visual": {
+                "role": "water",
+                "depth": "middle"
+              },
+              "palette": {
+                "bg": "#18294B",
+                "main": "#355286",
+                "ink": "#98B0CC",
+                "accent": "#E8B569"
+              },
+              "timeScale": 0.405,
+              "performance": {
+                "rhythm": "continuous",
+                "rate": 0.9,
+                "amplitude": 0.9,
+                "phase": 3.8830085198369844
+              }
+            },
+            {
+              "tool": "boat",
+              "visual": {
+                "role": "architecture",
+                "depth": "near"
+              },
+              "palette": {
+                "bg": "#18294B",
+                "main": "#858994",
+                "ink": "#D2E4E9",
+                "accent": "#E8B569"
+              },
+              "timeScale": 0.45,
+              "performance": {
+                "rhythm": "steady",
+                "rate": 1,
+                "amplitude": 1,
+                "phase": 1.4828317324943823
+              }
+            },
+            {
+              "tool": "snow",
+              "visual": {
+                "role": "snow",
+                "depth": "middle"
+              },
+              "palette": {
+                "bg": "#18294B",
+                "main": "#466AA8",
+                "ink": "#BCC5D0",
+                "accent": "#E8B569",
+                "light": "#DBDFE9"
+              },
+              "timeScale": 0.315,
+              "performance": {
+                "rhythm": "falling",
+                "rate": 0.7,
+                "amplitude": 0.65,
+                "phase": 5.365840252331367
+              }
+            },
+            {
+              "tool": "landscape",
+              "visual": {
+                "role": "mountain",
+                "depth": "far"
+              },
+              "palette": {
+                "bg": "#18294B",
+                "main": "#4C5D77",
+                "ink": "#8AA1BC",
+                "accent": "#E8B569"
+              },
+              "timeScale": 1,
+              "performance": {
+                "rhythm": "steady",
+                "rate": 1,
+                "amplitude": 1,
+                "phase": 2.9656634649887645
+              }
+            }
+          ],
+          "geometryErrors": 0,
+          "landscapeErrors": 0
+        },
+        {
+          "file": "s04-1",
+          "sourceCanvases": 5,
+          "instances": 5,
+          "colors": [
+            {
+              "tool": "figure",
+              "visual": {
+                "role": "figure",
+                "depth": "near"
+              },
+              "palette": {
+                "bg": "#18294B",
+                "main": "#496EAE",
+                "ink": "#D2E4E9",
+                "accent": "#E8B569",
+                "light": "#EDEAE2"
+              },
+              "timeScale": 0,
+              "performance": {
+                "rhythm": "steady",
+                "rate": 1,
+                "amplitude": 1,
+                "phase": 0
+              }
+            },
+            {
+              "tool": "water",
+              "visual": {
+                "role": "water",
+                "depth": "middle"
+              },
+              "palette": {
+                "bg": "#18294B",
+                "main": "#355286",
+                "ink": "#98B0CC",
+                "accent": "#E8B569"
+              },
+              "timeScale": 0.405,
+              "performance": {
+                "rhythm": "continuous",
+                "rate": 0.9,
+                "amplitude": 0.9,
+                "phase": 3.8830085198369844
+              }
+            },
+            {
+              "tool": "boat",
+              "visual": {
+                "role": "architecture",
+                "depth": "middle"
+              },
+              "palette": {
+                "bg": "#18294B",
+                "main": "#7E8390",
+                "ink": "#C9DBE1",
+                "accent": "#E8B569"
+              },
+              "timeScale": 0.45,
+              "performance": {
+                "rhythm": "steady",
+                "rate": 1,
+                "amplitude": 1,
+                "phase": 1.4828317324943823
+              }
+            },
+            {
+              "tool": "snow",
+              "visual": {
+                "role": "snow",
+                "depth": "middle"
+              },
+              "palette": {
+                "bg": "#18294B",
+                "main": "#466AA8",
+                "ink": "#BCC5D0",
+                "accent": "#E8B569",
+                "light": "#DBDFE9"
+              },
+              "timeScale": 0.315,
+              "performance": {
+                "rhythm": "falling",
+                "rate": 0.7,
+                "amplitude": 0.65,
+                "phase": 5.365840252331367
+              }
+            },
+            {
+              "tool": "landscape",
+              "visual": {
+                "role": "mountain",
+                "depth": "far"
+              },
+              "palette": {
+                "bg": "#18294B",
+                "main": "#4C5D77",
+                "ink": "#8AA1BC",
+                "accent": "#E8B569"
+              },
+              "timeScale": 1,
+              "performance": {
+                "rhythm": "steady",
+                "rate": 1,
+                "amplitude": 1,
+                "phase": 2.9656634649887645
+              }
+            }
+          ],
+          "geometryErrors": 0,
+          "landscapeErrors": 0
+        },
+        {
+          "file": "s04-2",
+          "sourceCanvases": 5,
+          "instances": 5,
+          "colors": [
+            {
+              "tool": "figure",
+              "visual": {
+                "role": "figure",
+                "depth": "near"
+              },
+              "palette": {
+                "bg": "#18294B",
+                "main": "#496EAE",
+                "ink": "#D2E4E9",
+                "accent": "#E8B569",
+                "light": "#EDEAE2"
+              },
+              "timeScale": 0,
+              "performance": {
+                "rhythm": "steady",
+                "rate": 1,
+                "amplitude": 1,
+                "phase": 0
+              }
+            },
+            {
+              "tool": "water",
+              "visual": {
+                "role": "water",
+                "depth": "middle"
+              },
+              "palette": {
+                "bg": "#18294B",
+                "main": "#355286",
+                "ink": "#98B0CC",
+                "accent": "#E8B569"
+              },
+              "timeScale": 0.405,
+              "performance": {
+                "rhythm": "continuous",
+                "rate": 0.9,
+                "amplitude": 0.9,
+                "phase": 3.8830085198369844
+              }
+            },
+            {
+              "tool": "boat",
+              "visual": {
+                "role": "architecture",
+                "depth": "near"
+              },
+              "palette": {
+                "bg": "#18294B",
+                "main": "#858994",
+                "ink": "#D2E4E9",
+                "accent": "#E8B569"
+              },
+              "timeScale": 0.45,
+              "performance": {
+                "rhythm": "steady",
+                "rate": 1,
+                "amplitude": 1,
+                "phase": 1.4828317324943823
+              }
+            },
+            {
+              "tool": "snow",
+              "visual": {
+                "role": "snow",
+                "depth": "middle"
+              },
+              "palette": {
+                "bg": "#18294B",
+                "main": "#466AA8",
+                "ink": "#BCC5D0",
+                "accent": "#E8B569",
+                "light": "#DBDFE9"
+              },
+              "timeScale": 0.315,
+              "performance": {
+                "rhythm": "falling",
+                "rate": 0.7,
+                "amplitude": 0.65,
+                "phase": 5.365840252331367
+              }
+            },
+            {
+              "tool": "landscape",
+              "visual": {
+                "role": "mountain",
+                "depth": "far"
+              },
+              "palette": {
+                "bg": "#18294B",
+                "main": "#4C5D77",
+                "ink": "#8AA1BC",
+                "accent": "#E8B569"
+              },
+              "timeScale": 1,
+              "performance": {
+                "rhythm": "steady",
+                "rate": 1,
+                "amplitude": 1,
+                "phase": 2.9656634649887645
+              }
+            }
+          ],
+          "geometryErrors": 0,
+          "landscapeErrors": 0
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "poem": "漠漠水田飞白鹭，阴阴夏木啭黄鹂。",
+      "rawRecord": "2026-10-23T01-04-19-645Z-f44972c5",
+      "sourceExpanded": false,
+      "before": {
+        "file": "s06-before",
+        "sourceCanvases": 10,
+        "instances": 25,
+        "colors": [
+          {
+            "tool": "landscape",
+            "palette": {
+              "bg": "#E8E6D1",
+              "main": "#2C9A82",
+              "ink": "#184E68",
+              "accent": "#DEA742"
+            },
+            "timeScale": 0.8
+          },
+          {
+            "tool": "tree",
+            "palette": {
+              "bg": "#E8E6D1",
+              "main": "#2C9A82",
+              "ink": "#184E68",
+              "accent": "#DEA742"
+            },
+            "timeScale": 0.8
+          },
+          {
+            "tool": "tree",
+            "palette": {
+              "bg": "#E8E6D1",
+              "main": "#2C9A82",
+              "ink": "#184E68",
+              "accent": "#DEA742"
+            },
+            "timeScale": 0.8
+          },
+          {
+            "tool": "tree",
+            "palette": {
+              "bg": "#E8E6D1",
+              "main": "#2C9A82",
+              "ink": "#184E68",
+              "accent": "#DEA742"
+            },
+            "timeScale": 0.8
+          },
+          {
+            "tool": "bird",
+            "palette": {
+              "bg": "#E8E6D1",
+              "main": "#2C9A82",
+              "ink": "#184E68",
+              "accent": "#DEA742"
+            },
+            "timeScale": 0.8
+          },
+          {
+            "tool": "bird",
+            "palette": {
+              "bg": "#E8E6D1",
+              "main": "#2C9A82",
+              "ink": "#184E68",
+              "accent": "#DEA742"
+            },
+            "timeScale": 0.8
+          },
+          {
+            "tool": "bird",
+            "palette": {
+              "bg": "#E8E6D1",
+              "main": "#2C9A82",
+              "ink": "#184E68",
+              "accent": "#DEA742"
+            },
+            "timeScale": 0.8
+          },
+          {
+            "tool": "bird",
+            "palette": {
+              "bg": "#E8E6D1",
+              "main": "#2C9A82",
+              "ink": "#184E68",
+              "accent": "#DEA742"
+            },
+            "timeScale": 0
+          },
+          {
+            "tool": "bird",
+            "palette": {
+              "bg": "#E8E6D1",
+              "main": "#2C9A82",
+              "ink": "#184E68",
+              "accent": "#DEA742"
+            },
+            "timeScale": 0
+          },
+          {
+            "tool": "bird",
+            "palette": {
+              "bg": "#E8E6D1",
+              "main": "#2C9A82",
+              "ink": "#184E68",
+              "accent": "#DEA742"
+            },
+            "timeScale": 0
+          }
+        ],
+        "geometryErrors": 0,
+        "landscapeErrors": 0
+      },
+      "variants": [
+        {
+          "file": "s06-0",
+          "sourceCanvases": 6,
+          "instances": 25,
+          "colors": [
+            {
+              "tool": "landscape",
+              "visual": {
+                "role": "ground",
+                "depth": "middle"
+              },
+              "palette": {
+                "bg": "#E8E6D1",
+                "main": "#BFCBA5",
+                "ink": "#778E6E",
+                "accent": "#CBBE89"
+              },
+              "timeScale": 0.8,
+              "performance": {
+                "rhythm": "steady",
+                "rate": 1,
+                "amplitude": 1,
+                "phase": 0
+              }
+            },
+            {
+              "tool": "tree",
+              "visual": {
+                "role": "vegetation",
+                "depth": "far"
+              },
+              "palette": {
+                "bg": "#E8E6D1",
+                "main": "#63A17E",
+                "ink": "#4A6A61",
+                "accent": "#CBAC63"
+              },
+              "timeScale": 0.496,
+              "performance": {
+                "rhythm": "gust",
+                "rate": 0.62,
+                "amplitude": 0.65,
+                "phase": 3.8830085198369844
+              }
+            },
+            {
+              "tool": "tree",
+              "visual": {
+                "role": "vegetation",
+                "depth": "near"
+              },
+              "palette": {
+                "bg": "#E8E6D1",
+                "main": "#3D8D66",
+                "ink": "#284F49",
+                "accent": "#CBAC63"
+              },
+              "timeScale": 0.496,
+              "performance": {
+                "rhythm": "gust",
+                "rate": 0.62,
+                "amplitude": 0.65,
+                "phase": 3.8830085198369844
+              }
+            },
+            {
+              "tool": "bird",
+              "visual": {
+                "role": "figure",
+                "depth": "middle"
+              },
+              "palette": {
+                "bg": "#E8E6D1",
+                "main": "#379F87",
+                "ink": "#22556D",
+                "accent": "#DEA742",
+                "light": "#FDF9ED"
+              },
+              "timeScale": 0.8400000000000001,
+              "performance": {
+                "rhythm": "passing",
+                "rate": 1.05,
+                "amplitude": 1.1,
+                "phase": 1.4828317324943823
+              }
+            },
+            {
+              "tool": "bird",
+              "visual": {
+                "role": "figure",
+                "depth": "middle"
+              },
+              "palette": {
+                "bg": "#E8E6D1",
+                "main": "#379F87",
+                "ink": "#22556D",
+                "accent": "#DEA742",
+                "light": "#FDF9ED"
+              },
+              "timeScale": 0,
+              "performance": {
+                "rhythm": "passing",
+                "rate": 1.05,
+                "amplitude": 1.1,
+                "phase": 5.365840252331367
+              }
+            },
+            {
+              "tool": "bird",
+              "visual": {
+                "role": "figure",
+                "depth": "near"
+              },
+              "palette": {
+                "bg": "#E8E6D1",
+                "main": "#2C9A82",
+                "ink": "#184E68",
+                "accent": "#DEA742",
+                "light": "#FDF9ED"
+              },
+              "timeScale": 0,
+              "performance": {
+                "rhythm": "passing",
+                "rate": 1.05,
+                "amplitude": 1.1,
+                "phase": 5.365840252331367
+              }
+            }
+          ],
+          "geometryErrors": 0,
+          "landscapeErrors": 0
+        },
+        {
+          "file": "s06-1",
+          "sourceCanvases": 6,
+          "instances": 25,
+          "colors": [
+            {
+              "tool": "landscape",
+              "visual": {
+                "role": "ground",
+                "depth": "middle"
+              },
+              "palette": {
+                "bg": "#E8E6D1",
+                "main": "#BFCBA5",
+                "ink": "#778E6E",
+                "accent": "#CBBE89"
+              },
+              "timeScale": 0.8,
+              "performance": {
+                "rhythm": "steady",
+                "rate": 1,
+                "amplitude": 1,
+                "phase": 0
+              }
+            },
+            {
+              "tool": "tree",
+              "visual": {
+                "role": "vegetation",
+                "depth": "far"
+              },
+              "palette": {
+                "bg": "#E8E6D1",
+                "main": "#63A17E",
+                "ink": "#4A6A61",
+                "accent": "#CBAC63"
+              },
+              "timeScale": 0.496,
+              "performance": {
+                "rhythm": "gust",
+                "rate": 0.62,
+                "amplitude": 0.65,
+                "phase": 3.8830085198369844
+              }
+            },
+            {
+              "tool": "tree",
+              "visual": {
+                "role": "vegetation",
+                "depth": "near"
+              },
+              "palette": {
+                "bg": "#E8E6D1",
+                "main": "#3D8D66",
+                "ink": "#284F49",
+                "accent": "#CBAC63"
+              },
+              "timeScale": 0.496,
+              "performance": {
+                "rhythm": "gust",
+                "rate": 0.62,
+                "amplitude": 0.65,
+                "phase": 3.8830085198369844
+              }
+            },
+            {
+              "tool": "bird",
+              "visual": {
+                "role": "figure",
+                "depth": "middle"
+              },
+              "palette": {
+                "bg": "#E8E6D1",
+                "main": "#379F87",
+                "ink": "#22556D",
+                "accent": "#DEA742",
+                "light": "#FDF9ED"
+              },
+              "timeScale": 0.8400000000000001,
+              "performance": {
+                "rhythm": "passing",
+                "rate": 1.05,
+                "amplitude": 1.1,
+                "phase": 1.4828317324943823
+              }
+            },
+            {
+              "tool": "bird",
+              "visual": {
+                "role": "figure",
+                "depth": "middle"
+              },
+              "palette": {
+                "bg": "#E8E6D1",
+                "main": "#379F87",
+                "ink": "#22556D",
+                "accent": "#DEA742",
+                "light": "#FDF9ED"
+              },
+              "timeScale": 0,
+              "performance": {
+                "rhythm": "passing",
+                "rate": 1.05,
+                "amplitude": 1.1,
+                "phase": 5.365840252331367
+              }
+            },
+            {
+              "tool": "bird",
+              "visual": {
+                "role": "figure",
+                "depth": "near"
+              },
+              "palette": {
+                "bg": "#E8E6D1",
+                "main": "#2C9A82",
+                "ink": "#184E68",
+                "accent": "#DEA742",
+                "light": "#FDF9ED"
+              },
+              "timeScale": 0,
+              "performance": {
+                "rhythm": "passing",
+                "rate": 1.05,
+                "amplitude": 1.1,
+                "phase": 5.365840252331367
+              }
+            }
+          ],
+          "geometryErrors": 0,
+          "landscapeErrors": 0
+        },
+        {
+          "file": "s06-2",
+          "sourceCanvases": 6,
+          "instances": 25,
+          "colors": [
+            {
+              "tool": "landscape",
+              "visual": {
+                "role": "ground",
+                "depth": "middle"
+              },
+              "palette": {
+                "bg": "#E8E6D1",
+                "main": "#BFCBA5",
+                "ink": "#778E6E",
+                "accent": "#CBBE89"
+              },
+              "timeScale": 0.8,
+              "performance": {
+                "rhythm": "steady",
+                "rate": 1,
+                "amplitude": 1,
+                "phase": 0
+              }
+            },
+            {
+              "tool": "tree",
+              "visual": {
+                "role": "vegetation",
+                "depth": "far"
+              },
+              "palette": {
+                "bg": "#E8E6D1",
+                "main": "#63A17E",
+                "ink": "#4A6A61",
+                "accent": "#CBAC63"
+              },
+              "timeScale": 0.496,
+              "performance": {
+                "rhythm": "gust",
+                "rate": 0.62,
+                "amplitude": 0.65,
+                "phase": 3.8830085198369844
+              }
+            },
+            {
+              "tool": "tree",
+              "visual": {
+                "role": "vegetation",
+                "depth": "near"
+              },
+              "palette": {
+                "bg": "#E8E6D1",
+                "main": "#3D8D66",
+                "ink": "#284F49",
+                "accent": "#CBAC63"
+              },
+              "timeScale": 0.496,
+              "performance": {
+                "rhythm": "gust",
+                "rate": 0.62,
+                "amplitude": 0.65,
+                "phase": 3.8830085198369844
+              }
+            },
+            {
+              "tool": "bird",
+              "visual": {
+                "role": "figure",
+                "depth": "middle"
+              },
+              "palette": {
+                "bg": "#E8E6D1",
+                "main": "#379F87",
+                "ink": "#22556D",
+                "accent": "#DEA742",
+                "light": "#FDF9ED"
+              },
+              "timeScale": 0.8400000000000001,
+              "performance": {
+                "rhythm": "passing",
+                "rate": 1.05,
+                "amplitude": 1.1,
+                "phase": 1.4828317324943823
+              }
+            },
+            {
+              "tool": "bird",
+              "visual": {
+                "role": "figure",
+                "depth": "middle"
+              },
+              "palette": {
+                "bg": "#E8E6D1",
+                "main": "#379F87",
+                "ink": "#22556D",
+                "accent": "#DEA742",
+                "light": "#FDF9ED"
+              },
+              "timeScale": 0,
+              "performance": {
+                "rhythm": "passing",
+                "rate": 1.05,
+                "amplitude": 1.1,
+                "phase": 5.365840252331367
+              }
+            },
+            {
+              "tool": "bird",
+              "visual": {
+                "role": "figure",
+                "depth": "near"
+              },
+              "palette": {
+                "bg": "#E8E6D1",
+                "main": "#2C9A82",
+                "ink": "#184E68",
+                "accent": "#DEA742",
+                "light": "#FDF9ED"
+              },
+              "timeScale": 0,
+              "performance": {
+                "rhythm": "passing",
+                "rate": 1.05,
+                "amplitude": 1.1,
+                "phase": 5.365840252331367
+              }
+            }
+          ],
+          "geometryErrors": 0,
+          "landscapeErrors": 0
+        }
+      ]
+    }
+  ],
+  "actualColors": [
+    {
+      "id": "moon",
+      "role": "light",
+      "depth": "far",
+      "main": "#55AB93",
+      "ink": "#3D697A"
+    },
+    {
+      "id": "tree",
+      "role": "vegetation",
+      "depth": "far",
+      "main": "#63A17E",
+      "ink": "#4A6A61"
+    },
+    {
+      "id": "tree",
+      "role": "vegetation",
+      "depth": "middle",
+      "main": "#47926C",
+      "ink": "#315650"
+    },
+    {
+      "id": "tree",
+      "role": "vegetation",
+      "depth": "near",
+      "main": "#3D8D66",
+      "ink": "#284F49"
+    },
+    {
+      "id": "water",
+      "role": "water",
+      "depth": "far",
+      "main": "#9FC6BB",
+      "ink": "#5B959D"
+    },
+    {
+      "id": "rock",
+      "role": "rock",
+      "depth": "middle",
+      "main": "#92B2A2",
+      "ink": "#527C7B"
+    },
+    {
+      "id": "rock",
+      "role": "rock",
+      "depth": "near",
+      "main": "#8DAF9F",
+      "ink": "#4A7777"
+    },
+    {
+      "id": "landscape",
+      "role": "mountain",
+      "depth": "far",
+      "main": "#94AEB2",
+      "ink": "#638396"
+    },
+    {
+      "id": "landscape",
+      "role": "ground",
+      "depth": "middle",
+      "main": "#BFCBA5",
+      "ink": "#778E6E"
+    }
+  ],
+  "mainStudyReplay": true,
+  "compositionSwitch": true,
+  "preserveViewingSettings": true,
+  "pause": true,
+  "staticRoots": true,
+  "stationaryFigure": true,
+  "distinctRhythmClocks": {
+    "water": 0.7697340000075101,
+    "mist": 0.11376819999999999
+  },
+  "smokeWithHouseDrag": [
+    0.10197578075207137,
+    0.04195804195804209
+  ],
+  "pngExport": true,
+  "mobileWidth": 390,
+  "browserErrors": [],
+  "networkPosts": [],
+  "summary": {
+    "families": 5,
+    "compositions": 15,
+    "geometryErrors": 0,
+    "aestheticAcceptance": "pending-user"
+  }
+}
