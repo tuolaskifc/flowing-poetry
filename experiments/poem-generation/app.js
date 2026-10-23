@@ -2,6 +2,23 @@
   'use strict';
   const $=id=>document.getElementById(id),poem=$('poem');let source=null,latest=null,sdkPromise,candidateBatch=[],catalog=null,trials=[];
   const status=text=>{$('status').textContent=text;};
+  function syncViewingControls(settings){
+    $('palette').value=settings.palette;
+    for(const button of document.querySelectorAll('[data-palette]'))button.setAttribute('aria-pressed',String(button.dataset.palette===settings.palette));
+    const motion=settings.motion??1.4;
+    if($('motion')){$('motion').value=motion;$('motion').setAttribute('aria-valuetext',motion===0?'静观':Math.round(motion*100)+'%');}
+    if($('motion-value'))$('motion-value').textContent=(motion===0?'静观':motion<1?'轻柔':motion<=1.5?'流动':'鲜明')+(motion?' · '+Math.round(motion*100)+'%':'');
+  }
+  function choosePalette(value){window.PoemTrialScene.update({palette:value});syncViewingControls(window.PoemTrialScene.inspect().settings);}
+  const options=window.PoemDrawing.paletteOptions();$('palette').replaceChildren();
+  for(const group of [...new Set(options.map(o=>o.group))]){
+    const el=document.createElement('optgroup');el.label=group;
+    for(const item of options.filter(o=>o.group===group)){const option=document.createElement('option');option.value=item.id;option.textContent=item.label;el.append(option);}$('palette').append(el);
+  }
+  for(const id of ['mineral','cinnabar','gilded','indigo','joy','clear']){
+    if(!$('palette-swatches'))break;const scheme=options.find(o=>o.id===id),button=document.createElement('button');button.type='button';button.dataset.palette=id;button.setAttribute('aria-pressed','false');button.setAttribute('aria-label',scheme.label);button.title=scheme.label;
+    const colors=document.createElement('span');colors.className='swatch-colors';colors.setAttribute('aria-hidden','true');for(const value of Object.values(scheme.colors)){const chip=document.createElement('i');chip.style.backgroundColor=value;colors.append(chip);}const name=document.createElement('span');name.textContent=scheme.label;button.append(colors,name);button.addEventListener('click',()=>choosePalette(id));$('palette-swatches').append(button);
+  }
   const clearList=id=>{$(id).replaceChildren();};
   const clearCandidateSelection=()=>{for(const button of document.querySelectorAll('[data-candidate]'))button.setAttribute('aria-pressed','false');};
   function item(id,text){const li=document.createElement('li');li.textContent=text;$(id).append(li);return li;}
@@ -100,7 +117,7 @@
     const sourceIds=[...new Set(plan.layers.flatMap(l=>window.PoemDrawing.definitions().find(d=>d.id===l.tool).sources))];
     for(const id of sourceIds){const s=window.PoemDrawingSources[id],li=item('credits',s.author+(s.license?' · '+s.license:' · 本项目试作')+'。'+s.note);if(s.url){const link=document.createElement('a');link.href=s.url;link.textContent=' 原来源 ↗';link.target='_blank';link.rel='noopener noreferrer';li.append(link);}}
     $('usage').textContent='记录 '+record.id+'；模型 '+record.model+'；本次记录 token '+(record.usage?.total_tokens??'未返回')+'。'+(record.cached?'正在回看，没有新增模型调用。':'用量以本次接口返回为准。');
-    $('palette').value=plan.settings.palette;$('pause').textContent='暂停';$('pause').setAttribute('aria-pressed','false');
+    syncViewingControls(plan.settings);$('pause').textContent='暂停';$('pause').setAttribute('aria-pressed','false');
     const moon=plan.layers.find(l=>l.tool==='moon');$('moon-control').hidden=!moon;if(moon)$('moon-shape').value=moon.options.shape;
     if($('wind'))$('wind').value=plan.settings.wind;
     await window.PoemTrialScene.render(plan);
@@ -122,7 +139,8 @@
   $('replay').addEventListener('click',async()=>{if(latest){busy(true);clearCandidateSelection();try{poem.value=latest.poem;source=latest.source;librarySelection(catalog?.poems.find(p=>p.poem===latest.poem));$('source').textContent=source?[source.provider,source.author,source.title].filter(Boolean).join(' · '):'已保存的诗句';await show({...latest,cached:true});}catch(error){status(error.message);}finally{busy(false);}}});
   $('pause').addEventListener('click',()=>{const paused=$('pause').getAttribute('aria-pressed')!=='true';window.PoemTrialScene.pause(paused);$('pause').textContent=paused?'继续':'暂停';$('pause').setAttribute('aria-pressed',String(paused));});
   $('reseed').addEventListener('click',()=>window.PoemTrialScene.reseed());$('save').addEventListener('click',()=>window.PoemTrialScene.save());
-  $('palette').addEventListener('change',e=>window.PoemTrialScene.update({palette:e.target.value}));$('moon-shape').addEventListener('change',e=>window.PoemTrialScene.moon(e.target.value));
+  $('palette').addEventListener('change',e=>choosePalette(e.target.value));$('moon-shape').addEventListener('change',e=>window.PoemTrialScene.moon(e.target.value));
+  $('motion')?.addEventListener('input',e=>{window.PoemTrialScene.update({motion:Number(e.target.value)});syncViewingControls(window.PoemTrialScene.inspect().settings);});
   $('wind')?.addEventListener('input',e=>window.PoemTrialScene.update({wind:Number(e.target.value)}));
   $('reset-layout')?.addEventListener('click',()=>window.PoemTrialScene.resetLayout());
   function immersive(value){document.body.classList.toggle('immersive',value);$('immersive').setAttribute('aria-pressed',String(value));$('immersive').textContent=value?'返回诗句 ⤡':'沉浸观看 ⤢';}

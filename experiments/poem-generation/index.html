@@ -47,6 +47,7 @@
       <canvas id="scene" width="960" height="600" role="img" aria-label="根据诗句组合的动态试画"></canvas><div id="layer-hosts" hidden></div>
       <div class="view-controls">
         <label>配色 <select id="palette"><option value="clear">清寂澄明</option><option value="tender">温柔缱绻</option><option value="twilight">暮色微暖</option><option value="night">夜色淡墨</option></select></label>
+        <label>动态程度 <input id="motion" type="range" min="0" max="2" step="0.1" value="1.4"><output id="motion-value" for="motion">流动 · 140%</output></label>
         <label id="moon-control" hidden>月形 <select id="moon-shape"><option value="crescent">弯月</option><option value="half">半月</option><option value="gibbous">凸月</option><option value="full">满月</option><option value="dark">暗月</option></select></label>
         <button id="pause" type="button" aria-pressed="false">暂停</button><button id="reseed" type="button">换一组形态</button><button id="save" type="button">保存画面</button>
       </div>

@@ -10,7 +10,7 @@ window.PoemDrawing.register({
     function reset(){state={span:p.random(.86,1.12),phase:p.random(p.TWO_PI),tilt:p.random(-.14,.14),tail:p.random(.9,1.15)};}
     function draw(){
       const flying=ctx.options.pose==='flying',aquatic=ctx.options.pose==='waterbird',light=ctx.options.tone==='light',ink=ctx.palette.ink,body=light?ctx.palette.bg:ctx.palette.ink;
-      const flap=flying?Math.sin(ctx.time*1.6+state.phase)*7:0;p.push();p.translate(320,190);p.scale(ctx.options.facing==='left'?-state.span:state.span,state.span);p.rotate(state.tilt);
+      const flap=flying?Math.sin(ctx.time*2.2+state.phase)*7*(.6+ctx.settings.motion*.65):0;p.push();p.translate(320,190);p.scale(ctx.options.facing==='left'?-state.span:state.span,state.span);p.rotate(state.tilt);
       brush.wash([-13,5,-7,-1,9,-6,19,-1],flying?5:8,body,light?235:165,1);
       if(flying){
         brush.stroke([-2,0,-20,-13-flap,-36,-32-flap,-59,-26-flap],3.2,body,light?220:180,2);

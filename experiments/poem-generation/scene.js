@@ -4,14 +4,16 @@
 window.PoemTrialScene=(()=>{
   let controllers=[],hosts=[],sources=[],plan,shared,paused=false,raf,seed=0,ready=false,drag=null,initialPlacements=[],elapsed=0,lastFrame=null;
   const canvas=()=>document.getElementById('scene'),W=960,H=600;
-  function motion(layer,at){
-    const m=layer.motion;if(!m)return {dx:0,dy:0,scale:1,alpha:1};
+  function motion(layer,at,index=0){
+    const flying=layer.tool==='bird'&&layer.options.pose==='flying'||layer.tool==='oriole'&&layer.options.pose==='spread';
+    const m=layer.motion||(flying?{kind:'drift',state:'fly',rate:.8}:null);
+    if(!m||!layer.animate)return {dx:0,dy:0,scale:1,alpha:1};
+    const gain=shared.motion,phase=elapsed*m.rate*.65+index*.91;
     if(m.kind==='depth'){
-      const t=(elapsed*m.rate/70)%1,recede=m.direction==='recede',toward=layer.tool==='boat'?[.67,.52]:[.5,.18];
-      return {dx:recede?(toward[0]-at[0])*t*.45:(at[0]-.5)*t*.08,dy:recede?(toward[1]-at[1])*t*.45:.025*t,scale:recede?1-.45*t:1+.3*t,alpha:t>.88?(1-t)/.12:1};
+      const t=(elapsed*m.rate/70)%1,recede=m.direction==='recede',toward=layer.tool==='boat'?[.67,.52]:[.5,.18],wing=flying?(Math.sin(phase)-Math.sin(index*.91))*.025*gain:0;
+      return {dx:(recede?(toward[0]-at[0])*t*.45:(at[0]-.5)*t*.08)+wing,dy:recede?(toward[1]-at[1])*t*.45:.025*t,scale:recede?1-.45*t:1+.3*t,alpha:t>.88?(1-t)/.12:1};
     }
-    const phase=elapsed*m.rate*.22;
-    return {dx:m.state==='float'?Math.sin(phase)*.008:Math.sin(phase)*.025,dy:Math.sin(phase*.8)*(m.state==='float'?.006:.009),scale:1,alpha:1};
+    return {dx:(Math.sin(phase)-Math.sin(index*.91))*(m.state==='float'?.009:.045)*gain,dy:(Math.sin(phase*.8)-Math.sin(index*.91*.8))*(m.state==='float'?.006:.015)*gain,scale:1,alpha:1};
   }
   function entries(){
     if(!plan)return [];
@@ -25,7 +27,7 @@ window.PoemTrialScene=(()=>{
         const base=p.instances[0].placement.at.map((v,i)=>v+delta[i]),shift=motion(p,base);
         placement.at=[base[0]+shift.dx+(placement.at[0]-base[0])*shift.scale,base[1]+shift.dy+(placement.at[1]-base[1])*shift.scale];placement.scale*=shift.scale;parentOpacity=shift.alpha;
       }}
-      const shift=motion(l,placement.at);placement.at=[placement.at[0]+shift.dx,placement.at[1]+shift.dy];placement.scale*=shift.scale;
+      const shift=motion(l,placement.at,index);placement.at=[placement.at[0]+shift.dx,placement.at[1]+shift.dy];placement.scale*=shift.scale;
       const sourceIndex=sources.findIndex(s=>s.layer===i&&s.variant===(instance.variant||0));
       return {tool:l.tool,layer:i,index,sourceIndex,placement,opacity:(instance.opacity??1)*shift.alpha*parentOpacity,z:(l.z??i)+(instance.depth||0)};
     })).sort((a,b)=>{
@@ -49,7 +51,7 @@ window.PoemTrialScene=(()=>{
       if(layer.reflection){const line=layer.reflection.waterline*H;c.save();c.beginPath();for(let y=line;y<H;y+=7)c.rect(0,y,W,4);c.clip();c.globalAlpha=.15*entry.opacity;c.translate(0,2*line);c.scale(1,-1);c.drawImage(source,at[0]*W-anchor[0]*scale,at[1]*H-anchor[1]*scale,640*scale,388*scale);c.restore();}
     }c.globalAlpha=1;
   }
-  function loop(timestamp){if(lastFrame!==null)elapsed+=Math.max(0,Math.min(.1,(timestamp-lastFrame)/1000));lastFrame=timestamp;frame();raf=requestAnimationFrame(loop);}
+  function loop(timestamp){if(lastFrame!==null)elapsed+=Math.max(0,Math.min(.1,(timestamp-lastFrame)/1000))*shared.motion;lastFrame=timestamp;frame();raf=requestAnimationFrame(loop);}
   function dispose(){ready=false;drag=null;elapsed=0;lastFrame=null;cancelAnimationFrame(raf);controllers.forEach(c=>c.dispose());hosts.forEach(h=>h.remove());controllers=[];hosts=[];sources=[];plan=null;}
   function bindDrag(){
     const el=canvas();if(el.dataset.draggable)return;el.dataset.draggable='true';
@@ -69,7 +71,7 @@ window.PoemTrialScene=(()=>{
     const end=e=>{if(drag?.id===e.pointerId)drag=null;};for(const name of ['pointerup','pointercancel','lostpointercapture'])el.addEventListener(name,end);
   }
   async function render(next){
-    dispose();plan=structuredClone(next);initialPlacements=plan.layers.map(l=>structuredClone(l.placement));seed=next.seed;shared={...next.settings};paused=false;bindDrag();
+    dispose();plan=structuredClone(next);initialPlacements=plan.layers.map(l=>structuredClone(l.placement));seed=next.seed;shared=window.PoemDrawing.settings({motion:1.4,...next.settings});paused=false;bindDrag();
     for(const [i,layer] of plan.layers.entries()){
       if(!window.PoemDrawing.definitions().some(d=>d.id===layer.tool))throw new Error('未找到对应绘画工具');
       const variants=Math.max(1,...(layer.instances||[]).map(v=>(v.variant||0)+1));
@@ -84,7 +86,7 @@ window.PoemTrialScene=(()=>{
   function inspect(){return {ready,paused,elapsed,layers:controllers.map(c=>c.inspect()),placements:plan?.layers.map(l=>structuredClone(l.placement)),instances:entries(),settings:shared&&{...shared}};}
   return Object.freeze({render,dispose,inspect,
     pause(value){paused=Boolean(value);controllers.forEach((c,i)=>c.pause(paused||!plan.layers[sources[i].layer].animate));cancelAnimationFrame(raf);lastFrame=null;if(paused)frame();else raf=requestAnimationFrame(loop);},
-    update(patch){if(!shared)return;Object.assign(shared,patch);controllers.forEach(c=>c.refresh());setTimeout(frame,40);},
+    update(patch){if(!shared)return;Object.assign(shared,window.PoemDrawing.settings({...shared,...patch}));controllers.forEach(c=>c.refresh());setTimeout(frame,40);},
     moon(shape){controllers.forEach((c,i)=>{if(plan.layers[sources[i].layer].tool==='moon')c.configure({shape});});setTimeout(frame,40);},
     reseed(){if(!plan)return;seed++;elapsed=0;lastFrame=null;controllers.forEach((c,i)=>c.reset(seed+sources[i].layer*97+sources[i].variant*1543));setTimeout(frame,40);},
     resetLayout(){if(!plan)return;plan.layers.forEach((l,i)=>{l.placement=structuredClone(initialPlacements[i]);});frame();},

@@ -7,7 +7,7 @@ import {expressiveRule} from './expressive-mapping.mjs';
 import {arrangeScene} from './scene-layout.mjs';
 import {organizeScene} from './scene-organization.mjs';
 import {prepareSemanticLayers,finishSemanticPlan} from './semantic-policy.mjs';
-export const policyVersion='semantic-composition-3.3';
+export const policyVersion='semantic-composition-3.3-color-motion';
 const {rules,unsupportedTerms}=lexicon;
 const order=['landscape','moon','cloud','mist','dwelling','building','tree','willow','bamboo','pavilion','horse','water','rock','boat','lotus','grass','orchid','plum-branch','flower','flower-forms','wine','leaves','surface-weather','fish','bird','oriole','falling-petals','catkins','rain','snow'];
 const placements={

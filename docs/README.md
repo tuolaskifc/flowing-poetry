@@ -6,6 +6,7 @@
 | --- | --- | --- |
 | 整体设计与分工 | [设计规范](设计规范.md) | 当前唯一设计主文档 |
 | 现在实际运行的架构 | [架构页面](../poem-flow/architecture.html) · [SVG](../poem-flow/architecture.svg) | 当前 3.3 链路，已连接和待实现分别标记 |
+| 更丰富的配色与动态 | [效果预览](../poem-flow/color-motion-review.html) · [实现说明](../experiments/poem-generation/color-motion.md) | 22 套配色、动态程度 0–200%；人物保持基本写意，优先风景 |
 | 模型解释如何改变画面 | [3.3 语义消费约定](../experiments/poem-generation/composition-semantics.md) · [同回答开关对照](../poem-flow/semantic-review.html) | 主次、远近、依托、动作与照明；原始失败和引用展开单列 |
 | 运行当前项目 | [主入口与启动说明](../README.md#运行流动诗) | 输入／推荐 → DeepSeek → 本地绘制 → 交互与保存 |
 | 从哪些诗句开始改画 | [精选诗句库说明](../experiments/poem-generation/curated-library.md) | 20 组候选、首批 5 组、出处、画面目标及缺口；主网页优先选用 |

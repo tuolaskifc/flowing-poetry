@@ -11,14 +11,15 @@ state.phase=p.random(p.TWO_PI);state.ripples=Array.from({length:150},(_,i)=>{con
  }
 function water() {
         if(ctx.options.form==='plane'){
-          p.noFill();for(const r of state.ripples){p.stroke(alpha(p,palette.ink,18+r.depth*65));p.strokeWeight(.4+r.depth*.65);p.beginShape();for(let x=0;x<=r.length;x+=3)p.vertex(r.x+x,r.y+Math.sin(x*.035+r.phase-time*.6)*(1+shared.wind*2));p.endShape();}return;
+          const gain=shared.motion;
+          p.noFill();for(const r of state.ripples){const shift=(Math.sin(time*.55+r.phase)-Math.sin(r.phase))*7*gain;p.stroke(alpha(p,r.depth>.7?palette.accent:palette.ink,26+r.depth*90));p.strokeWeight(.4+r.depth*.65);p.beginShape();for(let x=0;x<=r.length;x+=3)p.vertex(r.x+x+shift,r.y+Math.sin(x*.035+r.phase-time*.9)*(1+shared.wind*2)*(1+gain*1.5));p.endShape();}return;
         }
         p.noFill();const rows=Math.round(15+shared.density*30);
         for(let j=0;j<rows;j++) {
           p.stroke(alpha(p,j%7===0?palette.accent:palette.ink,40+j/rows*65));p.strokeWeight(j%7===0?1.15:.7);
           p.beginShape();
           for(let x=-5;x<=W+5;x+=5) {
-            const y=135+j*(230/rows)+Math.sin(x*.013+j*.24-time*.7+state.phase)*(2+shared.wind*6)+Math.sin(x*.027-j*.12+time*.28)*(1+shared.wind*2);
+            const y=135+j*(230/rows)+(Math.sin(x*.013+j*.24-time*.9+state.phase)*(2+shared.wind*6)+Math.sin(x*.027-j*.12+time*.4)*(1+shared.wind*2))*(1+shared.motion*.65);
             p.vertex(x,y);
           }p.endShape();
         }

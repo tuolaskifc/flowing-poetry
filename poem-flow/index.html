@@ -52,7 +52,7 @@
   <script defer src="/experiments/poem-generation/app.js"></script>
 </head>
 <body>
-  <header><a class="wordmark" href="/">流动诗<span>FLOWING POETRY</span></a><nav><a href="/poem-flow/architecture.html">当前架构 ↗</a><a href="/poem-flow/semantic-review.html">语义贯通实测 ↗</a><a href="/poem-flow/expressive-review.html">已认可基线 ↗</a><a href="/poem-flow/library.html">精选诗句库 ↗</a><a href="/experiments/imagery-library/progress.html">意象进度 ↗</a></nav></header>
+  <header><a class="wordmark" href="/">流动诗<span>FLOWING POETRY</span></a><nav><a href="/poem-flow/architecture.html">当前架构 ↗</a><a href="/poem-flow/color-motion-review.html">色彩与动态 ↗</a><a href="/poem-flow/expressive-review.html">已认可基线 ↗</a><a href="/poem-flow/library.html">精选诗句库 ↗</a><a href="/experiments/imagery-library/progress.html">意象进度 ↗</a></nav></header>
   <main>
     <aside class="input-panel">
       <p class="eyebrow">A VERSE, A MOVING LANDSCAPE</p><h1>从一句诗<br>走进一幅画。</h1>
@@ -80,13 +80,15 @@
           <div id="empty-scene" hidden><p>这句诗，还缺合适的画法。</p><small>已有解读见下方。可以换一条本地推荐，再点击生成。</small></div>
           <button id="immersive" type="button" aria-pressed="false">沉浸观看 ⤢</button>
         </div>
+        <div id="palette-swatches" class="palette-swatches" role="group" aria-label="试试鲜明山色"></div>
         <div class="view-controls">
           <button id="pause" type="button" aria-pressed="false">暂停</button><button id="reseed" type="button">换一组形态</button><button id="reset-layout" type="button">还原构图</button><button id="save" type="button">保存画面 ↓</button>
           <label>配色 <select id="palette"><option value="clear">清寂澄明</option><option value="tender">温柔缱绻</option><option value="twilight">暮色微暖</option><option value="night">夜色淡墨</option></select></label>
           <label>风力 <input id="wind" type="range" min="0" max="1" step="0.05" value="0"></label>
+          <label>动态程度 <input id="motion" type="range" min="0" max="2" step="0.1" value="1.4"><output id="motion-value" for="motion">流动 · 140%</output></label>
           <label id="moon-control" hidden>月形 <select id="moon-shape"><option value="crescent">弯月</option><option value="half">半月</option><option value="gibbous">凸月</option><option value="full">满月</option><option value="dark">暗月</option></select></label>
         </div>
-        <p class="interaction-note">拖动可见笔触可移动该类意象；风力、配色与月形是你的观看选择。数量未明时的疏密与层次属于本地构图。沉浸时按 Esc 返回。</p>
+        <p class="interaction-note">点色卡试配色；动态程度调节运动幅度与节奏，拉到最左可静观。风力单独调节草木与云雾的风响应。拖动笔触可调整构图；沉浸时按 Esc 返回。</p>
         <details class="interpretation" open><summary>这幅画与诗句</summary>
           <div class="reading-grid"><article><h3>文字解读</h3><p id="reading"></p><ul id="entities"></ul><p id="atmosphere" class="muted"></p><ul id="uncertainties"></ul></article><article><h3>画出的意象</h3><ul id="drawn"></ul><h3>保留的空缺</h3><ul id="omitted"></ul></article></div>
         </details>

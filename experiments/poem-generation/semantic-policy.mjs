@@ -160,7 +160,11 @@ export function finishSemanticPlan(analysis,plan){
  s.supports.forEach((c,i)=>field('scene.supports['+i+']',c,'unsupported','依托尚未应用'));
  s.actions.forEach((a,i)=>{for(const k of ['state','pace','direction'])field('scene.actions['+i+'].'+k,a,'skipped',k==='state'?'主体无画法':a.modality!=='asserted'?'非确定动作不执行':a.state==='still'?'静止状态不推进时钟或位置':'该工具尚不支持此动作分量');});
  const light=s.atmosphere.illumination,visibility=s.atmosphere.visibility;
- if(s.actions.some(a=>a.modality==='asserted'&&a.state==='sway'))plan.settings.wind=Math.max(plan.settings.wind,.25);
+ plan.settings.motion=1.4;
+ const windAbsent=analysis.entities.some(e=>e.presence==='absent'&&e.mentions.some(m=>m.includes('风')));
+ if(!windAbsent)plan.settings.wind=Math.max(plan.settings.wind,.3);
+ for(const l of plan.layers)if(l.inferred&&l.tool==='water')l.animate=true;
+ if(!windAbsent&&s.actions.some(a=>a.modality==='asserted'&&a.state==='sway'))plan.settings.wind=Math.max(plan.settings.wind,.25);
  const palette=light==='night'?'night':light==='twilight'?'twilight':analysis.atmosphere.valence==='positive'?'tender':'clear';
  plan.settings.palette=palette;
  plan.settings.density={high:.35,medium:.45,low:.6,unclear:.45}[analysis.atmosphere.openness]??.45;
@@ -178,6 +182,7 @@ export function finishSemanticPlan(analysis,plan){
  const unsupported=items.filter(i=>i.status==='unsupported'||i.status==='partial');
  for(const item of unsupported)plan.notes.push('语义保留：'+item.path+'，'+item.effect);
  plan.notes.push('整体场景、主次、远近、依托和支持的动作状态来自本次模型解释；具体布局、颜色和时钟倍率由本地视觉策略选择。');
- plan.notes.push('动作动画只表现受支持的主导状态与有限观看微动，未完成先后事件、完整因果或人物行走步态。');
+ plan.notes.push('动作动画表现受支持的主导状态与有限观看运动；先后事件与完整因果尚未编排。');
+ plan.notes.push('动态程度与默认轻风是可调整的观看选择；不改变数量、主次或原文动作判断。人物保持点景写意，不新增人物步态。');
  return plan;
 }
