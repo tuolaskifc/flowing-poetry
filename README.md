@@ -10,6 +10,10 @@
 
 日常设计优先更新主规范；旧的单指标文档已归档，不再作为并行的当前定义。
 
+## 景意交融
+
+打开[融合试画](http://127.0.0.1:4173/poem-flow/expression.html)：一次解读后可在风景优先、景意交融、抽象优先之间切换。三档共用景物数量、位置与依托，水纹、树冠和山石纹理依附已有区域与轮廓；月、舟、人物保留可辨点景。支持新句输入、自动推荐表达倾向、十三类笔触、八套配色、点击／触摸回应、暂停与 PNG。[六句／18 张对照](http://127.0.0.1:4173/poem-flow/expression-review.html)包括三次新协议真实请求及三份历史适配；首轮结构检查 3/3，文学解释和审美仍待复核。135 项测试通过，详情见[统一构图与表达控制](experiments/poem-generation/shared-expression.md)。
+
 ## 抽象诗句试验
 
 打开[抽象试画](http://127.0.0.1:4173/poem-flow/abstract.html)：可以输入新句，也可直接观看七份已有真实解读。十三类笔触、五种空间分布、八套色组与种子可组合变化；新增涡流、浸染、裂隙、游丝，以及点击／触摸扰动、回应强度和键盘可用的“轻拨画面”。支持单体拖动留痕、暂停、重放、PNG 与月楼叠加。[新增 40 张对照](http://127.0.0.1:4173/poem-flow/abstract-extension-review.html)和[原 32 张](http://127.0.0.1:4173/poem-flow/abstract-review.html)均可进入对应动态图，旧预设保留原画笔选择。首批结构检查 3/4，原失败保留；新增三句首次检查 3/3，但词义与逻辑问题另外标注。124 项检查通过，文学解释与新画面仍待审阅。见[协议与来源](experiments/poem-generation/abstract-expression.md)、[本次扩展记录](experiments/poem-generation/abstract-extension.md)。主风景协议继续使用 3.3。

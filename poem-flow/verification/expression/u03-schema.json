@@ -1,0 +1,870 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Flowing Poetry unified expression 1.0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "poem",
+    "reading",
+    "entities",
+    "relations",
+    "atmosphere",
+    "time",
+    "uncertainties",
+    "spatial",
+    "scene",
+    "expression"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "expression-1.0"
+    },
+    "poem": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 200
+    },
+    "reading": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 160
+    },
+    "entities": {
+      "type": "array",
+      "minItems": 0,
+      "maxItems": 6,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "mentions",
+          "concept",
+          "kind",
+          "role",
+          "presence",
+          "evidence",
+          "quantity"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^i[1-9][0-9]*$"
+          },
+          "mentions": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 4,
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 30
+            }
+          },
+          "concept": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 60
+          },
+          "kind": {
+            "enum": [
+              "object",
+              "organism",
+              "person",
+              "place",
+              "environment",
+              "abstract"
+            ]
+          },
+          "role": {
+            "enum": [
+              "scene",
+              "reference"
+            ]
+          },
+          "presence": {
+            "enum": [
+              "present",
+              "absent",
+              "unclear"
+            ]
+          },
+          "evidence": {
+            "$ref": "#/$defs/evidence"
+          },
+          "quantity": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "mode",
+              "min",
+              "max",
+              "unit",
+              "scope",
+              "extent",
+              "evidence"
+            ],
+            "properties": {
+              "mode": {
+                "enum": [
+                  "exact",
+                  "range",
+                  "few",
+                  "many",
+                  "unspecified"
+                ]
+              },
+              "min": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "max": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "unit": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "scope": {
+                "enum": [
+                  "individual",
+                  "part",
+                  "group",
+                  "extent",
+                  "unspecified"
+                ]
+              },
+              "extent": {
+                "enum": [
+                  "local",
+                  "spread",
+                  "unspecified"
+                ]
+              },
+              "evidence": {
+                "type": "array",
+                "maxItems": 3,
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 200
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "relations": {
+      "type": "array",
+      "minItems": 0,
+      "maxItems": 6,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "type",
+          "source",
+          "target",
+          "meaning",
+          "modality",
+          "basis",
+          "evidence"
+        ],
+        "properties": {
+          "type": {
+            "enum": [
+              "acts_on",
+              "moves",
+              "moves_toward",
+              "moves_away",
+              "carries",
+              "grows_from",
+              "disappears",
+              "changes",
+              "obscures",
+              "located_in",
+              "compared_to",
+              "contrasts_with",
+              "corresponds_with",
+              "observes",
+              "other"
+            ]
+          },
+          "source": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "pattern": "^i[1-9][0-9]*$"
+          },
+          "target": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "pattern": "^i[1-9][0-9]*$"
+          },
+          "meaning": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 120
+          },
+          "modality": {
+            "enum": [
+              "asserted",
+              "negated",
+              "possible",
+              "conditional",
+              "unclear"
+            ]
+          },
+          "basis": {
+            "enum": [
+              "explicit",
+              "inferred"
+            ]
+          },
+          "evidence": {
+            "$ref": "#/$defs/evidence"
+          }
+        }
+      }
+    },
+    "atmosphere": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "labels",
+        "valence",
+        "energy",
+        "tension",
+        "openness",
+        "evidence"
+      ],
+      "properties": {
+        "labels": {
+          "type": "array",
+          "minItems": 0,
+          "maxItems": 3,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 12
+          }
+        },
+        "energy": {
+          "enum": [
+            "low",
+            "medium",
+            "high",
+            "unclear"
+          ]
+        },
+        "tension": {
+          "enum": [
+            "low",
+            "medium",
+            "high",
+            "unclear"
+          ]
+        },
+        "openness": {
+          "enum": [
+            "low",
+            "medium",
+            "high",
+            "unclear"
+          ]
+        },
+        "evidence": {
+          "$ref": "#/$defs/evidence"
+        },
+        "valence": {
+          "enum": [
+            "positive",
+            "neutral",
+            "negative",
+            "mixed",
+            "unclear"
+          ]
+        }
+      }
+    },
+    "time": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "markers",
+        "note"
+      ],
+      "properties": {
+        "markers": {
+          "type": "array",
+          "minItems": 0,
+          "maxItems": 4,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "surface",
+              "meaning"
+            ],
+            "properties": {
+              "surface": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 20
+              },
+              "meaning": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 100
+              }
+            }
+          }
+        },
+        "note": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1,
+          "maxLength": 120
+        }
+      }
+    },
+    "uncertainties": {
+      "type": "array",
+      "minItems": 0,
+      "maxItems": 3,
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 160
+      }
+    },
+    "spatial": {
+      "type": "array",
+      "maxItems": 8,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "type",
+          "source",
+          "target",
+          "modality",
+          "basis",
+          "evidence"
+        ],
+        "properties": {
+          "type": {
+            "enum": [
+              "on",
+              "beside",
+              "behind",
+              "in_front_of",
+              "outside",
+              "among",
+              "reflects_on"
+            ]
+          },
+          "source": {
+            "type": "string",
+            "pattern": "^i[1-9][0-9]*$"
+          },
+          "target": {
+            "type": "string",
+            "pattern": "^i[1-9][0-9]*$"
+          },
+          "modality": {
+            "enum": [
+              "asserted",
+              "negated",
+              "possible",
+              "conditional",
+              "unclear"
+            ]
+          },
+          "basis": {
+            "enum": [
+              "explicit",
+              "inferred"
+            ]
+          },
+          "evidence": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 3,
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 200
+            }
+          }
+        }
+      }
+    },
+    "scene": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "setting",
+        "groups",
+        "supports",
+        "actions",
+        "atmosphere"
+      ],
+      "properties": {
+        "setting": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "kind",
+            "basis",
+            "evidence"
+          ],
+          "properties": {
+            "kind": {
+              "enum": [
+                "mountain_stream",
+                "waterside",
+                "woodland",
+                "settlement",
+                "field",
+                "open_land",
+                "sky",
+                "mixed",
+                "unclear"
+              ]
+            },
+            "basis": {
+              "enum": [
+                "explicit",
+                "inferred"
+              ]
+            },
+            "evidence": {
+              "type": "array",
+              "maxItems": 3,
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 200
+              }
+            }
+          }
+        },
+        "groups": {
+          "type": "array",
+          "maxItems": 6,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "members",
+              "role",
+              "pattern",
+              "depth",
+              "basis",
+              "evidence"
+            ],
+            "properties": {
+              "members": {
+                "type": "array",
+                "minItems": 1,
+                "maxItems": 6,
+                "items": {
+                  "type": "string",
+                  "pattern": "^i[1-9][0-9]*$"
+                }
+              },
+              "role": {
+                "enum": [
+                  "subject",
+                  "environment",
+                  "accent"
+                ]
+              },
+              "pattern": {
+                "enum": [
+                  "single",
+                  "cluster",
+                  "grove",
+                  "flock",
+                  "field",
+                  "scattered",
+                  "unspecified"
+                ]
+              },
+              "depth": {
+                "enum": [
+                  "near",
+                  "middle",
+                  "far",
+                  "unspecified"
+                ]
+              },
+              "basis": {
+                "enum": [
+                  "explicit",
+                  "inferred"
+                ]
+              },
+              "evidence": {
+                "type": "array",
+                "maxItems": 3,
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 200
+                }
+              }
+            }
+          }
+        },
+        "supports": {
+          "type": "array",
+          "maxItems": 6,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "entity",
+              "surface",
+              "target",
+              "basis",
+              "evidence"
+            ],
+            "properties": {
+              "entity": {
+                "type": "string",
+                "pattern": "^i[1-9][0-9]*$"
+              },
+              "surface": {
+                "enum": [
+                  "water",
+                  "ground",
+                  "mountain",
+                  "vegetation",
+                  "boat"
+                ]
+              },
+              "target": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "pattern": "^i[1-9][0-9]*$"
+              },
+              "basis": {
+                "enum": [
+                  "explicit",
+                  "inferred"
+                ]
+              },
+              "evidence": {
+                "type": "array",
+                "maxItems": 3,
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 200
+                }
+              }
+            }
+          }
+        },
+        "actions": {
+          "type": "array",
+          "maxItems": 6,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "entity",
+              "state",
+              "pace",
+              "direction",
+              "modality",
+              "basis",
+              "evidence"
+            ],
+            "properties": {
+              "entity": {
+                "type": "string",
+                "pattern": "^i[1-9][0-9]*$"
+              },
+              "state": {
+                "enum": [
+                  "still",
+                  "flow",
+                  "fly",
+                  "float",
+                  "sway",
+                  "fall",
+                  "rise",
+                  "walk",
+                  "unclear"
+                ]
+              },
+              "pace": {
+                "enum": [
+                  "slow",
+                  "normal",
+                  "fast",
+                  "unspecified"
+                ]
+              },
+              "direction": {
+                "enum": [
+                  "approach",
+                  "recede",
+                  "across",
+                  "up",
+                  "down",
+                  "unspecified"
+                ]
+              },
+              "modality": {
+                "enum": [
+                  "asserted",
+                  "negated",
+                  "possible",
+                  "conditional",
+                  "unclear"
+                ]
+              },
+              "basis": {
+                "enum": [
+                  "explicit",
+                  "inferred"
+                ]
+              },
+              "evidence": {
+                "type": "array",
+                "maxItems": 3,
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 200
+                }
+              }
+            }
+          }
+        },
+        "atmosphere": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "visibility",
+            "illumination",
+            "basis",
+            "evidence"
+          ],
+          "properties": {
+            "visibility": {
+              "enum": [
+                "clear",
+                "hazy",
+                "dark",
+                "unclear"
+              ]
+            },
+            "illumination": {
+              "enum": [
+                "day",
+                "twilight",
+                "night",
+                "unclear"
+              ]
+            },
+            "basis": {
+              "enum": [
+                "explicit",
+                "inferred"
+              ]
+            },
+            "evidence": {
+              "type": "array",
+              "maxItems": 3,
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 200
+              }
+            }
+          }
+        }
+      }
+    },
+    "expression": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "relations",
+        "processes"
+      ],
+      "properties": {
+        "relations": {
+          "type": "array",
+          "maxItems": 6,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "source",
+              "target",
+              "kind",
+              "modality",
+              "basis",
+              "evidence"
+            ],
+            "properties": {
+              "source": {
+                "type": "string",
+                "pattern": "^i[1-9][0-9]*$"
+              },
+              "target": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "pattern": "^i[1-9][0-9]*$"
+              },
+              "kind": {
+                "enum": [
+                  "connect",
+                  "approach",
+                  "separate",
+                  "echo",
+                  "contrast",
+                  "interweave",
+                  "surround",
+                  "block",
+                  "converge",
+                  "disperse",
+                  "occlude",
+                  "reveal"
+                ]
+              },
+              "modality": {
+                "enum": [
+                  "asserted",
+                  "negated",
+                  "possible",
+                  "conditional",
+                  "unclear"
+                ]
+              },
+              "basis": {
+                "enum": [
+                  "explicit",
+                  "inferred"
+                ]
+              },
+              "evidence": {
+                "type": "array",
+                "minItems": 1,
+                "maxItems": 3,
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 200
+                }
+              }
+            }
+          }
+        },
+        "processes": {
+          "type": "array",
+          "maxItems": 6,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "subject",
+              "kind",
+              "temporal",
+              "modality",
+              "basis",
+              "evidence"
+            ],
+            "properties": {
+              "subject": {
+                "type": "string",
+                "pattern": "^i[1-9][0-9]*$"
+              },
+              "kind": {
+                "enum": [
+                  "persist",
+                  "emerge",
+                  "fade",
+                  "accumulate",
+                  "recur",
+                  "unclear"
+                ]
+              },
+              "temporal": {
+                "enum": [
+                  "ongoing",
+                  "already",
+                  "not_yet",
+                  "again",
+                  "repeated",
+                  "unspecified"
+                ]
+              },
+              "modality": {
+                "enum": [
+                  "asserted",
+                  "negated",
+                  "possible",
+                  "conditional",
+                  "unclear"
+                ]
+              },
+              "basis": {
+                "enum": [
+                  "explicit",
+                  "inferred"
+                ]
+              },
+              "evidence": {
+                "type": "array",
+                "minItems": 1,
+                "maxItems": 3,
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 200
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "evidence": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 3,
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 80
+      }
+    }
+  }
+}

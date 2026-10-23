@@ -1,0 +1,36 @@
+(()=>{
+ 'use strict';const $=id=>document.getElementById(id);let data,current,meta,busy=false,ready=false,showing=false;
+ const words={connect:'连接',approach:'趋近',separate:'分离',echo:'呼应',contrast:'对照',interweave:'交织',surround:'包围',block:'阻隔',converge:'汇聚',disperse:'分散',occlude:'遮蔽',reveal:'显露',persist:'延续',emerge:'显现',fade:'消退',accumulate:'积累',recur:'重现',unclear:'未明',asserted:'成立',negated:'被否定',possible:'可能',conditional:'有条件',ongoing:'正在',already:'已经',not_yet:'尚未',again:'再次',repeated:'反复',unspecified:'未指定'};
+ const scene=window.PoemTrialScene,engine=window.PoemAbstract.mount($('art'),{background:()=>current?.plan.concretePlan?$('scene'):null,mask:i=>scene.layerCanvas(i),foreground:()=>scene.foregroundCanvas((current?.plan.concretePlan?.layers||[]).flatMap((l,i)=>['moon','building','dwelling','pavilion','boat','figure','bird','oriole','horse','fish'].includes(l.tool)?[i]:[]))});window.expressionExperiment=engine;
+ for(const [id,name] of window.PoemExpression.modes){const o=new Option(name,id);$('expression-mode').add(o);}
+ for(const [id,name] of window.PoemAbstract.styles)$('style').add(new Option(name,id));$('palette').add(new Option('随种子试色','auto'));for(const p of window.PoemAbstract.palettes)$('palette').add(new Option(p.name,p.id));
+ const settings=()=>({expression:$('expression-mode').value,style:$('style').value,palette:$('palette').value,density:+$('density').value,motion:+$('motion').value,trace:+$('trace').value,response:+$('response').value,hybrid:false});
+ const status=text=>$('status').textContent=text;
+ function sync(){const state=engine.inspect();$('seed-label').textContent='画法种子 '+state.seed;$('pause').textContent=state.paused?'继续':'暂停';$('pause').setAttribute('aria-pressed',String(state.paused));$('palette-name').textContent=window.PoemAbstract.palettes.find(p=>p.id===state.palette)?.name||'';
+  const name=window.PoemExpression.modes.find(m=>m[0]===state.expression?.mode)?.[1];$('mode-reason').textContent=(name||'')+' · '+current.plan.expression.reason+(current.plan.concretePlan?'':'；本句没有实景，三档仅改变抽象表达强度。');
+  if(scene.inspect().ready){scene.update({palette:window.PoemAbstract.backgroundPalette(state.palette),motion:+$('motion').value});setTimeout(()=>{if(ready)engine.at(engine.inspect().time);},75);}
+ }
+ async function show(record,entry){if(!record?.validation?.valid){status('解读没有通过检查，原始结果已保存；保留当前画面。');return;}if(showing)return;showing=true;$('sample').disabled=true;$('generate').disabled=true;try{ready=false;current=record;meta=entry;$('poem').value=record.poem;$('reading').textContent=record.analysis.reading;$('poem-title').textContent=record.poem;
+  $('source').replaceChildren();if(entry){const a=document.createElement('a');a.href=entry.url;a.textContent=entry.author+'《'+entry.title+'》· 原文来源';a.target='_blank';a.rel='noopener noreferrer';$('source').append(a);}
+  for(const id of ['relations','processes','uncertainties','choices'])$(id).replaceChildren();const item=(id,text)=>{const li=document.createElement('li');li.textContent=text;$(id).append(li);};
+  const p=record.plan,by=id=>p.nodes.find(n=>n.id===id)?.label||id;
+  for(const r of p.relations)item('relations',by(r.source)+' → '+(r.target?by(r.target):'未指定参照')+' · '+words[r.kind]+'，'+words[r.modality]+'；依据：'+r.evidence.join('／'));
+  for(const q of p.processes)item('processes',by(q.subject)+' · '+words[q.kind]+'，'+words[q.temporal]+'，'+words[q.modality]+'；依据：'+q.evidence.join('／'));
+  for(const text of [...record.analysis.uncertainties,...(entry?.reviewWarnings||[])])item('uncertainties',text);
+  for(const text of [...p.notes,...p.expression.limitations])item('choices',text);for(const gap of p.expression.gaps)item('choices',gap.label+'：'+gap.reason);
+  $('review-note').hidden=!entry?.note;$('review-note').textContent=entry?.note||'';
+  scene.dispose();if(p.concretePlan){await scene.render(p.concretePlan);const start=performance.now();while(scene.inspect().layers.some(l=>l.ticks<1)){if(performance.now()-start>5000)throw Error('景物画笔尚未准备好');await new Promise(r=>setTimeout(r,20));}}
+  engine.render(p,{...settings(),seed:p.seed});const pause=matchMedia('(prefers-reduced-motion: reduce)').matches;engine.pause(pause);if(scene.inspect().ready)scene.pause(pause);sync();ready=true;
+  status((record.cached?'已有真实解读重放':'本次真实解读')+'；三档表达共享同一构图，切换不请求模型。');
+  if(!p.concretePlan&&p.expression.gaps.length&&!p.nodes.some(n=>n.kind==='abstract'||n.mode==='reference'))status('解读已完成，但具体主体尚无画法；当前保留缺口，没有用抽象图案代替。');
+  $('variants').replaceChildren();for(const v of (data?.variants||[]).filter(v=>v.case===entry?.id)){const b=document.createElement('button');b.className='variant';const im=new Image();im.src='verification/expression/'+v.file;im.alt=window.PoemExpression.modes.find(m=>m[0]===v.mode)[1];const text=document.createElement('span');text.textContent=im.alt;b.append(im,text);b.onclick=()=>{$('expression-mode').value=v.mode;engine.configure({expression:v.mode});sync();};$('variants').append(b);}
+ }finally{showing=false;$('sample').disabled=busy;$('generate').disabled=busy;}}
+ window.expressionStudy={show};
+ $('sample').onchange=async()=>{if(busy)return;const c=data.cases.find(c=>c.id===$('sample').value);if(c?.record)try{await show(c.record,c);}catch(e){status(e.message);}else status('本次原始回答未通过检查，没有自动补画或重试。');};
+ $('generate').onclick=async()=>{if(busy)return;const poem=$('poem').value.trim();if(!poem||[...poem].length>200){status('请输入 1–200 字诗句。');return;}busy=true;$('generate').disabled=true;$('sample').disabled=true;status('正在分析景物、空间与抽象关系……');try{const response=await fetch('/api/analyze',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({poem,mode:'expression'})}),body=await response.json();if(!response.ok&&!body.record)throw Error(body.error||'分析未完成');await show(body.record,data.cases.find(c=>c.poem===poem));}catch(e){status(e.message);}finally{busy=false;$('generate').disabled=false;$('sample').disabled=false;}};
+ $('expression-mode').onchange=()=>{if(ready){engine.configure({expression:$('expression-mode').value});sync();}};
+ for(const id of ['style','palette'])$(id).onchange=()=>{if(ready){engine.configure({[id]:$(id).value});sync();}};
+ for(const id of ['density','motion','trace','response'])$(id).oninput=()=>{if(ready){engine.configure({[id]:+$(id).value});sync();}};
+ $('pause').onclick=()=>{if(!ready)return;const pause=!engine.inspect().paused;engine.pause(pause);if(scene.inspect().ready)scene.pause(pause);sync();};$('restart').onclick=()=>{engine.restart();scene.resetLayout();};$('reseed').onclick=()=>{if(ready){engine.reseed();sync();}};$('stir').onclick=()=>{if(ready)engine.impulse([.5,.5]);};$('save').onclick=()=>{if(ready)engine.save();};
+ fetch('expression-studies.json').then(r=>{if(!r.ok)throw Error('融合试画数据未准备好');return r.json();}).then(async d=>{data=d;for(const c of data.cases)$('sample').add(new Option(c.author+' · '+c.poem,c.id));const q=new URLSearchParams(location.search),sample=data.cases.find(c=>c.id===q.get('case')&&c.record)||data.cases.find(c=>c.id==='u02'&&c.record)||data.cases.find(c=>c.record);if(!sample)throw Error('尚无有效解读可重放');if(window.PoemExpression.modes.some(m=>m[0]===q.get('mode')))$('expression-mode').value=q.get('mode');$('sample').value=sample.id;await show(sample.record,sample);$('generate').disabled=false;}).catch(e=>status(e.message));
+})();

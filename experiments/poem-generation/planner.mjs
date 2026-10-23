@@ -9,7 +9,7 @@ import {organizeScene} from './scene-organization.mjs';
 import {prepareSemanticLayers,finishSemanticPlan} from './semantic-policy.mjs';
 import {developLandscape} from './landscape-development.mjs';
 import {finalizeScene} from './scene-integrity.mjs';
-export const policyVersion='semantic-composition-3.3-world-instances';
+export const policyVersion='semantic-composition-3.3-world-instances-directional-buildings';
 const {rules,unsupportedTerms}=lexicon;
 const order=['landscape','moon','cloud','mist','dwelling','building','tree','willow','bamboo','pavilion','horse','water','rock','boat','lotus','grass','orchid','plum-branch','flower','flower-forms','wine','leaves','surface-weather','fish','bird','oriole','falling-petals','catkins','rain','snow'];
 const placements={

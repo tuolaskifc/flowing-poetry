@@ -43,9 +43,10 @@ window.PoemTrialScene=(()=>{
       return a.z-b.z;
     });
   }
-  function frame(){
-    if(!plan)return;const c=canvas().getContext('2d');c.clearRect(0,0,W,H);c.fillStyle=window.PoemDrawing.paletteFor(shared.palette).bg;c.fillRect(0,0,W,H);
+  function frame(target=null,onlyLayer=null){
+    if(!plan)return;const c=target||canvas().getContext('2d');c.clearRect(0,0,W,H);if(!target){c.fillStyle=window.PoemDrawing.paletteFor(shared.palette).bg;c.fillRect(0,0,W,H);}
     for(const entry of entries()){
+      if(onlyLayer!==null&&(onlyLayer instanceof Set?!onlyLayer.has(entry.layer):entry.layer!==onlyLayer))continue;
       const source=hosts[entry.sourceIndex]?.querySelector('canvas');if(!source)continue;
       const {anchor,at,scale}=entry.placement;const layer=plan.layers[entry.layer];
       const colors=window.PoemDrawing.paletteFor(shared.palette,entry.visual&&{...entry.visual,depth:entry.tone});
@@ -99,6 +100,8 @@ window.PoemTrialScene=(()=>{
   }
   function inspect(){return {ready,paused,elapsed,composition:plan?.composition,landscape:plan?.scene.landscape,layers:controllers.map(c=>c.inspect()),placements:plan?.layers.map(l=>structuredClone(l.placement)),instances:entries(),settings:shared&&{...shared}};}
   return Object.freeze({render,dispose,inspect,
+    layerCanvas(index){if(!ready||!Number.isInteger(index)||!plan.layers[index])return null;const out=document.createElement('canvas');out.width=W;out.height=H;frame(out.getContext('2d'),index);return out;},
+    foregroundCanvas(indices){if(!ready)return null;const out=canvas()._expressionForeground||(canvas()._expressionForeground=document.createElement('canvas'));if(out.width!==W){out.width=W;out.height=H;}frame(out.getContext('2d'),new Set(indices));return out;},
     async composition(id){const selected=plan?.compositions?.find(c=>c.id===id);if(!selected)throw new Error('没有这组构图');const wasPaused=paused,next={...plan,...structuredClone(selected),composition:id,settings:{...shared}};await render(next);if(wasPaused)this.pause(true);return inspect();},
     pause(value){paused=Boolean(value);controllers.forEach((c,i)=>c.pause(paused||!plan.layers[sources[i].layer].animate));cancelAnimationFrame(raf);lastFrame=null;if(paused)frame();else raf=requestAnimationFrame(loop);},
     update(patch){if(!shared)return;Object.assign(shared,window.PoemDrawing.settings({...shared,...patch}));controllers.forEach(c=>c.refresh());setTimeout(frame,40);},

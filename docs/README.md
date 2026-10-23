@@ -16,6 +16,7 @@
 | 一张图看懂模块 | [模块职能树](assets/模块职能树.png) | 标注现状的目标结构 |
 | 写意借形如何处理 | [写意归类与场景](../experiments/poem-generation/expressive-generation.md) | 房寺、鸟类、马蹄等共享画法，保留原词义及数量边界 |
 | 程序现在如何读模型回答 | [3.3 整体场景](../experiments/poem-generation/composition-semantics.md)；[冻结完整协议 3.0](../experiments/poem-semantics/contract-v3/固定输出结构.md) | 默认整体场景语义，支持主导动作；完整动作因果与时间仍待实现 |
+| 风景与抽象怎样共用画面 | [统一构图与表达控制](../experiments/poem-generation/shared-expression.md) | 一次语义解读、本地三档表达、轮廓裁切与 2026-10-24 实证 |
 | 实际调用的结果和问题 | [实验结论](../experiments/poem-semantics/实验结论.md) | 指向真实记录，不随设计改写原始回答 |
 | 外部资源 | [参考资料](参考资料.md) | 保留各项核实状态 |
 | 意象库第一轮试画 | [试画与候选](../experiments/imagery-library/README.md) | 五类本地试画、10 个 OpenProcessing 候选与来源边界 |
