@@ -5,6 +5,9 @@
     {"id":"a01","poem":"此情可待成追忆，只是当时已惘然。","author":"李商隐","title":"锦瑟","url":"https://zh.wikisource.org/wiki/錦瑟"},
     {"id":"a02","poem":"此中有真意，欲辩已忘言。","author":"陶渊明","title":"饮酒·其五","url":"https://zh.wikisource.org/wiki/飲酒二十首#其五","note":"依所列来源采用“辩”字，另有“辨”字版本。"},
     {"id":"a03","poem":"剪不断，理还乱，是离愁。","author":"李煜","title":"相见欢·无言独上西楼","url":"https://zh.wikisource.org/wiki/相見歡_(無言獨上西樓,_李煜)"},
-    {"id":"a04","poem":"从此无心爱良夜，任他明月下西楼。","author":"李益","title":"写情","url":"https://zh.wikisource.org/wiki/寫情"}
+    {"id":"a04","poem":"从此无心爱良夜，任他明月下西楼。","author":"李益","title":"写情","url":"https://zh.wikisource.org/wiki/寫情"},
+    {"id":"a05","poem":"问君能有几多愁？恰似一江春水向东流！","author":"李煜","title":"虞美人·春花秋月何时了","url":"https://zh.wikisource.org/wiki/虞美人_(春花秋月何時了)","batch":"extension","note":"只借春水的流动形态，不据比喻补造真实江岸。"},
+    {"id":"a06","poem":"两情若是久长时，又岂在朝朝暮暮。","author":"秦观","title":"鹊桥仙","url":"https://zh.wikisource.org/wiki/鵲橋仙_(秦觀)","batch":"extension","note":"保留“若是”的条件范围；不把朝暮直接变成昼夜循环。","reviewWarnings":["模型把“朝朝暮暮”标作缺席，但“不必朝夕相守”不能直接推出“没有相守”；此判断待复核，原回答保留。"]},
+    {"id":"a07","poem":"人生如逆旅，我亦是行人。","author":"苏轼","title":"临江仙·送钱穆父","url":"https://zh.wikisource.org/wiki/臨江仙_(蘇軾)/送錢穆父","batch":"extension","note":"检验人生、旅舍与行人的比喻层次，不另造实景剧情。","reviewWarnings":["模型误将“逆旅”并释为“逆行的旅次”。此处应按旅舍理解；保留原回答作为词义失败记录，不据此生成逆行剧情。"],"reviewSource":"https://dict.revised.moe.edu.tw/dictView.jsp?ID=57514&la=0&powerMode=0"}
   ]
 }

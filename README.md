@@ -12,7 +12,7 @@
 
 ## 抽象诗句试验
 
-打开[抽象试画](http://127.0.0.1:4173/poem-flow/abstract.html)：可以输入新句，也可直接观看四份已有真实解读。九类笔触、五种空间分布、八套色组与随机种子可组合变化；支持逐个拖动、留痕、暂停、重放、PNG，以及月楼景物与抽象层叠加。[32 张画面对照](http://127.0.0.1:4173/poem-flow/abstract-review.html)可直接进入对应种子的动态图。四次首次结构检查 3/4，一份修正缺席结果检查后仅本地重放，原失败保留；120 项检查通过，解读与审美待确认。见[协议、来源与实验说明](experiments/poem-generation/abstract-expression.md)。原风景生成通路继续保留。
+打开[抽象试画](http://127.0.0.1:4173/poem-flow/abstract.html)：可以输入新句，也可直接观看七份已有真实解读。十三类笔触、五种空间分布、八套色组与种子可组合变化；新增涡流、浸染、裂隙、游丝，以及点击／触摸扰动、回应强度和键盘可用的“轻拨画面”。支持单体拖动留痕、暂停、重放、PNG 与月楼叠加。[新增 40 张对照](http://127.0.0.1:4173/poem-flow/abstract-extension-review.html)和[原 32 张](http://127.0.0.1:4173/poem-flow/abstract-review.html)均可进入对应动态图，旧预设保留原画笔选择。首批结构检查 3/4，原失败保留；新增三句首次检查 3/3，但词义与逻辑问题另外标注。124 项检查通过，文学解释与新画面仍待审阅。见[协议与来源](experiments/poem-generation/abstract-expression.md)、[本次扩展记录](experiments/poem-generation/abstract-extension.md)。主风景协议继续使用 3.3。
 
 ## 当前状态
 

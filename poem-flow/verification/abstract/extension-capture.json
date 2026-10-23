@@ -1,0 +1,66 @@
+{
+  "schema": "abstract-1.0",
+  "noAutomaticRetry": true,
+  "calls": [
+    {
+      "id": "a05",
+      "poem": "问君能有几多愁？恰似一江春水向东流！",
+      "record": "2026-10-23T15-46-24-006Z-b951a741",
+      "valid": true,
+      "errors": [],
+      "cached": false,
+      "usage": {
+        "completion_tokens": 947,
+        "prompt_tokens": 1396,
+        "total_tokens": 2343,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens_details": {
+          "cached_tokens": 1280
+        }
+      },
+      "elapsed": 15.7
+    },
+    {
+      "id": "a06",
+      "poem": "两情若是久长时，又岂在朝朝暮暮。",
+      "record": "2026-10-23T15-46-39-781Z-29e9aaaf",
+      "valid": true,
+      "errors": [],
+      "cached": false,
+      "usage": {
+        "completion_tokens": 730,
+        "prompt_tokens": 1395,
+        "total_tokens": 2125,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens_details": {
+          "cached_tokens": 1280
+        }
+      },
+      "elapsed": 11.5
+    },
+    {
+      "id": "a07",
+      "poem": "人生如逆旅，我亦是行人。",
+      "record": "2026-10-23T15-46-51-349Z-64953243",
+      "valid": true,
+      "errors": [],
+      "cached": false,
+      "usage": {
+        "completion_tokens": 756,
+        "prompt_tokens": 1389,
+        "total_tokens": 2145,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens_details": {
+          "cached_tokens": 1280
+        }
+      },
+      "elapsed": 18.5
+    }
+  ]
+}

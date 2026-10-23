@@ -3,7 +3,7 @@
  */
 (function(root,factory){const api=factory();if(typeof module==='object'&&module.exports)module.exports=api;else root.PoemAbstract=api;})(globalThis,()=>{
  const W=960,H=600,TAU=Math.PI*2,clamp=(v,a=0,b=1)=>Math.max(a,Math.min(b,v));
- const styles=[['auto','交融'],['flow','流线'],['ink','墨晕'],['shards','碎片'],['ribbons','丝带'],['ripples','涟漪'],['dust','微粒'],['contours','等高纹'],['echoes','叠影'],['weave','网织']];
+ const styles=[['auto','交融'],['flow','流线'],['ink','墨晕'],['shards','碎片'],['ribbons','丝带'],['ripples','涟漪'],['dust','微粒'],['contours','等高纹'],['echoes','叠影'],['weave','网织'],['vortex','涡流'],['bloom','浸染'],['fissures','裂隙'],['fibers','游丝']];
  const palettes=[
   {id:'lapis',name:'青金与胭脂',dark:true,bg:'#101F36',colors:['#67B6C4','#DA9DAB','#C5BCE7','#E4B96A','#DBE8E1']},
   {id:'ember',name:'炽色余温',dark:true,bg:'#251D2F',colors:['#ED9271','#D7B582','#947CBF','#5CB4A5','#E5CED6']},
@@ -16,7 +16,7 @@
  ];
  function random(seed){let a=seed>>>0;return ()=>{a+=0x6D2B79F5;let t=a;t=Math.imul(t^t>>>15,t|1);t^=t+Math.imul(t^t>>>7,t|61);return ((t^t>>>14)>>>0)/4294967296;};}
  const hash=s=>{let h=2166136261;for(const c of JSON.stringify(s))h=Math.imul(h^c.charCodeAt(0),16777619);return (h>>>0).toString(16);};
- function compose(plan,{seed=plan.seed,style='auto',palette='auto',density=.55}={}){
+ function compose(plan,{seed=plan.seed,style='auto',palette='auto',density=.55,vocabulary='expanded'}={}){
   const rng=random(seed),rand=(a,b)=>a+rng()*(b-a),night=plan.atmosphere.illumination==='night';
   const available=night?palettes.filter(p=>p.dark):palettes;
   const scheme=palettes.find(p=>p.id===palette)||(available[Math.floor(rng()*available.length)]);
@@ -25,7 +25,8 @@
    const t=(i+.5)/Math.max(n,1),angle=TAU*t+rotation;
    const at=n===1?[.5,.52]:layout===0?[.18+t*.64,.40+Math.sin(t*6+rotation)*.18]:layout===1?[.5+Math.cos(angle)*.26,.5+Math.sin(angle)*.22]:layout===2?[.24+t*.52,.24+t*.53]:layout===3?[.5+Math.sin(angle)*.28,.28+(i%2)*.35]:[.22+((i*1.618)%1)*.57,.3+((i*.414)%1)*.43];
    const related=plan.relations.filter(r=>[r.source,r.target].includes(node.id));
-   let form=style==='auto'?styles[1+Math.floor(rng()*(styles.length-1))][0]:style;
+   const pool=vocabulary==='classic'?styles.slice(1,10):styles.slice(1);
+   let form=style==='auto'?pool[Math.floor(rng()*pool.length)][0]:style;
    if(style==='auto'&&related.some(r=>r.kind==='interweave'))form=rng()<.5?'weave':'ribbons';
    if(style==='auto'&&related.some(r=>r.kind==='surround'&&r.source===node.id))form='contours';
    return {...node,at,form,radius:(n<3?143:109)*rand(.83,1.28),color:scheme.colors[(i+Math.floor(rng()*2))%scheme.colors.length],secondary:scheme.colors[(i+2)%scheme.colors.length],phase:rand(0,TAU),angle:rand(-1,1),frequency:rand(1.2,3.6),stretch:rand(.68,1.6),count:Math.round(rand(22,44)*(.55+clamp(density)*1.1)),salt:Math.floor(rand(1,1e8))};
@@ -63,14 +64,22 @@
   }
   return state;
  }
+ // Viewer input deforms the drawing only; it never changes semantic positions or modalities.
+ function response(at,time,pulses,strength=1){
+  let x=0,y=0,twist=0;for(const p of pulses){const age=time-p.time;if(age<0||age>8)continue;
+   const dx=(at[0]-p.at[0])*W,dy=(at[1]-p.at[1])*H,d=Math.hypot(dx,dy),front=28+age*150;
+   const envelope=Math.exp(-(((d-front)/105)**2))*Math.exp(-age*.38),wave=Math.cos((d-front)*.019)*envelope*clamp(strength)*38;
+   x+=(dx/(d||1)*.8-dy/(d||1)*.45)*wave;y+=(dy/(d||1)*.8+dx/(d||1)*.45)*wave;twist+=wave*.002;
+  }return {offset:[clamp(x,-65,65)/W,clamp(y,-65,65)/H],twist:clamp(twist,-.22,.22)};
+ }
  function mount(canvas,{background=()=>null}={}){
-  const c=canvas.getContext('2d');let plan,composition,options={style:'auto',palette:'auto',motion:1,trace:.45,hybrid:false},time=0,paused=false,last=null,raf,drag=null,offsets={},history=[],paper=null,disposed=false;
+  const c=canvas.getContext('2d');let plan,composition,options={style:'auto',palette:'auto',motion:1,trace:.45,response:.65,hybrid:false},time=0,paused=false,last=null,raf,drag=null,gesture=null,offsets={},history=[],pulses=[],paper=null,disposed=false;
   const stroke=(color,alpha,width=1)=>{c.strokeStyle=color;c.globalAlpha=alpha;c.lineWidth=width;c.lineCap='round';c.lineJoin='round';};
   function field(x,y,t,n,k=0){const f=n.frequency;return Math.sin(x*.009*f+t*.17+n.phase+k)*Math.cos(y*.008-t*.11+k)*14+Math.sin(y*.019+x*.011+n.phase)*7;}
   function glyph(n,t,alpha=1){
    if(n.mode==='gap')return;
    const rng=random(n.salt),r=n.radius,color=n.color;
-   c.save();c.translate(n.at[0]*W,n.at[1]*H);c.rotate(n.angle*.35);c.scale(n.stretch,1/n.stretch**.3);
+   c.save();c.translate(n.at[0]*W,n.at[1]*H);c.rotate(n.angle*.35+(n.twist||0));c.scale(n.stretch,1/n.stretch**.3);
    const power=n.alpha*alpha*(n.mode==='candidate'?.65:1);
    const ghost=n.mode==='candidate';if(ghost)c.setLineDash([3,7]);
    if(n.form==='ink'){
@@ -78,6 +87,27 @@
      const x=(rng()-.5)*r*.95,y=(rng()-.5)*r*.65,rr=r*(.42+rng()*.62),g=c.createRadialGradient(x,y,0,x,y,rr);g.addColorStop(0,color+'3A');g.addColorStop(.5,color+'16');g.addColorStop(1,color+'00');c.fillStyle=g;c.globalAlpha=power;c.beginPath();
      for(let k=0;k<58;k++){const a=k/57*TAU,dist=rr*(.82+.1*Math.sin(a*5+n.phase+j)+.07*Math.sin(a*9+t*.1));const px=x+Math.cos(a)*dist,py=y+Math.sin(a)*dist*.72;k?c.lineTo(px,py):c.moveTo(px,py);}c.closePath();if(!ghost)c.fill();else{stroke(color,power*.2);c.stroke();}
     }
+   }else if(n.form==='vortex'){
+    const arms=Math.round(n.count*1.15),hand=rng()<.5?-1:1;
+    for(let j=0;j<arms;j++){const start=rng()*TAU,turn=1.1+rng()*1.5,reach=r*(.65+rng()*.7);c.beginPath();
+     for(let k=0;k<=100;k++){const q=k/100,rr=reach*(.06+q*.94),a=start+hand*q*TAU*turn+t*.10*(1-q),x=Math.cos(a)*rr+Math.sin(q*7+n.phase)*r*.13,y=Math.sin(a)*rr*.73;k?c.lineTo(x,y):c.moveTo(x,y);}stroke(j%4?color:n.secondary,power*(j%6===0?.58:.23),j%9===0?1.7:.65);c.stroke();}
+   }else if(n.form==='bloom'){
+    // Procedural pigment edges and branching veins; not a fluid solver.
+    const lobes=7+Math.floor(rng()*5),phase=rng()*TAU;
+    for(let layer=17;layer>=0;layer--){const size=r*(.38+layer*.048),drift=layer*2.1,points=[];c.beginPath();
+     for(let k=0;k<=144;k++){const a=k/144*TAU,edge=1+.19*Math.sin(a*lobes+phase)+.09*Math.sin(a*17+n.phase)+.035*Math.sin(a*39+layer*.4+t*.12),rr=size*edge,x=Math.cos(a)*rr+drift*Math.sin(phase),y=Math.sin(a)*rr*.73;points.push([x,y]);k?c.lineTo(x,y):c.moveTo(x,y);}c.closePath();c.fillStyle=layer%5?color:n.secondary;c.globalAlpha=power*.025;if(!ghost)c.fill();stroke(layer%5?color:n.secondary,power*(layer%4===0?.15:.045),.7);c.stroke();
+    }
+    for(let j=0;j<n.count;j++){const a=rng()*TAU,length=r*(.5+rng()*.73);let x=0,y=0;c.beginPath();c.moveTo(x,y);
+     for(let k=1;k<=18;k++){const q=k/18;x=Math.cos(a)*length*q+Math.sin(q*8+j)*q*9;y=Math.sin(a)*length*q*.73+Math.sin(q*11+n.phase)*q*7;c.lineTo(x,y);if(k>9&&k%3===0){c.moveTo(x,y);c.lineTo(x+Math.cos(a+.7)*12*q,y+Math.sin(a+.7)*12*q);c.moveTo(x,y);}}stroke(color,power*.14,.45);c.stroke();}
+   }else if(n.form==='fissures'){
+    const size=Math.round(clamp(Math.sqrt(n.count)*.85,4,7)),vertices=[];for(let y=0;y<=size;y++){vertices[y]=[];for(let x=0;x<=size;x++)vertices[y][x]=[(x/size-.5)*r*2.6+(rng()-.5)*r*.33,(y/size-.5)*r*1.8+(rng()-.5)*r*.29];}
+    for(let y=0;y<size;y++)for(let x=0;x<size;x++){const pts=[vertices[y][x],vertices[y][x+1],vertices[y+1][x+1],vertices[y+1][x]],cx=pts.reduce((s,p)=>s+p[0],0)/4,cy=pts.reduce((s,p)=>s+p[1],0)/4;
+     const edge=Math.hypot(cx/(r*1.4),cy/r),alphaEdge=clamp(1.4-edge),gap=3+7*rng(),sway=Math.sin(t*.12+n.phase+x+y)*2;c.beginPath();pts.forEach(([px,py],k)=>{const vx=px-cx,vy=py-cy,len=Math.hypot(vx,vy)||1,xx=px-vx/len*gap+sway,yy=py-vy/len*gap;k?c.lineTo(xx,yy):c.moveTo(xx,yy);});c.closePath();c.fillStyle=(x+y)%4?color:n.secondary;c.globalAlpha=power*alphaEdge*(.10+rng()*.22);if(!ghost)c.fill();stroke(color,power*alphaEdge*.46,.65);c.stroke();
+     c.beginPath();c.moveTo(cx,cy);const end=pts[Math.floor(rng()*4)];c.lineTo((cx+end[0])*.5+7,(cy+end[1])*.5-5);c.lineTo(end[0],end[1]);stroke(n.secondary,power*alphaEdge*.24,.5);c.stroke();}
+   }else if(n.form==='fibers'){
+    for(let j=0;j<n.count*2;j++){const rootX=-r*(.4+rng()*.5),rootY=(rng()-.5)*r*.22,length=r*(1.25+rng()),spread=(rng()-.5)*r*1.7,phase=rng()*TAU,pts=[];c.beginPath();
+     for(let k=0;k<=65;k++){const q=k/65,x=rootX+q*length,y=rootY+q*q*spread+Math.sin(q*7+phase+t*.18)*q*r*.12;pts.push([x,y]);k?c.lineTo(x,y):c.moveTo(x,y);}stroke(j%5?color:n.secondary,power*(.15+rng()*.27),j%13===0?1.5:.55);c.stroke();
+     for(let branch=0;branch<3;branch++){const index=22+Math.floor(rng()*29),[x,y]=pts[index],dir=spread<0?-1:1;c.beginPath();c.moveTo(x,y);c.bezierCurveTo(x+r*.13,y+dir*r*.06,x+r*.22,y+dir*r*.27,x+r*(.2+rng()*.25),y+dir*r*(.25+rng()*.23));stroke(color,power*.16,.4);c.stroke();}}
    }else if(n.form==='shards'){
     for(let j=0;j<n.count;j++){const a=rng()*TAU,rr=Math.sqrt(rng())*r*1.1,x=Math.cos(a)*rr,y=Math.sin(a)*rr*.78,side=3+Math.floor(rng()*4),size=8+rng()*35;c.beginPath();for(let k=0;k<side;k++){const b=k/side*TAU+n.phase+Math.sin(t*.1+j)*.08,px=x+Math.cos(b)*size,py=y+Math.sin(b)*size;k?c.lineTo(px,py):c.moveTo(px,py);}c.closePath();c.fillStyle=j%3?color:n.secondary;c.globalAlpha=power*(.1+rng()*.25);if(!ghost)c.fill();stroke(color,power*.25,.6);c.stroke();}
    }else if(n.form==='dust'){
@@ -119,7 +149,7 @@
   function draw(){
    if(!plan||disposed)return;const scheme=composition.palette,bg=background();c.save();c.globalAlpha=1;c.clearRect(0,0,W,H);c.fillStyle=scheme.bg;c.fillRect(0,0,W,H);
    if(options.hybrid&&bg)c.drawImage(bg,0,0,W,H);
-   const nodes=positions(plan,composition,time,offsets,options.hybrid);
+   const nodes=positions(plan,composition,time,offsets,options.hybrid).map(n=>{if(n.mode==='gap'||options.hybrid&&n.kind==='concrete')return n;const d=response(n.at,time,pulses,options.response);return {...n,at:n.at.map((v,i)=>v+d.offset[i]),twist:d.twist};});
    for(const n of nodes){if(n.mode==='gap'||options.hybrid&&n.kind==='concrete')continue;const r=n.radius*2.25,g=c.createRadialGradient(n.at[0]*W,n.at[1]*H,0,n.at[0]*W,n.at[1]*H,r);g.addColorStop(0,n.color+(scheme.dark?'14':'0B'));g.addColorStop(1,n.color+'00');c.fillStyle=g;c.fillRect(0,0,W,H);}
    if(paper){c.globalAlpha=options.hybrid?.09:.22;c.drawImage(paper,0,0);}
    for(const h of history){const age=time-h.time;if(age>=0&&age<18*options.trace){const base=nodes.find(n=>n.id===h.id);if(base)glyph({...base,at:h.at},h.time,(1-age/(18*options.trace))*.18*options.trace);}}
@@ -129,28 +159,32 @@
     if(p)for(let j=1;j<=Math.min(5,Math.floor(time/3));j++)glyph({...n,at:[n.at[0]-j*.014,n.at[1]+j*.009]},time-j*2,.09*options.trace);
     glyph(n,Math.max(0,time-(n.echoDelay||0)));
    }
+   // A quiet wavefront makes a click visible even in an empty part of the canvas.
+   for(const p of pulses){const age=time-p.time;if(age<0||age>8||!options.response)continue;const radius=28+age*150;c.save();c.translate(p.at[0]*W,p.at[1]*H);c.rotate(p.at[0]*2);c.beginPath();c.ellipse(0,0,radius,radius*.86,0,.3,Math.PI*1.8);stroke(composition.palette.colors[0],options.response*.25*Math.exp(-age*.65),1);c.stroke();c.restore();}
    c.restore();
   }
   function texture(){paper=document.createElement('canvas');paper.width=W;paper.height=H;const ctx=paper.getContext('2d'),rng=random(composition.seed^0xAF53);for(let i=0;i<5800;i++){ctx.fillStyle=i%2?'#FFFFFF25':'#00000018';ctx.fillRect(rng()*W,rng()*H,rng()<.9?.6:1.1,.6);}}
   function loop(now){if(disposed)return;raf=requestAnimationFrame(loop);if(paused||options.motion===0){last=null;return;}if(last!==null&&now-last<1000/30)return;if(last!==null)time+=Math.min(.08,(now-last)/1000)*options.motion;last=now;draw();}
   const point=e=>{const b=canvas.getBoundingClientRect();return [(e.clientX-b.left)/b.width,(e.clientY-b.top)/b.height];};
-  function down(e){if(!plan||e.button!==0)return;const p=point(e),nodes=positions(plan,composition,time,offsets,options.hybrid);let best=null,dist=Infinity;for(const n of nodes){if(n.mode==='gap'||options.hybrid&&n.kind==='concrete')continue;const d=Math.hypot((n.at[0]-p[0])*W,(n.at[1]-p[1])*H);if(d<dist&&d<n.radius*1.25){best=n;dist=d;}}
-   if(best){const surround=plan.relations.find(r=>r.kind==='surround'&&r.modality==='asserted'&&r.source===best.id),id=surround?.target||best.id,target=nodes.find(n=>n.id===id)||best;drag={id,p,offset:[...(offsets[id]||[0,0])],at:[...target.at]};canvas.setPointerCapture(e.pointerId);e.preventDefault();}
+  function impulse(at){if(!plan||disposed||options.response<=0||!Array.isArray(at)||at.length!==2||!at.every(Number.isFinite))return;const p=at.map(v=>clamp(v));pulses=pulses.filter(p=>time-p.time<=8);pulses.push({at:p,time});if(pulses.length>12)pulses.shift();draw();}
+  function down(e){if(!plan||e.button!==0||gesture)return;const p=point(e),nodes=positions(plan,composition,time,offsets,options.hybrid);gesture={p,id:e.pointerId,moved:false};canvas.setPointerCapture(e.pointerId);e.preventDefault();let best=null,dist=Infinity;for(const n of nodes){if(n.mode==='gap'||options.hybrid&&n.kind==='concrete')continue;const d=Math.hypot((n.at[0]-p[0])*W,(n.at[1]-p[1])*H);if(d<dist&&d<n.radius*1.25){best=n;dist=d;}}
+   if(best){const surround=plan.relations.find(r=>r.kind==='surround'&&r.modality==='asserted'&&r.source===best.id),id=surround?.target||best.id,target=nodes.find(n=>n.id===id)||best;drag={id,p,offset:[...(offsets[id]||[0,0])],at:[...target.at]};}
   }
-  function move(e){if(!drag)return;const p=point(e);if(options.trace>0){history.push({id:drag.id,at:drag.at,time});if(history.length>80)history.shift();}offsets[drag.id]=p.map((v,i)=>clamp(drag.offset[i]+v-drag.p[i],-.65,.65));drag.at=positions(plan,composition,time,offsets,options.hybrid).find(n=>n.id===drag.id).at;draw();}
-  const up=()=>{drag=null;};canvas.addEventListener('pointerdown',down);canvas.addEventListener('pointermove',move);for(const event of ['pointerup','pointercancel','lostpointercapture'])canvas.addEventListener(event,up);
+  function move(e){if(!gesture||gesture.id!==e.pointerId)return;const p=point(e);if(Math.hypot((p[0]-gesture.p[0])*W,(p[1]-gesture.p[1])*H)>5)gesture.moved=true;if(!drag||!gesture.moved)return;if(options.trace>0){history.push({id:drag.id,at:drag.at,time});if(history.length>80)history.shift();}offsets[drag.id]=p.map((v,i)=>clamp(drag.offset[i]+v-drag.p[i],-.65,.65));drag.at=positions(plan,composition,time,offsets,options.hybrid).find(n=>n.id===drag.id).at;draw();}
+  const up=e=>{if(!gesture||gesture.id!==e.pointerId)return;const tap=e.type==='pointerup'&&!gesture.moved,p=gesture.p;gesture=null;drag=null;if(tap)impulse(p);};canvas.addEventListener('pointerdown',down);canvas.addEventListener('pointermove',move);for(const event of ['pointerup','pointercancel','lostpointercapture'])canvas.addEventListener(event,up);
   return {
-   render(next,settings={}){plan=structuredClone(next);options={...options,...settings};composition=compose(plan,options);time=0;last=null;history=[];offsets={};texture();cancelAnimationFrame(raf);draw();raf=requestAnimationFrame(loop);return this.inspect();},
-   configure(patch){options={...options,...patch};if(['style','palette','seed','density'].some(k=>Object.hasOwn(patch,k))){composition=compose(plan,options);texture();history=[];offsets={};}draw();return this.inspect();},
+   render(next,settings={}){plan=structuredClone(next);options={...options,...settings};composition=compose(plan,options);time=0;last=null;history=[];pulses=[];gesture=null;drag=null;offsets={};texture();cancelAnimationFrame(raf);draw();raf=requestAnimationFrame(loop);return this.inspect();},
+   configure(patch){options={...options,...patch};if(['style','palette','seed','density','vocabulary'].some(k=>Object.hasOwn(patch,k))){composition=compose(plan,options);texture();history=[];pulses=[];gesture=null;drag=null;offsets={};}draw();return this.inspect();},
    reseed(){options.seed=((composition.seed>>>0)+0x9E3779B9)>>>0;return this.render(plan,options);},
    pause(value){paused=!!value;last=null;draw();},
-   restart(){time=0;last=null;history=[];offsets={};draw();},
+   restart(){time=0;last=null;history=[];pulses=[];gesture=null;drag=null;offsets={};draw();},
+   impulse,
    at(value){time=Math.max(0,Number(value)||0);draw();return this.inspect();},
-   inspect(){return {ready:!!plan,time,paused,seed:composition?.seed,geometryKey:composition?.geometryKey,palette:composition?.palette.id,style:options.style,options:{...options},nodes:plan?positions(plan,composition,time,offsets,options.hybrid):[],history:history.length,relations:plan?.relations,processes:plan?.processes};},
+   inspect(){return {ready:!!plan,time,paused,seed:composition?.seed,geometryKey:composition?.geometryKey,palette:composition?.palette.id,style:options.style,options:{...options},nodes:plan?positions(plan,composition,time,offsets,options.hybrid):[],history:history.length,pulses:pulses.filter(p=>time>=p.time&&time-p.time<=8).map(p=>({...p,at:[...p.at]})),relations:plan?.relations,processes:plan?.processes};},
    save(){draw();const a=document.createElement('a');a.download='流动诗-抽象表达-'+composition.seed+'.png';a.href=canvas.toDataURL('image/png');a.click();},
    dispose(){disposed=true;cancelAnimationFrame(raf);canvas.removeEventListener('pointerdown',down);canvas.removeEventListener('pointermove',move);for(const event of ['pointerup','pointercancel','lostpointercapture'])canvas.removeEventListener(event,up);}
   };
  }
  const backgroundPalette=id=>({lapis:'indigo',ember:'defiance',tide:'gilded',violet:'indigo',paper:'clear',mineral:'mineral',rose:'tender',mist:'clear'})[id]||'indigo';
- return Object.freeze({styles,palettes,backgroundPalette,compose,positions,mount});
+ return Object.freeze({styles,palettes,backgroundPalette,compose,positions,response,mount});
 });

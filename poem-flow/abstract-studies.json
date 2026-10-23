@@ -1,8 +1,8 @@
 {
   "schema": "abstract-1.0",
-  "policy": "abstract-expression-1.0",
-  "scope": "four-real-first-requests-and-local-variants",
-  "newModelCalls": 0,
+  "policy": "abstract-expression-1.1",
+  "scope": "four-original-and-three-new-first-requests",
+  "generationModelCalls": 0,
   "cases": [
     {
       "id": "a01",
@@ -173,7 +173,7 @@
           "review_required": true
         },
         "plan": {
-          "version": "abstract-expression-1.0",
+          "version": "abstract-expression-1.1",
           "poem": "此情可待成追忆，只是当时已惘然。",
           "seed": 2205578360,
           "nodes": [
@@ -454,7 +454,7 @@
           "review_required": true
         },
         "plan": {
-          "version": "abstract-expression-1.0",
+          "version": "abstract-expression-1.1",
           "poem": "此中有真意，欲辩已忘言。",
           "seed": 1471135998,
           "nodes": [
@@ -711,7 +711,7 @@
           "review_required": true
         },
         "plan": {
-          "version": "abstract-expression-1.0",
+          "version": "abstract-expression-1.1",
           "poem": "剪不断，理还乱，是离愁。",
           "seed": 2819797886,
           "nodes": [
@@ -962,7 +962,7 @@
           "review_required": true
         },
         "plan": {
-          "version": "abstract-expression-1.0",
+          "version": "abstract-expression-1.1",
           "poem": "从此无心爱良夜，任他明月下西楼。",
           "seed": 723713584,
           "nodes": [
@@ -1472,6 +1472,780 @@
         "cached": true
       },
       "failure": null
+    },
+    {
+      "id": "a05",
+      "poem": "问君能有几多愁？恰似一江春水向东流！",
+      "author": "李煜",
+      "title": "虞美人·春花秋月何时了",
+      "url": "https://zh.wikisource.org/wiki/虞美人_(春花秋月何時了)",
+      "batch": "extension",
+      "note": "只借春水的流动形态，不据比喻补造真实江岸。",
+      "rawValid": true,
+      "rawRecord": "2026-10-23T15-46-24-006Z-b951a741",
+      "record": {
+        "id": "2026-10-23T15-46-24-006Z-b951a741",
+        "poem": "问君能有几多愁？恰似一江春水向东流！",
+        "source": {
+          "provider": "抽象扩展首次试验",
+          "author": "李煜",
+          "title": "虞美人·春花秋月何时了"
+        },
+        "mode": "abstract",
+        "analysis": {
+          "schema_version": "abstract-1.0",
+          "poem": "问君能有几多愁？恰似一江春水向东流！",
+          "reading": "以问句起笔，将愁设为可被追问、可被比拟的对象；随即用一江春水向东流作比，把抽象的愁量化为绵延不绝、奔流不返的江水。愁与春水在比喻中相互映照，形成绵长、涌动、不可遏止的抽象结构。",
+          "subjects": [
+            {
+              "id": "a1",
+              "mentions": [
+                "愁"
+              ],
+              "meaning": "抽象情感，被追问数量并以春水为喻。",
+              "kind": "abstract",
+              "role": "scene",
+              "presence": "present",
+              "evidence": [
+                "问君能有几多愁？",
+                "恰似一江春水向东流！"
+              ]
+            },
+            {
+              "id": "a2",
+              "mentions": [
+                "一江春水"
+              ],
+              "meaning": "比喻参照中的江水与春水，具流动、向东、绵延特征。",
+              "kind": "concrete",
+              "role": "reference",
+              "presence": "present",
+              "evidence": [
+                "恰似一江春水向东流！"
+              ]
+            },
+            {
+              "id": "a3",
+              "mentions": [
+                "向东流"
+              ],
+              "meaning": "春水向东奔流的方向与动态，暗示愁的绵延与不可逆。",
+              "kind": "abstract",
+              "role": "reference",
+              "presence": "present",
+              "evidence": [
+                "恰似一江春水向东流！"
+              ]
+            }
+          ],
+          "relations": [
+            {
+              "source": "a1",
+              "target": "a2",
+              "kind": "connect",
+              "modality": "asserted",
+              "basis": "explicit",
+              "evidence": [
+                "问君能有几多愁？",
+                "恰似一江春水向东流！"
+              ]
+            },
+            {
+              "source": "a1",
+              "target": "a3",
+              "kind": "echo",
+              "modality": "asserted",
+              "basis": "inferred",
+              "evidence": [
+                "问君能有几多愁？",
+                "恰似一江春水向东流！"
+              ]
+            },
+            {
+              "source": "a2",
+              "target": "a3",
+              "kind": "interweave",
+              "modality": "asserted",
+              "basis": "explicit",
+              "evidence": [
+                "恰似一江春水向东流！"
+              ]
+            }
+          ],
+          "processes": [
+            {
+              "subject": "a1",
+              "kind": "persist",
+              "temporal": "ongoing",
+              "modality": "asserted",
+              "basis": "inferred",
+              "evidence": [
+                "问君能有几多愁？",
+                "恰似一江春水向东流！"
+              ]
+            },
+            {
+              "subject": "a2",
+              "kind": "persist",
+              "temporal": "ongoing",
+              "modality": "asserted",
+              "basis": "explicit",
+              "evidence": [
+                "恰似一江春水向东流！"
+              ]
+            },
+            {
+              "subject": "a3",
+              "kind": "persist",
+              "temporal": "ongoing",
+              "modality": "asserted",
+              "basis": "explicit",
+              "evidence": [
+                "恰似一江春水向东流！"
+              ]
+            }
+          ],
+          "atmosphere": {
+            "labels": [
+              "绵长",
+              "涌动",
+              "不可遏止"
+            ],
+            "valence": "negative",
+            "openness": "high",
+            "illumination": "unclear",
+            "evidence": [
+              "问君能有几多愁？",
+              "恰似一江春水向东流！"
+            ]
+          },
+          "uncertainties": [
+            "问句“问君能有几多愁”中的“君”所指不明，可能是自问或泛问，不补人物。",
+            "“恰似一江春水向东流”为比喻参照，并非实景描写，春水与愁的等同程度保留为修辞性。",
+            "愁的“几多”数量未被回答，仅以江水绵延作比，量度保持开放。"
+          ]
+        },
+        "validation": {
+          "valid": true,
+          "errors": [],
+          "warnings": [
+            "relations[1] 为解读推断",
+            "processes[0] 为解读推断"
+          ],
+          "review_required": true
+        },
+        "plan": {
+          "version": "abstract-expression-1.1",
+          "poem": "问君能有几多愁？恰似一江春水向东流！",
+          "seed": 3235492019,
+          "nodes": [
+            {
+              "id": "a1",
+              "label": "愁",
+              "meaning": "抽象情感，被追问数量并以春水为喻。",
+              "kind": "abstract",
+              "mode": "present"
+            },
+            {
+              "id": "a2",
+              "label": "一江春水",
+              "meaning": "比喻参照中的江水与春水，具流动、向东、绵延特征。",
+              "kind": "concrete",
+              "mode": "reference"
+            },
+            {
+              "id": "a3",
+              "label": "向东流",
+              "meaning": "春水向东奔流的方向与动态，暗示愁的绵延与不可逆。",
+              "kind": "abstract",
+              "mode": "reference"
+            }
+          ],
+          "relations": [
+            {
+              "source": "a1",
+              "target": "a2",
+              "kind": "connect",
+              "modality": "asserted",
+              "basis": "explicit",
+              "evidence": [
+                "问君能有几多愁？",
+                "恰似一江春水向东流！"
+              ]
+            },
+            {
+              "source": "a1",
+              "target": "a3",
+              "kind": "echo",
+              "modality": "asserted",
+              "basis": "inferred",
+              "evidence": [
+                "问君能有几多愁？",
+                "恰似一江春水向东流！"
+              ]
+            },
+            {
+              "source": "a2",
+              "target": "a3",
+              "kind": "interweave",
+              "modality": "asserted",
+              "basis": "explicit",
+              "evidence": [
+                "恰似一江春水向东流！"
+              ]
+            }
+          ],
+          "processes": [
+            {
+              "subject": "a1",
+              "kind": "persist",
+              "temporal": "ongoing",
+              "modality": "asserted",
+              "basis": "inferred",
+              "evidence": [
+                "问君能有几多愁？",
+                "恰似一江春水向东流！"
+              ]
+            },
+            {
+              "subject": "a2",
+              "kind": "persist",
+              "temporal": "ongoing",
+              "modality": "asserted",
+              "basis": "explicit",
+              "evidence": [
+                "恰似一江春水向东流！"
+              ]
+            },
+            {
+              "subject": "a3",
+              "kind": "persist",
+              "temporal": "ongoing",
+              "modality": "asserted",
+              "basis": "explicit",
+              "evidence": [
+                "恰似一江春水向东流！"
+              ]
+            }
+          ],
+          "omitted": [],
+          "atmosphere": {
+            "labels": [
+              "绵长",
+              "涌动",
+              "不可遏止"
+            ],
+            "valence": "negative",
+            "openness": "high",
+            "illumination": "unclear",
+            "evidence": [
+              "问君能有几多愁？",
+              "恰似一江春水向东流！"
+            ]
+          },
+          "concretePlan": null,
+          "notes": [
+            "形态、笔触数量、配色变体、布局与观看节奏为本地艺术选择，不表示原文物体数或发生概率。",
+            "非确定关系只作候选或边界提示；未完成不固定为永久无法完成。",
+            "一次性过程在播放时段内演化，不自动循环成诗句的事实；可手动重放。"
+          ],
+          "aestheticAcceptance": "pending-user"
+        },
+        "cached": true
+      },
+      "failure": null
+    },
+    {
+      "id": "a06",
+      "poem": "两情若是久长时，又岂在朝朝暮暮。",
+      "author": "秦观",
+      "title": "鹊桥仙",
+      "url": "https://zh.wikisource.org/wiki/鵲橋仙_(秦觀)",
+      "batch": "extension",
+      "note": "保留“若是”的条件范围；不把朝暮直接变成昼夜循环。",
+      "reviewWarnings": [
+        "模型把“朝朝暮暮”标作缺席，但“不必朝夕相守”不能直接推出“没有相守”；此判断待复核，原回答保留。"
+      ],
+      "rawValid": true,
+      "rawRecord": "2026-10-23T15-46-39-781Z-29e9aaaf",
+      "record": {
+        "id": "2026-10-23T15-46-39-781Z-29e9aaaf",
+        "poem": "两情若是久长时，又岂在朝朝暮暮。",
+        "source": {
+          "provider": "抽象扩展首次试验",
+          "author": "秦观",
+          "title": "鹊桥仙"
+        },
+        "mode": "abstract",
+        "analysis": {
+          "schema_version": "abstract-1.0",
+          "poem": "两情若是久长时，又岂在朝朝暮暮。",
+          "reading": "此句以假设语气提出：若两情能够长久，便不必以朝夕相守为必要条件。它把“情”的持久与“朝朝暮暮”的日常相伴置于对照中，反问语气使结论带有论辩性，而非单纯陈述事实。",
+          "subjects": [
+            {
+              "id": "a1",
+              "mentions": [
+                "两情"
+              ],
+              "meaning": "双方之间的情感，被设想为可以长久延续的关系。",
+              "kind": "abstract",
+              "role": "scene",
+              "presence": "present",
+              "evidence": [
+                "两情若是久长时"
+              ]
+            },
+            {
+              "id": "a2",
+              "mentions": [
+                "久长时"
+              ],
+              "meaning": "情感长久延续的状态或时段。",
+              "kind": "abstract",
+              "role": "scene",
+              "presence": "unclear",
+              "evidence": [
+                "两情若是久长时"
+              ]
+            },
+            {
+              "id": "a3",
+              "mentions": [
+                "朝朝暮暮"
+              ],
+              "meaning": "每日早晚、朝夕相伴的日常相处。",
+              "kind": "abstract",
+              "role": "reference",
+              "presence": "absent",
+              "evidence": [
+                "又岂在朝朝暮暮"
+              ]
+            }
+          ],
+          "relations": [
+            {
+              "source": "a1",
+              "target": "a2",
+              "kind": "connect",
+              "modality": "conditional",
+              "basis": "explicit",
+              "evidence": [
+                "两情若是久长时"
+              ]
+            },
+            {
+              "source": "a1",
+              "target": "a3",
+              "kind": "contrast",
+              "modality": "negated",
+              "basis": "explicit",
+              "evidence": [
+                "两情若是久长时，又岂在朝朝暮暮。"
+              ]
+            }
+          ],
+          "processes": [
+            {
+              "subject": "a1",
+              "kind": "persist",
+              "temporal": "not_yet",
+              "modality": "conditional",
+              "basis": "explicit",
+              "evidence": [
+                "两情若是久长时"
+              ]
+            },
+            {
+              "subject": "a3",
+              "kind": "recur",
+              "temporal": "repeated",
+              "modality": "negated",
+              "basis": "explicit",
+              "evidence": [
+                "又岂在朝朝暮暮"
+              ]
+            }
+          ],
+          "atmosphere": {
+            "labels": [
+              "论辩",
+              "克制",
+              "假设"
+            ],
+            "valence": "mixed",
+            "openness": "medium",
+            "illumination": "unclear",
+            "evidence": [
+              "两情若是久长时，又岂在朝朝暮暮。"
+            ]
+          },
+          "uncertainties": [
+            "“久长时”是已经成立的长久，还是假设中的长久，原文未明。",
+            "“又岂在朝朝暮暮”是反问式否定，还是对朝夕相伴价值的相对化，存在解读空间。",
+            "“朝朝暮暮”可指日常相伴，也可指时间上的反复，具体侧重未定。"
+          ]
+        },
+        "validation": {
+          "valid": true,
+          "errors": [],
+          "warnings": [],
+          "review_required": true
+        },
+        "plan": {
+          "version": "abstract-expression-1.1",
+          "poem": "两情若是久长时，又岂在朝朝暮暮。",
+          "seed": 1809001109,
+          "nodes": [
+            {
+              "id": "a1",
+              "label": "两情",
+              "meaning": "双方之间的情感，被设想为可以长久延续的关系。",
+              "kind": "abstract",
+              "mode": "present"
+            },
+            {
+              "id": "a2",
+              "label": "久长时",
+              "meaning": "情感长久延续的状态或时段。",
+              "kind": "abstract",
+              "mode": "candidate"
+            },
+            {
+              "id": "a3",
+              "label": "朝朝暮暮",
+              "meaning": "每日早晚、朝夕相伴的日常相处。",
+              "kind": "abstract",
+              "mode": "gap"
+            }
+          ],
+          "relations": [
+            {
+              "source": "a1",
+              "target": "a2",
+              "kind": "connect",
+              "modality": "conditional",
+              "basis": "explicit",
+              "evidence": [
+                "两情若是久长时"
+              ]
+            },
+            {
+              "source": "a1",
+              "target": "a3",
+              "kind": "contrast",
+              "modality": "negated",
+              "basis": "explicit",
+              "evidence": [
+                "两情若是久长时，又岂在朝朝暮暮。"
+              ]
+            }
+          ],
+          "processes": [
+            {
+              "subject": "a1",
+              "kind": "persist",
+              "temporal": "not_yet",
+              "modality": "conditional",
+              "basis": "explicit",
+              "evidence": [
+                "两情若是久长时"
+              ]
+            },
+            {
+              "subject": "a3",
+              "kind": "recur",
+              "temporal": "repeated",
+              "modality": "negated",
+              "basis": "explicit",
+              "evidence": [
+                "又岂在朝朝暮暮"
+              ]
+            }
+          ],
+          "omitted": [],
+          "atmosphere": {
+            "labels": [
+              "论辩",
+              "克制",
+              "假设"
+            ],
+            "valence": "mixed",
+            "openness": "medium",
+            "illumination": "unclear",
+            "evidence": [
+              "两情若是久长时，又岂在朝朝暮暮。"
+            ]
+          },
+          "concretePlan": null,
+          "notes": [
+            "形态、笔触数量、配色变体、布局与观看节奏为本地艺术选择，不表示原文物体数或发生概率。",
+            "非确定关系只作候选或边界提示；未完成不固定为永久无法完成。",
+            "一次性过程在播放时段内演化，不自动循环成诗句的事实；可手动重放。"
+          ],
+          "aestheticAcceptance": "pending-user"
+        },
+        "cached": true
+      },
+      "failure": null
+    },
+    {
+      "id": "a07",
+      "poem": "人生如逆旅，我亦是行人。",
+      "author": "苏轼",
+      "title": "临江仙·送钱穆父",
+      "url": "https://zh.wikisource.org/wiki/臨江仙_(蘇軾)/送錢穆父",
+      "batch": "extension",
+      "note": "检验人生、旅舍与行人的比喻层次，不另造实景剧情。",
+      "reviewWarnings": [
+        "模型误将“逆旅”并释为“逆行的旅次”。此处应按旅舍理解；保留原回答作为词义失败记录，不据此生成逆行剧情。"
+      ],
+      "reviewSource": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=57514&la=0&powerMode=0",
+      "rawValid": true,
+      "rawRecord": "2026-10-23T15-46-51-349Z-64953243",
+      "record": {
+        "id": "2026-10-23T15-46-51-349Z-64953243",
+        "poem": "人生如逆旅，我亦是行人。",
+        "source": {
+          "provider": "抽象扩展首次试验",
+          "author": "苏轼",
+          "title": "临江仙·送钱穆父"
+        },
+        "mode": "abstract",
+        "analysis": {
+          "schema_version": "abstract-1.0",
+          "poem": "人生如逆旅，我亦是行人。",
+          "reading": "以逆旅比喻人生，把存在处境说成一段逆行的旅次；说话者把自己也放进行人的行列，不居高临下，只承认同在路上。语气平静而带自省，没有具体景物，只有行旅与过客的抽象框架。",
+          "subjects": [
+            {
+              "id": "a1",
+              "mentions": [
+                "人生"
+              ],
+              "meaning": "人的一生、生存处境，被比作逆旅。",
+              "kind": "abstract",
+              "role": "scene",
+              "presence": "present",
+              "evidence": [
+                "人生如逆旅"
+              ]
+            },
+            {
+              "id": "a2",
+              "mentions": [
+                "逆旅"
+              ],
+              "meaning": "迎客旅舍，也指逆行中的旅次；作为人生的比喻参照。",
+              "kind": "concrete",
+              "role": "reference",
+              "presence": "present",
+              "evidence": [
+                "人生如逆旅"
+              ]
+            },
+            {
+              "id": "a3",
+              "mentions": [
+                "我"
+              ],
+              "meaning": "说话者自身，被归入行人之列。",
+              "kind": "abstract",
+              "role": "scene",
+              "presence": "present",
+              "evidence": [
+                "我亦是行人"
+              ]
+            },
+            {
+              "id": "a4",
+              "mentions": [
+                "行人"
+              ],
+              "meaning": "行路的人、过客；说话者自认也是其中之一。",
+              "kind": "abstract",
+              "role": "scene",
+              "presence": "present",
+              "evidence": [
+                "我亦是行人"
+              ]
+            }
+          ],
+          "relations": [
+            {
+              "source": "a1",
+              "target": "a2",
+              "kind": "connect",
+              "modality": "asserted",
+              "basis": "explicit",
+              "evidence": [
+                "人生如逆旅"
+              ]
+            },
+            {
+              "source": "a3",
+              "target": "a4",
+              "kind": "connect",
+              "modality": "asserted",
+              "basis": "explicit",
+              "evidence": [
+                "我亦是行人"
+              ]
+            }
+          ],
+          "processes": [
+            {
+              "subject": "a1",
+              "kind": "persist",
+              "temporal": "ongoing",
+              "modality": "asserted",
+              "basis": "inferred",
+              "evidence": [
+                "人生如逆旅"
+              ]
+            },
+            {
+              "subject": "a3",
+              "kind": "persist",
+              "temporal": "ongoing",
+              "modality": "asserted",
+              "basis": "inferred",
+              "evidence": [
+                "我亦是行人"
+              ]
+            }
+          ],
+          "atmosphere": {
+            "labels": [
+              "自省",
+              "行旅",
+              "过客感"
+            ],
+            "valence": "neutral",
+            "openness": "medium",
+            "illumination": "unclear",
+            "evidence": [
+              "人生如逆旅",
+              "我亦是行人"
+            ]
+          },
+          "uncertainties": [
+            "“逆旅”可解为旅舍，也可解为逆行之旅，两义并存。",
+            "“亦”表示说话者把自己加入行人，但未说明同行者是谁。",
+            "全句为比喻性判断，不指向具体时间、地点或事件。"
+          ]
+        },
+        "validation": {
+          "valid": true,
+          "errors": [],
+          "warnings": [
+            "processes[0] 为解读推断",
+            "processes[1] 为解读推断"
+          ],
+          "review_required": true
+        },
+        "plan": {
+          "version": "abstract-expression-1.1",
+          "poem": "人生如逆旅，我亦是行人。",
+          "seed": 1737565744,
+          "nodes": [
+            {
+              "id": "a1",
+              "label": "人生",
+              "meaning": "人的一生、生存处境，被比作逆旅。",
+              "kind": "abstract",
+              "mode": "present"
+            },
+            {
+              "id": "a2",
+              "label": "逆旅",
+              "meaning": "迎客旅舍，也指逆行中的旅次；作为人生的比喻参照。",
+              "kind": "concrete",
+              "mode": "reference"
+            },
+            {
+              "id": "a3",
+              "label": "我",
+              "meaning": "说话者自身，被归入行人之列。",
+              "kind": "abstract",
+              "mode": "present"
+            },
+            {
+              "id": "a4",
+              "label": "行人",
+              "meaning": "行路的人、过客；说话者自认也是其中之一。",
+              "kind": "abstract",
+              "mode": "present"
+            }
+          ],
+          "relations": [
+            {
+              "source": "a1",
+              "target": "a2",
+              "kind": "connect",
+              "modality": "asserted",
+              "basis": "explicit",
+              "evidence": [
+                "人生如逆旅"
+              ]
+            },
+            {
+              "source": "a3",
+              "target": "a4",
+              "kind": "connect",
+              "modality": "asserted",
+              "basis": "explicit",
+              "evidence": [
+                "我亦是行人"
+              ]
+            }
+          ],
+          "processes": [
+            {
+              "subject": "a1",
+              "kind": "persist",
+              "temporal": "ongoing",
+              "modality": "asserted",
+              "basis": "inferred",
+              "evidence": [
+                "人生如逆旅"
+              ]
+            },
+            {
+              "subject": "a3",
+              "kind": "persist",
+              "temporal": "ongoing",
+              "modality": "asserted",
+              "basis": "inferred",
+              "evidence": [
+                "我亦是行人"
+              ]
+            }
+          ],
+          "omitted": [],
+          "atmosphere": {
+            "labels": [
+              "自省",
+              "行旅",
+              "过客感"
+            ],
+            "valence": "neutral",
+            "openness": "medium",
+            "illumination": "unclear",
+            "evidence": [
+              "人生如逆旅",
+              "我亦是行人"
+            ]
+          },
+          "concretePlan": null,
+          "notes": [
+            "形态、笔触数量、配色变体、布局与观看节奏为本地艺术选择，不表示原文物体数或发生概率。",
+            "非确定关系只作候选或边界提示；未完成不固定为永久无法完成。",
+            "一次性过程在播放时段内演化，不自动循环成诗句的事实；可手动重放。"
+          ],
+          "aestheticAcceptance": "pending-user"
+        },
+        "cached": true
+      },
+      "failure": null
     }
   ],
   "variants": [
@@ -1480,6 +2254,7 @@
       "style": "auto",
       "seed": 565046833,
       "palette": "auto",
+      "vocabulary": "classic",
       "hybrid": false,
       "file": "a01-0.png",
       "label": "交融 · 抽象表达"
@@ -1489,6 +2264,7 @@
       "style": "flow",
       "seed": 3219482602,
       "palette": "auto",
+      "vocabulary": "classic",
       "hybrid": false,
       "file": "a01-1.png",
       "label": "流线 · 抽象表达"
@@ -1498,6 +2274,7 @@
       "style": "ink",
       "seed": 1578951075,
       "palette": "auto",
+      "vocabulary": "classic",
       "hybrid": false,
       "file": "a01-2.png",
       "label": "墨晕 · 抽象表达"
@@ -1507,6 +2284,7 @@
       "style": "shards",
       "seed": 4233386844,
       "palette": "auto",
+      "vocabulary": "classic",
       "hybrid": false,
       "file": "a01-3.png",
       "label": "碎片 · 抽象表达"
@@ -1516,6 +2294,7 @@
       "style": "ribbons",
       "seed": 2592855317,
       "palette": "auto",
+      "vocabulary": "classic",
       "hybrid": false,
       "file": "a01-4.png",
       "label": "丝带 · 抽象表达"
@@ -1525,6 +2304,7 @@
       "style": "ripples",
       "seed": 952323790,
       "palette": "auto",
+      "vocabulary": "classic",
       "hybrid": false,
       "file": "a01-5.png",
       "label": "涟漪 · 抽象表达"
@@ -1534,6 +2314,7 @@
       "style": "dust",
       "seed": 3606759559,
       "palette": "auto",
+      "vocabulary": "classic",
       "hybrid": false,
       "file": "a01-6.png",
       "label": "微粒 · 抽象表达"
@@ -1543,6 +2324,7 @@
       "style": "contours",
       "seed": 1966228032,
       "palette": "auto",
+      "vocabulary": "classic",
       "hybrid": false,
       "file": "a01-7.png",
       "label": "等高纹 · 抽象表达"
@@ -1552,6 +2334,7 @@
       "style": "ink",
       "seed": 4125571767,
       "palette": "auto",
+      "vocabulary": "classic",
       "hybrid": false,
       "file": "a02-0.png",
       "label": "墨晕 · 抽象表达"
@@ -1561,6 +2344,7 @@
       "style": "shards",
       "seed": 2485040240,
       "palette": "auto",
+      "vocabulary": "classic",
       "hybrid": false,
       "file": "a02-1.png",
       "label": "碎片 · 抽象表达"
@@ -1570,6 +2354,7 @@
       "style": "ribbons",
       "seed": 844508713,
       "palette": "auto",
+      "vocabulary": "classic",
       "hybrid": false,
       "file": "a02-2.png",
       "label": "丝带 · 抽象表达"
@@ -1579,6 +2364,7 @@
       "style": "ripples",
       "seed": 3498944482,
       "palette": "auto",
+      "vocabulary": "classic",
       "hybrid": false,
       "file": "a02-3.png",
       "label": "涟漪 · 抽象表达"
@@ -1588,6 +2374,7 @@
       "style": "dust",
       "seed": 1858412955,
       "palette": "auto",
+      "vocabulary": "classic",
       "hybrid": false,
       "file": "a02-4.png",
       "label": "微粒 · 抽象表达"
@@ -1597,6 +2384,7 @@
       "style": "contours",
       "seed": 217881428,
       "palette": "auto",
+      "vocabulary": "classic",
       "hybrid": false,
       "file": "a02-5.png",
       "label": "等高纹 · 抽象表达"
@@ -1606,6 +2394,7 @@
       "style": "echoes",
       "seed": 2872317197,
       "palette": "auto",
+      "vocabulary": "classic",
       "hybrid": false,
       "file": "a02-6.png",
       "label": "叠影 · 抽象表达"
@@ -1615,6 +2404,7 @@
       "style": "weave",
       "seed": 1231785670,
       "palette": "auto",
+      "vocabulary": "classic",
       "hybrid": false,
       "file": "a02-7.png",
       "label": "网织 · 抽象表达"
@@ -1624,6 +2414,7 @@
       "style": "ribbons",
       "seed": 1179266359,
       "palette": "auto",
+      "vocabulary": "classic",
       "hybrid": false,
       "file": "a03-0.png",
       "label": "丝带 · 抽象表达"
@@ -1633,6 +2424,7 @@
       "style": "ripples",
       "seed": 3833702128,
       "palette": "auto",
+      "vocabulary": "classic",
       "hybrid": false,
       "file": "a03-1.png",
       "label": "涟漪 · 抽象表达"
@@ -1642,6 +2434,7 @@
       "style": "dust",
       "seed": 2193170601,
       "palette": "auto",
+      "vocabulary": "classic",
       "hybrid": false,
       "file": "a03-2.png",
       "label": "微粒 · 抽象表达"
@@ -1651,6 +2444,7 @@
       "style": "contours",
       "seed": 552639074,
       "palette": "auto",
+      "vocabulary": "classic",
       "hybrid": false,
       "file": "a03-3.png",
       "label": "等高纹 · 抽象表达"
@@ -1660,6 +2454,7 @@
       "style": "echoes",
       "seed": 3207074843,
       "palette": "auto",
+      "vocabulary": "classic",
       "hybrid": false,
       "file": "a03-4.png",
       "label": "叠影 · 抽象表达"
@@ -1669,6 +2464,7 @@
       "style": "weave",
       "seed": 1566543316,
       "palette": "auto",
+      "vocabulary": "classic",
       "hybrid": false,
       "file": "a03-5.png",
       "label": "网织 · 抽象表达"
@@ -1678,6 +2474,7 @@
       "style": "auto",
       "seed": 4220979085,
       "palette": "auto",
+      "vocabulary": "classic",
       "hybrid": false,
       "file": "a03-6.png",
       "label": "交融 · 抽象表达"
@@ -1687,6 +2484,7 @@
       "style": "flow",
       "seed": 2580447558,
       "palette": "auto",
+      "vocabulary": "classic",
       "hybrid": false,
       "file": "a03-7.png",
       "label": "流线 · 抽象表达"
@@ -1696,6 +2494,7 @@
       "style": "dust",
       "seed": 3378149353,
       "palette": "auto",
+      "vocabulary": "classic",
       "hybrid": true,
       "file": "a04-0.png",
       "label": "微粒 · 景物叠加"
@@ -1705,6 +2504,7 @@
       "style": "contours",
       "seed": 1737617826,
       "palette": "auto",
+      "vocabulary": "classic",
       "hybrid": true,
       "file": "a04-1.png",
       "label": "等高纹 · 景物叠加"
@@ -1714,6 +2514,7 @@
       "style": "echoes",
       "seed": 97086299,
       "palette": "auto",
+      "vocabulary": "classic",
       "hybrid": true,
       "file": "a04-2.png",
       "label": "叠影 · 景物叠加"
@@ -1723,6 +2524,7 @@
       "style": "weave",
       "seed": 2751522068,
       "palette": "auto",
+      "vocabulary": "classic",
       "hybrid": true,
       "file": "a04-3.png",
       "label": "网织 · 景物叠加"
@@ -1732,6 +2534,7 @@
       "style": "auto",
       "seed": 1110990541,
       "palette": "auto",
+      "vocabulary": "classic",
       "hybrid": false,
       "file": "a04-4.png",
       "label": "交融 · 抽象表达"
@@ -1741,6 +2544,7 @@
       "style": "flow",
       "seed": 3765426310,
       "palette": "auto",
+      "vocabulary": "classic",
       "hybrid": false,
       "file": "a04-5.png",
       "label": "流线 · 抽象表达"
@@ -1750,6 +2554,7 @@
       "style": "ink",
       "seed": 2124894783,
       "palette": "auto",
+      "vocabulary": "classic",
       "hybrid": false,
       "file": "a04-6.png",
       "label": "墨晕 · 抽象表达"
@@ -1759,9 +2564,410 @@
       "style": "shards",
       "seed": 484363256,
       "palette": "auto",
+      "vocabulary": "classic",
       "hybrid": false,
       "file": "a04-7.png",
       "label": "碎片 · 抽象表达"
+    },
+    {
+      "case": "a01",
+      "style": "vortex",
+      "seed": 1339600747,
+      "palette": "auto",
+      "hybrid": false,
+      "file": "a01-extension-0.png",
+      "label": "涡流 · 新画法",
+      "extension": true
+    },
+    {
+      "case": "a01",
+      "style": "bloom",
+      "seed": 3994036516,
+      "palette": "auto",
+      "hybrid": false,
+      "file": "a01-extension-1.png",
+      "label": "浸染 · 新画法",
+      "extension": true
+    },
+    {
+      "case": "a01",
+      "style": "fissures",
+      "seed": 2353504989,
+      "palette": "auto",
+      "hybrid": false,
+      "file": "a01-extension-2.png",
+      "label": "裂隙 · 新画法",
+      "extension": true
+    },
+    {
+      "case": "a01",
+      "style": "fibers",
+      "seed": 712973462,
+      "palette": "auto",
+      "hybrid": false,
+      "file": "a01-extension-3.png",
+      "label": "游丝 · 新画法",
+      "extension": true
+    },
+    {
+      "case": "a02",
+      "style": "vortex",
+      "seed": 605158385,
+      "palette": "auto",
+      "hybrid": false,
+      "file": "a02-extension-0.png",
+      "label": "涡流 · 新画法",
+      "extension": true
+    },
+    {
+      "case": "a02",
+      "style": "bloom",
+      "seed": 3259594154,
+      "palette": "auto",
+      "hybrid": false,
+      "file": "a02-extension-1.png",
+      "label": "浸染 · 新画法",
+      "extension": true
+    },
+    {
+      "case": "a02",
+      "style": "fissures",
+      "seed": 1619062627,
+      "palette": "auto",
+      "hybrid": false,
+      "file": "a02-extension-2.png",
+      "label": "裂隙 · 新画法",
+      "extension": true
+    },
+    {
+      "case": "a02",
+      "style": "fibers",
+      "seed": 4273498396,
+      "palette": "auto",
+      "hybrid": false,
+      "file": "a02-extension-3.png",
+      "label": "游丝 · 新画法",
+      "extension": true
+    },
+    {
+      "case": "a03",
+      "style": "vortex",
+      "seed": 1953820273,
+      "palette": "auto",
+      "hybrid": false,
+      "file": "a03-extension-0.png",
+      "label": "涡流 · 新画法",
+      "extension": true
+    },
+    {
+      "case": "a03",
+      "style": "bloom",
+      "seed": 313288746,
+      "palette": "auto",
+      "hybrid": false,
+      "file": "a03-extension-1.png",
+      "label": "浸染 · 新画法",
+      "extension": true
+    },
+    {
+      "case": "a03",
+      "style": "fissures",
+      "seed": 2967724515,
+      "palette": "auto",
+      "hybrid": false,
+      "file": "a03-extension-2.png",
+      "label": "裂隙 · 新画法",
+      "extension": true
+    },
+    {
+      "case": "a03",
+      "style": "fibers",
+      "seed": 1327192988,
+      "palette": "auto",
+      "hybrid": false,
+      "file": "a03-extension-3.png",
+      "label": "游丝 · 新画法",
+      "extension": true
+    },
+    {
+      "case": "a04",
+      "style": "vortex",
+      "seed": 4152703267,
+      "palette": "auto",
+      "hybrid": false,
+      "file": "a04-extension-0.png",
+      "label": "涡流 · 新画法",
+      "extension": true
+    },
+    {
+      "case": "a04",
+      "style": "bloom",
+      "seed": 2512171740,
+      "palette": "auto",
+      "hybrid": false,
+      "file": "a04-extension-1.png",
+      "label": "浸染 · 新画法",
+      "extension": true
+    },
+    {
+      "case": "a04",
+      "style": "fissures",
+      "seed": 871640213,
+      "palette": "auto",
+      "hybrid": false,
+      "file": "a04-extension-2.png",
+      "label": "裂隙 · 新画法",
+      "extension": true
+    },
+    {
+      "case": "a04",
+      "style": "fibers",
+      "seed": 3526075982,
+      "palette": "auto",
+      "hybrid": false,
+      "file": "a04-extension-3.png",
+      "label": "游丝 · 新画法",
+      "extension": true
+    },
+    {
+      "case": "a05",
+      "style": "vortex",
+      "seed": 2369514406,
+      "palette": "auto",
+      "hybrid": false,
+      "file": "a05-extension-0.png",
+      "label": "涡流 · 新画法",
+      "extension": true
+    },
+    {
+      "case": "a05",
+      "style": "bloom",
+      "seed": 728982879,
+      "palette": "auto",
+      "hybrid": false,
+      "file": "a05-extension-1.png",
+      "label": "浸染 · 新画法",
+      "extension": true
+    },
+    {
+      "case": "a05",
+      "style": "fissures",
+      "seed": 3383418648,
+      "palette": "auto",
+      "hybrid": false,
+      "file": "a05-extension-2.png",
+      "label": "裂隙 · 新画法",
+      "extension": true
+    },
+    {
+      "case": "a05",
+      "style": "fibers",
+      "seed": 1742887121,
+      "palette": "auto",
+      "hybrid": false,
+      "file": "a05-extension-3.png",
+      "label": "游丝 · 新画法",
+      "extension": true
+    },
+    {
+      "case": "a05",
+      "style": "auto",
+      "seed": 102355594,
+      "palette": "auto",
+      "hybrid": false,
+      "file": "a05-extension-4.png",
+      "label": "交融 · 新画法",
+      "extension": true
+    },
+    {
+      "case": "a05",
+      "style": "flow",
+      "seed": 2756791363,
+      "palette": "auto",
+      "hybrid": false,
+      "file": "a05-extension-5.png",
+      "label": "流线 · 新画法",
+      "extension": true
+    },
+    {
+      "case": "a05",
+      "style": "ribbons",
+      "seed": 1116259836,
+      "palette": "auto",
+      "hybrid": false,
+      "file": "a05-extension-6.png",
+      "label": "丝带 · 新画法",
+      "extension": true
+    },
+    {
+      "case": "a05",
+      "style": "dust",
+      "seed": 3770695605,
+      "palette": "auto",
+      "hybrid": false,
+      "file": "a05-extension-7.png",
+      "label": "微粒 · 新画法",
+      "extension": true
+    },
+    {
+      "case": "a06",
+      "style": "vortex",
+      "seed": 943023496,
+      "palette": "auto",
+      "hybrid": false,
+      "file": "a06-extension-0.png",
+      "label": "涡流 · 新画法",
+      "extension": true
+    },
+    {
+      "case": "a06",
+      "style": "bloom",
+      "seed": 3597459265,
+      "palette": "auto",
+      "hybrid": false,
+      "file": "a06-extension-1.png",
+      "label": "浸染 · 新画法",
+      "extension": true
+    },
+    {
+      "case": "a06",
+      "style": "fissures",
+      "seed": 1956927738,
+      "palette": "auto",
+      "hybrid": false,
+      "file": "a06-extension-2.png",
+      "label": "裂隙 · 新画法",
+      "extension": true
+    },
+    {
+      "case": "a06",
+      "style": "fibers",
+      "seed": 316396211,
+      "palette": "auto",
+      "hybrid": false,
+      "file": "a06-extension-3.png",
+      "label": "游丝 · 新画法",
+      "extension": true
+    },
+    {
+      "case": "a06",
+      "style": "auto",
+      "seed": 2970831980,
+      "palette": "auto",
+      "hybrid": false,
+      "file": "a06-extension-4.png",
+      "label": "交融 · 新画法",
+      "extension": true
+    },
+    {
+      "case": "a06",
+      "style": "flow",
+      "seed": 1330300453,
+      "palette": "auto",
+      "hybrid": false,
+      "file": "a06-extension-5.png",
+      "label": "流线 · 新画法",
+      "extension": true
+    },
+    {
+      "case": "a06",
+      "style": "ribbons",
+      "seed": 3984736222,
+      "palette": "auto",
+      "hybrid": false,
+      "file": "a06-extension-6.png",
+      "label": "丝带 · 新画法",
+      "extension": true
+    },
+    {
+      "case": "a06",
+      "style": "dust",
+      "seed": 2344204695,
+      "palette": "auto",
+      "hybrid": false,
+      "file": "a06-extension-7.png",
+      "label": "微粒 · 新画法",
+      "extension": true
+    },
+    {
+      "case": "a07",
+      "style": "vortex",
+      "seed": 871588131,
+      "palette": "auto",
+      "hybrid": false,
+      "file": "a07-extension-0.png",
+      "label": "涡流 · 新画法",
+      "extension": true
+    },
+    {
+      "case": "a07",
+      "style": "bloom",
+      "seed": 3526023900,
+      "palette": "auto",
+      "hybrid": false,
+      "file": "a07-extension-1.png",
+      "label": "浸染 · 新画法",
+      "extension": true
+    },
+    {
+      "case": "a07",
+      "style": "fissures",
+      "seed": 1885492373,
+      "palette": "auto",
+      "hybrid": false,
+      "file": "a07-extension-2.png",
+      "label": "裂隙 · 新画法",
+      "extension": true
+    },
+    {
+      "case": "a07",
+      "style": "fibers",
+      "seed": 244960846,
+      "palette": "auto",
+      "hybrid": false,
+      "file": "a07-extension-3.png",
+      "label": "游丝 · 新画法",
+      "extension": true
+    },
+    {
+      "case": "a07",
+      "style": "auto",
+      "seed": 2899396615,
+      "palette": "auto",
+      "hybrid": false,
+      "file": "a07-extension-4.png",
+      "label": "交融 · 新画法",
+      "extension": true
+    },
+    {
+      "case": "a07",
+      "style": "flow",
+      "seed": 1258865088,
+      "palette": "auto",
+      "hybrid": false,
+      "file": "a07-extension-5.png",
+      "label": "流线 · 新画法",
+      "extension": true
+    },
+    {
+      "case": "a07",
+      "style": "ribbons",
+      "seed": 3913300857,
+      "palette": "auto",
+      "hybrid": false,
+      "file": "a07-extension-6.png",
+      "label": "丝带 · 新画法",
+      "extension": true
+    },
+    {
+      "case": "a07",
+      "style": "dust",
+      "seed": 2272769330,
+      "palette": "auto",
+      "hybrid": false,
+      "file": "a07-extension-7.png",
+      "label": "微粒 · 新画法",
+      "extension": true
     }
   ]
 }

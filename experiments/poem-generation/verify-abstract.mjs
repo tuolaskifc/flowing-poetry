@@ -6,7 +6,7 @@ import assert from 'node:assert/strict';
 import {prepareAbstractStudies} from './abstract-cases.mjs';
 import {openBrowser,wait} from './browser-qa.mjs';
 const dir=dirname(fileURLToPath(import.meta.url)),root=resolve(dir,'../..'),out=resolve(root,'poem-flow/verification/abstract');await mkdir(out,{recursive:true});
-const data=await prepareAbstractStudies(),b=await openBrowser(resolve(dir,'.qa/abstract-'+Date.now())),rows=[];
+const all=await prepareAbstractStudies(),data={...all,cases:all.cases.filter(c=>c.batch!=='extension'),variants:all.variants.filter(v=>!v.extension)},b=await openBrowser(resolve(dir,'.qa/abstract-'+Date.now())),rows=[];
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 try{
  await b.send('Emulation.setDeviceMetricsOverride',{width:1440,height:1100,deviceScaleFactor:1,mobile:false});

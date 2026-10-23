@@ -1,10 +1,10 @@
 // Semantic interpretation -> local expression plan. Numeric/artistic choices are code owned.
 import {createHash} from 'node:crypto';
 import {buildPlan} from './planner.mjs';
-export const abstractPolicyVersion='abstract-expression-1.0';
+export const abstractPolicyVersion='abstract-expression-1.1';
 export function buildAbstractPlan(a){
  const visible=a.subjects.filter(s=>!s.mentions.every(m=>/^(当时|彼时|从此|此时|已经|尚未)$/.test(m)));
- const nodes=visible.map(s=>({id:s.id,label:s.mentions.join('／'),meaning:s.meaning,kind:s.kind,mode:s.role==='reference'?'reference':s.presence==='absent'?'gap':s.presence==='unclear'?'candidate':'present'}));
+ const nodes=visible.map(s=>({id:s.id,label:s.mentions.join('／'),meaning:s.meaning,kind:s.kind,mode:s.presence==='absent'?'gap':s.presence==='unclear'?'candidate':s.role==='reference'?'reference':'present'}));
  const ids=new Set(nodes.map(n=>n.id)),relations=a.relations.filter(r=>ids.has(r.source)&&(!r.target||ids.has(r.target))),processes=a.processes.filter(p=>ids.has(p.subject));
  const omitted=a.subjects.filter(s=>!ids.has(s.id)).map(s=>({id:s.id,label:s.mentions.join('／'),reason:'纯时间线索保留在解读，不独立造形'}));
  const seed=parseInt(createHash('sha256').update(a.poem).digest('hex').slice(0,8),16);

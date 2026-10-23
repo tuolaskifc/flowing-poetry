@@ -1,8 +1,9 @@
 // Four authorized first trials, one request each, no automatic retries or repairs.
-import {readFile,writeFile,mkdir} from 'node:fs/promises';
+import {readFile,writeFile,mkdir,access} from 'node:fs/promises';
 import {createGenerationService} from './service.mjs';
-const cases=JSON.parse(await readFile(new URL('abstract-poems.json',import.meta.url),'utf8')).cases;
+const cases=JSON.parse(await readFile(new URL('abstract-poems.json',import.meta.url),'utf8')).cases.filter(c=>c.batch!=='extension');
 const out=new URL('../../poem-flow/verification/abstract/',import.meta.url);await mkdir(out,{recursive:true});
+try{await access(new URL('capture.json',out));throw new Error('Initial capture already exists; refusing to overwrite or repeat calls');}catch(e){if(e.code!=='ENOENT')throw e;}
 const service=createGenerationService(),rows=[];
 for(const c of cases){
  const r=await service.analyze({poem:c.poem,mode:'abstract',source:{author:c.author,title:c.title,provider:'抽象诗句首次试验'}});

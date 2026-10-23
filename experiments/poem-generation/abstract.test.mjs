@@ -56,3 +56,24 @@ test('abstract API uses the separate contract, stores raw output and keeps lands
   const r=await service.analyze({poem:first.poem,mode:'abstract'});assert(r.validation.valid);assert(r.plan.nodes);assert.equal(await service.latest(),null);assert((await service.latest({abstract:true})).plan.nodes);assert((await service.analyze({poem:first.poem,mode:'abstract'})).cached);assert.equal(calls,1);assert.equal(await readFile(join(folder,'runs',r.id,'response.txt'),'utf8'),JSON.stringify(first));
  }finally{await rm(folder,{recursive:true,force:true});}
 });
+test('new first requests preserve raw semantics, figurative water and conditional time boundaries',async()=>{
+ const capture=JSON.parse(await readFile(new URL('../../poem-flow/verification/abstract/extension-capture.json',import.meta.url),'utf8'));
+ assert.equal(capture.calls.length,3);assert(capture.calls.every(r=>r.valid&&!r.cached));assert(capture.noAutomaticRetry);
+ const water=cases.find(c=>c.id==='a05').record.plan;assert.equal(water.concretePlan,null);assert(water.nodes.some(n=>n.kind==='concrete'&&n.mode==='reference'));
+ const condition=cases.find(c=>c.id==='a06').record.plan;assert(condition.nodes.some(n=>n.mode==='gap'));assert(condition.nodes.some(n=>n.mode==='candidate'));assert(condition.processes.some(p=>p.modality==='conditional'));const c=drawing.compose(condition,{seed:16});assert.deepEqual(drawing.positions(condition,c,0),drawing.positions(condition,c,90));
+ assert(cases.find(c=>c.id==='a07').reviewWarnings.some(w=>w.includes('逆行')));
+});
+test('missing and uncertain references retain presence priority over borrowing a shape',()=>{
+ const a=structuredClone(first);a.subjects[0].role='reference';a.subjects[0].presence='absent';assert.equal(buildAbstractPlan(a).nodes[0].mode,'gap');a.subjects[0].presence='unclear';assert.equal(buildAbstractPlan(a).nodes[0].mode,'candidate');
+});
+test('viewer disturbance is finite, local, reproducible and independent of semantic geometry',()=>{
+ const pulse={at:[.45,.5],time:3},p=buildAbstractPlan(first),c=drawing.compose(p,{seed:9}),before=structuredClone(c),ps=[pulse];
+ const near=drawing.response([.52,.5],3.3,ps,.8),far=drawing.response([1,1],3.3,ps,.8);assert(near.offset.some(v=>Math.abs(v)>.001));assert(Math.hypot(...near.offset)>Math.hypot(...far.offset));assert.deepEqual(near,drawing.response([.52,.5],3.3,ps,.8));
+ for(const [time,strength] of [[2,1],[12,1],[3.3,0]])assert.deepEqual(drawing.response([.52,.5],time,ps,strength),{offset:[0,0],twist:0});
+ const many=Array.from({length:1000},()=>pulse);const bounded=drawing.response([.52,.5],3.3,many,1);assert(Math.abs(bounded.offset[0])<=65/960);assert(Math.abs(bounded.twist)<=.22);assert.deepEqual(c,before);assert.deepEqual(ps,[pulse]);
+});
+test('historical auto presets retain their original brush pool while new seeds can use all thirteen',()=>{
+ const p=buildAbstractPlan(first),classic=new Set(),expanded=new Set();p.relations=[];
+ for(let seed=1;seed<=120;seed++){for(const n of drawing.compose(p,{seed,vocabulary:'classic'}).nodes)classic.add(n.form);for(const n of drawing.compose(p,{seed}).nodes)expanded.add(n.form);}
+ assert.equal(classic.size,9);assert.equal(expanded.size,13);for(const id of ['vortex','bloom','fissures','fibers']){assert(!classic.has(id));assert(expanded.has(id));}
+});

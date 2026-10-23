@@ -1,0 +1,91 @@
+{
+  "schema_version": "abstract-1.0",
+  "poem": "人生如逆旅，我亦是行人。",
+  "reading": "以逆旅比喻人生，把存在处境说成一段逆行的旅次；说话者把自己也放进行人的行列，不居高临下，只承认同在路上。语气平静而带自省，没有具体景物，只有行旅与过客的抽象框架。",
+  "subjects": [
+    {
+    "id": "a1",
+    "mentions": ["人生"],
+    "meaning": "人的一生、生存处境，被比作逆旅。",
+    "kind": "abstract",
+    "role": "scene",
+    "presence": "present",
+    "evidence": ["人生如逆旅"]
+    },
+    {
+    "id": "a2",
+    "mentions": ["逆旅"],
+    "meaning": "迎客旅舍，也指逆行中的旅次；作为人生的比喻参照。",
+    "kind": "concrete",
+    "role": "reference",
+    "presence": "present",
+    "evidence": ["人生如逆旅"]
+    },
+    {
+    "id": "a3",
+    "mentions": ["我"],
+    "meaning": "说话者自身，被归入行人之列。",
+    "kind": "abstract",
+    "role": "scene",
+    "presence": "present",
+    "evidence": ["我亦是行人"]
+    },
+    {
+    "id": "a4",
+    "mentions": ["行人"],
+    "meaning": "行路的人、过客；说话者自认也是其中之一。",
+    "kind": "abstract",
+    "role": "scene",
+    "presence": "present",
+    "evidence": ["我亦是行人"]
+    }
+  ],
+  "relations": [
+    {
+    "source": "a1",
+    "target": "a2",
+    "kind": "connect",
+    "modality": "asserted",
+    "basis": "explicit",
+    "evidence": ["人生如逆旅"]
+    },
+    {
+    "source": "a3",
+    "target": "a4",
+    "kind": "connect",
+    "modality": "asserted",
+    "basis": "explicit",
+    "evidence": ["我亦是行人"]
+    }
+  ],
+  "processes": [
+    {
+    "subject": "a1",
+    "kind": "persist",
+    "temporal": "ongoing",
+    "modality": "asserted",
+    "basis": "inferred",
+    "evidence": ["人生如逆旅"]
+    },
+    {
+    "subject": "a3",
+    "kind": "persist",
+    "temporal": "ongoing",
+    "modality": "asserted",
+    "basis": "inferred",
+    "evidence": ["我亦是行人"]
+    }
+  ],
+  "atmosphere": {
+    "labels": ["自省", "行旅", "过客感"],
+    "valence": "neutral",
+    "openness": "medium",
+    "illumination": "unclear",
+    "evidence": ["人生如逆旅", "我亦是行人"]
+  },
+  "uncertainties": [
+    "“逆旅”可解为旅舍，也可解为逆行之旅，两义并存。",
+    "“亦”表示说话者把自己加入行人，但未说明同行者是谁。",
+    "全句为比喻性判断，不指向具体时间、地点或事件。"
+  ]
+}
