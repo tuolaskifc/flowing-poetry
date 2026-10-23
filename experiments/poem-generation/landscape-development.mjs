@@ -1,5 +1,6 @@
 // Local landscape grammar. No semantic entities/counts are inserted or removed.
 import {inspectOrganization,inRegion} from './scene-organization.mjs';
+import {compositionScore} from './world-layout.mjs';
 const frac=x=>x-Math.floor(x),clamp=(x,a=.025,b=.975)=>Math.max(a,Math.min(b,x));
 const plants=new Set(['tree','willow','bamboo','grass','flower','orchid']);
 const families={
@@ -17,7 +18,7 @@ const across=(points,x)=>track(points.map(([a,b])=>[b,a]),x);
 function band(points,near=.17){const side=sign=>points.map(([x,y])=>[x+sign*(.035+(y-points[0][1])*near),y]);return [...side(-1),...side(1).reverse()];}
 function role(l){
  if(l.tool==='landscape')return ['sun','glow','lightwash','stars'].includes(l.options.form)?'light':l.options.form==='mountain'?'mountain':l.options.form==='waterfall'?'water':['ground','shore','path','field'].includes(l.options.form)?'ground':l.options.form==='moss'?'vegetation':'atmosphere';
- return l.tool==='water'?'water':l.tool==='snow'?'snow':l.tool==='tree'&&l.options.form==='blossom'||['flower','plum-branch','flower-forms'].includes(l.tool)?'blossom':plants.has(l.tool)||l.tool==='lotus'?'vegetation':['dwelling','building','pavilion','boat'].includes(l.tool)?'architecture':['moon'].includes(l.tool)?'light':['cloud','mist','rain','catkins'].includes(l.tool)?'atmosphere':['bird','oriole','fish','horse','figure'].includes(l.tool)?'figure':l.tool==='rock'?'rock':'vegetation';
+ return l.tool==='water'?'water':l.tool==='snow'?'snow':l.tool==='tree'&&l.options.form==='blossom'||l.tool==='lotus'&&l.options.form!=='leaf'||['flower','plum-branch','flower-forms'].includes(l.tool)?'blossom':plants.has(l.tool)||l.tool==='lotus'?'vegetation':['dwelling','building','pavilion','boat'].includes(l.tool)?'architecture':['moon'].includes(l.tool)?'light':['cloud','mist','rain','catkins'].includes(l.tool)?'atmosphere':['bird','oriole','fish','horse','figure'].includes(l.tool)?'figure':l.tool==='rock'?'rock':'vegetation';
 }
 function style(plan){
  for(const [index,l] of plan.layers.entries()){
@@ -149,15 +150,16 @@ export function inspectLandscape(analysis,plan){
 export function developLandscape(analysis,input){
  if(analysis.schema_version!=='3.3')return input;
  const family=families[input.scene.kind];
- if(!family)return style(input);
+ if(!family){for(const v of input.compositions||[])style(v);return style(input);}
  const variants=[0,1,2].map(i=>composeFamily(analysis,input,family,i));
  const usable=variants.filter(p=>!p.scene.landscape.audit.errors&&!p.scene.organization.audit.errors);
  const candidates=variants.map(p=>({label:p.scene.landscape.label,variant:p.scene.landscape.variant,errors:p.scene.landscape.audit.errors+p.scene.organization.audit.errors,issues:[...p.scene.landscape.audit.issues,...p.scene.organization.audit.issues.filter(i=>i.severity==='error')]}));
  if(!usable.length){input.notes.push('风景构图候选未通过已实现约束，保留原有布局');const kept=style(input);kept.landscapeStyle.candidates=candidates;return kept;}
+ usable.sort((a,b)=>compositionScore(a)-compositionScore(b)||a.scene.landscape.variant-b.scene.landscape.variant);
  const chosen=usable[0];
  chosen.landscapeStyle.candidates=candidates;
  chosen.compositions=usable.map(p=>({id:family+'-'+p.scene.landscape.variant,label:p.scene.landscape.label,description:p.scene.landscape.description,layers:p.layers,scene:p.scene,spatial:p.spatial}));
  chosen.composition=chosen.compositions[0].id;
- chosen.notes.push('本地构图候选使用同一份语义；显示数量、原文实体与依据不变。未通过约束的候选保留检查记录；默认第一份可用布局，不把检查结果当作审美排名。');
+ chosen.notes.push('本地构图候选使用同一份语义；显示数量、原文实体与依据不变。默认按已实现的遮挡与重心指标排序，指标不代表审美验收。');
  return chosen;
 }

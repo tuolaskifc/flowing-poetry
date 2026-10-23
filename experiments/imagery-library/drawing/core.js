@@ -39,8 +39,8 @@ window.PoemDrawing = (() => {
   const mix=(a,b,t)=>'#'+[1,3,5].map(i=>Math.round(parseInt(a.slice(i,i+2),16)*(1-t)+parseInt(b.slice(i,i+2),16)*t).toString(16).padStart(2,'0')).join('').toUpperCase();
   function paletteFor(name,visual){
     const base=palettes[name]||palettes.clear;if(!visual?.role)return base;
-    const {role,depth='middle'}=visual,key=name+':'+role+':'+depth;if(tonalCache.has(key))return tonalCache.get(key);
-    const local=name==='mineral'?{mountain:{main:'#7C9EA9',ink:'#476E89',accent:'#BED1BF'},vegetation:{main:'#3D8D66',ink:'#284F49',accent:'#CBAC63'},water:{main:'#8BBDB5',ink:'#3D8492',accent:'#DADAB3'},ground:{main:'#BCC9A2',ink:'#718A69',accent:'#CBBE89'},architecture:{main:'#BBAE8A',ink:'#48605C',accent:'#D5AB64'},rock:{main:'#8DAF9F',ink:'#4A7777',accent:'#B4C2A5'}}[role]:null;
+    const {role,depth='middle',color}=visual,key=name+':'+role+':'+depth+':'+(color||'');if(tonalCache.has(key))return tonalCache.get(key);
+    const local=name==='mineral'?{mountain:{main:'#7C9EA9',ink:'#476E89',accent:'#BED1BF'},vegetation:{main:'#3D8D66',ink:'#284F49',accent:'#CBAC63'},water:{main:'#8BBDB5',ink:'#3D8492',accent:'#DADAB3'},ground:{main:'#BCC9A2',ink:'#718A69',accent:'#CBBE89'},architecture:{main:'#BBAE8A',ink:'#48605C',accent:'#D5AB64'},rock:{main:'#8DAF9F',ink:'#4A7777',accent:'#B4C2A5'}}[role]:name==='indigo'?{mountain:{main:'#34476C',ink:'#627EA3'},vegetation:{main:'#375E64',ink:'#6B9498'},water:{main:'#315F85',ink:'#709EBB'},ground:{main:'#263E4A',ink:'#46626D'},rock:{main:'#3E566E',ink:'#8CA9BB'},architecture:{main:'#496274',ink:'#B0BAC0'},blossom:{main:'#B87999',ink:'#B5A1B6',flower:'#D8A7BE'},light:{main:'#DAE9F3',ink:'#ECF4F6',accent:'#C1DCE4'}}[role]:null;
     const p={...base,...local};
     if(!local){
       if(role==='mountain')Object.assign(p,{main:mix(base.ink,base.bg,.64),ink:mix(base.ink,base.main,.35)});
@@ -49,8 +49,12 @@ window.PoemDrawing = (() => {
       if(role==='architecture')p.main=mix(base.main,base.accent,.38);
       if(role==='blossom')Object.assign(p,{main:mix(base.main,base.accent,.58),flower:base.accent});
     }
-    if(role==='blossom')p.flower=base.accent;
+    if(role==='blossom')p.flower=p.flower||base.accent;
     if(role==='figure')p.light=mix('#FFFBEF',base.bg,.08);
+    if(/^#[a-fA-F0-9]{6}$/.test(color||'')){
+      if(role==='figure')p.light=color;
+      else {p.main=color;p.ink=mix(color,base.ink,.42);if(role==='blossom')p.flower=color;}
+    }
     if(role==='snow'){p.light=mix('#F6F8FF',base.bg,.12);p.ink=mix('#EAF1F6',base.bg,.18);}
     const fade=depth==='far'?.22:depth==='middle'?.06:0;
     p.main=mix(p.main,base.bg,fade);p.ink=mix(p.ink,base.bg,fade*.8);
@@ -85,7 +89,8 @@ window.PoemDrawing = (() => {
     const sketch=p=>{
       const colors=new Map();
       function alpha(_p,color,value){
-        const a=Math.round(clamp(number(value,255),0,255)),key=`${color}:${a}`;
+        const strength=renderOptions.visual?.brushStrength??1;
+        const a=Math.round(clamp(number(value,255)*strength,0,255)),key=`${color}:${a}`;
         if(!colors.has(key)){const c=p.color(color);c.setAlpha(a);colors.set(key,c);}
         return colors.get(key);
       }

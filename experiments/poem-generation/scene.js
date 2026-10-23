@@ -2,8 +2,12 @@
  * locally placed motifs. Semantic entity count and p5 renderer count differ.
  */
 window.PoemTrialScene=(()=>{
-  let controllers=[],hosts=[],sources=[],plan,shared,paused=false,raf,seed=0,ready=false,drag=null,initialPlacements=[],elapsed=0,lastFrame=null;
+  let controllers=[],hosts=[],sources=[],plan,shared,paused=false,raf,seed=0,ready=false,drag=null,initialPlacements=[],elapsed=0,lastFrame=null,instanceOffsets=new Map();
   const canvas=()=>document.getElementById('scene'),W=960,H=600;
+  function insideClip(pos,layer){
+    if(!layer.clip)return true;const initial=initialPlacements[plan.layers.indexOf(layer)],x=pos[0]/W-layer.placement.at[0]+initial.at[0],y=pos[1]/H-layer.placement.at[1]+initial.at[1];let inside=false;
+    for(let i=0,j=layer.clip.length-1;i<layer.clip.length;j=i++){const [ax,ay]=layer.clip[i],[bx,by]=layer.clip[j];if((ay>y)!==(by>y)&&x<(bx-ax)*(y-ay)/(by-ay)+ax)inside=!inside;}return inside;
+  }
   function motion(layer,at,index=0){
     const flying=layer.tool==='bird'&&layer.options.pose==='flying'||layer.tool==='oriole'&&layer.options.pose==='spread';
     const m=layer.motion||(flying?{kind:'drift',state:'fly',rate:layer.timeScale??.8}:null);
@@ -17,20 +21,24 @@ window.PoemTrialScene=(()=>{
   }
   function entries(){
     if(!plan)return [];
-    return plan.layers.flatMap((l,i)=>(l.instances||[{placement:l.placement,variant:0,depth:0,opacity:1}]).map((instance,index)=>{
+    const cache=new Map();
+    function entryFor(i,index,seen=new Set()){
+      const key=i+':'+index;if(cache.has(key))return cache.get(key);if(seen.has(key))return null;seen.add(key);
+      const l=plan.layers[i],instance=l.instances?.[index]||{placement:l.placement,variant:0,depth:0,opacity:1},id=instance.id||key;
       const placement=structuredClone(instance.placement),initial=initialPlacements[i];
-      placement.at=[placement.at[0]+l.placement.at[0]-initial.at[0],placement.at[1]+l.placement.at[1]-initial.at[1]];
+      const own=instanceOffsets.get(id)||[0,0];
+      placement.at=[placement.at[0]+l.placement.at[0]-initial.at[0]+own[0],placement.at[1]+l.placement.at[1]-initial.at[1]+own[1]];
       let parentOpacity=1;
       if(l.attachment){const parent=plan.layers.findIndex(v=>v.entities.includes(l.attachment.target));if(parent>=0){
-        const p=plan.layers[parent],delta=[p.placement.at[0]-initialPlacements[parent].at[0],p.placement.at[1]-initialPlacements[parent].at[1]];
-        placement.at[0]+=delta[0];placement.at[1]+=delta[1];
-        const base=p.instances[0].placement.at.map((v,i)=>v+delta[i]),shift=motion(p,base);
-        placement.at=[base[0]+shift.dx+(placement.at[0]-base[0])*shift.scale,base[1]+shift.dy+(placement.at[1]-base[1])*shift.scale];placement.scale*=shift.scale;parentOpacity=shift.alpha;
+        const p=plan.layers[parent],pi=Math.max(0,p.instances.findIndex(v=>v.id===l.attachment.instance)),pe=entryFor(parent,pi,seen);
+        if(pe){const original=p.instances[pi].placement,ratio=pe.placement.scale/original.scale;
+        placement.at=placement.at.map((v,k)=>pe.placement.at[k]+(v-original.at[k])*ratio);placement.scale*=ratio;parentOpacity=pe.opacity;}
       }}
       const shift=motion(l,placement.at,index);placement.at=[placement.at[0]+shift.dx,placement.at[1]+shift.dy];placement.scale*=shift.scale;
       const sourceIndex=sources.findIndex(s=>s.layer===i&&s.variant===(instance.variant||0));
-      return {tool:l.tool,layer:i,index,sourceIndex,tone:instance.tone,visual:l.visual,placement,opacity:(instance.opacity??1)*shift.alpha*parentOpacity,z:(l.z??i)+(instance.depth||0)};
-    })).sort((a,b)=>{
+      const entry={id,groupId:l.interaction?.groupId||'layer-'+i,tool:l.tool,layer:i,index,sourceIndex,tone:instance.tone,visual:l.visual,placement,opacity:(instance.opacity??1)*shift.alpha*parentOpacity,z:(l.z??i)+(instance.depth||0)};cache.set(key,entry);return entry;
+    }
+    return plan.layers.flatMap((l,i)=>(l.instances||[{}]).map((_,index)=>entryFor(i,index))).sort((a,b)=>{
       if(plan.layers[a.layer].tool==='lotus'&&plan.layers[b.layer].tool==='lotus')return a.placement.at[1]-b.placement.at[1];
       return a.z-b.z;
     });
@@ -46,14 +54,14 @@ window.PoemTrialScene=(()=>{
         const dx=layer.placement.at[0]-initialPlacements[entry.layer].at[0],dy=layer.placement.at[1]-initialPlacements[entry.layer].at[1];
         const points=layer.clip.map(([x,y])=>[(x+dx)*W,(y+dy)*H]);c.beginPath();
         const last=points.at(-1),first=points[0];c.moveTo((last[0]+first[0])/2,(last[1]+first[1])/2);
-        points.forEach(([x,y],i)=>{const next=points[(i+1)%points.length];if(x<=0||x>=W||y<=0||y>=H){c.lineTo(x,y);c.lineTo((x+next[0])/2,(y+next[1])/2);}else c.quadraticCurveTo(x,y,(x+next[0])/2,(y+next[1])/2);});c.closePath();c.clip();
-      }if(layer.surface){const y=layer.surface.top*H;c.beginPath();c.rect(0,y,W,H-y);c.clip();const wash=c.createLinearGradient(0,y,0,H);wash.addColorStop(0,'transparent');wash.addColorStop(1,colors.main+'70');c.fillStyle=wash;c.fillRect(0,y,W,H-y);}
+        points.forEach(([x,y],i)=>{const next=points[(i+1)%points.length];if(layer.clipRule==='polygon'){c.lineTo(x,y);}else if(x<=0||x>=W||y<=0||y>=H){c.lineTo(x,y);c.lineTo((x+next[0])/2,(y+next[1])/2);}else c.quadraticCurveTo(x,y,(x+next[0])/2,(y+next[1])/2);});c.closePath();c.clip();
+      }if(layer.surface){const y=layer.surface.top*H;c.beginPath();c.rect(0,y,W,H-y);c.clip();const wash=c.createLinearGradient(0,y,0,H);wash.addColorStop(0,'transparent');wash.addColorStop(1,colors.main+(entry.visual?.color?'99':'70'));c.fillStyle=wash;c.fillRect(0,y,W,H-y);}
       c.globalAlpha=entry.opacity;c.drawImage(source,at[0]*W-anchor[0]*scale,at[1]*H-anchor[1]*scale,640*scale,388*scale);c.restore();
       if(layer.reflection){const line=layer.reflection.waterline*H;c.save();c.beginPath();for(let y=line;y<H;y+=7)c.rect(0,y,W,4);c.clip();c.globalAlpha=.15*entry.opacity;c.translate(0,2*line);c.scale(1,-1);c.drawImage(source,at[0]*W-anchor[0]*scale,at[1]*H-anchor[1]*scale,640*scale,388*scale);c.restore();}
     }c.globalAlpha=1;
   }
   function loop(timestamp){if(lastFrame!==null)elapsed+=Math.max(0,Math.min(.1,(timestamp-lastFrame)/1000))*shared.motion;lastFrame=timestamp;frame();raf=requestAnimationFrame(loop);}
-  function dispose(){ready=false;drag=null;elapsed=0;lastFrame=null;cancelAnimationFrame(raf);controllers.forEach(c=>c.dispose());hosts.forEach(h=>h.remove());controllers=[];hosts=[];sources=[];plan=null;}
+  function dispose(){ready=false;drag=null;instanceOffsets.clear();elapsed=0;lastFrame=null;cancelAnimationFrame(raf);controllers.forEach(c=>c.dispose());hosts.forEach(h=>h.remove());controllers=[];hosts=[];sources=[];plan=null;}
   function bindDrag(){
     const el=canvas();if(el.dataset.draggable)return;el.dataset.draggable='true';
     const point=e=>{const b=el.getBoundingClientRect();return [(e.clientX-b.left)*W/b.width,(e.clientY-b.top)*H/b.height];};
@@ -64,11 +72,15 @@ window.PoemTrialScene=(()=>{
         const x=Math.floor((pos[0]-p.at[0]*W)/p.scale+p.anchor[0]),y=Math.floor((pos[1]-p.at[1]*H)/p.scale+p.anchor[1]),radius=Math.min(8,Math.ceil(4*W/el.getBoundingClientRect().width/p.scale));
         const left=Math.max(0,x-radius),top=Math.max(0,y-radius),right=Math.min(source.width,x+radius+1),bottom=Math.min(source.height,y+radius+1);if(right<=left||bottom<=top)continue;
         if(plan.layers[entry.layer].inferred)continue;
+        if(!insideClip(pos,plan.layers[entry.layer]))continue;
         const pixels=source.getContext('2d').getImageData(left,top,right-left,bottom-top).data;
-        if(pixels.some((v,j)=>j%4===3&&v>8)){drag={i:entry.layer,id:e.pointerId,start:pos,at:[...plan.layers[entry.layer].placement.at]};el.setPointerCapture(e.pointerId);e.preventDefault();break;}
+        if(pixels.some((v,j)=>j%4===3&&v>8)){
+          const group=e.shiftKey||plan.layers[entry.layer].interaction?.mode==='group';
+          drag={i:entry.layer,instanceId:entry.id,group,id:e.pointerId,start:pos,at:group?[...plan.layers[entry.layer].placement.at]:[...(instanceOffsets.get(entry.id)||[0,0])]};el.setPointerCapture(e.pointerId);e.preventDefault();break;
+        }
       }
     });
-    el.addEventListener('pointermove',e=>{if(!drag||drag.id!==e.pointerId)return;const pos=point(e),p=plan.layers[drag.i].placement;p.at=[Math.max(0,Math.min(1,drag.at[0]+(pos[0]-drag.start[0])/W)),Math.max(0,Math.min(1,drag.at[1]+(pos[1]-drag.start[1])/H))];frame();});
+    el.addEventListener('pointermove',e=>{if(!drag||drag.id!==e.pointerId)return;const pos=point(e),at=drag.at.map((v,i)=>v+(pos[i]-drag.start[i])/(i===0?W:H));if(drag.group)plan.layers[drag.i].placement.at=at.map(v=>Math.max(0,Math.min(1,v)));else instanceOffsets.set(drag.instanceId,at);frame();});
     const end=e=>{if(drag?.id===e.pointerId)drag=null;};for(const name of ['pointerup','pointercancel','lostpointercapture'])el.addEventListener(name,end);
   }
   async function render(next){
@@ -92,7 +104,7 @@ window.PoemTrialScene=(()=>{
     update(patch){if(!shared)return;Object.assign(shared,window.PoemDrawing.settings({...shared,...patch}));controllers.forEach(c=>c.refresh());setTimeout(frame,40);},
     moon(shape){controllers.forEach((c,i)=>{if(plan.layers[sources[i].layer].tool==='moon')c.configure({shape});});setTimeout(frame,40);},
     reseed(){if(!plan)return;seed++;elapsed=0;lastFrame=null;controllers.forEach((c,i)=>c.reset(seed+sources[i].layer*97+sources[i].variant*1543));setTimeout(frame,40);},
-    resetLayout(){if(!plan)return;plan.layers.forEach((l,i)=>{l.placement=structuredClone(initialPlacements[i]);});frame();},
+    resetLayout(){if(!plan)return;instanceOffsets.clear();plan.layers.forEach((l,i)=>{l.placement=structuredClone(initialPlacements[i]);});frame();},
     save(){frame();const a=document.createElement('a');a.download='流动诗.png';a.href=canvas().toDataURL('image/png');a.click();}
   });
 })();

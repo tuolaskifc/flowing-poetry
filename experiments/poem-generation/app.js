@@ -161,13 +161,14 @@
   const loadLibrary=fetch('/experiments/poem-generation/curated-poems.json').then(r=>{if(!r.ok)throw new Error('library unavailable');return r.json();}).then(data=>window.PoemCuratedLibrary.validate(data)).catch(()=>null);
   const loadTrials=fetch('/experiments/poem-generation/generalization-cases.json').then(r=>r.ok?r.json():null).then(d=>d?.cases||[]).catch(()=>[]);
   const pageQuery=new URLSearchParams(location.search);
-  const loadStudy=pageQuery.has('study')?fetch('/poem-flow/landscape-studies.json').then(r=>r.ok?r.json():null).then(d=>d?.cases.find(c=>c.id===pageQuery.get('study'))).catch(()=>null):Promise.resolve(null);
+  const replayKey=pageQuery.has('review')?'review':'study';
+  const loadStudy=pageQuery.has(replayKey)?fetch('/poem-flow/'+(replayKey==='review'?'composition-studies.json':'landscape-studies.json')).then(r=>r.ok?r.json():null).then(d=>d?.cases.find(c=>c.id===pageQuery.get(replayKey))).catch(()=>null):Promise.resolve(null);
   Promise.all([fetch('/api/status').then(r=>r.json()),fetch('/api/latest').then(r=>r.json()),loadLibrary,loadTrials,loadStudy]).then(async([config,saved,data,trialCases,study])=>{
     catalog=data;if(saved.record){latest=saved.record;$('replay').hidden=false;}
     trials=trialCases;if(catalog){populateLibrary();if(trials.length&&$('library-choice')){const group=document.createElement('optgroup');group.label='新句试验 · '+trials.length+' 组';for(const trial of trials){const option=document.createElement('option');option.value=trial.id;option.textContent=trial.poem+' · '+trial.author;group.append(option);}$('library-choice').append(group);}const query=new URLSearchParams(location.search),requested=query.get('poem'),trial=trials.find(c=>c.id===query.get('trial'));if(trial)chooseTrial(trial);else chooseCurated(window.PoemCuratedLibrary.find(catalog,requested)||window.PoemCuratedLibrary.ordered(catalog)[0]);if(!config.configured)status('精选诗句库已载入；分析接口尚未配置。');}
     else status('精选诗句库暂未载入，可以手动输入；'+(config.configured?'分析接口已就绪。':'分析接口尚未配置。'));
     if(study){
-      const r=study.record;poem.value=r.poem;source=r.source;librarySelection(catalog?.poems.find(p=>p.poem===r.poem));$('source').textContent='风景构图试看 · '+[r.source.author,r.source.title].filter(Boolean).join(' · ');await show(r);
+      const r=study.record;poem.value=r.poem;source=r.source;librarySelection(catalog?.poems.find(p=>p.poem===r.poem));$('source').textContent='风景构图试看 · '+[r.source?.author,r.source?.title].filter(Boolean).join(' · ');await show(r);
       const composition=pageQuery.get('composition');if(r.plan.compositions?.some(c=>c.id===composition)){await window.PoemTrialScene.composition(composition);if($('composition'))$('composition').value=composition;}
       const palette=pageQuery.get('palette');if(window.PoemDrawing.paletteOptions().some(p=>p.id===palette))choosePalette(palette);
       status('正在观看已有回答的本地风景构图；切换构图、配色与动态均不请求模型。');

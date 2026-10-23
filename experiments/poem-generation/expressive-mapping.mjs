@@ -2,6 +2,7 @@
 // only the local drawing representation changes, with an explicit note.
 export function expressiveRule(entity,rule,poem=''){
   const mentions=entity.mentions.join(' '),text=mentions+' '+entity.concept;
+  if(entity.mentions.some(m=>/^(荷风|荷香)$/.test(m)))return {tool:'lotus',options:{form:'leaf'},projection:'whole-from-context',approximation:'由荷风或荷香借荷叶形提示来源；原文未明确给出可见荷叶或花朵，不补花数'};
   if(entity.kind==='person'&&entity.mentions.some(m=>/^(人|行人|游人|旅人|客|渔人|渔翁|渔父|钓翁|翁|老翁|蓑笠翁|僧|僧人|童子|牧童|樵夫)$/.test(m)))return {tool:'figure',options:{pose:/蓑笠|渔|钓/.test(mentions+' '+poem)?'fisher':'standing'},approximation:'只以淡墨衣形和头部笔点提示人物，不作肖像或服饰考据'};
   if(entity.mentions.some(m=>/^(桃花|杏花|桃树|杏树)$/.test(m))){
     const q=entity.quantity,branches=q?.scope==='part'&&q.unit==='枝'&&['exact','range'].includes(q.mode)?Math.max(1,Math.min(7,Math.round((q.min+q.max)/2))):7;

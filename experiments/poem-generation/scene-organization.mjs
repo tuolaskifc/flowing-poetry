@@ -1,6 +1,7 @@
 // Code-owned scene graph, candidate layouts and bounded geometric supervision.
 // These checks measure implemented constraints, never literary truth or beauty.
 import {applySemanticSupports,applySemanticLayout} from './semantic-policy.mjs';
+import {worldLayout,compositionScore} from './world-layout.mjs';
 const frac=n=>n-Math.floor(n);
 const clamp=(n,a,b)=>Math.max(a,Math.min(b,n));
 const plants=new Set(['tree','willow','bamboo','grass','flower','orchid']);
@@ -62,7 +63,7 @@ function graphFor(analysis,layers,scene){
   const relation=analysis.spatial?.find(r=>r.source&&l.entities.includes(r.source)&&r.type==='on'&&r.modality==='asserted');
   const target=relation&&layers.find(t=>t.entities.includes(relation.target));
   let habitat=grounded.has(l.tool)?'land':l.tool==='boat'||l.tool==='fish'||l.tool==='lotus'||l.tool==='bird'&&l.options.pose==='waterbird'?'water':['bird','oriole','moon','cloud'].includes(l.tool)?'air':null;
-  if(target?.tool==='water')habitat='water';if(target&&['tree','willow','bamboo'].includes(target.tool)&&['bird','oriole'].includes(l.tool))habitat='canopy';
+  if(target?.tool==='water'&&!['bird','oriole','moon'].includes(l.tool))habitat='water';if(target&&['tree','willow','bamboo'].includes(target.tool)&&['bird','oriole'].includes(l.tool))habitat='canopy';
   if(l.attachment&&l.tool==='figure')habitat='deck';
   return {id:'l'+i,entities:[...l.entities],tool:l.tool,role:physical(l),habitat,inferred:!!l.inferred,support:target?'l'+layers.indexOf(target):habitat==='water'&&water?'l'+layers.indexOf(water):habitat==='land'&&land?'l'+layers.indexOf(land):null};
  });
@@ -76,7 +77,7 @@ function applyRelations(analysis,layers,spatial,regions){
  for(const r of spatial){
   const source=by(r.source),target=by(r.target);if(r.modality!=='asserted'||!source||!target||source===target)continue;
   const [tx,ty]=center(target);let applied=false;
-  if(r.type==='on'&&target.tool==='water'&&['boat','bird','fish'].includes(source.tool)){
+  if(r.type==='on'&&target.tool==='water'&&(['boat','fish'].includes(source.tool)||source.tool==='bird'&&source.options.pose==='waterbird')){
    for(const v of source.instances)v.placement.at=pointIn(target.clip||regions.water,v.placement.at[0],Math.max(.59,v.placement.at[1]));applied=true;
   }else if(r.type==='on'&&plants.has(target.tool)&&['bird','oriole'].includes(source.tool)){
    const branch=target.instances[Math.floor(target.instances.length/2)].placement;
@@ -110,7 +111,11 @@ function candidate(analysis,base,index){
    regions.land=[[0,.48],[.43,.48],[.40,.68],[.45,.81],[.60,1.04],[0,1.04]];water.clip=regions.water;
   }
  }else if(landNeeded)regions.land=[[0,.50],[1,.50],[1,1.04],[0,1.04]];
- if(ground){ground.clip=regions.land;ground.options.edge='soft';ground.z=-18;ground.instances[0].placement={anchor:[320,265],at:[.5,.54],scale:2.5};}
+ if(analysis.schema_version==='3.3'){
+  const world=worldLayout(analysis,layers,index,landNeeded);Object.assign(regions,{land:world.land,water:world.water});scene.organization.topology=world.name;
+  if(water){water.clip=regions.water;water.surface.top=Math.min(...regions.water.map(p=>p[1]));}
+ }
+ if(ground){ground.clip=regions.land;if(/环池|池深/.test(scene.organization.topology||''))ground.clipRule='polygon';ground.options.edge='soft';ground.z=-18;ground.instances[0].placement={anchor:[320,265],at:[.5,.54],scale:2.5};}
  for(const l of layers.filter(l=>l.tool==='landscape'&&l.options.form==='shore')){l.clip=regions.land;l.options.edge='soft';}
  if(field&&regions.land){field.clip=regions.land;field.z=-12;}
  const plantLayers=layers.filter(l=>plants.has(l.tool)),subjectLayers=layers.filter(l=>subjects.has(l.tool)),offset=(analysis.poem.length%13)*.017;
@@ -121,7 +126,7 @@ function candidate(analysis,base,index){
    const t=(i+.5)/n,u=frac((i+1)*.61803398875+offset+index*.073);
    if(plants.has(l.tool)){
     const global=(plantIndex+i+.5)/Math.max(1,total),far=global<.58;
-    const cluster=water?flip(.035+u*.27):scene.semanticSetting?.kind==='woodland'?.03+u*.94:global<.52?.04+u*.28:.73+u*.24;
+    const cluster=analysis.schema_version==='3.3'?.055+u*.89:water?flip(.035+u*.27):scene.semanticSetting?.kind==='woodland'?.03+u*.94:global<.52?.04+u*.28:.73+u*.24;
     const y=far?.61+frac(global*1.7)*.15:.81+frac(global*1.3)*.18;
     v.placement.at=regions.land?pointIn(regions.land,cluster,y):[cluster,y];
     v.placement.scale=['grass','flower'].includes(l.tool)?(far?.21:.32)+u*.13:l.tool==='orchid'?(far?.30:.43)+u*.15:(far?.43:.67)+u*.23;
@@ -130,7 +135,7 @@ function candidate(analysis,base,index){
     l.z=plants.has(l.tool)&&['grass','flower','orchid'].includes(l.tool)?14:8;
    }else if(subjects.has(l.tool)){
     if(l.tool==='figure'&&l.attachment)continue;
-    const slot=subjectLayers.indexOf(l),x=l.tool==='boat'?(n>3?flip(.52+u*.41):(index===2?.72:.61)+((i%3)-1)*.09):water?flip(.10+t*.21):n>4?.07+u*.86:.43+(slot%2)*.22+(t-.5)*.22;
+    const slot=subjectLayers.indexOf(l),x=analysis.schema_version==='3.3'?.15+u*.70:l.tool==='boat'?(n>3?flip(.52+u*.41):(index===2?.72:.61)+((i%3)-1)*.09):water?flip(.10+t*.21):n>4?.07+u*.86:.43+(slot%2)*.22+(t-.5)*.22;
     const y=n>4?.61+t*.34:l.tool==='boat'?.72+(i%3)*.07:.73+slot*.065+(i%2)*.045;
     const region=l.tool==='boat'?regions.water:regions.land;
     v.placement.at=region?pointIn(region,x,Math.min(.94,y)):[x,y];
@@ -154,7 +159,7 @@ function candidate(analysis,base,index){
   }
   if(plants.has(l.tool))plantIndex+=n;sync(l);
  }
- scene.organization.regions=regions;scene.organization.layout=index;scene.organization.orientation=water&&landNeeded?(left?'left-bank':'right-bank'):'open';
+ scene.organization.regions=regions;scene.organization.layout=index;scene.organization.orientation=scene.organization.topology|| (water&&landNeeded?(left?'left-bank':'right-bank'):'open');
  applySemanticLayout(analysis,result,{pointIn,sync});
  applyRelations(analysis,layers,spatial,regions);
  // Reproject roots after relative moves; this may expose an unsatisfied relation
@@ -268,9 +273,13 @@ export function organizeScene(analysis,arranged){
   if(!layers.some(l=>l.tool==='water')&&needsWater&&!waterVeto(analysis))addSupport(layers,'water','舟、游鱼、水生植物或渡口水岸需要水域；水形和范围是本地选择');
   const proposals=[0,1,2].map(i=>repairOrganization(analysis,candidate(analysis,base,i)));
   for(const p of proposals){p.scene.organization.graph=graphFor(analysis,p.layers,p.scene);p.scene.organization.audit=inspectOrganization(analysis,p);}
-  proposals.sort((a,b)=>a.scene.organization.audit.cost-b.scene.organization.audit.cost||a.scene.organization.layout-b.scene.organization.layout);
+  proposals.sort((a,b)=>compositionScore(a)-compositionScore(b)||a.scene.organization.layout-b.scene.organization.layout);
   const chosen=proposals[0];
-  chosen.scene.organization.candidates=proposals.map(p=>({layout:p.scene.organization.layout,orientation:p.scene.organization.orientation,errors:p.scene.organization.audit.errors,cost:p.scene.organization.audit.cost,metrics:p.scene.organization.audit.metrics}));
+  chosen.scene.organization.candidates=proposals.map(p=>({layout:p.scene.organization.layout,orientation:p.scene.organization.orientation,errors:p.scene.organization.audit.errors,cost:p.scene.organization.audit.cost,score:compositionScore(p),metrics:p.scene.organization.audit.metrics}));
+  if(analysis.schema_version==='3.3'){
+   chosen.compositions=proposals.filter(p=>!p.scene.organization.audit.errors).map(p=>({id:'space-'+p.scene.organization.layout,label:p.scene.organization.topology,description:'先安排连续水域与地表，再按主次与远近安放景物',layers:p.layers,scene:p.scene,spatial:p.spatial}));
+   chosen.composition=chosen.compositions[0]?.id;
+  }
   chosen.scene.organization.repairs.push(...chosen.layers.filter(l=>l.inferred&&!arranged.layers.some(old=>old.tool===l.tool&&old.options.form===l.options.form)).map(l=>({type:'support-added',reason:l.provenance.reason})));
   chosen.scene.notes.push('通用场景层先组织地面、水域、群落和主体，再比较三个布局的依托、相对位置、尺度与遮挡；检查通过不代表审美已通过。');
   return chosen;

@@ -7,6 +7,13 @@ const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
 const rate={slow:.35,normal:.8,fast:1.35};
 const energyRate={low:.45,medium:.8,high:1.2,unclear:.8};
 const active=a=>a.schema_version==='3.3'&&a.scene;
+function automaticPalette(analysis){
+ const light=analysis.scene.atmosphere.illumination,labels=analysis.atmosphere.labels.join(' ');
+ if(light==='night')return /华丽|辉煌|热闹|欢宴/.test(labels)?'gilded':'indigo';
+ if(light==='twilight')return /明艳|绚丽|热烈/.test(labels)?'cinnabar':'twilight';
+ const choices=[[/明快|欣悦|欢乐|欢快|喜悦/,'joy'],[/温柔|缱绻|柔情/,'tender'],[/闲适|恬淡|田园|悠然/,'pastoral'],[/思念|牵挂|思乡/,'longing'],[/惜别|送别|离别/,'farewell'],[/惆怅|失落|忧伤/,'melancholy'],[/苍凉|迟暮|萧瑟/,'autumn'],[/豪迈|昂扬|壮阔/,'heroic'],[/坚贞|清峻/,'steadfast'],[/旷达|释然/,'release']];
+ return choices.find(([words])=>words.test(labels))?.[1]||(analysis.atmosphere.valence==='positive'?'mineral':'clear');
+}
 const record=(l,path,consumer,effect,status='applied')=>{l.semanticEffects??=[];l.semanticEffects.push({path,consumer,effect,status});};
 export function semanticGroupKey(analysis,entity){return active(analysis)?analysis.scene.groups.findIndex(g=>g.members.includes(entity.id)):-1;}
 export function prepareSemanticLayers(analysis,layers){
@@ -21,7 +28,8 @@ export function prepareSemanticLayers(analysis,layers){
   l.semanticAction=structuredClone(action);const path='scene.actions['+analysis.scene.actions.indexOf(action)+']';
   if(action.modality!=='asserted'){
    l.animate=false;l.timeScale=0;l.semanticEnergy=false;
-   if(l.tool==='bird')l.options.pose='resting';if(l.tool==='oriole')Object.assign(l.options,{pose:'folded',motion:'still'});
+   // An uncertain flight freezes time, but does not assert that the bird landed.
+   if(action.modality!=='unclear'){if(l.tool==='bird')l.options.pose='resting';if(l.tool==='oriole')Object.assign(l.options,{pose:'folded',motion:'still'});}
    if(action.modality==='negated'){
     l.animate=false;if(l.tool==='bird')l.options.pose='resting';if(l.tool==='oriole')Object.assign(l.options,{pose:'folded',motion:'still'});
     record(l,path+'.state','形态与绘画时钟','否定动作保持静止，未执行该动作');
@@ -102,7 +110,7 @@ export function applySemanticLayout(analysis,result,{pointIn,sync}){
   const path='scene.groups['+g.index+']',n=l.instances.length;
   const average=l.instances.reduce((p,v)=>[p[0]+v.placement.at[0]/n,p[1]+v.placement.at[1]/n],[0,0]);
   const surface=l.semanticSupport?.surface;
-  const aquatic=surface==='water'||['boat','fish','lotus'].includes(l.tool)||l.tool==='bird'&&l.options.pose==='waterbird';
+  const aquatic=(surface==='water'&&!['bird','oriole','moon'].includes(l.tool))||['boat','fish','lotus'].includes(l.tool)||l.tool==='bird'&&l.options.pose==='waterbird';
   const region=aquatic?water?.clip||regions.water:rooted.has(l.tool)?regions.land:null;
   const multiple=n>1;
   for(const [i,v] of l.instances.entries()){
@@ -134,7 +142,7 @@ export function applySemanticLayout(analysis,result,{pointIn,sync}){
  }
  for(const l of result.layers){
   const support=l.semanticSupport;if(!support)continue;
-  if(support.surface==='water'&&l.tool==='bird'&&l.semanticAction?.state!=='fly')l.options.pose='waterbird';
+  if(support.surface==='water'&&l.tool==='bird'&&l.semanticAction?.modality==='asserted'&&l.semanticAction.state==='float')l.options.pose='waterbird';
   if(support.surface==='vegetation'&&support.target&&['bird','oriole'].includes(l.tool)){
    const parent=result.layers.find(p=>p.entities.includes(support.target));if(!parent)continue;
    const anchor=parent.instances[Math.floor(parent.instances.length/2)].placement;
@@ -165,7 +173,7 @@ export function finishSemanticPlan(analysis,plan){
  if(!windAbsent)plan.settings.wind=Math.max(plan.settings.wind,.3);
  for(const l of plan.layers)if(l.inferred&&l.tool==='water')l.animate=true;
  if(!windAbsent&&s.actions.some(a=>a.modality==='asserted'&&a.state==='sway'))plan.settings.wind=Math.max(plan.settings.wind,.25);
- const palette=light==='night'?'night':light==='twilight'?'twilight':analysis.atmosphere.valence==='positive'?'tender':'clear';
+ const palette=automaticPalette(analysis);
  plan.settings.palette=palette;
  plan.settings.density={high:.35,medium:.45,low:.6,unclear:.45}[analysis.atmosphere.openness]??.45;
  if(visibility==='hazy'||visibility==='dark')for(const l of plan.layers){
@@ -173,10 +181,10 @@ export function finishSemanticPlan(analysis,plan){
   const distant=l.semanticGroup?.depth==='far';for(const v of l.instances)v.opacity=(v.opacity??1)*(distant?.62:.84);
  }
  add('scene.atmosphere.visibility',visibility==='unclear'?'skipped':'applied','画布色层与远景','可见度 '+visibility+'；迷蒙或昏暗时淡化非光源图层',s.atmosphere);
- add('scene.atmosphere.illumination',light==='unclear'?'skipped':'applied','有限配色','照明 '+light+' 映射为本地 '+palette+' 配色；用户仍可手动覆盖',s.atmosphere);
+ add('scene.atmosphere.illumination',light==='unclear'?'skipped':'applied','自动光色','照明 '+light+' 与气息标签共同选择本地 '+palette+' 配色；夜景优先暗底，用户可手动覆盖',s.atmosphere);
  add('atmosphere.energy',plan.layers.some(l=>l.semanticEnergy)?'applied':'skipped','绘画时钟','没有明确动作节奏时，气息强弱控制已有微动的默认时钟');
  add('atmosphere.openness',plan.layers.length?'applied':'skipped','群落分布与笔触密度','开阔度转换为本地间距与工具笔触密度，不等于原文数量');
- add('atmosphere.valence',['night','twilight'].includes(light)?'skipped':'applied','有限配色',['night','twilight'].includes(light)?'照明策略优先，本次不另套情绪配色':'正向感受暂用 tender，其余用 clear；尚非完整情感色谱');
+ add('atmosphere.valence','applied','自动光色','先约束昼夜明暗，再按已支持的气息标签和情绪倾向选择配色；不宣称完整情感理解');
  add('time.markers','retained','原始记录与解读','保留原文时间标记；本版照明由 scene.atmosphere 转换，多阶段时间逻辑未执行');
  plan.semanticConsumption={version:'3.3',items,summary:{applied:items.filter(i=>i.status==='applied').length,partial:items.filter(i=>i.status==='partial').length,unsupported:items.filter(i=>i.status==='unsupported').length,skipped:items.filter(i=>i.status==='skipped').length,retained:items.filter(i=>i.status==='retained').length},aestheticAcceptance:'pending-user'};
  const unsupported=items.filter(i=>i.status==='unsupported'||i.status==='partial');

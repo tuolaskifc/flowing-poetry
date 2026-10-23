@@ -1,0 +1,170 @@
+{
+  "policyVersion": "semantic-composition-3.3-world-instances",
+  "hashes": {
+    "planner.mjs": "c1f14b67779c3a8086f8da2057ab1124a1154732215eafc123a9662983291f87",
+    "scene-integrity.mjs": "3cb52a6fbb1420b90ad7b323c27c96d54a42e215ebd916f17d402c966ae2fbaf",
+    "world-layout.mjs": "a60153cde598acfbd72d519d39661b35ac8c33db5c400a57bea5d6c0423f34c4",
+    "scene-organization.mjs": "420a3f547c10ae425a90ccc0585cbb3c7d38dc7f0657bf1080b4ac87adccf64d",
+    "landscape-development.mjs": "1016a51ce26a6d7a03a991b99dcfa77c5e4ac3dccbc8402d0dbb5b1635c14dcc",
+    "semantic-policy.mjs": "0cb5a1cfe6cfc654ebffe6a131bbd65d80ceb493fbefb31c93ef6174f90adf67",
+    "scene.js": "74d8418b5b9af404259619857b8b4c39a317b6d80435b73884f1b42497932bc7",
+    "app.js": "20e580c87ccea28ca1a67e1a2d416064bbc397e7e0833256ff6d821f3aab5887",
+    "physical-mapping.mjs": "6a7581743d7057dd96c7ea11bab9b8241ad6eb9890f9329febf805e65322d9a7",
+    "expressive-mapping.mjs": "d611edf63458ae34d7bc8cc2216a790838aaf010a2da26120589d8b6fdb6a30e",
+    "../imagery-library/drawing/core.js": "cf1b7224cb97aabeef712517e2899c0775e53c1ef2591077b51cb0fb31020fb0"
+  },
+  "modelCalls": 0,
+  "scope": "user-reported-regression-replays",
+  "currentBackend": true,
+  "rows": [
+    {
+      "id": "r01",
+      "rawRecord": "2026-10-23T07-29-38-639Z-8c6b5c35",
+      "sourceExpanded": false,
+      "palette": "indigo",
+      "instances": 15,
+      "omitted": [],
+      "geometryErrors": 0,
+      "displayErrors": 0
+    },
+    {
+      "id": "r02",
+      "rawRecord": "2026-10-23T07-30-18-337Z-6ed83f82",
+      "sourceExpanded": false,
+      "palette": "indigo",
+      "instances": 5,
+      "omitted": [],
+      "geometryErrors": 0,
+      "displayErrors": 0
+    },
+    {
+      "id": "r03",
+      "rawRecord": "2026-10-23T07-34-02-989Z-2a7f68dc",
+      "sourceExpanded": true,
+      "palette": "twilight",
+      "instances": 4,
+      "omitted": [],
+      "geometryErrors": 0,
+      "displayErrors": 0
+    },
+    {
+      "id": "r04",
+      "rawRecord": "2026-10-23T07-35-20-435Z-9c6d6ede",
+      "sourceExpanded": false,
+      "palette": "clear",
+      "instances": 2,
+      "omitted": [],
+      "geometryErrors": 0,
+      "displayErrors": 0
+    },
+    {
+      "id": "r05",
+      "rawRecord": "2026-10-23T07-35-57-349Z-0f8ed5fd",
+      "sourceExpanded": false,
+      "palette": "mineral",
+      "instances": 51,
+      "omitted": [],
+      "geometryErrors": 0,
+      "displayErrors": 0
+    },
+    {
+      "id": "r06",
+      "rawRecord": "2026-10-23T07-36-45-987Z-3e209114",
+      "sourceExpanded": false,
+      "palette": "mineral",
+      "instances": 17,
+      "omitted": [],
+      "geometryErrors": 0,
+      "displayErrors": 0
+    },
+    {
+      "id": "r07",
+      "rawRecord": "2026-10-23T07-37-24-051Z-590f0392",
+      "sourceExpanded": false,
+      "palette": "indigo",
+      "instances": 4,
+      "omitted": [],
+      "geometryErrors": 0,
+      "displayErrors": 0
+    },
+    {
+      "id": "r08",
+      "rawRecord": "2026-10-23T07-37-50-430Z-942f1e7b",
+      "sourceExpanded": false,
+      "palette": "mineral",
+      "instances": 9,
+      "omitted": [
+        {
+          "id": "i2",
+          "name": "香气",
+          "reason": "该专名人物、地名或抽象含义暂不作实景补画"
+        },
+        {
+          "id": "i4",
+          "name": "清响",
+          "reason": "该专名人物、地名或抽象含义暂不作实景补画"
+        }
+      ],
+      "geometryErrors": 0,
+      "displayErrors": 0
+    },
+    {
+      "id": "r09",
+      "rawRecord": "2026-10-23T07-38-35-356Z-8ea87787",
+      "sourceExpanded": true,
+      "palette": "mineral",
+      "instances": 5,
+      "omitted": [
+        {
+          "id": "i3",
+          "name": "绿",
+          "reason": "该专名人物、地名或抽象含义暂不作实景补画"
+        },
+        {
+          "id": "i5",
+          "name": "闼",
+          "reason": "仅为比喻参照，不当作实景"
+        },
+        {
+          "id": "i6",
+          "name": "青",
+          "reason": "该专名人物、地名或抽象含义暂不作实景补画"
+        }
+      ],
+      "geometryErrors": 0,
+      "displayErrors": 0
+    },
+    {
+      "id": "r10",
+      "rawRecord": "2026-10-23T07-43-21-269Z-a67d8995",
+      "sourceExpanded": false,
+      "palette": "mineral",
+      "instances": 5,
+      "omitted": [
+        {
+          "id": "i2",
+          "name": "银河",
+          "reason": "仅为比喻参照，不当作实景"
+        }
+      ],
+      "geometryErrors": 0,
+      "displayErrors": 0
+    }
+  ],
+  "individualBirdDrag": true,
+  "shiftGroupDrag": true,
+  "bambooGroupDrag": true,
+  "resetLayout": true,
+  "personFollowsBoat": true,
+  "smokeFollowsSpecificHouse": true,
+  "otherHousesStill": true,
+  "automaticNight": true,
+  "manualColorSurvivesSwitch": true,
+  "animation": true,
+  "pause": true,
+  "pngExport": true,
+  "mobileWidth": 390,
+  "browserErrors": [],
+  "networkPosts": [],
+  "aestheticAcceptance": "pending-user"
+}

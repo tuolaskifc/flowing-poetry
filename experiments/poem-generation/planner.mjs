@@ -8,7 +8,8 @@ import {arrangeScene} from './scene-layout.mjs';
 import {organizeScene} from './scene-organization.mjs';
 import {prepareSemanticLayers,finishSemanticPlan} from './semantic-policy.mjs';
 import {developLandscape} from './landscape-development.mjs';
-export const policyVersion='semantic-composition-3.3-landscape';
+import {finalizeScene} from './scene-integrity.mjs';
+export const policyVersion='semantic-composition-3.3-world-instances';
 const {rules,unsupportedTerms}=lexicon;
 const order=['landscape','moon','cloud','mist','dwelling','building','tree','willow','bamboo','pavilion','horse','water','rock','boat','lotus','grass','orchid','plum-branch','flower','flower-forms','wine','leaves','surface-weather','fish','bird','oriole','falling-petals','catkins','rain','snow'];
 const placements={
@@ -40,7 +41,7 @@ export function buildPlan(analysis,{landscape=true}={}){
     if(/风/.test(text)&&entity.kind==='environment'){
       const denied=analysis.relations.some(r=>r.source===entity.id&&['negated','conditional','possible','unclear'].includes(r.modality));
       if(!denied)wind=.45;
-      notes.push(denied?`${name}的作用未被确认，暂不启用风。`:`${name}作为风参数，不额外画风线；强弱是本次试画选择。`);continue;
+      notes.push(denied?`${name}的作用未被确认，暂不启用风。`:`${name}作为风参数，不额外画风线；强弱是本次试画选择。`);if(analysis.schema_version!=='3.3'||!entity.mentions.some(m=>/^(荷风|荷香)$/.test(m)))continue;
     }
     const specificUnsupported=unsupportedTerms.some(word=>text.includes(word));
     const findRule=value=>{let best=null,length=0;for(const r of rules){if(r.exclude?.some(word=>value.includes(word)))continue;for(const word of r.words)if(value.includes(word)&&word.length>length){best=r;length=word.length;}}return best;};
@@ -114,5 +115,5 @@ export function buildPlan(analysis,{landscape=true}={}){
   const arranged=organizeScene(analysis,proposal);
   const plan={version:policyVersion,seed,settings:{wind,density:.45,palette:'clear'},...arranged,omitted,notes:[...new Set([...notes,...composition.notes,...arranged.scene.notes])],relations};
   const finished=finishSemanticPlan(analysis,plan);
-  return landscape?developLandscape(analysis,finished):finished;
+  return finalizeScene(analysis,landscape?developLandscape(analysis,finished):finished);
 }
