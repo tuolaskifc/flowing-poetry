@@ -19152,108 +19152,126 @@
     {
       "case": "u01",
       "mode": "scenery",
+      "expanse": 0,
       "seed": 410416620,
       "file": "u01-scenery.png"
     },
     {
       "case": "u01",
       "mode": "balanced",
+      "expanse": 0,
       "seed": 410416620,
       "file": "u01-balanced.png"
     },
     {
       "case": "u01",
       "mode": "abstract",
+      "expanse": 0,
       "seed": 410416620,
       "file": "u01-abstract.png"
     },
     {
       "case": "u02",
       "mode": "scenery",
+      "expanse": 0,
       "seed": 723713584,
       "file": "u02-scenery.png"
     },
     {
       "case": "u02",
       "mode": "balanced",
+      "expanse": 0,
       "seed": 723713584,
       "file": "u02-balanced.png"
     },
     {
       "case": "u02",
       "mode": "abstract",
+      "expanse": 0,
       "seed": 723713584,
       "file": "u02-abstract.png"
     },
     {
       "case": "u03",
       "mode": "scenery",
+      "expanse": 0,
       "seed": 2819797886,
       "file": "u03-scenery.png"
     },
     {
       "case": "u03",
       "mode": "balanced",
+      "expanse": 0,
       "seed": 2819797886,
       "file": "u03-balanced.png"
     },
     {
       "case": "u03",
       "mode": "abstract",
+      "expanse": 0,
       "seed": 2819797886,
       "file": "u03-abstract.png"
     },
     {
       "case": "h01",
       "mode": "scenery",
+      "expanse": 0,
       "seed": 958039947,
       "file": "h01-scenery.png"
     },
     {
       "case": "h01",
       "mode": "balanced",
+      "expanse": 0,
       "seed": 958039947,
       "file": "h01-balanced.png"
     },
     {
       "case": "h01",
       "mode": "abstract",
+      "expanse": 0,
       "seed": 958039947,
       "file": "h01-abstract.png"
     },
     {
       "case": "h02",
       "mode": "scenery",
+      "expanse": 0,
       "seed": 1799097591,
       "file": "h02-scenery.png"
     },
     {
       "case": "h02",
       "mode": "balanced",
+      "expanse": 0,
       "seed": 1799097591,
       "file": "h02-balanced.png"
     },
     {
       "case": "h02",
       "mode": "abstract",
+      "expanse": 0,
       "seed": 1799097591,
       "file": "h02-abstract.png"
     },
     {
       "case": "h03",
       "mode": "scenery",
+      "expanse": 0,
       "seed": 3235492019,
       "file": "h03-scenery.png"
     },
     {
       "case": "h03",
       "mode": "balanced",
+      "expanse": 0,
       "seed": 3235492019,
       "file": "h03-balanced.png"
     },
     {
       "case": "h03",
       "mode": "abstract",
+      "expanse": 0,
       "seed": 3235492019,
       "file": "h03-abstract.png"
     }

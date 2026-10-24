@@ -1,0 +1,907 @@
+{
+  "version": "canvas-gestures-1.0",
+  "scope": "same-six-answers-local-painting-expansion",
+  "modelCalls": 0,
+  "rows": [
+    {
+      "case": "u01",
+      "poem": "明月松间照，清泉石上流。",
+      "style": "auto",
+      "expanse": 0,
+      "mode": "abstract",
+      "seed": 410416620,
+      "file": "u01-local.png",
+      "label": "原局部画法",
+      "coverage": null,
+      "sha256": "14823fe3781f84fbf4936349bd309d8e308daf9f0896849170c0c0b0d04713f5",
+      "placements": [
+        {
+          "anchor": [
+            320,
+            175
+          ],
+          "at": [
+            0.78,
+            0.23
+          ],
+          "scale": 0.85
+        },
+        {
+          "anchor": [
+            320,
+            388
+          ],
+          "at": [
+            0.40444113756613764,
+            0.815
+          ],
+          "scale": 1.15
+        },
+        {
+          "anchor": [
+            320,
+            130
+          ],
+          "at": [
+            0.5,
+            0.44
+          ],
+          "scale": 1.5
+        },
+        {
+          "anchor": [
+            320,
+            245
+          ],
+          "at": [
+            0.46596402116402114,
+            0.8230000000000001
+          ],
+          "scale": 0.95
+        },
+        {
+          "anchor": [
+            320,
+            194
+          ],
+          "at": [
+            0.58,
+            0.35
+          ],
+          "scale": 1.7
+        },
+        {
+          "anchor": [
+            320,
+            194
+          ],
+          "at": [
+            0.5,
+            0.51
+          ],
+          "scale": 1.6
+        }
+      ]
+    },
+    {
+      "case": "u01",
+      "poem": "明月松间照，清泉石上流。",
+      "style": "auto",
+      "expanse": 0.95,
+      "mode": "abstract",
+      "seed": 410416620,
+      "file": "u01-wide.png",
+      "label": "自由铺展",
+      "coverage": {
+        "fraction": 0.4274878472222222,
+        "width": 1,
+        "height": 1,
+        "tiles": 24
+      },
+      "sha256": "61d010a2369083477c0a4d7eea6f8e12df0a867d07eeb17f49c319388a228a1d",
+      "placements": [
+        {
+          "anchor": [
+            320,
+            175
+          ],
+          "at": [
+            0.78,
+            0.23
+          ],
+          "scale": 0.85
+        },
+        {
+          "anchor": [
+            320,
+            388
+          ],
+          "at": [
+            0.40444113756613764,
+            0.815
+          ],
+          "scale": 1.15
+        },
+        {
+          "anchor": [
+            320,
+            130
+          ],
+          "at": [
+            0.5,
+            0.44
+          ],
+          "scale": 1.5
+        },
+        {
+          "anchor": [
+            320,
+            245
+          ],
+          "at": [
+            0.46596402116402114,
+            0.8230000000000001
+          ],
+          "scale": 0.95
+        },
+        {
+          "anchor": [
+            320,
+            194
+          ],
+          "at": [
+            0.58,
+            0.35
+          ],
+          "scale": 1.7
+        },
+        {
+          "anchor": [
+            320,
+            194
+          ],
+          "at": [
+            0.5,
+            0.51
+          ],
+          "scale": 1.6
+        }
+      ]
+    },
+    {
+      "case": "u02",
+      "poem": "从此无心爱良夜，任他明月下西楼。",
+      "style": "auto",
+      "expanse": 0,
+      "mode": "abstract",
+      "seed": 723713584,
+      "file": "u02-local.png",
+      "label": "原局部画法",
+      "coverage": null,
+      "sha256": "b9d427b75836f0ff07f8240fb11b94c80fa8d5cd509a918e9a3170bfd3c6cd27",
+      "placements": [
+        {
+          "anchor": [
+            320,
+            175
+          ],
+          "at": [
+            0.72,
+            0.22
+          ],
+          "scale": 0.85
+        },
+        {
+          "anchor": [
+            320,
+            320
+          ],
+          "at": [
+            0.618323792125,
+            0.73
+          ],
+          "scale": 0.9
+        },
+        {
+          "anchor": [
+            320,
+            194
+          ],
+          "at": [
+            0.5,
+            0.54
+          ],
+          "scale": 1.6
+        }
+      ]
+    },
+    {
+      "case": "u02",
+      "poem": "从此无心爱良夜，任他明月下西楼。",
+      "style": "auto",
+      "expanse": 0.95,
+      "mode": "abstract",
+      "seed": 723713584,
+      "file": "u02-wide.png",
+      "label": "自由铺展",
+      "coverage": {
+        "fraction": 0.09482465277777778,
+        "width": 1,
+        "height": 1,
+        "tiles": 24
+      },
+      "sha256": "c766035ae60c45d43ada4e3943d51b3ff17d446a28e613aca90ee25f5714b565",
+      "placements": [
+        {
+          "anchor": [
+            320,
+            175
+          ],
+          "at": [
+            0.72,
+            0.22
+          ],
+          "scale": 0.85
+        },
+        {
+          "anchor": [
+            320,
+            320
+          ],
+          "at": [
+            0.618323792125,
+            0.73
+          ],
+          "scale": 0.9
+        },
+        {
+          "anchor": [
+            320,
+            194
+          ],
+          "at": [
+            0.5,
+            0.54
+          ],
+          "scale": 1.6
+        }
+      ]
+    },
+    {
+      "case": "u03",
+      "poem": "剪不断，理还乱，是离愁。",
+      "style": "auto",
+      "expanse": 0,
+      "mode": "abstract",
+      "seed": 2819797886,
+      "file": "u03-local.png",
+      "label": "原局部画法",
+      "coverage": null,
+      "sha256": "b411a27a7d8e8dff84d321a9361a4aaec4d57e42b077f71662344bf6b9357393"
+    },
+    {
+      "case": "u03",
+      "poem": "剪不断，理还乱，是离愁。",
+      "style": "auto",
+      "expanse": 0.95,
+      "mode": "abstract",
+      "seed": 2819797886,
+      "file": "u03-wide.png",
+      "label": "自由铺展",
+      "coverage": {
+        "fraction": 0.174234375,
+        "width": 1,
+        "height": 1,
+        "tiles": 24
+      },
+      "sha256": "52652272e0515eebca016b2443ce57acdb898a6427864d850269fb36182a73b7"
+    },
+    {
+      "case": "h01",
+      "poem": "返景入深林，复照青苔上。",
+      "style": "auto",
+      "expanse": 0,
+      "mode": "abstract",
+      "seed": 958039947,
+      "file": "h01-local.png",
+      "label": "原局部画法",
+      "coverage": null,
+      "sha256": "e37602124336335bdc569e5e1502020ecd99ebc8fcc6b7f217a708a61bb9c63d",
+      "placements": [
+        {
+          "anchor": [
+            320,
+            194
+          ],
+          "at": [
+            0.59,
+            0.8
+          ],
+          "scale": 1.5
+        },
+        {
+          "anchor": [
+            320,
+            194
+          ],
+          "at": [
+            0.59,
+            0.89
+          ],
+          "scale": 1.5
+        },
+        {
+          "anchor": [
+            320,
+            388
+          ],
+          "at": [
+            0.5360400000000001,
+            0.8104539999999999
+          ],
+          "scale": 1.15
+        },
+        {
+          "anchor": [
+            320,
+            194
+          ],
+          "at": [
+            0.5,
+            0.52
+          ],
+          "scale": 1.6
+        }
+      ]
+    },
+    {
+      "case": "h01",
+      "poem": "返景入深林，复照青苔上。",
+      "style": "auto",
+      "expanse": 0.95,
+      "mode": "abstract",
+      "seed": 958039947,
+      "file": "h01-wide.png",
+      "label": "自由铺展",
+      "coverage": {
+        "fraction": 0.8256059027777778,
+        "width": 1,
+        "height": 1,
+        "tiles": 24
+      },
+      "sha256": "db20e2592cbb90aaecf747e65c03985e47366eb0c586497e122704b98a5d7170",
+      "placements": [
+        {
+          "anchor": [
+            320,
+            194
+          ],
+          "at": [
+            0.59,
+            0.8
+          ],
+          "scale": 1.5
+        },
+        {
+          "anchor": [
+            320,
+            194
+          ],
+          "at": [
+            0.59,
+            0.89
+          ],
+          "scale": 1.5
+        },
+        {
+          "anchor": [
+            320,
+            388
+          ],
+          "at": [
+            0.5360400000000001,
+            0.8104539999999999
+          ],
+          "scale": 1.15
+        },
+        {
+          "anchor": [
+            320,
+            194
+          ],
+          "at": [
+            0.5,
+            0.52
+          ],
+          "scale": 1.6
+        }
+      ]
+    },
+    {
+      "case": "h02",
+      "poem": "孤舟蓑笠翁，独钓寒江雪。",
+      "style": "auto",
+      "expanse": 0,
+      "mode": "abstract",
+      "seed": 1799097591,
+      "file": "h02-local.png",
+      "label": "原局部画法",
+      "coverage": null,
+      "sha256": "9cdc2e969d5a40db9a932f02107b077dc2b046aa6014c56d8e4b6c344b4c4a75",
+      "placements": [
+        {
+          "anchor": [
+            320,
+            310
+          ],
+          "at": [
+            0.632,
+            0.788
+          ],
+          "scale": 0.6
+        },
+        {
+          "anchor": [
+            320,
+            130
+          ],
+          "at": [
+            0.5,
+            0.48
+          ],
+          "scale": 1.5
+        },
+        {
+          "anchor": [
+            320,
+            230
+          ],
+          "at": [
+            0.65,
+            0.8
+          ],
+          "scale": 0.95
+        },
+        {
+          "anchor": [
+            320,
+            194
+          ],
+          "at": [
+            0.5,
+            0.5
+          ],
+          "scale": 1.55
+        },
+        {
+          "anchor": [
+            320,
+            194
+          ],
+          "at": [
+            0.47,
+            0.23
+          ],
+          "scale": 1.7
+        }
+      ]
+    },
+    {
+      "case": "h02",
+      "poem": "孤舟蓑笠翁，独钓寒江雪。",
+      "style": "auto",
+      "expanse": 0.95,
+      "mode": "abstract",
+      "seed": 1799097591,
+      "file": "h02-wide.png",
+      "label": "自由铺展",
+      "coverage": {
+        "fraction": 1,
+        "width": 1,
+        "height": 1,
+        "tiles": 24
+      },
+      "sha256": "79bca6d4024f6b27aba7d55540147735ea978272ee2393280bc4c96e9e0fba6c",
+      "placements": [
+        {
+          "anchor": [
+            320,
+            310
+          ],
+          "at": [
+            0.632,
+            0.788
+          ],
+          "scale": 0.6
+        },
+        {
+          "anchor": [
+            320,
+            130
+          ],
+          "at": [
+            0.5,
+            0.48
+          ],
+          "scale": 1.5
+        },
+        {
+          "anchor": [
+            320,
+            230
+          ],
+          "at": [
+            0.65,
+            0.8
+          ],
+          "scale": 0.95
+        },
+        {
+          "anchor": [
+            320,
+            194
+          ],
+          "at": [
+            0.5,
+            0.5
+          ],
+          "scale": 1.55
+        },
+        {
+          "anchor": [
+            320,
+            194
+          ],
+          "at": [
+            0.47,
+            0.23
+          ],
+          "scale": 1.7
+        }
+      ]
+    },
+    {
+      "case": "h03",
+      "poem": "问君能有几多愁？恰似一江春水向东流！",
+      "style": "auto",
+      "expanse": 0,
+      "mode": "abstract",
+      "seed": 3235492019,
+      "file": "h03-local.png",
+      "label": "原局部画法",
+      "coverage": null,
+      "sha256": "9954d5286a7f442a2ea391be706e7ba17954827327587779e8d22a08bdda2281"
+    },
+    {
+      "case": "h03",
+      "poem": "问君能有几多愁？恰似一江春水向东流！",
+      "style": "auto",
+      "expanse": 0.95,
+      "mode": "abstract",
+      "seed": 3235492019,
+      "file": "h03-wide.png",
+      "label": "自由铺展",
+      "coverage": {
+        "fraction": 0.08687673611111112,
+        "width": 1,
+        "height": 1,
+        "tiles": 24
+      },
+      "sha256": "7fb01b305548e70c9df92d4fd93ed850aaa7c73925cc2cdba7b94d595fb078c0"
+    },
+    {
+      "case": "u03",
+      "poem": "剪不断，理还乱，是离愁。",
+      "style": "flow",
+      "expanse": 0.95,
+      "mode": "abstract",
+      "seed": 2819797886,
+      "file": "brush-flow.png",
+      "label": "flow",
+      "coverage": {
+        "fraction": 0.0903107638888889,
+        "width": 1,
+        "height": 1,
+        "tiles": 24
+      },
+      "sha256": "d60254c1f8563e355a7655190725aac51b7a8ae7d697e30a8fcb773817a82adf"
+    },
+    {
+      "case": "u03",
+      "poem": "剪不断，理还乱，是离愁。",
+      "style": "ink",
+      "expanse": 0.95,
+      "mode": "abstract",
+      "seed": 2819797886,
+      "file": "brush-ink.png",
+      "label": "ink",
+      "coverage": {
+        "fraction": 0.8930138888888889,
+        "width": 1,
+        "height": 1,
+        "tiles": 24
+      },
+      "sha256": "706d5cdd90346a2c9fe222ffe7d3f9cf051eb2ce6539f2526b2228216573ef0d"
+    },
+    {
+      "case": "u03",
+      "poem": "剪不断，理还乱，是离愁。",
+      "style": "shards",
+      "expanse": 0.95,
+      "mode": "abstract",
+      "seed": 2819797886,
+      "file": "brush-shards.png",
+      "label": "shards",
+      "coverage": {
+        "fraction": 0.8482951388888889,
+        "width": 1,
+        "height": 1,
+        "tiles": 24
+      },
+      "sha256": "c3e54ea8d79a70bb53b05f35f23df2b68840aaab6ec0b34c6bfc705e095dd374"
+    },
+    {
+      "case": "u03",
+      "poem": "剪不断，理还乱，是离愁。",
+      "style": "ribbons",
+      "expanse": 0.95,
+      "mode": "abstract",
+      "seed": 2819797886,
+      "file": "brush-ribbons.png",
+      "label": "ribbons",
+      "coverage": {
+        "fraction": 0.2803333333333333,
+        "width": 1,
+        "height": 1,
+        "tiles": 24
+      },
+      "sha256": "3bff5993b253f205baa4c0c79e113b9175a4ea31aafba65241ff67af1e979ffb"
+    },
+    {
+      "case": "u03",
+      "poem": "剪不断，理还乱，是离愁。",
+      "style": "ripples",
+      "expanse": 0.95,
+      "mode": "abstract",
+      "seed": 2819797886,
+      "file": "brush-ripples.png",
+      "label": "ripples",
+      "coverage": {
+        "fraction": 0.08676388888888889,
+        "width": 1,
+        "height": 1,
+        "tiles": 24
+      },
+      "sha256": "e9fcaa7f33c534c80a697045385c9e65a3a2f4cff1523cc78a3b46b8af4b6e79"
+    },
+    {
+      "case": "u03",
+      "poem": "剪不断，理还乱，是离愁。",
+      "style": "dust",
+      "expanse": 0.95,
+      "mode": "abstract",
+      "seed": 2819797886,
+      "file": "brush-dust.png",
+      "label": "dust",
+      "coverage": {
+        "fraction": 0.018756944444444444,
+        "width": 1,
+        "height": 1,
+        "tiles": 20
+      },
+      "sha256": "9ed0e06aec87b05d413b0d51f84751d3571322029f46b8e09067b0c85dc265de"
+    },
+    {
+      "case": "u03",
+      "poem": "剪不断，理还乱，是离愁。",
+      "style": "contours",
+      "expanse": 0.95,
+      "mode": "abstract",
+      "seed": 2819797886,
+      "file": "brush-contours.png",
+      "label": "contours",
+      "coverage": {
+        "fraction": 0.0853454861111111,
+        "width": 1,
+        "height": 1,
+        "tiles": 24
+      },
+      "sha256": "690e0e289ca1872785da41a1e247979f2cba19fc7e5cb3af08c2028e70654284"
+    },
+    {
+      "case": "u03",
+      "poem": "剪不断，理还乱，是离愁。",
+      "style": "echoes",
+      "expanse": 0.95,
+      "mode": "abstract",
+      "seed": 2819797886,
+      "file": "brush-echoes.png",
+      "label": "echoes",
+      "coverage": {
+        "fraction": 0.08676388888888889,
+        "width": 1,
+        "height": 1,
+        "tiles": 24
+      },
+      "sha256": "3445aa21f6406e3f139cf664811147deaa67c2a80c93dd57874dd3ac575cc57c"
+    },
+    {
+      "case": "u03",
+      "poem": "剪不断，理还乱，是离愁。",
+      "style": "weave",
+      "expanse": 0.95,
+      "mode": "abstract",
+      "seed": 2819797886,
+      "file": "brush-weave.png",
+      "label": "weave",
+      "coverage": {
+        "fraction": 0.174234375,
+        "width": 1,
+        "height": 1,
+        "tiles": 24
+      },
+      "sha256": "bf0c4d32c64b32e86d5161435f92f2da86d64879cde6d2731b1affe1af835e11"
+    },
+    {
+      "case": "u03",
+      "poem": "剪不断，理还乱，是离愁。",
+      "style": "vortex",
+      "expanse": 0.95,
+      "mode": "abstract",
+      "seed": 2819797886,
+      "file": "brush-vortex.png",
+      "label": "vortex",
+      "coverage": {
+        "fraction": 0.17774305555555556,
+        "width": 1,
+        "height": 1,
+        "tiles": 24
+      },
+      "sha256": "a56aada649bdf9eac46d7ec5b2e80ab031fd413d5866934828ed036ae49a3279"
+    },
+    {
+      "case": "u03",
+      "poem": "剪不断，理还乱，是离愁。",
+      "style": "bloom",
+      "expanse": 0.95,
+      "mode": "abstract",
+      "seed": 2819797886,
+      "file": "brush-bloom.png",
+      "label": "bloom",
+      "coverage": {
+        "fraction": 0.8930138888888889,
+        "width": 1,
+        "height": 1,
+        "tiles": 24
+      },
+      "sha256": "63cd8590e0466ded4e78d927bbad46a8acaf4062c221b2f8afcad0e642eabf1b"
+    },
+    {
+      "case": "u03",
+      "poem": "剪不断，理还乱，是离愁。",
+      "style": "fissures",
+      "expanse": 0.95,
+      "mode": "abstract",
+      "seed": 2819797886,
+      "file": "brush-fissures.png",
+      "label": "fissures",
+      "coverage": {
+        "fraction": 0.73390625,
+        "width": 1,
+        "height": 1,
+        "tiles": 24
+      },
+      "sha256": "806bb8ebc4dd1731c6c80eb2efde28a8fb396bec6953c80148ad5bcc3c4d12fd"
+    },
+    {
+      "case": "u03",
+      "poem": "剪不断，理还乱，是离愁。",
+      "style": "fibers",
+      "expanse": 0.95,
+      "mode": "abstract",
+      "seed": 2819797886,
+      "file": "brush-fibers.png",
+      "label": "fibers",
+      "coverage": {
+        "fraction": 0.2017378472222222,
+        "width": 1,
+        "height": 1,
+        "tiles": 24
+      },
+      "sha256": "8fdf19b61312bc068ac9d6b2c4f2b3a3efbb1bdac4422f70f49ad8f7e3b18441"
+    }
+  ],
+  "hashes": {
+    "gesture-field.js": "ad89d7050e8c916171d8631b5b57eab87ce91f677f25fd509880be02d4afcd65",
+    "abstract-scene.js": "052017da249bab7e106d0c7d123e3c04d351e281e630caf1255deaf5481790fd",
+    "expression-layout.js": "c09065f906fb690c0759c29e12ba433c1da3c391d159eddc8de25e1d544063be",
+    "../../poem-flow/expression-app.js": "6dc1498b83053b4e4c2e0d334b5ec34aa635325c4dc27d0dd60e4bd711a8b67a",
+    "../../poem-flow/abstract-app.js": "12eaf48462b53b44e56c7816309d24ef2d7423997785e37f28d58ba9850b9d24"
+  },
+  "allThirteenBrushesSpanCanvas": true,
+  "legacyPriorImplementationExact": 12,
+  "priorCommit": "5b529a1",
+  "legacyDifferences": [
+    {
+      "file": "a01-0.png",
+      "priorChanged": 0,
+      "historicalMax": 1,
+      "historicalChanged": 4
+    },
+    {
+      "file": "a01-1.png",
+      "priorChanged": 0,
+      "historicalMax": 0,
+      "historicalChanged": 0
+    },
+    {
+      "file": "a01-2.png",
+      "priorChanged": 0,
+      "historicalMax": 1,
+      "historicalChanged": 2
+    },
+    {
+      "file": "a01-3.png",
+      "priorChanged": 0,
+      "historicalMax": 0,
+      "historicalChanged": 0
+    },
+    {
+      "file": "a01-4.png",
+      "priorChanged": 0,
+      "historicalMax": 0,
+      "historicalChanged": 0
+    },
+    {
+      "file": "a01-5.png",
+      "priorChanged": 0,
+      "historicalMax": 1,
+      "historicalChanged": 2
+    },
+    {
+      "file": "a01-6.png",
+      "priorChanged": 0,
+      "historicalMax": 14,
+      "historicalChanged": 335
+    },
+    {
+      "file": "a01-7.png",
+      "priorChanged": 0,
+      "historicalMax": 1,
+      "historicalChanged": 3
+    },
+    {
+      "file": "a03-extension-0.png",
+      "priorChanged": 0,
+      "historicalMax": 1,
+      "historicalChanged": 3
+    },
+    {
+      "file": "a03-extension-1.png",
+      "priorChanged": 0,
+      "historicalMax": 0,
+      "historicalChanged": 0
+    },
+    {
+      "file": "a03-extension-2.png",
+      "priorChanged": 0,
+      "historicalMax": 0,
+      "historicalChanged": 0
+    },
+    {
+      "file": "a03-extension-3.png",
+      "priorChanged": 0,
+      "historicalMax": 0,
+      "historicalChanged": 0
+    }
+  ],
+  "historicalArtifactsUnchanged": 169,
+  "samePhysicalGeometry": true,
+  "slider": true,
+  "individualDisturbance": true,
+  "pixelReproducibility": true,
+  "mobile": 390,
+  "browserErrors": [],
+  "networkPosts": [],
+  "aestheticAcceptance": "pending-user"
+}

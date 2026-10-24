@@ -17,7 +17,8 @@
  function random(seed){let a=seed>>>0;return ()=>{a+=0x6D2B79F5;let t=a;t=Math.imul(t^t>>>15,t|1);t^=t+Math.imul(t^t>>>7,t|61);return ((t^t>>>14)>>>0)/4294967296;};}
  const hash=s=>{let h=2166136261;for(const c of JSON.stringify(s))h=Math.imul(h^c.charCodeAt(0),16777619);return (h>>>0).toString(16);};
  const expressionLayout=typeof module==='object'&&module.exports?require('./expression-layout.js'):globalThis.PoemExpression;
- function compose(plan,{seed=plan.seed,style='auto',palette='auto',density=.55,vocabulary='expanded',expression=null}={}){
+ const gestures=typeof module==='object'&&module.exports?require('./gesture-field.js'):globalThis.PoemGestures;
+ function compose(plan,{seed=plan.seed,style='auto',palette='auto',density=.55,vocabulary='expanded',expression=null,expanse=undefined}={}){
   const rng=random(seed),rand=(a,b)=>a+rng()*(b-a),night=plan.atmosphere.illumination==='night';
   const available=night?palettes.filter(p=>p.dark):palettes;
   const scheme=palettes.find(p=>p.id===palette)||(available[Math.floor(rng()*available.length)]);
@@ -33,7 +34,10 @@
    return {...node,at,form,radius:(n<3?143:109)*rand(.83,1.28),color:scheme.colors[(i+Math.floor(rng()*2))%scheme.colors.length],secondary:scheme.colors[(i+2)%scheme.colors.length],phase:rand(0,TAU),angle:rand(-1,1),frequency:rand(1.2,3.6),stretch:rand(.68,1.6),count:Math.round(rand(22,44)*(.55+clamp(density)*1.1)),salt:Math.floor(rand(1,1e8))};
   });
   const result={seed:seed>>>0,style,palette:scheme,layout,nodes,geometryKey:hash({seed,style,scheme,nodes}),variationBasis:'local-artistic-choice'};
-  return expression&&plan.expression?expressionLayout.arrange(plan,result,expression):result;
+  const arranged=expression&&plan.expression?expressionLayout.arrange(plan,result,expression):result;
+  const amount=(expanse===undefined?(expression ? .9 : 0):Math.max(0,Math.min(1,Number(expanse)||0)))*(arranged.expression?{scenery:0,balanced:.5,abstract:1}[arranged.expression.mode]:1);
+  if(amount>0){arranged.frame=gestures.build(plan,arranged,amount);if(arranged.frame)arranged.geometryKey+='-expanse-'+amount;}
+  return arranged;
  }
  function positions(plan,composition,time,offsets={},hybrid=false){
   const state=composition.nodes.map(n=>{
@@ -173,12 +177,13 @@
    const nodes=positions(plan,composition,time,offsets,options.hybrid||!!options.expression).map(n=>{if(n.mode==='gap'||n.binding||options.hybrid&&n.kind==='concrete')return n;const d=response(n.at,time,pulses,options.response);return {...n,at:n.at.map((v,i)=>v+d.offset[i]),twist:d.twist};});
    if(!options.expression)for(const n of nodes){if(n.mode==='gap'||options.hybrid&&n.kind==='concrete')continue;const r=n.radius*2.25,g=c.createRadialGradient(n.at[0]*W,n.at[1]*H,0,n.at[0]*W,n.at[1]*H,r);g.addColorStop(0,n.color+(scheme.dark?'14':'0B'));g.addColorStop(1,n.color+'00');c.fillStyle=g;c.fillRect(0,0,W,H);}
    if(paper){c.globalAlpha=options.hybrid?.09:.22;c.drawImage(paper,0,0);}
+   if(composition.frame)gestures.paint(c,composition.frame,scheme,nodes,time,{density:options.density,warp:pulses.length&&options.response>0?at=>response(at,time,pulses,options.response).offset:null});
    for(const h of history){const age=time-h.time;if(age>=0&&age<18*options.trace){const base=nodes.find(n=>n.id===h.id);if(base)glyph({...base,at:h.at},h.time,(1-age/(18*options.trace))*.18*options.trace);}}
    if(!options.expression||!plan.concretePlan)links(nodes);expressionMarks(nodes);
    for(const n of nodes){if(options.hybrid&&n.kind==='concrete'||options.expression&&n.expressionGain===0)continue;
     const p=plan.processes.find(p=>p.subject===n.id&&p.modality==='asserted'&&p.kind==='accumulate'&&p.temporal!=='not_yet');
     if(p)for(let j=1;j<=Math.min(5,Math.floor(time/3));j++)glyph({...n,at:[n.at[0]-j*.014,n.at[1]+j*.009]},time-j*2,.09*options.trace);
-    glyph(n,Math.max(0,time-(n.echoDelay||0)));
+    glyph(n,Math.max(0,time-(n.echoDelay||0)),composition.frame && !n.binding ? .24 : 1);
    }
    if(options.expression&&composition.expression?.hasScenery){const accents=foreground();if(accents){c.globalAlpha=composition.expression.foreground;c.drawImage(accents,0,0);c.globalAlpha=1;}}
    // A quiet wavefront makes a click visible even in an empty part of the canvas.
@@ -196,13 +201,13 @@
   const up=e=>{if(!gesture||gesture.id!==e.pointerId)return;const tap=e.type==='pointerup'&&!gesture.moved,p=gesture.p;gesture=null;drag=null;if(tap)impulse(p);};canvas.addEventListener('pointerdown',down);canvas.addEventListener('pointermove',move);for(const event of ['pointerup','pointercancel','lostpointercapture'])canvas.addEventListener(event,up);
   return {
    render(next,settings={}){plan=structuredClone(next);options={...options,...settings};composition=compose(plan,options);time=0;last=null;history=[];pulses=[];maskCache.clear();gesture=null;drag=null;offsets={};texture();cancelAnimationFrame(raf);draw();raf=requestAnimationFrame(loop);return this.inspect();},
-   configure(patch){options={...options,...patch};if(['style','palette','seed','density','vocabulary','expression'].some(k=>Object.hasOwn(patch,k))){composition=compose(plan,options);texture();history=[];pulses=[];gesture=null;drag=null;offsets={};}draw();return this.inspect();},
+   configure(patch){options={...options,...patch};if(['style','palette','seed','density','vocabulary','expression','expanse'].some(k=>Object.hasOwn(patch,k))){composition=compose(plan,options);texture();history=[];pulses=[];gesture=null;drag=null;offsets={};}draw();return this.inspect();},
    reseed(){options.seed=((composition.seed>>>0)+0x9E3779B9)>>>0;return this.render(plan,options);},
    pause(value){paused=!!value;last=null;draw();},
    restart(){time=0;last=null;history=[];pulses=[];gesture=null;drag=null;offsets={};draw();},
    impulse,
    at(value){time=Math.max(0,Number(value)||0);draw();return this.inspect();},
-   inspect(){return {ready:!!plan,time,paused,seed:composition?.seed,geometryKey:composition?.geometryKey,palette:composition?.palette.id,style:options.style,options:{...options},expression:composition?.expression&&structuredClone(composition.expression),masks:[...maskCache.keys()],nodes:plan?positions(plan,composition,time,offsets,options.hybrid||!!options.expression):[],history:history.length,pulses:pulses.filter(p=>time>=p.time&&time-p.time<=8).map(p=>({...p,at:[...p.at]})),relations:plan?.relations,processes:plan?.processes};},
+   inspect(){return {ready:!!plan,time,paused,seed:composition?.seed,geometryKey:composition?.geometryKey,palette:composition?.palette.id,style:options.style,options:{...options},frame:composition?.frame&&structuredClone(composition.frame),expression:composition?.expression&&structuredClone(composition.expression),masks:[...maskCache.keys()],nodes:plan?positions(plan,composition,time,offsets,options.hybrid||!!options.expression):[],history:history.length,pulses:pulses.filter(p=>time>=p.time&&time-p.time<=8).map(p=>({...p,at:[...p.at]})),relations:plan?.relations,processes:plan?.processes};},
    save(){draw();const a=document.createElement('a');a.download='流动诗-抽象表达-'+composition.seed+'.png';a.href=canvas.toDataURL('image/png');a.click();},
    dispose(){disposed=true;cancelAnimationFrame(raf);canvas.removeEventListener('pointerdown',down);canvas.removeEventListener('pointermove',move);for(const event of ['pointerup','pointercancel','lostpointercapture'])canvas.removeEventListener(event,up);}
   };

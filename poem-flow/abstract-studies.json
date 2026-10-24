@@ -2257,7 +2257,8 @@
       "vocabulary": "classic",
       "hybrid": false,
       "file": "a01-0.png",
-      "label": "交融 · 抽象表达"
+      "label": "交融 · 抽象表达",
+      "expanse": 0
     },
     {
       "case": "a01",
@@ -2267,7 +2268,8 @@
       "vocabulary": "classic",
       "hybrid": false,
       "file": "a01-1.png",
-      "label": "流线 · 抽象表达"
+      "label": "流线 · 抽象表达",
+      "expanse": 0
     },
     {
       "case": "a01",
@@ -2277,7 +2279,8 @@
       "vocabulary": "classic",
       "hybrid": false,
       "file": "a01-2.png",
-      "label": "墨晕 · 抽象表达"
+      "label": "墨晕 · 抽象表达",
+      "expanse": 0
     },
     {
       "case": "a01",
@@ -2287,7 +2290,8 @@
       "vocabulary": "classic",
       "hybrid": false,
       "file": "a01-3.png",
-      "label": "碎片 · 抽象表达"
+      "label": "碎片 · 抽象表达",
+      "expanse": 0
     },
     {
       "case": "a01",
@@ -2297,7 +2301,8 @@
       "vocabulary": "classic",
       "hybrid": false,
       "file": "a01-4.png",
-      "label": "丝带 · 抽象表达"
+      "label": "丝带 · 抽象表达",
+      "expanse": 0
     },
     {
       "case": "a01",
@@ -2307,7 +2312,8 @@
       "vocabulary": "classic",
       "hybrid": false,
       "file": "a01-5.png",
-      "label": "涟漪 · 抽象表达"
+      "label": "涟漪 · 抽象表达",
+      "expanse": 0
     },
     {
       "case": "a01",
@@ -2317,7 +2323,8 @@
       "vocabulary": "classic",
       "hybrid": false,
       "file": "a01-6.png",
-      "label": "微粒 · 抽象表达"
+      "label": "微粒 · 抽象表达",
+      "expanse": 0
     },
     {
       "case": "a01",
@@ -2327,7 +2334,8 @@
       "vocabulary": "classic",
       "hybrid": false,
       "file": "a01-7.png",
-      "label": "等高纹 · 抽象表达"
+      "label": "等高纹 · 抽象表达",
+      "expanse": 0
     },
     {
       "case": "a02",
@@ -2337,7 +2345,8 @@
       "vocabulary": "classic",
       "hybrid": false,
       "file": "a02-0.png",
-      "label": "墨晕 · 抽象表达"
+      "label": "墨晕 · 抽象表达",
+      "expanse": 0
     },
     {
       "case": "a02",
@@ -2347,7 +2356,8 @@
       "vocabulary": "classic",
       "hybrid": false,
       "file": "a02-1.png",
-      "label": "碎片 · 抽象表达"
+      "label": "碎片 · 抽象表达",
+      "expanse": 0
     },
     {
       "case": "a02",
@@ -2357,7 +2367,8 @@
       "vocabulary": "classic",
       "hybrid": false,
       "file": "a02-2.png",
-      "label": "丝带 · 抽象表达"
+      "label": "丝带 · 抽象表达",
+      "expanse": 0
     },
     {
       "case": "a02",
@@ -2367,7 +2378,8 @@
       "vocabulary": "classic",
       "hybrid": false,
       "file": "a02-3.png",
-      "label": "涟漪 · 抽象表达"
+      "label": "涟漪 · 抽象表达",
+      "expanse": 0
     },
     {
       "case": "a02",
@@ -2377,7 +2389,8 @@
       "vocabulary": "classic",
       "hybrid": false,
       "file": "a02-4.png",
-      "label": "微粒 · 抽象表达"
+      "label": "微粒 · 抽象表达",
+      "expanse": 0
     },
     {
       "case": "a02",
@@ -2387,7 +2400,8 @@
       "vocabulary": "classic",
       "hybrid": false,
       "file": "a02-5.png",
-      "label": "等高纹 · 抽象表达"
+      "label": "等高纹 · 抽象表达",
+      "expanse": 0
     },
     {
       "case": "a02",
@@ -2397,7 +2411,8 @@
       "vocabulary": "classic",
       "hybrid": false,
       "file": "a02-6.png",
-      "label": "叠影 · 抽象表达"
+      "label": "叠影 · 抽象表达",
+      "expanse": 0
     },
     {
       "case": "a02",
@@ -2407,7 +2422,8 @@
       "vocabulary": "classic",
       "hybrid": false,
       "file": "a02-7.png",
-      "label": "网织 · 抽象表达"
+      "label": "网织 · 抽象表达",
+      "expanse": 0
     },
     {
       "case": "a03",
@@ -2417,7 +2433,8 @@
       "vocabulary": "classic",
       "hybrid": false,
       "file": "a03-0.png",
-      "label": "丝带 · 抽象表达"
+      "label": "丝带 · 抽象表达",
+      "expanse": 0
     },
     {
       "case": "a03",
@@ -2427,7 +2444,8 @@
       "vocabulary": "classic",
       "hybrid": false,
       "file": "a03-1.png",
-      "label": "涟漪 · 抽象表达"
+      "label": "涟漪 · 抽象表达",
+      "expanse": 0
     },
     {
       "case": "a03",
@@ -2437,7 +2455,8 @@
       "vocabulary": "classic",
       "hybrid": false,
       "file": "a03-2.png",
-      "label": "微粒 · 抽象表达"
+      "label": "微粒 · 抽象表达",
+      "expanse": 0
     },
     {
       "case": "a03",
@@ -2447,7 +2466,8 @@
       "vocabulary": "classic",
       "hybrid": false,
       "file": "a03-3.png",
-      "label": "等高纹 · 抽象表达"
+      "label": "等高纹 · 抽象表达",
+      "expanse": 0
     },
     {
       "case": "a03",
@@ -2457,7 +2477,8 @@
       "vocabulary": "classic",
       "hybrid": false,
       "file": "a03-4.png",
-      "label": "叠影 · 抽象表达"
+      "label": "叠影 · 抽象表达",
+      "expanse": 0
     },
     {
       "case": "a03",
@@ -2467,7 +2488,8 @@
       "vocabulary": "classic",
       "hybrid": false,
       "file": "a03-5.png",
-      "label": "网织 · 抽象表达"
+      "label": "网织 · 抽象表达",
+      "expanse": 0
     },
     {
       "case": "a03",
@@ -2477,7 +2499,8 @@
       "vocabulary": "classic",
       "hybrid": false,
       "file": "a03-6.png",
-      "label": "交融 · 抽象表达"
+      "label": "交融 · 抽象表达",
+      "expanse": 0
     },
     {
       "case": "a03",
@@ -2487,7 +2510,8 @@
       "vocabulary": "classic",
       "hybrid": false,
       "file": "a03-7.png",
-      "label": "流线 · 抽象表达"
+      "label": "流线 · 抽象表达",
+      "expanse": 0
     },
     {
       "case": "a04",
@@ -2497,7 +2521,8 @@
       "vocabulary": "classic",
       "hybrid": true,
       "file": "a04-0.png",
-      "label": "微粒 · 景物叠加"
+      "label": "微粒 · 景物叠加",
+      "expanse": 0
     },
     {
       "case": "a04",
@@ -2507,7 +2532,8 @@
       "vocabulary": "classic",
       "hybrid": true,
       "file": "a04-1.png",
-      "label": "等高纹 · 景物叠加"
+      "label": "等高纹 · 景物叠加",
+      "expanse": 0
     },
     {
       "case": "a04",
@@ -2517,7 +2543,8 @@
       "vocabulary": "classic",
       "hybrid": true,
       "file": "a04-2.png",
-      "label": "叠影 · 景物叠加"
+      "label": "叠影 · 景物叠加",
+      "expanse": 0
     },
     {
       "case": "a04",
@@ -2527,7 +2554,8 @@
       "vocabulary": "classic",
       "hybrid": true,
       "file": "a04-3.png",
-      "label": "网织 · 景物叠加"
+      "label": "网织 · 景物叠加",
+      "expanse": 0
     },
     {
       "case": "a04",
@@ -2537,7 +2565,8 @@
       "vocabulary": "classic",
       "hybrid": false,
       "file": "a04-4.png",
-      "label": "交融 · 抽象表达"
+      "label": "交融 · 抽象表达",
+      "expanse": 0
     },
     {
       "case": "a04",
@@ -2547,7 +2576,8 @@
       "vocabulary": "classic",
       "hybrid": false,
       "file": "a04-5.png",
-      "label": "流线 · 抽象表达"
+      "label": "流线 · 抽象表达",
+      "expanse": 0
     },
     {
       "case": "a04",
@@ -2557,7 +2587,8 @@
       "vocabulary": "classic",
       "hybrid": false,
       "file": "a04-6.png",
-      "label": "墨晕 · 抽象表达"
+      "label": "墨晕 · 抽象表达",
+      "expanse": 0
     },
     {
       "case": "a04",
@@ -2567,7 +2598,8 @@
       "vocabulary": "classic",
       "hybrid": false,
       "file": "a04-7.png",
-      "label": "碎片 · 抽象表达"
+      "label": "碎片 · 抽象表达",
+      "expanse": 0
     },
     {
       "case": "a01",
@@ -2577,7 +2609,8 @@
       "hybrid": false,
       "file": "a01-extension-0.png",
       "label": "涡流 · 新画法",
-      "extension": true
+      "extension": true,
+      "expanse": 0
     },
     {
       "case": "a01",
@@ -2587,7 +2620,8 @@
       "hybrid": false,
       "file": "a01-extension-1.png",
       "label": "浸染 · 新画法",
-      "extension": true
+      "extension": true,
+      "expanse": 0
     },
     {
       "case": "a01",
@@ -2597,7 +2631,8 @@
       "hybrid": false,
       "file": "a01-extension-2.png",
       "label": "裂隙 · 新画法",
-      "extension": true
+      "extension": true,
+      "expanse": 0
     },
     {
       "case": "a01",
@@ -2607,7 +2642,8 @@
       "hybrid": false,
       "file": "a01-extension-3.png",
       "label": "游丝 · 新画法",
-      "extension": true
+      "extension": true,
+      "expanse": 0
     },
     {
       "case": "a02",
@@ -2617,7 +2653,8 @@
       "hybrid": false,
       "file": "a02-extension-0.png",
       "label": "涡流 · 新画法",
-      "extension": true
+      "extension": true,
+      "expanse": 0
     },
     {
       "case": "a02",
@@ -2627,7 +2664,8 @@
       "hybrid": false,
       "file": "a02-extension-1.png",
       "label": "浸染 · 新画法",
-      "extension": true
+      "extension": true,
+      "expanse": 0
     },
     {
       "case": "a02",
@@ -2637,7 +2675,8 @@
       "hybrid": false,
       "file": "a02-extension-2.png",
       "label": "裂隙 · 新画法",
-      "extension": true
+      "extension": true,
+      "expanse": 0
     },
     {
       "case": "a02",
@@ -2647,7 +2686,8 @@
       "hybrid": false,
       "file": "a02-extension-3.png",
       "label": "游丝 · 新画法",
-      "extension": true
+      "extension": true,
+      "expanse": 0
     },
     {
       "case": "a03",
@@ -2657,7 +2697,8 @@
       "hybrid": false,
       "file": "a03-extension-0.png",
       "label": "涡流 · 新画法",
-      "extension": true
+      "extension": true,
+      "expanse": 0
     },
     {
       "case": "a03",
@@ -2667,7 +2708,8 @@
       "hybrid": false,
       "file": "a03-extension-1.png",
       "label": "浸染 · 新画法",
-      "extension": true
+      "extension": true,
+      "expanse": 0
     },
     {
       "case": "a03",
@@ -2677,7 +2719,8 @@
       "hybrid": false,
       "file": "a03-extension-2.png",
       "label": "裂隙 · 新画法",
-      "extension": true
+      "extension": true,
+      "expanse": 0
     },
     {
       "case": "a03",
@@ -2687,7 +2730,8 @@
       "hybrid": false,
       "file": "a03-extension-3.png",
       "label": "游丝 · 新画法",
-      "extension": true
+      "extension": true,
+      "expanse": 0
     },
     {
       "case": "a04",
@@ -2697,7 +2741,8 @@
       "hybrid": false,
       "file": "a04-extension-0.png",
       "label": "涡流 · 新画法",
-      "extension": true
+      "extension": true,
+      "expanse": 0
     },
     {
       "case": "a04",
@@ -2707,7 +2752,8 @@
       "hybrid": false,
       "file": "a04-extension-1.png",
       "label": "浸染 · 新画法",
-      "extension": true
+      "extension": true,
+      "expanse": 0
     },
     {
       "case": "a04",
@@ -2717,7 +2763,8 @@
       "hybrid": false,
       "file": "a04-extension-2.png",
       "label": "裂隙 · 新画法",
-      "extension": true
+      "extension": true,
+      "expanse": 0
     },
     {
       "case": "a04",
@@ -2727,7 +2774,8 @@
       "hybrid": false,
       "file": "a04-extension-3.png",
       "label": "游丝 · 新画法",
-      "extension": true
+      "extension": true,
+      "expanse": 0
     },
     {
       "case": "a05",
@@ -2737,7 +2785,8 @@
       "hybrid": false,
       "file": "a05-extension-0.png",
       "label": "涡流 · 新画法",
-      "extension": true
+      "extension": true,
+      "expanse": 0
     },
     {
       "case": "a05",
@@ -2747,7 +2796,8 @@
       "hybrid": false,
       "file": "a05-extension-1.png",
       "label": "浸染 · 新画法",
-      "extension": true
+      "extension": true,
+      "expanse": 0
     },
     {
       "case": "a05",
@@ -2757,7 +2807,8 @@
       "hybrid": false,
       "file": "a05-extension-2.png",
       "label": "裂隙 · 新画法",
-      "extension": true
+      "extension": true,
+      "expanse": 0
     },
     {
       "case": "a05",
@@ -2767,7 +2818,8 @@
       "hybrid": false,
       "file": "a05-extension-3.png",
       "label": "游丝 · 新画法",
-      "extension": true
+      "extension": true,
+      "expanse": 0
     },
     {
       "case": "a05",
@@ -2777,7 +2829,8 @@
       "hybrid": false,
       "file": "a05-extension-4.png",
       "label": "交融 · 新画法",
-      "extension": true
+      "extension": true,
+      "expanse": 0
     },
     {
       "case": "a05",
@@ -2787,7 +2840,8 @@
       "hybrid": false,
       "file": "a05-extension-5.png",
       "label": "流线 · 新画法",
-      "extension": true
+      "extension": true,
+      "expanse": 0
     },
     {
       "case": "a05",
@@ -2797,7 +2851,8 @@
       "hybrid": false,
       "file": "a05-extension-6.png",
       "label": "丝带 · 新画法",
-      "extension": true
+      "extension": true,
+      "expanse": 0
     },
     {
       "case": "a05",
@@ -2807,7 +2862,8 @@
       "hybrid": false,
       "file": "a05-extension-7.png",
       "label": "微粒 · 新画法",
-      "extension": true
+      "extension": true,
+      "expanse": 0
     },
     {
       "case": "a06",
@@ -2817,7 +2873,8 @@
       "hybrid": false,
       "file": "a06-extension-0.png",
       "label": "涡流 · 新画法",
-      "extension": true
+      "extension": true,
+      "expanse": 0
     },
     {
       "case": "a06",
@@ -2827,7 +2884,8 @@
       "hybrid": false,
       "file": "a06-extension-1.png",
       "label": "浸染 · 新画法",
-      "extension": true
+      "extension": true,
+      "expanse": 0
     },
     {
       "case": "a06",
@@ -2837,7 +2895,8 @@
       "hybrid": false,
       "file": "a06-extension-2.png",
       "label": "裂隙 · 新画法",
-      "extension": true
+      "extension": true,
+      "expanse": 0
     },
     {
       "case": "a06",
@@ -2847,7 +2906,8 @@
       "hybrid": false,
       "file": "a06-extension-3.png",
       "label": "游丝 · 新画法",
-      "extension": true
+      "extension": true,
+      "expanse": 0
     },
     {
       "case": "a06",
@@ -2857,7 +2917,8 @@
       "hybrid": false,
       "file": "a06-extension-4.png",
       "label": "交融 · 新画法",
-      "extension": true
+      "extension": true,
+      "expanse": 0
     },
     {
       "case": "a06",
@@ -2867,7 +2928,8 @@
       "hybrid": false,
       "file": "a06-extension-5.png",
       "label": "流线 · 新画法",
-      "extension": true
+      "extension": true,
+      "expanse": 0
     },
     {
       "case": "a06",
@@ -2877,7 +2939,8 @@
       "hybrid": false,
       "file": "a06-extension-6.png",
       "label": "丝带 · 新画法",
-      "extension": true
+      "extension": true,
+      "expanse": 0
     },
     {
       "case": "a06",
@@ -2887,7 +2950,8 @@
       "hybrid": false,
       "file": "a06-extension-7.png",
       "label": "微粒 · 新画法",
-      "extension": true
+      "extension": true,
+      "expanse": 0
     },
     {
       "case": "a07",
@@ -2897,7 +2961,8 @@
       "hybrid": false,
       "file": "a07-extension-0.png",
       "label": "涡流 · 新画法",
-      "extension": true
+      "extension": true,
+      "expanse": 0
     },
     {
       "case": "a07",
@@ -2907,7 +2972,8 @@
       "hybrid": false,
       "file": "a07-extension-1.png",
       "label": "浸染 · 新画法",
-      "extension": true
+      "extension": true,
+      "expanse": 0
     },
     {
       "case": "a07",
@@ -2917,7 +2983,8 @@
       "hybrid": false,
       "file": "a07-extension-2.png",
       "label": "裂隙 · 新画法",
-      "extension": true
+      "extension": true,
+      "expanse": 0
     },
     {
       "case": "a07",
@@ -2927,7 +2994,8 @@
       "hybrid": false,
       "file": "a07-extension-3.png",
       "label": "游丝 · 新画法",
-      "extension": true
+      "extension": true,
+      "expanse": 0
     },
     {
       "case": "a07",
@@ -2937,7 +3005,8 @@
       "hybrid": false,
       "file": "a07-extension-4.png",
       "label": "交融 · 新画法",
-      "extension": true
+      "extension": true,
+      "expanse": 0
     },
     {
       "case": "a07",
@@ -2947,7 +3016,8 @@
       "hybrid": false,
       "file": "a07-extension-5.png",
       "label": "流线 · 新画法",
-      "extension": true
+      "extension": true,
+      "expanse": 0
     },
     {
       "case": "a07",
@@ -2957,7 +3027,8 @@
       "hybrid": false,
       "file": "a07-extension-6.png",
       "label": "丝带 · 新画法",
-      "extension": true
+      "extension": true,
+      "expanse": 0
     },
     {
       "case": "a07",
@@ -2967,7 +3038,8 @@
       "hybrid": false,
       "file": "a07-extension-7.png",
       "label": "微粒 · 新画法",
-      "extension": true
+      "extension": true,
+      "expanse": 0
     }
   ]
 }

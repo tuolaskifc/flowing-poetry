@@ -2,6 +2,8 @@
 
 2026-10-23。独立协议仍为 `abstract-1.0`，本地策略为 `abstract-expression-1.1`，主风景通路保持 3.3。入口：[抽象试画](../../poem-flow/abstract.html)、[新 40 图](../../poem-flow/abstract-extension-review.html)、[原 32 图](../../poem-flow/abstract-review.html)。
 
+2026-10-24 继续加入[满幅自由笔势](canvas-gestures.md)：两种试画均可调整铺展程度，默认充分展开，旧预设显式归零以保留原画。见[六句对照与十三类满幅画法](../../poem-flow/expanse-review.html)，沿用原解读，没有新增模型请求。
+
 ## 已实现
 
 | 画笔 | 视觉构造 | 种子变化 |

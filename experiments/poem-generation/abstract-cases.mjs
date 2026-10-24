@@ -24,6 +24,7 @@ export async function prepareAbstractStudies(){
  }
  const names={vortex:'涡流',bloom:'浸染',fissures:'裂隙',fibers:'游丝',auto:'交融',flow:'流线',ribbons:'丝带',dust:'微粒'};
  for(const c of cases)if(c.record){const extensionForms=c.batch==='extension'?['vortex','bloom','fissures','fibers','auto','flow','ribbons','dust']:['vortex','bloom','fissures','fibers'];for(const [i,style] of extensionForms.entries())variants.push({case:c.id,style,seed:(c.record.plan.seed+Math.imul(i+11,0x9E3779B9))>>>0,palette:'auto',hybrid:false,file:c.id+'-extension-'+i+'.png',label:names[style]+' · 新画法',extension:true});}
+ for(const v of variants)v.expanse=0;
  const data={schema:'abstract-1.0',policy:abstractPolicyVersion,scope:'four-original-and-three-new-first-requests',generationModelCalls:0,cases,variants};
  await writeFile(new URL('../../poem-flow/abstract-studies.json',import.meta.url),JSON.stringify(data,null,2)+'\n');return data;
 }
