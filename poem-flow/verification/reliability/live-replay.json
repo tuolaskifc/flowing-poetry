@@ -1,0 +1,31 @@
+{
+  "modelCalls": 0,
+  "note": "After capture, only raw Markdown fence failure bookkeeping was refined; all four saved replies replay under the final code.",
+  "serviceHash": "7164f688931c37373e168174c05f4c1215f85d2243d93a1e2d1fb80fd9eb2f40",
+  "rows": [
+    {
+      "id": "n01",
+      "record": "2026-10-24T10-11-06-790Z-aec0e2d7",
+      "usable": true,
+      "status": "partial"
+    },
+    {
+      "id": "n02",
+      "record": "2026-10-24T10-11-35-059Z-a52dcfdd",
+      "usable": true,
+      "status": "complete"
+    },
+    {
+      "id": "r01",
+      "record": "2026-10-24T10-11-39-363Z-e75e2506",
+      "usable": true,
+      "status": "complete"
+    },
+    {
+      "id": "r02",
+      "record": "2026-10-24T10-11-45-664Z-79b85492",
+      "usable": true,
+      "status": "complete"
+    }
+  ]
+}

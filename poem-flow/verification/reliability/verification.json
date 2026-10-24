@@ -1,0 +1,107 @@
+{
+  "scope": "saved-provider-response-browser-replays-and-negative-controls",
+  "modelCalls": 0,
+  "savedReplays": [
+    {
+      "id": "2026-10-24T09-00-48-338Z-8e7ec1b9",
+      "poem": "日出江花红胜火，春来江水绿如蓝。",
+      "delivery": "complete",
+      "recovery": null,
+      "rawValid": true,
+      "status": "本次真实解读 三档表达共享同一构图，切换不请求模型。"
+    },
+    {
+      "id": "2026-10-24T09-01-21-779Z-4e9de3c9",
+      "poem": "日出江花红胜火，春来江水绿如蓝。",
+      "delivery": "adjusted",
+      "recovery": "normalized",
+      "rawValid": false,
+      "status": "已完成格式或引用整理，解读仍可复核。 三档表达共享同一构图，切换不请求模型。"
+    },
+    {
+      "id": "2026-10-24T09-03-20-225Z-02ea676a",
+      "poem": "日出江花红胜火，春来江水绿如蓝",
+      "delivery": "adjusted",
+      "recovery": "normalized",
+      "rawValid": false,
+      "status": "已完成格式或引用整理，解读仍可复核。 三档表达共享同一构图，切换不请求模型。"
+    },
+    {
+      "id": "2026-10-24T09-03-29-541Z-ab3bca15",
+      "poem": "日出江花红胜火，春来江水绿如蓝",
+      "delivery": "adjusted",
+      "recovery": "normalized",
+      "rawValid": false,
+      "status": "已完成格式或引用整理，解读仍可复核。 三档表达共享同一构图，切换不请求模型。"
+    },
+    {
+      "id": "2026-10-24T09-03-53-350Z-17efb396",
+      "poem": "晴川历历汉阳树，芳草萋萋鹦鹉洲。",
+      "delivery": "adjusted",
+      "recovery": "normalized",
+      "rawValid": false,
+      "status": "已完成格式或引用整理，解读仍可复核。 三档表达共享同一构图，切换不请求模型。"
+    },
+    {
+      "id": "2026-10-24T09-07-52-369Z-8fb31e5c",
+      "poem": "自在飞花轻似梦，无边丝雨细如愁。",
+      "delivery": "adjusted",
+      "recovery": "normalized",
+      "rawValid": false,
+      "status": "已完成格式或引用整理，解读仍可复核。 三档表达共享同一构图，切换不请求模型。"
+    },
+    {
+      "id": "2026-10-24T09-08-01-099Z-fa6aac63",
+      "poem": "自在飞花轻似梦，无边丝雨细如愁。",
+      "delivery": "adjusted",
+      "recovery": "normalized",
+      "rawValid": false,
+      "status": "已完成格式或引用整理，解读仍可复核。 三档表达共享同一构图，切换不请求模型。"
+    },
+    {
+      "id": "2026-10-24T09-08-14-437Z-de4b5489",
+      "poem": "自在飞花轻似梦，无边丝雨细如愁。",
+      "delivery": "complete",
+      "recovery": null,
+      "rawValid": true,
+      "status": "本次真实解读 三档表达共享同一构图，切换不请求模型。"
+    },
+    {
+      "id": "2026-10-24T09-08-37-791Z-4c3eee22",
+      "poem": "自在飞花轻似梦，无边丝雨细如愁。",
+      "delivery": "adjusted",
+      "recovery": "normalized",
+      "rawValid": false,
+      "status": "已完成格式或引用整理，解读仍可复核。 三档表达共享同一构图，切换不请求模型。"
+    },
+    {
+      "id": "2026-10-24T09-08-50-954Z-5a4928eb",
+      "poem": "自在飞花轻似梦，无边丝雨细如愁。",
+      "delivery": "complete",
+      "recovery": null,
+      "rawValid": true,
+      "status": "本次真实解读 三档表达共享同一构图，切换不请求模型。"
+    },
+    {
+      "id": "2026-10-24T09-57-37-783Z-7c58cd33",
+      "poem": "自在飞花轻似梦，无边丝雨细如愁。",
+      "delivery": "complete",
+      "recovery": null,
+      "rawValid": true,
+      "status": "本次真实解读 三档表达共享同一构图，切换不请求模型。"
+    }
+  ],
+  "partialResult": true,
+  "retainsOldPictureOnHardFailure": true,
+  "retainsOldPictureOnNetworkFailure": true,
+  "truncationRejected": true,
+  "manualRetryLabel": true,
+  "replayButtonWithoutModelRequest": true,
+  "currentBackendLatest": true,
+  "mobileWidth": 390,
+  "historicalArtifactsUnchanged": 169,
+  "localMockCalls": 15,
+  "browserErrors": [],
+  "localSubmissions": 15,
+  "aestheticAcceptance": "pending-user"
+}

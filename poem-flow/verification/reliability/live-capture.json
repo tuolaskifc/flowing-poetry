@@ -1,0 +1,106 @@
+{
+  "recoveryVersion": "generation-recovery-1.0",
+  "scope": "two-untuned-poems-and-two-known-failure-poems",
+  "noAutomaticRetry": true,
+  "sourceHashes": {
+    "service.mjs": "1d29a13e7a6a6147b062c02421250d4eee0709743db33313c2758de57e15db93",
+    "generation-recovery.mjs": "eb39ba297d913f4c25252625fc04e88321c26c25b59a25a0b98dcb511c996e9e",
+    "expression-contract.mjs": "84eabdace85b0b66a036756196415655c0814d1dffc598606906f5216d4c3386",
+    "abstract-contract.mjs": "863b548b9c060b572b704064df8a5bc3c48af08c5f1ccdd2b64de91c4d0d8c51"
+  },
+  "rulesUnchanged": true,
+  "calls": [
+    {
+      "id": "n01",
+      "poem": "我欲乘风归去，又恐琼楼玉宇，高处不胜寒。",
+      "record": "2026-10-24T10-11-06-790Z-aec0e2d7",
+      "cached": false,
+      "rawValid": false,
+      "usable": true,
+      "status": "partial",
+      "recovery": "partial",
+      "errors": [],
+      "usage": {
+        "completion_tokens": 1087,
+        "prompt_tokens": 5881,
+        "total_tokens": 6968,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens_details": {
+          "cached_tokens": 2048
+        }
+      },
+      "elapsedSeconds": 28.1
+    },
+    {
+      "id": "n02",
+      "poem": "欲穷千里目，更上一层楼。",
+      "record": "2026-10-24T10-11-35-059Z-a52dcfdd",
+      "cached": false,
+      "rawValid": true,
+      "usable": true,
+      "status": "complete",
+      "recovery": null,
+      "errors": [],
+      "usage": {
+        "completion_tokens": 525,
+        "prompt_tokens": 5873,
+        "total_tokens": 6398,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens_details": {
+          "cached_tokens": 5760
+        }
+      },
+      "elapsedSeconds": 4.2
+    },
+    {
+      "id": "r01",
+      "poem": "日出江花红胜火，春来江水绿如蓝。",
+      "record": "2026-10-24T10-11-39-363Z-e75e2506",
+      "cached": false,
+      "rawValid": true,
+      "usable": true,
+      "status": "complete",
+      "recovery": null,
+      "errors": [],
+      "usage": {
+        "completion_tokens": 1168,
+        "prompt_tokens": 5878,
+        "total_tokens": 7046,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens_details": {
+          "cached_tokens": 5760
+        }
+      },
+      "elapsedSeconds": 6.2
+    },
+    {
+      "id": "r02",
+      "poem": "自在飞花轻似梦，无边丝雨细如愁。",
+      "record": "2026-10-24T10-11-45-664Z-79b85492",
+      "cached": false,
+      "rawValid": true,
+      "usable": true,
+      "status": "complete",
+      "recovery": null,
+      "errors": [],
+      "usage": {
+        "completion_tokens": 908,
+        "prompt_tokens": 5878,
+        "total_tokens": 6786,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens_details": {
+          "cached_tokens": 5760
+        }
+      },
+      "elapsedSeconds": 10.2
+    }
+  ]
+}

@@ -10,8 +10,9 @@ import {schema as compositionSchema,promptAddition as compositionPrompt,validate
 import {expandSourceContext} from './source-context.mjs';
 import {schema as abstractSchema,prompt as abstractPrompt,validateAbstract} from './abstract-contract.mjs';
 import {buildAbstractPlan,abstractPolicyVersion} from './abstract-plan.mjs';
-import {schema as expressionSchema,prompt as expressionPrompt,validateExpression} from './expression-contract.mjs';
+import {schema as expressionSchema,prompt as expressionPrompt,reliabilityPrompt,validateExpression} from './expression-contract.mjs';
 import {buildExpressionPlan,expressionPolicyVersion} from './expression-plan.mjs';
+import {recoverInterpretation,constrainRecoveredPlan,parseModelJSON,recoveryVersion} from './generation-recovery.mjs';
 const dir=dirname(fileURLToPath(import.meta.url)),root=resolve(dir,'../..');
 export function parseCredentials(text){
   const lines=text.replace(/^\uFEFF/,'').split(/\r?\n/).map(s=>s.trim()).filter(s=>s&&!s.startsWith('#'));
@@ -26,10 +27,35 @@ export function createGenerationService({fetcher=fetch,credentialsPath=resolve(r
   let busy=false;
   const promptFile=resolve(dir,'../poem-semantics/contract-v3/system-prompt.txt');
   async function configured(){try{parseCredentials(await readFile(credentialsPath,'utf8'));return true;}catch{return false;}}
-  async function latest({abstract=false,expression=false}={}){
+  const planning=(r)=>constrainRecoveredPlan(r.mode==='expression'?buildExpressionPlan(r.effectiveAnalysis||r.analysis):r.mode==='abstract'?buildAbstractPlan(r.effectiveAnalysis||r.analysis):buildPlan(r.effectiveAnalysis||r.analysis),r.recovery);
+  function delivery(record){
+    const failed=!record.validation?.valid,status=failed?'failed':record.recovery?.status==='partial'?'partial':record.recovery?'adjusted':'complete';
+    const errors=(record.validation?.errors||[]).join(' ');
+    const reason=record.finish_reason&&record.finish_reason!=='stop'?'truncated':/HTTP|fetch|timeout|timed out|网络|接口|JSON|最终文本/i.test(errors)?'connection-or-format':'interpretation';
+    return {status,retryable:failed,reason:failed?reason:null,message:failed?(reason==='truncated'?'这次解读未完整返回，尚未生成本句画面。':reason==='connection-or-format'?'这次分析未能完整返回，尚未生成本句画面。':'这次解读的基础内容仍有问题，尚未生成本句画面。'):record.recovery?.message||'解读已通过检查。'};
+  }
+  function rehydrate(saved){
+    const r=structuredClone(saved),modern=['abstract','expression'].includes(r.mode);
+    if(modern&&r.analysis&&r.finish_reason==='stop'){
+      const result=recoverInterpretation(r.effectiveAnalysis||r.analysis,r.poem,r.mode);
+      if(!result.validation.valid)return null;
+      if(!r.validation?.valid||result.recovery){
+        r.rawValidation??=r.validation;
+        if(result.effectiveAnalysis)r.effectiveAnalysis=result.effectiveAnalysis;
+        r.recovery=result.recovery||{version:recoveryVersion,status:'revalidated',reviewRequired:true,changes:[],omitted:[],message:'检查规则已修正，已从原始回答恢复本句画面；原失败记录保留。'};
+      }
+      r.validation=result.validation;
+    }
+    if(!r.validation?.valid)return null;
+    r.plan=planning(r);r.delivery=delivery(r);r.cached=true;return r;
+  }
+  async function savedMatch(predicate){
     let names;try{names=await readdir(runsDir);}catch{return null;}
-    for(const name of names.sort().reverse())try{const r=JSON.parse(await readFile(resolve(runsDir,name,'result.json'),'utf8'));if(abstract?r.mode!=='abstract':expression?r.mode!=='expression':['abstract','expression'].includes(r.mode))continue;if(r.validation?.valid)return {...r,plan:abstract?buildAbstractPlan(r.analysis):expression?buildExpressionPlan(r.analysis):buildPlan(r.effectiveAnalysis||r.analysis),cached:true};}catch{}
+    for(const name of names.sort().reverse())try{const r=JSON.parse(await readFile(resolve(runsDir,name,'result.json'),'utf8'));if(predicate(r)){const value=rehydrate(r);if(value)return value;}}catch{}
     return null;
+  }
+  async function latest({abstract=false,expression=false}={}){
+    return savedMatch(r=>abstract?r.mode==='abstract':expression?r.mode==='expression':!['abstract','expression'].includes(r.mode));
   }
   async function analyze(input){
     if(typeof input?.poem!=='string'||!input.poem.trim()||[...input.poem].length>200){const e=new Error('请输入 1–200 字的诗句。');e.status=400;throw e;}
@@ -41,10 +67,10 @@ export function createGenerationService({fetcher=fetch,credentialsPath=resolve(r
       const requestSchema=structuredClone(mode==='expression'?expressionSchema:mode==='abstract'?abstractSchema:mode==='composition'?compositionSchema:mode==='scene'?sceneSchema:mode==='quantity'?quantitySchema:schema);
       if(mode==='imagery-only')requestSchema.properties.relations.maxItems=0;
       const poem=input.poem,prompt=(await readFile(promptFile,'utf8'))+(mode!=='full'?'\n\n【本次任务范围：基础意象通路】\n本次只检验 entities 到现有绘画库的连接，尚未请求完整关系抽取。relations 必须为 []，不得输出任何关系项。动作和属性只在 reading 中简述。其余字段仍按协议 3.0 填写。不要把人物想象成在场；保留 presence 与 role 的不确定性。':'\n\n【本轮通路自检补充】\n提交前检查每条关系引用。grows_from、carries、located_in、compared_to 等双对象关系必须给出两个已有实体的 id，不能有 null；缺少第二个实体就不输出该关系。状态或属性可留在 reading 中，不要虚构生长或承载动作。怀念不是观察，observes 只用于实际观看。relations 可以为空数组。');
-      const effectivePrompt=mode==='expression'?(await readFile(promptFile,'utf8'))+'\n'+expressionPrompt:mode==='abstract'?abstractPrompt:mode==='composition'?(await readFile(promptFile,'utf8'))+'\n\n本次请求整体场景语义 3.3。按下列扩展解释环境、主次群落、远近、必要依托、动作状态与可见气息，原文依据与推断分开。\n'+compositionPrompt:mode==='scene'?prompt+scenePrompt:mode==='quantity'?prompt+promptAddition:prompt;
+      const effectivePrompt=mode==='expression'?(await readFile(promptFile,'utf8'))+'\n'+expressionPrompt+'\n'+reliabilityPrompt:mode==='abstract'?abstractPrompt+'\n比喻的 echo/contrast 可以关联 reference 且 presence=unclear 的主体，断言的是比较成立，不是该主体在场。确定过程仍不得执行在参照主体上。':mode==='composition'?(await readFile(promptFile,'utf8'))+'\n\n本次请求整体场景语义 3.3。按下列扩展解释环境、主次群落、远近、必要依托、动作状态与可见气息，原文依据与推断分开。\n'+compositionPrompt:mode==='scene'?prompt+scenePrompt:mode==='quantity'?prompt+promptAddition:prompt;
       if(['quantity','scene','composition'].includes(mode))requestSchema.properties.relations.maxItems=0;
-      const fingerprint=createHash('sha256').update(JSON.stringify({poem,prompt:effectivePrompt,schema:requestSchema,model:config.model,endpoint:config.endpoint,policyVersion:mode==='expression'?expressionPolicyVersion:mode==='abstract'?abstractPolicyVersion:policyVersion})).digest('hex');
-      const last=await latest({abstract:mode==='abstract',expression:mode==='expression'});if(last?.fingerprint===fingerprint)return last;
+      const fingerprint=createHash('sha256').update(JSON.stringify({poem,prompt:effectivePrompt,schema:requestSchema,model:config.model,endpoint:config.endpoint,policyVersion:mode==='expression'?expressionPolicyVersion:mode==='abstract'?abstractPolicyVersion:policyVersion,...(['abstract','expression'].includes(mode)?{recoveryVersion}:{})})).digest('hex');
+      const reusable=await savedMatch(r=>r.fingerprint===fingerprint&&r.mode===mode&&r.poem===poem);if(reusable)return reusable;
       const runId=new Date().toISOString().replace(/[:.]/g,'-')+'-'+randomUUID().slice(0,8),folder=resolve(runsDir,runId);await mkdir(folder,{recursive:true});
       const redact=text=>String(text).split(key).join('[REDACTED]').replace(/\bsk-[a-zA-Z0-9_-]+/g,'[REDACTED]');
       const save=(name,value)=>writeFile(resolve(folder,name),redact(typeof value==='string'?value:JSON.stringify(value,null,2)+'\n'),'utf8');
@@ -61,8 +87,24 @@ export function createGenerationService({fetcher=fetch,credentialsPath=resolve(r
         record.model=data.model??config.model;record.usage=data.usage??null;record.finish_reason=data.choices?.[0]?.finish_reason??null;
         if(typeof text!=='string'||!text.trim())throw new Error('接口没有返回最终文本。');
         await save('response.txt',text);
-        try{record.analysis=JSON.parse(text);}catch{throw new Error('接口回答不是有效 JSON，原始回答已保留，没有自动改写。');}
+        try{
+          if(['abstract','expression'].includes(mode)){
+            const parsed=parseModelJSON(text);record.analysis=parsed.analysis;
+            if(parsed.wrapped){
+              record.rawValidation={valid:false,errors:['回答使用 Markdown 围栏，未直接返回 JSON 对象'],warnings:[],review_required:true};
+              record.recovery={version:recoveryVersion,status:'normalized',reviewRequired:true,changes:[{kind:'markdown-fence',path:'response'}],omitted:[],message:'已整理回答的 JSON 包装，原始文本保留。'};
+            }
+          }else record.analysis=JSON.parse(text);
+        }catch{throw new Error('接口回答不是有效 JSON，原始回答已保留，没有自动改写。');}
         record.validation=mode==='expression'?validateExpression(record.analysis,poem):mode==='abstract'?validateAbstract(record.analysis,poem):mode==='composition'?validateCompositionContract(record.analysis,poem):mode==='scene'?validateSceneContract(record.analysis,poem):mode==='quantity'?validateQuantityContract(record.analysis,poem):validateContract(record.analysis,poem);
+        if(['abstract','expression'].includes(mode)&&!record.validation.valid){
+          const recovered=recoverInterpretation(record.analysis,poem,mode);
+          if(recovered.validation.valid){
+            record.rawValidation=record.rawValidation?{...record.validation,valid:false,errors:[...record.rawValidation.errors,...record.validation.errors]}:record.validation;record.validation=recovered.validation;
+            if(recovered.effectiveAnalysis)record.effectiveAnalysis=recovered.effectiveAnalysis;
+            if(recovered.recovery){const prefix=record.recovery?.changes||[];record.recovery=recovered.recovery;record.recovery.changes.unshift(...prefix);}
+          }
+        }
         if(mode==='composition'&&!record.validation.valid){
           const context=expandSourceContext(record.analysis,poem);
           if(context.applied){
@@ -74,9 +116,12 @@ export function createGenerationService({fetcher=fetch,credentialsPath=resolve(r
         }
         if(!['full','abstract','expression'].includes(mode)&&record.analysis.relations?.length){record.validation.valid=false;record.validation.errors.push('基础意象模式要求 relations=[]。');}
         if(record.finish_reason!=='stop'){record.validation.valid=false;record.validation.errors.push('回答未正常结束。');}
-        if(record.validation.valid)record.plan=mode==='expression'?buildExpressionPlan(record.analysis):mode==='abstract'?buildAbstractPlan(record.analysis):buildPlan(record.effectiveAnalysis||record.analysis);
+        if(record.validation.valid)record.plan=planning(record);
       }catch(error){record.error=redact(error.message);record.validation={valid:false,errors:[record.error],warnings:[],review_required:true};}
-      record.elapsed_seconds=Math.round((Date.now()-start)/100)/10;await save('result.json',record);
+      record.delivery=delivery(record);record.elapsed_seconds=Math.round((Date.now()-start)/100)/10;
+      if(record.effectiveAnalysis&&['abstract','expression'].includes(mode))await save('effective-analysis.json',record.effectiveAnalysis);
+      if(record.recovery)await save('recovery.json',record.recovery);
+      await save('result.json',record);
       return record;
     }catch(error){const e=new Error(key?String(error.message).split(key).join('[REDACTED]'):error.code==='ENOENT'?'未找到本地分析接口配置。':error.message);e.status=error.status??500;throw e;}
     finally{busy=false;}

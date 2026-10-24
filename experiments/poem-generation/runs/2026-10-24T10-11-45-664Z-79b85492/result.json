@@ -1,0 +1,4722 @@
+{
+  "id": "2026-10-24T10-11-45-664Z-79b85492",
+  "fingerprint": "22216affd409abe0ed7c4ef604a1090f5461298fa3e389d82a3868baddb3c68c",
+  "poem": "自在飞花轻似梦，无边丝雨细如愁。",
+  "source": {
+    "provider": "稳定性首次验证：两句新组合与两句既有失败诗"
+  },
+  "mode": "expression",
+  "model": "DeepSeek-V4.1-Flash",
+  "started_at": "2026-10-24T10:11:45.665Z",
+  "cached": false,
+  "http_status": 200,
+  "usage": {
+    "completion_tokens": 908,
+    "prompt_tokens": 5878,
+    "total_tokens": 6786,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 5760
+    }
+  },
+  "finish_reason": "stop",
+  "analysis": {
+    "schema_version": "expression-1.0",
+    "poem": "自在飞花轻似梦，无边丝雨细如愁。",
+    "reading": "飞花自在飘落，轻得像梦；细雨无边无际，细密得像愁。以梦喻花之轻，以愁喻雨之细，写出一片迷蒙轻柔的春景与心绪。",
+    "entities": [
+      {
+        "id": "i1",
+        "mentions": [
+          "飞花"
+        ],
+        "concept": "飘飞的花",
+        "kind": "object",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "自在飞花轻似梦"
+        ],
+        "quantity": {
+          "mode": "many",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "spread",
+          "evidence": [
+            "自在飞花轻似梦"
+          ]
+        }
+      },
+      {
+        "id": "i2",
+        "mentions": [
+          "梦"
+        ],
+        "concept": "梦境",
+        "kind": "abstract",
+        "role": "reference",
+        "presence": "unclear",
+        "evidence": [
+          "自在飞花轻似梦"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i3",
+        "mentions": [
+          "丝雨"
+        ],
+        "concept": "细密的雨",
+        "kind": "environment",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "无边丝雨细如愁"
+        ],
+        "quantity": {
+          "mode": "many",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "spread",
+          "evidence": [
+            "无边丝雨细如愁"
+          ]
+        }
+      },
+      {
+        "id": "i4",
+        "mentions": [
+          "愁"
+        ],
+        "concept": "愁绪",
+        "kind": "abstract",
+        "role": "reference",
+        "presence": "unclear",
+        "evidence": [
+          "无边丝雨细如愁"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      }
+    ],
+    "relations": [],
+    "atmosphere": {
+      "labels": [
+        "轻柔",
+        "迷蒙",
+        "怅惘"
+      ],
+      "valence": "mixed",
+      "energy": "low",
+      "tension": "low",
+      "openness": "high",
+      "evidence": [
+        "自在飞花轻似梦",
+        "无边丝雨细如愁"
+      ]
+    },
+    "time": {
+      "markers": [],
+      "note": null
+    },
+    "uncertainties": [
+      "飞花与丝雨是否同时出现于同一场景，原文未明说。",
+      "‘自在’是形容飞花的状态还是兼指心境，存在歧义。"
+    ],
+    "spatial": [],
+    "scene": {
+      "setting": {
+        "kind": "open_land",
+        "basis": "inferred",
+        "evidence": [
+          "自在飞花轻似梦",
+          "无边丝雨细如愁"
+        ]
+      },
+      "groups": [
+        {
+          "members": [
+            "i1"
+          ],
+          "role": "subject",
+          "pattern": "scattered",
+          "depth": "unspecified",
+          "basis": "inferred",
+          "evidence": [
+            "自在飞花轻似梦"
+          ]
+        },
+        {
+          "members": [
+            "i3"
+          ],
+          "role": "environment",
+          "pattern": "field",
+          "depth": "unspecified",
+          "basis": "inferred",
+          "evidence": [
+            "无边丝雨细如愁"
+          ]
+        }
+      ],
+      "supports": [],
+      "actions": [
+        {
+          "entity": "i1",
+          "state": "fall",
+          "pace": "slow",
+          "direction": "down",
+          "modality": "asserted",
+          "basis": "inferred",
+          "evidence": [
+            "自在飞花轻似梦"
+          ]
+        },
+        {
+          "entity": "i3",
+          "state": "fall",
+          "pace": "slow",
+          "direction": "down",
+          "modality": "asserted",
+          "basis": "inferred",
+          "evidence": [
+            "无边丝雨细如愁"
+          ]
+        }
+      ],
+      "atmosphere": {
+        "visibility": "hazy",
+        "illumination": "unclear",
+        "basis": "inferred",
+        "evidence": [
+          "无边丝雨细如愁"
+        ]
+      }
+    },
+    "expression": {
+      "relations": [
+        {
+          "source": "i1",
+          "target": "i2",
+          "kind": "echo",
+          "modality": "asserted",
+          "basis": "explicit",
+          "evidence": [
+            "自在飞花轻似梦"
+          ]
+        },
+        {
+          "source": "i3",
+          "target": "i4",
+          "kind": "echo",
+          "modality": "asserted",
+          "basis": "explicit",
+          "evidence": [
+            "无边丝雨细如愁"
+          ]
+        }
+      ],
+      "processes": [
+        {
+          "subject": "i1",
+          "kind": "unclear",
+          "temporal": "ongoing",
+          "modality": "asserted",
+          "basis": "inferred",
+          "evidence": [
+            "自在飞花轻似梦"
+          ]
+        },
+        {
+          "subject": "i3",
+          "kind": "unclear",
+          "temporal": "ongoing",
+          "modality": "asserted",
+          "basis": "inferred",
+          "evidence": [
+            "无边丝雨细如愁"
+          ]
+        }
+      ]
+    }
+  },
+  "validation": {
+    "valid": true,
+    "errors": [],
+    "warnings": [
+      "模型保留了不确定性，需要审阅",
+      "scene.setting 为语义推断，绘画选择需与原文明示区分",
+      "scene.groups[0] 为语义推断，绘画选择需与原文明示区分",
+      "scene.groups[1] 为语义推断，绘画选择需与原文明示区分",
+      "scene.actions[0] 为语义推断，绘画选择需与原文明示区分",
+      "scene.actions[1] 为语义推断，绘画选择需与原文明示区分",
+      "scene.atmosphere 为语义推断，绘画选择需与原文明示区分",
+      "expression.processes[0] 为语义推断",
+      "expression.processes[1] 为语义推断"
+    ],
+    "review_required": true
+  },
+  "plan": {
+    "version": "shared-expression-1.0",
+    "seed": 3371173808,
+    "poem": "自在飞花轻似梦，无边丝雨细如愁。",
+    "nodes": [
+      {
+        "id": "i1",
+        "label": "飞花",
+        "meaning": "飘飞的花",
+        "kind": "concrete",
+        "contextOnly": false,
+        "mode": "present"
+      },
+      {
+        "id": "i2",
+        "label": "梦",
+        "meaning": "梦境",
+        "kind": "abstract",
+        "contextOnly": false,
+        "mode": "candidate"
+      },
+      {
+        "id": "i3",
+        "label": "丝雨",
+        "meaning": "细密的雨",
+        "kind": "concrete",
+        "contextOnly": false,
+        "mode": "present"
+      },
+      {
+        "id": "i4",
+        "label": "愁",
+        "meaning": "愁绪",
+        "kind": "abstract",
+        "contextOnly": false,
+        "mode": "candidate"
+      }
+    ],
+    "relations": [
+      {
+        "source": "i1",
+        "target": "i2",
+        "kind": "echo",
+        "modality": "asserted",
+        "basis": "explicit",
+        "evidence": [
+          "自在飞花轻似梦"
+        ]
+      },
+      {
+        "source": "i3",
+        "target": "i4",
+        "kind": "echo",
+        "modality": "asserted",
+        "basis": "explicit",
+        "evidence": [
+          "无边丝雨细如愁"
+        ]
+      }
+    ],
+    "processes": [
+      {
+        "subject": "i1",
+        "kind": "unclear",
+        "temporal": "ongoing",
+        "modality": "asserted",
+        "basis": "inferred",
+        "evidence": [
+          "自在飞花轻似梦"
+        ]
+      },
+      {
+        "subject": "i3",
+        "kind": "unclear",
+        "temporal": "ongoing",
+        "modality": "asserted",
+        "basis": "inferred",
+        "evidence": [
+          "无边丝雨细如愁"
+        ]
+      }
+    ],
+    "omitted": [],
+    "atmosphere": {
+      "labels": [
+        "轻柔",
+        "迷蒙",
+        "怅惘"
+      ],
+      "valence": "mixed",
+      "energy": "low",
+      "tension": "low",
+      "openness": "high",
+      "evidence": [
+        "自在飞花轻似梦",
+        "无边丝雨细如愁"
+      ],
+      "illumination": "unclear"
+    },
+    "concretePlan": {
+      "version": "semantic-composition-3.3-world-instances-directional-buildings",
+      "seed": 3371173808,
+      "settings": {
+        "wind": 0.3,
+        "density": 0.35,
+        "palette": "clear",
+        "motion": 1.4
+      },
+      "layers": [
+        {
+          "tool": "flower",
+          "entities": [
+            "i1"
+          ],
+          "projectedEntities": [],
+          "names": [
+            "飞花"
+          ],
+          "options": {},
+          "animate": false,
+          "placement": {
+            "anchor": [
+              320,
+              320
+            ],
+            "at": [
+              0.5011662165468734,
+              0.7735717455621303
+            ],
+            "scale": 0.95
+          },
+          "semanticGroup": {
+            "members": [
+              "i1"
+            ],
+            "role": "subject",
+            "pattern": "scattered",
+            "depth": "unspecified",
+            "basis": "inferred",
+            "evidence": [
+              "自在飞花轻似梦"
+            ],
+            "index": 0
+          },
+          "semanticEffects": [
+            {
+              "path": "scene.actions[0].state",
+              "consumer": "动作画法",
+              "effect": "当前工具尚无对应动作状态",
+              "status": "unsupported"
+            },
+            {
+              "path": "scene.groups[0].role",
+              "consumer": "主次布局",
+              "effect": "主体相对突出",
+              "status": "applied"
+            },
+            {
+              "path": "scene.groups[0].pattern",
+              "consumer": "群落布局",
+              "effect": "按 scattered 组织显示单元；不覆盖明确数量",
+              "status": "applied"
+            },
+            {
+              "path": "scene.groups[0].depth",
+              "consumer": "远近布局",
+              "effect": "远近未明，保持本地默认",
+              "status": "skipped"
+            }
+          ],
+          "semanticEnergy": false,
+          "timeScale": 0,
+          "semanticAction": {
+            "entity": "i1",
+            "state": "fall",
+            "pace": "slow",
+            "direction": "down",
+            "modality": "asserted",
+            "basis": "inferred",
+            "evidence": [
+              "自在飞花轻似梦"
+            ]
+          },
+          "instances": [
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  388
+                ],
+                "at": [
+                  0.8478020899291585,
+                  0.6149038461538462
+                ],
+                "scale": 0.36
+              },
+              "depth": 0,
+              "opacity": 0.72,
+              "variant": 0,
+              "tone": "far",
+              "id": "i1:flower::0:0"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  388
+                ],
+                "at": [
+                  0.4255845004136334,
+                  0.6247115384615385
+                ],
+                "scale": 0.395
+              },
+              "depth": 0.01,
+              "opacity": 0.72,
+              "variant": 0,
+              "tone": "far",
+              "id": "i1:flower::0:1"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  388
+                ],
+                "at": [
+                  0.035,
+                  0.6345192307692308
+                ],
+                "scale": 0.43
+              },
+              "depth": 0.02,
+              "opacity": 0.72,
+              "variant": 0,
+              "tone": "far",
+              "id": "i1:flower::0:2"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  388
+                ],
+                "at": [
+                  0.6865293213825838,
+                  0.6443269230769231
+                ],
+                "scale": 0.46499999999999997
+              },
+              "depth": 10.03,
+              "opacity": 0.72,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i1:flower::0:3"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  388
+                ],
+                "at": [
+                  0.2643117318670589,
+                  0.6541346153846154
+                ],
+                "scale": 0.36
+              },
+              "depth": 10.04,
+              "opacity": 0.72,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i1:flower::0:4"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  388
+                ],
+                "at": [
+                  0.9474741423515336,
+                  0.6639423076923077
+                ],
+                "scale": 0.395
+              },
+              "depth": 10.05,
+              "opacity": 0.72,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i1:flower::0:5"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  388
+                ],
+                "at": [
+                  0.5252565528360092,
+                  0.67375
+                ],
+                "scale": 0.43
+              },
+              "depth": 10.06,
+              "opacity": 0.72,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i1:flower::0:6"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  388
+                ],
+                "at": [
+                  0.10303896332048385,
+                  0.6835576923076923
+                ],
+                "scale": 0.46499999999999997
+              },
+              "depth": 10.07,
+              "opacity": 0.72,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i1:flower::0:7"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  388
+                ],
+                "at": [
+                  0.7862013738049587,
+                  0.6933653846153847
+                ],
+                "scale": 0.36
+              },
+              "depth": 10.08,
+              "opacity": 0.72,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i1:flower::0:8"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  388
+                ],
+                "at": [
+                  0.36398378428943423,
+                  0.7031730769230768
+                ],
+                "scale": 0.395
+              },
+              "depth": 10.09,
+              "opacity": 0.72,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i1:flower::0:9"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  388
+                ],
+                "at": [
+                  0.965,
+                  0.7129807692307693
+                ],
+                "scale": 0.43
+              },
+              "depth": 10.1,
+              "opacity": 0.72,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i1:flower::0:10"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  388
+                ],
+                "at": [
+                  0.6249286052583837,
+                  0.7227884615384615
+                ],
+                "scale": 0.46499999999999997
+              },
+              "depth": 10.11,
+              "opacity": 0.72,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i1:flower::0:11"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  388
+                ],
+                "at": [
+                  0.20271101574285927,
+                  0.7325961538461538
+                ],
+                "scale": 0.36
+              },
+              "depth": 10.12,
+              "opacity": 0.72,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i1:flower::0:12"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  388
+                ],
+                "at": [
+                  0.885873426227336,
+                  0.7424038461538461
+                ],
+                "scale": 0.395
+              },
+              "depth": 10.13,
+              "opacity": 0.72,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i1:flower::0:13"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  388
+                ],
+                "at": [
+                  0.46365583671181054,
+                  0.7522115384615384
+                ],
+                "scale": 0.43
+              },
+              "depth": 10.14,
+              "opacity": 0.72,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i1:flower::0:14"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  388
+                ],
+                "at": [
+                  0.041438247196285194,
+                  0.9495
+                ],
+                "scale": 0.46499999999999997
+              },
+              "depth": 20.15,
+              "opacity": 0.72,
+              "variant": 2,
+              "tone": "near",
+              "id": "i1:flower::0:15"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  388
+                ],
+                "at": [
+                  0.72460065768076,
+                  0.9585
+                ],
+                "scale": 0.46084092895400025
+              },
+              "depth": 20.16,
+              "opacity": 0.7951809646830001,
+              "variant": 2,
+              "tone": "near",
+              "id": "i1:flower::0:16"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  388
+                ],
+                "at": [
+                  0.3023830681652346,
+                  0.9675
+                ],
+                "scale": 0.4052266777160002
+              },
+              "depth": 20.17,
+              "opacity": 0.7374277037820002,
+              "variant": 2,
+              "tone": "near",
+              "id": "i1:flower::0:17"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  388
+                ],
+                "at": [
+                  0.965,
+                  0.9765
+                ],
+                "scale": 0.4952124264780004
+              },
+              "depth": 20.18,
+              "opacity": 0.8308744428810003,
+              "variant": 2,
+              "tone": "near",
+              "id": "i1:flower::0:18"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  388
+                ],
+                "at": [
+                  0.563327889134186,
+                  0.9855
+                ],
+                "scale": 0.46499999999999997
+              },
+              "depth": 20.19,
+              "opacity": 0.7731211819800002,
+              "variant": 2,
+              "tone": "near",
+              "id": "i1:flower::0:19"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  388
+                ],
+                "at": [
+                  0.14111029961866062,
+                  0.8145
+                ],
+                "scale": 0.3839839240020004
+              },
+              "depth": 10.2,
+              "opacity": 0.72,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i1:flower::0:20"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  388
+                ],
+                "at": [
+                  0.8242727101031353,
+                  0.8235
+                ],
+                "scale": 0.47396967276400026
+              },
+              "depth": 10.21,
+              "opacity": 0.8088146601780002,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i1:flower::0:21"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  388
+                ],
+                "at": [
+                  0.40205512058760995,
+                  0.8325
+                ],
+                "scale": 0.43
+              },
+              "depth": 20.22,
+              "opacity": 0.7510613992770001,
+              "variant": 2,
+              "tone": "near",
+              "id": "i1:flower::0:22"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  388
+                ],
+                "at": [
+                  0.035,
+                  0.8415
+                ],
+                "scale": 0.46499999999999997
+              },
+              "depth": 20.23,
+              "opacity": 0.72,
+              "variant": 2,
+              "tone": "near",
+              "id": "i1:flower::0:23"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  388
+                ],
+                "at": [
+                  0.6629999415565614,
+                  0.8505
+                ],
+                "scale": 0.45272691905000045
+              },
+              "depth": 20.24,
+              "opacity": 0.7867548774750003,
+              "variant": 2,
+              "tone": "near",
+              "id": "i1:flower::0:24"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  388
+                ],
+                "at": [
+                  0.240782352041032,
+                  0.8595
+                ],
+                "scale": 0.3971126678119999
+              },
+              "depth": 20.25,
+              "opacity": 0.7290016165739998,
+              "variant": 2,
+              "tone": "near",
+              "id": "i1:flower::0:25"
+            }
+          ],
+          "singleUnit": true,
+          "quantity": {
+            "items": [
+              {
+                "entity": "i1",
+                "mode": "many",
+                "min": null,
+                "max": null,
+                "unit": null,
+                "scope": "unspecified",
+                "extent": "spread",
+                "evidence": [
+                  "自在飞花轻似梦"
+                ],
+                "basis": "model"
+              }
+            ],
+            "rendered": 26,
+            "exact": false,
+            "collective": true,
+            "partUnsupported": false
+          },
+          "quantityLabel": "成片分布；本地试画 26 个单元",
+          "z": 14,
+          "visual": {
+            "role": "blossom",
+            "brushStrength": 1.65
+          },
+          "performance": {
+            "rhythm": "gust",
+            "rate": 0.62,
+            "amplitude": 0.65,
+            "phase": 0
+          },
+          "id": "i1:flower::0",
+          "interaction": {
+            "mode": "instance",
+            "groupId": "i1:flower::0"
+          }
+        },
+        {
+          "tool": "rain",
+          "entities": [
+            "i3"
+          ],
+          "projectedEntities": [],
+          "names": [
+            "丝雨"
+          ],
+          "options": {},
+          "animate": true,
+          "placement": {
+            "anchor": [
+              320,
+              194
+            ],
+            "at": [
+              0.5,
+              0.5
+            ],
+            "scale": 1.55
+          },
+          "semanticGroup": {
+            "members": [
+              "i3"
+            ],
+            "role": "environment",
+            "pattern": "field",
+            "depth": "unspecified",
+            "basis": "inferred",
+            "evidence": [
+              "无边丝雨细如愁"
+            ],
+            "index": 1
+          },
+          "semanticEffects": [
+            {
+              "path": "scene.actions[1].state",
+              "consumer": "形态与绘画时钟",
+              "effect": "启用工具支持的 fall 状态",
+              "status": "applied"
+            },
+            {
+              "path": "scene.actions[1].pace",
+              "consumer": "绘画时钟",
+              "effect": "定性节奏映射为语义基准时钟倍率 0.35；观看动态与景物节奏另行调节",
+              "status": "applied"
+            },
+            {
+              "path": "scene.actions[1].direction",
+              "consumer": "工具原生运动",
+              "effect": "使用原生向上／向下运动，不平移依托锚点",
+              "status": "applied"
+            },
+            {
+              "path": "scene.groups[1].role",
+              "consumer": "主次布局",
+              "effect": "保留环境群落层次",
+              "status": "applied"
+            },
+            {
+              "path": "scene.groups[1].pattern",
+              "consumer": "群落布局",
+              "effect": "按 field 组织显示单元；不覆盖明确数量",
+              "status": "applied"
+            },
+            {
+              "path": "scene.groups[1].depth",
+              "consumer": "远近布局",
+              "effect": "远近未明，保持本地默认",
+              "status": "skipped"
+            }
+          ],
+          "semanticEnergy": false,
+          "timeScale": 0.35,
+          "semanticAction": {
+            "entity": "i3",
+            "state": "fall",
+            "pace": "slow",
+            "direction": "down",
+            "modality": "asserted",
+            "basis": "inferred",
+            "evidence": [
+              "无边丝雨细如愁"
+            ]
+          },
+          "instances": [
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  194
+                ],
+                "at": [
+                  0.5,
+                  0.5
+                ],
+                "scale": 1.55
+              },
+              "depth": 0.05,
+              "opacity": 0.84,
+              "variant": 0,
+              "tone": "far",
+              "id": "i3:rain::1:0"
+            }
+          ],
+          "singleUnit": false,
+          "quantity": {
+            "items": [
+              {
+                "entity": "i3",
+                "mode": "many",
+                "min": null,
+                "max": null,
+                "unit": null,
+                "scope": "unspecified",
+                "extent": "spread",
+                "evidence": [
+                  "无边丝雨细如愁"
+                ],
+                "basis": "model"
+              }
+            ],
+            "rendered": 1,
+            "exact": false,
+            "collective": true,
+            "partUnsupported": false
+          },
+          "quantityLabel": "整体笔触图层；内部数量尚未适配",
+          "visual": {
+            "role": "atmosphere",
+            "brushStrength": 1.1
+          },
+          "performance": {
+            "rhythm": "falling",
+            "rate": 1,
+            "amplitude": 0.8,
+            "phase": 3.8830085198369844
+          },
+          "id": "i3:rain::1",
+          "interaction": {
+            "mode": "instance",
+            "groupId": "i3:rain::1"
+          }
+        },
+        {
+          "tool": "landscape",
+          "entities": [],
+          "projectedEntities": [],
+          "names": [
+            "构图依托·地面"
+          ],
+          "options": {
+            "form": "ground",
+            "edge": "soft"
+          },
+          "animate": false,
+          "placement": {
+            "anchor": [
+              320,
+              194
+            ],
+            "at": [
+              0.5,
+              0.54
+            ],
+            "scale": 1.6
+          },
+          "instances": [
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  265
+                ],
+                "at": [
+                  0.5,
+                  0.54
+                ],
+                "scale": 2.5
+              },
+              "variant": 0,
+              "depth": 0,
+              "opacity": 0.84,
+              "tone": "far",
+              "id": "inferred:landscape:ground:2:0"
+            }
+          ],
+          "singleUnit": false,
+          "inferred": true,
+          "provenance": {
+            "basis": "local-context",
+            "reason": "整体场景解释为 open_land，本地补充必要 ground 依托",
+            "semanticPath": "scene.setting"
+          },
+          "quantity": {
+            "rendered": 1,
+            "exact": false,
+            "items": []
+          },
+          "quantityLabel": "本地环境依托，不计入原文意象覆盖",
+          "z": -18,
+          "clip": [
+            [
+              0,
+              0.5
+            ],
+            [
+              1,
+              0.5
+            ],
+            [
+              1,
+              1.04
+            ],
+            [
+              0,
+              1.04
+            ]
+          ],
+          "visual": {
+            "role": "ground",
+            "brushStrength": 1.1
+          },
+          "performance": {
+            "rhythm": "steady",
+            "rate": 1,
+            "amplitude": 1,
+            "phase": 1.4828317324943823
+          },
+          "id": "inferred:landscape:ground:2",
+          "interaction": {
+            "mode": "group",
+            "groupId": "inferred:landscape:ground:2"
+          }
+        }
+      ],
+      "spatial": [],
+      "scene": {
+        "kind": "study",
+        "notes": [
+          "通用场景层先组织地面、水域、群落和主体，再比较三个布局的依托、相对位置、尺度与遮挡；检查通过不代表审美已通过。"
+        ],
+        "waterline": null,
+        "semanticSetting": {
+          "kind": "open_land",
+          "basis": "inferred",
+          "evidence": [
+            "自在飞花轻似梦",
+            "无边丝雨细如愁"
+          ]
+        },
+        "semanticEffects": [
+          {
+            "path": "scene.setting",
+            "consumer": "场景依托",
+            "status": "applied",
+            "effect": "必要环境以独立推断背景表示，不新增原文实体"
+          }
+        ],
+        "organization": {
+          "version": "1.0",
+          "strategy": "general-constraints",
+          "regions": {
+            "land": [
+              [
+                0,
+                0.5
+              ],
+              [
+                1,
+                0.5
+              ],
+              [
+                1,
+                1.04
+              ],
+              [
+                0,
+                1.04
+              ]
+            ]
+          },
+          "candidates": [
+            {
+              "layout": 2,
+              "orientation": "远近错落",
+              "errors": 0,
+              "cost": 0.433,
+              "score": 1.189,
+              "metrics": {
+                "overlapPenalty": 0,
+                "balancePenalty": 0.054,
+                "motifFootprint": 0.232,
+                "landArea": 0.54
+              }
+            },
+            {
+              "layout": 1,
+              "orientation": "林隙展开",
+              "errors": 0,
+              "cost": 0.5,
+              "score": 1.382,
+              "metrics": {
+                "overlapPenalty": 0,
+                "balancePenalty": 0.063,
+                "motifFootprint": 0.233,
+                "landArea": 0.54
+              }
+            },
+            {
+              "layout": 0,
+              "orientation": "疏林前后",
+              "errors": 0,
+              "cost": 0.556,
+              "score": 1.536,
+              "metrics": {
+                "overlapPenalty": 0,
+                "balancePenalty": 0.07,
+                "motifFootprint": 0.234,
+                "landArea": 0.54
+              }
+            }
+          ],
+          "repairs": [
+            {
+              "type": "support-added",
+              "reason": "整体场景解释为 open_land，本地补充必要 ground 依托"
+            }
+          ],
+          "limitations": [
+            "几何检查不判定诗意理解或审美合格",
+            "动作时序与整首诗的场景切换尚未编排"
+          ],
+          "topology": "远近错落",
+          "layout": 2,
+          "orientation": "远近错落",
+          "audit": {
+            "scope": "implemented-geometry-and-drawing-gaps",
+            "coverage": {
+              "scope": "extracted-entities-only",
+              "present": 2,
+              "mapped": 2,
+              "parameters": [],
+              "missing": []
+            },
+            "checks": [
+              "presence",
+              "count",
+              "finite",
+              "support",
+              "scale",
+              "relative-position",
+              "depth",
+              "grove-spread",
+              "drawing-gaps"
+            ],
+            "status": "checks-passed",
+            "errors": 0,
+            "review": 0,
+            "issues": [],
+            "metrics": {
+              "overlapPenalty": 0,
+              "balancePenalty": 0.006,
+              "motifFootprint": 0.313,
+              "landArea": 0.54
+            },
+            "cost": 0.046,
+            "aestheticAcceptance": "pending-user"
+          },
+          "graph": {
+            "nodes": [
+              {
+                "id": "l0",
+                "entities": [
+                  "i1"
+                ],
+                "tool": "flower",
+                "role": "vegetation",
+                "habitat": "land",
+                "inferred": false,
+                "support": "l2"
+              },
+              {
+                "id": "l1",
+                "entities": [
+                  "i3"
+                ],
+                "tool": "rain",
+                "role": "atmosphere",
+                "habitat": null,
+                "inferred": false,
+                "support": null
+              },
+              {
+                "id": "l2",
+                "entities": [],
+                "tool": "landscape",
+                "role": "terrain",
+                "habitat": null,
+                "inferred": true,
+                "support": null
+              }
+            ],
+            "edges": [
+              {
+                "type": "supported-by",
+                "source": "l0",
+                "target": "l2",
+                "basis": "local-composition",
+                "habitat": "land"
+              }
+            ],
+            "setting": "study"
+          }
+        },
+        "displayAudit": {
+          "scope": "display-scale-separation-and-habitat",
+          "issues": [],
+          "errors": 0,
+          "aestheticAcceptance": "pending-user"
+        }
+      },
+      "compositions": [
+        {
+          "id": "space-2",
+          "label": "远近错落",
+          "description": "先安排连续水域与地表，再按主次与远近安放景物",
+          "layers": [
+            {
+              "tool": "flower",
+              "entities": [
+                "i1"
+              ],
+              "projectedEntities": [],
+              "names": [
+                "飞花"
+              ],
+              "options": {},
+              "animate": false,
+              "placement": {
+                "anchor": [
+                  320,
+                  320
+                ],
+                "at": [
+                  0.5011662165468734,
+                  0.7735717455621303
+                ],
+                "scale": 0.95
+              },
+              "semanticGroup": {
+                "members": [
+                  "i1"
+                ],
+                "role": "subject",
+                "pattern": "scattered",
+                "depth": "unspecified",
+                "basis": "inferred",
+                "evidence": [
+                  "自在飞花轻似梦"
+                ],
+                "index": 0
+              },
+              "semanticEffects": [
+                {
+                  "path": "scene.actions[0].state",
+                  "consumer": "动作画法",
+                  "effect": "当前工具尚无对应动作状态",
+                  "status": "unsupported"
+                },
+                {
+                  "path": "scene.groups[0].role",
+                  "consumer": "主次布局",
+                  "effect": "主体相对突出",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[0].pattern",
+                  "consumer": "群落布局",
+                  "effect": "按 scattered 组织显示单元；不覆盖明确数量",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[0].depth",
+                  "consumer": "远近布局",
+                  "effect": "远近未明，保持本地默认",
+                  "status": "skipped"
+                }
+              ],
+              "semanticEnergy": false,
+              "timeScale": 0,
+              "semanticAction": {
+                "entity": "i1",
+                "state": "fall",
+                "pace": "slow",
+                "direction": "down",
+                "modality": "asserted",
+                "basis": "inferred",
+                "evidence": [
+                  "自在飞花轻似梦"
+                ]
+              },
+              "instances": [
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.8478020899291585,
+                      0.6149038461538462
+                    ],
+                    "scale": 0.36
+                  },
+                  "depth": 0,
+                  "opacity": 0.72,
+                  "variant": 0,
+                  "tone": "far",
+                  "id": "i1:flower::0:0"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.4255845004136334,
+                      0.6247115384615385
+                    ],
+                    "scale": 0.395
+                  },
+                  "depth": 0.01,
+                  "opacity": 0.72,
+                  "variant": 0,
+                  "tone": "far",
+                  "id": "i1:flower::0:1"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.035,
+                      0.6345192307692308
+                    ],
+                    "scale": 0.43
+                  },
+                  "depth": 0.02,
+                  "opacity": 0.72,
+                  "variant": 0,
+                  "tone": "far",
+                  "id": "i1:flower::0:2"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.6865293213825838,
+                      0.6443269230769231
+                    ],
+                    "scale": 0.46499999999999997
+                  },
+                  "depth": 10.03,
+                  "opacity": 0.72,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i1:flower::0:3"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.2643117318670589,
+                      0.6541346153846154
+                    ],
+                    "scale": 0.36
+                  },
+                  "depth": 10.04,
+                  "opacity": 0.72,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i1:flower::0:4"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.9474741423515336,
+                      0.6639423076923077
+                    ],
+                    "scale": 0.395
+                  },
+                  "depth": 10.05,
+                  "opacity": 0.72,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i1:flower::0:5"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.5252565528360092,
+                      0.67375
+                    ],
+                    "scale": 0.43
+                  },
+                  "depth": 10.06,
+                  "opacity": 0.72,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i1:flower::0:6"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.10303896332048385,
+                      0.6835576923076923
+                    ],
+                    "scale": 0.46499999999999997
+                  },
+                  "depth": 10.07,
+                  "opacity": 0.72,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i1:flower::0:7"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.7862013738049587,
+                      0.6933653846153847
+                    ],
+                    "scale": 0.36
+                  },
+                  "depth": 10.08,
+                  "opacity": 0.72,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i1:flower::0:8"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.36398378428943423,
+                      0.7031730769230768
+                    ],
+                    "scale": 0.395
+                  },
+                  "depth": 10.09,
+                  "opacity": 0.72,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i1:flower::0:9"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.965,
+                      0.7129807692307693
+                    ],
+                    "scale": 0.43
+                  },
+                  "depth": 10.1,
+                  "opacity": 0.72,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i1:flower::0:10"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.6249286052583837,
+                      0.7227884615384615
+                    ],
+                    "scale": 0.46499999999999997
+                  },
+                  "depth": 10.11,
+                  "opacity": 0.72,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i1:flower::0:11"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.20271101574285927,
+                      0.7325961538461538
+                    ],
+                    "scale": 0.36
+                  },
+                  "depth": 10.12,
+                  "opacity": 0.72,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i1:flower::0:12"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.885873426227336,
+                      0.7424038461538461
+                    ],
+                    "scale": 0.395
+                  },
+                  "depth": 10.13,
+                  "opacity": 0.72,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i1:flower::0:13"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.46365583671181054,
+                      0.7522115384615384
+                    ],
+                    "scale": 0.43
+                  },
+                  "depth": 10.14,
+                  "opacity": 0.72,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i1:flower::0:14"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.041438247196285194,
+                      0.9495
+                    ],
+                    "scale": 0.46499999999999997
+                  },
+                  "depth": 20.15,
+                  "opacity": 0.72,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i1:flower::0:15"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.72460065768076,
+                      0.9585
+                    ],
+                    "scale": 0.46084092895400025
+                  },
+                  "depth": 20.16,
+                  "opacity": 0.7951809646830001,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i1:flower::0:16"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.3023830681652346,
+                      0.9675
+                    ],
+                    "scale": 0.4052266777160002
+                  },
+                  "depth": 20.17,
+                  "opacity": 0.7374277037820002,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i1:flower::0:17"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.965,
+                      0.9765
+                    ],
+                    "scale": 0.4952124264780004
+                  },
+                  "depth": 20.18,
+                  "opacity": 0.8308744428810003,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i1:flower::0:18"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.563327889134186,
+                      0.9855
+                    ],
+                    "scale": 0.46499999999999997
+                  },
+                  "depth": 20.19,
+                  "opacity": 0.7731211819800002,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i1:flower::0:19"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.14111029961866062,
+                      0.8145
+                    ],
+                    "scale": 0.3839839240020004
+                  },
+                  "depth": 10.2,
+                  "opacity": 0.72,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i1:flower::0:20"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.8242727101031353,
+                      0.8235
+                    ],
+                    "scale": 0.47396967276400026
+                  },
+                  "depth": 10.21,
+                  "opacity": 0.8088146601780002,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i1:flower::0:21"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.40205512058760995,
+                      0.8325
+                    ],
+                    "scale": 0.43
+                  },
+                  "depth": 20.22,
+                  "opacity": 0.7510613992770001,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i1:flower::0:22"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.035,
+                      0.8415
+                    ],
+                    "scale": 0.46499999999999997
+                  },
+                  "depth": 20.23,
+                  "opacity": 0.72,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i1:flower::0:23"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.6629999415565614,
+                      0.8505
+                    ],
+                    "scale": 0.45272691905000045
+                  },
+                  "depth": 20.24,
+                  "opacity": 0.7867548774750003,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i1:flower::0:24"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.240782352041032,
+                      0.8595
+                    ],
+                    "scale": 0.3971126678119999
+                  },
+                  "depth": 20.25,
+                  "opacity": 0.7290016165739998,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i1:flower::0:25"
+                }
+              ],
+              "singleUnit": true,
+              "quantity": {
+                "items": [
+                  {
+                    "entity": "i1",
+                    "mode": "many",
+                    "min": null,
+                    "max": null,
+                    "unit": null,
+                    "scope": "unspecified",
+                    "extent": "spread",
+                    "evidence": [
+                      "自在飞花轻似梦"
+                    ],
+                    "basis": "model"
+                  }
+                ],
+                "rendered": 26,
+                "exact": false,
+                "collective": true,
+                "partUnsupported": false
+              },
+              "quantityLabel": "成片分布；本地试画 26 个单元",
+              "z": 14,
+              "visual": {
+                "role": "blossom",
+                "brushStrength": 1.65
+              },
+              "performance": {
+                "rhythm": "gust",
+                "rate": 0.62,
+                "amplitude": 0.65,
+                "phase": 0
+              },
+              "id": "i1:flower::0",
+              "interaction": {
+                "mode": "instance",
+                "groupId": "i1:flower::0"
+              }
+            },
+            {
+              "tool": "rain",
+              "entities": [
+                "i3"
+              ],
+              "projectedEntities": [],
+              "names": [
+                "丝雨"
+              ],
+              "options": {},
+              "animate": true,
+              "placement": {
+                "anchor": [
+                  320,
+                  194
+                ],
+                "at": [
+                  0.5,
+                  0.5
+                ],
+                "scale": 1.55
+              },
+              "semanticGroup": {
+                "members": [
+                  "i3"
+                ],
+                "role": "environment",
+                "pattern": "field",
+                "depth": "unspecified",
+                "basis": "inferred",
+                "evidence": [
+                  "无边丝雨细如愁"
+                ],
+                "index": 1
+              },
+              "semanticEffects": [
+                {
+                  "path": "scene.actions[1].state",
+                  "consumer": "形态与绘画时钟",
+                  "effect": "启用工具支持的 fall 状态",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.actions[1].pace",
+                  "consumer": "绘画时钟",
+                  "effect": "定性节奏映射为语义基准时钟倍率 0.35；观看动态与景物节奏另行调节",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.actions[1].direction",
+                  "consumer": "工具原生运动",
+                  "effect": "使用原生向上／向下运动，不平移依托锚点",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[1].role",
+                  "consumer": "主次布局",
+                  "effect": "保留环境群落层次",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[1].pattern",
+                  "consumer": "群落布局",
+                  "effect": "按 field 组织显示单元；不覆盖明确数量",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[1].depth",
+                  "consumer": "远近布局",
+                  "effect": "远近未明，保持本地默认",
+                  "status": "skipped"
+                }
+              ],
+              "semanticEnergy": false,
+              "timeScale": 0.35,
+              "semanticAction": {
+                "entity": "i3",
+                "state": "fall",
+                "pace": "slow",
+                "direction": "down",
+                "modality": "asserted",
+                "basis": "inferred",
+                "evidence": [
+                  "无边丝雨细如愁"
+                ]
+              },
+              "instances": [
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      194
+                    ],
+                    "at": [
+                      0.5,
+                      0.5
+                    ],
+                    "scale": 1.55
+                  },
+                  "depth": 0.05,
+                  "opacity": 0.84,
+                  "variant": 0,
+                  "tone": "far",
+                  "id": "i3:rain::1:0"
+                }
+              ],
+              "singleUnit": false,
+              "quantity": {
+                "items": [
+                  {
+                    "entity": "i3",
+                    "mode": "many",
+                    "min": null,
+                    "max": null,
+                    "unit": null,
+                    "scope": "unspecified",
+                    "extent": "spread",
+                    "evidence": [
+                      "无边丝雨细如愁"
+                    ],
+                    "basis": "model"
+                  }
+                ],
+                "rendered": 1,
+                "exact": false,
+                "collective": true,
+                "partUnsupported": false
+              },
+              "quantityLabel": "整体笔触图层；内部数量尚未适配",
+              "visual": {
+                "role": "atmosphere",
+                "brushStrength": 1.1
+              },
+              "performance": {
+                "rhythm": "falling",
+                "rate": 1,
+                "amplitude": 0.8,
+                "phase": 3.8830085198369844
+              },
+              "id": "i3:rain::1",
+              "interaction": {
+                "mode": "instance",
+                "groupId": "i3:rain::1"
+              }
+            },
+            {
+              "tool": "landscape",
+              "entities": [],
+              "projectedEntities": [],
+              "names": [
+                "构图依托·地面"
+              ],
+              "options": {
+                "form": "ground",
+                "edge": "soft"
+              },
+              "animate": false,
+              "placement": {
+                "anchor": [
+                  320,
+                  194
+                ],
+                "at": [
+                  0.5,
+                  0.54
+                ],
+                "scale": 1.6
+              },
+              "instances": [
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      265
+                    ],
+                    "at": [
+                      0.5,
+                      0.54
+                    ],
+                    "scale": 2.5
+                  },
+                  "variant": 0,
+                  "depth": 0,
+                  "opacity": 0.84,
+                  "tone": "far",
+                  "id": "inferred:landscape:ground:2:0"
+                }
+              ],
+              "singleUnit": false,
+              "inferred": true,
+              "provenance": {
+                "basis": "local-context",
+                "reason": "整体场景解释为 open_land，本地补充必要 ground 依托",
+                "semanticPath": "scene.setting"
+              },
+              "quantity": {
+                "rendered": 1,
+                "exact": false,
+                "items": []
+              },
+              "quantityLabel": "本地环境依托，不计入原文意象覆盖",
+              "z": -18,
+              "clip": [
+                [
+                  0,
+                  0.5
+                ],
+                [
+                  1,
+                  0.5
+                ],
+                [
+                  1,
+                  1.04
+                ],
+                [
+                  0,
+                  1.04
+                ]
+              ],
+              "visual": {
+                "role": "ground",
+                "brushStrength": 1.1
+              },
+              "performance": {
+                "rhythm": "steady",
+                "rate": 1,
+                "amplitude": 1,
+                "phase": 1.4828317324943823
+              },
+              "id": "inferred:landscape:ground:2",
+              "interaction": {
+                "mode": "group",
+                "groupId": "inferred:landscape:ground:2"
+              }
+            }
+          ],
+          "scene": {
+            "kind": "study",
+            "notes": [
+              "通用场景层先组织地面、水域、群落和主体，再比较三个布局的依托、相对位置、尺度与遮挡；检查通过不代表审美已通过。"
+            ],
+            "waterline": null,
+            "semanticSetting": {
+              "kind": "open_land",
+              "basis": "inferred",
+              "evidence": [
+                "自在飞花轻似梦",
+                "无边丝雨细如愁"
+              ]
+            },
+            "semanticEffects": [
+              {
+                "path": "scene.setting",
+                "consumer": "场景依托",
+                "status": "applied",
+                "effect": "必要环境以独立推断背景表示，不新增原文实体"
+              }
+            ],
+            "organization": {
+              "version": "1.0",
+              "strategy": "general-constraints",
+              "regions": {
+                "land": [
+                  [
+                    0,
+                    0.5
+                  ],
+                  [
+                    1,
+                    0.5
+                  ],
+                  [
+                    1,
+                    1.04
+                  ],
+                  [
+                    0,
+                    1.04
+                  ]
+                ]
+              },
+              "candidates": [
+                {
+                  "layout": 2,
+                  "orientation": "远近错落",
+                  "errors": 0,
+                  "cost": 0.433,
+                  "score": 1.189,
+                  "metrics": {
+                    "overlapPenalty": 0,
+                    "balancePenalty": 0.054,
+                    "motifFootprint": 0.232,
+                    "landArea": 0.54
+                  }
+                },
+                {
+                  "layout": 1,
+                  "orientation": "林隙展开",
+                  "errors": 0,
+                  "cost": 0.5,
+                  "score": 1.382,
+                  "metrics": {
+                    "overlapPenalty": 0,
+                    "balancePenalty": 0.063,
+                    "motifFootprint": 0.233,
+                    "landArea": 0.54
+                  }
+                },
+                {
+                  "layout": 0,
+                  "orientation": "疏林前后",
+                  "errors": 0,
+                  "cost": 0.556,
+                  "score": 1.536,
+                  "metrics": {
+                    "overlapPenalty": 0,
+                    "balancePenalty": 0.07,
+                    "motifFootprint": 0.234,
+                    "landArea": 0.54
+                  }
+                }
+              ],
+              "repairs": [
+                {
+                  "type": "support-added",
+                  "reason": "整体场景解释为 open_land，本地补充必要 ground 依托"
+                }
+              ],
+              "limitations": [
+                "几何检查不判定诗意理解或审美合格",
+                "动作时序与整首诗的场景切换尚未编排"
+              ],
+              "topology": "远近错落",
+              "layout": 2,
+              "orientation": "远近错落",
+              "audit": {
+                "scope": "implemented-geometry-and-drawing-gaps",
+                "coverage": {
+                  "scope": "extracted-entities-only",
+                  "present": 2,
+                  "mapped": 2,
+                  "parameters": [],
+                  "missing": []
+                },
+                "checks": [
+                  "presence",
+                  "count",
+                  "finite",
+                  "support",
+                  "scale",
+                  "relative-position",
+                  "depth",
+                  "grove-spread",
+                  "drawing-gaps"
+                ],
+                "status": "checks-passed",
+                "errors": 0,
+                "review": 0,
+                "issues": [],
+                "metrics": {
+                  "overlapPenalty": 0,
+                  "balancePenalty": 0.006,
+                  "motifFootprint": 0.313,
+                  "landArea": 0.54
+                },
+                "cost": 0.046,
+                "aestheticAcceptance": "pending-user"
+              },
+              "graph": {
+                "nodes": [
+                  {
+                    "id": "l0",
+                    "entities": [
+                      "i1"
+                    ],
+                    "tool": "flower",
+                    "role": "vegetation",
+                    "habitat": "land",
+                    "inferred": false,
+                    "support": "l2"
+                  },
+                  {
+                    "id": "l1",
+                    "entities": [
+                      "i3"
+                    ],
+                    "tool": "rain",
+                    "role": "atmosphere",
+                    "habitat": null,
+                    "inferred": false,
+                    "support": null
+                  },
+                  {
+                    "id": "l2",
+                    "entities": [],
+                    "tool": "landscape",
+                    "role": "terrain",
+                    "habitat": null,
+                    "inferred": true,
+                    "support": null
+                  }
+                ],
+                "edges": [
+                  {
+                    "type": "supported-by",
+                    "source": "l0",
+                    "target": "l2",
+                    "basis": "local-composition",
+                    "habitat": "land"
+                  }
+                ],
+                "setting": "study"
+              }
+            },
+            "displayAudit": {
+              "scope": "display-scale-separation-and-habitat",
+              "issues": [],
+              "errors": 0,
+              "aestheticAcceptance": "pending-user"
+            }
+          },
+          "spatial": [],
+          "landscapeStyle": {
+            "version": "1.0",
+            "color": "role-and-distance",
+            "motion": "layer-rhythms",
+            "aestheticAcceptance": "pending-user"
+          }
+        },
+        {
+          "id": "space-1",
+          "label": "林隙展开",
+          "description": "先安排连续水域与地表，再按主次与远近安放景物",
+          "layers": [
+            {
+              "tool": "flower",
+              "entities": [
+                "i1"
+              ],
+              "projectedEntities": [],
+              "names": [
+                "飞花"
+              ],
+              "options": {},
+              "animate": false,
+              "placement": {
+                "anchor": [
+                  320,
+                  320
+                ],
+                "at": [
+                  0.5047730138419273,
+                  0.7735717455621303
+                ],
+                "scale": 0.95
+              },
+              "semanticGroup": {
+                "members": [
+                  "i1"
+                ],
+                "role": "subject",
+                "pattern": "scattered",
+                "depth": "unspecified",
+                "basis": "inferred",
+                "evidence": [
+                  "自在飞花轻似梦"
+                ],
+                "index": 0
+              },
+              "semanticEffects": [
+                {
+                  "path": "scene.actions[0].state",
+                  "consumer": "动作画法",
+                  "effect": "当前工具尚无对应动作状态",
+                  "status": "unsupported"
+                },
+                {
+                  "path": "scene.groups[0].role",
+                  "consumer": "主次布局",
+                  "effect": "主体相对突出",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[0].pattern",
+                  "consumer": "群落布局",
+                  "effect": "按 scattered 组织显示单元；不覆盖明确数量",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[0].depth",
+                  "consumer": "远近布局",
+                  "effect": "远近未明，保持本地默认",
+                  "status": "skipped"
+                }
+              ],
+              "semanticEnergy": false,
+              "timeScale": 0,
+              "semanticAction": {
+                "entity": "i1",
+                "state": "fall",
+                "pace": "slow",
+                "direction": "down",
+                "modality": "asserted",
+                "basis": "inferred",
+                "evidence": [
+                  "自在飞花轻似梦"
+                ]
+              },
+              "instances": [
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.7662643976214663,
+                      0.6149038461538462
+                    ],
+                    "scale": 0.36
+                  },
+                  "depth": 0,
+                  "opacity": 0.72840679775,
+                  "variant": 0,
+                  "tone": "far",
+                  "id": "i1:flower::0:0"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.3440468081059411,
+                      0.6247115384615385
+                    ],
+                    "scale": 0.395
+                  },
+                  "depth": 0.01,
+                  "opacity": 0.72,
+                  "variant": 0,
+                  "tone": "far",
+                  "id": "i1:flower::0:1"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.965,
+                      0.6345192307692308
+                    ],
+                    "scale": 0.43
+                  },
+                  "depth": 0.02,
+                  "opacity": 0.77562039325,
+                  "variant": 0,
+                  "tone": "far",
+                  "id": "i1:flower::0:2"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.6049916290748916,
+                      0.6443269230769231
+                    ],
+                    "scale": 0.46499999999999997
+                  },
+                  "depth": 10.03,
+                  "opacity": 0.72,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i1:flower::0:3"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.18277403955936666,
+                      0.6541346153846154
+                    ],
+                    "scale": 0.36
+                  },
+                  "depth": 10.04,
+                  "opacity": 0.72,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i1:flower::0:4"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.8659364500438413,
+                      0.6639423076923077
+                    ],
+                    "scale": 0.395
+                  },
+                  "depth": 10.05,
+                  "opacity": 0.7464407865,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i1:flower::0:5"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.44371886052831744,
+                      0.67375
+                    ],
+                    "scale": 0.43
+                  },
+                  "depth": 10.06,
+                  "opacity": 0.72,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i1:flower::0:6"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.035,
+                      0.6835576923076923
+                    ],
+                    "scale": 0.46499999999999997
+                  },
+                  "depth": 10.07,
+                  "opacity": 0.72,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i1:flower::0:7"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.7046636814972669,
+                      0.6933653846153847
+                    ],
+                    "scale": 0.36
+                  },
+                  "depth": 10.08,
+                  "opacity": 0.72,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i1:flower::0:8"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.2824460919817424,
+                      0.7031730769230768
+                    ],
+                    "scale": 0.395
+                  },
+                  "depth": 10.09,
+                  "opacity": 0.72,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i1:flower::0:9"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.965,
+                      0.7129807692307693
+                    ],
+                    "scale": 0.43
+                  },
+                  "depth": 10.1,
+                  "opacity": 0.7644747752500002,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i1:flower::0:10"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.5433909129506918,
+                      0.7227884615384615
+                    ],
+                    "scale": 0.46499999999999997
+                  },
+                  "depth": 10.11,
+                  "opacity": 0.72,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i1:flower::0:11"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.1211733234351664,
+                      0.7325961538461538
+                    ],
+                    "scale": 0.36
+                  },
+                  "depth": 10.12,
+                  "opacity": 0.72,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i1:flower::0:12"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.8043357339196432,
+                      0.7424038461538461
+                    ],
+                    "scale": 0.395
+                  },
+                  "depth": 10.13,
+                  "opacity": 0.7352951685000003,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i1:flower::0:13"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.3821181444041178,
+                      0.7522115384615384
+                    ],
+                    "scale": 0.43
+                  },
+                  "depth": 10.14,
+                  "opacity": 0.72,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i1:flower::0:14"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.035,
+                      0.9495
+                    ],
+                    "scale": 0.46499999999999997
+                  },
+                  "depth": 20.15,
+                  "opacity": 0.8222578876000002,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i1:flower::0:15"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.6430629653730672,
+                      0.9585
+                    ],
+                    "scale": 0.45021212895400015
+                  },
+                  "depth": 20.16,
+                  "opacity": 0.9335040055750001,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i1:flower::0:16"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.22084537585754183,
+                      0.9675
+                    ],
+                    "scale": 0.395
+                  },
+                  "depth": 20.17,
+                  "opacity": 0.86475012355,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i1:flower::0:17"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.9040077863420186,
+                      0.9765
+                    ],
+                    "scale": 0.4845836264780004
+                  },
+                  "depth": 20.18,
+                  "opacity": 0.9759962415250003,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i1:flower::0:18"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.48179019682649316,
+                      0.9855
+                    ],
+                    "scale": 0.46499999999999997
+                  },
+                  "depth": 20.19,
+                  "opacity": 0.9072423595000003,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i1:flower::0:19"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.05957260731096781,
+                      0.8145
+                    ],
+                    "scale": 0.37335512400200027
+                  },
+                  "depth": 10.2,
+                  "opacity": 0.8384884774750002,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i1:flower::0:20"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.7427350177954426,
+                      0.8235
+                    ],
+                    "scale": 0.46334087276400027
+                  },
+                  "depth": 10.21,
+                  "opacity": 0.9497345954500002,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i1:flower::0:21"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.32051742827991714,
+                      0.8325
+                    ],
+                    "scale": 0.43
+                  },
+                  "depth": 20.22,
+                  "opacity": 0.8809807134250001,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i1:flower::0:22"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.965,
+                      0.8415
+                    ],
+                    "scale": 0.4977123702880002
+                  },
+                  "depth": 20.23,
+                  "opacity": 0.9922268314,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i1:flower::0:23"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.5814622492488685,
+                      0.8505
+                    ],
+                    "scale": 0.44209811905000035
+                  },
+                  "depth": 20.24,
+                  "opacity": 0.9234729493750004,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i1:flower::0:24"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.15924465973333923,
+                      0.8595
+                    ],
+                    "scale": 0.395
+                  },
+                  "depth": 20.25,
+                  "opacity": 0.8547190673499996,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i1:flower::0:25"
+                }
+              ],
+              "singleUnit": true,
+              "quantity": {
+                "items": [
+                  {
+                    "entity": "i1",
+                    "mode": "many",
+                    "min": null,
+                    "max": null,
+                    "unit": null,
+                    "scope": "unspecified",
+                    "extent": "spread",
+                    "evidence": [
+                      "自在飞花轻似梦"
+                    ],
+                    "basis": "model"
+                  }
+                ],
+                "rendered": 26,
+                "exact": false,
+                "collective": true,
+                "partUnsupported": false
+              },
+              "quantityLabel": "成片分布；本地试画 26 个单元",
+              "z": 14,
+              "visual": {
+                "role": "blossom",
+                "brushStrength": 1.65
+              },
+              "performance": {
+                "rhythm": "gust",
+                "rate": 0.62,
+                "amplitude": 0.65,
+                "phase": 0
+              },
+              "id": "i1:flower::0",
+              "interaction": {
+                "mode": "instance",
+                "groupId": "i1:flower::0"
+              }
+            },
+            {
+              "tool": "rain",
+              "entities": [
+                "i3"
+              ],
+              "projectedEntities": [],
+              "names": [
+                "丝雨"
+              ],
+              "options": {},
+              "animate": true,
+              "placement": {
+                "anchor": [
+                  320,
+                  194
+                ],
+                "at": [
+                  0.5,
+                  0.5
+                ],
+                "scale": 1.55
+              },
+              "semanticGroup": {
+                "members": [
+                  "i3"
+                ],
+                "role": "environment",
+                "pattern": "field",
+                "depth": "unspecified",
+                "basis": "inferred",
+                "evidence": [
+                  "无边丝雨细如愁"
+                ],
+                "index": 1
+              },
+              "semanticEffects": [
+                {
+                  "path": "scene.actions[1].state",
+                  "consumer": "形态与绘画时钟",
+                  "effect": "启用工具支持的 fall 状态",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.actions[1].pace",
+                  "consumer": "绘画时钟",
+                  "effect": "定性节奏映射为语义基准时钟倍率 0.35；观看动态与景物节奏另行调节",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.actions[1].direction",
+                  "consumer": "工具原生运动",
+                  "effect": "使用原生向上／向下运动，不平移依托锚点",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[1].role",
+                  "consumer": "主次布局",
+                  "effect": "保留环境群落层次",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[1].pattern",
+                  "consumer": "群落布局",
+                  "effect": "按 field 组织显示单元；不覆盖明确数量",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[1].depth",
+                  "consumer": "远近布局",
+                  "effect": "远近未明，保持本地默认",
+                  "status": "skipped"
+                }
+              ],
+              "semanticEnergy": false,
+              "timeScale": 0.35,
+              "semanticAction": {
+                "entity": "i3",
+                "state": "fall",
+                "pace": "slow",
+                "direction": "down",
+                "modality": "asserted",
+                "basis": "inferred",
+                "evidence": [
+                  "无边丝雨细如愁"
+                ]
+              },
+              "instances": [
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      194
+                    ],
+                    "at": [
+                      0.5,
+                      0.5
+                    ],
+                    "scale": 1.55
+                  },
+                  "depth": 0.05,
+                  "opacity": 1,
+                  "variant": 0,
+                  "tone": "far",
+                  "id": "i3:rain::1:0"
+                }
+              ],
+              "singleUnit": false,
+              "quantity": {
+                "items": [
+                  {
+                    "entity": "i3",
+                    "mode": "many",
+                    "min": null,
+                    "max": null,
+                    "unit": null,
+                    "scope": "unspecified",
+                    "extent": "spread",
+                    "evidence": [
+                      "无边丝雨细如愁"
+                    ],
+                    "basis": "model"
+                  }
+                ],
+                "rendered": 1,
+                "exact": false,
+                "collective": true,
+                "partUnsupported": false
+              },
+              "quantityLabel": "整体笔触图层；内部数量尚未适配",
+              "visual": {
+                "role": "atmosphere",
+                "brushStrength": 1.1
+              },
+              "performance": {
+                "rhythm": "falling",
+                "rate": 1,
+                "amplitude": 0.8,
+                "phase": 3.8830085198369844
+              },
+              "id": "i3:rain::1",
+              "interaction": {
+                "mode": "instance",
+                "groupId": "i3:rain::1"
+              }
+            },
+            {
+              "tool": "landscape",
+              "entities": [],
+              "projectedEntities": [],
+              "names": [
+                "构图依托·地面"
+              ],
+              "options": {
+                "form": "ground",
+                "edge": "soft"
+              },
+              "animate": false,
+              "placement": {
+                "anchor": [
+                  320,
+                  194
+                ],
+                "at": [
+                  0.5,
+                  0.54
+                ],
+                "scale": 1.6
+              },
+              "instances": [
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      265
+                    ],
+                    "at": [
+                      0.5,
+                      0.54
+                    ],
+                    "scale": 2.5
+                  },
+                  "variant": 0,
+                  "depth": 0,
+                  "opacity": 1,
+                  "tone": "far",
+                  "id": "inferred:landscape:ground:2:0"
+                }
+              ],
+              "singleUnit": false,
+              "inferred": true,
+              "provenance": {
+                "basis": "local-context",
+                "reason": "整体场景解释为 open_land，本地补充必要 ground 依托",
+                "semanticPath": "scene.setting"
+              },
+              "quantity": {
+                "rendered": 1,
+                "exact": false,
+                "items": []
+              },
+              "quantityLabel": "本地环境依托，不计入原文意象覆盖",
+              "z": -18,
+              "clip": [
+                [
+                  0,
+                  0.5
+                ],
+                [
+                  1,
+                  0.5
+                ],
+                [
+                  1,
+                  1.04
+                ],
+                [
+                  0,
+                  1.04
+                ]
+              ],
+              "visual": {
+                "role": "ground",
+                "brushStrength": 1.1
+              },
+              "performance": {
+                "rhythm": "steady",
+                "rate": 1,
+                "amplitude": 1,
+                "phase": 1.4828317324943823
+              },
+              "id": "inferred:landscape:ground:2",
+              "interaction": {
+                "mode": "group",
+                "groupId": "inferred:landscape:ground:2"
+              }
+            }
+          ],
+          "scene": {
+            "kind": "study",
+            "notes": [],
+            "waterline": null,
+            "semanticSetting": {
+              "kind": "open_land",
+              "basis": "inferred",
+              "evidence": [
+                "自在飞花轻似梦",
+                "无边丝雨细如愁"
+              ]
+            },
+            "semanticEffects": [
+              {
+                "path": "scene.setting",
+                "consumer": "场景依托",
+                "status": "applied",
+                "effect": "必要环境以独立推断背景表示，不新增原文实体"
+              }
+            ],
+            "organization": {
+              "version": "1.0",
+              "strategy": "general-constraints",
+              "regions": {
+                "land": [
+                  [
+                    0,
+                    0.5
+                  ],
+                  [
+                    1,
+                    0.5
+                  ],
+                  [
+                    1,
+                    1.04
+                  ],
+                  [
+                    0,
+                    1.04
+                  ]
+                ]
+              },
+              "candidates": [],
+              "repairs": [],
+              "limitations": [
+                "几何检查不判定诗意理解或审美合格",
+                "动作时序与整首诗的场景切换尚未编排"
+              ],
+              "topology": "林隙展开",
+              "layout": 1,
+              "orientation": "林隙展开",
+              "audit": {
+                "scope": "implemented-geometry-and-drawing-gaps",
+                "coverage": {
+                  "scope": "extracted-entities-only",
+                  "present": 2,
+                  "mapped": 2,
+                  "parameters": [],
+                  "missing": []
+                },
+                "checks": [
+                  "presence",
+                  "count",
+                  "finite",
+                  "support",
+                  "scale",
+                  "relative-position",
+                  "depth",
+                  "grove-spread",
+                  "drawing-gaps"
+                ],
+                "status": "checks-passed",
+                "errors": 0,
+                "review": 0,
+                "issues": [],
+                "metrics": {
+                  "overlapPenalty": 0,
+                  "balancePenalty": 0.021,
+                  "motifFootprint": 0.311,
+                  "landArea": 0.54
+                },
+                "cost": 0.17,
+                "aestheticAcceptance": "pending-user"
+              },
+              "graph": {
+                "nodes": [
+                  {
+                    "id": "l0",
+                    "entities": [
+                      "i1"
+                    ],
+                    "tool": "flower",
+                    "role": "vegetation",
+                    "habitat": "land",
+                    "inferred": false,
+                    "support": "l2"
+                  },
+                  {
+                    "id": "l1",
+                    "entities": [
+                      "i3"
+                    ],
+                    "tool": "rain",
+                    "role": "atmosphere",
+                    "habitat": null,
+                    "inferred": false,
+                    "support": null
+                  },
+                  {
+                    "id": "l2",
+                    "entities": [],
+                    "tool": "landscape",
+                    "role": "terrain",
+                    "habitat": null,
+                    "inferred": true,
+                    "support": null
+                  }
+                ],
+                "edges": [
+                  {
+                    "type": "supported-by",
+                    "source": "l0",
+                    "target": "l2",
+                    "basis": "local-composition",
+                    "habitat": "land"
+                  }
+                ],
+                "setting": "study"
+              }
+            },
+            "displayAudit": {
+              "scope": "display-scale-separation-and-habitat",
+              "issues": [],
+              "errors": 0,
+              "aestheticAcceptance": "pending-user"
+            }
+          },
+          "spatial": [],
+          "landscapeStyle": {
+            "version": "1.0",
+            "color": "role-and-distance",
+            "motion": "layer-rhythms",
+            "aestheticAcceptance": "pending-user"
+          }
+        },
+        {
+          "id": "space-0",
+          "label": "疏林前后",
+          "description": "先安排连续水域与地表，再按主次与远近安放景物",
+          "layers": [
+            {
+              "tool": "flower",
+              "entities": [
+                "i1"
+              ],
+              "projectedEntities": [],
+              "names": [
+                "飞花"
+              ],
+              "options": {},
+              "animate": false,
+              "placement": {
+                "anchor": [
+                  320,
+                  320
+                ],
+                "at": [
+                  0.507140630358586,
+                  0.7735717455621303
+                ],
+                "scale": 0.95
+              },
+              "semanticGroup": {
+                "members": [
+                  "i1"
+                ],
+                "role": "subject",
+                "pattern": "scattered",
+                "depth": "unspecified",
+                "basis": "inferred",
+                "evidence": [
+                  "自在飞花轻似梦"
+                ],
+                "index": 0
+              },
+              "semanticEffects": [
+                {
+                  "path": "scene.actions[0].state",
+                  "consumer": "动作画法",
+                  "effect": "当前工具尚无对应动作状态",
+                  "status": "unsupported"
+                },
+                {
+                  "path": "scene.groups[0].role",
+                  "consumer": "主次布局",
+                  "effect": "主体相对突出",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[0].pattern",
+                  "consumer": "群落布局",
+                  "effect": "按 scattered 组织显示单元；不覆盖明确数量",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[0].depth",
+                  "consumer": "远近布局",
+                  "effect": "远近未明，保持本地默认",
+                  "status": "skipped"
+                }
+              ],
+              "semanticEnergy": false,
+              "timeScale": 0,
+              "semanticAction": {
+                "entity": "i1",
+                "state": "fall",
+                "pace": "slow",
+                "direction": "down",
+                "modality": "asserted",
+                "basis": "inferred",
+                "evidence": [
+                  "自在飞花轻似梦"
+                ]
+              },
+              "instances": [
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.6847267053137741,
+                      0.6149038461538462
+                    ],
+                    "scale": 0.36
+                  },
+                  "depth": 0,
+                  "opacity": 0.72,
+                  "variant": 0,
+                  "tone": "far",
+                  "id": "i1:flower::0:0"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.26250911579824887,
+                      0.6247115384615385
+                    ],
+                    "scale": 0.395
+                  },
+                  "depth": 0.01,
+                  "opacity": 0.72,
+                  "variant": 0,
+                  "tone": "far",
+                  "id": "i1:flower::0:1"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.9456715262827239,
+                      0.6345192307692308
+                    ],
+                    "scale": 0.43
+                  },
+                  "depth": 0.02,
+                  "opacity": 0.7610203932499999,
+                  "variant": 0,
+                  "tone": "far",
+                  "id": "i1:flower::0:2"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.5234539367671993,
+                      0.6443269230769231
+                    ],
+                    "scale": 0.46499999999999997
+                  },
+                  "depth": 10.03,
+                  "opacity": 0.72,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i1:flower::0:3"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.10123634725167441,
+                      0.6541346153846154
+                    ],
+                    "scale": 0.36
+                  },
+                  "depth": 10.04,
+                  "opacity": 0.72,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i1:flower::0:4"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.7843987577361493,
+                      0.6639423076923077
+                    ],
+                    "scale": 0.395
+                  },
+                  "depth": 10.05,
+                  "opacity": 0.7318407865000001,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i1:flower::0:5"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.36218116822062485,
+                      0.67375
+                    ],
+                    "scale": 0.43
+                  },
+                  "depth": 10.06,
+                  "opacity": 0.72,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i1:flower::0:6"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.965,
+                      0.6835576923076923
+                    ],
+                    "scale": 0.46499999999999997
+                  },
+                  "depth": 10.07,
+                  "opacity": 0.7790543820000001,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i1:flower::0:7"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.6231259891895742,
+                      0.6933653846153847
+                    ],
+                    "scale": 0.36
+                  },
+                  "depth": 10.08,
+                  "opacity": 0.72,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i1:flower::0:8"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.20090839967404978,
+                      0.7031730769230768
+                    ],
+                    "scale": 0.395
+                  },
+                  "depth": 10.09,
+                  "opacity": 0.72,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i1:flower::0:9"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.8840708101585244,
+                      0.7129807692307693
+                    ],
+                    "scale": 0.43
+                  },
+                  "depth": 10.1,
+                  "opacity": 0.7498747752500001,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i1:flower::0:10"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.46185322064299916,
+                      0.7227884615384615
+                    ],
+                    "scale": 0.46499999999999997
+                  },
+                  "depth": 10.11,
+                  "opacity": 0.72,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i1:flower::0:11"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.039635631127473814,
+                      0.7325961538461538
+                    ],
+                    "scale": 0.36
+                  },
+                  "depth": 10.12,
+                  "opacity": 0.72,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i1:flower::0:12"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.7227980416119506,
+                      0.7424038461538461
+                    ],
+                    "scale": 0.395
+                  },
+                  "depth": 10.13,
+                  "opacity": 0.7206951685000003,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i1:flower::0:13"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.3005804520964251,
+                      0.7522115384615384
+                    ],
+                    "scale": 0.43
+                  },
+                  "depth": 10.14,
+                  "opacity": 0.72,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i1:flower::0:14"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.965,
+                      0.9495
+                    ],
+                    "scale": 0.49519758019200016
+                  },
+                  "depth": 20.15,
+                  "opacity": 0.9891178876000001,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i1:flower::0:15"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.5615252730653746,
+                      0.9585
+                    ],
+                    "scale": 0.4395833289540001
+                  },
+                  "depth": 20.16,
+                  "opacity": 0.9203640055750001,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i1:flower::0:16"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.13930768354984918,
+                      0.9675
+                    ],
+                    "scale": 0.395
+                  },
+                  "depth": 20.17,
+                  "opacity": 0.85161012355,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i1:flower::0:17"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.8224700940343258,
+                      0.9765
+                    ],
+                    "scale": 0.47395482647800025
+                  },
+                  "depth": 20.18,
+                  "opacity": 0.9628562415250003,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i1:flower::0:18"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.4002525045188005,
+                      0.9855
+                    ],
+                    "scale": 0.46499999999999997
+                  },
+                  "depth": 20.19,
+                  "opacity": 0.8941023595000002,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i1:flower::0:19"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.035,
+                      0.8145
+                    ],
+                    "scale": 0.3627263240020002
+                  },
+                  "depth": 10.2,
+                  "opacity": 0.8253484774750002,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i1:flower::0:20"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.6611973254877499,
+                      0.8235
+                    ],
+                    "scale": 0.4527120727640002
+                  },
+                  "depth": 10.21,
+                  "opacity": 0.9365945954500001,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i1:flower::0:21"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.2389797359722245,
+                      0.8325
+                    ],
+                    "scale": 0.43
+                  },
+                  "depth": 20.22,
+                  "opacity": 0.867840713425,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i1:flower::0:22"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.9221421464566993,
+                      0.8415
+                    ],
+                    "scale": 0.4870835702880001
+                  },
+                  "depth": 20.23,
+                  "opacity": 0.9790868314,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i1:flower::0:23"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.4999245569411759,
+                      0.8505
+                    ],
+                    "scale": 0.4314693190500003
+                  },
+                  "depth": 20.24,
+                  "opacity": 0.9103329493750003,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i1:flower::0:24"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.07770696742564659,
+                      0.8595
+                    ],
+                    "scale": 0.395
+                  },
+                  "depth": 20.25,
+                  "opacity": 0.8415790673499995,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i1:flower::0:25"
+                }
+              ],
+              "singleUnit": true,
+              "quantity": {
+                "items": [
+                  {
+                    "entity": "i1",
+                    "mode": "many",
+                    "min": null,
+                    "max": null,
+                    "unit": null,
+                    "scope": "unspecified",
+                    "extent": "spread",
+                    "evidence": [
+                      "自在飞花轻似梦"
+                    ],
+                    "basis": "model"
+                  }
+                ],
+                "rendered": 26,
+                "exact": false,
+                "collective": true,
+                "partUnsupported": false
+              },
+              "quantityLabel": "成片分布；本地试画 26 个单元",
+              "z": 14,
+              "visual": {
+                "role": "blossom",
+                "brushStrength": 1.65
+              },
+              "performance": {
+                "rhythm": "gust",
+                "rate": 0.62,
+                "amplitude": 0.65,
+                "phase": 0
+              },
+              "id": "i1:flower::0",
+              "interaction": {
+                "mode": "instance",
+                "groupId": "i1:flower::0"
+              }
+            },
+            {
+              "tool": "rain",
+              "entities": [
+                "i3"
+              ],
+              "projectedEntities": [],
+              "names": [
+                "丝雨"
+              ],
+              "options": {},
+              "animate": true,
+              "placement": {
+                "anchor": [
+                  320,
+                  194
+                ],
+                "at": [
+                  0.5,
+                  0.5
+                ],
+                "scale": 1.55
+              },
+              "semanticGroup": {
+                "members": [
+                  "i3"
+                ],
+                "role": "environment",
+                "pattern": "field",
+                "depth": "unspecified",
+                "basis": "inferred",
+                "evidence": [
+                  "无边丝雨细如愁"
+                ],
+                "index": 1
+              },
+              "semanticEffects": [
+                {
+                  "path": "scene.actions[1].state",
+                  "consumer": "形态与绘画时钟",
+                  "effect": "启用工具支持的 fall 状态",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.actions[1].pace",
+                  "consumer": "绘画时钟",
+                  "effect": "定性节奏映射为语义基准时钟倍率 0.35；观看动态与景物节奏另行调节",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.actions[1].direction",
+                  "consumer": "工具原生运动",
+                  "effect": "使用原生向上／向下运动，不平移依托锚点",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[1].role",
+                  "consumer": "主次布局",
+                  "effect": "保留环境群落层次",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[1].pattern",
+                  "consumer": "群落布局",
+                  "effect": "按 field 组织显示单元；不覆盖明确数量",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[1].depth",
+                  "consumer": "远近布局",
+                  "effect": "远近未明，保持本地默认",
+                  "status": "skipped"
+                }
+              ],
+              "semanticEnergy": false,
+              "timeScale": 0.35,
+              "semanticAction": {
+                "entity": "i3",
+                "state": "fall",
+                "pace": "slow",
+                "direction": "down",
+                "modality": "asserted",
+                "basis": "inferred",
+                "evidence": [
+                  "无边丝雨细如愁"
+                ]
+              },
+              "instances": [
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      194
+                    ],
+                    "at": [
+                      0.5,
+                      0.5
+                    ],
+                    "scale": 1.55
+                  },
+                  "depth": 0.05,
+                  "opacity": 1,
+                  "variant": 0,
+                  "tone": "far",
+                  "id": "i3:rain::1:0"
+                }
+              ],
+              "singleUnit": false,
+              "quantity": {
+                "items": [
+                  {
+                    "entity": "i3",
+                    "mode": "many",
+                    "min": null,
+                    "max": null,
+                    "unit": null,
+                    "scope": "unspecified",
+                    "extent": "spread",
+                    "evidence": [
+                      "无边丝雨细如愁"
+                    ],
+                    "basis": "model"
+                  }
+                ],
+                "rendered": 1,
+                "exact": false,
+                "collective": true,
+                "partUnsupported": false
+              },
+              "quantityLabel": "整体笔触图层；内部数量尚未适配",
+              "visual": {
+                "role": "atmosphere",
+                "brushStrength": 1.1
+              },
+              "performance": {
+                "rhythm": "falling",
+                "rate": 1,
+                "amplitude": 0.8,
+                "phase": 3.8830085198369844
+              },
+              "id": "i3:rain::1",
+              "interaction": {
+                "mode": "instance",
+                "groupId": "i3:rain::1"
+              }
+            },
+            {
+              "tool": "landscape",
+              "entities": [],
+              "projectedEntities": [],
+              "names": [
+                "构图依托·地面"
+              ],
+              "options": {
+                "form": "ground",
+                "edge": "soft"
+              },
+              "animate": false,
+              "placement": {
+                "anchor": [
+                  320,
+                  194
+                ],
+                "at": [
+                  0.5,
+                  0.54
+                ],
+                "scale": 1.6
+              },
+              "instances": [
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      265
+                    ],
+                    "at": [
+                      0.5,
+                      0.54
+                    ],
+                    "scale": 2.5
+                  },
+                  "variant": 0,
+                  "depth": 0,
+                  "opacity": 1,
+                  "tone": "far",
+                  "id": "inferred:landscape:ground:2:0"
+                }
+              ],
+              "singleUnit": false,
+              "inferred": true,
+              "provenance": {
+                "basis": "local-context",
+                "reason": "整体场景解释为 open_land，本地补充必要 ground 依托",
+                "semanticPath": "scene.setting"
+              },
+              "quantity": {
+                "rendered": 1,
+                "exact": false,
+                "items": []
+              },
+              "quantityLabel": "本地环境依托，不计入原文意象覆盖",
+              "z": -18,
+              "clip": [
+                [
+                  0,
+                  0.5
+                ],
+                [
+                  1,
+                  0.5
+                ],
+                [
+                  1,
+                  1.04
+                ],
+                [
+                  0,
+                  1.04
+                ]
+              ],
+              "visual": {
+                "role": "ground",
+                "brushStrength": 1.1
+              },
+              "performance": {
+                "rhythm": "steady",
+                "rate": 1,
+                "amplitude": 1,
+                "phase": 1.4828317324943823
+              },
+              "id": "inferred:landscape:ground:2",
+              "interaction": {
+                "mode": "group",
+                "groupId": "inferred:landscape:ground:2"
+              }
+            }
+          ],
+          "scene": {
+            "kind": "study",
+            "notes": [],
+            "waterline": null,
+            "semanticSetting": {
+              "kind": "open_land",
+              "basis": "inferred",
+              "evidence": [
+                "自在飞花轻似梦",
+                "无边丝雨细如愁"
+              ]
+            },
+            "semanticEffects": [
+              {
+                "path": "scene.setting",
+                "consumer": "场景依托",
+                "status": "applied",
+                "effect": "必要环境以独立推断背景表示，不新增原文实体"
+              }
+            ],
+            "organization": {
+              "version": "1.0",
+              "strategy": "general-constraints",
+              "regions": {
+                "land": [
+                  [
+                    0,
+                    0.5
+                  ],
+                  [
+                    1,
+                    0.5
+                  ],
+                  [
+                    1,
+                    1.04
+                  ],
+                  [
+                    0,
+                    1.04
+                  ]
+                ]
+              },
+              "candidates": [],
+              "repairs": [],
+              "limitations": [
+                "几何检查不判定诗意理解或审美合格",
+                "动作时序与整首诗的场景切换尚未编排"
+              ],
+              "topology": "疏林前后",
+              "layout": 0,
+              "orientation": "疏林前后",
+              "audit": {
+                "scope": "implemented-geometry-and-drawing-gaps",
+                "coverage": {
+                  "scope": "extracted-entities-only",
+                  "present": 2,
+                  "mapped": 2,
+                  "parameters": [],
+                  "missing": []
+                },
+                "checks": [
+                  "presence",
+                  "count",
+                  "finite",
+                  "support",
+                  "scale",
+                  "relative-position",
+                  "depth",
+                  "grove-spread",
+                  "drawing-gaps"
+                ],
+                "status": "checks-passed",
+                "errors": 0,
+                "review": 0,
+                "issues": [],
+                "metrics": {
+                  "overlapPenalty": 0,
+                  "balancePenalty": 0.041,
+                  "motifFootprint": 0.309,
+                  "landArea": 0.54
+                },
+                "cost": 0.327,
+                "aestheticAcceptance": "pending-user"
+              },
+              "graph": {
+                "nodes": [
+                  {
+                    "id": "l0",
+                    "entities": [
+                      "i1"
+                    ],
+                    "tool": "flower",
+                    "role": "vegetation",
+                    "habitat": "land",
+                    "inferred": false,
+                    "support": "l2"
+                  },
+                  {
+                    "id": "l1",
+                    "entities": [
+                      "i3"
+                    ],
+                    "tool": "rain",
+                    "role": "atmosphere",
+                    "habitat": null,
+                    "inferred": false,
+                    "support": null
+                  },
+                  {
+                    "id": "l2",
+                    "entities": [],
+                    "tool": "landscape",
+                    "role": "terrain",
+                    "habitat": null,
+                    "inferred": true,
+                    "support": null
+                  }
+                ],
+                "edges": [
+                  {
+                    "type": "supported-by",
+                    "source": "l0",
+                    "target": "l2",
+                    "basis": "local-composition",
+                    "habitat": "land"
+                  }
+                ],
+                "setting": "study"
+              }
+            },
+            "displayAudit": {
+              "scope": "display-scale-separation-and-habitat",
+              "issues": [],
+              "errors": 0,
+              "aestheticAcceptance": "pending-user"
+            }
+          },
+          "spatial": [],
+          "landscapeStyle": {
+            "version": "1.0",
+            "color": "role-and-distance",
+            "motion": "layer-rhythms",
+            "aestheticAcceptance": "pending-user"
+          }
+        }
+      ],
+      "composition": "space-2",
+      "omitted": [
+        {
+          "id": "i2",
+          "name": "梦",
+          "reason": "仅为比喻参照，不当作实景"
+        },
+        {
+          "id": "i4",
+          "name": "愁",
+          "reason": "仅为比喻参照，不当作实景"
+        }
+      ],
+      "notes": [
+        "位置、大小、笔触与默认微动是本地试画选择；数量解释与本地显示数量分别记录。",
+        "丝雨的数量解释已保留，当前工具以整体图层表现，内部笔触尚未按数量逐个适配。",
+        "未明说的群落数量、疏密、近中远层次与变体均为本地构图选择；种类可按已声明的写意画法概括，不把铺展词换算成精确物体数量。",
+        "通用场景层先组织地面、水域、群落和主体，再比较三个布局的依托、相对位置、尺度与遮挡；检查通过不代表审美已通过。",
+        "语义保留：scene.actions[0].state，当前工具尚无对应动作状态",
+        "整体场景、主次、远近、依托和支持的动作状态来自本次模型解释；具体布局、颜色和时钟倍率由本地视觉策略选择。",
+        "动作动画表现受支持的主导状态与有限观看运动；先后事件与完整因果尚未编排。",
+        "动态程度与默认轻风是可调整的观看选择；不改变数量、主次或原文动作判断。人物保持点景写意，不新增人物步态。",
+        "显示检查覆盖实例尺度、鸟群分离与空中落点；不保证笔触未被遮挡，也不代替实际观看。竹林默认成组拖动，其余单独拖动；Shift 可拖动同层整组。"
+      ],
+      "relations": [],
+      "semanticConsumption": {
+        "version": "3.3",
+        "items": [
+          {
+            "path": "scene.setting",
+            "status": "applied",
+            "consumer": "场景依托",
+            "effect": "必要环境以独立推断背景表示，不新增原文实体",
+            "basis": "inferred",
+            "evidence": [
+              "自在飞花轻似梦",
+              "无边丝雨细如愁"
+            ]
+          },
+          {
+            "path": "scene.groups[0].role",
+            "status": "applied",
+            "consumer": "主次布局",
+            "effect": "主体相对突出",
+            "basis": "inferred",
+            "evidence": [
+              "自在飞花轻似梦"
+            ]
+          },
+          {
+            "path": "scene.groups[0].pattern",
+            "status": "applied",
+            "consumer": "群落布局",
+            "effect": "按 scattered 组织显示单元；不覆盖明确数量",
+            "basis": "inferred",
+            "evidence": [
+              "自在飞花轻似梦"
+            ]
+          },
+          {
+            "path": "scene.groups[0].depth",
+            "status": "skipped",
+            "consumer": "远近布局",
+            "effect": "远近未明，保持本地默认",
+            "basis": "inferred",
+            "evidence": [
+              "自在飞花轻似梦"
+            ]
+          },
+          {
+            "path": "scene.groups[1].role",
+            "status": "applied",
+            "consumer": "主次布局",
+            "effect": "保留环境群落层次",
+            "basis": "inferred",
+            "evidence": [
+              "无边丝雨细如愁"
+            ]
+          },
+          {
+            "path": "scene.groups[1].pattern",
+            "status": "applied",
+            "consumer": "群落布局",
+            "effect": "按 field 组织显示单元；不覆盖明确数量",
+            "basis": "inferred",
+            "evidence": [
+              "无边丝雨细如愁"
+            ]
+          },
+          {
+            "path": "scene.groups[1].depth",
+            "status": "skipped",
+            "consumer": "远近布局",
+            "effect": "远近未明，保持本地默认",
+            "basis": "inferred",
+            "evidence": [
+              "无边丝雨细如愁"
+            ]
+          },
+          {
+            "path": "scene.actions[0].state",
+            "status": "unsupported",
+            "consumer": "动作画法",
+            "effect": "当前工具尚无对应动作状态",
+            "basis": "inferred",
+            "evidence": [
+              "自在飞花轻似梦"
+            ]
+          },
+          {
+            "path": "scene.actions[0].pace",
+            "status": "skipped",
+            "consumer": "本地视觉策略",
+            "effect": "该工具尚不支持此动作分量",
+            "basis": "inferred",
+            "evidence": [
+              "自在飞花轻似梦"
+            ]
+          },
+          {
+            "path": "scene.actions[0].direction",
+            "status": "skipped",
+            "consumer": "本地视觉策略",
+            "effect": "该工具尚不支持此动作分量",
+            "basis": "inferred",
+            "evidence": [
+              "自在飞花轻似梦"
+            ]
+          },
+          {
+            "path": "scene.actions[1].state",
+            "status": "applied",
+            "consumer": "形态与绘画时钟",
+            "effect": "启用工具支持的 fall 状态",
+            "basis": "inferred",
+            "evidence": [
+              "无边丝雨细如愁"
+            ]
+          },
+          {
+            "path": "scene.actions[1].pace",
+            "status": "applied",
+            "consumer": "绘画时钟",
+            "effect": "定性节奏映射为语义基准时钟倍率 0.35；观看动态与景物节奏另行调节",
+            "basis": "inferred",
+            "evidence": [
+              "无边丝雨细如愁"
+            ]
+          },
+          {
+            "path": "scene.actions[1].direction",
+            "status": "applied",
+            "consumer": "工具原生运动",
+            "effect": "使用原生向上／向下运动，不平移依托锚点",
+            "basis": "inferred",
+            "evidence": [
+              "无边丝雨细如愁"
+            ]
+          },
+          {
+            "path": "scene.atmosphere.visibility",
+            "status": "applied",
+            "consumer": "画布色层与远景",
+            "effect": "可见度 hazy；迷蒙或昏暗时淡化非光源图层",
+            "basis": "inferred",
+            "evidence": [
+              "无边丝雨细如愁"
+            ]
+          },
+          {
+            "path": "scene.atmosphere.illumination",
+            "status": "skipped",
+            "consumer": "自动光色",
+            "effect": "照明 unclear 与气息标签共同选择本地 clear 配色；夜景优先暗底，用户可手动覆盖",
+            "basis": "inferred",
+            "evidence": [
+              "无边丝雨细如愁"
+            ]
+          },
+          {
+            "path": "atmosphere.energy",
+            "status": "skipped",
+            "consumer": "绘画时钟",
+            "effect": "没有明确动作节奏时，气息强弱控制已有微动的默认时钟"
+          },
+          {
+            "path": "atmosphere.openness",
+            "status": "applied",
+            "consumer": "群落分布与笔触密度",
+            "effect": "开阔度转换为本地间距与工具笔触密度，不等于原文数量"
+          },
+          {
+            "path": "atmosphere.valence",
+            "status": "applied",
+            "consumer": "自动光色",
+            "effect": "先约束昼夜明暗，再按已支持的气息标签和情绪倾向选择配色；不宣称完整情感理解"
+          },
+          {
+            "path": "time.markers",
+            "status": "retained",
+            "consumer": "原始记录与解读",
+            "effect": "保留原文时间标记；本版照明由 scene.atmosphere 转换，多阶段时间逻辑未执行"
+          }
+        ],
+        "summary": {
+          "applied": 11,
+          "partial": 0,
+          "unsupported": 1,
+          "skipped": 6,
+          "retained": 1
+        },
+        "aestheticAcceptance": "pending-user"
+      },
+      "landscapeStyle": {
+        "version": "1.0",
+        "color": "role-and-distance",
+        "motion": "layer-rhythms",
+        "aestheticAcceptance": "pending-user"
+      },
+      "compositionSelection": {
+        "method": "final-display-constraints-then-geometric-preference",
+        "candidates": [
+          {
+            "id": "space-2",
+            "errors": 0,
+            "score": 0.13
+          },
+          {
+            "id": "space-1",
+            "errors": 0,
+            "score": 0.464
+          },
+          {
+            "id": "space-0",
+            "errors": 0,
+            "score": 0.901
+          }
+        ],
+        "aestheticAcceptance": "pending-user"
+      },
+      "imageryTrace": [
+        {
+          "id": "i1",
+          "mentions": [
+            "飞花"
+          ],
+          "role": "scene",
+          "presence": "present",
+          "parameter": null,
+          "layers": [
+            {
+              "id": "i1:flower::0",
+              "tool": "flower",
+              "instances": [
+                "i1:flower::0:0",
+                "i1:flower::0:1",
+                "i1:flower::0:2",
+                "i1:flower::0:3",
+                "i1:flower::0:4",
+                "i1:flower::0:5",
+                "i1:flower::0:6",
+                "i1:flower::0:7",
+                "i1:flower::0:8",
+                "i1:flower::0:9",
+                "i1:flower::0:10",
+                "i1:flower::0:11",
+                "i1:flower::0:12",
+                "i1:flower::0:13",
+                "i1:flower::0:14",
+                "i1:flower::0:15",
+                "i1:flower::0:16",
+                "i1:flower::0:17",
+                "i1:flower::0:18",
+                "i1:flower::0:19",
+                "i1:flower::0:20",
+                "i1:flower::0:21",
+                "i1:flower::0:22",
+                "i1:flower::0:23",
+                "i1:flower::0:24",
+                "i1:flower::0:25"
+              ]
+            }
+          ],
+          "omission": null
+        },
+        {
+          "id": "i2",
+          "mentions": [
+            "梦"
+          ],
+          "role": "reference",
+          "presence": "unclear",
+          "parameter": null,
+          "layers": [],
+          "omission": "仅为比喻参照，不当作实景"
+        },
+        {
+          "id": "i3",
+          "mentions": [
+            "丝雨"
+          ],
+          "role": "scene",
+          "presence": "present",
+          "parameter": null,
+          "layers": [
+            {
+              "id": "i3:rain::1",
+              "tool": "rain",
+              "instances": [
+                "i3:rain::1:0"
+              ]
+            }
+          ],
+          "omission": null
+        },
+        {
+          "id": "i4",
+          "mentions": [
+            "愁"
+          ],
+          "role": "reference",
+          "presence": "unclear",
+          "parameter": null,
+          "layers": [],
+          "omission": "仅为比喻参照，不当作实景"
+        }
+      ]
+    },
+    "expression": {
+      "version": "shared-expression-1.0",
+      "sourceContract": "expression-1.0",
+      "recommendation": "scenery",
+      "reason": "以明确景物及空间为主，默认风景优先",
+      "gaps": [],
+      "limitations": [
+        "景物过程当前影响抽象纹理；原生景物动作沿用场景能力，未支持的月下楼位移等仍不执行。",
+        "纹理、色层和观看扰动属于本地艺术选择，不改变语义成立状态"
+      ]
+    },
+    "notes": [
+      "三个表达倾向共享景物数量、空间、依托与主体身份；抽象笔触优先服从原景物区域和轮廓。",
+      "纯抽象或比喻句不因切换风景优先而补山水。",
+      "位置、大小、笔触与默认微动是本地试画选择；数量解释与本地显示数量分别记录。",
+      "丝雨的数量解释已保留，当前工具以整体图层表现，内部笔触尚未按数量逐个适配。",
+      "未明说的群落数量、疏密、近中远层次与变体均为本地构图选择；种类可按已声明的写意画法概括，不把铺展词换算成精确物体数量。",
+      "通用场景层先组织地面、水域、群落和主体，再比较三个布局的依托、相对位置、尺度与遮挡；检查通过不代表审美已通过。",
+      "语义保留：scene.actions[0].state，当前工具尚无对应动作状态",
+      "整体场景、主次、远近、依托和支持的动作状态来自本次模型解释；具体布局、颜色和时钟倍率由本地视觉策略选择。",
+      "动作动画表现受支持的主导状态与有限观看运动；先后事件与完整因果尚未编排。",
+      "动态程度与默认轻风是可调整的观看选择；不改变数量、主次或原文动作判断。人物保持点景写意，不新增人物步态。",
+      "显示检查覆盖实例尺度、鸟群分离与空中落点；不保证笔触未被遮挡，也不代替实际观看。竹林默认成组拖动，其余单独拖动；Shift 可拖动同层整组。"
+    ],
+    "aestheticAcceptance": "pending-user"
+  },
+  "delivery": {
+    "status": "complete",
+    "retryable": false,
+    "reason": null,
+    "message": "解读已通过检查。"
+  },
+  "elapsed_seconds": 10.2
+}

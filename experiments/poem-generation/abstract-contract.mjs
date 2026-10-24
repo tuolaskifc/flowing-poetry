@@ -32,16 +32,17 @@ export function validateAbstract(value,poem){
  walk(value,schema,'analysis');if(errors.length)return {valid:false,errors,warnings,review_required:true};
  if(value.poem!==poem)add('poem','改写了输入');
  const ids=new Map();for(const s of value.subjects){if(ids.has(s.id))add('subjects','重复id');ids.set(s.id,s);for(const q of [...s.mentions,...s.evidence])if(!poem.includes(q))add(s.id,'原词或依据不在原文中');if(!s.evidence.some(q=>s.mentions.some(m=>q.includes(m))))add(s.id,'依据未关联原词');}
- function claim(c,who,path){
+ function claim(c,who,path,comparison=false){
   for(const q of c.evidence)if(!poem.includes(q))add(path,'捏造依据');
   for(const id of who){const s=ids.get(id);if(!s){add(path,'端点不存在');continue;}if(!c.evidence.some(q=>s.mentions.some(m=>q.includes(m))))add(path,'依据未关联 '+id);
    const absentResult=s.presence==='absent'&&(c.kind==='fade'&&c.temporal==='already'||c.kind==='block'&&c.target===id);
-   if(c.modality==='asserted'&&s.presence!=='present'&&!absentResult)add(path,'非在场主体不能执行确定过程');
+   const reference=comparison&&s.role==='reference'&&s.presence==='unclear';
+   if(c.modality==='asserted'&&s.presence!=='present'&&!absentResult&&!reference)add(path,'非在场主体不能执行确定过程');
   }
   if(c.basis==='inferred')warnings.push(path+' 为解读推断');
  }
  for(const [i,r] of value.relations.entries()){
-  if(r.source===r.target)add('relations','不能以自身作二元关系');if(r.target===null&&!['disperse','reveal','occlude'].includes(r.kind))add('relations','二元关系缺少端点');claim(r,[r.source,...r.target?[r.target]:[]],'relations['+i+']');
+  if(r.source===r.target)add('relations','不能以自身作二元关系');if(r.target===null&&!['disperse','reveal','occlude'].includes(r.kind))add('relations','二元关系缺少端点');claim(r,[r.source,...r.target?[r.target]:[]],'relations['+i+']',['echo','contrast'].includes(r.kind));
  }
  const processed=new Set();for(const [i,p] of value.processes.entries()){claim(p,[p.subject],'processes['+i+']');if(processed.has(p.subject))add('processes','重复过程');processed.add(p.subject);}
  for(const q of value.atmosphere.evidence)if(!poem.includes(q))add('atmosphere','捏造依据');

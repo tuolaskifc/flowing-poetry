@@ -1,0 +1,282 @@
+{
+  "id": "2026-10-24T09-08-50-954Z-5a4928eb",
+  "fingerprint": "910b21e8533a46b38a646c422b6694dc7adc487ac8a89700da70a8ae88bf5f72",
+  "poem": "自在飞花轻似梦，无边丝雨细如愁。",
+  "source": null,
+  "mode": "expression",
+  "model": "DeepSeek-V4.1-Flash",
+  "started_at": "2026-10-24T09:08:50.954Z",
+  "cached": false,
+  "http_status": 200,
+  "usage": {
+    "completion_tokens": 910,
+    "prompt_tokens": 5686,
+    "total_tokens": 6596,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 5632
+    }
+  },
+  "finish_reason": "stop",
+  "analysis": {
+    "schema_version": "expression-1.0",
+    "poem": "自在飞花轻似梦，无边丝雨细如愁。",
+    "reading": "飞花自在飘落，轻得像梦；细雨无边无际，细密得像愁。两句以梦喻花之轻，以愁喻雨之细，把眼前景与心中感叠合起来。",
+    "entities": [
+      {
+        "id": "i1",
+        "mentions": [
+          "飞花"
+        ],
+        "concept": "飘飞的花",
+        "kind": "organism",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "自在飞花轻似梦"
+        ],
+        "quantity": {
+          "mode": "many",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "group",
+          "extent": "spread",
+          "evidence": [
+            "自在飞花轻似梦"
+          ]
+        }
+      },
+      {
+        "id": "i2",
+        "mentions": [
+          "梦"
+        ],
+        "concept": "梦境",
+        "kind": "abstract",
+        "role": "reference",
+        "presence": "unclear",
+        "evidence": [
+          "自在飞花轻似梦"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i3",
+        "mentions": [
+          "丝雨"
+        ],
+        "concept": "细密如丝的雨",
+        "kind": "environment",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "无边丝雨细如愁"
+        ],
+        "quantity": {
+          "mode": "many",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "group",
+          "extent": "spread",
+          "evidence": [
+            "无边丝雨细如愁"
+          ]
+        }
+      },
+      {
+        "id": "i4",
+        "mentions": [
+          "愁"
+        ],
+        "concept": "愁绪",
+        "kind": "abstract",
+        "role": "reference",
+        "presence": "unclear",
+        "evidence": [
+          "无边丝雨细如愁"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      }
+    ],
+    "relations": [],
+    "atmosphere": {
+      "labels": [
+        "轻渺",
+        "细密",
+        "怅惘"
+      ],
+      "valence": "mixed",
+      "energy": "low",
+      "tension": "low",
+      "openness": "high",
+      "evidence": [
+        "自在飞花轻似梦",
+        "无边丝雨细如愁"
+      ]
+    },
+    "time": {
+      "markers": [],
+      "note": null
+    },
+    "uncertainties": [
+      "飞花与丝雨的具体数量、范围均无明确数字，只能按铺展的群体意象理解。",
+      "梦与愁是比喻参照，并非场景中实际存在的物体。"
+    ],
+    "spatial": [],
+    "scene": {
+      "setting": {
+        "kind": "open_land",
+        "basis": "inferred",
+        "evidence": [
+          "自在飞花轻似梦",
+          "无边丝雨细如愁"
+        ]
+      },
+      "groups": [
+        {
+          "members": [
+            "i1"
+          ],
+          "role": "subject",
+          "pattern": "scattered",
+          "depth": "unspecified",
+          "basis": "inferred",
+          "evidence": [
+            "自在飞花轻似梦"
+          ]
+        },
+        {
+          "members": [
+            "i3"
+          ],
+          "role": "environment",
+          "pattern": "field",
+          "depth": "unspecified",
+          "basis": "inferred",
+          "evidence": [
+            "无边丝雨细如愁"
+          ]
+        }
+      ],
+      "supports": [],
+      "actions": [
+        {
+          "entity": "i1",
+          "state": "fall",
+          "pace": "slow",
+          "direction": "down",
+          "modality": "asserted",
+          "basis": "inferred",
+          "evidence": [
+            "自在飞花轻似梦"
+          ]
+        },
+        {
+          "entity": "i3",
+          "state": "fall",
+          "pace": "slow",
+          "direction": "down",
+          "modality": "asserted",
+          "basis": "inferred",
+          "evidence": [
+            "无边丝雨细如愁"
+          ]
+        }
+      ],
+      "atmosphere": {
+        "visibility": "hazy",
+        "illumination": "unclear",
+        "basis": "inferred",
+        "evidence": [
+          "无边丝雨细如愁"
+        ]
+      }
+    },
+    "expression": {
+      "relations": [
+        {
+          "source": "i1",
+          "target": "i2",
+          "kind": "echo",
+          "modality": "asserted",
+          "basis": "explicit",
+          "evidence": [
+            "自在飞花轻似梦"
+          ]
+        },
+        {
+          "source": "i3",
+          "target": "i4",
+          "kind": "echo",
+          "modality": "asserted",
+          "basis": "explicit",
+          "evidence": [
+            "无边丝雨细如愁"
+          ]
+        }
+      ],
+      "processes": [
+        {
+          "subject": "i1",
+          "kind": "persist",
+          "temporal": "ongoing",
+          "modality": "asserted",
+          "basis": "inferred",
+          "evidence": [
+            "自在飞花轻似梦"
+          ]
+        },
+        {
+          "subject": "i3",
+          "kind": "persist",
+          "temporal": "ongoing",
+          "modality": "asserted",
+          "basis": "inferred",
+          "evidence": [
+            "无边丝雨细如愁"
+          ]
+        }
+      ]
+    }
+  },
+  "validation": {
+    "valid": false,
+    "errors": [
+      "expression.relations[0] 非在场主体不能执行确定过程",
+      "expression.relations[1] 非在场主体不能执行确定过程"
+    ],
+    "warnings": [
+      "模型保留了不确定性，需要审阅",
+      "scene.setting 为语义推断，绘画选择需与原文明示区分",
+      "scene.groups[0] 为语义推断，绘画选择需与原文明示区分",
+      "scene.groups[1] 为语义推断，绘画选择需与原文明示区分",
+      "scene.actions[0] 为语义推断，绘画选择需与原文明示区分",
+      "scene.actions[1] 为语义推断，绘画选择需与原文明示区分",
+      "scene.atmosphere 为语义推断，绘画选择需与原文明示区分",
+      "expression.processes[0] 为语义推断",
+      "expression.processes[1] 为语义推断"
+    ],
+    "review_required": true
+  },
+  "elapsed_seconds": 16.4
+}

@@ -1,0 +1,46 @@
+{
+  "version": "generation-recovery-1.0",
+  "status": "partial",
+  "reviewRequired": true,
+  "changes": [],
+  "omitted": [
+    {
+      "path": "scene.groups[2]",
+      "claim": {
+        "members": [
+          "i3",
+          "i4"
+        ],
+        "role": "environment",
+        "pattern": "unspecified",
+        "depth": "far",
+        "basis": "inferred",
+        "evidence": [
+          "又恐琼楼玉宇",
+          "高处不胜寒"
+        ]
+      },
+      "errors": [
+        "scene.groups[2] 不能把缺席、未知或比喻参照作为在场画面主体"
+      ]
+    },
+    {
+      "path": "expression.relations[2]",
+      "claim": {
+        "source": "i3",
+        "target": "i5",
+        "kind": "connect",
+        "modality": "asserted",
+        "basis": "inferred",
+        "evidence": [
+          "又恐琼楼玉宇",
+          "高处不胜寒"
+        ]
+      },
+      "errors": [
+        "expression.relations[2] 非在场主体不能执行确定过程"
+      ]
+    }
+  ],
+  "message": "已绘制核验通过的部分，个别联系或动作暂未采用。"
+}

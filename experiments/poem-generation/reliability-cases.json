@@ -1,0 +1,3072 @@
+{
+  "scope": "eleven-historical-failures-with-repeated-poems-not-independent-trials",
+  "modelCalls": 0,
+  "cases": [
+    {
+      "id": "2026-10-24T09-00-48-338Z-8e7ec1b9",
+      "poem": "日出江花红胜火，春来江水绿如蓝。",
+      "mode": "expression",
+      "analysis": {
+        "schema_version": "expression-1.0",
+        "poem": "日出江花红胜火，春来江水绿如蓝。",
+        "reading": "日出时江边花红得胜过火焰，春天到来江水碧绿如同蓝草。写江畔春日的明丽色彩。",
+        "entities": [
+          {
+            "id": "i1",
+            "mentions": [
+              "日出"
+            ],
+            "concept": "太阳升起",
+            "kind": "environment",
+            "role": "scene",
+            "presence": "present",
+            "evidence": [
+              "日出江花红胜火"
+            ],
+            "quantity": {
+              "mode": "exact",
+              "min": 1,
+              "max": 1,
+              "unit": null,
+              "scope": "individual",
+              "extent": "local",
+              "evidence": [
+                "日出"
+              ]
+            }
+          },
+          {
+            "id": "i2",
+            "mentions": [
+              "江花"
+            ],
+            "concept": "江边花",
+            "kind": "organism",
+            "role": "scene",
+            "presence": "present",
+            "evidence": [
+              "日出江花红胜火"
+            ],
+            "quantity": {
+              "mode": "many",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "unspecified",
+              "extent": "spread",
+              "evidence": [
+                "江花"
+              ]
+            }
+          },
+          {
+            "id": "i3",
+            "mentions": [
+              "火"
+            ],
+            "concept": "火焰",
+            "kind": "object",
+            "role": "reference",
+            "presence": "unclear",
+            "evidence": [
+              "日出江花红胜火"
+            ],
+            "quantity": {
+              "mode": "unspecified",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "unspecified",
+              "extent": "unspecified",
+              "evidence": []
+            }
+          },
+          {
+            "id": "i4",
+            "mentions": [
+              "春"
+            ],
+            "concept": "春天",
+            "kind": "abstract",
+            "role": "scene",
+            "presence": "present",
+            "evidence": [
+              "春来江水绿如蓝"
+            ],
+            "quantity": {
+              "mode": "unspecified",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "unspecified",
+              "extent": "unspecified",
+              "evidence": []
+            }
+          },
+          {
+            "id": "i5",
+            "mentions": [
+              "江水"
+            ],
+            "concept": "江水",
+            "kind": "environment",
+            "role": "scene",
+            "presence": "present",
+            "evidence": [
+              "春来江水绿如蓝"
+            ],
+            "quantity": {
+              "mode": "many",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "unspecified",
+              "extent": "spread",
+              "evidence": [
+                "江水"
+              ]
+            }
+          },
+          {
+            "id": "i6",
+            "mentions": [
+              "蓝"
+            ],
+            "concept": "蓝草",
+            "kind": "organism",
+            "role": "reference",
+            "presence": "unclear",
+            "evidence": [
+              "春来江水绿如蓝"
+            ],
+            "quantity": {
+              "mode": "unspecified",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "unspecified",
+              "extent": "unspecified",
+              "evidence": []
+            }
+          }
+        ],
+        "relations": [],
+        "atmosphere": {
+          "labels": [
+            "明丽",
+            "春意",
+            "鲜艳"
+          ],
+          "valence": "positive",
+          "energy": "medium",
+          "tension": "low",
+          "openness": "high",
+          "evidence": [
+            "日出江花红胜火",
+            "春来江水绿如蓝"
+          ]
+        },
+        "time": {
+          "markers": [
+            {
+              "surface": "日出",
+              "meaning": "太阳升起的时刻，暗示清晨"
+            },
+            {
+              "surface": "春来",
+              "meaning": "春天到来，季节转换"
+            }
+          ],
+          "note": "两句并置，未明言先后顺序。"
+        },
+        "uncertainties": [
+          "“江花”可指江边花或江中浪花，此处按江边花解释。",
+          "“蓝”指蓝草，为比喻参照，非实景植物。"
+        ],
+        "spatial": [
+          {
+            "type": "on",
+            "source": "i2",
+            "target": "i5",
+            "modality": "asserted",
+            "basis": "inferred",
+            "evidence": [
+              "日出江花红胜火，春来江水绿如蓝。"
+            ]
+          }
+        ],
+        "scene": {
+          "setting": {
+            "kind": "waterside",
+            "basis": "inferred",
+            "evidence": [
+              "日出江花红胜火，春来江水绿如蓝。"
+            ]
+          },
+          "groups": [
+            {
+              "members": [
+                "i2"
+              ],
+              "role": "subject",
+              "pattern": "field",
+              "depth": "unspecified",
+              "basis": "inferred",
+              "evidence": [
+                "日出江花红胜火"
+              ]
+            },
+            {
+              "members": [
+                "i5"
+              ],
+              "role": "environment",
+              "pattern": "field",
+              "depth": "unspecified",
+              "basis": "inferred",
+              "evidence": [
+                "春来江水绿如蓝"
+              ]
+            },
+            {
+              "members": [
+                "i1"
+              ],
+              "role": "accent",
+              "pattern": "single",
+              "depth": "unspecified",
+              "basis": "inferred",
+              "evidence": [
+                "日出江花红胜火"
+              ]
+            }
+          ],
+          "supports": [
+            {
+              "entity": "i2",
+              "surface": "ground",
+              "target": null,
+              "basis": "inferred",
+              "evidence": [
+                "日出江花红胜火"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "entity": "i1",
+              "state": "rise",
+              "pace": "unspecified",
+              "direction": "up",
+              "modality": "asserted",
+              "basis": "explicit",
+              "evidence": [
+                "日出江花红胜火"
+              ]
+            }
+          ],
+          "atmosphere": {
+            "visibility": "clear",
+            "illumination": "day",
+            "basis": "inferred",
+            "evidence": [
+              "日出江花红胜火"
+            ]
+          }
+        },
+        "expression": {
+          "relations": [
+            {
+              "source": "i2",
+              "target": "i3",
+              "kind": "contrast",
+              "modality": "asserted",
+              "basis": "explicit",
+              "evidence": [
+                "日出江花红胜火"
+              ]
+            },
+            {
+              "source": "i5",
+              "target": "i6",
+              "kind": "echo",
+              "modality": "asserted",
+              "basis": "explicit",
+              "evidence": [
+                "春来江水绿如蓝"
+              ]
+            }
+          ],
+          "processes": [
+            {
+              "subject": "i1",
+              "kind": "emerge",
+              "temporal": "ongoing",
+              "modality": "asserted",
+              "basis": "explicit",
+              "evidence": [
+                "日出江花红胜火"
+              ]
+            },
+            {
+              "subject": "i4",
+              "kind": "emerge",
+              "temporal": "already",
+              "modality": "asserted",
+              "basis": "explicit",
+              "evidence": [
+                "春来江水绿如蓝"
+              ]
+            }
+          ]
+        }
+      },
+      "originalValidation": {
+        "valid": false,
+        "errors": [
+          "expression.relations[0] 非在场主体不能执行确定过程",
+          "expression.relations[1] 非在场主体不能执行确定过程"
+        ],
+        "warnings": [
+          "模型保留了不确定性，需要审阅",
+          "spatial[0] 的推断或非确定关系需审阅",
+          "scene.setting 为语义推断，绘画选择需与原文明示区分",
+          "scene.groups[0] 为语义推断，绘画选择需与原文明示区分",
+          "scene.groups[1] 为语义推断，绘画选择需与原文明示区分",
+          "scene.groups[2] 为语义推断，绘画选择需与原文明示区分",
+          "i4 未进入整体分组，后续使用本地默认布局",
+          "scene.supports[0] 为语义推断，绘画选择需与原文明示区分",
+          "scene.atmosphere 为语义推断，绘画选择需与原文明示区分"
+        ],
+        "review_required": true
+      },
+      "originalResultHash": "aa12cf61e7e2cc1266c8f69ddb84fda3b6a6f681230ea5cae9350aff4a1fcfe2"
+    },
+    {
+      "id": "2026-10-24T09-01-21-779Z-4e9de3c9",
+      "poem": "日出江花红胜火，春来江水绿如蓝。",
+      "mode": "expression",
+      "analysis": {
+        "schema_version": "expression-1.0",
+        "poem": "日出江花红胜火，春来江水绿如蓝。",
+        "reading": "日出时江边花红得胜过火焰，春天到来江水碧绿如同蓝草。写江畔春日的明丽色彩。",
+        "entities": [
+          {
+            "id": "i1",
+            "mentions": [
+              "日出"
+            ],
+            "concept": "太阳升起",
+            "kind": "environment",
+            "role": "scene",
+            "presence": "present",
+            "evidence": [
+              "日出"
+            ],
+            "quantity": {
+              "mode": "unspecified",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "unspecified",
+              "extent": "unspecified",
+              "evidence": []
+            }
+          },
+          {
+            "id": "i2",
+            "mentions": [
+              "江花"
+            ],
+            "concept": "江边的花",
+            "kind": "organism",
+            "role": "scene",
+            "presence": "present",
+            "evidence": [
+              "江花"
+            ],
+            "quantity": {
+              "mode": "many",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "group",
+              "extent": "spread",
+              "evidence": [
+                "江花"
+              ]
+            }
+          },
+          {
+            "id": "i3",
+            "mentions": [
+              "火"
+            ],
+            "concept": "火焰",
+            "kind": "object",
+            "role": "reference",
+            "presence": "unclear",
+            "evidence": [
+              "红胜火"
+            ],
+            "quantity": {
+              "mode": "unspecified",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "unspecified",
+              "extent": "unspecified",
+              "evidence": []
+            }
+          },
+          {
+            "id": "i4",
+            "mentions": [
+              "江水"
+            ],
+            "concept": "江中的水",
+            "kind": "environment",
+            "role": "scene",
+            "presence": "present",
+            "evidence": [
+              "江水"
+            ],
+            "quantity": {
+              "mode": "many",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "group",
+              "extent": "spread",
+              "evidence": [
+                "江水"
+              ]
+            }
+          },
+          {
+            "id": "i5",
+            "mentions": [
+              "蓝"
+            ],
+            "concept": "蓝草",
+            "kind": "organism",
+            "role": "reference",
+            "presence": "unclear",
+            "evidence": [
+              "绿如蓝"
+            ],
+            "quantity": {
+              "mode": "unspecified",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "unspecified",
+              "extent": "unspecified",
+              "evidence": []
+            }
+          }
+        ],
+        "relations": [],
+        "atmosphere": {
+          "labels": [
+            "明丽",
+            "鲜艳",
+            "生机"
+          ],
+          "valence": "positive",
+          "energy": "medium",
+          "tension": "low",
+          "openness": "high",
+          "evidence": [
+            "日出江花红胜火",
+            "春来江水绿如蓝"
+          ]
+        },
+        "time": {
+          "markers": [
+            {
+              "surface": "日出",
+              "meaning": "太阳升起的时刻，暗示清晨"
+            },
+            {
+              "surface": "春来",
+              "meaning": "春天到来，季节更替"
+            }
+          ],
+          "note": null
+        },
+        "uncertainties": [
+          "“红胜火”“绿如蓝”是比喻性比较，火与蓝草并非实景中的真实物体。"
+        ],
+        "spatial": [],
+        "scene": {
+          "setting": {
+            "kind": "waterside",
+            "basis": "explicit",
+            "evidence": [
+              "日出江花红胜火",
+              "春来江水绿如蓝"
+            ]
+          },
+          "groups": [
+            {
+              "members": [
+                "i1"
+              ],
+              "role": "environment",
+              "pattern": "single",
+              "depth": "far",
+              "basis": "inferred",
+              "evidence": [
+                "日出"
+              ]
+            },
+            {
+              "members": [
+                "i2"
+              ],
+              "role": "subject",
+              "pattern": "cluster",
+              "depth": "middle",
+              "basis": "inferred",
+              "evidence": [
+                "江花"
+              ]
+            },
+            {
+              "members": [
+                "i4"
+              ],
+              "role": "environment",
+              "pattern": "field",
+              "depth": "middle",
+              "basis": "inferred",
+              "evidence": [
+                "江水"
+              ]
+            }
+          ],
+          "supports": [
+            {
+              "entity": "i2",
+              "surface": "ground",
+              "target": null,
+              "basis": "inferred",
+              "evidence": [
+                "江花"
+              ]
+            },
+            {
+              "entity": "i4",
+              "surface": "ground",
+              "target": null,
+              "basis": "inferred",
+              "evidence": [
+                "江水"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "entity": "i1",
+              "state": "rise",
+              "pace": "unspecified",
+              "direction": "up",
+              "modality": "asserted",
+              "basis": "explicit",
+              "evidence": [
+                "日出"
+              ]
+            }
+          ],
+          "atmosphere": {
+            "visibility": "clear",
+            "illumination": "day",
+            "basis": "inferred",
+            "evidence": [
+              "日出"
+            ]
+          }
+        },
+        "expression": {
+          "relations": [
+            {
+              "source": "i2",
+              "target": "i3",
+              "kind": "contrast",
+              "modality": "asserted",
+              "basis": "explicit",
+              "evidence": [
+                "红胜火"
+              ]
+            },
+            {
+              "source": "i4",
+              "target": "i5",
+              "kind": "contrast",
+              "modality": "asserted",
+              "basis": "explicit",
+              "evidence": [
+                "绿如蓝"
+              ]
+            }
+          ],
+          "processes": [
+            {
+              "subject": "i1",
+              "kind": "emerge",
+              "temporal": "ongoing",
+              "modality": "asserted",
+              "basis": "explicit",
+              "evidence": [
+                "日出"
+              ]
+            },
+            {
+              "subject": "i2",
+              "kind": "persist",
+              "temporal": "ongoing",
+              "modality": "asserted",
+              "basis": "inferred",
+              "evidence": [
+                "江花"
+              ]
+            },
+            {
+              "subject": "i4",
+              "kind": "persist",
+              "temporal": "ongoing",
+              "modality": "asserted",
+              "basis": "inferred",
+              "evidence": [
+                "江水"
+              ]
+            }
+          ]
+        }
+      },
+      "originalValidation": {
+        "valid": false,
+        "errors": [
+          "expression.relations[0] 依据未关联 i2",
+          "expression.relations[0] 非在场主体不能执行确定过程",
+          "expression.relations[1] 依据未关联 i4",
+          "expression.relations[1] 非在场主体不能执行确定过程"
+        ],
+        "warnings": [
+          "模型保留了不确定性，需要审阅",
+          "scene.groups[0] 为语义推断，绘画选择需与原文明示区分",
+          "scene.groups[1] 为语义推断，绘画选择需与原文明示区分",
+          "scene.groups[2] 为语义推断，绘画选择需与原文明示区分",
+          "scene.supports[0] 为语义推断，绘画选择需与原文明示区分",
+          "scene.supports[1] 为语义推断，绘画选择需与原文明示区分",
+          "scene.atmosphere 为语义推断，绘画选择需与原文明示区分",
+          "expression.processes[1] 为语义推断",
+          "expression.processes[2] 为语义推断"
+        ],
+        "review_required": true
+      },
+      "originalResultHash": "99d31b5b393c01af3ff824d118398e3ea51bfa7c67b9a982a933d573aa148315"
+    },
+    {
+      "id": "2026-10-24T09-03-20-225Z-02ea676a",
+      "poem": "日出江花红胜火，春来江水绿如蓝",
+      "mode": "expression",
+      "analysis": {
+        "schema_version": "expression-1.0",
+        "poem": "日出江花红胜火，春来江水绿如蓝",
+        "reading": "日出时江边花红得胜过火焰，春天到来江水碧绿如同蓝草。写江畔春晨的明丽色彩。",
+        "entities": [
+          {
+            "id": "i1",
+            "mentions": [
+              "日出"
+            ],
+            "concept": "太阳升起",
+            "kind": "environment",
+            "role": "scene",
+            "presence": "present",
+            "evidence": [
+              "日出江花红胜火"
+            ],
+            "quantity": {
+              "mode": "unspecified",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "unspecified",
+              "extent": "unspecified",
+              "evidence": []
+            }
+          },
+          {
+            "id": "i2",
+            "mentions": [
+              "江花"
+            ],
+            "concept": "江边花朵",
+            "kind": "organism",
+            "role": "scene",
+            "presence": "present",
+            "evidence": [
+              "日出江花红胜火"
+            ],
+            "quantity": {
+              "mode": "many",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "group",
+              "extent": "spread",
+              "evidence": [
+                "江花"
+              ]
+            }
+          },
+          {
+            "id": "i3",
+            "mentions": [
+              "火"
+            ],
+            "concept": "火焰",
+            "kind": "object",
+            "role": "reference",
+            "presence": "unclear",
+            "evidence": [
+              "红胜火"
+            ],
+            "quantity": {
+              "mode": "unspecified",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "unspecified",
+              "extent": "unspecified",
+              "evidence": []
+            }
+          },
+          {
+            "id": "i4",
+            "mentions": [
+              "江水"
+            ],
+            "concept": "江中流水",
+            "kind": "environment",
+            "role": "scene",
+            "presence": "present",
+            "evidence": [
+              "春来江水绿如蓝"
+            ],
+            "quantity": {
+              "mode": "unspecified",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "unspecified",
+              "extent": "spread",
+              "evidence": [
+                "江水"
+              ]
+            }
+          },
+          {
+            "id": "i5",
+            "mentions": [
+              "蓝"
+            ],
+            "concept": "蓝草",
+            "kind": "organism",
+            "role": "reference",
+            "presence": "unclear",
+            "evidence": [
+              "绿如蓝"
+            ],
+            "quantity": {
+              "mode": "unspecified",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "unspecified",
+              "extent": "unspecified",
+              "evidence": []
+            }
+          }
+        ],
+        "relations": [],
+        "atmosphere": {
+          "labels": [
+            "明丽",
+            "鲜亮",
+            "春意"
+          ],
+          "valence": "positive",
+          "energy": "medium",
+          "tension": "low",
+          "openness": "high",
+          "evidence": [
+            "日出江花红胜火",
+            "春来江水绿如蓝"
+          ]
+        },
+        "time": {
+          "markers": [
+            {
+              "surface": "日出",
+              "meaning": "太阳升起的早晨时段"
+            },
+            {
+              "surface": "春来",
+              "meaning": "春天到来之时"
+            }
+          ],
+          "note": null
+        },
+        "uncertainties": [
+          "“红胜火”“绿如蓝”为比喻，火与蓝草是否作为实景出现不明。",
+          "江花的具体所指（江边花或江中浪花）未明。"
+        ],
+        "spatial": [],
+        "scene": {
+          "setting": {
+            "kind": "waterside",
+            "basis": "explicit",
+            "evidence": [
+              "日出江花红胜火",
+              "春来江水绿如蓝"
+            ]
+          },
+          "groups": [
+            {
+              "members": [
+                "i2"
+              ],
+              "role": "subject",
+              "pattern": "field",
+              "depth": "unspecified",
+              "basis": "inferred",
+              "evidence": [
+                "江花"
+              ]
+            },
+            {
+              "members": [
+                "i4"
+              ],
+              "role": "environment",
+              "pattern": "field",
+              "depth": "unspecified",
+              "basis": "inferred",
+              "evidence": [
+                "江水"
+              ]
+            }
+          ],
+          "supports": [],
+          "actions": [],
+          "atmosphere": {
+            "visibility": "clear",
+            "illumination": "day",
+            "basis": "inferred",
+            "evidence": [
+              "日出"
+            ]
+          }
+        },
+        "expression": {
+          "relations": [
+            {
+              "source": "i2",
+              "target": "i3",
+              "kind": "contrast",
+              "modality": "asserted",
+              "basis": "explicit",
+              "evidence": [
+                "红胜火"
+              ]
+            },
+            {
+              "source": "i4",
+              "target": "i5",
+              "kind": "echo",
+              "modality": "asserted",
+              "basis": "explicit",
+              "evidence": [
+                "绿如蓝"
+              ]
+            }
+          ],
+          "processes": []
+        }
+      },
+      "originalValidation": {
+        "valid": false,
+        "errors": [
+          "expression.relations[0] 依据未关联 i2",
+          "expression.relations[0] 非在场主体不能执行确定过程",
+          "expression.relations[1] 依据未关联 i4",
+          "expression.relations[1] 非在场主体不能执行确定过程"
+        ],
+        "warnings": [
+          "模型保留了不确定性，需要审阅",
+          "scene.groups[0] 为语义推断，绘画选择需与原文明示区分",
+          "scene.groups[1] 为语义推断，绘画选择需与原文明示区分",
+          "i1 未进入整体分组，后续使用本地默认布局",
+          "scene.atmosphere 为语义推断，绘画选择需与原文明示区分"
+        ],
+        "review_required": true
+      },
+      "originalResultHash": "4a50f0dc0f075d7df6a5833be513a27c9614e8ef2421449a029bfffeb659f51a"
+    },
+    {
+      "id": "2026-10-24T09-03-29-541Z-ab3bca15",
+      "poem": "日出江花红胜火，春来江水绿如蓝",
+      "mode": "expression",
+      "analysis": {
+        "schema_version": "expression-1.0",
+        "poem": "日出江花红胜火，春来江水绿如蓝",
+        "reading": "日出时江边花红得胜过火焰，春天到来江水碧绿如同蓝草。写江畔春日的明丽色彩。",
+        "entities": [
+          {
+            "id": "i1",
+            "mentions": [
+              "江花"
+            ],
+            "concept": "江边的花",
+            "kind": "organism",
+            "role": "scene",
+            "presence": "present",
+            "evidence": [
+              "日出江花红胜火"
+            ],
+            "quantity": {
+              "mode": "many",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "group",
+              "extent": "spread",
+              "evidence": [
+                "江花"
+              ]
+            }
+          },
+          {
+            "id": "i2",
+            "mentions": [
+              "火"
+            ],
+            "concept": "火焰",
+            "kind": "object",
+            "role": "reference",
+            "presence": "unclear",
+            "evidence": [
+              "红胜火"
+            ],
+            "quantity": {
+              "mode": "unspecified",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "unspecified",
+              "extent": "unspecified",
+              "evidence": []
+            }
+          },
+          {
+            "id": "i3",
+            "mentions": [
+              "江水"
+            ],
+            "concept": "江中的水",
+            "kind": "environment",
+            "role": "scene",
+            "presence": "present",
+            "evidence": [
+              "春来江水绿如蓝"
+            ],
+            "quantity": {
+              "mode": "many",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "group",
+              "extent": "spread",
+              "evidence": [
+                "江水"
+              ]
+            }
+          },
+          {
+            "id": "i4",
+            "mentions": [
+              "蓝"
+            ],
+            "concept": "蓝草，可制靛青的植物",
+            "kind": "organism",
+            "role": "reference",
+            "presence": "unclear",
+            "evidence": [
+              "绿如蓝"
+            ],
+            "quantity": {
+              "mode": "unspecified",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "unspecified",
+              "extent": "unspecified",
+              "evidence": []
+            }
+          }
+        ],
+        "relations": [],
+        "atmosphere": {
+          "labels": [
+            "明丽",
+            "鲜妍"
+          ],
+          "valence": "positive",
+          "energy": "medium",
+          "tension": "low",
+          "openness": "high",
+          "evidence": [
+            "日出江花红胜火",
+            "春来江水绿如蓝"
+          ]
+        },
+        "time": {
+          "markers": [
+            {
+              "surface": "日出",
+              "meaning": "太阳升起之时，指清晨"
+            },
+            {
+              "surface": "春来",
+              "meaning": "春天到来之际"
+            }
+          ],
+          "note": "两句均写春日清晨的景致，未交代先后顺序。"
+        },
+        "uncertainties": [
+          "“红胜火”“绿如蓝”为比喻性比较，火与蓝草并非场景中实际存在的物体。",
+          "江花具体指何种花、江水具体位置均未明说。"
+        ],
+        "spatial": [
+          {
+            "type": "on",
+            "source": "i1",
+            "target": "i3",
+            "modality": "unclear",
+            "basis": "inferred",
+            "evidence": [
+              "日出江花红胜火",
+              "春来江水绿如蓝"
+            ]
+          }
+        ],
+        "scene": {
+          "setting": {
+            "kind": "waterside",
+            "basis": "inferred",
+            "evidence": [
+              "日出江花红胜火",
+              "春来江水绿如蓝"
+            ]
+          },
+          "groups": [
+            {
+              "members": [
+                "i1"
+              ],
+              "role": "subject",
+              "pattern": "cluster",
+              "depth": "unspecified",
+              "basis": "inferred",
+              "evidence": [
+                "日出江花红胜火"
+              ]
+            },
+            {
+              "members": [
+                "i3"
+              ],
+              "role": "environment",
+              "pattern": "field",
+              "depth": "unspecified",
+              "basis": "inferred",
+              "evidence": [
+                "春来江水绿如蓝"
+              ]
+            }
+          ],
+          "supports": [],
+          "actions": [],
+          "atmosphere": {
+            "visibility": "clear",
+            "illumination": "day",
+            "basis": "inferred",
+            "evidence": [
+              "日出江花红胜火"
+            ]
+          }
+        },
+        "expression": {
+          "relations": [
+            {
+              "source": "i1",
+              "target": "i2",
+              "kind": "contrast",
+              "modality": "asserted",
+              "basis": "explicit",
+              "evidence": [
+                "红胜火"
+              ]
+            },
+            {
+              "source": "i3",
+              "target": "i4",
+              "kind": "contrast",
+              "modality": "asserted",
+              "basis": "explicit",
+              "evidence": [
+                "绿如蓝"
+              ]
+            }
+          ],
+          "processes": []
+        }
+      },
+      "originalValidation": {
+        "valid": false,
+        "errors": [
+          "expression.relations[0] 依据未关联 i1",
+          "expression.relations[0] 非在场主体不能执行确定过程",
+          "expression.relations[1] 依据未关联 i3",
+          "expression.relations[1] 非在场主体不能执行确定过程"
+        ],
+        "warnings": [
+          "模型保留了不确定性，需要审阅",
+          "spatial[0] 的推断或非确定关系需审阅",
+          "scene.setting 为语义推断，绘画选择需与原文明示区分",
+          "scene.groups[0] 为语义推断，绘画选择需与原文明示区分",
+          "scene.groups[1] 为语义推断，绘画选择需与原文明示区分",
+          "scene.atmosphere 为语义推断，绘画选择需与原文明示区分"
+        ],
+        "review_required": true
+      },
+      "originalResultHash": "845c29ba82c62cc78c80943bdd3c4d0761e1f5f9162221eb2fb0dd5e2153bd6b"
+    },
+    {
+      "id": "2026-10-24T09-03-53-350Z-17efb396",
+      "poem": "晴川历历汉阳树，芳草萋萋鹦鹉洲。",
+      "mode": "expression",
+      "analysis": {
+        "schema_version": "expression-1.0",
+        "poem": "晴川历历汉阳树，芳草萋萋鹦鹉洲。",
+        "reading": "晴日下的江面与汉阳一带的树木清晰可辨，鹦鹉洲上芳草茂盛。两句以明朗开阔的江畔洲渚景象为主，草木繁密，视野清楚。",
+        "entities": [
+          {
+            "id": "i1",
+            "mentions": [
+              "晴川"
+            ],
+            "concept": "晴日下的江面/江水",
+            "kind": "environment",
+            "role": "scene",
+            "presence": "present",
+            "evidence": [
+              "晴川历历汉阳树"
+            ],
+            "quantity": {
+              "mode": "unspecified",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "unspecified",
+              "extent": "spread",
+              "evidence": []
+            }
+          },
+          {
+            "id": "i2",
+            "mentions": [
+              "汉阳树"
+            ],
+            "concept": "汉阳一带的树木",
+            "kind": "organism",
+            "role": "scene",
+            "presence": "present",
+            "evidence": [
+              "晴川历历汉阳树"
+            ],
+            "quantity": {
+              "mode": "many",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "group",
+              "extent": "spread",
+              "evidence": [
+                "汉阳树"
+              ]
+            }
+          },
+          {
+            "id": "i3",
+            "mentions": [
+              "芳草"
+            ],
+            "concept": "茂盛的香草/野草",
+            "kind": "organism",
+            "role": "scene",
+            "presence": "present",
+            "evidence": [
+              "芳草萋萋鹦鹉洲"
+            ],
+            "quantity": {
+              "mode": "many",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "group",
+              "extent": "spread",
+              "evidence": [
+                "芳草萋萋"
+              ]
+            }
+          },
+          {
+            "id": "i4",
+            "mentions": [
+              "鹦鹉洲"
+            ],
+            "concept": "江中的鹦鹉洲",
+            "kind": "place",
+            "role": "scene",
+            "presence": "present",
+            "evidence": [
+              "芳草萋萋鹦鹉洲"
+            ],
+            "quantity": {
+              "mode": "unspecified",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "unspecified",
+              "extent": "unspecified",
+              "evidence": []
+            }
+          }
+        ],
+        "relations": [],
+        "atmosphere": {
+          "labels": [
+            "明朗",
+            "开阔",
+            "繁茂"
+          ],
+          "valence": "positive",
+          "energy": "low",
+          "tension": "low",
+          "openness": "high",
+          "evidence": [
+            "晴川历历汉阳树",
+            "芳草萋萋鹦鹉洲"
+          ]
+        },
+        "time": {
+          "markers": [],
+          "note": null
+        },
+        "uncertainties": [
+          "“历历”可指清晰可数，也可指分明可见，具体程度未明。",
+          "“汉阳树”是泛指汉阳一带的树还是某处树木，原文未限定。",
+          "“鹦鹉洲”与“汉阳树”的相对方位未在句中明说。"
+        ],
+        "spatial": [
+          {
+            "type": "on",
+            "source": "i4",
+            "target": "i1",
+            "modality": "asserted",
+            "basis": "inferred",
+            "evidence": [
+              "芳草萋萋鹦鹉洲"
+            ]
+          }
+        ],
+        "scene": {
+          "setting": {
+            "kind": "waterside",
+            "basis": "inferred",
+            "evidence": [
+              "晴川历历汉阳树",
+              "芳草萋萋鹦鹉洲"
+            ]
+          },
+          "groups": [
+            {
+              "members": [
+                "i1"
+              ],
+              "role": "environment",
+              "pattern": "field",
+              "depth": "middle",
+              "basis": "inferred",
+              "evidence": [
+                "晴川历历汉阳树"
+              ]
+            },
+            {
+              "members": [
+                "i2"
+              ],
+              "role": "subject",
+              "pattern": "grove",
+              "depth": "middle",
+              "basis": "inferred",
+              "evidence": [
+                "晴川历历汉阳树"
+              ]
+            },
+            {
+              "members": [
+                "i3",
+                "i4"
+              ],
+              "role": "subject",
+              "pattern": "field",
+              "depth": "far",
+              "basis": "inferred",
+              "evidence": [
+                "芳草萋萋鹦鹉洲"
+              ]
+            }
+          ],
+          "supports": [
+            {
+              "entity": "i2",
+              "surface": "ground",
+              "target": null,
+              "basis": "inferred",
+              "evidence": [
+                "晴川历历汉阳树"
+              ]
+            },
+            {
+              "entity": "i3",
+              "surface": "ground",
+              "target": "i4",
+              "basis": "inferred",
+              "evidence": [
+                "芳草萋萋鹦鹉洲"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "entity": "i1",
+              "state": "still",
+              "pace": "unspecified",
+              "direction": "unspecified",
+              "modality": "unclear",
+              "basis": "inferred",
+              "evidence": [
+                "晴川历历汉阳树"
+              ]
+            },
+            {
+              "entity": "i2",
+              "state": "still",
+              "pace": "unspecified",
+              "direction": "unspecified",
+              "modality": "unclear",
+              "basis": "inferred",
+              "evidence": [
+                "晴川历历汉阳树"
+              ]
+            },
+            {
+              "entity": "i3",
+              "state": "still",
+              "pace": "unspecified",
+              "direction": "unspecified",
+              "modality": "unclear",
+              "basis": "inferred",
+              "evidence": [
+                "芳草萋萋鹦鹉洲"
+              ]
+            }
+          ],
+          "atmosphere": {
+            "visibility": "clear",
+            "illumination": "day",
+            "basis": "explicit",
+            "evidence": [
+              "晴川历历汉阳树"
+            ]
+          }
+        },
+        "expression": {
+          "relations": [
+            {
+              "source": "i2",
+              "target": "i1",
+              "kind": "connect",
+              "modality": "asserted",
+              "basis": "inferred",
+              "evidence": [
+                "晴川历历汉阳树"
+              ]
+            },
+            {
+              "source": "i3",
+              "target": "i4",
+              "kind": "surround",
+              "modality": "asserted",
+              "basis": "inferred",
+              "evidence": [
+                "芳草萋萋鹦鹉洲"
+              ]
+            }
+          ],
+          "processes": [
+            {
+              "subject": "i2",
+              "kind": "persist",
+              "temporal": "ongoing",
+              "modality": "asserted",
+              "basis": "inferred",
+              "evidence": [
+                "晴川历历汉阳树"
+              ]
+            },
+            {
+              "subject": "i3",
+              "kind": "accumulate",
+              "temporal": "ongoing",
+              "modality": "asserted",
+              "basis": "inferred",
+              "evidence": [
+                "芳草萋萋鹦鹉洲"
+              ]
+            }
+          ]
+        }
+      },
+      "originalValidation": {
+        "valid": false,
+        "errors": [
+          "spatial[0] 依据未关联关系两端"
+        ],
+        "warnings": [
+          "模型保留了不确定性，需要审阅",
+          "spatial[0] 的推断或非确定关系需审阅"
+        ],
+        "review_required": true
+      },
+      "originalResultHash": "7893319975bd721467988e64ab8391988741755c3110825da8e70a56e5e0a290"
+    },
+    {
+      "id": "2026-10-24T09-07-52-369Z-8fb31e5c",
+      "poem": "自在飞花轻似梦，无边丝雨细如愁。",
+      "mode": "expression",
+      "analysis": {
+        "schema_version": "expression-1.0",
+        "poem": "自在飞花轻似梦，无边丝雨细如愁。",
+        "reading": "飞花自在飘落，轻得如同梦境；细雨无边无际，细密得如同愁绪。两句以梦喻花之轻、以愁喻雨之细，写出一片迷蒙轻柔的春景与心绪。",
+        "entities": [
+          {
+            "id": "i1",
+            "mentions": [
+              "飞花"
+            ],
+            "concept": "飘飞的花",
+            "kind": "organism",
+            "role": "scene",
+            "presence": "present",
+            "evidence": [
+              "自在飞花轻似梦"
+            ],
+            "quantity": {
+              "mode": "many",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "group",
+              "extent": "spread",
+              "evidence": [
+                "自在飞花轻似梦"
+              ]
+            }
+          },
+          {
+            "id": "i2",
+            "mentions": [
+              "梦"
+            ],
+            "concept": "梦境",
+            "kind": "abstract",
+            "role": "reference",
+            "presence": "unclear",
+            "evidence": [
+              "自在飞花轻似梦"
+            ],
+            "quantity": {
+              "mode": "unspecified",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "unspecified",
+              "extent": "unspecified",
+              "evidence": []
+            }
+          },
+          {
+            "id": "i3",
+            "mentions": [
+              "丝雨"
+            ],
+            "concept": "细密的雨丝",
+            "kind": "environment",
+            "role": "scene",
+            "presence": "present",
+            "evidence": [
+              "无边丝雨细如愁"
+            ],
+            "quantity": {
+              "mode": "many",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "group",
+              "extent": "spread",
+              "evidence": [
+                "无边丝雨细如愁"
+              ]
+            }
+          },
+          {
+            "id": "i4",
+            "mentions": [
+              "愁"
+            ],
+            "concept": "愁绪",
+            "kind": "abstract",
+            "role": "reference",
+            "presence": "unclear",
+            "evidence": [
+              "无边丝雨细如愁"
+            ],
+            "quantity": {
+              "mode": "unspecified",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "unspecified",
+              "extent": "unspecified",
+              "evidence": []
+            }
+          }
+        ],
+        "relations": [],
+        "atmosphere": {
+          "labels": [
+            "轻柔",
+            "迷蒙",
+            "愁绪"
+          ],
+          "valence": "mixed",
+          "energy": "low",
+          "tension": "low",
+          "openness": "high",
+          "evidence": [
+            "自在飞花轻似梦",
+            "无边丝雨细如愁"
+          ]
+        },
+        "time": {
+          "markers": [],
+          "note": null
+        },
+        "uncertainties": [
+          "飞花与丝雨的具体数量、范围均未明说，只能按群体铺展理解。",
+          "梦与愁是比喻参照，并非场景中真实存在的实体。"
+        ],
+        "spatial": [],
+        "scene": {
+          "setting": {
+            "kind": "open_land",
+            "basis": "inferred",
+            "evidence": [
+              "自在飞花轻似梦",
+              "无边丝雨细如愁"
+            ]
+          },
+          "groups": [
+            {
+              "members": [
+                "i1"
+              ],
+              "role": "subject",
+              "pattern": "scattered",
+              "depth": "unspecified",
+              "basis": "inferred",
+              "evidence": [
+                "自在飞花轻似梦"
+              ]
+            },
+            {
+              "members": [
+                "i3"
+              ],
+              "role": "environment",
+              "pattern": "field",
+              "depth": "unspecified",
+              "basis": "inferred",
+              "evidence": [
+                "无边丝雨细如愁"
+              ]
+            }
+          ],
+          "supports": [],
+          "actions": [
+            {
+              "entity": "i1",
+              "state": "fall",
+              "pace": "slow",
+              "direction": "down",
+              "modality": "asserted",
+              "basis": "inferred",
+              "evidence": [
+                "自在飞花轻似梦"
+              ]
+            },
+            {
+              "entity": "i3",
+              "state": "fall",
+              "pace": "slow",
+              "direction": "down",
+              "modality": "asserted",
+              "basis": "inferred",
+              "evidence": [
+                "无边丝雨细如愁"
+              ]
+            }
+          ],
+          "atmosphere": {
+            "visibility": {
+              "enum": "unclear"
+            },
+            "illumination": {
+              "enum": "unclear"
+            },
+            "basis": "inferred",
+            "evidence": [
+              "自在飞花轻似梦",
+              "无边丝雨细如愁"
+            ]
+          }
+        },
+        "expression": {
+          "relations": [
+            {
+              "source": "i1",
+              "target": "i2",
+              "kind": "echo",
+              "modality": "asserted",
+              "basis": "explicit",
+              "evidence": [
+                "自在飞花轻似梦"
+              ]
+            },
+            {
+              "source": "i3",
+              "target": "i4",
+              "kind": "echo",
+              "modality": "asserted",
+              "basis": "explicit",
+              "evidence": [
+                "无边丝雨细如愁"
+              ]
+            }
+          ],
+          "processes": [
+            {
+              "subject": "i1",
+              "kind": "persist",
+              "temporal": "ongoing",
+              "modality": "asserted",
+              "basis": "inferred",
+              "evidence": [
+                "自在飞花轻似梦"
+              ]
+            },
+            {
+              "subject": "i3",
+              "kind": "persist",
+              "temporal": "ongoing",
+              "modality": "asserted",
+              "basis": "inferred",
+              "evidence": [
+                "无边丝雨细如愁"
+              ]
+            }
+          ]
+        }
+      },
+      "originalValidation": {
+        "valid": false,
+        "errors": [
+          "scene.atmosphere.visibility 枚举不正确",
+          "scene.atmosphere.visibility.enum 额外字段",
+          "scene.atmosphere.illumination 枚举不正确",
+          "scene.atmosphere.illumination.enum 额外字段"
+        ],
+        "warnings": [
+          "模型保留了不确定性，需要审阅"
+        ],
+        "review_required": true
+      },
+      "originalResultHash": "1ebec72427f053465af71c6f5c0d84b0cb29d8102a5eec9753c96971c8f8279b"
+    },
+    {
+      "id": "2026-10-24T09-08-01-099Z-fa6aac63",
+      "poem": "自在飞花轻似梦，无边丝雨细如愁。",
+      "mode": "expression",
+      "analysis": {
+        "schema_version": "expression-1.0",
+        "poem": "自在飞花轻似梦，无边丝雨细如愁。",
+        "reading": "飞花自在飘落，轻得如同梦境；细雨无边无际，细密得如同愁绪。两句以梦喻花之轻，以愁喻雨之细，写出一片迷蒙、轻柔而略带怅惘的景致。",
+        "entities": [
+          {
+            "id": "i1",
+            "mentions": [
+              "飞花"
+            ],
+            "concept": "飘飞的花",
+            "kind": "object",
+            "role": "scene",
+            "presence": "present",
+            "evidence": [
+              "自在飞花轻似梦"
+            ],
+            "quantity": {
+              "mode": "many",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "group",
+              "extent": "spread",
+              "evidence": [
+                "自在飞花轻似梦"
+              ]
+            }
+          },
+          {
+            "id": "i2",
+            "mentions": [
+              "梦"
+            ],
+            "concept": "梦境",
+            "kind": "abstract",
+            "role": "reference",
+            "presence": "unclear",
+            "evidence": [
+              "自在飞花轻似梦"
+            ],
+            "quantity": {
+              "mode": "unspecified",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "unspecified",
+              "extent": "unspecified",
+              "evidence": []
+            }
+          },
+          {
+            "id": "i3",
+            "mentions": [
+              "丝雨"
+            ],
+            "concept": "细密的雨",
+            "kind": "environment",
+            "role": "scene",
+            "presence": "present",
+            "evidence": [
+              "无边丝雨细如愁"
+            ],
+            "quantity": {
+              "mode": "many",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "group",
+              "extent": "spread",
+              "evidence": [
+                "无边丝雨细如愁"
+              ]
+            }
+          },
+          {
+            "id": "i4",
+            "mentions": [
+              "愁"
+            ],
+            "concept": "愁绪",
+            "kind": "abstract",
+            "role": "reference",
+            "presence": "unclear",
+            "evidence": [
+              "无边丝雨细如愁"
+            ],
+            "quantity": {
+              "mode": "unspecified",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "unspecified",
+              "extent": "unspecified",
+              "evidence": []
+            }
+          }
+        ],
+        "relations": [],
+        "atmosphere": {
+          "labels": [
+            "轻柔",
+            "迷蒙",
+            "怅惘"
+          ],
+          "valence": "mixed",
+          "energy": "low",
+          "tension": "low",
+          "openness": "high",
+          "evidence": [
+            "自在飞花轻似梦",
+            "无边丝雨细如愁"
+          ]
+        },
+        "time": {
+          "markers": [],
+          "note": null
+        },
+        "uncertainties": [
+          "飞花与丝雨是否同时出现于同一场景，原文未明说。",
+          "‘自在’可指花之轻盈无拘，也可指观者心境，解读略有歧义。"
+        ],
+        "spatial": [],
+        "scene": {
+          "setting": {
+            "kind": "open_land",
+            "basis": "inferred",
+            "evidence": [
+              "自在飞花轻似梦",
+              "无边丝雨细如愁"
+            ]
+          },
+          "groups": [
+            {
+              "members": [
+                "i1"
+              ],
+              "role": "subject",
+              "pattern": "scattered",
+              "depth": "unspecified",
+              "basis": "inferred",
+              "evidence": [
+                "自在飞花轻似梦"
+              ]
+            },
+            {
+              "members": [
+                "i3"
+              ],
+              "role": "environment",
+              "pattern": "field",
+              "depth": "unspecified",
+              "basis": "inferred",
+              "evidence": [
+                "无边丝雨细如愁"
+              ]
+            }
+          ],
+          "supports": [],
+          "actions": [
+            {
+              "entity": "i1",
+              "state": "fall",
+              "pace": "slow",
+              "direction": "down",
+              "modality": "asserted",
+              "basis": "inferred",
+              "evidence": [
+                "自在飞花轻似梦"
+              ]
+            },
+            {
+              "entity": "i3",
+              "state": "fall",
+              "pace": "slow",
+              "direction": "down",
+              "modality": "asserted",
+              "basis": "inferred",
+              "evidence": [
+                "无边丝雨细如愁"
+              ]
+            }
+          ],
+          "atmosphere": {
+            "visibility": {
+              "value": "hazy",
+              "basis": "inferred",
+              "evidence": [
+                "无边丝雨细如愁"
+              ]
+            },
+            "illumination": {
+              "value": "unclear",
+              "basis": "inferred",
+              "evidence": [
+                "自在飞花轻似梦",
+                "无边丝雨细如愁"
+              ]
+            }
+          }
+        },
+        "expression": {
+          "relations": [
+            {
+              "source": "i1",
+              "target": "i2",
+              "kind": "echo",
+              "modality": "asserted",
+              "basis": "explicit",
+              "evidence": [
+                "自在飞花轻似梦"
+              ]
+            },
+            {
+              "source": "i3",
+              "target": "i4",
+              "kind": "echo",
+              "modality": "asserted",
+              "basis": "explicit",
+              "evidence": [
+                "无边丝雨细如愁"
+              ]
+            }
+          ],
+          "processes": [
+            {
+              "subject": "i1",
+              "kind": "persist",
+              "temporal": "ongoing",
+              "modality": "asserted",
+              "basis": "inferred",
+              "evidence": [
+                "自在飞花轻似梦"
+              ]
+            },
+            {
+              "subject": "i3",
+              "kind": "persist",
+              "temporal": "ongoing",
+              "modality": "asserted",
+              "basis": "inferred",
+              "evidence": [
+                "无边丝雨细如愁"
+              ]
+            }
+          ]
+        }
+      },
+      "originalValidation": {
+        "valid": false,
+        "errors": [
+          "scene.atmosphere.basis 缺少字段",
+          "scene.atmosphere.evidence 缺少字段",
+          "scene.atmosphere.visibility 枚举不正确",
+          "scene.atmosphere.visibility.value 额外字段",
+          "scene.atmosphere.visibility.basis 额外字段",
+          "scene.atmosphere.visibility.evidence 额外字段",
+          "scene.atmosphere.illumination 枚举不正确",
+          "scene.atmosphere.illumination.value 额外字段",
+          "scene.atmosphere.illumination.basis 额外字段",
+          "scene.atmosphere.illumination.evidence 额外字段"
+        ],
+        "warnings": [
+          "模型保留了不确定性，需要审阅"
+        ],
+        "review_required": true
+      },
+      "originalResultHash": "f1020098df47eaed0d31bd9c8c19efe84a030fcfde47c3886c7ed571bc9957c4"
+    },
+    {
+      "id": "2026-10-24T09-08-14-437Z-de4b5489",
+      "poem": "自在飞花轻似梦，无边丝雨细如愁。",
+      "mode": "expression",
+      "analysis": {
+        "schema_version": "expression-1.0",
+        "poem": "自在飞花轻似梦，无边丝雨细如愁。",
+        "reading": "飞花自在飘落，轻得像梦；细雨无边无际，细密得像愁。两句以梦喻花、以愁喻雨，把可见的春景与抽象心绪交织在一起。",
+        "entities": [
+          {
+            "id": "i1",
+            "mentions": [
+              "飞花"
+            ],
+            "concept": "飘飞的花",
+            "kind": "organism",
+            "role": "scene",
+            "presence": "present",
+            "evidence": [
+              "自在飞花轻似梦"
+            ],
+            "quantity": {
+              "mode": "many",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "group",
+              "extent": "spread",
+              "evidence": [
+                "自在飞花轻似梦"
+              ]
+            }
+          },
+          {
+            "id": "i2",
+            "mentions": [
+              "梦"
+            ],
+            "concept": "梦境",
+            "kind": "abstract",
+            "role": "reference",
+            "presence": "unclear",
+            "evidence": [
+              "自在飞花轻似梦"
+            ],
+            "quantity": {
+              "mode": "unspecified",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "unspecified",
+              "extent": "unspecified",
+              "evidence": []
+            }
+          },
+          {
+            "id": "i3",
+            "mentions": [
+              "丝雨"
+            ],
+            "concept": "细密如丝的雨",
+            "kind": "environment",
+            "role": "scene",
+            "presence": "present",
+            "evidence": [
+              "无边丝雨细如愁"
+            ],
+            "quantity": {
+              "mode": "many",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "group",
+              "extent": "spread",
+              "evidence": [
+                "无边丝雨细如愁"
+              ]
+            }
+          },
+          {
+            "id": "i4",
+            "mentions": [
+              "愁"
+            ],
+            "concept": "愁绪",
+            "kind": "abstract",
+            "role": "reference",
+            "presence": "unclear",
+            "evidence": [
+              "无边丝雨细如愁"
+            ],
+            "quantity": {
+              "mode": "unspecified",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "unspecified",
+              "extent": "unspecified",
+              "evidence": []
+            }
+          }
+        ],
+        "relations": [],
+        "atmosphere": {
+          "labels": [
+            "轻柔",
+            "迷蒙",
+            "愁绪"
+          ],
+          "valence": "mixed",
+          "energy": "low",
+          "tension": "low",
+          "openness": "high",
+          "evidence": [
+            "自在飞花轻似梦",
+            "无边丝雨细如愁"
+          ]
+        },
+        "time": {
+          "markers": [],
+          "note": null
+        },
+        "uncertainties": [
+          "“自在”既可指花自由飘落，也可指观者心境自在，主体归属不明。",
+          "“无边”是范围修饰，不能确定丝雨的具体数量或边界。"
+        ],
+        "spatial": [],
+        "scene": {
+          "setting": {
+            "kind": "open_land",
+            "basis": "inferred",
+            "evidence": [
+              "自在飞花轻似梦",
+              "无边丝雨细如愁"
+            ]
+          },
+          "groups": [
+            {
+              "members": [
+                "i1"
+              ],
+              "role": "subject",
+              "pattern": "scattered",
+              "depth": "unspecified",
+              "basis": "inferred",
+              "evidence": [
+                "自在飞花轻似梦"
+              ]
+            },
+            {
+              "members": [
+                "i3"
+              ],
+              "role": "environment",
+              "pattern": "field",
+              "depth": "unspecified",
+              "basis": "inferred",
+              "evidence": [
+                "无边丝雨细如愁"
+              ]
+            }
+          ],
+          "supports": [],
+          "actions": [
+            {
+              "entity": "i1",
+              "state": "fall",
+              "pace": "slow",
+              "direction": "down",
+              "modality": "asserted",
+              "basis": "inferred",
+              "evidence": [
+                "自在飞花轻似梦"
+              ]
+            },
+            {
+              "entity": "i3",
+              "state": "fall",
+              "pace": "slow",
+              "direction": "down",
+              "modality": "asserted",
+              "basis": "inferred",
+              "evidence": [
+                "无边丝雨细如愁"
+              ]
+            }
+          ],
+          "atmosphere": {
+            "visibility": "hazy",
+            "illumination": "unclear",
+            "basis": "inferred",
+            "evidence": [
+              "无边丝雨细如愁"
+            ]
+          }
+        },
+        "expression": {
+          "relations": [
+            {
+              "source": "i1",
+              "target": "i2",
+              "kind": "echo",
+              "modality": "asserted",
+              "basis": "explicit",
+              "evidence": [
+                "自在飞花轻似梦"
+              ]
+            },
+            {
+              "source": "i3",
+              "target": "i4",
+              "kind": "echo",
+              "modality": "asserted",
+              "basis": "explicit",
+              "evidence": [
+                "无边丝雨细如愁"
+              ]
+            }
+          ],
+          "processes": [
+            {
+              "subject": "i1",
+              "kind": "persist",
+              "temporal": "ongoing",
+              "modality": "asserted",
+              "basis": "inferred",
+              "evidence": [
+                "自在飞花轻似梦"
+              ]
+            },
+            {
+              "subject": "i3",
+              "kind": "persist",
+              "temporal": "ongoing",
+              "modality": "asserted",
+              "basis": "inferred",
+              "evidence": [
+                "无边丝雨细如愁"
+              ]
+            }
+          ]
+        }
+      },
+      "originalValidation": {
+        "valid": false,
+        "errors": [
+          "expression.relations[0] 非在场主体不能执行确定过程",
+          "expression.relations[1] 非在场主体不能执行确定过程"
+        ],
+        "warnings": [
+          "模型保留了不确定性，需要审阅",
+          "scene.setting 为语义推断，绘画选择需与原文明示区分",
+          "scene.groups[0] 为语义推断，绘画选择需与原文明示区分",
+          "scene.groups[1] 为语义推断，绘画选择需与原文明示区分",
+          "scene.actions[0] 为语义推断，绘画选择需与原文明示区分",
+          "scene.actions[1] 为语义推断，绘画选择需与原文明示区分",
+          "scene.atmosphere 为语义推断，绘画选择需与原文明示区分",
+          "expression.processes[0] 为语义推断",
+          "expression.processes[1] 为语义推断"
+        ],
+        "review_required": true
+      },
+      "originalResultHash": "38ad64efd38d14ca502af353b66001c2fd530d8422ea54c21e568ffeeb1d2c15"
+    },
+    {
+      "id": "2026-10-24T09-08-37-791Z-4c3eee22",
+      "poem": "自在飞花轻似梦，无边丝雨细如愁。",
+      "mode": "expression",
+      "analysis": {
+        "schema_version": "expression-1.0",
+        "poem": "自在飞花轻似梦，无边丝雨细如愁。",
+        "reading": "飞花自在飘落，轻得如同梦境；细雨无边无际，细密得如同愁绪。两句以梦喻花之轻、以愁喻雨之细，写出一片迷蒙而轻柔的春日雨景。",
+        "entities": [
+          {
+            "id": "i1",
+            "mentions": [
+              "飞花"
+            ],
+            "concept": "飘飞的花",
+            "kind": "organism",
+            "role": "scene",
+            "presence": "present",
+            "evidence": [
+              "自在飞花轻似梦"
+            ],
+            "quantity": {
+              "mode": "many",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "unspecified",
+              "extent": "spread",
+              "evidence": [
+                "飞花"
+              ]
+            }
+          },
+          {
+            "id": "i2",
+            "mentions": [
+              "梦"
+            ],
+            "concept": "梦境",
+            "kind": "abstract",
+            "role": "reference",
+            "presence": "unclear",
+            "evidence": [
+              "自在飞花轻似梦"
+            ],
+            "quantity": {
+              "mode": "unspecified",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "unspecified",
+              "extent": "unspecified",
+              "evidence": []
+            }
+          },
+          {
+            "id": "i3",
+            "mentions": [
+              "丝雨"
+            ],
+            "concept": "细密的雨",
+            "kind": "environment",
+            "role": "scene",
+            "presence": "present",
+            "evidence": [
+              "无边丝雨细如愁"
+            ],
+            "quantity": {
+              "mode": "many",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "unspecified",
+              "extent": "spread",
+              "evidence": [
+                "无边丝雨"
+              ]
+            }
+          },
+          {
+            "id": "i4",
+            "mentions": [
+              "愁"
+            ],
+            "concept": "愁绪",
+            "kind": "abstract",
+            "role": "reference",
+            "presence": "unclear",
+            "evidence": [
+              "无边丝雨细如愁"
+            ],
+            "quantity": {
+              "mode": "unspecified",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "unspecified",
+              "extent": "unspecified",
+              "evidence": []
+            }
+          }
+        ],
+        "relations": [],
+        "atmosphere": {
+          "labels": [
+            "轻柔",
+            "迷蒙",
+            "怅惘"
+          ],
+          "valence": "mixed",
+          "energy": "low",
+          "tension": "low",
+          "openness": "high",
+          "evidence": [
+            "自在飞花轻似梦",
+            "无边丝雨细如愁"
+          ]
+        },
+        "time": {
+          "markers": [],
+          "note": null
+        },
+        "uncertainties": [
+          "飞花与丝雨的具体数量、范围均无明确数字，只能按铺展的群体理解。",
+          "梦与愁是比喻参照，并非场景中实际存在的对象。"
+        ],
+        "spatial": [],
+        "scene": {
+          "setting": {
+            "kind": "open_land",
+            "basis": "inferred",
+            "evidence": [
+              "自在飞花轻似梦",
+              "无边丝雨细如愁"
+            ]
+          },
+          "groups": [
+            {
+              "members": [
+                "i1"
+              ],
+              "role": "subject",
+              "pattern": "scattered",
+              "depth": "unspecified",
+              "basis": "inferred",
+              "evidence": [
+                "自在飞花轻似梦"
+              ]
+            },
+            {
+              "members": [
+                "i3"
+              ],
+              "role": "environment",
+              "pattern": "field",
+              "depth": "unspecified",
+              "basis": "inferred",
+              "evidence": [
+                "无边丝雨细如愁"
+              ]
+            }
+          ],
+          "supports": [],
+          "actions": [
+            {
+              "entity": "i1",
+              "state": "fall",
+              "pace": "slow",
+              "direction": "down",
+              "modality": "asserted",
+              "basis": "inferred",
+              "evidence": [
+                "自在飞花轻似梦"
+              ]
+            },
+            {
+              "entity": "i3",
+              "state": "fall",
+              "pace": "slow",
+              "direction": "down",
+              "modality": "asserted",
+              "basis": "inferred",
+              "evidence": [
+                "无边丝雨细如愁"
+              ]
+            }
+          ],
+          "atmosphere": {
+            "visibility": {
+              "enum": "hazy",
+              "basis": "inferred",
+              "evidence": [
+                "无边丝雨细如愁"
+              ]
+            },
+            "illumination": {
+              "enum": "unclear",
+              "basis": "inferred",
+              "evidence": [
+                "自在飞花轻似梦",
+                "无边丝雨细如愁"
+              ]
+            }
+          }
+        },
+        "expression": {
+          "relations": [
+            {
+              "source": "i1",
+              "target": "i2",
+              "kind": "echo",
+              "modality": "asserted",
+              "basis": "explicit",
+              "evidence": [
+                "自在飞花轻似梦"
+              ]
+            },
+            {
+              "source": "i3",
+              "target": "i4",
+              "kind": "echo",
+              "modality": "asserted",
+              "basis": "explicit",
+              "evidence": [
+                "无边丝雨细如愁"
+              ]
+            }
+          ],
+          "processes": [
+            {
+              "subject": "i1",
+              "kind": "persist",
+              "temporal": "ongoing",
+              "modality": "asserted",
+              "basis": "inferred",
+              "evidence": [
+                "自在飞花轻似梦"
+              ]
+            },
+            {
+              "subject": "i3",
+              "kind": "persist",
+              "temporal": "ongoing",
+              "modality": "asserted",
+              "basis": "inferred",
+              "evidence": [
+                "无边丝雨细如愁"
+              ]
+            }
+          ]
+        }
+      },
+      "originalValidation": {
+        "valid": false,
+        "errors": [
+          "scene.atmosphere.basis 缺少字段",
+          "scene.atmosphere.evidence 缺少字段",
+          "scene.atmosphere.visibility 枚举不正确",
+          "scene.atmosphere.visibility.enum 额外字段",
+          "scene.atmosphere.visibility.basis 额外字段",
+          "scene.atmosphere.visibility.evidence 额外字段",
+          "scene.atmosphere.illumination 枚举不正确",
+          "scene.atmosphere.illumination.enum 额外字段",
+          "scene.atmosphere.illumination.basis 额外字段",
+          "scene.atmosphere.illumination.evidence 额外字段"
+        ],
+        "warnings": [
+          "模型保留了不确定性，需要审阅"
+        ],
+        "review_required": true
+      },
+      "originalResultHash": "37a3732423386daccb0689023d2cf7957b00c1a4fb241cf155870412b47d993e"
+    },
+    {
+      "id": "2026-10-24T09-08-50-954Z-5a4928eb",
+      "poem": "自在飞花轻似梦，无边丝雨细如愁。",
+      "mode": "expression",
+      "analysis": {
+        "schema_version": "expression-1.0",
+        "poem": "自在飞花轻似梦，无边丝雨细如愁。",
+        "reading": "飞花自在飘落，轻得像梦；细雨无边无际，细密得像愁。两句以梦喻花之轻，以愁喻雨之细，把眼前景与心中感叠合起来。",
+        "entities": [
+          {
+            "id": "i1",
+            "mentions": [
+              "飞花"
+            ],
+            "concept": "飘飞的花",
+            "kind": "organism",
+            "role": "scene",
+            "presence": "present",
+            "evidence": [
+              "自在飞花轻似梦"
+            ],
+            "quantity": {
+              "mode": "many",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "group",
+              "extent": "spread",
+              "evidence": [
+                "自在飞花轻似梦"
+              ]
+            }
+          },
+          {
+            "id": "i2",
+            "mentions": [
+              "梦"
+            ],
+            "concept": "梦境",
+            "kind": "abstract",
+            "role": "reference",
+            "presence": "unclear",
+            "evidence": [
+              "自在飞花轻似梦"
+            ],
+            "quantity": {
+              "mode": "unspecified",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "unspecified",
+              "extent": "unspecified",
+              "evidence": []
+            }
+          },
+          {
+            "id": "i3",
+            "mentions": [
+              "丝雨"
+            ],
+            "concept": "细密如丝的雨",
+            "kind": "environment",
+            "role": "scene",
+            "presence": "present",
+            "evidence": [
+              "无边丝雨细如愁"
+            ],
+            "quantity": {
+              "mode": "many",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "group",
+              "extent": "spread",
+              "evidence": [
+                "无边丝雨细如愁"
+              ]
+            }
+          },
+          {
+            "id": "i4",
+            "mentions": [
+              "愁"
+            ],
+            "concept": "愁绪",
+            "kind": "abstract",
+            "role": "reference",
+            "presence": "unclear",
+            "evidence": [
+              "无边丝雨细如愁"
+            ],
+            "quantity": {
+              "mode": "unspecified",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "unspecified",
+              "extent": "unspecified",
+              "evidence": []
+            }
+          }
+        ],
+        "relations": [],
+        "atmosphere": {
+          "labels": [
+            "轻渺",
+            "细密",
+            "怅惘"
+          ],
+          "valence": "mixed",
+          "energy": "low",
+          "tension": "low",
+          "openness": "high",
+          "evidence": [
+            "自在飞花轻似梦",
+            "无边丝雨细如愁"
+          ]
+        },
+        "time": {
+          "markers": [],
+          "note": null
+        },
+        "uncertainties": [
+          "飞花与丝雨的具体数量、范围均无明确数字，只能按铺展的群体意象理解。",
+          "梦与愁是比喻参照，并非场景中实际存在的物体。"
+        ],
+        "spatial": [],
+        "scene": {
+          "setting": {
+            "kind": "open_land",
+            "basis": "inferred",
+            "evidence": [
+              "自在飞花轻似梦",
+              "无边丝雨细如愁"
+            ]
+          },
+          "groups": [
+            {
+              "members": [
+                "i1"
+              ],
+              "role": "subject",
+              "pattern": "scattered",
+              "depth": "unspecified",
+              "basis": "inferred",
+              "evidence": [
+                "自在飞花轻似梦"
+              ]
+            },
+            {
+              "members": [
+                "i3"
+              ],
+              "role": "environment",
+              "pattern": "field",
+              "depth": "unspecified",
+              "basis": "inferred",
+              "evidence": [
+                "无边丝雨细如愁"
+              ]
+            }
+          ],
+          "supports": [],
+          "actions": [
+            {
+              "entity": "i1",
+              "state": "fall",
+              "pace": "slow",
+              "direction": "down",
+              "modality": "asserted",
+              "basis": "inferred",
+              "evidence": [
+                "自在飞花轻似梦"
+              ]
+            },
+            {
+              "entity": "i3",
+              "state": "fall",
+              "pace": "slow",
+              "direction": "down",
+              "modality": "asserted",
+              "basis": "inferred",
+              "evidence": [
+                "无边丝雨细如愁"
+              ]
+            }
+          ],
+          "atmosphere": {
+            "visibility": "hazy",
+            "illumination": "unclear",
+            "basis": "inferred",
+            "evidence": [
+              "无边丝雨细如愁"
+            ]
+          }
+        },
+        "expression": {
+          "relations": [
+            {
+              "source": "i1",
+              "target": "i2",
+              "kind": "echo",
+              "modality": "asserted",
+              "basis": "explicit",
+              "evidence": [
+                "自在飞花轻似梦"
+              ]
+            },
+            {
+              "source": "i3",
+              "target": "i4",
+              "kind": "echo",
+              "modality": "asserted",
+              "basis": "explicit",
+              "evidence": [
+                "无边丝雨细如愁"
+              ]
+            }
+          ],
+          "processes": [
+            {
+              "subject": "i1",
+              "kind": "persist",
+              "temporal": "ongoing",
+              "modality": "asserted",
+              "basis": "inferred",
+              "evidence": [
+                "自在飞花轻似梦"
+              ]
+            },
+            {
+              "subject": "i3",
+              "kind": "persist",
+              "temporal": "ongoing",
+              "modality": "asserted",
+              "basis": "inferred",
+              "evidence": [
+                "无边丝雨细如愁"
+              ]
+            }
+          ]
+        }
+      },
+      "originalValidation": {
+        "valid": false,
+        "errors": [
+          "expression.relations[0] 非在场主体不能执行确定过程",
+          "expression.relations[1] 非在场主体不能执行确定过程"
+        ],
+        "warnings": [
+          "模型保留了不确定性，需要审阅",
+          "scene.setting 为语义推断，绘画选择需与原文明示区分",
+          "scene.groups[0] 为语义推断，绘画选择需与原文明示区分",
+          "scene.groups[1] 为语义推断，绘画选择需与原文明示区分",
+          "scene.actions[0] 为语义推断，绘画选择需与原文明示区分",
+          "scene.actions[1] 为语义推断，绘画选择需与原文明示区分",
+          "scene.atmosphere 为语义推断，绘画选择需与原文明示区分",
+          "expression.processes[0] 为语义推断",
+          "expression.processes[1] 为语义推断"
+        ],
+        "review_required": true
+      },
+      "originalResultHash": "3491b2e4263766afe4cf5cd8bc12ee5cfbcdf3f5b39b2c8a0f00432f4e306a5f"
+    },
+    {
+      "id": "2026-10-24T09-57-37-783Z-7c58cd33",
+      "poem": "自在飞花轻似梦，无边丝雨细如愁。",
+      "mode": "expression",
+      "analysis": {
+        "schema_version": "expression-1.0",
+        "poem": "自在飞花轻似梦，无边丝雨细如愁。",
+        "reading": "飞花自在飘落，轻得如同梦境；细雨无边无际，细密得如同愁绪。两句以梦喻花之轻、以愁喻雨之细，写出一片轻柔迷蒙的春景与心绪。",
+        "entities": [
+          {
+            "id": "i1",
+            "mentions": [
+              "飞花"
+            ],
+            "concept": "飘飞的花瓣",
+            "kind": "object",
+            "role": "scene",
+            "presence": "present",
+            "evidence": [
+              "自在飞花轻似梦"
+            ],
+            "quantity": {
+              "mode": "many",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "group",
+              "extent": "spread",
+              "evidence": [
+                "自在飞花轻似梦"
+              ]
+            }
+          },
+          {
+            "id": "i2",
+            "mentions": [
+              "梦"
+            ],
+            "concept": "梦境",
+            "kind": "abstract",
+            "role": "reference",
+            "presence": "unclear",
+            "evidence": [
+              "自在飞花轻似梦"
+            ],
+            "quantity": {
+              "mode": "unspecified",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "unspecified",
+              "extent": "unspecified",
+              "evidence": []
+            }
+          },
+          {
+            "id": "i3",
+            "mentions": [
+              "丝雨"
+            ],
+            "concept": "细密如丝的雨",
+            "kind": "environment",
+            "role": "scene",
+            "presence": "present",
+            "evidence": [
+              "无边丝雨细如愁"
+            ],
+            "quantity": {
+              "mode": "many",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "group",
+              "extent": "spread",
+              "evidence": [
+                "无边丝雨细如愁"
+              ]
+            }
+          },
+          {
+            "id": "i4",
+            "mentions": [
+              "愁"
+            ],
+            "concept": "愁绪",
+            "kind": "abstract",
+            "role": "reference",
+            "presence": "unclear",
+            "evidence": [
+              "无边丝雨细如愁"
+            ],
+            "quantity": {
+              "mode": "unspecified",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "unspecified",
+              "extent": "unspecified",
+              "evidence": []
+            }
+          }
+        ],
+        "relations": [],
+        "atmosphere": {
+          "labels": [
+            "轻柔",
+            "迷蒙",
+            "怅惘"
+          ],
+          "valence": "mixed",
+          "energy": "low",
+          "tension": "low",
+          "openness": "high",
+          "evidence": [
+            "自在飞花轻似梦",
+            "无边丝雨细如愁"
+          ]
+        },
+        "time": {
+          "markers": [],
+          "note": null
+        },
+        "uncertainties": [
+          "飞花与丝雨的具体数量无从确定，只能按铺展的群体理解。",
+          "梦与愁是比喻参照，并非场景中实际存在的物体。"
+        ],
+        "spatial": [],
+        "scene": {
+          "setting": {
+            "kind": "open_land",
+            "basis": "inferred",
+            "evidence": [
+              "自在飞花轻似梦",
+              "无边丝雨细如愁"
+            ]
+          },
+          "groups": [
+            {
+              "members": [
+                "i1"
+              ],
+              "role": "subject",
+              "pattern": "scattered",
+              "depth": "unspecified",
+              "basis": "inferred",
+              "evidence": [
+                "自在飞花轻似梦"
+              ]
+            },
+            {
+              "members": [
+                "i3"
+              ],
+              "role": "environment",
+              "pattern": "field",
+              "depth": "unspecified",
+              "basis": "inferred",
+              "evidence": [
+                "无边丝雨细如愁"
+              ]
+            }
+          ],
+          "supports": [],
+          "actions": [
+            {
+              "entity": "i1",
+              "state": "fall",
+              "pace": "slow",
+              "direction": "down",
+              "modality": "asserted",
+              "basis": "inferred",
+              "evidence": [
+                "自在飞花轻似梦"
+              ]
+            },
+            {
+              "entity": "i3",
+              "state": "fall",
+              "pace": "slow",
+              "direction": "down",
+              "modality": "asserted",
+              "basis": "inferred",
+              "evidence": [
+                "无边丝雨细如愁"
+              ]
+            }
+          ],
+          "atmosphere": {
+            "visibility": "hazy",
+            "illumination": "unclear",
+            "basis": "inferred",
+            "evidence": [
+              "无边丝雨细如愁"
+            ]
+          }
+        },
+        "expression": {
+          "relations": [
+            {
+              "source": "i1",
+              "target": "i2",
+              "kind": "echo",
+              "modality": "asserted",
+              "basis": "explicit",
+              "evidence": [
+                "自在飞花轻似梦"
+              ]
+            },
+            {
+              "source": "i3",
+              "target": "i4",
+              "kind": "echo",
+              "modality": "asserted",
+              "basis": "explicit",
+              "evidence": [
+                "无边丝雨细如愁"
+              ]
+            }
+          ],
+          "processes": [
+            {
+              "subject": "i1",
+              "kind": "persist",
+              "temporal": "ongoing",
+              "modality": "asserted",
+              "basis": "inferred",
+              "evidence": [
+                "自在飞花轻似梦"
+              ]
+            },
+            {
+              "subject": "i3",
+              "kind": "persist",
+              "temporal": "ongoing",
+              "modality": "asserted",
+              "basis": "inferred",
+              "evidence": [
+                "无边丝雨细如愁"
+              ]
+            }
+          ]
+        }
+      },
+      "originalValidation": {
+        "valid": false,
+        "errors": [
+          "expression.relations[0] 非在场主体不能执行确定过程",
+          "expression.relations[1] 非在场主体不能执行确定过程"
+        ],
+        "warnings": [
+          "模型保留了不确定性，需要审阅",
+          "scene.setting 为语义推断，绘画选择需与原文明示区分",
+          "scene.groups[0] 为语义推断，绘画选择需与原文明示区分",
+          "scene.groups[1] 为语义推断，绘画选择需与原文明示区分",
+          "scene.actions[0] 为语义推断，绘画选择需与原文明示区分",
+          "scene.actions[1] 为语义推断，绘画选择需与原文明示区分",
+          "scene.atmosphere 为语义推断，绘画选择需与原文明示区分",
+          "expression.processes[0] 为语义推断",
+          "expression.processes[1] 为语义推断"
+        ],
+        "review_required": true
+      },
+      "originalResultHash": "0f5e516ed37ef7e2a873b8b00a0df84ec66b1136fc691ee2c09a6a21d1653029"
+    }
+  ]
+}

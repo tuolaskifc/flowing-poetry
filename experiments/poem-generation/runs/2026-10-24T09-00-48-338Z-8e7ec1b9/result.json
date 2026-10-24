@@ -1,0 +1,358 @@
+{
+  "id": "2026-10-24T09-00-48-338Z-8e7ec1b9",
+  "fingerprint": "19f377a28716851008b47c7cae7a11b0075af1f512c822a2e890650373fa4de2",
+  "poem": "日出江花红胜火，春来江水绿如蓝。",
+  "source": null,
+  "mode": "expression",
+  "model": "DeepSeek-V4.1-Flash",
+  "started_at": "2026-10-24T09:00:48.341Z",
+  "cached": false,
+  "http_status": 200,
+  "usage": {
+    "completion_tokens": 1141,
+    "prompt_tokens": 5686,
+    "total_tokens": 6827,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 5632
+    }
+  },
+  "finish_reason": "stop",
+  "analysis": {
+    "schema_version": "expression-1.0",
+    "poem": "日出江花红胜火，春来江水绿如蓝。",
+    "reading": "日出时江边花红得胜过火焰，春天到来江水碧绿如同蓝草。写江畔春日的明丽色彩。",
+    "entities": [
+      {
+        "id": "i1",
+        "mentions": [
+          "日出"
+        ],
+        "concept": "太阳升起",
+        "kind": "environment",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "日出江花红胜火"
+        ],
+        "quantity": {
+          "mode": "exact",
+          "min": 1,
+          "max": 1,
+          "unit": null,
+          "scope": "individual",
+          "extent": "local",
+          "evidence": [
+            "日出"
+          ]
+        }
+      },
+      {
+        "id": "i2",
+        "mentions": [
+          "江花"
+        ],
+        "concept": "江边花",
+        "kind": "organism",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "日出江花红胜火"
+        ],
+        "quantity": {
+          "mode": "many",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "spread",
+          "evidence": [
+            "江花"
+          ]
+        }
+      },
+      {
+        "id": "i3",
+        "mentions": [
+          "火"
+        ],
+        "concept": "火焰",
+        "kind": "object",
+        "role": "reference",
+        "presence": "unclear",
+        "evidence": [
+          "日出江花红胜火"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i4",
+        "mentions": [
+          "春"
+        ],
+        "concept": "春天",
+        "kind": "abstract",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "春来江水绿如蓝"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i5",
+        "mentions": [
+          "江水"
+        ],
+        "concept": "江水",
+        "kind": "environment",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "春来江水绿如蓝"
+        ],
+        "quantity": {
+          "mode": "many",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "spread",
+          "evidence": [
+            "江水"
+          ]
+        }
+      },
+      {
+        "id": "i6",
+        "mentions": [
+          "蓝"
+        ],
+        "concept": "蓝草",
+        "kind": "organism",
+        "role": "reference",
+        "presence": "unclear",
+        "evidence": [
+          "春来江水绿如蓝"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      }
+    ],
+    "relations": [],
+    "atmosphere": {
+      "labels": [
+        "明丽",
+        "春意",
+        "鲜艳"
+      ],
+      "valence": "positive",
+      "energy": "medium",
+      "tension": "low",
+      "openness": "high",
+      "evidence": [
+        "日出江花红胜火",
+        "春来江水绿如蓝"
+      ]
+    },
+    "time": {
+      "markers": [
+        {
+          "surface": "日出",
+          "meaning": "太阳升起的时刻，暗示清晨"
+        },
+        {
+          "surface": "春来",
+          "meaning": "春天到来，季节转换"
+        }
+      ],
+      "note": "两句并置，未明言先后顺序。"
+    },
+    "uncertainties": [
+      "“江花”可指江边花或江中浪花，此处按江边花解释。",
+      "“蓝”指蓝草，为比喻参照，非实景植物。"
+    ],
+    "spatial": [
+      {
+        "type": "on",
+        "source": "i2",
+        "target": "i5",
+        "modality": "asserted",
+        "basis": "inferred",
+        "evidence": [
+          "日出江花红胜火，春来江水绿如蓝。"
+        ]
+      }
+    ],
+    "scene": {
+      "setting": {
+        "kind": "waterside",
+        "basis": "inferred",
+        "evidence": [
+          "日出江花红胜火，春来江水绿如蓝。"
+        ]
+      },
+      "groups": [
+        {
+          "members": [
+            "i2"
+          ],
+          "role": "subject",
+          "pattern": "field",
+          "depth": "unspecified",
+          "basis": "inferred",
+          "evidence": [
+            "日出江花红胜火"
+          ]
+        },
+        {
+          "members": [
+            "i5"
+          ],
+          "role": "environment",
+          "pattern": "field",
+          "depth": "unspecified",
+          "basis": "inferred",
+          "evidence": [
+            "春来江水绿如蓝"
+          ]
+        },
+        {
+          "members": [
+            "i1"
+          ],
+          "role": "accent",
+          "pattern": "single",
+          "depth": "unspecified",
+          "basis": "inferred",
+          "evidence": [
+            "日出江花红胜火"
+          ]
+        }
+      ],
+      "supports": [
+        {
+          "entity": "i2",
+          "surface": "ground",
+          "target": null,
+          "basis": "inferred",
+          "evidence": [
+            "日出江花红胜火"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "entity": "i1",
+          "state": "rise",
+          "pace": "unspecified",
+          "direction": "up",
+          "modality": "asserted",
+          "basis": "explicit",
+          "evidence": [
+            "日出江花红胜火"
+          ]
+        }
+      ],
+      "atmosphere": {
+        "visibility": "clear",
+        "illumination": "day",
+        "basis": "inferred",
+        "evidence": [
+          "日出江花红胜火"
+        ]
+      }
+    },
+    "expression": {
+      "relations": [
+        {
+          "source": "i2",
+          "target": "i3",
+          "kind": "contrast",
+          "modality": "asserted",
+          "basis": "explicit",
+          "evidence": [
+            "日出江花红胜火"
+          ]
+        },
+        {
+          "source": "i5",
+          "target": "i6",
+          "kind": "echo",
+          "modality": "asserted",
+          "basis": "explicit",
+          "evidence": [
+            "春来江水绿如蓝"
+          ]
+        }
+      ],
+      "processes": [
+        {
+          "subject": "i1",
+          "kind": "emerge",
+          "temporal": "ongoing",
+          "modality": "asserted",
+          "basis": "explicit",
+          "evidence": [
+            "日出江花红胜火"
+          ]
+        },
+        {
+          "subject": "i4",
+          "kind": "emerge",
+          "temporal": "already",
+          "modality": "asserted",
+          "basis": "explicit",
+          "evidence": [
+            "春来江水绿如蓝"
+          ]
+        }
+      ]
+    }
+  },
+  "validation": {
+    "valid": false,
+    "errors": [
+      "expression.relations[0] 非在场主体不能执行确定过程",
+      "expression.relations[1] 非在场主体不能执行确定过程"
+    ],
+    "warnings": [
+      "模型保留了不确定性，需要审阅",
+      "spatial[0] 的推断或非确定关系需审阅",
+      "scene.setting 为语义推断，绘画选择需与原文明示区分",
+      "scene.groups[0] 为语义推断，绘画选择需与原文明示区分",
+      "scene.groups[1] 为语义推断，绘画选择需与原文明示区分",
+      "scene.groups[2] 为语义推断，绘画选择需与原文明示区分",
+      "i4 未进入整体分组，后续使用本地默认布局",
+      "scene.supports[0] 为语义推断，绘画选择需与原文明示区分",
+      "scene.atmosphere 为语义推断，绘画选择需与原文明示区分"
+    ],
+    "review_required": true
+  },
+  "elapsed_seconds": 16.3
+}
