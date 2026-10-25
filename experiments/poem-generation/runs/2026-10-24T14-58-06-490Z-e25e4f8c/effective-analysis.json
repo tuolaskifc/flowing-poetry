@@ -1,0 +1,266 @@
+{
+  "schema_version": "expression-1.0",
+  "poem": "我欲乘风归去，又恐琼楼玉宇，高处不胜寒。",
+  "reading": "我想乘着风归去，却又怕那美玉砌成的楼宇，处在高天之上，寒冷得让人承受不住。",
+  "entities": [
+    {
+      "id": "i1",
+      "mentions": [
+        "我"
+      ],
+      "concept": "抒情主体",
+      "kind": "person",
+      "role": "scene",
+      "presence": "present",
+      "evidence": [
+        "我欲乘风归去"
+      ],
+      "quantity": {
+        "mode": "unspecified",
+        "min": null,
+        "max": null,
+        "unit": null,
+        "scope": "unspecified",
+        "extent": "unspecified",
+        "evidence": []
+      }
+    },
+    {
+      "id": "i2",
+      "mentions": [
+        "风"
+      ],
+      "concept": "风",
+      "kind": "environment",
+      "role": "scene",
+      "presence": "present",
+      "evidence": [
+        "我欲乘风归去"
+      ],
+      "quantity": {
+        "mode": "unspecified",
+        "min": null,
+        "max": null,
+        "unit": null,
+        "scope": "unspecified",
+        "extent": "unspecified",
+        "evidence": []
+      }
+    },
+    {
+      "id": "i3",
+      "mentions": [
+        "琼楼玉宇"
+      ],
+      "concept": "华美楼宇",
+      "kind": "place",
+      "role": "scene",
+      "presence": "unclear",
+      "evidence": [
+        "又恐琼楼玉宇"
+      ],
+      "quantity": {
+        "mode": "unspecified",
+        "min": null,
+        "max": null,
+        "unit": null,
+        "scope": "unspecified",
+        "extent": "unspecified",
+        "evidence": []
+      }
+    },
+    {
+      "id": "i4",
+      "mentions": [
+        "高处"
+      ],
+      "concept": "高远之处",
+      "kind": "place",
+      "role": "scene",
+      "presence": "unclear",
+      "evidence": [
+        "高处不胜寒"
+      ],
+      "quantity": {
+        "mode": "unspecified",
+        "min": null,
+        "max": null,
+        "unit": null,
+        "scope": "unspecified",
+        "extent": "unspecified",
+        "evidence": []
+      }
+    },
+    {
+      "id": "i5",
+      "mentions": [
+        "寒"
+      ],
+      "concept": "寒冷",
+      "kind": "abstract",
+      "role": "scene",
+      "presence": "unclear",
+      "evidence": [
+        "高处不胜寒"
+      ],
+      "quantity": {
+        "mode": "unspecified",
+        "min": null,
+        "max": null,
+        "unit": null,
+        "scope": "unspecified",
+        "extent": "unspecified",
+        "evidence": []
+      }
+    }
+  ],
+  "relations": [],
+  "atmosphere": {
+    "labels": [
+      "高寒",
+      "犹疑"
+    ],
+    "valence": "mixed",
+    "energy": "medium",
+    "tension": "medium",
+    "openness": "high",
+    "evidence": [
+      "我欲乘风归去",
+      "又恐琼楼玉宇",
+      "高处不胜寒"
+    ]
+  },
+  "time": {
+    "markers": [
+      {
+        "surface": "欲",
+        "meaning": "表示将要、打算，动作尚未发生"
+      },
+      {
+        "surface": "又",
+        "meaning": "表示转折或递进，引出另一层顾虑"
+      }
+    ],
+    "note": "“欲”表未然意愿，“又恐”表当下顾虑，均未成为已发生事实。"
+  },
+  "uncertainties": [
+    "“归去”的目的地未明说，只能从“琼楼玉宇”“高处”推知为高远之处。",
+    "“琼楼玉宇”与“高处”是否指同一处所，原文未明确交代。"
+  ],
+  "spatial": [
+    {
+      "type": "on",
+      "source": "i1",
+      "target": "i2",
+      "modality": "possible",
+      "basis": "inferred",
+      "evidence": [
+        "我欲乘风归去"
+      ]
+    }
+  ],
+  "scene": {
+    "setting": {
+      "kind": "sky",
+      "basis": "inferred",
+      "evidence": [
+        "我欲乘风归去",
+        "高处不胜寒"
+      ]
+    },
+    "groups": [
+      {
+        "members": [
+          "i1"
+        ],
+        "role": "subject",
+        "pattern": "single",
+        "depth": "unspecified",
+        "basis": "inferred",
+        "evidence": [
+          "我欲乘风归去"
+        ]
+      },
+      {
+        "members": [
+          "i2"
+        ],
+        "role": "environment",
+        "pattern": "unspecified",
+        "depth": "unspecified",
+        "basis": "inferred",
+        "evidence": [
+          "我欲乘风归去"
+        ]
+      }
+    ],
+    "supports": [],
+    "actions": [
+      {
+        "entity": "i1",
+        "state": "rise",
+        "pace": "unspecified",
+        "direction": "up",
+        "modality": "possible",
+        "basis": "inferred",
+        "evidence": [
+          "我欲乘风归去"
+        ]
+      }
+    ],
+    "atmosphere": {
+      "visibility": "unclear",
+      "illumination": "unclear",
+      "basis": "inferred",
+      "evidence": []
+    }
+  },
+  "expression": {
+    "relations": [
+      {
+        "source": "i1",
+        "target": "i2",
+        "kind": "connect",
+        "modality": "possible",
+        "basis": "inferred",
+        "evidence": [
+          "我欲乘风归去"
+        ]
+      },
+      {
+        "source": "i1",
+        "target": "i3",
+        "kind": "approach",
+        "modality": "possible",
+        "basis": "inferred",
+        "evidence": [
+          "我欲乘风归去",
+          "又恐琼楼玉宇"
+        ]
+      },
+      {
+        "source": "i1",
+        "target": "i4",
+        "kind": "separate",
+        "modality": "possible",
+        "basis": "inferred",
+        "evidence": [
+          "我欲乘风归去",
+          "高处不胜寒"
+        ]
+      }
+    ],
+    "processes": [
+      {
+        "subject": "i1",
+        "kind": "emerge",
+        "temporal": "not_yet",
+        "modality": "possible",
+        "basis": "inferred",
+        "evidence": [
+          "我欲乘风归去"
+        ]
+      }
+    ]
+  }
+}

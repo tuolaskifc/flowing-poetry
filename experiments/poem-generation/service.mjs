@@ -27,8 +27,17 @@ export function createGenerationService({fetcher=fetch,credentialsPath=resolve(r
   let busy=false;
   const promptFile=resolve(dir,'../poem-semantics/contract-v3/system-prompt.txt');
   async function configured(){try{parseCredentials(await readFile(credentialsPath,'utf8'));return true;}catch{return false;}}
-  const planning=(r)=>constrainRecoveredPlan(r.mode==='expression'?buildExpressionPlan(r.effectiveAnalysis||r.analysis):r.mode==='abstract'?buildAbstractPlan(r.effectiveAnalysis||r.analysis):buildPlan(r.effectiveAnalysis||r.analysis),r.recovery);
+  const planning=(r)=>{
+    const a=r.effectiveAnalysis||r.analysis,p=constrainRecoveredPlan(r.mode==='expression'?buildExpressionPlan(a):r.mode==='abstract'?buildAbstractPlan(a,{sourceBound:true}):buildPlan(a),r.recovery);
+    if(!['expression','abstract'].includes(r.mode)){
+      const visible=p.layers.some(l=>!l.inferred&&l.entities.length),gaps=p.omitted.filter(o=>o.category!=='context-only'&&a.entities.some(e=>e.id===o.id&&e.role==='scene'&&e.presence==='present'));
+      p.renderability={status:!visible?'unavailable':gaps.length?'limited':'ready',visibleScenery:visible,gaps};
+    }
+    return p;
+  };
   function delivery(record){
+    if(record.validation?.valid&&record.plan?.renderability?.status==='unavailable')return {status:'failed',retryable:false,reason:'drawing-gap',message:'解读已完成，但本句主要内容尚无可靠画法，未生成新画面。'};
+    if(record.validation?.valid&&record.plan?.renderability?.status==='limited')return {status:'partial',retryable:false,reason:'drawing-gap',message:'基础画面已生成，部分意象尚未单独表现，具体缺口已列出。'+(record.recovery?.message||'')};
     const failed=!record.validation?.valid,status=failed?'failed':record.recovery?.status==='partial'?'partial':record.recovery?'adjusted':'complete';
     const errors=(record.validation?.errors||[]).join(' ');
     const reason=record.finish_reason&&record.finish_reason!=='stop'?'truncated':/HTTP|fetch|timeout|timed out|网络|接口|JSON|最终文本/i.test(errors)?'connection-or-format':'interpretation';
@@ -49,13 +58,13 @@ export function createGenerationService({fetcher=fetch,credentialsPath=resolve(r
     if(!r.validation?.valid)return null;
     r.plan=planning(r);r.delivery=delivery(r);r.cached=true;return r;
   }
-  async function savedMatch(predicate){
+  async function savedMatch(predicate,{renderableOnly=false}={}){
     let names;try{names=await readdir(runsDir);}catch{return null;}
-    for(const name of names.sort().reverse())try{const r=JSON.parse(await readFile(resolve(runsDir,name,'result.json'),'utf8'));if(predicate(r)){const value=rehydrate(r);if(value)return value;}}catch{}
+    for(const name of names.sort().reverse())try{const r=JSON.parse(await readFile(resolve(runsDir,name,'result.json'),'utf8'));if(predicate(r)){const value=rehydrate(r);if(value&&(!renderableOnly||value.plan.renderability?.status!=='unavailable'))return value;}}catch{}
     return null;
   }
   async function latest({abstract=false,expression=false}={}){
-    return savedMatch(r=>abstract?r.mode==='abstract':expression?r.mode==='expression':!['abstract','expression'].includes(r.mode));
+    return savedMatch(r=>abstract?r.mode==='abstract':expression?r.mode==='expression':!['abstract','expression'].includes(r.mode),{renderableOnly:true});
   }
   async function analyze(input){
     if(typeof input?.poem!=='string'||!input.poem.trim()||[...input.poem].length>200){const e=new Error('请输入 1–200 字的诗句。');e.status=400;throw e;}
@@ -69,14 +78,20 @@ export function createGenerationService({fetcher=fetch,credentialsPath=resolve(r
       const poem=input.poem,prompt=(await readFile(promptFile,'utf8'))+(mode!=='full'?'\n\n【本次任务范围：基础意象通路】\n本次只检验 entities 到现有绘画库的连接，尚未请求完整关系抽取。relations 必须为 []，不得输出任何关系项。动作和属性只在 reading 中简述。其余字段仍按协议 3.0 填写。不要把人物想象成在场；保留 presence 与 role 的不确定性。':'\n\n【本轮通路自检补充】\n提交前检查每条关系引用。grows_from、carries、located_in、compared_to 等双对象关系必须给出两个已有实体的 id，不能有 null；缺少第二个实体就不输出该关系。状态或属性可留在 reading 中，不要虚构生长或承载动作。怀念不是观察，observes 只用于实际观看。relations 可以为空数组。');
       const effectivePrompt=mode==='expression'?(await readFile(promptFile,'utf8'))+'\n'+expressionPrompt+'\n'+reliabilityPrompt:mode==='abstract'?abstractPrompt+'\n比喻的 echo/contrast 可以关联 reference 且 presence=unclear 的主体，断言的是比较成立，不是该主体在场。确定过程仍不得执行在参照主体上。':mode==='composition'?(await readFile(promptFile,'utf8'))+'\n\n本次请求整体场景语义 3.3。按下列扩展解释环境、主次群落、远近、必要依托、动作状态与可见气息，原文依据与推断分开。\n'+compositionPrompt:mode==='scene'?prompt+scenePrompt:mode==='quantity'?prompt+promptAddition:prompt;
       if(['quantity','scene','composition'].includes(mode))requestSchema.properties.relations.maxItems=0;
-      const fingerprint=createHash('sha256').update(JSON.stringify({poem,prompt:effectivePrompt,schema:requestSchema,model:config.model,endpoint:config.endpoint,policyVersion:mode==='expression'?expressionPolicyVersion:mode==='abstract'?abstractPolicyVersion:policyVersion,...(['abstract','expression'].includes(mode)?{recoveryVersion}:{})})).digest('hex');
-      const reusable=await savedMatch(r=>r.fingerprint===fingerprint&&r.mode===mode&&r.poem===poem);if(reusable)return reusable;
+      const semanticKey={poem,prompt:effectivePrompt,schema:requestSchema,model:config.model,endpoint:config.endpoint},digest=v=>createHash('sha256').update(JSON.stringify(v)).digest('hex'),semanticFingerprint=digest(semanticKey);
+      const localPolicy=mode==='expression'?expressionPolicyVersion:mode==='abstract'?abstractPolicyVersion:policyVersion;
+      const fingerprint=digest({...semanticKey,policyVersion:localPolicy,...(['abstract','expression'].includes(mode)?{recoveryVersion}:{})});
+      // Old evidence used local drawing/recovery versions in its cache key. They
+      // can be replayed under the same semantic prompt without another request.
+      const compatible=new Set([fingerprint]);
+      if(['abstract','expression'].includes(mode))for(const priorRecovery of ['generation-recovery-1.0','generation-recovery-1.1'])compatible.add(digest({...semanticKey,policyVersion:localPolicy,recoveryVersion:priorRecovery}));
+      const reusable=await savedMatch(r=>(r.semanticFingerprint===semanticFingerprint||compatible.has(r.fingerprint))&&r.mode===mode&&r.poem===poem);if(reusable)return reusable;
       const runId=new Date().toISOString().replace(/[:.]/g,'-')+'-'+randomUUID().slice(0,8),folder=resolve(runsDir,runId);await mkdir(folder,{recursive:true});
       const redact=text=>String(text).split(key).join('[REDACTED]').replace(/\bsk-[a-zA-Z0-9_-]+/g,'[REDACTED]');
       const save=(name,value)=>writeFile(resolve(folder,name),redact(typeof value==='string'?value:JSON.stringify(value,null,2)+'\n'),'utf8');
       const request={model:config.model,temperature:.2,max_tokens:['composition','abstract','expression'].includes(mode)?6144:4096,stream:false,thinking:{type:'disabled'},response_format:{type:'json_object'},messages:[{role:'system',content:effectivePrompt+'\n\nJSON Schema:\n'+JSON.stringify(requestSchema)},{role:'user',content:JSON.stringify({poem})}]};
       const source=input.source&&typeof input.source==='object'?Object.fromEntries(['provider','author','title','dynasty'].filter(k=>typeof input.source[k]==='string').map(k=>[k,input.source[k].slice(0,120)])):null;
-      const record={id:runId,fingerprint,poem,source,mode,model:config.model,started_at:new Date().toISOString(),cached:false};
+      const record={id:runId,fingerprint,semanticFingerprint,poem,source,mode,model:config.model,started_at:new Date().toISOString(),cached:false};
       await save('request.json',request);await save('prompt.txt',effectivePrompt);await save('schema.json',requestSchema);
       const start=Date.now();
       try{

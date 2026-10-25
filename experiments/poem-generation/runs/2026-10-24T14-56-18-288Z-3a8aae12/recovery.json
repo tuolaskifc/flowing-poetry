@@ -1,0 +1,26 @@
+{
+  "version": "generation-recovery-1.1",
+  "status": "partial",
+  "reviewRequired": true,
+  "changes": [],
+  "omitted": [
+    {
+      "path": "scene.actions[0]",
+      "claim": {
+        "entity": "i2",
+        "state": "fly",
+        "pace": "unspecified",
+        "direction": "unspecified",
+        "modality": "negated",
+        "basis": "explicit",
+        "evidence": [
+          "千山鸟飞绝"
+        ]
+      },
+      "errors": [
+        "scene.actions[0] 不能把缺席、未知或比喻参照作为在场画面主体"
+      ]
+    }
+  ],
+  "message": "已绘制核验通过的部分，个别联系或动作暂未采用。"
+}

@@ -1,0 +1,182 @@
+{
+  "scope": "one-new-request-per-unreplayable-input",
+  "noAutomaticRetry": true,
+  "rows": [
+    {
+      "case": "b039",
+      "poem": "松下茅亭五月凉，汀沙云树晚苍苍。",
+      "id": "2026-10-24T14-18-10-687Z-8b5369c8",
+      "cached": false,
+      "rawValid": true,
+      "usable": true,
+      "status": "complete",
+      "errors": [],
+      "usage": {
+        "completion_tokens": 1151,
+        "prompt_tokens": 5878,
+        "total_tokens": 7029,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens_details": {
+          "cached_tokens": 5760
+        }
+      },
+      "elapsedSeconds": 9.4
+    },
+    {
+      "case": "b040",
+      "poem": "池上碧苔三四点，叶底黄鹂一两声。",
+      "id": "2026-10-24T14-18-20-513Z-86597144",
+      "cached": false,
+      "rawValid": true,
+      "usable": true,
+      "status": "complete",
+      "errors": [],
+      "usage": {
+        "completion_tokens": 1026,
+        "prompt_tokens": 5879,
+        "total_tokens": 6905,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens_details": {
+          "cached_tokens": 5760
+        }
+      },
+      "elapsedSeconds": 9.9
+    },
+    {
+      "case": "b045",
+      "poem": "桃李春风一杯酒，江湖夜雨十年灯。\n",
+      "id": "2026-10-24T14-18-30-857Z-67157048",
+      "cached": false,
+      "rawValid": true,
+      "usable": true,
+      "status": "complete",
+      "errors": [],
+      "usage": {
+        "completion_tokens": 965,
+        "prompt_tokens": 5878,
+        "total_tokens": 6843,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens_details": {
+          "cached_tokens": 5760
+        }
+      },
+      "elapsedSeconds": 5.7
+    },
+    {
+      "case": "b065",
+      "poem": "西风酒旗市，细雨菊花天",
+      "id": "2026-10-24T14-18-37-016Z-48e5e386",
+      "cached": false,
+      "rawValid": true,
+      "usable": true,
+      "status": "complete",
+      "errors": [],
+      "usage": {
+        "completion_tokens": 1120,
+        "prompt_tokens": 5873,
+        "total_tokens": 6993,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens_details": {
+          "cached_tokens": 5760
+        }
+      },
+      "elapsedSeconds": 13
+    },
+    {
+      "case": "b066",
+      "poem": "十月到幽州，戈鋋若罗星",
+      "id": "2026-10-24T14-18-50-535Z-4b5fc462",
+      "cached": false,
+      "rawValid": true,
+      "usable": true,
+      "status": "complete",
+      "errors": [],
+      "usage": {
+        "completion_tokens": 637,
+        "prompt_tokens": 5875,
+        "total_tokens": 6512,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens_details": {
+          "cached_tokens": 5760
+        }
+      },
+      "elapsedSeconds": 8.9
+    },
+    {
+      "case": "b067",
+      "poem": "长风万里送秋雁，对此可以酣高楼",
+      "id": "2026-10-24T14-19-00-062Z-aa923659",
+      "cached": false,
+      "rawValid": false,
+      "usable": true,
+      "status": "partial",
+      "errors": [],
+      "usage": {
+        "completion_tokens": 801,
+        "prompt_tokens": 5874,
+        "total_tokens": 6675,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens_details": {
+          "cached_tokens": 5760
+        }
+      },
+      "elapsedSeconds": 11.8
+    },
+    {
+      "case": "b068",
+      "poem": "黄华自与西风约，白发先从远客生",
+      "id": "2026-10-24T14-19-12-465Z-0e76d322",
+      "cached": false,
+      "rawValid": true,
+      "usable": true,
+      "status": "complete",
+      "errors": [],
+      "usage": {
+        "completion_tokens": 913,
+        "prompt_tokens": 5877,
+        "total_tokens": 6790,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens_details": {
+          "cached_tokens": 5760
+        }
+      },
+      "elapsedSeconds": 12.6
+    },
+    {
+      "case": "b069",
+      "poem": "风送归舟，舟载归人",
+      "id": "2026-10-24T14-19-25-633Z-2c9c015f",
+      "cached": false,
+      "rawValid": true,
+      "usable": true,
+      "status": "complete",
+      "errors": [],
+      "usage": {
+        "completion_tokens": 748,
+        "prompt_tokens": 5873,
+        "total_tokens": 6621,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens_details": {
+          "cached_tokens": 5760
+        }
+      },
+      "elapsedSeconds": 4.4
+    }
+  ]
+}

@@ -1,0 +1,673 @@
+{
+  "id": "2026-10-23T15-00-20-450Z-e9a3dcde",
+  "fingerprint": "b1b604db54a82bdb474c9d59e159b76c5ca5a716e797225b8143c6649a158e67",
+  "poem": "从此无心爱良夜，任他明月下西楼。",
+  "source": {
+    "provider": "抽象诗句首次试验",
+    "author": "李益",
+    "title": "写情"
+  },
+  "mode": "abstract",
+  "model": "DeepSeek-V4.1-Flash",
+  "started_at": "2026-10-23T15:00:20.451Z",
+  "cached": false,
+  "http_status": 200,
+  "usage": {
+    "completion_tokens": 863,
+    "prompt_tokens": 1393,
+    "total_tokens": 2256,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 1280
+    }
+  },
+  "finish_reason": "stop",
+  "analysis": {
+    "schema_version": "abstract-1.0",
+    "poem": "从此无心爱良夜，任他明月下西楼。",
+    "reading": "诗句写一种心境转折：从某一刻起，对良夜不再有爱赏之心，任凭明月西沉、离开西楼。重点不在夜景本身，而在“无心”与“任他”所呈现的疏离、放任与情感退潮。",
+    "subjects": [
+      {
+        "id": "a1",
+        "mentions": [
+          "无心"
+        ],
+        "meaning": "没有爱赏、眷恋或投入的心绪，指向主体内在情感状态的退去。",
+        "kind": "abstract",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "从此无心爱良夜"
+        ]
+      },
+      {
+        "id": "a2",
+        "mentions": [
+          "良夜"
+        ],
+        "meaning": "美好的夜晚，本可引发爱赏的时段与氛围。",
+        "kind": "abstract",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "从此无心爱良夜"
+        ]
+      },
+      {
+        "id": "a3",
+        "mentions": [
+          "明月"
+        ],
+        "meaning": "明亮的月亮，诗中作为夜景与推移的焦点。",
+        "kind": "concrete",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "任他明月下西楼"
+        ]
+      },
+      {
+        "id": "a4",
+        "mentions": [
+          "西楼"
+        ],
+        "meaning": "西边的楼，明月下沉所离开的位置。",
+        "kind": "concrete",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "任他明月下西楼"
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "source": "a1",
+        "target": "a2",
+        "kind": "separate",
+        "modality": "asserted",
+        "basis": "explicit",
+        "evidence": [
+          "从此无心爱良夜"
+        ]
+      },
+      {
+        "source": "a1",
+        "target": "a3",
+        "kind": "separate",
+        "modality": "asserted",
+        "basis": "inferred",
+        "evidence": [
+          "从此无心爱良夜",
+          "任他明月下西楼"
+        ]
+      },
+      {
+        "source": "a3",
+        "target": "a4",
+        "kind": "separate",
+        "modality": "asserted",
+        "basis": "explicit",
+        "evidence": [
+          "任他明月下西楼"
+        ]
+      }
+    ],
+    "processes": [
+      {
+        "subject": "a1",
+        "kind": "fade",
+        "temporal": "already",
+        "modality": "asserted",
+        "basis": "explicit",
+        "evidence": [
+          "从此无心爱良夜"
+        ]
+      },
+      {
+        "subject": "a3",
+        "kind": "fade",
+        "temporal": "ongoing",
+        "modality": "asserted",
+        "basis": "explicit",
+        "evidence": [
+          "任他明月下西楼"
+        ]
+      }
+    ],
+    "atmosphere": {
+      "labels": [
+        "疏离",
+        "放任",
+        "夜境"
+      ],
+      "valence": "negative",
+      "openness": "medium",
+      "illumination": "night",
+      "evidence": [
+        "从此无心爱良夜",
+        "任他明月下西楼"
+      ]
+    },
+    "uncertainties": [
+      "“从此”的起点未明说，只能确定是某一转折之后。",
+      "“无心”是永久断绝还是当下心境，文本未作限定。",
+      "“任他”可解为放任、听任，也可带轻微无奈，语气不完全确定。",
+      "明月“下西楼”是正在下沉还是已经西沉，时间阶段有歧义。"
+    ]
+  },
+  "validation": {
+    "valid": true,
+    "errors": [],
+    "warnings": [
+      "relations[1] 为解读推断"
+    ],
+    "review_required": true
+  },
+  "plan": {
+    "version": "abstract-expression-1.0",
+    "poem": "从此无心爱良夜，任他明月下西楼。",
+    "seed": 723713584,
+    "nodes": [
+      {
+        "id": "a1",
+        "label": "无心",
+        "meaning": "没有爱赏、眷恋或投入的心绪，指向主体内在情感状态的退去。",
+        "kind": "abstract"
+      },
+      {
+        "id": "a2",
+        "label": "良夜",
+        "meaning": "美好的夜晚，本可引发爱赏的时段与氛围。",
+        "kind": "abstract"
+      },
+      {
+        "id": "a3",
+        "label": "明月",
+        "meaning": "明亮的月亮，诗中作为夜景与推移的焦点。",
+        "kind": "concrete"
+      },
+      {
+        "id": "a4",
+        "label": "西楼",
+        "meaning": "西边的楼，明月下沉所离开的位置。",
+        "kind": "concrete"
+      }
+    ],
+    "relations": [
+      {
+        "source": "a1",
+        "target": "a2",
+        "kind": "separate",
+        "modality": "asserted",
+        "basis": "explicit",
+        "evidence": [
+          "从此无心爱良夜"
+        ]
+      },
+      {
+        "source": "a1",
+        "target": "a3",
+        "kind": "separate",
+        "modality": "asserted",
+        "basis": "inferred",
+        "evidence": [
+          "从此无心爱良夜",
+          "任他明月下西楼"
+        ]
+      },
+      {
+        "source": "a3",
+        "target": "a4",
+        "kind": "separate",
+        "modality": "asserted",
+        "basis": "explicit",
+        "evidence": [
+          "任他明月下西楼"
+        ]
+      }
+    ],
+    "processes": [
+      {
+        "subject": "a1",
+        "kind": "fade",
+        "temporal": "already",
+        "modality": "asserted",
+        "basis": "explicit",
+        "evidence": [
+          "从此无心爱良夜"
+        ]
+      },
+      {
+        "subject": "a3",
+        "kind": "fade",
+        "temporal": "ongoing",
+        "modality": "asserted",
+        "basis": "explicit",
+        "evidence": [
+          "任他明月下西楼"
+        ]
+      }
+    ],
+    "omitted": [],
+    "atmosphere": {
+      "labels": [
+        "疏离",
+        "放任",
+        "夜境"
+      ],
+      "valence": "negative",
+      "openness": "medium",
+      "illumination": "night",
+      "evidence": [
+        "从此无心爱良夜",
+        "任他明月下西楼"
+      ]
+    },
+    "concretePlan": {
+      "version": "semantic-composition-3.3-world-instances",
+      "seed": 723713584,
+      "settings": {
+        "wind": 0,
+        "density": 0.45,
+        "palette": "indigo"
+      },
+      "layers": [
+        {
+          "tool": "moon",
+          "entities": [
+            "a3"
+          ],
+          "projectedEntities": [],
+          "names": [
+            "明月"
+          ],
+          "options": {
+            "shape": "crescent"
+          },
+          "animate": false,
+          "placement": {
+            "anchor": [
+              320,
+              175
+            ],
+            "at": [
+              0.72,
+              0.22
+            ],
+            "scale": 0.85
+          },
+          "instances": [
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  175
+                ],
+                "at": [
+                  0.72,
+                  0.22
+                ],
+                "scale": 0.64
+              },
+              "depth": 0,
+              "opacity": 1,
+              "variant": 0
+            }
+          ],
+          "singleUnit": true,
+          "quantity": {
+            "items": [
+              {
+                "entity": "a3",
+                "mode": "unspecified",
+                "min": null,
+                "max": null,
+                "unit": null,
+                "scope": "unspecified",
+                "extent": "unspecified",
+                "evidence": [],
+                "basis": "local-legacy"
+              }
+            ],
+            "rendered": 1,
+            "exact": false,
+            "collective": false,
+            "partUnsupported": false
+          },
+          "quantityLabel": "数量未精确；本地试画 1 个单元",
+          "z": -5
+        },
+        {
+          "tool": "building",
+          "entities": [
+            "a4"
+          ],
+          "projectedEntities": [],
+          "names": [
+            "西楼"
+          ],
+          "options": {},
+          "animate": false,
+          "placement": {
+            "anchor": [
+              320,
+              320
+            ],
+            "at": [
+              0.43,
+              0.73
+            ],
+            "scale": 0.9
+          },
+          "instances": [
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  320
+                ],
+                "at": [
+                  0.43,
+                  0.73
+                ],
+                "scale": 0.78
+              },
+              "depth": 0.15,
+              "opacity": 1,
+              "variant": 0
+            }
+          ],
+          "singleUnit": true,
+          "quantity": {
+            "items": [
+              {
+                "entity": "a4",
+                "mode": "unspecified",
+                "min": null,
+                "max": null,
+                "unit": null,
+                "scope": "unspecified",
+                "extent": "unspecified",
+                "evidence": [],
+                "basis": "local-legacy"
+              }
+            ],
+            "rendered": 1,
+            "exact": false,
+            "collective": false,
+            "partUnsupported": false
+          },
+          "quantityLabel": "数量未精确；本地试画 1 个单元",
+          "z": 12
+        },
+        {
+          "tool": "landscape",
+          "entities": [],
+          "projectedEntities": [],
+          "names": [
+            "构图依托·地面"
+          ],
+          "options": {
+            "form": "ground",
+            "edge": "soft"
+          },
+          "animate": false,
+          "placement": {
+            "anchor": [
+              320,
+              194
+            ],
+            "at": [
+              0.5,
+              0.54
+            ],
+            "scale": 1.6
+          },
+          "instances": [
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  265
+                ],
+                "at": [
+                  0.5,
+                  0.54
+                ],
+                "scale": 2.5
+              },
+              "variant": 0,
+              "depth": 0,
+              "opacity": 1
+            }
+          ],
+          "singleUnit": false,
+          "inferred": true,
+          "provenance": {
+            "basis": "local-context",
+            "reason": "生长物、房舍和陆上主体需要共同地表；这是本地构图依托"
+          },
+          "quantity": {
+            "rendered": 1,
+            "exact": false,
+            "items": []
+          },
+          "quantityLabel": "本地环境依托，不计入原文意象覆盖",
+          "z": -18,
+          "clip": [
+            [
+              0,
+              0.5
+            ],
+            [
+              1,
+              0.5
+            ],
+            [
+              1,
+              1.04
+            ],
+            [
+              0,
+              1.04
+            ]
+          ]
+        }
+      ],
+      "spatial": [],
+      "scene": {
+        "kind": "study",
+        "notes": [
+          "通用场景层先组织地面、水域、群落和主体，再比较三个布局的依托、相对位置、尺度与遮挡；检查通过不代表审美已通过。"
+        ],
+        "waterline": null,
+        "organization": {
+          "version": "1.0",
+          "strategy": "general-constraints",
+          "regions": {
+            "land": [
+              [
+                0,
+                0.5
+              ],
+              [
+                1,
+                0.5
+              ],
+              [
+                1,
+                1.04
+              ],
+              [
+                0,
+                1.04
+              ]
+            ]
+          },
+          "candidates": [
+            {
+              "layout": 0,
+              "orientation": "open",
+              "errors": 0,
+              "cost": 0.56,
+              "score": 1.54,
+              "metrics": {
+                "overlapPenalty": 0,
+                "balancePenalty": 0.07,
+                "motifFootprint": 0.091,
+                "landArea": 0.54
+              }
+            },
+            {
+              "layout": 1,
+              "orientation": "open",
+              "errors": 0,
+              "cost": 0.56,
+              "score": 1.54,
+              "metrics": {
+                "overlapPenalty": 0,
+                "balancePenalty": 0.07,
+                "motifFootprint": 0.091,
+                "landArea": 0.54
+              }
+            },
+            {
+              "layout": 2,
+              "orientation": "open",
+              "errors": 0,
+              "cost": 0.56,
+              "score": 1.54,
+              "metrics": {
+                "overlapPenalty": 0,
+                "balancePenalty": 0.07,
+                "motifFootprint": 0.091,
+                "landArea": 0.54
+              }
+            }
+          ],
+          "repairs": [
+            {
+              "type": "support-added",
+              "reason": "生长物、房舍和陆上主体需要共同地表；这是本地构图依托"
+            }
+          ],
+          "limitations": [
+            "几何检查不判定诗意理解或审美合格",
+            "动作时序与整首诗的场景切换尚未编排"
+          ],
+          "layout": 0,
+          "orientation": "open",
+          "audit": {
+            "scope": "implemented-geometry-and-drawing-gaps",
+            "coverage": {
+              "scope": "extracted-entities-only",
+              "present": 2,
+              "mapped": 2,
+              "parameters": [],
+              "missing": []
+            },
+            "checks": [
+              "presence",
+              "count",
+              "finite",
+              "support",
+              "scale",
+              "relative-position",
+              "depth",
+              "grove-spread",
+              "drawing-gaps"
+            ],
+            "status": "checks-passed",
+            "errors": 0,
+            "review": 0,
+            "issues": [],
+            "metrics": {
+              "overlapPenalty": 0,
+              "balancePenalty": 0.07,
+              "motifFootprint": 0.091,
+              "landArea": 0.54
+            },
+            "cost": 0.56,
+            "aestheticAcceptance": "pending-user"
+          },
+          "graph": {
+            "nodes": [
+              {
+                "id": "l0",
+                "entities": [
+                  "a3"
+                ],
+                "tool": "moon",
+                "role": "sky",
+                "habitat": "air",
+                "inferred": false,
+                "support": null
+              },
+              {
+                "id": "l1",
+                "entities": [
+                  "a4"
+                ],
+                "tool": "building",
+                "role": "subject",
+                "habitat": "land",
+                "inferred": false,
+                "support": "l2"
+              },
+              {
+                "id": "l2",
+                "entities": [],
+                "tool": "landscape",
+                "role": "terrain",
+                "habitat": null,
+                "inferred": true,
+                "support": null
+              }
+            ],
+            "edges": [
+              {
+                "type": "supported-by",
+                "source": "l0",
+                "target": null,
+                "basis": "local-composition",
+                "habitat": "air"
+              },
+              {
+                "type": "supported-by",
+                "source": "l1",
+                "target": "l2",
+                "basis": "local-composition",
+                "habitat": "land"
+              }
+            ],
+            "setting": "study"
+          }
+        }
+      },
+      "omitted": [],
+      "notes": [
+        "原句未明确月形，暂用弯月试画；可以手动切换。",
+        "西楼采用二层楼体试画，层数与门窗排列是本地选择；不等同于具体历史建筑，也未实现人物登楼。",
+        "本句有否定或假设提示，基础意象模式未细分其范围，暂缓动画，不宣称完成逻辑解释。",
+        "位置、大小、笔触与默认微动是本地试画选择；数量解释与本地显示数量分别记录。",
+        "未明说的群落数量、疏密、近中远层次与变体均为本地构图选择；种类可按已声明的写意画法概括，不把铺展词换算成精确物体数量。",
+        "通用场景层先组织地面、水域、群落和主体，再比较三个布局的依托、相对位置、尺度与遮挡；检查通过不代表审美已通过。"
+      ],
+      "relations": [],
+      "provenance": {
+        "basis": "local-semantic-adapter",
+        "source": "abstract-1.0 concrete subjects only"
+      }
+    },
+    "notes": [
+      "形态、笔触数量、配色变体、布局与观看节奏为本地艺术选择，不表示原文物体数或发生概率。",
+      "非确定关系只作候选或边界提示；未完成不固定为永久无法完成。",
+      "一次性过程在播放时段内演化，不自动循环成诗句的事实；可手动重放。"
+    ],
+    "aestheticAcceptance": "pending-user"
+  },
+  "elapsed_seconds": 10.8
+}

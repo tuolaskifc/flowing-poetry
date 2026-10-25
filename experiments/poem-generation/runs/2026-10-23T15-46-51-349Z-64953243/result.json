@@ -1,0 +1,260 @@
+{
+  "id": "2026-10-23T15-46-51-349Z-64953243",
+  "fingerprint": "3cf91b34f8ee5001591702231762285c3acf3f9c0b258e7bd48ced5f45838260",
+  "poem": "人生如逆旅，我亦是行人。",
+  "source": {
+    "provider": "抽象扩展首次试验",
+    "author": "苏轼",
+    "title": "临江仙·送钱穆父"
+  },
+  "mode": "abstract",
+  "model": "DeepSeek-V4.1-Flash",
+  "started_at": "2026-10-23T15:46:51.351Z",
+  "cached": false,
+  "http_status": 200,
+  "usage": {
+    "completion_tokens": 756,
+    "prompt_tokens": 1389,
+    "total_tokens": 2145,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 1280
+    }
+  },
+  "finish_reason": "stop",
+  "analysis": {
+    "schema_version": "abstract-1.0",
+    "poem": "人生如逆旅，我亦是行人。",
+    "reading": "以逆旅比喻人生，把存在处境说成一段逆行的旅次；说话者把自己也放进行人的行列，不居高临下，只承认同在路上。语气平静而带自省，没有具体景物，只有行旅与过客的抽象框架。",
+    "subjects": [
+      {
+        "id": "a1",
+        "mentions": [
+          "人生"
+        ],
+        "meaning": "人的一生、生存处境，被比作逆旅。",
+        "kind": "abstract",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "人生如逆旅"
+        ]
+      },
+      {
+        "id": "a2",
+        "mentions": [
+          "逆旅"
+        ],
+        "meaning": "迎客旅舍，也指逆行中的旅次；作为人生的比喻参照。",
+        "kind": "concrete",
+        "role": "reference",
+        "presence": "present",
+        "evidence": [
+          "人生如逆旅"
+        ]
+      },
+      {
+        "id": "a3",
+        "mentions": [
+          "我"
+        ],
+        "meaning": "说话者自身，被归入行人之列。",
+        "kind": "abstract",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "我亦是行人"
+        ]
+      },
+      {
+        "id": "a4",
+        "mentions": [
+          "行人"
+        ],
+        "meaning": "行路的人、过客；说话者自认也是其中之一。",
+        "kind": "abstract",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "我亦是行人"
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "source": "a1",
+        "target": "a2",
+        "kind": "connect",
+        "modality": "asserted",
+        "basis": "explicit",
+        "evidence": [
+          "人生如逆旅"
+        ]
+      },
+      {
+        "source": "a3",
+        "target": "a4",
+        "kind": "connect",
+        "modality": "asserted",
+        "basis": "explicit",
+        "evidence": [
+          "我亦是行人"
+        ]
+      }
+    ],
+    "processes": [
+      {
+        "subject": "a1",
+        "kind": "persist",
+        "temporal": "ongoing",
+        "modality": "asserted",
+        "basis": "inferred",
+        "evidence": [
+          "人生如逆旅"
+        ]
+      },
+      {
+        "subject": "a3",
+        "kind": "persist",
+        "temporal": "ongoing",
+        "modality": "asserted",
+        "basis": "inferred",
+        "evidence": [
+          "我亦是行人"
+        ]
+      }
+    ],
+    "atmosphere": {
+      "labels": [
+        "自省",
+        "行旅",
+        "过客感"
+      ],
+      "valence": "neutral",
+      "openness": "medium",
+      "illumination": "unclear",
+      "evidence": [
+        "人生如逆旅",
+        "我亦是行人"
+      ]
+    },
+    "uncertainties": [
+      "“逆旅”可解为旅舍，也可解为逆行之旅，两义并存。",
+      "“亦”表示说话者把自己加入行人，但未说明同行者是谁。",
+      "全句为比喻性判断，不指向具体时间、地点或事件。"
+    ]
+  },
+  "validation": {
+    "valid": true,
+    "errors": [],
+    "warnings": [
+      "processes[0] 为解读推断",
+      "processes[1] 为解读推断"
+    ],
+    "review_required": true
+  },
+  "plan": {
+    "version": "abstract-expression-1.0",
+    "poem": "人生如逆旅，我亦是行人。",
+    "seed": 1737565744,
+    "nodes": [
+      {
+        "id": "a1",
+        "label": "人生",
+        "meaning": "人的一生、生存处境，被比作逆旅。",
+        "kind": "abstract",
+        "mode": "present"
+      },
+      {
+        "id": "a2",
+        "label": "逆旅",
+        "meaning": "迎客旅舍，也指逆行中的旅次；作为人生的比喻参照。",
+        "kind": "concrete",
+        "mode": "reference"
+      },
+      {
+        "id": "a3",
+        "label": "我",
+        "meaning": "说话者自身，被归入行人之列。",
+        "kind": "abstract",
+        "mode": "present"
+      },
+      {
+        "id": "a4",
+        "label": "行人",
+        "meaning": "行路的人、过客；说话者自认也是其中之一。",
+        "kind": "abstract",
+        "mode": "present"
+      }
+    ],
+    "relations": [
+      {
+        "source": "a1",
+        "target": "a2",
+        "kind": "connect",
+        "modality": "asserted",
+        "basis": "explicit",
+        "evidence": [
+          "人生如逆旅"
+        ]
+      },
+      {
+        "source": "a3",
+        "target": "a4",
+        "kind": "connect",
+        "modality": "asserted",
+        "basis": "explicit",
+        "evidence": [
+          "我亦是行人"
+        ]
+      }
+    ],
+    "processes": [
+      {
+        "subject": "a1",
+        "kind": "persist",
+        "temporal": "ongoing",
+        "modality": "asserted",
+        "basis": "inferred",
+        "evidence": [
+          "人生如逆旅"
+        ]
+      },
+      {
+        "subject": "a3",
+        "kind": "persist",
+        "temporal": "ongoing",
+        "modality": "asserted",
+        "basis": "inferred",
+        "evidence": [
+          "我亦是行人"
+        ]
+      }
+    ],
+    "omitted": [],
+    "atmosphere": {
+      "labels": [
+        "自省",
+        "行旅",
+        "过客感"
+      ],
+      "valence": "neutral",
+      "openness": "medium",
+      "illumination": "unclear",
+      "evidence": [
+        "人生如逆旅",
+        "我亦是行人"
+      ]
+    },
+    "concretePlan": null,
+    "notes": [
+      "形态、笔触数量、配色变体、布局与观看节奏为本地艺术选择，不表示原文物体数或发生概率。",
+      "非确定关系只作候选或边界提示；未完成不固定为永久无法完成。",
+      "一次性过程在播放时段内演化，不自动循环成诗句的事实；可手动重放。"
+    ],
+    "aestheticAcceptance": "pending-user"
+  },
+  "elapsed_seconds": 18.5
+}

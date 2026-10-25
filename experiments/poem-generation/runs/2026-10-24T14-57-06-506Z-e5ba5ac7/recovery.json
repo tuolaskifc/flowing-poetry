@@ -1,0 +1,39 @@
+{
+  "version": "generation-recovery-1.1",
+  "status": "normalized",
+  "reviewRequired": true,
+  "changes": [
+    {
+      "kind": "source-range-only",
+      "path": "spatial.0.evidence",
+      "original": [
+        "长驱河洛昏"
+      ],
+      "effective": [
+        "坐见幽州骑，长驱河洛昏"
+      ]
+    },
+    {
+      "kind": "source-range-only",
+      "path": "scene.supports.0.evidence",
+      "original": [
+        "长驱河洛昏"
+      ],
+      "effective": [
+        "坐见幽州骑，长驱河洛昏"
+      ]
+    },
+    {
+      "kind": "source-range-only",
+      "path": "scene.actions.0.evidence",
+      "original": [
+        "长驱河洛昏"
+      ],
+      "effective": [
+        "坐见幽州骑，长驱河洛昏"
+      ]
+    }
+  ],
+  "omitted": [],
+  "message": "已完成格式或引用整理，解读仍可复核。"
+}

@@ -1,0 +1,259 @@
+{
+  "schema_version": "expression-1.0",
+  "poem": "白鸟一双临水立，见人惊起入芦花。",
+  "reading": "一双白鸟在水边静立，见人惊起，飞入芦花丛中。",
+  "entities": [
+    {
+      "id": "i1",
+      "mentions": [
+        "白鸟一双"
+      ],
+      "concept": "白鸟",
+      "kind": "organism",
+      "role": "scene",
+      "presence": "present",
+      "evidence": [
+        "白鸟一双临水立"
+      ],
+      "quantity": {
+        "mode": "exact",
+        "min": 2,
+        "max": 2,
+        "unit": "双",
+        "scope": "group",
+        "extent": "local",
+        "evidence": [
+          "白鸟一双临水立"
+        ]
+      }
+    },
+    {
+      "id": "i2",
+      "mentions": [
+        "水"
+      ],
+      "concept": "水边",
+      "kind": "place",
+      "role": "scene",
+      "presence": "present",
+      "evidence": [
+        "白鸟一双临水立"
+      ],
+      "quantity": {
+        "mode": "unspecified",
+        "min": null,
+        "max": null,
+        "unit": null,
+        "scope": "unspecified",
+        "extent": "unspecified",
+        "evidence": []
+      }
+    },
+    {
+      "id": "i3",
+      "mentions": [
+        "人"
+      ],
+      "concept": "人",
+      "kind": "person",
+      "role": "scene",
+      "presence": "present",
+      "evidence": [
+        "见人惊起入芦花"
+      ],
+      "quantity": {
+        "mode": "unspecified",
+        "min": null,
+        "max": null,
+        "unit": null,
+        "scope": "unspecified",
+        "extent": "unspecified",
+        "evidence": []
+      }
+    },
+    {
+      "id": "i4",
+      "mentions": [
+        "芦花"
+      ],
+      "concept": "芦花",
+      "kind": "organism",
+      "role": "scene",
+      "presence": "present",
+      "evidence": [
+        "见人惊起入芦花"
+      ],
+      "quantity": {
+        "mode": "many",
+        "min": null,
+        "max": null,
+        "unit": null,
+        "scope": "group",
+        "extent": "spread",
+        "evidence": [
+          "见人惊起入芦花"
+        ]
+      }
+    }
+  ],
+  "relations": [],
+  "atmosphere": {
+    "labels": [
+      "惊起",
+      "清冷"
+    ],
+    "valence": "neutral",
+    "energy": "medium",
+    "tension": "medium",
+    "openness": "medium",
+    "evidence": [
+      "白鸟一双临水立",
+      "见人惊起入芦花"
+    ]
+  },
+  "time": {
+    "markers": [],
+    "note": null
+  },
+  "uncertainties": [
+    "“见人”的观察者未明，可能是人看见鸟，也可能是鸟见人而惊起。",
+    "“入芦花”只表明飞入芦花丛，具体方向与距离未明。"
+  ],
+  "spatial": [
+    {
+      "type": "beside",
+      "source": "i1",
+      "target": "i2",
+      "modality": "asserted",
+      "basis": "explicit",
+      "evidence": [
+        "白鸟一双临水立"
+      ]
+    },
+    {
+      "type": "among",
+      "source": "i1",
+      "target": "i4",
+      "modality": "asserted",
+      "basis": "explicit",
+      "evidence": [
+        "白鸟一双临水立，见人惊起入芦花。"
+      ]
+    }
+  ],
+  "scene": {
+    "setting": {
+      "kind": "waterside",
+      "basis": "explicit",
+      "evidence": [
+        "白鸟一双临水立"
+      ]
+    },
+    "groups": [
+      {
+        "members": [
+          "i1"
+        ],
+        "role": "subject",
+        "pattern": "cluster",
+        "depth": "middle",
+        "basis": "inferred",
+        "evidence": [
+          "白鸟一双临水立"
+        ]
+      },
+      {
+        "members": [
+          "i4"
+        ],
+        "role": "environment",
+        "pattern": "field",
+        "depth": "middle",
+        "basis": "inferred",
+        "evidence": [
+          "见人惊起入芦花"
+        ]
+      },
+      {
+        "members": [
+          "i3"
+        ],
+        "role": "accent",
+        "pattern": "single",
+        "depth": "unspecified",
+        "basis": "inferred",
+        "evidence": [
+          "见人惊起入芦花"
+        ]
+      }
+    ],
+    "supports": [
+      {
+        "entity": "i1",
+        "surface": "ground",
+        "target": null,
+        "basis": "inferred",
+        "evidence": [
+          "白鸟一双临水立"
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "entity": "i1",
+        "state": "fly",
+        "pace": "fast",
+        "direction": "unspecified",
+        "modality": "asserted",
+        "basis": "explicit",
+        "evidence": [
+          "白鸟一双临水立，见人惊起入芦花。"
+        ]
+      }
+    ],
+    "atmosphere": {
+      "visibility": "clear",
+      "illumination": "day",
+      "basis": "inferred",
+      "evidence": [
+        "白鸟一双临水立"
+      ]
+    }
+  },
+  "expression": {
+    "relations": [
+      {
+        "source": "i3",
+        "target": "i1",
+        "kind": "separate",
+        "modality": "asserted",
+        "basis": "explicit",
+        "evidence": [
+          "白鸟一双临水立，见人惊起入芦花。"
+        ]
+      },
+      {
+        "source": "i1",
+        "target": "i4",
+        "kind": "converge",
+        "modality": "asserted",
+        "basis": "explicit",
+        "evidence": [
+          "白鸟一双临水立，见人惊起入芦花。"
+        ]
+      }
+    ],
+    "processes": [
+      {
+        "subject": "i1",
+        "kind": "emerge",
+        "temporal": "already",
+        "modality": "asserted",
+        "basis": "explicit",
+        "evidence": [
+          "白鸟一双临水立，见人惊起入芦花。"
+        ]
+      }
+    ]
+  }
+}

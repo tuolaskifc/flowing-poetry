@@ -337,7 +337,7 @@
           "review_required": true
         },
         "plan": {
-          "version": "shared-expression-1.0",
+          "version": "shared-expression-1.1-source-bound",
           "seed": 410416620,
           "poem": "明月松间照，清泉石上流。",
           "nodes": [
@@ -436,7 +436,7 @@
             "illumination": "night"
           },
           "concretePlan": {
-            "version": "semantic-composition-3.3-world-instances-directional-buildings",
+            "version": "semantic-composition-3.3-source-bound",
             "seed": 410416620,
             "settings": {
               "wind": 0.3,
@@ -578,6 +578,14 @@
                 "interaction": {
                   "mode": "instance",
                   "groupId": "i1:moon::0"
+                },
+                "visibility": {
+                  "protect": true,
+                  "reasons": [
+                    "recognizable-subject",
+                    "semantic-subject"
+                  ],
+                  "basis": "local-drawing-policy"
                 }
               },
               {
@@ -794,6 +802,11 @@
                 "interaction": {
                   "mode": "instance",
                   "groupId": "i2:tree:pine:1"
+                },
+                "visibility": {
+                  "protect": false,
+                  "reasons": [],
+                  "basis": "local-drawing-policy"
                 }
               },
               {
@@ -978,6 +991,11 @@
                 "interaction": {
                   "mode": "group",
                   "groupId": "i3:water:plane:2"
+                },
+                "visibility": {
+                  "protect": false,
+                  "reasons": [],
+                  "basis": "local-drawing-policy"
                 }
               },
               {
@@ -1171,6 +1189,11 @@
                 "interaction": {
                   "mode": "instance",
                   "groupId": "i4:rock::3"
+                },
+                "visibility": {
+                  "protect": false,
+                  "reasons": [],
+                  "basis": "local-drawing-policy"
                 }
               },
               {
@@ -1245,6 +1268,11 @@
                 "interaction": {
                   "mode": "instance",
                   "groupId": "inferred:landscape:mountain:4"
+                },
+                "visibility": {
+                  "protect": false,
+                  "reasons": [],
+                  "basis": "local-drawing-policy"
                 }
               },
               {
@@ -1320,6 +1348,11 @@
                 "interaction": {
                   "mode": "instance",
                   "groupId": "inferred:landscape:ground:5"
+                },
+                "visibility": {
+                  "protect": false,
+                  "reasons": [],
+                  "basis": "local-drawing-policy"
                 }
               }
             ],
@@ -1645,6 +1678,12 @@
                   },
                   "cost": 31.747,
                   "aestheticAcceptance": "pending-user"
+                },
+                "actorSpacing": {
+                  "version": "1.0",
+                  "repairs": [],
+                  "residualOverlap": 0,
+                  "scope": "discrete-actors-not-intentional-occlusion"
                 }
               },
               "landscape": {
@@ -1722,6 +1761,13 @@
               }
             },
             "omitted": [],
+            "parameters": [],
+            "sourceResolution": {
+              "version": "source-depiction-1.1",
+              "quantities": {},
+              "identities": [],
+              "changes": []
+            },
             "notes": [
               "原句未明确月形，暂用弯月试画；可以手动切换。",
               "位置、大小、笔触与默认微动是本地试画选择；数量解释与本地显示数量分别记录。",
@@ -2130,6 +2176,14 @@
                     "interaction": {
                       "mode": "instance",
                       "groupId": "i1:moon::0"
+                    },
+                    "visibility": {
+                      "protect": true,
+                      "reasons": [
+                        "recognizable-subject",
+                        "semantic-subject"
+                      ],
+                      "basis": "local-drawing-policy"
                     }
                   },
                   {
@@ -2346,6 +2400,11 @@
                     "interaction": {
                       "mode": "instance",
                       "groupId": "i2:tree:pine:1"
+                    },
+                    "visibility": {
+                      "protect": false,
+                      "reasons": [],
+                      "basis": "local-drawing-policy"
                     }
                   },
                   {
@@ -2530,6 +2589,11 @@
                     "interaction": {
                       "mode": "group",
                       "groupId": "i3:water:plane:2"
+                    },
+                    "visibility": {
+                      "protect": false,
+                      "reasons": [],
+                      "basis": "local-drawing-policy"
                     }
                   },
                   {
@@ -2723,6 +2787,11 @@
                     "interaction": {
                       "mode": "instance",
                       "groupId": "i4:rock::3"
+                    },
+                    "visibility": {
+                      "protect": false,
+                      "reasons": [],
+                      "basis": "local-drawing-policy"
                     }
                   },
                   {
@@ -2797,6 +2866,11 @@
                     "interaction": {
                       "mode": "instance",
                       "groupId": "inferred:landscape:mountain:4"
+                    },
+                    "visibility": {
+                      "protect": false,
+                      "reasons": [],
+                      "basis": "local-drawing-policy"
                     }
                   },
                   {
@@ -2872,6 +2946,11 @@
                     "interaction": {
                       "mode": "instance",
                       "groupId": "inferred:landscape:ground:5"
+                    },
+                    "visibility": {
+                      "protect": false,
+                      "reasons": [],
+                      "basis": "local-drawing-policy"
                     }
                   }
                 ],
@@ -3171,6 +3250,12 @@
                       },
                       "cost": 31.747,
                       "aestheticAcceptance": "pending-user"
+                    },
+                    "actorSpacing": {
+                      "version": "1.0",
+                      "repairs": [],
+                      "residualOverlap": 0,
+                      "scope": "discrete-actors-not-intentional-occlusion"
                     }
                   },
                   "landscape": {
@@ -3412,6 +3497,14 @@
                     "interaction": {
                       "mode": "instance",
                       "groupId": "i1:moon::0"
+                    },
+                    "visibility": {
+                      "protect": true,
+                      "reasons": [
+                        "recognizable-subject",
+                        "semantic-subject"
+                      ],
+                      "basis": "local-drawing-policy"
                     }
                   },
                   {
@@ -3628,6 +3721,11 @@
                     "interaction": {
                       "mode": "instance",
                       "groupId": "i2:tree:pine:1"
+                    },
+                    "visibility": {
+                      "protect": false,
+                      "reasons": [],
+                      "basis": "local-drawing-policy"
                     }
                   },
                   {
@@ -3812,6 +3910,11 @@
                     "interaction": {
                       "mode": "group",
                       "groupId": "i3:water:plane:2"
+                    },
+                    "visibility": {
+                      "protect": false,
+                      "reasons": [],
+                      "basis": "local-drawing-policy"
                     }
                   },
                   {
@@ -4005,6 +4108,11 @@
                     "interaction": {
                       "mode": "instance",
                       "groupId": "i4:rock::3"
+                    },
+                    "visibility": {
+                      "protect": false,
+                      "reasons": [],
+                      "basis": "local-drawing-policy"
                     }
                   },
                   {
@@ -4079,6 +4187,11 @@
                     "interaction": {
                       "mode": "instance",
                       "groupId": "inferred:landscape:mountain:4"
+                    },
+                    "visibility": {
+                      "protect": false,
+                      "reasons": [],
+                      "basis": "local-drawing-policy"
                     }
                   },
                   {
@@ -4154,6 +4267,11 @@
                     "interaction": {
                       "mode": "instance",
                       "groupId": "inferred:landscape:ground:5"
+                    },
+                    "visibility": {
+                      "protect": false,
+                      "reasons": [],
+                      "basis": "local-drawing-policy"
                     }
                   }
                 ],
@@ -4453,6 +4571,12 @@
                       },
                       "cost": 36.559,
                       "aestheticAcceptance": "pending-user"
+                    },
+                    "actorSpacing": {
+                      "version": "1.0",
+                      "repairs": [],
+                      "residualOverlap": 0,
+                      "scope": "discrete-actors-not-intentional-occlusion"
                     }
                   },
                   "landscape": {
@@ -4554,7 +4678,8 @@
                     "visualized": true,
                     "reason": "溪流区域与错落溪石相交，不模拟流体"
                   }
-                ]
+                ],
+                "notes": []
               },
               {
                 "id": "stream-0",
@@ -4694,6 +4819,14 @@
                     "interaction": {
                       "mode": "instance",
                       "groupId": "i1:moon::0"
+                    },
+                    "visibility": {
+                      "protect": true,
+                      "reasons": [
+                        "recognizable-subject",
+                        "semantic-subject"
+                      ],
+                      "basis": "local-drawing-policy"
                     }
                   },
                   {
@@ -4910,6 +5043,11 @@
                     "interaction": {
                       "mode": "instance",
                       "groupId": "i2:tree:pine:1"
+                    },
+                    "visibility": {
+                      "protect": false,
+                      "reasons": [],
+                      "basis": "local-drawing-policy"
                     }
                   },
                   {
@@ -5094,6 +5232,11 @@
                     "interaction": {
                       "mode": "group",
                       "groupId": "i3:water:plane:2"
+                    },
+                    "visibility": {
+                      "protect": false,
+                      "reasons": [],
+                      "basis": "local-drawing-policy"
                     }
                   },
                   {
@@ -5287,6 +5430,11 @@
                     "interaction": {
                       "mode": "instance",
                       "groupId": "i4:rock::3"
+                    },
+                    "visibility": {
+                      "protect": false,
+                      "reasons": [],
+                      "basis": "local-drawing-policy"
                     }
                   },
                   {
@@ -5361,6 +5509,11 @@
                     "interaction": {
                       "mode": "instance",
                       "groupId": "inferred:landscape:mountain:4"
+                    },
+                    "visibility": {
+                      "protect": false,
+                      "reasons": [],
+                      "basis": "local-drawing-policy"
                     }
                   },
                   {
@@ -5436,6 +5589,11 @@
                     "interaction": {
                       "mode": "instance",
                       "groupId": "inferred:landscape:ground:5"
+                    },
+                    "visibility": {
+                      "protect": false,
+                      "reasons": [],
+                      "basis": "local-drawing-policy"
                     }
                   }
                 ],
@@ -5735,6 +5893,12 @@
                       },
                       "cost": 40.725,
                       "aestheticAcceptance": "pending-user"
+                    },
+                    "actorSpacing": {
+                      "version": "1.0",
+                      "repairs": [],
+                      "residualOverlap": 0,
+                      "scope": "discrete-actors-not-intentional-occlusion"
                     }
                   },
                   "landscape": {
@@ -5836,27 +6000,31 @@
                     "visualized": true,
                     "reason": "溪流区域与错落溪石相交，不模拟流体"
                   }
-                ]
+                ],
+                "notes": []
               }
             ],
             "composition": "stream-1",
             "compositionSelection": {
-              "method": "final-display-constraints-then-geometric-preference",
+              "method": "shared-policy-final-audit-and-geometric-preference",
               "candidates": [
                 {
                   "id": "stream-1",
                   "errors": 0,
-                  "score": 79.649
+                  "score": 79.649,
+                  "actorOverlap": 0
                 },
                 {
                   "id": "stream-2",
                   "errors": 0,
-                  "score": 91.485
+                  "score": 91.485,
+                  "actorOverlap": 0
                 },
                 {
                   "id": "stream-0",
                   "errors": 0,
-                  "score": 102.087
+                  "score": 102.087,
+                  "actorOverlap": 0
                 }
               ],
               "aestheticAcceptance": "pending-user"
@@ -5949,10 +6117,65 @@
                 ],
                 "omission": null
               }
-            ]
+            ],
+            "drawingPolicy": {
+              "version": "shared-drawing-policy-1.0",
+              "scope": "source-bound-generation-and-composition-alternatives",
+              "selectedComposition": "stream-1",
+              "applied": [
+                {
+                  "composition": "stream-1",
+                  "layer": "i1:moon::0",
+                  "entities": [
+                    "i1"
+                  ],
+                  "color": null,
+                  "visibility": [
+                    "recognizable-subject",
+                    "semantic-subject"
+                  ],
+                  "attachment": null
+                },
+                {
+                  "composition": "stream-2",
+                  "layer": "i1:moon::0",
+                  "entities": [
+                    "i1"
+                  ],
+                  "color": null,
+                  "visibility": [
+                    "recognizable-subject",
+                    "semantic-subject"
+                  ],
+                  "attachment": null
+                },
+                {
+                  "composition": "stream-0",
+                  "layer": "i1:moon::0",
+                  "entities": [
+                    "i1"
+                  ],
+                  "color": null,
+                  "visibility": [
+                    "recognizable-subject",
+                    "semantic-subject"
+                  ],
+                  "attachment": null
+                }
+              ],
+              "quantityChanges": 0,
+              "identityGroups": 0,
+              "aestheticAcceptance": "pending-user"
+            }
+          },
+          "renderability": {
+            "status": "ready",
+            "visibleScenery": true,
+            "visibleAbstract": false,
+            "gaps": []
           },
           "expression": {
-            "version": "shared-expression-1.0",
+            "version": "shared-expression-1.1-source-bound",
             "sourceContract": "expression-1.0",
             "recommendation": "scenery",
             "reason": "以明确景物及空间为主，默认风景优先",
@@ -6254,7 +6477,7 @@
           "review_required": true
         },
         "plan": {
-          "version": "shared-expression-1.0",
+          "version": "shared-expression-1.1-source-bound",
           "seed": 723713584,
           "poem": "从此无心爱良夜，任他明月下西楼。",
           "nodes": [
@@ -6342,7 +6565,7 @@
             "illumination": "night"
           },
           "concretePlan": {
-            "version": "semantic-composition-3.3-world-instances-directional-buildings",
+            "version": "semantic-composition-3.3-source-bound",
             "seed": 723713584,
             "settings": {
               "wind": 0.3,
@@ -6486,6 +6709,13 @@
                 "interaction": {
                   "mode": "instance",
                   "groupId": "i3:moon::0"
+                },
+                "visibility": {
+                  "protect": true,
+                  "reasons": [
+                    "recognizable-subject"
+                  ],
+                  "basis": "local-drawing-policy"
                 }
               },
               {
@@ -6604,6 +6834,14 @@
                 "interaction": {
                   "mode": "instance",
                   "groupId": "i4:building::1"
+                },
+                "grounding": true,
+                "visibility": {
+                  "protect": true,
+                  "reasons": [
+                    "recognizable-subject"
+                  ],
+                  "basis": "local-drawing-policy"
                 }
               },
               {
@@ -6695,6 +6933,11 @@
                 "interaction": {
                   "mode": "group",
                   "groupId": "inferred:landscape:ground:2"
+                },
+                "visibility": {
+                  "protect": false,
+                  "reasons": [],
+                  "basis": "local-drawing-policy"
                 }
               }
             ],
@@ -6920,6 +7163,12 @@
                     }
                   ],
                   "setting": "study"
+                },
+                "actorSpacing": {
+                  "version": "1.0",
+                  "repairs": [],
+                  "residualOverlap": 0,
+                  "scope": "discrete-actors-not-intentional-occlusion"
                 }
               },
               "displayAudit": {
@@ -7070,6 +7319,13 @@
                     "interaction": {
                       "mode": "instance",
                       "groupId": "i3:moon::0"
+                    },
+                    "visibility": {
+                      "protect": true,
+                      "reasons": [
+                        "recognizable-subject"
+                      ],
+                      "basis": "local-drawing-policy"
                     }
                   },
                   {
@@ -7188,6 +7444,14 @@
                     "interaction": {
                       "mode": "instance",
                       "groupId": "i4:building::1"
+                    },
+                    "grounding": true,
+                    "visibility": {
+                      "protect": true,
+                      "reasons": [
+                        "recognizable-subject"
+                      ],
+                      "basis": "local-drawing-policy"
                     }
                   },
                   {
@@ -7279,6 +7543,11 @@
                     "interaction": {
                       "mode": "group",
                       "groupId": "inferred:landscape:ground:2"
+                    },
+                    "visibility": {
+                      "protect": false,
+                      "reasons": [],
+                      "basis": "local-drawing-policy"
                     }
                   }
                 ],
@@ -7490,6 +7759,12 @@
                         }
                       ],
                       "setting": "study"
+                    },
+                    "actorSpacing": {
+                      "version": "1.0",
+                      "repairs": [],
+                      "residualOverlap": 0,
+                      "scope": "discrete-actors-not-intentional-occlusion"
                     }
                   },
                   "displayAudit": {
@@ -7660,6 +7935,13 @@
                     "interaction": {
                       "mode": "instance",
                       "groupId": "i3:moon::0"
+                    },
+                    "visibility": {
+                      "protect": true,
+                      "reasons": [
+                        "recognizable-subject"
+                      ],
+                      "basis": "local-drawing-policy"
                     }
                   },
                   {
@@ -7778,6 +8060,14 @@
                     "interaction": {
                       "mode": "instance",
                       "groupId": "i4:building::1"
+                    },
+                    "grounding": true,
+                    "visibility": {
+                      "protect": true,
+                      "reasons": [
+                        "recognizable-subject"
+                      ],
+                      "basis": "local-drawing-policy"
                     }
                   },
                   {
@@ -7869,6 +8159,11 @@
                     "interaction": {
                       "mode": "group",
                       "groupId": "inferred:landscape:ground:2"
+                    },
+                    "visibility": {
+                      "protect": false,
+                      "reasons": [],
+                      "basis": "local-drawing-policy"
                     }
                   }
                 ],
@@ -8034,6 +8329,12 @@
                         }
                       ],
                       "setting": "study"
+                    },
+                    "actorSpacing": {
+                      "version": "1.0",
+                      "repairs": [],
+                      "residualOverlap": 0,
+                      "scope": "discrete-actors-not-intentional-occlusion"
                     }
                   },
                   "displayAudit": {
@@ -8062,7 +8363,8 @@
                   "color": "role-and-distance",
                   "motion": "layer-rhythms",
                   "aestheticAcceptance": "pending-user"
-                }
+                },
+                "notes": []
               },
               {
                 "id": "space-2",
@@ -8204,6 +8506,13 @@
                     "interaction": {
                       "mode": "instance",
                       "groupId": "i3:moon::0"
+                    },
+                    "visibility": {
+                      "protect": true,
+                      "reasons": [
+                        "recognizable-subject"
+                      ],
+                      "basis": "local-drawing-policy"
                     }
                   },
                   {
@@ -8322,6 +8631,14 @@
                     "interaction": {
                       "mode": "instance",
                       "groupId": "i4:building::1"
+                    },
+                    "grounding": true,
+                    "visibility": {
+                      "protect": true,
+                      "reasons": [
+                        "recognizable-subject"
+                      ],
+                      "basis": "local-drawing-policy"
                     }
                   },
                   {
@@ -8413,6 +8730,11 @@
                     "interaction": {
                       "mode": "group",
                       "groupId": "inferred:landscape:ground:2"
+                    },
+                    "visibility": {
+                      "protect": false,
+                      "reasons": [],
+                      "basis": "local-drawing-policy"
                     }
                   }
                 ],
@@ -8578,6 +8900,12 @@
                         }
                       ],
                       "setting": "study"
+                    },
+                    "actorSpacing": {
+                      "version": "1.0",
+                      "repairs": [],
+                      "residualOverlap": 0,
+                      "scope": "discrete-actors-not-intentional-occlusion"
                     }
                   },
                   "displayAudit": {
@@ -8606,7 +8934,8 @@
                   "color": "role-and-distance",
                   "motion": "layer-rhythms",
                   "aestheticAcceptance": "pending-user"
-                }
+                },
+                "notes": []
               }
             ],
             "composition": "space-0",
@@ -8622,6 +8951,13 @@
                 "reason": "该意象尚无合适的写意画法"
               }
             ],
+            "parameters": [],
+            "sourceResolution": {
+              "version": "source-depiction-1.1",
+              "quantities": {},
+              "identities": [],
+              "changes": []
+            },
             "notes": [
               "原句未明确月形，暂用弯月试画；可以手动切换。",
               "西楼虽被归为地点，仍按原文明示的自然景物匹配；具体空间关系另行处理。",
@@ -8774,22 +9110,25 @@
               "aestheticAcceptance": "pending-user"
             },
             "compositionSelection": {
-              "method": "final-display-constraints-then-geometric-preference",
+              "method": "shared-policy-final-audit-and-geometric-preference",
               "candidates": [
                 {
                   "id": "space-0",
                   "errors": 0,
-                  "score": 32.599
+                  "score": 32.599,
+                  "actorOverlap": 0
                 },
                 {
                   "id": "space-1",
                   "errors": 0,
-                  "score": 33.721
+                  "score": 33.721,
+                  "actorOverlap": 0
                 },
                 {
                   "id": "space-2",
                   "errors": 0,
-                  "score": 34.858
+                  "score": 34.858,
+                  "actorOverlap": 0
                 }
               ],
               "aestheticAcceptance": "pending-user"
@@ -8855,10 +9194,98 @@
                 ],
                 "omission": null
               }
-            ]
+            ],
+            "drawingPolicy": {
+              "version": "shared-drawing-policy-1.0",
+              "scope": "source-bound-generation-and-composition-alternatives",
+              "selectedComposition": "space-0",
+              "applied": [
+                {
+                  "composition": "space-0",
+                  "layer": "i3:moon::0",
+                  "entities": [
+                    "i3"
+                  ],
+                  "color": null,
+                  "visibility": [
+                    "recognizable-subject"
+                  ],
+                  "attachment": null
+                },
+                {
+                  "composition": "space-0",
+                  "layer": "i4:building::1",
+                  "entities": [
+                    "i4"
+                  ],
+                  "color": null,
+                  "visibility": [
+                    "recognizable-subject"
+                  ],
+                  "attachment": null
+                },
+                {
+                  "composition": "space-1",
+                  "layer": "i3:moon::0",
+                  "entities": [
+                    "i3"
+                  ],
+                  "color": null,
+                  "visibility": [
+                    "recognizable-subject"
+                  ],
+                  "attachment": null
+                },
+                {
+                  "composition": "space-1",
+                  "layer": "i4:building::1",
+                  "entities": [
+                    "i4"
+                  ],
+                  "color": null,
+                  "visibility": [
+                    "recognizable-subject"
+                  ],
+                  "attachment": null
+                },
+                {
+                  "composition": "space-2",
+                  "layer": "i3:moon::0",
+                  "entities": [
+                    "i3"
+                  ],
+                  "color": null,
+                  "visibility": [
+                    "recognizable-subject"
+                  ],
+                  "attachment": null
+                },
+                {
+                  "composition": "space-2",
+                  "layer": "i4:building::1",
+                  "entities": [
+                    "i4"
+                  ],
+                  "color": null,
+                  "visibility": [
+                    "recognizable-subject"
+                  ],
+                  "attachment": null
+                }
+              ],
+              "quantityChanges": 0,
+              "identityGroups": 0,
+              "aestheticAcceptance": "pending-user"
+            }
+          },
+          "renderability": {
+            "status": "ready",
+            "visibleScenery": true,
+            "visibleAbstract": true,
+            "gaps": []
           },
           "expression": {
-            "version": "shared-expression-1.0",
+            "version": "shared-expression-1.1-source-bound",
             "sourceContract": "expression-1.0",
             "recommendation": "balanced",
             "reason": "已有景物承托，同时有抽象主体，默认景意交融",
@@ -9024,7 +9451,7 @@
           "review_required": true
         },
         "plan": {
-          "version": "shared-expression-1.0",
+          "version": "shared-expression-1.1-source-bound",
           "seed": 2819797886,
           "poem": "剪不断，理还乱，是离愁。",
           "nodes": [
@@ -9066,8 +9493,14 @@
             "illumination": "unclear"
           },
           "concretePlan": null,
+          "renderability": {
+            "status": "ready",
+            "visibleScenery": false,
+            "visibleAbstract": true,
+            "gaps": []
+          },
           "expression": {
-            "version": "shared-expression-1.0",
+            "version": "shared-expression-1.1-source-bound",
             "sourceContract": "expression-1.0",
             "recommendation": "abstract",
             "reason": "没有可直接落成实景的主体，以抽象关系组织画面",
@@ -9563,7 +9996,7 @@
           "review_required": true
         },
         "plan": {
-          "version": "shared-expression-1.0",
+          "version": "shared-expression-1.1-source-bound",
           "seed": 958039947,
           "poem": "返景入深林，复照青苔上。",
           "nodes": [
@@ -9611,7 +10044,7 @@
             "illumination": "twilight"
           },
           "concretePlan": {
-            "version": "semantic-composition-3.3-world-instances-directional-buildings",
+            "version": "semantic-composition-3.3-source-bound",
             "seed": 958039947,
             "settings": {
               "wind": 0.3,
@@ -9755,6 +10188,11 @@
                 "interaction": {
                   "mode": "instance",
                   "groupId": "i1:landscape:lightwash:0"
+                },
+                "visibility": {
+                  "protect": false,
+                  "reasons": [],
+                  "basis": "local-drawing-policy"
                 }
               },
               {
@@ -9880,6 +10318,11 @@
                 "interaction": {
                   "mode": "instance",
                   "groupId": "i3:landscape:moss:1"
+                },
+                "visibility": {
+                  "protect": false,
+                  "reasons": [],
+                  "basis": "local-drawing-policy"
                 }
               },
               {
@@ -10362,6 +10805,11 @@
                 "interaction": {
                   "mode": "instance",
                   "groupId": "i2:tree:broadleaf:2"
+                },
+                "visibility": {
+                  "protect": false,
+                  "reasons": [],
+                  "basis": "local-drawing-policy"
                 }
               },
               {
@@ -10437,6 +10885,11 @@
                 "interaction": {
                   "mode": "instance",
                   "groupId": "inferred:landscape:ground:3"
+                },
+                "visibility": {
+                  "protect": false,
+                  "reasons": [],
+                  "basis": "local-drawing-policy"
                 }
               }
             ],
@@ -10667,6 +11120,12 @@
                   },
                   "cost": 60.175,
                   "aestheticAcceptance": "pending-user"
+                },
+                "actorSpacing": {
+                  "version": "1.0",
+                  "repairs": [],
+                  "residualOverlap": 0,
+                  "scope": "discrete-actors-not-intentional-occlusion"
                 }
               },
               "landscape": {
@@ -10696,6 +11155,13 @@
               }
             },
             "omitted": [],
+            "parameters": [],
+            "sourceResolution": {
+              "version": "source-depiction-1.1",
+              "quantities": {},
+              "identities": [],
+              "changes": []
+            },
             "notes": [
               "深林虽被归为地点，仍按原文明示的自然景物匹配；具体空间关系另行处理。",
               "位置、大小、笔触与默认微动是本地试画选择；数量解释与本地显示数量分别记录。",
@@ -11083,6 +11549,11 @@
                     "interaction": {
                       "mode": "instance",
                       "groupId": "i1:landscape:lightwash:0"
+                    },
+                    "visibility": {
+                      "protect": false,
+                      "reasons": [],
+                      "basis": "local-drawing-policy"
                     }
                   },
                   {
@@ -11208,6 +11679,11 @@
                     "interaction": {
                       "mode": "instance",
                       "groupId": "i3:landscape:moss:1"
+                    },
+                    "visibility": {
+                      "protect": false,
+                      "reasons": [],
+                      "basis": "local-drawing-policy"
                     }
                   },
                   {
@@ -11690,6 +12166,11 @@
                     "interaction": {
                       "mode": "instance",
                       "groupId": "i2:tree:broadleaf:2"
+                    },
+                    "visibility": {
+                      "protect": false,
+                      "reasons": [],
+                      "basis": "local-drawing-policy"
                     }
                   },
                   {
@@ -11765,6 +12246,11 @@
                     "interaction": {
                       "mode": "instance",
                       "groupId": "inferred:landscape:ground:3"
+                    },
+                    "visibility": {
+                      "protect": false,
+                      "reasons": [],
+                      "basis": "local-drawing-policy"
                     }
                   }
                 ],
@@ -11969,6 +12455,12 @@
                       },
                       "cost": 60.175,
                       "aestheticAcceptance": "pending-user"
+                    },
+                    "actorSpacing": {
+                      "version": "1.0",
+                      "repairs": [],
+                      "residualOverlap": 0,
+                      "scope": "discrete-actors-not-intentional-occlusion"
                     }
                   },
                   "landscape": {
@@ -12164,6 +12656,11 @@
                     "interaction": {
                       "mode": "instance",
                       "groupId": "i1:landscape:lightwash:0"
+                    },
+                    "visibility": {
+                      "protect": false,
+                      "reasons": [],
+                      "basis": "local-drawing-policy"
                     }
                   },
                   {
@@ -12289,6 +12786,11 @@
                     "interaction": {
                       "mode": "instance",
                       "groupId": "i3:landscape:moss:1"
+                    },
+                    "visibility": {
+                      "protect": false,
+                      "reasons": [],
+                      "basis": "local-drawing-policy"
                     }
                   },
                   {
@@ -12771,6 +13273,11 @@
                     "interaction": {
                       "mode": "instance",
                       "groupId": "i2:tree:broadleaf:2"
+                    },
+                    "visibility": {
+                      "protect": false,
+                      "reasons": [],
+                      "basis": "local-drawing-policy"
                     }
                   },
                   {
@@ -12846,6 +13353,11 @@
                     "interaction": {
                       "mode": "instance",
                       "groupId": "inferred:landscape:ground:3"
+                    },
+                    "visibility": {
+                      "protect": false,
+                      "reasons": [],
+                      "basis": "local-drawing-policy"
                     }
                   }
                 ],
@@ -13050,6 +13562,12 @@
                       },
                       "cost": 60.36,
                       "aestheticAcceptance": "pending-user"
+                    },
+                    "actorSpacing": {
+                      "version": "1.0",
+                      "repairs": [],
+                      "residualOverlap": 0,
+                      "scope": "discrete-actors-not-intentional-occlusion"
                     }
                   },
                   "landscape": {
@@ -13103,7 +13621,8 @@
                     "visualized": false,
                     "reason": "该空间关系与形态组合尚未适配"
                   }
-                ]
+                ],
+                "notes": []
               },
               {
                 "id": "forest-1",
@@ -13245,6 +13764,11 @@
                     "interaction": {
                       "mode": "instance",
                       "groupId": "i1:landscape:lightwash:0"
+                    },
+                    "visibility": {
+                      "protect": false,
+                      "reasons": [],
+                      "basis": "local-drawing-policy"
                     }
                   },
                   {
@@ -13370,6 +13894,11 @@
                     "interaction": {
                       "mode": "instance",
                       "groupId": "i3:landscape:moss:1"
+                    },
+                    "visibility": {
+                      "protect": false,
+                      "reasons": [],
+                      "basis": "local-drawing-policy"
                     }
                   },
                   {
@@ -13852,6 +14381,11 @@
                     "interaction": {
                       "mode": "instance",
                       "groupId": "i2:tree:broadleaf:2"
+                    },
+                    "visibility": {
+                      "protect": false,
+                      "reasons": [],
+                      "basis": "local-drawing-policy"
                     }
                   },
                   {
@@ -13927,6 +14461,11 @@
                     "interaction": {
                       "mode": "instance",
                       "groupId": "inferred:landscape:ground:3"
+                    },
+                    "visibility": {
+                      "protect": false,
+                      "reasons": [],
+                      "basis": "local-drawing-policy"
                     }
                   }
                 ],
@@ -14131,6 +14670,12 @@
                       },
                       "cost": 60.373,
                       "aestheticAcceptance": "pending-user"
+                    },
+                    "actorSpacing": {
+                      "version": "1.0",
+                      "repairs": [],
+                      "residualOverlap": 0,
+                      "scope": "discrete-actors-not-intentional-occlusion"
                     }
                   },
                   "landscape": {
@@ -14184,27 +14729,31 @@
                     "visualized": false,
                     "reason": "该空间关系与形态组合尚未适配"
                   }
-                ]
+                ],
+                "notes": []
               }
             ],
             "composition": "forest-0",
             "compositionSelection": {
-              "method": "final-display-constraints-then-geometric-preference",
+              "method": "shared-policy-final-audit-and-geometric-preference",
               "candidates": [
                 {
                   "id": "forest-0",
                   "errors": 0,
-                  "score": 60.483
+                  "score": 60.483,
+                  "actorOverlap": 0
                 },
                 {
                   "id": "forest-2",
                   "errors": 0,
-                  "score": 60.99
+                  "score": 60.99,
+                  "actorOverlap": 0
                 },
                 {
                   "id": "forest-1",
                   "errors": 0,
-                  "score": 61.031
+                  "score": 61.031,
+                  "actorOverlap": 0
                 }
               ],
               "aestheticAcceptance": "pending-user"
@@ -14286,10 +14835,25 @@
                 ],
                 "omission": null
               }
-            ]
+            ],
+            "drawingPolicy": {
+              "version": "shared-drawing-policy-1.0",
+              "scope": "source-bound-generation-and-composition-alternatives",
+              "selectedComposition": "forest-0",
+              "applied": [],
+              "quantityChanges": 0,
+              "identityGroups": 0,
+              "aestheticAcceptance": "pending-user"
+            }
+          },
+          "renderability": {
+            "status": "ready",
+            "visibleScenery": true,
+            "visibleAbstract": false,
+            "gaps": []
           },
           "expression": {
-            "version": "shared-expression-1.0",
+            "version": "shared-expression-1.1-source-bound",
             "sourceContract": "3.3",
             "recommendation": "scenery",
             "reason": "以明确景物及空间为主，默认风景优先",
@@ -14880,7 +15444,7 @@
           "review_required": true
         },
         "plan": {
-          "version": "shared-expression-1.0",
+          "version": "shared-expression-1.1-source-bound",
           "seed": 1799097591,
           "poem": "孤舟蓑笠翁，独钓寒江雪。",
           "nodes": [
@@ -14936,7 +15500,7 @@
             "illumination": "day"
           },
           "concretePlan": {
-            "version": "semantic-composition-3.3-world-instances-directional-buildings",
+            "version": "semantic-composition-3.3-source-bound",
             "seed": 1799097591,
             "settings": {
               "wind": 0.3,
@@ -15092,6 +15656,14 @@
                 "interaction": {
                   "mode": "instance",
                   "groupId": "i2:figure::0"
+                },
+                "visibility": {
+                  "protect": true,
+                  "reasons": [
+                    "recognizable-subject",
+                    "semantic-subject"
+                  ],
+                  "basis": "local-drawing-policy"
                 }
               },
               {
@@ -15234,6 +15806,11 @@
                 "interaction": {
                   "mode": "group",
                   "groupId": "i3:water:plane:1"
+                },
+                "visibility": {
+                  "protect": false,
+                  "reasons": [],
+                  "basis": "local-drawing-policy"
                 }
               },
               {
@@ -15358,6 +15935,14 @@
                 "interaction": {
                   "mode": "instance",
                   "groupId": "i1:boat::2"
+                },
+                "visibility": {
+                  "protect": true,
+                  "reasons": [
+                    "recognizable-subject",
+                    "semantic-subject"
+                  ],
+                  "basis": "local-drawing-policy"
                 }
               },
               {
@@ -15478,6 +16063,11 @@
                 "interaction": {
                   "mode": "instance",
                   "groupId": "i4:snow::3"
+                },
+                "visibility": {
+                  "protect": false,
+                  "reasons": [],
+                  "basis": "local-drawing-policy"
                 }
               },
               {
@@ -15552,6 +16142,11 @@
                 "interaction": {
                   "mode": "instance",
                   "groupId": "inferred:landscape:mountain:4"
+                },
+                "visibility": {
+                  "protect": false,
+                  "reasons": [],
+                  "basis": "local-drawing-policy"
                 }
               }
             ],
@@ -15779,6 +16374,12 @@
                   },
                   "cost": 1.165,
                   "aestheticAcceptance": "pending-user"
+                },
+                "actorSpacing": {
+                  "version": "1.0",
+                  "repairs": [],
+                  "residualOverlap": 0,
+                  "scope": "discrete-actors-not-intentional-occlusion"
                 }
               },
               "landscape": {
@@ -15822,6 +16423,13 @@
               }
             },
             "omitted": [],
+            "parameters": [],
+            "sourceResolution": {
+              "version": "source-depiction-1.1",
+              "quantities": {},
+              "identities": [],
+              "changes": []
+            },
             "notes": [
               "孤舟：按舟船这个主体选择画法，材质或修饰词不另画成植物。这是本地写意借形，保留原词义。",
               "蓑笠翁：只以淡墨衣形和头部笔点提示人物，不作肖像或服饰考据。这是本地写意借形，保留原词义。",
@@ -16197,6 +16805,14 @@
                     "interaction": {
                       "mode": "instance",
                       "groupId": "i2:figure::0"
+                    },
+                    "visibility": {
+                      "protect": true,
+                      "reasons": [
+                        "recognizable-subject",
+                        "semantic-subject"
+                      ],
+                      "basis": "local-drawing-policy"
                     }
                   },
                   {
@@ -16339,6 +16955,11 @@
                     "interaction": {
                       "mode": "group",
                       "groupId": "i3:water:plane:1"
+                    },
+                    "visibility": {
+                      "protect": false,
+                      "reasons": [],
+                      "basis": "local-drawing-policy"
                     }
                   },
                   {
@@ -16463,6 +17084,14 @@
                     "interaction": {
                       "mode": "instance",
                       "groupId": "i1:boat::2"
+                    },
+                    "visibility": {
+                      "protect": true,
+                      "reasons": [
+                        "recognizable-subject",
+                        "semantic-subject"
+                      ],
+                      "basis": "local-drawing-policy"
                     }
                   },
                   {
@@ -16583,6 +17212,11 @@
                     "interaction": {
                       "mode": "instance",
                       "groupId": "i4:snow::3"
+                    },
+                    "visibility": {
+                      "protect": false,
+                      "reasons": [],
+                      "basis": "local-drawing-policy"
                     }
                   },
                   {
@@ -16657,6 +17291,11 @@
                     "interaction": {
                       "mode": "instance",
                       "groupId": "inferred:landscape:mountain:4"
+                    },
+                    "visibility": {
+                      "protect": false,
+                      "reasons": [],
+                      "basis": "local-drawing-policy"
                     }
                   }
                 ],
@@ -16858,6 +17497,12 @@
                       },
                       "cost": 1.165,
                       "aestheticAcceptance": "pending-user"
+                    },
+                    "actorSpacing": {
+                      "version": "1.0",
+                      "repairs": [],
+                      "residualOverlap": 0,
+                      "scope": "discrete-actors-not-intentional-occlusion"
                     }
                   },
                   "landscape": {
@@ -17079,6 +17724,14 @@
                     "interaction": {
                       "mode": "instance",
                       "groupId": "i2:figure::0"
+                    },
+                    "visibility": {
+                      "protect": true,
+                      "reasons": [
+                        "recognizable-subject",
+                        "semantic-subject"
+                      ],
+                      "basis": "local-drawing-policy"
                     }
                   },
                   {
@@ -17221,6 +17874,11 @@
                     "interaction": {
                       "mode": "group",
                       "groupId": "i3:water:plane:1"
+                    },
+                    "visibility": {
+                      "protect": false,
+                      "reasons": [],
+                      "basis": "local-drawing-policy"
                     }
                   },
                   {
@@ -17345,6 +18003,14 @@
                     "interaction": {
                       "mode": "instance",
                       "groupId": "i1:boat::2"
+                    },
+                    "visibility": {
+                      "protect": true,
+                      "reasons": [
+                        "recognizable-subject",
+                        "semantic-subject"
+                      ],
+                      "basis": "local-drawing-policy"
                     }
                   },
                   {
@@ -17465,6 +18131,11 @@
                     "interaction": {
                       "mode": "instance",
                       "groupId": "i4:snow::3"
+                    },
+                    "visibility": {
+                      "protect": false,
+                      "reasons": [],
+                      "basis": "local-drawing-policy"
                     }
                   },
                   {
@@ -17539,6 +18210,11 @@
                     "interaction": {
                       "mode": "instance",
                       "groupId": "inferred:landscape:mountain:4"
+                    },
+                    "visibility": {
+                      "protect": false,
+                      "reasons": [],
+                      "basis": "local-drawing-policy"
                     }
                   }
                 ],
@@ -17740,6 +18416,12 @@
                       },
                       "cost": 1.475,
                       "aestheticAcceptance": "pending-user"
+                    },
+                    "actorSpacing": {
+                      "version": "1.0",
+                      "repairs": [],
+                      "residualOverlap": 0,
+                      "scope": "discrete-actors-not-intentional-occlusion"
                     }
                   },
                   "landscape": {
@@ -17807,7 +18489,8 @@
                     "visualized": true,
                     "reason": "在水面区域定位，尚非物理承载"
                   }
-                ]
+                ],
+                "notes": []
               },
               {
                 "id": "snow-2",
@@ -17961,6 +18644,14 @@
                     "interaction": {
                       "mode": "instance",
                       "groupId": "i2:figure::0"
+                    },
+                    "visibility": {
+                      "protect": true,
+                      "reasons": [
+                        "recognizable-subject",
+                        "semantic-subject"
+                      ],
+                      "basis": "local-drawing-policy"
                     }
                   },
                   {
@@ -18103,6 +18794,11 @@
                     "interaction": {
                       "mode": "group",
                       "groupId": "i3:water:plane:1"
+                    },
+                    "visibility": {
+                      "protect": false,
+                      "reasons": [],
+                      "basis": "local-drawing-policy"
                     }
                   },
                   {
@@ -18227,6 +18923,14 @@
                     "interaction": {
                       "mode": "instance",
                       "groupId": "i1:boat::2"
+                    },
+                    "visibility": {
+                      "protect": true,
+                      "reasons": [
+                        "recognizable-subject",
+                        "semantic-subject"
+                      ],
+                      "basis": "local-drawing-policy"
                     }
                   },
                   {
@@ -18347,6 +19051,11 @@
                     "interaction": {
                       "mode": "instance",
                       "groupId": "i4:snow::3"
+                    },
+                    "visibility": {
+                      "protect": false,
+                      "reasons": [],
+                      "basis": "local-drawing-policy"
                     }
                   },
                   {
@@ -18421,6 +19130,11 @@
                     "interaction": {
                       "mode": "instance",
                       "groupId": "inferred:landscape:mountain:4"
+                    },
+                    "visibility": {
+                      "protect": false,
+                      "reasons": [],
+                      "basis": "local-drawing-policy"
                     }
                   }
                 ],
@@ -18622,6 +19336,12 @@
                       },
                       "cost": 1.725,
                       "aestheticAcceptance": "pending-user"
+                    },
+                    "actorSpacing": {
+                      "version": "1.0",
+                      "repairs": [],
+                      "residualOverlap": 0,
+                      "scope": "discrete-actors-not-intentional-occlusion"
                     }
                   },
                   "landscape": {
@@ -18689,27 +19409,31 @@
                     "visualized": true,
                     "reason": "在水面区域定位，尚非物理承载"
                   }
-                ]
+                ],
+                "notes": []
               }
             ],
             "composition": "snow-0",
             "compositionSelection": {
-              "method": "final-display-constraints-then-geometric-preference",
+              "method": "shared-policy-final-audit-and-geometric-preference",
               "candidates": [
                 {
                   "id": "snow-0",
                   "errors": 0,
-                  "score": 3.209
+                  "score": 3.209,
+                  "actorOverlap": 0
                 },
                 {
                   "id": "snow-1",
                   "errors": 0,
-                  "score": 4.051
+                  "score": 4.051,
+                  "actorOverlap": 0
                 },
                 {
                   "id": "snow-2",
                   "errors": 0,
-                  "score": 4.749
+                  "score": 4.749,
+                  "actorOverlap": 0
                 }
               ],
               "aestheticAcceptance": "pending-user"
@@ -18791,10 +19515,104 @@
                 ],
                 "omission": null
               }
-            ]
+            ],
+            "drawingPolicy": {
+              "version": "shared-drawing-policy-1.0",
+              "scope": "source-bound-generation-and-composition-alternatives",
+              "selectedComposition": "snow-0",
+              "applied": [
+                {
+                  "composition": "snow-0",
+                  "layer": "i2:figure::0",
+                  "entities": [
+                    "i2"
+                  ],
+                  "color": null,
+                  "visibility": [
+                    "recognizable-subject",
+                    "semantic-subject"
+                  ],
+                  "attachment": "deck"
+                },
+                {
+                  "composition": "snow-0",
+                  "layer": "i1:boat::2",
+                  "entities": [
+                    "i1"
+                  ],
+                  "color": null,
+                  "visibility": [
+                    "recognizable-subject",
+                    "semantic-subject"
+                  ],
+                  "attachment": null
+                },
+                {
+                  "composition": "snow-1",
+                  "layer": "i2:figure::0",
+                  "entities": [
+                    "i2"
+                  ],
+                  "color": null,
+                  "visibility": [
+                    "recognizable-subject",
+                    "semantic-subject"
+                  ],
+                  "attachment": "deck"
+                },
+                {
+                  "composition": "snow-1",
+                  "layer": "i1:boat::2",
+                  "entities": [
+                    "i1"
+                  ],
+                  "color": null,
+                  "visibility": [
+                    "recognizable-subject",
+                    "semantic-subject"
+                  ],
+                  "attachment": null
+                },
+                {
+                  "composition": "snow-2",
+                  "layer": "i2:figure::0",
+                  "entities": [
+                    "i2"
+                  ],
+                  "color": null,
+                  "visibility": [
+                    "recognizable-subject",
+                    "semantic-subject"
+                  ],
+                  "attachment": "deck"
+                },
+                {
+                  "composition": "snow-2",
+                  "layer": "i1:boat::2",
+                  "entities": [
+                    "i1"
+                  ],
+                  "color": null,
+                  "visibility": [
+                    "recognizable-subject",
+                    "semantic-subject"
+                  ],
+                  "attachment": null
+                }
+              ],
+              "quantityChanges": 0,
+              "identityGroups": 0,
+              "aestheticAcceptance": "pending-user"
+            }
+          },
+          "renderability": {
+            "status": "ready",
+            "visibleScenery": true,
+            "visibleAbstract": false,
+            "gaps": []
           },
           "expression": {
-            "version": "shared-expression-1.0",
+            "version": "shared-expression-1.1-source-bound",
             "sourceContract": "3.3",
             "recommendation": "scenery",
             "reason": "以明确景物及空间为主，默认风景优先",
@@ -19010,7 +19828,7 @@
           "review_required": true
         },
         "plan": {
-          "version": "shared-expression-1.0",
+          "version": "shared-expression-1.1-source-bound",
           "seed": 3235492019,
           "poem": "问君能有几多愁？恰似一江春水向东流！",
           "nodes": [
@@ -19122,8 +19940,14 @@
             ]
           },
           "concretePlan": null,
+          "renderability": {
+            "status": "ready",
+            "visibleScenery": false,
+            "visibleAbstract": true,
+            "gaps": []
+          },
           "expression": {
-            "version": "shared-expression-1.0",
+            "version": "shared-expression-1.1-source-bound",
             "sourceContract": "abstract-1.0",
             "recommendation": "abstract",
             "reason": "没有可直接落成实景的主体，以抽象关系组织画面",

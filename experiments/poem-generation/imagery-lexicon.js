@@ -2,6 +2,9 @@
 // Matching words alone never establishes presence, metaphor or movement.
 (function(root,factory){if(typeof module==='object'&&module.exports)module.exports=factory();else root.PoemImageryLexicon=factory();})(globalThis,()=>{
 const rules=[
+  {words:['酒旗','酒招','旗幡','旗帜','旌旗','招幌','酒幌','红旗','青旗','白旗','素旗','黄旗','战旗','军旗','彩旗','旗'],tool:'flag',exclude:['旗人','旗舰','旗鼓相当']},
+  {words:['长剑','宝剑','戈鋋','长矛','剑','戈','矛','戟'],tool:'weapon',exclude:['剑阁','剑南','剑门']},
+  {words:['市集','街市'],tool:'dwelling',options:{kind:'house'}},
   {words:['墟里','村庄','村落','孤村','荒村','村'],tool:'dwelling',options:{kind:'house'},approximation:'以一组低矮房舍借形村落，不把村的数量当作房屋栋数'},
   {words:['孤帆','帆'],tool:'boat',projection:'whole-from-sail',approximation:'以舟身借形帆所指的船，当前不补帆布；帆的数量与船数分别保留'},
   {words:['芦花','芦苇','蒹葭'],tool:'grass',options:{form:'reed'},approximation:'以长茎疏叶与白色穗意概括岸边芦苇，不画成园中花冠'},
@@ -44,7 +47,7 @@ const rules=[
   {words:['梅花','梅枝','寒梅','红梅','白梅','梅'],tool:'plum-branch',exclude:['梅子','梅雨']},
   {words:['酒杯','酒盏','杯中酒'],tool:'wine',options:{form:'cup'}},
   {words:['酒壶','酒坛'],tool:'wine',options:{form:'jar'}},
-  {words:['酒液','清酒','浊酒','美酒','酒'],tool:'wine',options:{form:'liquid'},exclude:['饮酒','饮','劝酒','醉酒','沽酒','买酒']},
+  {words:['酒液','清酒','浊酒','美酒','酒'],tool:'wine',options:{form:'liquid'},exclude:['饮酒','饮','劝酒','醉酒','沽酒','买酒','酒旗','酒招','酒幌']},
   {words:['楼阁','楼台','楼宇','楼'],tool:'building'},
   {words:['兰花','兰草','兰'],tool:'orchid',exclude:['木兰','兰桡','兰舟','兰陵','兰台','兰亭']},
   {words:['马'],tool:'horse',exclude:['司马','驸马','马鞍','马车','马嵬','竹马']},

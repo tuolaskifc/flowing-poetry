@@ -1,0 +1,6529 @@
+{
+  "id": "2026-10-24T14-55-17-636Z-b9482445",
+  "fingerprint": "ff66dda521d249b56a6555f03bac11f61573209f9ff8d3ec6856a9f1a96d01c4",
+  "poem": "江南可采莲，莲叶何田田。",
+  "source": null,
+  "mode": "expression",
+  "model": "DeepSeek-V4.1-Flash",
+  "started_at": "2026-10-24T14:55:17.636Z",
+  "cached": false,
+  "http_status": 200,
+  "usage": {
+    "completion_tokens": 519,
+    "prompt_tokens": 6060,
+    "total_tokens": 6579,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 6016
+    }
+  },
+  "finish_reason": "stop",
+  "analysis": {
+    "schema_version": "expression-1.0",
+    "poem": "江南可采莲，莲叶何田田。",
+    "reading": "江南水乡可以采莲，莲叶茂密相连、铺展成片。",
+    "entities": [
+      {
+        "id": "i1",
+        "mentions": [
+          "江南"
+        ],
+        "concept": "江南水乡",
+        "kind": "place",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "江南可采莲"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i2",
+        "mentions": [
+          "莲"
+        ],
+        "concept": "莲",
+        "kind": "organism",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "江南可采莲"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i3",
+        "mentions": [
+          "莲叶"
+        ],
+        "concept": "莲叶",
+        "kind": "organism",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "莲叶何田田"
+        ],
+        "quantity": {
+          "mode": "many",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "spread",
+          "evidence": [
+            "莲叶何田田"
+          ]
+        }
+      }
+    ],
+    "relations": [],
+    "atmosphere": {
+      "labels": [
+        "繁茂",
+        "明丽"
+      ],
+      "valence": "positive",
+      "energy": "low",
+      "tension": "low",
+      "openness": "high",
+      "evidence": [
+        "江南可采莲",
+        "莲叶何田田"
+      ]
+    },
+    "time": {
+      "markers": [],
+      "note": null
+    },
+    "uncertainties": [
+      "“可采莲”表示可以采，未明说是否正在采或由谁采。",
+      "“田田”只形容莲叶茂密，未给出具体数量或范围。"
+    ],
+    "spatial": [],
+    "scene": {
+      "setting": {
+        "kind": "waterside",
+        "basis": "inferred",
+        "evidence": [
+          "江南可采莲"
+        ]
+      },
+      "groups": [
+        {
+          "members": [
+            "i2",
+            "i3"
+          ],
+          "role": "subject",
+          "pattern": "field",
+          "depth": "unspecified",
+          "basis": "inferred",
+          "evidence": [
+            "江南可采莲",
+            "莲叶何田田"
+          ]
+        }
+      ],
+      "supports": [],
+      "actions": [],
+      "atmosphere": {
+        "visibility": "clear",
+        "illumination": "day",
+        "basis": "inferred",
+        "evidence": [
+          "江南可采莲",
+          "莲叶何田田"
+        ]
+      }
+    },
+    "expression": {
+      "relations": [],
+      "processes": []
+    }
+  },
+  "validation": {
+    "valid": true,
+    "errors": [],
+    "warnings": [
+      "模型保留了不确定性，需要审阅",
+      "scene.setting 为语义推断，绘画选择需与原文明示区分",
+      "scene.groups[0] 为语义推断，绘画选择需与原文明示区分",
+      "i1 未进入整体分组，后续使用本地默认布局",
+      "scene.atmosphere 为语义推断，绘画选择需与原文明示区分"
+    ],
+    "review_required": true
+  },
+  "plan": {
+    "version": "shared-expression-1.1-source-bound",
+    "seed": 737055821,
+    "poem": "江南可采莲，莲叶何田田。",
+    "nodes": [
+      {
+        "id": "i1",
+        "label": "江南",
+        "meaning": "江南水乡",
+        "kind": "concrete",
+        "contextOnly": false,
+        "mode": "present"
+      },
+      {
+        "id": "i2",
+        "label": "莲",
+        "meaning": "莲",
+        "kind": "concrete",
+        "contextOnly": false,
+        "mode": "present"
+      },
+      {
+        "id": "i3",
+        "label": "莲叶",
+        "meaning": "莲叶",
+        "kind": "concrete",
+        "contextOnly": false,
+        "mode": "present"
+      }
+    ],
+    "relations": [],
+    "processes": [],
+    "omitted": [],
+    "atmosphere": {
+      "labels": [
+        "繁茂",
+        "明丽"
+      ],
+      "valence": "positive",
+      "energy": "low",
+      "tension": "low",
+      "openness": "high",
+      "evidence": [
+        "江南可采莲",
+        "莲叶何田田"
+      ],
+      "illumination": "day"
+    },
+    "concretePlan": {
+      "version": "semantic-composition-3.3-source-bound",
+      "seed": 737055821,
+      "settings": {
+        "wind": 0.3,
+        "density": 0.35,
+        "palette": "mineral",
+        "motion": 1.4
+      },
+      "layers": [
+        {
+          "tool": "lotus",
+          "entities": [
+            "i2"
+          ],
+          "projectedEntities": [],
+          "names": [
+            "莲"
+          ],
+          "options": {
+            "form": "flower",
+            "state": "open"
+          },
+          "animate": true,
+          "placement": {
+            "anchor": [
+              320,
+              330
+            ],
+            "at": [
+              0.5310345409443602,
+              0.6756326426630436
+            ],
+            "scale": 0.95
+          },
+          "semanticGroup": {
+            "members": [
+              "i2",
+              "i3"
+            ],
+            "role": "subject",
+            "pattern": "field",
+            "depth": "unspecified",
+            "basis": "inferred",
+            "evidence": [
+              "江南可采莲",
+              "莲叶何田田"
+            ],
+            "index": 0
+          },
+          "semanticEffects": [
+            {
+              "path": "scene.groups[0].role",
+              "consumer": "主次布局",
+              "effect": "主体相对突出",
+              "status": "applied"
+            },
+            {
+              "path": "scene.groups[0].pattern",
+              "consumer": "群落布局",
+              "effect": "按 field 组织显示单元；不覆盖明确数量",
+              "status": "applied"
+            },
+            {
+              "path": "scene.groups[0].depth",
+              "consumer": "远近布局",
+              "effect": "远近未明，保持本地默认",
+              "status": "skipped"
+            }
+          ],
+          "semanticEnergy": true,
+          "timeScale": 0.45,
+          "instances": [
+            {
+              "placement": {
+                "anchor": [
+                  328,
+                  169
+                ],
+                "at": [
+                  0.23837754183925658,
+                  0.5304347826086957
+                ],
+                "scale": 0.35910000000000003
+              },
+              "depth": 0.003125,
+              "opacity": 0.5216,
+              "variant": 0,
+              "tone": "far",
+              "id": "i2:lotus:flower:0:0"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  328,
+                  169
+                ],
+                "at": [
+                  0.9536146984966707,
+                  0.5409375
+                ],
+                "scale": 0.40530000000000005
+              },
+              "depth": 0.009375000000000001,
+              "opacity": 0.5350786555898376,
+              "variant": 0,
+              "tone": "far",
+              "id": "i2:lotus:flower:0:1"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  328,
+                  169
+                ],
+                "at": [
+                  0.507677019682521,
+                  0.5615625
+                ],
+                "scale": 0.45150000000000007
+              },
+              "depth": 0.015625,
+              "opacity": 0.5641317139999009,
+              "variant": 0,
+              "tone": "far",
+              "id": "i2:lotus:flower:0:2"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  328,
+                  169
+                ],
+                "at": [
+                  0.061739340868371184,
+                  0.5821875
+                ],
+                "scale": 0.49770000000000003
+              },
+              "depth": 0.021875000000000002,
+              "opacity": 0.597427942192182,
+              "variant": 0,
+              "tone": "far",
+              "id": "i2:lotus:flower:0:3"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  328,
+                  169
+                ],
+                "at": [
+                  0.7832816620542213,
+                  0.6028125
+                ],
+                "scale": 0.5439
+              },
+              "depth": 0.028125,
+              "opacity": 0.6325806553107686,
+              "variant": 0,
+              "tone": "far",
+              "id": "i2:lotus:flower:0:4"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  328,
+                  169
+                ],
+                "at": [
+                  0.33734398324007153,
+                  0.6234375
+                ],
+                "scale": 0.5901000000000001
+              },
+              "depth": 0.034375,
+              "opacity": 0.6651074469994929,
+              "variant": 0,
+              "tone": "far",
+              "id": "i2:lotus:flower:0:5"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  328,
+                  169
+                ],
+                "at": [
+                  0.965,
+                  0.6440625
+                ],
+                "scale": 0.6363000000000001
+              },
+              "depth": 0.040625,
+              "opacity": 0.699523885906412,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i2:lotus:flower:0:6"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  328,
+                  169
+                ],
+                "at": [
+                  0.6129486256117709,
+                  0.6646875
+                ],
+                "scale": 0.6825000000000001
+              },
+              "depth": 0.046875,
+              "opacity": 0.7214364883480011,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i2:lotus:flower:0:7"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  328,
+                  169
+                ],
+                "at": [
+                  0.16701094679762052,
+                  0.6853125
+                ],
+                "scale": 0.7287000000000001
+              },
+              "depth": 0.053125000000000006,
+              "opacity": 0.7593317113387748,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i2:lotus:flower:0:8"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  328,
+                  169
+                ],
+                "at": [
+                  0.8885532679834712,
+                  0.7059375
+                ],
+                "scale": 0.7749000000000001
+              },
+              "depth": 0.059375000000000004,
+              "opacity": 0.7862820917079516,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i2:lotus:flower:0:9"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  328,
+                  169
+                ],
+                "at": [
+                  0.4426155891693208,
+                  0.7265625
+                ],
+                "scale": 0.8211000000000002
+              },
+              "depth": 0.065625,
+              "opacity": 0.8195222014206229,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i2:lotus:flower:0:10"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  328,
+                  169
+                ],
+                "at": [
+                  0.035,
+                  0.7471875
+                ],
+                "scale": 0.8673000000000001
+              },
+              "depth": 0.07187500000000001,
+              "opacity": 0.8524071393810737,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i2:lotus:flower:0:11"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  328,
+                  169
+                ],
+                "at": [
+                  0.7182202315410222,
+                  0.7678125
+                ],
+                "scale": 0.9135000000000001
+              },
+              "depth": 0.078125,
+              "opacity": 0.8882947784633434,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i2:lotus:flower:0:12"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  328,
+                  169
+                ],
+                "at": [
+                  0.2722825527268739,
+                  0.7884375
+                ],
+                "scale": 0.9597000000000001
+              },
+              "depth": 0.084375,
+              "opacity": 0.9252046534678666,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i2:lotus:flower:0:13"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  328,
+                  169
+                ],
+                "at": [
+                  0.965,
+                  0.8090625
+                ],
+                "scale": 1.0059000000000002
+              },
+              "depth": 0.09062500000000001,
+              "opacity": 0.9498649251429596,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i2:lotus:flower:0:14"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  328,
+                  169
+                ],
+                "at": [
+                  0.5478871950985733,
+                  0.8296875
+                ],
+                "scale": 1.0521000000000003
+              },
+              "depth": 0.096875,
+              "opacity": 0.9896,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i2:lotus:flower:0:15"
+            }
+          ],
+          "singleUnit": true,
+          "quantity": {
+            "items": [
+              {
+                "entity": "i2",
+                "mode": "unspecified",
+                "min": null,
+                "max": null,
+                "unit": null,
+                "scope": "unspecified",
+                "extent": "unspecified",
+                "evidence": [],
+                "basis": "model"
+              }
+            ],
+            "rendered": 16,
+            "exact": false,
+            "collective": true,
+            "partUnsupported": false
+          },
+          "quantityLabel": "成片分布；本地试画 16 个单元",
+          "z": 19,
+          "visual": {
+            "role": "blossom",
+            "brushStrength": 1.65
+          },
+          "performance": {
+            "rhythm": "gust",
+            "rate": 0.62,
+            "amplitude": 0.65,
+            "phase": 0
+          },
+          "id": "i2:lotus:flower:0",
+          "interaction": {
+            "mode": "instance",
+            "groupId": "i2:lotus:flower:0"
+          }
+        },
+        {
+          "tool": "lotus",
+          "entities": [
+            "i3"
+          ],
+          "projectedEntities": [],
+          "names": [
+            "莲叶"
+          ],
+          "options": {
+            "form": "leaf"
+          },
+          "animate": true,
+          "placement": {
+            "anchor": [
+              320,
+              330
+            ],
+            "at": [
+              0.4956724388306207,
+              0.7849999999999999
+            ],
+            "scale": 0.95
+          },
+          "semanticGroup": {
+            "members": [
+              "i2",
+              "i3"
+            ],
+            "role": "subject",
+            "pattern": "field",
+            "depth": "unspecified",
+            "basis": "inferred",
+            "evidence": [
+              "江南可采莲",
+              "莲叶何田田"
+            ],
+            "index": 0
+          },
+          "semanticEffects": [
+            {
+              "path": "scene.groups[0].role",
+              "consumer": "主次布局",
+              "effect": "主体相对突出",
+              "status": "applied"
+            },
+            {
+              "path": "scene.groups[0].pattern",
+              "consumer": "群落布局",
+              "effect": "按 field 组织显示单元；不覆盖明确数量",
+              "status": "applied"
+            },
+            {
+              "path": "scene.groups[0].depth",
+              "consumer": "远近布局",
+              "effect": "远近未明，保持本地默认",
+              "status": "skipped"
+            }
+          ],
+          "semanticEnergy": true,
+          "timeScale": 0.45,
+          "instances": [
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  218
+                ],
+                "at": [
+                  0.965,
+                  0.624125
+                ],
+                "scale": 0.34524
+              },
+              "depth": 0.0012500000000000002,
+              "opacity": 0.5216,
+              "variant": 0,
+              "tone": "far",
+              "id": "i3:lotus:leaf:1:0"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  218
+                ],
+                "at": [
+                  0.6016890212742745,
+                  0.632375
+                ],
+                "scale": 0.36372000000000004
+              },
+              "depth": 0.00375,
+              "opacity": 0.5216,
+              "variant": 0,
+              "tone": "far",
+              "id": "i3:lotus:leaf:1:1"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  218
+                ],
+                "at": [
+                  0.15575134246012468,
+                  0.640625
+                ],
+                "scale": 0.38220000000000004
+              },
+              "depth": 0.00625,
+              "opacity": 0.5216,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i3:lotus:leaf:1:2"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  218
+                ],
+                "at": [
+                  0.8772936636459749,
+                  0.648875
+                ],
+                "scale": 0.40068000000000004
+              },
+              "depth": 0.008749999999999999,
+              "opacity": 0.5273552502395585,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i3:lotus:leaf:1:3"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  218
+                ],
+                "at": [
+                  0.43135598483182497,
+                  0.657125
+                ],
+                "scale": 0.41916000000000003
+              },
+              "depth": 0.011250000000000001,
+              "opacity": 0.5418583347594598,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i3:lotus:leaf:1:4"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  218
+                ],
+                "at": [
+                  0.035,
+                  0.665375
+                ],
+                "scale": 0.43764000000000003
+              },
+              "depth": 0.013750000000000002,
+              "opacity": 0.5533344523191918,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i3:lotus:leaf:1:5"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  218
+                ],
+                "at": [
+                  0.7069606272035249,
+                  0.673625
+                ],
+                "scale": 0.45612
+              },
+              "depth": 0.01625,
+              "opacity": 0.5625784790996811,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i3:lotus:leaf:1:6"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  218
+                ],
+                "at": [
+                  0.26102294838937445,
+                  0.681875
+                ],
+                "scale": 0.4746
+              },
+              "depth": 0.018750000000000003,
+              "opacity": 0.5784828320464468,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i3:lotus:leaf:1:7"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  218
+                ],
+                "at": [
+                  0.965,
+                  0.690125
+                ],
+                "scale": 0.4930800000000001
+              },
+              "depth": 0.02125,
+              "opacity": 0.5905290207874728,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i3:lotus:leaf:1:8"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  218
+                ],
+                "at": [
+                  0.5366275907610748,
+                  0.698375
+                ],
+                "scale": 0.51156
+              },
+              "depth": 0.02375,
+              "opacity": 0.6038189625775674,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i3:lotus:leaf:1:9"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  218
+                ],
+                "at": [
+                  0.09068991194692455,
+                  0.7066250000000001
+                ],
+                "scale": 0.5300400000000001
+              },
+              "depth": 0.026250000000000002,
+              "opacity": 0.6190328365264925,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i3:lotus:leaf:1:10"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  218
+                ],
+                "at": [
+                  0.8122322331327743,
+                  0.714875
+                ],
+                "scale": 0.5485200000000001
+              },
+              "depth": 0.028749999999999998,
+              "opacity": 0.6333030811951379,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i3:lotus:leaf:1:11"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  218
+                ],
+                "at": [
+                  0.3662945543186259,
+                  0.723125
+                ],
+                "scale": 0.5670000000000001
+              },
+              "depth": 0.03125,
+              "opacity": 0.6461841392689966,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i3:lotus:leaf:1:12"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  218
+                ],
+                "at": [
+                  0.035,
+                  0.731375
+                ],
+                "scale": 0.5854800000000001
+              },
+              "depth": 0.03375,
+              "opacity": 0.6575344378040637,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i3:lotus:leaf:1:13"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  218
+                ],
+                "at": [
+                  0.6418991966903274,
+                  0.739625
+                ],
+                "scale": 0.60396
+              },
+              "depth": 0.03625,
+              "opacity": 0.6684311633562436,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i3:lotus:leaf:1:14"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  218
+                ],
+                "at": [
+                  0.19596151787617688,
+                  0.7478750000000001
+                ],
+                "scale": 0.62244
+              },
+              "depth": 0.03875000000000001,
+              "opacity": 0.6852951537200949,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i3:lotus:leaf:1:15"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  218
+                ],
+                "at": [
+                  0.9175038390620266,
+                  0.7561249999999999
+                ],
+                "scale": 0.6409199999999999
+              },
+              "depth": 0.04125,
+              "opacity": 0.6929952741042478,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i3:lotus:leaf:1:16"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  218
+                ],
+                "at": [
+                  0.4715661602478763,
+                  0.764375
+                ],
+                "scale": 0.6594000000000001
+              },
+              "depth": 0.043750000000000004,
+              "opacity": 0.7109430395757197,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i3:lotus:leaf:1:17"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  218
+                ],
+                "at": [
+                  0.035,
+                  0.772625
+                ],
+                "scale": 0.6778800000000001
+              },
+              "depth": 0.046250000000000006,
+              "opacity": 0.7200056194118806,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i3:lotus:leaf:1:18"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  218
+                ],
+                "at": [
+                  0.7471708026195776,
+                  0.780875
+                ],
+                "scale": 0.6963600000000001
+              },
+              "depth": 0.04875,
+              "opacity": 0.7373652616373263,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i3:lotus:leaf:1:19"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  218
+                ],
+                "at": [
+                  0.3012331238054273,
+                  0.789125
+                ],
+                "scale": 0.71484
+              },
+              "depth": 0.05125,
+              "opacity": 0.7457512309821556,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i3:lotus:leaf:1:20"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  218
+                ],
+                "at": [
+                  0.965,
+                  0.797375
+                ],
+                "scale": 0.73332
+              },
+              "depth": 0.05375,
+              "opacity": 0.7596897168624099,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i3:lotus:leaf:1:21"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  218
+                ],
+                "at": [
+                  0.5768377661771267,
+                  0.805625
+                ],
+                "scale": 0.7518000000000001
+              },
+              "depth": 0.05625,
+              "opacity": 0.7763697053679381,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i3:lotus:leaf:1:22"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  218
+                ],
+                "at": [
+                  0.13090008736297631,
+                  0.813875
+                ],
+                "scale": 0.7702800000000002
+              },
+              "depth": 0.058750000000000004,
+              "opacity": 0.788525962618075,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i3:lotus:leaf:1:23"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  218
+                ],
+                "at": [
+                  0.852442408548828,
+                  0.822125
+                ],
+                "scale": 0.7887600000000001
+              },
+              "depth": 0.061250000000000006,
+              "opacity": 0.7981928418634227,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i3:lotus:leaf:1:24"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  218
+                ],
+                "at": [
+                  0.40650472973467555,
+                  0.830375
+                ],
+                "scale": 0.8072400000000001
+              },
+              "depth": 0.06375,
+              "opacity": 0.8142997138574137,
+              "variant": 2,
+              "tone": "near",
+              "id": "i3:lotus:leaf:1:25"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  218
+                ],
+                "at": [
+                  0.035,
+                  0.838625
+                ],
+                "scale": 0.82572
+              },
+              "depth": 0.06625,
+              "opacity": 0.8281548804380582,
+              "variant": 2,
+              "tone": "near",
+              "id": "i3:lotus:leaf:1:26"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  218
+                ],
+                "at": [
+                  0.6821093721063791,
+                  0.846875
+                ],
+                "scale": 0.8442000000000001
+              },
+              "depth": 0.06875,
+              "opacity": 0.840476657261746,
+              "variant": 2,
+              "tone": "near",
+              "id": "i3:lotus:leaf:1:27"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  218
+                ],
+                "at": [
+                  0.2361716932922288,
+                  0.855125
+                ],
+                "scale": 0.8626800000000002
+              },
+              "depth": 0.07125000000000001,
+              "opacity": 0.8489094648254569,
+              "variant": 2,
+              "tone": "near",
+              "id": "i3:lotus:leaf:1:28"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  218
+                ],
+                "at": [
+                  0.9577140144780785,
+                  0.863375
+                ],
+                "scale": 0.8811600000000002
+              },
+              "depth": 0.07375000000000001,
+              "opacity": 0.8660268724803115,
+              "variant": 2,
+              "tone": "near",
+              "id": "i3:lotus:leaf:1:29"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  218
+                ],
+                "at": [
+                  0.5117763356639281,
+                  0.871625
+                ],
+                "scale": 0.8996400000000001
+              },
+              "depth": 0.07625,
+              "opacity": 0.8784673147116788,
+              "variant": 2,
+              "tone": "near",
+              "id": "i3:lotus:leaf:1:30"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  218
+                ],
+                "at": [
+                  0.06583865684977774,
+                  0.879875
+                ],
+                "scale": 0.91812
+              },
+              "depth": 0.07875,
+              "opacity": 0.8902662684697076,
+              "variant": 2,
+              "tone": "near",
+              "id": "i3:lotus:leaf:1:31"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  218
+                ],
+                "at": [
+                  0.7873809780356273,
+                  0.888125
+                ],
+                "scale": 0.9366
+              },
+              "depth": 0.08125,
+              "opacity": 0.9014256412148824,
+              "variant": 2,
+              "tone": "near",
+              "id": "i3:lotus:leaf:1:32"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  218
+                ],
+                "at": [
+                  0.341443299221477,
+                  0.896375
+                ],
+                "scale": 0.9550800000000003
+              },
+              "depth": 0.08375,
+              "opacity": 0.9146260999935563,
+              "variant": 2,
+              "tone": "near",
+              "id": "i3:lotus:leaf:1:33"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  218
+                ],
+                "at": [
+                  0.965,
+                  0.904625
+                ],
+                "scale": 0.9735600000000002
+              },
+              "depth": 0.08625000000000001,
+              "opacity": 0.9283063661675086,
+              "variant": 2,
+              "tone": "near",
+              "id": "i3:lotus:leaf:1:34"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  218
+                ],
+                "at": [
+                  0.6170479415931764,
+                  0.912875
+                ],
+                "scale": 0.9920400000000001
+              },
+              "depth": 0.08875,
+              "opacity": 0.940476658749173,
+              "variant": 2,
+              "tone": "near",
+              "id": "i3:lotus:leaf:1:35"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  218
+                ],
+                "at": [
+                  0.17111026277902608,
+                  0.921125
+                ],
+                "scale": 1.01052
+              },
+              "depth": 0.09125,
+              "opacity": 0.9577343167312793,
+              "variant": 2,
+              "tone": "near",
+              "id": "i3:lotus:leaf:1:36"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  218
+                ],
+                "at": [
+                  0.8926525839648798,
+                  0.9293750000000001
+                ],
+                "scale": 1.0290000000000001
+              },
+              "depth": 0.09375,
+              "opacity": 0.969440075474116,
+              "variant": 2,
+              "tone": "near",
+              "id": "i3:lotus:leaf:1:37"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  218
+                ],
+                "at": [
+                  0.44671490515072954,
+                  0.937625
+                ],
+                "scale": 1.0474800000000002
+              },
+              "depth": 0.09625,
+              "opacity": 0.9816337541053188,
+              "variant": 2,
+              "tone": "near",
+              "id": "i3:lotus:leaf:1:38"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  218
+                ],
+                "at": [
+                  0.035,
+                  0.945875
+                ],
+                "scale": 1.0659600000000002
+              },
+              "depth": 0.09875,
+              "opacity": 0.9896,
+              "variant": 2,
+              "tone": "near",
+              "id": "i3:lotus:leaf:1:39"
+            }
+          ],
+          "singleUnit": true,
+          "quantity": {
+            "items": [
+              {
+                "entity": "i3",
+                "mode": "many",
+                "min": null,
+                "max": null,
+                "unit": null,
+                "scope": "unspecified",
+                "extent": "spread",
+                "evidence": [
+                  "莲叶何田田"
+                ],
+                "basis": "model"
+              }
+            ],
+            "rendered": 40,
+            "exact": false,
+            "collective": true,
+            "partUnsupported": false
+          },
+          "quantityLabel": "成片分布；本地试画 40 个单元",
+          "z": 18,
+          "visual": {
+            "role": "vegetation",
+            "brushStrength": 1.2
+          },
+          "performance": {
+            "rhythm": "gust",
+            "rate": 0.62,
+            "amplitude": 0.65,
+            "phase": 3.8830085198369844
+          },
+          "id": "i3:lotus:leaf:1",
+          "interaction": {
+            "mode": "instance",
+            "groupId": "i3:lotus:leaf:1"
+          }
+        },
+        {
+          "tool": "water",
+          "entities": [],
+          "projectedEntities": [],
+          "names": [
+            "构图依托·水域"
+          ],
+          "options": {
+            "form": "plane"
+          },
+          "animate": true,
+          "placement": {
+            "anchor": [
+              320,
+              135
+            ],
+            "at": [
+              0.5,
+              0.45
+            ],
+            "scale": 1.6
+          },
+          "instances": [
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  135
+                ],
+                "at": [
+                  0.5,
+                  0.45
+                ],
+                "scale": 1.65
+              },
+              "variant": 0,
+              "depth": 0,
+              "opacity": 1,
+              "tone": "far",
+              "id": "inferred:water:plane:2:0"
+            }
+          ],
+          "singleUnit": false,
+          "inferred": true,
+          "provenance": {
+            "basis": "local-context",
+            "reason": "整体场景解释为 waterside，本地补充必要 water 依托",
+            "semanticPath": "scene.setting"
+          },
+          "quantity": {
+            "rendered": 1,
+            "exact": false,
+            "items": []
+          },
+          "quantityLabel": "本地环境依托，不计入原文意象覆盖",
+          "z": -10,
+          "clip": [
+            [
+              0,
+              0.53
+            ],
+            [
+              1,
+              0.53
+            ],
+            [
+              1,
+              1.04
+            ],
+            [
+              0,
+              1.04
+            ]
+          ],
+          "surface": {
+            "top": 0.53,
+            "bottom": 1
+          },
+          "visual": {
+            "role": "water",
+            "brushStrength": 1.35
+          },
+          "performance": {
+            "rhythm": "continuous",
+            "rate": 0.9,
+            "amplitude": 0.9,
+            "phase": 1.4828317324943823
+          },
+          "id": "inferred:water:plane:2",
+          "interaction": {
+            "mode": "group",
+            "groupId": "inferred:water:plane:2"
+          }
+        }
+      ],
+      "spatial": [],
+      "scene": {
+        "kind": "study",
+        "notes": [
+          "通用场景层先组织地面、水域、群落和主体，再比较三个布局的依托、相对位置、尺度与遮挡；检查通过不代表审美已通过。"
+        ],
+        "waterline": null,
+        "semanticSetting": {
+          "kind": "waterside",
+          "basis": "inferred",
+          "evidence": [
+            "江南可采莲"
+          ]
+        },
+        "semanticEffects": [
+          {
+            "path": "scene.setting",
+            "consumer": "场景依托",
+            "status": "applied",
+            "effect": "必要环境以独立推断背景表示，不新增原文实体"
+          }
+        ],
+        "organization": {
+          "version": "1.0",
+          "strategy": "general-constraints",
+          "regions": {
+            "water": [
+              [
+                0,
+                0.53
+              ],
+              [
+                1,
+                0.53
+              ],
+              [
+                1,
+                1.04
+              ],
+              [
+                0,
+                1.04
+              ]
+            ]
+          },
+          "candidates": [
+            {
+              "layout": 2,
+              "orientation": "近水远照",
+              "errors": 0,
+              "cost": 564.026,
+              "score": 1365.064,
+              "metrics": {
+                "overlapPenalty": 44.499,
+                "balancePenalty": 0.004,
+                "motifFootprint": 1.753,
+                "landArea": 0
+              }
+            },
+            {
+              "layout": 0,
+              "orientation": "阔水远天",
+              "errors": 0,
+              "cost": 580.767,
+              "score": 1406.951,
+              "metrics": {
+                "overlapPenalty": 45.889,
+                "balancePenalty": 0.013,
+                "motifFootprint": 1.753,
+                "landArea": 0
+              }
+            },
+            {
+              "layout": 1,
+              "orientation": "水面横展",
+              "errors": 0,
+              "cost": 587.153,
+              "score": 1422.907,
+              "metrics": {
+                "overlapPenalty": 46.423,
+                "balancePenalty": 0.01,
+                "motifFootprint": 1.753,
+                "landArea": 0
+              }
+            }
+          ],
+          "repairs": [
+            {
+              "type": "support-added",
+              "reason": "整体场景解释为 waterside，本地补充必要 water 依托"
+            }
+          ],
+          "limitations": [
+            "几何检查不判定诗意理解或审美合格",
+            "动作时序与整首诗的场景切换尚未编排"
+          ],
+          "topology": "近水远照",
+          "layout": 2,
+          "orientation": "近水远照",
+          "audit": {
+            "scope": "implemented-geometry-and-drawing-gaps",
+            "coverage": {
+              "scope": "extracted-entities-only",
+              "present": 3,
+              "mapped": 2,
+              "parameters": [],
+              "missing": [
+                {
+                  "id": "i1",
+                  "name": "江南"
+                }
+              ]
+            },
+            "checks": [
+              "presence",
+              "count",
+              "finite",
+              "support",
+              "scale",
+              "relative-position",
+              "depth",
+              "grove-spread",
+              "drawing-gaps"
+            ],
+            "status": "needs-review",
+            "errors": 0,
+            "review": 1,
+            "issues": [
+              {
+                "code": "drawing-gaps",
+                "severity": "review",
+                "message": "还有 1 项已提取线索尚未转成画面：江南"
+              }
+            ],
+            "metrics": {
+              "overlapPenalty": 44.499,
+              "balancePenalty": 0.004,
+              "motifFootprint": 1.753,
+              "landArea": 0
+            },
+            "cost": 564.026,
+            "aestheticAcceptance": "pending-user"
+          },
+          "graph": {
+            "nodes": [
+              {
+                "id": "l0",
+                "entities": [
+                  "i2"
+                ],
+                "tool": "lotus",
+                "role": "aquatic-vegetation",
+                "habitat": "water",
+                "inferred": false,
+                "support": "l2"
+              },
+              {
+                "id": "l1",
+                "entities": [
+                  "i3"
+                ],
+                "tool": "lotus",
+                "role": "aquatic-vegetation",
+                "habitat": "water",
+                "inferred": false,
+                "support": "l2"
+              },
+              {
+                "id": "l2",
+                "entities": [],
+                "tool": "water",
+                "role": "water",
+                "habitat": null,
+                "inferred": true,
+                "support": null
+              }
+            ],
+            "edges": [
+              {
+                "type": "supported-by",
+                "source": "l0",
+                "target": "l2",
+                "basis": "local-composition",
+                "habitat": "water"
+              },
+              {
+                "type": "supported-by",
+                "source": "l1",
+                "target": "l2",
+                "basis": "local-composition",
+                "habitat": "water"
+              }
+            ],
+            "setting": "study"
+          }
+        },
+        "displayAudit": {
+          "scope": "display-scale-separation-and-habitat",
+          "issues": [],
+          "errors": 0,
+          "aestheticAcceptance": "pending-user"
+        }
+      },
+      "compositions": [
+        {
+          "id": "space-2",
+          "label": "近水远照",
+          "description": "先安排连续水域与地表，再按主次与远近安放景物",
+          "layers": [
+            {
+              "tool": "lotus",
+              "entities": [
+                "i2"
+              ],
+              "projectedEntities": [],
+              "names": [
+                "莲"
+              ],
+              "options": {
+                "form": "flower",
+                "state": "open"
+              },
+              "animate": true,
+              "placement": {
+                "anchor": [
+                  320,
+                  330
+                ],
+                "at": [
+                  0.5310345409443602,
+                  0.6756326426630436
+                ],
+                "scale": 0.95
+              },
+              "semanticGroup": {
+                "members": [
+                  "i2",
+                  "i3"
+                ],
+                "role": "subject",
+                "pattern": "field",
+                "depth": "unspecified",
+                "basis": "inferred",
+                "evidence": [
+                  "江南可采莲",
+                  "莲叶何田田"
+                ],
+                "index": 0
+              },
+              "semanticEffects": [
+                {
+                  "path": "scene.groups[0].role",
+                  "consumer": "主次布局",
+                  "effect": "主体相对突出",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[0].pattern",
+                  "consumer": "群落布局",
+                  "effect": "按 field 组织显示单元；不覆盖明确数量",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[0].depth",
+                  "consumer": "远近布局",
+                  "effect": "远近未明，保持本地默认",
+                  "status": "skipped"
+                }
+              ],
+              "semanticEnergy": true,
+              "timeScale": 0.45,
+              "instances": [
+                {
+                  "placement": {
+                    "anchor": [
+                      328,
+                      169
+                    ],
+                    "at": [
+                      0.23837754183925658,
+                      0.5304347826086957
+                    ],
+                    "scale": 0.35910000000000003
+                  },
+                  "depth": 0.003125,
+                  "opacity": 0.5216,
+                  "variant": 0,
+                  "tone": "far",
+                  "id": "i2:lotus:flower:0:0"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      328,
+                      169
+                    ],
+                    "at": [
+                      0.9536146984966707,
+                      0.5409375
+                    ],
+                    "scale": 0.40530000000000005
+                  },
+                  "depth": 0.009375000000000001,
+                  "opacity": 0.5350786555898376,
+                  "variant": 0,
+                  "tone": "far",
+                  "id": "i2:lotus:flower:0:1"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      328,
+                      169
+                    ],
+                    "at": [
+                      0.507677019682521,
+                      0.5615625
+                    ],
+                    "scale": 0.45150000000000007
+                  },
+                  "depth": 0.015625,
+                  "opacity": 0.5641317139999009,
+                  "variant": 0,
+                  "tone": "far",
+                  "id": "i2:lotus:flower:0:2"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      328,
+                      169
+                    ],
+                    "at": [
+                      0.061739340868371184,
+                      0.5821875
+                    ],
+                    "scale": 0.49770000000000003
+                  },
+                  "depth": 0.021875000000000002,
+                  "opacity": 0.597427942192182,
+                  "variant": 0,
+                  "tone": "far",
+                  "id": "i2:lotus:flower:0:3"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      328,
+                      169
+                    ],
+                    "at": [
+                      0.7832816620542213,
+                      0.6028125
+                    ],
+                    "scale": 0.5439
+                  },
+                  "depth": 0.028125,
+                  "opacity": 0.6325806553107686,
+                  "variant": 0,
+                  "tone": "far",
+                  "id": "i2:lotus:flower:0:4"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      328,
+                      169
+                    ],
+                    "at": [
+                      0.33734398324007153,
+                      0.6234375
+                    ],
+                    "scale": 0.5901000000000001
+                  },
+                  "depth": 0.034375,
+                  "opacity": 0.6651074469994929,
+                  "variant": 0,
+                  "tone": "far",
+                  "id": "i2:lotus:flower:0:5"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      328,
+                      169
+                    ],
+                    "at": [
+                      0.965,
+                      0.6440625
+                    ],
+                    "scale": 0.6363000000000001
+                  },
+                  "depth": 0.040625,
+                  "opacity": 0.699523885906412,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i2:lotus:flower:0:6"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      328,
+                      169
+                    ],
+                    "at": [
+                      0.6129486256117709,
+                      0.6646875
+                    ],
+                    "scale": 0.6825000000000001
+                  },
+                  "depth": 0.046875,
+                  "opacity": 0.7214364883480011,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i2:lotus:flower:0:7"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      328,
+                      169
+                    ],
+                    "at": [
+                      0.16701094679762052,
+                      0.6853125
+                    ],
+                    "scale": 0.7287000000000001
+                  },
+                  "depth": 0.053125000000000006,
+                  "opacity": 0.7593317113387748,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i2:lotus:flower:0:8"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      328,
+                      169
+                    ],
+                    "at": [
+                      0.8885532679834712,
+                      0.7059375
+                    ],
+                    "scale": 0.7749000000000001
+                  },
+                  "depth": 0.059375000000000004,
+                  "opacity": 0.7862820917079516,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i2:lotus:flower:0:9"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      328,
+                      169
+                    ],
+                    "at": [
+                      0.4426155891693208,
+                      0.7265625
+                    ],
+                    "scale": 0.8211000000000002
+                  },
+                  "depth": 0.065625,
+                  "opacity": 0.8195222014206229,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i2:lotus:flower:0:10"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      328,
+                      169
+                    ],
+                    "at": [
+                      0.035,
+                      0.7471875
+                    ],
+                    "scale": 0.8673000000000001
+                  },
+                  "depth": 0.07187500000000001,
+                  "opacity": 0.8524071393810737,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i2:lotus:flower:0:11"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      328,
+                      169
+                    ],
+                    "at": [
+                      0.7182202315410222,
+                      0.7678125
+                    ],
+                    "scale": 0.9135000000000001
+                  },
+                  "depth": 0.078125,
+                  "opacity": 0.8882947784633434,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i2:lotus:flower:0:12"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      328,
+                      169
+                    ],
+                    "at": [
+                      0.2722825527268739,
+                      0.7884375
+                    ],
+                    "scale": 0.9597000000000001
+                  },
+                  "depth": 0.084375,
+                  "opacity": 0.9252046534678666,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i2:lotus:flower:0:13"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      328,
+                      169
+                    ],
+                    "at": [
+                      0.965,
+                      0.8090625
+                    ],
+                    "scale": 1.0059000000000002
+                  },
+                  "depth": 0.09062500000000001,
+                  "opacity": 0.9498649251429596,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i2:lotus:flower:0:14"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      328,
+                      169
+                    ],
+                    "at": [
+                      0.5478871950985733,
+                      0.8296875
+                    ],
+                    "scale": 1.0521000000000003
+                  },
+                  "depth": 0.096875,
+                  "opacity": 0.9896,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i2:lotus:flower:0:15"
+                }
+              ],
+              "singleUnit": true,
+              "quantity": {
+                "items": [
+                  {
+                    "entity": "i2",
+                    "mode": "unspecified",
+                    "min": null,
+                    "max": null,
+                    "unit": null,
+                    "scope": "unspecified",
+                    "extent": "unspecified",
+                    "evidence": [],
+                    "basis": "model"
+                  }
+                ],
+                "rendered": 16,
+                "exact": false,
+                "collective": true,
+                "partUnsupported": false
+              },
+              "quantityLabel": "成片分布；本地试画 16 个单元",
+              "z": 19,
+              "visual": {
+                "role": "blossom",
+                "brushStrength": 1.65
+              },
+              "performance": {
+                "rhythm": "gust",
+                "rate": 0.62,
+                "amplitude": 0.65,
+                "phase": 0
+              },
+              "id": "i2:lotus:flower:0",
+              "interaction": {
+                "mode": "instance",
+                "groupId": "i2:lotus:flower:0"
+              }
+            },
+            {
+              "tool": "lotus",
+              "entities": [
+                "i3"
+              ],
+              "projectedEntities": [],
+              "names": [
+                "莲叶"
+              ],
+              "options": {
+                "form": "leaf"
+              },
+              "animate": true,
+              "placement": {
+                "anchor": [
+                  320,
+                  330
+                ],
+                "at": [
+                  0.4956724388306207,
+                  0.7849999999999999
+                ],
+                "scale": 0.95
+              },
+              "semanticGroup": {
+                "members": [
+                  "i2",
+                  "i3"
+                ],
+                "role": "subject",
+                "pattern": "field",
+                "depth": "unspecified",
+                "basis": "inferred",
+                "evidence": [
+                  "江南可采莲",
+                  "莲叶何田田"
+                ],
+                "index": 0
+              },
+              "semanticEffects": [
+                {
+                  "path": "scene.groups[0].role",
+                  "consumer": "主次布局",
+                  "effect": "主体相对突出",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[0].pattern",
+                  "consumer": "群落布局",
+                  "effect": "按 field 组织显示单元；不覆盖明确数量",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[0].depth",
+                  "consumer": "远近布局",
+                  "effect": "远近未明，保持本地默认",
+                  "status": "skipped"
+                }
+              ],
+              "semanticEnergy": true,
+              "timeScale": 0.45,
+              "instances": [
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.965,
+                      0.624125
+                    ],
+                    "scale": 0.34524
+                  },
+                  "depth": 0.0012500000000000002,
+                  "opacity": 0.5216,
+                  "variant": 0,
+                  "tone": "far",
+                  "id": "i3:lotus:leaf:1:0"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.6016890212742745,
+                      0.632375
+                    ],
+                    "scale": 0.36372000000000004
+                  },
+                  "depth": 0.00375,
+                  "opacity": 0.5216,
+                  "variant": 0,
+                  "tone": "far",
+                  "id": "i3:lotus:leaf:1:1"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.15575134246012468,
+                      0.640625
+                    ],
+                    "scale": 0.38220000000000004
+                  },
+                  "depth": 0.00625,
+                  "opacity": 0.5216,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:lotus:leaf:1:2"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.8772936636459749,
+                      0.648875
+                    ],
+                    "scale": 0.40068000000000004
+                  },
+                  "depth": 0.008749999999999999,
+                  "opacity": 0.5273552502395585,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:lotus:leaf:1:3"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.43135598483182497,
+                      0.657125
+                    ],
+                    "scale": 0.41916000000000003
+                  },
+                  "depth": 0.011250000000000001,
+                  "opacity": 0.5418583347594598,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:lotus:leaf:1:4"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.035,
+                      0.665375
+                    ],
+                    "scale": 0.43764000000000003
+                  },
+                  "depth": 0.013750000000000002,
+                  "opacity": 0.5533344523191918,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:lotus:leaf:1:5"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.7069606272035249,
+                      0.673625
+                    ],
+                    "scale": 0.45612
+                  },
+                  "depth": 0.01625,
+                  "opacity": 0.5625784790996811,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:lotus:leaf:1:6"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.26102294838937445,
+                      0.681875
+                    ],
+                    "scale": 0.4746
+                  },
+                  "depth": 0.018750000000000003,
+                  "opacity": 0.5784828320464468,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:lotus:leaf:1:7"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.965,
+                      0.690125
+                    ],
+                    "scale": 0.4930800000000001
+                  },
+                  "depth": 0.02125,
+                  "opacity": 0.5905290207874728,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:lotus:leaf:1:8"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.5366275907610748,
+                      0.698375
+                    ],
+                    "scale": 0.51156
+                  },
+                  "depth": 0.02375,
+                  "opacity": 0.6038189625775674,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:lotus:leaf:1:9"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.09068991194692455,
+                      0.7066250000000001
+                    ],
+                    "scale": 0.5300400000000001
+                  },
+                  "depth": 0.026250000000000002,
+                  "opacity": 0.6190328365264925,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:lotus:leaf:1:10"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.8122322331327743,
+                      0.714875
+                    ],
+                    "scale": 0.5485200000000001
+                  },
+                  "depth": 0.028749999999999998,
+                  "opacity": 0.6333030811951379,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:lotus:leaf:1:11"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.3662945543186259,
+                      0.723125
+                    ],
+                    "scale": 0.5670000000000001
+                  },
+                  "depth": 0.03125,
+                  "opacity": 0.6461841392689966,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:lotus:leaf:1:12"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.035,
+                      0.731375
+                    ],
+                    "scale": 0.5854800000000001
+                  },
+                  "depth": 0.03375,
+                  "opacity": 0.6575344378040637,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:lotus:leaf:1:13"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.6418991966903274,
+                      0.739625
+                    ],
+                    "scale": 0.60396
+                  },
+                  "depth": 0.03625,
+                  "opacity": 0.6684311633562436,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:lotus:leaf:1:14"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.19596151787617688,
+                      0.7478750000000001
+                    ],
+                    "scale": 0.62244
+                  },
+                  "depth": 0.03875000000000001,
+                  "opacity": 0.6852951537200949,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:lotus:leaf:1:15"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.9175038390620266,
+                      0.7561249999999999
+                    ],
+                    "scale": 0.6409199999999999
+                  },
+                  "depth": 0.04125,
+                  "opacity": 0.6929952741042478,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:lotus:leaf:1:16"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.4715661602478763,
+                      0.764375
+                    ],
+                    "scale": 0.6594000000000001
+                  },
+                  "depth": 0.043750000000000004,
+                  "opacity": 0.7109430395757197,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:lotus:leaf:1:17"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.035,
+                      0.772625
+                    ],
+                    "scale": 0.6778800000000001
+                  },
+                  "depth": 0.046250000000000006,
+                  "opacity": 0.7200056194118806,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:lotus:leaf:1:18"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.7471708026195776,
+                      0.780875
+                    ],
+                    "scale": 0.6963600000000001
+                  },
+                  "depth": 0.04875,
+                  "opacity": 0.7373652616373263,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:lotus:leaf:1:19"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.3012331238054273,
+                      0.789125
+                    ],
+                    "scale": 0.71484
+                  },
+                  "depth": 0.05125,
+                  "opacity": 0.7457512309821556,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:lotus:leaf:1:20"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.965,
+                      0.797375
+                    ],
+                    "scale": 0.73332
+                  },
+                  "depth": 0.05375,
+                  "opacity": 0.7596897168624099,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:lotus:leaf:1:21"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.5768377661771267,
+                      0.805625
+                    ],
+                    "scale": 0.7518000000000001
+                  },
+                  "depth": 0.05625,
+                  "opacity": 0.7763697053679381,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:lotus:leaf:1:22"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.13090008736297631,
+                      0.813875
+                    ],
+                    "scale": 0.7702800000000002
+                  },
+                  "depth": 0.058750000000000004,
+                  "opacity": 0.788525962618075,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:lotus:leaf:1:23"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.852442408548828,
+                      0.822125
+                    ],
+                    "scale": 0.7887600000000001
+                  },
+                  "depth": 0.061250000000000006,
+                  "opacity": 0.7981928418634227,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:lotus:leaf:1:24"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.40650472973467555,
+                      0.830375
+                    ],
+                    "scale": 0.8072400000000001
+                  },
+                  "depth": 0.06375,
+                  "opacity": 0.8142997138574137,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i3:lotus:leaf:1:25"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.035,
+                      0.838625
+                    ],
+                    "scale": 0.82572
+                  },
+                  "depth": 0.06625,
+                  "opacity": 0.8281548804380582,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i3:lotus:leaf:1:26"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.6821093721063791,
+                      0.846875
+                    ],
+                    "scale": 0.8442000000000001
+                  },
+                  "depth": 0.06875,
+                  "opacity": 0.840476657261746,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i3:lotus:leaf:1:27"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.2361716932922288,
+                      0.855125
+                    ],
+                    "scale": 0.8626800000000002
+                  },
+                  "depth": 0.07125000000000001,
+                  "opacity": 0.8489094648254569,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i3:lotus:leaf:1:28"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.9577140144780785,
+                      0.863375
+                    ],
+                    "scale": 0.8811600000000002
+                  },
+                  "depth": 0.07375000000000001,
+                  "opacity": 0.8660268724803115,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i3:lotus:leaf:1:29"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.5117763356639281,
+                      0.871625
+                    ],
+                    "scale": 0.8996400000000001
+                  },
+                  "depth": 0.07625,
+                  "opacity": 0.8784673147116788,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i3:lotus:leaf:1:30"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.06583865684977774,
+                      0.879875
+                    ],
+                    "scale": 0.91812
+                  },
+                  "depth": 0.07875,
+                  "opacity": 0.8902662684697076,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i3:lotus:leaf:1:31"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.7873809780356273,
+                      0.888125
+                    ],
+                    "scale": 0.9366
+                  },
+                  "depth": 0.08125,
+                  "opacity": 0.9014256412148824,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i3:lotus:leaf:1:32"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.341443299221477,
+                      0.896375
+                    ],
+                    "scale": 0.9550800000000003
+                  },
+                  "depth": 0.08375,
+                  "opacity": 0.9146260999935563,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i3:lotus:leaf:1:33"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.965,
+                      0.904625
+                    ],
+                    "scale": 0.9735600000000002
+                  },
+                  "depth": 0.08625000000000001,
+                  "opacity": 0.9283063661675086,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i3:lotus:leaf:1:34"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.6170479415931764,
+                      0.912875
+                    ],
+                    "scale": 0.9920400000000001
+                  },
+                  "depth": 0.08875,
+                  "opacity": 0.940476658749173,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i3:lotus:leaf:1:35"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.17111026277902608,
+                      0.921125
+                    ],
+                    "scale": 1.01052
+                  },
+                  "depth": 0.09125,
+                  "opacity": 0.9577343167312793,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i3:lotus:leaf:1:36"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.8926525839648798,
+                      0.9293750000000001
+                    ],
+                    "scale": 1.0290000000000001
+                  },
+                  "depth": 0.09375,
+                  "opacity": 0.969440075474116,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i3:lotus:leaf:1:37"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.44671490515072954,
+                      0.937625
+                    ],
+                    "scale": 1.0474800000000002
+                  },
+                  "depth": 0.09625,
+                  "opacity": 0.9816337541053188,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i3:lotus:leaf:1:38"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.035,
+                      0.945875
+                    ],
+                    "scale": 1.0659600000000002
+                  },
+                  "depth": 0.09875,
+                  "opacity": 0.9896,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i3:lotus:leaf:1:39"
+                }
+              ],
+              "singleUnit": true,
+              "quantity": {
+                "items": [
+                  {
+                    "entity": "i3",
+                    "mode": "many",
+                    "min": null,
+                    "max": null,
+                    "unit": null,
+                    "scope": "unspecified",
+                    "extent": "spread",
+                    "evidence": [
+                      "莲叶何田田"
+                    ],
+                    "basis": "model"
+                  }
+                ],
+                "rendered": 40,
+                "exact": false,
+                "collective": true,
+                "partUnsupported": false
+              },
+              "quantityLabel": "成片分布；本地试画 40 个单元",
+              "z": 18,
+              "visual": {
+                "role": "vegetation",
+                "brushStrength": 1.2
+              },
+              "performance": {
+                "rhythm": "gust",
+                "rate": 0.62,
+                "amplitude": 0.65,
+                "phase": 3.8830085198369844
+              },
+              "id": "i3:lotus:leaf:1",
+              "interaction": {
+                "mode": "instance",
+                "groupId": "i3:lotus:leaf:1"
+              }
+            },
+            {
+              "tool": "water",
+              "entities": [],
+              "projectedEntities": [],
+              "names": [
+                "构图依托·水域"
+              ],
+              "options": {
+                "form": "plane"
+              },
+              "animate": true,
+              "placement": {
+                "anchor": [
+                  320,
+                  135
+                ],
+                "at": [
+                  0.5,
+                  0.45
+                ],
+                "scale": 1.6
+              },
+              "instances": [
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      135
+                    ],
+                    "at": [
+                      0.5,
+                      0.45
+                    ],
+                    "scale": 1.65
+                  },
+                  "variant": 0,
+                  "depth": 0,
+                  "opacity": 1,
+                  "tone": "far",
+                  "id": "inferred:water:plane:2:0"
+                }
+              ],
+              "singleUnit": false,
+              "inferred": true,
+              "provenance": {
+                "basis": "local-context",
+                "reason": "整体场景解释为 waterside，本地补充必要 water 依托",
+                "semanticPath": "scene.setting"
+              },
+              "quantity": {
+                "rendered": 1,
+                "exact": false,
+                "items": []
+              },
+              "quantityLabel": "本地环境依托，不计入原文意象覆盖",
+              "z": -10,
+              "clip": [
+                [
+                  0,
+                  0.53
+                ],
+                [
+                  1,
+                  0.53
+                ],
+                [
+                  1,
+                  1.04
+                ],
+                [
+                  0,
+                  1.04
+                ]
+              ],
+              "surface": {
+                "top": 0.53,
+                "bottom": 1
+              },
+              "visual": {
+                "role": "water",
+                "brushStrength": 1.35
+              },
+              "performance": {
+                "rhythm": "continuous",
+                "rate": 0.9,
+                "amplitude": 0.9,
+                "phase": 1.4828317324943823
+              },
+              "id": "inferred:water:plane:2",
+              "interaction": {
+                "mode": "group",
+                "groupId": "inferred:water:plane:2"
+              }
+            }
+          ],
+          "scene": {
+            "kind": "study",
+            "notes": [
+              "通用场景层先组织地面、水域、群落和主体，再比较三个布局的依托、相对位置、尺度与遮挡；检查通过不代表审美已通过。"
+            ],
+            "waterline": null,
+            "semanticSetting": {
+              "kind": "waterside",
+              "basis": "inferred",
+              "evidence": [
+                "江南可采莲"
+              ]
+            },
+            "semanticEffects": [
+              {
+                "path": "scene.setting",
+                "consumer": "场景依托",
+                "status": "applied",
+                "effect": "必要环境以独立推断背景表示，不新增原文实体"
+              }
+            ],
+            "organization": {
+              "version": "1.0",
+              "strategy": "general-constraints",
+              "regions": {
+                "water": [
+                  [
+                    0,
+                    0.53
+                  ],
+                  [
+                    1,
+                    0.53
+                  ],
+                  [
+                    1,
+                    1.04
+                  ],
+                  [
+                    0,
+                    1.04
+                  ]
+                ]
+              },
+              "candidates": [
+                {
+                  "layout": 2,
+                  "orientation": "近水远照",
+                  "errors": 0,
+                  "cost": 564.026,
+                  "score": 1365.064,
+                  "metrics": {
+                    "overlapPenalty": 44.499,
+                    "balancePenalty": 0.004,
+                    "motifFootprint": 1.753,
+                    "landArea": 0
+                  }
+                },
+                {
+                  "layout": 0,
+                  "orientation": "阔水远天",
+                  "errors": 0,
+                  "cost": 580.767,
+                  "score": 1406.951,
+                  "metrics": {
+                    "overlapPenalty": 45.889,
+                    "balancePenalty": 0.013,
+                    "motifFootprint": 1.753,
+                    "landArea": 0
+                  }
+                },
+                {
+                  "layout": 1,
+                  "orientation": "水面横展",
+                  "errors": 0,
+                  "cost": 587.153,
+                  "score": 1422.907,
+                  "metrics": {
+                    "overlapPenalty": 46.423,
+                    "balancePenalty": 0.01,
+                    "motifFootprint": 1.753,
+                    "landArea": 0
+                  }
+                }
+              ],
+              "repairs": [
+                {
+                  "type": "support-added",
+                  "reason": "整体场景解释为 waterside，本地补充必要 water 依托"
+                }
+              ],
+              "limitations": [
+                "几何检查不判定诗意理解或审美合格",
+                "动作时序与整首诗的场景切换尚未编排"
+              ],
+              "topology": "近水远照",
+              "layout": 2,
+              "orientation": "近水远照",
+              "audit": {
+                "scope": "implemented-geometry-and-drawing-gaps",
+                "coverage": {
+                  "scope": "extracted-entities-only",
+                  "present": 3,
+                  "mapped": 2,
+                  "parameters": [],
+                  "missing": [
+                    {
+                      "id": "i1",
+                      "name": "江南"
+                    }
+                  ]
+                },
+                "checks": [
+                  "presence",
+                  "count",
+                  "finite",
+                  "support",
+                  "scale",
+                  "relative-position",
+                  "depth",
+                  "grove-spread",
+                  "drawing-gaps"
+                ],
+                "status": "needs-review",
+                "errors": 0,
+                "review": 1,
+                "issues": [
+                  {
+                    "code": "drawing-gaps",
+                    "severity": "review",
+                    "message": "还有 1 项已提取线索尚未转成画面：江南"
+                  }
+                ],
+                "metrics": {
+                  "overlapPenalty": 44.499,
+                  "balancePenalty": 0.004,
+                  "motifFootprint": 1.753,
+                  "landArea": 0
+                },
+                "cost": 564.026,
+                "aestheticAcceptance": "pending-user"
+              },
+              "graph": {
+                "nodes": [
+                  {
+                    "id": "l0",
+                    "entities": [
+                      "i2"
+                    ],
+                    "tool": "lotus",
+                    "role": "aquatic-vegetation",
+                    "habitat": "water",
+                    "inferred": false,
+                    "support": "l2"
+                  },
+                  {
+                    "id": "l1",
+                    "entities": [
+                      "i3"
+                    ],
+                    "tool": "lotus",
+                    "role": "aquatic-vegetation",
+                    "habitat": "water",
+                    "inferred": false,
+                    "support": "l2"
+                  },
+                  {
+                    "id": "l2",
+                    "entities": [],
+                    "tool": "water",
+                    "role": "water",
+                    "habitat": null,
+                    "inferred": true,
+                    "support": null
+                  }
+                ],
+                "edges": [
+                  {
+                    "type": "supported-by",
+                    "source": "l0",
+                    "target": "l2",
+                    "basis": "local-composition",
+                    "habitat": "water"
+                  },
+                  {
+                    "type": "supported-by",
+                    "source": "l1",
+                    "target": "l2",
+                    "basis": "local-composition",
+                    "habitat": "water"
+                  }
+                ],
+                "setting": "study"
+              }
+            },
+            "displayAudit": {
+              "scope": "display-scale-separation-and-habitat",
+              "issues": [],
+              "errors": 0,
+              "aestheticAcceptance": "pending-user"
+            }
+          },
+          "spatial": [],
+          "landscapeStyle": {
+            "version": "1.0",
+            "color": "role-and-distance",
+            "motion": "layer-rhythms",
+            "aestheticAcceptance": "pending-user"
+          }
+        },
+        {
+          "id": "space-0",
+          "label": "阔水远天",
+          "description": "先安排连续水域与地表，再按主次与远近安放景物",
+          "layers": [
+            {
+              "tool": "lotus",
+              "entities": [
+                "i2"
+              ],
+              "projectedEntities": [],
+              "names": [
+                "莲"
+              ],
+              "options": {
+                "form": "flower",
+                "state": "open"
+              },
+              "animate": true,
+              "placement": {
+                "anchor": [
+                  320,
+                  330
+                ],
+                "at": [
+                  0.5100894732534645,
+                  0.675
+                ],
+                "scale": 0.95
+              },
+              "semanticGroup": {
+                "members": [
+                  "i2",
+                  "i3"
+                ],
+                "role": "subject",
+                "pattern": "field",
+                "depth": "unspecified",
+                "basis": "inferred",
+                "evidence": [
+                  "江南可采莲",
+                  "莲叶何田田"
+                ],
+                "index": 0
+              },
+              "semanticEffects": [
+                {
+                  "path": "scene.groups[0].role",
+                  "consumer": "主次布局",
+                  "effect": "主体相对突出",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[0].pattern",
+                  "consumer": "群落布局",
+                  "effect": "按 field 组织显示单元；不覆盖明确数量",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[0].depth",
+                  "consumer": "远近布局",
+                  "effect": "远近未明，保持本地默认",
+                  "status": "skipped"
+                }
+              ],
+              "semanticEnergy": true,
+              "timeScale": 0.45,
+              "instances": [
+                {
+                  "placement": {
+                    "anchor": [
+                      328,
+                      169
+                    ],
+                    "at": [
+                      0.0664741612186251,
+                      0.5203125
+                    ],
+                    "scale": 0.35910000000000003
+                  },
+                  "depth": 0.003125,
+                  "opacity": 0.5216,
+                  "variant": 0,
+                  "tone": "far",
+                  "id": "i2:lotus:flower:0:0"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      328,
+                      169
+                    ],
+                    "at": [
+                      0.7880164824044751,
+                      0.5409375
+                    ],
+                    "scale": 0.40530000000000005
+                  },
+                  "depth": 0.009375000000000001,
+                  "opacity": 0.5350786555898376,
+                  "variant": 0,
+                  "tone": "far",
+                  "id": "i2:lotus:flower:0:1"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      328,
+                      169
+                    ],
+                    "at": [
+                      0.34207880359032505,
+                      0.5615625
+                    ],
+                    "scale": 0.45150000000000007
+                  },
+                  "depth": 0.015625,
+                  "opacity": 0.5641317139999009,
+                  "variant": 0,
+                  "tone": "far",
+                  "id": "i2:lotus:flower:0:2"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      328,
+                      169
+                    ],
+                    "at": [
+                      0.965,
+                      0.5821875
+                    ],
+                    "scale": 0.49770000000000003
+                  },
+                  "depth": 0.021875000000000002,
+                  "opacity": 0.597427942192182,
+                  "variant": 0,
+                  "tone": "far",
+                  "id": "i2:lotus:flower:0:3"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      328,
+                      169
+                    ],
+                    "at": [
+                      0.6176834459620255,
+                      0.6028125
+                    ],
+                    "scale": 0.5439
+                  },
+                  "depth": 0.028125,
+                  "opacity": 0.6325806553107686,
+                  "variant": 0,
+                  "tone": "far",
+                  "id": "i2:lotus:flower:0:4"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      328,
+                      169
+                    ],
+                    "at": [
+                      0.1717457671478752,
+                      0.6234375
+                    ],
+                    "scale": 0.5901000000000001
+                  },
+                  "depth": 0.034375,
+                  "opacity": 0.6651074469994929,
+                  "variant": 0,
+                  "tone": "far",
+                  "id": "i2:lotus:flower:0:5"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      328,
+                      169
+                    ],
+                    "at": [
+                      0.8932880883337253,
+                      0.6440625
+                    ],
+                    "scale": 0.6363000000000001
+                  },
+                  "depth": 0.040625,
+                  "opacity": 0.699523885906412,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i2:lotus:flower:0:6"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      328,
+                      169
+                    ],
+                    "at": [
+                      0.44735040951957494,
+                      0.6646875
+                    ],
+                    "scale": 0.6825000000000001
+                  },
+                  "depth": 0.046875,
+                  "opacity": 0.7214364883480011,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i2:lotus:flower:0:7"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      328,
+                      169
+                    ],
+                    "at": [
+                      0.035,
+                      0.6853125
+                    ],
+                    "scale": 0.7287000000000001
+                  },
+                  "depth": 0.053125000000000006,
+                  "opacity": 0.7593317113387748,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i2:lotus:flower:0:8"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      328,
+                      169
+                    ],
+                    "at": [
+                      0.7229550518912754,
+                      0.7059375
+                    ],
+                    "scale": 0.7749000000000001
+                  },
+                  "depth": 0.059375000000000004,
+                  "opacity": 0.7862820917079516,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i2:lotus:flower:0:9"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      328,
+                      169
+                    ],
+                    "at": [
+                      0.27701737307712504,
+                      0.7265625
+                    ],
+                    "scale": 0.8211000000000002
+                  },
+                  "depth": 0.065625,
+                  "opacity": 0.8195222014206229,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i2:lotus:flower:0:10"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      328,
+                      169
+                    ],
+                    "at": [
+                      0.965,
+                      0.7471875
+                    ],
+                    "scale": 0.8673000000000001
+                  },
+                  "depth": 0.07187500000000001,
+                  "opacity": 0.8524071393810737,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i2:lotus:flower:0:11"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      328,
+                      169
+                    ],
+                    "at": [
+                      0.5526220154488254,
+                      0.7678125
+                    ],
+                    "scale": 0.9135000000000001
+                  },
+                  "depth": 0.078125,
+                  "opacity": 0.8882947784633434,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i2:lotus:flower:0:12"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      328,
+                      169
+                    ],
+                    "at": [
+                      0.10668433663467713,
+                      0.7884375
+                    ],
+                    "scale": 0.9597000000000001
+                  },
+                  "depth": 0.084375,
+                  "opacity": 0.9252046534678666,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i2:lotus:flower:0:13"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      328,
+                      169
+                    ],
+                    "at": [
+                      0.8282266578205268,
+                      0.8090625
+                    ],
+                    "scale": 1.0059000000000002
+                  },
+                  "depth": 0.09062500000000001,
+                  "opacity": 0.9498649251429596,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i2:lotus:flower:0:14"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      328,
+                      169
+                    ],
+                    "at": [
+                      0.3822889790063764,
+                      0.8296875
+                    ],
+                    "scale": 1.0521000000000003
+                  },
+                  "depth": 0.096875,
+                  "opacity": 0.9896,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i2:lotus:flower:0:15"
+                }
+              ],
+              "singleUnit": true,
+              "quantity": {
+                "items": [
+                  {
+                    "entity": "i2",
+                    "mode": "unspecified",
+                    "min": null,
+                    "max": null,
+                    "unit": null,
+                    "scope": "unspecified",
+                    "extent": "unspecified",
+                    "evidence": [],
+                    "basis": "model"
+                  }
+                ],
+                "rendered": 16,
+                "exact": false,
+                "collective": true,
+                "partUnsupported": false
+              },
+              "quantityLabel": "成片分布；本地试画 16 个单元",
+              "z": 19,
+              "visual": {
+                "role": "blossom",
+                "brushStrength": 1.65
+              },
+              "performance": {
+                "rhythm": "gust",
+                "rate": 0.62,
+                "amplitude": 0.65,
+                "phase": 0
+              },
+              "id": "i2:lotus:flower:0",
+              "interaction": {
+                "mode": "instance",
+                "groupId": "i2:lotus:flower:0"
+              }
+            },
+            {
+              "tool": "lotus",
+              "entities": [
+                "i3"
+              ],
+              "projectedEntities": [],
+              "names": [
+                "莲叶"
+              ],
+              "options": {
+                "form": "leaf"
+              },
+              "animate": true,
+              "placement": {
+                "anchor": [
+                  320,
+                  330
+                ],
+                "at": [
+                  0.5009065183859266,
+                  0.7849999999999999
+                ],
+                "scale": 0.95
+              },
+              "semanticGroup": {
+                "members": [
+                  "i2",
+                  "i3"
+                ],
+                "role": "subject",
+                "pattern": "field",
+                "depth": "unspecified",
+                "basis": "inferred",
+                "evidence": [
+                  "江南可采莲",
+                  "莲叶何田田"
+                ],
+                "index": 0
+              },
+              "semanticEffects": [
+                {
+                  "path": "scene.groups[0].role",
+                  "consumer": "主次布局",
+                  "effect": "主体相对突出",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[0].pattern",
+                  "consumer": "群落布局",
+                  "effect": "按 field 组织显示单元；不覆盖明确数量",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[0].depth",
+                  "consumer": "远近布局",
+                  "effect": "远近未明，保持本地默认",
+                  "status": "skipped"
+                }
+              ],
+              "semanticEnergy": true,
+              "timeScale": 0.45,
+              "instances": [
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.8762647000884249,
+                      0.624125
+                    ],
+                    "scale": 0.34524
+                  },
+                  "depth": 0.0012500000000000002,
+                  "opacity": 0.5216,
+                  "variant": 0,
+                  "tone": "far",
+                  "id": "i3:lotus:leaf:1:0"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.43032702127427475,
+                      0.632375
+                    ],
+                    "scale": 0.36372000000000004
+                  },
+                  "depth": 0.00375,
+                  "opacity": 0.5216,
+                  "variant": 0,
+                  "tone": "far",
+                  "id": "i3:lotus:leaf:1:1"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.035,
+                      0.640625
+                    ],
+                    "scale": 0.38220000000000004
+                  },
+                  "depth": 0.00625,
+                  "opacity": 0.5216,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:lotus:leaf:1:2"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.705931663645975,
+                      0.648875
+                    ],
+                    "scale": 0.40068000000000004
+                  },
+                  "depth": 0.008749999999999999,
+                  "opacity": 0.5273552502395585,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:lotus:leaf:1:3"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.25999398483182523,
+                      0.657125
+                    ],
+                    "scale": 0.41916000000000003
+                  },
+                  "depth": 0.011250000000000001,
+                  "opacity": 0.5418583347594598,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:lotus:leaf:1:4"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.965,
+                      0.665375
+                    ],
+                    "scale": 0.43764000000000003
+                  },
+                  "depth": 0.013750000000000002,
+                  "opacity": 0.5533344523191918,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:lotus:leaf:1:5"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.5355986272035251,
+                      0.673625
+                    ],
+                    "scale": 0.45612
+                  },
+                  "depth": 0.01625,
+                  "opacity": 0.5625784790996811,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:lotus:leaf:1:6"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.08966094838937477,
+                      0.681875
+                    ],
+                    "scale": 0.4746
+                  },
+                  "depth": 0.018750000000000003,
+                  "opacity": 0.5784828320464468,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:lotus:leaf:1:7"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.8112032695752244,
+                      0.690125
+                    ],
+                    "scale": 0.4930800000000001
+                  },
+                  "depth": 0.02125,
+                  "opacity": 0.5905290207874728,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:lotus:leaf:1:8"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.3652655907610751,
+                      0.698375
+                    ],
+                    "scale": 0.51156
+                  },
+                  "depth": 0.02375,
+                  "opacity": 0.6038189625775674,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:lotus:leaf:1:9"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.035,
+                      0.7066250000000001
+                    ],
+                    "scale": 0.5300400000000001
+                  },
+                  "depth": 0.026250000000000002,
+                  "opacity": 0.6190328365264925,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:lotus:leaf:1:10"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.6408702331327745,
+                      0.714875
+                    ],
+                    "scale": 0.5485200000000001
+                  },
+                  "depth": 0.028749999999999998,
+                  "opacity": 0.6333030811951379,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:lotus:leaf:1:11"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.19493255431862516,
+                      0.723125
+                    ],
+                    "scale": 0.5670000000000001
+                  },
+                  "depth": 0.03125,
+                  "opacity": 0.6461841392689966,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:lotus:leaf:1:12"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.9164748755044769,
+                      0.731375
+                    ],
+                    "scale": 0.5854800000000001
+                  },
+                  "depth": 0.03375,
+                  "opacity": 0.6575344378040637,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:lotus:leaf:1:13"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.47053719669032645,
+                      0.739625
+                    ],
+                    "scale": 0.60396
+                  },
+                  "depth": 0.03625,
+                  "opacity": 0.6684311633562436,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:lotus:leaf:1:14"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.035,
+                      0.7478750000000001
+                    ],
+                    "scale": 0.62244
+                  },
+                  "depth": 0.03875000000000001,
+                  "opacity": 0.6852951537200949,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:lotus:leaf:1:15"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.7461418390620258,
+                      0.7561249999999999
+                    ],
+                    "scale": 0.6409199999999999
+                  },
+                  "depth": 0.04125,
+                  "opacity": 0.6929952741042478,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:lotus:leaf:1:16"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.30020416024787544,
+                      0.764375
+                    ],
+                    "scale": 0.6594000000000001
+                  },
+                  "depth": 0.043750000000000004,
+                  "opacity": 0.7109430395757197,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:lotus:leaf:1:17"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.965,
+                      0.772625
+                    ],
+                    "scale": 0.6778800000000001
+                  },
+                  "depth": 0.046250000000000006,
+                  "opacity": 0.7200056194118806,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:lotus:leaf:1:18"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.5758088026195769,
+                      0.780875
+                    ],
+                    "scale": 0.6963600000000001
+                  },
+                  "depth": 0.04875,
+                  "opacity": 0.7373652616373263,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:lotus:leaf:1:19"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.12987112380542654,
+                      0.789125
+                    ],
+                    "scale": 0.71484
+                  },
+                  "depth": 0.05125,
+                  "opacity": 0.7457512309821556,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:lotus:leaf:1:20"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.851413444991276,
+                      0.797375
+                    ],
+                    "scale": 0.73332
+                  },
+                  "depth": 0.05375,
+                  "opacity": 0.7596897168624099,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:lotus:leaf:1:21"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.4054757661771259,
+                      0.805625
+                    ],
+                    "scale": 0.7518000000000001
+                  },
+                  "depth": 0.05625,
+                  "opacity": 0.7763697053679381,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:lotus:leaf:1:22"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.035,
+                      0.813875
+                    ],
+                    "scale": 0.7702800000000002
+                  },
+                  "depth": 0.058750000000000004,
+                  "opacity": 0.788525962618075,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:lotus:leaf:1:23"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.6810804085488273,
+                      0.822125
+                    ],
+                    "scale": 0.7887600000000001
+                  },
+                  "depth": 0.061250000000000006,
+                  "opacity": 0.7981928418634227,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:lotus:leaf:1:24"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.23514272973467482,
+                      0.830375
+                    ],
+                    "scale": 0.8072400000000001
+                  },
+                  "depth": 0.06375,
+                  "opacity": 0.8142997138574137,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i3:lotus:leaf:1:25"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.9566850509205287,
+                      0.838625
+                    ],
+                    "scale": 0.82572
+                  },
+                  "depth": 0.06625,
+                  "opacity": 0.8281548804380582,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i3:lotus:leaf:1:26"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.5107473721063783,
+                      0.846875
+                    ],
+                    "scale": 0.8442000000000001
+                  },
+                  "depth": 0.06875,
+                  "opacity": 0.840476657261746,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i3:lotus:leaf:1:27"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.06480969329222797,
+                      0.855125
+                    ],
+                    "scale": 0.8626800000000002
+                  },
+                  "depth": 0.07125000000000001,
+                  "opacity": 0.8489094648254569,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i3:lotus:leaf:1:28"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.7863520144780776,
+                      0.863375
+                    ],
+                    "scale": 0.8811600000000002
+                  },
+                  "depth": 0.07375000000000001,
+                  "opacity": 0.8660268724803115,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i3:lotus:leaf:1:29"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.3404143356639273,
+                      0.871625
+                    ],
+                    "scale": 0.8996400000000001
+                  },
+                  "depth": 0.07625,
+                  "opacity": 0.8784673147116788,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i3:lotus:leaf:1:30"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.965,
+                      0.879875
+                    ],
+                    "scale": 0.91812
+                  },
+                  "depth": 0.07875,
+                  "opacity": 0.8902662684697076,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i3:lotus:leaf:1:31"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.6160189780356266,
+                      0.888125
+                    ],
+                    "scale": 0.9366
+                  },
+                  "depth": 0.08125,
+                  "opacity": 0.9014256412148824,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i3:lotus:leaf:1:32"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.17008129922147625,
+                      0.896375
+                    ],
+                    "scale": 0.9550800000000003
+                  },
+                  "depth": 0.08375,
+                  "opacity": 0.9146260999935563,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i3:lotus:leaf:1:33"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.891623620407326,
+                      0.904625
+                    ],
+                    "scale": 0.9735600000000002
+                  },
+                  "depth": 0.08625000000000001,
+                  "opacity": 0.9283063661675086,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i3:lotus:leaf:1:34"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.44568594159317554,
+                      0.912875
+                    ],
+                    "scale": 0.9920400000000001
+                  },
+                  "depth": 0.08875,
+                  "opacity": 0.940476658749173,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i3:lotus:leaf:1:35"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.035,
+                      0.921125
+                    ],
+                    "scale": 1.01052
+                  },
+                  "depth": 0.09125,
+                  "opacity": 0.9577343167312793,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i3:lotus:leaf:1:36"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.7212905839648791,
+                      0.9293750000000001
+                    ],
+                    "scale": 1.0290000000000001
+                  },
+                  "depth": 0.09375,
+                  "opacity": 0.969440075474116,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i3:lotus:leaf:1:37"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.27535290515072863,
+                      0.937625
+                    ],
+                    "scale": 1.0474800000000002
+                  },
+                  "depth": 0.09625,
+                  "opacity": 0.9816337541053188,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i3:lotus:leaf:1:38"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.965,
+                      0.945875
+                    ],
+                    "scale": 1.0659600000000002
+                  },
+                  "depth": 0.09875,
+                  "opacity": 0.9896,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i3:lotus:leaf:1:39"
+                }
+              ],
+              "singleUnit": true,
+              "quantity": {
+                "items": [
+                  {
+                    "entity": "i3",
+                    "mode": "many",
+                    "min": null,
+                    "max": null,
+                    "unit": null,
+                    "scope": "unspecified",
+                    "extent": "spread",
+                    "evidence": [
+                      "莲叶何田田"
+                    ],
+                    "basis": "model"
+                  }
+                ],
+                "rendered": 40,
+                "exact": false,
+                "collective": true,
+                "partUnsupported": false
+              },
+              "quantityLabel": "成片分布；本地试画 40 个单元",
+              "z": 18,
+              "visual": {
+                "role": "vegetation",
+                "brushStrength": 1.2
+              },
+              "performance": {
+                "rhythm": "gust",
+                "rate": 0.62,
+                "amplitude": 0.65,
+                "phase": 3.8830085198369844
+              },
+              "id": "i3:lotus:leaf:1",
+              "interaction": {
+                "mode": "instance",
+                "groupId": "i3:lotus:leaf:1"
+              }
+            },
+            {
+              "tool": "water",
+              "entities": [],
+              "projectedEntities": [],
+              "names": [
+                "构图依托·水域"
+              ],
+              "options": {
+                "form": "plane"
+              },
+              "animate": false,
+              "placement": {
+                "anchor": [
+                  320,
+                  135
+                ],
+                "at": [
+                  0.5,
+                  0.45
+                ],
+                "scale": 1.6
+              },
+              "instances": [
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      135
+                    ],
+                    "at": [
+                      0.5,
+                      0.45
+                    ],
+                    "scale": 1.65
+                  },
+                  "variant": 0,
+                  "depth": 0,
+                  "opacity": 1,
+                  "tone": "far",
+                  "id": "inferred:water:plane:2:0"
+                }
+              ],
+              "singleUnit": false,
+              "inferred": true,
+              "provenance": {
+                "basis": "local-context",
+                "reason": "整体场景解释为 waterside，本地补充必要 water 依托",
+                "semanticPath": "scene.setting"
+              },
+              "quantity": {
+                "rendered": 1,
+                "exact": false,
+                "items": []
+              },
+              "quantityLabel": "本地环境依托，不计入原文意象覆盖",
+              "z": -10,
+              "clip": [
+                [
+                  0,
+                  0.42
+                ],
+                [
+                  1,
+                  0.42
+                ],
+                [
+                  1,
+                  1.04
+                ],
+                [
+                  0,
+                  1.04
+                ]
+              ],
+              "surface": {
+                "top": 0.42,
+                "bottom": 1
+              },
+              "visual": {
+                "role": "water",
+                "brushStrength": 1.35
+              },
+              "performance": {
+                "rhythm": "continuous",
+                "rate": 0.9,
+                "amplitude": 0.9,
+                "phase": 1.4828317324943823
+              },
+              "id": "inferred:water:plane:2",
+              "interaction": {
+                "mode": "group",
+                "groupId": "inferred:water:plane:2"
+              }
+            }
+          ],
+          "scene": {
+            "kind": "study",
+            "notes": [],
+            "waterline": null,
+            "semanticSetting": {
+              "kind": "waterside",
+              "basis": "inferred",
+              "evidence": [
+                "江南可采莲"
+              ]
+            },
+            "semanticEffects": [
+              {
+                "path": "scene.setting",
+                "consumer": "场景依托",
+                "status": "applied",
+                "effect": "必要环境以独立推断背景表示，不新增原文实体"
+              }
+            ],
+            "organization": {
+              "version": "1.0",
+              "strategy": "general-constraints",
+              "regions": {
+                "water": [
+                  [
+                    0,
+                    0.42
+                  ],
+                  [
+                    1,
+                    0.42
+                  ],
+                  [
+                    1,
+                    1.04
+                  ],
+                  [
+                    0,
+                    1.04
+                  ]
+                ]
+              },
+              "candidates": [],
+              "repairs": [],
+              "limitations": [
+                "几何检查不判定诗意理解或审美合格",
+                "动作时序与整首诗的场景切换尚未编排"
+              ],
+              "topology": "阔水远天",
+              "layout": 0,
+              "orientation": "阔水远天",
+              "audit": {
+                "scope": "implemented-geometry-and-drawing-gaps",
+                "coverage": {
+                  "scope": "extracted-entities-only",
+                  "present": 3,
+                  "mapped": 2,
+                  "parameters": [],
+                  "missing": [
+                    {
+                      "id": "i1",
+                      "name": "江南"
+                    }
+                  ]
+                },
+                "checks": [
+                  "presence",
+                  "count",
+                  "finite",
+                  "support",
+                  "scale",
+                  "relative-position",
+                  "depth",
+                  "grove-spread",
+                  "drawing-gaps"
+                ],
+                "status": "needs-review",
+                "errors": 0,
+                "review": 1,
+                "issues": [
+                  {
+                    "code": "drawing-gaps",
+                    "severity": "review",
+                    "message": "还有 1 项已提取线索尚未转成画面：江南"
+                  }
+                ],
+                "metrics": {
+                  "overlapPenalty": 45.889,
+                  "balancePenalty": 0.013,
+                  "motifFootprint": 1.753,
+                  "landArea": 0
+                },
+                "cost": 580.767,
+                "aestheticAcceptance": "pending-user"
+              },
+              "graph": {
+                "nodes": [
+                  {
+                    "id": "l0",
+                    "entities": [
+                      "i2"
+                    ],
+                    "tool": "lotus",
+                    "role": "aquatic-vegetation",
+                    "habitat": "water",
+                    "inferred": false,
+                    "support": "l2"
+                  },
+                  {
+                    "id": "l1",
+                    "entities": [
+                      "i3"
+                    ],
+                    "tool": "lotus",
+                    "role": "aquatic-vegetation",
+                    "habitat": "water",
+                    "inferred": false,
+                    "support": "l2"
+                  },
+                  {
+                    "id": "l2",
+                    "entities": [],
+                    "tool": "water",
+                    "role": "water",
+                    "habitat": null,
+                    "inferred": true,
+                    "support": null
+                  }
+                ],
+                "edges": [
+                  {
+                    "type": "supported-by",
+                    "source": "l0",
+                    "target": "l2",
+                    "basis": "local-composition",
+                    "habitat": "water"
+                  },
+                  {
+                    "type": "supported-by",
+                    "source": "l1",
+                    "target": "l2",
+                    "basis": "local-composition",
+                    "habitat": "water"
+                  }
+                ],
+                "setting": "study"
+              }
+            },
+            "displayAudit": {
+              "scope": "display-scale-separation-and-habitat",
+              "issues": [],
+              "errors": 0,
+              "aestheticAcceptance": "pending-user"
+            }
+          },
+          "spatial": [],
+          "landscapeStyle": {
+            "version": "1.0",
+            "color": "role-and-distance",
+            "motion": "layer-rhythms",
+            "aestheticAcceptance": "pending-user"
+          }
+        },
+        {
+          "id": "space-1",
+          "label": "水面横展",
+          "description": "先安排连续水域与地表，再按主次与远近安放景物",
+          "layers": [
+            {
+              "tool": "lotus",
+              "entities": [
+                "i2"
+              ],
+              "projectedEntities": [],
+              "names": [
+                "莲"
+              ],
+              "options": {
+                "form": "flower",
+                "state": "open"
+              },
+              "animate": true,
+              "placement": {
+                "anchor": [
+                  320,
+                  330
+                ],
+                "at": [
+                  0.4750794509016959,
+                  0.675
+                ],
+                "scale": 0.95
+              },
+              "semanticGroup": {
+                "members": [
+                  "i2",
+                  "i3"
+                ],
+                "role": "subject",
+                "pattern": "field",
+                "depth": "unspecified",
+                "basis": "inferred",
+                "evidence": [
+                  "江南可采莲",
+                  "莲叶何田田"
+                ],
+                "index": 0
+              },
+              "semanticEffects": [
+                {
+                  "path": "scene.groups[0].role",
+                  "consumer": "主次布局",
+                  "effect": "主体相对突出",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[0].pattern",
+                  "consumer": "群落布局",
+                  "effect": "按 field 组织显示单元；不覆盖明确数量",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[0].depth",
+                  "consumer": "远近布局",
+                  "effect": "远近未明，保持本地默认",
+                  "status": "skipped"
+                }
+              ],
+              "semanticEnergy": true,
+              "timeScale": 0.45,
+              "instances": [
+                {
+                  "placement": {
+                    "anchor": [
+                      328,
+                      169
+                    ],
+                    "at": [
+                      0.16352916121862499,
+                      0.5203125
+                    ],
+                    "scale": 0.35910000000000003
+                  },
+                  "depth": 0.003125,
+                  "opacity": 0.5216,
+                  "variant": 0,
+                  "tone": "far",
+                  "id": "i2:lotus:flower:0:0"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      328,
+                      169
+                    ],
+                    "at": [
+                      0.8850714824044749,
+                      0.5409375
+                    ],
+                    "scale": 0.40530000000000005
+                  },
+                  "depth": 0.009375000000000001,
+                  "opacity": 0.5350786555898376,
+                  "variant": 0,
+                  "tone": "far",
+                  "id": "i2:lotus:flower:0:1"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      328,
+                      169
+                    ],
+                    "at": [
+                      0.43913380359032506,
+                      0.5615625
+                    ],
+                    "scale": 0.45150000000000007
+                  },
+                  "depth": 0.015625,
+                  "opacity": 0.5641317139999009,
+                  "variant": 0,
+                  "tone": "far",
+                  "id": "i2:lotus:flower:0:2"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      328,
+                      169
+                    ],
+                    "at": [
+                      0.035,
+                      0.5821875
+                    ],
+                    "scale": 0.49770000000000003
+                  },
+                  "depth": 0.021875000000000002,
+                  "opacity": 0.597427942192182,
+                  "variant": 0,
+                  "tone": "far",
+                  "id": "i2:lotus:flower:0:3"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      328,
+                      169
+                    ],
+                    "at": [
+                      0.7147384459620254,
+                      0.6028125
+                    ],
+                    "scale": 0.5439
+                  },
+                  "depth": 0.028125,
+                  "opacity": 0.6325806553107686,
+                  "variant": 0,
+                  "tone": "far",
+                  "id": "i2:lotus:flower:0:4"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      328,
+                      169
+                    ],
+                    "at": [
+                      0.2688007671478751,
+                      0.6234375
+                    ],
+                    "scale": 0.5901000000000001
+                  },
+                  "depth": 0.034375,
+                  "opacity": 0.6651074469994929,
+                  "variant": 0,
+                  "tone": "far",
+                  "id": "i2:lotus:flower:0:5"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      328,
+                      169
+                    ],
+                    "at": [
+                      0.965,
+                      0.6440625
+                    ],
+                    "scale": 0.6363000000000001
+                  },
+                  "depth": 0.040625,
+                  "opacity": 0.699523885906412,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i2:lotus:flower:0:6"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      328,
+                      169
+                    ],
+                    "at": [
+                      0.5444054095195754,
+                      0.6646875
+                    ],
+                    "scale": 0.6825000000000001
+                  },
+                  "depth": 0.046875,
+                  "opacity": 0.7214364883480011,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i2:lotus:flower:0:7"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      328,
+                      169
+                    ],
+                    "at": [
+                      0.09846773070542514,
+                      0.6853125
+                    ],
+                    "scale": 0.7287000000000001
+                  },
+                  "depth": 0.053125000000000006,
+                  "opacity": 0.7593317113387748,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i2:lotus:flower:0:8"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      328,
+                      169
+                    ],
+                    "at": [
+                      0.8200100518912758,
+                      0.7059375
+                    ],
+                    "scale": 0.7749000000000001
+                  },
+                  "depth": 0.059375000000000004,
+                  "opacity": 0.7862820917079516,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i2:lotus:flower:0:9"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      328,
+                      169
+                    ],
+                    "at": [
+                      0.3740723730771254,
+                      0.7265625
+                    ],
+                    "scale": 0.8211000000000002
+                  },
+                  "depth": 0.065625,
+                  "opacity": 0.8195222014206229,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i2:lotus:flower:0:10"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      328,
+                      169
+                    ],
+                    "at": [
+                      0.035,
+                      0.7471875
+                    ],
+                    "scale": 0.8673000000000001
+                  },
+                  "depth": 0.07187500000000001,
+                  "opacity": 0.8524071393810737,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i2:lotus:flower:0:11"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      328,
+                      169
+                    ],
+                    "at": [
+                      0.6496770154488258,
+                      0.7678125
+                    ],
+                    "scale": 0.9135000000000001
+                  },
+                  "depth": 0.078125,
+                  "opacity": 0.8882947784633434,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i2:lotus:flower:0:12"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      328,
+                      169
+                    ],
+                    "at": [
+                      0.20373933663467753,
+                      0.7884375
+                    ],
+                    "scale": 0.9597000000000001
+                  },
+                  "depth": 0.084375,
+                  "opacity": 0.9252046534678666,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i2:lotus:flower:0:13"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      328,
+                      169
+                    ],
+                    "at": [
+                      0.9252816578205272,
+                      0.8090625
+                    ],
+                    "scale": 1.0059000000000002
+                  },
+                  "depth": 0.09062500000000001,
+                  "opacity": 0.9498649251429596,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i2:lotus:flower:0:14"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      328,
+                      169
+                    ],
+                    "at": [
+                      0.47934397900637676,
+                      0.8296875
+                    ],
+                    "scale": 1.0521000000000003
+                  },
+                  "depth": 0.096875,
+                  "opacity": 0.9896,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i2:lotus:flower:0:15"
+                }
+              ],
+              "singleUnit": true,
+              "quantity": {
+                "items": [
+                  {
+                    "entity": "i2",
+                    "mode": "unspecified",
+                    "min": null,
+                    "max": null,
+                    "unit": null,
+                    "scope": "unspecified",
+                    "extent": "unspecified",
+                    "evidence": [],
+                    "basis": "model"
+                  }
+                ],
+                "rendered": 16,
+                "exact": false,
+                "collective": true,
+                "partUnsupported": false
+              },
+              "quantityLabel": "成片分布；本地试画 16 个单元",
+              "z": 19,
+              "visual": {
+                "role": "blossom",
+                "brushStrength": 1.65
+              },
+              "performance": {
+                "rhythm": "gust",
+                "rate": 0.62,
+                "amplitude": 0.65,
+                "phase": 0
+              },
+              "id": "i2:lotus:flower:0",
+              "interaction": {
+                "mode": "instance",
+                "groupId": "i2:lotus:flower:0"
+              }
+            },
+            {
+              "tool": "lotus",
+              "entities": [
+                "i3"
+              ],
+              "projectedEntities": [],
+              "names": [
+                "莲叶"
+              ],
+              "options": {
+                "form": "leaf"
+              },
+              "animate": true,
+              "placement": {
+                "anchor": [
+                  320,
+                  330
+                ],
+                "at": [
+                  0.5173640099770761,
+                  0.7849999999999999
+                ],
+                "scale": 0.95
+              },
+              "semanticGroup": {
+                "members": [
+                  "i2",
+                  "i3"
+                ],
+                "role": "subject",
+                "pattern": "field",
+                "depth": "unspecified",
+                "basis": "inferred",
+                "evidence": [
+                  "江南可采莲",
+                  "莲叶何田田"
+                ],
+                "index": 0
+              },
+              "semanticEffects": [
+                {
+                  "path": "scene.groups[0].role",
+                  "consumer": "主次布局",
+                  "effect": "主体相对突出",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[0].pattern",
+                  "consumer": "群落布局",
+                  "effect": "按 field 组织显示单元；不覆盖明确数量",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[0].depth",
+                  "consumer": "远近布局",
+                  "effect": "远近未明，保持本地默认",
+                  "status": "skipped"
+                }
+              ],
+              "semanticEnergy": true,
+              "timeScale": 0.45,
+              "instances": [
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.9562587000884247,
+                      0.624125
+                    ],
+                    "scale": 0.34524
+                  },
+                  "depth": 0.0012500000000000002,
+                  "opacity": 0.5216,
+                  "variant": 0,
+                  "tone": "far",
+                  "id": "i3:lotus:leaf:1:0"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.5103210212742746,
+                      0.632375
+                    ],
+                    "scale": 0.36372000000000004
+                  },
+                  "depth": 0.00375,
+                  "opacity": 0.5216,
+                  "variant": 0,
+                  "tone": "far",
+                  "id": "i3:lotus:leaf:1:1"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.06438334246012489,
+                      0.640625
+                    ],
+                    "scale": 0.38220000000000004
+                  },
+                  "depth": 0.00625,
+                  "opacity": 0.5216,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:lotus:leaf:1:2"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.785925663645975,
+                      0.648875
+                    ],
+                    "scale": 0.40068000000000004
+                  },
+                  "depth": 0.008749999999999999,
+                  "opacity": 0.5273552502395585,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:lotus:leaf:1:3"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.3399879848318252,
+                      0.657125
+                    ],
+                    "scale": 0.41916000000000003
+                  },
+                  "depth": 0.011250000000000001,
+                  "opacity": 0.5418583347594598,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:lotus:leaf:1:4"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.965,
+                      0.665375
+                    ],
+                    "scale": 0.43764000000000003
+                  },
+                  "depth": 0.013750000000000002,
+                  "opacity": 0.5533344523191918,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:lotus:leaf:1:5"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.6155926272035256,
+                      0.673625
+                    ],
+                    "scale": 0.45612
+                  },
+                  "depth": 0.01625,
+                  "opacity": 0.5625784790996811,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:lotus:leaf:1:6"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.16965494838937523,
+                      0.681875
+                    ],
+                    "scale": 0.4746
+                  },
+                  "depth": 0.018750000000000003,
+                  "opacity": 0.5784828320464468,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:lotus:leaf:1:7"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.8911972695752248,
+                      0.690125
+                    ],
+                    "scale": 0.4930800000000001
+                  },
+                  "depth": 0.02125,
+                  "opacity": 0.5905290207874728,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:lotus:leaf:1:8"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.44525959076107546,
+                      0.698375
+                    ],
+                    "scale": 0.51156
+                  },
+                  "depth": 0.02375,
+                  "opacity": 0.6038189625775674,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:lotus:leaf:1:9"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.035,
+                      0.7066250000000001
+                    ],
+                    "scale": 0.5300400000000001
+                  },
+                  "depth": 0.026250000000000002,
+                  "opacity": 0.6190328365264925,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:lotus:leaf:1:10"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.7208642331327748,
+                      0.714875
+                    ],
+                    "scale": 0.5485200000000001
+                  },
+                  "depth": 0.028749999999999998,
+                  "opacity": 0.6333030811951379,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:lotus:leaf:1:11"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.27492655431862556,
+                      0.723125
+                    ],
+                    "scale": 0.5670000000000001
+                  },
+                  "depth": 0.03125,
+                  "opacity": 0.6461841392689966,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:lotus:leaf:1:12"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.965,
+                      0.731375
+                    ],
+                    "scale": 0.5854800000000001
+                  },
+                  "depth": 0.03375,
+                  "opacity": 0.6575344378040637,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:lotus:leaf:1:13"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.550531196690327,
+                      0.739625
+                    ],
+                    "scale": 0.60396
+                  },
+                  "depth": 0.03625,
+                  "opacity": 0.6684311633562436,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:lotus:leaf:1:14"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.1045935178761766,
+                      0.7478750000000001
+                    ],
+                    "scale": 0.62244
+                  },
+                  "depth": 0.03875000000000001,
+                  "opacity": 0.6852951537200949,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:lotus:leaf:1:15"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.8261358390620263,
+                      0.7561249999999999
+                    ],
+                    "scale": 0.6409199999999999
+                  },
+                  "depth": 0.04125,
+                  "opacity": 0.6929952741042478,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:lotus:leaf:1:16"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.380198160247876,
+                      0.764375
+                    ],
+                    "scale": 0.6594000000000001
+                  },
+                  "depth": 0.043750000000000004,
+                  "opacity": 0.7109430395757197,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:lotus:leaf:1:17"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.035,
+                      0.772625
+                    ],
+                    "scale": 0.6778800000000001
+                  },
+                  "depth": 0.046250000000000006,
+                  "opacity": 0.7200056194118806,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:lotus:leaf:1:18"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.6558028026195772,
+                      0.780875
+                    ],
+                    "scale": 0.6963600000000001
+                  },
+                  "depth": 0.04875,
+                  "opacity": 0.7373652616373263,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:lotus:leaf:1:19"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.20986512380542705,
+                      0.789125
+                    ],
+                    "scale": 0.71484
+                  },
+                  "depth": 0.05125,
+                  "opacity": 0.7457512309821556,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:lotus:leaf:1:20"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.9314074449912766,
+                      0.797375
+                    ],
+                    "scale": 0.73332
+                  },
+                  "depth": 0.05375,
+                  "opacity": 0.7596897168624099,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:lotus:leaf:1:21"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.4854697661771263,
+                      0.805625
+                    ],
+                    "scale": 0.7518000000000001
+                  },
+                  "depth": 0.05625,
+                  "opacity": 0.7763697053679381,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:lotus:leaf:1:22"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.039532087362975976,
+                      0.813875
+                    ],
+                    "scale": 0.7702800000000002
+                  },
+                  "depth": 0.058750000000000004,
+                  "opacity": 0.788525962618075,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:lotus:leaf:1:23"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.7610744085488277,
+                      0.822125
+                    ],
+                    "scale": 0.7887600000000001
+                  },
+                  "depth": 0.061250000000000006,
+                  "opacity": 0.7981928418634227,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:lotus:leaf:1:24"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.3151367297346752,
+                      0.830375
+                    ],
+                    "scale": 0.8072400000000001
+                  },
+                  "depth": 0.06375,
+                  "opacity": 0.8142997138574137,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i3:lotus:leaf:1:25"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.965,
+                      0.838625
+                    ],
+                    "scale": 0.82572
+                  },
+                  "depth": 0.06625,
+                  "opacity": 0.8281548804380582,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i3:lotus:leaf:1:26"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.5907413721063788,
+                      0.846875
+                    ],
+                    "scale": 0.8442000000000001
+                  },
+                  "depth": 0.06875,
+                  "opacity": 0.840476657261746,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i3:lotus:leaf:1:27"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.14480369329222842,
+                      0.855125
+                    ],
+                    "scale": 0.8626800000000002
+                  },
+                  "depth": 0.07125000000000001,
+                  "opacity": 0.8489094648254569,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i3:lotus:leaf:1:28"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.866346014478078,
+                      0.863375
+                    ],
+                    "scale": 0.8811600000000002
+                  },
+                  "depth": 0.07375000000000001,
+                  "opacity": 0.8660268724803115,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i3:lotus:leaf:1:29"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.4204083356639277,
+                      0.871625
+                    ],
+                    "scale": 0.8996400000000001
+                  },
+                  "depth": 0.07625,
+                  "opacity": 0.8784673147116788,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i3:lotus:leaf:1:30"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.035,
+                      0.879875
+                    ],
+                    "scale": 0.91812
+                  },
+                  "depth": 0.07875,
+                  "opacity": 0.8902662684697076,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i3:lotus:leaf:1:31"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.696012978035627,
+                      0.888125
+                    ],
+                    "scale": 0.9366
+                  },
+                  "depth": 0.08125,
+                  "opacity": 0.9014256412148824,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i3:lotus:leaf:1:32"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.2500752992214767,
+                      0.896375
+                    ],
+                    "scale": 0.9550800000000003
+                  },
+                  "depth": 0.08375,
+                  "opacity": 0.9146260999935563,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i3:lotus:leaf:1:33"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.965,
+                      0.904625
+                    ],
+                    "scale": 0.9735600000000002
+                  },
+                  "depth": 0.08625000000000001,
+                  "opacity": 0.9283063661675086,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i3:lotus:leaf:1:34"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.525679941593176,
+                      0.912875
+                    ],
+                    "scale": 0.9920400000000001
+                  },
+                  "depth": 0.08875,
+                  "opacity": 0.940476658749173,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i3:lotus:leaf:1:35"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.07974226277902569,
+                      0.921125
+                    ],
+                    "scale": 1.01052
+                  },
+                  "depth": 0.09125,
+                  "opacity": 0.9577343167312793,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i3:lotus:leaf:1:36"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.8012845839648794,
+                      0.9293750000000001
+                    ],
+                    "scale": 1.0290000000000001
+                  },
+                  "depth": 0.09375,
+                  "opacity": 0.969440075474116,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i3:lotus:leaf:1:37"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.3553469051507292,
+                      0.937625
+                    ],
+                    "scale": 1.0474800000000002
+                  },
+                  "depth": 0.09625,
+                  "opacity": 0.9816337541053188,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i3:lotus:leaf:1:38"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      218
+                    ],
+                    "at": [
+                      0.965,
+                      0.945875
+                    ],
+                    "scale": 1.0659600000000002
+                  },
+                  "depth": 0.09875,
+                  "opacity": 0.9896,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i3:lotus:leaf:1:39"
+                }
+              ],
+              "singleUnit": true,
+              "quantity": {
+                "items": [
+                  {
+                    "entity": "i3",
+                    "mode": "many",
+                    "min": null,
+                    "max": null,
+                    "unit": null,
+                    "scope": "unspecified",
+                    "extent": "spread",
+                    "evidence": [
+                      "莲叶何田田"
+                    ],
+                    "basis": "model"
+                  }
+                ],
+                "rendered": 40,
+                "exact": false,
+                "collective": true,
+                "partUnsupported": false
+              },
+              "quantityLabel": "成片分布；本地试画 40 个单元",
+              "z": 18,
+              "visual": {
+                "role": "vegetation",
+                "brushStrength": 1.2
+              },
+              "performance": {
+                "rhythm": "gust",
+                "rate": 0.62,
+                "amplitude": 0.65,
+                "phase": 3.8830085198369844
+              },
+              "id": "i3:lotus:leaf:1",
+              "interaction": {
+                "mode": "instance",
+                "groupId": "i3:lotus:leaf:1"
+              }
+            },
+            {
+              "tool": "water",
+              "entities": [],
+              "projectedEntities": [],
+              "names": [
+                "构图依托·水域"
+              ],
+              "options": {
+                "form": "plane"
+              },
+              "animate": false,
+              "placement": {
+                "anchor": [
+                  320,
+                  135
+                ],
+                "at": [
+                  0.5,
+                  0.45
+                ],
+                "scale": 1.6
+              },
+              "instances": [
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      135
+                    ],
+                    "at": [
+                      0.5,
+                      0.45
+                    ],
+                    "scale": 1.65
+                  },
+                  "variant": 0,
+                  "depth": 0,
+                  "opacity": 1,
+                  "tone": "far",
+                  "id": "inferred:water:plane:2:0"
+                }
+              ],
+              "singleUnit": false,
+              "inferred": true,
+              "provenance": {
+                "basis": "local-context",
+                "reason": "整体场景解释为 waterside，本地补充必要 water 依托",
+                "semanticPath": "scene.setting"
+              },
+              "quantity": {
+                "rendered": 1,
+                "exact": false,
+                "items": []
+              },
+              "quantityLabel": "本地环境依托，不计入原文意象覆盖",
+              "z": -10,
+              "clip": [
+                [
+                  0,
+                  0.475
+                ],
+                [
+                  1,
+                  0.475
+                ],
+                [
+                  1,
+                  1.04
+                ],
+                [
+                  0,
+                  1.04
+                ]
+              ],
+              "surface": {
+                "top": 0.475,
+                "bottom": 1
+              },
+              "visual": {
+                "role": "water",
+                "brushStrength": 1.35
+              },
+              "performance": {
+                "rhythm": "continuous",
+                "rate": 0.9,
+                "amplitude": 0.9,
+                "phase": 1.4828317324943823
+              },
+              "id": "inferred:water:plane:2",
+              "interaction": {
+                "mode": "group",
+                "groupId": "inferred:water:plane:2"
+              }
+            }
+          ],
+          "scene": {
+            "kind": "study",
+            "notes": [],
+            "waterline": null,
+            "semanticSetting": {
+              "kind": "waterside",
+              "basis": "inferred",
+              "evidence": [
+                "江南可采莲"
+              ]
+            },
+            "semanticEffects": [
+              {
+                "path": "scene.setting",
+                "consumer": "场景依托",
+                "status": "applied",
+                "effect": "必要环境以独立推断背景表示，不新增原文实体"
+              }
+            ],
+            "organization": {
+              "version": "1.0",
+              "strategy": "general-constraints",
+              "regions": {
+                "water": [
+                  [
+                    0,
+                    0.475
+                  ],
+                  [
+                    1,
+                    0.475
+                  ],
+                  [
+                    1,
+                    1.04
+                  ],
+                  [
+                    0,
+                    1.04
+                  ]
+                ]
+              },
+              "candidates": [],
+              "repairs": [],
+              "limitations": [
+                "几何检查不判定诗意理解或审美合格",
+                "动作时序与整首诗的场景切换尚未编排"
+              ],
+              "topology": "水面横展",
+              "layout": 1,
+              "orientation": "水面横展",
+              "audit": {
+                "scope": "implemented-geometry-and-drawing-gaps",
+                "coverage": {
+                  "scope": "extracted-entities-only",
+                  "present": 3,
+                  "mapped": 2,
+                  "parameters": [],
+                  "missing": [
+                    {
+                      "id": "i1",
+                      "name": "江南"
+                    }
+                  ]
+                },
+                "checks": [
+                  "presence",
+                  "count",
+                  "finite",
+                  "support",
+                  "scale",
+                  "relative-position",
+                  "depth",
+                  "grove-spread",
+                  "drawing-gaps"
+                ],
+                "status": "needs-review",
+                "errors": 0,
+                "review": 1,
+                "issues": [
+                  {
+                    "code": "drawing-gaps",
+                    "severity": "review",
+                    "message": "还有 1 项已提取线索尚未转成画面：江南"
+                  }
+                ],
+                "metrics": {
+                  "overlapPenalty": 46.423,
+                  "balancePenalty": 0.01,
+                  "motifFootprint": 1.753,
+                  "landArea": 0
+                },
+                "cost": 587.153,
+                "aestheticAcceptance": "pending-user"
+              },
+              "graph": {
+                "nodes": [
+                  {
+                    "id": "l0",
+                    "entities": [
+                      "i2"
+                    ],
+                    "tool": "lotus",
+                    "role": "aquatic-vegetation",
+                    "habitat": "water",
+                    "inferred": false,
+                    "support": "l2"
+                  },
+                  {
+                    "id": "l1",
+                    "entities": [
+                      "i3"
+                    ],
+                    "tool": "lotus",
+                    "role": "aquatic-vegetation",
+                    "habitat": "water",
+                    "inferred": false,
+                    "support": "l2"
+                  },
+                  {
+                    "id": "l2",
+                    "entities": [],
+                    "tool": "water",
+                    "role": "water",
+                    "habitat": null,
+                    "inferred": true,
+                    "support": null
+                  }
+                ],
+                "edges": [
+                  {
+                    "type": "supported-by",
+                    "source": "l0",
+                    "target": "l2",
+                    "basis": "local-composition",
+                    "habitat": "water"
+                  },
+                  {
+                    "type": "supported-by",
+                    "source": "l1",
+                    "target": "l2",
+                    "basis": "local-composition",
+                    "habitat": "water"
+                  }
+                ],
+                "setting": "study"
+              }
+            },
+            "displayAudit": {
+              "scope": "display-scale-separation-and-habitat",
+              "issues": [],
+              "errors": 0,
+              "aestheticAcceptance": "pending-user"
+            }
+          },
+          "spatial": [],
+          "landscapeStyle": {
+            "version": "1.0",
+            "color": "role-and-distance",
+            "motion": "layer-rhythms",
+            "aestheticAcceptance": "pending-user"
+          }
+        }
+      ],
+      "composition": "space-2",
+      "omitted": [
+        {
+          "id": "i1",
+          "name": "江南",
+          "reason": "该专名人物、地名或抽象含义暂不作实景补画"
+        }
+      ],
+      "parameters": [],
+      "notes": [
+        "莲的单体画笔只画选定的花或叶，环境依托另由场景组织层决定；默认花态是本地选择，尚无生长或开花过程。",
+        "莲叶的单体画笔只画选定的花或叶，环境依托另由场景组织层决定；默认花态是本地选择，尚无生长或开花过程。",
+        "位置、大小、笔触与默认微动是本地试画选择；数量解释与本地显示数量分别记录。",
+        "莲未明说精确数量，按模型的 field 群落解释选择本地显示密度。",
+        "未明说的群落数量、疏密、近中远层次与变体均为本地构图选择；种类可按已声明的写意画法概括，不把铺展词换算成精确物体数量。",
+        "通用场景层先组织地面、水域、群落和主体，再比较三个布局的依托、相对位置、尺度与遮挡；检查通过不代表审美已通过。",
+        "整体场景、主次、远近、依托和支持的动作状态来自本次模型解释；具体布局、颜色和时钟倍率由本地视觉策略选择。",
+        "动作动画表现受支持的主导状态与有限观看运动；先后事件与完整因果尚未编排。",
+        "动态程度与默认轻风是可调整的观看选择；不改变数量、主次或原文动作判断。人物保持点景写意，不新增人物步态。",
+        "显示检查覆盖实例尺度、鸟群分离与空中落点；不保证笔触未被遮挡，也不代替实际观看。竹林默认成组拖动，其余单独拖动；Shift 可拖动同层整组。"
+      ],
+      "relations": [],
+      "semanticConsumption": {
+        "version": "3.3",
+        "items": [
+          {
+            "path": "scene.setting",
+            "status": "applied",
+            "consumer": "场景依托",
+            "effect": "必要环境以独立推断背景表示，不新增原文实体",
+            "basis": "inferred",
+            "evidence": [
+              "江南可采莲"
+            ]
+          },
+          {
+            "path": "scene.groups[0].role",
+            "status": "applied",
+            "consumer": "主次布局",
+            "effect": "主体相对突出",
+            "basis": "inferred",
+            "evidence": [
+              "江南可采莲",
+              "莲叶何田田"
+            ]
+          },
+          {
+            "path": "scene.groups[0].pattern",
+            "status": "applied",
+            "consumer": "群落布局",
+            "effect": "按 field 组织显示单元；不覆盖明确数量",
+            "basis": "inferred",
+            "evidence": [
+              "江南可采莲",
+              "莲叶何田田"
+            ]
+          },
+          {
+            "path": "scene.groups[0].depth",
+            "status": "skipped",
+            "consumer": "远近布局",
+            "effect": "远近未明，保持本地默认",
+            "basis": "inferred",
+            "evidence": [
+              "江南可采莲",
+              "莲叶何田田"
+            ]
+          },
+          {
+            "path": "scene.atmosphere.visibility",
+            "status": "applied",
+            "consumer": "画布色层与远景",
+            "effect": "可见度 clear；迷蒙或昏暗时淡化非光源图层",
+            "basis": "inferred",
+            "evidence": [
+              "江南可采莲",
+              "莲叶何田田"
+            ]
+          },
+          {
+            "path": "scene.atmosphere.illumination",
+            "status": "applied",
+            "consumer": "自动光色",
+            "effect": "照明 day 与气息标签共同选择本地 mineral 配色；夜景优先暗底，用户可手动覆盖",
+            "basis": "inferred",
+            "evidence": [
+              "江南可采莲",
+              "莲叶何田田"
+            ]
+          },
+          {
+            "path": "atmosphere.energy",
+            "status": "applied",
+            "consumer": "绘画时钟",
+            "effect": "没有明确动作节奏时，气息强弱控制已有微动的默认时钟"
+          },
+          {
+            "path": "atmosphere.openness",
+            "status": "applied",
+            "consumer": "群落分布与笔触密度",
+            "effect": "开阔度转换为本地间距与工具笔触密度，不等于原文数量"
+          },
+          {
+            "path": "atmosphere.valence",
+            "status": "applied",
+            "consumer": "自动光色",
+            "effect": "先约束昼夜明暗，再按已支持的气息标签和情绪倾向选择配色；不宣称完整情感理解"
+          },
+          {
+            "path": "time.markers",
+            "status": "retained",
+            "consumer": "原始记录与解读",
+            "effect": "保留原文时间标记；本版照明由 scene.atmosphere 转换，多阶段时间逻辑未执行"
+          }
+        ],
+        "summary": {
+          "applied": 8,
+          "partial": 0,
+          "unsupported": 0,
+          "skipped": 1,
+          "retained": 1
+        },
+        "aestheticAcceptance": "pending-user"
+      },
+      "landscapeStyle": {
+        "version": "1.0",
+        "color": "role-and-distance",
+        "motion": "layer-rhythms",
+        "aestheticAcceptance": "pending-user"
+      },
+      "compositionSelection": {
+        "method": "final-display-constraints-then-geometric-preference",
+        "candidates": [
+          {
+            "id": "space-2",
+            "errors": 0,
+            "score": 1365.064
+          },
+          {
+            "id": "space-0",
+            "errors": 0,
+            "score": 1406.951
+          },
+          {
+            "id": "space-1",
+            "errors": 0,
+            "score": 1422.907
+          }
+        ],
+        "aestheticAcceptance": "pending-user"
+      },
+      "imageryTrace": [
+        {
+          "id": "i1",
+          "mentions": [
+            "江南"
+          ],
+          "role": "scene",
+          "presence": "present",
+          "parameter": null,
+          "layers": [],
+          "omission": "该专名人物、地名或抽象含义暂不作实景补画"
+        },
+        {
+          "id": "i2",
+          "mentions": [
+            "莲"
+          ],
+          "role": "scene",
+          "presence": "present",
+          "parameter": null,
+          "layers": [
+            {
+              "id": "i2:lotus:flower:0",
+              "tool": "lotus",
+              "instances": [
+                "i2:lotus:flower:0:0",
+                "i2:lotus:flower:0:1",
+                "i2:lotus:flower:0:2",
+                "i2:lotus:flower:0:3",
+                "i2:lotus:flower:0:4",
+                "i2:lotus:flower:0:5",
+                "i2:lotus:flower:0:6",
+                "i2:lotus:flower:0:7",
+                "i2:lotus:flower:0:8",
+                "i2:lotus:flower:0:9",
+                "i2:lotus:flower:0:10",
+                "i2:lotus:flower:0:11",
+                "i2:lotus:flower:0:12",
+                "i2:lotus:flower:0:13",
+                "i2:lotus:flower:0:14",
+                "i2:lotus:flower:0:15"
+              ]
+            }
+          ],
+          "omission": null
+        },
+        {
+          "id": "i3",
+          "mentions": [
+            "莲叶"
+          ],
+          "role": "scene",
+          "presence": "present",
+          "parameter": null,
+          "layers": [
+            {
+              "id": "i3:lotus:leaf:1",
+              "tool": "lotus",
+              "instances": [
+                "i3:lotus:leaf:1:0",
+                "i3:lotus:leaf:1:1",
+                "i3:lotus:leaf:1:2",
+                "i3:lotus:leaf:1:3",
+                "i3:lotus:leaf:1:4",
+                "i3:lotus:leaf:1:5",
+                "i3:lotus:leaf:1:6",
+                "i3:lotus:leaf:1:7",
+                "i3:lotus:leaf:1:8",
+                "i3:lotus:leaf:1:9",
+                "i3:lotus:leaf:1:10",
+                "i3:lotus:leaf:1:11",
+                "i3:lotus:leaf:1:12",
+                "i3:lotus:leaf:1:13",
+                "i3:lotus:leaf:1:14",
+                "i3:lotus:leaf:1:15",
+                "i3:lotus:leaf:1:16",
+                "i3:lotus:leaf:1:17",
+                "i3:lotus:leaf:1:18",
+                "i3:lotus:leaf:1:19",
+                "i3:lotus:leaf:1:20",
+                "i3:lotus:leaf:1:21",
+                "i3:lotus:leaf:1:22",
+                "i3:lotus:leaf:1:23",
+                "i3:lotus:leaf:1:24",
+                "i3:lotus:leaf:1:25",
+                "i3:lotus:leaf:1:26",
+                "i3:lotus:leaf:1:27",
+                "i3:lotus:leaf:1:28",
+                "i3:lotus:leaf:1:29",
+                "i3:lotus:leaf:1:30",
+                "i3:lotus:leaf:1:31",
+                "i3:lotus:leaf:1:32",
+                "i3:lotus:leaf:1:33",
+                "i3:lotus:leaf:1:34",
+                "i3:lotus:leaf:1:35",
+                "i3:lotus:leaf:1:36",
+                "i3:lotus:leaf:1:37",
+                "i3:lotus:leaf:1:38",
+                "i3:lotus:leaf:1:39"
+              ]
+            }
+          ],
+          "omission": null
+        }
+      ]
+    },
+    "renderability": {
+      "status": "limited",
+      "visibleScenery": true,
+      "visibleAbstract": false,
+      "gaps": [
+        {
+          "id": "i1",
+          "label": "江南",
+          "reason": "该专名人物、地名或抽象含义暂不作实景补画"
+        }
+      ]
+    },
+    "expression": {
+      "version": "shared-expression-1.1-source-bound",
+      "sourceContract": "expression-1.0",
+      "recommendation": "scenery",
+      "reason": "以明确景物及空间为主，默认风景优先",
+      "gaps": [
+        {
+          "id": "i1",
+          "label": "江南",
+          "reason": "该专名人物、地名或抽象含义暂不作实景补画"
+        }
+      ],
+      "limitations": [
+        "景物过程当前影响抽象纹理；原生景物动作沿用场景能力，未支持的月下楼位移等仍不执行。",
+        "纹理、色层和观看扰动属于本地艺术选择，不改变语义成立状态"
+      ]
+    },
+    "notes": [
+      "三个表达倾向共享景物数量、空间、依托与主体身份；抽象笔触优先服从原景物区域和轮廓。",
+      "纯抽象或比喻句不因切换风景优先而补山水。",
+      "莲的单体画笔只画选定的花或叶，环境依托另由场景组织层决定；默认花态是本地选择，尚无生长或开花过程。",
+      "莲叶的单体画笔只画选定的花或叶，环境依托另由场景组织层决定；默认花态是本地选择，尚无生长或开花过程。",
+      "位置、大小、笔触与默认微动是本地试画选择；数量解释与本地显示数量分别记录。",
+      "莲未明说精确数量，按模型的 field 群落解释选择本地显示密度。",
+      "未明说的群落数量、疏密、近中远层次与变体均为本地构图选择；种类可按已声明的写意画法概括，不把铺展词换算成精确物体数量。",
+      "通用场景层先组织地面、水域、群落和主体，再比较三个布局的依托、相对位置、尺度与遮挡；检查通过不代表审美已通过。",
+      "整体场景、主次、远近、依托和支持的动作状态来自本次模型解释；具体布局、颜色和时钟倍率由本地视觉策略选择。",
+      "动作动画表现受支持的主导状态与有限观看运动；先后事件与完整因果尚未编排。",
+      "动态程度与默认轻风是可调整的观看选择；不改变数量、主次或原文动作判断。人物保持点景写意，不新增人物步态。",
+      "显示检查覆盖实例尺度、鸟群分离与空中落点；不保证笔触未被遮挡，也不代替实际观看。竹林默认成组拖动，其余单独拖动；Shift 可拖动同层整组。"
+    ],
+    "aestheticAcceptance": "pending-user"
+  },
+  "delivery": {
+    "status": "partial",
+    "retryable": false,
+    "reason": "drawing-gap",
+    "message": "基础画面已生成，部分意象尚未单独表现，具体缺口已列出。"
+  },
+  "elapsed_seconds": 4.5
+}

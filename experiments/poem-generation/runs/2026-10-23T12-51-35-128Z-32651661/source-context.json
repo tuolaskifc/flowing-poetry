@@ -1,0 +1,61 @@
+{
+  "applied": true,
+  "rawValidation": {
+    "valid": false,
+    "errors": [
+      "spatial[0] 依据未关联关系两端"
+    ],
+    "warnings": [
+      "模型保留了不确定性，需要审阅",
+      "spatial[0] 的推断或非确定关系需审阅"
+    ],
+    "review_required": true
+  },
+  "validation": {
+    "valid": true,
+    "errors": [],
+    "warnings": [
+      "模型保留了不确定性，需要审阅",
+      "spatial[0] 的推断或非确定关系需审阅",
+      "scene.setting 为语义推断，绘画选择需与原文明示区分",
+      "scene.groups[0] 为语义推断，绘画选择需与原文明示区分",
+      "scene.groups[1] 为语义推断，绘画选择需与原文明示区分",
+      "scene.supports[0] 为语义推断，绘画选择需与原文明示区分",
+      "scene.actions[0] 为语义推断，绘画选择需与原文明示区分",
+      "scene.atmosphere 为语义推断，绘画选择需与原文明示区分",
+      "引用范围由程序按同句或相邻原句展开；未改写语义，关联是否合理仍需复核"
+    ],
+    "review_required": true
+  },
+  "changes": [
+    {
+      "path": "spatial[0].evidence",
+      "original": [
+        "孤舟尽日横"
+      ],
+      "expanded": [
+        "野水无人渡，孤舟尽日横。"
+      ],
+      "clauses": [
+        "c1",
+        "c2"
+      ]
+    },
+    {
+      "path": "scene.supports[0].evidence",
+      "original": [
+        "孤舟尽日横"
+      ],
+      "expanded": [
+        "野水无人渡，孤舟尽日横。"
+      ],
+      "clauses": [
+        "c1",
+        "c2"
+      ]
+    }
+  ],
+  "reviewRequired": true,
+  "scope": "source-range-only",
+  "note": "仅机械展开原文引用，不证明文学解读正确；原始回答与原始失败保留"
+}

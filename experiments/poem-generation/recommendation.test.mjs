@@ -12,14 +12,14 @@ test('longest compounds win, supported species survive generic exclusions, repea
   assert.deepEqual(scorePoem('露水清泉水').hits.map(h=>h.tool),['surface-weather','water','water']);
 });
 test('months, named places and unsupported compounds do not become drawable substrings',()=>{
-  for(const poem of ['十月二月2026年10月','提剑出燕京','兰桡莲子莲蓬梅子','风流风骨岁月'])assert.equal(scorePoem(poem).toolCount,0,poem);
+  for(const poem of ['十月二月2026年10月','剑阁剑门剑南','兰桡莲子莲蓬梅子','风流风骨岁月'])assert.equal(scorePoem(poem).toolCount,0,poem);
   assert.equal(scorePoem('三月明月').toolCount,1);
   assert.deepEqual(scorePoem('兰舟梅雨').hits.map(h=>h.tool),['boat','rain']);
-  assert.equal(scorePoem('只有风').score,0);
+  assert.equal(scorePoem('只有风').score,0);assert.deepEqual(scorePoem('酒旗长剑').hits.map(h=>h.tool),['flag','weapon']);
 });
 test('ranking deduplicates poems and rewards drawable diversity instead of repetition or metadata',()=>{
   const ranked=rankCandidates([{poem:'花花花花花',source:{title:'明月清泉柳絮'}},{poem:'提剑出燕京'},{poem:'月照水，柳含烟。'},{poem:'月照水柳含烟'}]);
-  assert.equal(ranked.length,3);assert.equal(ranked[0].selection.toolCount,4);assert(ranked[0].selection.hits.some(h=>h.tool==='mist'));assert.equal(ranked[1].selection.toolCount,1);assert.equal(ranked[2].selection.toolCount,0);
+  assert.equal(ranked.length,3);assert.equal(ranked[0].selection.toolCount,4);assert(ranked[0].selection.hits.some(h=>h.tool==='mist'));assert.equal(ranked[1].selection.toolCount,1);assert.equal(ranked[2].selection.toolCount,1);assert.equal(ranked[2].selection.hits[0].tool,'weapon');
   assert.equal(scorePoem('花花花花花').score,scorePoem('花').score);
   assert.equal(scorePoem('月水柳竹草').score,scorePoem('月水柳竹').score);
 });
@@ -40,5 +40,5 @@ test('a failed or timed out call stops the batch, preserving earlier candidates 
 });
 test('invalid length and an entirely unsupported batch never inject a fallback poem',async()=>{
   const bad=await collectCandidates(async()=>result('月'.repeat(201)),fast);assert.equal(bad.candidates.length,0);assert.equal(bad.attempts,1);
-  const empty=await collectCandidates(async()=>result('君子死知己，提剑出燕京。'),fast);assert.equal(empty.attempts,5);assert.equal(empty.candidates.length,1);assert.equal(empty.candidates[0].selection.toolCount,0);
+  const empty=await collectCandidates(async()=>result('岁月光阴，风骨风流。'),fast);assert.equal(empty.attempts,5);assert.equal(empty.candidates.length,1);assert.equal(empty.candidates[0].selection.toolCount,0);
 });

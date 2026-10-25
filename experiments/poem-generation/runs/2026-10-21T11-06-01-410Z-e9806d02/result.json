@@ -1,0 +1,197 @@
+{
+  "id": "2026-10-21T11-06-01-410Z-e9806d02",
+  "fingerprint": "30b8072cb3f9da207eb565be86b4b6b4cdb203935069e3b76eda3d0921c2854d",
+  "poem": "接天莲叶无穷碧，映日荷花别样红。",
+  "source": {
+    "provider": "精选诗句库",
+    "author": "杨万里",
+    "title": "晓出净慈寺送林子方",
+    "dynasty": "宋代"
+  },
+  "mode": "imagery-only",
+  "model": "DeepSeek-V4.1-Flash",
+  "started_at": "2026-10-21T11:06:01.412Z",
+  "cached": false,
+  "http_status": 200,
+  "usage": {
+    "completion_tokens": 340,
+    "prompt_tokens": 1993,
+    "total_tokens": 2333,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 1920
+    }
+  },
+  "finish_reason": "stop",
+  "analysis": {
+    "schema_version": "3.0",
+    "poem": "接天莲叶无穷碧，映日荷花别样红。",
+    "reading": "莲叶连绵与天相接，一片无尽碧色；荷花在日光映照下格外鲜红。两句以碧与红对举，写夏日荷塘的繁盛明丽。",
+    "entities": [
+      {
+        "id": "i1",
+        "mentions": [
+          "莲叶"
+        ],
+        "concept": "莲的叶子",
+        "kind": "organism",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "接天莲叶无穷碧"
+        ]
+      },
+      {
+        "id": "i2",
+        "mentions": [
+          "天"
+        ],
+        "concept": "天空",
+        "kind": "environment",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "接天莲叶无穷碧"
+        ]
+      },
+      {
+        "id": "i3",
+        "mentions": [
+          "荷花"
+        ],
+        "concept": "荷花",
+        "kind": "organism",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "映日荷花别样红"
+        ]
+      },
+      {
+        "id": "i4",
+        "mentions": [
+          "日"
+        ],
+        "concept": "太阳",
+        "kind": "environment",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "映日荷花别样红"
+        ]
+      }
+    ],
+    "relations": [],
+    "atmosphere": {
+      "labels": [
+        "明丽",
+        "繁盛"
+      ],
+      "valence": "positive",
+      "energy": "medium",
+      "tension": "low",
+      "openness": "high",
+      "evidence": [
+        "接天莲叶无穷碧",
+        "映日荷花别样红"
+      ]
+    },
+    "time": {
+      "markers": [],
+      "note": null
+    },
+    "uncertainties": [
+      "“接天”可理解为莲叶与天相接的夸张描写，也可理解为视线延伸至天际，空间关系不完全确定。"
+    ]
+  },
+  "validation": {
+    "valid": true,
+    "errors": [],
+    "warnings": [
+      "模型保留了不确定性，需要审阅"
+    ],
+    "review_required": true
+  },
+  "plan": {
+    "version": "trial-4-orchid-horse-lotus",
+    "seed": 4131447296,
+    "settings": {
+      "wind": 0,
+      "density": 0.45,
+      "palette": "clear"
+    },
+    "layers": [
+      {
+        "tool": "lotus",
+        "entities": [
+          "i1"
+        ],
+        "names": [
+          "莲叶"
+        ],
+        "options": {
+          "form": "leaf"
+        },
+        "animate": false,
+        "placement": {
+          "anchor": [
+            320,
+            330
+          ],
+          "at": [
+            0.53,
+            0.92
+          ],
+          "scale": 0.95
+        }
+      },
+      {
+        "tool": "lotus",
+        "entities": [
+          "i3"
+        ],
+        "names": [
+          "荷花"
+        ],
+        "options": {
+          "form": "flower",
+          "state": "open"
+        },
+        "animate": false,
+        "placement": {
+          "anchor": [
+            320,
+            330
+          ],
+          "at": [
+            0.53,
+            0.92
+          ],
+          "scale": 0.95
+        }
+      }
+    ],
+    "omitted": [
+      {
+        "id": "i2",
+        "name": "天",
+        "reason": "该具体意象尚无可用形态；没有替换成通用树、花或鸟群"
+      },
+      {
+        "id": "i4",
+        "name": "日",
+        "reason": "该具体意象尚无可用形态；没有替换成通用树、花或鸟群"
+      }
+    ],
+    "notes": [
+      "莲叶按提到的花或叶分别试画；不自动补池水、荷叶或其他生物，默认花态是本地选择，尚无生长或开花过程。",
+      "荷花按提到的花或叶分别试画；不自动补池水、荷叶或其他生物，默认花态是本地选择，尚无生长或开花过程。",
+      "本句有否定或假设提示，基础意象模式未细分其范围，暂缓动画，不宣称完成逻辑解释。",
+      "位置、大小、笔触、固定群体数量与默认微动是本地试画选择；不表示原句给出了这些数值。"
+    ],
+    "relations": []
+  },
+  "elapsed_seconds": 1.8
+}

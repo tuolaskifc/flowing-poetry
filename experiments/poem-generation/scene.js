@@ -29,8 +29,9 @@ window.PoemTrialScene=(()=>{
       const own=instanceOffsets.get(id)||[0,0];
       placement.at=[placement.at[0]+l.placement.at[0]-initial.at[0]+own[0],placement.at[1]+l.placement.at[1]-initial.at[1]+own[1]];
       let parentOpacity=1;
-      if(l.attachment){const parent=plan.layers.findIndex(v=>v.entities.includes(l.attachment.target));if(parent>=0){
-        const p=plan.layers[parent],pi=Math.max(0,p.instances.findIndex(v=>v.id===l.attachment.instance)),pe=entryFor(parent,pi,seen);
+      const attachment=instance.attachment||l.attachment;
+      if(attachment){const parent=plan.layers.findIndex(v=>v.entities.includes(attachment.target));if(parent>=0){
+        const p=plan.layers[parent],pi=Math.max(0,p.instances.findIndex(v=>v.id===attachment.instance)),pe=entryFor(parent,pi,seen);
         if(pe){const original=p.instances[pi].placement,ratio=pe.placement.scale/original.scale;
         placement.at=placement.at.map((v,k)=>pe.placement.at[k]+(v-original.at[k])*ratio);placement.scale*=ratio;parentOpacity=pe.opacity;}
       }}
@@ -50,7 +51,7 @@ window.PoemTrialScene=(()=>{
       const source=hosts[entry.sourceIndex]?.querySelector('canvas');if(!source)continue;
       const {anchor,at,scale}=entry.placement;const layer=plan.layers[entry.layer];
       const colors=window.PoemDrawing.paletteFor(shared.palette,entry.visual&&{...entry.visual,depth:entry.tone});
-      if(layer.grounding){c.save();c.translate(at[0]*W,at[1]*H+5);c.scale(scale*1.8,scale*.24);const g=c.createRadialGradient(0,0,4,0,0,95);g.addColorStop(0,colors.main+'50');g.addColorStop(1,'transparent');c.fillStyle=g;c.fillRect(-100,-100,200,200);c.restore();}
+      if(layer.grounding){const narrow=['weapon','flag'].includes(layer.tool);c.save();c.translate(at[0]*W,at[1]*H+5);c.scale(scale*(narrow?.65:1.8),scale*(narrow?.10:.24));const g=c.createRadialGradient(0,0,4,0,0,95);g.addColorStop(0,colors.main+'50');g.addColorStop(1,'transparent');c.fillStyle=g;c.fillRect(-100,-100,200,200);c.restore();}
       c.save();if(layer.clip){
         const dx=layer.placement.at[0]-initialPlacements[entry.layer].at[0],dy=layer.placement.at[1]-initialPlacements[entry.layer].at[1];
         const points=layer.clip.map(([x,y])=>[(x+dx)*W,(y+dy)*H]);c.beginPath();

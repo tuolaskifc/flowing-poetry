@@ -1,0 +1,1054 @@
+{
+  "id": "2026-10-23T07-43-21-269Z-a67d8995",
+  "fingerprint": "7e4640101c68f460ec2b5ef375c2b927b2ef381e43974944a7062f40bf2e362d",
+  "poem": "飞流直下三千尺，疑是银河落九天。",
+  "source": {
+    "provider": "精选诗句库",
+    "author": "李白",
+    "title": "望庐山瀑布",
+    "dynasty": "唐代"
+  },
+  "mode": "composition",
+  "model": "DeepSeek-V4.1-Flash",
+  "started_at": "2026-10-23T07:43:21.270Z",
+  "cached": false,
+  "http_status": 200,
+  "usage": {
+    "completion_tokens": 619,
+    "prompt_tokens": 4897,
+    "total_tokens": 5516,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 4864
+    }
+  },
+  "finish_reason": "stop",
+  "analysis": {
+    "schema_version": "3.3",
+    "poem": "飞流直下三千尺，疑是银河落九天。",
+    "reading": "瀑布从高处笔直飞泻而下，落差被夸张为三千尺；诗人怀疑那是银河从九天之上倾落。",
+    "entities": [
+      {
+        "id": "i1",
+        "mentions": [
+          "飞流"
+        ],
+        "concept": "飞泻而下的水流/瀑布",
+        "kind": "environment",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "飞流直下三千尺"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i2",
+        "mentions": [
+          "银河"
+        ],
+        "concept": "银河",
+        "kind": "environment",
+        "role": "reference",
+        "presence": "unclear",
+        "evidence": [
+          "疑是银河落九天"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i3",
+        "mentions": [
+          "九天"
+        ],
+        "concept": "极高的天空",
+        "kind": "place",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "疑是银河落九天"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      }
+    ],
+    "relations": [],
+    "atmosphere": {
+      "labels": [
+        "雄奇",
+        "迅疾",
+        "高远"
+      ],
+      "valence": "positive",
+      "energy": "high",
+      "tension": "medium",
+      "openness": "high",
+      "evidence": [
+        "飞流直下三千尺",
+        "疑是银河落九天"
+      ]
+    },
+    "time": {
+      "markers": [],
+      "note": null
+    },
+    "uncertainties": [
+      "“疑是”表明银河之喻是主观揣测，非实见。",
+      "“三千尺”为夸张，非可核实的精确长度。"
+    ],
+    "spatial": [],
+    "scene": {
+      "setting": {
+        "kind": "mountain_stream",
+        "basis": "inferred",
+        "evidence": [
+          "飞流直下三千尺"
+        ]
+      },
+      "groups": [
+        {
+          "members": [
+            "i1"
+          ],
+          "role": "subject",
+          "pattern": "single",
+          "depth": "unspecified",
+          "basis": "inferred",
+          "evidence": [
+            "飞流直下三千尺"
+          ]
+        },
+        {
+          "members": [
+            "i3"
+          ],
+          "role": "environment",
+          "pattern": "single",
+          "depth": "far",
+          "basis": "inferred",
+          "evidence": [
+            "疑是银河落九天"
+          ]
+        }
+      ],
+      "supports": [
+        {
+          "entity": "i1",
+          "surface": "mountain",
+          "target": null,
+          "basis": "inferred",
+          "evidence": [
+            "飞流直下三千尺"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "entity": "i1",
+          "state": "fall",
+          "pace": "fast",
+          "direction": "down",
+          "modality": "asserted",
+          "basis": "explicit",
+          "evidence": [
+            "飞流直下三千尺"
+          ]
+        }
+      ],
+      "atmosphere": {
+        "visibility": "unclear",
+        "illumination": "unclear",
+        "basis": "inferred",
+        "evidence": [
+          "飞流直下三千尺",
+          "疑是银河落九天"
+        ]
+      }
+    }
+  },
+  "validation": {
+    "valid": true,
+    "errors": [],
+    "warnings": [
+      "模型保留了不确定性，需要审阅",
+      "scene.setting 为语义推断，绘画选择需与原文明示区分",
+      "scene.groups[0] 为语义推断，绘画选择需与原文明示区分",
+      "scene.groups[1] 为语义推断，绘画选择需与原文明示区分",
+      "scene.supports[0] 为语义推断，绘画选择需与原文明示区分",
+      "scene.atmosphere 为语义推断，绘画选择需与原文明示区分"
+    ],
+    "review_required": true
+  },
+  "plan": {
+    "version": "semantic-composition-3.3-landscape",
+    "seed": 395570893,
+    "settings": {
+      "wind": 0.3,
+      "density": 0.35,
+      "palette": "tender",
+      "motion": 1.4
+    },
+    "layers": [
+      {
+        "tool": "landscape",
+        "entities": [
+          "i1"
+        ],
+        "projectedEntities": [],
+        "names": [
+          "飞流"
+        ],
+        "options": {
+          "form": "waterfall"
+        },
+        "animate": false,
+        "placement": {
+          "anchor": [
+            320,
+            194
+          ],
+          "at": [
+            0.53,
+            0.49
+          ],
+          "scale": 1.5
+        },
+        "semanticGroup": {
+          "members": [
+            "i1"
+          ],
+          "role": "subject",
+          "pattern": "single",
+          "depth": "unspecified",
+          "basis": "inferred",
+          "evidence": [
+            "飞流直下三千尺"
+          ],
+          "index": 0
+        },
+        "semanticEffects": [
+          {
+            "path": "scene.actions[0].state",
+            "consumer": "动作画法",
+            "effect": "当前工具尚无对应动作状态",
+            "status": "unsupported"
+          },
+          {
+            "path": "scene.groups[0].role",
+            "consumer": "主次布局",
+            "effect": "主体相对突出",
+            "status": "applied"
+          },
+          {
+            "path": "scene.groups[0].pattern",
+            "consumer": "群落布局",
+            "effect": "按 single 组织显示单元；不覆盖明确数量",
+            "status": "applied"
+          },
+          {
+            "path": "scene.groups[0].depth",
+            "consumer": "远近布局",
+            "effect": "远近未明，保持本地默认",
+            "status": "skipped"
+          }
+        ],
+        "semanticEnergy": false,
+        "timeScale": 0,
+        "semanticAction": {
+          "entity": "i1",
+          "state": "fall",
+          "pace": "fast",
+          "direction": "down",
+          "modality": "asserted",
+          "basis": "explicit",
+          "evidence": [
+            "飞流直下三千尺"
+          ]
+        },
+        "instances": [
+          {
+            "placement": {
+              "anchor": [
+                320,
+                194
+              ],
+              "at": [
+                0.53,
+                0.49
+              ],
+              "scale": 1.8144000000000002
+            },
+            "depth": 0.05,
+            "opacity": 1,
+            "variant": 0,
+            "tone": "far"
+          }
+        ],
+        "singleUnit": false,
+        "quantity": {
+          "items": [
+            {
+              "entity": "i1",
+              "mode": "unspecified",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "unspecified",
+              "extent": "unspecified",
+              "evidence": [],
+              "basis": "model"
+            }
+          ],
+          "rendered": 1,
+          "exact": false,
+          "collective": false,
+          "partUnsupported": false
+        },
+        "quantityLabel": "整体笔触图层；内部数量尚未适配",
+        "z": 4,
+        "semanticSupport": {
+          "surface": "mountain",
+          "target": null,
+          "path": "scene.supports[0]"
+        },
+        "visual": {
+          "role": "water"
+        },
+        "performance": {
+          "rhythm": "steady",
+          "rate": 1,
+          "amplitude": 1,
+          "phase": 0
+        }
+      },
+      {
+        "tool": "landscape",
+        "entities": [
+          "i3"
+        ],
+        "projectedEntities": [],
+        "names": [
+          "九天"
+        ],
+        "options": {
+          "form": "sky"
+        },
+        "animate": false,
+        "placement": {
+          "anchor": [
+            320,
+            194
+          ],
+          "at": [
+            0.5,
+            0.5
+          ],
+          "scale": 1.5
+        },
+        "semanticGroup": {
+          "members": [
+            "i3"
+          ],
+          "role": "environment",
+          "pattern": "single",
+          "depth": "far",
+          "basis": "inferred",
+          "evidence": [
+            "疑是银河落九天"
+          ],
+          "index": 1
+        },
+        "semanticEffects": [
+          {
+            "path": "scene.groups[1].role",
+            "consumer": "主次布局",
+            "effect": "保留环境画布范围，主次不改变地形边界",
+            "status": "applied"
+          },
+          {
+            "path": "scene.groups[1].pattern",
+            "consumer": "群落布局",
+            "effect": "按 single 组织显示单元；不覆盖明确数量",
+            "status": "applied"
+          },
+          {
+            "path": "scene.groups[1].depth",
+            "consumer": "远近布局",
+            "effect": "将 far 转为相对大小、透明度与允许区域内的落点",
+            "status": "applied"
+          }
+        ],
+        "semanticEnergy": false,
+        "timeScale": 1.2,
+        "instances": [
+          {
+            "placement": {
+              "anchor": [
+                320,
+                194
+              ],
+              "at": [
+                0.5,
+                0.5
+              ],
+              "scale": 1.6
+            },
+            "depth": -0.2,
+            "opacity": 1,
+            "variant": 0,
+            "tone": "far"
+          }
+        ],
+        "singleUnit": false,
+        "quantity": {
+          "items": [
+            {
+              "entity": "i3",
+              "mode": "unspecified",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "unspecified",
+              "extent": "unspecified",
+              "evidence": [],
+              "basis": "model"
+            }
+          ],
+          "rendered": 1,
+          "exact": false,
+          "collective": false,
+          "partUnsupported": false
+        },
+        "quantityLabel": "整体笔触图层；内部数量尚未适配",
+        "z": -45,
+        "visual": {
+          "role": "atmosphere"
+        },
+        "performance": {
+          "rhythm": "steady",
+          "rate": 1,
+          "amplitude": 1,
+          "phase": 3.8830085198369844
+        }
+      },
+      {
+        "tool": "landscape",
+        "names": [
+          "构图依托·山势"
+        ],
+        "entities": [],
+        "projectedEntities": [],
+        "options": {
+          "form": "mountain"
+        },
+        "animate": false,
+        "placement": {
+          "anchor": [
+            320,
+            194
+          ],
+          "at": [
+            0.5,
+            0.43
+          ],
+          "scale": 1.9
+        },
+        "instances": [
+          {
+            "placement": {
+              "anchor": [
+                320,
+                194
+              ],
+              "at": [
+                0.5,
+                0.43
+              ],
+              "scale": 1.9
+            },
+            "variant": 0,
+            "depth": 0,
+            "opacity": 1,
+            "tone": "far"
+          }
+        ],
+        "singleUnit": false,
+        "inferred": true,
+        "provenance": {
+          "basis": "local-context",
+          "reason": "瀑布必须依托山体与落差"
+        },
+        "quantity": {
+          "rendered": 1,
+          "exact": false,
+          "items": []
+        },
+        "quantityLabel": "背景依托，不计入意象覆盖",
+        "z": -32,
+        "semanticEffects": [],
+        "semanticEnergy": false,
+        "visual": {
+          "role": "mountain"
+        },
+        "performance": {
+          "rhythm": "steady",
+          "rate": 1,
+          "amplitude": 1,
+          "phase": 1.4828317324943823
+        }
+      },
+      {
+        "tool": "water",
+        "entities": [],
+        "projectedEntities": [],
+        "names": [
+          "构图依托·水域"
+        ],
+        "options": {
+          "form": "plane"
+        },
+        "animate": true,
+        "placement": {
+          "anchor": [
+            320,
+            135
+          ],
+          "at": [
+            0.5,
+            0.46
+          ],
+          "scale": 1.6
+        },
+        "instances": [
+          {
+            "placement": {
+              "anchor": [
+                320,
+                135
+              ],
+              "at": [
+                0.5,
+                0.46
+              ],
+              "scale": 1.6
+            },
+            "variant": 0,
+            "depth": 0,
+            "opacity": 1,
+            "tone": "far"
+          }
+        ],
+        "singleUnit": false,
+        "inferred": true,
+        "provenance": {
+          "basis": "local-context",
+          "reason": "整体场景解释为 mountain_stream，本地补充必要 water 依托",
+          "semanticPath": "scene.setting"
+        },
+        "quantity": {
+          "rendered": 1,
+          "exact": false,
+          "items": []
+        },
+        "quantityLabel": "本地环境依托，不计入原文意象覆盖",
+        "z": -10,
+        "visual": {
+          "role": "water"
+        },
+        "performance": {
+          "rhythm": "continuous",
+          "rate": 0.9,
+          "amplitude": 0.9,
+          "phase": 5.365840252331367
+        }
+      },
+      {
+        "tool": "landscape",
+        "entities": [],
+        "projectedEntities": [],
+        "names": [
+          "构图依托·地面"
+        ],
+        "options": {
+          "form": "ground",
+          "edge": "soft"
+        },
+        "animate": false,
+        "placement": {
+          "anchor": [
+            320,
+            194
+          ],
+          "at": [
+            0.5,
+            0.46
+          ],
+          "scale": 1.6
+        },
+        "instances": [
+          {
+            "placement": {
+              "anchor": [
+                320,
+                194
+              ],
+              "at": [
+                0.5,
+                0.46
+              ],
+              "scale": 1.6
+            },
+            "variant": 0,
+            "depth": 0,
+            "opacity": 1,
+            "tone": "far"
+          }
+        ],
+        "singleUnit": false,
+        "inferred": true,
+        "provenance": {
+          "basis": "local-context",
+          "reason": "整体场景解释为 mountain_stream，本地补充必要 ground 依托",
+          "semanticPath": "scene.setting"
+        },
+        "quantity": {
+          "rendered": 1,
+          "exact": false,
+          "items": []
+        },
+        "quantityLabel": "本地环境依托，不计入原文意象覆盖",
+        "z": -18,
+        "visual": {
+          "role": "ground"
+        },
+        "performance": {
+          "rhythm": "steady",
+          "rate": 1,
+          "amplitude": 1,
+          "phase": 2.9656634649887645
+        }
+      }
+    ],
+    "spatial": [],
+    "scene": {
+      "kind": "mountain-waterfall",
+      "notes": [
+        "先划分承托地形、群落与主体活动区域；场景密度和背景依托是本地构图推断，不冒充原文明示意象。"
+      ],
+      "waterline": null,
+      "basis": "local-context",
+      "regions": {
+        "cliff": [
+          [
+            0.2,
+            0.12
+          ],
+          [
+            0.75,
+            0.1
+          ],
+          [
+            0.88,
+            0.89
+          ],
+          [
+            0.21,
+            0.92
+          ]
+        ]
+      },
+      "supports": [
+        {
+          "form": "mountain",
+          "reason": "瀑布必须依托山体与落差"
+        }
+      ],
+      "semanticSetting": {
+        "kind": "mountain_stream",
+        "basis": "inferred",
+        "evidence": [
+          "飞流直下三千尺"
+        ]
+      },
+      "semanticEffects": [
+        {
+          "path": "scene.supports[0]",
+          "consumer": "场景依托",
+          "status": "applied",
+          "effect": "必要环境以独立推断背景表示，不新增原文实体"
+        },
+        {
+          "path": "scene.setting",
+          "consumer": "场景依托",
+          "status": "applied",
+          "effect": "必要环境以独立推断背景表示，不新增原文实体"
+        },
+        {
+          "path": "scene.setting",
+          "consumer": "场景依托",
+          "status": "applied",
+          "effect": "必要环境以独立推断背景表示，不新增原文实体"
+        }
+      ],
+      "organization": {
+        "version": "1.0",
+        "strategy": "regional-proposal",
+        "regions": {
+          "cliff": [
+            [
+              0.2,
+              0.12
+            ],
+            [
+              0.75,
+              0.1
+            ],
+            [
+              0.88,
+              0.89
+            ],
+            [
+              0.21,
+              0.92
+            ]
+          ],
+          "water": [
+            [
+              0,
+              0.46
+            ],
+            [
+              1,
+              0.46
+            ],
+            [
+              1,
+              1.04
+            ],
+            [
+              0,
+              1.04
+            ]
+          ]
+        },
+        "candidates": [
+          {
+            "layout": "existing",
+            "errors": 0,
+            "cost": 0
+          }
+        ],
+        "repairs": [],
+        "limitations": [
+          "几何检查不判定诗意理解或审美合格",
+          "动作时序与整首诗的场景切换尚未编排"
+        ],
+        "graph": {
+          "nodes": [
+            {
+              "id": "l0",
+              "entities": [
+                "i1"
+              ],
+              "tool": "landscape",
+              "role": "terrain",
+              "habitat": null,
+              "inferred": false,
+              "support": null
+            },
+            {
+              "id": "l1",
+              "entities": [
+                "i3"
+              ],
+              "tool": "landscape",
+              "role": "sky",
+              "habitat": null,
+              "inferred": false,
+              "support": null
+            },
+            {
+              "id": "l2",
+              "entities": [],
+              "tool": "landscape",
+              "role": "terrain",
+              "habitat": null,
+              "inferred": true,
+              "support": null
+            },
+            {
+              "id": "l3",
+              "entities": [],
+              "tool": "water",
+              "role": "water",
+              "habitat": null,
+              "inferred": true,
+              "support": null
+            },
+            {
+              "id": "l4",
+              "entities": [],
+              "tool": "landscape",
+              "role": "terrain",
+              "habitat": null,
+              "inferred": true,
+              "support": null
+            }
+          ],
+          "edges": [],
+          "setting": "mountain-waterfall"
+        },
+        "audit": {
+          "scope": "implemented-geometry-and-drawing-gaps",
+          "coverage": {
+            "scope": "extracted-entities-only",
+            "present": 2,
+            "mapped": 2,
+            "parameters": [],
+            "missing": []
+          },
+          "checks": [
+            "presence",
+            "count",
+            "finite",
+            "water-support",
+            "cliff-support",
+            "grove-spread",
+            "drawing-gaps"
+          ],
+          "status": "checks-passed",
+          "errors": 0,
+          "review": 0,
+          "issues": [],
+          "metrics": {
+            "overlapPenalty": 0,
+            "balancePenalty": 0,
+            "motifFootprint": 0,
+            "landArea": 0
+          },
+          "cost": 0,
+          "aestheticAcceptance": "pending-user"
+        }
+      }
+    },
+    "omitted": [
+      {
+        "id": "i2",
+        "name": "银河",
+        "reason": "仅为比喻参照，不当作实景"
+      }
+    ],
+    "notes": [
+      "九天虽被归为地点，仍按原文明示的自然景物匹配；具体空间关系另行处理。",
+      "位置、大小、笔触与默认微动是本地试画选择；数量解释与本地显示数量分别记录。",
+      "未明说的群落数量、疏密、近中远层次与变体均为本地构图选择；种类可按已声明的写意画法概括，不把铺展词换算成精确物体数量。",
+      "先划分承托地形、群落与主体活动区域；场景密度和背景依托是本地构图推断，不冒充原文明示意象。",
+      "语义保留：scene.actions[0].state，当前工具尚无对应动作状态",
+      "整体场景、主次、远近、依托和支持的动作状态来自本次模型解释；具体布局、颜色和时钟倍率由本地视觉策略选择。",
+      "动作动画表现受支持的主导状态与有限观看运动；先后事件与完整因果尚未编排。",
+      "动态程度与默认轻风是可调整的观看选择；不改变数量、主次或原文动作判断。人物保持点景写意，不新增人物步态。"
+    ],
+    "relations": [],
+    "semanticConsumption": {
+      "version": "3.3",
+      "items": [
+        {
+          "path": "scene.setting",
+          "status": "applied",
+          "consumer": "场景依托",
+          "effect": "必要环境以独立推断背景表示，不新增原文实体",
+          "basis": "inferred",
+          "evidence": [
+            "飞流直下三千尺"
+          ]
+        },
+        {
+          "path": "scene.groups[0].role",
+          "status": "applied",
+          "consumer": "主次布局",
+          "effect": "主体相对突出",
+          "basis": "inferred",
+          "evidence": [
+            "飞流直下三千尺"
+          ]
+        },
+        {
+          "path": "scene.groups[0].pattern",
+          "status": "applied",
+          "consumer": "群落布局",
+          "effect": "按 single 组织显示单元；不覆盖明确数量",
+          "basis": "inferred",
+          "evidence": [
+            "飞流直下三千尺"
+          ]
+        },
+        {
+          "path": "scene.groups[0].depth",
+          "status": "skipped",
+          "consumer": "远近布局",
+          "effect": "远近未明，保持本地默认",
+          "basis": "inferred",
+          "evidence": [
+            "飞流直下三千尺"
+          ]
+        },
+        {
+          "path": "scene.groups[1].role",
+          "status": "applied",
+          "consumer": "主次布局",
+          "effect": "保留环境画布范围，主次不改变地形边界",
+          "basis": "inferred",
+          "evidence": [
+            "疑是银河落九天"
+          ]
+        },
+        {
+          "path": "scene.groups[1].pattern",
+          "status": "applied",
+          "consumer": "群落布局",
+          "effect": "按 single 组织显示单元；不覆盖明确数量",
+          "basis": "inferred",
+          "evidence": [
+            "疑是银河落九天"
+          ]
+        },
+        {
+          "path": "scene.groups[1].depth",
+          "status": "applied",
+          "consumer": "远近布局",
+          "effect": "将 far 转为相对大小、透明度与允许区域内的落点",
+          "basis": "inferred",
+          "evidence": [
+            "疑是银河落九天"
+          ]
+        },
+        {
+          "path": "scene.supports[0]",
+          "status": "applied",
+          "consumer": "场景依托",
+          "effect": "必要环境以独立推断背景表示，不新增原文实体",
+          "basis": "inferred",
+          "evidence": [
+            "飞流直下三千尺"
+          ]
+        },
+        {
+          "path": "scene.actions[0].state",
+          "status": "unsupported",
+          "consumer": "动作画法",
+          "effect": "当前工具尚无对应动作状态",
+          "basis": "explicit",
+          "evidence": [
+            "飞流直下三千尺"
+          ]
+        },
+        {
+          "path": "scene.actions[0].pace",
+          "status": "skipped",
+          "consumer": "本地视觉策略",
+          "effect": "该工具尚不支持此动作分量",
+          "basis": "explicit",
+          "evidence": [
+            "飞流直下三千尺"
+          ]
+        },
+        {
+          "path": "scene.actions[0].direction",
+          "status": "skipped",
+          "consumer": "本地视觉策略",
+          "effect": "该工具尚不支持此动作分量",
+          "basis": "explicit",
+          "evidence": [
+            "飞流直下三千尺"
+          ]
+        },
+        {
+          "path": "scene.atmosphere.visibility",
+          "status": "skipped",
+          "consumer": "画布色层与远景",
+          "effect": "可见度 unclear；迷蒙或昏暗时淡化非光源图层",
+          "basis": "inferred",
+          "evidence": [
+            "飞流直下三千尺",
+            "疑是银河落九天"
+          ]
+        },
+        {
+          "path": "scene.atmosphere.illumination",
+          "status": "skipped",
+          "consumer": "有限配色",
+          "effect": "照明 unclear 映射为本地 tender 配色；用户仍可手动覆盖",
+          "basis": "inferred",
+          "evidence": [
+            "飞流直下三千尺",
+            "疑是银河落九天"
+          ]
+        },
+        {
+          "path": "atmosphere.energy",
+          "status": "skipped",
+          "consumer": "绘画时钟",
+          "effect": "没有明确动作节奏时，气息强弱控制已有微动的默认时钟"
+        },
+        {
+          "path": "atmosphere.openness",
+          "status": "applied",
+          "consumer": "群落分布与笔触密度",
+          "effect": "开阔度转换为本地间距与工具笔触密度，不等于原文数量"
+        },
+        {
+          "path": "atmosphere.valence",
+          "status": "applied",
+          "consumer": "有限配色",
+          "effect": "正向感受暂用 tender，其余用 clear；尚非完整情感色谱"
+        },
+        {
+          "path": "time.markers",
+          "status": "retained",
+          "consumer": "原始记录与解读",
+          "effect": "保留原文时间标记；本版照明由 scene.atmosphere 转换，多阶段时间逻辑未执行"
+        }
+      ],
+      "summary": {
+        "applied": 9,
+        "partial": 0,
+        "unsupported": 1,
+        "skipped": 6,
+        "retained": 1
+      },
+      "aestheticAcceptance": "pending-user"
+    },
+    "landscapeStyle": {
+      "version": "1.0",
+      "color": "role-and-distance",
+      "motion": "layer-rhythms",
+      "aestheticAcceptance": "pending-user"
+    }
+  },
+  "elapsed_seconds": 5.4
+}

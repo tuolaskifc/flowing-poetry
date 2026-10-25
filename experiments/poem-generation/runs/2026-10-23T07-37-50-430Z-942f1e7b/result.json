@@ -1,0 +1,1127 @@
+{
+  "id": "2026-10-23T07-37-50-430Z-942f1e7b",
+  "fingerprint": "0f678f0962f63b7b6b3185256eed838777ca033eeec41379f0a0ffd933c4b20b",
+  "poem": "荷风送香气，竹露滴清响。",
+  "source": {
+    "provider": "精选诗句库",
+    "author": "孟浩然",
+    "title": "夏日南亭怀辛大",
+    "dynasty": "唐代"
+  },
+  "mode": "composition",
+  "model": "DeepSeek-V4.1-Flash",
+  "started_at": "2026-10-23T07:37:50.433Z",
+  "cached": false,
+  "http_status": 200,
+  "usage": {
+    "completion_tokens": 776,
+    "prompt_tokens": 4895,
+    "total_tokens": 5671,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 4864
+    }
+  },
+  "finish_reason": "stop",
+  "analysis": {
+    "schema_version": "3.3",
+    "poem": "荷风送香气，竹露滴清响。",
+    "reading": "荷塘的风送来香气，竹叶上的露水滴落，发出清亮的声响。两句写夏日水边林下的清凉幽静，以嗅觉与听觉为主。",
+    "entities": [
+      {
+        "id": "i1",
+        "mentions": [
+          "荷风"
+        ],
+        "concept": "带着荷香的风",
+        "kind": "environment",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "荷风送香气"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i2",
+        "mentions": [
+          "香气"
+        ],
+        "concept": "荷花的香气",
+        "kind": "abstract",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "荷风送香气"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i3",
+        "mentions": [
+          "竹露"
+        ],
+        "concept": "竹叶上的露水",
+        "kind": "object",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "竹露滴清响"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i4",
+        "mentions": [
+          "清响"
+        ],
+        "concept": "清亮的滴水声",
+        "kind": "abstract",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "竹露滴清响"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      }
+    ],
+    "relations": [],
+    "atmosphere": {
+      "labels": [
+        "清幽",
+        "凉爽",
+        "静谧"
+      ],
+      "valence": "positive",
+      "energy": "low",
+      "tension": "low",
+      "openness": "medium",
+      "evidence": [
+        "荷风送香气",
+        "竹露滴清响"
+      ]
+    },
+    "time": {
+      "markers": [],
+      "note": null
+    },
+    "uncertainties": [
+      "荷、竹未作为独立实体列出，仅以荷风、竹露呈现，故无法确定荷塘与竹林的具体空间关系。",
+      "香气与清响是嗅觉、听觉描写，其来源与传播范围未明。",
+      "露水滴落是瞬时动作还是反复发生，原文未交代。"
+    ],
+    "spatial": [],
+    "scene": {
+      "setting": {
+        "kind": "waterside",
+        "basis": "inferred",
+        "evidence": [
+          "荷风送香气",
+          "竹露滴清响"
+        ]
+      },
+      "groups": [
+        {
+          "members": [
+            "i1",
+            "i2"
+          ],
+          "role": "subject",
+          "pattern": "unspecified",
+          "depth": "unspecified",
+          "basis": "inferred",
+          "evidence": [
+            "荷风送香气"
+          ]
+        },
+        {
+          "members": [
+            "i3",
+            "i4"
+          ],
+          "role": "subject",
+          "pattern": "unspecified",
+          "depth": "unspecified",
+          "basis": "inferred",
+          "evidence": [
+            "竹露滴清响"
+          ]
+        }
+      ],
+      "supports": [
+        {
+          "entity": "i3",
+          "surface": "vegetation",
+          "target": null,
+          "basis": "inferred",
+          "evidence": [
+            "竹露滴清响"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "entity": "i1",
+          "state": "flow",
+          "pace": "slow",
+          "direction": "unspecified",
+          "modality": "asserted",
+          "basis": "inferred",
+          "evidence": [
+            "荷风送香气"
+          ]
+        },
+        {
+          "entity": "i3",
+          "state": "fall",
+          "pace": "unspecified",
+          "direction": "down",
+          "modality": "asserted",
+          "basis": "explicit",
+          "evidence": [
+            "竹露滴清响"
+          ]
+        }
+      ],
+      "atmosphere": {
+        "visibility": "unclear",
+        "illumination": "unclear",
+        "basis": "inferred",
+        "evidence": [
+          "荷风送香气",
+          "竹露滴清响"
+        ]
+      }
+    }
+  },
+  "validation": {
+    "valid": true,
+    "errors": [],
+    "warnings": [
+      "模型保留了不确定性，需要审阅",
+      "scene.setting 为语义推断，绘画选择需与原文明示区分",
+      "scene.groups[0] 为语义推断，绘画选择需与原文明示区分",
+      "scene.groups[1] 为语义推断，绘画选择需与原文明示区分",
+      "scene.supports[0] 为语义推断，绘画选择需与原文明示区分",
+      "scene.actions[0] 为语义推断，绘画选择需与原文明示区分",
+      "scene.atmosphere 为语义推断，绘画选择需与原文明示区分"
+    ],
+    "review_required": true
+  },
+  "plan": {
+    "version": "semantic-composition-3.3-landscape",
+    "seed": 492129285,
+    "settings": {
+      "wind": 0.45,
+      "density": 0.45,
+      "palette": "tender",
+      "motion": 1.4
+    },
+    "layers": [
+      {
+        "tool": "bamboo",
+        "entities": [
+          "i3"
+        ],
+        "projectedEntities": [],
+        "names": [
+          "竹露"
+        ],
+        "options": {},
+        "animate": false,
+        "placement": {
+          "anchor": [
+            320,
+            335
+          ],
+          "at": [
+            0.8011678806312499,
+            0.799625
+          ],
+          "scale": 1
+        },
+        "semanticGroup": {
+          "members": [
+            "i3",
+            "i4"
+          ],
+          "role": "subject",
+          "pattern": "unspecified",
+          "depth": "unspecified",
+          "basis": "inferred",
+          "evidence": [
+            "竹露滴清响"
+          ],
+          "index": 1
+        },
+        "semanticEffects": [
+          {
+            "path": "scene.actions[1].state",
+            "consumer": "动作画法",
+            "effect": "当前工具尚无对应动作状态",
+            "status": "unsupported"
+          },
+          {
+            "path": "scene.groups[1].role",
+            "consumer": "主次布局",
+            "effect": "主体相对突出",
+            "status": "applied"
+          },
+          {
+            "path": "scene.groups[1].pattern",
+            "consumer": "群落布局",
+            "effect": "群落形式未明，保持本地默认",
+            "status": "skipped"
+          },
+          {
+            "path": "scene.groups[1].depth",
+            "consumer": "远近布局",
+            "effect": "远近未明，保持本地默认",
+            "status": "skipped"
+          }
+        ],
+        "semanticEnergy": false,
+        "timeScale": 0,
+        "semanticAction": {
+          "entity": "i3",
+          "state": "fall",
+          "pace": "unspecified",
+          "direction": "down",
+          "modality": "asserted",
+          "basis": "explicit",
+          "evidence": [
+            "竹露滴清响"
+          ]
+        },
+        "instances": [
+          {
+            "placement": {
+              "anchor": [
+                320,
+                335
+              ],
+              "at": [
+                0.7233408230375,
+                0.63125
+              ],
+              "scale": 0.7121607555020001
+            },
+            "depth": 0,
+            "opacity": 0.75900679775,
+            "variant": 0,
+            "tone": "far"
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                335
+              ],
+              "at": [
+                0.826471646075,
+                0.67375
+              ],
+              "scale": 0.613766311004
+            },
+            "depth": 10.01,
+            "opacity": 0.6826135955,
+            "variant": 1,
+            "tone": "middle"
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                335
+              ],
+              "at": [
+                0.9296024691125,
+                0.7162499999999999
+              ],
+              "scale": 0.5153718665060001
+            },
+            "depth": 10.02,
+            "opacity": 0.60622039325,
+            "variant": 1,
+            "tone": "middle"
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                335
+              ],
+              "at": [
+                0.7627332921499999,
+                0.9465000000000001
+              ],
+              "scale": 0.9433774220080001
+            },
+            "depth": 20.03,
+            "opacity": 0.9548444719,
+            "variant": 2,
+            "tone": "near"
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                335
+              ],
+              "at": [
+                0.8658641151874998,
+                0.9855
+              ],
+              "scale": 0.8449829775100002
+            },
+            "depth": 20.04,
+            "opacity": 0.886090589875,
+            "variant": 2,
+            "tone": "near"
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                335
+              ],
+              "at": [
+                0.6989949382249999,
+                0.8445
+              ],
+              "scale": 1.0041885330120002
+            },
+            "depth": 20.05,
+            "opacity": 0.99733670785,
+            "variant": 2,
+            "tone": "near"
+          }
+        ],
+        "singleUnit": true,
+        "quantity": {
+          "items": [
+            {
+              "entity": "i3",
+              "mode": "unspecified",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "unspecified",
+              "extent": "unspecified",
+              "evidence": [],
+              "basis": "model"
+            }
+          ],
+          "rendered": 6,
+          "exact": false,
+          "collective": false,
+          "partUnsupported": false
+        },
+        "quantityLabel": "数量未精确；本地试画 6 个单元",
+        "semanticSupport": {
+          "surface": "vegetation",
+          "target": "i3",
+          "path": "scene.supports[0]"
+        },
+        "z": 8,
+        "visual": {
+          "role": "vegetation"
+        },
+        "performance": {
+          "rhythm": "gust",
+          "rate": 0.62,
+          "amplitude": 0.65,
+          "phase": 0
+        }
+      },
+      {
+        "tool": "water",
+        "entities": [],
+        "projectedEntities": [],
+        "names": [
+          "构图依托·水域"
+        ],
+        "options": {
+          "form": "plane"
+        },
+        "animate": true,
+        "placement": {
+          "anchor": [
+            320,
+            135
+          ],
+          "at": [
+            0.5,
+            0.45
+          ],
+          "scale": 1.6
+        },
+        "instances": [
+          {
+            "placement": {
+              "anchor": [
+                320,
+                135
+              ],
+              "at": [
+                0.5,
+                0.45
+              ],
+              "scale": 1.65
+            },
+            "variant": 0,
+            "depth": 0,
+            "opacity": 1,
+            "tone": "far"
+          }
+        ],
+        "singleUnit": false,
+        "inferred": true,
+        "provenance": {
+          "basis": "local-context",
+          "reason": "整体场景解释为 waterside，本地补充必要 water 依托",
+          "semanticPath": "scene.setting"
+        },
+        "quantity": {
+          "rendered": 1,
+          "exact": false,
+          "items": []
+        },
+        "quantityLabel": "本地环境依托，不计入原文意象覆盖",
+        "z": -10,
+        "clip": [
+          [
+            0.62,
+            0.45
+          ],
+          [
+            -0.040000000000000036,
+            0.45
+          ],
+          [
+            -0.040000000000000036,
+            1.04
+          ],
+          [
+            0.72,
+            1.04
+          ],
+          [
+            0.53,
+            0.79
+          ],
+          [
+            0.65,
+            0.62
+          ]
+        ],
+        "surface": {
+          "top": 0.45,
+          "bottom": 1
+        },
+        "visual": {
+          "role": "water"
+        },
+        "performance": {
+          "rhythm": "continuous",
+          "rate": 0.9,
+          "amplitude": 0.9,
+          "phase": 3.8830085198369844
+        }
+      },
+      {
+        "tool": "landscape",
+        "entities": [],
+        "projectedEntities": [],
+        "names": [
+          "构图依托·地面"
+        ],
+        "options": {
+          "form": "ground",
+          "edge": "soft"
+        },
+        "animate": false,
+        "placement": {
+          "anchor": [
+            320,
+            194
+          ],
+          "at": [
+            0.5,
+            0.54
+          ],
+          "scale": 1.6
+        },
+        "instances": [
+          {
+            "placement": {
+              "anchor": [
+                320,
+                265
+              ],
+              "at": [
+                0.5,
+                0.54
+              ],
+              "scale": 2.5
+            },
+            "variant": 0,
+            "depth": 0,
+            "opacity": 1,
+            "tone": "far"
+          }
+        ],
+        "singleUnit": false,
+        "inferred": true,
+        "provenance": {
+          "basis": "local-context",
+          "reason": "生长物、房舍和陆上主体需要共同地表；这是本地构图依托"
+        },
+        "quantity": {
+          "rendered": 1,
+          "exact": false,
+          "items": []
+        },
+        "quantityLabel": "本地环境依托，不计入原文意象覆盖",
+        "z": -18,
+        "clip": [
+          [
+            1.04,
+            0.48
+          ],
+          [
+            0.6599999999999999,
+            0.48
+          ],
+          [
+            0.65,
+            0.62
+          ],
+          [
+            0.53,
+            0.79
+          ],
+          [
+            0.72,
+            1.04
+          ],
+          [
+            1.04,
+            1.04
+          ]
+        ],
+        "visual": {
+          "role": "ground"
+        },
+        "performance": {
+          "rhythm": "steady",
+          "rate": 1,
+          "amplitude": 1,
+          "phase": 1.4828317324943823
+        }
+      }
+    ],
+    "spatial": [],
+    "scene": {
+      "kind": "study",
+      "notes": [
+        "通用场景层先组织地面、水域、群落和主体，再比较三个布局的依托、相对位置、尺度与遮挡；检查通过不代表审美已通过。"
+      ],
+      "waterline": null,
+      "semanticSetting": {
+        "kind": "waterside",
+        "basis": "inferred",
+        "evidence": [
+          "荷风送香气",
+          "竹露滴清响"
+        ]
+      },
+      "semanticEffects": [
+        {
+          "path": "scene.supports[0]",
+          "consumer": "场景依托",
+          "status": "applied",
+          "effect": "使用已提取主体的现有承托画法"
+        },
+        {
+          "path": "scene.setting",
+          "consumer": "场景依托",
+          "status": "applied",
+          "effect": "必要环境以独立推断背景表示，不新增原文实体"
+        }
+      ],
+      "organization": {
+        "version": "1.0",
+        "strategy": "general-constraints",
+        "regions": {
+          "water": [
+            [
+              0.62,
+              0.45
+            ],
+            [
+              -0.040000000000000036,
+              0.45
+            ],
+            [
+              -0.040000000000000036,
+              1.04
+            ],
+            [
+              0.72,
+              1.04
+            ],
+            [
+              0.53,
+              0.79
+            ],
+            [
+              0.65,
+              0.62
+            ]
+          ],
+          "land": [
+            [
+              1.04,
+              0.48
+            ],
+            [
+              0.6599999999999999,
+              0.48
+            ],
+            [
+              0.65,
+              0.62
+            ],
+            [
+              0.53,
+              0.79
+            ],
+            [
+              0.72,
+              1.04
+            ],
+            [
+              1.04,
+              1.04
+            ]
+          ]
+        },
+        "candidates": [
+          {
+            "layout": 1,
+            "orientation": "right-bank",
+            "errors": 0,
+            "cost": 32.225,
+            "metrics": {
+              "overlapPenalty": 0,
+              "balancePenalty": 0.278,
+              "motifFootprint": 0.46,
+              "landArea": 0.234
+            }
+          },
+          {
+            "layout": 0,
+            "orientation": "left-bank",
+            "errors": 0,
+            "cost": 32.378,
+            "metrics": {
+              "overlapPenalty": 0,
+              "balancePenalty": 0.297,
+              "motifFootprint": 0.439,
+              "landArea": 0.234
+            }
+          },
+          {
+            "layout": 2,
+            "orientation": "left-bank",
+            "errors": 0,
+            "cost": 32.519,
+            "metrics": {
+              "overlapPenalty": 0,
+              "balancePenalty": 0.315,
+              "motifFootprint": 0.426,
+              "landArea": 0.234
+            }
+          }
+        ],
+        "repairs": [
+          {
+            "type": "support-added",
+            "reason": "整体场景解释为 waterside，本地补充必要 water 依托"
+          },
+          {
+            "type": "support-added",
+            "reason": "生长物、房舍和陆上主体需要共同地表；这是本地构图依托"
+          }
+        ],
+        "limitations": [
+          "几何检查不判定诗意理解或审美合格",
+          "动作时序与整首诗的场景切换尚未编排"
+        ],
+        "layout": 1,
+        "orientation": "right-bank",
+        "audit": {
+          "scope": "implemented-geometry-and-drawing-gaps",
+          "coverage": {
+            "scope": "extracted-entities-only",
+            "present": 4,
+            "mapped": 1,
+            "parameters": [
+              "i1"
+            ],
+            "missing": [
+              {
+                "id": "i2",
+                "name": "香气"
+              },
+              {
+                "id": "i4",
+                "name": "清响"
+              }
+            ]
+          },
+          "checks": [
+            "presence",
+            "count",
+            "finite",
+            "support",
+            "scale",
+            "relative-position",
+            "depth",
+            "grove-spread",
+            "drawing-gaps"
+          ],
+          "status": "needs-review",
+          "errors": 0,
+          "review": 1,
+          "issues": [
+            {
+              "code": "drawing-gaps",
+              "severity": "review",
+              "message": "还有 2 项已提取线索尚未转成画面：香气、清响"
+            }
+          ],
+          "metrics": {
+            "overlapPenalty": 0,
+            "balancePenalty": 0.278,
+            "motifFootprint": 0.46,
+            "landArea": 0.234
+          },
+          "cost": 32.225,
+          "aestheticAcceptance": "pending-user"
+        },
+        "graph": {
+          "nodes": [
+            {
+              "id": "l0",
+              "entities": [
+                "i3"
+              ],
+              "tool": "bamboo",
+              "role": "vegetation",
+              "habitat": "land",
+              "inferred": false,
+              "support": "l2"
+            },
+            {
+              "id": "l1",
+              "entities": [],
+              "tool": "water",
+              "role": "water",
+              "habitat": null,
+              "inferred": true,
+              "support": null
+            },
+            {
+              "id": "l2",
+              "entities": [],
+              "tool": "landscape",
+              "role": "terrain",
+              "habitat": null,
+              "inferred": true,
+              "support": null
+            }
+          ],
+          "edges": [
+            {
+              "type": "supported-by",
+              "source": "l0",
+              "target": "l2",
+              "basis": "local-composition",
+              "habitat": "land"
+            }
+          ],
+          "setting": "study"
+        }
+      }
+    },
+    "omitted": [
+      {
+        "id": "i2",
+        "name": "香气",
+        "reason": "该专名人物、地名或抽象含义暂不作实景补画"
+      },
+      {
+        "id": "i4",
+        "name": "清响",
+        "reason": "该专名人物、地名或抽象含义暂不作实景补画"
+      }
+    ],
+    "notes": [
+      "荷风作为风参数，不额外画风线；强弱是本次试画选择。",
+      "位置、大小、笔触与默认微动是本地试画选择；数量解释与本地显示数量分别记录。",
+      "未明说的群落数量、疏密、近中远层次与变体均为本地构图选择；种类可按已声明的写意画法概括，不把铺展词换算成精确物体数量。",
+      "通用场景层先组织地面、水域、群落和主体，再比较三个布局的依托、相对位置、尺度与遮挡；检查通过不代表审美已通过。",
+      "语义保留：scene.groups[0].role，分组成员目前缺少基础画法",
+      "语义保留：scene.groups[0].pattern，分组成员目前缺少基础画法",
+      "语义保留：scene.groups[0].depth，分组成员目前缺少基础画法",
+      "语义保留：scene.actions[1].state，当前工具尚无对应动作状态",
+      "整体场景、主次、远近、依托和支持的动作状态来自本次模型解释；具体布局、颜色和时钟倍率由本地视觉策略选择。",
+      "动作动画表现受支持的主导状态与有限观看运动；先后事件与完整因果尚未编排。",
+      "动态程度与默认轻风是可调整的观看选择；不改变数量、主次或原文动作判断。人物保持点景写意，不新增人物步态。"
+    ],
+    "relations": [],
+    "semanticConsumption": {
+      "version": "3.3",
+      "items": [
+        {
+          "path": "scene.setting",
+          "status": "applied",
+          "consumer": "场景依托",
+          "effect": "必要环境以独立推断背景表示，不新增原文实体",
+          "basis": "inferred",
+          "evidence": [
+            "荷风送香气",
+            "竹露滴清响"
+          ]
+        },
+        {
+          "path": "scene.groups[0].role",
+          "status": "unsupported",
+          "consumer": "本地视觉策略",
+          "effect": "分组成员目前缺少基础画法",
+          "basis": "inferred",
+          "evidence": [
+            "荷风送香气"
+          ]
+        },
+        {
+          "path": "scene.groups[0].pattern",
+          "status": "unsupported",
+          "consumer": "本地视觉策略",
+          "effect": "分组成员目前缺少基础画法",
+          "basis": "inferred",
+          "evidence": [
+            "荷风送香气"
+          ]
+        },
+        {
+          "path": "scene.groups[0].depth",
+          "status": "unsupported",
+          "consumer": "本地视觉策略",
+          "effect": "分组成员目前缺少基础画法",
+          "basis": "inferred",
+          "evidence": [
+            "荷风送香气"
+          ]
+        },
+        {
+          "path": "scene.groups[1].role",
+          "status": "applied",
+          "consumer": "主次布局",
+          "effect": "主体相对突出",
+          "basis": "inferred",
+          "evidence": [
+            "竹露滴清响"
+          ]
+        },
+        {
+          "path": "scene.groups[1].pattern",
+          "status": "skipped",
+          "consumer": "群落布局",
+          "effect": "群落形式未明，保持本地默认",
+          "basis": "inferred",
+          "evidence": [
+            "竹露滴清响"
+          ]
+        },
+        {
+          "path": "scene.groups[1].depth",
+          "status": "skipped",
+          "consumer": "远近布局",
+          "effect": "远近未明，保持本地默认",
+          "basis": "inferred",
+          "evidence": [
+            "竹露滴清响"
+          ]
+        },
+        {
+          "path": "scene.supports[0]",
+          "status": "applied",
+          "consumer": "场景依托",
+          "effect": "使用已提取主体的现有承托画法",
+          "basis": "inferred",
+          "evidence": [
+            "竹露滴清响"
+          ]
+        },
+        {
+          "path": "scene.actions[0].state",
+          "status": "skipped",
+          "consumer": "本地视觉策略",
+          "effect": "主体无画法",
+          "basis": "inferred",
+          "evidence": [
+            "荷风送香气"
+          ]
+        },
+        {
+          "path": "scene.actions[0].pace",
+          "status": "skipped",
+          "consumer": "本地视觉策略",
+          "effect": "该工具尚不支持此动作分量",
+          "basis": "inferred",
+          "evidence": [
+            "荷风送香气"
+          ]
+        },
+        {
+          "path": "scene.actions[0].direction",
+          "status": "skipped",
+          "consumer": "本地视觉策略",
+          "effect": "该工具尚不支持此动作分量",
+          "basis": "inferred",
+          "evidence": [
+            "荷风送香气"
+          ]
+        },
+        {
+          "path": "scene.actions[1].state",
+          "status": "unsupported",
+          "consumer": "动作画法",
+          "effect": "当前工具尚无对应动作状态",
+          "basis": "explicit",
+          "evidence": [
+            "竹露滴清响"
+          ]
+        },
+        {
+          "path": "scene.actions[1].pace",
+          "status": "skipped",
+          "consumer": "本地视觉策略",
+          "effect": "该工具尚不支持此动作分量",
+          "basis": "explicit",
+          "evidence": [
+            "竹露滴清响"
+          ]
+        },
+        {
+          "path": "scene.actions[1].direction",
+          "status": "skipped",
+          "consumer": "本地视觉策略",
+          "effect": "该工具尚不支持此动作分量",
+          "basis": "explicit",
+          "evidence": [
+            "竹露滴清响"
+          ]
+        },
+        {
+          "path": "scene.atmosphere.visibility",
+          "status": "skipped",
+          "consumer": "画布色层与远景",
+          "effect": "可见度 unclear；迷蒙或昏暗时淡化非光源图层",
+          "basis": "inferred",
+          "evidence": [
+            "荷风送香气",
+            "竹露滴清响"
+          ]
+        },
+        {
+          "path": "scene.atmosphere.illumination",
+          "status": "skipped",
+          "consumer": "有限配色",
+          "effect": "照明 unclear 映射为本地 tender 配色；用户仍可手动覆盖",
+          "basis": "inferred",
+          "evidence": [
+            "荷风送香气",
+            "竹露滴清响"
+          ]
+        },
+        {
+          "path": "atmosphere.energy",
+          "status": "skipped",
+          "consumer": "绘画时钟",
+          "effect": "没有明确动作节奏时，气息强弱控制已有微动的默认时钟"
+        },
+        {
+          "path": "atmosphere.openness",
+          "status": "applied",
+          "consumer": "群落分布与笔触密度",
+          "effect": "开阔度转换为本地间距与工具笔触密度，不等于原文数量"
+        },
+        {
+          "path": "atmosphere.valence",
+          "status": "applied",
+          "consumer": "有限配色",
+          "effect": "正向感受暂用 tender，其余用 clear；尚非完整情感色谱"
+        },
+        {
+          "path": "time.markers",
+          "status": "retained",
+          "consumer": "原始记录与解读",
+          "effect": "保留原文时间标记；本版照明由 scene.atmosphere 转换，多阶段时间逻辑未执行"
+        }
+      ],
+      "summary": {
+        "applied": 5,
+        "partial": 0,
+        "unsupported": 4,
+        "skipped": 10,
+        "retained": 1
+      },
+      "aestheticAcceptance": "pending-user"
+    },
+    "landscapeStyle": {
+      "version": "1.0",
+      "color": "role-and-distance",
+      "motion": "layer-rhythms",
+      "aestheticAcceptance": "pending-user"
+    }
+  },
+  "elapsed_seconds": 9.8
+}

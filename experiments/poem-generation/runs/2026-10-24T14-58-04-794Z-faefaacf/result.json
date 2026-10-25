@@ -1,0 +1,278 @@
+{
+  "id": "2026-10-24T14-58-04-794Z-faefaacf",
+  "fingerprint": "b0e9ec8e86bd392976e43eed118f096fda4cc6a8df0851e19f376498b3489f81",
+  "poem": "天长地久有时尽，此恨绵绵无绝期。",
+  "source": null,
+  "mode": "expression",
+  "model": "DeepSeek-V4.1-Flash",
+  "started_at": "2026-10-24T14:58:04.794Z",
+  "cached": false,
+  "http_status": 200,
+  "usage": {
+    "completion_tokens": 569,
+    "prompt_tokens": 6062,
+    "total_tokens": 6631,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 6016
+    }
+  },
+  "finish_reason": "stop",
+  "analysis": {
+    "schema_version": "expression-1.0",
+    "poem": "天长地久有时尽，此恨绵绵无绝期。",
+    "reading": "天地虽长久也有穷尽之时，而这份遗恨绵延不绝、没有终止之期。以有限反衬无限，突出恨意之绵长无尽。",
+    "entities": [
+      {
+        "id": "i1",
+        "mentions": [
+          "天长地久"
+        ],
+        "concept": "天地长久",
+        "kind": "abstract",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "天长地久有时尽"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i2",
+        "mentions": [
+          "此恨"
+        ],
+        "concept": "绵长的遗恨",
+        "kind": "abstract",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "此恨绵绵无绝期"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      }
+    ],
+    "relations": [],
+    "atmosphere": {
+      "labels": [
+        "绵长",
+        "无尽",
+        "怅恨"
+      ],
+      "valence": "negative",
+      "energy": "low",
+      "tension": "medium",
+      "openness": "high",
+      "evidence": [
+        "天长地久有时尽",
+        "此恨绵绵无绝期"
+      ]
+    },
+    "time": {
+      "markers": [
+        {
+          "surface": "有时尽",
+          "meaning": "天地长久也有终结之时，指向有限与终了"
+        },
+        {
+          "surface": "无绝期",
+          "meaning": "没有终止的期限，指向无限延续"
+        }
+      ],
+      "note": "两句以有限与无限对照，未明示具体时间点。"
+    },
+    "uncertainties": [
+      "“此恨”的具体所指未在节选中说明。",
+      "“天长地久”是抽象的时间意象，未给出具体空间场景。"
+    ],
+    "spatial": [],
+    "scene": {
+      "setting": {
+        "kind": "unclear",
+        "basis": "inferred",
+        "evidence": []
+      },
+      "groups": [],
+      "supports": [],
+      "actions": [],
+      "atmosphere": {
+        "visibility": "unclear",
+        "illumination": "unclear",
+        "basis": "inferred",
+        "evidence": []
+      }
+    },
+    "expression": {
+      "relations": [
+        {
+          "source": "i1",
+          "target": "i2",
+          "kind": "contrast",
+          "modality": "asserted",
+          "basis": "explicit",
+          "evidence": [
+            "天长地久有时尽",
+            "此恨绵绵无绝期"
+          ]
+        }
+      ],
+      "processes": [
+        {
+          "subject": "i1",
+          "kind": "fade",
+          "temporal": "not_yet",
+          "modality": "possible",
+          "basis": "explicit",
+          "evidence": [
+            "天长地久有时尽"
+          ]
+        },
+        {
+          "subject": "i2",
+          "kind": "persist",
+          "temporal": "ongoing",
+          "modality": "asserted",
+          "basis": "explicit",
+          "evidence": [
+            "此恨绵绵无绝期"
+          ]
+        }
+      ]
+    }
+  },
+  "validation": {
+    "valid": true,
+    "errors": [],
+    "warnings": [
+      "模型保留了不确定性，需要审阅",
+      "scene.setting 为语义推断，绘画选择需与原文明示区分",
+      "i1 未进入整体分组，后续使用本地默认布局",
+      "i2 未进入整体分组，后续使用本地默认布局",
+      "scene.atmosphere 为语义推断，绘画选择需与原文明示区分"
+    ],
+    "review_required": true
+  },
+  "plan": {
+    "version": "shared-expression-1.1-source-bound",
+    "seed": 1674095623,
+    "poem": "天长地久有时尽，此恨绵绵无绝期。",
+    "nodes": [
+      {
+        "id": "i1",
+        "label": "天长地久",
+        "meaning": "天地长久",
+        "kind": "abstract",
+        "contextOnly": true,
+        "mode": "present"
+      },
+      {
+        "id": "i2",
+        "label": "此恨",
+        "meaning": "绵长的遗恨",
+        "kind": "abstract",
+        "contextOnly": false,
+        "mode": "present"
+      }
+    ],
+    "relations": [
+      {
+        "source": "i1",
+        "target": "i2",
+        "kind": "contrast",
+        "modality": "asserted",
+        "basis": "explicit",
+        "evidence": [
+          "天长地久有时尽",
+          "此恨绵绵无绝期"
+        ]
+      }
+    ],
+    "processes": [
+      {
+        "subject": "i1",
+        "kind": "fade",
+        "temporal": "not_yet",
+        "modality": "possible",
+        "basis": "explicit",
+        "evidence": [
+          "天长地久有时尽"
+        ]
+      },
+      {
+        "subject": "i2",
+        "kind": "persist",
+        "temporal": "ongoing",
+        "modality": "asserted",
+        "basis": "explicit",
+        "evidence": [
+          "此恨绵绵无绝期"
+        ]
+      }
+    ],
+    "omitted": [],
+    "atmosphere": {
+      "labels": [
+        "绵长",
+        "无尽",
+        "怅恨"
+      ],
+      "valence": "negative",
+      "energy": "low",
+      "tension": "medium",
+      "openness": "high",
+      "evidence": [
+        "天长地久有时尽",
+        "此恨绵绵无绝期"
+      ],
+      "illumination": "unclear"
+    },
+    "concretePlan": null,
+    "renderability": {
+      "status": "ready",
+      "visibleScenery": false,
+      "visibleAbstract": true,
+      "gaps": []
+    },
+    "expression": {
+      "version": "shared-expression-1.1-source-bound",
+      "sourceContract": "expression-1.0",
+      "recommendation": "abstract",
+      "reason": "没有可直接落成实景的主体，以抽象关系组织画面",
+      "gaps": [],
+      "limitations": [
+        "景物过程当前影响抽象纹理；原生景物动作沿用场景能力，未支持的月下楼位移等仍不执行。",
+        "纹理、色层和观看扰动属于本地艺术选择，不改变语义成立状态"
+      ]
+    },
+    "notes": [
+      "三个表达倾向共享景物数量、空间、依托与主体身份；抽象笔触优先服从原景物区域和轮廓。",
+      "纯抽象或比喻句不因切换风景优先而补山水。"
+    ],
+    "aestheticAcceptance": "pending-user"
+  },
+  "delivery": {
+    "status": "complete",
+    "retryable": false,
+    "reason": null,
+    "message": "解读已通过检查。"
+  },
+  "elapsed_seconds": 3.9
+}

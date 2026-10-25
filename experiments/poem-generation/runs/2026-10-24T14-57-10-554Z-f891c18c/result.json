@@ -1,0 +1,510 @@
+{
+  "id": "2026-10-24T14-57-10-554Z-f891c18c",
+  "fingerprint": "f277612469c4f51a8b562fb6aa7f868b74b8987a176c44cf1e2bac2b038a6cd4",
+  "poem": "此中有真意，欲辩已忘言。",
+  "source": null,
+  "mode": "expression",
+  "model": "DeepSeek-V4.1-Flash",
+  "started_at": "2026-10-24T14:57:10.555Z",
+  "cached": false,
+  "http_status": 200,
+  "usage": {
+    "completion_tokens": 639,
+    "prompt_tokens": 6060,
+    "total_tokens": 6699,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 6016
+    }
+  },
+  "finish_reason": "stop",
+  "analysis": {
+    "schema_version": "expression-1.0",
+    "poem": "此中有真意，欲辩已忘言。",
+    "reading": "此间含蕴着真实的意趣，想要辨析言说时却已忘却言辞；写一种体悟在心、言说难继的状态。",
+    "entities": [
+      {
+        "id": "i1",
+        "mentions": [
+          "此中"
+        ],
+        "concept": "此处、此境",
+        "kind": "place",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "此中有真意"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i2",
+        "mentions": [
+          "真意"
+        ],
+        "concept": "真实的意趣或本真意味",
+        "kind": "abstract",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "此中有真意"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i3",
+        "mentions": [
+          "言"
+        ],
+        "concept": "言辞、言说",
+        "kind": "abstract",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "欲辩已忘言"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      }
+    ],
+    "relations": [],
+    "atmosphere": {
+      "labels": [
+        "静默",
+        "内省"
+      ],
+      "valence": "neutral",
+      "energy": "low",
+      "tension": "low",
+      "openness": "unclear",
+      "evidence": [
+        "此中有真意",
+        "欲辩已忘言"
+      ]
+    },
+    "time": {
+      "markers": [
+        {
+          "surface": "已",
+          "meaning": "表示“忘言”已经发生、成为既成状态"
+        }
+      ],
+      "note": "“欲辩”表示想要辨析的意愿，未说明是否真正开始言说。"
+    },
+    "uncertainties": [
+      "“此中”具体指何处未明，只能理解为当下所在之境。",
+      "“真意”的内涵未展开，不宜补入具体哲理或景物。",
+      "“忘言”是暂时忘却还是终究无法言说，原文未明。"
+    ],
+    "spatial": [],
+    "scene": {
+      "setting": {
+        "kind": "unclear",
+        "basis": "inferred",
+        "evidence": [
+          "此中有真意"
+        ]
+      },
+      "groups": [],
+      "supports": [],
+      "actions": [],
+      "atmosphere": {
+        "visibility": "unclear",
+        "illumination": "unclear",
+        "basis": "inferred",
+        "evidence": []
+      }
+    },
+    "expression": {
+      "relations": [
+        {
+          "source": "i2",
+          "target": "i1",
+          "kind": "connect",
+          "modality": "asserted",
+          "basis": "explicit",
+          "evidence": [
+            "此中有真意"
+          ]
+        },
+        {
+          "source": "i3",
+          "target": "i2",
+          "kind": "block",
+          "modality": "asserted",
+          "basis": "inferred",
+          "evidence": [
+            "欲辩已忘言"
+          ]
+        }
+      ],
+      "processes": [
+        {
+          "subject": "i3",
+          "kind": "fade",
+          "temporal": "already",
+          "modality": "asserted",
+          "basis": "explicit",
+          "evidence": [
+            "欲辩已忘言"
+          ]
+        }
+      ]
+    }
+  },
+  "validation": {
+    "valid": true,
+    "errors": [],
+    "warnings": [
+      "模型保留了不确定性，需要审阅",
+      "scene.setting 为语义推断，绘画选择需与原文明示区分",
+      "i1 未进入整体分组，后续使用本地默认布局",
+      "i2 未进入整体分组，后续使用本地默认布局",
+      "i3 未进入整体分组，后续使用本地默认布局",
+      "scene.atmosphere 为语义推断，绘画选择需与原文明示区分",
+      "expression.relations[1] 为语义推断",
+      "格式或原文引用范围由本地处理，语义合理性仍需复核"
+    ],
+    "review_required": true
+  },
+  "rawValidation": {
+    "valid": false,
+    "errors": [
+      "expression.relations[1] 依据未关联 i2"
+    ],
+    "warnings": [
+      "模型保留了不确定性，需要审阅",
+      "scene.setting 为语义推断，绘画选择需与原文明示区分",
+      "i1 未进入整体分组，后续使用本地默认布局",
+      "i2 未进入整体分组，后续使用本地默认布局",
+      "i3 未进入整体分组，后续使用本地默认布局",
+      "scene.atmosphere 为语义推断，绘画选择需与原文明示区分",
+      "expression.relations[1] 为语义推断"
+    ],
+    "review_required": true
+  },
+  "effectiveAnalysis": {
+    "schema_version": "expression-1.0",
+    "poem": "此中有真意，欲辩已忘言。",
+    "reading": "此间含蕴着真实的意趣，想要辨析言说时却已忘却言辞；写一种体悟在心、言说难继的状态。",
+    "entities": [
+      {
+        "id": "i1",
+        "mentions": [
+          "此中"
+        ],
+        "concept": "此处、此境",
+        "kind": "place",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "此中有真意"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i2",
+        "mentions": [
+          "真意"
+        ],
+        "concept": "真实的意趣或本真意味",
+        "kind": "abstract",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "此中有真意"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i3",
+        "mentions": [
+          "言"
+        ],
+        "concept": "言辞、言说",
+        "kind": "abstract",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "欲辩已忘言"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      }
+    ],
+    "relations": [],
+    "atmosphere": {
+      "labels": [
+        "静默",
+        "内省"
+      ],
+      "valence": "neutral",
+      "energy": "low",
+      "tension": "low",
+      "openness": "unclear",
+      "evidence": [
+        "此中有真意",
+        "欲辩已忘言"
+      ]
+    },
+    "time": {
+      "markers": [
+        {
+          "surface": "已",
+          "meaning": "表示“忘言”已经发生、成为既成状态"
+        }
+      ],
+      "note": "“欲辩”表示想要辨析的意愿，未说明是否真正开始言说。"
+    },
+    "uncertainties": [
+      "“此中”具体指何处未明，只能理解为当下所在之境。",
+      "“真意”的内涵未展开，不宜补入具体哲理或景物。",
+      "“忘言”是暂时忘却还是终究无法言说，原文未明。"
+    ],
+    "spatial": [],
+    "scene": {
+      "setting": {
+        "kind": "unclear",
+        "basis": "inferred",
+        "evidence": [
+          "此中有真意"
+        ]
+      },
+      "groups": [],
+      "supports": [],
+      "actions": [],
+      "atmosphere": {
+        "visibility": "unclear",
+        "illumination": "unclear",
+        "basis": "inferred",
+        "evidence": []
+      }
+    },
+    "expression": {
+      "relations": [
+        {
+          "source": "i2",
+          "target": "i1",
+          "kind": "connect",
+          "modality": "asserted",
+          "basis": "explicit",
+          "evidence": [
+            "此中有真意"
+          ]
+        },
+        {
+          "source": "i3",
+          "target": "i2",
+          "kind": "block",
+          "modality": "asserted",
+          "basis": "inferred",
+          "evidence": [
+            "此中有真意，欲辩已忘言。"
+          ]
+        }
+      ],
+      "processes": [
+        {
+          "subject": "i3",
+          "kind": "fade",
+          "temporal": "already",
+          "modality": "asserted",
+          "basis": "explicit",
+          "evidence": [
+            "欲辩已忘言"
+          ]
+        }
+      ]
+    }
+  },
+  "recovery": {
+    "version": "generation-recovery-1.1",
+    "status": "normalized",
+    "reviewRequired": true,
+    "changes": [
+      {
+        "kind": "source-range-only",
+        "path": "expression.relations.1.evidence",
+        "original": [
+          "欲辩已忘言"
+        ],
+        "effective": [
+          "此中有真意，欲辩已忘言。"
+        ]
+      }
+    ],
+    "omitted": [],
+    "message": "已完成格式或引用整理，解读仍可复核。"
+  },
+  "plan": {
+    "version": "shared-expression-1.1-source-bound",
+    "seed": 1471135998,
+    "poem": "此中有真意，欲辩已忘言。",
+    "nodes": [
+      {
+        "id": "i1",
+        "label": "此中",
+        "meaning": "此处、此境",
+        "kind": "concrete",
+        "contextOnly": false,
+        "mode": "present"
+      },
+      {
+        "id": "i2",
+        "label": "真意",
+        "meaning": "真实的意趣或本真意味",
+        "kind": "abstract",
+        "contextOnly": false,
+        "mode": "present"
+      },
+      {
+        "id": "i3",
+        "label": "言",
+        "meaning": "言辞、言说",
+        "kind": "abstract",
+        "contextOnly": false,
+        "mode": "present"
+      }
+    ],
+    "relations": [
+      {
+        "source": "i2",
+        "target": "i1",
+        "kind": "connect",
+        "modality": "asserted",
+        "basis": "explicit",
+        "evidence": [
+          "此中有真意"
+        ]
+      },
+      {
+        "source": "i3",
+        "target": "i2",
+        "kind": "block",
+        "modality": "asserted",
+        "basis": "inferred",
+        "evidence": [
+          "此中有真意，欲辩已忘言。"
+        ]
+      }
+    ],
+    "processes": [
+      {
+        "subject": "i3",
+        "kind": "fade",
+        "temporal": "already",
+        "modality": "asserted",
+        "basis": "explicit",
+        "evidence": [
+          "欲辩已忘言"
+        ]
+      }
+    ],
+    "omitted": [],
+    "atmosphere": {
+      "labels": [
+        "静默",
+        "内省"
+      ],
+      "valence": "neutral",
+      "energy": "low",
+      "tension": "low",
+      "openness": "unclear",
+      "evidence": [
+        "此中有真意",
+        "欲辩已忘言"
+      ],
+      "illumination": "unclear"
+    },
+    "concretePlan": null,
+    "renderability": {
+      "status": "limited",
+      "visibleScenery": false,
+      "visibleAbstract": true,
+      "gaps": [
+        {
+          "id": "i1",
+          "label": "此中",
+          "reason": "该专名人物、地名或抽象含义暂不作实景补画"
+        }
+      ]
+    },
+    "expression": {
+      "version": "shared-expression-1.1-source-bound",
+      "sourceContract": "expression-1.0",
+      "recommendation": "abstract",
+      "reason": "没有可直接落成实景的主体，以抽象关系组织画面",
+      "gaps": [
+        {
+          "id": "i1",
+          "label": "此中",
+          "reason": "该专名人物、地名或抽象含义暂不作实景补画"
+        }
+      ],
+      "limitations": [
+        "景物过程当前影响抽象纹理；原生景物动作沿用场景能力，未支持的月下楼位移等仍不执行。",
+        "纹理、色层和观看扰动属于本地艺术选择，不改变语义成立状态"
+      ]
+    },
+    "notes": [
+      "三个表达倾向共享景物数量、空间、依托与主体身份；抽象笔触优先服从原景物区域和轮廓。",
+      "纯抽象或比喻句不因切换风景优先而补山水。"
+    ],
+    "aestheticAcceptance": "pending-user"
+  },
+  "delivery": {
+    "status": "adjusted",
+    "retryable": false,
+    "reason": null,
+    "message": "已完成格式或引用整理，解读仍可复核。"
+  },
+  "elapsed_seconds": 4.1
+}

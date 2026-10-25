@@ -1,0 +1,313 @@
+{
+  "id": "2026-10-24T14-18-50-535Z-4b5fc462",
+  "fingerprint": "b0a26e04af7dd6bf2738797dc485059b86514c06842d83552a446fdc49a3f201",
+  "poem": "十月到幽州，戈鋋若罗星",
+  "source": {
+    "provider": "全量下限检查：无当前可重放回答的输入单次补测"
+  },
+  "mode": "expression",
+  "model": "DeepSeek-V4.1-Flash",
+  "started_at": "2026-10-24T14:18:50.536Z",
+  "cached": false,
+  "http_status": 200,
+  "usage": {
+    "completion_tokens": 637,
+    "prompt_tokens": 5875,
+    "total_tokens": 6512,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 5760
+    }
+  },
+  "finish_reason": "stop",
+  "analysis": {
+    "schema_version": "expression-1.0",
+    "poem": "十月到幽州，戈鋋若罗星",
+    "reading": "十月抵达幽州，看到戈与鋋密集排列，如同罗列在天上的星辰。",
+    "entities": [
+      {
+        "id": "i1",
+        "mentions": [
+          "十月"
+        ],
+        "concept": "十月时节",
+        "kind": "abstract",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "十月到幽州"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i2",
+        "mentions": [
+          "幽州"
+        ],
+        "concept": "幽州",
+        "kind": "place",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "十月到幽州"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i3",
+        "mentions": [
+          "戈鋋"
+        ],
+        "concept": "戈与鋋等兵器",
+        "kind": "object",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "戈鋋若罗星"
+        ],
+        "quantity": {
+          "mode": "many",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "group",
+          "extent": "spread",
+          "evidence": [
+            "戈鋋若罗星"
+          ]
+        }
+      },
+      {
+        "id": "i4",
+        "mentions": [
+          "罗星"
+        ],
+        "concept": "罗列的星辰",
+        "kind": "environment",
+        "role": "reference",
+        "presence": "unclear",
+        "evidence": [
+          "戈鋋若罗星"
+        ],
+        "quantity": {
+          "mode": "many",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "group",
+          "extent": "spread",
+          "evidence": [
+            "戈鋋若罗星"
+          ]
+        }
+      }
+    ],
+    "relations": [],
+    "atmosphere": {
+      "labels": [
+        "肃杀",
+        "密集"
+      ],
+      "valence": "neutral",
+      "energy": "medium",
+      "tension": "medium",
+      "openness": "unclear",
+      "evidence": [
+        "戈鋋若罗星"
+      ]
+    },
+    "time": {
+      "markers": [
+        {
+          "surface": "十月",
+          "meaning": "时间标记，指十月时节"
+        }
+      ],
+      "note": null
+    },
+    "uncertainties": [
+      "“到”的主语未在句中明说，抵达者身份不明。",
+      "“若罗星”是比喻，星辰并非实际出现在幽州场景中。"
+    ],
+    "spatial": [],
+    "scene": {
+      "setting": {
+        "kind": "settlement",
+        "basis": "inferred",
+        "evidence": [
+          "十月到幽州"
+        ]
+      },
+      "groups": [
+        {
+          "members": [
+            "i3"
+          ],
+          "role": "subject",
+          "pattern": "field",
+          "depth": "unspecified",
+          "basis": "inferred",
+          "evidence": [
+            "戈鋋若罗星"
+          ]
+        }
+      ],
+      "supports": [],
+      "actions": [],
+      "atmosphere": {
+        "visibility": "unclear",
+        "illumination": "unclear",
+        "basis": "inferred",
+        "evidence": []
+      }
+    },
+    "expression": {
+      "relations": [
+        {
+          "source": "i3",
+          "target": "i4",
+          "kind": "echo",
+          "modality": "asserted",
+          "basis": "explicit",
+          "evidence": [
+            "戈鋋若罗星"
+          ]
+        }
+      ],
+      "processes": []
+    }
+  },
+  "validation": {
+    "valid": true,
+    "errors": [],
+    "warnings": [
+      "模型保留了不确定性，需要审阅",
+      "scene.setting 为语义推断，绘画选择需与原文明示区分",
+      "scene.groups[0] 为语义推断，绘画选择需与原文明示区分",
+      "i1 未进入整体分组，后续使用本地默认布局",
+      "i2 未进入整体分组，后续使用本地默认布局",
+      "scene.atmosphere 为语义推断，绘画选择需与原文明示区分"
+    ],
+    "review_required": true
+  },
+  "plan": {
+    "version": "shared-expression-1.1-source-bound",
+    "seed": 1623671223,
+    "poem": "十月到幽州，戈鋋若罗星",
+    "nodes": [
+      {
+        "id": "i1",
+        "label": "十月",
+        "meaning": "十月时节",
+        "kind": "abstract",
+        "contextOnly": false,
+        "mode": "present"
+      },
+      {
+        "id": "i2",
+        "label": "幽州",
+        "meaning": "幽州",
+        "kind": "concrete",
+        "contextOnly": false,
+        "mode": "present"
+      },
+      {
+        "id": "i3",
+        "label": "戈鋋",
+        "meaning": "戈与鋋等兵器",
+        "kind": "concrete",
+        "contextOnly": false,
+        "mode": "present"
+      },
+      {
+        "id": "i4",
+        "label": "罗星",
+        "meaning": "罗列的星辰",
+        "kind": "concrete",
+        "contextOnly": false,
+        "mode": "candidate"
+      }
+    ],
+    "relations": [
+      {
+        "source": "i3",
+        "target": "i4",
+        "kind": "echo",
+        "modality": "asserted",
+        "basis": "explicit",
+        "evidence": [
+          "戈鋋若罗星"
+        ]
+      }
+    ],
+    "processes": [],
+    "omitted": [],
+    "atmosphere": {
+      "labels": [
+        "肃杀",
+        "密集"
+      ],
+      "valence": "neutral",
+      "energy": "medium",
+      "tension": "medium",
+      "openness": "unclear",
+      "evidence": [
+        "戈鋋若罗星"
+      ],
+      "illumination": "unclear"
+    },
+    "concretePlan": null,
+    "expression": {
+      "version": "shared-expression-1.1-source-bound",
+      "sourceContract": "expression-1.0",
+      "recommendation": "abstract",
+      "reason": "没有可直接落成实景的主体，以抽象关系组织画面",
+      "gaps": [
+        {
+          "id": "i2",
+          "label": "幽州",
+          "reason": "该专名人物、地名或抽象含义暂不作实景补画"
+        },
+        {
+          "id": "i3",
+          "label": "戈鋋",
+          "reason": "该意象尚无合适的写意画法"
+        }
+      ],
+      "limitations": [
+        "景物过程当前影响抽象纹理；原生景物动作沿用场景能力，未支持的月下楼位移等仍不执行。",
+        "纹理、色层和观看扰动属于本地艺术选择，不改变语义成立状态"
+      ]
+    },
+    "notes": [
+      "三个表达倾向共享景物数量、空间、依托与主体身份；抽象笔触优先服从原景物区域和轮廓。",
+      "纯抽象或比喻句不因切换风景优先而补山水。"
+    ],
+    "aestheticAcceptance": "pending-user"
+  },
+  "delivery": {
+    "status": "complete",
+    "retryable": false,
+    "reason": null,
+    "message": "解读已通过检查。"
+  },
+  "elapsed_seconds": 8.9
+}

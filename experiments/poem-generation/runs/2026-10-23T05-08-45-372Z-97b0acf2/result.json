@@ -1,0 +1,1204 @@
+{
+  "id": "2026-10-23T05-08-45-372Z-97b0acf2",
+  "fingerprint": "63da00d5308a2b0e8241cd54059f6938f4da18574af1fd2d28256e375ec2313b",
+  "poem": "渭城朝雨浥轻尘，客舍青青柳色新。",
+  "source": {
+    "provider": "精选诗句库",
+    "author": "王维",
+    "title": "送元二使安西",
+    "dynasty": "唐代"
+  },
+  "mode": "composition",
+  "model": "DeepSeek-V4.1-Flash",
+  "started_at": "2026-10-23T05:08:45.374Z",
+  "cached": false,
+  "http_status": 200,
+  "usage": {
+    "completion_tokens": 920,
+    "prompt_tokens": 4900,
+    "total_tokens": 5820,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 4864
+    }
+  },
+  "finish_reason": "stop",
+  "analysis": {
+    "schema_version": "3.3",
+    "poem": "渭城朝雨浥轻尘，客舍青青柳色新。",
+    "reading": "渭城清晨的雨沾湿了轻尘，客舍旁柳色青翠如新。",
+    "entities": [
+      {
+        "id": "i1",
+        "mentions": [
+          "渭城"
+        ],
+        "concept": "渭城",
+        "kind": "place",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "渭城朝雨浥轻尘"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i2",
+        "mentions": [
+          "朝雨"
+        ],
+        "concept": "清晨的雨",
+        "kind": "environment",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "渭城朝雨浥轻尘"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i3",
+        "mentions": [
+          "轻尘"
+        ],
+        "concept": "轻尘",
+        "kind": "object",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "渭城朝雨浥轻尘"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i4",
+        "mentions": [
+          "客舍"
+        ],
+        "concept": "客舍",
+        "kind": "place",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "客舍青青柳色新"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i5",
+        "mentions": [
+          "柳色"
+        ],
+        "concept": "柳色",
+        "kind": "abstract",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "客舍青青柳色新"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      }
+    ],
+    "relations": [],
+    "atmosphere": {
+      "labels": [
+        "清新",
+        "湿润",
+        "宁静"
+      ],
+      "valence": "positive",
+      "energy": "low",
+      "tension": "low",
+      "openness": "medium",
+      "evidence": [
+        "渭城朝雨浥轻尘",
+        "客舍青青柳色新"
+      ]
+    },
+    "time": {
+      "markers": [
+        {
+          "surface": "朝",
+          "meaning": "清晨"
+        }
+      ],
+      "note": null
+    },
+    "uncertainties": [
+      "柳色新是否指柳树本身未明，仅按颜色状态理解。"
+    ],
+    "spatial": [
+      {
+        "type": "on",
+        "source": "i2",
+        "target": "i3",
+        "modality": "asserted",
+        "basis": "inferred",
+        "evidence": [
+          "渭城朝雨浥轻尘"
+        ]
+      },
+      {
+        "type": "beside",
+        "source": "i5",
+        "target": "i4",
+        "modality": "asserted",
+        "basis": "inferred",
+        "evidence": [
+          "客舍青青柳色新"
+        ]
+      }
+    ],
+    "scene": {
+      "setting": {
+        "kind": "settlement",
+        "basis": "inferred",
+        "evidence": [
+          "渭城朝雨浥轻尘",
+          "客舍青青柳色新"
+        ]
+      },
+      "groups": [
+        {
+          "members": [
+            "i1",
+            "i4"
+          ],
+          "role": "environment",
+          "pattern": "unspecified",
+          "depth": "unspecified",
+          "basis": "inferred",
+          "evidence": [
+            "渭城朝雨浥轻尘",
+            "客舍青青柳色新"
+          ]
+        },
+        {
+          "members": [
+            "i2",
+            "i3",
+            "i5"
+          ],
+          "role": "subject",
+          "pattern": "scattered",
+          "depth": "unspecified",
+          "basis": "inferred",
+          "evidence": [
+            "渭城朝雨浥轻尘",
+            "客舍青青柳色新"
+          ]
+        }
+      ],
+      "supports": [
+        {
+          "entity": "i3",
+          "surface": "ground",
+          "target": null,
+          "basis": "inferred",
+          "evidence": [
+            "渭城朝雨浥轻尘"
+          ]
+        },
+        {
+          "entity": "i4",
+          "surface": "ground",
+          "target": null,
+          "basis": "inferred",
+          "evidence": [
+            "客舍青青柳色新"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "entity": "i2",
+          "state": "fall",
+          "pace": "unspecified",
+          "direction": "down",
+          "modality": "asserted",
+          "basis": "inferred",
+          "evidence": [
+            "渭城朝雨浥轻尘"
+          ]
+        }
+      ],
+      "atmosphere": {
+        "visibility": "clear",
+        "illumination": "day",
+        "basis": "inferred",
+        "evidence": [
+          "渭城朝雨浥轻尘",
+          "客舍青青柳色新"
+        ]
+      }
+    }
+  },
+  "validation": {
+    "valid": true,
+    "errors": [],
+    "warnings": [
+      "模型保留了不确定性，需要审阅",
+      "spatial[0] 的推断或非确定关系需审阅",
+      "spatial[1] 的推断或非确定关系需审阅",
+      "scene.setting 为语义推断，绘画选择需与原文明示区分",
+      "scene.groups[0] 为语义推断，绘画选择需与原文明示区分",
+      "scene.groups[1] 为语义推断，绘画选择需与原文明示区分",
+      "scene.supports[0] 为语义推断，绘画选择需与原文明示区分",
+      "scene.supports[1] 为语义推断，绘画选择需与原文明示区分",
+      "scene.actions[0] 为语义推断，绘画选择需与原文明示区分",
+      "scene.atmosphere 为语义推断，绘画选择需与原文明示区分"
+    ],
+    "review_required": true
+  },
+  "plan": {
+    "version": "semantic-composition-3.3-color-motion",
+    "seed": 981621458,
+    "settings": {
+      "wind": 0.3,
+      "density": 0.45,
+      "palette": "tender",
+      "motion": 1.4
+    },
+    "layers": [
+      {
+        "tool": "landscape",
+        "entities": [
+          "i3"
+        ],
+        "projectedEntities": [],
+        "names": [
+          "轻尘"
+        ],
+        "options": {
+          "form": "dust"
+        },
+        "animate": false,
+        "placement": {
+          "anchor": [
+            320,
+            194
+          ],
+          "at": [
+            0.5,
+            0.57
+          ],
+          "scale": 1.5
+        },
+        "semanticGroup": {
+          "members": [
+            "i2",
+            "i3",
+            "i5"
+          ],
+          "role": "subject",
+          "pattern": "scattered",
+          "depth": "unspecified",
+          "basis": "inferred",
+          "evidence": [
+            "渭城朝雨浥轻尘",
+            "客舍青青柳色新"
+          ],
+          "index": 1
+        },
+        "semanticEffects": [
+          {
+            "path": "scene.groups[1].role",
+            "consumer": "主次布局",
+            "effect": "主体相对突出",
+            "status": "applied"
+          },
+          {
+            "path": "scene.groups[1].pattern",
+            "consumer": "群落布局",
+            "effect": "按 scattered 组织显示单元；不覆盖明确数量",
+            "status": "applied"
+          },
+          {
+            "path": "scene.groups[1].depth",
+            "consumer": "远近布局",
+            "effect": "远近未明，保持本地默认",
+            "status": "skipped"
+          }
+        ],
+        "semanticEnergy": false,
+        "timeScale": 0.45,
+        "instances": [
+          {
+            "placement": {
+              "anchor": [
+                320,
+                194
+              ],
+              "at": [
+                0.5,
+                0.57
+              ],
+              "scale": 1.7920000000000003
+            },
+            "depth": 0.05,
+            "opacity": 1,
+            "variant": 0
+          }
+        ],
+        "singleUnit": false,
+        "quantity": {
+          "items": [
+            {
+              "entity": "i3",
+              "mode": "unspecified",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "unspecified",
+              "extent": "unspecified",
+              "evidence": [],
+              "basis": "model"
+            }
+          ],
+          "rendered": 1,
+          "exact": false,
+          "collective": false,
+          "partUnsupported": false
+        },
+        "quantityLabel": "整体笔触图层；内部数量尚未适配",
+        "z": -20,
+        "semanticSupport": {
+          "surface": "ground",
+          "target": null,
+          "path": "scene.supports[0]"
+        }
+      },
+      {
+        "tool": "dwelling",
+        "entities": [
+          "i4"
+        ],
+        "projectedEntities": [],
+        "names": [
+          "客舍"
+        ],
+        "options": {
+          "kind": "house"
+        },
+        "animate": true,
+        "placement": {
+          "anchor": [
+            320,
+            307
+          ],
+          "at": [
+            0.43,
+            0.73
+          ],
+          "scale": 1.05
+        },
+        "drawingLabel": "房舍",
+        "semanticGroup": {
+          "members": [
+            "i1",
+            "i4"
+          ],
+          "role": "environment",
+          "pattern": "unspecified",
+          "depth": "unspecified",
+          "basis": "inferred",
+          "evidence": [
+            "渭城朝雨浥轻尘",
+            "客舍青青柳色新"
+          ],
+          "index": 0
+        },
+        "semanticEffects": [
+          {
+            "path": "scene.groups[0].role",
+            "consumer": "主次布局",
+            "effect": "保留环境群落层次",
+            "status": "applied"
+          },
+          {
+            "path": "scene.groups[0].pattern",
+            "consumer": "群落布局",
+            "effect": "群落形式未明，保持本地默认",
+            "status": "skipped"
+          },
+          {
+            "path": "scene.groups[0].depth",
+            "consumer": "远近布局",
+            "effect": "远近未明，保持本地默认",
+            "status": "skipped"
+          }
+        ],
+        "semanticEnergy": true,
+        "timeScale": 0.45,
+        "instances": [
+          {
+            "placement": {
+              "anchor": [
+                320,
+                307
+              ],
+              "at": [
+                0.43,
+                0.73
+              ],
+              "scale": 0.78
+            },
+            "depth": 0.05,
+            "opacity": 1,
+            "variant": 0
+          }
+        ],
+        "singleUnit": true,
+        "quantity": {
+          "items": [
+            {
+              "entity": "i4",
+              "mode": "unspecified",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "unspecified",
+              "extent": "unspecified",
+              "evidence": [],
+              "basis": "model"
+            }
+          ],
+          "rendered": 1,
+          "exact": false,
+          "collective": false,
+          "partUnsupported": false
+        },
+        "quantityLabel": "数量未精确；本地试画 1 个单元",
+        "z": 12,
+        "grounding": true,
+        "semanticSupport": {
+          "surface": "ground",
+          "target": null,
+          "path": "scene.supports[1]"
+        }
+      },
+      {
+        "tool": "rain",
+        "entities": [
+          "i2"
+        ],
+        "projectedEntities": [],
+        "names": [
+          "朝雨"
+        ],
+        "options": {},
+        "animate": true,
+        "placement": {
+          "anchor": [
+            320,
+            194
+          ],
+          "at": [
+            0.5,
+            0.5
+          ],
+          "scale": 1.55
+        },
+        "semanticGroup": {
+          "members": [
+            "i2",
+            "i3",
+            "i5"
+          ],
+          "role": "subject",
+          "pattern": "scattered",
+          "depth": "unspecified",
+          "basis": "inferred",
+          "evidence": [
+            "渭城朝雨浥轻尘",
+            "客舍青青柳色新"
+          ],
+          "index": 1
+        },
+        "semanticEffects": [
+          {
+            "path": "scene.actions[0].state",
+            "consumer": "形态与绘画时钟",
+            "effect": "启用工具支持的 fall 状态",
+            "status": "applied"
+          },
+          {
+            "path": "scene.actions[0].pace",
+            "consumer": "绘画时钟",
+            "effect": "定性节奏映射为本地时钟倍率 0.45",
+            "status": "applied"
+          },
+          {
+            "path": "scene.actions[0].direction",
+            "consumer": "工具原生运动",
+            "effect": "使用原生向上／向下运动，不平移依托锚点",
+            "status": "applied"
+          },
+          {
+            "path": "scene.groups[1].role",
+            "consumer": "主次布局",
+            "effect": "主体相对突出",
+            "status": "applied"
+          },
+          {
+            "path": "scene.groups[1].pattern",
+            "consumer": "群落布局",
+            "effect": "按 scattered 组织显示单元；不覆盖明确数量",
+            "status": "applied"
+          },
+          {
+            "path": "scene.groups[1].depth",
+            "consumer": "远近布局",
+            "effect": "远近未明，保持本地默认",
+            "status": "skipped"
+          }
+        ],
+        "semanticEnergy": true,
+        "timeScale": 0.45,
+        "semanticAction": {
+          "entity": "i2",
+          "state": "fall",
+          "pace": "unspecified",
+          "direction": "down",
+          "modality": "asserted",
+          "basis": "inferred",
+          "evidence": [
+            "渭城朝雨浥轻尘"
+          ]
+        },
+        "instances": [
+          {
+            "placement": {
+              "anchor": [
+                320,
+                194
+              ],
+              "at": [
+                0.5,
+                0.5
+              ],
+              "scale": 1.7360000000000002
+            },
+            "depth": 0.05,
+            "opacity": 1,
+            "variant": 0
+          }
+        ],
+        "singleUnit": false,
+        "quantity": {
+          "items": [
+            {
+              "entity": "i2",
+              "mode": "unspecified",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "unspecified",
+              "extent": "unspecified",
+              "evidence": [],
+              "basis": "model"
+            }
+          ],
+          "rendered": 1,
+          "exact": false,
+          "collective": false,
+          "partUnsupported": false
+        },
+        "quantityLabel": "整体笔触图层；内部数量尚未适配"
+      },
+      {
+        "tool": "landscape",
+        "entities": [],
+        "projectedEntities": [],
+        "names": [
+          "构图依托·地面"
+        ],
+        "options": {
+          "form": "ground",
+          "edge": "soft"
+        },
+        "animate": false,
+        "placement": {
+          "anchor": [
+            320,
+            194
+          ],
+          "at": [
+            0.5,
+            0.54
+          ],
+          "scale": 1.6
+        },
+        "instances": [
+          {
+            "placement": {
+              "anchor": [
+                320,
+                265
+              ],
+              "at": [
+                0.5,
+                0.54
+              ],
+              "scale": 2.5
+            },
+            "variant": 0,
+            "depth": 0,
+            "opacity": 1
+          }
+        ],
+        "singleUnit": false,
+        "inferred": true,
+        "provenance": {
+          "basis": "local-context",
+          "reason": "模型解释的必要依托，依据：渭城朝雨浥轻尘",
+          "semanticPath": "scene.supports[0]"
+        },
+        "quantity": {
+          "rendered": 1,
+          "exact": false,
+          "items": []
+        },
+        "quantityLabel": "本地环境依托，不计入原文意象覆盖",
+        "z": -18,
+        "clip": [
+          [
+            0,
+            0.5
+          ],
+          [
+            1,
+            0.5
+          ],
+          [
+            1,
+            1.04
+          ],
+          [
+            0,
+            1.04
+          ]
+        ]
+      }
+    ],
+    "spatial": [
+      {
+        "type": "on",
+        "source": "i2",
+        "target": "i3",
+        "modality": "asserted",
+        "basis": "inferred",
+        "evidence": [
+          "渭城朝雨浥轻尘"
+        ],
+        "visualized": false,
+        "reason": "该空间关系与形态组合尚未适配"
+      },
+      {
+        "type": "beside",
+        "source": "i5",
+        "target": "i4",
+        "modality": "asserted",
+        "basis": "inferred",
+        "evidence": [
+          "客舍青青柳色新"
+        ],
+        "visualized": false,
+        "reason": "关系的一端缺少独立画法"
+      }
+    ],
+    "scene": {
+      "kind": "landscape",
+      "notes": [
+        "房舍下方的淡墨承托是本地构图，不把它当作诗句额外明说的地面或投影。",
+        "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。",
+        "通用场景层先组织地面、水域、群落和主体，再比较三个布局的依托、相对位置、尺度与遮挡；检查通过不代表审美已通过。"
+      ],
+      "waterline": null,
+      "semanticSetting": {
+        "kind": "settlement",
+        "basis": "inferred",
+        "evidence": [
+          "渭城朝雨浥轻尘",
+          "客舍青青柳色新"
+        ]
+      },
+      "semanticEffects": [
+        {
+          "path": "scene.supports[0]",
+          "consumer": "场景依托",
+          "status": "applied",
+          "effect": "必要环境以独立推断背景表示，不新增原文实体"
+        },
+        {
+          "path": "scene.supports[1]",
+          "consumer": "场景依托",
+          "status": "applied",
+          "effect": "必要环境以独立推断背景表示，不新增原文实体"
+        }
+      ],
+      "organization": {
+        "version": "1.0",
+        "strategy": "general-constraints",
+        "regions": {
+          "land": [
+            [
+              0,
+              0.5
+            ],
+            [
+              1,
+              0.5
+            ],
+            [
+              1,
+              1.04
+            ],
+            [
+              0,
+              1.04
+            ]
+          ]
+        },
+        "candidates": [
+          {
+            "layout": 0,
+            "orientation": "open",
+            "errors": 0,
+            "cost": 90.56,
+            "metrics": {
+              "overlapPenalty": 0,
+              "balancePenalty": 0.07,
+              "motifFootprint": 0.055,
+              "landArea": 0.54
+            }
+          },
+          {
+            "layout": 1,
+            "orientation": "open",
+            "errors": 0,
+            "cost": 90.56,
+            "metrics": {
+              "overlapPenalty": 0,
+              "balancePenalty": 0.07,
+              "motifFootprint": 0.055,
+              "landArea": 0.54
+            }
+          },
+          {
+            "layout": 2,
+            "orientation": "open",
+            "errors": 0,
+            "cost": 90.56,
+            "metrics": {
+              "overlapPenalty": 0,
+              "balancePenalty": 0.07,
+              "motifFootprint": 0.055,
+              "landArea": 0.54
+            }
+          }
+        ],
+        "repairs": [
+          {
+            "type": "support-added",
+            "reason": "模型解释的必要依托，依据：渭城朝雨浥轻尘"
+          }
+        ],
+        "limitations": [
+          "几何检查不判定诗意理解或审美合格",
+          "动作时序与整首诗的场景切换尚未编排"
+        ],
+        "layout": 0,
+        "orientation": "open",
+        "audit": {
+          "scope": "implemented-geometry-and-drawing-gaps",
+          "coverage": {
+            "scope": "extracted-entities-only",
+            "present": 5,
+            "mapped": 3,
+            "parameters": [],
+            "missing": [
+              {
+                "id": "i1",
+                "name": "渭城"
+              },
+              {
+                "id": "i5",
+                "name": "柳色"
+              }
+            ]
+          },
+          "checks": [
+            "presence",
+            "count",
+            "finite",
+            "support",
+            "scale",
+            "relative-position",
+            "depth",
+            "grove-spread",
+            "drawing-gaps"
+          ],
+          "status": "needs-review",
+          "errors": 0,
+          "review": 3,
+          "issues": [
+            {
+              "code": "unresolved-relation",
+              "severity": "review",
+              "message": "有空间关系尚无对应布局画法"
+            },
+            {
+              "code": "unresolved-relation",
+              "severity": "review",
+              "message": "有空间关系尚无对应布局画法"
+            },
+            {
+              "code": "drawing-gaps",
+              "severity": "review",
+              "message": "还有 2 项已提取线索尚未转成画面：渭城、柳色"
+            }
+          ],
+          "metrics": {
+            "overlapPenalty": 0,
+            "balancePenalty": 0.07,
+            "motifFootprint": 0.055,
+            "landArea": 0.54
+          },
+          "cost": 90.56,
+          "aestheticAcceptance": "pending-user"
+        },
+        "graph": {
+          "nodes": [
+            {
+              "id": "l0",
+              "entities": [
+                "i3"
+              ],
+              "tool": "landscape",
+              "role": "detail",
+              "habitat": null,
+              "inferred": false,
+              "support": null
+            },
+            {
+              "id": "l1",
+              "entities": [
+                "i4"
+              ],
+              "tool": "dwelling",
+              "role": "subject",
+              "habitat": "land",
+              "inferred": false,
+              "support": "l3"
+            },
+            {
+              "id": "l2",
+              "entities": [
+                "i2"
+              ],
+              "tool": "rain",
+              "role": "atmosphere",
+              "habitat": null,
+              "inferred": false,
+              "support": "l0"
+            },
+            {
+              "id": "l3",
+              "entities": [],
+              "tool": "landscape",
+              "role": "terrain",
+              "habitat": null,
+              "inferred": true,
+              "support": null
+            }
+          ],
+          "edges": [
+            {
+              "type": "supported-by",
+              "source": "l1",
+              "target": "l3",
+              "basis": "local-composition",
+              "habitat": "land"
+            },
+            {
+              "type": "on",
+              "source": "l2",
+              "target": "l0",
+              "basis": "inferred",
+              "modality": "asserted",
+              "evidence": [
+                "渭城朝雨浥轻尘"
+              ]
+            },
+            {
+              "type": "beside",
+              "target": "l1",
+              "basis": "inferred",
+              "modality": "asserted",
+              "evidence": [
+                "客舍青青柳色新"
+              ]
+            }
+          ],
+          "setting": "landscape"
+        }
+      }
+    },
+    "omitted": [
+      {
+        "id": "i1",
+        "name": "渭城",
+        "reason": "该专名人物、地名或抽象含义暂不作实景补画"
+      },
+      {
+        "id": "i5",
+        "name": "柳色",
+        "reason": "该专名人物、地名或抽象含义暂不作实景补画"
+      }
+    ],
+    "notes": [
+      "轻尘：以静态地表颗粒概括，不自动绘成扬尘。这是本地写意借形，保留原词义。",
+      "客舍虽被归为地点，仍按原文明示的自然景物匹配；具体空间关系另行处理。",
+      "客舍：以低层房舍概括用途不同的屋舍。这是本地写意借形，保留原词义。",
+      "位置、大小、笔触与默认微动是本地试画选择；数量解释与本地显示数量分别记录。",
+      "未明说的群落数量、疏密、近中远层次与变体均为本地构图选择；种类可按已声明的写意画法概括，不把铺展词换算成精确物体数量。",
+      "房舍下方的淡墨承托是本地构图，不把它当作诗句额外明说的地面或投影。",
+      "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。",
+      "通用场景层先组织地面、水域、群落和主体，再比较三个布局的依托、相对位置、尺度与遮挡；检查通过不代表审美已通过。",
+      "整体场景、主次、远近、依托和支持的动作状态来自本次模型解释；具体布局、颜色和时钟倍率由本地视觉策略选择。",
+      "动作动画表现受支持的主导状态与有限观看运动；先后事件与完整因果尚未编排。",
+      "动态程度与默认轻风是可调整的观看选择；不改变数量、主次或原文动作判断。人物保持点景写意，不新增人物步态。"
+    ],
+    "relations": [],
+    "semanticConsumption": {
+      "version": "3.3",
+      "items": [
+        {
+          "path": "scene.setting",
+          "status": "applied",
+          "consumer": "本地视觉策略",
+          "effect": "整体环境进入场景提案选择",
+          "basis": "inferred",
+          "evidence": [
+            "渭城朝雨浥轻尘",
+            "客舍青青柳色新"
+          ]
+        },
+        {
+          "path": "scene.groups[0].role",
+          "status": "applied",
+          "consumer": "主次布局",
+          "effect": "保留环境群落层次",
+          "basis": "inferred",
+          "evidence": [
+            "渭城朝雨浥轻尘",
+            "客舍青青柳色新"
+          ]
+        },
+        {
+          "path": "scene.groups[0].pattern",
+          "status": "skipped",
+          "consumer": "群落布局",
+          "effect": "群落形式未明，保持本地默认",
+          "basis": "inferred",
+          "evidence": [
+            "渭城朝雨浥轻尘",
+            "客舍青青柳色新"
+          ]
+        },
+        {
+          "path": "scene.groups[0].depth",
+          "status": "skipped",
+          "consumer": "远近布局",
+          "effect": "远近未明，保持本地默认",
+          "basis": "inferred",
+          "evidence": [
+            "渭城朝雨浥轻尘",
+            "客舍青青柳色新"
+          ]
+        },
+        {
+          "path": "scene.groups[1].role",
+          "status": "applied",
+          "consumer": "主次布局",
+          "effect": "主体相对突出",
+          "basis": "inferred",
+          "evidence": [
+            "渭城朝雨浥轻尘",
+            "客舍青青柳色新"
+          ]
+        },
+        {
+          "path": "scene.groups[1].pattern",
+          "status": "applied",
+          "consumer": "群落布局",
+          "effect": "按 scattered 组织显示单元；不覆盖明确数量",
+          "basis": "inferred",
+          "evidence": [
+            "渭城朝雨浥轻尘",
+            "客舍青青柳色新"
+          ]
+        },
+        {
+          "path": "scene.groups[1].depth",
+          "status": "skipped",
+          "consumer": "远近布局",
+          "effect": "远近未明，保持本地默认",
+          "basis": "inferred",
+          "evidence": [
+            "渭城朝雨浥轻尘",
+            "客舍青青柳色新"
+          ]
+        },
+        {
+          "path": "scene.supports[0]",
+          "status": "applied",
+          "consumer": "场景依托",
+          "effect": "必要环境以独立推断背景表示，不新增原文实体",
+          "basis": "inferred",
+          "evidence": [
+            "渭城朝雨浥轻尘"
+          ]
+        },
+        {
+          "path": "scene.supports[1]",
+          "status": "applied",
+          "consumer": "场景依托",
+          "effect": "必要环境以独立推断背景表示，不新增原文实体",
+          "basis": "inferred",
+          "evidence": [
+            "客舍青青柳色新"
+          ]
+        },
+        {
+          "path": "scene.actions[0].state",
+          "status": "applied",
+          "consumer": "形态与绘画时钟",
+          "effect": "启用工具支持的 fall 状态",
+          "basis": "inferred",
+          "evidence": [
+            "渭城朝雨浥轻尘"
+          ]
+        },
+        {
+          "path": "scene.actions[0].pace",
+          "status": "applied",
+          "consumer": "绘画时钟",
+          "effect": "定性节奏映射为本地时钟倍率 0.45",
+          "basis": "inferred",
+          "evidence": [
+            "渭城朝雨浥轻尘"
+          ]
+        },
+        {
+          "path": "scene.actions[0].direction",
+          "status": "applied",
+          "consumer": "工具原生运动",
+          "effect": "使用原生向上／向下运动，不平移依托锚点",
+          "basis": "inferred",
+          "evidence": [
+            "渭城朝雨浥轻尘"
+          ]
+        },
+        {
+          "path": "scene.atmosphere.visibility",
+          "status": "applied",
+          "consumer": "画布色层与远景",
+          "effect": "可见度 clear；迷蒙或昏暗时淡化非光源图层",
+          "basis": "inferred",
+          "evidence": [
+            "渭城朝雨浥轻尘",
+            "客舍青青柳色新"
+          ]
+        },
+        {
+          "path": "scene.atmosphere.illumination",
+          "status": "applied",
+          "consumer": "有限配色",
+          "effect": "照明 day 映射为本地 tender 配色；用户仍可手动覆盖",
+          "basis": "inferred",
+          "evidence": [
+            "渭城朝雨浥轻尘",
+            "客舍青青柳色新"
+          ]
+        },
+        {
+          "path": "atmosphere.energy",
+          "status": "applied",
+          "consumer": "绘画时钟",
+          "effect": "没有明确动作节奏时，气息强弱控制已有微动的默认时钟"
+        },
+        {
+          "path": "atmosphere.openness",
+          "status": "applied",
+          "consumer": "群落分布与笔触密度",
+          "effect": "开阔度转换为本地间距与工具笔触密度，不等于原文数量"
+        },
+        {
+          "path": "atmosphere.valence",
+          "status": "applied",
+          "consumer": "有限配色",
+          "effect": "正向感受暂用 tender，其余用 clear；尚非完整情感色谱"
+        },
+        {
+          "path": "time.markers",
+          "status": "retained",
+          "consumer": "原始记录与解读",
+          "effect": "保留原文时间标记；本版照明由 scene.atmosphere 转换，多阶段时间逻辑未执行"
+        }
+      ],
+      "summary": {
+        "applied": 14,
+        "partial": 0,
+        "unsupported": 0,
+        "skipped": 3,
+        "retained": 1
+      },
+      "aestheticAcceptance": "pending-user"
+    }
+  },
+  "elapsed_seconds": 6.2
+}

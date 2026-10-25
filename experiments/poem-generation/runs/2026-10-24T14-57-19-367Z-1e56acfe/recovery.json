@@ -1,0 +1,25 @@
+{
+  "version": "generation-recovery-1.1",
+  "status": "partial",
+  "reviewRequired": true,
+  "changes": [],
+  "omitted": [
+    {
+      "path": "expression.processes[0]",
+      "claim": {
+        "subject": "i2",
+        "kind": "persist",
+        "temporal": "ongoing",
+        "modality": "asserted",
+        "basis": "inferred",
+        "evidence": [
+          "恰似一江春水向东流！"
+        ]
+      },
+      "errors": [
+        "expression.processes[0] 非在场主体不能执行确定过程"
+      ]
+    }
+  ],
+  "message": "已绘制核验通过的部分，个别联系或动作暂未采用。"
+}

@@ -1,0 +1,208 @@
+{
+  "schema_version": "expression-1.0",
+  "poem": "返景入深林，复照青苔上。",
+  "reading": "返照的光线进入幽深树林，又落在青苔之上；写林间夕照的幽静明暗。",
+  "entities": [
+    {
+      "id": "i1",
+      "mentions": [
+        "返景"
+      ],
+      "concept": "返照的光线",
+      "kind": "object",
+      "role": "scene",
+      "presence": "present",
+      "evidence": [
+        "返景入深林"
+      ],
+      "quantity": {
+        "mode": "unspecified",
+        "min": null,
+        "max": null,
+        "unit": null,
+        "scope": "unspecified",
+        "extent": "unspecified",
+        "evidence": []
+      }
+    },
+    {
+      "id": "i2",
+      "mentions": [
+        "深林"
+      ],
+      "concept": "幽深的树林",
+      "kind": "place",
+      "role": "scene",
+      "presence": "present",
+      "evidence": [
+        "返景入深林"
+      ],
+      "quantity": {
+        "mode": "unspecified",
+        "min": null,
+        "max": null,
+        "unit": null,
+        "scope": "unspecified",
+        "extent": "unspecified",
+        "evidence": []
+      }
+    },
+    {
+      "id": "i3",
+      "mentions": [
+        "青苔"
+      ],
+      "concept": "青色苔藓",
+      "kind": "organism",
+      "role": "scene",
+      "presence": "present",
+      "evidence": [
+        "复照青苔上"
+      ],
+      "quantity": {
+        "mode": "unspecified",
+        "min": null,
+        "max": null,
+        "unit": null,
+        "scope": "unspecified",
+        "extent": "unspecified",
+        "evidence": []
+      }
+    }
+  ],
+  "relations": [],
+  "atmosphere": {
+    "labels": [
+      "幽静",
+      "明暗"
+    ],
+    "valence": "neutral",
+    "energy": "low",
+    "tension": "low",
+    "openness": "low",
+    "evidence": [
+      "返景入深林",
+      "复照青苔上"
+    ]
+  },
+  "time": {
+    "markers": [
+      {
+        "surface": "复",
+        "meaning": "表示再次、又一次"
+      }
+    ],
+    "note": "返照再次照到青苔，暗示光线反复出现。"
+  },
+  "uncertainties": [
+    "返景的具体光源未明说，只能理解为返照的光线。",
+    "深林与青苔的空间关系未明说，仅知光线进入并照到青苔。"
+  ],
+  "spatial": [
+    {
+      "type": "on",
+      "source": "i1",
+      "target": "i3",
+      "modality": "asserted",
+      "basis": "explicit",
+      "evidence": [
+        "返景入深林，复照青苔上。"
+      ]
+    }
+  ],
+  "scene": {
+    "setting": {
+      "kind": "woodland",
+      "basis": "explicit",
+      "evidence": [
+        "返景入深林"
+      ]
+    },
+    "groups": [
+      {
+        "members": [
+          "i2"
+        ],
+        "role": "environment",
+        "pattern": "grove",
+        "depth": "unspecified",
+        "basis": "inferred",
+        "evidence": [
+          "返景入深林"
+        ]
+      },
+      {
+        "members": [
+          "i3"
+        ],
+        "role": "accent",
+        "pattern": "scattered",
+        "depth": "unspecified",
+        "basis": "inferred",
+        "evidence": [
+          "复照青苔上"
+        ]
+      }
+    ],
+    "supports": [
+      {
+        "entity": "i3",
+        "surface": "ground",
+        "target": null,
+        "basis": "inferred",
+        "evidence": [
+          "复照青苔上"
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "entity": "i1",
+        "state": "unclear",
+        "pace": "unspecified",
+        "direction": "unspecified",
+        "modality": "asserted",
+        "basis": "inferred",
+        "evidence": [
+          "返景入深林",
+          "复照青苔上"
+        ]
+      }
+    ],
+    "atmosphere": {
+      "visibility": "clear",
+      "illumination": "twilight",
+      "basis": "inferred",
+      "evidence": [
+        "返景入深林",
+        "复照青苔上"
+      ]
+    }
+  },
+  "expression": {
+    "relations": [
+      {
+        "source": "i1",
+        "target": "i3",
+        "kind": "reveal",
+        "modality": "asserted",
+        "basis": "explicit",
+        "evidence": [
+          "返景入深林，复照青苔上。"
+        ]
+      }
+    ],
+    "processes": [
+      {
+        "subject": "i1",
+        "kind": "recur",
+        "temporal": "again",
+        "modality": "asserted",
+        "basis": "explicit",
+        "evidence": [
+          "返景入深林，复照青苔上。"
+        ]
+      }
+    ]
+  }
+}

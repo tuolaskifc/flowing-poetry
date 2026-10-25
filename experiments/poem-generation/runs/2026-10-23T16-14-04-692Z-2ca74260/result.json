@@ -1,0 +1,2353 @@
+{
+  "id": "2026-10-23T16-14-04-692Z-2ca74260",
+  "fingerprint": "e58e87c165edfc578228869ee5122805d7de635d90677e15fd46c858f7c98591",
+  "poem": "从此无心爱良夜，任他明月下西楼。",
+  "source": {
+    "provider": "统一表达首次协议试验",
+    "author": "李益",
+    "title": "写情"
+  },
+  "mode": "expression",
+  "model": "DeepSeek-V4.1-Flash",
+  "started_at": "2026-10-23T16:14:04.693Z",
+  "cached": false,
+  "http_status": 200,
+  "usage": {
+    "completion_tokens": 818,
+    "prompt_tokens": 5664,
+    "total_tokens": 6482,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 5632
+    }
+  },
+  "finish_reason": "stop",
+  "analysis": {
+    "schema_version": "expression-1.0",
+    "poem": "从此无心爱良夜，任他明月下西楼。",
+    "reading": "从此不再有爱赏良夜的心绪，任凭明月西沉、离开西楼。",
+    "entities": [
+      {
+        "id": "i1",
+        "mentions": [
+          "无心"
+        ],
+        "concept": "不再有爱赏之心",
+        "kind": "abstract",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "从此无心爱良夜"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i2",
+        "mentions": [
+          "良夜"
+        ],
+        "concept": "美好的夜晚",
+        "kind": "environment",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "从此无心爱良夜"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i3",
+        "mentions": [
+          "明月"
+        ],
+        "concept": "明月",
+        "kind": "object",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "任他明月下西楼"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i4",
+        "mentions": [
+          "西楼"
+        ],
+        "concept": "西边的楼",
+        "kind": "place",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "任他明月下西楼"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      }
+    ],
+    "relations": [],
+    "atmosphere": {
+      "labels": [
+        "清冷",
+        "疏淡"
+      ],
+      "valence": "neutral",
+      "energy": "low",
+      "tension": "low",
+      "openness": "medium",
+      "evidence": [
+        "从此无心爱良夜",
+        "任他明月下西楼"
+      ]
+    },
+    "time": {
+      "markers": [
+        {
+          "surface": "从此",
+          "meaning": "从此时起，表示时间起点"
+        }
+      ],
+      "note": "下西楼表示月落过程，但未明说具体时刻"
+    },
+    "uncertainties": [
+      "“下西楼”可解为月落至西楼之下或离开西楼，方向略有歧义。",
+      "“无心”的主体未在句中明说。"
+    ],
+    "spatial": [
+      {
+        "type": "on",
+        "source": "i3",
+        "target": "i4",
+        "modality": "unclear",
+        "basis": "inferred",
+        "evidence": [
+          "任他明月下西楼"
+        ]
+      }
+    ],
+    "scene": {
+      "setting": {
+        "kind": "settlement",
+        "basis": "inferred",
+        "evidence": [
+          "任他明月下西楼"
+        ]
+      },
+      "groups": [
+        {
+          "members": [
+            "i2",
+            "i3",
+            "i4"
+          ],
+          "role": "environment",
+          "pattern": "scattered",
+          "depth": "unspecified",
+          "basis": "inferred",
+          "evidence": [
+            "从此无心爱良夜",
+            "任他明月下西楼"
+          ]
+        }
+      ],
+      "supports": [],
+      "actions": [
+        {
+          "entity": "i3",
+          "state": "fall",
+          "pace": "unspecified",
+          "direction": "down",
+          "modality": "asserted",
+          "basis": "inferred",
+          "evidence": [
+            "任他明月下西楼"
+          ]
+        }
+      ],
+      "atmosphere": {
+        "visibility": "clear",
+        "illumination": "night",
+        "basis": "inferred",
+        "evidence": [
+          "任他明月下西楼"
+        ]
+      }
+    },
+    "expression": {
+      "relations": [
+        {
+          "source": "i3",
+          "target": "i4",
+          "kind": "separate",
+          "modality": "asserted",
+          "basis": "inferred",
+          "evidence": [
+            "任他明月下西楼"
+          ]
+        }
+      ],
+      "processes": [
+        {
+          "subject": "i1",
+          "kind": "persist",
+          "temporal": "ongoing",
+          "modality": "asserted",
+          "basis": "explicit",
+          "evidence": [
+            "从此无心爱良夜"
+          ]
+        },
+        {
+          "subject": "i3",
+          "kind": "fade",
+          "temporal": "ongoing",
+          "modality": "asserted",
+          "basis": "inferred",
+          "evidence": [
+            "任他明月下西楼"
+          ]
+        }
+      ]
+    }
+  },
+  "validation": {
+    "valid": true,
+    "errors": [],
+    "warnings": [
+      "模型保留了不确定性，需要审阅",
+      "spatial[0] 的推断或非确定关系需审阅",
+      "scene.setting 为语义推断，绘画选择需与原文明示区分",
+      "scene.groups[0] 为语义推断，绘画选择需与原文明示区分",
+      "i1 未进入整体分组，后续使用本地默认布局",
+      "scene.actions[0] 为语义推断，绘画选择需与原文明示区分",
+      "scene.atmosphere 为语义推断，绘画选择需与原文明示区分",
+      "expression.relations[0] 为语义推断",
+      "expression.processes[1] 为语义推断"
+    ],
+    "review_required": true
+  },
+  "plan": {
+    "version": "shared-expression-1.0",
+    "seed": 723713584,
+    "poem": "从此无心爱良夜，任他明月下西楼。",
+    "nodes": [
+      {
+        "id": "i1",
+        "label": "无心",
+        "meaning": "不再有爱赏之心",
+        "kind": "abstract",
+        "mode": "present"
+      },
+      {
+        "id": "i2",
+        "label": "良夜",
+        "meaning": "美好的夜晚",
+        "kind": "concrete",
+        "mode": "present"
+      },
+      {
+        "id": "i3",
+        "label": "明月",
+        "meaning": "明月",
+        "kind": "concrete",
+        "mode": "present"
+      },
+      {
+        "id": "i4",
+        "label": "西楼",
+        "meaning": "西边的楼",
+        "kind": "concrete",
+        "mode": "present"
+      }
+    ],
+    "relations": [
+      {
+        "source": "i3",
+        "target": "i4",
+        "kind": "separate",
+        "modality": "asserted",
+        "basis": "inferred",
+        "evidence": [
+          "任他明月下西楼"
+        ]
+      }
+    ],
+    "processes": [
+      {
+        "subject": "i1",
+        "kind": "persist",
+        "temporal": "ongoing",
+        "modality": "asserted",
+        "basis": "explicit",
+        "evidence": [
+          "从此无心爱良夜"
+        ]
+      },
+      {
+        "subject": "i3",
+        "kind": "fade",
+        "temporal": "ongoing",
+        "modality": "asserted",
+        "basis": "inferred",
+        "evidence": [
+          "任他明月下西楼"
+        ]
+      }
+    ],
+    "omitted": [],
+    "atmosphere": {
+      "labels": [
+        "清冷",
+        "疏淡"
+      ],
+      "valence": "neutral",
+      "energy": "low",
+      "tension": "low",
+      "openness": "medium",
+      "evidence": [
+        "从此无心爱良夜",
+        "任他明月下西楼"
+      ],
+      "illumination": "night"
+    },
+    "concretePlan": {
+      "version": "semantic-composition-3.3-world-instances",
+      "seed": 723713584,
+      "settings": {
+        "wind": 0.3,
+        "density": 0.45,
+        "palette": "indigo",
+        "motion": 1.4
+      },
+      "layers": [
+        {
+          "tool": "moon",
+          "entities": [
+            "i3"
+          ],
+          "projectedEntities": [],
+          "names": [
+            "明月"
+          ],
+          "options": {
+            "shape": "crescent"
+          },
+          "animate": false,
+          "placement": {
+            "anchor": [
+              320,
+              175
+            ],
+            "at": [
+              0.72,
+              0.22
+            ],
+            "scale": 0.85
+          },
+          "semanticGroup": {
+            "members": [
+              "i2",
+              "i3",
+              "i4"
+            ],
+            "role": "environment",
+            "pattern": "scattered",
+            "depth": "unspecified",
+            "basis": "inferred",
+            "evidence": [
+              "从此无心爱良夜",
+              "任他明月下西楼"
+            ],
+            "index": 0
+          },
+          "semanticEffects": [
+            {
+              "path": "scene.actions[0].state",
+              "consumer": "动作画法",
+              "effect": "当前工具尚无对应动作状态",
+              "status": "unsupported"
+            },
+            {
+              "path": "scene.groups[0].role",
+              "consumer": "主次布局",
+              "effect": "保留环境群落层次",
+              "status": "applied"
+            },
+            {
+              "path": "scene.groups[0].pattern",
+              "consumer": "群落布局",
+              "effect": "按 scattered 组织显示单元；不覆盖明确数量",
+              "status": "applied"
+            },
+            {
+              "path": "scene.groups[0].depth",
+              "consumer": "远近布局",
+              "effect": "远近未明，保持本地默认",
+              "status": "skipped"
+            }
+          ],
+          "semanticEnergy": false,
+          "timeScale": 0,
+          "semanticAction": {
+            "entity": "i3",
+            "state": "fall",
+            "pace": "unspecified",
+            "direction": "down",
+            "modality": "asserted",
+            "basis": "inferred",
+            "evidence": [
+              "任他明月下西楼"
+            ]
+          },
+          "instances": [
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  175
+                ],
+                "at": [
+                  0.72,
+                  0.22
+                ],
+                "scale": 0.76
+              },
+              "depth": 0.05,
+              "opacity": 1,
+              "variant": 0,
+              "tone": "far",
+              "id": "i3:moon::0:0"
+            }
+          ],
+          "singleUnit": true,
+          "quantity": {
+            "items": [
+              {
+                "entity": "i3",
+                "mode": "unspecified",
+                "min": null,
+                "max": null,
+                "unit": null,
+                "scope": "unspecified",
+                "extent": "unspecified",
+                "evidence": [],
+                "basis": "model"
+              }
+            ],
+            "rendered": 1,
+            "exact": false,
+            "collective": false,
+            "partUnsupported": false
+          },
+          "quantityLabel": "数量未精确；本地试画 1 个单元",
+          "z": -5,
+          "visual": {
+            "role": "light",
+            "brushStrength": 1.1
+          },
+          "performance": {
+            "rhythm": "steady",
+            "rate": 1,
+            "amplitude": 1,
+            "phase": 0
+          },
+          "id": "i3:moon::0",
+          "interaction": {
+            "mode": "instance",
+            "groupId": "i3:moon::0"
+          }
+        },
+        {
+          "tool": "landscape",
+          "entities": [],
+          "projectedEntities": [],
+          "names": [
+            "构图依托·地面"
+          ],
+          "options": {
+            "form": "ground",
+            "edge": "soft"
+          },
+          "animate": false,
+          "placement": {
+            "anchor": [
+              320,
+              194
+            ],
+            "at": [
+              0.5,
+              0.54
+            ],
+            "scale": 1.6
+          },
+          "instances": [
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  265
+                ],
+                "at": [
+                  0.5,
+                  0.54
+                ],
+                "scale": 2.5
+              },
+              "variant": 0,
+              "depth": 0,
+              "opacity": 1,
+              "tone": "far",
+              "id": "inferred:landscape:ground:1:0"
+            }
+          ],
+          "singleUnit": false,
+          "inferred": true,
+          "provenance": {
+            "basis": "local-context",
+            "reason": "整体场景解释为 settlement，本地补充必要 ground 依托",
+            "semanticPath": "scene.setting"
+          },
+          "quantity": {
+            "rendered": 1,
+            "exact": false,
+            "items": []
+          },
+          "quantityLabel": "本地环境依托，不计入原文意象覆盖",
+          "z": -18,
+          "clip": [
+            [
+              0,
+              0.5
+            ],
+            [
+              1,
+              0.5
+            ],
+            [
+              1,
+              1.04
+            ],
+            [
+              0,
+              1.04
+            ]
+          ],
+          "visual": {
+            "role": "ground",
+            "brushStrength": 1.1
+          },
+          "performance": {
+            "rhythm": "steady",
+            "rate": 1,
+            "amplitude": 1,
+            "phase": 3.8830085198369844
+          },
+          "id": "inferred:landscape:ground:1",
+          "interaction": {
+            "mode": "group",
+            "groupId": "inferred:landscape:ground:1"
+          }
+        }
+      ],
+      "spatial": [
+        {
+          "type": "on",
+          "source": "i3",
+          "target": "i4",
+          "modality": "unclear",
+          "basis": "inferred",
+          "evidence": [
+            "任他明月下西楼"
+          ],
+          "visualized": false,
+          "reason": "非确定关系仅保留解读"
+        }
+      ],
+      "scene": {
+        "kind": "study",
+        "notes": [
+          "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。",
+          "通用场景层先组织地面、水域、群落和主体，再比较三个布局的依托、相对位置、尺度与遮挡；检查通过不代表审美已通过。"
+        ],
+        "waterline": null,
+        "semanticSetting": {
+          "kind": "settlement",
+          "basis": "inferred",
+          "evidence": [
+            "任他明月下西楼"
+          ]
+        },
+        "semanticEffects": [
+          {
+            "path": "scene.setting",
+            "consumer": "场景依托",
+            "status": "applied",
+            "effect": "必要环境以独立推断背景表示，不新增原文实体"
+          }
+        ],
+        "organization": {
+          "version": "1.0",
+          "strategy": "general-constraints",
+          "regions": {
+            "land": [
+              [
+                0,
+                0.5
+              ],
+              [
+                1,
+                0.5
+              ],
+              [
+                1,
+                1.04
+              ],
+              [
+                0,
+                1.04
+              ]
+            ]
+          },
+          "candidates": [
+            {
+              "layout": 0,
+              "orientation": "疏林前后",
+              "errors": 0,
+              "cost": 30,
+              "score": 30,
+              "metrics": {
+                "overlapPenalty": 0,
+                "balancePenalty": 0,
+                "motifFootprint": 0,
+                "landArea": 0.54
+              }
+            },
+            {
+              "layout": 1,
+              "orientation": "林隙展开",
+              "errors": 0,
+              "cost": 30,
+              "score": 30,
+              "metrics": {
+                "overlapPenalty": 0,
+                "balancePenalty": 0,
+                "motifFootprint": 0,
+                "landArea": 0.54
+              }
+            },
+            {
+              "layout": 2,
+              "orientation": "远近错落",
+              "errors": 0,
+              "cost": 30,
+              "score": 30,
+              "metrics": {
+                "overlapPenalty": 0,
+                "balancePenalty": 0,
+                "motifFootprint": 0,
+                "landArea": 0.54
+              }
+            }
+          ],
+          "repairs": [
+            {
+              "type": "support-added",
+              "reason": "整体场景解释为 settlement，本地补充必要 ground 依托"
+            }
+          ],
+          "limitations": [
+            "几何检查不判定诗意理解或审美合格",
+            "动作时序与整首诗的场景切换尚未编排"
+          ],
+          "topology": "疏林前后",
+          "layout": 0,
+          "orientation": "疏林前后",
+          "audit": {
+            "scope": "implemented-geometry-and-drawing-gaps",
+            "coverage": {
+              "scope": "extracted-entities-only",
+              "present": 4,
+              "mapped": 1,
+              "parameters": [],
+              "missing": [
+                {
+                  "id": "i1",
+                  "name": "无心"
+                },
+                {
+                  "id": "i2",
+                  "name": "良夜"
+                },
+                {
+                  "id": "i4",
+                  "name": "西楼"
+                }
+              ]
+            },
+            "checks": [
+              "presence",
+              "count",
+              "finite",
+              "support",
+              "scale",
+              "relative-position",
+              "depth",
+              "grove-spread",
+              "drawing-gaps"
+            ],
+            "status": "needs-review",
+            "errors": 0,
+            "review": 1,
+            "issues": [
+              {
+                "code": "drawing-gaps",
+                "severity": "review",
+                "message": "还有 3 项已提取线索尚未转成画面：无心、良夜、西楼"
+              }
+            ],
+            "metrics": {
+              "overlapPenalty": 0,
+              "balancePenalty": 0,
+              "motifFootprint": 0,
+              "landArea": 0.54
+            },
+            "cost": 30,
+            "aestheticAcceptance": "pending-user"
+          },
+          "graph": {
+            "nodes": [
+              {
+                "id": "l0",
+                "entities": [
+                  "i3"
+                ],
+                "tool": "moon",
+                "role": "sky",
+                "habitat": "air",
+                "inferred": false,
+                "support": null
+              },
+              {
+                "id": "l1",
+                "entities": [],
+                "tool": "landscape",
+                "role": "terrain",
+                "habitat": null,
+                "inferred": true,
+                "support": null
+              }
+            ],
+            "edges": [
+              {
+                "type": "supported-by",
+                "source": "l0",
+                "target": null,
+                "basis": "local-composition",
+                "habitat": "air"
+              },
+              {
+                "type": "on",
+                "source": "l0",
+                "basis": "inferred",
+                "modality": "unclear",
+                "evidence": [
+                  "任他明月下西楼"
+                ]
+              }
+            ],
+            "setting": "study"
+          }
+        },
+        "displayAudit": {
+          "scope": "display-scale-separation-and-habitat",
+          "issues": [],
+          "errors": 0,
+          "aestheticAcceptance": "pending-user"
+        }
+      },
+      "compositions": [
+        {
+          "id": "space-0",
+          "label": "疏林前后",
+          "description": "先安排连续水域与地表，再按主次与远近安放景物",
+          "layers": [
+            {
+              "tool": "moon",
+              "entities": [
+                "i3"
+              ],
+              "projectedEntities": [],
+              "names": [
+                "明月"
+              ],
+              "options": {
+                "shape": "crescent"
+              },
+              "animate": false,
+              "placement": {
+                "anchor": [
+                  320,
+                  175
+                ],
+                "at": [
+                  0.72,
+                  0.22
+                ],
+                "scale": 0.85
+              },
+              "semanticGroup": {
+                "members": [
+                  "i2",
+                  "i3",
+                  "i4"
+                ],
+                "role": "environment",
+                "pattern": "scattered",
+                "depth": "unspecified",
+                "basis": "inferred",
+                "evidence": [
+                  "从此无心爱良夜",
+                  "任他明月下西楼"
+                ],
+                "index": 0
+              },
+              "semanticEffects": [
+                {
+                  "path": "scene.actions[0].state",
+                  "consumer": "动作画法",
+                  "effect": "当前工具尚无对应动作状态",
+                  "status": "unsupported"
+                },
+                {
+                  "path": "scene.groups[0].role",
+                  "consumer": "主次布局",
+                  "effect": "保留环境群落层次",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[0].pattern",
+                  "consumer": "群落布局",
+                  "effect": "按 scattered 组织显示单元；不覆盖明确数量",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[0].depth",
+                  "consumer": "远近布局",
+                  "effect": "远近未明，保持本地默认",
+                  "status": "skipped"
+                }
+              ],
+              "semanticEnergy": false,
+              "timeScale": 0,
+              "semanticAction": {
+                "entity": "i3",
+                "state": "fall",
+                "pace": "unspecified",
+                "direction": "down",
+                "modality": "asserted",
+                "basis": "inferred",
+                "evidence": [
+                  "任他明月下西楼"
+                ]
+              },
+              "instances": [
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      175
+                    ],
+                    "at": [
+                      0.72,
+                      0.22
+                    ],
+                    "scale": 0.76
+                  },
+                  "depth": 0.05,
+                  "opacity": 1,
+                  "variant": 0,
+                  "tone": "far",
+                  "id": "i3:moon::0:0"
+                }
+              ],
+              "singleUnit": true,
+              "quantity": {
+                "items": [
+                  {
+                    "entity": "i3",
+                    "mode": "unspecified",
+                    "min": null,
+                    "max": null,
+                    "unit": null,
+                    "scope": "unspecified",
+                    "extent": "unspecified",
+                    "evidence": [],
+                    "basis": "model"
+                  }
+                ],
+                "rendered": 1,
+                "exact": false,
+                "collective": false,
+                "partUnsupported": false
+              },
+              "quantityLabel": "数量未精确；本地试画 1 个单元",
+              "z": -5,
+              "visual": {
+                "role": "light",
+                "brushStrength": 1.1
+              },
+              "performance": {
+                "rhythm": "steady",
+                "rate": 1,
+                "amplitude": 1,
+                "phase": 0
+              },
+              "id": "i3:moon::0",
+              "interaction": {
+                "mode": "instance",
+                "groupId": "i3:moon::0"
+              }
+            },
+            {
+              "tool": "landscape",
+              "entities": [],
+              "projectedEntities": [],
+              "names": [
+                "构图依托·地面"
+              ],
+              "options": {
+                "form": "ground",
+                "edge": "soft"
+              },
+              "animate": false,
+              "placement": {
+                "anchor": [
+                  320,
+                  194
+                ],
+                "at": [
+                  0.5,
+                  0.54
+                ],
+                "scale": 1.6
+              },
+              "instances": [
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      265
+                    ],
+                    "at": [
+                      0.5,
+                      0.54
+                    ],
+                    "scale": 2.5
+                  },
+                  "variant": 0,
+                  "depth": 0,
+                  "opacity": 1,
+                  "tone": "far",
+                  "id": "inferred:landscape:ground:1:0"
+                }
+              ],
+              "singleUnit": false,
+              "inferred": true,
+              "provenance": {
+                "basis": "local-context",
+                "reason": "整体场景解释为 settlement，本地补充必要 ground 依托",
+                "semanticPath": "scene.setting"
+              },
+              "quantity": {
+                "rendered": 1,
+                "exact": false,
+                "items": []
+              },
+              "quantityLabel": "本地环境依托，不计入原文意象覆盖",
+              "z": -18,
+              "clip": [
+                [
+                  0,
+                  0.5
+                ],
+                [
+                  1,
+                  0.5
+                ],
+                [
+                  1,
+                  1.04
+                ],
+                [
+                  0,
+                  1.04
+                ]
+              ],
+              "visual": {
+                "role": "ground",
+                "brushStrength": 1.1
+              },
+              "performance": {
+                "rhythm": "steady",
+                "rate": 1,
+                "amplitude": 1,
+                "phase": 3.8830085198369844
+              },
+              "id": "inferred:landscape:ground:1",
+              "interaction": {
+                "mode": "group",
+                "groupId": "inferred:landscape:ground:1"
+              }
+            }
+          ],
+          "scene": {
+            "kind": "study",
+            "notes": [
+              "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。",
+              "通用场景层先组织地面、水域、群落和主体，再比较三个布局的依托、相对位置、尺度与遮挡；检查通过不代表审美已通过。"
+            ],
+            "waterline": null,
+            "semanticSetting": {
+              "kind": "settlement",
+              "basis": "inferred",
+              "evidence": [
+                "任他明月下西楼"
+              ]
+            },
+            "semanticEffects": [
+              {
+                "path": "scene.setting",
+                "consumer": "场景依托",
+                "status": "applied",
+                "effect": "必要环境以独立推断背景表示，不新增原文实体"
+              }
+            ],
+            "organization": {
+              "version": "1.0",
+              "strategy": "general-constraints",
+              "regions": {
+                "land": [
+                  [
+                    0,
+                    0.5
+                  ],
+                  [
+                    1,
+                    0.5
+                  ],
+                  [
+                    1,
+                    1.04
+                  ],
+                  [
+                    0,
+                    1.04
+                  ]
+                ]
+              },
+              "candidates": [
+                {
+                  "layout": 0,
+                  "orientation": "疏林前后",
+                  "errors": 0,
+                  "cost": 30,
+                  "score": 30,
+                  "metrics": {
+                    "overlapPenalty": 0,
+                    "balancePenalty": 0,
+                    "motifFootprint": 0,
+                    "landArea": 0.54
+                  }
+                },
+                {
+                  "layout": 1,
+                  "orientation": "林隙展开",
+                  "errors": 0,
+                  "cost": 30,
+                  "score": 30,
+                  "metrics": {
+                    "overlapPenalty": 0,
+                    "balancePenalty": 0,
+                    "motifFootprint": 0,
+                    "landArea": 0.54
+                  }
+                },
+                {
+                  "layout": 2,
+                  "orientation": "远近错落",
+                  "errors": 0,
+                  "cost": 30,
+                  "score": 30,
+                  "metrics": {
+                    "overlapPenalty": 0,
+                    "balancePenalty": 0,
+                    "motifFootprint": 0,
+                    "landArea": 0.54
+                  }
+                }
+              ],
+              "repairs": [
+                {
+                  "type": "support-added",
+                  "reason": "整体场景解释为 settlement，本地补充必要 ground 依托"
+                }
+              ],
+              "limitations": [
+                "几何检查不判定诗意理解或审美合格",
+                "动作时序与整首诗的场景切换尚未编排"
+              ],
+              "topology": "疏林前后",
+              "layout": 0,
+              "orientation": "疏林前后",
+              "audit": {
+                "scope": "implemented-geometry-and-drawing-gaps",
+                "coverage": {
+                  "scope": "extracted-entities-only",
+                  "present": 4,
+                  "mapped": 1,
+                  "parameters": [],
+                  "missing": [
+                    {
+                      "id": "i1",
+                      "name": "无心"
+                    },
+                    {
+                      "id": "i2",
+                      "name": "良夜"
+                    },
+                    {
+                      "id": "i4",
+                      "name": "西楼"
+                    }
+                  ]
+                },
+                "checks": [
+                  "presence",
+                  "count",
+                  "finite",
+                  "support",
+                  "scale",
+                  "relative-position",
+                  "depth",
+                  "grove-spread",
+                  "drawing-gaps"
+                ],
+                "status": "needs-review",
+                "errors": 0,
+                "review": 1,
+                "issues": [
+                  {
+                    "code": "drawing-gaps",
+                    "severity": "review",
+                    "message": "还有 3 项已提取线索尚未转成画面：无心、良夜、西楼"
+                  }
+                ],
+                "metrics": {
+                  "overlapPenalty": 0,
+                  "balancePenalty": 0,
+                  "motifFootprint": 0,
+                  "landArea": 0.54
+                },
+                "cost": 30,
+                "aestheticAcceptance": "pending-user"
+              },
+              "graph": {
+                "nodes": [
+                  {
+                    "id": "l0",
+                    "entities": [
+                      "i3"
+                    ],
+                    "tool": "moon",
+                    "role": "sky",
+                    "habitat": "air",
+                    "inferred": false,
+                    "support": null
+                  },
+                  {
+                    "id": "l1",
+                    "entities": [],
+                    "tool": "landscape",
+                    "role": "terrain",
+                    "habitat": null,
+                    "inferred": true,
+                    "support": null
+                  }
+                ],
+                "edges": [
+                  {
+                    "type": "supported-by",
+                    "source": "l0",
+                    "target": null,
+                    "basis": "local-composition",
+                    "habitat": "air"
+                  },
+                  {
+                    "type": "on",
+                    "source": "l0",
+                    "basis": "inferred",
+                    "modality": "unclear",
+                    "evidence": [
+                      "任他明月下西楼"
+                    ]
+                  }
+                ],
+                "setting": "study"
+              }
+            },
+            "displayAudit": {
+              "scope": "display-scale-separation-and-habitat",
+              "issues": [],
+              "errors": 0,
+              "aestheticAcceptance": "pending-user"
+            }
+          },
+          "spatial": [
+            {
+              "type": "on",
+              "source": "i3",
+              "target": "i4",
+              "modality": "unclear",
+              "basis": "inferred",
+              "evidence": [
+                "任他明月下西楼"
+              ],
+              "visualized": false,
+              "reason": "非确定关系仅保留解读"
+            }
+          ],
+          "landscapeStyle": {
+            "version": "1.0",
+            "color": "role-and-distance",
+            "motion": "layer-rhythms",
+            "aestheticAcceptance": "pending-user"
+          }
+        },
+        {
+          "id": "space-1",
+          "label": "林隙展开",
+          "description": "先安排连续水域与地表，再按主次与远近安放景物",
+          "layers": [
+            {
+              "tool": "moon",
+              "entities": [
+                "i3"
+              ],
+              "projectedEntities": [],
+              "names": [
+                "明月"
+              ],
+              "options": {
+                "shape": "crescent"
+              },
+              "animate": false,
+              "placement": {
+                "anchor": [
+                  320,
+                  175
+                ],
+                "at": [
+                  0.29,
+                  0.22
+                ],
+                "scale": 0.85
+              },
+              "semanticGroup": {
+                "members": [
+                  "i2",
+                  "i3",
+                  "i4"
+                ],
+                "role": "environment",
+                "pattern": "scattered",
+                "depth": "unspecified",
+                "basis": "inferred",
+                "evidence": [
+                  "从此无心爱良夜",
+                  "任他明月下西楼"
+                ],
+                "index": 0
+              },
+              "semanticEffects": [
+                {
+                  "path": "scene.actions[0].state",
+                  "consumer": "动作画法",
+                  "effect": "当前工具尚无对应动作状态",
+                  "status": "unsupported"
+                },
+                {
+                  "path": "scene.groups[0].role",
+                  "consumer": "主次布局",
+                  "effect": "保留环境群落层次",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[0].pattern",
+                  "consumer": "群落布局",
+                  "effect": "按 scattered 组织显示单元；不覆盖明确数量",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[0].depth",
+                  "consumer": "远近布局",
+                  "effect": "远近未明，保持本地默认",
+                  "status": "skipped"
+                }
+              ],
+              "semanticEnergy": false,
+              "timeScale": 0,
+              "semanticAction": {
+                "entity": "i3",
+                "state": "fall",
+                "pace": "unspecified",
+                "direction": "down",
+                "modality": "asserted",
+                "basis": "inferred",
+                "evidence": [
+                  "任他明月下西楼"
+                ]
+              },
+              "instances": [
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      175
+                    ],
+                    "at": [
+                      0.29,
+                      0.22
+                    ],
+                    "scale": 0.76
+                  },
+                  "depth": 0.05,
+                  "opacity": 1,
+                  "variant": 0,
+                  "tone": "far",
+                  "id": "i3:moon::0:0"
+                }
+              ],
+              "singleUnit": true,
+              "quantity": {
+                "items": [
+                  {
+                    "entity": "i3",
+                    "mode": "unspecified",
+                    "min": null,
+                    "max": null,
+                    "unit": null,
+                    "scope": "unspecified",
+                    "extent": "unspecified",
+                    "evidence": [],
+                    "basis": "model"
+                  }
+                ],
+                "rendered": 1,
+                "exact": false,
+                "collective": false,
+                "partUnsupported": false
+              },
+              "quantityLabel": "数量未精确；本地试画 1 个单元",
+              "z": -5,
+              "visual": {
+                "role": "light",
+                "brushStrength": 1.1
+              },
+              "performance": {
+                "rhythm": "steady",
+                "rate": 1,
+                "amplitude": 1,
+                "phase": 0
+              },
+              "id": "i3:moon::0",
+              "interaction": {
+                "mode": "instance",
+                "groupId": "i3:moon::0"
+              }
+            },
+            {
+              "tool": "landscape",
+              "entities": [],
+              "projectedEntities": [],
+              "names": [
+                "构图依托·地面"
+              ],
+              "options": {
+                "form": "ground",
+                "edge": "soft"
+              },
+              "animate": false,
+              "placement": {
+                "anchor": [
+                  320,
+                  194
+                ],
+                "at": [
+                  0.5,
+                  0.54
+                ],
+                "scale": 1.6
+              },
+              "instances": [
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      265
+                    ],
+                    "at": [
+                      0.5,
+                      0.54
+                    ],
+                    "scale": 2.5
+                  },
+                  "variant": 0,
+                  "depth": 0,
+                  "opacity": 1,
+                  "tone": "far",
+                  "id": "inferred:landscape:ground:1:0"
+                }
+              ],
+              "singleUnit": false,
+              "inferred": true,
+              "provenance": {
+                "basis": "local-context",
+                "reason": "整体场景解释为 settlement，本地补充必要 ground 依托",
+                "semanticPath": "scene.setting"
+              },
+              "quantity": {
+                "rendered": 1,
+                "exact": false,
+                "items": []
+              },
+              "quantityLabel": "本地环境依托，不计入原文意象覆盖",
+              "z": -18,
+              "clip": [
+                [
+                  0,
+                  0.5
+                ],
+                [
+                  1,
+                  0.5
+                ],
+                [
+                  1,
+                  1.04
+                ],
+                [
+                  0,
+                  1.04
+                ]
+              ],
+              "visual": {
+                "role": "ground",
+                "brushStrength": 1.1
+              },
+              "performance": {
+                "rhythm": "steady",
+                "rate": 1,
+                "amplitude": 1,
+                "phase": 3.8830085198369844
+              },
+              "id": "inferred:landscape:ground:1",
+              "interaction": {
+                "mode": "group",
+                "groupId": "inferred:landscape:ground:1"
+              }
+            }
+          ],
+          "scene": {
+            "kind": "study",
+            "notes": [
+              "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。"
+            ],
+            "waterline": null,
+            "semanticSetting": {
+              "kind": "settlement",
+              "basis": "inferred",
+              "evidence": [
+                "任他明月下西楼"
+              ]
+            },
+            "semanticEffects": [
+              {
+                "path": "scene.setting",
+                "consumer": "场景依托",
+                "status": "applied",
+                "effect": "必要环境以独立推断背景表示，不新增原文实体"
+              }
+            ],
+            "organization": {
+              "version": "1.0",
+              "strategy": "general-constraints",
+              "regions": {
+                "land": [
+                  [
+                    0,
+                    0.5
+                  ],
+                  [
+                    1,
+                    0.5
+                  ],
+                  [
+                    1,
+                    1.04
+                  ],
+                  [
+                    0,
+                    1.04
+                  ]
+                ]
+              },
+              "candidates": [],
+              "repairs": [],
+              "limitations": [
+                "几何检查不判定诗意理解或审美合格",
+                "动作时序与整首诗的场景切换尚未编排"
+              ],
+              "topology": "林隙展开",
+              "layout": 1,
+              "orientation": "林隙展开",
+              "audit": {
+                "scope": "implemented-geometry-and-drawing-gaps",
+                "coverage": {
+                  "scope": "extracted-entities-only",
+                  "present": 4,
+                  "mapped": 1,
+                  "parameters": [],
+                  "missing": [
+                    {
+                      "id": "i1",
+                      "name": "无心"
+                    },
+                    {
+                      "id": "i2",
+                      "name": "良夜"
+                    },
+                    {
+                      "id": "i4",
+                      "name": "西楼"
+                    }
+                  ]
+                },
+                "checks": [
+                  "presence",
+                  "count",
+                  "finite",
+                  "support",
+                  "scale",
+                  "relative-position",
+                  "depth",
+                  "grove-spread",
+                  "drawing-gaps"
+                ],
+                "status": "needs-review",
+                "errors": 0,
+                "review": 1,
+                "issues": [
+                  {
+                    "code": "drawing-gaps",
+                    "severity": "review",
+                    "message": "还有 3 项已提取线索尚未转成画面：无心、良夜、西楼"
+                  }
+                ],
+                "metrics": {
+                  "overlapPenalty": 0,
+                  "balancePenalty": 0,
+                  "motifFootprint": 0,
+                  "landArea": 0.54
+                },
+                "cost": 30,
+                "aestheticAcceptance": "pending-user"
+              },
+              "graph": {
+                "nodes": [
+                  {
+                    "id": "l0",
+                    "entities": [
+                      "i3"
+                    ],
+                    "tool": "moon",
+                    "role": "sky",
+                    "habitat": "air",
+                    "inferred": false,
+                    "support": null
+                  },
+                  {
+                    "id": "l1",
+                    "entities": [],
+                    "tool": "landscape",
+                    "role": "terrain",
+                    "habitat": null,
+                    "inferred": true,
+                    "support": null
+                  }
+                ],
+                "edges": [
+                  {
+                    "type": "supported-by",
+                    "source": "l0",
+                    "target": null,
+                    "basis": "local-composition",
+                    "habitat": "air"
+                  },
+                  {
+                    "type": "on",
+                    "source": "l0",
+                    "basis": "inferred",
+                    "modality": "unclear",
+                    "evidence": [
+                      "任他明月下西楼"
+                    ]
+                  }
+                ],
+                "setting": "study"
+              }
+            },
+            "displayAudit": {
+              "scope": "display-scale-separation-and-habitat",
+              "issues": [],
+              "errors": 0,
+              "aestheticAcceptance": "pending-user"
+            }
+          },
+          "spatial": [
+            {
+              "type": "on",
+              "source": "i3",
+              "target": "i4",
+              "modality": "unclear",
+              "basis": "inferred",
+              "evidence": [
+                "任他明月下西楼"
+              ],
+              "visualized": false,
+              "reason": "非确定关系仅保留解读"
+            }
+          ],
+          "landscapeStyle": {
+            "version": "1.0",
+            "color": "role-and-distance",
+            "motion": "layer-rhythms",
+            "aestheticAcceptance": "pending-user"
+          }
+        },
+        {
+          "id": "space-2",
+          "label": "远近错落",
+          "description": "先安排连续水域与地表，再按主次与远近安放景物",
+          "layers": [
+            {
+              "tool": "moon",
+              "entities": [
+                "i3"
+              ],
+              "projectedEntities": [],
+              "names": [
+                "明月"
+              ],
+              "options": {
+                "shape": "crescent"
+              },
+              "animate": false,
+              "placement": {
+                "anchor": [
+                  320,
+                  175
+                ],
+                "at": [
+                  0.72,
+                  0.22
+                ],
+                "scale": 0.85
+              },
+              "semanticGroup": {
+                "members": [
+                  "i2",
+                  "i3",
+                  "i4"
+                ],
+                "role": "environment",
+                "pattern": "scattered",
+                "depth": "unspecified",
+                "basis": "inferred",
+                "evidence": [
+                  "从此无心爱良夜",
+                  "任他明月下西楼"
+                ],
+                "index": 0
+              },
+              "semanticEffects": [
+                {
+                  "path": "scene.actions[0].state",
+                  "consumer": "动作画法",
+                  "effect": "当前工具尚无对应动作状态",
+                  "status": "unsupported"
+                },
+                {
+                  "path": "scene.groups[0].role",
+                  "consumer": "主次布局",
+                  "effect": "保留环境群落层次",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[0].pattern",
+                  "consumer": "群落布局",
+                  "effect": "按 scattered 组织显示单元；不覆盖明确数量",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[0].depth",
+                  "consumer": "远近布局",
+                  "effect": "远近未明，保持本地默认",
+                  "status": "skipped"
+                }
+              ],
+              "semanticEnergy": false,
+              "timeScale": 0,
+              "semanticAction": {
+                "entity": "i3",
+                "state": "fall",
+                "pace": "unspecified",
+                "direction": "down",
+                "modality": "asserted",
+                "basis": "inferred",
+                "evidence": [
+                  "任他明月下西楼"
+                ]
+              },
+              "instances": [
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      175
+                    ],
+                    "at": [
+                      0.72,
+                      0.22
+                    ],
+                    "scale": 0.76
+                  },
+                  "depth": 0.05,
+                  "opacity": 1,
+                  "variant": 0,
+                  "tone": "far",
+                  "id": "i3:moon::0:0"
+                }
+              ],
+              "singleUnit": true,
+              "quantity": {
+                "items": [
+                  {
+                    "entity": "i3",
+                    "mode": "unspecified",
+                    "min": null,
+                    "max": null,
+                    "unit": null,
+                    "scope": "unspecified",
+                    "extent": "unspecified",
+                    "evidence": [],
+                    "basis": "model"
+                  }
+                ],
+                "rendered": 1,
+                "exact": false,
+                "collective": false,
+                "partUnsupported": false
+              },
+              "quantityLabel": "数量未精确；本地试画 1 个单元",
+              "z": -5,
+              "visual": {
+                "role": "light",
+                "brushStrength": 1.1
+              },
+              "performance": {
+                "rhythm": "steady",
+                "rate": 1,
+                "amplitude": 1,
+                "phase": 0
+              },
+              "id": "i3:moon::0",
+              "interaction": {
+                "mode": "instance",
+                "groupId": "i3:moon::0"
+              }
+            },
+            {
+              "tool": "landscape",
+              "entities": [],
+              "projectedEntities": [],
+              "names": [
+                "构图依托·地面"
+              ],
+              "options": {
+                "form": "ground",
+                "edge": "soft"
+              },
+              "animate": false,
+              "placement": {
+                "anchor": [
+                  320,
+                  194
+                ],
+                "at": [
+                  0.5,
+                  0.54
+                ],
+                "scale": 1.6
+              },
+              "instances": [
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      265
+                    ],
+                    "at": [
+                      0.5,
+                      0.54
+                    ],
+                    "scale": 2.5
+                  },
+                  "variant": 0,
+                  "depth": 0,
+                  "opacity": 1,
+                  "tone": "far",
+                  "id": "inferred:landscape:ground:1:0"
+                }
+              ],
+              "singleUnit": false,
+              "inferred": true,
+              "provenance": {
+                "basis": "local-context",
+                "reason": "整体场景解释为 settlement，本地补充必要 ground 依托",
+                "semanticPath": "scene.setting"
+              },
+              "quantity": {
+                "rendered": 1,
+                "exact": false,
+                "items": []
+              },
+              "quantityLabel": "本地环境依托，不计入原文意象覆盖",
+              "z": -18,
+              "clip": [
+                [
+                  0,
+                  0.5
+                ],
+                [
+                  1,
+                  0.5
+                ],
+                [
+                  1,
+                  1.04
+                ],
+                [
+                  0,
+                  1.04
+                ]
+              ],
+              "visual": {
+                "role": "ground",
+                "brushStrength": 1.1
+              },
+              "performance": {
+                "rhythm": "steady",
+                "rate": 1,
+                "amplitude": 1,
+                "phase": 3.8830085198369844
+              },
+              "id": "inferred:landscape:ground:1",
+              "interaction": {
+                "mode": "group",
+                "groupId": "inferred:landscape:ground:1"
+              }
+            }
+          ],
+          "scene": {
+            "kind": "study",
+            "notes": [
+              "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。"
+            ],
+            "waterline": null,
+            "semanticSetting": {
+              "kind": "settlement",
+              "basis": "inferred",
+              "evidence": [
+                "任他明月下西楼"
+              ]
+            },
+            "semanticEffects": [
+              {
+                "path": "scene.setting",
+                "consumer": "场景依托",
+                "status": "applied",
+                "effect": "必要环境以独立推断背景表示，不新增原文实体"
+              }
+            ],
+            "organization": {
+              "version": "1.0",
+              "strategy": "general-constraints",
+              "regions": {
+                "land": [
+                  [
+                    0,
+                    0.5
+                  ],
+                  [
+                    1,
+                    0.5
+                  ],
+                  [
+                    1,
+                    1.04
+                  ],
+                  [
+                    0,
+                    1.04
+                  ]
+                ]
+              },
+              "candidates": [],
+              "repairs": [],
+              "limitations": [
+                "几何检查不判定诗意理解或审美合格",
+                "动作时序与整首诗的场景切换尚未编排"
+              ],
+              "topology": "远近错落",
+              "layout": 2,
+              "orientation": "远近错落",
+              "audit": {
+                "scope": "implemented-geometry-and-drawing-gaps",
+                "coverage": {
+                  "scope": "extracted-entities-only",
+                  "present": 4,
+                  "mapped": 1,
+                  "parameters": [],
+                  "missing": [
+                    {
+                      "id": "i1",
+                      "name": "无心"
+                    },
+                    {
+                      "id": "i2",
+                      "name": "良夜"
+                    },
+                    {
+                      "id": "i4",
+                      "name": "西楼"
+                    }
+                  ]
+                },
+                "checks": [
+                  "presence",
+                  "count",
+                  "finite",
+                  "support",
+                  "scale",
+                  "relative-position",
+                  "depth",
+                  "grove-spread",
+                  "drawing-gaps"
+                ],
+                "status": "needs-review",
+                "errors": 0,
+                "review": 1,
+                "issues": [
+                  {
+                    "code": "drawing-gaps",
+                    "severity": "review",
+                    "message": "还有 3 项已提取线索尚未转成画面：无心、良夜、西楼"
+                  }
+                ],
+                "metrics": {
+                  "overlapPenalty": 0,
+                  "balancePenalty": 0,
+                  "motifFootprint": 0,
+                  "landArea": 0.54
+                },
+                "cost": 30,
+                "aestheticAcceptance": "pending-user"
+              },
+              "graph": {
+                "nodes": [
+                  {
+                    "id": "l0",
+                    "entities": [
+                      "i3"
+                    ],
+                    "tool": "moon",
+                    "role": "sky",
+                    "habitat": "air",
+                    "inferred": false,
+                    "support": null
+                  },
+                  {
+                    "id": "l1",
+                    "entities": [],
+                    "tool": "landscape",
+                    "role": "terrain",
+                    "habitat": null,
+                    "inferred": true,
+                    "support": null
+                  }
+                ],
+                "edges": [
+                  {
+                    "type": "supported-by",
+                    "source": "l0",
+                    "target": null,
+                    "basis": "local-composition",
+                    "habitat": "air"
+                  },
+                  {
+                    "type": "on",
+                    "source": "l0",
+                    "basis": "inferred",
+                    "modality": "unclear",
+                    "evidence": [
+                      "任他明月下西楼"
+                    ]
+                  }
+                ],
+                "setting": "study"
+              }
+            },
+            "displayAudit": {
+              "scope": "display-scale-separation-and-habitat",
+              "issues": [],
+              "errors": 0,
+              "aestheticAcceptance": "pending-user"
+            }
+          },
+          "spatial": [
+            {
+              "type": "on",
+              "source": "i3",
+              "target": "i4",
+              "modality": "unclear",
+              "basis": "inferred",
+              "evidence": [
+                "任他明月下西楼"
+              ],
+              "visualized": false,
+              "reason": "非确定关系仅保留解读"
+            }
+          ],
+          "landscapeStyle": {
+            "version": "1.0",
+            "color": "role-and-distance",
+            "motion": "layer-rhythms",
+            "aestheticAcceptance": "pending-user"
+          }
+        }
+      ],
+      "composition": "space-0",
+      "omitted": [
+        {
+          "id": "i1",
+          "name": "无心",
+          "reason": "该专名人物、地名或抽象含义暂不作实景补画"
+        },
+        {
+          "id": "i2",
+          "name": "良夜",
+          "reason": "该意象尚无合适的写意画法"
+        },
+        {
+          "id": "i4",
+          "name": "西楼",
+          "reason": "该专名人物、地名或抽象含义暂不作实景补画"
+        }
+      ],
+      "notes": [
+        "原句未明确月形，暂用弯月试画；可以手动切换。",
+        "位置、大小、笔触与默认微动是本地试画选择；数量解释与本地显示数量分别记录。",
+        "未明说的群落数量、疏密、近中远层次与变体均为本地构图选择；种类可按已声明的写意画法概括，不把铺展词换算成精确物体数量。",
+        "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。",
+        "通用场景层先组织地面、水域、群落和主体，再比较三个布局的依托、相对位置、尺度与遮挡；检查通过不代表审美已通过。",
+        "语义保留：scene.actions[0].state，当前工具尚无对应动作状态",
+        "整体场景、主次、远近、依托和支持的动作状态来自本次模型解释；具体布局、颜色和时钟倍率由本地视觉策略选择。",
+        "动作动画表现受支持的主导状态与有限观看运动；先后事件与完整因果尚未编排。",
+        "动态程度与默认轻风是可调整的观看选择；不改变数量、主次或原文动作判断。人物保持点景写意，不新增人物步态。",
+        "显示检查覆盖实例尺度、鸟群分离与空中落点；不保证笔触未被遮挡，也不代替实际观看。竹林默认成组拖动，其余单独拖动；Shift 可拖动同层整组。"
+      ],
+      "relations": [],
+      "semanticConsumption": {
+        "version": "3.3",
+        "items": [
+          {
+            "path": "scene.setting",
+            "status": "applied",
+            "consumer": "场景依托",
+            "effect": "必要环境以独立推断背景表示，不新增原文实体",
+            "basis": "inferred",
+            "evidence": [
+              "任他明月下西楼"
+            ]
+          },
+          {
+            "path": "scene.groups[0].role",
+            "status": "applied",
+            "consumer": "主次布局",
+            "effect": "保留环境群落层次",
+            "basis": "inferred",
+            "evidence": [
+              "从此无心爱良夜",
+              "任他明月下西楼"
+            ]
+          },
+          {
+            "path": "scene.groups[0].pattern",
+            "status": "applied",
+            "consumer": "群落布局",
+            "effect": "按 scattered 组织显示单元；不覆盖明确数量",
+            "basis": "inferred",
+            "evidence": [
+              "从此无心爱良夜",
+              "任他明月下西楼"
+            ]
+          },
+          {
+            "path": "scene.groups[0].depth",
+            "status": "skipped",
+            "consumer": "远近布局",
+            "effect": "远近未明，保持本地默认",
+            "basis": "inferred",
+            "evidence": [
+              "从此无心爱良夜",
+              "任他明月下西楼"
+            ]
+          },
+          {
+            "path": "scene.actions[0].state",
+            "status": "unsupported",
+            "consumer": "动作画法",
+            "effect": "当前工具尚无对应动作状态",
+            "basis": "inferred",
+            "evidence": [
+              "任他明月下西楼"
+            ]
+          },
+          {
+            "path": "scene.actions[0].pace",
+            "status": "skipped",
+            "consumer": "本地视觉策略",
+            "effect": "该工具尚不支持此动作分量",
+            "basis": "inferred",
+            "evidence": [
+              "任他明月下西楼"
+            ]
+          },
+          {
+            "path": "scene.actions[0].direction",
+            "status": "skipped",
+            "consumer": "本地视觉策略",
+            "effect": "该工具尚不支持此动作分量",
+            "basis": "inferred",
+            "evidence": [
+              "任他明月下西楼"
+            ]
+          },
+          {
+            "path": "scene.atmosphere.visibility",
+            "status": "applied",
+            "consumer": "画布色层与远景",
+            "effect": "可见度 clear；迷蒙或昏暗时淡化非光源图层",
+            "basis": "inferred",
+            "evidence": [
+              "任他明月下西楼"
+            ]
+          },
+          {
+            "path": "scene.atmosphere.illumination",
+            "status": "applied",
+            "consumer": "自动光色",
+            "effect": "照明 night 与气息标签共同选择本地 indigo 配色；夜景优先暗底，用户可手动覆盖",
+            "basis": "inferred",
+            "evidence": [
+              "任他明月下西楼"
+            ]
+          },
+          {
+            "path": "atmosphere.energy",
+            "status": "skipped",
+            "consumer": "绘画时钟",
+            "effect": "没有明确动作节奏时，气息强弱控制已有微动的默认时钟"
+          },
+          {
+            "path": "atmosphere.openness",
+            "status": "applied",
+            "consumer": "群落分布与笔触密度",
+            "effect": "开阔度转换为本地间距与工具笔触密度，不等于原文数量"
+          },
+          {
+            "path": "atmosphere.valence",
+            "status": "applied",
+            "consumer": "自动光色",
+            "effect": "先约束昼夜明暗，再按已支持的气息标签和情绪倾向选择配色；不宣称完整情感理解"
+          },
+          {
+            "path": "time.markers",
+            "status": "retained",
+            "consumer": "原始记录与解读",
+            "effect": "保留原文时间标记；本版照明由 scene.atmosphere 转换，多阶段时间逻辑未执行"
+          }
+        ],
+        "summary": {
+          "applied": 7,
+          "partial": 0,
+          "unsupported": 1,
+          "skipped": 4,
+          "retained": 1
+        },
+        "aestheticAcceptance": "pending-user"
+      },
+      "landscapeStyle": {
+        "version": "1.0",
+        "color": "role-and-distance",
+        "motion": "layer-rhythms",
+        "aestheticAcceptance": "pending-user"
+      },
+      "compositionSelection": {
+        "method": "final-display-constraints-then-geometric-preference",
+        "candidates": [
+          {
+            "id": "space-0",
+            "errors": 0,
+            "score": 30
+          },
+          {
+            "id": "space-1",
+            "errors": 0,
+            "score": 30
+          },
+          {
+            "id": "space-2",
+            "errors": 0,
+            "score": 30
+          }
+        ],
+        "aestheticAcceptance": "pending-user"
+      },
+      "imageryTrace": [
+        {
+          "id": "i1",
+          "mentions": [
+            "无心"
+          ],
+          "role": "scene",
+          "presence": "present",
+          "parameter": null,
+          "layers": [],
+          "omission": "该专名人物、地名或抽象含义暂不作实景补画"
+        },
+        {
+          "id": "i2",
+          "mentions": [
+            "良夜"
+          ],
+          "role": "scene",
+          "presence": "present",
+          "parameter": null,
+          "layers": [],
+          "omission": "该意象尚无合适的写意画法"
+        },
+        {
+          "id": "i3",
+          "mentions": [
+            "明月"
+          ],
+          "role": "scene",
+          "presence": "present",
+          "parameter": null,
+          "layers": [
+            {
+              "id": "i3:moon::0",
+              "tool": "moon",
+              "instances": [
+                "i3:moon::0:0"
+              ]
+            }
+          ],
+          "omission": null
+        },
+        {
+          "id": "i4",
+          "mentions": [
+            "西楼"
+          ],
+          "role": "scene",
+          "presence": "present",
+          "parameter": null,
+          "layers": [],
+          "omission": "该专名人物、地名或抽象含义暂不作实景补画"
+        }
+      ]
+    },
+    "expression": {
+      "version": "shared-expression-1.0",
+      "sourceContract": "expression-1.0",
+      "recommendation": "balanced",
+      "reason": "已有景物承托，同时有抽象主体，默认景意交融",
+      "gaps": [
+        {
+          "id": "i2",
+          "label": "良夜",
+          "reason": "尚无实际画笔；不把缺失能力自动当作抽象表达"
+        },
+        {
+          "id": "i4",
+          "label": "西楼",
+          "reason": "尚无实际画笔；不把缺失能力自动当作抽象表达"
+        }
+      ],
+      "limitations": [
+        "纹理、色层和观看扰动属于本地艺术选择，不改变语义成立状态"
+      ]
+    },
+    "notes": [
+      "三个表达倾向共享景物数量、空间、依托与主体身份；抽象笔触优先服从原景物区域和轮廓。",
+      "纯抽象或比喻句不因切换风景优先而补山水。"
+    ],
+    "aestheticAcceptance": "pending-user"
+  },
+  "elapsed_seconds": 5.1
+}

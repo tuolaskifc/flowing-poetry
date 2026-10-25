@@ -1,0 +1,300 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "poem",
+    "reading",
+    "subjects",
+    "relations",
+    "processes",
+    "atmosphere",
+    "uncertainties"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "abstract-1.0"
+    },
+    "poem": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 200
+    },
+    "reading": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 600
+    },
+    "subjects": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 5,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "mentions",
+          "meaning",
+          "kind",
+          "role",
+          "presence",
+          "evidence"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^a[1-9][0-9]*$"
+          },
+          "mentions": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 3,
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 200
+            }
+          },
+          "meaning": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200
+          },
+          "kind": {
+            "enum": [
+              "concrete",
+              "abstract"
+            ]
+          },
+          "role": {
+            "enum": [
+              "scene",
+              "reference"
+            ]
+          },
+          "presence": {
+            "enum": [
+              "present",
+              "absent",
+              "unclear"
+            ]
+          },
+          "evidence": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 3,
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 200
+            }
+          }
+        }
+      }
+    },
+    "relations": {
+      "type": "array",
+      "maxItems": 6,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "source",
+          "target",
+          "kind",
+          "modality",
+          "basis",
+          "evidence"
+        ],
+        "properties": {
+          "source": {
+            "type": "string",
+            "pattern": "^a[1-9][0-9]*$"
+          },
+          "target": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "pattern": "^a[1-9][0-9]*$"
+          },
+          "kind": {
+            "enum": [
+              "connect",
+              "approach",
+              "separate",
+              "echo",
+              "contrast",
+              "interweave",
+              "surround",
+              "block",
+              "converge",
+              "disperse",
+              "occlude",
+              "reveal"
+            ]
+          },
+          "modality": {
+            "enum": [
+              "asserted",
+              "negated",
+              "possible",
+              "conditional",
+              "unclear"
+            ]
+          },
+          "basis": {
+            "enum": [
+              "explicit",
+              "inferred"
+            ]
+          },
+          "evidence": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 3,
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 200
+            }
+          }
+        }
+      }
+    },
+    "processes": {
+      "type": "array",
+      "maxItems": 5,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "subject",
+          "kind",
+          "temporal",
+          "modality",
+          "basis",
+          "evidence"
+        ],
+        "properties": {
+          "subject": {
+            "type": "string",
+            "pattern": "^a[1-9][0-9]*$"
+          },
+          "kind": {
+            "enum": [
+              "persist",
+              "emerge",
+              "fade",
+              "accumulate",
+              "recur",
+              "unclear"
+            ]
+          },
+          "temporal": {
+            "enum": [
+              "ongoing",
+              "already",
+              "not_yet",
+              "again",
+              "repeated",
+              "unspecified"
+            ]
+          },
+          "modality": {
+            "enum": [
+              "asserted",
+              "negated",
+              "possible",
+              "conditional",
+              "unclear"
+            ]
+          },
+          "basis": {
+            "enum": [
+              "explicit",
+              "inferred"
+            ]
+          },
+          "evidence": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 3,
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 200
+            }
+          }
+        }
+      }
+    },
+    "atmosphere": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "labels",
+        "valence",
+        "openness",
+        "illumination",
+        "evidence"
+      ],
+      "properties": {
+        "labels": {
+          "type": "array",
+          "maxItems": 4,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200
+          }
+        },
+        "valence": {
+          "enum": [
+            "positive",
+            "neutral",
+            "negative",
+            "mixed",
+            "unclear"
+          ]
+        },
+        "openness": {
+          "enum": [
+            "low",
+            "medium",
+            "high",
+            "unclear"
+          ]
+        },
+        "illumination": {
+          "enum": [
+            "day",
+            "twilight",
+            "night",
+            "unclear"
+          ]
+        },
+        "evidence": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 3,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200
+          }
+        }
+      }
+    },
+    "uncertainties": {
+      "type": "array",
+      "maxItems": 6,
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 200
+      }
+    }
+  }
+}

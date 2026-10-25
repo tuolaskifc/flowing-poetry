@@ -1,0 +1,2642 @@
+{
+  "id": "2026-10-23T12-51-35-128Z-32651661",
+  "fingerprint": "f026c50cfe3199c6011b481402447af30d6f8863440ce4029036923925d72932",
+  "poem": "野水无人渡，孤舟尽日横。",
+  "source": {
+    "provider": "泛化新句试验",
+    "author": "寇准",
+    "title": "春日登楼怀归",
+    "dynasty": "宋代"
+  },
+  "mode": "composition",
+  "model": "DeepSeek-V4.1-Flash",
+  "started_at": "2026-10-23T12:51:35.130Z",
+  "cached": false,
+  "http_status": 200,
+  "usage": {
+    "completion_tokens": 662,
+    "prompt_tokens": 4895,
+    "total_tokens": 5557,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 4864
+    }
+  },
+  "finish_reason": "stop",
+  "analysis": {
+    "schema_version": "3.3",
+    "poem": "野水无人渡，孤舟尽日横。",
+    "reading": "野外的水面上没有行人渡河，一条孤舟整日横泊。",
+    "entities": [
+      {
+        "id": "i1",
+        "mentions": [
+          "野水"
+        ],
+        "concept": "野外的水面",
+        "kind": "place",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "野水无人渡"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "spread",
+          "evidence": [
+            "野水"
+          ]
+        }
+      },
+      {
+        "id": "i2",
+        "mentions": [
+          "孤舟"
+        ],
+        "concept": "孤零零的小船",
+        "kind": "object",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "孤舟尽日横"
+        ],
+        "quantity": {
+          "mode": "exact",
+          "min": 1,
+          "max": 1,
+          "unit": null,
+          "scope": "individual",
+          "extent": "local",
+          "evidence": [
+            "孤舟"
+          ]
+        }
+      },
+      {
+        "id": "i3",
+        "mentions": [
+          "无人",
+          "人"
+        ],
+        "concept": "渡河的人",
+        "kind": "person",
+        "role": "scene",
+        "presence": "absent",
+        "evidence": [
+          "野水无人渡"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      }
+    ],
+    "relations": [],
+    "atmosphere": {
+      "labels": [
+        "空寂",
+        "闲静"
+      ],
+      "valence": "neutral",
+      "energy": "low",
+      "tension": "low",
+      "openness": "high",
+      "evidence": [
+        "野水无人渡",
+        "孤舟尽日横"
+      ]
+    },
+    "time": {
+      "markers": [
+        {
+          "surface": "尽日",
+          "meaning": "整日、全天，表示持续一整天"
+        }
+      ],
+      "note": "无先后或完成标记，仅强调时间持续。"
+    },
+    "uncertainties": [
+      "“横”可指横泊或横浮，具体姿态未明。",
+      "“无人”只否定渡河者，不排除其他未提及的人物。"
+    ],
+    "spatial": [
+      {
+        "type": "on",
+        "source": "i2",
+        "target": "i1",
+        "modality": "asserted",
+        "basis": "inferred",
+        "evidence": [
+          "孤舟尽日横"
+        ]
+      }
+    ],
+    "scene": {
+      "setting": {
+        "kind": "waterside",
+        "basis": "inferred",
+        "evidence": [
+          "野水无人渡",
+          "孤舟尽日横"
+        ]
+      },
+      "groups": [
+        {
+          "members": [
+            "i1"
+          ],
+          "role": "environment",
+          "pattern": "field",
+          "depth": "unspecified",
+          "basis": "inferred",
+          "evidence": [
+            "野水无人渡"
+          ]
+        },
+        {
+          "members": [
+            "i2"
+          ],
+          "role": "subject",
+          "pattern": "single",
+          "depth": "unspecified",
+          "basis": "inferred",
+          "evidence": [
+            "孤舟尽日横"
+          ]
+        }
+      ],
+      "supports": [
+        {
+          "entity": "i2",
+          "surface": "water",
+          "target": "i1",
+          "basis": "inferred",
+          "evidence": [
+            "孤舟尽日横"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "entity": "i2",
+          "state": "still",
+          "pace": "unspecified",
+          "direction": "unspecified",
+          "modality": "asserted",
+          "basis": "inferred",
+          "evidence": [
+            "孤舟尽日横"
+          ]
+        }
+      ],
+      "atmosphere": {
+        "visibility": "clear",
+        "illumination": "day",
+        "basis": "inferred",
+        "evidence": [
+          "孤舟尽日横"
+        ]
+      }
+    }
+  },
+  "validation": {
+    "valid": true,
+    "errors": [],
+    "warnings": [
+      "模型保留了不确定性，需要审阅",
+      "spatial[0] 的推断或非确定关系需审阅",
+      "scene.setting 为语义推断，绘画选择需与原文明示区分",
+      "scene.groups[0] 为语义推断，绘画选择需与原文明示区分",
+      "scene.groups[1] 为语义推断，绘画选择需与原文明示区分",
+      "scene.supports[0] 为语义推断，绘画选择需与原文明示区分",
+      "scene.actions[0] 为语义推断，绘画选择需与原文明示区分",
+      "scene.atmosphere 为语义推断，绘画选择需与原文明示区分",
+      "引用范围由程序按同句或相邻原句展开；未改写语义，关联是否合理仍需复核"
+    ],
+    "review_required": true
+  },
+  "rawValidation": {
+    "valid": false,
+    "errors": [
+      "spatial[0] 依据未关联关系两端"
+    ],
+    "warnings": [
+      "模型保留了不确定性，需要审阅",
+      "spatial[0] 的推断或非确定关系需审阅"
+    ],
+    "review_required": true
+  },
+  "effectiveAnalysis": {
+    "schema_version": "3.3",
+    "poem": "野水无人渡，孤舟尽日横。",
+    "reading": "野外的水面上没有行人渡河，一条孤舟整日横泊。",
+    "entities": [
+      {
+        "id": "i1",
+        "mentions": [
+          "野水"
+        ],
+        "concept": "野外的水面",
+        "kind": "place",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "野水无人渡"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "spread",
+          "evidence": [
+            "野水"
+          ]
+        }
+      },
+      {
+        "id": "i2",
+        "mentions": [
+          "孤舟"
+        ],
+        "concept": "孤零零的小船",
+        "kind": "object",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "孤舟尽日横"
+        ],
+        "quantity": {
+          "mode": "exact",
+          "min": 1,
+          "max": 1,
+          "unit": null,
+          "scope": "individual",
+          "extent": "local",
+          "evidence": [
+            "孤舟"
+          ]
+        }
+      },
+      {
+        "id": "i3",
+        "mentions": [
+          "无人",
+          "人"
+        ],
+        "concept": "渡河的人",
+        "kind": "person",
+        "role": "scene",
+        "presence": "absent",
+        "evidence": [
+          "野水无人渡"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      }
+    ],
+    "relations": [],
+    "atmosphere": {
+      "labels": [
+        "空寂",
+        "闲静"
+      ],
+      "valence": "neutral",
+      "energy": "low",
+      "tension": "low",
+      "openness": "high",
+      "evidence": [
+        "野水无人渡",
+        "孤舟尽日横"
+      ]
+    },
+    "time": {
+      "markers": [
+        {
+          "surface": "尽日",
+          "meaning": "整日、全天，表示持续一整天"
+        }
+      ],
+      "note": "无先后或完成标记，仅强调时间持续。"
+    },
+    "uncertainties": [
+      "“横”可指横泊或横浮，具体姿态未明。",
+      "“无人”只否定渡河者，不排除其他未提及的人物。"
+    ],
+    "spatial": [
+      {
+        "type": "on",
+        "source": "i2",
+        "target": "i1",
+        "modality": "asserted",
+        "basis": "inferred",
+        "evidence": [
+          "野水无人渡，孤舟尽日横。"
+        ]
+      }
+    ],
+    "scene": {
+      "setting": {
+        "kind": "waterside",
+        "basis": "inferred",
+        "evidence": [
+          "野水无人渡",
+          "孤舟尽日横"
+        ]
+      },
+      "groups": [
+        {
+          "members": [
+            "i1"
+          ],
+          "role": "environment",
+          "pattern": "field",
+          "depth": "unspecified",
+          "basis": "inferred",
+          "evidence": [
+            "野水无人渡"
+          ]
+        },
+        {
+          "members": [
+            "i2"
+          ],
+          "role": "subject",
+          "pattern": "single",
+          "depth": "unspecified",
+          "basis": "inferred",
+          "evidence": [
+            "孤舟尽日横"
+          ]
+        }
+      ],
+      "supports": [
+        {
+          "entity": "i2",
+          "surface": "water",
+          "target": "i1",
+          "basis": "inferred",
+          "evidence": [
+            "野水无人渡，孤舟尽日横。"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "entity": "i2",
+          "state": "still",
+          "pace": "unspecified",
+          "direction": "unspecified",
+          "modality": "asserted",
+          "basis": "inferred",
+          "evidence": [
+            "孤舟尽日横"
+          ]
+        }
+      ],
+      "atmosphere": {
+        "visibility": "clear",
+        "illumination": "day",
+        "basis": "inferred",
+        "evidence": [
+          "孤舟尽日横"
+        ]
+      }
+    }
+  },
+  "sourceContext": {
+    "applied": true,
+    "rawValidation": {
+      "valid": false,
+      "errors": [
+        "spatial[0] 依据未关联关系两端"
+      ],
+      "warnings": [
+        "模型保留了不确定性，需要审阅",
+        "spatial[0] 的推断或非确定关系需审阅"
+      ],
+      "review_required": true
+    },
+    "validation": {
+      "valid": true,
+      "errors": [],
+      "warnings": [
+        "模型保留了不确定性，需要审阅",
+        "spatial[0] 的推断或非确定关系需审阅",
+        "scene.setting 为语义推断，绘画选择需与原文明示区分",
+        "scene.groups[0] 为语义推断，绘画选择需与原文明示区分",
+        "scene.groups[1] 为语义推断，绘画选择需与原文明示区分",
+        "scene.supports[0] 为语义推断，绘画选择需与原文明示区分",
+        "scene.actions[0] 为语义推断，绘画选择需与原文明示区分",
+        "scene.atmosphere 为语义推断，绘画选择需与原文明示区分",
+        "引用范围由程序按同句或相邻原句展开；未改写语义，关联是否合理仍需复核"
+      ],
+      "review_required": true
+    },
+    "changes": [
+      {
+        "path": "spatial[0].evidence",
+        "original": [
+          "孤舟尽日横"
+        ],
+        "expanded": [
+          "野水无人渡，孤舟尽日横。"
+        ],
+        "clauses": [
+          "c1",
+          "c2"
+        ]
+      },
+      {
+        "path": "scene.supports[0].evidence",
+        "original": [
+          "孤舟尽日横"
+        ],
+        "expanded": [
+          "野水无人渡，孤舟尽日横。"
+        ],
+        "clauses": [
+          "c1",
+          "c2"
+        ]
+      }
+    ],
+    "reviewRequired": true,
+    "scope": "source-range-only",
+    "note": "仅机械展开原文引用，不证明文学解读正确；原始回答与原始失败保留"
+  },
+  "plan": {
+    "version": "semantic-composition-3.3-world-instances",
+    "seed": 4161293165,
+    "settings": {
+      "wind": 0.3,
+      "density": 0.35,
+      "palette": "clear",
+      "motion": 1.4
+    },
+    "layers": [
+      {
+        "tool": "water",
+        "entities": [
+          "i1"
+        ],
+        "projectedEntities": [],
+        "names": [
+          "野水"
+        ],
+        "options": {
+          "form": "plane"
+        },
+        "animate": true,
+        "placement": {
+          "anchor": [
+            320,
+            130
+          ],
+          "at": [
+            0.5,
+            0.45
+          ],
+          "scale": 1.5
+        },
+        "semanticGroup": {
+          "members": [
+            "i1"
+          ],
+          "role": "environment",
+          "pattern": "field",
+          "depth": "unspecified",
+          "basis": "inferred",
+          "evidence": [
+            "野水无人渡"
+          ],
+          "index": 0
+        },
+        "semanticEffects": [
+          {
+            "path": "scene.groups[0].role",
+            "consumer": "主次布局",
+            "effect": "保留环境画布范围，主次不改变地形边界",
+            "status": "applied"
+          },
+          {
+            "path": "scene.groups[0].pattern",
+            "consumer": "群落布局",
+            "effect": "按 field 组织显示单元；不覆盖明确数量",
+            "status": "applied"
+          },
+          {
+            "path": "scene.groups[0].depth",
+            "consumer": "远近布局",
+            "effect": "远近未明，保持本地默认",
+            "status": "skipped"
+          }
+        ],
+        "semanticEnergy": true,
+        "timeScale": 0.45,
+        "instances": [
+          {
+            "placement": {
+              "anchor": [
+                320,
+                135
+              ],
+              "at": [
+                0.5,
+                0.45
+              ],
+              "scale": 1.65
+            },
+            "depth": 0.05,
+            "opacity": 1,
+            "variant": 0,
+            "tone": "far",
+            "id": "i1:water:plane:0:0"
+          }
+        ],
+        "singleUnit": false,
+        "quantity": {
+          "items": [
+            {
+              "entity": "i1",
+              "mode": "unspecified",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "unspecified",
+              "extent": "spread",
+              "evidence": [
+                "野水"
+              ],
+              "basis": "model"
+            }
+          ],
+          "rendered": 1,
+          "exact": false,
+          "collective": true,
+          "partUnsupported": false
+        },
+        "quantityLabel": "整体笔触图层；内部数量尚未适配",
+        "z": -10,
+        "surface": {
+          "top": 0.42,
+          "bottom": 1
+        },
+        "clip": [
+          [
+            0,
+            0.42
+          ],
+          [
+            1,
+            0.42
+          ],
+          [
+            1,
+            1.04
+          ],
+          [
+            0,
+            1.04
+          ]
+        ],
+        "visual": {
+          "role": "water",
+          "brushStrength": 1.35
+        },
+        "performance": {
+          "rhythm": "continuous",
+          "rate": 0.9,
+          "amplitude": 0.9,
+          "phase": 0
+        },
+        "id": "i1:water:plane:0",
+        "interaction": {
+          "mode": "group",
+          "groupId": "i1:water:plane:0"
+        }
+      },
+      {
+        "tool": "boat",
+        "entities": [
+          "i2"
+        ],
+        "projectedEntities": [],
+        "names": [
+          "孤舟"
+        ],
+        "options": {},
+        "animate": false,
+        "placement": {
+          "anchor": [
+            320,
+            230
+          ],
+          "at": [
+            0.7254237921250001,
+            0.72
+          ],
+          "scale": 0.95
+        },
+        "semanticGroup": {
+          "members": [
+            "i2"
+          ],
+          "role": "subject",
+          "pattern": "single",
+          "depth": "unspecified",
+          "basis": "inferred",
+          "evidence": [
+            "孤舟尽日横"
+          ],
+          "index": 1
+        },
+        "semanticEffects": [
+          {
+            "path": "scene.actions[0].state",
+            "consumer": "形态与绘画时钟",
+            "effect": "静止姿态并停止该图层时钟",
+            "status": "applied"
+          },
+          {
+            "path": "scene.groups[1].role",
+            "consumer": "主次布局",
+            "effect": "主体相对突出",
+            "status": "applied"
+          },
+          {
+            "path": "scene.groups[1].pattern",
+            "consumer": "群落布局",
+            "effect": "按 single 组织显示单元；不覆盖明确数量",
+            "status": "applied"
+          },
+          {
+            "path": "scene.groups[1].depth",
+            "consumer": "远近布局",
+            "effect": "远近未明，保持本地默认",
+            "status": "skipped"
+          }
+        ],
+        "semanticEnergy": false,
+        "timeScale": 0,
+        "semanticAction": {
+          "entity": "i2",
+          "state": "still",
+          "pace": "unspecified",
+          "direction": "unspecified",
+          "modality": "asserted",
+          "basis": "inferred",
+          "evidence": [
+            "孤舟尽日横"
+          ]
+        },
+        "instances": [
+          {
+            "placement": {
+              "anchor": [
+                320,
+                230
+              ],
+              "at": [
+                0.7254237921250001,
+                0.72
+              ],
+              "scale": 0.8064
+            },
+            "depth": 0.05,
+            "opacity": 1,
+            "variant": 1,
+            "tone": "middle",
+            "id": "i2:boat::1:0"
+          }
+        ],
+        "singleUnit": true,
+        "quantity": {
+          "items": [
+            {
+              "entity": "i2",
+              "mode": "exact",
+              "min": 1,
+              "max": 1,
+              "unit": null,
+              "scope": "individual",
+              "extent": "local",
+              "evidence": [
+                "孤舟"
+              ],
+              "basis": "model"
+            }
+          ],
+          "rendered": 1,
+          "exact": true,
+          "collective": false,
+          "partUnsupported": false
+        },
+        "quantityLabel": "按提取数量绘制 1 个",
+        "z": 22,
+        "semanticSupport": {
+          "surface": "water",
+          "target": "i1",
+          "path": "scene.supports[0]"
+        },
+        "visual": {
+          "role": "architecture",
+          "brushStrength": 1.1
+        },
+        "performance": {
+          "rhythm": "steady",
+          "rate": 1,
+          "amplitude": 1,
+          "phase": 3.8830085198369844
+        },
+        "id": "i2:boat::1",
+        "interaction": {
+          "mode": "instance",
+          "groupId": "i2:boat::1"
+        }
+      }
+    ],
+    "spatial": [
+      {
+        "type": "on",
+        "source": "i2",
+        "target": "i1",
+        "modality": "asserted",
+        "basis": "inferred",
+        "evidence": [
+          "野水无人渡，孤舟尽日横。"
+        ],
+        "visualized": true,
+        "reason": "由通用场景约束组织；具体方向、距离与尺度属于本地构图"
+      }
+    ],
+    "scene": {
+      "kind": "waterside",
+      "notes": [
+        "水面以连续色层和水纹构成空间；水面的范围、视点与水平线是本地构图选择，不自动增加岸或陆地。",
+        "孤舟与水同场时先按水面区域组织；此项是本地试画安排，不宣称已识别承载关系。",
+        "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。",
+        "通用场景层先组织地面、水域、群落和主体，再比较三个布局的依托、相对位置、尺度与遮挡；检查通过不代表审美已通过。"
+      ],
+      "waterline": 0.46,
+      "semanticSetting": {
+        "kind": "waterside",
+        "basis": "inferred",
+        "evidence": [
+          "野水无人渡",
+          "孤舟尽日横"
+        ]
+      },
+      "semanticEffects": [
+        {
+          "path": "scene.supports[0]",
+          "consumer": "场景依托",
+          "status": "applied",
+          "effect": "使用已提取主体的现有承托画法"
+        }
+      ],
+      "organization": {
+        "version": "1.0",
+        "strategy": "general-constraints",
+        "regions": {
+          "water": [
+            [
+              0,
+              0.42
+            ],
+            [
+              1,
+              0.42
+            ],
+            [
+              1,
+              1.04
+            ],
+            [
+              0,
+              1.04
+            ]
+          ]
+        },
+        "candidates": [
+          {
+            "layout": 0,
+            "orientation": "阔水远天",
+            "errors": 0,
+            "cost": 1.803,
+            "score": 4.953,
+            "metrics": {
+              "overlapPenalty": 0,
+              "balancePenalty": 0.225,
+              "motifFootprint": 0.016,
+              "landArea": 0
+            }
+          },
+          {
+            "layout": 1,
+            "orientation": "水面横展",
+            "errors": 0,
+            "cost": 2.212,
+            "score": 6.09,
+            "metrics": {
+              "overlapPenalty": 0,
+              "balancePenalty": 0.277,
+              "motifFootprint": 0.016,
+              "landArea": 0
+            }
+          },
+          {
+            "layout": 2,
+            "orientation": "近水远照",
+            "errors": 0,
+            "cost": 2.621,
+            "score": 7.213,
+            "metrics": {
+              "overlapPenalty": 0,
+              "balancePenalty": 0.328,
+              "motifFootprint": 0.016,
+              "landArea": 0
+            }
+          }
+        ],
+        "repairs": [],
+        "limitations": [
+          "几何检查不判定诗意理解或审美合格",
+          "动作时序与整首诗的场景切换尚未编排"
+        ],
+        "topology": "阔水远天",
+        "layout": 0,
+        "orientation": "阔水远天",
+        "audit": {
+          "scope": "implemented-geometry-and-drawing-gaps",
+          "coverage": {
+            "scope": "extracted-entities-only",
+            "present": 2,
+            "mapped": 2,
+            "parameters": [],
+            "missing": []
+          },
+          "checks": [
+            "presence",
+            "count",
+            "finite",
+            "support",
+            "scale",
+            "relative-position",
+            "depth",
+            "grove-spread",
+            "drawing-gaps"
+          ],
+          "status": "checks-passed",
+          "errors": 0,
+          "review": 0,
+          "issues": [],
+          "metrics": {
+            "overlapPenalty": 0,
+            "balancePenalty": 0.225,
+            "motifFootprint": 0.016,
+            "landArea": 0
+          },
+          "cost": 1.803,
+          "aestheticAcceptance": "pending-user"
+        },
+        "graph": {
+          "nodes": [
+            {
+              "id": "l0",
+              "entities": [
+                "i1"
+              ],
+              "tool": "water",
+              "role": "water",
+              "habitat": null,
+              "inferred": false,
+              "support": null
+            },
+            {
+              "id": "l1",
+              "entities": [
+                "i2"
+              ],
+              "tool": "boat",
+              "role": "subject",
+              "habitat": "water",
+              "inferred": false,
+              "support": "l0"
+            }
+          ],
+          "edges": [
+            {
+              "type": "supported-by",
+              "source": "l1",
+              "target": "l0",
+              "basis": "local-composition",
+              "habitat": "water"
+            },
+            {
+              "type": "on",
+              "source": "l1",
+              "target": "l0",
+              "basis": "inferred",
+              "modality": "asserted",
+              "evidence": [
+                "野水无人渡，孤舟尽日横。"
+              ]
+            }
+          ],
+          "setting": "waterside"
+        }
+      },
+      "displayAudit": {
+        "scope": "display-scale-separation-and-habitat",
+        "issues": [],
+        "errors": 0,
+        "aestheticAcceptance": "pending-user"
+      }
+    },
+    "compositions": [
+      {
+        "id": "space-0",
+        "label": "阔水远天",
+        "description": "先安排连续水域与地表，再按主次与远近安放景物",
+        "layers": [
+          {
+            "tool": "water",
+            "entities": [
+              "i1"
+            ],
+            "projectedEntities": [],
+            "names": [
+              "野水"
+            ],
+            "options": {
+              "form": "plane"
+            },
+            "animate": true,
+            "placement": {
+              "anchor": [
+                320,
+                130
+              ],
+              "at": [
+                0.5,
+                0.45
+              ],
+              "scale": 1.5
+            },
+            "semanticGroup": {
+              "members": [
+                "i1"
+              ],
+              "role": "environment",
+              "pattern": "field",
+              "depth": "unspecified",
+              "basis": "inferred",
+              "evidence": [
+                "野水无人渡"
+              ],
+              "index": 0
+            },
+            "semanticEffects": [
+              {
+                "path": "scene.groups[0].role",
+                "consumer": "主次布局",
+                "effect": "保留环境画布范围，主次不改变地形边界",
+                "status": "applied"
+              },
+              {
+                "path": "scene.groups[0].pattern",
+                "consumer": "群落布局",
+                "effect": "按 field 组织显示单元；不覆盖明确数量",
+                "status": "applied"
+              },
+              {
+                "path": "scene.groups[0].depth",
+                "consumer": "远近布局",
+                "effect": "远近未明，保持本地默认",
+                "status": "skipped"
+              }
+            ],
+            "semanticEnergy": true,
+            "timeScale": 0.45,
+            "instances": [
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    135
+                  ],
+                  "at": [
+                    0.5,
+                    0.45
+                  ],
+                  "scale": 1.65
+                },
+                "depth": 0.05,
+                "opacity": 1,
+                "variant": 0,
+                "tone": "far",
+                "id": "i1:water:plane:0:0"
+              }
+            ],
+            "singleUnit": false,
+            "quantity": {
+              "items": [
+                {
+                  "entity": "i1",
+                  "mode": "unspecified",
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "scope": "unspecified",
+                  "extent": "spread",
+                  "evidence": [
+                    "野水"
+                  ],
+                  "basis": "model"
+                }
+              ],
+              "rendered": 1,
+              "exact": false,
+              "collective": true,
+              "partUnsupported": false
+            },
+            "quantityLabel": "整体笔触图层；内部数量尚未适配",
+            "z": -10,
+            "surface": {
+              "top": 0.42,
+              "bottom": 1
+            },
+            "clip": [
+              [
+                0,
+                0.42
+              ],
+              [
+                1,
+                0.42
+              ],
+              [
+                1,
+                1.04
+              ],
+              [
+                0,
+                1.04
+              ]
+            ],
+            "visual": {
+              "role": "water",
+              "brushStrength": 1.35
+            },
+            "performance": {
+              "rhythm": "continuous",
+              "rate": 0.9,
+              "amplitude": 0.9,
+              "phase": 0
+            },
+            "id": "i1:water:plane:0",
+            "interaction": {
+              "mode": "group",
+              "groupId": "i1:water:plane:0"
+            }
+          },
+          {
+            "tool": "boat",
+            "entities": [
+              "i2"
+            ],
+            "projectedEntities": [],
+            "names": [
+              "孤舟"
+            ],
+            "options": {},
+            "animate": false,
+            "placement": {
+              "anchor": [
+                320,
+                230
+              ],
+              "at": [
+                0.7254237921250001,
+                0.72
+              ],
+              "scale": 0.95
+            },
+            "semanticGroup": {
+              "members": [
+                "i2"
+              ],
+              "role": "subject",
+              "pattern": "single",
+              "depth": "unspecified",
+              "basis": "inferred",
+              "evidence": [
+                "孤舟尽日横"
+              ],
+              "index": 1
+            },
+            "semanticEffects": [
+              {
+                "path": "scene.actions[0].state",
+                "consumer": "形态与绘画时钟",
+                "effect": "静止姿态并停止该图层时钟",
+                "status": "applied"
+              },
+              {
+                "path": "scene.groups[1].role",
+                "consumer": "主次布局",
+                "effect": "主体相对突出",
+                "status": "applied"
+              },
+              {
+                "path": "scene.groups[1].pattern",
+                "consumer": "群落布局",
+                "effect": "按 single 组织显示单元；不覆盖明确数量",
+                "status": "applied"
+              },
+              {
+                "path": "scene.groups[1].depth",
+                "consumer": "远近布局",
+                "effect": "远近未明，保持本地默认",
+                "status": "skipped"
+              }
+            ],
+            "semanticEnergy": false,
+            "timeScale": 0,
+            "semanticAction": {
+              "entity": "i2",
+              "state": "still",
+              "pace": "unspecified",
+              "direction": "unspecified",
+              "modality": "asserted",
+              "basis": "inferred",
+              "evidence": [
+                "孤舟尽日横"
+              ]
+            },
+            "instances": [
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    230
+                  ],
+                  "at": [
+                    0.7254237921250001,
+                    0.72
+                  ],
+                  "scale": 0.8064
+                },
+                "depth": 0.05,
+                "opacity": 1,
+                "variant": 1,
+                "tone": "middle",
+                "id": "i2:boat::1:0"
+              }
+            ],
+            "singleUnit": true,
+            "quantity": {
+              "items": [
+                {
+                  "entity": "i2",
+                  "mode": "exact",
+                  "min": 1,
+                  "max": 1,
+                  "unit": null,
+                  "scope": "individual",
+                  "extent": "local",
+                  "evidence": [
+                    "孤舟"
+                  ],
+                  "basis": "model"
+                }
+              ],
+              "rendered": 1,
+              "exact": true,
+              "collective": false,
+              "partUnsupported": false
+            },
+            "quantityLabel": "按提取数量绘制 1 个",
+            "z": 22,
+            "semanticSupport": {
+              "surface": "water",
+              "target": "i1",
+              "path": "scene.supports[0]"
+            },
+            "visual": {
+              "role": "architecture",
+              "brushStrength": 1.1
+            },
+            "performance": {
+              "rhythm": "steady",
+              "rate": 1,
+              "amplitude": 1,
+              "phase": 3.8830085198369844
+            },
+            "id": "i2:boat::1",
+            "interaction": {
+              "mode": "instance",
+              "groupId": "i2:boat::1"
+            }
+          }
+        ],
+        "scene": {
+          "kind": "waterside",
+          "notes": [
+            "水面以连续色层和水纹构成空间；水面的范围、视点与水平线是本地构图选择，不自动增加岸或陆地。",
+            "孤舟与水同场时先按水面区域组织；此项是本地试画安排，不宣称已识别承载关系。",
+            "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。",
+            "通用场景层先组织地面、水域、群落和主体，再比较三个布局的依托、相对位置、尺度与遮挡；检查通过不代表审美已通过。"
+          ],
+          "waterline": 0.46,
+          "semanticSetting": {
+            "kind": "waterside",
+            "basis": "inferred",
+            "evidence": [
+              "野水无人渡",
+              "孤舟尽日横"
+            ]
+          },
+          "semanticEffects": [
+            {
+              "path": "scene.supports[0]",
+              "consumer": "场景依托",
+              "status": "applied",
+              "effect": "使用已提取主体的现有承托画法"
+            }
+          ],
+          "organization": {
+            "version": "1.0",
+            "strategy": "general-constraints",
+            "regions": {
+              "water": [
+                [
+                  0,
+                  0.42
+                ],
+                [
+                  1,
+                  0.42
+                ],
+                [
+                  1,
+                  1.04
+                ],
+                [
+                  0,
+                  1.04
+                ]
+              ]
+            },
+            "candidates": [
+              {
+                "layout": 0,
+                "orientation": "阔水远天",
+                "errors": 0,
+                "cost": 1.803,
+                "score": 4.953,
+                "metrics": {
+                  "overlapPenalty": 0,
+                  "balancePenalty": 0.225,
+                  "motifFootprint": 0.016,
+                  "landArea": 0
+                }
+              },
+              {
+                "layout": 1,
+                "orientation": "水面横展",
+                "errors": 0,
+                "cost": 2.212,
+                "score": 6.09,
+                "metrics": {
+                  "overlapPenalty": 0,
+                  "balancePenalty": 0.277,
+                  "motifFootprint": 0.016,
+                  "landArea": 0
+                }
+              },
+              {
+                "layout": 2,
+                "orientation": "近水远照",
+                "errors": 0,
+                "cost": 2.621,
+                "score": 7.213,
+                "metrics": {
+                  "overlapPenalty": 0,
+                  "balancePenalty": 0.328,
+                  "motifFootprint": 0.016,
+                  "landArea": 0
+                }
+              }
+            ],
+            "repairs": [],
+            "limitations": [
+              "几何检查不判定诗意理解或审美合格",
+              "动作时序与整首诗的场景切换尚未编排"
+            ],
+            "topology": "阔水远天",
+            "layout": 0,
+            "orientation": "阔水远天",
+            "audit": {
+              "scope": "implemented-geometry-and-drawing-gaps",
+              "coverage": {
+                "scope": "extracted-entities-only",
+                "present": 2,
+                "mapped": 2,
+                "parameters": [],
+                "missing": []
+              },
+              "checks": [
+                "presence",
+                "count",
+                "finite",
+                "support",
+                "scale",
+                "relative-position",
+                "depth",
+                "grove-spread",
+                "drawing-gaps"
+              ],
+              "status": "checks-passed",
+              "errors": 0,
+              "review": 0,
+              "issues": [],
+              "metrics": {
+                "overlapPenalty": 0,
+                "balancePenalty": 0.225,
+                "motifFootprint": 0.016,
+                "landArea": 0
+              },
+              "cost": 1.803,
+              "aestheticAcceptance": "pending-user"
+            },
+            "graph": {
+              "nodes": [
+                {
+                  "id": "l0",
+                  "entities": [
+                    "i1"
+                  ],
+                  "tool": "water",
+                  "role": "water",
+                  "habitat": null,
+                  "inferred": false,
+                  "support": null
+                },
+                {
+                  "id": "l1",
+                  "entities": [
+                    "i2"
+                  ],
+                  "tool": "boat",
+                  "role": "subject",
+                  "habitat": "water",
+                  "inferred": false,
+                  "support": "l0"
+                }
+              ],
+              "edges": [
+                {
+                  "type": "supported-by",
+                  "source": "l1",
+                  "target": "l0",
+                  "basis": "local-composition",
+                  "habitat": "water"
+                },
+                {
+                  "type": "on",
+                  "source": "l1",
+                  "target": "l0",
+                  "basis": "inferred",
+                  "modality": "asserted",
+                  "evidence": [
+                    "野水无人渡，孤舟尽日横。"
+                  ]
+                }
+              ],
+              "setting": "waterside"
+            }
+          },
+          "displayAudit": {
+            "scope": "display-scale-separation-and-habitat",
+            "issues": [],
+            "errors": 0,
+            "aestheticAcceptance": "pending-user"
+          }
+        },
+        "spatial": [
+          {
+            "type": "on",
+            "source": "i2",
+            "target": "i1",
+            "modality": "asserted",
+            "basis": "inferred",
+            "evidence": [
+              "野水无人渡，孤舟尽日横。"
+            ],
+            "visualized": true,
+            "reason": "由通用场景约束组织；具体方向、距离与尺度属于本地构图"
+          }
+        ],
+        "landscapeStyle": {
+          "version": "1.0",
+          "color": "role-and-distance",
+          "motion": "layer-rhythms",
+          "aestheticAcceptance": "pending-user"
+        }
+      },
+      {
+        "id": "space-1",
+        "label": "水面横展",
+        "description": "先安排连续水域与地表，再按主次与远近安放景物",
+        "layers": [
+          {
+            "tool": "water",
+            "entities": [
+              "i1"
+            ],
+            "projectedEntities": [],
+            "names": [
+              "野水"
+            ],
+            "options": {
+              "form": "plane"
+            },
+            "animate": true,
+            "placement": {
+              "anchor": [
+                320,
+                130
+              ],
+              "at": [
+                0.5,
+                0.45
+              ],
+              "scale": 1.5
+            },
+            "semanticGroup": {
+              "members": [
+                "i1"
+              ],
+              "role": "environment",
+              "pattern": "field",
+              "depth": "unspecified",
+              "basis": "inferred",
+              "evidence": [
+                "野水无人渡"
+              ],
+              "index": 0
+            },
+            "semanticEffects": [
+              {
+                "path": "scene.groups[0].role",
+                "consumer": "主次布局",
+                "effect": "保留环境画布范围，主次不改变地形边界",
+                "status": "applied"
+              },
+              {
+                "path": "scene.groups[0].pattern",
+                "consumer": "群落布局",
+                "effect": "按 field 组织显示单元；不覆盖明确数量",
+                "status": "applied"
+              },
+              {
+                "path": "scene.groups[0].depth",
+                "consumer": "远近布局",
+                "effect": "远近未明，保持本地默认",
+                "status": "skipped"
+              }
+            ],
+            "semanticEnergy": true,
+            "timeScale": 0.45,
+            "instances": [
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    135
+                  ],
+                  "at": [
+                    0.5,
+                    0.45
+                  ],
+                  "scale": 1.65
+                },
+                "depth": 0.05,
+                "opacity": 1,
+                "variant": 0,
+                "tone": "far",
+                "id": "i1:water:plane:0:0"
+              }
+            ],
+            "singleUnit": false,
+            "quantity": {
+              "items": [
+                {
+                  "entity": "i1",
+                  "mode": "unspecified",
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "scope": "unspecified",
+                  "extent": "spread",
+                  "evidence": [
+                    "野水"
+                  ],
+                  "basis": "model"
+                }
+              ],
+              "rendered": 1,
+              "exact": false,
+              "collective": true,
+              "partUnsupported": false
+            },
+            "quantityLabel": "整体笔触图层；内部数量尚未适配",
+            "z": -10,
+            "surface": {
+              "top": 0.475,
+              "bottom": 1
+            },
+            "clip": [
+              [
+                0,
+                0.475
+              ],
+              [
+                1,
+                0.475
+              ],
+              [
+                1,
+                1.04
+              ],
+              [
+                0,
+                1.04
+              ]
+            ],
+            "visual": {
+              "role": "water",
+              "brushStrength": 1.35
+            },
+            "performance": {
+              "rhythm": "continuous",
+              "rate": 0.9,
+              "amplitude": 0.9,
+              "phase": 0
+            },
+            "id": "i1:water:plane:0",
+            "interaction": {
+              "mode": "group",
+              "groupId": "i1:water:plane:0"
+            }
+          },
+          {
+            "tool": "boat",
+            "entities": [
+              "i2"
+            ],
+            "projectedEntities": [],
+            "names": [
+              "孤舟"
+            ],
+            "options": {},
+            "animate": false,
+            "placement": {
+              "anchor": [
+                320,
+                230
+              ],
+              "at": [
+                0.776523792125,
+                0.72
+              ],
+              "scale": 0.95
+            },
+            "semanticGroup": {
+              "members": [
+                "i2"
+              ],
+              "role": "subject",
+              "pattern": "single",
+              "depth": "unspecified",
+              "basis": "inferred",
+              "evidence": [
+                "孤舟尽日横"
+              ],
+              "index": 1
+            },
+            "semanticEffects": [
+              {
+                "path": "scene.actions[0].state",
+                "consumer": "形态与绘画时钟",
+                "effect": "静止姿态并停止该图层时钟",
+                "status": "applied"
+              },
+              {
+                "path": "scene.groups[1].role",
+                "consumer": "主次布局",
+                "effect": "主体相对突出",
+                "status": "applied"
+              },
+              {
+                "path": "scene.groups[1].pattern",
+                "consumer": "群落布局",
+                "effect": "按 single 组织显示单元；不覆盖明确数量",
+                "status": "applied"
+              },
+              {
+                "path": "scene.groups[1].depth",
+                "consumer": "远近布局",
+                "effect": "远近未明，保持本地默认",
+                "status": "skipped"
+              }
+            ],
+            "semanticEnergy": false,
+            "timeScale": 0,
+            "semanticAction": {
+              "entity": "i2",
+              "state": "still",
+              "pace": "unspecified",
+              "direction": "unspecified",
+              "modality": "asserted",
+              "basis": "inferred",
+              "evidence": [
+                "孤舟尽日横"
+              ]
+            },
+            "instances": [
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    230
+                  ],
+                  "at": [
+                    0.776523792125,
+                    0.72
+                  ],
+                  "scale": 0.8064
+                },
+                "depth": 0.05,
+                "opacity": 1,
+                "variant": 1,
+                "tone": "middle",
+                "id": "i2:boat::1:0"
+              }
+            ],
+            "singleUnit": true,
+            "quantity": {
+              "items": [
+                {
+                  "entity": "i2",
+                  "mode": "exact",
+                  "min": 1,
+                  "max": 1,
+                  "unit": null,
+                  "scope": "individual",
+                  "extent": "local",
+                  "evidence": [
+                    "孤舟"
+                  ],
+                  "basis": "model"
+                }
+              ],
+              "rendered": 1,
+              "exact": true,
+              "collective": false,
+              "partUnsupported": false
+            },
+            "quantityLabel": "按提取数量绘制 1 个",
+            "z": 22,
+            "semanticSupport": {
+              "surface": "water",
+              "target": "i1",
+              "path": "scene.supports[0]"
+            },
+            "visual": {
+              "role": "architecture",
+              "brushStrength": 1.1
+            },
+            "performance": {
+              "rhythm": "steady",
+              "rate": 1,
+              "amplitude": 1,
+              "phase": 3.8830085198369844
+            },
+            "id": "i2:boat::1",
+            "interaction": {
+              "mode": "instance",
+              "groupId": "i2:boat::1"
+            }
+          }
+        ],
+        "scene": {
+          "kind": "waterside",
+          "notes": [
+            "水面以连续色层和水纹构成空间；水面的范围、视点与水平线是本地构图选择，不自动增加岸或陆地。",
+            "孤舟与水同场时先按水面区域组织；此项是本地试画安排，不宣称已识别承载关系。",
+            "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。"
+          ],
+          "waterline": 0.46,
+          "semanticSetting": {
+            "kind": "waterside",
+            "basis": "inferred",
+            "evidence": [
+              "野水无人渡",
+              "孤舟尽日横"
+            ]
+          },
+          "semanticEffects": [
+            {
+              "path": "scene.supports[0]",
+              "consumer": "场景依托",
+              "status": "applied",
+              "effect": "使用已提取主体的现有承托画法"
+            }
+          ],
+          "organization": {
+            "version": "1.0",
+            "strategy": "general-constraints",
+            "regions": {
+              "water": [
+                [
+                  0,
+                  0.475
+                ],
+                [
+                  1,
+                  0.475
+                ],
+                [
+                  1,
+                  1.04
+                ],
+                [
+                  0,
+                  1.04
+                ]
+              ]
+            },
+            "candidates": [],
+            "repairs": [],
+            "limitations": [
+              "几何检查不判定诗意理解或审美合格",
+              "动作时序与整首诗的场景切换尚未编排"
+            ],
+            "topology": "水面横展",
+            "layout": 1,
+            "orientation": "水面横展",
+            "audit": {
+              "scope": "implemented-geometry-and-drawing-gaps",
+              "coverage": {
+                "scope": "extracted-entities-only",
+                "present": 2,
+                "mapped": 2,
+                "parameters": [],
+                "missing": []
+              },
+              "checks": [
+                "presence",
+                "count",
+                "finite",
+                "support",
+                "scale",
+                "relative-position",
+                "depth",
+                "grove-spread",
+                "drawing-gaps"
+              ],
+              "status": "checks-passed",
+              "errors": 0,
+              "review": 0,
+              "issues": [],
+              "metrics": {
+                "overlapPenalty": 0,
+                "balancePenalty": 0.277,
+                "motifFootprint": 0.016,
+                "landArea": 0
+              },
+              "cost": 2.212,
+              "aestheticAcceptance": "pending-user"
+            },
+            "graph": {
+              "nodes": [
+                {
+                  "id": "l0",
+                  "entities": [
+                    "i1"
+                  ],
+                  "tool": "water",
+                  "role": "water",
+                  "habitat": null,
+                  "inferred": false,
+                  "support": null
+                },
+                {
+                  "id": "l1",
+                  "entities": [
+                    "i2"
+                  ],
+                  "tool": "boat",
+                  "role": "subject",
+                  "habitat": "water",
+                  "inferred": false,
+                  "support": "l0"
+                }
+              ],
+              "edges": [
+                {
+                  "type": "supported-by",
+                  "source": "l1",
+                  "target": "l0",
+                  "basis": "local-composition",
+                  "habitat": "water"
+                },
+                {
+                  "type": "on",
+                  "source": "l1",
+                  "target": "l0",
+                  "basis": "inferred",
+                  "modality": "asserted",
+                  "evidence": [
+                    "野水无人渡，孤舟尽日横。"
+                  ]
+                }
+              ],
+              "setting": "waterside"
+            }
+          },
+          "displayAudit": {
+            "scope": "display-scale-separation-and-habitat",
+            "issues": [],
+            "errors": 0,
+            "aestheticAcceptance": "pending-user"
+          }
+        },
+        "spatial": [
+          {
+            "type": "on",
+            "source": "i2",
+            "target": "i1",
+            "modality": "asserted",
+            "basis": "inferred",
+            "evidence": [
+              "野水无人渡，孤舟尽日横。"
+            ],
+            "visualized": true,
+            "reason": "由通用场景约束组织；具体方向、距离与尺度属于本地构图"
+          }
+        ],
+        "landscapeStyle": {
+          "version": "1.0",
+          "color": "role-and-distance",
+          "motion": "layer-rhythms",
+          "aestheticAcceptance": "pending-user"
+        }
+      },
+      {
+        "id": "space-2",
+        "label": "近水远照",
+        "description": "先安排连续水域与地表，再按主次与远近安放景物",
+        "layers": [
+          {
+            "tool": "water",
+            "entities": [
+              "i1"
+            ],
+            "projectedEntities": [],
+            "names": [
+              "野水"
+            ],
+            "options": {
+              "form": "plane"
+            },
+            "animate": true,
+            "placement": {
+              "anchor": [
+                320,
+                130
+              ],
+              "at": [
+                0.5,
+                0.45
+              ],
+              "scale": 1.5
+            },
+            "semanticGroup": {
+              "members": [
+                "i1"
+              ],
+              "role": "environment",
+              "pattern": "field",
+              "depth": "unspecified",
+              "basis": "inferred",
+              "evidence": [
+                "野水无人渡"
+              ],
+              "index": 0
+            },
+            "semanticEffects": [
+              {
+                "path": "scene.groups[0].role",
+                "consumer": "主次布局",
+                "effect": "保留环境画布范围，主次不改变地形边界",
+                "status": "applied"
+              },
+              {
+                "path": "scene.groups[0].pattern",
+                "consumer": "群落布局",
+                "effect": "按 field 组织显示单元；不覆盖明确数量",
+                "status": "applied"
+              },
+              {
+                "path": "scene.groups[0].depth",
+                "consumer": "远近布局",
+                "effect": "远近未明，保持本地默认",
+                "status": "skipped"
+              }
+            ],
+            "semanticEnergy": true,
+            "timeScale": 0.45,
+            "instances": [
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    135
+                  ],
+                  "at": [
+                    0.5,
+                    0.45
+                  ],
+                  "scale": 1.65
+                },
+                "depth": 0.05,
+                "opacity": 1,
+                "variant": 0,
+                "tone": "far",
+                "id": "i1:water:plane:0:0"
+              }
+            ],
+            "singleUnit": false,
+            "quantity": {
+              "items": [
+                {
+                  "entity": "i1",
+                  "mode": "unspecified",
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "scope": "unspecified",
+                  "extent": "spread",
+                  "evidence": [
+                    "野水"
+                  ],
+                  "basis": "model"
+                }
+              ],
+              "rendered": 1,
+              "exact": false,
+              "collective": true,
+              "partUnsupported": false
+            },
+            "quantityLabel": "整体笔触图层；内部数量尚未适配",
+            "z": -10,
+            "surface": {
+              "top": 0.53,
+              "bottom": 1
+            },
+            "clip": [
+              [
+                0,
+                0.53
+              ],
+              [
+                1,
+                0.53
+              ],
+              [
+                1,
+                1.04
+              ],
+              [
+                0,
+                1.04
+              ]
+            ],
+            "visual": {
+              "role": "water",
+              "brushStrength": 1.35
+            },
+            "performance": {
+              "rhythm": "continuous",
+              "rate": 0.9,
+              "amplitude": 0.9,
+              "phase": 0
+            },
+            "id": "i1:water:plane:0",
+            "interaction": {
+              "mode": "group",
+              "groupId": "i1:water:plane:0"
+            }
+          },
+          {
+            "tool": "boat",
+            "entities": [
+              "i2"
+            ],
+            "projectedEntities": [],
+            "names": [
+              "孤舟"
+            ],
+            "options": {},
+            "animate": false,
+            "placement": {
+              "anchor": [
+                320,
+                230
+              ],
+              "at": [
+                0.827623792125,
+                0.72
+              ],
+              "scale": 0.95
+            },
+            "semanticGroup": {
+              "members": [
+                "i2"
+              ],
+              "role": "subject",
+              "pattern": "single",
+              "depth": "unspecified",
+              "basis": "inferred",
+              "evidence": [
+                "孤舟尽日横"
+              ],
+              "index": 1
+            },
+            "semanticEffects": [
+              {
+                "path": "scene.actions[0].state",
+                "consumer": "形态与绘画时钟",
+                "effect": "静止姿态并停止该图层时钟",
+                "status": "applied"
+              },
+              {
+                "path": "scene.groups[1].role",
+                "consumer": "主次布局",
+                "effect": "主体相对突出",
+                "status": "applied"
+              },
+              {
+                "path": "scene.groups[1].pattern",
+                "consumer": "群落布局",
+                "effect": "按 single 组织显示单元；不覆盖明确数量",
+                "status": "applied"
+              },
+              {
+                "path": "scene.groups[1].depth",
+                "consumer": "远近布局",
+                "effect": "远近未明，保持本地默认",
+                "status": "skipped"
+              }
+            ],
+            "semanticEnergy": false,
+            "timeScale": 0,
+            "semanticAction": {
+              "entity": "i2",
+              "state": "still",
+              "pace": "unspecified",
+              "direction": "unspecified",
+              "modality": "asserted",
+              "basis": "inferred",
+              "evidence": [
+                "孤舟尽日横"
+              ]
+            },
+            "instances": [
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    230
+                  ],
+                  "at": [
+                    0.827623792125,
+                    0.72
+                  ],
+                  "scale": 0.8064
+                },
+                "depth": 0.05,
+                "opacity": 1,
+                "variant": 1,
+                "tone": "middle",
+                "id": "i2:boat::1:0"
+              }
+            ],
+            "singleUnit": true,
+            "quantity": {
+              "items": [
+                {
+                  "entity": "i2",
+                  "mode": "exact",
+                  "min": 1,
+                  "max": 1,
+                  "unit": null,
+                  "scope": "individual",
+                  "extent": "local",
+                  "evidence": [
+                    "孤舟"
+                  ],
+                  "basis": "model"
+                }
+              ],
+              "rendered": 1,
+              "exact": true,
+              "collective": false,
+              "partUnsupported": false
+            },
+            "quantityLabel": "按提取数量绘制 1 个",
+            "z": 22,
+            "semanticSupport": {
+              "surface": "water",
+              "target": "i1",
+              "path": "scene.supports[0]"
+            },
+            "visual": {
+              "role": "architecture",
+              "brushStrength": 1.1
+            },
+            "performance": {
+              "rhythm": "steady",
+              "rate": 1,
+              "amplitude": 1,
+              "phase": 3.8830085198369844
+            },
+            "id": "i2:boat::1",
+            "interaction": {
+              "mode": "instance",
+              "groupId": "i2:boat::1"
+            }
+          }
+        ],
+        "scene": {
+          "kind": "waterside",
+          "notes": [
+            "水面以连续色层和水纹构成空间；水面的范围、视点与水平线是本地构图选择，不自动增加岸或陆地。",
+            "孤舟与水同场时先按水面区域组织；此项是本地试画安排，不宣称已识别承载关系。",
+            "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。"
+          ],
+          "waterline": 0.46,
+          "semanticSetting": {
+            "kind": "waterside",
+            "basis": "inferred",
+            "evidence": [
+              "野水无人渡",
+              "孤舟尽日横"
+            ]
+          },
+          "semanticEffects": [
+            {
+              "path": "scene.supports[0]",
+              "consumer": "场景依托",
+              "status": "applied",
+              "effect": "使用已提取主体的现有承托画法"
+            }
+          ],
+          "organization": {
+            "version": "1.0",
+            "strategy": "general-constraints",
+            "regions": {
+              "water": [
+                [
+                  0,
+                  0.53
+                ],
+                [
+                  1,
+                  0.53
+                ],
+                [
+                  1,
+                  1.04
+                ],
+                [
+                  0,
+                  1.04
+                ]
+              ]
+            },
+            "candidates": [],
+            "repairs": [],
+            "limitations": [
+              "几何检查不判定诗意理解或审美合格",
+              "动作时序与整首诗的场景切换尚未编排"
+            ],
+            "topology": "近水远照",
+            "layout": 2,
+            "orientation": "近水远照",
+            "audit": {
+              "scope": "implemented-geometry-and-drawing-gaps",
+              "coverage": {
+                "scope": "extracted-entities-only",
+                "present": 2,
+                "mapped": 2,
+                "parameters": [],
+                "missing": []
+              },
+              "checks": [
+                "presence",
+                "count",
+                "finite",
+                "support",
+                "scale",
+                "relative-position",
+                "depth",
+                "grove-spread",
+                "drawing-gaps"
+              ],
+              "status": "checks-passed",
+              "errors": 0,
+              "review": 0,
+              "issues": [],
+              "metrics": {
+                "overlapPenalty": 0,
+                "balancePenalty": 0.328,
+                "motifFootprint": 0.016,
+                "landArea": 0
+              },
+              "cost": 2.621,
+              "aestheticAcceptance": "pending-user"
+            },
+            "graph": {
+              "nodes": [
+                {
+                  "id": "l0",
+                  "entities": [
+                    "i1"
+                  ],
+                  "tool": "water",
+                  "role": "water",
+                  "habitat": null,
+                  "inferred": false,
+                  "support": null
+                },
+                {
+                  "id": "l1",
+                  "entities": [
+                    "i2"
+                  ],
+                  "tool": "boat",
+                  "role": "subject",
+                  "habitat": "water",
+                  "inferred": false,
+                  "support": "l0"
+                }
+              ],
+              "edges": [
+                {
+                  "type": "supported-by",
+                  "source": "l1",
+                  "target": "l0",
+                  "basis": "local-composition",
+                  "habitat": "water"
+                },
+                {
+                  "type": "on",
+                  "source": "l1",
+                  "target": "l0",
+                  "basis": "inferred",
+                  "modality": "asserted",
+                  "evidence": [
+                    "野水无人渡，孤舟尽日横。"
+                  ]
+                }
+              ],
+              "setting": "waterside"
+            }
+          },
+          "displayAudit": {
+            "scope": "display-scale-separation-and-habitat",
+            "issues": [],
+            "errors": 0,
+            "aestheticAcceptance": "pending-user"
+          }
+        },
+        "spatial": [
+          {
+            "type": "on",
+            "source": "i2",
+            "target": "i1",
+            "modality": "asserted",
+            "basis": "inferred",
+            "evidence": [
+              "野水无人渡，孤舟尽日横。"
+            ],
+            "visualized": true,
+            "reason": "由通用场景约束组织；具体方向、距离与尺度属于本地构图"
+          }
+        ],
+        "landscapeStyle": {
+          "version": "1.0",
+          "color": "role-and-distance",
+          "motion": "layer-rhythms",
+          "aestheticAcceptance": "pending-user"
+        }
+      }
+    ],
+    "composition": "space-0",
+    "omitted": [
+      {
+        "id": "i3",
+        "name": "无人／人",
+        "reason": "原文中缺席，不绘制"
+      }
+    ],
+    "notes": [
+      "野水虽被归为地点，仍按原文明示的自然景物匹配；具体空间关系另行处理。",
+      "孤舟：按舟船这个主体选择画法，材质或修饰词不另画成植物。这是本地写意借形，保留原词义。",
+      "位置、大小、笔触与默认微动是本地试画选择；数量解释与本地显示数量分别记录。",
+      "未明说的群落数量、疏密、近中远层次与变体均为本地构图选择；种类可按已声明的写意画法概括，不把铺展词换算成精确物体数量。",
+      "水面以连续色层和水纹构成空间；水面的范围、视点与水平线是本地构图选择，不自动增加岸或陆地。",
+      "孤舟与水同场时先按水面区域组织；此项是本地试画安排，不宣称已识别承载关系。",
+      "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。",
+      "通用场景层先组织地面、水域、群落和主体，再比较三个布局的依托、相对位置、尺度与遮挡；检查通过不代表审美已通过。",
+      "整体场景、主次、远近、依托和支持的动作状态来自本次模型解释；具体布局、颜色和时钟倍率由本地视觉策略选择。",
+      "动作动画表现受支持的主导状态与有限观看运动；先后事件与完整因果尚未编排。",
+      "动态程度与默认轻风是可调整的观看选择；不改变数量、主次或原文动作判断。人物保持点景写意，不新增人物步态。",
+      "显示检查覆盖实例尺度、鸟群分离与空中落点；不保证笔触未被遮挡，也不代替实际观看。竹林默认成组拖动，其余单独拖动；Shift 可拖动同层整组。"
+    ],
+    "relations": [],
+    "semanticConsumption": {
+      "version": "3.3",
+      "items": [
+        {
+          "path": "scene.setting",
+          "status": "applied",
+          "consumer": "本地视觉策略",
+          "effect": "整体环境进入场景提案选择",
+          "basis": "inferred",
+          "evidence": [
+            "野水无人渡",
+            "孤舟尽日横"
+          ]
+        },
+        {
+          "path": "scene.groups[0].role",
+          "status": "applied",
+          "consumer": "主次布局",
+          "effect": "保留环境画布范围，主次不改变地形边界",
+          "basis": "inferred",
+          "evidence": [
+            "野水无人渡"
+          ]
+        },
+        {
+          "path": "scene.groups[0].pattern",
+          "status": "applied",
+          "consumer": "群落布局",
+          "effect": "按 field 组织显示单元；不覆盖明确数量",
+          "basis": "inferred",
+          "evidence": [
+            "野水无人渡"
+          ]
+        },
+        {
+          "path": "scene.groups[0].depth",
+          "status": "skipped",
+          "consumer": "远近布局",
+          "effect": "远近未明，保持本地默认",
+          "basis": "inferred",
+          "evidence": [
+            "野水无人渡"
+          ]
+        },
+        {
+          "path": "scene.groups[1].role",
+          "status": "applied",
+          "consumer": "主次布局",
+          "effect": "主体相对突出",
+          "basis": "inferred",
+          "evidence": [
+            "孤舟尽日横"
+          ]
+        },
+        {
+          "path": "scene.groups[1].pattern",
+          "status": "applied",
+          "consumer": "群落布局",
+          "effect": "按 single 组织显示单元；不覆盖明确数量",
+          "basis": "inferred",
+          "evidence": [
+            "孤舟尽日横"
+          ]
+        },
+        {
+          "path": "scene.groups[1].depth",
+          "status": "skipped",
+          "consumer": "远近布局",
+          "effect": "远近未明，保持本地默认",
+          "basis": "inferred",
+          "evidence": [
+            "孤舟尽日横"
+          ]
+        },
+        {
+          "path": "scene.supports[0]",
+          "status": "applied",
+          "consumer": "场景依托",
+          "effect": "使用已提取主体的现有承托画法",
+          "basis": "inferred",
+          "evidence": [
+            "野水无人渡，孤舟尽日横。"
+          ]
+        },
+        {
+          "path": "scene.actions[0].state",
+          "status": "applied",
+          "consumer": "形态与绘画时钟",
+          "effect": "静止姿态并停止该图层时钟",
+          "basis": "inferred",
+          "evidence": [
+            "孤舟尽日横"
+          ]
+        },
+        {
+          "path": "scene.actions[0].pace",
+          "status": "skipped",
+          "consumer": "本地视觉策略",
+          "effect": "静止状态不推进时钟或位置",
+          "basis": "inferred",
+          "evidence": [
+            "孤舟尽日横"
+          ]
+        },
+        {
+          "path": "scene.actions[0].direction",
+          "status": "skipped",
+          "consumer": "本地视觉策略",
+          "effect": "静止状态不推进时钟或位置",
+          "basis": "inferred",
+          "evidence": [
+            "孤舟尽日横"
+          ]
+        },
+        {
+          "path": "scene.atmosphere.visibility",
+          "status": "applied",
+          "consumer": "画布色层与远景",
+          "effect": "可见度 clear；迷蒙或昏暗时淡化非光源图层",
+          "basis": "inferred",
+          "evidence": [
+            "孤舟尽日横"
+          ]
+        },
+        {
+          "path": "scene.atmosphere.illumination",
+          "status": "applied",
+          "consumer": "自动光色",
+          "effect": "照明 day 与气息标签共同选择本地 clear 配色；夜景优先暗底，用户可手动覆盖",
+          "basis": "inferred",
+          "evidence": [
+            "孤舟尽日横"
+          ]
+        },
+        {
+          "path": "atmosphere.energy",
+          "status": "applied",
+          "consumer": "绘画时钟",
+          "effect": "没有明确动作节奏时，气息强弱控制已有微动的默认时钟"
+        },
+        {
+          "path": "atmosphere.openness",
+          "status": "applied",
+          "consumer": "群落分布与笔触密度",
+          "effect": "开阔度转换为本地间距与工具笔触密度，不等于原文数量"
+        },
+        {
+          "path": "atmosphere.valence",
+          "status": "applied",
+          "consumer": "自动光色",
+          "effect": "先约束昼夜明暗，再按已支持的气息标签和情绪倾向选择配色；不宣称完整情感理解"
+        },
+        {
+          "path": "time.markers",
+          "status": "retained",
+          "consumer": "原始记录与解读",
+          "effect": "保留原文时间标记；本版照明由 scene.atmosphere 转换，多阶段时间逻辑未执行"
+        }
+      ],
+      "summary": {
+        "applied": 12,
+        "partial": 0,
+        "unsupported": 0,
+        "skipped": 4,
+        "retained": 1
+      },
+      "aestheticAcceptance": "pending-user"
+    },
+    "landscapeStyle": {
+      "version": "1.0",
+      "color": "role-and-distance",
+      "motion": "layer-rhythms",
+      "aestheticAcceptance": "pending-user"
+    },
+    "compositionSelection": {
+      "method": "final-display-constraints-then-geometric-preference",
+      "candidates": [
+        {
+          "id": "space-0",
+          "errors": 0,
+          "score": 4.953
+        },
+        {
+          "id": "space-1",
+          "errors": 0,
+          "score": 6.09
+        },
+        {
+          "id": "space-2",
+          "errors": 0,
+          "score": 7.213
+        }
+      ],
+      "aestheticAcceptance": "pending-user"
+    },
+    "imageryTrace": [
+      {
+        "id": "i1",
+        "mentions": [
+          "野水"
+        ],
+        "role": "scene",
+        "presence": "present",
+        "parameter": null,
+        "layers": [
+          {
+            "id": "i1:water:plane:0",
+            "tool": "water",
+            "instances": [
+              "i1:water:plane:0:0"
+            ]
+          }
+        ],
+        "omission": null
+      },
+      {
+        "id": "i2",
+        "mentions": [
+          "孤舟"
+        ],
+        "role": "scene",
+        "presence": "present",
+        "parameter": null,
+        "layers": [
+          {
+            "id": "i2:boat::1",
+            "tool": "boat",
+            "instances": [
+              "i2:boat::1:0"
+            ]
+          }
+        ],
+        "omission": null
+      },
+      {
+        "id": "i3",
+        "mentions": [
+          "无人",
+          "人"
+        ],
+        "role": "scene",
+        "presence": "absent",
+        "parameter": null,
+        "layers": [],
+        "omission": "原文中缺席，不绘制"
+      }
+    ]
+  },
+  "elapsed_seconds": 7.8
+}

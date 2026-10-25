@@ -1,0 +1,454 @@
+{
+  "scope": "manual-inspection-of-all-78-current-balanced-images-and-one-explicitly-blocked-input",
+  "sceneryDetailChecks": [
+    "b012",
+    "b035",
+    "b054"
+  ],
+  "notUserAestheticAcceptance": true,
+  "cases": {
+    "b001": {
+      "recordId": "2026-10-24T14-55-02-370Z-cfb44fa9",
+      "reviewed": "balanced-contact-sheet",
+      "sha256": "7eb8eb810f699c9a0852b0f8d8ed8213f97b9a26c44b96786d26a652c283bb5d"
+    },
+    "b002": {
+      "recordId": "2026-10-24T14-55-02-373Z-028ca6b0",
+      "reviewed": "balanced-contact-sheet",
+      "sha256": "40285909cb8937cf92b4aca773882ce17c14f25598a80f5bd22251d7a741f43b"
+    },
+    "b003": {
+      "recordId": "2026-10-24T14-55-02-368Z-8da71468",
+      "reviewed": "balanced-contact-sheet",
+      "sha256": "1cc1bf9ad6ffec97c2f58c604c6eb2bc698202364238ee7bebd07b58a588be94"
+    },
+    "b004": {
+      "recordId": "2026-10-24T14-55-08-594Z-572f3ca0",
+      "reviewed": "balanced-contact-sheet",
+      "sha256": "2abdc481bc637d21b66ff6ea5db6f53420f68fccc38cadba362ecd46393ecd78"
+    },
+    "b005": {
+      "recordId": "2026-10-24T14-55-11-825Z-8f09b8a0",
+      "reviewed": "balanced-contact-sheet",
+      "sha256": "94253553b6b3cc52e64a8e1113fec23e210bf85d752c5319881c24e6dc7c1796"
+    },
+    "b006": {
+      "recordId": "2026-10-24T14-55-13-619Z-936aad00",
+      "reviewed": "balanced-contact-sheet",
+      "sha256": "d6a0949f37f6874c2898a2a3ed19c1a56529b1093faa32a34dbcd7437c44ab94"
+    },
+    "b007": {
+      "recordId": "2026-10-24T14-55-17-083Z-37feac30",
+      "reviewed": "balanced-contact-sheet",
+      "sha256": "51f0dccb2b6caf825875f6fc1c7f472bebc7d42ba198de4119b545165866f869"
+    },
+    "b008": {
+      "recordId": "2026-10-24T14-55-17-636Z-b9482445",
+      "reviewed": "balanced-contact-sheet",
+      "sha256": "b8439cc30537a4b708bfffd2a978f67b8c8d822a32ccfbd9f75a06b90918281b"
+    },
+    "b009": {
+      "recordId": "2026-10-24T14-55-21-004Z-9d2aae3d",
+      "reviewed": "balanced-contact-sheet",
+      "sha256": "09a4cdde9ecc6ea2317e1d4d28d1a1e929d4381cbab117ec47aeb96a26b972bd"
+    },
+    "b010": {
+      "recordId": "2026-10-24T14-55-22-360Z-93ebc41a",
+      "reviewed": "balanced-contact-sheet",
+      "sha256": "c5ac0cee4954f79d0f34d7fe510eb4f64df85b8f8dd93445c8c6f3c23b648d43"
+    },
+    "b011": {
+      "recordId": "2026-10-24T14-55-23-334Z-728cb726",
+      "reviewed": "balanced-contact-sheet",
+      "sha256": "1f1be8453be3666c55b7bafde31d3cfb9506d47c2a4a693a1bdc9388c3888e5f"
+    },
+    "b012": {
+      "recordId": "2026-10-24T14-55-26-776Z-af720c76",
+      "reviewed": "balanced-contact-sheet",
+      "sha256": "bc2fbb32b5718774467285d28e6d7db146bc082312e9fd9569b3e3cc028a1829",
+      "grade": "limited",
+      "issues": [
+        "交融纹理令碧色荷叶偏红；风景优先的原画笔颜色正常"
+      ]
+    },
+    "b013": {
+      "recordId": "2026-10-24T14-55-26-995Z-710a83fa",
+      "reviewed": "balanced-contact-sheet",
+      "sha256": "be7e7a704118e57ac248cc4689fb9f887bc3991c33dd4285894b68e8ebe662ab"
+    },
+    "b014": {
+      "recordId": "2026-10-24T14-55-34-302Z-e464fd93",
+      "reviewed": "balanced-contact-sheet",
+      "sha256": "73c8c9c36987e3d4db0f38a84c35c4402fd22607428d4e80651eed4e840bd93e"
+    },
+    "b015": {
+      "recordId": "2026-10-24T14-55-36-411Z-0840388e",
+      "reviewed": "balanced-contact-sheet",
+      "sha256": "a440fdd388d8485ee0c749f5585a8c748154eac72ddbef7896dbb1b8b6a8c166"
+    },
+    "b016": {
+      "recordId": "2026-10-24T14-55-36-774Z-57c7f498",
+      "reviewed": "balanced-contact-sheet",
+      "sha256": "782921dc7f06ebb33effe8ff4aece0da06216d1c60c00f7c24267e17a7c2f654",
+      "grade": "limited",
+      "issues": [
+        "交融模式中瀑布和山体对比偏弱，主体被铺展笔势冲淡"
+      ]
+    },
+    "b017": {
+      "recordId": "2026-10-24T14-55-40-108Z-80da3756",
+      "reviewed": "balanced-contact-sheet",
+      "sha256": "4380102d1be5a43bc4cba69ae4462d3899d437d860a97e1f5db9ab440ecbbca4",
+      "grade": "limited",
+      "issues": [
+        "交融模式中远处白鸟对比仍偏低"
+      ]
+    },
+    "b018": {
+      "recordId": "2026-10-24T14-55-41-222Z-5667cf28",
+      "reviewed": "balanced-contact-sheet",
+      "sha256": "930507bd29772824b55287b904a192a6d75c1ac3dd85e4cc9fb4716b8d259120"
+    },
+    "b019": {
+      "recordId": "2026-10-24T14-55-41-896Z-c1106111",
+      "reviewed": "balanced-contact-sheet",
+      "sha256": "4268142a55f43fd3cd1ea219c190b7b60181728954822e933804ca2453eb1425"
+    },
+    "b020": {
+      "recordId": "2026-10-24T14-55-47-299Z-b21bf29f",
+      "reviewed": "balanced-contact-sheet",
+      "sha256": "f83ba32df5341f93b4291673fec0d905aaedd99d4c1920e22d4fc3928dab31be"
+    },
+    "b021": {
+      "recordId": "2026-10-24T14-55-56-496Z-adc62bbb",
+      "reviewed": "balanced-contact-sheet",
+      "sha256": "b4707a560346f91ed6302cc73e82659d53953be0e0c4cd947151155f180fba5d",
+      "grade": "limited",
+      "issues": [
+        "黄鹂在树冠中的可见度偏低，数量正确但缩略图难分辨"
+      ]
+    },
+    "b022": {
+      "recordId": "2026-10-24T14-55-56-593Z-1a08ef8f",
+      "reviewed": "balanced-contact-sheet",
+      "sha256": "93604a9dda2ff7628960c08beb331b59bae34ab4184cd9ec2be916cfdb8cbc4c"
+    },
+    "b023": {
+      "recordId": "2026-10-24T14-56-02-532Z-0601f906",
+      "reviewed": "balanced-contact-sheet",
+      "sha256": "e42277cf8642004da4698347bff234605abe9f8751cdecc6e45f803d5e485ba8",
+      "grade": "limited",
+      "issues": [
+        "白鹭在交融色层下过淡，不能以图层存在代替可见度判断"
+      ]
+    },
+    "b024": {
+      "recordId": "2026-10-24T14-56-03-063Z-5ff404e3",
+      "reviewed": "balanced-contact-sheet",
+      "sha256": "11b582ed1220be0e879b6046d3edb7b9fc4abac573badfaf8b81441b812e6e47"
+    },
+    "b025": {
+      "recordId": "2026-10-24T14-56-07-926Z-a7d8412f",
+      "reviewed": "balanced-contact-sheet",
+      "sha256": "2da1b747357ad50d20b69aa8dc2d1fbfe496cf6e6d9364e977e25651f6bbf712"
+    },
+    "b026": {
+      "recordId": "2026-10-24T14-56-08-874Z-61f25f09",
+      "reviewed": "balanced-contact-sheet",
+      "sha256": "33a51d5a337ced327501b03c0ef39ab10a8c8d663b579196dccfc2652b07225e"
+    },
+    "b027": {
+      "recordId": "2026-10-24T14-56-13-066Z-8ec402f4",
+      "reviewed": "balanced-contact-sheet",
+      "sha256": "78327a5d88f48166ac48390ffc01cd2db7cb5904325d9b0272917c4b2e38adc1"
+    },
+    "b028": {
+      "recordId": "2026-10-24T14-56-13-453Z-2ed4599c",
+      "reviewed": "balanced-contact-sheet",
+      "sha256": "7b0534f3aa0d81526c54dc8a90e064a15891c5092f8512503564776a5bf47b68",
+      "grade": "limited",
+      "issues": [
+        "交融模式舟身偏淡，日边帆仍只借舟形"
+      ]
+    },
+    "b029": {
+      "recordId": "2026-10-24T14-56-13-721Z-f105d2f3",
+      "reviewed": "balanced-contact-sheet",
+      "sha256": "968df82b8d2d39fc982e4028d588bfc54bd3b2738823505205278ceff6f5fe29",
+      "grade": "limited",
+      "issues": [
+        "舟和水纹在交融模式中偏淡"
+      ]
+    },
+    "b030": {
+      "recordId": "2026-10-24T14-56-18-288Z-3a8aae12",
+      "reviewed": "balanced-contact-sheet",
+      "sha256": "7900ed2c36e613ba10046d135f0281716b93e01c703ccec03c8a985270659614"
+    },
+    "b031": {
+      "recordId": "2026-10-24T14-56-18-307Z-af5f4aba",
+      "reviewed": "balanced-contact-sheet",
+      "sha256": "65253fb64e880f39841e2b2853888b1ee70218eaeafea7d15c9d47f3c48d3ad9"
+    },
+    "b032": {
+      "recordId": "2026-10-24T14-56-19-251Z-b4339304",
+      "reviewed": "balanced-contact-sheet",
+      "sha256": "462c205078c0ff5479bf7603a746c2cfd43e021dbba845fc2ce39fada5b2a978"
+    },
+    "b033": {
+      "recordId": "2026-10-24T14-56-25-773Z-d3b6577b",
+      "reviewed": "balanced-contact-sheet",
+      "sha256": "b83f411c918ec859fa2de1307ef9c067f04b2bd7ab1ba497fde18fce1c6b6a70"
+    },
+    "b034": {
+      "recordId": "2026-10-24T14-56-26-992Z-69b006c7",
+      "reviewed": "balanced-contact-sheet",
+      "sha256": "69776326c89f4261856a5f539d9363e436bf09a1c5929e8fab1f9c44f19d8e76"
+    },
+    "b035": {
+      "recordId": "2026-10-24T14-56-31-488Z-398825fa",
+      "reviewed": "balanced-contact-sheet",
+      "sha256": "a3da8d794dd7e3d03ab71e7f89c4e46f31646fbc92ead8e72ab419f7c261ac9a",
+      "grade": "below-floor",
+      "issues": [
+        "原文一双，模型写成 exact=2、unit=双、scope=group，最后画成四只；当前未改写该数量错误"
+      ]
+    },
+    "b036": {
+      "recordId": "2026-10-24T14-56-32-583Z-1eb40dfe",
+      "reviewed": "balanced-contact-sheet",
+      "sha256": "008e988dafd0e0586b69aac62439896e1a6573a8e8711c85d00fd1ca16838402"
+    },
+    "b037": {
+      "recordId": "2026-10-24T14-56-37-673Z-4383002a",
+      "reviewed": "balanced-contact-sheet",
+      "sha256": "a444cbc9f2f00607f60e2fef394325d731c5038774d49356aa5169fb9ae145a9"
+    },
+    "b038": {
+      "recordId": "2026-10-24T14-56-38-031Z-17d15d10",
+      "reviewed": "balanced-contact-sheet",
+      "sha256": "7bf885cb737c269842466731e083b2525ad23d425de526c671a9c074d03643b5"
+    },
+    "b039": {
+      "recordId": "2026-10-24T14-56-41-672Z-b0b14428",
+      "reviewed": "balanced-contact-sheet",
+      "sha256": "6043c7a5d9ef46e057444f0a3126043f8aeb91ce4f53d693d4b7d7b6e343d217"
+    },
+    "b040": {
+      "recordId": "2026-10-24T14-56-43-378Z-8c8a9ecb",
+      "reviewed": "balanced-contact-sheet",
+      "sha256": "4632939a2a75f6b196c33797a8e0a4ac9b53c3aca05a6815eb052a61b7615064"
+    },
+    "b041": {
+      "recordId": "2026-10-24T14-56-46-996Z-03bf3c3a",
+      "reviewed": "balanced-contact-sheet",
+      "sha256": "ed63b95e4aa6f6d22e6abb16c50b98a46365365082d42348955e692ff3963ec7"
+    },
+    "b042": {
+      "recordId": "2026-10-24T14-56-47-088Z-518404ad",
+      "reviewed": "balanced-contact-sheet",
+      "sha256": "fbb2b983e7d1532e5aa1bea9059b2410d9ce0966f6e47a73d881b0fd96b23a3f"
+    },
+    "b043": {
+      "recordId": "2026-10-24T14-56-50-319Z-d56eda75",
+      "reviewed": "balanced-contact-sheet",
+      "sha256": "31fa71df287c6c00dc52a561408180f3117f9e14f6a992e1ec424927f45c74c3"
+    },
+    "b044": {
+      "recordId": "2026-10-24T14-56-55-156Z-91f19d7e",
+      "reviewed": "balanced-contact-sheet",
+      "sha256": "ebe538faf1c596cd5a5681d8c69a28f63e20eda8df922bcc86ec428aafa8cf8c"
+    },
+    "b045": {
+      "recordId": "2026-10-24T14-57-03-050Z-25122ae5",
+      "reviewed": "balanced-contact-sheet",
+      "sha256": "8f62caef64c1ffc7139df93b3f5117257ba12938cf9e3fe8c3adce32d82c798b"
+    },
+    "b046": {
+      "recordId": "2026-10-24T14-57-06-506Z-e5ba5ac7",
+      "reviewed": "balanced-contact-sheet",
+      "sha256": "fce147e9953fc129377f37a56151384bd90c854ce0b1d623d1d9257d37a14dc3"
+    },
+    "b047": {
+      "recordId": "2026-10-24T14-57-09-174Z-1033dca2",
+      "reviewed": "balanced-contact-sheet",
+      "sha256": "9dc8727622f9d837aaa7d0aa57bc9d480b2b2ff422b8b708261919ea224a5408"
+    },
+    "b048": {
+      "recordId": "2026-10-24T14-57-10-554Z-f891c18c",
+      "reviewed": "balanced-contact-sheet",
+      "sha256": "d1952df144b703e9007bb5a2c38a0c02ab284a98fecefeff4a4722b614b57267"
+    },
+    "b049": {
+      "recordId": "2026-10-24T14-57-14-901Z-0b9e3017",
+      "reviewed": "balanced-contact-sheet",
+      "sha256": "d2a4003d00fea1887555903bb5123f71c41a3b69ff22abb5cd69f6568196a147"
+    },
+    "b050": {
+      "recordId": "2026-10-24T14-57-19-104Z-ac4bb17d",
+      "reviewed": "balanced-contact-sheet",
+      "sha256": "d8abb8aad797c3054f9a4f5cb660219af769432b19f8d0166c3a531053fc0d51"
+    },
+    "b051": {
+      "recordId": "2026-10-24T14-57-19-367Z-1e56acfe",
+      "reviewed": "balanced-contact-sheet",
+      "sha256": "31be886704215dd8b866c1383fb95decaff37c9971f59fd793f9eecba785990e"
+    },
+    "b052": {
+      "recordId": "2026-10-24T14-57-22-931Z-416dcf88",
+      "reviewed": "balanced-contact-sheet",
+      "sha256": "f8634a1e26dacd97714a0a5270b3108715e20d82e9b79c65a1942e4ca2dd51ce"
+    },
+    "b053": {
+      "recordId": "2026-10-24T14-57-27-215Z-9d15c7d4",
+      "reviewed": "balanced-contact-sheet",
+      "sha256": "726851a9ddc44f4d66f67f8b3cb76bcf1c71e2b3d5e69a355a0a119d77d2d5fe",
+      "grade": "below-floor",
+      "issues": [
+        "我与行人本为同一人的两个称谓，却被画成两个身影；同指身份尚未统一"
+      ]
+    },
+    "b054": {
+      "recordId": "2026-10-24T14-57-29-751Z-c979b24b",
+      "reviewed": "balanced-contact-sheet",
+      "sha256": "2e1b1d52328a9b847d77898e457ee89ce7bb137734ec8ba47290c69a84c201b5",
+      "grade": "limited",
+      "issues": [
+        "交融纹理使原文明示的红花偏蓝；风景优先原画笔仍是红色"
+      ]
+    },
+    "b055": {
+      "recordId": "2026-10-24T14-57-32-617Z-9820484f",
+      "reviewed": "balanced-contact-sheet",
+      "sha256": "b0c0690c5f5780a39e15cc92479ac0a24600000407478aecde38935bc95fde80"
+    },
+    "b056": {
+      "recordId": "2026-10-24T14-57-35-573Z-ae60d9e8",
+      "reviewed": "balanced-contact-sheet",
+      "sha256": "b9d24ed26e82610f117752ba0aeb71664b40cb3f35912a58dfa58b7054b2f753"
+    },
+    "b057": {
+      "recordId": "2026-10-24T14-57-37-513Z-2936e7a2",
+      "reviewed": "balanced-contact-sheet",
+      "sha256": "8705787567d76ab99105fc059b1477e2d5a1930bbdf3f290dfedb074bd10896f"
+    },
+    "b058": {
+      "recordId": "2026-10-24T14-57-47-452Z-42446598",
+      "reviewed": "balanced-contact-sheet",
+      "sha256": "d26c948e018d98d7db955e876072c6c1b584c305cc3065a0e11f91aa5e3e6c23"
+    },
+    "b059": {
+      "recordId": "2026-10-24T14-57-51-538Z-b14701d7",
+      "reviewed": "balanced-contact-sheet",
+      "sha256": "586daf79db9e7f8174c18159333ca1229b90bea9f17bbd734cbbdead420af72d"
+    },
+    "b060": {
+      "recordId": "2026-10-24T14-57-54-732Z-bf572f15",
+      "reviewed": "balanced-contact-sheet",
+      "sha256": "6d82ecd439608574969adb6d5a2541fba0533c93be54ca3d6acdc79e8180fe0e"
+    },
+    "b061": {
+      "recordId": "2026-10-24T14-57-59-373Z-43f3aa12",
+      "reviewed": "balanced-contact-sheet",
+      "sha256": "531432b3552ac6ebcb43cc66461d647ca7425ae9ae8ed3a18a7072ac14d6d2f3"
+    },
+    "b062": {
+      "recordId": "2026-10-24T14-58-04-794Z-faefaacf",
+      "reviewed": "balanced-contact-sheet",
+      "sha256": "eea139dbbe8f891cc00d710ffd5257e8c25b51b62d3f2f509c03fd393d3666c3"
+    },
+    "b063": {
+      "recordId": "2026-10-24T14-58-06-490Z-e25e4f8c",
+      "reviewed": "balanced-contact-sheet",
+      "sha256": "e47bfabc40025c2251b274e9a63540e78fef0b71ef7764f1eaf64dd83cd7a44e"
+    },
+    "b064": {
+      "recordId": "2026-10-24T14-58-08-943Z-cac7eb5c",
+      "reviewed": "balanced-contact-sheet",
+      "sha256": "9d23d7386cee3e98aff0afbaaaefbb730d5e78e8499e106042f7d6d0581ddd60"
+    },
+    "b065": {
+      "recordId": "2026-10-24T14-58-11-594Z-62740256",
+      "reviewed": "balanced-contact-sheet",
+      "sha256": "099b74bb6224c12351035d33274223625a4adeda744c3fe28111db7fdde8cf16",
+      "grade": "below-floor",
+      "issues": [
+        "酒旗误接酒液画笔，旗幡主体未实现；不能以酒液顶替旗帜"
+      ]
+    },
+    "b066": {
+      "recordId": "2026-10-24T14-58-12-715Z-9b3d007a",
+      "reviewed": "explicit-no-image",
+      "sha256": "350b08fb3dbb92a866ca664608b0d55f63022285374eb58cae1c134a617a3267"
+    },
+    "b067": {
+      "recordId": "2026-10-24T14-58-13-355Z-4a1287e0",
+      "reviewed": "balanced-contact-sheet",
+      "sha256": "0a3c18d3fe4075ce35966b278d1c1c3d1a8489bf4f56d82406509e696cb3a986",
+      "grade": "limited",
+      "issues": [
+        "高楼缺少明显地形承托，交融模式中略显悬浮"
+      ]
+    },
+    "b068": {
+      "recordId": "2026-10-24T14-58-17-053Z-f6aa2971",
+      "reviewed": "balanced-contact-sheet",
+      "sha256": "b38172d9a8c1e4c8903924434ab78d3fa1671fbd58633b65c4f6441498875400"
+    },
+    "b069": {
+      "recordId": "2026-10-24T14-58-19-110Z-b315ca04",
+      "reviewed": "balanced-contact-sheet",
+      "sha256": "7d5e7a291c8eaf1bb548d16909c23d664a7beb4ebf903fa22ca3d8eca68ed989"
+    },
+    "b070": {
+      "recordId": "2026-10-24T14-58-19-436Z-3220d851",
+      "reviewed": "balanced-contact-sheet",
+      "sha256": "99d3f69ac4bd9d1ee4212e3515c39381b129dae5b1b06f81315309b42dd2385e"
+    },
+    "b071": {
+      "recordId": "2026-10-24T14-58-24-094Z-52e993f3",
+      "reviewed": "balanced-contact-sheet",
+      "sha256": "026f8788e20adc812088526c95b152867483ff9d02adbadbb9d957f525b16809"
+    },
+    "b072": {
+      "recordId": "fixture-o01",
+      "reviewed": "balanced-contact-sheet",
+      "sha256": "8092500c2677bd23049adc3ca7810b025a8d3e11e6948e10cb0918d15fddb073"
+    },
+    "b073": {
+      "recordId": "fixture-o02",
+      "reviewed": "balanced-contact-sheet",
+      "sha256": "1371a2668389675aefd5d4418c57d90ca4d3185b2378d099d1aaa296ad6f641e"
+    },
+    "b074": {
+      "recordId": "fixture-o03",
+      "reviewed": "balanced-contact-sheet",
+      "sha256": "14eefd7c61f9cd966e748c2d2d0afbc22f21257788fc98cee766cb1481c0d482"
+    },
+    "b075": {
+      "recordId": "fixture-o04",
+      "reviewed": "balanced-contact-sheet",
+      "sha256": "ba9ec60681b33c7e19af89c1f1ca221a5ee0a083b98a7a9efdfc82a5a6647034"
+    },
+    "b076": {
+      "recordId": "fixture-o05",
+      "reviewed": "balanced-contact-sheet",
+      "sha256": "181e5009aaafaa2137bce202ce924964d630f6a2e52aed1129df2828eb01e217"
+    },
+    "b077": {
+      "recordId": "fixture-o06",
+      "reviewed": "balanced-contact-sheet",
+      "sha256": "897a569feddcc78f92f69c7ad7cb092c9e99c9ac4da794b52ad256b568a20bac"
+    },
+    "b078": {
+      "recordId": "fixture-o07",
+      "reviewed": "balanced-contact-sheet",
+      "sha256": "e9b7c260cc4230ef4d56cf1eb5045514b0047c99cfddbe6e79f3a1a9af640611"
+    },
+    "b079": {
+      "recordId": "fixture-o08",
+      "reviewed": "balanced-contact-sheet",
+      "sha256": "34b72f8e90d4c7a58236dec845599b5a1d86a62ee940aff2ffeb9c3092360dc7"
+    }
+  }
+}

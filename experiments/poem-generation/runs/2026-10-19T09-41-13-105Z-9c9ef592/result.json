@@ -1,0 +1,188 @@
+{
+  "id": "2026-10-19T09-41-13-105Z-9c9ef592",
+  "fingerprint": "99d0f01771785c991501925e744abef79b897f407537eddd3332e0285b81ee97",
+  "poem": "曾伴浮云归晚翠，犹陪落日泛秋声。",
+  "source": {
+    "provider": "今日诗词",
+    "author": "高蟾",
+    "title": "金陵晚望",
+    "dynasty": "唐代"
+  },
+  "mode": "imagery-only",
+  "model": "DeepSeek-V4.1-Flash",
+  "started_at": "2026-10-19T09:41:13.108Z",
+  "cached": false,
+  "http_status": 200,
+  "usage": {
+    "completion_tokens": 472,
+    "prompt_tokens": 1994,
+    "total_tokens": 2466,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 1920
+    }
+  },
+  "finish_reason": "stop",
+  "analysis": {
+    "schema_version": "3.0",
+    "poem": "曾伴浮云归晚翠，犹陪落日泛秋声。",
+    "reading": "诗句写曾与浮云同归暮色，又仍伴随落日，在秋声里浮泛；主体未明说，只以“伴”“陪”写出与云、日、秋声的相随。",
+    "entities": [
+      {
+        "id": "i1",
+        "mentions": [
+          "浮云"
+        ],
+        "concept": "飘浮的云",
+        "kind": "environment",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "曾伴浮云归晚翠"
+        ]
+      },
+      {
+        "id": "i2",
+        "mentions": [
+          "晚翠"
+        ],
+        "concept": "傍晚的青色暮景",
+        "kind": "environment",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "曾伴浮云归晚翠"
+        ]
+      },
+      {
+        "id": "i3",
+        "mentions": [
+          "落日"
+        ],
+        "concept": "西沉的太阳",
+        "kind": "environment",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "犹陪落日泛秋声"
+        ]
+      },
+      {
+        "id": "i4",
+        "mentions": [
+          "秋声"
+        ],
+        "concept": "秋天的声响",
+        "kind": "abstract",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "犹陪落日泛秋声"
+        ]
+      }
+    ],
+    "relations": [],
+    "atmosphere": {
+      "labels": [
+        "暮色",
+        "秋意",
+        "相伴"
+      ],
+      "valence": "neutral",
+      "energy": "low",
+      "tension": "low",
+      "openness": "high",
+      "evidence": [
+        "曾伴浮云归晚翠",
+        "犹陪落日泛秋声"
+      ]
+    },
+    "time": {
+      "markers": [
+        {
+          "surface": "曾",
+          "meaning": "表示过去曾经发生"
+        },
+        {
+          "surface": "晚",
+          "meaning": "指傍晚时分"
+        },
+        {
+          "surface": "犹",
+          "meaning": "表示仍然、依旧"
+        }
+      ],
+      "note": "“曾”与“犹”形成过去与仍然的对照，但具体时间跨度未明。"
+    },
+    "uncertainties": [
+      "“伴”“陪”的主体未在句中明说，无法确定是人物还是拟人化的其他存在。",
+      "“晚翠”可指暮色中的青翠山色或泛指傍晚天色，具体所指有歧义。",
+      "“泛秋声”中“泛”的宾语关系不明确，秋声是浮泛于落日之间还是被伴随而泛，存在多种理解。"
+    ]
+  },
+  "validation": {
+    "valid": true,
+    "errors": [],
+    "warnings": [
+      "模型保留了不确定性，需要审阅"
+    ],
+    "review_required": true
+  },
+  "plan": {
+    "version": "trial-4-orchid-horse-lotus",
+    "seed": 958319904,
+    "settings": {
+      "wind": 0,
+      "density": 0.45,
+      "palette": "clear"
+    },
+    "layers": [
+      {
+        "tool": "cloud",
+        "entities": [
+          "i1"
+        ],
+        "names": [
+          "浮云"
+        ],
+        "options": {},
+        "animate": true,
+        "placement": {
+          "anchor": [
+            320,
+            170
+          ],
+          "at": [
+            0.46,
+            0.2
+          ],
+          "scale": 1.05
+        }
+      }
+    ],
+    "omitted": [
+      {
+        "id": "i2",
+        "name": "晚翠",
+        "reason": "该具体意象尚无可用形态；没有替换成通用树、花或鸟群"
+      },
+      {
+        "id": "i3",
+        "name": "落日",
+        "reason": "该具体意象尚无可用形态；没有替换成通用树、花或鸟群"
+      },
+      {
+        "id": "i4",
+        "name": "秋声",
+        "reason": "暂未提供该人物、地点或抽象含义的绘画单元"
+      }
+    ],
+    "notes": [
+      "位置、大小、笔触、固定群体数量与默认微动是本地试画选择；不表示原句给出了这些数值。"
+    ],
+    "relations": []
+  },
+  "elapsed_seconds": 4.9
+}

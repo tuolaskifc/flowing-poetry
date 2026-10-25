@@ -1,0 +1,54 @@
+{
+  "scope": "one-targeted-recheck-of-two-confirmed-semantic-errors",
+  "noAutomaticRetry": true,
+  "rows": [
+    {
+      "case": "b052",
+      "id": "2026-10-24T14-46-20-457Z-3b51469a",
+      "reason": "不必相守被标为相守缺席",
+      "rawValid": true,
+      "delivery": {
+        "status": "complete",
+        "retryable": false,
+        "reason": null,
+        "message": "解读已通过检查。"
+      },
+      "usage": {
+        "completion_tokens": 532,
+        "prompt_tokens": 5879,
+        "total_tokens": 6411,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens_details": {
+          "cached_tokens": 5760
+        }
+      },
+      "cached": false
+    },
+    {
+      "case": "b053",
+      "id": "2026-10-24T14-46-24-664Z-aefbe4e7",
+      "reason": "逆旅被解释成逆行旅次",
+      "rawValid": true,
+      "delivery": {
+        "status": "complete",
+        "retryable": false,
+        "reason": null,
+        "message": "解读已通过检查。"
+      },
+      "usage": {
+        "completion_tokens": 633,
+        "prompt_tokens": 5873,
+        "total_tokens": 6506,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens_details": {
+          "cached_tokens": 5760
+        }
+      },
+      "cached": false
+    }
+  ]
+}

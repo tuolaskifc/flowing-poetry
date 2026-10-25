@@ -1,0 +1,193 @@
+{
+  "schema_version": "expression-1.0",
+  "poem": "千山鸟飞绝，万径人踪灭",
+  "reading": "群山之间鸟飞已绝，所有路径上人的踪迹也已消失，呈现空寂无人的景象。",
+  "entities": [
+    {
+      "id": "i1",
+      "mentions": [
+        "千山"
+      ],
+      "concept": "众多山岭",
+      "kind": "place",
+      "role": "scene",
+      "presence": "present",
+      "evidence": [
+        "千山鸟飞绝"
+      ],
+      "quantity": {
+        "mode": "many",
+        "min": null,
+        "max": null,
+        "unit": null,
+        "scope": "group",
+        "extent": "spread",
+        "evidence": [
+          "千山鸟飞绝"
+        ]
+      }
+    },
+    {
+      "id": "i2",
+      "mentions": [
+        "鸟"
+      ],
+      "concept": "飞鸟",
+      "kind": "organism",
+      "role": "scene",
+      "presence": "absent",
+      "evidence": [
+        "千山鸟飞绝"
+      ],
+      "quantity": {
+        "mode": "unspecified",
+        "min": null,
+        "max": null,
+        "unit": null,
+        "scope": "unspecified",
+        "extent": "unspecified",
+        "evidence": []
+      }
+    },
+    {
+      "id": "i3",
+      "mentions": [
+        "万径"
+      ],
+      "concept": "众多路径",
+      "kind": "place",
+      "role": "scene",
+      "presence": "present",
+      "evidence": [
+        "万径人踪灭"
+      ],
+      "quantity": {
+        "mode": "many",
+        "min": null,
+        "max": null,
+        "unit": null,
+        "scope": "group",
+        "extent": "spread",
+        "evidence": [
+          "万径人踪灭"
+        ]
+      }
+    },
+    {
+      "id": "i4",
+      "mentions": [
+        "人踪"
+      ],
+      "concept": "人的踪迹",
+      "kind": "abstract",
+      "role": "scene",
+      "presence": "absent",
+      "evidence": [
+        "万径人踪灭"
+      ],
+      "quantity": {
+        "mode": "unspecified",
+        "min": null,
+        "max": null,
+        "unit": null,
+        "scope": "unspecified",
+        "extent": "unspecified",
+        "evidence": []
+      }
+    }
+  ],
+  "relations": [],
+  "atmosphere": {
+    "labels": [
+      "空寂",
+      "清冷"
+    ],
+    "valence": "negative",
+    "energy": "low",
+    "tension": "low",
+    "openness": "high",
+    "evidence": [
+      "千山鸟飞绝",
+      "万径人踪灭"
+    ]
+  },
+  "time": {
+    "markers": [],
+    "note": null
+  },
+  "uncertainties": [
+    "“绝”“灭”表示鸟飞与踪迹已消失，但未交代发生时间或过程。"
+  ],
+  "spatial": [],
+  "scene": {
+    "setting": {
+      "kind": "mountain_stream",
+      "basis": "inferred",
+      "evidence": [
+        "千山鸟飞绝"
+      ]
+    },
+    "groups": [
+      {
+        "members": [
+          "i1"
+        ],
+        "role": "environment",
+        "pattern": "field",
+        "depth": "far",
+        "basis": "inferred",
+        "evidence": [
+          "千山鸟飞绝"
+        ]
+      },
+      {
+        "members": [
+          "i3"
+        ],
+        "role": "environment",
+        "pattern": "scattered",
+        "depth": "middle",
+        "basis": "inferred",
+        "evidence": [
+          "万径人踪灭"
+        ]
+      }
+    ],
+    "supports": [],
+    "actions": [],
+    "atmosphere": {
+      "visibility": "clear",
+      "illumination": "unclear",
+      "basis": "inferred",
+      "evidence": [
+        "千山鸟飞绝",
+        "万径人踪灭"
+      ]
+    }
+  },
+  "expression": {
+    "relations": [],
+    "processes": [
+      {
+        "subject": "i2",
+        "kind": "fade",
+        "temporal": "already",
+        "modality": "asserted",
+        "basis": "explicit",
+        "evidence": [
+          "千山鸟飞绝"
+        ]
+      },
+      {
+        "subject": "i4",
+        "kind": "fade",
+        "temporal": "already",
+        "modality": "asserted",
+        "basis": "explicit",
+        "evidence": [
+          "万径人踪灭"
+        ]
+      }
+    ]
+  }
+}

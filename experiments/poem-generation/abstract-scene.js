@@ -20,7 +20,12 @@
  const gestures=typeof module==='object'&&module.exports?require('./gesture-field.js'):globalThis.PoemGestures;
  function compose(plan,{seed=plan.seed,style='auto',palette='auto',density=.55,vocabulary='expanded',expression=null,expanse=undefined}={}){
   const rng=random(seed),rand=(a,b)=>a+rng()*(b-a),night=plan.atmosphere.illumination==='night';
-  const available=night?palettes.filter(p=>p.dark):palettes;
+  // Unified scenery defaults to a light ground when time is unknown. This is a
+  // local viewing choice, not an assertion that the source poem specifies day.
+  // Keep standalone historical abstract compositions pixel compatible.
+  const unifiedScenery=expression&&plan.expression&&plan.concretePlan;
+  const lightGround=unifiedScenery&&!['night','dusk'].includes(plan.atmosphere.illumination);
+  const available=night?palettes.filter(p=>p.dark):lightGround?palettes.filter(p=>!p.dark):palettes;
   const scheme=palettes.find(p=>p.id===palette)||(available[Math.floor(rng()*available.length)]);
   const layout=Math.floor(rng()*5),rotation=rand(-.28,.28),n=plan.nodes.length;
   const nodes=plan.nodes.map((node,i)=>{

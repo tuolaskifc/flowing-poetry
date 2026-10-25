@@ -1,0 +1,197 @@
+{
+  "id": "2026-10-23T15-00-08-145Z-fd557e2b",
+  "fingerprint": "73def2b9274dc3f403f1d60680cf705e4c63ab67f699496b10ca01f9c373bd70",
+  "poem": "剪不断，理还乱，是离愁。",
+  "source": {
+    "provider": "抽象诗句首次试验",
+    "author": "李煜",
+    "title": "相见欢·无言独上西楼"
+  },
+  "mode": "abstract",
+  "model": "DeepSeek-V4.1-Flash",
+  "started_at": "2026-10-23T15:00:08.147Z",
+  "cached": false,
+  "http_status": 200,
+  "usage": {
+    "completion_tokens": 609,
+    "prompt_tokens": 1391,
+    "total_tokens": 2000,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 1280
+    }
+  },
+  "finish_reason": "stop",
+  "analysis": {
+    "schema_version": "abstract-1.0",
+    "poem": "剪不断，理还乱，是离愁。",
+    "reading": "以剪不断、理还乱的动作与状态，写离愁的纠缠难解；愁绪既无法切断，也无法理清，反而越理越乱。",
+    "subjects": [
+      {
+        "id": "a1",
+        "mentions": [
+          "离愁"
+        ],
+        "meaning": "离别带来的愁绪，是整句所指向的核心情感。",
+        "kind": "abstract",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "是离愁"
+        ]
+      },
+      {
+        "id": "a2",
+        "mentions": [
+          "剪不断"
+        ],
+        "meaning": "以剪的动作表现愁绪无法被切断。",
+        "kind": "abstract",
+        "role": "reference",
+        "presence": "present",
+        "evidence": [
+          "剪不断"
+        ]
+      },
+      {
+        "id": "a3",
+        "mentions": [
+          "理还乱"
+        ],
+        "meaning": "以整理的动作表现愁绪越理越乱。",
+        "kind": "abstract",
+        "role": "reference",
+        "presence": "present",
+        "evidence": [
+          "理还乱"
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "source": "a2",
+        "target": "a1",
+        "kind": "block",
+        "modality": "negated",
+        "basis": "explicit",
+        "evidence": [
+          "剪不断",
+          "是离愁"
+        ]
+      },
+      {
+        "source": "a3",
+        "target": "a1",
+        "kind": "interweave",
+        "modality": "asserted",
+        "basis": "explicit",
+        "evidence": [
+          "理还乱",
+          "是离愁"
+        ]
+      }
+    ],
+    "processes": [
+      {
+        "subject": "a1",
+        "kind": "persist",
+        "temporal": "ongoing",
+        "modality": "asserted",
+        "basis": "explicit",
+        "evidence": [
+          "剪不断",
+          "理还乱",
+          "是离愁"
+        ]
+      }
+    ],
+    "atmosphere": {
+      "labels": [
+        "纠缠",
+        "难解"
+      ],
+      "valence": "negative",
+      "openness": "unclear",
+      "illumination": "unclear",
+      "evidence": [
+        "剪不断",
+        "理还乱",
+        "是离愁"
+      ]
+    },
+    "uncertainties": [
+      "剪不断与理还乱是并列描写离愁的两种状态，还是存在先后递进关系，原文未明。",
+      "离愁是抽象情感，剪与理的动作可视为比喻性表达，而非实际动作。"
+    ]
+  },
+  "validation": {
+    "valid": true,
+    "errors": [],
+    "warnings": [],
+    "review_required": true
+  },
+  "plan": {
+    "version": "abstract-expression-1.0",
+    "poem": "剪不断，理还乱，是离愁。",
+    "seed": 2819797886,
+    "nodes": [
+      {
+        "id": "a1",
+        "label": "离愁",
+        "meaning": "离别带来的愁绪，是整句所指向的核心情感。",
+        "kind": "abstract"
+      }
+    ],
+    "relations": [],
+    "processes": [
+      {
+        "subject": "a1",
+        "kind": "persist",
+        "temporal": "ongoing",
+        "modality": "asserted",
+        "basis": "explicit",
+        "evidence": [
+          "剪不断",
+          "理还乱",
+          "是离愁"
+        ]
+      }
+    ],
+    "omitted": [
+      {
+        "id": "a2",
+        "label": "剪不断",
+        "reason": "比喻参照保留在解读，不补成实景"
+      },
+      {
+        "id": "a3",
+        "label": "理还乱",
+        "reason": "比喻参照保留在解读，不补成实景"
+      }
+    ],
+    "atmosphere": {
+      "labels": [
+        "纠缠",
+        "难解"
+      ],
+      "valence": "negative",
+      "openness": "unclear",
+      "illumination": "unclear",
+      "evidence": [
+        "剪不断",
+        "理还乱",
+        "是离愁"
+      ]
+    },
+    "concretePlan": null,
+    "notes": [
+      "形态、笔触数量、配色变体、布局与观看节奏为本地艺术选择，不表示原文物体数或发生概率。",
+      "非确定关系只作候选或边界提示；未完成不固定为永久无法完成。",
+      "一次性过程在播放时段内演化，不自动循环成诗句的事实；可手动重放。"
+    ],
+    "aestheticAcceptance": "pending-user"
+  },
+  "elapsed_seconds": 12.3
+}

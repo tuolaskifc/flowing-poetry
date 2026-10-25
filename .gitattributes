@@ -1,0 +1,5 @@
+# Keep original experiment records and frozen verification evidence byte-for-byte.
+/experiments/poem-generation/runs/** -text -whitespace
+/experiments/poem-semantics/results/** -text -whitespace
+/poem-flow/verification/** -text -whitespace
+/docs/sources/** -text -whitespace

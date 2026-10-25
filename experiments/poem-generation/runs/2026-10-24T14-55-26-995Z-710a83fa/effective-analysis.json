@@ -1,0 +1,240 @@
+{
+  "schema_version": "expression-1.0",
+  "poem": "疏影横斜水清浅，暗香浮动月黄昏。",
+  "reading": "稀疏的枝影斜斜映在清浅的水面，幽微的香气在黄昏月色中轻轻浮动。",
+  "entities": [
+    {
+      "id": "i1",
+      "mentions": [
+        "疏影"
+      ],
+      "concept": "稀疏的枝影",
+      "kind": "object",
+      "role": "scene",
+      "presence": "present",
+      "evidence": [
+        "疏影横斜水清浅"
+      ],
+      "quantity": {
+        "mode": "unspecified",
+        "min": null,
+        "max": null,
+        "unit": null,
+        "scope": "unspecified",
+        "extent": "unspecified",
+        "evidence": []
+      }
+    },
+    {
+      "id": "i2",
+      "mentions": [
+        "水"
+      ],
+      "concept": "清浅的水面",
+      "kind": "environment",
+      "role": "scene",
+      "presence": "present",
+      "evidence": [
+        "疏影横斜水清浅"
+      ],
+      "quantity": {
+        "mode": "unspecified",
+        "min": null,
+        "max": null,
+        "unit": null,
+        "scope": "unspecified",
+        "extent": "unspecified",
+        "evidence": []
+      }
+    },
+    {
+      "id": "i3",
+      "mentions": [
+        "暗香"
+      ],
+      "concept": "幽微浮动的香气",
+      "kind": "abstract",
+      "role": "scene",
+      "presence": "present",
+      "evidence": [
+        "暗香浮动月黄昏"
+      ],
+      "quantity": {
+        "mode": "unspecified",
+        "min": null,
+        "max": null,
+        "unit": null,
+        "scope": "unspecified",
+        "extent": "unspecified",
+        "evidence": []
+      }
+    },
+    {
+      "id": "i4",
+      "mentions": [
+        "月"
+      ],
+      "concept": "黄昏时的月亮",
+      "kind": "object",
+      "role": "scene",
+      "presence": "present",
+      "evidence": [
+        "暗香浮动月黄昏"
+      ],
+      "quantity": {
+        "mode": "unspecified",
+        "min": null,
+        "max": null,
+        "unit": null,
+        "scope": "unspecified",
+        "extent": "unspecified",
+        "evidence": []
+      }
+    }
+  ],
+  "relations": [],
+  "atmosphere": {
+    "labels": [
+      "清幽",
+      "朦胧",
+      "静谧"
+    ],
+    "valence": "positive",
+    "energy": "low",
+    "tension": "low",
+    "openness": "medium",
+    "evidence": [
+      "疏影横斜水清浅",
+      "暗香浮动月黄昏"
+    ]
+  },
+  "time": {
+    "markers": [
+      {
+        "surface": "黄昏",
+        "meaning": "傍晚时分，天色将暗"
+      }
+    ],
+    "note": null
+  },
+  "uncertainties": [
+    "疏影所指的具体植物未在原文说明，仅能确定为稀疏的枝影。",
+    "暗香浮动是香气弥漫的描写，其具体来源未明。",
+    "月黄昏可理解为黄昏时月色朦胧，但月是否已升起或可见程度未明。"
+  ],
+  "spatial": [
+    {
+      "type": "on",
+      "source": "i1",
+      "target": "i2",
+      "modality": "asserted",
+      "basis": "inferred",
+      "evidence": [
+        "疏影横斜水清浅"
+      ]
+    }
+  ],
+  "scene": {
+    "setting": {
+      "kind": "waterside",
+      "basis": "inferred",
+      "evidence": [
+        "疏影横斜水清浅"
+      ]
+    },
+    "groups": [
+      {
+        "members": [
+          "i1"
+        ],
+        "role": "subject",
+        "pattern": "single",
+        "depth": "unspecified",
+        "basis": "inferred",
+        "evidence": [
+          "疏影横斜水清浅"
+        ]
+      },
+      {
+        "members": [
+          "i2"
+        ],
+        "role": "environment",
+        "pattern": "unspecified",
+        "depth": "unspecified",
+        "basis": "inferred",
+        "evidence": [
+          "疏影横斜水清浅"
+        ]
+      },
+      {
+        "members": [
+          "i4"
+        ],
+        "role": "environment",
+        "pattern": "single",
+        "depth": "unspecified",
+        "basis": "inferred",
+        "evidence": [
+          "暗香浮动月黄昏"
+        ]
+      }
+    ],
+    "supports": [
+      {
+        "entity": "i1",
+        "surface": "water",
+        "target": "i2",
+        "basis": "inferred",
+        "evidence": [
+          "疏影横斜水清浅"
+        ]
+      }
+    ],
+    "actions": [],
+    "atmosphere": {
+      "visibility": "hazy",
+      "illumination": "twilight",
+      "basis": "inferred",
+      "evidence": [
+        "暗香浮动月黄昏"
+      ]
+    }
+  },
+  "expression": {
+    "relations": [
+      {
+        "source": "i1",
+        "target": "i2",
+        "kind": "connect",
+        "modality": "asserted",
+        "basis": "inferred",
+        "evidence": [
+          "疏影横斜水清浅"
+        ]
+      },
+      {
+        "source": "i3",
+        "target": "i4",
+        "kind": "interweave",
+        "modality": "asserted",
+        "basis": "inferred",
+        "evidence": [
+          "暗香浮动月黄昏"
+        ]
+      }
+    ],
+    "processes": [
+      {
+        "subject": "i3",
+        "kind": "persist",
+        "temporal": "ongoing",
+        "modality": "asserted",
+        "basis": "inferred",
+        "evidence": [
+          "暗香浮动月黄昏"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,4959 @@
+{
+  "id": "2026-10-23T12-51-20-392Z-2a24adce",
+  "fingerprint": "61258482f56586b9b540a7b9e00bde2a9868bf7b71fd2634c2cec0486f4f4e60",
+  "poem": "绿树村边合，青山郭外斜。",
+  "source": {
+    "provider": "泛化新句试验",
+    "author": "孟浩然",
+    "title": "过故人庄",
+    "dynasty": "唐代"
+  },
+  "mode": "composition",
+  "model": "DeepSeek-V4.1-Flash",
+  "started_at": "2026-10-23T12:51:20.394Z",
+  "cached": false,
+  "http_status": 200,
+  "usage": {
+    "completion_tokens": 978,
+    "prompt_tokens": 4895,
+    "total_tokens": 5873,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 4864
+    }
+  },
+  "finish_reason": "stop",
+  "analysis": {
+    "schema_version": "3.3",
+    "poem": "绿树村边合，青山郭外斜。",
+    "reading": "绿树环绕在村庄近旁，青山在城郭之外斜延；两句写村居外围的树与山，一近一远，构成开阔而安静的乡野环境。",
+    "entities": [
+      {
+        "id": "i1",
+        "mentions": [
+          "绿树"
+        ],
+        "concept": "村庄近旁的绿树",
+        "kind": "organism",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "绿树村边合"
+        ],
+        "quantity": {
+          "mode": "many",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "group",
+          "extent": "spread",
+          "evidence": [
+            "绿树村边合"
+          ]
+        }
+      },
+      {
+        "id": "i2",
+        "mentions": [
+          "村"
+        ],
+        "concept": "村庄",
+        "kind": "place",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "绿树村边合"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i3",
+        "mentions": [
+          "青山"
+        ],
+        "concept": "青翠的山",
+        "kind": "place",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "青山郭外斜"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "spread",
+          "evidence": [
+            "青山郭外斜"
+          ]
+        }
+      },
+      {
+        "id": "i4",
+        "mentions": [
+          "郭"
+        ],
+        "concept": "外城/城郭",
+        "kind": "place",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "青山郭外斜"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      }
+    ],
+    "relations": [],
+    "atmosphere": {
+      "labels": [
+        "宁静",
+        "开阔"
+      ],
+      "valence": "positive",
+      "energy": "low",
+      "tension": "low",
+      "openness": "high",
+      "evidence": [
+        "绿树村边合",
+        "青山郭外斜"
+      ]
+    },
+    "time": {
+      "markers": [],
+      "note": null
+    },
+    "uncertainties": [
+      "“合”可理解为绿树环绕村庄，也可理解为绿树在村边聚合成片，具体形态未明。",
+      "“斜”可指青山斜延的走向，也可指山势倾斜，方向细节未明。"
+    ],
+    "spatial": [
+      {
+        "type": "outside",
+        "source": "i1",
+        "target": "i2",
+        "modality": "asserted",
+        "basis": "explicit",
+        "evidence": [
+          "绿树村边合"
+        ]
+      },
+      {
+        "type": "outside",
+        "source": "i3",
+        "target": "i4",
+        "modality": "asserted",
+        "basis": "explicit",
+        "evidence": [
+          "青山郭外斜"
+        ]
+      }
+    ],
+    "scene": {
+      "setting": {
+        "kind": "settlement",
+        "basis": "inferred",
+        "evidence": [
+          "绿树村边合",
+          "青山郭外斜"
+        ]
+      },
+      "groups": [
+        {
+          "members": [
+            "i1"
+          ],
+          "role": "environment",
+          "pattern": "grove",
+          "depth": "near",
+          "basis": "inferred",
+          "evidence": [
+            "绿树村边合"
+          ]
+        },
+        {
+          "members": [
+            "i2"
+          ],
+          "role": "subject",
+          "pattern": "single",
+          "depth": "middle",
+          "basis": "inferred",
+          "evidence": [
+            "绿树村边合"
+          ]
+        },
+        {
+          "members": [
+            "i3"
+          ],
+          "role": "environment",
+          "pattern": "unspecified",
+          "depth": "far",
+          "basis": "inferred",
+          "evidence": [
+            "青山郭外斜"
+          ]
+        },
+        {
+          "members": [
+            "i4"
+          ],
+          "role": "environment",
+          "pattern": "single",
+          "depth": "middle",
+          "basis": "inferred",
+          "evidence": [
+            "青山郭外斜"
+          ]
+        }
+      ],
+      "supports": [
+        {
+          "entity": "i1",
+          "surface": "ground",
+          "target": null,
+          "basis": "inferred",
+          "evidence": [
+            "绿树村边合"
+          ]
+        },
+        {
+          "entity": "i2",
+          "surface": "ground",
+          "target": null,
+          "basis": "inferred",
+          "evidence": [
+            "绿树村边合"
+          ]
+        },
+        {
+          "entity": "i3",
+          "surface": "mountain",
+          "target": null,
+          "basis": "inferred",
+          "evidence": [
+            "青山郭外斜"
+          ]
+        },
+        {
+          "entity": "i4",
+          "surface": "ground",
+          "target": null,
+          "basis": "inferred",
+          "evidence": [
+            "青山郭外斜"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "entity": "i1",
+          "state": "still",
+          "pace": "unspecified",
+          "direction": "unspecified",
+          "modality": "asserted",
+          "basis": "inferred",
+          "evidence": [
+            "绿树村边合"
+          ]
+        },
+        {
+          "entity": "i3",
+          "state": "still",
+          "pace": "unspecified",
+          "direction": "unspecified",
+          "modality": "asserted",
+          "basis": "inferred",
+          "evidence": [
+            "青山郭外斜"
+          ]
+        }
+      ],
+      "atmosphere": {
+        "visibility": "clear",
+        "illumination": "day",
+        "basis": "inferred",
+        "evidence": [
+          "绿树村边合",
+          "青山郭外斜"
+        ]
+      }
+    }
+  },
+  "validation": {
+    "valid": true,
+    "errors": [],
+    "warnings": [
+      "模型保留了不确定性，需要审阅",
+      "scene.setting 为语义推断，绘画选择需与原文明示区分",
+      "scene.groups[0] 为语义推断，绘画选择需与原文明示区分",
+      "scene.groups[1] 为语义推断，绘画选择需与原文明示区分",
+      "scene.groups[2] 为语义推断，绘画选择需与原文明示区分",
+      "scene.groups[3] 为语义推断，绘画选择需与原文明示区分",
+      "scene.supports[0] 为语义推断，绘画选择需与原文明示区分",
+      "scene.supports[1] 为语义推断，绘画选择需与原文明示区分",
+      "scene.supports[2] 为语义推断，绘画选择需与原文明示区分",
+      "scene.supports[3] 为语义推断，绘画选择需与原文明示区分",
+      "scene.actions[0] 为语义推断，绘画选择需与原文明示区分",
+      "scene.actions[1] 为语义推断，绘画选择需与原文明示区分",
+      "scene.atmosphere 为语义推断，绘画选择需与原文明示区分"
+    ],
+    "review_required": true
+  },
+  "plan": {
+    "version": "semantic-composition-3.3-world-instances",
+    "seed": 2674075558,
+    "settings": {
+      "wind": 0.3,
+      "density": 0.35,
+      "palette": "mineral",
+      "motion": 1.4
+    },
+    "layers": [
+      {
+        "tool": "landscape",
+        "entities": [
+          "i3"
+        ],
+        "projectedEntities": [],
+        "names": [
+          "青山"
+        ],
+        "options": {
+          "form": "mountain"
+        },
+        "animate": false,
+        "placement": {
+          "anchor": [
+            320,
+            194
+          ],
+          "at": [
+            0.5,
+            0.4
+          ],
+          "scale": 1.5
+        },
+        "semanticGroup": {
+          "members": [
+            "i3"
+          ],
+          "role": "environment",
+          "pattern": "unspecified",
+          "depth": "far",
+          "basis": "inferred",
+          "evidence": [
+            "青山郭外斜"
+          ],
+          "index": 2
+        },
+        "semanticEffects": [
+          {
+            "path": "scene.actions[1].state",
+            "consumer": "形态与绘画时钟",
+            "effect": "静止姿态并停止该图层时钟",
+            "status": "applied"
+          },
+          {
+            "path": "scene.groups[2].role",
+            "consumer": "主次布局",
+            "effect": "保留环境画布范围，主次不改变地形边界",
+            "status": "applied"
+          },
+          {
+            "path": "scene.groups[2].pattern",
+            "consumer": "群落布局",
+            "effect": "群落形式未明，保持本地默认",
+            "status": "skipped"
+          },
+          {
+            "path": "scene.groups[2].depth",
+            "consumer": "远近布局",
+            "effect": "将 far 转为相对大小、透明度与允许区域内的落点",
+            "status": "applied"
+          }
+        ],
+        "semanticEnergy": false,
+        "timeScale": 0,
+        "semanticAction": {
+          "entity": "i3",
+          "state": "still",
+          "pace": "unspecified",
+          "direction": "unspecified",
+          "modality": "asserted",
+          "basis": "inferred",
+          "evidence": [
+            "青山郭外斜"
+          ]
+        },
+        "instances": [
+          {
+            "placement": {
+              "anchor": [
+                320,
+                194
+              ],
+              "at": [
+                0.5,
+                0.4
+              ],
+              "scale": 1.6
+            },
+            "depth": -0.2,
+            "opacity": 0.6,
+            "variant": 0,
+            "tone": "far",
+            "id": "i3:landscape:mountain:0:0"
+          }
+        ],
+        "singleUnit": false,
+        "quantity": {
+          "items": [
+            {
+              "entity": "i3",
+              "mode": "unspecified",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "unspecified",
+              "extent": "spread",
+              "evidence": [
+                "青山郭外斜"
+              ],
+              "basis": "model"
+            }
+          ],
+          "rendered": 1,
+          "exact": false,
+          "collective": true,
+          "partUnsupported": false
+        },
+        "quantityLabel": "整体笔触图层；内部数量尚未适配",
+        "z": -30,
+        "semanticSupport": {
+          "surface": "mountain",
+          "target": "i3",
+          "path": "scene.supports[2]"
+        },
+        "visual": {
+          "role": "mountain",
+          "color": "#427E73",
+          "brushStrength": 1.1
+        },
+        "performance": {
+          "rhythm": "steady",
+          "rate": 1,
+          "amplitude": 1,
+          "phase": 0
+        },
+        "id": "i3:landscape:mountain:0",
+        "interaction": {
+          "mode": "instance",
+          "groupId": "i3:landscape:mountain:0"
+        },
+        "colorCue": {
+          "color": "#427E73",
+          "evidence": "青山郭外斜",
+          "basis": "source-literal"
+        }
+      },
+      {
+        "tool": "dwelling",
+        "entities": [
+          "i2"
+        ],
+        "projectedEntities": [],
+        "names": [
+          "村"
+        ],
+        "options": {
+          "kind": "house"
+        },
+        "animate": true,
+        "placement": {
+          "anchor": [
+            320,
+            307
+          ],
+          "at": [
+            0.55,
+            0.7034666666666667
+          ],
+          "scale": 1.05
+        },
+        "drawingLabel": "房舍",
+        "semanticGroup": {
+          "members": [
+            "i2"
+          ],
+          "role": "subject",
+          "pattern": "single",
+          "depth": "middle",
+          "basis": "inferred",
+          "evidence": [
+            "绿树村边合"
+          ],
+          "index": 1
+        },
+        "semanticEffects": [
+          {
+            "path": "scene.groups[1].role",
+            "consumer": "主次布局",
+            "effect": "主体相对突出",
+            "status": "applied"
+          },
+          {
+            "path": "scene.groups[1].pattern",
+            "consumer": "群落布局",
+            "effect": "按 single 组织显示单元；不覆盖明确数量",
+            "status": "applied"
+          },
+          {
+            "path": "scene.groups[1].depth",
+            "consumer": "远近布局",
+            "effect": "将 middle 转为相对大小、透明度与允许区域内的落点",
+            "status": "applied"
+          }
+        ],
+        "semanticEnergy": true,
+        "timeScale": 0.45,
+        "instances": [
+          {
+            "placement": {
+              "anchor": [
+                320,
+                307
+              ],
+              "at": [
+                0.43000000000000005,
+                0.675
+              ],
+              "scale": 0.6179800000000001
+            },
+            "depth": 0,
+            "opacity": 0.63,
+            "variant": 0,
+            "tier": "far",
+            "tone": "far",
+            "id": "i2:dwelling::1:0"
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                307
+              ],
+              "at": [
+                0.55,
+                0.7368
+              ],
+              "scale": 0.7620976
+            },
+            "depth": 10.01,
+            "opacity": 0.84,
+            "variant": 1,
+            "tier": "middle",
+            "tone": "middle",
+            "id": "i2:dwelling::1:1"
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                307
+              ],
+              "at": [
+                0.67,
+                0.6986
+              ],
+              "scale": 0.6730152
+            },
+            "depth": 0.02,
+            "opacity": 0.63,
+            "variant": 0,
+            "tier": "far",
+            "tone": "far",
+            "id": "i2:dwelling::1:2"
+          }
+        ],
+        "singleUnit": true,
+        "quantity": {
+          "items": [
+            {
+              "entity": "i2",
+              "mode": "unspecified",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "unspecified",
+              "extent": "unspecified",
+              "evidence": [],
+              "basis": "model"
+            }
+          ],
+          "rendered": 3,
+          "exact": false,
+          "collective": true,
+          "partUnsupported": false
+        },
+        "quantityLabel": "成片分布；本地试画 3 个单元",
+        "z": 9,
+        "grounding": true,
+        "semanticSupport": {
+          "surface": "ground",
+          "target": null,
+          "path": "scene.supports[1]"
+        },
+        "visual": {
+          "role": "architecture",
+          "brushStrength": 1.1
+        },
+        "performance": {
+          "rhythm": "steady",
+          "rate": 1,
+          "amplitude": 1,
+          "phase": 3.8830085198369844
+        },
+        "id": "i2:dwelling::1",
+        "interaction": {
+          "mode": "instance",
+          "groupId": "i2:dwelling::1"
+        }
+      },
+      {
+        "tool": "tree",
+        "entities": [
+          "i1"
+        ],
+        "projectedEntities": [],
+        "names": [
+          "绿树"
+        ],
+        "options": {
+          "form": "broadleaf",
+          "crown": "wash"
+        },
+        "animate": false,
+        "placement": {
+          "anchor": [
+            320,
+            388
+          ],
+          "at": [
+            0.51048,
+            0.73029291005291
+          ],
+          "scale": 1.15
+        },
+        "semanticGroup": {
+          "members": [
+            "i1"
+          ],
+          "role": "environment",
+          "pattern": "grove",
+          "depth": "near",
+          "basis": "inferred",
+          "evidence": [
+            "绿树村边合"
+          ],
+          "index": 0
+        },
+        "semanticEffects": [
+          {
+            "path": "scene.actions[0].state",
+            "consumer": "形态与绘画时钟",
+            "effect": "静止姿态并停止该图层时钟",
+            "status": "applied"
+          },
+          {
+            "path": "scene.groups[0].role",
+            "consumer": "主次布局",
+            "effect": "保留环境群落层次",
+            "status": "applied"
+          },
+          {
+            "path": "scene.groups[0].pattern",
+            "consumer": "群落布局",
+            "effect": "按 grove 组织显示单元；不覆盖明确数量",
+            "status": "applied"
+          },
+          {
+            "path": "scene.groups[0].depth",
+            "consumer": "远近布局",
+            "effect": "将 near 转为相对大小、透明度与允许区域内的落点",
+            "status": "applied"
+          }
+        ],
+        "semanticEnergy": false,
+        "timeScale": 0,
+        "semanticAction": {
+          "entity": "i1",
+          "state": "still",
+          "pace": "unspecified",
+          "direction": "unspecified",
+          "modality": "asserted",
+          "basis": "inferred",
+          "evidence": [
+            "绿树村边合"
+          ]
+        },
+        "instances": [
+          {
+            "placement": {
+              "anchor": [
+                320,
+                388
+              ],
+              "at": [
+                0.8220000000000001,
+                0.728611111111111
+              ],
+              "scale": 0.6903360000000001
+            },
+            "depth": 20,
+            "opacity": 0.98,
+            "variant": 2,
+            "tier": "near",
+            "tone": "near",
+            "id": "i1:tree:broadleaf:2:0"
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                388
+              ],
+              "at": [
+                0.20116,
+                0.7509371428571429
+              ],
+              "scale": 0.9372888
+            },
+            "depth": 10.01,
+            "opacity": 0.84,
+            "variant": 1,
+            "tier": "middle",
+            "tone": "middle",
+            "id": "i1:tree:broadleaf:2:1"
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                388
+              ],
+              "at": [
+                0.8692,
+                0.6958333333333333
+              ],
+              "scale": 0.7846415999999999
+            },
+            "depth": 10.02,
+            "opacity": 0.84,
+            "variant": 1,
+            "tier": "middle",
+            "tone": "middle",
+            "id": "i1:tree:broadleaf:2:2"
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                388
+              ],
+              "at": [
+                0.033080000000000054,
+                0.8033257142857142
+              ],
+              "scale": 0.6319944000000001
+            },
+            "depth": 20.03,
+            "opacity": 0.98,
+            "variant": 2,
+            "tier": "near",
+            "tone": "near",
+            "id": "i1:tree:broadleaf:2:3"
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                388
+              ],
+              "at": [
+                0.9164000000000001,
+                0.6630555555555555
+              ],
+              "scale": 0.8789472
+            },
+            "depth": 10.04,
+            "opacity": 0.84,
+            "variant": 1,
+            "tier": "middle",
+            "tone": "middle",
+            "id": "i1:tree:broadleaf:2:4"
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                388
+              ],
+              "at": [
+                0.08499999999999999,
+                0.787142857142857
+              ],
+              "scale": 0.7263000000000001
+            },
+            "depth": 10.05,
+            "opacity": 0.84,
+            "variant": 1,
+            "tier": "middle",
+            "tone": "middle",
+            "id": "i1:tree:broadleaf:2:5"
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                388
+              ],
+              "at": [
+                0.9636000000000001,
+                0.6302777777777777
+              ],
+              "scale": 0.9732528000000001
+            },
+            "depth": 20.06,
+            "opacity": 0.98,
+            "variant": 2,
+            "tier": "near",
+            "tone": "near",
+            "id": "i1:tree:broadleaf:2:6"
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                388
+              ],
+              "at": [
+                0.13691999999999993,
+                0.77096
+              ],
+              "scale": 0.8206055999999999
+            },
+            "depth": 10.07,
+            "opacity": 0.84,
+            "variant": 1,
+            "tier": "middle",
+            "tone": "middle",
+            "id": "i1:tree:broadleaf:2:7"
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                388
+              ],
+              "at": [
+                0.8108000000000001,
+                0.7363888888888889
+              ],
+              "scale": 0.6679584000000001
+            },
+            "depth": 10.08,
+            "opacity": 0.84,
+            "variant": 1,
+            "tier": "middle",
+            "tone": "middle",
+            "id": "i1:tree:broadleaf:2:8"
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                388
+              ],
+              "at": [
+                0.1888400000000001,
+                0.7547771428571428
+              ],
+              "scale": 0.9149112000000001
+            },
+            "depth": 20.09,
+            "opacity": 0.98,
+            "variant": 2,
+            "tier": "near",
+            "tone": "near",
+            "id": "i1:tree:broadleaf:2:9"
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                388
+              ],
+              "at": [
+                0.858,
+                0.7036111111111111
+              ],
+              "scale": 0.7622639999999999
+            },
+            "depth": 10.1,
+            "opacity": 0.84,
+            "variant": 1,
+            "tier": "middle",
+            "tone": "middle",
+            "id": "i1:tree:broadleaf:2:10"
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                388
+              ],
+              "at": [
+                0.24076000000000003,
+                0.7385942857142856
+              ],
+              "scale": 1.0092168000000001
+            },
+            "depth": 10.11,
+            "opacity": 0.84,
+            "variant": 1,
+            "tier": "middle",
+            "tone": "middle",
+            "id": "i1:tree:broadleaf:2:11"
+          }
+        ],
+        "singleUnit": true,
+        "quantity": {
+          "items": [
+            {
+              "entity": "i1",
+              "mode": "many",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "group",
+              "extent": "spread",
+              "evidence": [
+                "绿树村边合"
+              ],
+              "basis": "model"
+            }
+          ],
+          "rendered": 12,
+          "exact": false,
+          "collective": true,
+          "partUnsupported": false
+        },
+        "quantityLabel": "依场景疏密试画 12 个单元；原文未给精确个体数",
+        "z": 10,
+        "regionalRelation": "outside",
+        "semanticSupport": {
+          "surface": "ground",
+          "target": null,
+          "path": "scene.supports[0]"
+        },
+        "visual": {
+          "role": "vegetation",
+          "brushStrength": 1.2
+        },
+        "performance": {
+          "rhythm": "gust",
+          "rate": 0.62,
+          "amplitude": 0.65,
+          "phase": 1.4828317324943823
+        },
+        "id": "i1:tree:broadleaf:2",
+        "interaction": {
+          "mode": "instance",
+          "groupId": "i1:tree:broadleaf:2"
+        }
+      },
+      {
+        "tool": "landscape",
+        "names": [
+          "构图依托·地面"
+        ],
+        "entities": [],
+        "projectedEntities": [],
+        "options": {
+          "form": "ground",
+          "edge": "soft"
+        },
+        "animate": false,
+        "placement": {
+          "anchor": [
+            320,
+            194
+          ],
+          "at": [
+            0.5,
+            0.51
+          ],
+          "scale": 1.6
+        },
+        "instances": [
+          {
+            "placement": {
+              "anchor": [
+                320,
+                265
+              ],
+              "at": [
+                0.5,
+                0.51
+              ],
+              "scale": 2.6
+            },
+            "variant": 1,
+            "depth": 0,
+            "opacity": 1,
+            "tier": "middle",
+            "tone": "middle",
+            "id": "inferred:landscape:ground:3:0"
+          }
+        ],
+        "singleUnit": false,
+        "inferred": true,
+        "provenance": {
+          "basis": "local-context",
+          "reason": "村落房舍和环村树木共同落地"
+        },
+        "quantity": {
+          "rendered": 1,
+          "exact": false,
+          "items": []
+        },
+        "quantityLabel": "背景依托，不计入意象覆盖",
+        "z": -18,
+        "semanticEffects": [],
+        "semanticEnergy": false,
+        "visual": {
+          "role": "ground",
+          "brushStrength": 1.1
+        },
+        "performance": {
+          "rhythm": "steady",
+          "rate": 1,
+          "amplitude": 1,
+          "phase": 5.365840252331367
+        },
+        "id": "inferred:landscape:ground:3",
+        "interaction": {
+          "mode": "instance",
+          "groupId": "inferred:landscape:ground:3"
+        }
+      }
+    ],
+    "spatial": [
+      {
+        "type": "outside",
+        "source": "i1",
+        "target": "i2",
+        "modality": "asserted",
+        "basis": "explicit",
+        "evidence": [
+          "绿树村边合"
+        ],
+        "visualized": true,
+        "reason": "关系已由场景区域布局承接；方向、尺度和间距为本地选择"
+      },
+      {
+        "type": "outside",
+        "source": "i3",
+        "target": "i4",
+        "modality": "asserted",
+        "basis": "explicit",
+        "evidence": [
+          "青山郭外斜"
+        ],
+        "visualized": false,
+        "reason": "关系的一端缺少独立画法"
+      }
+    ],
+    "scene": {
+      "kind": "village",
+      "notes": [
+        "房舍下方的淡墨承托是本地构图，不把它当作诗句额外明说的地面或投影。",
+        "先划分承托地形、群落与主体活动区域；场景密度和背景依托是本地构图推断，不冒充原文明示意象。",
+        "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。"
+      ],
+      "waterline": null,
+      "basis": "local-context",
+      "regions": {
+        "village": [
+          [
+            0.32,
+            0.58
+          ],
+          [
+            0.75,
+            0.58
+          ],
+          [
+            0.82,
+            0.85
+          ],
+          [
+            0.28,
+            0.85
+          ]
+        ]
+      },
+      "supports": [
+        {
+          "form": "ground",
+          "reason": "村落房舍和环村树木共同落地"
+        }
+      ],
+      "semanticSetting": {
+        "kind": "settlement",
+        "basis": "inferred",
+        "evidence": [
+          "绿树村边合",
+          "青山郭外斜"
+        ]
+      },
+      "semanticEffects": [
+        {
+          "path": "scene.supports[0]",
+          "consumer": "场景依托",
+          "status": "applied",
+          "effect": "必要环境以独立推断背景表示，不新增原文实体"
+        },
+        {
+          "path": "scene.supports[1]",
+          "consumer": "场景依托",
+          "status": "applied",
+          "effect": "必要环境以独立推断背景表示，不新增原文实体"
+        },
+        {
+          "path": "scene.supports[2]",
+          "consumer": "场景依托",
+          "status": "applied",
+          "effect": "使用已提取主体的现有承托画法"
+        },
+        {
+          "path": "scene.supports[3]",
+          "consumer": "场景依托",
+          "status": "unsupported",
+          "effect": "依托主体尚无可绘制形态"
+        }
+      ],
+      "organization": {
+        "version": "1.0",
+        "strategy": "regional-proposal",
+        "regions": {
+          "village": [
+            [
+              0.32,
+              0.58
+            ],
+            [
+              0.75,
+              0.58
+            ],
+            [
+              0.82,
+              0.85
+            ],
+            [
+              0.28,
+              0.85
+            ]
+          ]
+        },
+        "candidates": [
+          {
+            "layout": "existing",
+            "errors": 0,
+            "cost": 78.743
+          }
+        ],
+        "repairs": [],
+        "limitations": [
+          "几何检查不判定诗意理解或审美合格",
+          "动作时序与整首诗的场景切换尚未编排"
+        ],
+        "graph": {
+          "nodes": [
+            {
+              "id": "l0",
+              "entities": [
+                "i3"
+              ],
+              "tool": "landscape",
+              "role": "terrain",
+              "habitat": null,
+              "inferred": false,
+              "support": null
+            },
+            {
+              "id": "l1",
+              "entities": [
+                "i2"
+              ],
+              "tool": "dwelling",
+              "role": "subject",
+              "habitat": "land",
+              "inferred": false,
+              "support": "l3"
+            },
+            {
+              "id": "l2",
+              "entities": [
+                "i1"
+              ],
+              "tool": "tree",
+              "role": "vegetation",
+              "habitat": "land",
+              "inferred": false,
+              "support": "l3"
+            },
+            {
+              "id": "l3",
+              "entities": [],
+              "tool": "landscape",
+              "role": "terrain",
+              "habitat": null,
+              "inferred": true,
+              "support": null
+            }
+          ],
+          "edges": [
+            {
+              "type": "supported-by",
+              "source": "l1",
+              "target": "l3",
+              "basis": "local-composition",
+              "habitat": "land"
+            },
+            {
+              "type": "supported-by",
+              "source": "l2",
+              "target": "l3",
+              "basis": "local-composition",
+              "habitat": "land"
+            },
+            {
+              "type": "outside",
+              "source": "l2",
+              "target": "l1",
+              "basis": "explicit",
+              "modality": "asserted",
+              "evidence": [
+                "绿树村边合"
+              ]
+            },
+            {
+              "type": "outside",
+              "source": "l0",
+              "basis": "explicit",
+              "modality": "asserted",
+              "evidence": [
+                "青山郭外斜"
+              ]
+            }
+          ],
+          "setting": "village"
+        },
+        "audit": {
+          "scope": "implemented-geometry-and-drawing-gaps",
+          "coverage": {
+            "scope": "extracted-entities-only",
+            "present": 4,
+            "mapped": 3,
+            "parameters": [],
+            "missing": [
+              {
+                "id": "i4",
+                "name": "郭"
+              }
+            ]
+          },
+          "checks": [
+            "presence",
+            "count",
+            "finite",
+            "water-support",
+            "cliff-support",
+            "grove-spread",
+            "drawing-gaps"
+          ],
+          "status": "needs-review",
+          "errors": 0,
+          "review": 2,
+          "issues": [
+            {
+              "code": "unresolved-relation",
+              "severity": "review",
+              "message": "有空间关系尚无对应布局画法"
+            },
+            {
+              "code": "drawing-gaps",
+              "severity": "review",
+              "message": "还有 1 项已提取线索尚未转成画面：郭"
+            }
+          ],
+          "metrics": {
+            "overlapPenalty": 2.719,
+            "balancePenalty": 0.01,
+            "motifFootprint": 1.766,
+            "landArea": 0
+          },
+          "cost": 92.71,
+          "aestheticAcceptance": "pending-user"
+        }
+      },
+      "landscape": {
+        "family": "village",
+        "variant": 0,
+        "label": "临水聚落",
+        "description": "房舍成组落地，烟意有源点，水岸承接聚落",
+        "basis": "local-artistic-choice",
+        "zones": {
+          "shoreline": [
+            [
+              0,
+              0.84
+            ],
+            [
+              0.35,
+              0.89
+            ],
+            [
+              0.64,
+              0.82
+            ],
+            [
+              1,
+              0.75
+            ]
+          ]
+        },
+        "audit": {
+          "scope": "implemented-landscape-constraints",
+          "errors": 0,
+          "issues": [],
+          "aestheticAcceptance": "pending-user"
+        }
+      },
+      "displayAudit": {
+        "scope": "display-scale-separation-and-habitat",
+        "issues": [],
+        "errors": 0,
+        "aestheticAcceptance": "pending-user"
+      }
+    },
+    "omitted": [
+      {
+        "id": "i4",
+        "name": "郭",
+        "reason": "该专名人物、地名或抽象含义暂不作实景补画"
+      }
+    ],
+    "notes": [
+      "村虽被归为地点，仍按原文明示的自然景物匹配；具体空间关系另行处理。",
+      "村：以一组低矮房舍借形村落，不把村的数量当作房屋栋数。这是本地写意借形，保留原词义。",
+      "青山虽被归为地点，仍按原文明示的自然景物匹配；具体空间关系另行处理。",
+      "位置、大小、笔触与默认微动是本地试画选择；数量解释与本地显示数量分别记录。",
+      "未明说的群落数量、疏密、近中远层次与变体均为本地构图选择；种类可按已声明的写意画法概括，不把铺展词换算成精确物体数量。",
+      "房舍下方的淡墨承托是本地构图，不把它当作诗句额外明说的地面或投影。",
+      "先划分承托地形、群落与主体活动区域；场景密度和背景依托是本地构图推断，不冒充原文明示意象。",
+      "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。",
+      "语义保留：scene.groups[3].role，分组成员目前缺少基础画法",
+      "语义保留：scene.groups[3].pattern，分组成员目前缺少基础画法",
+      "语义保留：scene.groups[3].depth，分组成员目前缺少基础画法",
+      "语义保留：scene.supports[3]，依托主体尚无可绘制形态",
+      "整体场景、主次、远近、依托和支持的动作状态来自本次模型解释；具体布局、颜色和时钟倍率由本地视觉策略选择。",
+      "动作动画表现受支持的主导状态与有限观看运动；先后事件与完整因果尚未编排。",
+      "动态程度与默认轻风是可调整的观看选择；不改变数量、主次或原文动作判断。人物保持点景写意，不新增人物步态。",
+      "本地构图候选使用同一份语义；显示数量、原文实体与依据不变。默认按已实现的遮挡与重心指标排序，指标不代表审美验收。",
+      "显示检查覆盖实例尺度、鸟群分离与空中落点；不保证笔触未被遮挡，也不代替实际观看。竹林默认成组拖动，其余单独拖动；Shift 可拖动同层整组。"
+    ],
+    "relations": [],
+    "semanticConsumption": {
+      "version": "3.3",
+      "items": [
+        {
+          "path": "scene.setting",
+          "status": "applied",
+          "consumer": "本地视觉策略",
+          "effect": "整体环境进入场景提案选择",
+          "basis": "inferred",
+          "evidence": [
+            "绿树村边合",
+            "青山郭外斜"
+          ]
+        },
+        {
+          "path": "scene.groups[0].role",
+          "status": "applied",
+          "consumer": "主次布局",
+          "effect": "保留环境群落层次",
+          "basis": "inferred",
+          "evidence": [
+            "绿树村边合"
+          ]
+        },
+        {
+          "path": "scene.groups[0].pattern",
+          "status": "applied",
+          "consumer": "群落布局",
+          "effect": "按 grove 组织显示单元；不覆盖明确数量",
+          "basis": "inferred",
+          "evidence": [
+            "绿树村边合"
+          ]
+        },
+        {
+          "path": "scene.groups[0].depth",
+          "status": "applied",
+          "consumer": "远近布局",
+          "effect": "将 near 转为相对大小、透明度与允许区域内的落点",
+          "basis": "inferred",
+          "evidence": [
+            "绿树村边合"
+          ]
+        },
+        {
+          "path": "scene.groups[1].role",
+          "status": "applied",
+          "consumer": "主次布局",
+          "effect": "主体相对突出",
+          "basis": "inferred",
+          "evidence": [
+            "绿树村边合"
+          ]
+        },
+        {
+          "path": "scene.groups[1].pattern",
+          "status": "applied",
+          "consumer": "群落布局",
+          "effect": "按 single 组织显示单元；不覆盖明确数量",
+          "basis": "inferred",
+          "evidence": [
+            "绿树村边合"
+          ]
+        },
+        {
+          "path": "scene.groups[1].depth",
+          "status": "applied",
+          "consumer": "远近布局",
+          "effect": "将 middle 转为相对大小、透明度与允许区域内的落点",
+          "basis": "inferred",
+          "evidence": [
+            "绿树村边合"
+          ]
+        },
+        {
+          "path": "scene.groups[2].role",
+          "status": "applied",
+          "consumer": "主次布局",
+          "effect": "保留环境画布范围，主次不改变地形边界",
+          "basis": "inferred",
+          "evidence": [
+            "青山郭外斜"
+          ]
+        },
+        {
+          "path": "scene.groups[2].pattern",
+          "status": "skipped",
+          "consumer": "群落布局",
+          "effect": "群落形式未明，保持本地默认",
+          "basis": "inferred",
+          "evidence": [
+            "青山郭外斜"
+          ]
+        },
+        {
+          "path": "scene.groups[2].depth",
+          "status": "applied",
+          "consumer": "远近布局",
+          "effect": "将 far 转为相对大小、透明度与允许区域内的落点",
+          "basis": "inferred",
+          "evidence": [
+            "青山郭外斜"
+          ]
+        },
+        {
+          "path": "scene.groups[3].role",
+          "status": "unsupported",
+          "consumer": "本地视觉策略",
+          "effect": "分组成员目前缺少基础画法",
+          "basis": "inferred",
+          "evidence": [
+            "青山郭外斜"
+          ]
+        },
+        {
+          "path": "scene.groups[3].pattern",
+          "status": "unsupported",
+          "consumer": "本地视觉策略",
+          "effect": "分组成员目前缺少基础画法",
+          "basis": "inferred",
+          "evidence": [
+            "青山郭外斜"
+          ]
+        },
+        {
+          "path": "scene.groups[3].depth",
+          "status": "unsupported",
+          "consumer": "本地视觉策略",
+          "effect": "分组成员目前缺少基础画法",
+          "basis": "inferred",
+          "evidence": [
+            "青山郭外斜"
+          ]
+        },
+        {
+          "path": "scene.supports[0]",
+          "status": "applied",
+          "consumer": "场景依托",
+          "effect": "必要环境以独立推断背景表示，不新增原文实体",
+          "basis": "inferred",
+          "evidence": [
+            "绿树村边合"
+          ]
+        },
+        {
+          "path": "scene.supports[1]",
+          "status": "applied",
+          "consumer": "场景依托",
+          "effect": "必要环境以独立推断背景表示，不新增原文实体",
+          "basis": "inferred",
+          "evidence": [
+            "绿树村边合"
+          ]
+        },
+        {
+          "path": "scene.supports[2]",
+          "status": "applied",
+          "consumer": "场景依托",
+          "effect": "使用已提取主体的现有承托画法",
+          "basis": "inferred",
+          "evidence": [
+            "青山郭外斜"
+          ]
+        },
+        {
+          "path": "scene.supports[3]",
+          "status": "unsupported",
+          "consumer": "场景依托",
+          "effect": "依托主体尚无可绘制形态",
+          "basis": "inferred",
+          "evidence": [
+            "青山郭外斜"
+          ]
+        },
+        {
+          "path": "scene.actions[0].state",
+          "status": "applied",
+          "consumer": "形态与绘画时钟",
+          "effect": "静止姿态并停止该图层时钟",
+          "basis": "inferred",
+          "evidence": [
+            "绿树村边合"
+          ]
+        },
+        {
+          "path": "scene.actions[0].pace",
+          "status": "skipped",
+          "consumer": "本地视觉策略",
+          "effect": "静止状态不推进时钟或位置",
+          "basis": "inferred",
+          "evidence": [
+            "绿树村边合"
+          ]
+        },
+        {
+          "path": "scene.actions[0].direction",
+          "status": "skipped",
+          "consumer": "本地视觉策略",
+          "effect": "静止状态不推进时钟或位置",
+          "basis": "inferred",
+          "evidence": [
+            "绿树村边合"
+          ]
+        },
+        {
+          "path": "scene.actions[1].state",
+          "status": "applied",
+          "consumer": "形态与绘画时钟",
+          "effect": "静止姿态并停止该图层时钟",
+          "basis": "inferred",
+          "evidence": [
+            "青山郭外斜"
+          ]
+        },
+        {
+          "path": "scene.actions[1].pace",
+          "status": "skipped",
+          "consumer": "本地视觉策略",
+          "effect": "静止状态不推进时钟或位置",
+          "basis": "inferred",
+          "evidence": [
+            "青山郭外斜"
+          ]
+        },
+        {
+          "path": "scene.actions[1].direction",
+          "status": "skipped",
+          "consumer": "本地视觉策略",
+          "effect": "静止状态不推进时钟或位置",
+          "basis": "inferred",
+          "evidence": [
+            "青山郭外斜"
+          ]
+        },
+        {
+          "path": "scene.atmosphere.visibility",
+          "status": "applied",
+          "consumer": "画布色层与远景",
+          "effect": "可见度 clear；迷蒙或昏暗时淡化非光源图层",
+          "basis": "inferred",
+          "evidence": [
+            "绿树村边合",
+            "青山郭外斜"
+          ]
+        },
+        {
+          "path": "scene.atmosphere.illumination",
+          "status": "applied",
+          "consumer": "自动光色",
+          "effect": "照明 day 与气息标签共同选择本地 mineral 配色；夜景优先暗底，用户可手动覆盖",
+          "basis": "inferred",
+          "evidence": [
+            "绿树村边合",
+            "青山郭外斜"
+          ]
+        },
+        {
+          "path": "atmosphere.energy",
+          "status": "applied",
+          "consumer": "绘画时钟",
+          "effect": "没有明确动作节奏时，气息强弱控制已有微动的默认时钟"
+        },
+        {
+          "path": "atmosphere.openness",
+          "status": "applied",
+          "consumer": "群落分布与笔触密度",
+          "effect": "开阔度转换为本地间距与工具笔触密度，不等于原文数量"
+        },
+        {
+          "path": "atmosphere.valence",
+          "status": "applied",
+          "consumer": "自动光色",
+          "effect": "先约束昼夜明暗，再按已支持的气息标签和情绪倾向选择配色；不宣称完整情感理解"
+        },
+        {
+          "path": "time.markers",
+          "status": "retained",
+          "consumer": "原始记录与解读",
+          "effect": "保留原文时间标记；本版照明由 scene.atmosphere 转换，多阶段时间逻辑未执行"
+        }
+      ],
+      "summary": {
+        "applied": 19,
+        "partial": 0,
+        "unsupported": 4,
+        "skipped": 5,
+        "retained": 1
+      },
+      "aestheticAcceptance": "pending-user"
+    },
+    "landscapeStyle": {
+      "version": "1.0",
+      "color": "role-and-distance",
+      "motion": "layer-rhythms",
+      "aestheticAcceptance": "pending-user",
+      "candidates": [
+        {
+          "label": "临水聚落",
+          "variant": 0,
+          "errors": 0,
+          "issues": []
+        },
+        {
+          "label": "岸曲屋深",
+          "variant": 1,
+          "errors": 0,
+          "issues": []
+        },
+        {
+          "label": "疏村远照",
+          "variant": 2,
+          "errors": 0,
+          "issues": []
+        }
+      ]
+    },
+    "compositions": [
+      {
+        "id": "village-0",
+        "label": "临水聚落",
+        "description": "房舍成组落地，烟意有源点，水岸承接聚落",
+        "layers": [
+          {
+            "tool": "landscape",
+            "entities": [
+              "i3"
+            ],
+            "projectedEntities": [],
+            "names": [
+              "青山"
+            ],
+            "options": {
+              "form": "mountain"
+            },
+            "animate": false,
+            "placement": {
+              "anchor": [
+                320,
+                194
+              ],
+              "at": [
+                0.5,
+                0.4
+              ],
+              "scale": 1.5
+            },
+            "semanticGroup": {
+              "members": [
+                "i3"
+              ],
+              "role": "environment",
+              "pattern": "unspecified",
+              "depth": "far",
+              "basis": "inferred",
+              "evidence": [
+                "青山郭外斜"
+              ],
+              "index": 2
+            },
+            "semanticEffects": [
+              {
+                "path": "scene.actions[1].state",
+                "consumer": "形态与绘画时钟",
+                "effect": "静止姿态并停止该图层时钟",
+                "status": "applied"
+              },
+              {
+                "path": "scene.groups[2].role",
+                "consumer": "主次布局",
+                "effect": "保留环境画布范围，主次不改变地形边界",
+                "status": "applied"
+              },
+              {
+                "path": "scene.groups[2].pattern",
+                "consumer": "群落布局",
+                "effect": "群落形式未明，保持本地默认",
+                "status": "skipped"
+              },
+              {
+                "path": "scene.groups[2].depth",
+                "consumer": "远近布局",
+                "effect": "将 far 转为相对大小、透明度与允许区域内的落点",
+                "status": "applied"
+              }
+            ],
+            "semanticEnergy": false,
+            "timeScale": 0,
+            "semanticAction": {
+              "entity": "i3",
+              "state": "still",
+              "pace": "unspecified",
+              "direction": "unspecified",
+              "modality": "asserted",
+              "basis": "inferred",
+              "evidence": [
+                "青山郭外斜"
+              ]
+            },
+            "instances": [
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    194
+                  ],
+                  "at": [
+                    0.5,
+                    0.4
+                  ],
+                  "scale": 1.6
+                },
+                "depth": -0.2,
+                "opacity": 0.6,
+                "variant": 0,
+                "tone": "far",
+                "id": "i3:landscape:mountain:0:0"
+              }
+            ],
+            "singleUnit": false,
+            "quantity": {
+              "items": [
+                {
+                  "entity": "i3",
+                  "mode": "unspecified",
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "scope": "unspecified",
+                  "extent": "spread",
+                  "evidence": [
+                    "青山郭外斜"
+                  ],
+                  "basis": "model"
+                }
+              ],
+              "rendered": 1,
+              "exact": false,
+              "collective": true,
+              "partUnsupported": false
+            },
+            "quantityLabel": "整体笔触图层；内部数量尚未适配",
+            "z": -30,
+            "semanticSupport": {
+              "surface": "mountain",
+              "target": "i3",
+              "path": "scene.supports[2]"
+            },
+            "visual": {
+              "role": "mountain",
+              "color": "#427E73",
+              "brushStrength": 1.1
+            },
+            "performance": {
+              "rhythm": "steady",
+              "rate": 1,
+              "amplitude": 1,
+              "phase": 0
+            },
+            "id": "i3:landscape:mountain:0",
+            "interaction": {
+              "mode": "instance",
+              "groupId": "i3:landscape:mountain:0"
+            },
+            "colorCue": {
+              "color": "#427E73",
+              "evidence": "青山郭外斜",
+              "basis": "source-literal"
+            }
+          },
+          {
+            "tool": "dwelling",
+            "entities": [
+              "i2"
+            ],
+            "projectedEntities": [],
+            "names": [
+              "村"
+            ],
+            "options": {
+              "kind": "house"
+            },
+            "animate": true,
+            "placement": {
+              "anchor": [
+                320,
+                307
+              ],
+              "at": [
+                0.55,
+                0.7034666666666667
+              ],
+              "scale": 1.05
+            },
+            "drawingLabel": "房舍",
+            "semanticGroup": {
+              "members": [
+                "i2"
+              ],
+              "role": "subject",
+              "pattern": "single",
+              "depth": "middle",
+              "basis": "inferred",
+              "evidence": [
+                "绿树村边合"
+              ],
+              "index": 1
+            },
+            "semanticEffects": [
+              {
+                "path": "scene.groups[1].role",
+                "consumer": "主次布局",
+                "effect": "主体相对突出",
+                "status": "applied"
+              },
+              {
+                "path": "scene.groups[1].pattern",
+                "consumer": "群落布局",
+                "effect": "按 single 组织显示单元；不覆盖明确数量",
+                "status": "applied"
+              },
+              {
+                "path": "scene.groups[1].depth",
+                "consumer": "远近布局",
+                "effect": "将 middle 转为相对大小、透明度与允许区域内的落点",
+                "status": "applied"
+              }
+            ],
+            "semanticEnergy": true,
+            "timeScale": 0.45,
+            "instances": [
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    307
+                  ],
+                  "at": [
+                    0.43000000000000005,
+                    0.675
+                  ],
+                  "scale": 0.6179800000000001
+                },
+                "depth": 0,
+                "opacity": 0.63,
+                "variant": 0,
+                "tier": "far",
+                "tone": "far",
+                "id": "i2:dwelling::1:0"
+              },
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    307
+                  ],
+                  "at": [
+                    0.55,
+                    0.7368
+                  ],
+                  "scale": 0.7620976
+                },
+                "depth": 10.01,
+                "opacity": 0.84,
+                "variant": 1,
+                "tier": "middle",
+                "tone": "middle",
+                "id": "i2:dwelling::1:1"
+              },
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    307
+                  ],
+                  "at": [
+                    0.67,
+                    0.6986
+                  ],
+                  "scale": 0.6730152
+                },
+                "depth": 0.02,
+                "opacity": 0.63,
+                "variant": 0,
+                "tier": "far",
+                "tone": "far",
+                "id": "i2:dwelling::1:2"
+              }
+            ],
+            "singleUnit": true,
+            "quantity": {
+              "items": [
+                {
+                  "entity": "i2",
+                  "mode": "unspecified",
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "scope": "unspecified",
+                  "extent": "unspecified",
+                  "evidence": [],
+                  "basis": "model"
+                }
+              ],
+              "rendered": 3,
+              "exact": false,
+              "collective": true,
+              "partUnsupported": false
+            },
+            "quantityLabel": "成片分布；本地试画 3 个单元",
+            "z": 9,
+            "grounding": true,
+            "semanticSupport": {
+              "surface": "ground",
+              "target": null,
+              "path": "scene.supports[1]"
+            },
+            "visual": {
+              "role": "architecture",
+              "brushStrength": 1.1
+            },
+            "performance": {
+              "rhythm": "steady",
+              "rate": 1,
+              "amplitude": 1,
+              "phase": 3.8830085198369844
+            },
+            "id": "i2:dwelling::1",
+            "interaction": {
+              "mode": "instance",
+              "groupId": "i2:dwelling::1"
+            }
+          },
+          {
+            "tool": "tree",
+            "entities": [
+              "i1"
+            ],
+            "projectedEntities": [],
+            "names": [
+              "绿树"
+            ],
+            "options": {
+              "form": "broadleaf",
+              "crown": "wash"
+            },
+            "animate": false,
+            "placement": {
+              "anchor": [
+                320,
+                388
+              ],
+              "at": [
+                0.51048,
+                0.73029291005291
+              ],
+              "scale": 1.15
+            },
+            "semanticGroup": {
+              "members": [
+                "i1"
+              ],
+              "role": "environment",
+              "pattern": "grove",
+              "depth": "near",
+              "basis": "inferred",
+              "evidence": [
+                "绿树村边合"
+              ],
+              "index": 0
+            },
+            "semanticEffects": [
+              {
+                "path": "scene.actions[0].state",
+                "consumer": "形态与绘画时钟",
+                "effect": "静止姿态并停止该图层时钟",
+                "status": "applied"
+              },
+              {
+                "path": "scene.groups[0].role",
+                "consumer": "主次布局",
+                "effect": "保留环境群落层次",
+                "status": "applied"
+              },
+              {
+                "path": "scene.groups[0].pattern",
+                "consumer": "群落布局",
+                "effect": "按 grove 组织显示单元；不覆盖明确数量",
+                "status": "applied"
+              },
+              {
+                "path": "scene.groups[0].depth",
+                "consumer": "远近布局",
+                "effect": "将 near 转为相对大小、透明度与允许区域内的落点",
+                "status": "applied"
+              }
+            ],
+            "semanticEnergy": false,
+            "timeScale": 0,
+            "semanticAction": {
+              "entity": "i1",
+              "state": "still",
+              "pace": "unspecified",
+              "direction": "unspecified",
+              "modality": "asserted",
+              "basis": "inferred",
+              "evidence": [
+                "绿树村边合"
+              ]
+            },
+            "instances": [
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    388
+                  ],
+                  "at": [
+                    0.8220000000000001,
+                    0.728611111111111
+                  ],
+                  "scale": 0.6903360000000001
+                },
+                "depth": 20,
+                "opacity": 0.98,
+                "variant": 2,
+                "tier": "near",
+                "tone": "near",
+                "id": "i1:tree:broadleaf:2:0"
+              },
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    388
+                  ],
+                  "at": [
+                    0.20116,
+                    0.7509371428571429
+                  ],
+                  "scale": 0.9372888
+                },
+                "depth": 10.01,
+                "opacity": 0.84,
+                "variant": 1,
+                "tier": "middle",
+                "tone": "middle",
+                "id": "i1:tree:broadleaf:2:1"
+              },
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    388
+                  ],
+                  "at": [
+                    0.8692,
+                    0.6958333333333333
+                  ],
+                  "scale": 0.7846415999999999
+                },
+                "depth": 10.02,
+                "opacity": 0.84,
+                "variant": 1,
+                "tier": "middle",
+                "tone": "middle",
+                "id": "i1:tree:broadleaf:2:2"
+              },
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    388
+                  ],
+                  "at": [
+                    0.033080000000000054,
+                    0.8033257142857142
+                  ],
+                  "scale": 0.6319944000000001
+                },
+                "depth": 20.03,
+                "opacity": 0.98,
+                "variant": 2,
+                "tier": "near",
+                "tone": "near",
+                "id": "i1:tree:broadleaf:2:3"
+              },
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    388
+                  ],
+                  "at": [
+                    0.9164000000000001,
+                    0.6630555555555555
+                  ],
+                  "scale": 0.8789472
+                },
+                "depth": 10.04,
+                "opacity": 0.84,
+                "variant": 1,
+                "tier": "middle",
+                "tone": "middle",
+                "id": "i1:tree:broadleaf:2:4"
+              },
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    388
+                  ],
+                  "at": [
+                    0.08499999999999999,
+                    0.787142857142857
+                  ],
+                  "scale": 0.7263000000000001
+                },
+                "depth": 10.05,
+                "opacity": 0.84,
+                "variant": 1,
+                "tier": "middle",
+                "tone": "middle",
+                "id": "i1:tree:broadleaf:2:5"
+              },
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    388
+                  ],
+                  "at": [
+                    0.9636000000000001,
+                    0.6302777777777777
+                  ],
+                  "scale": 0.9732528000000001
+                },
+                "depth": 20.06,
+                "opacity": 0.98,
+                "variant": 2,
+                "tier": "near",
+                "tone": "near",
+                "id": "i1:tree:broadleaf:2:6"
+              },
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    388
+                  ],
+                  "at": [
+                    0.13691999999999993,
+                    0.77096
+                  ],
+                  "scale": 0.8206055999999999
+                },
+                "depth": 10.07,
+                "opacity": 0.84,
+                "variant": 1,
+                "tier": "middle",
+                "tone": "middle",
+                "id": "i1:tree:broadleaf:2:7"
+              },
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    388
+                  ],
+                  "at": [
+                    0.8108000000000001,
+                    0.7363888888888889
+                  ],
+                  "scale": 0.6679584000000001
+                },
+                "depth": 10.08,
+                "opacity": 0.84,
+                "variant": 1,
+                "tier": "middle",
+                "tone": "middle",
+                "id": "i1:tree:broadleaf:2:8"
+              },
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    388
+                  ],
+                  "at": [
+                    0.1888400000000001,
+                    0.7547771428571428
+                  ],
+                  "scale": 0.9149112000000001
+                },
+                "depth": 20.09,
+                "opacity": 0.98,
+                "variant": 2,
+                "tier": "near",
+                "tone": "near",
+                "id": "i1:tree:broadleaf:2:9"
+              },
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    388
+                  ],
+                  "at": [
+                    0.858,
+                    0.7036111111111111
+                  ],
+                  "scale": 0.7622639999999999
+                },
+                "depth": 10.1,
+                "opacity": 0.84,
+                "variant": 1,
+                "tier": "middle",
+                "tone": "middle",
+                "id": "i1:tree:broadleaf:2:10"
+              },
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    388
+                  ],
+                  "at": [
+                    0.24076000000000003,
+                    0.7385942857142856
+                  ],
+                  "scale": 1.0092168000000001
+                },
+                "depth": 10.11,
+                "opacity": 0.84,
+                "variant": 1,
+                "tier": "middle",
+                "tone": "middle",
+                "id": "i1:tree:broadleaf:2:11"
+              }
+            ],
+            "singleUnit": true,
+            "quantity": {
+              "items": [
+                {
+                  "entity": "i1",
+                  "mode": "many",
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "scope": "group",
+                  "extent": "spread",
+                  "evidence": [
+                    "绿树村边合"
+                  ],
+                  "basis": "model"
+                }
+              ],
+              "rendered": 12,
+              "exact": false,
+              "collective": true,
+              "partUnsupported": false
+            },
+            "quantityLabel": "依场景疏密试画 12 个单元；原文未给精确个体数",
+            "z": 10,
+            "regionalRelation": "outside",
+            "semanticSupport": {
+              "surface": "ground",
+              "target": null,
+              "path": "scene.supports[0]"
+            },
+            "visual": {
+              "role": "vegetation",
+              "brushStrength": 1.2
+            },
+            "performance": {
+              "rhythm": "gust",
+              "rate": 0.62,
+              "amplitude": 0.65,
+              "phase": 1.4828317324943823
+            },
+            "id": "i1:tree:broadleaf:2",
+            "interaction": {
+              "mode": "instance",
+              "groupId": "i1:tree:broadleaf:2"
+            }
+          },
+          {
+            "tool": "landscape",
+            "names": [
+              "构图依托·地面"
+            ],
+            "entities": [],
+            "projectedEntities": [],
+            "options": {
+              "form": "ground",
+              "edge": "soft"
+            },
+            "animate": false,
+            "placement": {
+              "anchor": [
+                320,
+                194
+              ],
+              "at": [
+                0.5,
+                0.51
+              ],
+              "scale": 1.6
+            },
+            "instances": [
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    265
+                  ],
+                  "at": [
+                    0.5,
+                    0.51
+                  ],
+                  "scale": 2.6
+                },
+                "variant": 1,
+                "depth": 0,
+                "opacity": 1,
+                "tier": "middle",
+                "tone": "middle",
+                "id": "inferred:landscape:ground:3:0"
+              }
+            ],
+            "singleUnit": false,
+            "inferred": true,
+            "provenance": {
+              "basis": "local-context",
+              "reason": "村落房舍和环村树木共同落地"
+            },
+            "quantity": {
+              "rendered": 1,
+              "exact": false,
+              "items": []
+            },
+            "quantityLabel": "背景依托，不计入意象覆盖",
+            "z": -18,
+            "semanticEffects": [],
+            "semanticEnergy": false,
+            "visual": {
+              "role": "ground",
+              "brushStrength": 1.1
+            },
+            "performance": {
+              "rhythm": "steady",
+              "rate": 1,
+              "amplitude": 1,
+              "phase": 5.365840252331367
+            },
+            "id": "inferred:landscape:ground:3",
+            "interaction": {
+              "mode": "instance",
+              "groupId": "inferred:landscape:ground:3"
+            }
+          }
+        ],
+        "scene": {
+          "kind": "village",
+          "notes": [
+            "房舍下方的淡墨承托是本地构图，不把它当作诗句额外明说的地面或投影。",
+            "先划分承托地形、群落与主体活动区域；场景密度和背景依托是本地构图推断，不冒充原文明示意象。",
+            "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。"
+          ],
+          "waterline": null,
+          "basis": "local-context",
+          "regions": {
+            "village": [
+              [
+                0.32,
+                0.58
+              ],
+              [
+                0.75,
+                0.58
+              ],
+              [
+                0.82,
+                0.85
+              ],
+              [
+                0.28,
+                0.85
+              ]
+            ]
+          },
+          "supports": [
+            {
+              "form": "ground",
+              "reason": "村落房舍和环村树木共同落地"
+            }
+          ],
+          "semanticSetting": {
+            "kind": "settlement",
+            "basis": "inferred",
+            "evidence": [
+              "绿树村边合",
+              "青山郭外斜"
+            ]
+          },
+          "semanticEffects": [
+            {
+              "path": "scene.supports[0]",
+              "consumer": "场景依托",
+              "status": "applied",
+              "effect": "必要环境以独立推断背景表示，不新增原文实体"
+            },
+            {
+              "path": "scene.supports[1]",
+              "consumer": "场景依托",
+              "status": "applied",
+              "effect": "必要环境以独立推断背景表示，不新增原文实体"
+            },
+            {
+              "path": "scene.supports[2]",
+              "consumer": "场景依托",
+              "status": "applied",
+              "effect": "使用已提取主体的现有承托画法"
+            },
+            {
+              "path": "scene.supports[3]",
+              "consumer": "场景依托",
+              "status": "unsupported",
+              "effect": "依托主体尚无可绘制形态"
+            }
+          ],
+          "organization": {
+            "version": "1.0",
+            "strategy": "regional-proposal",
+            "regions": {
+              "village": [
+                [
+                  0.32,
+                  0.58
+                ],
+                [
+                  0.75,
+                  0.58
+                ],
+                [
+                  0.82,
+                  0.85
+                ],
+                [
+                  0.28,
+                  0.85
+                ]
+              ]
+            },
+            "candidates": [
+              {
+                "layout": "existing",
+                "errors": 0,
+                "cost": 78.743
+              }
+            ],
+            "repairs": [],
+            "limitations": [
+              "几何检查不判定诗意理解或审美合格",
+              "动作时序与整首诗的场景切换尚未编排"
+            ],
+            "graph": {
+              "nodes": [
+                {
+                  "id": "l0",
+                  "entities": [
+                    "i3"
+                  ],
+                  "tool": "landscape",
+                  "role": "terrain",
+                  "habitat": null,
+                  "inferred": false,
+                  "support": null
+                },
+                {
+                  "id": "l1",
+                  "entities": [
+                    "i2"
+                  ],
+                  "tool": "dwelling",
+                  "role": "subject",
+                  "habitat": "land",
+                  "inferred": false,
+                  "support": "l3"
+                },
+                {
+                  "id": "l2",
+                  "entities": [
+                    "i1"
+                  ],
+                  "tool": "tree",
+                  "role": "vegetation",
+                  "habitat": "land",
+                  "inferred": false,
+                  "support": "l3"
+                },
+                {
+                  "id": "l3",
+                  "entities": [],
+                  "tool": "landscape",
+                  "role": "terrain",
+                  "habitat": null,
+                  "inferred": true,
+                  "support": null
+                }
+              ],
+              "edges": [
+                {
+                  "type": "supported-by",
+                  "source": "l1",
+                  "target": "l3",
+                  "basis": "local-composition",
+                  "habitat": "land"
+                },
+                {
+                  "type": "supported-by",
+                  "source": "l2",
+                  "target": "l3",
+                  "basis": "local-composition",
+                  "habitat": "land"
+                },
+                {
+                  "type": "outside",
+                  "source": "l2",
+                  "target": "l1",
+                  "basis": "explicit",
+                  "modality": "asserted",
+                  "evidence": [
+                    "绿树村边合"
+                  ]
+                },
+                {
+                  "type": "outside",
+                  "source": "l0",
+                  "basis": "explicit",
+                  "modality": "asserted",
+                  "evidence": [
+                    "青山郭外斜"
+                  ]
+                }
+              ],
+              "setting": "village"
+            },
+            "audit": {
+              "scope": "implemented-geometry-and-drawing-gaps",
+              "coverage": {
+                "scope": "extracted-entities-only",
+                "present": 4,
+                "mapped": 3,
+                "parameters": [],
+                "missing": [
+                  {
+                    "id": "i4",
+                    "name": "郭"
+                  }
+                ]
+              },
+              "checks": [
+                "presence",
+                "count",
+                "finite",
+                "water-support",
+                "cliff-support",
+                "grove-spread",
+                "drawing-gaps"
+              ],
+              "status": "needs-review",
+              "errors": 0,
+              "review": 2,
+              "issues": [
+                {
+                  "code": "unresolved-relation",
+                  "severity": "review",
+                  "message": "有空间关系尚无对应布局画法"
+                },
+                {
+                  "code": "drawing-gaps",
+                  "severity": "review",
+                  "message": "还有 1 项已提取线索尚未转成画面：郭"
+                }
+              ],
+              "metrics": {
+                "overlapPenalty": 2.719,
+                "balancePenalty": 0.01,
+                "motifFootprint": 1.766,
+                "landArea": 0
+              },
+              "cost": 92.71,
+              "aestheticAcceptance": "pending-user"
+            }
+          },
+          "landscape": {
+            "family": "village",
+            "variant": 0,
+            "label": "临水聚落",
+            "description": "房舍成组落地，烟意有源点，水岸承接聚落",
+            "basis": "local-artistic-choice",
+            "zones": {
+              "shoreline": [
+                [
+                  0,
+                  0.84
+                ],
+                [
+                  0.35,
+                  0.89
+                ],
+                [
+                  0.64,
+                  0.82
+                ],
+                [
+                  1,
+                  0.75
+                ]
+              ]
+            },
+            "audit": {
+              "scope": "implemented-landscape-constraints",
+              "errors": 0,
+              "issues": [],
+              "aestheticAcceptance": "pending-user"
+            }
+          },
+          "displayAudit": {
+            "scope": "display-scale-separation-and-habitat",
+            "issues": [],
+            "errors": 0,
+            "aestheticAcceptance": "pending-user"
+          }
+        },
+        "spatial": [
+          {
+            "type": "outside",
+            "source": "i1",
+            "target": "i2",
+            "modality": "asserted",
+            "basis": "explicit",
+            "evidence": [
+              "绿树村边合"
+            ],
+            "visualized": true,
+            "reason": "关系已由场景区域布局承接；方向、尺度和间距为本地选择"
+          },
+          {
+            "type": "outside",
+            "source": "i3",
+            "target": "i4",
+            "modality": "asserted",
+            "basis": "explicit",
+            "evidence": [
+              "青山郭外斜"
+            ],
+            "visualized": false,
+            "reason": "关系的一端缺少独立画法"
+          }
+        ]
+      },
+      {
+        "id": "village-1",
+        "label": "岸曲屋深",
+        "description": "房舍成组落地，烟意有源点，水岸承接聚落",
+        "layers": [
+          {
+            "tool": "landscape",
+            "entities": [
+              "i3"
+            ],
+            "projectedEntities": [],
+            "names": [
+              "青山"
+            ],
+            "options": {
+              "form": "mountain"
+            },
+            "animate": false,
+            "placement": {
+              "anchor": [
+                320,
+                194
+              ],
+              "at": [
+                0.5,
+                0.4
+              ],
+              "scale": 1.5
+            },
+            "semanticGroup": {
+              "members": [
+                "i3"
+              ],
+              "role": "environment",
+              "pattern": "unspecified",
+              "depth": "far",
+              "basis": "inferred",
+              "evidence": [
+                "青山郭外斜"
+              ],
+              "index": 2
+            },
+            "semanticEffects": [
+              {
+                "path": "scene.actions[1].state",
+                "consumer": "形态与绘画时钟",
+                "effect": "静止姿态并停止该图层时钟",
+                "status": "applied"
+              },
+              {
+                "path": "scene.groups[2].role",
+                "consumer": "主次布局",
+                "effect": "保留环境画布范围，主次不改变地形边界",
+                "status": "applied"
+              },
+              {
+                "path": "scene.groups[2].pattern",
+                "consumer": "群落布局",
+                "effect": "群落形式未明，保持本地默认",
+                "status": "skipped"
+              },
+              {
+                "path": "scene.groups[2].depth",
+                "consumer": "远近布局",
+                "effect": "将 far 转为相对大小、透明度与允许区域内的落点",
+                "status": "applied"
+              }
+            ],
+            "semanticEnergy": false,
+            "timeScale": 0,
+            "semanticAction": {
+              "entity": "i3",
+              "state": "still",
+              "pace": "unspecified",
+              "direction": "unspecified",
+              "modality": "asserted",
+              "basis": "inferred",
+              "evidence": [
+                "青山郭外斜"
+              ]
+            },
+            "instances": [
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    194
+                  ],
+                  "at": [
+                    0.5,
+                    0.4
+                  ],
+                  "scale": 1.6
+                },
+                "depth": -0.2,
+                "opacity": 0.6,
+                "variant": 0,
+                "tone": "far",
+                "id": "i3:landscape:mountain:0:0"
+              }
+            ],
+            "singleUnit": false,
+            "quantity": {
+              "items": [
+                {
+                  "entity": "i3",
+                  "mode": "unspecified",
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "scope": "unspecified",
+                  "extent": "spread",
+                  "evidence": [
+                    "青山郭外斜"
+                  ],
+                  "basis": "model"
+                }
+              ],
+              "rendered": 1,
+              "exact": false,
+              "collective": true,
+              "partUnsupported": false
+            },
+            "quantityLabel": "整体笔触图层；内部数量尚未适配",
+            "z": -30,
+            "semanticSupport": {
+              "surface": "mountain",
+              "target": "i3",
+              "path": "scene.supports[2]"
+            },
+            "visual": {
+              "role": "mountain",
+              "color": "#427E73",
+              "brushStrength": 1.1
+            },
+            "performance": {
+              "rhythm": "steady",
+              "rate": 1,
+              "amplitude": 1,
+              "phase": 0
+            },
+            "id": "i3:landscape:mountain:0",
+            "interaction": {
+              "mode": "instance",
+              "groupId": "i3:landscape:mountain:0"
+            },
+            "colorCue": {
+              "color": "#427E73",
+              "evidence": "青山郭外斜",
+              "basis": "source-literal"
+            }
+          },
+          {
+            "tool": "dwelling",
+            "entities": [
+              "i2"
+            ],
+            "projectedEntities": [],
+            "names": [
+              "村"
+            ],
+            "options": {
+              "kind": "house"
+            },
+            "animate": true,
+            "placement": {
+              "anchor": [
+                320,
+                307
+              ],
+              "at": [
+                0.6799999999999999,
+                0.7034666666666667
+              ],
+              "scale": 1.05
+            },
+            "drawingLabel": "房舍",
+            "semanticGroup": {
+              "members": [
+                "i2"
+              ],
+              "role": "subject",
+              "pattern": "single",
+              "depth": "middle",
+              "basis": "inferred",
+              "evidence": [
+                "绿树村边合"
+              ],
+              "index": 1
+            },
+            "semanticEffects": [
+              {
+                "path": "scene.groups[1].role",
+                "consumer": "主次布局",
+                "effect": "主体相对突出",
+                "status": "applied"
+              },
+              {
+                "path": "scene.groups[1].pattern",
+                "consumer": "群落布局",
+                "effect": "按 single 组织显示单元；不覆盖明确数量",
+                "status": "applied"
+              },
+              {
+                "path": "scene.groups[1].depth",
+                "consumer": "远近布局",
+                "effect": "将 middle 转为相对大小、透明度与允许区域内的落点",
+                "status": "applied"
+              }
+            ],
+            "semanticEnergy": true,
+            "timeScale": 0.45,
+            "instances": [
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    307
+                  ],
+                  "at": [
+                    0.56,
+                    0.675
+                  ],
+                  "scale": 0.6179800000000001
+                },
+                "depth": 0,
+                "opacity": 0.63,
+                "variant": 0,
+                "tier": "far",
+                "tone": "far",
+                "id": "i2:dwelling::1:0"
+              },
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    307
+                  ],
+                  "at": [
+                    0.68,
+                    0.7368
+                  ],
+                  "scale": 0.7620976
+                },
+                "depth": 10.01,
+                "opacity": 0.84,
+                "variant": 1,
+                "tier": "middle",
+                "tone": "middle",
+                "id": "i2:dwelling::1:1"
+              },
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    307
+                  ],
+                  "at": [
+                    0.8,
+                    0.6986
+                  ],
+                  "scale": 0.6730152
+                },
+                "depth": 0.02,
+                "opacity": 0.63,
+                "variant": 0,
+                "tier": "far",
+                "tone": "far",
+                "id": "i2:dwelling::1:2"
+              }
+            ],
+            "singleUnit": true,
+            "quantity": {
+              "items": [
+                {
+                  "entity": "i2",
+                  "mode": "unspecified",
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "scope": "unspecified",
+                  "extent": "unspecified",
+                  "evidence": [],
+                  "basis": "model"
+                }
+              ],
+              "rendered": 3,
+              "exact": false,
+              "collective": true,
+              "partUnsupported": false
+            },
+            "quantityLabel": "成片分布；本地试画 3 个单元",
+            "z": 9,
+            "grounding": true,
+            "semanticSupport": {
+              "surface": "ground",
+              "target": null,
+              "path": "scene.supports[1]"
+            },
+            "visual": {
+              "role": "architecture",
+              "brushStrength": 1.1
+            },
+            "performance": {
+              "rhythm": "steady",
+              "rate": 1,
+              "amplitude": 1,
+              "phase": 3.8830085198369844
+            },
+            "id": "i2:dwelling::1",
+            "interaction": {
+              "mode": "instance",
+              "groupId": "i2:dwelling::1"
+            }
+          },
+          {
+            "tool": "tree",
+            "entities": [
+              "i1"
+            ],
+            "projectedEntities": [],
+            "names": [
+              "绿树"
+            ],
+            "options": {
+              "form": "broadleaf",
+              "crown": "wash"
+            },
+            "animate": false,
+            "placement": {
+              "anchor": [
+                320,
+                388
+              ],
+              "at": [
+                0.51048,
+                0.7489397198879552
+              ],
+              "scale": 1.15
+            },
+            "semanticGroup": {
+              "members": [
+                "i1"
+              ],
+              "role": "environment",
+              "pattern": "grove",
+              "depth": "near",
+              "basis": "inferred",
+              "evidence": [
+                "绿树村边合"
+              ],
+              "index": 0
+            },
+            "semanticEffects": [
+              {
+                "path": "scene.actions[0].state",
+                "consumer": "形态与绘画时钟",
+                "effect": "静止姿态并停止该图层时钟",
+                "status": "applied"
+              },
+              {
+                "path": "scene.groups[0].role",
+                "consumer": "主次布局",
+                "effect": "保留环境群落层次",
+                "status": "applied"
+              },
+              {
+                "path": "scene.groups[0].pattern",
+                "consumer": "群落布局",
+                "effect": "按 grove 组织显示单元；不覆盖明确数量",
+                "status": "applied"
+              },
+              {
+                "path": "scene.groups[0].depth",
+                "consumer": "远近布局",
+                "effect": "将 near 转为相对大小、透明度与允许区域内的落点",
+                "status": "applied"
+              }
+            ],
+            "semanticEnergy": false,
+            "timeScale": 0,
+            "semanticAction": {
+              "entity": "i1",
+              "state": "still",
+              "pace": "unspecified",
+              "direction": "unspecified",
+              "modality": "asserted",
+              "basis": "inferred",
+              "evidence": [
+                "绿树村边合"
+              ]
+            },
+            "instances": [
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    388
+                  ],
+                  "at": [
+                    0.8220000000000001,
+                    0.8357857142857142
+                  ],
+                  "scale": 0.6903360000000001
+                },
+                "depth": 20,
+                "opacity": 0.98,
+                "variant": 2,
+                "tier": "near",
+                "tone": "near",
+                "id": "i1:tree:broadleaf:2:0"
+              },
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    388
+                  ],
+                  "at": [
+                    0.20116,
+                    0.683615294117647
+                  ],
+                  "scale": 0.9372888
+                },
+                "depth": 10.01,
+                "opacity": 0.84,
+                "variant": 1,
+                "tier": "middle",
+                "tone": "middle",
+                "id": "i1:tree:broadleaf:2:1"
+              },
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    388
+                  ],
+                  "at": [
+                    0.8692,
+                    0.8037571428571428
+                  ],
+                  "scale": 0.7846415999999999
+                },
+                "depth": 10.02,
+                "opacity": 0.84,
+                "variant": 1,
+                "tier": "middle",
+                "tone": "middle",
+                "id": "i1:tree:broadleaf:2:2"
+              },
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    388
+                  ],
+                  "at": [
+                    0.033080000000000054,
+                    0.725410588235294
+                  ],
+                  "scale": 0.6319944000000001
+                },
+                "depth": 20.03,
+                "opacity": 0.98,
+                "variant": 2,
+                "tier": "near",
+                "tone": "near",
+                "id": "i1:tree:broadleaf:2:3"
+              },
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    388
+                  ],
+                  "at": [
+                    0.9164000000000001,
+                    0.7717285714285713
+                  ],
+                  "scale": 0.8789472
+                },
+                "depth": 10.04,
+                "opacity": 0.84,
+                "variant": 1,
+                "tier": "middle",
+                "tone": "middle",
+                "id": "i1:tree:broadleaf:2:4"
+              },
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    388
+                  ],
+                  "at": [
+                    0.08499999999999999,
+                    0.7124999999999999
+                  ],
+                  "scale": 0.7263000000000001
+                },
+                "depth": 10.05,
+                "opacity": 0.84,
+                "variant": 1,
+                "tier": "middle",
+                "tone": "middle",
+                "id": "i1:tree:broadleaf:2:5"
+              },
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    388
+                  ],
+                  "at": [
+                    0.9636000000000001,
+                    0.7396999999999998
+                  ],
+                  "scale": 0.9732528000000001
+                },
+                "depth": 20.06,
+                "opacity": 0.98,
+                "variant": 2,
+                "tier": "near",
+                "tone": "near",
+                "id": "i1:tree:broadleaf:2:6"
+              },
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    388
+                  ],
+                  "at": [
+                    0.13691999999999993,
+                    0.6995894117647058
+                  ],
+                  "scale": 0.8206055999999999
+                },
+                "depth": 10.07,
+                "opacity": 0.84,
+                "variant": 1,
+                "tier": "middle",
+                "tone": "middle",
+                "id": "i1:tree:broadleaf:2:7"
+              },
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    388
+                  ],
+                  "at": [
+                    0.8108000000000001,
+                    0.8433857142857143
+                  ],
+                  "scale": 0.6679584000000001
+                },
+                "depth": 10.08,
+                "opacity": 0.84,
+                "variant": 1,
+                "tier": "middle",
+                "tone": "middle",
+                "id": "i1:tree:broadleaf:2:8"
+              },
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    388
+                  ],
+                  "at": [
+                    0.1888400000000001,
+                    0.6866788235294117
+                  ],
+                  "scale": 0.9149112000000001
+                },
+                "depth": 20.09,
+                "opacity": 0.98,
+                "variant": 2,
+                "tier": "near",
+                "tone": "near",
+                "id": "i1:tree:broadleaf:2:9"
+              },
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    388
+                  ],
+                  "at": [
+                    0.858,
+                    0.8113571428571428
+                  ],
+                  "scale": 0.7622639999999999
+                },
+                "depth": 10.1,
+                "opacity": 0.84,
+                "variant": 1,
+                "tier": "middle",
+                "tone": "middle",
+                "id": "i1:tree:broadleaf:2:10"
+              },
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    388
+                  ],
+                  "at": [
+                    0.24076000000000003,
+                    0.6737682352941176
+                  ],
+                  "scale": 1.0092168000000001
+                },
+                "depth": 10.11,
+                "opacity": 0.84,
+                "variant": 1,
+                "tier": "middle",
+                "tone": "middle",
+                "id": "i1:tree:broadleaf:2:11"
+              }
+            ],
+            "singleUnit": true,
+            "quantity": {
+              "items": [
+                {
+                  "entity": "i1",
+                  "mode": "many",
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "scope": "group",
+                  "extent": "spread",
+                  "evidence": [
+                    "绿树村边合"
+                  ],
+                  "basis": "model"
+                }
+              ],
+              "rendered": 12,
+              "exact": false,
+              "collective": true,
+              "partUnsupported": false
+            },
+            "quantityLabel": "依场景疏密试画 12 个单元；原文未给精确个体数",
+            "z": 10,
+            "regionalRelation": "outside",
+            "semanticSupport": {
+              "surface": "ground",
+              "target": null,
+              "path": "scene.supports[0]"
+            },
+            "visual": {
+              "role": "vegetation",
+              "brushStrength": 1.2
+            },
+            "performance": {
+              "rhythm": "gust",
+              "rate": 0.62,
+              "amplitude": 0.65,
+              "phase": 1.4828317324943823
+            },
+            "id": "i1:tree:broadleaf:2",
+            "interaction": {
+              "mode": "instance",
+              "groupId": "i1:tree:broadleaf:2"
+            }
+          },
+          {
+            "tool": "landscape",
+            "names": [
+              "构图依托·地面"
+            ],
+            "entities": [],
+            "projectedEntities": [],
+            "options": {
+              "form": "ground",
+              "edge": "soft"
+            },
+            "animate": false,
+            "placement": {
+              "anchor": [
+                320,
+                194
+              ],
+              "at": [
+                0.5,
+                0.51
+              ],
+              "scale": 1.6
+            },
+            "instances": [
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    265
+                  ],
+                  "at": [
+                    0.5,
+                    0.51
+                  ],
+                  "scale": 2.6
+                },
+                "variant": 1,
+                "depth": 0,
+                "opacity": 1,
+                "tier": "middle",
+                "tone": "middle",
+                "id": "inferred:landscape:ground:3:0"
+              }
+            ],
+            "singleUnit": false,
+            "inferred": true,
+            "provenance": {
+              "basis": "local-context",
+              "reason": "村落房舍和环村树木共同落地"
+            },
+            "quantity": {
+              "rendered": 1,
+              "exact": false,
+              "items": []
+            },
+            "quantityLabel": "背景依托，不计入意象覆盖",
+            "z": -18,
+            "semanticEffects": [],
+            "semanticEnergy": false,
+            "visual": {
+              "role": "ground",
+              "brushStrength": 1.1
+            },
+            "performance": {
+              "rhythm": "steady",
+              "rate": 1,
+              "amplitude": 1,
+              "phase": 5.365840252331367
+            },
+            "id": "inferred:landscape:ground:3",
+            "interaction": {
+              "mode": "instance",
+              "groupId": "inferred:landscape:ground:3"
+            }
+          }
+        ],
+        "scene": {
+          "kind": "village",
+          "notes": [
+            "房舍下方的淡墨承托是本地构图，不把它当作诗句额外明说的地面或投影。",
+            "先划分承托地形、群落与主体活动区域；场景密度和背景依托是本地构图推断，不冒充原文明示意象。",
+            "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。"
+          ],
+          "waterline": null,
+          "basis": "local-context",
+          "regions": {
+            "village": [
+              [
+                0.32,
+                0.58
+              ],
+              [
+                0.75,
+                0.58
+              ],
+              [
+                0.82,
+                0.85
+              ],
+              [
+                0.28,
+                0.85
+              ]
+            ]
+          },
+          "supports": [
+            {
+              "form": "ground",
+              "reason": "村落房舍和环村树木共同落地"
+            }
+          ],
+          "semanticSetting": {
+            "kind": "settlement",
+            "basis": "inferred",
+            "evidence": [
+              "绿树村边合",
+              "青山郭外斜"
+            ]
+          },
+          "semanticEffects": [
+            {
+              "path": "scene.supports[0]",
+              "consumer": "场景依托",
+              "status": "applied",
+              "effect": "必要环境以独立推断背景表示，不新增原文实体"
+            },
+            {
+              "path": "scene.supports[1]",
+              "consumer": "场景依托",
+              "status": "applied",
+              "effect": "必要环境以独立推断背景表示，不新增原文实体"
+            },
+            {
+              "path": "scene.supports[2]",
+              "consumer": "场景依托",
+              "status": "applied",
+              "effect": "使用已提取主体的现有承托画法"
+            },
+            {
+              "path": "scene.supports[3]",
+              "consumer": "场景依托",
+              "status": "unsupported",
+              "effect": "依托主体尚无可绘制形态"
+            }
+          ],
+          "organization": {
+            "version": "1.0",
+            "strategy": "regional-proposal",
+            "regions": {
+              "village": [
+                [
+                  0.32,
+                  0.58
+                ],
+                [
+                  0.75,
+                  0.58
+                ],
+                [
+                  0.82,
+                  0.85
+                ],
+                [
+                  0.28,
+                  0.85
+                ]
+              ]
+            },
+            "candidates": [
+              {
+                "layout": "existing",
+                "errors": 0,
+                "cost": 78.743
+              }
+            ],
+            "repairs": [],
+            "limitations": [
+              "几何检查不判定诗意理解或审美合格",
+              "动作时序与整首诗的场景切换尚未编排"
+            ],
+            "graph": {
+              "nodes": [
+                {
+                  "id": "l0",
+                  "entities": [
+                    "i3"
+                  ],
+                  "tool": "landscape",
+                  "role": "terrain",
+                  "habitat": null,
+                  "inferred": false,
+                  "support": null
+                },
+                {
+                  "id": "l1",
+                  "entities": [
+                    "i2"
+                  ],
+                  "tool": "dwelling",
+                  "role": "subject",
+                  "habitat": "land",
+                  "inferred": false,
+                  "support": "l3"
+                },
+                {
+                  "id": "l2",
+                  "entities": [
+                    "i1"
+                  ],
+                  "tool": "tree",
+                  "role": "vegetation",
+                  "habitat": "land",
+                  "inferred": false,
+                  "support": "l3"
+                },
+                {
+                  "id": "l3",
+                  "entities": [],
+                  "tool": "landscape",
+                  "role": "terrain",
+                  "habitat": null,
+                  "inferred": true,
+                  "support": null
+                }
+              ],
+              "edges": [
+                {
+                  "type": "supported-by",
+                  "source": "l1",
+                  "target": "l3",
+                  "basis": "local-composition",
+                  "habitat": "land"
+                },
+                {
+                  "type": "supported-by",
+                  "source": "l2",
+                  "target": "l3",
+                  "basis": "local-composition",
+                  "habitat": "land"
+                },
+                {
+                  "type": "outside",
+                  "source": "l2",
+                  "target": "l1",
+                  "basis": "explicit",
+                  "modality": "asserted",
+                  "evidence": [
+                    "绿树村边合"
+                  ]
+                },
+                {
+                  "type": "outside",
+                  "source": "l0",
+                  "basis": "explicit",
+                  "modality": "asserted",
+                  "evidence": [
+                    "青山郭外斜"
+                  ]
+                }
+              ],
+              "setting": "village"
+            },
+            "audit": {
+              "scope": "implemented-geometry-and-drawing-gaps",
+              "coverage": {
+                "scope": "extracted-entities-only",
+                "present": 4,
+                "mapped": 3,
+                "parameters": [],
+                "missing": [
+                  {
+                    "id": "i4",
+                    "name": "郭"
+                  }
+                ]
+              },
+              "checks": [
+                "presence",
+                "count",
+                "finite",
+                "water-support",
+                "cliff-support",
+                "grove-spread",
+                "drawing-gaps"
+              ],
+              "status": "needs-review",
+              "errors": 0,
+              "review": 2,
+              "issues": [
+                {
+                  "code": "unresolved-relation",
+                  "severity": "review",
+                  "message": "有空间关系尚无对应布局画法"
+                },
+                {
+                  "code": "drawing-gaps",
+                  "severity": "review",
+                  "message": "还有 1 项已提取线索尚未转成画面：郭"
+                }
+              ],
+              "metrics": {
+                "overlapPenalty": 7.192,
+                "balancePenalty": 0.019,
+                "motifFootprint": 1.766,
+                "landArea": 0
+              },
+              "cost": 146.455,
+              "aestheticAcceptance": "pending-user"
+            }
+          },
+          "landscape": {
+            "family": "village",
+            "variant": 1,
+            "label": "岸曲屋深",
+            "description": "房舍成组落地，烟意有源点，水岸承接聚落",
+            "basis": "local-artistic-choice",
+            "zones": {
+              "shoreline": [
+                [
+                  0,
+                  0.76
+                ],
+                [
+                  0.34,
+                  0.83
+                ],
+                [
+                  0.72,
+                  0.91
+                ],
+                [
+                  1,
+                  0.86
+                ]
+              ]
+            },
+            "audit": {
+              "scope": "implemented-landscape-constraints",
+              "errors": 0,
+              "issues": [],
+              "aestheticAcceptance": "pending-user"
+            }
+          },
+          "displayAudit": {
+            "scope": "display-scale-separation-and-habitat",
+            "issues": [],
+            "errors": 0,
+            "aestheticAcceptance": "pending-user"
+          }
+        },
+        "spatial": [
+          {
+            "type": "outside",
+            "source": "i1",
+            "target": "i2",
+            "modality": "asserted",
+            "basis": "explicit",
+            "evidence": [
+              "绿树村边合"
+            ],
+            "visualized": true,
+            "reason": "关系已由场景区域布局承接；方向、尺度和间距为本地选择"
+          },
+          {
+            "type": "outside",
+            "source": "i3",
+            "target": "i4",
+            "modality": "asserted",
+            "basis": "explicit",
+            "evidence": [
+              "青山郭外斜"
+            ],
+            "visualized": false,
+            "reason": "关系的一端缺少独立画法"
+          }
+        ]
+      },
+      {
+        "id": "village-2",
+        "label": "疏村远照",
+        "description": "房舍成组落地，烟意有源点，水岸承接聚落",
+        "layers": [
+          {
+            "tool": "landscape",
+            "entities": [
+              "i3"
+            ],
+            "projectedEntities": [],
+            "names": [
+              "青山"
+            ],
+            "options": {
+              "form": "mountain"
+            },
+            "animate": false,
+            "placement": {
+              "anchor": [
+                320,
+                194
+              ],
+              "at": [
+                0.5,
+                0.4
+              ],
+              "scale": 1.5
+            },
+            "semanticGroup": {
+              "members": [
+                "i3"
+              ],
+              "role": "environment",
+              "pattern": "unspecified",
+              "depth": "far",
+              "basis": "inferred",
+              "evidence": [
+                "青山郭外斜"
+              ],
+              "index": 2
+            },
+            "semanticEffects": [
+              {
+                "path": "scene.actions[1].state",
+                "consumer": "形态与绘画时钟",
+                "effect": "静止姿态并停止该图层时钟",
+                "status": "applied"
+              },
+              {
+                "path": "scene.groups[2].role",
+                "consumer": "主次布局",
+                "effect": "保留环境画布范围，主次不改变地形边界",
+                "status": "applied"
+              },
+              {
+                "path": "scene.groups[2].pattern",
+                "consumer": "群落布局",
+                "effect": "群落形式未明，保持本地默认",
+                "status": "skipped"
+              },
+              {
+                "path": "scene.groups[2].depth",
+                "consumer": "远近布局",
+                "effect": "将 far 转为相对大小、透明度与允许区域内的落点",
+                "status": "applied"
+              }
+            ],
+            "semanticEnergy": false,
+            "timeScale": 0,
+            "semanticAction": {
+              "entity": "i3",
+              "state": "still",
+              "pace": "unspecified",
+              "direction": "unspecified",
+              "modality": "asserted",
+              "basis": "inferred",
+              "evidence": [
+                "青山郭外斜"
+              ]
+            },
+            "instances": [
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    194
+                  ],
+                  "at": [
+                    0.5,
+                    0.4
+                  ],
+                  "scale": 1.6
+                },
+                "depth": -0.2,
+                "opacity": 0.6,
+                "variant": 0,
+                "tone": "far",
+                "id": "i3:landscape:mountain:0:0"
+              }
+            ],
+            "singleUnit": false,
+            "quantity": {
+              "items": [
+                {
+                  "entity": "i3",
+                  "mode": "unspecified",
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "scope": "unspecified",
+                  "extent": "spread",
+                  "evidence": [
+                    "青山郭外斜"
+                  ],
+                  "basis": "model"
+                }
+              ],
+              "rendered": 1,
+              "exact": false,
+              "collective": true,
+              "partUnsupported": false
+            },
+            "quantityLabel": "整体笔触图层；内部数量尚未适配",
+            "z": -30,
+            "semanticSupport": {
+              "surface": "mountain",
+              "target": "i3",
+              "path": "scene.supports[2]"
+            },
+            "visual": {
+              "role": "mountain",
+              "color": "#427E73",
+              "brushStrength": 1.1
+            },
+            "performance": {
+              "rhythm": "steady",
+              "rate": 1,
+              "amplitude": 1,
+              "phase": 0
+            },
+            "id": "i3:landscape:mountain:0",
+            "interaction": {
+              "mode": "instance",
+              "groupId": "i3:landscape:mountain:0"
+            },
+            "colorCue": {
+              "color": "#427E73",
+              "evidence": "青山郭外斜",
+              "basis": "source-literal"
+            }
+          },
+          {
+            "tool": "dwelling",
+            "entities": [
+              "i2"
+            ],
+            "projectedEntities": [],
+            "names": [
+              "村"
+            ],
+            "options": {
+              "kind": "house"
+            },
+            "animate": true,
+            "placement": {
+              "anchor": [
+                320,
+                307
+              ],
+              "at": [
+                0.3400000000000001,
+                0.7034666666666667
+              ],
+              "scale": 1.05
+            },
+            "drawingLabel": "房舍",
+            "semanticGroup": {
+              "members": [
+                "i2"
+              ],
+              "role": "subject",
+              "pattern": "single",
+              "depth": "middle",
+              "basis": "inferred",
+              "evidence": [
+                "绿树村边合"
+              ],
+              "index": 1
+            },
+            "semanticEffects": [
+              {
+                "path": "scene.groups[1].role",
+                "consumer": "主次布局",
+                "effect": "主体相对突出",
+                "status": "applied"
+              },
+              {
+                "path": "scene.groups[1].pattern",
+                "consumer": "群落布局",
+                "effect": "按 single 组织显示单元；不覆盖明确数量",
+                "status": "applied"
+              },
+              {
+                "path": "scene.groups[1].depth",
+                "consumer": "远近布局",
+                "effect": "将 middle 转为相对大小、透明度与允许区域内的落点",
+                "status": "applied"
+              }
+            ],
+            "semanticEnergy": true,
+            "timeScale": 0.45,
+            "instances": [
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    307
+                  ],
+                  "at": [
+                    0.22000000000000003,
+                    0.675
+                  ],
+                  "scale": 0.6179800000000001
+                },
+                "depth": 0,
+                "opacity": 0.63,
+                "variant": 0,
+                "tier": "far",
+                "tone": "far",
+                "id": "i2:dwelling::1:0"
+              },
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    307
+                  ],
+                  "at": [
+                    0.34,
+                    0.7368
+                  ],
+                  "scale": 0.7620976
+                },
+                "depth": 10.01,
+                "opacity": 0.84,
+                "variant": 1,
+                "tier": "middle",
+                "tone": "middle",
+                "id": "i2:dwelling::1:1"
+              },
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    307
+                  ],
+                  "at": [
+                    0.46,
+                    0.6986
+                  ],
+                  "scale": 0.6730152
+                },
+                "depth": 0.02,
+                "opacity": 0.63,
+                "variant": 0,
+                "tier": "far",
+                "tone": "far",
+                "id": "i2:dwelling::1:2"
+              }
+            ],
+            "singleUnit": true,
+            "quantity": {
+              "items": [
+                {
+                  "entity": "i2",
+                  "mode": "unspecified",
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "scope": "unspecified",
+                  "extent": "unspecified",
+                  "evidence": [],
+                  "basis": "model"
+                }
+              ],
+              "rendered": 3,
+              "exact": false,
+              "collective": true,
+              "partUnsupported": false
+            },
+            "quantityLabel": "成片分布；本地试画 3 个单元",
+            "z": 9,
+            "grounding": true,
+            "semanticSupport": {
+              "surface": "ground",
+              "target": null,
+              "path": "scene.supports[1]"
+            },
+            "visual": {
+              "role": "architecture",
+              "brushStrength": 1.1
+            },
+            "performance": {
+              "rhythm": "steady",
+              "rate": 1,
+              "amplitude": 1,
+              "phase": 3.8830085198369844
+            },
+            "id": "i2:dwelling::1",
+            "interaction": {
+              "mode": "instance",
+              "groupId": "i2:dwelling::1"
+            }
+          },
+          {
+            "tool": "tree",
+            "entities": [
+              "i1"
+            ],
+            "projectedEntities": [],
+            "names": [
+              "绿树"
+            ],
+            "options": {
+              "form": "broadleaf",
+              "crown": "wash"
+            },
+            "animate": false,
+            "placement": {
+              "anchor": [
+                320,
+                388
+              ],
+              "at": [
+                0.51048,
+                0.7695920634920637
+              ],
+              "scale": 1.15
+            },
+            "semanticGroup": {
+              "members": [
+                "i1"
+              ],
+              "role": "environment",
+              "pattern": "grove",
+              "depth": "near",
+              "basis": "inferred",
+              "evidence": [
+                "绿树村边合"
+              ],
+              "index": 0
+            },
+            "semanticEffects": [
+              {
+                "path": "scene.actions[0].state",
+                "consumer": "形态与绘画时钟",
+                "effect": "静止姿态并停止该图层时钟",
+                "status": "applied"
+              },
+              {
+                "path": "scene.groups[0].role",
+                "consumer": "主次布局",
+                "effect": "保留环境群落层次",
+                "status": "applied"
+              },
+              {
+                "path": "scene.groups[0].pattern",
+                "consumer": "群落布局",
+                "effect": "按 grove 组织显示单元；不覆盖明确数量",
+                "status": "applied"
+              },
+              {
+                "path": "scene.groups[0].depth",
+                "consumer": "远近布局",
+                "effect": "将 near 转为相对大小、透明度与允许区域内的落点",
+                "status": "applied"
+              }
+            ],
+            "semanticEnergy": false,
+            "timeScale": 0,
+            "semanticAction": {
+              "entity": "i1",
+              "state": "still",
+              "pace": "unspecified",
+              "direction": "unspecified",
+              "modality": "asserted",
+              "basis": "inferred",
+              "evidence": [
+                "绿树村边合"
+              ]
+            },
+            "instances": [
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    388
+                  ],
+                  "at": [
+                    0.8220000000000001,
+                    0.79704
+                  ],
+                  "scale": 0.6903360000000001
+                },
+                "depth": 20,
+                "opacity": 0.98,
+                "variant": 2,
+                "tier": "near",
+                "tone": "near",
+                "id": "i1:tree:broadleaf:2:0"
+              },
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    388
+                  ],
+                  "at": [
+                    0.20116,
+                    0.7143047619047619
+                  ],
+                  "scale": 0.9372888
+                },
+                "depth": 10.01,
+                "opacity": 0.84,
+                "variant": 1,
+                "tier": "middle",
+                "tone": "middle",
+                "id": "i1:tree:broadleaf:2:1"
+              },
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    388
+                  ],
+                  "at": [
+                    0.8692,
+                    0.788544
+                  ],
+                  "scale": 0.7846415999999999
+                },
+                "depth": 10.02,
+                "opacity": 0.84,
+                "variant": 1,
+                "tier": "middle",
+                "tone": "middle",
+                "id": "i1:tree:broadleaf:2:2"
+              },
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    388
+                  ],
+                  "at": [
+                    0.033080000000000054,
+                    0.8307238095238094
+                  ],
+                  "scale": 0.6319944000000001
+                },
+                "depth": 20.03,
+                "opacity": 0.98,
+                "variant": 2,
+                "tier": "near",
+                "tone": "near",
+                "id": "i1:tree:broadleaf:2:3"
+              },
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    388
+                  ],
+                  "at": [
+                    0.9164000000000001,
+                    0.780048
+                  ],
+                  "scale": 0.8789472
+                },
+                "depth": 10.04,
+                "opacity": 0.84,
+                "variant": 1,
+                "tier": "middle",
+                "tone": "middle",
+                "id": "i1:tree:broadleaf:2:4"
+              },
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    388
+                  ],
+                  "at": [
+                    0.08499999999999999,
+                    0.7947619047619047
+                  ],
+                  "scale": 0.7263000000000001
+                },
+                "depth": 10.05,
+                "opacity": 0.84,
+                "variant": 1,
+                "tier": "middle",
+                "tone": "middle",
+                "id": "i1:tree:broadleaf:2:5"
+              },
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    388
+                  ],
+                  "at": [
+                    0.9636000000000001,
+                    0.771552
+                  ],
+                  "scale": 0.9732528000000001
+                },
+                "depth": 20.06,
+                "opacity": 0.98,
+                "variant": 2,
+                "tier": "near",
+                "tone": "near",
+                "id": "i1:tree:broadleaf:2:6"
+              },
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    388
+                  ],
+                  "at": [
+                    0.13691999999999993,
+                    0.7588
+                  ],
+                  "scale": 0.8206055999999999
+                },
+                "depth": 10.07,
+                "opacity": 0.84,
+                "variant": 1,
+                "tier": "middle",
+                "tone": "middle",
+                "id": "i1:tree:broadleaf:2:7"
+              },
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    388
+                  ],
+                  "at": [
+                    0.8108000000000001,
+                    0.799056
+                  ],
+                  "scale": 0.6679584000000001
+                },
+                "depth": 10.08,
+                "opacity": 0.84,
+                "variant": 1,
+                "tier": "middle",
+                "tone": "middle",
+                "id": "i1:tree:broadleaf:2:8"
+              },
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    388
+                  ],
+                  "at": [
+                    0.1888400000000001,
+                    0.7228380952380952
+                  ],
+                  "scale": 0.9149112000000001
+                },
+                "depth": 20.09,
+                "opacity": 0.98,
+                "variant": 2,
+                "tier": "near",
+                "tone": "near",
+                "id": "i1:tree:broadleaf:2:9"
+              },
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    388
+                  ],
+                  "at": [
+                    0.858,
+                    0.7905599999999999
+                  ],
+                  "scale": 0.7622639999999999
+                },
+                "depth": 10.1,
+                "opacity": 0.84,
+                "variant": 1,
+                "tier": "middle",
+                "tone": "middle",
+                "id": "i1:tree:broadleaf:2:10"
+              },
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    388
+                  ],
+                  "at": [
+                    0.24076000000000003,
+                    0.6868761904761904
+                  ],
+                  "scale": 1.0092168000000001
+                },
+                "depth": 10.11,
+                "opacity": 0.84,
+                "variant": 1,
+                "tier": "middle",
+                "tone": "middle",
+                "id": "i1:tree:broadleaf:2:11"
+              }
+            ],
+            "singleUnit": true,
+            "quantity": {
+              "items": [
+                {
+                  "entity": "i1",
+                  "mode": "many",
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "scope": "group",
+                  "extent": "spread",
+                  "evidence": [
+                    "绿树村边合"
+                  ],
+                  "basis": "model"
+                }
+              ],
+              "rendered": 12,
+              "exact": false,
+              "collective": true,
+              "partUnsupported": false
+            },
+            "quantityLabel": "依场景疏密试画 12 个单元；原文未给精确个体数",
+            "z": 10,
+            "regionalRelation": "outside",
+            "semanticSupport": {
+              "surface": "ground",
+              "target": null,
+              "path": "scene.supports[0]"
+            },
+            "visual": {
+              "role": "vegetation",
+              "brushStrength": 1.2
+            },
+            "performance": {
+              "rhythm": "gust",
+              "rate": 0.62,
+              "amplitude": 0.65,
+              "phase": 1.4828317324943823
+            },
+            "id": "i1:tree:broadleaf:2",
+            "interaction": {
+              "mode": "instance",
+              "groupId": "i1:tree:broadleaf:2"
+            }
+          },
+          {
+            "tool": "landscape",
+            "names": [
+              "构图依托·地面"
+            ],
+            "entities": [],
+            "projectedEntities": [],
+            "options": {
+              "form": "ground",
+              "edge": "soft"
+            },
+            "animate": false,
+            "placement": {
+              "anchor": [
+                320,
+                194
+              ],
+              "at": [
+                0.5,
+                0.51
+              ],
+              "scale": 1.6
+            },
+            "instances": [
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    265
+                  ],
+                  "at": [
+                    0.5,
+                    0.51
+                  ],
+                  "scale": 2.6
+                },
+                "variant": 1,
+                "depth": 0,
+                "opacity": 1,
+                "tier": "middle",
+                "tone": "middle",
+                "id": "inferred:landscape:ground:3:0"
+              }
+            ],
+            "singleUnit": false,
+            "inferred": true,
+            "provenance": {
+              "basis": "local-context",
+              "reason": "村落房舍和环村树木共同落地"
+            },
+            "quantity": {
+              "rendered": 1,
+              "exact": false,
+              "items": []
+            },
+            "quantityLabel": "背景依托，不计入意象覆盖",
+            "z": -18,
+            "semanticEffects": [],
+            "semanticEnergy": false,
+            "visual": {
+              "role": "ground",
+              "brushStrength": 1.1
+            },
+            "performance": {
+              "rhythm": "steady",
+              "rate": 1,
+              "amplitude": 1,
+              "phase": 5.365840252331367
+            },
+            "id": "inferred:landscape:ground:3",
+            "interaction": {
+              "mode": "instance",
+              "groupId": "inferred:landscape:ground:3"
+            }
+          }
+        ],
+        "scene": {
+          "kind": "village",
+          "notes": [
+            "房舍下方的淡墨承托是本地构图，不把它当作诗句额外明说的地面或投影。",
+            "先划分承托地形、群落与主体活动区域；场景密度和背景依托是本地构图推断，不冒充原文明示意象。",
+            "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。"
+          ],
+          "waterline": null,
+          "basis": "local-context",
+          "regions": {
+            "village": [
+              [
+                0.32,
+                0.58
+              ],
+              [
+                0.75,
+                0.58
+              ],
+              [
+                0.82,
+                0.85
+              ],
+              [
+                0.28,
+                0.85
+              ]
+            ]
+          },
+          "supports": [
+            {
+              "form": "ground",
+              "reason": "村落房舍和环村树木共同落地"
+            }
+          ],
+          "semanticSetting": {
+            "kind": "settlement",
+            "basis": "inferred",
+            "evidence": [
+              "绿树村边合",
+              "青山郭外斜"
+            ]
+          },
+          "semanticEffects": [
+            {
+              "path": "scene.supports[0]",
+              "consumer": "场景依托",
+              "status": "applied",
+              "effect": "必要环境以独立推断背景表示，不新增原文实体"
+            },
+            {
+              "path": "scene.supports[1]",
+              "consumer": "场景依托",
+              "status": "applied",
+              "effect": "必要环境以独立推断背景表示，不新增原文实体"
+            },
+            {
+              "path": "scene.supports[2]",
+              "consumer": "场景依托",
+              "status": "applied",
+              "effect": "使用已提取主体的现有承托画法"
+            },
+            {
+              "path": "scene.supports[3]",
+              "consumer": "场景依托",
+              "status": "unsupported",
+              "effect": "依托主体尚无可绘制形态"
+            }
+          ],
+          "organization": {
+            "version": "1.0",
+            "strategy": "regional-proposal",
+            "regions": {
+              "village": [
+                [
+                  0.32,
+                  0.58
+                ],
+                [
+                  0.75,
+                  0.58
+                ],
+                [
+                  0.82,
+                  0.85
+                ],
+                [
+                  0.28,
+                  0.85
+                ]
+              ]
+            },
+            "candidates": [
+              {
+                "layout": "existing",
+                "errors": 0,
+                "cost": 78.743
+              }
+            ],
+            "repairs": [],
+            "limitations": [
+              "几何检查不判定诗意理解或审美合格",
+              "动作时序与整首诗的场景切换尚未编排"
+            ],
+            "graph": {
+              "nodes": [
+                {
+                  "id": "l0",
+                  "entities": [
+                    "i3"
+                  ],
+                  "tool": "landscape",
+                  "role": "terrain",
+                  "habitat": null,
+                  "inferred": false,
+                  "support": null
+                },
+                {
+                  "id": "l1",
+                  "entities": [
+                    "i2"
+                  ],
+                  "tool": "dwelling",
+                  "role": "subject",
+                  "habitat": "land",
+                  "inferred": false,
+                  "support": "l3"
+                },
+                {
+                  "id": "l2",
+                  "entities": [
+                    "i1"
+                  ],
+                  "tool": "tree",
+                  "role": "vegetation",
+                  "habitat": "land",
+                  "inferred": false,
+                  "support": "l3"
+                },
+                {
+                  "id": "l3",
+                  "entities": [],
+                  "tool": "landscape",
+                  "role": "terrain",
+                  "habitat": null,
+                  "inferred": true,
+                  "support": null
+                }
+              ],
+              "edges": [
+                {
+                  "type": "supported-by",
+                  "source": "l1",
+                  "target": "l3",
+                  "basis": "local-composition",
+                  "habitat": "land"
+                },
+                {
+                  "type": "supported-by",
+                  "source": "l2",
+                  "target": "l3",
+                  "basis": "local-composition",
+                  "habitat": "land"
+                },
+                {
+                  "type": "outside",
+                  "source": "l2",
+                  "target": "l1",
+                  "basis": "explicit",
+                  "modality": "asserted",
+                  "evidence": [
+                    "绿树村边合"
+                  ]
+                },
+                {
+                  "type": "outside",
+                  "source": "l0",
+                  "basis": "explicit",
+                  "modality": "asserted",
+                  "evidence": [
+                    "青山郭外斜"
+                  ]
+                }
+              ],
+              "setting": "village"
+            },
+            "audit": {
+              "scope": "implemented-geometry-and-drawing-gaps",
+              "coverage": {
+                "scope": "extracted-entities-only",
+                "present": 4,
+                "mapped": 3,
+                "parameters": [],
+                "missing": [
+                  {
+                    "id": "i4",
+                    "name": "郭"
+                  }
+                ]
+              },
+              "checks": [
+                "presence",
+                "count",
+                "finite",
+                "water-support",
+                "cliff-support",
+                "grove-spread",
+                "drawing-gaps"
+              ],
+              "status": "needs-review",
+              "errors": 0,
+              "review": 2,
+              "issues": [
+                {
+                  "code": "unresolved-relation",
+                  "severity": "review",
+                  "message": "有空间关系尚无对应布局画法"
+                },
+                {
+                  "code": "drawing-gaps",
+                  "severity": "review",
+                  "message": "还有 1 项已提取线索尚未转成画面：郭"
+                }
+              ],
+              "metrics": {
+                "overlapPenalty": 7.4,
+                "balancePenalty": 0.005,
+                "motifFootprint": 1.766,
+                "landArea": 0
+              },
+              "cost": 148.845,
+              "aestheticAcceptance": "pending-user"
+            }
+          },
+          "landscape": {
+            "family": "village",
+            "variant": 2,
+            "label": "疏村远照",
+            "description": "房舍成组落地，烟意有源点，水岸承接聚落",
+            "basis": "local-artistic-choice",
+            "zones": {
+              "shoreline": [
+                [
+                  0,
+                  0.88
+                ],
+                [
+                  0.42,
+                  0.78
+                ],
+                [
+                  0.75,
+                  0.83
+                ],
+                [
+                  1,
+                  0.91
+                ]
+              ]
+            },
+            "audit": {
+              "scope": "implemented-landscape-constraints",
+              "errors": 0,
+              "issues": [],
+              "aestheticAcceptance": "pending-user"
+            }
+          },
+          "displayAudit": {
+            "scope": "display-scale-separation-and-habitat",
+            "issues": [],
+            "errors": 0,
+            "aestheticAcceptance": "pending-user"
+          }
+        },
+        "spatial": [
+          {
+            "type": "outside",
+            "source": "i1",
+            "target": "i2",
+            "modality": "asserted",
+            "basis": "explicit",
+            "evidence": [
+              "绿树村边合"
+            ],
+            "visualized": true,
+            "reason": "关系已由场景区域布局承接；方向、尺度和间距为本地选择"
+          },
+          {
+            "type": "outside",
+            "source": "i3",
+            "target": "i4",
+            "modality": "asserted",
+            "basis": "explicit",
+            "evidence": [
+              "青山郭外斜"
+            ],
+            "visualized": false,
+            "reason": "关系的一端缺少独立画法"
+          }
+        ]
+      }
+    ],
+    "composition": "village-0",
+    "compositionSelection": {
+      "method": "final-display-constraints-then-geometric-preference",
+      "candidates": [
+        {
+          "id": "village-0",
+          "errors": 0,
+          "score": 141.792
+        },
+        {
+          "id": "village-1",
+          "errors": 0,
+          "score": 276.177
+        },
+        {
+          "id": "village-2",
+          "errors": 0,
+          "score": 282.115
+        }
+      ],
+      "aestheticAcceptance": "pending-user"
+    },
+    "imageryTrace": [
+      {
+        "id": "i1",
+        "mentions": [
+          "绿树"
+        ],
+        "role": "scene",
+        "presence": "present",
+        "parameter": null,
+        "layers": [
+          {
+            "id": "i1:tree:broadleaf:2",
+            "tool": "tree",
+            "instances": [
+              "i1:tree:broadleaf:2:0",
+              "i1:tree:broadleaf:2:1",
+              "i1:tree:broadleaf:2:2",
+              "i1:tree:broadleaf:2:3",
+              "i1:tree:broadleaf:2:4",
+              "i1:tree:broadleaf:2:5",
+              "i1:tree:broadleaf:2:6",
+              "i1:tree:broadleaf:2:7",
+              "i1:tree:broadleaf:2:8",
+              "i1:tree:broadleaf:2:9",
+              "i1:tree:broadleaf:2:10",
+              "i1:tree:broadleaf:2:11"
+            ]
+          }
+        ],
+        "omission": null
+      },
+      {
+        "id": "i2",
+        "mentions": [
+          "村"
+        ],
+        "role": "scene",
+        "presence": "present",
+        "parameter": null,
+        "layers": [
+          {
+            "id": "i2:dwelling::1",
+            "tool": "dwelling",
+            "instances": [
+              "i2:dwelling::1:0",
+              "i2:dwelling::1:1",
+              "i2:dwelling::1:2"
+            ]
+          }
+        ],
+        "omission": null
+      },
+      {
+        "id": "i3",
+        "mentions": [
+          "青山"
+        ],
+        "role": "scene",
+        "presence": "present",
+        "parameter": null,
+        "layers": [
+          {
+            "id": "i3:landscape:mountain:0",
+            "tool": "landscape",
+            "instances": [
+              "i3:landscape:mountain:0:0"
+            ]
+          }
+        ],
+        "omission": null
+      },
+      {
+        "id": "i4",
+        "mentions": [
+          "郭"
+        ],
+        "role": "scene",
+        "presence": "present",
+        "parameter": null,
+        "layers": [],
+        "omission": "该专名人物、地名或抽象含义暂不作实景补画"
+      }
+    ]
+  },
+  "elapsed_seconds": 6.8
+}

@@ -1,0 +1,196 @@
+{
+  "id": "2026-10-21T11-58-30-693Z-7dbaff4d",
+  "fingerprint": "d627b7dd323b991a56627a23f6a8afbcaf78ba367b799b10a191c3fcea69a53e",
+  "poem": "春潮带雨晚来急，野渡无人舟自横。",
+  "source": {
+    "provider": "精选诗句库",
+    "author": "韦应物",
+    "title": "滁州西涧",
+    "dynasty": "唐代"
+  },
+  "mode": "quantity",
+  "model": "DeepSeek-V4.1-Flash",
+  "started_at": "2026-10-21T11:58:30.695Z",
+  "cached": false,
+  "http_status": 200,
+  "usage": {
+    "completion_tokens": 600,
+    "prompt_tokens": 2543,
+    "total_tokens": 3143,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2432
+    }
+  },
+  "finish_reason": "stop",
+  "analysis": {
+    "schema_version": "3.1",
+    "poem": "春潮带雨晚来急，野渡无人舟自横。",
+    "reading": "春潮裹着雨，傍晚来得又急；荒野渡口空无一人，小船独自横泊。",
+    "entities": [
+      {
+        "id": "i1",
+        "mentions": [
+          "春潮"
+        ],
+        "concept": "春天涨起的潮水",
+        "kind": "environment",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "春潮带雨晚来急"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "spread",
+          "evidence": [
+            "春潮"
+          ]
+        }
+      },
+      {
+        "id": "i2",
+        "mentions": [
+          "雨"
+        ],
+        "concept": "降雨",
+        "kind": "environment",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "春潮带雨晚来急"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "spread",
+          "evidence": [
+            "带雨"
+          ]
+        }
+      },
+      {
+        "id": "i3",
+        "mentions": [
+          "野渡"
+        ],
+        "concept": "荒野的渡口",
+        "kind": "place",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "野渡无人舟自横"
+        ],
+        "quantity": {
+          "mode": "exact",
+          "min": 1,
+          "max": 1,
+          "unit": "个",
+          "scope": "individual",
+          "extent": "local",
+          "evidence": [
+            "野渡"
+          ]
+        }
+      },
+      {
+        "id": "i4",
+        "mentions": [
+          "人"
+        ],
+        "concept": "渡口上的人",
+        "kind": "person",
+        "role": "scene",
+        "presence": "absent",
+        "evidence": [
+          "野渡无人"
+        ],
+        "quantity": {
+          "mode": "exact",
+          "min": 0,
+          "max": 0,
+          "unit": "人",
+          "scope": "individual",
+          "extent": "local",
+          "evidence": [
+            "无人"
+          ]
+        }
+      },
+      {
+        "id": "i5",
+        "mentions": [
+          "舟"
+        ],
+        "concept": "小船",
+        "kind": "object",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "舟自横"
+        ],
+        "quantity": {
+          "mode": "exact",
+          "min": 1,
+          "max": 1,
+          "unit": "只",
+          "scope": "individual",
+          "extent": "local",
+          "evidence": [
+            "舟自横"
+          ]
+        }
+      }
+    ],
+    "relations": [],
+    "atmosphere": {
+      "labels": [
+        "荒寂",
+        "清冷",
+        "自在"
+      ],
+      "valence": "mixed",
+      "energy": "medium",
+      "tension": "low",
+      "openness": "medium",
+      "evidence": [
+        "春潮带雨晚来急",
+        "野渡无人舟自横"
+      ]
+    },
+    "time": {
+      "markers": [
+        {
+          "surface": "晚",
+          "meaning": "傍晚时分，点明潮雨到来的时间"
+        }
+      ],
+      "note": "未提供更具体的季节或日期信息。"
+    },
+    "uncertainties": [
+      "“自横”可理解为无人看管而横泊，也可理解为自在随意，语气略有歧义。",
+      "“春潮”与“雨”是同时并起还是潮水带来雨，原文未明确区分。"
+    ]
+  },
+  "validation": {
+    "valid": false,
+    "errors": [
+      "i3.quantity 单位不是原文",
+      "i5.quantity 单位不是原文"
+    ],
+    "warnings": [
+      "模型保留了不确定性，需要审阅"
+    ],
+    "review_required": true
+  },
+  "elapsed_seconds": 5.1
+}

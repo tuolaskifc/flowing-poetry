@@ -1,0 +1,29 @@
+{
+  "version": "generation-recovery-1.1",
+  "status": "normalized",
+  "reviewRequired": true,
+  "changes": [
+    {
+      "kind": "source-range-only",
+      "path": "spatial.0.evidence",
+      "original": [
+        "提剑出燕京"
+      ],
+      "effective": [
+        "君子死知己，提剑出燕京。"
+      ]
+    },
+    {
+      "kind": "source-range-only",
+      "path": "scene.actions.0.evidence",
+      "original": [
+        "提剑出燕京"
+      ],
+      "effective": [
+        "君子死知己，提剑出燕京。"
+      ]
+    }
+  ],
+  "omitted": [],
+  "message": "已完成格式或引用整理，解读仍可复核。"
+}

@@ -1,0 +1,4745 @@
+{
+  "id": "2026-10-24T14-18-30-857Z-67157048",
+  "fingerprint": "3ad9034f84dfe734829379f5f50fa4d785717f28518de8f9b2811cca0fda1b37",
+  "poem": "桃李春风一杯酒，江湖夜雨十年灯。\n",
+  "source": {
+    "provider": "全量下限检查：无当前可重放回答的输入单次补测"
+  },
+  "mode": "expression",
+  "model": "DeepSeek-V4.1-Flash",
+  "started_at": "2026-10-24T14:18:30.859Z",
+  "cached": false,
+  "http_status": 200,
+  "usage": {
+    "completion_tokens": 965,
+    "prompt_tokens": 5878,
+    "total_tokens": 6843,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 5760
+    }
+  },
+  "finish_reason": "stop",
+  "analysis": {
+    "schema_version": "expression-1.0",
+    "poem": "桃李春风一杯酒，江湖夜雨十年灯。\n",
+    "reading": "上句写桃李春风中一杯酒，是短暂而明丽的相聚；下句写江湖夜雨里十年灯，是漫长漂泊中的孤灯长夜。两句以时间与境遇对照，一暖一冷，一短一长。",
+    "entities": [
+      {
+        "id": "i1",
+        "mentions": [
+          "桃李"
+        ],
+        "concept": "桃李花木",
+        "kind": "organism",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "桃李春风一杯酒"
+        ],
+        "quantity": {
+          "mode": "many",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "group",
+          "extent": "spread",
+          "evidence": [
+            "桃李"
+          ]
+        }
+      },
+      {
+        "id": "i2",
+        "mentions": [
+          "春风"
+        ],
+        "concept": "春风",
+        "kind": "environment",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "桃李春风一杯酒"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i3",
+        "mentions": [
+          "一杯酒"
+        ],
+        "concept": "一杯酒",
+        "kind": "object",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "桃李春风一杯酒"
+        ],
+        "quantity": {
+          "mode": "exact",
+          "min": 1,
+          "max": 1,
+          "unit": "杯",
+          "scope": "individual",
+          "extent": "local",
+          "evidence": [
+            "一杯酒"
+          ]
+        }
+      },
+      {
+        "id": "i4",
+        "mentions": [
+          "江湖"
+        ],
+        "concept": "江湖",
+        "kind": "place",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "江湖夜雨十年灯"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i5",
+        "mentions": [
+          "夜雨"
+        ],
+        "concept": "夜雨",
+        "kind": "environment",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "江湖夜雨十年灯"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i6",
+        "mentions": [
+          "十年灯"
+        ],
+        "concept": "十年长夜之灯",
+        "kind": "object",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "江湖夜雨十年灯"
+        ],
+        "quantity": {
+          "mode": "exact",
+          "min": 1,
+          "max": 1,
+          "unit": "灯",
+          "scope": "individual",
+          "extent": "local",
+          "evidence": [
+            "十年灯"
+          ]
+        }
+      }
+    ],
+    "relations": [],
+    "atmosphere": {
+      "labels": [
+        "对照",
+        "漂泊",
+        "孤寂"
+      ],
+      "valence": "mixed",
+      "energy": "low",
+      "tension": "medium",
+      "openness": "medium",
+      "evidence": [
+        "桃李春风一杯酒",
+        "江湖夜雨十年灯"
+      ]
+    },
+    "time": {
+      "markers": [
+        {
+          "surface": "十年",
+          "meaning": "标示长达十年的时段，强调时间之久"
+        }
+      ],
+      "note": "上句未明写时间，下句以“十年”点出漫长跨度，两句形成时间长短对照。"
+    },
+    "uncertainties": [
+      "“江湖”可指江河湖海，也可指漂泊的世间，具体所指不明。",
+      "“十年灯”可理解为十年间的一盏灯，也可理解为十年长夜中的灯下情景，细节未明。"
+    ],
+    "spatial": [],
+    "scene": {
+      "setting": {
+        "kind": "mixed",
+        "basis": "inferred",
+        "evidence": [
+          "桃李春风一杯酒",
+          "江湖夜雨十年灯"
+        ]
+      },
+      "groups": [
+        {
+          "members": [
+            "i1",
+            "i2",
+            "i3"
+          ],
+          "role": "subject",
+          "pattern": "cluster",
+          "depth": "unspecified",
+          "basis": "inferred",
+          "evidence": [
+            "桃李春风一杯酒"
+          ]
+        },
+        {
+          "members": [
+            "i4",
+            "i5",
+            "i6"
+          ],
+          "role": "environment",
+          "pattern": "scattered",
+          "depth": "unspecified",
+          "basis": "inferred",
+          "evidence": [
+            "江湖夜雨十年灯"
+          ]
+        }
+      ],
+      "supports": [],
+      "actions": [],
+      "atmosphere": {
+        "visibility": "unclear",
+        "illumination": "night",
+        "basis": "inferred",
+        "evidence": [
+          "江湖夜雨十年灯"
+        ]
+      }
+    },
+    "expression": {
+      "relations": [
+        {
+          "source": "i1",
+          "target": "i4",
+          "kind": "contrast",
+          "modality": "asserted",
+          "basis": "inferred",
+          "evidence": [
+            "桃李春风一杯酒",
+            "江湖夜雨十年灯"
+          ]
+        },
+        {
+          "source": "i3",
+          "target": "i6",
+          "kind": "contrast",
+          "modality": "asserted",
+          "basis": "inferred",
+          "evidence": [
+            "桃李春风一杯酒",
+            "江湖夜雨十年灯"
+          ]
+        }
+      ],
+      "processes": []
+    }
+  },
+  "validation": {
+    "valid": true,
+    "errors": [],
+    "warnings": [
+      "模型保留了不确定性，需要审阅",
+      "scene.setting 为语义推断，绘画选择需与原文明示区分",
+      "scene.groups[0] 为语义推断，绘画选择需与原文明示区分",
+      "scene.groups[1] 为语义推断，绘画选择需与原文明示区分",
+      "scene.atmosphere 为语义推断，绘画选择需与原文明示区分",
+      "expression.relations[0] 为语义推断",
+      "expression.relations[1] 为语义推断"
+    ],
+    "review_required": true
+  },
+  "plan": {
+    "version": "shared-expression-1.1-source-bound",
+    "seed": 2919555698,
+    "poem": "桃李春风一杯酒，江湖夜雨十年灯。\n",
+    "nodes": [
+      {
+        "id": "i1",
+        "label": "桃李",
+        "meaning": "桃李花木",
+        "kind": "concrete",
+        "contextOnly": false,
+        "mode": "present"
+      },
+      {
+        "id": "i2",
+        "label": "春风",
+        "meaning": "春风",
+        "kind": "concrete",
+        "contextOnly": false,
+        "mode": "present"
+      },
+      {
+        "id": "i3",
+        "label": "一杯酒",
+        "meaning": "一杯酒",
+        "kind": "concrete",
+        "contextOnly": false,
+        "mode": "present"
+      },
+      {
+        "id": "i4",
+        "label": "江湖",
+        "meaning": "江湖",
+        "kind": "concrete",
+        "contextOnly": false,
+        "mode": "present"
+      },
+      {
+        "id": "i5",
+        "label": "夜雨",
+        "meaning": "夜雨",
+        "kind": "concrete",
+        "contextOnly": false,
+        "mode": "present"
+      },
+      {
+        "id": "i6",
+        "label": "十年灯",
+        "meaning": "十年长夜之灯",
+        "kind": "concrete",
+        "contextOnly": false,
+        "mode": "present"
+      }
+    ],
+    "relations": [
+      {
+        "source": "i1",
+        "target": "i4",
+        "kind": "contrast",
+        "modality": "asserted",
+        "basis": "inferred",
+        "evidence": [
+          "桃李春风一杯酒",
+          "江湖夜雨十年灯"
+        ]
+      },
+      {
+        "source": "i3",
+        "target": "i6",
+        "kind": "contrast",
+        "modality": "asserted",
+        "basis": "inferred",
+        "evidence": [
+          "桃李春风一杯酒",
+          "江湖夜雨十年灯"
+        ]
+      }
+    ],
+    "processes": [],
+    "omitted": [],
+    "atmosphere": {
+      "labels": [
+        "对照",
+        "漂泊",
+        "孤寂"
+      ],
+      "valence": "mixed",
+      "energy": "low",
+      "tension": "medium",
+      "openness": "medium",
+      "evidence": [
+        "桃李春风一杯酒",
+        "江湖夜雨十年灯"
+      ],
+      "illumination": "night"
+    },
+    "concretePlan": {
+      "version": "semantic-composition-3.3-source-bound",
+      "seed": 2919555698,
+      "settings": {
+        "wind": 0.45,
+        "density": 0.45,
+        "palette": "indigo",
+        "motion": 1.4
+      },
+      "layers": [
+        {
+          "tool": "landscape",
+          "entities": [
+            "i6"
+          ],
+          "projectedEntities": [],
+          "names": [
+            "十年灯"
+          ],
+          "options": {
+            "form": "glow"
+          },
+          "animate": false,
+          "placement": {
+            "anchor": [
+              320,
+              194
+            ],
+            "at": [
+              0.7,
+              0.6
+            ],
+            "scale": 1.5
+          },
+          "semanticGroup": {
+            "members": [
+              "i4",
+              "i5",
+              "i6"
+            ],
+            "role": "environment",
+            "pattern": "scattered",
+            "depth": "unspecified",
+            "basis": "inferred",
+            "evidence": [
+              "江湖夜雨十年灯"
+            ],
+            "index": 1
+          },
+          "semanticEffects": [
+            {
+              "path": "scene.groups[1].role",
+              "consumer": "主次布局",
+              "effect": "保留环境群落层次",
+              "status": "applied"
+            },
+            {
+              "path": "scene.groups[1].pattern",
+              "consumer": "群落布局",
+              "effect": "按 scattered 组织显示单元；不覆盖明确数量",
+              "status": "applied"
+            },
+            {
+              "path": "scene.groups[1].depth",
+              "consumer": "远近布局",
+              "effect": "远近未明，保持本地默认",
+              "status": "skipped"
+            }
+          ],
+          "semanticEnergy": false,
+          "timeScale": 0.45,
+          "instances": [
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  210
+                ],
+                "at": [
+                  0.7,
+                  0.6
+                ],
+                "scale": 1.2
+              },
+              "depth": 0.05,
+              "opacity": 1,
+              "variant": 0,
+              "tone": "far",
+              "id": "i6:landscape:glow:0:0"
+            }
+          ],
+          "singleUnit": false,
+          "quantity": {
+            "items": [
+              {
+                "entity": "i6",
+                "mode": "exact",
+                "min": 1,
+                "max": 1,
+                "unit": "灯",
+                "scope": "individual",
+                "extent": "local",
+                "evidence": [
+                  "十年灯"
+                ],
+                "basis": "model"
+              }
+            ],
+            "rendered": 1,
+            "exact": false,
+            "collective": false,
+            "partUnsupported": false
+          },
+          "quantityLabel": "整体笔触图层；内部数量尚未适配",
+          "z": 30,
+          "visual": {
+            "role": "light",
+            "brushStrength": 1.1
+          },
+          "performance": {
+            "rhythm": "steady",
+            "rate": 1,
+            "amplitude": 1,
+            "phase": 0
+          },
+          "id": "i6:landscape:glow:0",
+          "interaction": {
+            "mode": "instance",
+            "groupId": "i6:landscape:glow:0"
+          }
+        },
+        {
+          "tool": "tree",
+          "entities": [
+            "i1"
+          ],
+          "projectedEntities": [],
+          "names": [
+            "桃李"
+          ],
+          "options": {
+            "form": "broadleaf",
+            "crown": "wash"
+          },
+          "animate": true,
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.4901825891919643,
+              0.7775714285714285
+            ],
+            "scale": 1.15
+          },
+          "semanticGroup": {
+            "members": [
+              "i1",
+              "i2",
+              "i3"
+            ],
+            "role": "subject",
+            "pattern": "cluster",
+            "depth": "unspecified",
+            "basis": "inferred",
+            "evidence": [
+              "桃李春风一杯酒"
+            ],
+            "index": 0
+          },
+          "semanticEffects": [
+            {
+              "path": "scene.groups[0].role",
+              "consumer": "主次布局",
+              "effect": "主体相对突出",
+              "status": "applied"
+            },
+            {
+              "path": "scene.groups[0].pattern",
+              "consumer": "群落布局",
+              "effect": "按 cluster 组织显示单元；不覆盖明确数量",
+              "status": "applied"
+            },
+            {
+              "path": "scene.groups[0].depth",
+              "consumer": "远近布局",
+              "effect": "远近未明，保持本地默认",
+              "status": "skipped"
+            }
+          ],
+          "semanticEnergy": true,
+          "timeScale": 0.45,
+          "instances": [
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  388
+                ],
+                "at": [
+                  0.6024306921011072,
+                  0.6634771428571428
+                ],
+                "scale": 0.658322355502
+              },
+              "depth": 10,
+              "opacity": 0.71720679775,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i1:tree:broadleaf:1:0"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  388
+                ],
+                "at": [
+                  0.3848628520931073,
+                  0.6765914285714285
+                ],
+                "scale": 0.5599279110040001
+              },
+              "depth": 10.01,
+              "opacity": 0.6408135954999999,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i1:tree:broadleaf:1:1"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  388
+                ],
+                "at": [
+                  0.7368950120851073,
+                  0.6897057142857141
+                ],
+                "scale": 0.7191334665060002
+              },
+              "depth": 10.02,
+              "opacity": 0.76442039325,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i1:tree:broadleaf:1:2"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  388
+                ],
+                "at": [
+                  0.5193271720771073,
+                  0.7028199999999999
+                ],
+                "scale": 0.6207390220080001
+              },
+              "depth": 10.03,
+              "opacity": 0.688027191,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i1:tree:broadleaf:1:3"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  388
+                ],
+                "at": [
+                  0.30175933206910743,
+                  0.7159342857142856
+                ],
+                "scale": 0.5223445775100002
+              },
+              "depth": 10.04,
+              "opacity": 0.6116339887500001,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i1:tree:broadleaf:1:4"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  388
+                ],
+                "at": [
+                  0.6537914920611073,
+                  0.7290485714285714
+                ],
+                "scale": 0.6815501330120001
+              },
+              "depth": 10.05,
+              "opacity": 0.7352407865,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i1:tree:broadleaf:1:5"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  388
+                ],
+                "at": [
+                  0.4362236520531073,
+                  0.742162857142857
+                ],
+                "scale": 0.5831556885140001
+              },
+              "depth": 10.06,
+              "opacity": 0.65884758425,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i1:tree:broadleaf:1:6"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  388
+                ],
+                "at": [
+                  0.21865581204510715,
+                  0.7552771428571428
+                ],
+                "scale": 0.484761244016
+              },
+              "depth": 10.07,
+              "opacity": 0.582454382,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i1:tree:broadleaf:1:7"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  388
+                ],
+                "at": [
+                  0.5706879720371071,
+                  0.9032114285714286
+                ],
+                "scale": 0.912766799518
+              },
+              "depth": 20.08,
+              "opacity": 0.9334550617749999,
+              "variant": 2,
+              "tone": "near",
+              "id": "i1:tree:broadleaf:1:8"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  388
+                ],
+                "at": [
+                  0.3531201320291073,
+                  0.9152457142857142
+                ],
+                "scale": 0.8143723550200003
+              },
+              "depth": 20.09,
+              "opacity": 0.8647011797499999,
+              "variant": 2,
+              "tone": "near",
+              "id": "i1:tree:broadleaf:1:9"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  388
+                ],
+                "at": [
+                  0.7051522920211072,
+                  0.92728
+                ],
+                "scale": 0.9735779105220002
+              },
+              "depth": 20.1,
+              "opacity": 0.9759472977249999,
+              "variant": 2,
+              "tone": "near",
+              "id": "i1:tree:broadleaf:1:10"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  388
+                ],
+                "at": [
+                  0.487584452013107,
+                  0.8097142857142857
+                ],
+                "scale": 0.8751834660240001
+              },
+              "depth": 10.11,
+              "opacity": 0.9071934156999999,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i1:tree:broadleaf:1:11"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  388
+                ],
+                "at": [
+                  0.27001661200510685,
+                  0.8217485714285714
+                ],
+                "scale": 0.7767890215259999
+              },
+              "depth": 10.12,
+              "opacity": 0.8384395336749998,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i1:tree:broadleaf:1:12"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  388
+                ],
+                "at": [
+                  0.6220487719971077,
+                  0.833782857142857
+                ],
+                "scale": 0.9359945770280004
+              },
+              "depth": 20.13,
+              "opacity": 0.9496856516500001,
+              "variant": 2,
+              "tone": "near",
+              "id": "i1:tree:broadleaf:1:13"
+            }
+          ],
+          "singleUnit": true,
+          "quantity": {
+            "items": [
+              {
+                "entity": "i1",
+                "mode": "many",
+                "min": null,
+                "max": null,
+                "unit": null,
+                "scope": "group",
+                "extent": "spread",
+                "evidence": [
+                  "桃李"
+                ],
+                "basis": "model"
+              }
+            ],
+            "rendered": 14,
+            "exact": false,
+            "collective": true,
+            "partUnsupported": false
+          },
+          "quantityLabel": "成片分布；本地试画 14 个单元",
+          "z": 8,
+          "visual": {
+            "role": "vegetation",
+            "brushStrength": 1.2
+          },
+          "performance": {
+            "rhythm": "gust",
+            "rate": 0.62,
+            "amplitude": 0.65,
+            "phase": 3.8830085198369844
+          },
+          "id": "i1:tree:broadleaf:1",
+          "interaction": {
+            "mode": "instance",
+            "groupId": "i1:tree:broadleaf:1"
+          }
+        },
+        {
+          "tool": "wine",
+          "entities": [
+            "i3"
+          ],
+          "projectedEntities": [],
+          "names": [
+            "一杯酒"
+          ],
+          "options": {
+            "form": "liquid"
+          },
+          "animate": true,
+          "placement": {
+            "anchor": [
+              320,
+              244
+            ],
+            "at": [
+              0.57,
+              0.87
+            ],
+            "scale": 0.75
+          },
+          "semanticGroup": {
+            "members": [
+              "i1",
+              "i2",
+              "i3"
+            ],
+            "role": "subject",
+            "pattern": "cluster",
+            "depth": "unspecified",
+            "basis": "inferred",
+            "evidence": [
+              "桃李春风一杯酒"
+            ],
+            "index": 0
+          },
+          "semanticEffects": [
+            {
+              "path": "scene.groups[0].role",
+              "consumer": "主次布局",
+              "effect": "主体相对突出",
+              "status": "applied"
+            },
+            {
+              "path": "scene.groups[0].pattern",
+              "consumer": "群落布局",
+              "effect": "按 cluster 组织显示单元；不覆盖明确数量",
+              "status": "applied"
+            },
+            {
+              "path": "scene.groups[0].depth",
+              "consumer": "远近布局",
+              "effect": "远近未明，保持本地默认",
+              "status": "skipped"
+            }
+          ],
+          "semanticEnergy": true,
+          "timeScale": 0.45,
+          "instances": [
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  244
+                ],
+                "at": [
+                  0.57,
+                  0.87
+                ],
+                "scale": 0.8400000000000001
+              },
+              "depth": 0.05,
+              "opacity": 1,
+              "variant": 2,
+              "tone": "near",
+              "id": "i3:wine:liquid:2:0"
+            }
+          ],
+          "singleUnit": true,
+          "quantity": {
+            "items": [
+              {
+                "entity": "i3",
+                "mode": "exact",
+                "min": 1,
+                "max": 1,
+                "unit": "杯",
+                "scope": "individual",
+                "extent": "local",
+                "evidence": [
+                  "一杯酒"
+                ],
+                "basis": "model"
+              }
+            ],
+            "rendered": 1,
+            "exact": true,
+            "collective": false,
+            "partUnsupported": false
+          },
+          "quantityLabel": "按提取数量绘制 1 个",
+          "visual": {
+            "role": "vegetation",
+            "brushStrength": 1.2
+          },
+          "performance": {
+            "rhythm": "steady",
+            "rate": 1,
+            "amplitude": 1,
+            "phase": 1.4828317324943823
+          },
+          "id": "i3:wine:liquid:2",
+          "interaction": {
+            "mode": "instance",
+            "groupId": "i3:wine:liquid:2"
+          }
+        },
+        {
+          "tool": "rain",
+          "entities": [
+            "i5"
+          ],
+          "projectedEntities": [],
+          "names": [
+            "夜雨"
+          ],
+          "options": {},
+          "animate": true,
+          "placement": {
+            "anchor": [
+              320,
+              194
+            ],
+            "at": [
+              0.5,
+              0.5
+            ],
+            "scale": 1.55
+          },
+          "semanticGroup": {
+            "members": [
+              "i4",
+              "i5",
+              "i6"
+            ],
+            "role": "environment",
+            "pattern": "scattered",
+            "depth": "unspecified",
+            "basis": "inferred",
+            "evidence": [
+              "江湖夜雨十年灯"
+            ],
+            "index": 1
+          },
+          "semanticEffects": [
+            {
+              "path": "scene.groups[1].role",
+              "consumer": "主次布局",
+              "effect": "保留环境群落层次",
+              "status": "applied"
+            },
+            {
+              "path": "scene.groups[1].pattern",
+              "consumer": "群落布局",
+              "effect": "按 scattered 组织显示单元；不覆盖明确数量",
+              "status": "applied"
+            },
+            {
+              "path": "scene.groups[1].depth",
+              "consumer": "远近布局",
+              "effect": "远近未明，保持本地默认",
+              "status": "skipped"
+            }
+          ],
+          "semanticEnergy": true,
+          "timeScale": 0.45,
+          "instances": [
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  194
+                ],
+                "at": [
+                  0.5,
+                  0.5
+                ],
+                "scale": 1.55
+              },
+              "depth": 0.05,
+              "opacity": 1,
+              "variant": 0,
+              "tone": "far",
+              "id": "i5:rain::3:0"
+            }
+          ],
+          "singleUnit": false,
+          "quantity": {
+            "items": [
+              {
+                "entity": "i5",
+                "mode": "unspecified",
+                "min": null,
+                "max": null,
+                "unit": null,
+                "scope": "unspecified",
+                "extent": "unspecified",
+                "evidence": [],
+                "basis": "model"
+              }
+            ],
+            "rendered": 1,
+            "exact": false,
+            "collective": false,
+            "partUnsupported": false
+          },
+          "quantityLabel": "整体笔触图层；内部数量尚未适配",
+          "visual": {
+            "role": "atmosphere",
+            "brushStrength": 1.1
+          },
+          "performance": {
+            "rhythm": "falling",
+            "rate": 1,
+            "amplitude": 0.8,
+            "phase": 5.365840252331367
+          },
+          "id": "i5:rain::3",
+          "interaction": {
+            "mode": "instance",
+            "groupId": "i5:rain::3"
+          }
+        },
+        {
+          "tool": "landscape",
+          "entities": [],
+          "projectedEntities": [],
+          "names": [
+            "构图依托·地面"
+          ],
+          "options": {
+            "form": "ground",
+            "edge": "soft"
+          },
+          "animate": false,
+          "placement": {
+            "anchor": [
+              320,
+              194
+            ],
+            "at": [
+              0.5,
+              0.54
+            ],
+            "scale": 1.6
+          },
+          "instances": [
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  265
+                ],
+                "at": [
+                  0.5,
+                  0.54
+                ],
+                "scale": 2.5
+              },
+              "variant": 0,
+              "depth": 0,
+              "opacity": 1,
+              "tone": "far",
+              "id": "inferred:landscape:ground:4:0"
+            }
+          ],
+          "singleUnit": false,
+          "inferred": true,
+          "provenance": {
+            "basis": "local-context",
+            "reason": "生长物、房舍和陆上主体需要共同地表；这是本地构图依托"
+          },
+          "quantity": {
+            "rendered": 1,
+            "exact": false,
+            "items": []
+          },
+          "quantityLabel": "本地环境依托，不计入原文意象覆盖",
+          "z": -18,
+          "clip": [
+            [
+              0,
+              0.5
+            ],
+            [
+              1,
+              0.5
+            ],
+            [
+              1,
+              1.04
+            ],
+            [
+              0,
+              1.04
+            ]
+          ],
+          "visual": {
+            "role": "ground",
+            "brushStrength": 1.1
+          },
+          "performance": {
+            "rhythm": "steady",
+            "rate": 1,
+            "amplitude": 1,
+            "phase": 2.9656634649887645
+          },
+          "id": "inferred:landscape:ground:4",
+          "interaction": {
+            "mode": "group",
+            "groupId": "inferred:landscape:ground:4"
+          }
+        }
+      ],
+      "spatial": [],
+      "scene": {
+        "kind": "woodland",
+        "notes": [
+          "通用场景层先组织地面、水域、群落和主体，再比较三个布局的依托、相对位置、尺度与遮挡；检查通过不代表审美已通过。"
+        ],
+        "waterline": null,
+        "semanticSetting": {
+          "kind": "mixed",
+          "basis": "inferred",
+          "evidence": [
+            "桃李春风一杯酒",
+            "江湖夜雨十年灯"
+          ]
+        },
+        "semanticEffects": [],
+        "organization": {
+          "version": "1.0",
+          "strategy": "general-constraints",
+          "regions": {
+            "land": [
+              [
+                0,
+                0.5
+              ],
+              [
+                1,
+                0.5
+              ],
+              [
+                1,
+                1.04
+              ],
+              [
+                0,
+                1.04
+              ]
+            ]
+          },
+          "candidates": [
+            {
+              "layout": 0,
+              "orientation": "疏林前后",
+              "errors": 0,
+              "cost": 30.191,
+              "score": 30.527,
+              "metrics": {
+                "overlapPenalty": 0,
+                "balancePenalty": 0.024,
+                "motifFootprint": 1.535,
+                "landArea": 0.54
+              }
+            },
+            {
+              "layout": 2,
+              "orientation": "远近错落",
+              "errors": 0,
+              "cost": 30.206,
+              "score": 30.57,
+              "metrics": {
+                "overlapPenalty": 0,
+                "balancePenalty": 0.026,
+                "motifFootprint": 1.535,
+                "landArea": 0.54
+              }
+            },
+            {
+              "layout": 1,
+              "orientation": "林隙展开",
+              "errors": 0,
+              "cost": 30.704,
+              "score": 31.936,
+              "metrics": {
+                "overlapPenalty": 0,
+                "balancePenalty": 0.088,
+                "motifFootprint": 1.612,
+                "landArea": 0.54
+              }
+            }
+          ],
+          "repairs": [
+            {
+              "type": "support-added",
+              "reason": "生长物、房舍和陆上主体需要共同地表；这是本地构图依托"
+            }
+          ],
+          "limitations": [
+            "几何检查不判定诗意理解或审美合格",
+            "动作时序与整首诗的场景切换尚未编排"
+          ],
+          "topology": "疏林前后",
+          "layout": 0,
+          "orientation": "疏林前后",
+          "audit": {
+            "scope": "implemented-geometry-and-drawing-gaps",
+            "coverage": {
+              "scope": "extracted-entities-only",
+              "present": 6,
+              "mapped": 4,
+              "parameters": [
+                "i2"
+              ],
+              "missing": [
+                {
+                  "id": "i4",
+                  "name": "江湖"
+                }
+              ]
+            },
+            "checks": [
+              "presence",
+              "count",
+              "finite",
+              "support",
+              "scale",
+              "relative-position",
+              "depth",
+              "grove-spread",
+              "drawing-gaps"
+            ],
+            "status": "needs-review",
+            "errors": 0,
+            "review": 1,
+            "issues": [
+              {
+                "code": "drawing-gaps",
+                "severity": "review",
+                "message": "还有 1 项已提取线索尚未转成画面：江湖"
+              }
+            ],
+            "metrics": {
+              "overlapPenalty": 0,
+              "balancePenalty": 0.024,
+              "motifFootprint": 1.535,
+              "landArea": 0.54
+            },
+            "cost": 30.191,
+            "aestheticAcceptance": "pending-user"
+          },
+          "graph": {
+            "nodes": [
+              {
+                "id": "l0",
+                "entities": [
+                  "i6"
+                ],
+                "tool": "landscape",
+                "role": "detail",
+                "habitat": null,
+                "inferred": false,
+                "support": null
+              },
+              {
+                "id": "l1",
+                "entities": [
+                  "i1"
+                ],
+                "tool": "tree",
+                "role": "vegetation",
+                "habitat": "land",
+                "inferred": false,
+                "support": "l4"
+              },
+              {
+                "id": "l2",
+                "entities": [
+                  "i3"
+                ],
+                "tool": "wine",
+                "role": "detail",
+                "habitat": null,
+                "inferred": false,
+                "support": null
+              },
+              {
+                "id": "l3",
+                "entities": [
+                  "i5"
+                ],
+                "tool": "rain",
+                "role": "atmosphere",
+                "habitat": null,
+                "inferred": false,
+                "support": null
+              },
+              {
+                "id": "l4",
+                "entities": [],
+                "tool": "landscape",
+                "role": "terrain",
+                "habitat": null,
+                "inferred": true,
+                "support": null
+              }
+            ],
+            "edges": [
+              {
+                "type": "supported-by",
+                "source": "l1",
+                "target": "l4",
+                "basis": "local-composition",
+                "habitat": "land"
+              }
+            ],
+            "setting": "woodland"
+          }
+        },
+        "displayAudit": {
+          "scope": "display-scale-separation-and-habitat",
+          "issues": [],
+          "errors": 0,
+          "aestheticAcceptance": "pending-user"
+        }
+      },
+      "compositions": [
+        {
+          "id": "space-0",
+          "label": "疏林前后",
+          "description": "先安排连续水域与地表，再按主次与远近安放景物",
+          "layers": [
+            {
+              "tool": "landscape",
+              "entities": [
+                "i6"
+              ],
+              "projectedEntities": [],
+              "names": [
+                "十年灯"
+              ],
+              "options": {
+                "form": "glow"
+              },
+              "animate": false,
+              "placement": {
+                "anchor": [
+                  320,
+                  194
+                ],
+                "at": [
+                  0.7,
+                  0.6
+                ],
+                "scale": 1.5
+              },
+              "semanticGroup": {
+                "members": [
+                  "i4",
+                  "i5",
+                  "i6"
+                ],
+                "role": "environment",
+                "pattern": "scattered",
+                "depth": "unspecified",
+                "basis": "inferred",
+                "evidence": [
+                  "江湖夜雨十年灯"
+                ],
+                "index": 1
+              },
+              "semanticEffects": [
+                {
+                  "path": "scene.groups[1].role",
+                  "consumer": "主次布局",
+                  "effect": "保留环境群落层次",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[1].pattern",
+                  "consumer": "群落布局",
+                  "effect": "按 scattered 组织显示单元；不覆盖明确数量",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[1].depth",
+                  "consumer": "远近布局",
+                  "effect": "远近未明，保持本地默认",
+                  "status": "skipped"
+                }
+              ],
+              "semanticEnergy": false,
+              "timeScale": 0.45,
+              "instances": [
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      210
+                    ],
+                    "at": [
+                      0.7,
+                      0.6
+                    ],
+                    "scale": 1.2
+                  },
+                  "depth": 0.05,
+                  "opacity": 1,
+                  "variant": 0,
+                  "tone": "far",
+                  "id": "i6:landscape:glow:0:0"
+                }
+              ],
+              "singleUnit": false,
+              "quantity": {
+                "items": [
+                  {
+                    "entity": "i6",
+                    "mode": "exact",
+                    "min": 1,
+                    "max": 1,
+                    "unit": "灯",
+                    "scope": "individual",
+                    "extent": "local",
+                    "evidence": [
+                      "十年灯"
+                    ],
+                    "basis": "model"
+                  }
+                ],
+                "rendered": 1,
+                "exact": false,
+                "collective": false,
+                "partUnsupported": false
+              },
+              "quantityLabel": "整体笔触图层；内部数量尚未适配",
+              "z": 30,
+              "visual": {
+                "role": "light",
+                "brushStrength": 1.1
+              },
+              "performance": {
+                "rhythm": "steady",
+                "rate": 1,
+                "amplitude": 1,
+                "phase": 0
+              },
+              "id": "i6:landscape:glow:0",
+              "interaction": {
+                "mode": "instance",
+                "groupId": "i6:landscape:glow:0"
+              }
+            },
+            {
+              "tool": "tree",
+              "entities": [
+                "i1"
+              ],
+              "projectedEntities": [],
+              "names": [
+                "桃李"
+              ],
+              "options": {
+                "form": "broadleaf",
+                "crown": "wash"
+              },
+              "animate": true,
+              "placement": {
+                "anchor": [
+                  320,
+                  388
+                ],
+                "at": [
+                  0.4901825891919643,
+                  0.7775714285714285
+                ],
+                "scale": 1.15
+              },
+              "semanticGroup": {
+                "members": [
+                  "i1",
+                  "i2",
+                  "i3"
+                ],
+                "role": "subject",
+                "pattern": "cluster",
+                "depth": "unspecified",
+                "basis": "inferred",
+                "evidence": [
+                  "桃李春风一杯酒"
+                ],
+                "index": 0
+              },
+              "semanticEffects": [
+                {
+                  "path": "scene.groups[0].role",
+                  "consumer": "主次布局",
+                  "effect": "主体相对突出",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[0].pattern",
+                  "consumer": "群落布局",
+                  "effect": "按 cluster 组织显示单元；不覆盖明确数量",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[0].depth",
+                  "consumer": "远近布局",
+                  "effect": "远近未明，保持本地默认",
+                  "status": "skipped"
+                }
+              ],
+              "semanticEnergy": true,
+              "timeScale": 0.45,
+              "instances": [
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.6024306921011072,
+                      0.6634771428571428
+                    ],
+                    "scale": 0.658322355502
+                  },
+                  "depth": 10,
+                  "opacity": 0.71720679775,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i1:tree:broadleaf:1:0"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.3848628520931073,
+                      0.6765914285714285
+                    ],
+                    "scale": 0.5599279110040001
+                  },
+                  "depth": 10.01,
+                  "opacity": 0.6408135954999999,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i1:tree:broadleaf:1:1"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.7368950120851073,
+                      0.6897057142857141
+                    ],
+                    "scale": 0.7191334665060002
+                  },
+                  "depth": 10.02,
+                  "opacity": 0.76442039325,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i1:tree:broadleaf:1:2"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.5193271720771073,
+                      0.7028199999999999
+                    ],
+                    "scale": 0.6207390220080001
+                  },
+                  "depth": 10.03,
+                  "opacity": 0.688027191,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i1:tree:broadleaf:1:3"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.30175933206910743,
+                      0.7159342857142856
+                    ],
+                    "scale": 0.5223445775100002
+                  },
+                  "depth": 10.04,
+                  "opacity": 0.6116339887500001,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i1:tree:broadleaf:1:4"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.6537914920611073,
+                      0.7290485714285714
+                    ],
+                    "scale": 0.6815501330120001
+                  },
+                  "depth": 10.05,
+                  "opacity": 0.7352407865,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i1:tree:broadleaf:1:5"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.4362236520531073,
+                      0.742162857142857
+                    ],
+                    "scale": 0.5831556885140001
+                  },
+                  "depth": 10.06,
+                  "opacity": 0.65884758425,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i1:tree:broadleaf:1:6"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.21865581204510715,
+                      0.7552771428571428
+                    ],
+                    "scale": 0.484761244016
+                  },
+                  "depth": 10.07,
+                  "opacity": 0.582454382,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i1:tree:broadleaf:1:7"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.5706879720371071,
+                      0.9032114285714286
+                    ],
+                    "scale": 0.912766799518
+                  },
+                  "depth": 20.08,
+                  "opacity": 0.9334550617749999,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i1:tree:broadleaf:1:8"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.3531201320291073,
+                      0.9152457142857142
+                    ],
+                    "scale": 0.8143723550200003
+                  },
+                  "depth": 20.09,
+                  "opacity": 0.8647011797499999,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i1:tree:broadleaf:1:9"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.7051522920211072,
+                      0.92728
+                    ],
+                    "scale": 0.9735779105220002
+                  },
+                  "depth": 20.1,
+                  "opacity": 0.9759472977249999,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i1:tree:broadleaf:1:10"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.487584452013107,
+                      0.8097142857142857
+                    ],
+                    "scale": 0.8751834660240001
+                  },
+                  "depth": 10.11,
+                  "opacity": 0.9071934156999999,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i1:tree:broadleaf:1:11"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.27001661200510685,
+                      0.8217485714285714
+                    ],
+                    "scale": 0.7767890215259999
+                  },
+                  "depth": 10.12,
+                  "opacity": 0.8384395336749998,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i1:tree:broadleaf:1:12"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.6220487719971077,
+                      0.833782857142857
+                    ],
+                    "scale": 0.9359945770280004
+                  },
+                  "depth": 20.13,
+                  "opacity": 0.9496856516500001,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i1:tree:broadleaf:1:13"
+                }
+              ],
+              "singleUnit": true,
+              "quantity": {
+                "items": [
+                  {
+                    "entity": "i1",
+                    "mode": "many",
+                    "min": null,
+                    "max": null,
+                    "unit": null,
+                    "scope": "group",
+                    "extent": "spread",
+                    "evidence": [
+                      "桃李"
+                    ],
+                    "basis": "model"
+                  }
+                ],
+                "rendered": 14,
+                "exact": false,
+                "collective": true,
+                "partUnsupported": false
+              },
+              "quantityLabel": "成片分布；本地试画 14 个单元",
+              "z": 8,
+              "visual": {
+                "role": "vegetation",
+                "brushStrength": 1.2
+              },
+              "performance": {
+                "rhythm": "gust",
+                "rate": 0.62,
+                "amplitude": 0.65,
+                "phase": 3.8830085198369844
+              },
+              "id": "i1:tree:broadleaf:1",
+              "interaction": {
+                "mode": "instance",
+                "groupId": "i1:tree:broadleaf:1"
+              }
+            },
+            {
+              "tool": "wine",
+              "entities": [
+                "i3"
+              ],
+              "projectedEntities": [],
+              "names": [
+                "一杯酒"
+              ],
+              "options": {
+                "form": "liquid"
+              },
+              "animate": true,
+              "placement": {
+                "anchor": [
+                  320,
+                  244
+                ],
+                "at": [
+                  0.57,
+                  0.87
+                ],
+                "scale": 0.75
+              },
+              "semanticGroup": {
+                "members": [
+                  "i1",
+                  "i2",
+                  "i3"
+                ],
+                "role": "subject",
+                "pattern": "cluster",
+                "depth": "unspecified",
+                "basis": "inferred",
+                "evidence": [
+                  "桃李春风一杯酒"
+                ],
+                "index": 0
+              },
+              "semanticEffects": [
+                {
+                  "path": "scene.groups[0].role",
+                  "consumer": "主次布局",
+                  "effect": "主体相对突出",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[0].pattern",
+                  "consumer": "群落布局",
+                  "effect": "按 cluster 组织显示单元；不覆盖明确数量",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[0].depth",
+                  "consumer": "远近布局",
+                  "effect": "远近未明，保持本地默认",
+                  "status": "skipped"
+                }
+              ],
+              "semanticEnergy": true,
+              "timeScale": 0.45,
+              "instances": [
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      244
+                    ],
+                    "at": [
+                      0.57,
+                      0.87
+                    ],
+                    "scale": 0.8400000000000001
+                  },
+                  "depth": 0.05,
+                  "opacity": 1,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i3:wine:liquid:2:0"
+                }
+              ],
+              "singleUnit": true,
+              "quantity": {
+                "items": [
+                  {
+                    "entity": "i3",
+                    "mode": "exact",
+                    "min": 1,
+                    "max": 1,
+                    "unit": "杯",
+                    "scope": "individual",
+                    "extent": "local",
+                    "evidence": [
+                      "一杯酒"
+                    ],
+                    "basis": "model"
+                  }
+                ],
+                "rendered": 1,
+                "exact": true,
+                "collective": false,
+                "partUnsupported": false
+              },
+              "quantityLabel": "按提取数量绘制 1 个",
+              "visual": {
+                "role": "vegetation",
+                "brushStrength": 1.2
+              },
+              "performance": {
+                "rhythm": "steady",
+                "rate": 1,
+                "amplitude": 1,
+                "phase": 1.4828317324943823
+              },
+              "id": "i3:wine:liquid:2",
+              "interaction": {
+                "mode": "instance",
+                "groupId": "i3:wine:liquid:2"
+              }
+            },
+            {
+              "tool": "rain",
+              "entities": [
+                "i5"
+              ],
+              "projectedEntities": [],
+              "names": [
+                "夜雨"
+              ],
+              "options": {},
+              "animate": true,
+              "placement": {
+                "anchor": [
+                  320,
+                  194
+                ],
+                "at": [
+                  0.5,
+                  0.5
+                ],
+                "scale": 1.55
+              },
+              "semanticGroup": {
+                "members": [
+                  "i4",
+                  "i5",
+                  "i6"
+                ],
+                "role": "environment",
+                "pattern": "scattered",
+                "depth": "unspecified",
+                "basis": "inferred",
+                "evidence": [
+                  "江湖夜雨十年灯"
+                ],
+                "index": 1
+              },
+              "semanticEffects": [
+                {
+                  "path": "scene.groups[1].role",
+                  "consumer": "主次布局",
+                  "effect": "保留环境群落层次",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[1].pattern",
+                  "consumer": "群落布局",
+                  "effect": "按 scattered 组织显示单元；不覆盖明确数量",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[1].depth",
+                  "consumer": "远近布局",
+                  "effect": "远近未明，保持本地默认",
+                  "status": "skipped"
+                }
+              ],
+              "semanticEnergy": true,
+              "timeScale": 0.45,
+              "instances": [
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      194
+                    ],
+                    "at": [
+                      0.5,
+                      0.5
+                    ],
+                    "scale": 1.55
+                  },
+                  "depth": 0.05,
+                  "opacity": 1,
+                  "variant": 0,
+                  "tone": "far",
+                  "id": "i5:rain::3:0"
+                }
+              ],
+              "singleUnit": false,
+              "quantity": {
+                "items": [
+                  {
+                    "entity": "i5",
+                    "mode": "unspecified",
+                    "min": null,
+                    "max": null,
+                    "unit": null,
+                    "scope": "unspecified",
+                    "extent": "unspecified",
+                    "evidence": [],
+                    "basis": "model"
+                  }
+                ],
+                "rendered": 1,
+                "exact": false,
+                "collective": false,
+                "partUnsupported": false
+              },
+              "quantityLabel": "整体笔触图层；内部数量尚未适配",
+              "visual": {
+                "role": "atmosphere",
+                "brushStrength": 1.1
+              },
+              "performance": {
+                "rhythm": "falling",
+                "rate": 1,
+                "amplitude": 0.8,
+                "phase": 5.365840252331367
+              },
+              "id": "i5:rain::3",
+              "interaction": {
+                "mode": "instance",
+                "groupId": "i5:rain::3"
+              }
+            },
+            {
+              "tool": "landscape",
+              "entities": [],
+              "projectedEntities": [],
+              "names": [
+                "构图依托·地面"
+              ],
+              "options": {
+                "form": "ground",
+                "edge": "soft"
+              },
+              "animate": false,
+              "placement": {
+                "anchor": [
+                  320,
+                  194
+                ],
+                "at": [
+                  0.5,
+                  0.54
+                ],
+                "scale": 1.6
+              },
+              "instances": [
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      265
+                    ],
+                    "at": [
+                      0.5,
+                      0.54
+                    ],
+                    "scale": 2.5
+                  },
+                  "variant": 0,
+                  "depth": 0,
+                  "opacity": 1,
+                  "tone": "far",
+                  "id": "inferred:landscape:ground:4:0"
+                }
+              ],
+              "singleUnit": false,
+              "inferred": true,
+              "provenance": {
+                "basis": "local-context",
+                "reason": "生长物、房舍和陆上主体需要共同地表；这是本地构图依托"
+              },
+              "quantity": {
+                "rendered": 1,
+                "exact": false,
+                "items": []
+              },
+              "quantityLabel": "本地环境依托，不计入原文意象覆盖",
+              "z": -18,
+              "clip": [
+                [
+                  0,
+                  0.5
+                ],
+                [
+                  1,
+                  0.5
+                ],
+                [
+                  1,
+                  1.04
+                ],
+                [
+                  0,
+                  1.04
+                ]
+              ],
+              "visual": {
+                "role": "ground",
+                "brushStrength": 1.1
+              },
+              "performance": {
+                "rhythm": "steady",
+                "rate": 1,
+                "amplitude": 1,
+                "phase": 2.9656634649887645
+              },
+              "id": "inferred:landscape:ground:4",
+              "interaction": {
+                "mode": "group",
+                "groupId": "inferred:landscape:ground:4"
+              }
+            }
+          ],
+          "scene": {
+            "kind": "woodland",
+            "notes": [
+              "通用场景层先组织地面、水域、群落和主体，再比较三个布局的依托、相对位置、尺度与遮挡；检查通过不代表审美已通过。"
+            ],
+            "waterline": null,
+            "semanticSetting": {
+              "kind": "mixed",
+              "basis": "inferred",
+              "evidence": [
+                "桃李春风一杯酒",
+                "江湖夜雨十年灯"
+              ]
+            },
+            "semanticEffects": [],
+            "organization": {
+              "version": "1.0",
+              "strategy": "general-constraints",
+              "regions": {
+                "land": [
+                  [
+                    0,
+                    0.5
+                  ],
+                  [
+                    1,
+                    0.5
+                  ],
+                  [
+                    1,
+                    1.04
+                  ],
+                  [
+                    0,
+                    1.04
+                  ]
+                ]
+              },
+              "candidates": [
+                {
+                  "layout": 0,
+                  "orientation": "疏林前后",
+                  "errors": 0,
+                  "cost": 30.191,
+                  "score": 30.527,
+                  "metrics": {
+                    "overlapPenalty": 0,
+                    "balancePenalty": 0.024,
+                    "motifFootprint": 1.535,
+                    "landArea": 0.54
+                  }
+                },
+                {
+                  "layout": 2,
+                  "orientation": "远近错落",
+                  "errors": 0,
+                  "cost": 30.206,
+                  "score": 30.57,
+                  "metrics": {
+                    "overlapPenalty": 0,
+                    "balancePenalty": 0.026,
+                    "motifFootprint": 1.535,
+                    "landArea": 0.54
+                  }
+                },
+                {
+                  "layout": 1,
+                  "orientation": "林隙展开",
+                  "errors": 0,
+                  "cost": 30.704,
+                  "score": 31.936,
+                  "metrics": {
+                    "overlapPenalty": 0,
+                    "balancePenalty": 0.088,
+                    "motifFootprint": 1.612,
+                    "landArea": 0.54
+                  }
+                }
+              ],
+              "repairs": [
+                {
+                  "type": "support-added",
+                  "reason": "生长物、房舍和陆上主体需要共同地表；这是本地构图依托"
+                }
+              ],
+              "limitations": [
+                "几何检查不判定诗意理解或审美合格",
+                "动作时序与整首诗的场景切换尚未编排"
+              ],
+              "topology": "疏林前后",
+              "layout": 0,
+              "orientation": "疏林前后",
+              "audit": {
+                "scope": "implemented-geometry-and-drawing-gaps",
+                "coverage": {
+                  "scope": "extracted-entities-only",
+                  "present": 6,
+                  "mapped": 4,
+                  "parameters": [
+                    "i2"
+                  ],
+                  "missing": [
+                    {
+                      "id": "i4",
+                      "name": "江湖"
+                    }
+                  ]
+                },
+                "checks": [
+                  "presence",
+                  "count",
+                  "finite",
+                  "support",
+                  "scale",
+                  "relative-position",
+                  "depth",
+                  "grove-spread",
+                  "drawing-gaps"
+                ],
+                "status": "needs-review",
+                "errors": 0,
+                "review": 1,
+                "issues": [
+                  {
+                    "code": "drawing-gaps",
+                    "severity": "review",
+                    "message": "还有 1 项已提取线索尚未转成画面：江湖"
+                  }
+                ],
+                "metrics": {
+                  "overlapPenalty": 0,
+                  "balancePenalty": 0.024,
+                  "motifFootprint": 1.535,
+                  "landArea": 0.54
+                },
+                "cost": 30.191,
+                "aestheticAcceptance": "pending-user"
+              },
+              "graph": {
+                "nodes": [
+                  {
+                    "id": "l0",
+                    "entities": [
+                      "i6"
+                    ],
+                    "tool": "landscape",
+                    "role": "detail",
+                    "habitat": null,
+                    "inferred": false,
+                    "support": null
+                  },
+                  {
+                    "id": "l1",
+                    "entities": [
+                      "i1"
+                    ],
+                    "tool": "tree",
+                    "role": "vegetation",
+                    "habitat": "land",
+                    "inferred": false,
+                    "support": "l4"
+                  },
+                  {
+                    "id": "l2",
+                    "entities": [
+                      "i3"
+                    ],
+                    "tool": "wine",
+                    "role": "detail",
+                    "habitat": null,
+                    "inferred": false,
+                    "support": null
+                  },
+                  {
+                    "id": "l3",
+                    "entities": [
+                      "i5"
+                    ],
+                    "tool": "rain",
+                    "role": "atmosphere",
+                    "habitat": null,
+                    "inferred": false,
+                    "support": null
+                  },
+                  {
+                    "id": "l4",
+                    "entities": [],
+                    "tool": "landscape",
+                    "role": "terrain",
+                    "habitat": null,
+                    "inferred": true,
+                    "support": null
+                  }
+                ],
+                "edges": [
+                  {
+                    "type": "supported-by",
+                    "source": "l1",
+                    "target": "l4",
+                    "basis": "local-composition",
+                    "habitat": "land"
+                  }
+                ],
+                "setting": "woodland"
+              }
+            },
+            "displayAudit": {
+              "scope": "display-scale-separation-and-habitat",
+              "issues": [],
+              "errors": 0,
+              "aestheticAcceptance": "pending-user"
+            }
+          },
+          "spatial": [],
+          "landscapeStyle": {
+            "version": "1.0",
+            "color": "role-and-distance",
+            "motion": "layer-rhythms",
+            "aestheticAcceptance": "pending-user"
+          }
+        },
+        {
+          "id": "space-2",
+          "label": "远近错落",
+          "description": "先安排连续水域与地表，再按主次与远近安放景物",
+          "layers": [
+            {
+              "tool": "landscape",
+              "entities": [
+                "i6"
+              ],
+              "projectedEntities": [],
+              "names": [
+                "十年灯"
+              ],
+              "options": {
+                "form": "glow"
+              },
+              "animate": false,
+              "placement": {
+                "anchor": [
+                  320,
+                  194
+                ],
+                "at": [
+                  0.7,
+                  0.6
+                ],
+                "scale": 1.5
+              },
+              "semanticGroup": {
+                "members": [
+                  "i4",
+                  "i5",
+                  "i6"
+                ],
+                "role": "environment",
+                "pattern": "scattered",
+                "depth": "unspecified",
+                "basis": "inferred",
+                "evidence": [
+                  "江湖夜雨十年灯"
+                ],
+                "index": 1
+              },
+              "semanticEffects": [
+                {
+                  "path": "scene.groups[1].role",
+                  "consumer": "主次布局",
+                  "effect": "保留环境群落层次",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[1].pattern",
+                  "consumer": "群落布局",
+                  "effect": "按 scattered 组织显示单元；不覆盖明确数量",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[1].depth",
+                  "consumer": "远近布局",
+                  "effect": "远近未明，保持本地默认",
+                  "status": "skipped"
+                }
+              ],
+              "semanticEnergy": false,
+              "timeScale": 0.45,
+              "instances": [
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      210
+                    ],
+                    "at": [
+                      0.7,
+                      0.6
+                    ],
+                    "scale": 1.2
+                  },
+                  "depth": 0.05,
+                  "opacity": 1,
+                  "variant": 0,
+                  "tone": "far",
+                  "id": "i6:landscape:glow:0:0"
+                }
+              ],
+              "singleUnit": false,
+              "quantity": {
+                "items": [
+                  {
+                    "entity": "i6",
+                    "mode": "exact",
+                    "min": 1,
+                    "max": 1,
+                    "unit": "灯",
+                    "scope": "individual",
+                    "extent": "local",
+                    "evidence": [
+                      "十年灯"
+                    ],
+                    "basis": "model"
+                  }
+                ],
+                "rendered": 1,
+                "exact": false,
+                "collective": false,
+                "partUnsupported": false
+              },
+              "quantityLabel": "整体笔触图层；内部数量尚未适配",
+              "z": 30,
+              "visual": {
+                "role": "light",
+                "brushStrength": 1.1
+              },
+              "performance": {
+                "rhythm": "steady",
+                "rate": 1,
+                "amplitude": 1,
+                "phase": 0
+              },
+              "id": "i6:landscape:glow:0",
+              "interaction": {
+                "mode": "instance",
+                "groupId": "i6:landscape:glow:0"
+              }
+            },
+            {
+              "tool": "tree",
+              "entities": [
+                "i1"
+              ],
+              "projectedEntities": [],
+              "names": [
+                "桃李"
+              ],
+              "options": {
+                "form": "broadleaf",
+                "crown": "wash"
+              },
+              "animate": true,
+              "placement": {
+                "anchor": [
+                  320,
+                  388
+                ],
+                "at": [
+                  0.4929797320491072,
+                  0.7775714285714285
+                ],
+                "scale": 1.15
+              },
+              "semanticGroup": {
+                "members": [
+                  "i1",
+                  "i2",
+                  "i3"
+                ],
+                "role": "subject",
+                "pattern": "cluster",
+                "depth": "unspecified",
+                "basis": "inferred",
+                "evidence": [
+                  "桃李春风一杯酒"
+                ],
+                "index": 0
+              },
+              "semanticEffects": [
+                {
+                  "path": "scene.groups[0].role",
+                  "consumer": "主次布局",
+                  "effect": "主体相对突出",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[0].pattern",
+                  "consumer": "群落布局",
+                  "effect": "按 cluster 组织显示单元；不覆盖明确数量",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[0].depth",
+                  "consumer": "远近布局",
+                  "effect": "远近未明，保持本地默认",
+                  "status": "skipped"
+                }
+              ],
+              "semanticEnergy": true,
+              "timeScale": 0.45,
+              "instances": [
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.6865992635296787,
+                      0.6634771428571428
+                    ],
+                    "scale": 0.695931955502
+                  },
+                  "depth": 10,
+                  "opacity": 0.74640679775,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i1:tree:broadleaf:1:0"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.46903142352167865,
+                      0.6765914285714285
+                    ],
+                    "scale": 0.597537511004
+                  },
+                  "depth": 10.01,
+                  "opacity": 0.6700135955,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i1:tree:broadleaf:1:1"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.2514635835136786,
+                      0.6897057142857141
+                    ],
+                    "scale": 0.49914306650600004
+                  },
+                  "depth": 10.02,
+                  "opacity": 0.5936203932499999,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i1:tree:broadleaf:1:2"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.6034957435056787,
+                      0.7028199999999999
+                    ],
+                    "scale": 0.658348622008
+                  },
+                  "depth": 10.03,
+                  "opacity": 0.717227191,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i1:tree:broadleaf:1:3"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.3859279034976788,
+                      0.7159342857142856
+                    ],
+                    "scale": 0.5599541775100001
+                  },
+                  "depth": 10.04,
+                  "opacity": 0.64083398875,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i1:tree:broadleaf:1:4"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.7379600634896787,
+                      0.7290485714285714
+                    ],
+                    "scale": 0.719159733012
+                  },
+                  "depth": 10.05,
+                  "opacity": 0.7644407865,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i1:tree:broadleaf:1:5"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.5203922234816787,
+                      0.742162857142857
+                    ],
+                    "scale": 0.620765288514
+                  },
+                  "depth": 10.06,
+                  "opacity": 0.68804758425,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i1:tree:broadleaf:1:6"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.30282438347367857,
+                      0.7552771428571428
+                    ],
+                    "scale": 0.522370844016
+                  },
+                  "depth": 10.07,
+                  "opacity": 0.6116543819999999,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i1:tree:broadleaf:1:7"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.6548565434656785,
+                      0.9032114285714286
+                    ],
+                    "scale": 0.950376399518
+                  },
+                  "depth": 20.08,
+                  "opacity": 0.9597350617749999,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i1:tree:broadleaf:1:8"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.43728870345767873,
+                      0.9152457142857142
+                    ],
+                    "scale": 0.8519819550200002
+                  },
+                  "depth": 20.09,
+                  "opacity": 0.89098117975,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i1:tree:broadleaf:1:9"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.21972086344967856,
+                      0.92728
+                    ],
+                    "scale": 0.7535875105220001
+                  },
+                  "depth": 20.1,
+                  "opacity": 0.8222272977249999,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i1:tree:broadleaf:1:10"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.5717530234416784,
+                      0.8097142857142857
+                    ],
+                    "scale": 0.912793066024
+                  },
+                  "depth": 10.11,
+                  "opacity": 0.9334734156999999,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i1:tree:broadleaf:1:11"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.3541851834336787,
+                      0.8217485714285714
+                    ],
+                    "scale": 0.8143986215260002
+                  },
+                  "depth": 10.12,
+                  "opacity": 0.864719533675,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i1:tree:broadleaf:1:12"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.7062173434256795,
+                      0.833782857142857
+                    ],
+                    "scale": 0.9736041770280005
+                  },
+                  "depth": 20.13,
+                  "opacity": 0.9759656516500003,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i1:tree:broadleaf:1:13"
+                }
+              ],
+              "singleUnit": true,
+              "quantity": {
+                "items": [
+                  {
+                    "entity": "i1",
+                    "mode": "many",
+                    "min": null,
+                    "max": null,
+                    "unit": null,
+                    "scope": "group",
+                    "extent": "spread",
+                    "evidence": [
+                      "桃李"
+                    ],
+                    "basis": "model"
+                  }
+                ],
+                "rendered": 14,
+                "exact": false,
+                "collective": true,
+                "partUnsupported": false
+              },
+              "quantityLabel": "成片分布；本地试画 14 个单元",
+              "z": 8,
+              "visual": {
+                "role": "vegetation",
+                "brushStrength": 1.2
+              },
+              "performance": {
+                "rhythm": "gust",
+                "rate": 0.62,
+                "amplitude": 0.65,
+                "phase": 3.8830085198369844
+              },
+              "id": "i1:tree:broadleaf:1",
+              "interaction": {
+                "mode": "instance",
+                "groupId": "i1:tree:broadleaf:1"
+              }
+            },
+            {
+              "tool": "wine",
+              "entities": [
+                "i3"
+              ],
+              "projectedEntities": [],
+              "names": [
+                "一杯酒"
+              ],
+              "options": {
+                "form": "liquid"
+              },
+              "animate": true,
+              "placement": {
+                "anchor": [
+                  320,
+                  244
+                ],
+                "at": [
+                  0.57,
+                  0.87
+                ],
+                "scale": 0.75
+              },
+              "semanticGroup": {
+                "members": [
+                  "i1",
+                  "i2",
+                  "i3"
+                ],
+                "role": "subject",
+                "pattern": "cluster",
+                "depth": "unspecified",
+                "basis": "inferred",
+                "evidence": [
+                  "桃李春风一杯酒"
+                ],
+                "index": 0
+              },
+              "semanticEffects": [
+                {
+                  "path": "scene.groups[0].role",
+                  "consumer": "主次布局",
+                  "effect": "主体相对突出",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[0].pattern",
+                  "consumer": "群落布局",
+                  "effect": "按 cluster 组织显示单元；不覆盖明确数量",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[0].depth",
+                  "consumer": "远近布局",
+                  "effect": "远近未明，保持本地默认",
+                  "status": "skipped"
+                }
+              ],
+              "semanticEnergy": true,
+              "timeScale": 0.45,
+              "instances": [
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      244
+                    ],
+                    "at": [
+                      0.57,
+                      0.87
+                    ],
+                    "scale": 0.8400000000000001
+                  },
+                  "depth": 0.05,
+                  "opacity": 1,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i3:wine:liquid:2:0"
+                }
+              ],
+              "singleUnit": true,
+              "quantity": {
+                "items": [
+                  {
+                    "entity": "i3",
+                    "mode": "exact",
+                    "min": 1,
+                    "max": 1,
+                    "unit": "杯",
+                    "scope": "individual",
+                    "extent": "local",
+                    "evidence": [
+                      "一杯酒"
+                    ],
+                    "basis": "model"
+                  }
+                ],
+                "rendered": 1,
+                "exact": true,
+                "collective": false,
+                "partUnsupported": false
+              },
+              "quantityLabel": "按提取数量绘制 1 个",
+              "visual": {
+                "role": "vegetation",
+                "brushStrength": 1.2
+              },
+              "performance": {
+                "rhythm": "steady",
+                "rate": 1,
+                "amplitude": 1,
+                "phase": 1.4828317324943823
+              },
+              "id": "i3:wine:liquid:2",
+              "interaction": {
+                "mode": "instance",
+                "groupId": "i3:wine:liquid:2"
+              }
+            },
+            {
+              "tool": "rain",
+              "entities": [
+                "i5"
+              ],
+              "projectedEntities": [],
+              "names": [
+                "夜雨"
+              ],
+              "options": {},
+              "animate": true,
+              "placement": {
+                "anchor": [
+                  320,
+                  194
+                ],
+                "at": [
+                  0.5,
+                  0.5
+                ],
+                "scale": 1.55
+              },
+              "semanticGroup": {
+                "members": [
+                  "i4",
+                  "i5",
+                  "i6"
+                ],
+                "role": "environment",
+                "pattern": "scattered",
+                "depth": "unspecified",
+                "basis": "inferred",
+                "evidence": [
+                  "江湖夜雨十年灯"
+                ],
+                "index": 1
+              },
+              "semanticEffects": [
+                {
+                  "path": "scene.groups[1].role",
+                  "consumer": "主次布局",
+                  "effect": "保留环境群落层次",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[1].pattern",
+                  "consumer": "群落布局",
+                  "effect": "按 scattered 组织显示单元；不覆盖明确数量",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[1].depth",
+                  "consumer": "远近布局",
+                  "effect": "远近未明，保持本地默认",
+                  "status": "skipped"
+                }
+              ],
+              "semanticEnergy": true,
+              "timeScale": 0.45,
+              "instances": [
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      194
+                    ],
+                    "at": [
+                      0.5,
+                      0.5
+                    ],
+                    "scale": 1.55
+                  },
+                  "depth": 0.05,
+                  "opacity": 1,
+                  "variant": 0,
+                  "tone": "far",
+                  "id": "i5:rain::3:0"
+                }
+              ],
+              "singleUnit": false,
+              "quantity": {
+                "items": [
+                  {
+                    "entity": "i5",
+                    "mode": "unspecified",
+                    "min": null,
+                    "max": null,
+                    "unit": null,
+                    "scope": "unspecified",
+                    "extent": "unspecified",
+                    "evidence": [],
+                    "basis": "model"
+                  }
+                ],
+                "rendered": 1,
+                "exact": false,
+                "collective": false,
+                "partUnsupported": false
+              },
+              "quantityLabel": "整体笔触图层；内部数量尚未适配",
+              "visual": {
+                "role": "atmosphere",
+                "brushStrength": 1.1
+              },
+              "performance": {
+                "rhythm": "falling",
+                "rate": 1,
+                "amplitude": 0.8,
+                "phase": 5.365840252331367
+              },
+              "id": "i5:rain::3",
+              "interaction": {
+                "mode": "instance",
+                "groupId": "i5:rain::3"
+              }
+            },
+            {
+              "tool": "landscape",
+              "entities": [],
+              "projectedEntities": [],
+              "names": [
+                "构图依托·地面"
+              ],
+              "options": {
+                "form": "ground",
+                "edge": "soft"
+              },
+              "animate": false,
+              "placement": {
+                "anchor": [
+                  320,
+                  194
+                ],
+                "at": [
+                  0.5,
+                  0.54
+                ],
+                "scale": 1.6
+              },
+              "instances": [
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      265
+                    ],
+                    "at": [
+                      0.5,
+                      0.54
+                    ],
+                    "scale": 2.5
+                  },
+                  "variant": 0,
+                  "depth": 0,
+                  "opacity": 1,
+                  "tone": "far",
+                  "id": "inferred:landscape:ground:4:0"
+                }
+              ],
+              "singleUnit": false,
+              "inferred": true,
+              "provenance": {
+                "basis": "local-context",
+                "reason": "生长物、房舍和陆上主体需要共同地表；这是本地构图依托"
+              },
+              "quantity": {
+                "rendered": 1,
+                "exact": false,
+                "items": []
+              },
+              "quantityLabel": "本地环境依托，不计入原文意象覆盖",
+              "z": -18,
+              "clip": [
+                [
+                  0,
+                  0.5
+                ],
+                [
+                  1,
+                  0.5
+                ],
+                [
+                  1,
+                  1.04
+                ],
+                [
+                  0,
+                  1.04
+                ]
+              ],
+              "visual": {
+                "role": "ground",
+                "brushStrength": 1.1
+              },
+              "performance": {
+                "rhythm": "steady",
+                "rate": 1,
+                "amplitude": 1,
+                "phase": 2.9656634649887645
+              },
+              "id": "inferred:landscape:ground:4",
+              "interaction": {
+                "mode": "group",
+                "groupId": "inferred:landscape:ground:4"
+              }
+            }
+          ],
+          "scene": {
+            "kind": "woodland",
+            "notes": [],
+            "waterline": null,
+            "semanticSetting": {
+              "kind": "mixed",
+              "basis": "inferred",
+              "evidence": [
+                "桃李春风一杯酒",
+                "江湖夜雨十年灯"
+              ]
+            },
+            "semanticEffects": [],
+            "organization": {
+              "version": "1.0",
+              "strategy": "general-constraints",
+              "regions": {
+                "land": [
+                  [
+                    0,
+                    0.5
+                  ],
+                  [
+                    1,
+                    0.5
+                  ],
+                  [
+                    1,
+                    1.04
+                  ],
+                  [
+                    0,
+                    1.04
+                  ]
+                ]
+              },
+              "candidates": [],
+              "repairs": [],
+              "limitations": [
+                "几何检查不判定诗意理解或审美合格",
+                "动作时序与整首诗的场景切换尚未编排"
+              ],
+              "topology": "远近错落",
+              "layout": 2,
+              "orientation": "远近错落",
+              "audit": {
+                "scope": "implemented-geometry-and-drawing-gaps",
+                "coverage": {
+                  "scope": "extracted-entities-only",
+                  "present": 6,
+                  "mapped": 4,
+                  "parameters": [
+                    "i2"
+                  ],
+                  "missing": [
+                    {
+                      "id": "i4",
+                      "name": "江湖"
+                    }
+                  ]
+                },
+                "checks": [
+                  "presence",
+                  "count",
+                  "finite",
+                  "support",
+                  "scale",
+                  "relative-position",
+                  "depth",
+                  "grove-spread",
+                  "drawing-gaps"
+                ],
+                "status": "needs-review",
+                "errors": 0,
+                "review": 1,
+                "issues": [
+                  {
+                    "code": "drawing-gaps",
+                    "severity": "review",
+                    "message": "还有 1 项已提取线索尚未转成画面：江湖"
+                  }
+                ],
+                "metrics": {
+                  "overlapPenalty": 0,
+                  "balancePenalty": 0.026,
+                  "motifFootprint": 1.535,
+                  "landArea": 0.54
+                },
+                "cost": 30.206,
+                "aestheticAcceptance": "pending-user"
+              },
+              "graph": {
+                "nodes": [
+                  {
+                    "id": "l0",
+                    "entities": [
+                      "i6"
+                    ],
+                    "tool": "landscape",
+                    "role": "detail",
+                    "habitat": null,
+                    "inferred": false,
+                    "support": null
+                  },
+                  {
+                    "id": "l1",
+                    "entities": [
+                      "i1"
+                    ],
+                    "tool": "tree",
+                    "role": "vegetation",
+                    "habitat": "land",
+                    "inferred": false,
+                    "support": "l4"
+                  },
+                  {
+                    "id": "l2",
+                    "entities": [
+                      "i3"
+                    ],
+                    "tool": "wine",
+                    "role": "detail",
+                    "habitat": null,
+                    "inferred": false,
+                    "support": null
+                  },
+                  {
+                    "id": "l3",
+                    "entities": [
+                      "i5"
+                    ],
+                    "tool": "rain",
+                    "role": "atmosphere",
+                    "habitat": null,
+                    "inferred": false,
+                    "support": null
+                  },
+                  {
+                    "id": "l4",
+                    "entities": [],
+                    "tool": "landscape",
+                    "role": "terrain",
+                    "habitat": null,
+                    "inferred": true,
+                    "support": null
+                  }
+                ],
+                "edges": [
+                  {
+                    "type": "supported-by",
+                    "source": "l1",
+                    "target": "l4",
+                    "basis": "local-composition",
+                    "habitat": "land"
+                  }
+                ],
+                "setting": "woodland"
+              }
+            },
+            "displayAudit": {
+              "scope": "display-scale-separation-and-habitat",
+              "issues": [],
+              "errors": 0,
+              "aestheticAcceptance": "pending-user"
+            }
+          },
+          "spatial": [],
+          "landscapeStyle": {
+            "version": "1.0",
+            "color": "role-and-distance",
+            "motion": "layer-rhythms",
+            "aestheticAcceptance": "pending-user"
+          }
+        },
+        {
+          "id": "space-1",
+          "label": "林隙展开",
+          "description": "先安排连续水域与地表，再按主次与远近安放景物",
+          "layers": [
+            {
+              "tool": "landscape",
+              "entities": [
+                "i6"
+              ],
+              "projectedEntities": [],
+              "names": [
+                "十年灯"
+              ],
+              "options": {
+                "form": "glow"
+              },
+              "animate": false,
+              "placement": {
+                "anchor": [
+                  320,
+                  194
+                ],
+                "at": [
+                  0.7,
+                  0.6
+                ],
+                "scale": 1.5
+              },
+              "semanticGroup": {
+                "members": [
+                  "i4",
+                  "i5",
+                  "i6"
+                ],
+                "role": "environment",
+                "pattern": "scattered",
+                "depth": "unspecified",
+                "basis": "inferred",
+                "evidence": [
+                  "江湖夜雨十年灯"
+                ],
+                "index": 1
+              },
+              "semanticEffects": [
+                {
+                  "path": "scene.groups[1].role",
+                  "consumer": "主次布局",
+                  "effect": "保留环境群落层次",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[1].pattern",
+                  "consumer": "群落布局",
+                  "effect": "按 scattered 组织显示单元；不覆盖明确数量",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[1].depth",
+                  "consumer": "远近布局",
+                  "effect": "远近未明，保持本地默认",
+                  "status": "skipped"
+                }
+              ],
+              "semanticEnergy": false,
+              "timeScale": 0.45,
+              "instances": [
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      210
+                    ],
+                    "at": [
+                      0.7,
+                      0.6
+                    ],
+                    "scale": 1.2
+                  },
+                  "depth": 0.05,
+                  "opacity": 1,
+                  "variant": 0,
+                  "tone": "far",
+                  "id": "i6:landscape:glow:0:0"
+                }
+              ],
+              "singleUnit": false,
+              "quantity": {
+                "items": [
+                  {
+                    "entity": "i6",
+                    "mode": "exact",
+                    "min": 1,
+                    "max": 1,
+                    "unit": "灯",
+                    "scope": "individual",
+                    "extent": "local",
+                    "evidence": [
+                      "十年灯"
+                    ],
+                    "basis": "model"
+                  }
+                ],
+                "rendered": 1,
+                "exact": false,
+                "collective": false,
+                "partUnsupported": false
+              },
+              "quantityLabel": "整体笔触图层；内部数量尚未适配",
+              "z": 30,
+              "visual": {
+                "role": "light",
+                "brushStrength": 1.1
+              },
+              "performance": {
+                "rhythm": "steady",
+                "rate": 1,
+                "amplitude": 1,
+                "phase": 0
+              },
+              "id": "i6:landscape:glow:0",
+              "interaction": {
+                "mode": "instance",
+                "groupId": "i6:landscape:glow:0"
+              }
+            },
+            {
+              "tool": "tree",
+              "entities": [
+                "i1"
+              ],
+              "projectedEntities": [],
+              "names": [
+                "桃李"
+              ],
+              "options": {
+                "form": "broadleaf",
+                "crown": "wash"
+              },
+              "animate": true,
+              "placement": {
+                "anchor": [
+                  320,
+                  388
+                ],
+                "at": [
+                  0.5551525891919645,
+                  0.7775714285714285
+                ],
+                "scale": 1.15
+              },
+              "semanticGroup": {
+                "members": [
+                  "i1",
+                  "i2",
+                  "i3"
+                ],
+                "role": "subject",
+                "pattern": "cluster",
+                "depth": "unspecified",
+                "basis": "inferred",
+                "evidence": [
+                  "桃李春风一杯酒"
+                ],
+                "index": 0
+              },
+              "semanticEffects": [
+                {
+                  "path": "scene.groups[0].role",
+                  "consumer": "主次布局",
+                  "effect": "主体相对突出",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[0].pattern",
+                  "consumer": "群落布局",
+                  "effect": "按 cluster 组织显示单元；不覆盖明确数量",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[0].depth",
+                  "consumer": "远近布局",
+                  "effect": "远近未明，保持本地默认",
+                  "status": "skipped"
+                }
+              ],
+              "semanticEnergy": true,
+              "timeScale": 0.45,
+              "instances": [
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.6674006921011072,
+                      0.6634771428571428
+                    ],
+                    "scale": 0.6771271555020001
+                  },
+                  "depth": 10,
+                  "opacity": 0.73180679775,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i1:tree:broadleaf:1:0"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.44983285209310725,
+                      0.6765914285714285
+                    ],
+                    "scale": 0.578732711004
+                  },
+                  "depth": 10.01,
+                  "opacity": 0.6554135955,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i1:tree:broadleaf:1:1"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.8018650120851073,
+                      0.6897057142857141
+                    ],
+                    "scale": 0.7379382665060001
+                  },
+                  "depth": 10.02,
+                  "opacity": 0.7790203932499999,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i1:tree:broadleaf:1:2"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.5842971720771074,
+                      0.7028199999999999
+                    ],
+                    "scale": 0.6395438220080002
+                  },
+                  "depth": 10.03,
+                  "opacity": 0.702627191,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i1:tree:broadleaf:1:3"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.3667293320691074,
+                      0.7159342857142856
+                    ],
+                    "scale": 0.5411493775100001
+                  },
+                  "depth": 10.04,
+                  "opacity": 0.62623398875,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i1:tree:broadleaf:1:4"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.7187614920611073,
+                      0.7290485714285714
+                    ],
+                    "scale": 0.700354933012
+                  },
+                  "depth": 10.05,
+                  "opacity": 0.7498407865,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i1:tree:broadleaf:1:5"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.5011936520531076,
+                      0.742162857142857
+                    ],
+                    "scale": 0.6019604885140002
+                  },
+                  "depth": 10.06,
+                  "opacity": 0.6734475842500001,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i1:tree:broadleaf:1:6"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.28362581204510745,
+                      0.7552771428571428
+                    ],
+                    "scale": 0.5035660440160001
+                  },
+                  "depth": 10.07,
+                  "opacity": 0.597054382,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i1:tree:broadleaf:1:7"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.6356579720371073,
+                      0.9032114285714286
+                    ],
+                    "scale": 0.9315715995180002
+                  },
+                  "depth": 20.08,
+                  "opacity": 0.946595061775,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i1:tree:broadleaf:1:8"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.4180901320291076,
+                      0.9152457142857142
+                    ],
+                    "scale": 0.8331771550200003
+                  },
+                  "depth": 20.09,
+                  "opacity": 0.8778411797500001,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i1:tree:broadleaf:1:9"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.7701222920211075,
+                      0.92728
+                    ],
+                    "scale": 0.9923827105220002
+                  },
+                  "depth": 20.1,
+                  "opacity": 0.989087297725,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i1:tree:broadleaf:1:10"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.5525544520131073,
+                      0.8097142857142857
+                    ],
+                    "scale": 0.8939882660240002
+                  },
+                  "depth": 10.11,
+                  "opacity": 0.9203334156999999,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i1:tree:broadleaf:1:11"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.33498661200510704,
+                      0.8217485714285714
+                    ],
+                    "scale": 0.7955938215260001
+                  },
+                  "depth": 10.12,
+                  "opacity": 0.8515795336749999,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i1:tree:broadleaf:1:12"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.6870187719971079,
+                      0.833782857142857
+                    ],
+                    "scale": 0.9547993770280004
+                  },
+                  "depth": 20.13,
+                  "opacity": 0.9628256516500002,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i1:tree:broadleaf:1:13"
+                }
+              ],
+              "singleUnit": true,
+              "quantity": {
+                "items": [
+                  {
+                    "entity": "i1",
+                    "mode": "many",
+                    "min": null,
+                    "max": null,
+                    "unit": null,
+                    "scope": "group",
+                    "extent": "spread",
+                    "evidence": [
+                      "桃李"
+                    ],
+                    "basis": "model"
+                  }
+                ],
+                "rendered": 14,
+                "exact": false,
+                "collective": true,
+                "partUnsupported": false
+              },
+              "quantityLabel": "成片分布；本地试画 14 个单元",
+              "z": 8,
+              "visual": {
+                "role": "vegetation",
+                "brushStrength": 1.2
+              },
+              "performance": {
+                "rhythm": "gust",
+                "rate": 0.62,
+                "amplitude": 0.65,
+                "phase": 3.8830085198369844
+              },
+              "id": "i1:tree:broadleaf:1",
+              "interaction": {
+                "mode": "instance",
+                "groupId": "i1:tree:broadleaf:1"
+              }
+            },
+            {
+              "tool": "wine",
+              "entities": [
+                "i3"
+              ],
+              "projectedEntities": [],
+              "names": [
+                "一杯酒"
+              ],
+              "options": {
+                "form": "liquid"
+              },
+              "animate": true,
+              "placement": {
+                "anchor": [
+                  320,
+                  244
+                ],
+                "at": [
+                  0.57,
+                  0.87
+                ],
+                "scale": 0.75
+              },
+              "semanticGroup": {
+                "members": [
+                  "i1",
+                  "i2",
+                  "i3"
+                ],
+                "role": "subject",
+                "pattern": "cluster",
+                "depth": "unspecified",
+                "basis": "inferred",
+                "evidence": [
+                  "桃李春风一杯酒"
+                ],
+                "index": 0
+              },
+              "semanticEffects": [
+                {
+                  "path": "scene.groups[0].role",
+                  "consumer": "主次布局",
+                  "effect": "主体相对突出",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[0].pattern",
+                  "consumer": "群落布局",
+                  "effect": "按 cluster 组织显示单元；不覆盖明确数量",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[0].depth",
+                  "consumer": "远近布局",
+                  "effect": "远近未明，保持本地默认",
+                  "status": "skipped"
+                }
+              ],
+              "semanticEnergy": true,
+              "timeScale": 0.45,
+              "instances": [
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      244
+                    ],
+                    "at": [
+                      0.57,
+                      0.87
+                    ],
+                    "scale": 0.8400000000000001
+                  },
+                  "depth": 0.05,
+                  "opacity": 1,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i3:wine:liquid:2:0"
+                }
+              ],
+              "singleUnit": true,
+              "quantity": {
+                "items": [
+                  {
+                    "entity": "i3",
+                    "mode": "exact",
+                    "min": 1,
+                    "max": 1,
+                    "unit": "杯",
+                    "scope": "individual",
+                    "extent": "local",
+                    "evidence": [
+                      "一杯酒"
+                    ],
+                    "basis": "model"
+                  }
+                ],
+                "rendered": 1,
+                "exact": true,
+                "collective": false,
+                "partUnsupported": false
+              },
+              "quantityLabel": "按提取数量绘制 1 个",
+              "visual": {
+                "role": "vegetation",
+                "brushStrength": 1.2
+              },
+              "performance": {
+                "rhythm": "steady",
+                "rate": 1,
+                "amplitude": 1,
+                "phase": 1.4828317324943823
+              },
+              "id": "i3:wine:liquid:2",
+              "interaction": {
+                "mode": "instance",
+                "groupId": "i3:wine:liquid:2"
+              }
+            },
+            {
+              "tool": "rain",
+              "entities": [
+                "i5"
+              ],
+              "projectedEntities": [],
+              "names": [
+                "夜雨"
+              ],
+              "options": {},
+              "animate": true,
+              "placement": {
+                "anchor": [
+                  320,
+                  194
+                ],
+                "at": [
+                  0.5,
+                  0.5
+                ],
+                "scale": 1.55
+              },
+              "semanticGroup": {
+                "members": [
+                  "i4",
+                  "i5",
+                  "i6"
+                ],
+                "role": "environment",
+                "pattern": "scattered",
+                "depth": "unspecified",
+                "basis": "inferred",
+                "evidence": [
+                  "江湖夜雨十年灯"
+                ],
+                "index": 1
+              },
+              "semanticEffects": [
+                {
+                  "path": "scene.groups[1].role",
+                  "consumer": "主次布局",
+                  "effect": "保留环境群落层次",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[1].pattern",
+                  "consumer": "群落布局",
+                  "effect": "按 scattered 组织显示单元；不覆盖明确数量",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[1].depth",
+                  "consumer": "远近布局",
+                  "effect": "远近未明，保持本地默认",
+                  "status": "skipped"
+                }
+              ],
+              "semanticEnergy": true,
+              "timeScale": 0.45,
+              "instances": [
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      194
+                    ],
+                    "at": [
+                      0.5,
+                      0.5
+                    ],
+                    "scale": 1.55
+                  },
+                  "depth": 0.05,
+                  "opacity": 1,
+                  "variant": 0,
+                  "tone": "far",
+                  "id": "i5:rain::3:0"
+                }
+              ],
+              "singleUnit": false,
+              "quantity": {
+                "items": [
+                  {
+                    "entity": "i5",
+                    "mode": "unspecified",
+                    "min": null,
+                    "max": null,
+                    "unit": null,
+                    "scope": "unspecified",
+                    "extent": "unspecified",
+                    "evidence": [],
+                    "basis": "model"
+                  }
+                ],
+                "rendered": 1,
+                "exact": false,
+                "collective": false,
+                "partUnsupported": false
+              },
+              "quantityLabel": "整体笔触图层；内部数量尚未适配",
+              "visual": {
+                "role": "atmosphere",
+                "brushStrength": 1.1
+              },
+              "performance": {
+                "rhythm": "falling",
+                "rate": 1,
+                "amplitude": 0.8,
+                "phase": 5.365840252331367
+              },
+              "id": "i5:rain::3",
+              "interaction": {
+                "mode": "instance",
+                "groupId": "i5:rain::3"
+              }
+            },
+            {
+              "tool": "landscape",
+              "entities": [],
+              "projectedEntities": [],
+              "names": [
+                "构图依托·地面"
+              ],
+              "options": {
+                "form": "ground",
+                "edge": "soft"
+              },
+              "animate": false,
+              "placement": {
+                "anchor": [
+                  320,
+                  194
+                ],
+                "at": [
+                  0.5,
+                  0.54
+                ],
+                "scale": 1.6
+              },
+              "instances": [
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      265
+                    ],
+                    "at": [
+                      0.5,
+                      0.54
+                    ],
+                    "scale": 2.5
+                  },
+                  "variant": 0,
+                  "depth": 0,
+                  "opacity": 1,
+                  "tone": "far",
+                  "id": "inferred:landscape:ground:4:0"
+                }
+              ],
+              "singleUnit": false,
+              "inferred": true,
+              "provenance": {
+                "basis": "local-context",
+                "reason": "生长物、房舍和陆上主体需要共同地表；这是本地构图依托"
+              },
+              "quantity": {
+                "rendered": 1,
+                "exact": false,
+                "items": []
+              },
+              "quantityLabel": "本地环境依托，不计入原文意象覆盖",
+              "z": -18,
+              "clip": [
+                [
+                  0,
+                  0.5
+                ],
+                [
+                  1,
+                  0.5
+                ],
+                [
+                  1,
+                  1.04
+                ],
+                [
+                  0,
+                  1.04
+                ]
+              ],
+              "visual": {
+                "role": "ground",
+                "brushStrength": 1.1
+              },
+              "performance": {
+                "rhythm": "steady",
+                "rate": 1,
+                "amplitude": 1,
+                "phase": 2.9656634649887645
+              },
+              "id": "inferred:landscape:ground:4",
+              "interaction": {
+                "mode": "group",
+                "groupId": "inferred:landscape:ground:4"
+              }
+            }
+          ],
+          "scene": {
+            "kind": "woodland",
+            "notes": [],
+            "waterline": null,
+            "semanticSetting": {
+              "kind": "mixed",
+              "basis": "inferred",
+              "evidence": [
+                "桃李春风一杯酒",
+                "江湖夜雨十年灯"
+              ]
+            },
+            "semanticEffects": [],
+            "organization": {
+              "version": "1.0",
+              "strategy": "general-constraints",
+              "regions": {
+                "land": [
+                  [
+                    0,
+                    0.5
+                  ],
+                  [
+                    1,
+                    0.5
+                  ],
+                  [
+                    1,
+                    1.04
+                  ],
+                  [
+                    0,
+                    1.04
+                  ]
+                ]
+              },
+              "candidates": [],
+              "repairs": [],
+              "limitations": [
+                "几何检查不判定诗意理解或审美合格",
+                "动作时序与整首诗的场景切换尚未编排"
+              ],
+              "topology": "林隙展开",
+              "layout": 1,
+              "orientation": "林隙展开",
+              "audit": {
+                "scope": "implemented-geometry-and-drawing-gaps",
+                "coverage": {
+                  "scope": "extracted-entities-only",
+                  "present": 6,
+                  "mapped": 4,
+                  "parameters": [
+                    "i2"
+                  ],
+                  "missing": [
+                    {
+                      "id": "i4",
+                      "name": "江湖"
+                    }
+                  ]
+                },
+                "checks": [
+                  "presence",
+                  "count",
+                  "finite",
+                  "support",
+                  "scale",
+                  "relative-position",
+                  "depth",
+                  "grove-spread",
+                  "drawing-gaps"
+                ],
+                "status": "needs-review",
+                "errors": 0,
+                "review": 1,
+                "issues": [
+                  {
+                    "code": "drawing-gaps",
+                    "severity": "review",
+                    "message": "还有 1 项已提取线索尚未转成画面：江湖"
+                  }
+                ],
+                "metrics": {
+                  "overlapPenalty": 0,
+                  "balancePenalty": 0.088,
+                  "motifFootprint": 1.612,
+                  "landArea": 0.54
+                },
+                "cost": 30.704,
+                "aestheticAcceptance": "pending-user"
+              },
+              "graph": {
+                "nodes": [
+                  {
+                    "id": "l0",
+                    "entities": [
+                      "i6"
+                    ],
+                    "tool": "landscape",
+                    "role": "detail",
+                    "habitat": null,
+                    "inferred": false,
+                    "support": null
+                  },
+                  {
+                    "id": "l1",
+                    "entities": [
+                      "i1"
+                    ],
+                    "tool": "tree",
+                    "role": "vegetation",
+                    "habitat": "land",
+                    "inferred": false,
+                    "support": "l4"
+                  },
+                  {
+                    "id": "l2",
+                    "entities": [
+                      "i3"
+                    ],
+                    "tool": "wine",
+                    "role": "detail",
+                    "habitat": null,
+                    "inferred": false,
+                    "support": null
+                  },
+                  {
+                    "id": "l3",
+                    "entities": [
+                      "i5"
+                    ],
+                    "tool": "rain",
+                    "role": "atmosphere",
+                    "habitat": null,
+                    "inferred": false,
+                    "support": null
+                  },
+                  {
+                    "id": "l4",
+                    "entities": [],
+                    "tool": "landscape",
+                    "role": "terrain",
+                    "habitat": null,
+                    "inferred": true,
+                    "support": null
+                  }
+                ],
+                "edges": [
+                  {
+                    "type": "supported-by",
+                    "source": "l1",
+                    "target": "l4",
+                    "basis": "local-composition",
+                    "habitat": "land"
+                  }
+                ],
+                "setting": "woodland"
+              }
+            },
+            "displayAudit": {
+              "scope": "display-scale-separation-and-habitat",
+              "issues": [],
+              "errors": 0,
+              "aestheticAcceptance": "pending-user"
+            }
+          },
+          "spatial": [],
+          "landscapeStyle": {
+            "version": "1.0",
+            "color": "role-and-distance",
+            "motion": "layer-rhythms",
+            "aestheticAcceptance": "pending-user"
+          }
+        }
+      ],
+      "composition": "space-0",
+      "omitted": [
+        {
+          "id": "i4",
+          "name": "江湖",
+          "reason": "该专名人物、地名或抽象含义暂不作实景补画"
+        }
+      ],
+      "notes": [
+        "春风作为风参数，不额外画风线；强弱是本次试画选择。",
+        "一杯酒：以酒液概括酒名，不把配料另画成花果。这是本地写意借形，保留原词义。",
+        "一杯酒仅以酒液局部作抽象试画，不补杯、壶或饮酒者；不表示原文给出了酒液的外形。",
+        "位置、大小、笔触与默认微动是本地试画选择；数量解释与本地显示数量分别记录。",
+        "十年灯的数量解释已保留，当前工具以整体图层表现，内部笔触尚未按数量逐个适配。",
+        "未明说的群落数量、疏密、近中远层次与变体均为本地构图选择；种类可按已声明的写意画法概括，不把铺展词换算成精确物体数量。",
+        "通用场景层先组织地面、水域、群落和主体，再比较三个布局的依托、相对位置、尺度与遮挡；检查通过不代表审美已通过。",
+        "整体场景、主次、远近、依托和支持的动作状态来自本次模型解释；具体布局、颜色和时钟倍率由本地视觉策略选择。",
+        "动作动画表现受支持的主导状态与有限观看运动；先后事件与完整因果尚未编排。",
+        "动态程度与默认轻风是可调整的观看选择；不改变数量、主次或原文动作判断。人物保持点景写意，不新增人物步态。",
+        "显示检查覆盖实例尺度、鸟群分离与空中落点；不保证笔触未被遮挡，也不代替实际观看。竹林默认成组拖动，其余单独拖动；Shift 可拖动同层整组。"
+      ],
+      "relations": [],
+      "semanticConsumption": {
+        "version": "3.3",
+        "items": [
+          {
+            "path": "scene.setting",
+            "status": "applied",
+            "consumer": "本地视觉策略",
+            "effect": "整体环境进入场景提案选择",
+            "basis": "inferred",
+            "evidence": [
+              "桃李春风一杯酒",
+              "江湖夜雨十年灯"
+            ]
+          },
+          {
+            "path": "scene.groups[0].role",
+            "status": "applied",
+            "consumer": "主次布局",
+            "effect": "主体相对突出",
+            "basis": "inferred",
+            "evidence": [
+              "桃李春风一杯酒"
+            ]
+          },
+          {
+            "path": "scene.groups[0].pattern",
+            "status": "applied",
+            "consumer": "群落布局",
+            "effect": "按 cluster 组织显示单元；不覆盖明确数量",
+            "basis": "inferred",
+            "evidence": [
+              "桃李春风一杯酒"
+            ]
+          },
+          {
+            "path": "scene.groups[0].depth",
+            "status": "skipped",
+            "consumer": "远近布局",
+            "effect": "远近未明，保持本地默认",
+            "basis": "inferred",
+            "evidence": [
+              "桃李春风一杯酒"
+            ]
+          },
+          {
+            "path": "scene.groups[1].role",
+            "status": "applied",
+            "consumer": "主次布局",
+            "effect": "保留环境群落层次",
+            "basis": "inferred",
+            "evidence": [
+              "江湖夜雨十年灯"
+            ]
+          },
+          {
+            "path": "scene.groups[1].pattern",
+            "status": "applied",
+            "consumer": "群落布局",
+            "effect": "按 scattered 组织显示单元；不覆盖明确数量",
+            "basis": "inferred",
+            "evidence": [
+              "江湖夜雨十年灯"
+            ]
+          },
+          {
+            "path": "scene.groups[1].depth",
+            "status": "skipped",
+            "consumer": "远近布局",
+            "effect": "远近未明，保持本地默认",
+            "basis": "inferred",
+            "evidence": [
+              "江湖夜雨十年灯"
+            ]
+          },
+          {
+            "path": "scene.atmosphere.visibility",
+            "status": "skipped",
+            "consumer": "画布色层与远景",
+            "effect": "可见度 unclear；迷蒙或昏暗时淡化非光源图层",
+            "basis": "inferred",
+            "evidence": [
+              "江湖夜雨十年灯"
+            ]
+          },
+          {
+            "path": "scene.atmosphere.illumination",
+            "status": "applied",
+            "consumer": "自动光色",
+            "effect": "照明 night 与气息标签共同选择本地 indigo 配色；夜景优先暗底，用户可手动覆盖",
+            "basis": "inferred",
+            "evidence": [
+              "江湖夜雨十年灯"
+            ]
+          },
+          {
+            "path": "atmosphere.energy",
+            "status": "applied",
+            "consumer": "绘画时钟",
+            "effect": "没有明确动作节奏时，气息强弱控制已有微动的默认时钟"
+          },
+          {
+            "path": "atmosphere.openness",
+            "status": "applied",
+            "consumer": "群落分布与笔触密度",
+            "effect": "开阔度转换为本地间距与工具笔触密度，不等于原文数量"
+          },
+          {
+            "path": "atmosphere.valence",
+            "status": "applied",
+            "consumer": "自动光色",
+            "effect": "先约束昼夜明暗，再按已支持的气息标签和情绪倾向选择配色；不宣称完整情感理解"
+          },
+          {
+            "path": "time.markers",
+            "status": "retained",
+            "consumer": "原始记录与解读",
+            "effect": "保留原文时间标记；本版照明由 scene.atmosphere 转换，多阶段时间逻辑未执行"
+          }
+        ],
+        "summary": {
+          "applied": 9,
+          "partial": 0,
+          "unsupported": 0,
+          "skipped": 3,
+          "retained": 1
+        },
+        "aestheticAcceptance": "pending-user"
+      },
+      "landscapeStyle": {
+        "version": "1.0",
+        "color": "role-and-distance",
+        "motion": "layer-rhythms",
+        "aestheticAcceptance": "pending-user"
+      },
+      "compositionSelection": {
+        "method": "final-display-constraints-then-geometric-preference",
+        "candidates": [
+          {
+            "id": "space-0",
+            "errors": 0,
+            "score": 30.527
+          },
+          {
+            "id": "space-2",
+            "errors": 0,
+            "score": 30.57
+          },
+          {
+            "id": "space-1",
+            "errors": 0,
+            "score": 31.936
+          }
+        ],
+        "aestheticAcceptance": "pending-user"
+      },
+      "imageryTrace": [
+        {
+          "id": "i1",
+          "mentions": [
+            "桃李"
+          ],
+          "role": "scene",
+          "presence": "present",
+          "parameter": null,
+          "layers": [
+            {
+              "id": "i1:tree:broadleaf:1",
+              "tool": "tree",
+              "instances": [
+                "i1:tree:broadleaf:1:0",
+                "i1:tree:broadleaf:1:1",
+                "i1:tree:broadleaf:1:2",
+                "i1:tree:broadleaf:1:3",
+                "i1:tree:broadleaf:1:4",
+                "i1:tree:broadleaf:1:5",
+                "i1:tree:broadleaf:1:6",
+                "i1:tree:broadleaf:1:7",
+                "i1:tree:broadleaf:1:8",
+                "i1:tree:broadleaf:1:9",
+                "i1:tree:broadleaf:1:10",
+                "i1:tree:broadleaf:1:11",
+                "i1:tree:broadleaf:1:12",
+                "i1:tree:broadleaf:1:13"
+              ]
+            }
+          ],
+          "omission": null
+        },
+        {
+          "id": "i2",
+          "mentions": [
+            "春风"
+          ],
+          "role": "scene",
+          "presence": "present",
+          "parameter": "wind",
+          "layers": [],
+          "omission": null
+        },
+        {
+          "id": "i3",
+          "mentions": [
+            "一杯酒"
+          ],
+          "role": "scene",
+          "presence": "present",
+          "parameter": null,
+          "layers": [
+            {
+              "id": "i3:wine:liquid:2",
+              "tool": "wine",
+              "instances": [
+                "i3:wine:liquid:2:0"
+              ]
+            }
+          ],
+          "omission": null
+        },
+        {
+          "id": "i4",
+          "mentions": [
+            "江湖"
+          ],
+          "role": "scene",
+          "presence": "present",
+          "parameter": null,
+          "layers": [],
+          "omission": "该专名人物、地名或抽象含义暂不作实景补画"
+        },
+        {
+          "id": "i5",
+          "mentions": [
+            "夜雨"
+          ],
+          "role": "scene",
+          "presence": "present",
+          "parameter": null,
+          "layers": [
+            {
+              "id": "i5:rain::3",
+              "tool": "rain",
+              "instances": [
+                "i5:rain::3:0"
+              ]
+            }
+          ],
+          "omission": null
+        },
+        {
+          "id": "i6",
+          "mentions": [
+            "十年灯"
+          ],
+          "role": "scene",
+          "presence": "present",
+          "parameter": null,
+          "layers": [
+            {
+              "id": "i6:landscape:glow:0",
+              "tool": "landscape",
+              "instances": [
+                "i6:landscape:glow:0:0"
+              ]
+            }
+          ],
+          "omission": null
+        }
+      ]
+    },
+    "expression": {
+      "version": "shared-expression-1.1-source-bound",
+      "sourceContract": "expression-1.0",
+      "recommendation": "scenery",
+      "reason": "以明确景物及空间为主，默认风景优先",
+      "gaps": [
+        {
+          "id": "i4",
+          "label": "江湖",
+          "reason": "该专名人物、地名或抽象含义暂不作实景补画"
+        }
+      ],
+      "limitations": [
+        "景物过程当前影响抽象纹理；原生景物动作沿用场景能力，未支持的月下楼位移等仍不执行。",
+        "纹理、色层和观看扰动属于本地艺术选择，不改变语义成立状态"
+      ]
+    },
+    "notes": [
+      "三个表达倾向共享景物数量、空间、依托与主体身份；抽象笔触优先服从原景物区域和轮廓。",
+      "纯抽象或比喻句不因切换风景优先而补山水。",
+      "春风作为风参数，不额外画风线；强弱是本次试画选择。",
+      "一杯酒：以酒液概括酒名，不把配料另画成花果。这是本地写意借形，保留原词义。",
+      "一杯酒仅以酒液局部作抽象试画，不补杯、壶或饮酒者；不表示原文给出了酒液的外形。",
+      "位置、大小、笔触与默认微动是本地试画选择；数量解释与本地显示数量分别记录。",
+      "十年灯的数量解释已保留，当前工具以整体图层表现，内部笔触尚未按数量逐个适配。",
+      "未明说的群落数量、疏密、近中远层次与变体均为本地构图选择；种类可按已声明的写意画法概括，不把铺展词换算成精确物体数量。",
+      "通用场景层先组织地面、水域、群落和主体，再比较三个布局的依托、相对位置、尺度与遮挡；检查通过不代表审美已通过。",
+      "整体场景、主次、远近、依托和支持的动作状态来自本次模型解释；具体布局、颜色和时钟倍率由本地视觉策略选择。",
+      "动作动画表现受支持的主导状态与有限观看运动；先后事件与完整因果尚未编排。",
+      "动态程度与默认轻风是可调整的观看选择；不改变数量、主次或原文动作判断。人物保持点景写意，不新增人物步态。",
+      "显示检查覆盖实例尺度、鸟群分离与空中落点；不保证笔触未被遮挡，也不代替实际观看。竹林默认成组拖动，其余单独拖动；Shift 可拖动同层整组。"
+    ],
+    "aestheticAcceptance": "pending-user"
+  },
+  "delivery": {
+    "status": "complete",
+    "retryable": false,
+    "reason": null,
+    "message": "解读已通过检查。"
+  },
+  "elapsed_seconds": 5.7
+}

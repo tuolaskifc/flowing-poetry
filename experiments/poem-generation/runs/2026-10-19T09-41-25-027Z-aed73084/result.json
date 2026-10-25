@@ -1,0 +1,136 @@
+{
+  "id": "2026-10-19T09-41-25-027Z-aed73084",
+  "fingerprint": "78e4bf4afba7b8ca85f982a94ef74ca71cff833011ac3c4b82af4d25f33e4b66",
+  "poem": "风乍起，吹皱一池春水。",
+  "source": {
+    "provider": "手动试画样句",
+    "author": "冯延巳",
+    "title": "谒金门·风乍起",
+    "dynasty": "五代"
+  },
+  "mode": "imagery-only",
+  "model": "DeepSeek-V4.1-Flash",
+  "started_at": "2026-10-19T09:41:25.029Z",
+  "cached": false,
+  "http_status": 200,
+  "usage": {
+    "completion_tokens": 250,
+    "prompt_tokens": 1990,
+    "total_tokens": 2240,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 1920
+    }
+  },
+  "finish_reason": "stop",
+  "analysis": {
+    "schema_version": "3.0",
+    "poem": "风乍起，吹皱一池春水。",
+    "reading": "风忽然吹起，使一池春水泛起波纹。句中以“皱”写水面被风扰动后的细密起伏，呈现春日池上的动态景象。",
+    "entities": [
+      {
+        "id": "i1",
+        "mentions": [
+          "风"
+        ],
+        "concept": "风",
+        "kind": "environment",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "风乍起"
+        ]
+      },
+      {
+        "id": "i2",
+        "mentions": [
+          "一池春水"
+        ],
+        "concept": "春天的池水",
+        "kind": "environment",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "一池春水"
+        ]
+      }
+    ],
+    "relations": [],
+    "atmosphere": {
+      "labels": [
+        "微动",
+        "清润"
+      ],
+      "valence": "neutral",
+      "energy": "medium",
+      "tension": "low",
+      "openness": "medium",
+      "evidence": [
+        "风乍起",
+        "吹皱一池春水"
+      ]
+    },
+    "time": {
+      "markers": [
+        {
+          "surface": "乍",
+          "meaning": "表示动作突然发生"
+        }
+      ],
+      "note": null
+    },
+    "uncertainties": [
+      "“吹皱”的主语承前省略，可理解为风，但句法上未明说。"
+    ]
+  },
+  "validation": {
+    "valid": true,
+    "errors": [],
+    "warnings": [
+      "模型保留了不确定性，需要审阅"
+    ],
+    "review_required": true
+  },
+  "plan": {
+    "version": "trial-4-orchid-horse-lotus",
+    "seed": 2749528309,
+    "settings": {
+      "wind": 0.45,
+      "density": 0.45,
+      "palette": "clear"
+    },
+    "layers": [
+      {
+        "tool": "water",
+        "entities": [
+          "i2"
+        ],
+        "names": [
+          "一池春水"
+        ],
+        "options": {},
+        "animate": true,
+        "placement": {
+          "anchor": [
+            320,
+            130
+          ],
+          "at": [
+            0.5,
+            0.57
+          ],
+          "scale": 1.5
+        }
+      }
+    ],
+    "omitted": [],
+    "notes": [
+      "风作为风参数，不额外画风线；强弱是本次试画选择。",
+      "位置、大小、笔触、固定群体数量与默认微动是本地试画选择；不表示原句给出了这些数值。"
+    ],
+    "relations": []
+  },
+  "elapsed_seconds": 3.2
+}

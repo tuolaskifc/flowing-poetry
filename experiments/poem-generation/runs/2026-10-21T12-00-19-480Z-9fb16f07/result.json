@@ -1,0 +1,25 @@
+{
+  "id": "2026-10-21T12-00-19-480Z-9fb16f07",
+  "fingerprint": "eea194976e57223fece5f16a0b14d2386d8251858bfe3258a3e23bcd9cea0e8d",
+  "poem": "江碧鸟逾白，山青花欲燃。",
+  "source": {
+    "provider": "精选诗句库",
+    "author": "杜甫",
+    "title": "绝句二首·其二",
+    "dynasty": "唐代"
+  },
+  "mode": "quantity",
+  "model": "DeepSeek-V4.1-Flash",
+  "started_at": "2026-10-21T12:00:19.481Z",
+  "cached": false,
+  "error": "The operation was aborted due to timeout",
+  "validation": {
+    "valid": false,
+    "errors": [
+      "The operation was aborted due to timeout"
+    ],
+    "warnings": [],
+    "review_required": true
+  },
+  "elapsed_seconds": 90
+}

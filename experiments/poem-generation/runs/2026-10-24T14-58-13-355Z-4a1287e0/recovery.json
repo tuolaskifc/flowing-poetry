@@ -1,0 +1,19 @@
+{
+  "version": "generation-recovery-1.1",
+  "status": "normalized",
+  "reviewRequired": true,
+  "changes": [
+    {
+      "kind": "source-range-only",
+      "path": "spatial.0.evidence",
+      "original": [
+        "对此可以酣高楼"
+      ],
+      "effective": [
+        "长风万里送秋雁，对此可以酣高楼"
+      ]
+    }
+  ],
+  "omitted": [],
+  "message": "已完成格式或引用整理，解读仍可复核。"
+}

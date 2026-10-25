@@ -22,6 +22,8 @@ export const reliabilityPrompt=`
 scene.atmosphere 是一个对象，visibility 和 illumination 是字符串，不再包 value/enum 对象。未明时可为 {"visibility":"unclear","illumination":"unclear","basis":"inferred","evidence":[]}；有依据再选择相应枚举，basis/evidence 放在同一外层。
 比喻、比较可使用 echo/contrast 关联 role=reference,presence=unclear 的参照主体：这断言的是比较成立，不是参照真实在场。参照不能进入物理 scene 分组、依托、动作，也不能执行确定的主体过程。
 每条联系的 evidence 要合起来覆盖两个主体的原词，省略主语时引用包含主语的同句或相邻完整原句。不改 mentions、不编引文来凑检查。不能确认的关系宁可省略，保留可靠实体、数量和不确定性。
+数量只根据原文数词、孤独或群体线索提取。单写月、日、舟、楼不推出 exact=1；没有数量提示时使用 mode=unspecified,min=null,max=null,unit=null,scope=unspecified。unit 只抄原文实际出现的量词；不要自行补轮、盏、只、个。十年灯的十年是时长，不是十盏灯或确定一盏；一两声是声音次数，不是鸟只数。数量 evidence 引用包括该实体原词的完整短句。
+空间、动作、群落、关系和过程的枚举严格从 JSON Schema 选择，不能自行发明枚举。无法确认的可选空间关系和动作留空数组；scene 的 setting/groups/supports/actions/atmosphere 字段仍完整返回。抽象主体、比喻参照与缺席主体不放入物理 scene.groups/supports/actions。
 `;
 export function sceneProjection(a){const p=structuredClone(a);p.schema_version='3.3';delete p.expression;return p;}
 export function validateExpression(a,poem){

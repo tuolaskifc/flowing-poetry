@@ -1,0 +1,337 @@
+{
+  "id": "2026-10-21T11-59-11-773Z-9f1f0366",
+  "fingerprint": "022d1e91818c7c6d900b3ef2350f70f64c8488ee321b50cc6d98fba10f5ba006",
+  "poem": "渭城朝雨浥轻尘，客舍青青柳色新。",
+  "source": {
+    "provider": "精选诗句库",
+    "author": "王维",
+    "title": "送元二使安西",
+    "dynasty": "唐代"
+  },
+  "mode": "quantity",
+  "model": "DeepSeek-V4.1-Flash",
+  "started_at": "2026-10-21T11:59:11.775Z",
+  "cached": false,
+  "http_status": 200,
+  "usage": {
+    "completion_tokens": 566,
+    "prompt_tokens": 2544,
+    "total_tokens": 3110,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2432
+    }
+  },
+  "finish_reason": "stop",
+  "analysis": {
+    "schema_version": "3.1",
+    "poem": "渭城朝雨浥轻尘，客舍青青柳色新。",
+    "reading": "渭城清晨的雨沾湿了轻尘，客舍旁柳色青青，显得清新。",
+    "entities": [
+      {
+        "id": "i1",
+        "mentions": [
+          "渭城"
+        ],
+        "concept": "地名，渭城",
+        "kind": "place",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "渭城朝雨浥轻尘"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i2",
+        "mentions": [
+          "朝雨"
+        ],
+        "concept": "清晨的雨",
+        "kind": "environment",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "渭城朝雨浥轻尘"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i3",
+        "mentions": [
+          "轻尘"
+        ],
+        "concept": "轻微的尘土",
+        "kind": "object",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "渭城朝雨浥轻尘"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i4",
+        "mentions": [
+          "客舍"
+        ],
+        "concept": "旅舍，客居之所",
+        "kind": "place",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "客舍青青柳色新"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i5",
+        "mentions": [
+          "柳色"
+        ],
+        "concept": "柳树的颜色，指柳树",
+        "kind": "organism",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "客舍青青柳色新"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      }
+    ],
+    "relations": [],
+    "atmosphere": {
+      "labels": [
+        "清新",
+        "湿润",
+        "宁静"
+      ],
+      "valence": "positive",
+      "energy": "low",
+      "tension": "low",
+      "openness": "medium",
+      "evidence": [
+        "渭城朝雨浥轻尘",
+        "客舍青青柳色新"
+      ]
+    },
+    "time": {
+      "markers": [
+        {
+          "surface": "朝",
+          "meaning": "清晨，表示时间"
+        }
+      ],
+      "note": null
+    },
+    "uncertainties": [
+      "柳色新可指柳树整体或柳叶颜色，具体所指不明。"
+    ]
+  },
+  "validation": {
+    "valid": true,
+    "errors": [],
+    "warnings": [
+      "模型保留了不确定性，需要审阅"
+    ],
+    "review_required": true
+  },
+  "plan": {
+    "version": "quantity-composition-1",
+    "seed": 981621458,
+    "settings": {
+      "wind": 0,
+      "density": 0.45,
+      "palette": "clear"
+    },
+    "layers": [
+      {
+        "tool": "willow",
+        "entities": [
+          "i5"
+        ],
+        "names": [
+          "柳色"
+        ],
+        "options": {},
+        "animate": true,
+        "placement": {
+          "anchor": [
+            320,
+            340
+          ],
+          "at": [
+            0.23,
+            0.88
+          ],
+          "scale": 1
+        },
+        "instances": [
+          {
+            "placement": {
+              "anchor": [
+                320,
+                340
+              ],
+              "at": [
+                0.14,
+                0.96
+              ],
+              "scale": 1.7
+            },
+            "depth": 0,
+            "opacity": 1,
+            "variant": 0
+          }
+        ],
+        "singleUnit": true,
+        "quantity": {
+          "items": [
+            {
+              "entity": "i5",
+              "mode": "unspecified",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "unspecified",
+              "extent": "unspecified",
+              "evidence": [],
+              "basis": "model"
+            }
+          ],
+          "rendered": 1,
+          "exact": false,
+          "collective": false,
+          "partUnsupported": false
+        },
+        "quantityLabel": "数量未精确；本地试画 1 个单元"
+      },
+      {
+        "tool": "rain",
+        "entities": [
+          "i2"
+        ],
+        "names": [
+          "朝雨"
+        ],
+        "options": {},
+        "animate": true,
+        "placement": {
+          "anchor": [
+            320,
+            194
+          ],
+          "at": [
+            0.5,
+            0.5
+          ],
+          "scale": 1.55
+        },
+        "instances": [
+          {
+            "placement": {
+              "anchor": [
+                320,
+                194
+              ],
+              "at": [
+                0.5,
+                0.5
+              ],
+              "scale": 1.55
+            },
+            "depth": 0,
+            "opacity": 1,
+            "variant": 0
+          }
+        ],
+        "singleUnit": false,
+        "quantity": {
+          "items": [
+            {
+              "entity": "i2",
+              "mode": "unspecified",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "unspecified",
+              "extent": "unspecified",
+              "evidence": [],
+              "basis": "model"
+            }
+          ],
+          "rendered": 1,
+          "exact": false,
+          "collective": false,
+          "partUnsupported": false
+        },
+        "quantityLabel": "整体笔触图层；内部数量尚未适配"
+      }
+    ],
+    "omitted": [
+      {
+        "id": "i1",
+        "name": "渭城",
+        "reason": "暂未提供该人物、地点或抽象含义的绘画单元"
+      },
+      {
+        "id": "i3",
+        "name": "轻尘",
+        "reason": "该具体意象尚无可用形态；没有替换成通用树、花或鸟群"
+      },
+      {
+        "id": "i4",
+        "name": "客舍",
+        "reason": "暂未提供该人物、地点或抽象含义的绘画单元"
+      }
+    ],
+    "notes": [
+      "位置、大小、笔触与默认微动是本地试画选择；数量解释与本地显示数量分别记录。",
+      "未明说的群落数量、疏密、近中远层次与变体均为本地构图选择；不增加新物种，不把铺展词换算成精确物体数量。"
+    ],
+    "relations": []
+  },
+  "elapsed_seconds": 6.8
+}

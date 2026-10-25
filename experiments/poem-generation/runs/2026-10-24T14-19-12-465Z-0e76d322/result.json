@@ -1,0 +1,920 @@
+{
+  "id": "2026-10-24T14-19-12-465Z-0e76d322",
+  "fingerprint": "f9bd49fcb43a39eddce214e697672313d7ec7e57693381a9607573540def9419",
+  "poem": "黄华自与西风约，白发先从远客生",
+  "source": {
+    "provider": "全量下限检查：无当前可重放回答的输入单次补测"
+  },
+  "mode": "expression",
+  "model": "DeepSeek-V4.1-Flash",
+  "started_at": "2026-10-24T14:19:12.469Z",
+  "cached": false,
+  "http_status": 200,
+  "usage": {
+    "completion_tokens": 913,
+    "prompt_tokens": 5877,
+    "total_tokens": 6790,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 5760
+    }
+  },
+  "finish_reason": "stop",
+  "analysis": {
+    "schema_version": "expression-1.0",
+    "poem": "黄华自与西风约，白发先从远客生",
+    "reading": "菊花自与西风有约，白发却先从远客身上生出；以花之守约反衬客居者年华先衰。",
+    "entities": [
+      {
+        "id": "i1",
+        "mentions": [
+          "黄华"
+        ],
+        "concept": "菊花",
+        "kind": "organism",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "黄华自与西风约"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i2",
+        "mentions": [
+          "西风"
+        ],
+        "concept": "秋风",
+        "kind": "environment",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "黄华自与西风约"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i3",
+        "mentions": [
+          "白发"
+        ],
+        "concept": "白发",
+        "kind": "object",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "白发先从远客生"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i4",
+        "mentions": [
+          "远客"
+        ],
+        "concept": "远行客居之人",
+        "kind": "person",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "白发先从远客生"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      }
+    ],
+    "relations": [],
+    "atmosphere": {
+      "labels": [
+        "萧瑟",
+        "迟暮"
+      ],
+      "valence": "negative",
+      "energy": "low",
+      "tension": "medium",
+      "openness": "unclear",
+      "evidence": [
+        "黄华自与西风约",
+        "白发先从远客生"
+      ]
+    },
+    "time": {
+      "markers": [
+        {
+          "surface": "先",
+          "meaning": "表示白发比黄华之约更早发生"
+        }
+      ],
+      "note": "“自与”暗示黄华与西风之约的恒常，与“先”形成时间对照"
+    },
+    "uncertainties": [
+      "“约”是拟人化的约定还是自然时序的暗合，未明说",
+      "“远客”是否即抒情主体，未明说"
+    ],
+    "spatial": [],
+    "scene": {
+      "setting": {
+        "kind": "unclear",
+        "basis": "inferred",
+        "evidence": [
+          "黄华自与西风约",
+          "白发先从远客生"
+        ]
+      },
+      "groups": [
+        {
+          "members": [
+            "i1"
+          ],
+          "role": "subject",
+          "pattern": "single",
+          "depth": "unspecified",
+          "basis": "inferred",
+          "evidence": [
+            "黄华自与西风约"
+          ]
+        },
+        {
+          "members": [
+            "i2"
+          ],
+          "role": "environment",
+          "pattern": "single",
+          "depth": "unspecified",
+          "basis": "inferred",
+          "evidence": [
+            "黄华自与西风约"
+          ]
+        },
+        {
+          "members": [
+            "i3",
+            "i4"
+          ],
+          "role": "subject",
+          "pattern": "single",
+          "depth": "unspecified",
+          "basis": "inferred",
+          "evidence": [
+            "白发先从远客生"
+          ]
+        }
+      ],
+      "supports": [],
+      "actions": [
+        {
+          "entity": "i3",
+          "state": "rise",
+          "pace": "unspecified",
+          "direction": "unspecified",
+          "modality": "asserted",
+          "basis": "inferred",
+          "evidence": [
+            "白发先从远客生"
+          ]
+        }
+      ],
+      "atmosphere": {
+        "visibility": "unclear",
+        "illumination": "unclear",
+        "basis": "inferred",
+        "evidence": []
+      }
+    },
+    "expression": {
+      "relations": [
+        {
+          "source": "i1",
+          "target": "i2",
+          "kind": "connect",
+          "modality": "asserted",
+          "basis": "explicit",
+          "evidence": [
+            "黄华自与西风约"
+          ]
+        },
+        {
+          "source": "i1",
+          "target": "i3",
+          "kind": "contrast",
+          "modality": "asserted",
+          "basis": "inferred",
+          "evidence": [
+            "黄华自与西风约",
+            "白发先从远客生"
+          ]
+        }
+      ],
+      "processes": [
+        {
+          "subject": "i1",
+          "kind": "persist",
+          "temporal": "ongoing",
+          "modality": "asserted",
+          "basis": "inferred",
+          "evidence": [
+            "黄华自与西风约"
+          ]
+        },
+        {
+          "subject": "i3",
+          "kind": "emerge",
+          "temporal": "already",
+          "modality": "asserted",
+          "basis": "explicit",
+          "evidence": [
+            "白发先从远客生"
+          ]
+        }
+      ]
+    }
+  },
+  "validation": {
+    "valid": true,
+    "errors": [],
+    "warnings": [
+      "模型保留了不确定性，需要审阅",
+      "scene.setting 为语义推断，绘画选择需与原文明示区分",
+      "scene.groups[0] 为语义推断，绘画选择需与原文明示区分",
+      "scene.groups[1] 为语义推断，绘画选择需与原文明示区分",
+      "scene.groups[2] 为语义推断，绘画选择需与原文明示区分",
+      "scene.actions[0] 为语义推断，绘画选择需与原文明示区分",
+      "scene.atmosphere 为语义推断，绘画选择需与原文明示区分",
+      "expression.relations[1] 为语义推断",
+      "expression.processes[0] 为语义推断"
+    ],
+    "review_required": true
+  },
+  "plan": {
+    "version": "shared-expression-1.1-source-bound",
+    "seed": 2072494049,
+    "poem": "黄华自与西风约，白发先从远客生",
+    "nodes": [
+      {
+        "id": "i1",
+        "label": "黄华",
+        "meaning": "菊花",
+        "kind": "concrete",
+        "contextOnly": false,
+        "mode": "present"
+      },
+      {
+        "id": "i2",
+        "label": "西风",
+        "meaning": "秋风",
+        "kind": "concrete",
+        "contextOnly": false,
+        "mode": "present"
+      },
+      {
+        "id": "i3",
+        "label": "白发",
+        "meaning": "白发",
+        "kind": "concrete",
+        "contextOnly": false,
+        "mode": "present"
+      },
+      {
+        "id": "i4",
+        "label": "远客",
+        "meaning": "远行客居之人",
+        "kind": "concrete",
+        "contextOnly": false,
+        "mode": "present"
+      }
+    ],
+    "relations": [
+      {
+        "source": "i1",
+        "target": "i2",
+        "kind": "connect",
+        "modality": "asserted",
+        "basis": "explicit",
+        "evidence": [
+          "黄华自与西风约"
+        ]
+      },
+      {
+        "source": "i1",
+        "target": "i3",
+        "kind": "contrast",
+        "modality": "asserted",
+        "basis": "inferred",
+        "evidence": [
+          "黄华自与西风约",
+          "白发先从远客生"
+        ]
+      }
+    ],
+    "processes": [
+      {
+        "subject": "i1",
+        "kind": "persist",
+        "temporal": "ongoing",
+        "modality": "asserted",
+        "basis": "inferred",
+        "evidence": [
+          "黄华自与西风约"
+        ]
+      },
+      {
+        "subject": "i3",
+        "kind": "emerge",
+        "temporal": "already",
+        "modality": "asserted",
+        "basis": "explicit",
+        "evidence": [
+          "白发先从远客生"
+        ]
+      }
+    ],
+    "omitted": [],
+    "atmosphere": {
+      "labels": [
+        "萧瑟",
+        "迟暮"
+      ],
+      "valence": "negative",
+      "energy": "low",
+      "tension": "medium",
+      "openness": "unclear",
+      "evidence": [
+        "黄华自与西风约",
+        "白发先从远客生"
+      ],
+      "illumination": "unclear"
+    },
+    "concretePlan": {
+      "version": "semantic-composition-3.3-source-bound",
+      "seed": 2072494049,
+      "settings": {
+        "wind": 0.45,
+        "density": 0.45,
+        "palette": "autumn",
+        "motion": 1.4
+      },
+      "layers": [
+        {
+          "tool": "flower-forms",
+          "entities": [
+            "i1"
+          ],
+          "projectedEntities": [],
+          "names": [
+            "黄华"
+          ],
+          "options": {
+            "kind": "chrysanthemum"
+          },
+          "animate": true,
+          "placement": {
+            "anchor": [
+              320,
+              188
+            ],
+            "at": [
+              0.42,
+              0.65
+            ],
+            "scale": 0.9
+          },
+          "semanticGroup": {
+            "members": [
+              "i1"
+            ],
+            "role": "subject",
+            "pattern": "single",
+            "depth": "unspecified",
+            "basis": "inferred",
+            "evidence": [
+              "黄华自与西风约"
+            ],
+            "index": 0
+          },
+          "semanticEffects": [],
+          "semanticEnergy": true,
+          "timeScale": 0.45,
+          "instances": [
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  188
+                ],
+                "at": [
+                  0.42,
+                  0.65
+                ],
+                "scale": 0.9
+              },
+              "depth": 0,
+              "opacity": 1,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i1:flower-forms::0:0"
+            }
+          ],
+          "singleUnit": true,
+          "quantity": {
+            "items": [
+              {
+                "entity": "i1",
+                "mode": "unspecified",
+                "min": null,
+                "max": null,
+                "unit": null,
+                "scope": "unspecified",
+                "extent": "unspecified",
+                "evidence": [],
+                "basis": "model"
+              }
+            ],
+            "rendered": 1,
+            "exact": false,
+            "collective": false,
+            "partUnsupported": false
+          },
+          "quantityLabel": "数量未精确；本地试画 1 个单元",
+          "visual": {
+            "role": "blossom",
+            "brushStrength": 1.65
+          },
+          "performance": {
+            "rhythm": "steady",
+            "rate": 1,
+            "amplitude": 1,
+            "phase": 0
+          },
+          "id": "i1:flower-forms::0",
+          "interaction": {
+            "mode": "instance",
+            "groupId": "i1:flower-forms::0"
+          }
+        }
+      ],
+      "spatial": [],
+      "scene": {
+        "kind": "study",
+        "notes": [],
+        "waterline": null,
+        "semanticSetting": {
+          "kind": "unclear",
+          "basis": "inferred",
+          "evidence": [
+            "黄华自与西风约",
+            "白发先从远客生"
+          ]
+        },
+        "semanticEffects": [],
+        "organization": {
+          "version": "1.0",
+          "strategy": "isolated-study",
+          "regions": {},
+          "candidates": [
+            {
+              "layout": "existing",
+              "errors": 0,
+              "cost": 30
+            }
+          ],
+          "repairs": [],
+          "limitations": [
+            "几何检查不判定诗意理解或审美合格",
+            "动作时序与整首诗的场景切换尚未编排"
+          ],
+          "graph": {
+            "nodes": [
+              {
+                "id": "l0",
+                "entities": [
+                  "i1"
+                ],
+                "tool": "flower-forms",
+                "role": "detail",
+                "habitat": null,
+                "inferred": false,
+                "support": null
+              }
+            ],
+            "edges": [],
+            "setting": "study"
+          },
+          "audit": {
+            "scope": "implemented-geometry-and-drawing-gaps",
+            "coverage": {
+              "scope": "extracted-entities-only",
+              "present": 4,
+              "mapped": 1,
+              "parameters": [
+                "i2"
+              ],
+              "missing": [
+                {
+                  "id": "i3",
+                  "name": "白发"
+                },
+                {
+                  "id": "i4",
+                  "name": "远客"
+                }
+              ]
+            },
+            "checks": [
+              "presence",
+              "count",
+              "finite",
+              "water-support",
+              "cliff-support",
+              "grove-spread",
+              "drawing-gaps"
+            ],
+            "status": "needs-review",
+            "errors": 0,
+            "review": 1,
+            "issues": [
+              {
+                "code": "drawing-gaps",
+                "severity": "review",
+                "message": "还有 2 项已提取线索尚未转成画面：白发、远客"
+              }
+            ],
+            "metrics": {
+              "overlapPenalty": 0,
+              "balancePenalty": 0,
+              "motifFootprint": 0,
+              "landArea": 0
+            },
+            "cost": 30,
+            "aestheticAcceptance": "pending-user"
+          }
+        },
+        "displayAudit": {
+          "scope": "display-scale-separation-and-habitat",
+          "issues": [],
+          "errors": 0,
+          "aestheticAcceptance": "pending-user"
+        }
+      },
+      "omitted": [
+        {
+          "id": "i3",
+          "name": "白发",
+          "reason": "该意象尚无合适的写意画法"
+        },
+        {
+          "id": "i4",
+          "name": "远客",
+          "reason": "该专名人物、地名或抽象含义暂不作实景补画"
+        }
+      ],
+      "notes": [
+        "黄华目前只画花冠示意，未补出枝叶或整株。",
+        "西风作为风参数，不额外画风线；强弱是本次试画选择。",
+        "位置、大小、笔触与默认微动是本地试画选择；数量解释与本地显示数量分别记录。",
+        "未明说的群落数量、疏密、近中远层次与变体均为本地构图选择；种类可按已声明的写意画法概括，不把铺展词换算成精确物体数量。",
+        "语义保留：scene.groups[0].role，分组成员目前缺少基础画法",
+        "语义保留：scene.groups[0].pattern，分组成员目前缺少基础画法",
+        "语义保留：scene.groups[0].depth，分组成员目前缺少基础画法",
+        "语义保留：scene.groups[1].role，分组成员目前缺少基础画法",
+        "语义保留：scene.groups[1].pattern，分组成员目前缺少基础画法",
+        "语义保留：scene.groups[1].depth，分组成员目前缺少基础画法",
+        "语义保留：scene.groups[2].role，分组成员目前缺少基础画法",
+        "语义保留：scene.groups[2].pattern，分组成员目前缺少基础画法",
+        "语义保留：scene.groups[2].depth，分组成员目前缺少基础画法",
+        "整体场景、主次、远近、依托和支持的动作状态来自本次模型解释；具体布局、颜色和时钟倍率由本地视觉策略选择。",
+        "动作动画表现受支持的主导状态与有限观看运动；先后事件与完整因果尚未编排。",
+        "动态程度与默认轻风是可调整的观看选择；不改变数量、主次或原文动作判断。人物保持点景写意，不新增人物步态。",
+        "显示检查覆盖实例尺度、鸟群分离与空中落点；不保证笔触未被遮挡，也不代替实际观看。竹林默认成组拖动，其余单独拖动；Shift 可拖动同层整组。"
+      ],
+      "relations": [],
+      "semanticConsumption": {
+        "version": "3.3",
+        "items": [
+          {
+            "path": "scene.setting",
+            "status": "skipped",
+            "consumer": "本地视觉策略",
+            "effect": "整体环境未明",
+            "basis": "inferred",
+            "evidence": [
+              "黄华自与西风约",
+              "白发先从远客生"
+            ]
+          },
+          {
+            "path": "scene.groups[0].role",
+            "status": "unsupported",
+            "consumer": "本地视觉策略",
+            "effect": "分组成员目前缺少基础画法",
+            "basis": "inferred",
+            "evidence": [
+              "黄华自与西风约"
+            ]
+          },
+          {
+            "path": "scene.groups[0].pattern",
+            "status": "unsupported",
+            "consumer": "本地视觉策略",
+            "effect": "分组成员目前缺少基础画法",
+            "basis": "inferred",
+            "evidence": [
+              "黄华自与西风约"
+            ]
+          },
+          {
+            "path": "scene.groups[0].depth",
+            "status": "unsupported",
+            "consumer": "本地视觉策略",
+            "effect": "分组成员目前缺少基础画法",
+            "basis": "inferred",
+            "evidence": [
+              "黄华自与西风约"
+            ]
+          },
+          {
+            "path": "scene.groups[1].role",
+            "status": "unsupported",
+            "consumer": "本地视觉策略",
+            "effect": "分组成员目前缺少基础画法",
+            "basis": "inferred",
+            "evidence": [
+              "黄华自与西风约"
+            ]
+          },
+          {
+            "path": "scene.groups[1].pattern",
+            "status": "unsupported",
+            "consumer": "本地视觉策略",
+            "effect": "分组成员目前缺少基础画法",
+            "basis": "inferred",
+            "evidence": [
+              "黄华自与西风约"
+            ]
+          },
+          {
+            "path": "scene.groups[1].depth",
+            "status": "unsupported",
+            "consumer": "本地视觉策略",
+            "effect": "分组成员目前缺少基础画法",
+            "basis": "inferred",
+            "evidence": [
+              "黄华自与西风约"
+            ]
+          },
+          {
+            "path": "scene.groups[2].role",
+            "status": "unsupported",
+            "consumer": "本地视觉策略",
+            "effect": "分组成员目前缺少基础画法",
+            "basis": "inferred",
+            "evidence": [
+              "白发先从远客生"
+            ]
+          },
+          {
+            "path": "scene.groups[2].pattern",
+            "status": "unsupported",
+            "consumer": "本地视觉策略",
+            "effect": "分组成员目前缺少基础画法",
+            "basis": "inferred",
+            "evidence": [
+              "白发先从远客生"
+            ]
+          },
+          {
+            "path": "scene.groups[2].depth",
+            "status": "unsupported",
+            "consumer": "本地视觉策略",
+            "effect": "分组成员目前缺少基础画法",
+            "basis": "inferred",
+            "evidence": [
+              "白发先从远客生"
+            ]
+          },
+          {
+            "path": "scene.actions[0].state",
+            "status": "skipped",
+            "consumer": "本地视觉策略",
+            "effect": "主体无画法",
+            "basis": "inferred",
+            "evidence": [
+              "白发先从远客生"
+            ]
+          },
+          {
+            "path": "scene.actions[0].pace",
+            "status": "skipped",
+            "consumer": "本地视觉策略",
+            "effect": "该工具尚不支持此动作分量",
+            "basis": "inferred",
+            "evidence": [
+              "白发先从远客生"
+            ]
+          },
+          {
+            "path": "scene.actions[0].direction",
+            "status": "skipped",
+            "consumer": "本地视觉策略",
+            "effect": "该工具尚不支持此动作分量",
+            "basis": "inferred",
+            "evidence": [
+              "白发先从远客生"
+            ]
+          },
+          {
+            "path": "scene.atmosphere.visibility",
+            "status": "skipped",
+            "consumer": "画布色层与远景",
+            "effect": "可见度 unclear；迷蒙或昏暗时淡化非光源图层",
+            "basis": "inferred",
+            "evidence": []
+          },
+          {
+            "path": "scene.atmosphere.illumination",
+            "status": "skipped",
+            "consumer": "自动光色",
+            "effect": "照明 unclear 与气息标签共同选择本地 autumn 配色；夜景优先暗底，用户可手动覆盖",
+            "basis": "inferred",
+            "evidence": []
+          },
+          {
+            "path": "atmosphere.energy",
+            "status": "applied",
+            "consumer": "绘画时钟",
+            "effect": "没有明确动作节奏时，气息强弱控制已有微动的默认时钟"
+          },
+          {
+            "path": "atmosphere.openness",
+            "status": "applied",
+            "consumer": "群落分布与笔触密度",
+            "effect": "开阔度转换为本地间距与工具笔触密度，不等于原文数量"
+          },
+          {
+            "path": "atmosphere.valence",
+            "status": "applied",
+            "consumer": "自动光色",
+            "effect": "先约束昼夜明暗，再按已支持的气息标签和情绪倾向选择配色；不宣称完整情感理解"
+          },
+          {
+            "path": "time.markers",
+            "status": "retained",
+            "consumer": "原始记录与解读",
+            "effect": "保留原文时间标记；本版照明由 scene.atmosphere 转换，多阶段时间逻辑未执行"
+          }
+        ],
+        "summary": {
+          "applied": 3,
+          "partial": 0,
+          "unsupported": 9,
+          "skipped": 6,
+          "retained": 1
+        },
+        "aestheticAcceptance": "pending-user"
+      },
+      "landscapeStyle": {
+        "version": "1.0",
+        "color": "role-and-distance",
+        "motion": "layer-rhythms",
+        "aestheticAcceptance": "pending-user"
+      },
+      "imageryTrace": [
+        {
+          "id": "i1",
+          "mentions": [
+            "黄华"
+          ],
+          "role": "scene",
+          "presence": "present",
+          "parameter": null,
+          "layers": [
+            {
+              "id": "i1:flower-forms::0",
+              "tool": "flower-forms",
+              "instances": [
+                "i1:flower-forms::0:0"
+              ]
+            }
+          ],
+          "omission": null
+        },
+        {
+          "id": "i2",
+          "mentions": [
+            "西风"
+          ],
+          "role": "scene",
+          "presence": "present",
+          "parameter": "wind",
+          "layers": [],
+          "omission": null
+        },
+        {
+          "id": "i3",
+          "mentions": [
+            "白发"
+          ],
+          "role": "scene",
+          "presence": "present",
+          "parameter": null,
+          "layers": [],
+          "omission": "该意象尚无合适的写意画法"
+        },
+        {
+          "id": "i4",
+          "mentions": [
+            "远客"
+          ],
+          "role": "scene",
+          "presence": "present",
+          "parameter": null,
+          "layers": [],
+          "omission": "该专名人物、地名或抽象含义暂不作实景补画"
+        }
+      ]
+    },
+    "expression": {
+      "version": "shared-expression-1.1-source-bound",
+      "sourceContract": "expression-1.0",
+      "recommendation": "scenery",
+      "reason": "以明确景物及空间为主，默认风景优先",
+      "gaps": [
+        {
+          "id": "i3",
+          "label": "白发",
+          "reason": "该意象尚无合适的写意画法"
+        },
+        {
+          "id": "i4",
+          "label": "远客",
+          "reason": "该专名人物、地名或抽象含义暂不作实景补画"
+        }
+      ],
+      "limitations": [
+        "景物过程当前影响抽象纹理；原生景物动作沿用场景能力，未支持的月下楼位移等仍不执行。",
+        "纹理、色层和观看扰动属于本地艺术选择，不改变语义成立状态"
+      ]
+    },
+    "notes": [
+      "三个表达倾向共享景物数量、空间、依托与主体身份；抽象笔触优先服从原景物区域和轮廓。",
+      "纯抽象或比喻句不因切换风景优先而补山水。",
+      "黄华目前只画花冠示意，未补出枝叶或整株。",
+      "西风作为风参数，不额外画风线；强弱是本次试画选择。",
+      "位置、大小、笔触与默认微动是本地试画选择；数量解释与本地显示数量分别记录。",
+      "未明说的群落数量、疏密、近中远层次与变体均为本地构图选择；种类可按已声明的写意画法概括，不把铺展词换算成精确物体数量。",
+      "语义保留：scene.groups[0].role，分组成员目前缺少基础画法",
+      "语义保留：scene.groups[0].pattern，分组成员目前缺少基础画法",
+      "语义保留：scene.groups[0].depth，分组成员目前缺少基础画法",
+      "语义保留：scene.groups[1].role，分组成员目前缺少基础画法",
+      "语义保留：scene.groups[1].pattern，分组成员目前缺少基础画法",
+      "语义保留：scene.groups[1].depth，分组成员目前缺少基础画法",
+      "语义保留：scene.groups[2].role，分组成员目前缺少基础画法",
+      "语义保留：scene.groups[2].pattern，分组成员目前缺少基础画法",
+      "语义保留：scene.groups[2].depth，分组成员目前缺少基础画法",
+      "整体场景、主次、远近、依托和支持的动作状态来自本次模型解释；具体布局、颜色和时钟倍率由本地视觉策略选择。",
+      "动作动画表现受支持的主导状态与有限观看运动；先后事件与完整因果尚未编排。",
+      "动态程度与默认轻风是可调整的观看选择；不改变数量、主次或原文动作判断。人物保持点景写意，不新增人物步态。",
+      "显示检查覆盖实例尺度、鸟群分离与空中落点；不保证笔触未被遮挡，也不代替实际观看。竹林默认成组拖动，其余单独拖动；Shift 可拖动同层整组。"
+    ],
+    "aestheticAcceptance": "pending-user"
+  },
+  "delivery": {
+    "status": "complete",
+    "retryable": false,
+    "reason": null,
+    "message": "解读已通过检查。"
+  },
+  "elapsed_seconds": 12.6
+}

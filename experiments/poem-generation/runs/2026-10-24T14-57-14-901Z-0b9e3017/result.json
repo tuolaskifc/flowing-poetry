@@ -1,0 +1,190 @@
+{
+  "id": "2026-10-24T14-57-14-901Z-0b9e3017",
+  "fingerprint": "88300f21b49b3d5c3b8b72d14eb9bd4b16ee2e639e569af9820c7cf2332e6e2b",
+  "poem": "剪不断，理还乱，是离愁。",
+  "source": null,
+  "mode": "expression",
+  "model": "DeepSeek-V4.1-Flash",
+  "started_at": "2026-10-24T14:57:14.901Z",
+  "cached": false,
+  "http_status": 200,
+  "usage": {
+    "completion_tokens": 357,
+    "prompt_tokens": 6060,
+    "total_tokens": 6417,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 6016
+    }
+  },
+  "finish_reason": "stop",
+  "analysis": {
+    "schema_version": "expression-1.0",
+    "poem": "剪不断，理还乱，是离愁。",
+    "reading": "以剪不断、越理越乱来写离愁的纠缠难解，把无形的愁绪比作可剪可理却无法理清的丝线。",
+    "entities": [
+      {
+        "id": "i1",
+        "mentions": [
+          "离愁"
+        ],
+        "concept": "离别之愁",
+        "kind": "abstract",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "是离愁"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      }
+    ],
+    "relations": [],
+    "atmosphere": {
+      "labels": [
+        "纠缠",
+        "烦乱"
+      ],
+      "valence": "negative",
+      "energy": "medium",
+      "tension": "medium",
+      "openness": "unclear",
+      "evidence": [
+        "剪不断，理还乱"
+      ]
+    },
+    "time": {
+      "markers": [],
+      "note": null
+    },
+    "uncertainties": [
+      "“剪不断，理还乱”的主语未明说，可能指离愁，也可能指如丝如缕的愁绪；此处按离愁理解。"
+    ],
+    "spatial": [],
+    "scene": {
+      "setting": {
+        "kind": "unclear",
+        "basis": "inferred",
+        "evidence": []
+      },
+      "groups": [],
+      "supports": [],
+      "actions": [],
+      "atmosphere": {
+        "visibility": "unclear",
+        "illumination": "unclear",
+        "basis": "inferred",
+        "evidence": []
+      }
+    },
+    "expression": {
+      "relations": [],
+      "processes": [
+        {
+          "subject": "i1",
+          "kind": "persist",
+          "temporal": "ongoing",
+          "modality": "asserted",
+          "basis": "inferred",
+          "evidence": [
+            "剪不断，理还乱，是离愁。"
+          ]
+        }
+      ]
+    }
+  },
+  "validation": {
+    "valid": true,
+    "errors": [],
+    "warnings": [
+      "模型保留了不确定性，需要审阅",
+      "scene.setting 为语义推断，绘画选择需与原文明示区分",
+      "i1 未进入整体分组，后续使用本地默认布局",
+      "scene.atmosphere 为语义推断，绘画选择需与原文明示区分",
+      "expression.processes[0] 为语义推断"
+    ],
+    "review_required": true
+  },
+  "plan": {
+    "version": "shared-expression-1.1-source-bound",
+    "seed": 2819797886,
+    "poem": "剪不断，理还乱，是离愁。",
+    "nodes": [
+      {
+        "id": "i1",
+        "label": "离愁",
+        "meaning": "离别之愁",
+        "kind": "abstract",
+        "contextOnly": false,
+        "mode": "present"
+      }
+    ],
+    "relations": [],
+    "processes": [
+      {
+        "subject": "i1",
+        "kind": "persist",
+        "temporal": "ongoing",
+        "modality": "asserted",
+        "basis": "inferred",
+        "evidence": [
+          "剪不断，理还乱，是离愁。"
+        ]
+      }
+    ],
+    "omitted": [],
+    "atmosphere": {
+      "labels": [
+        "纠缠",
+        "烦乱"
+      ],
+      "valence": "negative",
+      "energy": "medium",
+      "tension": "medium",
+      "openness": "unclear",
+      "evidence": [
+        "剪不断，理还乱"
+      ],
+      "illumination": "unclear"
+    },
+    "concretePlan": null,
+    "renderability": {
+      "status": "ready",
+      "visibleScenery": false,
+      "visibleAbstract": true,
+      "gaps": []
+    },
+    "expression": {
+      "version": "shared-expression-1.1-source-bound",
+      "sourceContract": "expression-1.0",
+      "recommendation": "abstract",
+      "reason": "没有可直接落成实景的主体，以抽象关系组织画面",
+      "gaps": [],
+      "limitations": [
+        "景物过程当前影响抽象纹理；原生景物动作沿用场景能力，未支持的月下楼位移等仍不执行。",
+        "纹理、色层和观看扰动属于本地艺术选择，不改变语义成立状态"
+      ]
+    },
+    "notes": [
+      "三个表达倾向共享景物数量、空间、依托与主体身份；抽象笔触优先服从原景物区域和轮廓。",
+      "纯抽象或比喻句不因切换风景优先而补山水。"
+    ],
+    "aestheticAcceptance": "pending-user"
+  },
+  "delivery": {
+    "status": "complete",
+    "retryable": false,
+    "reason": null,
+    "message": "解读已通过检查。"
+  },
+  "elapsed_seconds": 4
+}

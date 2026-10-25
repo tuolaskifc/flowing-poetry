@@ -1,0 +1,6 @@
+# Copy this file to "llm api.txt" at the project root for NEW model requests.
+# Fill in your own HTTPS OpenAI-compatible chat endpoint, key, and model name.
+# The real configuration is ignored by Git and excluded from the submission.
+LLM_BASE_URL=https://your-provider.example/v1
+LLM_API_KEY=YOUR_OWN_API_KEY
+LLM_MODEL=YOUR_PROVIDER_MODEL_NAME

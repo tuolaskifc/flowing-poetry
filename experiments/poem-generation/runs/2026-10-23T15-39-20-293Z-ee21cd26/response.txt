@@ -1,0 +1,91 @@
+{
+  "schema_version": "abstract-1.0",
+  "poem": "此中有真意，欲辩已忘言。",
+  "reading": "此中蕴含一种真意，想要辨析言说时，却已经忘了言语。诗句呈现从内在领会到言说受阻的转折，重点不在景物，而在真意、欲辨与忘言之间的张力。",
+  "subjects": [
+    {
+    "id": "a1",
+    "mentions": ["此中", "真意"],
+    "meaning": "此中指向当下境域或体验内部；真意指其中所含的真实意趣、本真意味。",
+    "kind": "abstract",
+    "role": "scene",
+    "presence": "present",
+    "evidence": ["此中有真意"]
+    },
+    {
+    "id": "a2",
+    "mentions": ["欲辩"],
+    "meaning": "想要辨析、说明或言说那层真意。",
+    "kind": "abstract",
+    "role": "scene",
+    "presence": "present",
+    "evidence": ["欲辩已忘言"]
+    },
+    {
+    "id": "a3",
+    "mentions": ["言"],
+    "meaning": "言语、言辞，作为表达真意的方式。",
+    "kind": "abstract",
+    "role": "scene",
+    "presence": "absent",
+    "evidence": ["欲辩已忘言"]
+    }
+  ],
+  "relations": [
+    {
+    "source": "a1",
+    "target": "a2",
+    "kind": "approach",
+    "modality": "asserted",
+    "basis": "explicit",
+    "evidence": ["此中有真意，欲辩已忘言。"]
+    },
+    {
+    "source": "a2",
+    "target": "a3",
+    "kind": "block",
+    "modality": "asserted",
+    "basis": "explicit",
+    "evidence": ["欲辩已忘言"]
+    }
+  ],
+  "processes": [
+    {
+    "subject": "a1",
+    "kind": "persist",
+    "temporal": "ongoing",
+    "modality": "asserted",
+    "basis": "explicit",
+    "evidence": ["此中有真意"]
+    },
+    {
+    "subject": "a2",
+    "kind": "emerge",
+    "temporal": "not_yet",
+    "modality": "possible",
+    "basis": "explicit",
+    "evidence": ["欲辩"]
+    },
+    {
+    "subject": "a3",
+    "kind": "fade",
+    "temporal": "already",
+    "modality": "asserted",
+    "basis": "explicit",
+    "evidence": ["已忘言"]
+    }
+  ],
+  "atmosphere": {
+    "labels": ["内省", "静默", "言说受阻"],
+    "valence": "mixed",
+    "openness": "medium",
+    "illumination": "unclear",
+    "evidence": ["此中有真意", "欲辩已忘言"]
+  },
+  "uncertainties": [
+    "“此中”具体指何处未明，可指当下境域、体验内部或前文所涉情境。",
+    "“真意”的内涵未展开，是哲理、自然意趣还是个人体悟，文本未限定。",
+    "“欲辩”是否已经开口、是否只是内心意图，存在歧义。",
+    "“忘言”可解为言语自然消隐，也可解为一时说不出，不宜坐实为永久失语。"
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "version": "generation-recovery-1.1",
+  "status": "normalized",
+  "reviewRequired": true,
+  "changes": [
+    {
+      "kind": "source-range-only",
+      "path": "spatial.0.evidence",
+      "original": [
+        "独钓寒江雪"
+      ],
+      "effective": [
+        "孤舟蓑笠翁，独钓寒江雪。"
+      ]
+    },
+    {
+      "kind": "source-range-only",
+      "path": "scene.supports.0.evidence",
+      "original": [
+        "独钓寒江雪"
+      ],
+      "effective": [
+        "孤舟蓑笠翁，独钓寒江雪。"
+      ]
+    },
+    {
+      "kind": "source-range-only",
+      "path": "scene.actions.0.evidence",
+      "original": [
+        "独钓寒江雪"
+      ],
+      "effective": [
+        "孤舟蓑笠翁，独钓寒江雪。"
+      ]
+    },
+    {
+      "kind": "source-range-only",
+      "path": "expression.relations.1.evidence",
+      "original": [
+        "独钓寒江雪"
+      ],
+      "effective": [
+        "孤舟蓑笠翁，独钓寒江雪。"
+      ]
+    },
+    {
+      "kind": "source-range-only",
+      "path": "expression.processes.0.evidence",
+      "original": [
+        "独钓寒江雪"
+      ],
+      "effective": [
+        "孤舟蓑笠翁，独钓寒江雪。"
+      ]
+    }
+  ],
+  "omitted": [],
+  "message": "已完成格式或引用整理，解读仍可复核。"
+}

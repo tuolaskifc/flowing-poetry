@@ -1,0 +1,209 @@
+{
+  "id": "2026-10-19T09-40-30-616Z-69d76cf5",
+  "fingerprint": "02d7be2c3ffc9c9e23b3efefcf9cfbec02960c2b6fd168ca7b263f4c4066199e",
+  "poem": "明月松间照，清泉石上流。",
+  "source": {
+    "provider": "本地推荐",
+    "author": "王维",
+    "title": "山居秋暝",
+    "dynasty": "唐代"
+  },
+  "mode": "imagery-only",
+  "model": "DeepSeek-V4.1-Flash",
+  "started_at": "2026-10-19T09:40:30.619Z",
+  "cached": false,
+  "http_status": 200,
+  "usage": {
+    "completion_tokens": 312,
+    "prompt_tokens": 1990,
+    "total_tokens": 2302,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 1920
+    }
+  },
+  "finish_reason": "stop",
+  "analysis": {
+    "schema_version": "3.0",
+    "poem": "明月松间照，清泉石上流。",
+    "reading": "明月的光穿过松林洒落，清泉在石上流淌；两句并置静夜山景，明暗与动静相衬。",
+    "entities": [
+      {
+        "id": "i1",
+        "mentions": [
+          "明月"
+        ],
+        "concept": "明亮的月亮",
+        "kind": "object",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "明月松间照"
+        ]
+      },
+      {
+        "id": "i2",
+        "mentions": [
+          "松间"
+        ],
+        "concept": "松树之间",
+        "kind": "environment",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "明月松间照"
+        ]
+      },
+      {
+        "id": "i3",
+        "mentions": [
+          "清泉"
+        ],
+        "concept": "清澈的泉水",
+        "kind": "object",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "清泉石上流"
+        ]
+      },
+      {
+        "id": "i4",
+        "mentions": [
+          "石上"
+        ],
+        "concept": "石头表面",
+        "kind": "object",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "清泉石上流"
+        ]
+      }
+    ],
+    "relations": [],
+    "atmosphere": {
+      "labels": [
+        "清幽",
+        "明净"
+      ],
+      "valence": "positive",
+      "energy": "low",
+      "tension": "low",
+      "openness": "medium",
+      "evidence": [
+        "明月松间照",
+        "清泉石上流"
+      ]
+    },
+    "time": {
+      "markers": [],
+      "note": null
+    },
+    "uncertainties": [
+      "未明说观察者是否在场，也未交代具体时辰与季节。"
+    ]
+  },
+  "validation": {
+    "valid": true,
+    "errors": [],
+    "warnings": [
+      "模型保留了不确定性，需要审阅"
+    ],
+    "review_required": true
+  },
+  "plan": {
+    "version": "trial-4-orchid-horse-lotus",
+    "seed": 410416620,
+    "settings": {
+      "wind": 0,
+      "density": 0.45,
+      "palette": "clear"
+    },
+    "layers": [
+      {
+        "tool": "moon",
+        "entities": [
+          "i1"
+        ],
+        "names": [
+          "明月"
+        ],
+        "options": {
+          "shape": "crescent"
+        },
+        "animate": true,
+        "placement": {
+          "anchor": [
+            320,
+            175
+          ],
+          "at": [
+            0.76,
+            0.2
+          ],
+          "scale": 0.85
+        }
+      },
+      {
+        "tool": "water",
+        "entities": [
+          "i3"
+        ],
+        "names": [
+          "清泉"
+        ],
+        "options": {},
+        "animate": true,
+        "placement": {
+          "anchor": [
+            320,
+            130
+          ],
+          "at": [
+            0.5,
+            0.57
+          ],
+          "scale": 1.5
+        }
+      },
+      {
+        "tool": "rock",
+        "entities": [
+          "i4"
+        ],
+        "names": [
+          "石上"
+        ],
+        "options": {},
+        "animate": true,
+        "placement": {
+          "anchor": [
+            320,
+            245
+          ],
+          "at": [
+            0.3,
+            0.78
+          ],
+          "scale": 0.95
+        }
+      }
+    ],
+    "omitted": [
+      {
+        "id": "i2",
+        "name": "松间",
+        "reason": "该具体意象尚无可用形态；没有替换成通用树、花或鸟群"
+      }
+    ],
+    "notes": [
+      "原句未明确月形，暂用弯月试画；可以手动切换。",
+      "位置、大小、笔触、固定群体数量与默认微动是本地试画选择；不表示原句给出了这些数值。"
+    ],
+    "relations": []
+  },
+  "elapsed_seconds": 3.9
+}

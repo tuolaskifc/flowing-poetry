@@ -1,0 +1,43 @@
+{
+  "version": "generation-recovery-1.1",
+  "status": "partial",
+  "reviewRequired": true,
+  "changes": [],
+  "omitted": [
+    {
+      "path": "scene.groups[1]",
+      "claim": {
+        "members": [
+          "i2"
+        ],
+        "role": "accent",
+        "pattern": "single",
+        "depth": "unspecified",
+        "basis": "inferred",
+        "evidence": [
+          "秋色雁声愁几许"
+        ]
+      },
+      "errors": [
+        "scene 抽象概念不得作为物理场景、动作或依托主体"
+      ]
+    },
+    {
+      "path": "expression.relations[2]",
+      "claim": {
+        "source": "i3",
+        "target": "i4",
+        "kind": "converge",
+        "modality": "asserted",
+        "basis": "inferred",
+        "evidence": [
+          "都在斜阳"
+        ]
+      },
+      "errors": [
+        "expression.relations[2] 依据未关联 i3"
+      ]
+    }
+  ],
+  "message": "已绘制核验通过的部分，个别联系或动作暂未采用。"
+}

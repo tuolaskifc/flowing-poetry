@@ -1,0 +1,25 @@
+{
+  "version": "generation-recovery-1.1",
+  "status": "partial",
+  "reviewRequired": true,
+  "changes": [],
+  "omitted": [
+    {
+      "path": "expression.relations[1]",
+      "claim": {
+        "source": "i3",
+        "target": "i4",
+        "kind": "connect",
+        "modality": "asserted",
+        "basis": "explicit",
+        "evidence": [
+          "怀佳人兮不能忘"
+        ]
+      },
+      "errors": [
+        "expression.relations[1] 非在场主体不能执行确定过程"
+      ]
+    }
+  ],
+  "message": "已绘制核验通过的部分，个别联系或动作暂未采用。"
+}

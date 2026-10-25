@@ -1,0 +1,59 @@
+{
+  "version": "generation-recovery-1.1",
+  "status": "normalized",
+  "reviewRequired": true,
+  "changes": [
+    {
+      "kind": "source-range-only",
+      "path": "spatial.1.evidence",
+      "original": [
+        "见人惊起入芦花"
+      ],
+      "effective": [
+        "白鸟一双临水立，见人惊起入芦花。"
+      ]
+    },
+    {
+      "kind": "source-range-only",
+      "path": "scene.actions.0.evidence",
+      "original": [
+        "见人惊起入芦花"
+      ],
+      "effective": [
+        "白鸟一双临水立，见人惊起入芦花。"
+      ]
+    },
+    {
+      "kind": "source-range-only",
+      "path": "expression.relations.0.evidence",
+      "original": [
+        "见人惊起入芦花"
+      ],
+      "effective": [
+        "白鸟一双临水立，见人惊起入芦花。"
+      ]
+    },
+    {
+      "kind": "source-range-only",
+      "path": "expression.relations.1.evidence",
+      "original": [
+        "见人惊起入芦花"
+      ],
+      "effective": [
+        "白鸟一双临水立，见人惊起入芦花。"
+      ]
+    },
+    {
+      "kind": "source-range-only",
+      "path": "expression.processes.0.evidence",
+      "original": [
+        "见人惊起入芦花"
+      ],
+      "effective": [
+        "白鸟一双临水立，见人惊起入芦花。"
+      ]
+    }
+  ],
+  "omitted": [],
+  "message": "已完成格式或引用整理，解读仍可复核。"
+}

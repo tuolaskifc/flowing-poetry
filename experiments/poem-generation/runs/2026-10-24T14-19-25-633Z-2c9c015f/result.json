@@ -1,0 +1,2477 @@
+{
+  "id": "2026-10-24T14-19-25-633Z-2c9c015f",
+  "fingerprint": "ff6ec93ef0ad2c3a37701ec4b44da026d82c92f4f8a0b93441d4a293c176e7ed",
+  "poem": "风送归舟，舟载归人",
+  "source": {
+    "provider": "全量下限检查：无当前可重放回答的输入单次补测"
+  },
+  "mode": "expression",
+  "model": "DeepSeek-V4.1-Flash",
+  "started_at": "2026-10-24T14:19:25.636Z",
+  "cached": false,
+  "http_status": 200,
+  "usage": {
+    "completion_tokens": 748,
+    "prompt_tokens": 5873,
+    "total_tokens": 6621,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 5760
+    }
+  },
+  "finish_reason": "stop",
+  "analysis": {
+    "schema_version": "expression-1.0",
+    "poem": "风送归舟，舟载归人",
+    "reading": "风推送着归来的船，船承载着归来的人；两句以顶针相连，写归途中的送与载。",
+    "entities": [
+      {
+        "id": "i1",
+        "mentions": [
+          "风"
+        ],
+        "concept": "风",
+        "kind": "environment",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "风送归舟"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i2",
+        "mentions": [
+          "归舟",
+          "舟"
+        ],
+        "concept": "归来的船",
+        "kind": "object",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "风送归舟",
+          "舟载归人"
+        ],
+        "quantity": {
+          "mode": "exact",
+          "min": 1,
+          "max": 1,
+          "unit": null,
+          "scope": "individual",
+          "extent": "local",
+          "evidence": [
+            "归舟"
+          ]
+        }
+      },
+      {
+        "id": "i3",
+        "mentions": [
+          "归人"
+        ],
+        "concept": "归来的人",
+        "kind": "person",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "舟载归人"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      }
+    ],
+    "relations": [],
+    "atmosphere": {
+      "labels": [
+        "归途",
+        "轻缓"
+      ],
+      "valence": "neutral",
+      "energy": "low",
+      "tension": "low",
+      "openness": "medium",
+      "evidence": [
+        "风送归舟",
+        "舟载归人"
+      ]
+    },
+    "time": {
+      "markers": [],
+      "note": null
+    },
+    "uncertainties": [
+      "“归”只表明归来的方向，未交代出发地、目的地或具体时间。",
+      "“归人”未说明人数，故数量不明。"
+    ],
+    "spatial": [
+      {
+        "type": "on",
+        "source": "i3",
+        "target": "i2",
+        "modality": "asserted",
+        "basis": "explicit",
+        "evidence": [
+          "舟载归人"
+        ]
+      }
+    ],
+    "scene": {
+      "setting": {
+        "kind": "waterside",
+        "basis": "inferred",
+        "evidence": [
+          "风送归舟"
+        ]
+      },
+      "groups": [
+        {
+          "members": [
+            "i1"
+          ],
+          "role": "environment",
+          "pattern": "single",
+          "depth": "unspecified",
+          "basis": "inferred",
+          "evidence": [
+            "风送归舟"
+          ]
+        },
+        {
+          "members": [
+            "i2",
+            "i3"
+          ],
+          "role": "subject",
+          "pattern": "single",
+          "depth": "unspecified",
+          "basis": "inferred",
+          "evidence": [
+            "风送归舟",
+            "舟载归人"
+          ]
+        }
+      ],
+      "supports": [
+        {
+          "entity": "i3",
+          "surface": "boat",
+          "target": "i2",
+          "basis": "explicit",
+          "evidence": [
+            "舟载归人"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "entity": "i2",
+          "state": "float",
+          "pace": "slow",
+          "direction": "approach",
+          "modality": "asserted",
+          "basis": "inferred",
+          "evidence": [
+            "风送归舟"
+          ]
+        }
+      ],
+      "atmosphere": {
+        "visibility": "unclear",
+        "illumination": "unclear",
+        "basis": "inferred",
+        "evidence": []
+      }
+    },
+    "expression": {
+      "relations": [
+        {
+          "source": "i1",
+          "target": "i2",
+          "kind": "connect",
+          "modality": "asserted",
+          "basis": "explicit",
+          "evidence": [
+            "风送归舟"
+          ]
+        },
+        {
+          "source": "i2",
+          "target": "i3",
+          "kind": "connect",
+          "modality": "asserted",
+          "basis": "explicit",
+          "evidence": [
+            "舟载归人"
+          ]
+        }
+      ],
+      "processes": [
+        {
+          "subject": "i2",
+          "kind": "unclear",
+          "temporal": "ongoing",
+          "modality": "asserted",
+          "basis": "inferred",
+          "evidence": [
+            "风送归舟"
+          ]
+        }
+      ]
+    }
+  },
+  "validation": {
+    "valid": true,
+    "errors": [],
+    "warnings": [
+      "模型保留了不确定性，需要审阅",
+      "scene.setting 为语义推断，绘画选择需与原文明示区分",
+      "scene.groups[0] 为语义推断，绘画选择需与原文明示区分",
+      "scene.groups[1] 为语义推断，绘画选择需与原文明示区分",
+      "scene.actions[0] 为语义推断，绘画选择需与原文明示区分",
+      "scene.atmosphere 为语义推断，绘画选择需与原文明示区分",
+      "expression.processes[0] 为语义推断"
+    ],
+    "review_required": true
+  },
+  "plan": {
+    "version": "shared-expression-1.1-source-bound",
+    "seed": 2960521899,
+    "poem": "风送归舟，舟载归人",
+    "nodes": [
+      {
+        "id": "i1",
+        "label": "风",
+        "meaning": "风",
+        "kind": "concrete",
+        "contextOnly": false,
+        "mode": "present"
+      },
+      {
+        "id": "i2",
+        "label": "归舟／舟",
+        "meaning": "归来的船",
+        "kind": "concrete",
+        "contextOnly": false,
+        "mode": "present"
+      },
+      {
+        "id": "i3",
+        "label": "归人",
+        "meaning": "归来的人",
+        "kind": "concrete",
+        "contextOnly": false,
+        "mode": "present"
+      }
+    ],
+    "relations": [
+      {
+        "source": "i1",
+        "target": "i2",
+        "kind": "connect",
+        "modality": "asserted",
+        "basis": "explicit",
+        "evidence": [
+          "风送归舟"
+        ]
+      },
+      {
+        "source": "i2",
+        "target": "i3",
+        "kind": "connect",
+        "modality": "asserted",
+        "basis": "explicit",
+        "evidence": [
+          "舟载归人"
+        ]
+      }
+    ],
+    "processes": [
+      {
+        "subject": "i2",
+        "kind": "unclear",
+        "temporal": "ongoing",
+        "modality": "asserted",
+        "basis": "inferred",
+        "evidence": [
+          "风送归舟"
+        ]
+      }
+    ],
+    "omitted": [],
+    "atmosphere": {
+      "labels": [
+        "归途",
+        "轻缓"
+      ],
+      "valence": "neutral",
+      "energy": "low",
+      "tension": "low",
+      "openness": "medium",
+      "evidence": [
+        "风送归舟",
+        "舟载归人"
+      ],
+      "illumination": "unclear"
+    },
+    "concretePlan": {
+      "version": "semantic-composition-3.3-source-bound",
+      "seed": 2960521899,
+      "settings": {
+        "wind": 0.45,
+        "density": 0.45,
+        "palette": "clear",
+        "motion": 1.4
+      },
+      "layers": [
+        {
+          "tool": "boat",
+          "entities": [
+            "i2"
+          ],
+          "projectedEntities": [],
+          "names": [
+            "归舟／舟"
+          ],
+          "options": {},
+          "animate": true,
+          "placement": {
+            "anchor": [
+              320,
+              230
+            ],
+            "at": [
+              0.689723792125,
+              0.72
+            ],
+            "scale": 0.95
+          },
+          "semanticGroup": {
+            "members": [
+              "i2",
+              "i3"
+            ],
+            "role": "subject",
+            "pattern": "single",
+            "depth": "unspecified",
+            "basis": "inferred",
+            "evidence": [
+              "风送归舟",
+              "舟载归人"
+            ],
+            "index": 1
+          },
+          "semanticEffects": [
+            {
+              "path": "scene.actions[0].state",
+              "consumer": "形态与绘画时钟",
+              "effect": "启用工具支持的 float 状态",
+              "status": "applied"
+            },
+            {
+              "path": "scene.actions[0].pace",
+              "consumer": "绘画时钟",
+              "effect": "定性节奏映射为语义基准时钟倍率 0.35；观看动态与景物节奏另行调节",
+              "status": "applied"
+            },
+            {
+              "path": "scene.actions[0].direction",
+              "consumer": "画布合成",
+              "effect": "按定性方向作有限观看动画；不表示完整动作过程",
+              "status": "applied"
+            },
+            {
+              "path": "scene.groups[1].role",
+              "consumer": "主次布局",
+              "effect": "主体相对突出",
+              "status": "applied"
+            },
+            {
+              "path": "scene.groups[1].pattern",
+              "consumer": "群落布局",
+              "effect": "按 single 组织显示单元；不覆盖明确数量",
+              "status": "applied"
+            },
+            {
+              "path": "scene.groups[1].depth",
+              "consumer": "远近布局",
+              "effect": "远近未明，保持本地默认",
+              "status": "skipped"
+            }
+          ],
+          "semanticEnergy": false,
+          "timeScale": 0.35,
+          "semanticAction": {
+            "entity": "i2",
+            "state": "float",
+            "pace": "slow",
+            "direction": "approach",
+            "modality": "asserted",
+            "basis": "inferred",
+            "evidence": [
+              "风送归舟"
+            ]
+          },
+          "motion": {
+            "kind": "depth",
+            "direction": "approach",
+            "rate": 0.35,
+            "state": "float"
+          },
+          "instances": [
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  230
+                ],
+                "at": [
+                  0.689723792125,
+                  0.72
+                ],
+                "scale": 0.8064
+              },
+              "depth": 0.05,
+              "opacity": 1,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i2:boat::0:0"
+            }
+          ],
+          "singleUnit": true,
+          "quantity": {
+            "items": [
+              {
+                "entity": "i2",
+                "mode": "exact",
+                "min": 1,
+                "max": 1,
+                "unit": null,
+                "scope": "individual",
+                "extent": "local",
+                "evidence": [
+                  "归舟"
+                ],
+                "basis": "model"
+              }
+            ],
+            "rendered": 1,
+            "exact": true,
+            "collective": false,
+            "partUnsupported": false
+          },
+          "quantityLabel": "按提取数量绘制 1 个",
+          "z": 22,
+          "visual": {
+            "role": "architecture",
+            "brushStrength": 1.1
+          },
+          "performance": {
+            "rhythm": "steady",
+            "rate": 1,
+            "amplitude": 1,
+            "phase": 0
+          },
+          "id": "i2:boat::0",
+          "interaction": {
+            "mode": "instance",
+            "groupId": "i2:boat::0"
+          }
+        },
+        {
+          "tool": "water",
+          "entities": [],
+          "projectedEntities": [],
+          "names": [
+            "构图依托·水域"
+          ],
+          "options": {
+            "form": "plane"
+          },
+          "animate": true,
+          "placement": {
+            "anchor": [
+              320,
+              135
+            ],
+            "at": [
+              0.5,
+              0.45
+            ],
+            "scale": 1.6
+          },
+          "instances": [
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  135
+                ],
+                "at": [
+                  0.5,
+                  0.45
+                ],
+                "scale": 1.65
+              },
+              "variant": 0,
+              "depth": 0,
+              "opacity": 1,
+              "tone": "far",
+              "id": "inferred:water:plane:1:0"
+            }
+          ],
+          "singleUnit": false,
+          "inferred": true,
+          "provenance": {
+            "basis": "local-context",
+            "reason": "整体场景解释为 waterside，本地补充必要 water 依托",
+            "semanticPath": "scene.setting"
+          },
+          "quantity": {
+            "rendered": 1,
+            "exact": false,
+            "items": []
+          },
+          "quantityLabel": "本地环境依托，不计入原文意象覆盖",
+          "z": -10,
+          "clip": [
+            [
+              0,
+              0.42
+            ],
+            [
+              1,
+              0.42
+            ],
+            [
+              1,
+              1.04
+            ],
+            [
+              0,
+              1.04
+            ]
+          ],
+          "surface": {
+            "top": 0.42,
+            "bottom": 1
+          },
+          "visual": {
+            "role": "water",
+            "brushStrength": 1.35
+          },
+          "performance": {
+            "rhythm": "continuous",
+            "rate": 0.9,
+            "amplitude": 0.9,
+            "phase": 3.8830085198369844
+          },
+          "id": "inferred:water:plane:1",
+          "interaction": {
+            "mode": "group",
+            "groupId": "inferred:water:plane:1"
+          }
+        }
+      ],
+      "spatial": [
+        {
+          "type": "on",
+          "source": "i3",
+          "target": "i2",
+          "modality": "asserted",
+          "basis": "explicit",
+          "evidence": [
+            "舟载归人"
+          ],
+          "visualized": false,
+          "reason": "关系的一端缺少独立画法"
+        }
+      ],
+      "scene": {
+        "kind": "study",
+        "notes": [
+          "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。",
+          "通用场景层先组织地面、水域、群落和主体，再比较三个布局的依托、相对位置、尺度与遮挡；检查通过不代表审美已通过。"
+        ],
+        "waterline": null,
+        "semanticSetting": {
+          "kind": "waterside",
+          "basis": "inferred",
+          "evidence": [
+            "风送归舟"
+          ]
+        },
+        "semanticEffects": [
+          {
+            "path": "scene.supports[0]",
+            "consumer": "场景依托",
+            "status": "unsupported",
+            "effect": "依托主体尚无可绘制形态"
+          },
+          {
+            "path": "scene.setting",
+            "consumer": "场景依托",
+            "status": "applied",
+            "effect": "必要环境以独立推断背景表示，不新增原文实体"
+          }
+        ],
+        "organization": {
+          "version": "1.0",
+          "strategy": "general-constraints",
+          "regions": {
+            "water": [
+              [
+                0,
+                0.42
+              ],
+              [
+                1,
+                0.42
+              ],
+              [
+                1,
+                1.04
+              ],
+              [
+                0,
+                1.04
+              ]
+            ]
+          },
+          "candidates": [
+            {
+              "layout": 0,
+              "orientation": "阔水远天",
+              "errors": 0,
+              "cost": 61.518,
+              "score": 64.178,
+              "metrics": {
+                "overlapPenalty": 0,
+                "balancePenalty": 0.19,
+                "motifFootprint": 0.016,
+                "landArea": 0
+              }
+            },
+            {
+              "layout": 1,
+              "orientation": "水面横展",
+              "errors": 0,
+              "cost": 61.927,
+              "score": 65.301,
+              "metrics": {
+                "overlapPenalty": 0,
+                "balancePenalty": 0.241,
+                "motifFootprint": 0.016,
+                "landArea": 0
+              }
+            },
+            {
+              "layout": 2,
+              "orientation": "近水远照",
+              "errors": 0,
+              "cost": 62.335,
+              "score": 66.423,
+              "metrics": {
+                "overlapPenalty": 0,
+                "balancePenalty": 0.292,
+                "motifFootprint": 0.016,
+                "landArea": 0
+              }
+            }
+          ],
+          "repairs": [
+            {
+              "type": "support-added",
+              "reason": "整体场景解释为 waterside，本地补充必要 water 依托"
+            }
+          ],
+          "limitations": [
+            "几何检查不判定诗意理解或审美合格",
+            "动作时序与整首诗的场景切换尚未编排"
+          ],
+          "topology": "阔水远天",
+          "layout": 0,
+          "orientation": "阔水远天",
+          "audit": {
+            "scope": "implemented-geometry-and-drawing-gaps",
+            "coverage": {
+              "scope": "extracted-entities-only",
+              "present": 3,
+              "mapped": 1,
+              "parameters": [
+                "i1"
+              ],
+              "missing": [
+                {
+                  "id": "i3",
+                  "name": "归人"
+                }
+              ]
+            },
+            "checks": [
+              "presence",
+              "count",
+              "finite",
+              "support",
+              "scale",
+              "relative-position",
+              "depth",
+              "grove-spread",
+              "drawing-gaps"
+            ],
+            "status": "needs-review",
+            "errors": 0,
+            "review": 2,
+            "issues": [
+              {
+                "code": "unresolved-relation",
+                "severity": "review",
+                "message": "有空间关系尚无对应布局画法"
+              },
+              {
+                "code": "drawing-gaps",
+                "severity": "review",
+                "message": "还有 1 项已提取线索尚未转成画面：归人"
+              }
+            ],
+            "metrics": {
+              "overlapPenalty": 0,
+              "balancePenalty": 0.19,
+              "motifFootprint": 0.016,
+              "landArea": 0
+            },
+            "cost": 61.518,
+            "aestheticAcceptance": "pending-user"
+          },
+          "graph": {
+            "nodes": [
+              {
+                "id": "l0",
+                "entities": [
+                  "i2"
+                ],
+                "tool": "boat",
+                "role": "subject",
+                "habitat": "water",
+                "inferred": false,
+                "support": "l1"
+              },
+              {
+                "id": "l1",
+                "entities": [],
+                "tool": "water",
+                "role": "water",
+                "habitat": null,
+                "inferred": true,
+                "support": null
+              }
+            ],
+            "edges": [
+              {
+                "type": "supported-by",
+                "source": "l0",
+                "target": "l1",
+                "basis": "local-composition",
+                "habitat": "water"
+              },
+              {
+                "type": "on",
+                "target": "l0",
+                "basis": "explicit",
+                "modality": "asserted",
+                "evidence": [
+                  "舟载归人"
+                ]
+              }
+            ],
+            "setting": "study"
+          }
+        },
+        "displayAudit": {
+          "scope": "display-scale-separation-and-habitat",
+          "issues": [],
+          "errors": 0,
+          "aestheticAcceptance": "pending-user"
+        }
+      },
+      "compositions": [
+        {
+          "id": "space-0",
+          "label": "阔水远天",
+          "description": "先安排连续水域与地表，再按主次与远近安放景物",
+          "layers": [
+            {
+              "tool": "boat",
+              "entities": [
+                "i2"
+              ],
+              "projectedEntities": [],
+              "names": [
+                "归舟／舟"
+              ],
+              "options": {},
+              "animate": true,
+              "placement": {
+                "anchor": [
+                  320,
+                  230
+                ],
+                "at": [
+                  0.689723792125,
+                  0.72
+                ],
+                "scale": 0.95
+              },
+              "semanticGroup": {
+                "members": [
+                  "i2",
+                  "i3"
+                ],
+                "role": "subject",
+                "pattern": "single",
+                "depth": "unspecified",
+                "basis": "inferred",
+                "evidence": [
+                  "风送归舟",
+                  "舟载归人"
+                ],
+                "index": 1
+              },
+              "semanticEffects": [
+                {
+                  "path": "scene.actions[0].state",
+                  "consumer": "形态与绘画时钟",
+                  "effect": "启用工具支持的 float 状态",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.actions[0].pace",
+                  "consumer": "绘画时钟",
+                  "effect": "定性节奏映射为语义基准时钟倍率 0.35；观看动态与景物节奏另行调节",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.actions[0].direction",
+                  "consumer": "画布合成",
+                  "effect": "按定性方向作有限观看动画；不表示完整动作过程",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[1].role",
+                  "consumer": "主次布局",
+                  "effect": "主体相对突出",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[1].pattern",
+                  "consumer": "群落布局",
+                  "effect": "按 single 组织显示单元；不覆盖明确数量",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[1].depth",
+                  "consumer": "远近布局",
+                  "effect": "远近未明，保持本地默认",
+                  "status": "skipped"
+                }
+              ],
+              "semanticEnergy": false,
+              "timeScale": 0.35,
+              "semanticAction": {
+                "entity": "i2",
+                "state": "float",
+                "pace": "slow",
+                "direction": "approach",
+                "modality": "asserted",
+                "basis": "inferred",
+                "evidence": [
+                  "风送归舟"
+                ]
+              },
+              "motion": {
+                "kind": "depth",
+                "direction": "approach",
+                "rate": 0.35,
+                "state": "float"
+              },
+              "instances": [
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      230
+                    ],
+                    "at": [
+                      0.689723792125,
+                      0.72
+                    ],
+                    "scale": 0.8064
+                  },
+                  "depth": 0.05,
+                  "opacity": 1,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i2:boat::0:0"
+                }
+              ],
+              "singleUnit": true,
+              "quantity": {
+                "items": [
+                  {
+                    "entity": "i2",
+                    "mode": "exact",
+                    "min": 1,
+                    "max": 1,
+                    "unit": null,
+                    "scope": "individual",
+                    "extent": "local",
+                    "evidence": [
+                      "归舟"
+                    ],
+                    "basis": "model"
+                  }
+                ],
+                "rendered": 1,
+                "exact": true,
+                "collective": false,
+                "partUnsupported": false
+              },
+              "quantityLabel": "按提取数量绘制 1 个",
+              "z": 22,
+              "visual": {
+                "role": "architecture",
+                "brushStrength": 1.1
+              },
+              "performance": {
+                "rhythm": "steady",
+                "rate": 1,
+                "amplitude": 1,
+                "phase": 0
+              },
+              "id": "i2:boat::0",
+              "interaction": {
+                "mode": "instance",
+                "groupId": "i2:boat::0"
+              }
+            },
+            {
+              "tool": "water",
+              "entities": [],
+              "projectedEntities": [],
+              "names": [
+                "构图依托·水域"
+              ],
+              "options": {
+                "form": "plane"
+              },
+              "animate": true,
+              "placement": {
+                "anchor": [
+                  320,
+                  135
+                ],
+                "at": [
+                  0.5,
+                  0.45
+                ],
+                "scale": 1.6
+              },
+              "instances": [
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      135
+                    ],
+                    "at": [
+                      0.5,
+                      0.45
+                    ],
+                    "scale": 1.65
+                  },
+                  "variant": 0,
+                  "depth": 0,
+                  "opacity": 1,
+                  "tone": "far",
+                  "id": "inferred:water:plane:1:0"
+                }
+              ],
+              "singleUnit": false,
+              "inferred": true,
+              "provenance": {
+                "basis": "local-context",
+                "reason": "整体场景解释为 waterside，本地补充必要 water 依托",
+                "semanticPath": "scene.setting"
+              },
+              "quantity": {
+                "rendered": 1,
+                "exact": false,
+                "items": []
+              },
+              "quantityLabel": "本地环境依托，不计入原文意象覆盖",
+              "z": -10,
+              "clip": [
+                [
+                  0,
+                  0.42
+                ],
+                [
+                  1,
+                  0.42
+                ],
+                [
+                  1,
+                  1.04
+                ],
+                [
+                  0,
+                  1.04
+                ]
+              ],
+              "surface": {
+                "top": 0.42,
+                "bottom": 1
+              },
+              "visual": {
+                "role": "water",
+                "brushStrength": 1.35
+              },
+              "performance": {
+                "rhythm": "continuous",
+                "rate": 0.9,
+                "amplitude": 0.9,
+                "phase": 3.8830085198369844
+              },
+              "id": "inferred:water:plane:1",
+              "interaction": {
+                "mode": "group",
+                "groupId": "inferred:water:plane:1"
+              }
+            }
+          ],
+          "scene": {
+            "kind": "study",
+            "notes": [
+              "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。",
+              "通用场景层先组织地面、水域、群落和主体，再比较三个布局的依托、相对位置、尺度与遮挡；检查通过不代表审美已通过。"
+            ],
+            "waterline": null,
+            "semanticSetting": {
+              "kind": "waterside",
+              "basis": "inferred",
+              "evidence": [
+                "风送归舟"
+              ]
+            },
+            "semanticEffects": [
+              {
+                "path": "scene.supports[0]",
+                "consumer": "场景依托",
+                "status": "unsupported",
+                "effect": "依托主体尚无可绘制形态"
+              },
+              {
+                "path": "scene.setting",
+                "consumer": "场景依托",
+                "status": "applied",
+                "effect": "必要环境以独立推断背景表示，不新增原文实体"
+              }
+            ],
+            "organization": {
+              "version": "1.0",
+              "strategy": "general-constraints",
+              "regions": {
+                "water": [
+                  [
+                    0,
+                    0.42
+                  ],
+                  [
+                    1,
+                    0.42
+                  ],
+                  [
+                    1,
+                    1.04
+                  ],
+                  [
+                    0,
+                    1.04
+                  ]
+                ]
+              },
+              "candidates": [
+                {
+                  "layout": 0,
+                  "orientation": "阔水远天",
+                  "errors": 0,
+                  "cost": 61.518,
+                  "score": 64.178,
+                  "metrics": {
+                    "overlapPenalty": 0,
+                    "balancePenalty": 0.19,
+                    "motifFootprint": 0.016,
+                    "landArea": 0
+                  }
+                },
+                {
+                  "layout": 1,
+                  "orientation": "水面横展",
+                  "errors": 0,
+                  "cost": 61.927,
+                  "score": 65.301,
+                  "metrics": {
+                    "overlapPenalty": 0,
+                    "balancePenalty": 0.241,
+                    "motifFootprint": 0.016,
+                    "landArea": 0
+                  }
+                },
+                {
+                  "layout": 2,
+                  "orientation": "近水远照",
+                  "errors": 0,
+                  "cost": 62.335,
+                  "score": 66.423,
+                  "metrics": {
+                    "overlapPenalty": 0,
+                    "balancePenalty": 0.292,
+                    "motifFootprint": 0.016,
+                    "landArea": 0
+                  }
+                }
+              ],
+              "repairs": [
+                {
+                  "type": "support-added",
+                  "reason": "整体场景解释为 waterside，本地补充必要 water 依托"
+                }
+              ],
+              "limitations": [
+                "几何检查不判定诗意理解或审美合格",
+                "动作时序与整首诗的场景切换尚未编排"
+              ],
+              "topology": "阔水远天",
+              "layout": 0,
+              "orientation": "阔水远天",
+              "audit": {
+                "scope": "implemented-geometry-and-drawing-gaps",
+                "coverage": {
+                  "scope": "extracted-entities-only",
+                  "present": 3,
+                  "mapped": 1,
+                  "parameters": [
+                    "i1"
+                  ],
+                  "missing": [
+                    {
+                      "id": "i3",
+                      "name": "归人"
+                    }
+                  ]
+                },
+                "checks": [
+                  "presence",
+                  "count",
+                  "finite",
+                  "support",
+                  "scale",
+                  "relative-position",
+                  "depth",
+                  "grove-spread",
+                  "drawing-gaps"
+                ],
+                "status": "needs-review",
+                "errors": 0,
+                "review": 2,
+                "issues": [
+                  {
+                    "code": "unresolved-relation",
+                    "severity": "review",
+                    "message": "有空间关系尚无对应布局画法"
+                  },
+                  {
+                    "code": "drawing-gaps",
+                    "severity": "review",
+                    "message": "还有 1 项已提取线索尚未转成画面：归人"
+                  }
+                ],
+                "metrics": {
+                  "overlapPenalty": 0,
+                  "balancePenalty": 0.19,
+                  "motifFootprint": 0.016,
+                  "landArea": 0
+                },
+                "cost": 61.518,
+                "aestheticAcceptance": "pending-user"
+              },
+              "graph": {
+                "nodes": [
+                  {
+                    "id": "l0",
+                    "entities": [
+                      "i2"
+                    ],
+                    "tool": "boat",
+                    "role": "subject",
+                    "habitat": "water",
+                    "inferred": false,
+                    "support": "l1"
+                  },
+                  {
+                    "id": "l1",
+                    "entities": [],
+                    "tool": "water",
+                    "role": "water",
+                    "habitat": null,
+                    "inferred": true,
+                    "support": null
+                  }
+                ],
+                "edges": [
+                  {
+                    "type": "supported-by",
+                    "source": "l0",
+                    "target": "l1",
+                    "basis": "local-composition",
+                    "habitat": "water"
+                  },
+                  {
+                    "type": "on",
+                    "target": "l0",
+                    "basis": "explicit",
+                    "modality": "asserted",
+                    "evidence": [
+                      "舟载归人"
+                    ]
+                  }
+                ],
+                "setting": "study"
+              }
+            },
+            "displayAudit": {
+              "scope": "display-scale-separation-and-habitat",
+              "issues": [],
+              "errors": 0,
+              "aestheticAcceptance": "pending-user"
+            }
+          },
+          "spatial": [
+            {
+              "type": "on",
+              "source": "i3",
+              "target": "i2",
+              "modality": "asserted",
+              "basis": "explicit",
+              "evidence": [
+                "舟载归人"
+              ],
+              "visualized": false,
+              "reason": "关系的一端缺少独立画法"
+            }
+          ],
+          "landscapeStyle": {
+            "version": "1.0",
+            "color": "role-and-distance",
+            "motion": "layer-rhythms",
+            "aestheticAcceptance": "pending-user"
+          }
+        },
+        {
+          "id": "space-1",
+          "label": "水面横展",
+          "description": "先安排连续水域与地表，再按主次与远近安放景物",
+          "layers": [
+            {
+              "tool": "boat",
+              "entities": [
+                "i2"
+              ],
+              "projectedEntities": [],
+              "names": [
+                "归舟／舟"
+              ],
+              "options": {},
+              "animate": true,
+              "placement": {
+                "anchor": [
+                  320,
+                  230
+                ],
+                "at": [
+                  0.740823792125,
+                  0.72
+                ],
+                "scale": 0.95
+              },
+              "semanticGroup": {
+                "members": [
+                  "i2",
+                  "i3"
+                ],
+                "role": "subject",
+                "pattern": "single",
+                "depth": "unspecified",
+                "basis": "inferred",
+                "evidence": [
+                  "风送归舟",
+                  "舟载归人"
+                ],
+                "index": 1
+              },
+              "semanticEffects": [
+                {
+                  "path": "scene.actions[0].state",
+                  "consumer": "形态与绘画时钟",
+                  "effect": "启用工具支持的 float 状态",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.actions[0].pace",
+                  "consumer": "绘画时钟",
+                  "effect": "定性节奏映射为语义基准时钟倍率 0.35；观看动态与景物节奏另行调节",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.actions[0].direction",
+                  "consumer": "画布合成",
+                  "effect": "按定性方向作有限观看动画；不表示完整动作过程",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[1].role",
+                  "consumer": "主次布局",
+                  "effect": "主体相对突出",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[1].pattern",
+                  "consumer": "群落布局",
+                  "effect": "按 single 组织显示单元；不覆盖明确数量",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[1].depth",
+                  "consumer": "远近布局",
+                  "effect": "远近未明，保持本地默认",
+                  "status": "skipped"
+                }
+              ],
+              "semanticEnergy": false,
+              "timeScale": 0.35,
+              "semanticAction": {
+                "entity": "i2",
+                "state": "float",
+                "pace": "slow",
+                "direction": "approach",
+                "modality": "asserted",
+                "basis": "inferred",
+                "evidence": [
+                  "风送归舟"
+                ]
+              },
+              "motion": {
+                "kind": "depth",
+                "direction": "approach",
+                "rate": 0.35,
+                "state": "float"
+              },
+              "instances": [
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      230
+                    ],
+                    "at": [
+                      0.740823792125,
+                      0.72
+                    ],
+                    "scale": 0.8064
+                  },
+                  "depth": 0.05,
+                  "opacity": 1,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i2:boat::0:0"
+                }
+              ],
+              "singleUnit": true,
+              "quantity": {
+                "items": [
+                  {
+                    "entity": "i2",
+                    "mode": "exact",
+                    "min": 1,
+                    "max": 1,
+                    "unit": null,
+                    "scope": "individual",
+                    "extent": "local",
+                    "evidence": [
+                      "归舟"
+                    ],
+                    "basis": "model"
+                  }
+                ],
+                "rendered": 1,
+                "exact": true,
+                "collective": false,
+                "partUnsupported": false
+              },
+              "quantityLabel": "按提取数量绘制 1 个",
+              "z": 22,
+              "visual": {
+                "role": "architecture",
+                "brushStrength": 1.1
+              },
+              "performance": {
+                "rhythm": "steady",
+                "rate": 1,
+                "amplitude": 1,
+                "phase": 0
+              },
+              "id": "i2:boat::0",
+              "interaction": {
+                "mode": "instance",
+                "groupId": "i2:boat::0"
+              }
+            },
+            {
+              "tool": "water",
+              "entities": [],
+              "projectedEntities": [],
+              "names": [
+                "构图依托·水域"
+              ],
+              "options": {
+                "form": "plane"
+              },
+              "animate": false,
+              "placement": {
+                "anchor": [
+                  320,
+                  135
+                ],
+                "at": [
+                  0.5,
+                  0.45
+                ],
+                "scale": 1.6
+              },
+              "instances": [
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      135
+                    ],
+                    "at": [
+                      0.5,
+                      0.45
+                    ],
+                    "scale": 1.65
+                  },
+                  "variant": 0,
+                  "depth": 0,
+                  "opacity": 1,
+                  "tone": "far",
+                  "id": "inferred:water:plane:1:0"
+                }
+              ],
+              "singleUnit": false,
+              "inferred": true,
+              "provenance": {
+                "basis": "local-context",
+                "reason": "整体场景解释为 waterside，本地补充必要 water 依托",
+                "semanticPath": "scene.setting"
+              },
+              "quantity": {
+                "rendered": 1,
+                "exact": false,
+                "items": []
+              },
+              "quantityLabel": "本地环境依托，不计入原文意象覆盖",
+              "z": -10,
+              "clip": [
+                [
+                  0,
+                  0.475
+                ],
+                [
+                  1,
+                  0.475
+                ],
+                [
+                  1,
+                  1.04
+                ],
+                [
+                  0,
+                  1.04
+                ]
+              ],
+              "surface": {
+                "top": 0.475,
+                "bottom": 1
+              },
+              "visual": {
+                "role": "water",
+                "brushStrength": 1.35
+              },
+              "performance": {
+                "rhythm": "continuous",
+                "rate": 0.9,
+                "amplitude": 0.9,
+                "phase": 3.8830085198369844
+              },
+              "id": "inferred:water:plane:1",
+              "interaction": {
+                "mode": "group",
+                "groupId": "inferred:water:plane:1"
+              }
+            }
+          ],
+          "scene": {
+            "kind": "study",
+            "notes": [
+              "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。"
+            ],
+            "waterline": null,
+            "semanticSetting": {
+              "kind": "waterside",
+              "basis": "inferred",
+              "evidence": [
+                "风送归舟"
+              ]
+            },
+            "semanticEffects": [
+              {
+                "path": "scene.supports[0]",
+                "consumer": "场景依托",
+                "status": "unsupported",
+                "effect": "依托主体尚无可绘制形态"
+              },
+              {
+                "path": "scene.setting",
+                "consumer": "场景依托",
+                "status": "applied",
+                "effect": "必要环境以独立推断背景表示，不新增原文实体"
+              }
+            ],
+            "organization": {
+              "version": "1.0",
+              "strategy": "general-constraints",
+              "regions": {
+                "water": [
+                  [
+                    0,
+                    0.475
+                  ],
+                  [
+                    1,
+                    0.475
+                  ],
+                  [
+                    1,
+                    1.04
+                  ],
+                  [
+                    0,
+                    1.04
+                  ]
+                ]
+              },
+              "candidates": [],
+              "repairs": [],
+              "limitations": [
+                "几何检查不判定诗意理解或审美合格",
+                "动作时序与整首诗的场景切换尚未编排"
+              ],
+              "topology": "水面横展",
+              "layout": 1,
+              "orientation": "水面横展",
+              "audit": {
+                "scope": "implemented-geometry-and-drawing-gaps",
+                "coverage": {
+                  "scope": "extracted-entities-only",
+                  "present": 3,
+                  "mapped": 1,
+                  "parameters": [
+                    "i1"
+                  ],
+                  "missing": [
+                    {
+                      "id": "i3",
+                      "name": "归人"
+                    }
+                  ]
+                },
+                "checks": [
+                  "presence",
+                  "count",
+                  "finite",
+                  "support",
+                  "scale",
+                  "relative-position",
+                  "depth",
+                  "grove-spread",
+                  "drawing-gaps"
+                ],
+                "status": "needs-review",
+                "errors": 0,
+                "review": 2,
+                "issues": [
+                  {
+                    "code": "unresolved-relation",
+                    "severity": "review",
+                    "message": "有空间关系尚无对应布局画法"
+                  },
+                  {
+                    "code": "drawing-gaps",
+                    "severity": "review",
+                    "message": "还有 1 项已提取线索尚未转成画面：归人"
+                  }
+                ],
+                "metrics": {
+                  "overlapPenalty": 0,
+                  "balancePenalty": 0.241,
+                  "motifFootprint": 0.016,
+                  "landArea": 0
+                },
+                "cost": 61.927,
+                "aestheticAcceptance": "pending-user"
+              },
+              "graph": {
+                "nodes": [
+                  {
+                    "id": "l0",
+                    "entities": [
+                      "i2"
+                    ],
+                    "tool": "boat",
+                    "role": "subject",
+                    "habitat": "water",
+                    "inferred": false,
+                    "support": "l1"
+                  },
+                  {
+                    "id": "l1",
+                    "entities": [],
+                    "tool": "water",
+                    "role": "water",
+                    "habitat": null,
+                    "inferred": true,
+                    "support": null
+                  }
+                ],
+                "edges": [
+                  {
+                    "type": "supported-by",
+                    "source": "l0",
+                    "target": "l1",
+                    "basis": "local-composition",
+                    "habitat": "water"
+                  },
+                  {
+                    "type": "on",
+                    "target": "l0",
+                    "basis": "explicit",
+                    "modality": "asserted",
+                    "evidence": [
+                      "舟载归人"
+                    ]
+                  }
+                ],
+                "setting": "study"
+              }
+            },
+            "displayAudit": {
+              "scope": "display-scale-separation-and-habitat",
+              "issues": [],
+              "errors": 0,
+              "aestheticAcceptance": "pending-user"
+            }
+          },
+          "spatial": [
+            {
+              "type": "on",
+              "source": "i3",
+              "target": "i2",
+              "modality": "asserted",
+              "basis": "explicit",
+              "evidence": [
+                "舟载归人"
+              ],
+              "visualized": false,
+              "reason": "关系的一端缺少独立画法"
+            }
+          ],
+          "landscapeStyle": {
+            "version": "1.0",
+            "color": "role-and-distance",
+            "motion": "layer-rhythms",
+            "aestheticAcceptance": "pending-user"
+          }
+        },
+        {
+          "id": "space-2",
+          "label": "近水远照",
+          "description": "先安排连续水域与地表，再按主次与远近安放景物",
+          "layers": [
+            {
+              "tool": "boat",
+              "entities": [
+                "i2"
+              ],
+              "projectedEntities": [],
+              "names": [
+                "归舟／舟"
+              ],
+              "options": {},
+              "animate": true,
+              "placement": {
+                "anchor": [
+                  320,
+                  230
+                ],
+                "at": [
+                  0.7919237921250001,
+                  0.72
+                ],
+                "scale": 0.95
+              },
+              "semanticGroup": {
+                "members": [
+                  "i2",
+                  "i3"
+                ],
+                "role": "subject",
+                "pattern": "single",
+                "depth": "unspecified",
+                "basis": "inferred",
+                "evidence": [
+                  "风送归舟",
+                  "舟载归人"
+                ],
+                "index": 1
+              },
+              "semanticEffects": [
+                {
+                  "path": "scene.actions[0].state",
+                  "consumer": "形态与绘画时钟",
+                  "effect": "启用工具支持的 float 状态",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.actions[0].pace",
+                  "consumer": "绘画时钟",
+                  "effect": "定性节奏映射为语义基准时钟倍率 0.35；观看动态与景物节奏另行调节",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.actions[0].direction",
+                  "consumer": "画布合成",
+                  "effect": "按定性方向作有限观看动画；不表示完整动作过程",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[1].role",
+                  "consumer": "主次布局",
+                  "effect": "主体相对突出",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[1].pattern",
+                  "consumer": "群落布局",
+                  "effect": "按 single 组织显示单元；不覆盖明确数量",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[1].depth",
+                  "consumer": "远近布局",
+                  "effect": "远近未明，保持本地默认",
+                  "status": "skipped"
+                }
+              ],
+              "semanticEnergy": false,
+              "timeScale": 0.35,
+              "semanticAction": {
+                "entity": "i2",
+                "state": "float",
+                "pace": "slow",
+                "direction": "approach",
+                "modality": "asserted",
+                "basis": "inferred",
+                "evidence": [
+                  "风送归舟"
+                ]
+              },
+              "motion": {
+                "kind": "depth",
+                "direction": "approach",
+                "rate": 0.35,
+                "state": "float"
+              },
+              "instances": [
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      230
+                    ],
+                    "at": [
+                      0.7919237921250001,
+                      0.72
+                    ],
+                    "scale": 0.8064
+                  },
+                  "depth": 0.05,
+                  "opacity": 1,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i2:boat::0:0"
+                }
+              ],
+              "singleUnit": true,
+              "quantity": {
+                "items": [
+                  {
+                    "entity": "i2",
+                    "mode": "exact",
+                    "min": 1,
+                    "max": 1,
+                    "unit": null,
+                    "scope": "individual",
+                    "extent": "local",
+                    "evidence": [
+                      "归舟"
+                    ],
+                    "basis": "model"
+                  }
+                ],
+                "rendered": 1,
+                "exact": true,
+                "collective": false,
+                "partUnsupported": false
+              },
+              "quantityLabel": "按提取数量绘制 1 个",
+              "z": 22,
+              "visual": {
+                "role": "architecture",
+                "brushStrength": 1.1
+              },
+              "performance": {
+                "rhythm": "steady",
+                "rate": 1,
+                "amplitude": 1,
+                "phase": 0
+              },
+              "id": "i2:boat::0",
+              "interaction": {
+                "mode": "instance",
+                "groupId": "i2:boat::0"
+              }
+            },
+            {
+              "tool": "water",
+              "entities": [],
+              "projectedEntities": [],
+              "names": [
+                "构图依托·水域"
+              ],
+              "options": {
+                "form": "plane"
+              },
+              "animate": false,
+              "placement": {
+                "anchor": [
+                  320,
+                  135
+                ],
+                "at": [
+                  0.5,
+                  0.45
+                ],
+                "scale": 1.6
+              },
+              "instances": [
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      135
+                    ],
+                    "at": [
+                      0.5,
+                      0.45
+                    ],
+                    "scale": 1.65
+                  },
+                  "variant": 0,
+                  "depth": 0,
+                  "opacity": 1,
+                  "tone": "far",
+                  "id": "inferred:water:plane:1:0"
+                }
+              ],
+              "singleUnit": false,
+              "inferred": true,
+              "provenance": {
+                "basis": "local-context",
+                "reason": "整体场景解释为 waterside，本地补充必要 water 依托",
+                "semanticPath": "scene.setting"
+              },
+              "quantity": {
+                "rendered": 1,
+                "exact": false,
+                "items": []
+              },
+              "quantityLabel": "本地环境依托，不计入原文意象覆盖",
+              "z": -10,
+              "clip": [
+                [
+                  0,
+                  0.53
+                ],
+                [
+                  1,
+                  0.53
+                ],
+                [
+                  1,
+                  1.04
+                ],
+                [
+                  0,
+                  1.04
+                ]
+              ],
+              "surface": {
+                "top": 0.53,
+                "bottom": 1
+              },
+              "visual": {
+                "role": "water",
+                "brushStrength": 1.35
+              },
+              "performance": {
+                "rhythm": "continuous",
+                "rate": 0.9,
+                "amplitude": 0.9,
+                "phase": 3.8830085198369844
+              },
+              "id": "inferred:water:plane:1",
+              "interaction": {
+                "mode": "group",
+                "groupId": "inferred:water:plane:1"
+              }
+            }
+          ],
+          "scene": {
+            "kind": "study",
+            "notes": [
+              "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。"
+            ],
+            "waterline": null,
+            "semanticSetting": {
+              "kind": "waterside",
+              "basis": "inferred",
+              "evidence": [
+                "风送归舟"
+              ]
+            },
+            "semanticEffects": [
+              {
+                "path": "scene.supports[0]",
+                "consumer": "场景依托",
+                "status": "unsupported",
+                "effect": "依托主体尚无可绘制形态"
+              },
+              {
+                "path": "scene.setting",
+                "consumer": "场景依托",
+                "status": "applied",
+                "effect": "必要环境以独立推断背景表示，不新增原文实体"
+              }
+            ],
+            "organization": {
+              "version": "1.0",
+              "strategy": "general-constraints",
+              "regions": {
+                "water": [
+                  [
+                    0,
+                    0.53
+                  ],
+                  [
+                    1,
+                    0.53
+                  ],
+                  [
+                    1,
+                    1.04
+                  ],
+                  [
+                    0,
+                    1.04
+                  ]
+                ]
+              },
+              "candidates": [],
+              "repairs": [],
+              "limitations": [
+                "几何检查不判定诗意理解或审美合格",
+                "动作时序与整首诗的场景切换尚未编排"
+              ],
+              "topology": "近水远照",
+              "layout": 2,
+              "orientation": "近水远照",
+              "audit": {
+                "scope": "implemented-geometry-and-drawing-gaps",
+                "coverage": {
+                  "scope": "extracted-entities-only",
+                  "present": 3,
+                  "mapped": 1,
+                  "parameters": [
+                    "i1"
+                  ],
+                  "missing": [
+                    {
+                      "id": "i3",
+                      "name": "归人"
+                    }
+                  ]
+                },
+                "checks": [
+                  "presence",
+                  "count",
+                  "finite",
+                  "support",
+                  "scale",
+                  "relative-position",
+                  "depth",
+                  "grove-spread",
+                  "drawing-gaps"
+                ],
+                "status": "needs-review",
+                "errors": 0,
+                "review": 2,
+                "issues": [
+                  {
+                    "code": "unresolved-relation",
+                    "severity": "review",
+                    "message": "有空间关系尚无对应布局画法"
+                  },
+                  {
+                    "code": "drawing-gaps",
+                    "severity": "review",
+                    "message": "还有 1 项已提取线索尚未转成画面：归人"
+                  }
+                ],
+                "metrics": {
+                  "overlapPenalty": 0,
+                  "balancePenalty": 0.292,
+                  "motifFootprint": 0.016,
+                  "landArea": 0
+                },
+                "cost": 62.335,
+                "aestheticAcceptance": "pending-user"
+              },
+              "graph": {
+                "nodes": [
+                  {
+                    "id": "l0",
+                    "entities": [
+                      "i2"
+                    ],
+                    "tool": "boat",
+                    "role": "subject",
+                    "habitat": "water",
+                    "inferred": false,
+                    "support": "l1"
+                  },
+                  {
+                    "id": "l1",
+                    "entities": [],
+                    "tool": "water",
+                    "role": "water",
+                    "habitat": null,
+                    "inferred": true,
+                    "support": null
+                  }
+                ],
+                "edges": [
+                  {
+                    "type": "supported-by",
+                    "source": "l0",
+                    "target": "l1",
+                    "basis": "local-composition",
+                    "habitat": "water"
+                  },
+                  {
+                    "type": "on",
+                    "target": "l0",
+                    "basis": "explicit",
+                    "modality": "asserted",
+                    "evidence": [
+                      "舟载归人"
+                    ]
+                  }
+                ],
+                "setting": "study"
+              }
+            },
+            "displayAudit": {
+              "scope": "display-scale-separation-and-habitat",
+              "issues": [],
+              "errors": 0,
+              "aestheticAcceptance": "pending-user"
+            }
+          },
+          "spatial": [
+            {
+              "type": "on",
+              "source": "i3",
+              "target": "i2",
+              "modality": "asserted",
+              "basis": "explicit",
+              "evidence": [
+                "舟载归人"
+              ],
+              "visualized": false,
+              "reason": "关系的一端缺少独立画法"
+            }
+          ],
+          "landscapeStyle": {
+            "version": "1.0",
+            "color": "role-and-distance",
+            "motion": "layer-rhythms",
+            "aestheticAcceptance": "pending-user"
+          }
+        }
+      ],
+      "composition": "space-0",
+      "omitted": [
+        {
+          "id": "i3",
+          "name": "归人",
+          "reason": "该专名人物、地名或抽象含义暂不作实景补画"
+        }
+      ],
+      "notes": [
+        "风作为风参数，不额外画风线；强弱是本次试画选择。",
+        "归舟／舟：按舟船这个主体选择画法，材质或修饰词不另画成植物。这是本地写意借形，保留原词义。",
+        "位置、大小、笔触与默认微动是本地试画选择；数量解释与本地显示数量分别记录。",
+        "未明说的群落数量、疏密、近中远层次与变体均为本地构图选择；种类可按已声明的写意画法概括，不把铺展词换算成精确物体数量。",
+        "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。",
+        "通用场景层先组织地面、水域、群落和主体，再比较三个布局的依托、相对位置、尺度与遮挡；检查通过不代表审美已通过。",
+        "语义保留：scene.groups[0].role，分组成员目前缺少基础画法",
+        "语义保留：scene.groups[0].pattern，分组成员目前缺少基础画法",
+        "语义保留：scene.groups[0].depth，分组成员目前缺少基础画法",
+        "语义保留：scene.supports[0]，依托主体尚无可绘制形态",
+        "整体场景、主次、远近、依托和支持的动作状态来自本次模型解释；具体布局、颜色和时钟倍率由本地视觉策略选择。",
+        "动作动画表现受支持的主导状态与有限观看运动；先后事件与完整因果尚未编排。",
+        "动态程度与默认轻风是可调整的观看选择；不改变数量、主次或原文动作判断。人物保持点景写意，不新增人物步态。",
+        "显示检查覆盖实例尺度、鸟群分离与空中落点；不保证笔触未被遮挡，也不代替实际观看。竹林默认成组拖动，其余单独拖动；Shift 可拖动同层整组。"
+      ],
+      "relations": [],
+      "semanticConsumption": {
+        "version": "3.3",
+        "items": [
+          {
+            "path": "scene.setting",
+            "status": "applied",
+            "consumer": "场景依托",
+            "effect": "必要环境以独立推断背景表示，不新增原文实体",
+            "basis": "inferred",
+            "evidence": [
+              "风送归舟"
+            ]
+          },
+          {
+            "path": "scene.groups[0].role",
+            "status": "unsupported",
+            "consumer": "本地视觉策略",
+            "effect": "分组成员目前缺少基础画法",
+            "basis": "inferred",
+            "evidence": [
+              "风送归舟"
+            ]
+          },
+          {
+            "path": "scene.groups[0].pattern",
+            "status": "unsupported",
+            "consumer": "本地视觉策略",
+            "effect": "分组成员目前缺少基础画法",
+            "basis": "inferred",
+            "evidence": [
+              "风送归舟"
+            ]
+          },
+          {
+            "path": "scene.groups[0].depth",
+            "status": "unsupported",
+            "consumer": "本地视觉策略",
+            "effect": "分组成员目前缺少基础画法",
+            "basis": "inferred",
+            "evidence": [
+              "风送归舟"
+            ]
+          },
+          {
+            "path": "scene.groups[1].role",
+            "status": "applied",
+            "consumer": "主次布局",
+            "effect": "主体相对突出",
+            "basis": "inferred",
+            "evidence": [
+              "风送归舟",
+              "舟载归人"
+            ]
+          },
+          {
+            "path": "scene.groups[1].pattern",
+            "status": "applied",
+            "consumer": "群落布局",
+            "effect": "按 single 组织显示单元；不覆盖明确数量",
+            "basis": "inferred",
+            "evidence": [
+              "风送归舟",
+              "舟载归人"
+            ]
+          },
+          {
+            "path": "scene.groups[1].depth",
+            "status": "skipped",
+            "consumer": "远近布局",
+            "effect": "远近未明，保持本地默认",
+            "basis": "inferred",
+            "evidence": [
+              "风送归舟",
+              "舟载归人"
+            ]
+          },
+          {
+            "path": "scene.supports[0]",
+            "status": "unsupported",
+            "consumer": "场景依托",
+            "effect": "依托主体尚无可绘制形态",
+            "basis": "explicit",
+            "evidence": [
+              "舟载归人"
+            ]
+          },
+          {
+            "path": "scene.actions[0].state",
+            "status": "applied",
+            "consumer": "形态与绘画时钟",
+            "effect": "启用工具支持的 float 状态",
+            "basis": "inferred",
+            "evidence": [
+              "风送归舟"
+            ]
+          },
+          {
+            "path": "scene.actions[0].pace",
+            "status": "applied",
+            "consumer": "绘画时钟",
+            "effect": "定性节奏映射为语义基准时钟倍率 0.35；观看动态与景物节奏另行调节",
+            "basis": "inferred",
+            "evidence": [
+              "风送归舟"
+            ]
+          },
+          {
+            "path": "scene.actions[0].direction",
+            "status": "applied",
+            "consumer": "画布合成",
+            "effect": "按定性方向作有限观看动画；不表示完整动作过程",
+            "basis": "inferred",
+            "evidence": [
+              "风送归舟"
+            ]
+          },
+          {
+            "path": "scene.atmosphere.visibility",
+            "status": "skipped",
+            "consumer": "画布色层与远景",
+            "effect": "可见度 unclear；迷蒙或昏暗时淡化非光源图层",
+            "basis": "inferred",
+            "evidence": []
+          },
+          {
+            "path": "scene.atmosphere.illumination",
+            "status": "skipped",
+            "consumer": "自动光色",
+            "effect": "照明 unclear 与气息标签共同选择本地 clear 配色；夜景优先暗底，用户可手动覆盖",
+            "basis": "inferred",
+            "evidence": []
+          },
+          {
+            "path": "atmosphere.energy",
+            "status": "skipped",
+            "consumer": "绘画时钟",
+            "effect": "没有明确动作节奏时，气息强弱控制已有微动的默认时钟"
+          },
+          {
+            "path": "atmosphere.openness",
+            "status": "applied",
+            "consumer": "群落分布与笔触密度",
+            "effect": "开阔度转换为本地间距与工具笔触密度，不等于原文数量"
+          },
+          {
+            "path": "atmosphere.valence",
+            "status": "applied",
+            "consumer": "自动光色",
+            "effect": "先约束昼夜明暗，再按已支持的气息标签和情绪倾向选择配色；不宣称完整情感理解"
+          },
+          {
+            "path": "time.markers",
+            "status": "retained",
+            "consumer": "原始记录与解读",
+            "effect": "保留原文时间标记；本版照明由 scene.atmosphere 转换，多阶段时间逻辑未执行"
+          }
+        ],
+        "summary": {
+          "applied": 8,
+          "partial": 0,
+          "unsupported": 4,
+          "skipped": 4,
+          "retained": 1
+        },
+        "aestheticAcceptance": "pending-user"
+      },
+      "landscapeStyle": {
+        "version": "1.0",
+        "color": "role-and-distance",
+        "motion": "layer-rhythms",
+        "aestheticAcceptance": "pending-user"
+      },
+      "compositionSelection": {
+        "method": "final-display-constraints-then-geometric-preference",
+        "candidates": [
+          {
+            "id": "space-0",
+            "errors": 0,
+            "score": 64.178
+          },
+          {
+            "id": "space-1",
+            "errors": 0,
+            "score": 65.301
+          },
+          {
+            "id": "space-2",
+            "errors": 0,
+            "score": 66.423
+          }
+        ],
+        "aestheticAcceptance": "pending-user"
+      },
+      "imageryTrace": [
+        {
+          "id": "i1",
+          "mentions": [
+            "风"
+          ],
+          "role": "scene",
+          "presence": "present",
+          "parameter": "wind",
+          "layers": [],
+          "omission": null
+        },
+        {
+          "id": "i2",
+          "mentions": [
+            "归舟",
+            "舟"
+          ],
+          "role": "scene",
+          "presence": "present",
+          "parameter": null,
+          "layers": [
+            {
+              "id": "i2:boat::0",
+              "tool": "boat",
+              "instances": [
+                "i2:boat::0:0"
+              ]
+            }
+          ],
+          "omission": null
+        },
+        {
+          "id": "i3",
+          "mentions": [
+            "归人"
+          ],
+          "role": "scene",
+          "presence": "present",
+          "parameter": null,
+          "layers": [],
+          "omission": "该专名人物、地名或抽象含义暂不作实景补画"
+        }
+      ]
+    },
+    "expression": {
+      "version": "shared-expression-1.1-source-bound",
+      "sourceContract": "expression-1.0",
+      "recommendation": "scenery",
+      "reason": "以明确景物及空间为主，默认风景优先",
+      "gaps": [
+        {
+          "id": "i3",
+          "label": "归人",
+          "reason": "该专名人物、地名或抽象含义暂不作实景补画"
+        }
+      ],
+      "limitations": [
+        "景物过程当前影响抽象纹理；原生景物动作沿用场景能力，未支持的月下楼位移等仍不执行。",
+        "纹理、色层和观看扰动属于本地艺术选择，不改变语义成立状态"
+      ]
+    },
+    "notes": [
+      "三个表达倾向共享景物数量、空间、依托与主体身份；抽象笔触优先服从原景物区域和轮廓。",
+      "纯抽象或比喻句不因切换风景优先而补山水。",
+      "风作为风参数，不额外画风线；强弱是本次试画选择。",
+      "归舟／舟：按舟船这个主体选择画法，材质或修饰词不另画成植物。这是本地写意借形，保留原词义。",
+      "位置、大小、笔触与默认微动是本地试画选择；数量解释与本地显示数量分别记录。",
+      "未明说的群落数量、疏密、近中远层次与变体均为本地构图选择；种类可按已声明的写意画法概括，不把铺展词换算成精确物体数量。",
+      "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。",
+      "通用场景层先组织地面、水域、群落和主体，再比较三个布局的依托、相对位置、尺度与遮挡；检查通过不代表审美已通过。",
+      "语义保留：scene.groups[0].role，分组成员目前缺少基础画法",
+      "语义保留：scene.groups[0].pattern，分组成员目前缺少基础画法",
+      "语义保留：scene.groups[0].depth，分组成员目前缺少基础画法",
+      "语义保留：scene.supports[0]，依托主体尚无可绘制形态",
+      "整体场景、主次、远近、依托和支持的动作状态来自本次模型解释；具体布局、颜色和时钟倍率由本地视觉策略选择。",
+      "动作动画表现受支持的主导状态与有限观看运动；先后事件与完整因果尚未编排。",
+      "动态程度与默认轻风是可调整的观看选择；不改变数量、主次或原文动作判断。人物保持点景写意，不新增人物步态。",
+      "显示检查覆盖实例尺度、鸟群分离与空中落点；不保证笔触未被遮挡，也不代替实际观看。竹林默认成组拖动，其余单独拖动；Shift 可拖动同层整组。"
+    ],
+    "aestheticAcceptance": "pending-user"
+  },
+  "delivery": {
+    "status": "complete",
+    "retryable": false,
+    "reason": null,
+    "message": "解读已通过检查。"
+  },
+  "elapsed_seconds": 4.4
+}

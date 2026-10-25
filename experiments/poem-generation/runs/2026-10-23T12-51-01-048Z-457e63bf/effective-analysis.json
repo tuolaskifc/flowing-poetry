@@ -1,0 +1,154 @@
+{
+  "schema_version": "3.3",
+  "poem": "坐见幽州骑，长驱河洛昏。",
+  "reading": "静坐中望见幽州骑兵，长驱直入，河洛一带为之昏暗。",
+  "entities": [
+    {
+      "id": "i1",
+      "mentions": [
+        "幽州骑"
+      ],
+      "concept": "幽州来的骑兵",
+      "kind": "person",
+      "role": "scene",
+      "presence": "present",
+      "evidence": [
+        "坐见幽州骑"
+      ],
+      "quantity": {
+        "mode": "many",
+        "min": null,
+        "max": null,
+        "unit": null,
+        "scope": "group",
+        "extent": "unspecified",
+        "evidence": [
+          "幽州骑"
+        ]
+      }
+    },
+    {
+      "id": "i2",
+      "mentions": [
+        "河洛"
+      ],
+      "concept": "河洛地区",
+      "kind": "place",
+      "role": "scene",
+      "presence": "present",
+      "evidence": [
+        "长驱河洛昏"
+      ],
+      "quantity": {
+        "mode": "unspecified",
+        "min": null,
+        "max": null,
+        "unit": null,
+        "scope": "unspecified",
+        "extent": "spread",
+        "evidence": []
+      }
+    }
+  ],
+  "relations": [],
+  "atmosphere": {
+    "labels": [
+      "昏暗",
+      "紧张"
+    ],
+    "valence": "negative",
+    "energy": "high",
+    "tension": "high",
+    "openness": "medium",
+    "evidence": [
+      "长驱河洛昏"
+    ]
+  },
+  "time": {
+    "markers": [],
+    "note": null
+  },
+  "uncertainties": [
+    "“坐见”的观察者身份未明，可能是诗人自指，也可能是泛指。",
+    "“昏”可指天色昏暗，也可指局势昏暗，具体所指不确定。"
+  ],
+  "spatial": [
+    {
+      "type": "on",
+      "source": "i1",
+      "target": "i2",
+      "modality": "asserted",
+      "basis": "inferred",
+      "evidence": [
+        "坐见幽州骑，长驱河洛昏。"
+      ]
+    }
+  ],
+  "scene": {
+    "setting": {
+      "kind": "open_land",
+      "basis": "inferred",
+      "evidence": [
+        "长驱河洛昏"
+      ]
+    },
+    "groups": [
+      {
+        "members": [
+          "i1"
+        ],
+        "role": "subject",
+        "pattern": "flock",
+        "depth": "middle",
+        "basis": "inferred",
+        "evidence": [
+          "坐见幽州骑"
+        ]
+      },
+      {
+        "members": [
+          "i2"
+        ],
+        "role": "environment",
+        "pattern": "field",
+        "depth": "far",
+        "basis": "inferred",
+        "evidence": [
+          "长驱河洛昏"
+        ]
+      }
+    ],
+    "supports": [
+      {
+        "entity": "i1",
+        "surface": "ground",
+        "target": null,
+        "basis": "inferred",
+        "evidence": [
+          "坐见幽州骑，长驱河洛昏。"
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "entity": "i1",
+        "state": "walk",
+        "pace": "fast",
+        "direction": "across",
+        "modality": "asserted",
+        "basis": "explicit",
+        "evidence": [
+          "坐见幽州骑，长驱河洛昏。"
+        ]
+      }
+    ],
+    "atmosphere": {
+      "visibility": "dark",
+      "illumination": "unclear",
+      "basis": "inferred",
+      "evidence": [
+        "长驱河洛昏"
+      ]
+    }
+  }
+}

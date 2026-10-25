@@ -1,0 +1,192 @@
+{
+  "id": "2026-10-19T09-39-47-945Z-0ddd1b06",
+  "fingerprint": "cda39fd7ffbd885ac0f60c377d996cab2da0be02c84b6eb768182afe00cc0eb8",
+  "poem": "小池寒绿欲生漪，雨晴还日西。",
+  "source": {
+    "provider": "今日诗词",
+    "author": "佚名",
+    "title": "阮郎归·春风吹雨绕残枝",
+    "dynasty": "宋代"
+  },
+  "mode": "imagery-only",
+  "model": "DeepSeek-V4.1-Flash",
+  "started_at": "2026-10-19T09:39:47.947Z",
+  "cached": false,
+  "http_status": 200,
+  "usage": {
+    "completion_tokens": 456,
+    "prompt_tokens": 1993,
+    "total_tokens": 2449,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 1920
+    }
+  },
+  "finish_reason": "stop",
+  "analysis": {
+    "schema_version": "3.0",
+    "poem": "小池寒绿欲生漪，雨晴还日西。",
+    "reading": "小池水色寒绿，似将泛起涟漪；雨止天晴，日头又已西斜。写雨后池上的清冷与时光推移。",
+    "entities": [
+      {
+        "id": "i1",
+        "mentions": [
+          "小池"
+        ],
+        "concept": "小池",
+        "kind": "place",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "小池寒绿欲生漪"
+        ]
+      },
+      {
+        "id": "i2",
+        "mentions": [
+          "寒绿"
+        ],
+        "concept": "寒绿的池水",
+        "kind": "abstract",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "小池寒绿欲生漪"
+        ]
+      },
+      {
+        "id": "i3",
+        "mentions": [
+          "漪"
+        ],
+        "concept": "涟漪",
+        "kind": "abstract",
+        "role": "scene",
+        "presence": "unclear",
+        "evidence": [
+          "小池寒绿欲生漪"
+        ]
+      },
+      {
+        "id": "i4",
+        "mentions": [
+          "雨"
+        ],
+        "concept": "雨",
+        "kind": "environment",
+        "role": "scene",
+        "presence": "absent",
+        "evidence": [
+          "雨晴还日西"
+        ]
+      },
+      {
+        "id": "i5",
+        "mentions": [
+          "日"
+        ],
+        "concept": "太阳",
+        "kind": "object",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "雨晴还日西"
+        ]
+      }
+    ],
+    "relations": [],
+    "atmosphere": {
+      "labels": [
+        "清冷",
+        "静谧",
+        "微茫"
+      ],
+      "valence": "neutral",
+      "energy": "low",
+      "tension": "low",
+      "openness": "medium",
+      "evidence": [
+        "小池寒绿欲生漪",
+        "雨晴还日西"
+      ]
+    },
+    "time": {
+      "markers": [
+        {
+          "surface": "欲",
+          "meaning": "将要、即将发生"
+        },
+        {
+          "surface": "雨晴",
+          "meaning": "雨停转晴之后"
+        },
+        {
+          "surface": "还",
+          "meaning": "又、再度"
+        },
+        {
+          "surface": "日西",
+          "meaning": "太阳西斜，指傍晚时分"
+        }
+      ],
+      "note": "时间由雨晴推进到日西，暗示由昼入暮。"
+    },
+    "uncertainties": [
+      "“欲生漪”是即将起波还是已然微动，程度不明。",
+      "“寒绿”指水色还是池边草木之色，未明说。"
+    ]
+  },
+  "validation": {
+    "valid": true,
+    "errors": [],
+    "warnings": [
+      "$.entities[2]: 场景主体的出现情况不清楚",
+      "模型保留了不确定性，需要审阅"
+    ],
+    "review_required": true
+  },
+  "plan": {
+    "version": "trial-4-orchid-horse-lotus",
+    "seed": 2281103174,
+    "settings": {
+      "wind": 0,
+      "density": 0.45,
+      "palette": "clear"
+    },
+    "layers": [],
+    "omitted": [
+      {
+        "id": "i1",
+        "name": "小池",
+        "reason": "暂未提供该人物、地点或抽象含义的绘画单元"
+      },
+      {
+        "id": "i2",
+        "name": "寒绿",
+        "reason": "暂未提供该人物、地点或抽象含义的绘画单元"
+      },
+      {
+        "id": "i3",
+        "name": "漪",
+        "reason": "出现情况不确定，暂不补画"
+      },
+      {
+        "id": "i4",
+        "name": "雨",
+        "reason": "原文中缺席，不绘制"
+      },
+      {
+        "id": "i5",
+        "name": "日",
+        "reason": "该具体意象尚无可用形态；没有替换成通用树、花或鸟群"
+      }
+    ],
+    "notes": [
+      "位置、大小、笔触、固定群体数量与默认微动是本地试画选择；不表示原句给出了这些数值。"
+    ],
+    "relations": []
+  },
+  "elapsed_seconds": 4.8
+}

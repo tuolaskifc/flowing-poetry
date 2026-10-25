@@ -1,0 +1,159 @@
+{
+  "id": "2026-10-19T09-40-51-572Z-87005ad9",
+  "fingerprint": "6a03bc42e9f93c73ccece8b4b124c87d526e4691442c44d4768dd4f83b5eb001",
+  "poem": "江南可采莲，莲叶何田田。",
+  "source": {
+    "provider": "本地推荐",
+    "author": "汉乐府",
+    "title": "江南",
+    "dynasty": "两汉"
+  },
+  "mode": "imagery-only",
+  "model": "DeepSeek-V4.1-Flash",
+  "started_at": "2026-10-19T09:40:51.574Z",
+  "cached": false,
+  "http_status": 200,
+  "usage": {
+    "completion_tokens": 333,
+    "prompt_tokens": 1990,
+    "total_tokens": 2323,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 1920
+    }
+  },
+  "finish_reason": "stop",
+  "analysis": {
+    "schema_version": "3.0",
+    "poem": "江南可采莲，莲叶何田田。",
+    "reading": "江南水乡可以采莲，莲叶层层叠叠、茂密繁盛。句中以“可”表示采莲的可能，未点明采莲人是否在场，画面重心落在莲叶的繁密。",
+    "entities": [
+      {
+        "id": "i1",
+        "mentions": [
+          "江南"
+        ],
+        "concept": "江南水乡地域",
+        "kind": "place",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "江南"
+        ]
+      },
+      {
+        "id": "i2",
+        "mentions": [
+          "莲"
+        ],
+        "concept": "莲，可采的莲实或莲蓬",
+        "kind": "organism",
+        "role": "scene",
+        "presence": "unclear",
+        "evidence": [
+          "可采莲"
+        ]
+      },
+      {
+        "id": "i3",
+        "mentions": [
+          "莲叶"
+        ],
+        "concept": "莲的叶子",
+        "kind": "organism",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "莲叶何田田"
+        ]
+      }
+    ],
+    "relations": [],
+    "atmosphere": {
+      "labels": [
+        "繁茂",
+        "清润"
+      ],
+      "valence": "positive",
+      "energy": "low",
+      "tension": "low",
+      "openness": "medium",
+      "evidence": [
+        "江南可采莲",
+        "莲叶何田田"
+      ]
+    },
+    "time": {
+      "markers": [],
+      "note": "无明确时间标记；“可”只表可能，不指示时序。"
+    },
+    "uncertainties": [
+      "“可采莲”只说明采莲可行，未表明采莲人是否在场或正在采莲。",
+      "“田田”为形容莲叶茂密的古语，具体形态未明说。"
+    ]
+  },
+  "validation": {
+    "valid": true,
+    "errors": [],
+    "warnings": [
+      "$.entities[1]: 场景主体的出现情况不清楚",
+      "模型保留了不确定性，需要审阅"
+    ],
+    "review_required": true
+  },
+  "plan": {
+    "version": "trial-4-orchid-horse-lotus",
+    "seed": 737055821,
+    "settings": {
+      "wind": 0,
+      "density": 0.45,
+      "palette": "clear"
+    },
+    "layers": [
+      {
+        "tool": "lotus",
+        "entities": [
+          "i3"
+        ],
+        "names": [
+          "莲叶"
+        ],
+        "options": {
+          "form": "leaf"
+        },
+        "animate": true,
+        "placement": {
+          "anchor": [
+            320,
+            330
+          ],
+          "at": [
+            0.53,
+            0.92
+          ],
+          "scale": 0.95
+        }
+      }
+    ],
+    "omitted": [
+      {
+        "id": "i1",
+        "name": "江南",
+        "reason": "暂未提供该人物、地点或抽象含义的绘画单元"
+      },
+      {
+        "id": "i2",
+        "name": "莲",
+        "reason": "出现情况不确定，暂不补画"
+      }
+    ],
+    "notes": [
+      "莲叶按提到的花或叶分别试画；不自动补池水、荷叶或其他生物，默认花态是本地选择，尚无生长或开花过程。",
+      "位置、大小、笔触、固定群体数量与默认微动是本地试画选择；不表示原句给出了这些数值。"
+    ],
+    "relations": []
+  },
+  "elapsed_seconds": 9.7
+}

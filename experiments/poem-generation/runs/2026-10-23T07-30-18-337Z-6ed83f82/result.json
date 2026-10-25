@@ -1,0 +1,1270 @@
+{
+  "id": "2026-10-23T07-30-18-337Z-6ed83f82",
+  "fingerprint": "8c3aa74d626b55d7cdbdff5587bf234280a163321bb2b0ece8a54c28c01302a4",
+  "poem": "小楼一夜听春雨，深巷明朝卖杏花。",
+  "source": {
+    "provider": "精选诗句库",
+    "author": "陆游",
+    "title": "临安春雨初霁",
+    "dynasty": "宋代"
+  },
+  "mode": "composition",
+  "model": "DeepSeek-V4.1-Flash",
+  "started_at": "2026-10-23T07:30:18.338Z",
+  "cached": false,
+  "http_status": 200,
+  "usage": {
+    "completion_tokens": 926,
+    "prompt_tokens": 4897,
+    "total_tokens": 5823,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 4864
+    }
+  },
+  "finish_reason": "stop",
+  "analysis": {
+    "schema_version": "3.3",
+    "poem": "小楼一夜听春雨，深巷明朝卖杏花。",
+    "reading": "小楼中听了一夜春雨，深巷里到明天早晨有人卖杏花；写春夜到清晨的听觉与市井气息。",
+    "entities": [
+      {
+        "id": "i1",
+        "mentions": [
+          "小楼"
+        ],
+        "concept": "小楼",
+        "kind": "place",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "小楼一夜听春雨"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i2",
+        "mentions": [
+          "春雨"
+        ],
+        "concept": "春雨",
+        "kind": "environment",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "小楼一夜听春雨"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i3",
+        "mentions": [
+          "深巷"
+        ],
+        "concept": "深巷",
+        "kind": "place",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "深巷明朝卖杏花"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i4",
+        "mentions": [
+          "杏花"
+        ],
+        "concept": "杏花",
+        "kind": "organism",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "深巷明朝卖杏花"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      }
+    ],
+    "relations": [],
+    "atmosphere": {
+      "labels": [
+        "春夜",
+        "清润",
+        "市井"
+      ],
+      "valence": "neutral",
+      "energy": "low",
+      "tension": "low",
+      "openness": "low",
+      "evidence": [
+        "小楼一夜听春雨",
+        "深巷明朝卖杏花"
+      ]
+    },
+    "time": {
+      "markers": [
+        {
+          "surface": "一夜",
+          "meaning": "整夜持续"
+        },
+        {
+          "surface": "明朝",
+          "meaning": "明天早晨，未然"
+        }
+      ],
+      "note": "前句写夜间，后句写次日清晨，时间由夜转明。"
+    },
+    "uncertainties": [
+      "卖杏花者未在原文中明说，仅由“卖”推知有人售卖。",
+      "“听”的主语未明说，可能是小楼中的人，也可能是叙述者。"
+    ],
+    "spatial": [
+      {
+        "type": "outside",
+        "source": "i3",
+        "target": "i1",
+        "modality": "unclear",
+        "basis": "inferred",
+        "evidence": [
+          "小楼一夜听春雨，深巷明朝卖杏花"
+        ]
+      }
+    ],
+    "scene": {
+      "setting": {
+        "kind": "settlement",
+        "basis": "inferred",
+        "evidence": [
+          "小楼一夜听春雨",
+          "深巷明朝卖杏花"
+        ]
+      },
+      "groups": [
+        {
+          "members": [
+            "i1"
+          ],
+          "role": "environment",
+          "pattern": "single",
+          "depth": "unspecified",
+          "basis": "inferred",
+          "evidence": [
+            "小楼一夜听春雨"
+          ]
+        },
+        {
+          "members": [
+            "i3"
+          ],
+          "role": "environment",
+          "pattern": "single",
+          "depth": "unspecified",
+          "basis": "inferred",
+          "evidence": [
+            "深巷明朝卖杏花"
+          ]
+        },
+        {
+          "members": [
+            "i2"
+          ],
+          "role": "accent",
+          "pattern": "field",
+          "depth": "unspecified",
+          "basis": "inferred",
+          "evidence": [
+            "小楼一夜听春雨"
+          ]
+        },
+        {
+          "members": [
+            "i4"
+          ],
+          "role": "accent",
+          "pattern": "unspecified",
+          "depth": "unspecified",
+          "basis": "inferred",
+          "evidence": [
+            "深巷明朝卖杏花"
+          ]
+        }
+      ],
+      "supports": [
+        {
+          "entity": "i1",
+          "surface": "ground",
+          "target": null,
+          "basis": "inferred",
+          "evidence": [
+            "小楼一夜听春雨"
+          ]
+        },
+        {
+          "entity": "i3",
+          "surface": "ground",
+          "target": null,
+          "basis": "inferred",
+          "evidence": [
+            "深巷明朝卖杏花"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "entity": "i2",
+          "state": "fall",
+          "pace": "unspecified",
+          "direction": "down",
+          "modality": "asserted",
+          "basis": "inferred",
+          "evidence": [
+            "小楼一夜听春雨"
+          ]
+        },
+        {
+          "entity": "i4",
+          "state": "unclear",
+          "pace": "unspecified",
+          "direction": "unspecified",
+          "modality": "possible",
+          "basis": "inferred",
+          "evidence": [
+            "深巷明朝卖杏花"
+          ]
+        }
+      ],
+      "atmosphere": {
+        "visibility": "dark",
+        "illumination": "night",
+        "basis": "inferred",
+        "evidence": [
+          "小楼一夜听春雨"
+        ]
+      }
+    }
+  },
+  "validation": {
+    "valid": true,
+    "errors": [],
+    "warnings": [
+      "模型保留了不确定性，需要审阅",
+      "spatial[0] 的推断或非确定关系需审阅",
+      "scene.setting 为语义推断，绘画选择需与原文明示区分",
+      "scene.groups[0] 为语义推断，绘画选择需与原文明示区分",
+      "scene.groups[1] 为语义推断，绘画选择需与原文明示区分",
+      "scene.groups[2] 为语义推断，绘画选择需与原文明示区分",
+      "scene.groups[3] 为语义推断，绘画选择需与原文明示区分",
+      "scene.supports[0] 为语义推断，绘画选择需与原文明示区分",
+      "scene.supports[1] 为语义推断，绘画选择需与原文明示区分",
+      "scene.actions[0] 为语义推断，绘画选择需与原文明示区分",
+      "scene.actions[1] 为语义推断，绘画选择需与原文明示区分",
+      "scene.atmosphere 为语义推断，绘画选择需与原文明示区分"
+    ],
+    "review_required": true
+  },
+  "plan": {
+    "version": "semantic-composition-3.3-landscape",
+    "seed": 750830345,
+    "settings": {
+      "wind": 0.3,
+      "density": 0.6,
+      "palette": "night",
+      "motion": 1.4
+    },
+    "layers": [
+      {
+        "tool": "landscape",
+        "entities": [
+          "i3"
+        ],
+        "projectedEntities": [],
+        "names": [
+          "深巷"
+        ],
+        "options": {
+          "form": "path"
+        },
+        "animate": false,
+        "placement": {
+          "anchor": [
+            320,
+            194
+          ],
+          "at": [
+            0.5,
+            0.57
+          ],
+          "scale": 1.5
+        },
+        "semanticGroup": {
+          "members": [
+            "i3"
+          ],
+          "role": "environment",
+          "pattern": "single",
+          "depth": "unspecified",
+          "basis": "inferred",
+          "evidence": [
+            "深巷明朝卖杏花"
+          ],
+          "index": 1
+        },
+        "semanticEffects": [
+          {
+            "path": "scene.groups[1].role",
+            "consumer": "主次布局",
+            "effect": "保留环境群落层次",
+            "status": "applied"
+          },
+          {
+            "path": "scene.groups[1].pattern",
+            "consumer": "群落布局",
+            "effect": "按 single 组织显示单元；不覆盖明确数量",
+            "status": "applied"
+          },
+          {
+            "path": "scene.groups[1].depth",
+            "consumer": "远近布局",
+            "effect": "远近未明，保持本地默认",
+            "status": "skipped"
+          }
+        ],
+        "semanticEnergy": false,
+        "timeScale": 0.45,
+        "instances": [
+          {
+            "placement": {
+              "anchor": [
+                320,
+                194
+              ],
+              "at": [
+                0.5,
+                0.57
+              ],
+              "scale": 1.6
+            },
+            "depth": 0.05,
+            "opacity": 0.84,
+            "variant": 0,
+            "tone": "far"
+          }
+        ],
+        "singleUnit": false,
+        "quantity": {
+          "items": [
+            {
+              "entity": "i3",
+              "mode": "unspecified",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "unspecified",
+              "extent": "unspecified",
+              "evidence": [],
+              "basis": "model"
+            }
+          ],
+          "rendered": 1,
+          "exact": false,
+          "collective": false,
+          "partUnsupported": false
+        },
+        "quantityLabel": "整体笔触图层；内部数量尚未适配",
+        "z": -20,
+        "semanticSupport": {
+          "surface": "ground",
+          "target": null,
+          "path": "scene.supports[1]"
+        },
+        "visual": {
+          "role": "ground"
+        },
+        "performance": {
+          "rhythm": "steady",
+          "rate": 1,
+          "amplitude": 1,
+          "phase": 0
+        }
+      },
+      {
+        "tool": "tree",
+        "entities": [
+          "i4"
+        ],
+        "projectedEntities": [],
+        "names": [
+          "杏花"
+        ],
+        "options": {
+          "form": "blossom",
+          "branches": "7",
+          "crown": "lines"
+        },
+        "animate": false,
+        "placement": {
+          "anchor": [
+            320,
+            388
+          ],
+          "at": [
+            0.5,
+            0.93
+          ],
+          "scale": 1.15
+        },
+        "drawingLabel": "树意（写意借形）",
+        "semanticGroup": {
+          "members": [
+            "i4"
+          ],
+          "role": "accent",
+          "pattern": "unspecified",
+          "depth": "unspecified",
+          "basis": "inferred",
+          "evidence": [
+            "深巷明朝卖杏花"
+          ],
+          "index": 3
+        },
+        "semanticEffects": [
+          {
+            "path": "scene.actions[1].state",
+            "consumer": "动作边界",
+            "effect": "可能、假设或未明动作不执行",
+            "status": "skipped"
+          },
+          {
+            "path": "scene.groups[3].role",
+            "consumer": "主次布局",
+            "effect": "点景缩小淡化",
+            "status": "applied"
+          },
+          {
+            "path": "scene.groups[3].pattern",
+            "consumer": "群落布局",
+            "effect": "群落形式未明，保持本地默认",
+            "status": "skipped"
+          },
+          {
+            "path": "scene.groups[3].depth",
+            "consumer": "远近布局",
+            "effect": "远近未明，保持本地默认",
+            "status": "skipped"
+          }
+        ],
+        "semanticEnergy": false,
+        "timeScale": 0,
+        "semanticAction": {
+          "entity": "i4",
+          "state": "unclear",
+          "pace": "unspecified",
+          "direction": "unspecified",
+          "modality": "possible",
+          "basis": "inferred",
+          "evidence": [
+            "深巷明朝卖杏花"
+          ]
+        },
+        "instances": [
+          {
+            "placement": {
+              "anchor": [
+                320,
+                388
+              ],
+              "at": [
+                0.5,
+                0.93
+              ],
+              "scale": 1.2160000000000002
+            },
+            "depth": 20,
+            "opacity": 0.6552,
+            "variant": 2,
+            "tone": "near"
+          }
+        ],
+        "singleUnit": true,
+        "quantity": {
+          "items": [
+            {
+              "entity": "i4",
+              "mode": "unspecified",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "unspecified",
+              "extent": "unspecified",
+              "evidence": [],
+              "basis": "model"
+            }
+          ],
+          "rendered": 1,
+          "exact": false,
+          "collective": false,
+          "partUnsupported": false
+        },
+        "quantityLabel": "数量未精确；本地试画 1 个单元",
+        "z": 10,
+        "visual": {
+          "role": "blossom"
+        },
+        "performance": {
+          "rhythm": "gust",
+          "rate": 0.62,
+          "amplitude": 0.65,
+          "phase": 3.8830085198369844
+        }
+      },
+      {
+        "tool": "rain",
+        "entities": [
+          "i2"
+        ],
+        "projectedEntities": [],
+        "names": [
+          "春雨"
+        ],
+        "options": {},
+        "animate": true,
+        "placement": {
+          "anchor": [
+            320,
+            194
+          ],
+          "at": [
+            0.5,
+            0.5
+          ],
+          "scale": 1.55
+        },
+        "semanticGroup": {
+          "members": [
+            "i2"
+          ],
+          "role": "accent",
+          "pattern": "field",
+          "depth": "unspecified",
+          "basis": "inferred",
+          "evidence": [
+            "小楼一夜听春雨"
+          ],
+          "index": 2
+        },
+        "semanticEffects": [
+          {
+            "path": "scene.actions[0].state",
+            "consumer": "形态与绘画时钟",
+            "effect": "启用工具支持的 fall 状态",
+            "status": "applied"
+          },
+          {
+            "path": "scene.actions[0].pace",
+            "consumer": "绘画时钟",
+            "effect": "定性节奏映射为语义基准时钟倍率 0.45；观看动态与景物节奏另行调节",
+            "status": "applied"
+          },
+          {
+            "path": "scene.actions[0].direction",
+            "consumer": "工具原生运动",
+            "effect": "使用原生向上／向下运动，不平移依托锚点",
+            "status": "applied"
+          },
+          {
+            "path": "scene.groups[2].role",
+            "consumer": "主次布局",
+            "effect": "点景缩小淡化",
+            "status": "applied"
+          },
+          {
+            "path": "scene.groups[2].pattern",
+            "consumer": "群落布局",
+            "effect": "按 field 组织显示单元；不覆盖明确数量",
+            "status": "applied"
+          },
+          {
+            "path": "scene.groups[2].depth",
+            "consumer": "远近布局",
+            "effect": "远近未明，保持本地默认",
+            "status": "skipped"
+          }
+        ],
+        "semanticEnergy": true,
+        "timeScale": 0.45,
+        "semanticAction": {
+          "entity": "i2",
+          "state": "fall",
+          "pace": "unspecified",
+          "direction": "down",
+          "modality": "asserted",
+          "basis": "inferred",
+          "evidence": [
+            "小楼一夜听春雨"
+          ]
+        },
+        "instances": [
+          {
+            "placement": {
+              "anchor": [
+                320,
+                194
+              ],
+              "at": [
+                0.5,
+                0.5
+              ],
+              "scale": 1.1780000000000002
+            },
+            "depth": 0.05,
+            "opacity": 0.6552,
+            "variant": 0,
+            "tone": "far"
+          }
+        ],
+        "singleUnit": false,
+        "quantity": {
+          "items": [
+            {
+              "entity": "i2",
+              "mode": "unspecified",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "unspecified",
+              "extent": "unspecified",
+              "evidence": [],
+              "basis": "model"
+            }
+          ],
+          "rendered": 1,
+          "exact": false,
+          "collective": false,
+          "partUnsupported": false
+        },
+        "quantityLabel": "整体笔触图层；内部数量尚未适配",
+        "visual": {
+          "role": "atmosphere"
+        },
+        "performance": {
+          "rhythm": "falling",
+          "rate": 1,
+          "amplitude": 0.8,
+          "phase": 1.4828317324943823
+        }
+      },
+      {
+        "tool": "landscape",
+        "names": [
+          "构图依托·地面"
+        ],
+        "entities": [],
+        "projectedEntities": [],
+        "options": {
+          "form": "ground"
+        },
+        "animate": false,
+        "placement": {
+          "anchor": [
+            320,
+            194
+          ],
+          "at": [
+            0.5,
+            0.48
+          ],
+          "scale": 1.6
+        },
+        "instances": [
+          {
+            "placement": {
+              "anchor": [
+                320,
+                194
+              ],
+              "at": [
+                0.5,
+                0.48
+              ],
+              "scale": 1.6
+            },
+            "variant": 0,
+            "depth": 0,
+            "opacity": 0.84,
+            "tone": "far"
+          }
+        ],
+        "singleUnit": false,
+        "inferred": true,
+        "provenance": {
+          "basis": "local-context",
+          "reason": "疏花树的树根与地表相接"
+        },
+        "quantity": {
+          "rendered": 1,
+          "exact": false,
+          "items": []
+        },
+        "quantityLabel": "背景依托，不计入意象覆盖",
+        "z": -18,
+        "semanticEffects": [],
+        "semanticEnergy": false,
+        "visual": {
+          "role": "ground"
+        },
+        "performance": {
+          "rhythm": "steady",
+          "rate": 1,
+          "amplitude": 1,
+          "phase": 5.365840252331367
+        }
+      }
+    ],
+    "spatial": [
+      {
+        "type": "outside",
+        "source": "i3",
+        "target": "i1",
+        "modality": "unclear",
+        "basis": "inferred",
+        "evidence": [
+          "小楼一夜听春雨，深巷明朝卖杏花"
+        ],
+        "visualized": false,
+        "reason": "非确定关系仅保留解读"
+      }
+    ],
+    "scene": {
+      "kind": "flowering-grove",
+      "notes": [
+        "先划分承托地形、群落与主体活动区域；场景密度和背景依托是本地构图推断，不冒充原文明示意象。",
+        "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。"
+      ],
+      "waterline": null,
+      "basis": "local-context",
+      "regions": {
+        "grove": [
+          [
+            0.15,
+            0.6
+          ],
+          [
+            0.85,
+            0.6
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ]
+      },
+      "supports": [
+        {
+          "form": "ground",
+          "reason": "疏花树的树根与地表相接"
+        }
+      ],
+      "semanticSetting": {
+        "kind": "settlement",
+        "basis": "inferred",
+        "evidence": [
+          "小楼一夜听春雨",
+          "深巷明朝卖杏花"
+        ]
+      },
+      "semanticEffects": [
+        {
+          "path": "scene.supports[0]",
+          "consumer": "场景依托",
+          "status": "unsupported",
+          "effect": "依托主体尚无可绘制形态"
+        },
+        {
+          "path": "scene.supports[1]",
+          "consumer": "场景依托",
+          "status": "applied",
+          "effect": "必要环境以独立推断背景表示，不新增原文实体"
+        }
+      ],
+      "organization": {
+        "version": "1.0",
+        "strategy": "regional-proposal",
+        "regions": {
+          "grove": [
+            [
+              0.15,
+              0.6
+            ],
+            [
+              0.85,
+              0.6
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              1
+            ]
+          ]
+        },
+        "candidates": [
+          {
+            "layout": "existing",
+            "errors": 0,
+            "cost": 30
+          }
+        ],
+        "repairs": [],
+        "limitations": [
+          "几何检查不判定诗意理解或审美合格",
+          "动作时序与整首诗的场景切换尚未编排"
+        ],
+        "graph": {
+          "nodes": [
+            {
+              "id": "l0",
+              "entities": [
+                "i3"
+              ],
+              "tool": "landscape",
+              "role": "terrain",
+              "habitat": null,
+              "inferred": false,
+              "support": null
+            },
+            {
+              "id": "l1",
+              "entities": [
+                "i4"
+              ],
+              "tool": "tree",
+              "role": "vegetation",
+              "habitat": "land",
+              "inferred": false,
+              "support": "l3"
+            },
+            {
+              "id": "l2",
+              "entities": [
+                "i2"
+              ],
+              "tool": "rain",
+              "role": "atmosphere",
+              "habitat": null,
+              "inferred": false,
+              "support": null
+            },
+            {
+              "id": "l3",
+              "entities": [],
+              "tool": "landscape",
+              "role": "terrain",
+              "habitat": null,
+              "inferred": true,
+              "support": null
+            }
+          ],
+          "edges": [
+            {
+              "type": "supported-by",
+              "source": "l1",
+              "target": "l3",
+              "basis": "local-composition",
+              "habitat": "land"
+            },
+            {
+              "type": "outside",
+              "source": "l0",
+              "basis": "inferred",
+              "modality": "unclear",
+              "evidence": [
+                "小楼一夜听春雨，深巷明朝卖杏花"
+              ]
+            }
+          ],
+          "setting": "flowering-grove"
+        },
+        "audit": {
+          "scope": "implemented-geometry-and-drawing-gaps",
+          "coverage": {
+            "scope": "extracted-entities-only",
+            "present": 4,
+            "mapped": 3,
+            "parameters": [],
+            "missing": [
+              {
+                "id": "i1",
+                "name": "小楼"
+              }
+            ]
+          },
+          "checks": [
+            "presence",
+            "count",
+            "finite",
+            "water-support",
+            "cliff-support",
+            "grove-spread",
+            "drawing-gaps"
+          ],
+          "status": "needs-review",
+          "errors": 0,
+          "review": 1,
+          "issues": [
+            {
+              "code": "drawing-gaps",
+              "severity": "review",
+              "message": "还有 1 项已提取线索尚未转成画面：小楼"
+            }
+          ],
+          "metrics": {
+            "overlapPenalty": 0,
+            "balancePenalty": 0,
+            "motifFootprint": 0.297,
+            "landArea": 0
+          },
+          "cost": 30,
+          "aestheticAcceptance": "pending-user"
+        }
+      }
+    },
+    "omitted": [
+      {
+        "id": "i1",
+        "name": "小楼",
+        "reason": "该专名人物、地名或抽象含义暂不作实景补画"
+      }
+    ],
+    "notes": [
+      "深巷虽被归为地点，仍按原文明示的自然景物匹配；具体空间关系另行处理。",
+      "杏花：以一树疏花组织花枝；整株轮廓是本地写意借形，明确枝数只约束主花枝。这是本地写意借形，保留原词义。",
+      "位置、大小、笔触与默认微动是本地试画选择；数量解释与本地显示数量分别记录。",
+      "未明说的群落数量、疏密、近中远层次与变体均为本地构图选择；种类可按已声明的写意画法概括，不把铺展词换算成精确物体数量。",
+      "先划分承托地形、群落与主体活动区域；场景密度和背景依托是本地构图推断，不冒充原文明示意象。",
+      "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。",
+      "语义保留：scene.groups[0].role，分组成员目前缺少基础画法",
+      "语义保留：scene.groups[0].pattern，分组成员目前缺少基础画法",
+      "语义保留：scene.groups[0].depth，分组成员目前缺少基础画法",
+      "语义保留：scene.supports[0]，依托主体尚无可绘制形态",
+      "整体场景、主次、远近、依托和支持的动作状态来自本次模型解释；具体布局、颜色和时钟倍率由本地视觉策略选择。",
+      "动作动画表现受支持的主导状态与有限观看运动；先后事件与完整因果尚未编排。",
+      "动态程度与默认轻风是可调整的观看选择；不改变数量、主次或原文动作判断。人物保持点景写意，不新增人物步态。"
+    ],
+    "relations": [],
+    "semanticConsumption": {
+      "version": "3.3",
+      "items": [
+        {
+          "path": "scene.setting",
+          "status": "applied",
+          "consumer": "本地视觉策略",
+          "effect": "整体环境进入场景提案选择",
+          "basis": "inferred",
+          "evidence": [
+            "小楼一夜听春雨",
+            "深巷明朝卖杏花"
+          ]
+        },
+        {
+          "path": "scene.groups[0].role",
+          "status": "unsupported",
+          "consumer": "本地视觉策略",
+          "effect": "分组成员目前缺少基础画法",
+          "basis": "inferred",
+          "evidence": [
+            "小楼一夜听春雨"
+          ]
+        },
+        {
+          "path": "scene.groups[0].pattern",
+          "status": "unsupported",
+          "consumer": "本地视觉策略",
+          "effect": "分组成员目前缺少基础画法",
+          "basis": "inferred",
+          "evidence": [
+            "小楼一夜听春雨"
+          ]
+        },
+        {
+          "path": "scene.groups[0].depth",
+          "status": "unsupported",
+          "consumer": "本地视觉策略",
+          "effect": "分组成员目前缺少基础画法",
+          "basis": "inferred",
+          "evidence": [
+            "小楼一夜听春雨"
+          ]
+        },
+        {
+          "path": "scene.groups[1].role",
+          "status": "applied",
+          "consumer": "主次布局",
+          "effect": "保留环境群落层次",
+          "basis": "inferred",
+          "evidence": [
+            "深巷明朝卖杏花"
+          ]
+        },
+        {
+          "path": "scene.groups[1].pattern",
+          "status": "applied",
+          "consumer": "群落布局",
+          "effect": "按 single 组织显示单元；不覆盖明确数量",
+          "basis": "inferred",
+          "evidence": [
+            "深巷明朝卖杏花"
+          ]
+        },
+        {
+          "path": "scene.groups[1].depth",
+          "status": "skipped",
+          "consumer": "远近布局",
+          "effect": "远近未明，保持本地默认",
+          "basis": "inferred",
+          "evidence": [
+            "深巷明朝卖杏花"
+          ]
+        },
+        {
+          "path": "scene.groups[2].role",
+          "status": "applied",
+          "consumer": "主次布局",
+          "effect": "点景缩小淡化",
+          "basis": "inferred",
+          "evidence": [
+            "小楼一夜听春雨"
+          ]
+        },
+        {
+          "path": "scene.groups[2].pattern",
+          "status": "applied",
+          "consumer": "群落布局",
+          "effect": "按 field 组织显示单元；不覆盖明确数量",
+          "basis": "inferred",
+          "evidence": [
+            "小楼一夜听春雨"
+          ]
+        },
+        {
+          "path": "scene.groups[2].depth",
+          "status": "skipped",
+          "consumer": "远近布局",
+          "effect": "远近未明，保持本地默认",
+          "basis": "inferred",
+          "evidence": [
+            "小楼一夜听春雨"
+          ]
+        },
+        {
+          "path": "scene.groups[3].role",
+          "status": "applied",
+          "consumer": "主次布局",
+          "effect": "点景缩小淡化",
+          "basis": "inferred",
+          "evidence": [
+            "深巷明朝卖杏花"
+          ]
+        },
+        {
+          "path": "scene.groups[3].pattern",
+          "status": "skipped",
+          "consumer": "群落布局",
+          "effect": "群落形式未明，保持本地默认",
+          "basis": "inferred",
+          "evidence": [
+            "深巷明朝卖杏花"
+          ]
+        },
+        {
+          "path": "scene.groups[3].depth",
+          "status": "skipped",
+          "consumer": "远近布局",
+          "effect": "远近未明，保持本地默认",
+          "basis": "inferred",
+          "evidence": [
+            "深巷明朝卖杏花"
+          ]
+        },
+        {
+          "path": "scene.supports[0]",
+          "status": "unsupported",
+          "consumer": "场景依托",
+          "effect": "依托主体尚无可绘制形态",
+          "basis": "inferred",
+          "evidence": [
+            "小楼一夜听春雨"
+          ]
+        },
+        {
+          "path": "scene.supports[1]",
+          "status": "applied",
+          "consumer": "场景依托",
+          "effect": "必要环境以独立推断背景表示，不新增原文实体",
+          "basis": "inferred",
+          "evidence": [
+            "深巷明朝卖杏花"
+          ]
+        },
+        {
+          "path": "scene.actions[0].state",
+          "status": "applied",
+          "consumer": "形态与绘画时钟",
+          "effect": "启用工具支持的 fall 状态",
+          "basis": "inferred",
+          "evidence": [
+            "小楼一夜听春雨"
+          ]
+        },
+        {
+          "path": "scene.actions[0].pace",
+          "status": "applied",
+          "consumer": "绘画时钟",
+          "effect": "定性节奏映射为语义基准时钟倍率 0.45；观看动态与景物节奏另行调节",
+          "basis": "inferred",
+          "evidence": [
+            "小楼一夜听春雨"
+          ]
+        },
+        {
+          "path": "scene.actions[0].direction",
+          "status": "applied",
+          "consumer": "工具原生运动",
+          "effect": "使用原生向上／向下运动，不平移依托锚点",
+          "basis": "inferred",
+          "evidence": [
+            "小楼一夜听春雨"
+          ]
+        },
+        {
+          "path": "scene.actions[1].state",
+          "status": "skipped",
+          "consumer": "动作边界",
+          "effect": "可能、假设或未明动作不执行",
+          "basis": "inferred",
+          "evidence": [
+            "深巷明朝卖杏花"
+          ]
+        },
+        {
+          "path": "scene.actions[1].pace",
+          "status": "skipped",
+          "consumer": "本地视觉策略",
+          "effect": "非确定动作不执行",
+          "basis": "inferred",
+          "evidence": [
+            "深巷明朝卖杏花"
+          ]
+        },
+        {
+          "path": "scene.actions[1].direction",
+          "status": "skipped",
+          "consumer": "本地视觉策略",
+          "effect": "非确定动作不执行",
+          "basis": "inferred",
+          "evidence": [
+            "深巷明朝卖杏花"
+          ]
+        },
+        {
+          "path": "scene.atmosphere.visibility",
+          "status": "applied",
+          "consumer": "画布色层与远景",
+          "effect": "可见度 dark；迷蒙或昏暗时淡化非光源图层",
+          "basis": "inferred",
+          "evidence": [
+            "小楼一夜听春雨"
+          ]
+        },
+        {
+          "path": "scene.atmosphere.illumination",
+          "status": "applied",
+          "consumer": "有限配色",
+          "effect": "照明 night 映射为本地 night 配色；用户仍可手动覆盖",
+          "basis": "inferred",
+          "evidence": [
+            "小楼一夜听春雨"
+          ]
+        },
+        {
+          "path": "atmosphere.energy",
+          "status": "applied",
+          "consumer": "绘画时钟",
+          "effect": "没有明确动作节奏时，气息强弱控制已有微动的默认时钟"
+        },
+        {
+          "path": "atmosphere.openness",
+          "status": "applied",
+          "consumer": "群落分布与笔触密度",
+          "effect": "开阔度转换为本地间距与工具笔触密度，不等于原文数量"
+        },
+        {
+          "path": "atmosphere.valence",
+          "status": "skipped",
+          "consumer": "有限配色",
+          "effect": "照明策略优先，本次不另套情绪配色"
+        },
+        {
+          "path": "time.markers",
+          "status": "retained",
+          "consumer": "原始记录与解读",
+          "effect": "保留原文时间标记；本版照明由 scene.atmosphere 转换，多阶段时间逻辑未执行"
+        }
+      ],
+      "summary": {
+        "applied": 14,
+        "partial": 0,
+        "unsupported": 4,
+        "skipped": 8,
+        "retained": 1
+      },
+      "aestheticAcceptance": "pending-user"
+    },
+    "landscapeStyle": {
+      "version": "1.0",
+      "color": "role-and-distance",
+      "motion": "layer-rhythms",
+      "aestheticAcceptance": "pending-user"
+    }
+  },
+  "elapsed_seconds": 17.3
+}

@@ -1,0 +1,98 @@
+{
+  "schema_version": "abstract-1.0",
+  "poem": "问君能有几多愁？恰似一江春水向东流！",
+  "reading": "以问句起笔，将愁设为可被追问、可被比拟的对象；随即用一江春水向东流作比，把抽象的愁量化为绵延不绝、奔流不返的江水。愁与春水在比喻中相互映照，形成绵长、涌动、不可遏止的抽象结构。",
+  "subjects": [
+    {
+    "id": "a1",
+    "mentions": ["愁"],
+    "meaning": "抽象情感，被追问数量并以春水为喻。",
+    "kind": "abstract",
+    "role": "scene",
+    "presence": "present",
+    "evidence": ["问君能有几多愁？", "恰似一江春水向东流！"]
+    },
+    {
+    "id": "a2",
+    "mentions": ["一江春水"],
+    "meaning": "比喻参照中的江水与春水，具流动、向东、绵延特征。",
+    "kind": "concrete",
+    "role": "reference",
+    "presence": "present",
+    "evidence": ["恰似一江春水向东流！"]
+    },
+    {
+    "id": "a3",
+    "mentions": ["向东流"],
+    "meaning": "春水向东奔流的方向与动态，暗示愁的绵延与不可逆。",
+    "kind": "abstract",
+    "role": "reference",
+    "presence": "present",
+    "evidence": ["恰似一江春水向东流！"]
+    }
+  ],
+  "relations": [
+    {
+    "source": "a1",
+    "target": "a2",
+    "kind": "connect",
+    "modality": "asserted",
+    "basis": "explicit",
+    "evidence": ["问君能有几多愁？", "恰似一江春水向东流！"]
+    },
+    {
+    "source": "a1",
+    "target": "a3",
+    "kind": "echo",
+    "modality": "asserted",
+    "basis": "inferred",
+    "evidence": ["问君能有几多愁？", "恰似一江春水向东流！"]
+    },
+    {
+    "source": "a2",
+    "target": "a3",
+    "kind": "interweave",
+    "modality": "asserted",
+    "basis": "explicit",
+    "evidence": ["恰似一江春水向东流！"]
+    }
+  ],
+  "processes": [
+    {
+    "subject": "a1",
+    "kind": "persist",
+    "temporal": "ongoing",
+    "modality": "asserted",
+    "basis": "inferred",
+    "evidence": ["问君能有几多愁？", "恰似一江春水向东流！"]
+    },
+    {
+    "subject": "a2",
+    "kind": "persist",
+    "temporal": "ongoing",
+    "modality": "asserted",
+    "basis": "explicit",
+    "evidence": ["恰似一江春水向东流！"]
+    },
+    {
+    "subject": "a3",
+    "kind": "persist",
+    "temporal": "ongoing",
+    "modality": "asserted",
+    "basis": "explicit",
+    "evidence": ["恰似一江春水向东流！"]
+    }
+  ],
+  "atmosphere": {
+    "labels": ["绵长", "涌动", "不可遏止"],
+    "valence": "negative",
+    "openness": "high",
+    "illumination": "unclear",
+    "evidence": ["问君能有几多愁？", "恰似一江春水向东流！"]
+  },
+  "uncertainties": [
+    "问句“问君能有几多愁”中的“君”所指不明，可能是自问或泛问，不补人物。",
+    "“恰似一江春水向东流”为比喻参照，并非实景描写，春水与愁的等同程度保留为修辞性。",
+    "愁的“几多”数量未被回答，仅以江水绵延作比，量度保持开放。"
+  ]
+}

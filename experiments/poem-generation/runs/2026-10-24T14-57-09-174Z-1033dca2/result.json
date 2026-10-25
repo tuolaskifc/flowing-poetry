@@ -1,0 +1,335 @@
+{
+  "id": "2026-10-24T14-57-09-174Z-1033dca2",
+  "fingerprint": "8dcc4aa5a8f1f628ae49983226ea720dc12c9cb130e93a97ef7d01d4e16b84f2",
+  "poem": "此情可待成追忆，只是当时已惘然。",
+  "source": null,
+  "mode": "expression",
+  "model": "DeepSeek-V4.1-Flash",
+  "started_at": "2026-10-24T14:57:09.175Z",
+  "cached": false,
+  "http_status": 200,
+  "usage": {
+    "completion_tokens": 734,
+    "prompt_tokens": 6063,
+    "total_tokens": 6797,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 6016
+    }
+  },
+  "finish_reason": "stop",
+  "analysis": {
+    "schema_version": "expression-1.0",
+    "poem": "此情可待成追忆，只是当时已惘然。",
+    "reading": "这份情感本可留待日后成为追忆，只是在当时就已经惘然若失。诗句写情感在当下已难以把握，回望时更添怅惘。",
+    "entities": [
+      {
+        "id": "i1",
+        "mentions": [
+          "此情"
+        ],
+        "concept": "这份情感",
+        "kind": "abstract",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "此情可待成追忆"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i2",
+        "mentions": [
+          "追忆"
+        ],
+        "concept": "日后追忆",
+        "kind": "abstract",
+        "role": "scene",
+        "presence": "unclear",
+        "evidence": [
+          "此情可待成追忆"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i3",
+        "mentions": [
+          "当时"
+        ],
+        "concept": "当时情境",
+        "kind": "abstract",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "只是当时已惘然"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i4",
+        "mentions": [
+          "惘然"
+        ],
+        "concept": "惘然心绪",
+        "kind": "abstract",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "只是当时已惘然"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      }
+    ],
+    "relations": [],
+    "atmosphere": {
+      "labels": [
+        "怅惘",
+        "追忆"
+      ],
+      "valence": "negative",
+      "energy": "low",
+      "tension": "medium",
+      "openness": "unclear",
+      "evidence": [
+        "此情可待成追忆",
+        "只是当时已惘然"
+      ]
+    },
+    "time": {
+      "markers": [
+        {
+          "surface": "可待",
+          "meaning": "表示未来可能、有待实现"
+        },
+        {
+          "surface": "当时",
+          "meaning": "指过去的那个时刻"
+        },
+        {
+          "surface": "已",
+          "meaning": "表示当时已经发生或存在"
+        }
+      ],
+      "note": "“可待”指向未来可能，“当时已”指向过去完成，形成时间对照。"
+    },
+    "uncertainties": [
+      "“此情”具体所指未明，只能理解为某种情感。",
+      "“可待”是可能还是应当，语气略有歧义。"
+    ],
+    "spatial": [],
+    "scene": {
+      "setting": {
+        "kind": "unclear",
+        "basis": "inferred",
+        "evidence": []
+      },
+      "groups": [],
+      "supports": [],
+      "actions": [],
+      "atmosphere": {
+        "visibility": "unclear",
+        "illumination": "unclear",
+        "basis": "inferred",
+        "evidence": []
+      }
+    },
+    "expression": {
+      "relations": [
+        {
+          "source": "i1",
+          "target": "i2",
+          "kind": "connect",
+          "modality": "possible",
+          "basis": "explicit",
+          "evidence": [
+            "此情可待成追忆"
+          ]
+        },
+        {
+          "source": "i1",
+          "target": "i4",
+          "kind": "contrast",
+          "modality": "asserted",
+          "basis": "inferred",
+          "evidence": [
+            "此情可待成追忆",
+            "只是当时已惘然"
+          ]
+        }
+      ],
+      "processes": [
+        {
+          "subject": "i4",
+          "kind": "persist",
+          "temporal": "already",
+          "modality": "asserted",
+          "basis": "explicit",
+          "evidence": [
+            "只是当时已惘然"
+          ]
+        }
+      ]
+    }
+  },
+  "validation": {
+    "valid": true,
+    "errors": [],
+    "warnings": [
+      "$.entities[1]: 场景主体的出现情况不清楚",
+      "模型保留了不确定性，需要审阅",
+      "scene.setting 为语义推断，绘画选择需与原文明示区分",
+      "i1 未进入整体分组，后续使用本地默认布局",
+      "i3 未进入整体分组，后续使用本地默认布局",
+      "i4 未进入整体分组，后续使用本地默认布局",
+      "scene.atmosphere 为语义推断，绘画选择需与原文明示区分",
+      "expression.relations[1] 为语义推断"
+    ],
+    "review_required": true
+  },
+  "plan": {
+    "version": "shared-expression-1.1-source-bound",
+    "seed": 2205578360,
+    "poem": "此情可待成追忆，只是当时已惘然。",
+    "nodes": [
+      {
+        "id": "i1",
+        "label": "此情",
+        "meaning": "这份情感",
+        "kind": "abstract",
+        "contextOnly": false,
+        "mode": "present"
+      },
+      {
+        "id": "i2",
+        "label": "追忆",
+        "meaning": "日后追忆",
+        "kind": "abstract",
+        "contextOnly": false,
+        "mode": "candidate"
+      },
+      {
+        "id": "i4",
+        "label": "惘然",
+        "meaning": "惘然心绪",
+        "kind": "abstract",
+        "contextOnly": false,
+        "mode": "present"
+      }
+    ],
+    "relations": [
+      {
+        "source": "i1",
+        "target": "i2",
+        "kind": "connect",
+        "modality": "possible",
+        "basis": "explicit",
+        "evidence": [
+          "此情可待成追忆"
+        ]
+      },
+      {
+        "source": "i1",
+        "target": "i4",
+        "kind": "contrast",
+        "modality": "asserted",
+        "basis": "inferred",
+        "evidence": [
+          "此情可待成追忆",
+          "只是当时已惘然"
+        ]
+      }
+    ],
+    "processes": [
+      {
+        "subject": "i4",
+        "kind": "persist",
+        "temporal": "already",
+        "modality": "asserted",
+        "basis": "explicit",
+        "evidence": [
+          "只是当时已惘然"
+        ]
+      }
+    ],
+    "omitted": [],
+    "atmosphere": {
+      "labels": [
+        "怅惘",
+        "追忆"
+      ],
+      "valence": "negative",
+      "energy": "low",
+      "tension": "medium",
+      "openness": "unclear",
+      "evidence": [
+        "此情可待成追忆",
+        "只是当时已惘然"
+      ],
+      "illumination": "unclear"
+    },
+    "concretePlan": null,
+    "renderability": {
+      "status": "ready",
+      "visibleScenery": false,
+      "visibleAbstract": true,
+      "gaps": []
+    },
+    "expression": {
+      "version": "shared-expression-1.1-source-bound",
+      "sourceContract": "expression-1.0",
+      "recommendation": "abstract",
+      "reason": "没有可直接落成实景的主体，以抽象关系组织画面",
+      "gaps": [],
+      "limitations": [
+        "景物过程当前影响抽象纹理；原生景物动作沿用场景能力，未支持的月下楼位移等仍不执行。",
+        "纹理、色层和观看扰动属于本地艺术选择，不改变语义成立状态"
+      ]
+    },
+    "notes": [
+      "三个表达倾向共享景物数量、空间、依托与主体身份；抽象笔触优先服从原景物区域和轮廓。",
+      "纯抽象或比喻句不因切换风景优先而补山水。"
+    ],
+    "aestheticAcceptance": "pending-user"
+  },
+  "delivery": {
+    "status": "complete",
+    "retryable": false,
+    "reason": null,
+    "message": "解读已通过检查。"
+  },
+  "elapsed_seconds": 10
+}

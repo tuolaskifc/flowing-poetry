@@ -1,0 +1,44 @@
+{
+  "version": "generation-recovery-1.1",
+  "status": "partial",
+  "reviewRequired": true,
+  "changes": [],
+  "omitted": [
+    {
+      "path": "scene.groups[2]",
+      "claim": {
+        "members": [
+          "i3"
+        ],
+        "role": "accent",
+        "pattern": "unspecified",
+        "depth": "unspecified",
+        "basis": "inferred",
+        "evidence": [
+          "暗香浮动月黄昏"
+        ]
+      },
+      "errors": [
+        "scene 抽象概念不得作为物理场景、动作或依托主体"
+      ]
+    },
+    {
+      "path": "scene.actions[0]",
+      "claim": {
+        "entity": "i3",
+        "state": "float",
+        "pace": "slow",
+        "direction": "unspecified",
+        "modality": "asserted",
+        "basis": "inferred",
+        "evidence": [
+          "暗香浮动月黄昏"
+        ]
+      },
+      "errors": [
+        "scene 抽象概念不得作为物理场景、动作或依托主体"
+      ]
+    }
+  ],
+  "message": "已绘制核验通过的部分，个别联系或动作暂未采用。"
+}

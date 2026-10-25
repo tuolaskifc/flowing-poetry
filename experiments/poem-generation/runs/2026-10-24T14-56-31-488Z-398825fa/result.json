@@ -1,0 +1,2311 @@
+{
+  "id": "2026-10-24T14-56-31-488Z-398825fa",
+  "fingerprint": "fcada51f6951307d9aa95ae3c4d8ae7bc17016b5166fd7c015f29e314cd2bc25",
+  "poem": "白鸟一双临水立，见人惊起入芦花。",
+  "source": null,
+  "mode": "expression",
+  "model": "DeepSeek-V4.1-Flash",
+  "started_at": "2026-10-24T14:56:31.488Z",
+  "cached": false,
+  "http_status": 200,
+  "usage": {
+    "completion_tokens": 948,
+    "prompt_tokens": 6064,
+    "total_tokens": 7012,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 6016
+    }
+  },
+  "finish_reason": "stop",
+  "analysis": {
+    "schema_version": "expression-1.0",
+    "poem": "白鸟一双临水立，见人惊起入芦花。",
+    "reading": "一双白鸟在水边静立，见人惊起，飞入芦花丛中。",
+    "entities": [
+      {
+        "id": "i1",
+        "mentions": [
+          "白鸟一双"
+        ],
+        "concept": "白鸟",
+        "kind": "organism",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "白鸟一双临水立"
+        ],
+        "quantity": {
+          "mode": "exact",
+          "min": 2,
+          "max": 2,
+          "unit": "双",
+          "scope": "group",
+          "extent": "local",
+          "evidence": [
+            "白鸟一双临水立"
+          ]
+        }
+      },
+      {
+        "id": "i2",
+        "mentions": [
+          "水"
+        ],
+        "concept": "水边",
+        "kind": "place",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "白鸟一双临水立"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i3",
+        "mentions": [
+          "人"
+        ],
+        "concept": "人",
+        "kind": "person",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "见人惊起入芦花"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i4",
+        "mentions": [
+          "芦花"
+        ],
+        "concept": "芦花",
+        "kind": "organism",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "见人惊起入芦花"
+        ],
+        "quantity": {
+          "mode": "many",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "group",
+          "extent": "spread",
+          "evidence": [
+            "见人惊起入芦花"
+          ]
+        }
+      }
+    ],
+    "relations": [],
+    "atmosphere": {
+      "labels": [
+        "惊起",
+        "清冷"
+      ],
+      "valence": "neutral",
+      "energy": "medium",
+      "tension": "medium",
+      "openness": "medium",
+      "evidence": [
+        "白鸟一双临水立",
+        "见人惊起入芦花"
+      ]
+    },
+    "time": {
+      "markers": [],
+      "note": null
+    },
+    "uncertainties": [
+      "“见人”的观察者未明，可能是人看见鸟，也可能是鸟见人而惊起。",
+      "“入芦花”只表明飞入芦花丛，具体方向与距离未明。"
+    ],
+    "spatial": [
+      {
+        "type": "beside",
+        "source": "i1",
+        "target": "i2",
+        "modality": "asserted",
+        "basis": "explicit",
+        "evidence": [
+          "白鸟一双临水立"
+        ]
+      },
+      {
+        "type": "among",
+        "source": "i1",
+        "target": "i4",
+        "modality": "asserted",
+        "basis": "explicit",
+        "evidence": [
+          "见人惊起入芦花"
+        ]
+      }
+    ],
+    "scene": {
+      "setting": {
+        "kind": "waterside",
+        "basis": "explicit",
+        "evidence": [
+          "白鸟一双临水立"
+        ]
+      },
+      "groups": [
+        {
+          "members": [
+            "i1"
+          ],
+          "role": "subject",
+          "pattern": "cluster",
+          "depth": "middle",
+          "basis": "inferred",
+          "evidence": [
+            "白鸟一双临水立"
+          ]
+        },
+        {
+          "members": [
+            "i4"
+          ],
+          "role": "environment",
+          "pattern": "field",
+          "depth": "middle",
+          "basis": "inferred",
+          "evidence": [
+            "见人惊起入芦花"
+          ]
+        },
+        {
+          "members": [
+            "i3"
+          ],
+          "role": "accent",
+          "pattern": "single",
+          "depth": "unspecified",
+          "basis": "inferred",
+          "evidence": [
+            "见人惊起入芦花"
+          ]
+        }
+      ],
+      "supports": [
+        {
+          "entity": "i1",
+          "surface": "ground",
+          "target": null,
+          "basis": "inferred",
+          "evidence": [
+            "白鸟一双临水立"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "entity": "i1",
+          "state": "fly",
+          "pace": "fast",
+          "direction": "unspecified",
+          "modality": "asserted",
+          "basis": "explicit",
+          "evidence": [
+            "见人惊起入芦花"
+          ]
+        }
+      ],
+      "atmosphere": {
+        "visibility": "clear",
+        "illumination": "day",
+        "basis": "inferred",
+        "evidence": [
+          "白鸟一双临水立"
+        ]
+      }
+    },
+    "expression": {
+      "relations": [
+        {
+          "source": "i3",
+          "target": "i1",
+          "kind": "separate",
+          "modality": "asserted",
+          "basis": "explicit",
+          "evidence": [
+            "见人惊起入芦花"
+          ]
+        },
+        {
+          "source": "i1",
+          "target": "i4",
+          "kind": "converge",
+          "modality": "asserted",
+          "basis": "explicit",
+          "evidence": [
+            "见人惊起入芦花"
+          ]
+        }
+      ],
+      "processes": [
+        {
+          "subject": "i1",
+          "kind": "emerge",
+          "temporal": "already",
+          "modality": "asserted",
+          "basis": "explicit",
+          "evidence": [
+            "见人惊起入芦花"
+          ]
+        }
+      ]
+    }
+  },
+  "validation": {
+    "valid": true,
+    "errors": [],
+    "warnings": [
+      "模型保留了不确定性，需要审阅",
+      "scene.groups[0] 为语义推断，绘画选择需与原文明示区分",
+      "scene.groups[1] 为语义推断，绘画选择需与原文明示区分",
+      "scene.groups[2] 为语义推断，绘画选择需与原文明示区分",
+      "i2 未进入整体分组，后续使用本地默认布局",
+      "scene.supports[0] 为语义推断，绘画选择需与原文明示区分",
+      "scene.atmosphere 为语义推断，绘画选择需与原文明示区分",
+      "格式或原文引用范围由本地处理，语义合理性仍需复核"
+    ],
+    "review_required": true
+  },
+  "rawValidation": {
+    "valid": false,
+    "errors": [
+      "spatial[1] 依据未关联关系两端"
+    ],
+    "warnings": [
+      "模型保留了不确定性，需要审阅"
+    ],
+    "review_required": true
+  },
+  "effectiveAnalysis": {
+    "schema_version": "expression-1.0",
+    "poem": "白鸟一双临水立，见人惊起入芦花。",
+    "reading": "一双白鸟在水边静立，见人惊起，飞入芦花丛中。",
+    "entities": [
+      {
+        "id": "i1",
+        "mentions": [
+          "白鸟一双"
+        ],
+        "concept": "白鸟",
+        "kind": "organism",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "白鸟一双临水立"
+        ],
+        "quantity": {
+          "mode": "exact",
+          "min": 2,
+          "max": 2,
+          "unit": "双",
+          "scope": "group",
+          "extent": "local",
+          "evidence": [
+            "白鸟一双临水立"
+          ]
+        }
+      },
+      {
+        "id": "i2",
+        "mentions": [
+          "水"
+        ],
+        "concept": "水边",
+        "kind": "place",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "白鸟一双临水立"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i3",
+        "mentions": [
+          "人"
+        ],
+        "concept": "人",
+        "kind": "person",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "见人惊起入芦花"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i4",
+        "mentions": [
+          "芦花"
+        ],
+        "concept": "芦花",
+        "kind": "organism",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "见人惊起入芦花"
+        ],
+        "quantity": {
+          "mode": "many",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "group",
+          "extent": "spread",
+          "evidence": [
+            "见人惊起入芦花"
+          ]
+        }
+      }
+    ],
+    "relations": [],
+    "atmosphere": {
+      "labels": [
+        "惊起",
+        "清冷"
+      ],
+      "valence": "neutral",
+      "energy": "medium",
+      "tension": "medium",
+      "openness": "medium",
+      "evidence": [
+        "白鸟一双临水立",
+        "见人惊起入芦花"
+      ]
+    },
+    "time": {
+      "markers": [],
+      "note": null
+    },
+    "uncertainties": [
+      "“见人”的观察者未明，可能是人看见鸟，也可能是鸟见人而惊起。",
+      "“入芦花”只表明飞入芦花丛，具体方向与距离未明。"
+    ],
+    "spatial": [
+      {
+        "type": "beside",
+        "source": "i1",
+        "target": "i2",
+        "modality": "asserted",
+        "basis": "explicit",
+        "evidence": [
+          "白鸟一双临水立"
+        ]
+      },
+      {
+        "type": "among",
+        "source": "i1",
+        "target": "i4",
+        "modality": "asserted",
+        "basis": "explicit",
+        "evidence": [
+          "白鸟一双临水立，见人惊起入芦花。"
+        ]
+      }
+    ],
+    "scene": {
+      "setting": {
+        "kind": "waterside",
+        "basis": "explicit",
+        "evidence": [
+          "白鸟一双临水立"
+        ]
+      },
+      "groups": [
+        {
+          "members": [
+            "i1"
+          ],
+          "role": "subject",
+          "pattern": "cluster",
+          "depth": "middle",
+          "basis": "inferred",
+          "evidence": [
+            "白鸟一双临水立"
+          ]
+        },
+        {
+          "members": [
+            "i4"
+          ],
+          "role": "environment",
+          "pattern": "field",
+          "depth": "middle",
+          "basis": "inferred",
+          "evidence": [
+            "见人惊起入芦花"
+          ]
+        },
+        {
+          "members": [
+            "i3"
+          ],
+          "role": "accent",
+          "pattern": "single",
+          "depth": "unspecified",
+          "basis": "inferred",
+          "evidence": [
+            "见人惊起入芦花"
+          ]
+        }
+      ],
+      "supports": [
+        {
+          "entity": "i1",
+          "surface": "ground",
+          "target": null,
+          "basis": "inferred",
+          "evidence": [
+            "白鸟一双临水立"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "entity": "i1",
+          "state": "fly",
+          "pace": "fast",
+          "direction": "unspecified",
+          "modality": "asserted",
+          "basis": "explicit",
+          "evidence": [
+            "白鸟一双临水立，见人惊起入芦花。"
+          ]
+        }
+      ],
+      "atmosphere": {
+        "visibility": "clear",
+        "illumination": "day",
+        "basis": "inferred",
+        "evidence": [
+          "白鸟一双临水立"
+        ]
+      }
+    },
+    "expression": {
+      "relations": [
+        {
+          "source": "i3",
+          "target": "i1",
+          "kind": "separate",
+          "modality": "asserted",
+          "basis": "explicit",
+          "evidence": [
+            "白鸟一双临水立，见人惊起入芦花。"
+          ]
+        },
+        {
+          "source": "i1",
+          "target": "i4",
+          "kind": "converge",
+          "modality": "asserted",
+          "basis": "explicit",
+          "evidence": [
+            "白鸟一双临水立，见人惊起入芦花。"
+          ]
+        }
+      ],
+      "processes": [
+        {
+          "subject": "i1",
+          "kind": "emerge",
+          "temporal": "already",
+          "modality": "asserted",
+          "basis": "explicit",
+          "evidence": [
+            "白鸟一双临水立，见人惊起入芦花。"
+          ]
+        }
+      ]
+    }
+  },
+  "recovery": {
+    "version": "generation-recovery-1.1",
+    "status": "normalized",
+    "reviewRequired": true,
+    "changes": [
+      {
+        "kind": "source-range-only",
+        "path": "spatial.1.evidence",
+        "original": [
+          "见人惊起入芦花"
+        ],
+        "effective": [
+          "白鸟一双临水立，见人惊起入芦花。"
+        ]
+      },
+      {
+        "kind": "source-range-only",
+        "path": "scene.actions.0.evidence",
+        "original": [
+          "见人惊起入芦花"
+        ],
+        "effective": [
+          "白鸟一双临水立，见人惊起入芦花。"
+        ]
+      },
+      {
+        "kind": "source-range-only",
+        "path": "expression.relations.0.evidence",
+        "original": [
+          "见人惊起入芦花"
+        ],
+        "effective": [
+          "白鸟一双临水立，见人惊起入芦花。"
+        ]
+      },
+      {
+        "kind": "source-range-only",
+        "path": "expression.relations.1.evidence",
+        "original": [
+          "见人惊起入芦花"
+        ],
+        "effective": [
+          "白鸟一双临水立，见人惊起入芦花。"
+        ]
+      },
+      {
+        "kind": "source-range-only",
+        "path": "expression.processes.0.evidence",
+        "original": [
+          "见人惊起入芦花"
+        ],
+        "effective": [
+          "白鸟一双临水立，见人惊起入芦花。"
+        ]
+      }
+    ],
+    "omitted": [],
+    "message": "已完成格式或引用整理，解读仍可复核。"
+  },
+  "plan": {
+    "version": "shared-expression-1.1-source-bound",
+    "seed": 614970754,
+    "poem": "白鸟一双临水立，见人惊起入芦花。",
+    "nodes": [
+      {
+        "id": "i1",
+        "label": "白鸟一双",
+        "meaning": "白鸟",
+        "kind": "concrete",
+        "contextOnly": false,
+        "mode": "present"
+      },
+      {
+        "id": "i2",
+        "label": "水",
+        "meaning": "水边",
+        "kind": "concrete",
+        "contextOnly": false,
+        "mode": "present"
+      },
+      {
+        "id": "i3",
+        "label": "人",
+        "meaning": "人",
+        "kind": "concrete",
+        "contextOnly": false,
+        "mode": "present"
+      },
+      {
+        "id": "i4",
+        "label": "芦花",
+        "meaning": "芦花",
+        "kind": "concrete",
+        "contextOnly": false,
+        "mode": "present"
+      }
+    ],
+    "relations": [
+      {
+        "source": "i3",
+        "target": "i1",
+        "kind": "separate",
+        "modality": "asserted",
+        "basis": "explicit",
+        "evidence": [
+          "白鸟一双临水立，见人惊起入芦花。"
+        ]
+      },
+      {
+        "source": "i1",
+        "target": "i4",
+        "kind": "converge",
+        "modality": "asserted",
+        "basis": "explicit",
+        "evidence": [
+          "白鸟一双临水立，见人惊起入芦花。"
+        ]
+      }
+    ],
+    "processes": [
+      {
+        "subject": "i1",
+        "kind": "emerge",
+        "temporal": "already",
+        "modality": "asserted",
+        "basis": "explicit",
+        "evidence": [
+          "白鸟一双临水立，见人惊起入芦花。"
+        ]
+      }
+    ],
+    "omitted": [],
+    "atmosphere": {
+      "labels": [
+        "惊起",
+        "清冷"
+      ],
+      "valence": "neutral",
+      "energy": "medium",
+      "tension": "medium",
+      "openness": "medium",
+      "evidence": [
+        "白鸟一双临水立",
+        "见人惊起入芦花"
+      ],
+      "illumination": "day"
+    },
+    "concretePlan": {
+      "version": "semantic-composition-3.3-source-bound",
+      "seed": 614970754,
+      "settings": {
+        "wind": 0.3,
+        "density": 0.45,
+        "palette": "clear",
+        "motion": 1.4
+      },
+      "layers": [
+        {
+          "tool": "figure",
+          "entities": [
+            "i3"
+          ],
+          "projectedEntities": [],
+          "names": [
+            "人"
+          ],
+          "options": {
+            "pose": "standing"
+          },
+          "animate": true,
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.19,
+              0.84
+            ],
+            "scale": 0.6
+          },
+          "semanticGroup": {
+            "members": [
+              "i3"
+            ],
+            "role": "accent",
+            "pattern": "single",
+            "depth": "unspecified",
+            "basis": "inferred",
+            "evidence": [
+              "见人惊起入芦花"
+            ],
+            "index": 2
+          },
+          "semanticEffects": [
+            {
+              "path": "scene.groups[2].role",
+              "consumer": "主次布局",
+              "effect": "点景缩小淡化",
+              "status": "applied"
+            },
+            {
+              "path": "scene.groups[2].pattern",
+              "consumer": "群落布局",
+              "effect": "按 single 组织显示单元；不覆盖明确数量",
+              "status": "applied"
+            },
+            {
+              "path": "scene.groups[2].depth",
+              "consumer": "远近布局",
+              "effect": "远近未明，保持本地默认",
+              "status": "skipped"
+            }
+          ],
+          "semanticEnergy": true,
+          "timeScale": 0.8,
+          "instances": [
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  310
+                ],
+                "at": [
+                  0.19,
+                  0.84
+                ],
+                "scale": 0.41800000000000004
+              },
+              "depth": 0.05,
+              "opacity": 0.78,
+              "variant": 2,
+              "tone": "near",
+              "id": "i3:figure::0:0"
+            }
+          ],
+          "singleUnit": true,
+          "quantity": {
+            "items": [
+              {
+                "entity": "i3",
+                "mode": "unspecified",
+                "min": null,
+                "max": null,
+                "unit": null,
+                "scope": "unspecified",
+                "extent": "unspecified",
+                "evidence": [],
+                "basis": "model"
+              }
+            ],
+            "rendered": 1,
+            "exact": false,
+            "collective": false,
+            "partUnsupported": false
+          },
+          "quantityLabel": "数量未精确；本地试画 1 个单元",
+          "z": 22,
+          "visual": {
+            "role": "figure",
+            "brushStrength": 1.1
+          },
+          "performance": {
+            "rhythm": "steady",
+            "rate": 1,
+            "amplitude": 1,
+            "phase": 0
+          },
+          "id": "i3:figure::0",
+          "interaction": {
+            "mode": "instance",
+            "groupId": "i3:figure::0"
+          }
+        },
+        {
+          "tool": "water",
+          "entities": [
+            "i2"
+          ],
+          "projectedEntities": [],
+          "names": [
+            "水"
+          ],
+          "options": {
+            "form": "plane"
+          },
+          "animate": true,
+          "placement": {
+            "anchor": [
+              320,
+              130
+            ],
+            "at": [
+              0.5,
+              0.46
+            ],
+            "scale": 1.5
+          },
+          "semanticEffects": [],
+          "semanticEnergy": true,
+          "timeScale": 0.8,
+          "instances": [
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  135
+                ],
+                "at": [
+                  0.5,
+                  0.46
+                ],
+                "scale": 1.6
+              },
+              "depth": 0,
+              "opacity": 1,
+              "variant": 0,
+              "tone": "far",
+              "id": "i2:water:plane:1:0"
+            }
+          ],
+          "singleUnit": false,
+          "quantity": {
+            "items": [
+              {
+                "entity": "i2",
+                "mode": "unspecified",
+                "min": null,
+                "max": null,
+                "unit": null,
+                "scope": "unspecified",
+                "extent": "unspecified",
+                "evidence": [],
+                "basis": "model"
+              }
+            ],
+            "rendered": 1,
+            "exact": false,
+            "collective": false,
+            "partUnsupported": false
+          },
+          "quantityLabel": "整体笔触图层；内部数量尚未适配",
+          "z": -10,
+          "surface": {
+            "top": 0.46,
+            "bottom": 1
+          },
+          "clip": [
+            [
+              0.25,
+              0.46
+            ],
+            [
+              1.1,
+              0.46
+            ],
+            [
+              1.1,
+              1.1
+            ],
+            [
+              0.28,
+              1.1
+            ],
+            [
+              0.4,
+              0.83
+            ],
+            [
+              0.25,
+              0.62
+            ]
+          ],
+          "visual": {
+            "role": "water",
+            "brushStrength": 1.35
+          },
+          "performance": {
+            "rhythm": "continuous",
+            "rate": 0.9,
+            "amplitude": 0.9,
+            "phase": 3.8830085198369844
+          },
+          "id": "i2:water:plane:1",
+          "interaction": {
+            "mode": "group",
+            "groupId": "i2:water:plane:1"
+          }
+        },
+        {
+          "tool": "grass",
+          "entities": [
+            "i4"
+          ],
+          "projectedEntities": [],
+          "names": [
+            "芦花"
+          ],
+          "options": {
+            "form": "reed"
+          },
+          "animate": true,
+          "placement": {
+            "anchor": [
+              320,
+              315
+            ],
+            "at": [
+              0.17950693877551022,
+              0.8707142857142858
+            ],
+            "scale": 1
+          },
+          "semanticGroup": {
+            "members": [
+              "i4"
+            ],
+            "role": "environment",
+            "pattern": "field",
+            "depth": "middle",
+            "basis": "inferred",
+            "evidence": [
+              "见人惊起入芦花"
+            ],
+            "index": 1
+          },
+          "semanticEffects": [
+            {
+              "path": "scene.groups[1].role",
+              "consumer": "主次布局",
+              "effect": "保留环境群落层次",
+              "status": "applied"
+            },
+            {
+              "path": "scene.groups[1].pattern",
+              "consumer": "群落布局",
+              "effect": "按 field 组织显示单元；不覆盖明确数量",
+              "status": "applied"
+            },
+            {
+              "path": "scene.groups[1].depth",
+              "consumer": "远近布局",
+              "effect": "将 middle 转为相对大小、透明度与允许区域内的落点",
+              "status": "applied"
+            }
+          ],
+          "semanticEnergy": true,
+          "timeScale": 0.8,
+          "instances": [
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  310
+                ],
+                "at": [
+                  0.035,
+                  0.75
+                ],
+                "scale": 0.684
+              },
+              "depth": 10,
+              "opacity": 0.4921,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i4:grass:reed:2:0"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  310
+                ],
+                "at": [
+                  0.2395979285714286,
+                  0.7685714285714286
+                ],
+                "scale": 0.7956
+              },
+              "depth": 10.01,
+              "opacity": 0.5018999999999999,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i4:grass:reed:2:1"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  310
+                ],
+                "at": [
+                  0.10341492857142856,
+                  0.7871428571428571
+                ],
+                "scale": 0.9072
+              },
+              "depth": 10.02,
+              "opacity": 0.5116999999999999,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i4:grass:reed:2:2"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  310
+                ],
+                "at": [
+                  0.3237319285714286,
+                  0.8057142857142857
+                ],
+                "scale": 1.0188000000000001
+              },
+              "depth": 10.03,
+              "opacity": 0.5215,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i4:grass:reed:2:3"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  310
+                ],
+                "at": [
+                  0.18754892857142857,
+                  0.8242857142857143
+                ],
+                "scale": 0.7704
+              },
+              "depth": 10.04,
+              "opacity": 0.5313,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i4:grass:reed:2:4"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  310
+                ],
+                "at": [
+                  0.05136592857142855,
+                  0.8428571428571429
+                ],
+                "scale": 0.882
+              },
+              "depth": 10.05,
+              "opacity": 0.5411,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i4:grass:reed:2:5"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  310
+                ],
+                "at": [
+                  0.2716829285714286,
+                  0.8614285714285714
+                ],
+                "scale": 0.9936000000000001
+              },
+              "depth": 10.06,
+              "opacity": 0.5509,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i4:grass:reed:2:6"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  310
+                ],
+                "at": [
+                  0.13549992857142845,
+                  0.88
+                ],
+                "scale": 0.7452
+              },
+              "depth": 10.07,
+              "opacity": 0.5607,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i4:grass:reed:2:7"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  310
+                ],
+                "at": [
+                  0.3558169285714285,
+                  0.8985714285714286
+                ],
+                "scale": 0.8568
+              },
+              "depth": 10.08,
+              "opacity": 0.5704999999999999,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i4:grass:reed:2:8"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  310
+                ],
+                "at": [
+                  0.2196339285714287,
+                  0.9171428571428571
+                ],
+                "scale": 0.9684
+              },
+              "depth": 10.09,
+              "opacity": 0.5802999999999999,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i4:grass:reed:2:9"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  310
+                ],
+                "at": [
+                  0.08345092857142848,
+                  0.9357142857142857
+                ],
+                "scale": 0.7200000000000001
+              },
+              "depth": 10.1,
+              "opacity": 0.5900999999999998,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i4:grass:reed:2:10"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  310
+                ],
+                "at": [
+                  0.3037679285714286,
+                  0.9542857142857143
+                ],
+                "scale": 0.8316
+              },
+              "depth": 10.11,
+              "opacity": 0.5999,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i4:grass:reed:2:11"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  310
+                ],
+                "at": [
+                  0.1675849285714287,
+                  0.9728571428571429
+                ],
+                "scale": 0.9432
+              },
+              "depth": 10.12,
+              "opacity": 0.6097,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i4:grass:reed:2:12"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  310
+                ],
+                "at": [
+                  0.035,
+                  0.9914285714285714
+                ],
+                "scale": 0.6948000000000001
+              },
+              "depth": 10.13,
+              "opacity": 0.6194999999999999,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i4:grass:reed:2:13"
+            }
+          ],
+          "singleUnit": true,
+          "quantity": {
+            "items": [
+              {
+                "entity": "i4",
+                "mode": "many",
+                "min": null,
+                "max": null,
+                "unit": null,
+                "scope": "group",
+                "extent": "spread",
+                "evidence": [
+                  "见人惊起入芦花"
+                ],
+                "basis": "model"
+              }
+            ],
+            "rendered": 14,
+            "exact": false,
+            "collective": true,
+            "partUnsupported": false
+          },
+          "quantityLabel": "依场景疏密试画 14 个单元；原文未给精确个体数",
+          "z": 13,
+          "visual": {
+            "role": "vegetation",
+            "brushStrength": 1.2
+          },
+          "performance": {
+            "rhythm": "gust",
+            "rate": 0.62,
+            "amplitude": 0.65,
+            "phase": 1.4828317324943823
+          },
+          "id": "i4:grass:reed:2",
+          "interaction": {
+            "mode": "instance",
+            "groupId": "i4:grass:reed:2"
+          }
+        },
+        {
+          "tool": "bird",
+          "entities": [
+            "i1"
+          ],
+          "projectedEntities": [],
+          "names": [
+            "白鸟一双"
+          ],
+          "options": {
+            "pose": "flying",
+            "tone": "light",
+            "facing": "right"
+          },
+          "animate": true,
+          "placement": {
+            "anchor": [
+              320,
+              190
+            ],
+            "at": [
+              0.8768436116248155,
+              0.4018174808713813
+            ],
+            "scale": 0.78
+          },
+          "drawingLabel": "鸟意（写意借形）",
+          "semanticGroup": {
+            "members": [
+              "i1"
+            ],
+            "role": "subject",
+            "pattern": "cluster",
+            "depth": "middle",
+            "basis": "inferred",
+            "evidence": [
+              "白鸟一双临水立"
+            ],
+            "index": 0
+          },
+          "semanticEffects": [
+            {
+              "path": "scene.actions[0].state",
+              "consumer": "形态与绘画时钟",
+              "effect": "启用工具支持的 fly 状态",
+              "status": "applied"
+            },
+            {
+              "path": "scene.actions[0].pace",
+              "consumer": "绘画时钟",
+              "effect": "定性节奏映射为语义基准时钟倍率 1.35；观看动态与景物节奏另行调节",
+              "status": "applied"
+            },
+            {
+              "path": "scene.actions[0].direction",
+              "consumer": "画布合成",
+              "effect": "方向未明，仅用本地小幅微动",
+              "status": "applied"
+            },
+            {
+              "path": "scene.groups[0].role",
+              "consumer": "主次布局",
+              "effect": "主体相对突出",
+              "status": "applied"
+            },
+            {
+              "path": "scene.groups[0].pattern",
+              "consumer": "群落布局",
+              "effect": "按 cluster 组织显示单元；不覆盖明确数量",
+              "status": "applied"
+            },
+            {
+              "path": "scene.groups[0].depth",
+              "consumer": "远近布局",
+              "effect": "将 middle 转为相对大小、透明度与允许区域内的落点",
+              "status": "applied"
+            }
+          ],
+          "semanticEnergy": false,
+          "timeScale": 1.35,
+          "semanticAction": {
+            "entity": "i1",
+            "state": "fly",
+            "pace": "fast",
+            "direction": "unspecified",
+            "modality": "asserted",
+            "basis": "explicit",
+            "evidence": [
+              "白鸟一双临水立，见人惊起入芦花。"
+            ]
+          },
+          "motion": {
+            "kind": "drift",
+            "direction": "unspecified",
+            "rate": 1.35,
+            "state": "fly"
+          },
+          "instances": [
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  190
+                ],
+                "at": [
+                  0.7996,
+                  0.43
+                ],
+                "scale": 0.6552000000000001
+              },
+              "depth": 0.0125,
+              "opacity": 0.72,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i1:bird::3:0"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  190
+                ],
+                "at": [
+                  0.8750621095447181,
+                  0.43
+                ],
+                "scale": 0.6552000000000001
+              },
+              "depth": 0.037500000000000006,
+              "opacity": 0.72,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i1:bird::3:1"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  190
+                ],
+                "at": [
+                  0.94,
+                  0.40037752780807917
+                ],
+                "scale": 0.6552000000000001
+              },
+              "depth": 0.0625,
+              "opacity": 0.7454999999999999,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i1:bird::3:2"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  190
+                ],
+                "at": [
+                  0.8927123369545436,
+                  0.34689239567744606
+                ],
+                "scale": 0.6552000000000001
+              },
+              "depth": 0.08750000000000001,
+              "opacity": 0.8084999999999999,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i1:bird::3:3"
+            }
+          ],
+          "singleUnit": true,
+          "quantity": {
+            "items": [
+              {
+                "entity": "i1",
+                "mode": "exact",
+                "min": 2,
+                "max": 2,
+                "unit": "双",
+                "scope": "group",
+                "extent": "local",
+                "evidence": [
+                  "白鸟一双临水立"
+                ],
+                "basis": "model"
+              }
+            ],
+            "rendered": 4,
+            "exact": true,
+            "collective": false,
+            "partUnsupported": false
+          },
+          "quantityLabel": "按提取数量绘制 4 个",
+          "z": -9,
+          "semanticSupport": {
+            "surface": "ground",
+            "target": null,
+            "path": "scene.supports[0]"
+          },
+          "visual": {
+            "role": "figure",
+            "color": "#F8F7EB",
+            "brushStrength": 1.1
+          },
+          "performance": {
+            "rhythm": "passing",
+            "rate": 1.05,
+            "amplitude": 1.1,
+            "phase": 5.365840252331367
+          },
+          "id": "i1:bird::3",
+          "interaction": {
+            "mode": "instance",
+            "groupId": "i1:bird::3"
+          },
+          "colorCue": {
+            "color": "#F8F7EB",
+            "evidence": "白鸟一双临水立",
+            "basis": "source-literal"
+          }
+        },
+        {
+          "tool": "landscape",
+          "names": [
+            "构图依托·地面"
+          ],
+          "entities": [],
+          "projectedEntities": [],
+          "options": {
+            "form": "ground"
+          },
+          "animate": false,
+          "placement": {
+            "anchor": [
+              320,
+              194
+            ],
+            "at": [
+              0.5,
+              0.48
+            ],
+            "scale": 1.6
+          },
+          "instances": [
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  194
+                ],
+                "at": [
+                  0.5,
+                  0.48
+                ],
+                "scale": 1.6
+              },
+              "variant": 0,
+              "depth": 0,
+              "opacity": 1,
+              "tone": "far",
+              "id": "inferred:landscape:ground:4:0"
+            }
+          ],
+          "singleUnit": false,
+          "inferred": true,
+          "provenance": {
+            "basis": "local-context",
+            "reason": "芦穗与人影位于近岸，水域留给惊起的鸟"
+          },
+          "quantity": {
+            "rendered": 1,
+            "exact": false,
+            "items": []
+          },
+          "quantityLabel": "背景依托，不计入意象覆盖",
+          "z": -18,
+          "clip": [
+            [
+              0,
+              0.62
+            ],
+            [
+              0.25,
+              0.62
+            ],
+            [
+              0.4,
+              0.83
+            ],
+            [
+              0.28,
+              1.1
+            ],
+            [
+              0,
+              1.1
+            ]
+          ],
+          "semanticEffects": [],
+          "semanticEnergy": false,
+          "visual": {
+            "role": "ground",
+            "brushStrength": 1.1
+          },
+          "performance": {
+            "rhythm": "steady",
+            "rate": 1,
+            "amplitude": 1,
+            "phase": 2.9656634649887645
+          },
+          "id": "inferred:landscape:ground:4",
+          "interaction": {
+            "mode": "group",
+            "groupId": "inferred:landscape:ground:4"
+          }
+        }
+      ],
+      "spatial": [
+        {
+          "type": "beside",
+          "source": "i1",
+          "target": "i2",
+          "modality": "asserted",
+          "basis": "explicit",
+          "evidence": [
+            "白鸟一双临水立"
+          ],
+          "visualized": true,
+          "reason": "表现邻接或外侧；左右方向为本地选择"
+        },
+        {
+          "type": "among",
+          "source": "i1",
+          "target": "i4",
+          "modality": "asserted",
+          "basis": "explicit",
+          "evidence": [
+            "白鸟一双临水立，见人惊起入芦花。"
+          ],
+          "visualized": false,
+          "reason": "该空间关系与形态组合尚未适配"
+        }
+      ],
+      "scene": {
+        "kind": "reed-bank",
+        "notes": [
+          "水面以连续色层和水纹构成空间；水面的范围、视点与水平线是本地构图选择，不自动增加岸或陆地。",
+          "先划分承托地形、群落与主体活动区域；场景密度和背景依托是本地构图推断，不冒充原文明示意象。",
+          "本次鸟姿取惊起后的飞态；从临水站立到飞入芦丛的时间编排尚未实现。",
+          "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。"
+        ],
+        "waterline": 0.46,
+        "basis": "local-context",
+        "regions": {
+          "bank": [
+            [
+              0,
+              0.62
+            ],
+            [
+              0.25,
+              0.62
+            ],
+            [
+              0.4,
+              0.83
+            ],
+            [
+              0.28,
+              1.1
+            ],
+            [
+              0,
+              1.1
+            ]
+          ],
+          "water": [
+            [
+              0.25,
+              0.46
+            ],
+            [
+              1.1,
+              0.46
+            ],
+            [
+              1.1,
+              1.1
+            ],
+            [
+              0.28,
+              1.1
+            ],
+            [
+              0.4,
+              0.83
+            ],
+            [
+              0.25,
+              0.62
+            ]
+          ]
+        },
+        "supports": [
+          {
+            "form": "ground",
+            "reason": "芦穗与人影位于近岸，水域留给惊起的鸟"
+          }
+        ],
+        "semanticSetting": {
+          "kind": "waterside",
+          "basis": "explicit",
+          "evidence": [
+            "白鸟一双临水立"
+          ]
+        },
+        "semanticEffects": [
+          {
+            "path": "scene.supports[0]",
+            "consumer": "场景依托",
+            "status": "applied",
+            "effect": "必要环境以独立推断背景表示，不新增原文实体"
+          },
+          {
+            "path": "scene.setting",
+            "consumer": "场景依托",
+            "status": "applied",
+            "effect": "使用已提取主体的现有承托画法"
+          }
+        ],
+        "organization": {
+          "version": "1.0",
+          "strategy": "regional-proposal",
+          "regions": {
+            "bank": [
+              [
+                0,
+                0.62
+              ],
+              [
+                0.25,
+                0.62
+              ],
+              [
+                0.4,
+                0.83
+              ],
+              [
+                0.28,
+                1.1
+              ],
+              [
+                0,
+                1.1
+              ]
+            ],
+            "water": [
+              [
+                0.25,
+                0.46
+              ],
+              [
+                1.1,
+                0.46
+              ],
+              [
+                1.1,
+                1.1
+              ],
+              [
+                0.28,
+                1.1
+              ],
+              [
+                0.4,
+                0.83
+              ],
+              [
+                0.25,
+                0.62
+              ]
+            ]
+          },
+          "candidates": [
+            {
+              "layout": "existing",
+              "errors": 0,
+              "cost": 91.566
+            }
+          ],
+          "repairs": [],
+          "limitations": [
+            "几何检查不判定诗意理解或审美合格",
+            "动作时序与整首诗的场景切换尚未编排"
+          ],
+          "graph": {
+            "nodes": [
+              {
+                "id": "l0",
+                "entities": [
+                  "i3"
+                ],
+                "tool": "figure",
+                "role": "subject",
+                "habitat": "land",
+                "inferred": false,
+                "support": "l4"
+              },
+              {
+                "id": "l1",
+                "entities": [
+                  "i2"
+                ],
+                "tool": "water",
+                "role": "water",
+                "habitat": null,
+                "inferred": false,
+                "support": null
+              },
+              {
+                "id": "l2",
+                "entities": [
+                  "i4"
+                ],
+                "tool": "grass",
+                "role": "vegetation",
+                "habitat": "land",
+                "inferred": false,
+                "support": "l4"
+              },
+              {
+                "id": "l3",
+                "entities": [
+                  "i1"
+                ],
+                "tool": "bird",
+                "role": "fauna",
+                "habitat": "air",
+                "inferred": false,
+                "support": null
+              },
+              {
+                "id": "l4",
+                "entities": [],
+                "tool": "landscape",
+                "role": "terrain",
+                "habitat": null,
+                "inferred": true,
+                "support": null
+              }
+            ],
+            "edges": [
+              {
+                "type": "supported-by",
+                "source": "l0",
+                "target": "l4",
+                "basis": "local-composition",
+                "habitat": "land"
+              },
+              {
+                "type": "supported-by",
+                "source": "l2",
+                "target": "l4",
+                "basis": "local-composition",
+                "habitat": "land"
+              },
+              {
+                "type": "supported-by",
+                "source": "l3",
+                "target": null,
+                "basis": "local-composition",
+                "habitat": "air"
+              },
+              {
+                "type": "beside",
+                "source": "l3",
+                "target": "l1",
+                "basis": "explicit",
+                "modality": "asserted",
+                "evidence": [
+                  "白鸟一双临水立"
+                ]
+              },
+              {
+                "type": "among",
+                "source": "l3",
+                "target": "l2",
+                "basis": "explicit",
+                "modality": "asserted",
+                "evidence": [
+                  "白鸟一双临水立，见人惊起入芦花。"
+                ]
+              }
+            ],
+            "setting": "reed-bank"
+          },
+          "audit": {
+            "scope": "implemented-geometry-and-drawing-gaps",
+            "coverage": {
+              "scope": "extracted-entities-only",
+              "present": 4,
+              "mapped": 4,
+              "parameters": [],
+              "missing": []
+            },
+            "checks": [
+              "presence",
+              "count",
+              "finite",
+              "water-support",
+              "cliff-support",
+              "grove-spread",
+              "drawing-gaps"
+            ],
+            "status": "needs-review",
+            "errors": 0,
+            "review": 1,
+            "issues": [
+              {
+                "code": "unresolved-relation",
+                "severity": "review",
+                "message": "有空间关系尚无对应布局画法"
+              }
+            ],
+            "metrics": {
+              "overlapPenalty": 4.942,
+              "balancePenalty": 0.282,
+              "motifFootprint": 0.485,
+              "landArea": 0
+            },
+            "cost": 91.564,
+            "aestheticAcceptance": "pending-user"
+          }
+        },
+        "displayAudit": {
+          "scope": "display-scale-separation-and-habitat",
+          "issues": [],
+          "errors": 0,
+          "aestheticAcceptance": "pending-user"
+        }
+      },
+      "omitted": [],
+      "parameters": [],
+      "notes": [
+        "白鸟一双：以通用写意鸟形表现，不细分物种。这是本地写意借形，保留原词义。",
+        "水虽被归为地点，仍按原文明示的自然景物匹配；具体空间关系另行处理。",
+        "人：只以淡墨衣形和头部笔点提示人物，不作肖像或服饰考据。这是本地写意借形，保留原词义。",
+        "芦花：以长茎疏叶与白色穗意概括岸边芦苇，不画成园中花冠。这是本地写意借形，保留原词义。",
+        "位置、大小、笔触与默认微动是本地试画选择；数量解释与本地显示数量分别记录。",
+        "未明说的群落数量、疏密、近中远层次与变体均为本地构图选择；种类可按已声明的写意画法概括，不把铺展词换算成精确物体数量。",
+        "水面以连续色层和水纹构成空间；水面的范围、视点与水平线是本地构图选择，不自动增加岸或陆地。",
+        "先划分承托地形、群落与主体活动区域；场景密度和背景依托是本地构图推断，不冒充原文明示意象。",
+        "本次鸟姿取惊起后的飞态；从临水站立到飞入芦丛的时间编排尚未实现。",
+        "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。",
+        "整体场景、主次、远近、依托和支持的动作状态来自本次模型解释；具体布局、颜色和时钟倍率由本地视觉策略选择。",
+        "动作动画表现受支持的主导状态与有限观看运动；先后事件与完整因果尚未编排。",
+        "动态程度与默认轻风是可调整的观看选择；不改变数量、主次或原文动作判断。人物保持点景写意，不新增人物步态。",
+        "显示检查覆盖实例尺度、鸟群分离与空中落点；不保证笔触未被遮挡，也不代替实际观看。竹林默认成组拖动，其余单独拖动；Shift 可拖动同层整组。"
+      ],
+      "relations": [],
+      "semanticConsumption": {
+        "version": "3.3",
+        "items": [
+          {
+            "path": "scene.setting",
+            "status": "applied",
+            "consumer": "场景依托",
+            "effect": "使用已提取主体的现有承托画法",
+            "basis": "explicit",
+            "evidence": [
+              "白鸟一双临水立"
+            ]
+          },
+          {
+            "path": "scene.groups[0].role",
+            "status": "applied",
+            "consumer": "主次布局",
+            "effect": "主体相对突出",
+            "basis": "inferred",
+            "evidence": [
+              "白鸟一双临水立"
+            ]
+          },
+          {
+            "path": "scene.groups[0].pattern",
+            "status": "applied",
+            "consumer": "群落布局",
+            "effect": "按 cluster 组织显示单元；不覆盖明确数量",
+            "basis": "inferred",
+            "evidence": [
+              "白鸟一双临水立"
+            ]
+          },
+          {
+            "path": "scene.groups[0].depth",
+            "status": "applied",
+            "consumer": "远近布局",
+            "effect": "将 middle 转为相对大小、透明度与允许区域内的落点",
+            "basis": "inferred",
+            "evidence": [
+              "白鸟一双临水立"
+            ]
+          },
+          {
+            "path": "scene.groups[1].role",
+            "status": "applied",
+            "consumer": "主次布局",
+            "effect": "保留环境群落层次",
+            "basis": "inferred",
+            "evidence": [
+              "见人惊起入芦花"
+            ]
+          },
+          {
+            "path": "scene.groups[1].pattern",
+            "status": "applied",
+            "consumer": "群落布局",
+            "effect": "按 field 组织显示单元；不覆盖明确数量",
+            "basis": "inferred",
+            "evidence": [
+              "见人惊起入芦花"
+            ]
+          },
+          {
+            "path": "scene.groups[1].depth",
+            "status": "applied",
+            "consumer": "远近布局",
+            "effect": "将 middle 转为相对大小、透明度与允许区域内的落点",
+            "basis": "inferred",
+            "evidence": [
+              "见人惊起入芦花"
+            ]
+          },
+          {
+            "path": "scene.groups[2].role",
+            "status": "applied",
+            "consumer": "主次布局",
+            "effect": "点景缩小淡化",
+            "basis": "inferred",
+            "evidence": [
+              "见人惊起入芦花"
+            ]
+          },
+          {
+            "path": "scene.groups[2].pattern",
+            "status": "applied",
+            "consumer": "群落布局",
+            "effect": "按 single 组织显示单元；不覆盖明确数量",
+            "basis": "inferred",
+            "evidence": [
+              "见人惊起入芦花"
+            ]
+          },
+          {
+            "path": "scene.groups[2].depth",
+            "status": "skipped",
+            "consumer": "远近布局",
+            "effect": "远近未明，保持本地默认",
+            "basis": "inferred",
+            "evidence": [
+              "见人惊起入芦花"
+            ]
+          },
+          {
+            "path": "scene.supports[0]",
+            "status": "applied",
+            "consumer": "场景依托",
+            "effect": "必要环境以独立推断背景表示，不新增原文实体",
+            "basis": "inferred",
+            "evidence": [
+              "白鸟一双临水立"
+            ]
+          },
+          {
+            "path": "scene.actions[0].state",
+            "status": "applied",
+            "consumer": "形态与绘画时钟",
+            "effect": "启用工具支持的 fly 状态",
+            "basis": "explicit",
+            "evidence": [
+              "白鸟一双临水立，见人惊起入芦花。"
+            ]
+          },
+          {
+            "path": "scene.actions[0].pace",
+            "status": "applied",
+            "consumer": "绘画时钟",
+            "effect": "定性节奏映射为语义基准时钟倍率 1.35；观看动态与景物节奏另行调节",
+            "basis": "explicit",
+            "evidence": [
+              "白鸟一双临水立，见人惊起入芦花。"
+            ]
+          },
+          {
+            "path": "scene.actions[0].direction",
+            "status": "applied",
+            "consumer": "画布合成",
+            "effect": "方向未明，仅用本地小幅微动",
+            "basis": "explicit",
+            "evidence": [
+              "白鸟一双临水立，见人惊起入芦花。"
+            ]
+          },
+          {
+            "path": "scene.atmosphere.visibility",
+            "status": "applied",
+            "consumer": "画布色层与远景",
+            "effect": "可见度 clear；迷蒙或昏暗时淡化非光源图层",
+            "basis": "inferred",
+            "evidence": [
+              "白鸟一双临水立"
+            ]
+          },
+          {
+            "path": "scene.atmosphere.illumination",
+            "status": "applied",
+            "consumer": "自动光色",
+            "effect": "照明 day 与气息标签共同选择本地 clear 配色；夜景优先暗底，用户可手动覆盖",
+            "basis": "inferred",
+            "evidence": [
+              "白鸟一双临水立"
+            ]
+          },
+          {
+            "path": "atmosphere.energy",
+            "status": "applied",
+            "consumer": "绘画时钟",
+            "effect": "没有明确动作节奏时，气息强弱控制已有微动的默认时钟"
+          },
+          {
+            "path": "atmosphere.openness",
+            "status": "applied",
+            "consumer": "群落分布与笔触密度",
+            "effect": "开阔度转换为本地间距与工具笔触密度，不等于原文数量"
+          },
+          {
+            "path": "atmosphere.valence",
+            "status": "applied",
+            "consumer": "自动光色",
+            "effect": "先约束昼夜明暗，再按已支持的气息标签和情绪倾向选择配色；不宣称完整情感理解"
+          },
+          {
+            "path": "time.markers",
+            "status": "retained",
+            "consumer": "原始记录与解读",
+            "effect": "保留原文时间标记；本版照明由 scene.atmosphere 转换，多阶段时间逻辑未执行"
+          }
+        ],
+        "summary": {
+          "applied": 18,
+          "partial": 0,
+          "unsupported": 0,
+          "skipped": 1,
+          "retained": 1
+        },
+        "aestheticAcceptance": "pending-user"
+      },
+      "landscapeStyle": {
+        "version": "1.0",
+        "color": "role-and-distance",
+        "motion": "layer-rhythms",
+        "aestheticAcceptance": "pending-user"
+      },
+      "imageryTrace": [
+        {
+          "id": "i1",
+          "mentions": [
+            "白鸟一双"
+          ],
+          "role": "scene",
+          "presence": "present",
+          "parameter": null,
+          "layers": [
+            {
+              "id": "i1:bird::3",
+              "tool": "bird",
+              "instances": [
+                "i1:bird::3:0",
+                "i1:bird::3:1",
+                "i1:bird::3:2",
+                "i1:bird::3:3"
+              ]
+            }
+          ],
+          "omission": null
+        },
+        {
+          "id": "i2",
+          "mentions": [
+            "水"
+          ],
+          "role": "scene",
+          "presence": "present",
+          "parameter": null,
+          "layers": [
+            {
+              "id": "i2:water:plane:1",
+              "tool": "water",
+              "instances": [
+                "i2:water:plane:1:0"
+              ]
+            }
+          ],
+          "omission": null
+        },
+        {
+          "id": "i3",
+          "mentions": [
+            "人"
+          ],
+          "role": "scene",
+          "presence": "present",
+          "parameter": null,
+          "layers": [
+            {
+              "id": "i3:figure::0",
+              "tool": "figure",
+              "instances": [
+                "i3:figure::0:0"
+              ]
+            }
+          ],
+          "omission": null
+        },
+        {
+          "id": "i4",
+          "mentions": [
+            "芦花"
+          ],
+          "role": "scene",
+          "presence": "present",
+          "parameter": null,
+          "layers": [
+            {
+              "id": "i4:grass:reed:2",
+              "tool": "grass",
+              "instances": [
+                "i4:grass:reed:2:0",
+                "i4:grass:reed:2:1",
+                "i4:grass:reed:2:2",
+                "i4:grass:reed:2:3",
+                "i4:grass:reed:2:4",
+                "i4:grass:reed:2:5",
+                "i4:grass:reed:2:6",
+                "i4:grass:reed:2:7",
+                "i4:grass:reed:2:8",
+                "i4:grass:reed:2:9",
+                "i4:grass:reed:2:10",
+                "i4:grass:reed:2:11",
+                "i4:grass:reed:2:12",
+                "i4:grass:reed:2:13"
+              ]
+            }
+          ],
+          "omission": null
+        }
+      ]
+    },
+    "renderability": {
+      "status": "ready",
+      "visibleScenery": true,
+      "visibleAbstract": false,
+      "gaps": []
+    },
+    "expression": {
+      "version": "shared-expression-1.1-source-bound",
+      "sourceContract": "expression-1.0",
+      "recommendation": "scenery",
+      "reason": "以明确景物及空间为主，默认风景优先",
+      "gaps": [],
+      "limitations": [
+        "景物过程当前影响抽象纹理；原生景物动作沿用场景能力，未支持的月下楼位移等仍不执行。",
+        "纹理、色层和观看扰动属于本地艺术选择，不改变语义成立状态"
+      ]
+    },
+    "notes": [
+      "三个表达倾向共享景物数量、空间、依托与主体身份；抽象笔触优先服从原景物区域和轮廓。",
+      "纯抽象或比喻句不因切换风景优先而补山水。",
+      "白鸟一双：以通用写意鸟形表现，不细分物种。这是本地写意借形，保留原词义。",
+      "水虽被归为地点，仍按原文明示的自然景物匹配；具体空间关系另行处理。",
+      "人：只以淡墨衣形和头部笔点提示人物，不作肖像或服饰考据。这是本地写意借形，保留原词义。",
+      "芦花：以长茎疏叶与白色穗意概括岸边芦苇，不画成园中花冠。这是本地写意借形，保留原词义。",
+      "位置、大小、笔触与默认微动是本地试画选择；数量解释与本地显示数量分别记录。",
+      "未明说的群落数量、疏密、近中远层次与变体均为本地构图选择；种类可按已声明的写意画法概括，不把铺展词换算成精确物体数量。",
+      "水面以连续色层和水纹构成空间；水面的范围、视点与水平线是本地构图选择，不自动增加岸或陆地。",
+      "先划分承托地形、群落与主体活动区域；场景密度和背景依托是本地构图推断，不冒充原文明示意象。",
+      "本次鸟姿取惊起后的飞态；从临水站立到飞入芦丛的时间编排尚未实现。",
+      "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。",
+      "整体场景、主次、远近、依托和支持的动作状态来自本次模型解释；具体布局、颜色和时钟倍率由本地视觉策略选择。",
+      "动作动画表现受支持的主导状态与有限观看运动；先后事件与完整因果尚未编排。",
+      "动态程度与默认轻风是可调整的观看选择；不改变数量、主次或原文动作判断。人物保持点景写意，不新增人物步态。",
+      "显示检查覆盖实例尺度、鸟群分离与空中落点；不保证笔触未被遮挡，也不代替实际观看。竹林默认成组拖动，其余单独拖动；Shift 可拖动同层整组。"
+    ],
+    "aestheticAcceptance": "pending-user"
+  },
+  "delivery": {
+    "status": "adjusted",
+    "retryable": false,
+    "reason": null,
+    "message": "已完成格式或引用整理，解读仍可复核。"
+  },
+  "elapsed_seconds": 9.9
+}

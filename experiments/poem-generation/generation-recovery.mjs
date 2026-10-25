@@ -2,7 +2,7 @@
 // presence, roles and modalities are never rewritten to pass validation.
 import {validateExpression} from './expression-contract.mjs';
 import {validateAbstract} from './abstract-contract.mjs';
-export const recoveryVersion='generation-recovery-1.0';
+export const recoveryVersion='generation-recovery-1.2';
 const object=v=>v&&typeof v==='object'&&!Array.isArray(v);
 const same=(a,b)=>JSON.stringify(a)===JSON.stringify(b);
 const at=(v,path)=>path.split('.').reduce((p,k)=>p?.[k],v);
@@ -65,9 +65,9 @@ function expandEvidence(value,poem,mode,validation,changes){
 function quarantine(value,poem,mode,validation){
  const paths=mode==='expression'?['spatial','scene.groups','scene.supports','scene.actions','expression.relations','expression.processes']:['relations','processes'];
  const isClaimError=e=>paths.some(p=>e.startsWith(p+'[')||e.startsWith(p+' '))||mode==='expression'&&e.startsWith('scene 抽象概念');
- // A bad global contract, entity, quantity, enum, extra field or invented input
+ // A bad global contract, entity, quantity, extra field or invented input
  // stays a hard failure. Only independently checkable optional claims may go.
- if(!validation.errors.length||validation.errors.some(e=>!isClaimError(e)||/额外字段|字段不正确|类型|枚举|数量越界|文本或id|格式不正确/.test(e)))return null;
+ if(!validation.errors.length||validation.errors.some(e=>!isClaimError(e)||/额外字段|字段不正确|类型|数量越界|文本或id|格式不正确/.test(e)))return null;
  const validate=validators[mode],candidate=structuredClone(value),originals=[];
  for(const path of paths){const array=at(candidate,path);if(!Array.isArray(array))return null;originals.push({path,array:structuredClone(array)});array.length=0;}
  if(!validate(candidate,poem).valid)return null;
@@ -87,6 +87,15 @@ function quarantine(value,poem,mode,validation){
 }
 function missingComponents(value,mode){
  const omitted=[];
+ if(mode==='expression'){
+  const missing=path=>omitted.push({path,claim:{evidence:[],missing:true},errors:['这一部分场景解释未返回；使用未明或空视图，不作为模型已给出的语义断言']});
+  if(value.spatial===undefined||value.spatial===null){value.spatial=[];missing('spatial');}
+  if(value.scene===undefined||value.scene===null)value.scene={};
+  if(object(value.scene)&&Object.keys(value.scene).every(k=>['setting','groups','supports','actions','atmosphere'].includes(k))){
+   const defaults={setting:{kind:'unclear',basis:'inferred',evidence:[]},groups:[],supports:[],actions:[],atmosphere:{visibility:'unclear',illumination:'unclear',basis:'inferred',evidence:[]}};
+   for(const [key,fallback]of Object.entries(defaults))if(value.scene[key]===undefined||value.scene[key]===null){value.scene[key]=fallback;missing('scene.'+key);}
+  }
+ }
  if(mode==='expression'&&(value.expression===undefined||value.expression===null))value.expression={};
  const holder=mode==='expression'?value.expression:value;
  if(!object(holder)||mode==='expression'&&Object.keys(holder).some(k=>!['relations','processes'].includes(k)))return omitted;
@@ -114,7 +123,8 @@ export function recoverInterpretation(raw,poem,mode){
 export function constrainRecoveredPlan(plan,recovery){
  if(!recovery?.omitted.length)return plan;
  const paused=new Set(recovery.omitted.filter(o=>o.path.startsWith('scene.actions')).map(o=>o.claim.entity));
- const freeze=p=>{for(const l of p?.layers||[])if(l.entities.some(id=>paused.has(id))){l.animate=false;l.timeScale=0;delete l.motion;}for(const c of p?.compositions||[])freeze(c);};
+ const missingActions=recovery.omitted.some(o=>o.path==='scene.actions'&&o.claim.missing);
+ const freeze=p=>{for(const l of p?.layers||[])if(missingActions||l.entities.some(id=>paused.has(id))){l.animate=false;l.timeScale=0;delete l.motion;}for(const c of p?.compositions||[])freeze(c);};
  freeze(plan.concretePlan);freeze(plan);
  plan.notes.push('本次部分联系或过程未采用；相关原始解释与检查原因均保留，未增加实体或改变明确数量。');return plan;
 }

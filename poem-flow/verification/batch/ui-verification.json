@@ -1,0 +1,13 @@
+{
+  "partialSceneReplay": true,
+  "unavailableRetainsPriorPicture": true,
+  "invalidCoreRetainsPriorPicture": true,
+  "unavailableInitialViewDoesNotSubstituteAnotherPoem": true,
+  "tableRows": 79,
+  "belowFloorRows": 5,
+  "mobile": 390,
+  "privateRecordsBlocked": true,
+  "providerCalls": 0,
+  "baselineFilesUnchanged": 189,
+  "browserErrors": []
+}

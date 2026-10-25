@@ -1,0 +1,252 @@
+{
+  "id": "2026-10-21T12-00-06-732Z-900069b1",
+  "fingerprint": "ed9f46a99b868b0420c8a03ef449d07e7596d1c593f9ac36e82cc7c53d247e42",
+  "poem": "飞流直下三千尺，疑是银河落九天。",
+  "source": {
+    "provider": "精选诗句库",
+    "author": "李白",
+    "title": "望庐山瀑布",
+    "dynasty": "唐代"
+  },
+  "mode": "quantity",
+  "model": "DeepSeek-V4.1-Flash",
+  "started_at": "2026-10-21T12:00:06.734Z",
+  "cached": false,
+  "http_status": 200,
+  "usage": {
+    "completion_tokens": 491,
+    "prompt_tokens": 2541,
+    "total_tokens": 3032,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2432
+    }
+  },
+  "finish_reason": "stop",
+  "analysis": {
+    "schema_version": "3.1",
+    "poem": "飞流直下三千尺，疑是银河落九天。",
+    "reading": "瀑布从高处笔直飞泻而下，夸张为三千尺；诗人怀疑那是银河从九天倾落。",
+    "entities": [
+      {
+        "id": "i1",
+        "mentions": [
+          "飞流"
+        ],
+        "concept": "飞泻而下的水流/瀑布",
+        "kind": "object",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "飞流直下三千尺"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i2",
+        "mentions": [
+          "三千尺"
+        ],
+        "concept": "夸张的水流落差长度",
+        "kind": "abstract",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "飞流直下三千尺"
+        ],
+        "quantity": {
+          "mode": "exact",
+          "min": 3000,
+          "max": 3000,
+          "unit": "尺",
+          "scope": "extent",
+          "extent": "unspecified",
+          "evidence": [
+            "三千尺"
+          ]
+        }
+      },
+      {
+        "id": "i3",
+        "mentions": [
+          "银河"
+        ],
+        "concept": "银河，作为比喻中的参照",
+        "kind": "environment",
+        "role": "reference",
+        "presence": "unclear",
+        "evidence": [
+          "疑是银河落九天"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i4",
+        "mentions": [
+          "九天"
+        ],
+        "concept": "极高的天空",
+        "kind": "place",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "疑是银河落九天"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      }
+    ],
+    "relations": [],
+    "atmosphere": {
+      "labels": [
+        "雄奇",
+        "迅疾",
+        "高远"
+      ],
+      "valence": "positive",
+      "energy": "high",
+      "tension": "medium",
+      "openness": "high",
+      "evidence": [
+        "飞流直下三千尺",
+        "疑是银河落九天"
+      ]
+    },
+    "time": {
+      "markers": [],
+      "note": null
+    },
+    "uncertainties": [
+      "“疑是”表示疑似比喻，银河是否作为实景出现不明确。",
+      "“三千尺”为夸张量词，是否按实际长度理解存在歧义。"
+    ]
+  },
+  "validation": {
+    "valid": true,
+    "errors": [],
+    "warnings": [
+      "模型保留了不确定性，需要审阅"
+    ],
+    "review_required": true
+  },
+  "plan": {
+    "version": "quantity-composition-1",
+    "seed": 395570893,
+    "settings": {
+      "wind": 0,
+      "density": 0.45,
+      "palette": "clear"
+    },
+    "layers": [
+      {
+        "tool": "water",
+        "entities": [
+          "i1"
+        ],
+        "names": [
+          "飞流"
+        ],
+        "options": {},
+        "animate": true,
+        "placement": {
+          "anchor": [
+            320,
+            130
+          ],
+          "at": [
+            0.5,
+            0.57
+          ],
+          "scale": 1.5
+        },
+        "instances": [
+          {
+            "placement": {
+              "anchor": [
+                320,
+                130
+              ],
+              "at": [
+                0.5,
+                0.46
+              ],
+              "scale": 1.6
+            },
+            "depth": 0,
+            "opacity": 1,
+            "variant": 0
+          }
+        ],
+        "singleUnit": false,
+        "quantity": {
+          "items": [
+            {
+              "entity": "i1",
+              "mode": "unspecified",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "unspecified",
+              "extent": "unspecified",
+              "evidence": [],
+              "basis": "model"
+            }
+          ],
+          "rendered": 1,
+          "exact": false,
+          "collective": false,
+          "partUnsupported": false
+        },
+        "quantityLabel": "整体笔触图层；内部数量尚未适配"
+      }
+    ],
+    "omitted": [
+      {
+        "id": "i2",
+        "name": "三千尺",
+        "reason": "暂未提供该人物、地点或抽象含义的绘画单元"
+      },
+      {
+        "id": "i3",
+        "name": "银河",
+        "reason": "仅为比喻参照，不当作实景"
+      },
+      {
+        "id": "i4",
+        "name": "九天",
+        "reason": "暂未提供该人物、地点或抽象含义的绘画单元"
+      }
+    ],
+    "notes": [
+      "位置、大小、笔触与默认微动是本地试画选择；数量解释与本地显示数量分别记录。",
+      "未明说的群落数量、疏密、近中远层次与变体均为本地构图选择；不增加新物种，不把铺展词换算成精确物体数量。"
+    ],
+    "relations": []
+  },
+  "elapsed_seconds": 3.4
+}

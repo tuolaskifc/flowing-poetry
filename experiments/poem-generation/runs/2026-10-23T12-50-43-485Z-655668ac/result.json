@@ -1,0 +1,314 @@
+{
+  "id": "2026-10-23T12-50-43-485Z-655668ac",
+  "fingerprint": "6e33a251c2d5e0ade9f745c5032b8255938c830ff58a3cbf862a2c053eefd3f7",
+  "poem": "桃李春风一杯酒，江湖夜雨十年灯。\n",
+  "source": null,
+  "mode": "composition",
+  "model": "DeepSeek-V4.1-Flash",
+  "started_at": "2026-10-23T12:50:43.487Z",
+  "cached": false,
+  "http_status": 200,
+  "usage": {
+    "completion_tokens": 1054,
+    "prompt_tokens": 4898,
+    "total_tokens": 5952,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 4864
+    }
+  },
+  "finish_reason": "stop",
+  "analysis": {
+    "schema_version": "3.3",
+    "poem": "桃李春风一杯酒，江湖夜雨十年灯。\n",
+    "reading": "上句写桃李春风中一杯酒，是短暂而温暖的相聚；下句写江湖夜雨里十年灯，是漫长漂泊中的孤灯相伴。两句以时间与境遇对照，一暖一冷，一短一长。",
+    "entities": [
+      {
+        "id": "i1",
+        "mentions": [
+          "桃李"
+        ],
+        "concept": "桃李花木",
+        "kind": "organism",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "桃李春风一杯酒"
+        ],
+        "quantity": {
+          "mode": "many",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "group",
+          "extent": "spread",
+          "evidence": [
+            "桃李"
+          ]
+        }
+      },
+      {
+        "id": "i2",
+        "mentions": [
+          "春风"
+        ],
+        "concept": "春风",
+        "kind": "environment",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "桃李春风一杯酒"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i3",
+        "mentions": [
+          "一杯酒"
+        ],
+        "concept": "一杯酒",
+        "kind": "object",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "桃李春风一杯酒"
+        ],
+        "quantity": {
+          "mode": "exact",
+          "min": 1,
+          "max": 1,
+          "unit": "杯",
+          "scope": "individual",
+          "extent": "local",
+          "evidence": [
+            "一杯酒"
+          ]
+        }
+      },
+      {
+        "id": "i4",
+        "mentions": [
+          "江湖"
+        ],
+        "concept": "江湖漂泊之地",
+        "kind": "place",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "江湖夜雨十年灯"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "spread",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i5",
+        "mentions": [
+          "夜雨"
+        ],
+        "concept": "夜雨",
+        "kind": "environment",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "江湖夜雨十年灯"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i6",
+        "mentions": [
+          "十年灯"
+        ],
+        "concept": "长夜孤灯",
+        "kind": "object",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "江湖夜雨十年灯"
+        ],
+        "quantity": {
+          "mode": "exact",
+          "min": 1,
+          "max": 1,
+          "unit": "盏",
+          "scope": "individual",
+          "extent": "local",
+          "evidence": [
+            "十年灯"
+          ]
+        }
+      }
+    ],
+    "relations": [],
+    "atmosphere": {
+      "labels": [
+        "对照",
+        "漂泊",
+        "孤寂"
+      ],
+      "valence": "mixed",
+      "energy": "low",
+      "tension": "medium",
+      "openness": "medium",
+      "evidence": [
+        "桃李春风一杯酒",
+        "江湖夜雨十年灯"
+      ]
+    },
+    "time": {
+      "markers": [
+        {
+          "surface": "十年",
+          "meaning": "表示时间跨度长，约十年之久"
+        }
+      ],
+      "note": "上句未出现明确时间词，下句以“十年”标示漫长时段；两句的时间关系未明说。"
+    },
+    "uncertainties": [
+      "“十年灯”可理解为灯持续十年，也可理解为十年间常见之灯，具体所指有歧义。",
+      "“江湖”是泛指漂泊之地还是具体水域，原文未明。",
+      "两句之间的时间先后与因果关系未明说。"
+    ],
+    "spatial": [],
+    "scene": {
+      "setting": {
+        "kind": "mixed",
+        "basis": "inferred",
+        "evidence": [
+          "桃李春风一杯酒",
+          "江湖夜雨十年灯"
+        ]
+      },
+      "groups": [
+        {
+          "members": [
+            "i1",
+            "i2",
+            "i3"
+          ],
+          "role": "subject",
+          "pattern": "cluster",
+          "depth": "unspecified",
+          "basis": "inferred",
+          "evidence": [
+            "桃李春风一杯酒"
+          ]
+        },
+        {
+          "members": [
+            "i4",
+            "i5",
+            "i6"
+          ],
+          "role": "subject",
+          "pattern": "single",
+          "depth": "unspecified",
+          "basis": "inferred",
+          "evidence": [
+            "江湖夜雨十年灯"
+          ]
+        }
+      ],
+      "supports": [
+        {
+          "entity": "i1",
+          "surface": "ground",
+          "target": null,
+          "basis": "inferred",
+          "evidence": [
+            "桃李春风一杯酒"
+          ]
+        },
+        {
+          "entity": "i6",
+          "surface": "ground",
+          "target": null,
+          "basis": "inferred",
+          "evidence": [
+            "江湖夜雨十年灯"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "entity": "i2",
+          "state": "sway",
+          "pace": "unspecified",
+          "direction": "unspecified",
+          "modality": "unclear",
+          "basis": "inferred",
+          "evidence": [
+            "桃李春风一杯酒"
+          ]
+        },
+        {
+          "entity": "i5",
+          "state": "fall",
+          "pace": "unspecified",
+          "direction": "down",
+          "modality": "unclear",
+          "basis": "inferred",
+          "evidence": [
+            "江湖夜雨十年灯"
+          ]
+        },
+        {
+          "entity": "i6",
+          "state": "still",
+          "pace": "unspecified",
+          "direction": "unspecified",
+          "modality": "unclear",
+          "basis": "inferred",
+          "evidence": [
+            "江湖夜雨十年灯"
+          ]
+        }
+      ],
+      "atmosphere": {
+        "visibility": "unclear",
+        "illumination": "unclear",
+        "basis": "inferred",
+        "evidence": [
+          "桃李春风一杯酒",
+          "江湖夜雨十年灯"
+        ]
+      }
+    }
+  },
+  "validation": {
+    "valid": false,
+    "errors": [
+      "i6.quantity 单位不是原文"
+    ],
+    "warnings": [
+      "模型保留了不确定性，需要审阅"
+    ],
+    "review_required": true
+  },
+  "elapsed_seconds": 6.9
+}

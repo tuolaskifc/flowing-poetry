@@ -1,0 +1,100 @@
+{
+  "schema_version": "abstract-1.0",
+  "poem": "从此无心爱良夜，任他明月下西楼。",
+  "reading": "诗句写一种心境转折：从某一刻起，不再有心去喜爱良夜，任凭明月落下西楼。核心不是夜景本身，而是“无心”与“任他”所呈现的疏离、放任和情感退潮。",
+  "subjects": [
+    {
+    "id": "a1",
+    "mentions": ["良夜"],
+    "meaning": "美好的夜晚，作为被无心喜爱的对象",
+    "kind": "abstract",
+    "role": "scene",
+    "presence": "present",
+    "evidence": ["从此无心爱良夜"]
+    },
+    {
+    "id": "a2",
+    "mentions": ["明月"],
+    "meaning": "明月，诗中任其下落的自然景物",
+    "kind": "concrete",
+    "role": "scene",
+    "presence": "present",
+    "evidence": ["任他明月下西楼"]
+    },
+    {
+    "id": "a3",
+    "mentions": ["西楼"],
+    "meaning": "西边的楼，明月下落所经过或所对的位置",
+    "kind": "concrete",
+    "role": "scene",
+    "presence": "present",
+    "evidence": ["任他明月下西楼"]
+    },
+    {
+    "id": "a4",
+    "mentions": ["无心"],
+    "meaning": "没有心思、不再有意愿去爱良夜的心理状态",
+    "kind": "abstract",
+    "role": "reference",
+    "presence": "present",
+    "evidence": ["从此无心爱良夜"]
+    }
+  ],
+  "relations": [
+    {
+    "source": "a4",
+    "target": "a1",
+    "kind": "separate",
+    "modality": "asserted",
+    "basis": "explicit",
+    "evidence": ["从此无心爱良夜"]
+    },
+    {
+    "source": "a2",
+    "target": "a3",
+    "kind": "approach",
+    "modality": "asserted",
+    "basis": "explicit",
+    "evidence": ["任他明月下西楼"]
+    },
+    {
+    "source": "a4",
+    "target": "a2",
+    "kind": "disperse",
+    "modality": "asserted",
+    "basis": "inferred",
+    "evidence": ["从此无心爱良夜", "任他明月下西楼"]
+    }
+  ],
+  "processes": [
+    {
+    "subject": "a4",
+    "kind": "persist",
+    "temporal": "already",
+    "modality": "asserted",
+    "basis": "explicit",
+    "evidence": ["从此无心爱良夜"]
+    },
+    {
+    "subject": "a2",
+    "kind": "fade",
+    "temporal": "ongoing",
+    "modality": "asserted",
+    "basis": "explicit",
+    "evidence": ["任他明月下西楼"]
+    }
+  ],
+  "atmosphere": {
+    "labels": ["清冷", "疏离", "放任"],
+    "valence": "negative",
+    "openness": "medium",
+    "illumination": "night",
+    "evidence": ["从此无心爱良夜", "任他明月下西楼"]
+  },
+  "uncertainties": [
+    "“从此”指向的转折点未明说，只表示从某一时刻起的状态变化。",
+    "“任他”可理解为放任、听任，也可带有不再在意的意味，具体情绪强度不确定。",
+    "“明月下西楼”是明月落下西楼，还是明月照下西楼，句法上存在歧义。",
+    "“无心爱良夜”不等于良夜本身消失，也不等于所有情感都消失，只说明对良夜的爱意不再。"
+  ]
+}

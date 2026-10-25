@@ -1,0 +1,81 @@
+{
+  "id": "2026-10-23T15-37-16-378Z-45005fe8",
+  "fingerprint": "73def2b9274dc3f403f1d60680cf705e4c63ab67f699496b10ca01f9c373bd70",
+  "poem": "剪不断，理还乱，是离愁。",
+  "source": null,
+  "mode": "abstract",
+  "model": "DeepSeek-V4.1-Flash",
+  "started_at": "2026-10-23T15:37:16.379Z",
+  "cached": false,
+  "http_status": 200,
+  "usage": {
+    "completion_tokens": 253,
+    "prompt_tokens": 1391,
+    "total_tokens": 1644,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 1280
+    }
+  },
+  "finish_reason": "stop",
+  "analysis": {
+    "schema_version": "abstract-1.0",
+    "poem": "剪不断，理还乱，是离愁。",
+    "reading": "以剪、理两个动作写离愁：剪之不断，理之还乱，愁绪因此被呈现为难以切断、难以整理的状态。",
+    "subjects": [
+      {
+        "id": "a1",
+        "mentions": [
+          "离愁"
+        ],
+        "meaning": "离别带来的愁绪，被剪、理两个动作指向的核心情感。",
+        "kind": "abstract",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "是离愁"
+        ]
+      }
+    ],
+    "relations": [],
+    "processes": [
+      {
+        "subject": "a1",
+        "kind": "persist",
+        "temporal": "ongoing",
+        "modality": "asserted",
+        "basis": "explicit",
+        "evidence": [
+          "剪不断"
+        ]
+      }
+    ],
+    "atmosphere": {
+      "labels": [
+        "纠缠",
+        "纷乱"
+      ],
+      "valence": "negative",
+      "openness": "unclear",
+      "illumination": "unclear",
+      "evidence": [
+        "剪不断，理还乱"
+      ]
+    },
+    "uncertainties": [
+      "“剪不断”与“理还乱”可理解为对离愁的两种比喻性处理，而非实际动作。",
+      "“是离愁”为判断句，未明说愁绪之外是否另有主体。"
+    ]
+  },
+  "validation": {
+    "valid": false,
+    "errors": [
+      "processes[0] 依据未关联 a1"
+    ],
+    "warnings": [],
+    "review_required": true
+  },
+  "elapsed_seconds": 14.8
+}

@@ -1,0 +1,45 @@
+{
+  "version": "generation-recovery-1.1",
+  "status": "partial",
+  "reviewRequired": true,
+  "changes": [],
+  "omitted": [
+    {
+      "path": "scene.groups[0]",
+      "claim": {
+        "members": [
+          "i1",
+          "i2"
+        ],
+        "role": "subject",
+        "pattern": "single",
+        "depth": "unspecified",
+        "basis": "inferred",
+        "evidence": [
+          "小池寒绿欲生漪"
+        ]
+      },
+      "errors": [
+        "scene 抽象概念不得作为物理场景、动作或依托主体"
+      ]
+    },
+    {
+      "path": "scene.actions[0]",
+      "claim": {
+        "entity": "i3",
+        "state": "unclear",
+        "pace": "unspecified",
+        "direction": "unspecified",
+        "modality": "possible",
+        "basis": "explicit",
+        "evidence": [
+          "小池寒绿欲生漪"
+        ]
+      },
+      "errors": [
+        "scene.actions[0] 不能把缺席、未知或比喻参照作为在场画面主体"
+      ]
+    }
+  ],
+  "message": "已绘制核验通过的部分，个别联系或动作暂未采用。"
+}

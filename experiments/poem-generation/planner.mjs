@@ -9,10 +9,14 @@ import {organizeScene} from './scene-organization.mjs';
 import {prepareSemanticLayers,finishSemanticPlan} from './semantic-policy.mjs';
 import {developLandscape} from './landscape-development.mjs';
 import {finalizeScene} from './scene-integrity.mjs';
-export const policyVersion='semantic-composition-3.3-world-instances-directional-buildings';
+import {sourceDrawing} from './source-drawing.mjs';
+import {applyDrawingPolicy} from './drawing-policy.mjs';
+import {resolveSource} from './source-resolution.mjs';
+export const policyVersion='semantic-composition-3.3-source-bound';
 const {rules,unsupportedTerms}=lexicon;
-const order=['landscape','moon','cloud','mist','dwelling','building','tree','willow','bamboo','pavilion','horse','water','rock','boat','lotus','grass','orchid','plum-branch','flower','flower-forms','wine','leaves','surface-weather','fish','bird','oriole','falling-petals','catkins','rain','snow'];
+const order=['weapon','flag','landscape','moon','cloud','mist','dwelling','building','tree','willow','bamboo','pavilion','horse','water','rock','boat','lotus','grass','orchid','plum-branch','flower','flower-forms','wine','leaves','surface-weather','fish','bird','oriole','falling-petals','catkins','rain','snow'];
 const placements={
+  weapon:{anchor:[320,310],at:[.55,.83],scale:.75},flag:{anchor:[310,310],at:[.62,.80],scale:.85},
   figure:{anchor:[320,310],at:[.6,.76],scale:.6},bird:{anchor:[320,190],at:[.62,.34],scale:.78},dwelling:{anchor:[320,307],at:[.66,.74],scale:1.05},
   landscape:{anchor:[320,194],at:[.5,.5],scale:1.5},tree:{anchor:[320,388],at:[.25,.9],scale:1.15},
   moon:{anchor:[320,175],at:[.76,.2],scale:.85},cloud:{anchor:[320,170],at:[.46,.2],scale:1.05},
@@ -28,8 +32,9 @@ const placements={
   'surface-weather':{anchor:[320,206],at:[.43,.76],scale:.9},oriole:{anchor:[320,200],at:[.64,.43],scale:.72},
   orchid:{anchor:[272,331],at:[.27,.91],scale:.95},horse:{anchor:[298,312],at:[.7,.87],scale:.88},lotus:{anchor:[320,330],at:[.53,.92],scale:.95}
 };
-export function buildPlan(analysis,{landscape=true}={}){
-  const layers=[],omitted=[],notes=[],entityTools=new Map();let wind=0;
+export function buildPlan(analysis,{landscape=true,sourceBound=analysis.schema_version==='3.3'}={}){
+  const resolution=sourceBound?resolveSource(analysis):{quantities:{},identities:[],changes:[]};
+  const layers=[],omitted=[],notes=[],entityTools=new Map(),parameters=[];let wind=0;
   for(const entity of analysis.entities){
     const name=entity.mentions.join('／');
     if(entity.role!=='scene'||entity.presence!=='present'){
@@ -37,20 +42,23 @@ export function buildPlan(analysis,{landscape=true}={}){
     }
     // Source mentions choose a pictorial family. Species and part names may
     // borrow a declared local symbol; presence and reference roles stay semantic.
-    const text=entity.mentions.join(' ')+' '+entity.concept;
-    if(/风/.test(text)&&entity.kind==='environment'){
+    const text=entity.mentions.join(' ')+' '+entity.concept,source=sourceBound?sourceDrawing(entity):null;
+    if(source?.omit){omitted.push({id:entity.id,name,reason:source.omit,category:source.category});continue;}
+    const windText=sourceBound?entity.mentions.join(' '):text;
+    if(/风/.test(windText)&&!(/风景|风情|风流|风骨|风度|风范|风韵/.test(windText))&&entity.kind==='environment'){
       const denied=analysis.relations.some(r=>r.source===entity.id&&['negated','conditional','possible','unclear'].includes(r.modality));
       if(!denied)wind=.45;
+      parameters.push({entity:entity.id,type:'wind'});
       notes.push(denied?`${name}的作用未被确认，暂不启用风。`:`${name}作为风参数，不额外画风线；强弱是本次试画选择。`);if(analysis.schema_version!=='3.3'||!entity.mentions.some(m=>/^(荷风|荷香)$/.test(m)))continue;
     }
     const specificUnsupported=unsupportedTerms.some(word=>text.includes(word));
     const findRule=value=>{let best=null,length=0;for(const r of rules){if(r.exclude?.some(word=>value.includes(word)))continue;for(const word of r.words)if(value.includes(word)&&word.length>length){best=r;length=word.length;}}return best;};
-    const rawRule=findRule(entity.mentions.join(' ')),rule=expressiveRule(entity,specificUnsupported?null:rawRule||findRule(text),analysis.poem);
-    const localSurface=physicalPlace(entity),physicalAbstract=entity.mentions.some(m=>/^(泉声|飞流|飞瀑|瀑布|水田|稻田|客舍|禅房|火光|灯火|渔火|返景|返照|夕照|疏影|树阴|树荫|树影|倒影|马蹄声|蹄声|马蹄)$/.test(m)||/^(莺|鸟|黄鹂|燕|雁|鹭|鸥|鸦|杜鹃|鹧鸪)(声|啼|鸣)$/.test(m));
-    if(entity.kind==='abstract'&&!physicalAbstract||entity.kind==='person'&&rule?.tool!=='figure'||entity.kind==='place'&&!localSurface){omitted.push({id:entity.id,name,reason:'该专名人物、地名或抽象含义暂不作实景补画'});continue;}
+    const rawRule=findRule(entity.mentions.join(' ')),rule=source?.rule||expressiveRule(entity,specificUnsupported?null:rawRule||findRule(text),analysis.poem);
+    const localSurface=physicalPlace(entity)||entity.kind==='place'&&source?.allowPlace,physicalAbstract=source?.allowAbstract||entity.mentions.some(m=>/^(泉声|飞流|飞瀑|瀑布|水田|稻田|客舍|禅房|火光|灯火|渔火|返景|返照|夕照|疏影|树阴|树荫|树影|倒影|马蹄声|蹄声|马蹄)$/.test(m)||/^(莺|鸟|黄鹂|燕|雁|鹭|鸥|鸦|杜鹃|鹧鸪)(声|啼|鸣)$/.test(m));
+    if(entity.kind==='abstract'&&!physicalAbstract||entity.kind==='person'&&rule?.tool!=='figure'&&!source?.allowPerson||entity.kind==='place'&&!localSurface){omitted.push({id:entity.id,name,reason:'该专名人物、地名或抽象含义暂不作实景补画'});continue;}
     if(!rule){omitted.push({id:entity.id,name,reason:'该意象尚无合适的写意画法'});continue;}
-    const options={...rule.options};
-    if(rule.tool==='landscape'&&options.form==='mountain'&&entity.quantity?.mode==='exact'&&entity.quantity.scope==='individual'&&entity.quantity.min<=6)options.relief='single';
+    const options={...rule.options},quantity=resolution.quantities[entity.id]||entity.quantity;
+    if(rule.tool==='landscape'&&options.form==='mountain'&&quantity?.mode==='exact'&&(quantity.scope==='individual'||quantity.scope==='group'&&['双','对'].includes(quantity.unit))&&quantity.min<=6)options.relief='single';
     if(rule.tool==='water')options.form='plane';
     if(rule.tool==='tree')options.crown=entity.mentions.some(m=>/林|夏木/.test(m))||entity.quantity?.mode==='many'?'wash':'lines';
     if(rule.tool==='orchid'&&entity.quantity?.scope==='individual'&&/朵|瓣/.test(entity.quantity.unit||''))options.form='flower';
@@ -82,7 +90,8 @@ export function buildPlan(analysis,{landscape=true}={}){
     }
     if(rule.tool==='snow'&&/积雪|雪地|覆雪/.test(text))options.state='settled';
     const freeze=analysis.relations.some(r=>r.source===entity.id&&['moves','moves_toward','moves_away','changes','disappears'].includes(r.type)&&r.modality!=='asserted');
-    const key=rule.tool+JSON.stringify(options)+(analysis.schema_version==='3.3'?':'+entity.id:''),existing=layers.find(l=>l.key===key);
+    const identity=resolution.identities.find(g=>g.members.includes(entity.id));
+    const key=rule.tool+(rule.tool==='figure'&&identity?'':JSON.stringify(options))+(sourceBound?':'+(rule.tool==='figure'&&identity?identity.representative:entity.id):''),existing=layers.find(l=>l.key===key);
     if(existing){existing.entities.push(entity.id);existing.names.push(name);if(rule.projection)existing.projectedEntities.push(entity.id);if(freeze)existing.animate=false;}
     else layers.push({key,tool:rule.tool,entities:[entity.id],projectedEntities:rule.projection?[entity.id]:[],names:[name],options,animate:!freeze,placement:placements[rule.tool]});
     entityTools.set(entity.id,rule.tool);
@@ -110,10 +119,13 @@ export function buildPlan(analysis,{landscape=true}={}){
   if(relations.some(r=>!r.visualized))notes.push('已识别的其他关系保留在解读中；本次未实现承载、遮蔽或完整动作编排。');
   notes.push('位置、大小、笔触与默认微动是本地试画选择；数量解释与本地显示数量分别记录。');
   prepareSemanticLayers(analysis,layers);
-  const seed=parseInt(createHash('sha256').update(analysis.poem).digest('hex').slice(0,8),16),composition=compose(analysis,layers.map(({key,...l})=>l),seed),proposal=arrangeScene(analysis,composition.layers);
+  for(const c of resolution.changes)notes.push('原文数量复核：'+c.evidence.join('／')+'按 '+c.resolved.min+c.resolved.unit+'、'+c.individuals+' 个个体绘制；原回答数量保留，规范化依据单列。');
+  for(const g of resolution.identities)notes.push('同指复核：'+g.evidence.join('／')+'中两个称谓共用一个人物实例；原始主体 ID 与解读不合并。');
+  const seed=parseInt(createHash('sha256').update(analysis.poem).digest('hex').slice(0,8),16),composition=compose(analysis,layers.map(({key,...l})=>l),seed,resolution),proposal=arrangeScene(analysis,composition.layers);
   prepareSemanticLayers(analysis,proposal.layers);
   const arranged=organizeScene(analysis,proposal);
-  const plan={version:policyVersion,seed,settings:{wind,density:.45,palette:'clear'},...arranged,omitted,notes:[...new Set([...notes,...composition.notes,...arranged.scene.notes])],relations};
+  const plan={version:policyVersion,seed,settings:{wind,density:.45,palette:'clear'},...arranged,omitted,parameters,sourceResolution:resolution,notes:[...new Set([...notes,...composition.notes,...arranged.scene.notes])],relations};
   const finished=finishSemanticPlan(analysis,plan);
-  return finalizeScene(analysis,landscape?developLandscape(analysis,finished):finished);
+  const result=finalizeScene(analysis,landscape?developLandscape(analysis,finished):finished);
+  return sourceBound?applyDrawingPolicy(analysis,result):result;
 }

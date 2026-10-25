@@ -1,0 +1,212 @@
+{
+  "schema_version": "expression-1.0",
+  "poem": "君子死知己，提剑出燕京。",
+  "reading": "君子为知己而死，提剑离开燕京。",
+  "entities": [
+    {
+      "id": "i1",
+      "mentions": [
+        "君子"
+      ],
+      "concept": "君子",
+      "kind": "person",
+      "role": "scene",
+      "presence": "present",
+      "evidence": [
+        "君子死知己"
+      ],
+      "quantity": {
+        "mode": "unspecified",
+        "min": null,
+        "max": null,
+        "unit": null,
+        "scope": "unspecified",
+        "extent": "unspecified",
+        "evidence": []
+      }
+    },
+    {
+      "id": "i2",
+      "mentions": [
+        "知己"
+      ],
+      "concept": "知己",
+      "kind": "person",
+      "role": "scene",
+      "presence": "present",
+      "evidence": [
+        "君子死知己"
+      ],
+      "quantity": {
+        "mode": "unspecified",
+        "min": null,
+        "max": null,
+        "unit": null,
+        "scope": "unspecified",
+        "extent": "unspecified",
+        "evidence": []
+      }
+    },
+    {
+      "id": "i3",
+      "mentions": [
+        "剑"
+      ],
+      "concept": "剑",
+      "kind": "object",
+      "role": "scene",
+      "presence": "present",
+      "evidence": [
+        "提剑出燕京"
+      ],
+      "quantity": {
+        "mode": "unspecified",
+        "min": null,
+        "max": null,
+        "unit": null,
+        "scope": "unspecified",
+        "extent": "unspecified",
+        "evidence": []
+      }
+    },
+    {
+      "id": "i4",
+      "mentions": [
+        "燕京"
+      ],
+      "concept": "燕京",
+      "kind": "place",
+      "role": "scene",
+      "presence": "present",
+      "evidence": [
+        "提剑出燕京"
+      ],
+      "quantity": {
+        "mode": "unspecified",
+        "min": null,
+        "max": null,
+        "unit": null,
+        "scope": "unspecified",
+        "extent": "unspecified",
+        "evidence": []
+      }
+    }
+  ],
+  "relations": [],
+  "atmosphere": {
+    "labels": [
+      "决绝",
+      "悲壮"
+    ],
+    "valence": "mixed",
+    "energy": "high",
+    "tension": "high",
+    "openness": "unclear",
+    "evidence": [
+      "君子死知己",
+      "提剑出燕京"
+    ]
+  },
+  "time": {
+    "markers": [],
+    "note": null
+  },
+  "uncertainties": [
+    "“死”可解为为知己而死，也可解为死于知己之事，具体含义不明。",
+    "“出燕京”的方向与目的地未明。"
+  ],
+  "spatial": [
+    {
+      "type": "outside",
+      "source": "i1",
+      "target": "i4",
+      "modality": "asserted",
+      "basis": "explicit",
+      "evidence": [
+        "君子死知己，提剑出燕京。"
+      ]
+    }
+  ],
+  "scene": {
+    "setting": {
+      "kind": "settlement",
+      "basis": "explicit",
+      "evidence": [
+        "提剑出燕京"
+      ]
+    },
+    "groups": [
+      {
+        "members": [
+          "i1"
+        ],
+        "role": "subject",
+        "pattern": "single",
+        "depth": "unspecified",
+        "basis": "inferred",
+        "evidence": [
+          "君子死知己",
+          "提剑出燕京"
+        ]
+      },
+      {
+        "members": [
+          "i4"
+        ],
+        "role": "environment",
+        "pattern": "single",
+        "depth": "unspecified",
+        "basis": "inferred",
+        "evidence": [
+          "提剑出燕京"
+        ]
+      }
+    ],
+    "supports": [],
+    "actions": [
+      {
+        "entity": "i1",
+        "state": "walk",
+        "pace": "unspecified",
+        "direction": "unspecified",
+        "modality": "asserted",
+        "basis": "inferred",
+        "evidence": [
+          "君子死知己，提剑出燕京。"
+        ]
+      }
+    ],
+    "atmosphere": {
+      "visibility": "unclear",
+      "illumination": "unclear",
+      "basis": "inferred",
+      "evidence": []
+    }
+  },
+  "expression": {
+    "relations": [
+      {
+        "source": "i1",
+        "target": "i2",
+        "kind": "connect",
+        "modality": "asserted",
+        "basis": "explicit",
+        "evidence": [
+          "君子死知己"
+        ]
+      }
+    ],
+    "processes": [
+      {
+        "subject": "i1",
+        "kind": "unclear",
+        "temporal": "unspecified",
+        "modality": "asserted",
+        "basis": "explicit",
+        "evidence": [
+          "君子死知己"
+        ]
+      }
+    ]
+  }
+}

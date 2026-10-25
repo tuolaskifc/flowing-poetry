@@ -1,0 +1,107 @@
+{
+  "schema_version": "abstract-1.0",
+  "poem": "此情可待成追忆，只是当时已惘然。",
+  "reading": "此情是否要等到日后才成为追忆？诗句以反问或推测语气提出，随即转折：即便在当时，已经惘然难辨。核心不是叙事，而是情感在时间中的模糊与追忆的生成条件。",
+  "subjects": [
+    {
+    "id": "a1",
+    "mentions": ["此情"],
+    "meaning": "当下或所指的这份情感，具体内容未明。",
+    "kind": "abstract",
+    "role": "scene",
+    "presence": "present",
+    "evidence": ["此情可待成追忆"]
+    },
+    {
+    "id": "a2",
+    "mentions": ["追忆"],
+    "meaning": "日后对往事的回想与追念。",
+    "kind": "abstract",
+    "role": "reference",
+    "presence": "unclear",
+    "evidence": ["此情可待成追忆"]
+    },
+    {
+    "id": "a3",
+    "mentions": ["当时"],
+    "meaning": "事情发生或情感所在的彼时。",
+    "kind": "abstract",
+    "role": "reference",
+    "presence": "present",
+    "evidence": ["只是当时已惘然"]
+    },
+    {
+    "id": "a4",
+    "mentions": ["惘然"],
+    "meaning": "迷惘、若有所失而难以分辨的心境。",
+    "kind": "abstract",
+    "role": "scene",
+    "presence": "present",
+    "evidence": ["只是当时已惘然"]
+    }
+  ],
+  "relations": [
+    {
+    "source": "a1",
+    "target": "a2",
+    "kind": "approach",
+    "modality": "possible",
+    "basis": "explicit",
+    "evidence": ["此情可待成追忆"]
+    },
+    {
+    "source": "a1",
+    "target": "a4",
+    "kind": "interweave",
+    "modality": "asserted",
+    "basis": "explicit",
+    "evidence": ["此情可待成追忆", "只是当时已惘然"]
+    },
+    {
+    "source": "a3",
+    "target": "a4",
+    "kind": "surround",
+    "modality": "asserted",
+    "basis": "explicit",
+    "evidence": ["只是当时已惘然"]
+    }
+  ],
+  "processes": [
+    {
+    "subject": "a1",
+    "kind": "persist",
+    "temporal": "ongoing",
+    "modality": "possible",
+    "basis": "explicit",
+    "evidence": ["此情可待成追忆"]
+    },
+    {
+    "subject": "a2",
+    "kind": "emerge",
+    "temporal": "not_yet",
+    "modality": "possible",
+    "basis": "explicit",
+    "evidence": ["此情可待成追忆"]
+    },
+    {
+    "subject": "a4",
+    "kind": "persist",
+    "temporal": "already",
+    "modality": "asserted",
+    "basis": "explicit",
+    "evidence": ["只是当时已惘然"]
+    }
+  ],
+  "atmosphere": {
+    "labels": ["迷惘", "低回", "追想"],
+    "valence": "mixed",
+    "openness": "low",
+    "illumination": "unclear",
+    "evidence": ["此情可待成追忆", "只是当时已惘然"]
+  },
+  "uncertainties": [
+    "“可待”可解为反问（岂待）或推测（可以等到），语气不唯一。",
+    "“此情”具体指向未明，不宜补出人物或事件。",
+    "“当时已惘然”与“成追忆”之间的时间层次存在压缩，既可指彼时已迷惘，也可指追忆时仍觉彼时迷惘。"
+  ]
+}

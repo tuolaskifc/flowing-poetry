@@ -1,0 +1,2212 @@
+{
+  "id": "2026-10-23T05-09-23-313Z-295263d7",
+  "fingerprint": "6d92803983e758d8c481aa2d59e7fee4db158abc59b059ba9566924812ef687c",
+  "poem": "接天莲叶无穷碧，映日荷花别样红。",
+  "source": {
+    "provider": "精选诗句库",
+    "author": "杨万里",
+    "title": "晓出净慈寺送林子方",
+    "dynasty": "宋代"
+  },
+  "mode": "composition",
+  "model": "DeepSeek-V4.1-Flash",
+  "started_at": "2026-10-23T05:09:23.313Z",
+  "cached": false,
+  "http_status": 200,
+  "usage": {
+    "completion_tokens": 928,
+    "prompt_tokens": 4898,
+    "total_tokens": 5826,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 4864
+    }
+  },
+  "finish_reason": "stop",
+  "analysis": {
+    "schema_version": "3.3",
+    "poem": "接天莲叶无穷碧，映日荷花别样红。",
+    "reading": "莲叶铺展至天边，碧色无边；荷花在日光映照下格外红艳。",
+    "entities": [
+      {
+        "id": "i1",
+        "mentions": [
+          "莲叶"
+        ],
+        "concept": "莲叶",
+        "kind": "organism",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "接天莲叶无穷碧"
+        ],
+        "quantity": {
+          "mode": "many",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "spread",
+          "evidence": [
+            "接天莲叶无穷碧"
+          ]
+        }
+      },
+      {
+        "id": "i2",
+        "mentions": [
+          "荷花"
+        ],
+        "concept": "荷花",
+        "kind": "organism",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "映日荷花别样红"
+        ],
+        "quantity": {
+          "mode": "many",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "spread",
+          "evidence": [
+            "映日荷花别样红"
+          ]
+        }
+      },
+      {
+        "id": "i3",
+        "mentions": [
+          "日"
+        ],
+        "concept": "太阳",
+        "kind": "environment",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "映日荷花别样红"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i4",
+        "mentions": [
+          "天"
+        ],
+        "concept": "天空",
+        "kind": "environment",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "接天莲叶无穷碧"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      }
+    ],
+    "relations": [],
+    "atmosphere": {
+      "labels": [
+        "开阔",
+        "明丽"
+      ],
+      "valence": "positive",
+      "energy": "low",
+      "tension": "low",
+      "openness": "high",
+      "evidence": [
+        "接天莲叶无穷碧",
+        "映日荷花别样红"
+      ]
+    },
+    "time": {
+      "markers": [],
+      "note": null
+    },
+    "uncertainties": [
+      "“接天”可理解为莲叶与天相接的夸张描写，也可理解为空间上延伸至天际，具体关系不明。",
+      "“无穷碧”与“别样红”是色彩程度的描写，未给出可计数的数量。",
+      "“映日”可理解为日光映照荷花，也可理解为荷花映照日光，方向存在歧义。"
+    ],
+    "spatial": [
+      {
+        "type": "on",
+        "source": "i2",
+        "target": "i3",
+        "modality": "unclear",
+        "basis": "inferred",
+        "evidence": [
+          "映日荷花别样红"
+        ]
+      },
+      {
+        "type": "outside",
+        "source": "i1",
+        "target": "i4",
+        "modality": "unclear",
+        "basis": "inferred",
+        "evidence": [
+          "接天莲叶无穷碧"
+        ]
+      }
+    ],
+    "scene": {
+      "setting": {
+        "kind": "waterside",
+        "basis": "inferred",
+        "evidence": [
+          "接天莲叶无穷碧",
+          "映日荷花别样红"
+        ]
+      },
+      "groups": [
+        {
+          "members": [
+            "i1"
+          ],
+          "role": "subject",
+          "pattern": "field",
+          "depth": "unspecified",
+          "basis": "inferred",
+          "evidence": [
+            "接天莲叶无穷碧"
+          ]
+        },
+        {
+          "members": [
+            "i2"
+          ],
+          "role": "subject",
+          "pattern": "field",
+          "depth": "unspecified",
+          "basis": "inferred",
+          "evidence": [
+            "映日荷花别样红"
+          ]
+        },
+        {
+          "members": [
+            "i3",
+            "i4"
+          ],
+          "role": "environment",
+          "pattern": "unspecified",
+          "depth": "unspecified",
+          "basis": "inferred",
+          "evidence": [
+            "接天莲叶无穷碧",
+            "映日荷花别样红"
+          ]
+        }
+      ],
+      "supports": [
+        {
+          "entity": "i1",
+          "surface": "water",
+          "target": null,
+          "basis": "inferred",
+          "evidence": [
+            "接天莲叶无穷碧"
+          ]
+        },
+        {
+          "entity": "i2",
+          "surface": "water",
+          "target": null,
+          "basis": "inferred",
+          "evidence": [
+            "映日荷花别样红"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "entity": "i1",
+          "state": "still",
+          "pace": "unspecified",
+          "direction": "unspecified",
+          "modality": "unclear",
+          "basis": "inferred",
+          "evidence": [
+            "接天莲叶无穷碧"
+          ]
+        },
+        {
+          "entity": "i2",
+          "state": "still",
+          "pace": "unspecified",
+          "direction": "unspecified",
+          "modality": "unclear",
+          "basis": "inferred",
+          "evidence": [
+            "映日荷花别样红"
+          ]
+        }
+      ],
+      "atmosphere": {
+        "visibility": "clear",
+        "illumination": "day",
+        "basis": "inferred",
+        "evidence": [
+          "映日荷花别样红"
+        ]
+      }
+    }
+  },
+  "validation": {
+    "valid": true,
+    "errors": [],
+    "warnings": [
+      "模型保留了不确定性，需要审阅",
+      "spatial[0] 的推断或非确定关系需审阅",
+      "spatial[1] 的推断或非确定关系需审阅",
+      "scene.setting 为语义推断，绘画选择需与原文明示区分",
+      "scene.groups[0] 为语义推断，绘画选择需与原文明示区分",
+      "scene.groups[1] 为语义推断，绘画选择需与原文明示区分",
+      "scene.groups[2] 为语义推断，绘画选择需与原文明示区分",
+      "scene.supports[0] 为语义推断，绘画选择需与原文明示区分",
+      "scene.supports[1] 为语义推断，绘画选择需与原文明示区分",
+      "scene.actions[0] 为语义推断，绘画选择需与原文明示区分",
+      "scene.actions[1] 为语义推断，绘画选择需与原文明示区分",
+      "scene.atmosphere 为语义推断，绘画选择需与原文明示区分"
+    ],
+    "review_required": true
+  },
+  "plan": {
+    "version": "semantic-composition-3.3-color-motion",
+    "seed": 4131447296,
+    "settings": {
+      "wind": 0.3,
+      "density": 0.35,
+      "palette": "tender",
+      "motion": 1.4
+    },
+    "layers": [
+      {
+        "tool": "landscape",
+        "entities": [
+          "i3"
+        ],
+        "projectedEntities": [],
+        "names": [
+          "日"
+        ],
+        "options": {
+          "form": "sun"
+        },
+        "animate": false,
+        "placement": {
+          "anchor": [
+            320,
+            194
+          ],
+          "at": [
+            0.65,
+            0.23
+          ],
+          "scale": 1.5
+        },
+        "semanticGroup": {
+          "members": [
+            "i3",
+            "i4"
+          ],
+          "role": "environment",
+          "pattern": "unspecified",
+          "depth": "unspecified",
+          "basis": "inferred",
+          "evidence": [
+            "接天莲叶无穷碧",
+            "映日荷花别样红"
+          ],
+          "index": 2
+        },
+        "semanticEffects": [
+          {
+            "path": "scene.groups[2].role",
+            "consumer": "主次布局",
+            "effect": "保留环境群落层次",
+            "status": "applied"
+          },
+          {
+            "path": "scene.groups[2].pattern",
+            "consumer": "群落布局",
+            "effect": "群落形式未明，保持本地默认",
+            "status": "skipped"
+          },
+          {
+            "path": "scene.groups[2].depth",
+            "consumer": "远近布局",
+            "effect": "远近未明，保持本地默认",
+            "status": "skipped"
+          }
+        ],
+        "semanticEnergy": false,
+        "timeScale": 0.45,
+        "instances": [
+          {
+            "placement": {
+              "anchor": [
+                320,
+                95
+              ],
+              "at": [
+                0.65,
+                0.23
+              ],
+              "scale": 0.8
+            },
+            "depth": 0.05,
+            "opacity": 1,
+            "variant": 0
+          }
+        ],
+        "singleUnit": false,
+        "quantity": {
+          "items": [
+            {
+              "entity": "i3",
+              "mode": "unspecified",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "unspecified",
+              "extent": "unspecified",
+              "evidence": [],
+              "basis": "model"
+            }
+          ],
+          "rendered": 1,
+          "exact": false,
+          "collective": false,
+          "partUnsupported": false
+        },
+        "quantityLabel": "整体笔触图层；内部数量尚未适配",
+        "z": -40
+      },
+      {
+        "tool": "landscape",
+        "entities": [
+          "i4"
+        ],
+        "projectedEntities": [],
+        "names": [
+          "天"
+        ],
+        "options": {
+          "form": "sky"
+        },
+        "animate": false,
+        "placement": {
+          "anchor": [
+            320,
+            194
+          ],
+          "at": [
+            0.5,
+            0.5
+          ],
+          "scale": 1.5
+        },
+        "semanticGroup": {
+          "members": [
+            "i3",
+            "i4"
+          ],
+          "role": "environment",
+          "pattern": "unspecified",
+          "depth": "unspecified",
+          "basis": "inferred",
+          "evidence": [
+            "接天莲叶无穷碧",
+            "映日荷花别样红"
+          ],
+          "index": 2
+        },
+        "semanticEffects": [
+          {
+            "path": "scene.groups[2].role",
+            "consumer": "主次布局",
+            "effect": "保留环境画布范围，主次不改变地形边界",
+            "status": "applied"
+          },
+          {
+            "path": "scene.groups[2].pattern",
+            "consumer": "群落布局",
+            "effect": "群落形式未明，保持本地默认",
+            "status": "skipped"
+          },
+          {
+            "path": "scene.groups[2].depth",
+            "consumer": "远近布局",
+            "effect": "远近未明，保持本地默认",
+            "status": "skipped"
+          }
+        ],
+        "semanticEnergy": false,
+        "timeScale": 0.45,
+        "instances": [
+          {
+            "placement": {
+              "anchor": [
+                320,
+                194
+              ],
+              "at": [
+                0.5,
+                0.5
+              ],
+              "scale": 1.6
+            },
+            "depth": 0.05,
+            "opacity": 1,
+            "variant": 0
+          }
+        ],
+        "singleUnit": false,
+        "quantity": {
+          "items": [
+            {
+              "entity": "i4",
+              "mode": "unspecified",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "unspecified",
+              "extent": "unspecified",
+              "evidence": [],
+              "basis": "model"
+            }
+          ],
+          "rendered": 1,
+          "exact": false,
+          "collective": false,
+          "partUnsupported": false
+        },
+        "quantityLabel": "整体笔触图层；内部数量尚未适配",
+        "z": -45
+      },
+      {
+        "tool": "lotus",
+        "entities": [
+          "i1"
+        ],
+        "projectedEntities": [],
+        "names": [
+          "莲叶"
+        ],
+        "options": {
+          "form": "leaf"
+        },
+        "animate": false,
+        "placement": {
+          "anchor": [
+            320,
+            330
+          ],
+          "at": [
+            0.5146495933859262,
+            0.7849999999999999
+          ],
+          "scale": 0.95
+        },
+        "semanticGroup": {
+          "members": [
+            "i1"
+          ],
+          "role": "subject",
+          "pattern": "field",
+          "depth": "unspecified",
+          "basis": "inferred",
+          "evidence": [
+            "接天莲叶无穷碧"
+          ],
+          "index": 0
+        },
+        "semanticEffects": [
+          {
+            "path": "scene.actions[0].state",
+            "consumer": "动作边界",
+            "effect": "可能、假设或未明动作不执行",
+            "status": "skipped"
+          },
+          {
+            "path": "scene.groups[0].role",
+            "consumer": "主次布局",
+            "effect": "主体相对突出",
+            "status": "applied"
+          },
+          {
+            "path": "scene.groups[0].pattern",
+            "consumer": "群落布局",
+            "effect": "按 field 组织显示单元；不覆盖明确数量",
+            "status": "applied"
+          },
+          {
+            "path": "scene.groups[0].depth",
+            "consumer": "远近布局",
+            "effect": "远近未明，保持本地默认",
+            "status": "skipped"
+          }
+        ],
+        "semanticEnergy": false,
+        "timeScale": 0,
+        "semanticAction": {
+          "entity": "i1",
+          "state": "still",
+          "pace": "unspecified",
+          "direction": "unspecified",
+          "modality": "unclear",
+          "basis": "inferred",
+          "evidence": [
+            "接天莲叶无穷碧"
+          ]
+        },
+        "instances": [
+          {
+            "placement": {
+              "anchor": [
+                320,
+                218
+              ],
+              "at": [
+                0.8639977000884249,
+                0.624125
+              ],
+              "scale": 0.34524
+            },
+            "depth": 0.0012500000000000002,
+            "opacity": 0.5216,
+            "variant": 0
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                218
+              ],
+              "at": [
+                0.41806002127427466,
+                0.632375
+              ],
+              "scale": 0.36372000000000004
+            },
+            "depth": 0.00375,
+            "opacity": 0.5216,
+            "variant": 1
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                218
+              ],
+              "at": [
+                0.035,
+                0.640625
+              ],
+              "scale": 0.38220000000000004
+            },
+            "depth": 0.00625,
+            "opacity": 0.5216,
+            "variant": 2
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                218
+              ],
+              "at": [
+                0.693664663645975,
+                0.648875
+              ],
+              "scale": 0.40068000000000004
+            },
+            "depth": 0.008749999999999999,
+            "opacity": 0.5287130473449942,
+            "variant": 0
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                218
+              ],
+              "at": [
+                0.24772698483182526,
+                0.657125
+              ],
+              "scale": 0.41916000000000003
+            },
+            "depth": 0.011250000000000001,
+            "opacity": 0.5414754777756287,
+            "variant": 1
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                218
+              ],
+              "at": [
+                0.965,
+                0.665375
+              ],
+              "scale": 0.43764000000000003
+            },
+            "depth": 0.013750000000000002,
+            "opacity": 0.5545116612382349,
+            "variant": 2
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                218
+              ],
+              "at": [
+                0.5233316272035257,
+                0.673625
+              ],
+              "scale": 0.45612
+            },
+            "depth": 0.01625,
+            "opacity": 0.5651647709092125,
+            "variant": 0
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                218
+              ],
+              "at": [
+                0.07739394838937519,
+                0.681875
+              ],
+              "scale": 0.4746
+            },
+            "depth": 0.018750000000000003,
+            "opacity": 0.579821999715676,
+            "variant": 1
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                218
+              ],
+              "at": [
+                0.7989362695752249,
+                0.690125
+              ],
+              "scale": 0.4930800000000001
+            },
+            "depth": 0.02125,
+            "opacity": 0.5895776975967106,
+            "variant": 2
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                218
+              ],
+              "at": [
+                0.35299859076107554,
+                0.698375
+              ],
+              "scale": 0.51156
+            },
+            "depth": 0.02375,
+            "opacity": 0.604613058340759,
+            "variant": 0
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                218
+              ],
+              "at": [
+                0.965,
+                0.7066250000000001
+              ],
+              "scale": 0.5300400000000001
+            },
+            "depth": 0.026250000000000002,
+            "opacity": 0.6186921784092556,
+            "variant": 1
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                218
+              ],
+              "at": [
+                0.6286032331327749,
+                0.714875
+              ],
+              "scale": 0.5485200000000001
+            },
+            "depth": 0.028749999999999998,
+            "opacity": 0.6321059275305829,
+            "variant": 2
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                218
+              ],
+              "at": [
+                0.18266555431862563,
+                0.723125
+              ],
+              "scale": 0.5670000000000001
+            },
+            "depth": 0.03125,
+            "opacity": 0.6431166953521081,
+            "variant": 0
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                218
+              ],
+              "at": [
+                0.9042078755044773,
+                0.731375
+              ],
+              "scale": 0.5854800000000001
+            },
+            "depth": 0.03375,
+            "opacity": 0.6560358003572677,
+            "variant": 1
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                218
+              ],
+              "at": [
+                0.4582701966903269,
+                0.739625
+              ],
+              "scale": 0.60396
+            },
+            "depth": 0.03625,
+            "opacity": 0.6720853243877413,
+            "variant": 2
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                218
+              ],
+              "at": [
+                0.035,
+                0.7478750000000001
+              ],
+              "scale": 0.62244
+            },
+            "depth": 0.03875000000000001,
+            "opacity": 0.681025254207186,
+            "variant": 0
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                218
+              ],
+              "at": [
+                0.7338748390620263,
+                0.7561249999999999
+              ],
+              "scale": 0.6409199999999999
+            },
+            "depth": 0.04125,
+            "opacity": 0.6978257582708728,
+            "variant": 1
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                218
+              ],
+              "at": [
+                0.28793716024787586,
+                0.764375
+              ],
+              "scale": 0.6594000000000001
+            },
+            "depth": 0.043750000000000004,
+            "opacity": 0.7061313328139717,
+            "variant": 2
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                218
+              ],
+              "at": [
+                0.965,
+                0.772625
+              ],
+              "scale": 0.6778800000000001
+            },
+            "depth": 0.046250000000000006,
+            "opacity": 0.7237430533226463,
+            "variant": 0
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                218
+              ],
+              "at": [
+                0.5635418026195773,
+                0.780875
+              ],
+              "scale": 0.6963600000000001
+            },
+            "depth": 0.04875,
+            "opacity": 0.7365462872909498,
+            "variant": 1
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                218
+              ],
+              "at": [
+                0.11760412380542701,
+                0.789125
+              ],
+              "scale": 0.71484
+            },
+            "depth": 0.05125,
+            "opacity": 0.744562141843047,
+            "variant": 2
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                218
+              ],
+              "at": [
+                0.8391464449912767,
+                0.797375
+              ],
+              "scale": 0.73332
+            },
+            "depth": 0.05375,
+            "opacity": 0.7580420456557767,
+            "variant": 0
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                218
+              ],
+              "at": [
+                0.3932087661771263,
+                0.805625
+              ],
+              "scale": 0.7518000000000001
+            },
+            "depth": 0.05625,
+            "opacity": 0.7756339325806825,
+            "variant": 1
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                218
+              ],
+              "at": [
+                0.035,
+                0.813875
+              ],
+              "scale": 0.7702800000000002
+            },
+            "depth": 0.058750000000000004,
+            "opacity": 0.7877816194787854,
+            "variant": 2
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                218
+              ],
+              "at": [
+                0.6688134085488278,
+                0.822125
+              ],
+              "scale": 0.7887600000000001
+            },
+            "depth": 0.061250000000000006,
+            "opacity": 0.7975954840707826,
+            "variant": 0
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                218
+              ],
+              "at": [
+                0.22287572973467323,
+                0.830375
+              ],
+              "scale": 0.8072400000000001
+            },
+            "depth": 0.06375,
+            "opacity": 0.8118289358547306,
+            "variant": 1
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                218
+              ],
+              "at": [
+                0.9444180509205271,
+                0.838625
+              ],
+              "scale": 0.82572
+            },
+            "depth": 0.06625,
+            "opacity": 0.8263355246521067,
+            "variant": 2
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                218
+              ],
+              "at": [
+                0.49848037210637675,
+                0.846875
+              ],
+              "scale": 0.8442000000000001
+            },
+            "depth": 0.06875,
+            "opacity": 0.8401759638239281,
+            "variant": 0
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                218
+              ],
+              "at": [
+                0.05254269329222638,
+                0.855125
+              ],
+              "scale": 0.8626800000000002
+            },
+            "depth": 0.07125000000000001,
+            "opacity": 0.8486119560851483,
+            "variant": 1
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                218
+              ],
+              "at": [
+                0.774085014478076,
+                0.863375
+              ],
+              "scale": 0.8811600000000002
+            },
+            "depth": 0.07375000000000001,
+            "opacity": 0.8649911144034704,
+            "variant": 2
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                218
+              ],
+              "at": [
+                0.32814733566392573,
+                0.871625
+              ],
+              "scale": 0.8996400000000001
+            },
+            "depth": 0.07625,
+            "opacity": 0.8768117807741277,
+            "variant": 0
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                218
+              ],
+              "at": [
+                0.965,
+                0.879875
+              ],
+              "scale": 0.91812
+            },
+            "depth": 0.07875,
+            "opacity": 0.8883637397823623,
+            "variant": 1
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                218
+              ],
+              "at": [
+                0.603751978035625,
+                0.888125
+              ],
+              "scale": 0.9366
+            },
+            "depth": 0.08125,
+            "opacity": 0.9021739921590779,
+            "variant": 2
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                218
+              ],
+              "at": [
+                0.15781429922147466,
+                0.896375
+              ],
+              "scale": 0.9550800000000003
+            },
+            "depth": 0.08375,
+            "opacity": 0.9168524761142209,
+            "variant": 0
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                218
+              ],
+              "at": [
+                0.8793566204073244,
+                0.904625
+              ],
+              "scale": 0.9735600000000002
+            },
+            "depth": 0.08625000000000001,
+            "opacity": 0.9318063838059549,
+            "variant": 1
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                218
+              ],
+              "at": [
+                0.43341894159317396,
+                0.912875
+              ],
+              "scale": 0.9920400000000001
+            },
+            "depth": 0.08875,
+            "opacity": 0.9426060805846936,
+            "variant": 2
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                218
+              ],
+              "at": [
+                0.035,
+                0.921125
+              ],
+              "scale": 1.01052
+            },
+            "depth": 0.09125,
+            "opacity": 0.9550872432149946,
+            "variant": 0
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                218
+              ],
+              "at": [
+                0.7090235839648774,
+                0.9293750000000001
+              ],
+              "scale": 1.0290000000000001
+            },
+            "depth": 0.09375,
+            "opacity": 0.9681276955742855,
+            "variant": 1
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                218
+              ],
+              "at": [
+                0.26308590515072705,
+                0.937625
+              ],
+              "scale": 1.0474800000000002
+            },
+            "depth": 0.09625,
+            "opacity": 0.9840780175268301,
+            "variant": 2
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                218
+              ],
+              "at": [
+                0.965,
+                0.945875
+              ],
+              "scale": 1.0659600000000002
+            },
+            "depth": 0.09875,
+            "opacity": 0.9896,
+            "variant": 0
+          }
+        ],
+        "singleUnit": true,
+        "quantity": {
+          "items": [
+            {
+              "entity": "i1",
+              "mode": "many",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "unspecified",
+              "extent": "spread",
+              "evidence": [
+                "接天莲叶无穷碧"
+              ],
+              "basis": "model"
+            }
+          ],
+          "rendered": 40,
+          "exact": false,
+          "collective": true,
+          "partUnsupported": false
+        },
+        "quantityLabel": "成片分布；本地试画 40 个单元",
+        "semanticSupport": {
+          "surface": "water",
+          "target": null,
+          "path": "scene.supports[0]"
+        },
+        "z": 18
+      },
+      {
+        "tool": "lotus",
+        "entities": [
+          "i2"
+        ],
+        "projectedEntities": [],
+        "names": [
+          "荷花"
+        ],
+        "options": {
+          "form": "flower",
+          "state": "open"
+        },
+        "animate": false,
+        "placement": {
+          "anchor": [
+            320,
+            330
+          ],
+          "at": [
+            0.5047432232534647,
+            0.675
+          ],
+          "scale": 0.95
+        },
+        "semanticGroup": {
+          "members": [
+            "i2"
+          ],
+          "role": "subject",
+          "pattern": "field",
+          "depth": "unspecified",
+          "basis": "inferred",
+          "evidence": [
+            "映日荷花别样红"
+          ],
+          "index": 1
+        },
+        "semanticEffects": [
+          {
+            "path": "scene.actions[1].state",
+            "consumer": "动作边界",
+            "effect": "可能、假设或未明动作不执行",
+            "status": "skipped"
+          },
+          {
+            "path": "scene.groups[1].role",
+            "consumer": "主次布局",
+            "effect": "主体相对突出",
+            "status": "applied"
+          },
+          {
+            "path": "scene.groups[1].pattern",
+            "consumer": "群落布局",
+            "effect": "按 field 组织显示单元；不覆盖明确数量",
+            "status": "applied"
+          },
+          {
+            "path": "scene.groups[1].depth",
+            "consumer": "远近布局",
+            "effect": "远近未明，保持本地默认",
+            "status": "skipped"
+          }
+        ],
+        "semanticEnergy": false,
+        "timeScale": 0,
+        "semanticAction": {
+          "entity": "i2",
+          "state": "still",
+          "pace": "unspecified",
+          "direction": "unspecified",
+          "modality": "unclear",
+          "basis": "inferred",
+          "evidence": [
+            "映日荷花别样红"
+          ]
+        },
+        "instances": [
+          {
+            "placement": {
+              "anchor": [
+                328,
+                169
+              ],
+              "at": [
+                0.05989416121862495,
+                0.5203125
+              ],
+              "scale": 0.35910000000000003
+            },
+            "depth": 0.003125,
+            "opacity": 0.5216,
+            "variant": 0
+          },
+          {
+            "placement": {
+              "anchor": [
+                328,
+                169
+              ],
+              "at": [
+                0.7814364824044748,
+                0.5409375
+              ],
+              "scale": 0.40530000000000005
+            },
+            "depth": 0.009375000000000001,
+            "opacity": 0.5300738102360337,
+            "variant": 1
+          },
+          {
+            "placement": {
+              "anchor": [
+                328,
+                169
+              ],
+              "at": [
+                0.335498803590325,
+                0.5615625
+              ],
+              "scale": 0.45150000000000007
+            },
+            "depth": 0.015625,
+            "opacity": 0.5574310780860251,
+            "variant": 2
+          },
+          {
+            "placement": {
+              "anchor": [
+                328,
+                169
+              ],
+              "at": [
+                0.965,
+                0.5821875
+              ],
+              "scale": 0.49770000000000003
+            },
+            "depth": 0.021875000000000002,
+            "opacity": 0.6007479272084602,
+            "variant": 0
+          },
+          {
+            "placement": {
+              "anchor": [
+                328,
+                169
+              ],
+              "at": [
+                0.6111034459620254,
+                0.6028125
+              ],
+              "scale": 0.5439
+            },
+            "depth": 0.028125,
+            "opacity": 0.6356907313748379,
+            "variant": 1
+          },
+          {
+            "placement": {
+              "anchor": [
+                328,
+                169
+              ],
+              "at": [
+                0.16516576714787506,
+                0.6234375
+              ],
+              "scale": 0.5901000000000001
+            },
+            "depth": 0.034375,
+            "opacity": 0.6603345436976233,
+            "variant": 2
+          },
+          {
+            "placement": {
+              "anchor": [
+                328,
+                169
+              ],
+              "at": [
+                0.8867080883337257,
+                0.6440625
+              ],
+              "scale": 0.6363000000000001
+            },
+            "depth": 0.040625,
+            "opacity": 0.6961819641084294,
+            "variant": 0
+          },
+          {
+            "placement": {
+              "anchor": [
+                328,
+                169
+              ],
+              "at": [
+                0.44077040951957525,
+                0.6646875
+              ],
+              "scale": 0.6825000000000001
+            },
+            "depth": 0.046875,
+            "opacity": 0.7275570221072702,
+            "variant": 1
+          },
+          {
+            "placement": {
+              "anchor": [
+                328,
+                169
+              ],
+              "at": [
+                0.035,
+                0.6853125
+              ],
+              "scale": 0.7287000000000001
+            },
+            "depth": 0.053125000000000006,
+            "opacity": 0.7600758988593879,
+            "variant": 2
+          },
+          {
+            "placement": {
+              "anchor": [
+                328,
+                169
+              ],
+              "at": [
+                0.7163750518912757,
+                0.7059375
+              ],
+              "scale": 0.7749000000000001
+            },
+            "depth": 0.059375000000000004,
+            "opacity": 0.7879124896120047,
+            "variant": 0
+          },
+          {
+            "placement": {
+              "anchor": [
+                328,
+                169
+              ],
+              "at": [
+                0.27043737307712534,
+                0.7265625
+              ],
+              "scale": 0.8211000000000002
+            },
+            "depth": 0.065625,
+            "opacity": 0.8224335096596914,
+            "variant": 1
+          },
+          {
+            "placement": {
+              "anchor": [
+                328,
+                169
+              ],
+              "at": [
+                0.965,
+                0.7471875
+              ],
+              "scale": 0.8673000000000001
+            },
+            "depth": 0.07187500000000001,
+            "opacity": 0.8497000041391585,
+            "variant": 2
+          },
+          {
+            "placement": {
+              "anchor": [
+                328,
+                169
+              ],
+              "at": [
+                0.5460420154488257,
+                0.7678125
+              ],
+              "scale": 0.9135000000000001
+            },
+            "depth": 0.078125,
+            "opacity": 0.8866326108299836,
+            "variant": 0
+          },
+          {
+            "placement": {
+              "anchor": [
+                328,
+                169
+              ],
+              "at": [
+                0.10010433663467744,
+                0.7884375
+              ],
+              "scale": 0.9597000000000001
+            },
+            "depth": 0.084375,
+            "opacity": 0.9269382110165607,
+            "variant": 1
+          },
+          {
+            "placement": {
+              "anchor": [
+                328,
+                169
+              ],
+              "at": [
+                0.8216466578205271,
+                0.8090625
+              ],
+              "scale": 1.0059000000000002
+            },
+            "depth": 0.09062500000000001,
+            "opacity": 0.9598546731542738,
+            "variant": 2
+          },
+          {
+            "placement": {
+              "anchor": [
+                328,
+                169
+              ],
+              "at": [
+                0.37570897900637673,
+                0.8296875
+              ],
+              "scale": 1.0521000000000003
+            },
+            "depth": 0.096875,
+            "opacity": 0.9858013695430418,
+            "variant": 0
+          }
+        ],
+        "singleUnit": true,
+        "quantity": {
+          "items": [
+            {
+              "entity": "i2",
+              "mode": "many",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "unspecified",
+              "extent": "spread",
+              "evidence": [
+                "映日荷花别样红"
+              ],
+              "basis": "model"
+            }
+          ],
+          "rendered": 16,
+          "exact": false,
+          "collective": true,
+          "partUnsupported": false
+        },
+        "quantityLabel": "成片分布；本地试画 16 个单元",
+        "semanticSupport": {
+          "surface": "water",
+          "target": null,
+          "path": "scene.supports[1]"
+        },
+        "z": 19
+      },
+      {
+        "tool": "water",
+        "entities": [],
+        "projectedEntities": [],
+        "names": [
+          "构图依托·水域"
+        ],
+        "options": {
+          "form": "plane"
+        },
+        "animate": true,
+        "placement": {
+          "anchor": [
+            320,
+            135
+          ],
+          "at": [
+            0.5,
+            0.45
+          ],
+          "scale": 1.6
+        },
+        "instances": [
+          {
+            "placement": {
+              "anchor": [
+                320,
+                135
+              ],
+              "at": [
+                0.5,
+                0.45
+              ],
+              "scale": 1.65
+            },
+            "variant": 0,
+            "depth": 0,
+            "opacity": 1
+          }
+        ],
+        "singleUnit": false,
+        "inferred": true,
+        "provenance": {
+          "basis": "local-context",
+          "reason": "模型解释的必要依托，依据：接天莲叶无穷碧",
+          "semanticPath": "scene.supports[0]"
+        },
+        "quantity": {
+          "rendered": 1,
+          "exact": false,
+          "items": []
+        },
+        "quantityLabel": "本地环境依托，不计入原文意象覆盖",
+        "z": -10,
+        "clip": [
+          [
+            0,
+            0.45
+          ],
+          [
+            1,
+            0.45
+          ],
+          [
+            1,
+            1.04
+          ],
+          [
+            0,
+            1.04
+          ]
+        ],
+        "surface": {
+          "top": 0.45,
+          "bottom": 1
+        }
+      }
+    ],
+    "spatial": [
+      {
+        "type": "on",
+        "source": "i2",
+        "target": "i3",
+        "modality": "unclear",
+        "basis": "inferred",
+        "evidence": [
+          "映日荷花别样红"
+        ],
+        "visualized": false,
+        "reason": "非确定关系仅保留解读"
+      },
+      {
+        "type": "outside",
+        "source": "i1",
+        "target": "i4",
+        "modality": "unclear",
+        "basis": "inferred",
+        "evidence": [
+          "接天莲叶无穷碧"
+        ],
+        "visualized": false,
+        "reason": "非确定关系仅保留解读"
+      }
+    ],
+    "scene": {
+      "kind": "landscape",
+      "notes": [
+        "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。",
+        "通用场景层先组织地面、水域、群落和主体，再比较三个布局的依托、相对位置、尺度与遮挡；检查通过不代表审美已通过。"
+      ],
+      "waterline": null,
+      "semanticSetting": {
+        "kind": "waterside",
+        "basis": "inferred",
+        "evidence": [
+          "接天莲叶无穷碧",
+          "映日荷花别样红"
+        ]
+      },
+      "semanticEffects": [
+        {
+          "path": "scene.supports[0]",
+          "consumer": "场景依托",
+          "status": "applied",
+          "effect": "必要环境以独立推断背景表示，不新增原文实体"
+        },
+        {
+          "path": "scene.supports[1]",
+          "consumer": "场景依托",
+          "status": "applied",
+          "effect": "必要环境以独立推断背景表示，不新增原文实体"
+        }
+      ],
+      "organization": {
+        "version": "1.0",
+        "strategy": "general-constraints",
+        "regions": {
+          "water": [
+            [
+              0,
+              0.45
+            ],
+            [
+              1,
+              0.45
+            ],
+            [
+              1,
+              1.04
+            ],
+            [
+              0,
+              1.04
+            ]
+          ]
+        },
+        "candidates": [
+          {
+            "layout": 2,
+            "orientation": "open",
+            "errors": 0,
+            "cost": 547.317,
+            "metrics": {
+              "overlapPenalty": 45.601,
+              "balancePenalty": 0.013,
+              "motifFootprint": 1.753,
+              "landArea": 0
+            }
+          },
+          {
+            "layout": 1,
+            "orientation": "open",
+            "errors": 0,
+            "cost": 547.334,
+            "metrics": {
+              "overlapPenalty": 45.602,
+              "balancePenalty": 0.014,
+              "motifFootprint": 1.753,
+              "landArea": 0
+            }
+          },
+          {
+            "layout": 0,
+            "orientation": "open",
+            "errors": 0,
+            "cost": 549.625,
+            "metrics": {
+              "overlapPenalty": 45.796,
+              "balancePenalty": 0.009,
+              "motifFootprint": 1.753,
+              "landArea": 0
+            }
+          }
+        ],
+        "repairs": [
+          {
+            "type": "support-added",
+            "reason": "模型解释的必要依托，依据：接天莲叶无穷碧"
+          }
+        ],
+        "limitations": [
+          "几何检查不判定诗意理解或审美合格",
+          "动作时序与整首诗的场景切换尚未编排"
+        ],
+        "layout": 2,
+        "orientation": "open",
+        "audit": {
+          "scope": "implemented-geometry-and-drawing-gaps",
+          "coverage": {
+            "scope": "extracted-entities-only",
+            "present": 4,
+            "mapped": 4,
+            "parameters": [],
+            "missing": []
+          },
+          "checks": [
+            "presence",
+            "count",
+            "finite",
+            "support",
+            "scale",
+            "relative-position",
+            "depth",
+            "grove-spread",
+            "drawing-gaps"
+          ],
+          "status": "checks-passed",
+          "errors": 0,
+          "review": 0,
+          "issues": [],
+          "metrics": {
+            "overlapPenalty": 45.601,
+            "balancePenalty": 0.013,
+            "motifFootprint": 1.753,
+            "landArea": 0
+          },
+          "cost": 547.317,
+          "aestheticAcceptance": "pending-user"
+        },
+        "graph": {
+          "nodes": [
+            {
+              "id": "l0",
+              "entities": [
+                "i3"
+              ],
+              "tool": "landscape",
+              "role": "sky",
+              "habitat": null,
+              "inferred": false,
+              "support": null
+            },
+            {
+              "id": "l1",
+              "entities": [
+                "i4"
+              ],
+              "tool": "landscape",
+              "role": "sky",
+              "habitat": null,
+              "inferred": false,
+              "support": null
+            },
+            {
+              "id": "l2",
+              "entities": [
+                "i1"
+              ],
+              "tool": "lotus",
+              "role": "aquatic-vegetation",
+              "habitat": "water",
+              "inferred": false,
+              "support": "l4"
+            },
+            {
+              "id": "l3",
+              "entities": [
+                "i2"
+              ],
+              "tool": "lotus",
+              "role": "aquatic-vegetation",
+              "habitat": "water",
+              "inferred": false,
+              "support": "l4"
+            },
+            {
+              "id": "l4",
+              "entities": [],
+              "tool": "water",
+              "role": "water",
+              "habitat": null,
+              "inferred": true,
+              "support": null
+            }
+          ],
+          "edges": [
+            {
+              "type": "supported-by",
+              "source": "l2",
+              "target": "l4",
+              "basis": "local-composition",
+              "habitat": "water"
+            },
+            {
+              "type": "supported-by",
+              "source": "l3",
+              "target": "l4",
+              "basis": "local-composition",
+              "habitat": "water"
+            },
+            {
+              "type": "on",
+              "source": "l3",
+              "target": "l0",
+              "basis": "inferred",
+              "modality": "unclear",
+              "evidence": [
+                "映日荷花别样红"
+              ]
+            },
+            {
+              "type": "outside",
+              "source": "l2",
+              "target": "l1",
+              "basis": "inferred",
+              "modality": "unclear",
+              "evidence": [
+                "接天莲叶无穷碧"
+              ]
+            }
+          ],
+          "setting": "landscape"
+        }
+      }
+    },
+    "omitted": [],
+    "notes": [
+      "莲叶的单体画笔只画选定的花或叶，环境依托另由场景组织层决定；默认花态是本地选择，尚无生长或开花过程。",
+      "荷花的单体画笔只画选定的花或叶，环境依托另由场景组织层决定；默认花态是本地选择，尚无生长或开花过程。",
+      "位置、大小、笔触与默认微动是本地试画选择；数量解释与本地显示数量分别记录。",
+      "未明说的群落数量、疏密、近中远层次与变体均为本地构图选择；种类可按已声明的写意画法概括，不把铺展词换算成精确物体数量。",
+      "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。",
+      "通用场景层先组织地面、水域、群落和主体，再比较三个布局的依托、相对位置、尺度与遮挡；检查通过不代表审美已通过。",
+      "整体场景、主次、远近、依托和支持的动作状态来自本次模型解释；具体布局、颜色和时钟倍率由本地视觉策略选择。",
+      "动作动画表现受支持的主导状态与有限观看运动；先后事件与完整因果尚未编排。",
+      "动态程度与默认轻风是可调整的观看选择；不改变数量、主次或原文动作判断。人物保持点景写意，不新增人物步态。"
+    ],
+    "relations": [],
+    "semanticConsumption": {
+      "version": "3.3",
+      "items": [
+        {
+          "path": "scene.setting",
+          "status": "applied",
+          "consumer": "本地视觉策略",
+          "effect": "整体环境进入场景提案选择",
+          "basis": "inferred",
+          "evidence": [
+            "接天莲叶无穷碧",
+            "映日荷花别样红"
+          ]
+        },
+        {
+          "path": "scene.groups[0].role",
+          "status": "applied",
+          "consumer": "主次布局",
+          "effect": "主体相对突出",
+          "basis": "inferred",
+          "evidence": [
+            "接天莲叶无穷碧"
+          ]
+        },
+        {
+          "path": "scene.groups[0].pattern",
+          "status": "applied",
+          "consumer": "群落布局",
+          "effect": "按 field 组织显示单元；不覆盖明确数量",
+          "basis": "inferred",
+          "evidence": [
+            "接天莲叶无穷碧"
+          ]
+        },
+        {
+          "path": "scene.groups[0].depth",
+          "status": "skipped",
+          "consumer": "远近布局",
+          "effect": "远近未明，保持本地默认",
+          "basis": "inferred",
+          "evidence": [
+            "接天莲叶无穷碧"
+          ]
+        },
+        {
+          "path": "scene.groups[1].role",
+          "status": "applied",
+          "consumer": "主次布局",
+          "effect": "主体相对突出",
+          "basis": "inferred",
+          "evidence": [
+            "映日荷花别样红"
+          ]
+        },
+        {
+          "path": "scene.groups[1].pattern",
+          "status": "applied",
+          "consumer": "群落布局",
+          "effect": "按 field 组织显示单元；不覆盖明确数量",
+          "basis": "inferred",
+          "evidence": [
+            "映日荷花别样红"
+          ]
+        },
+        {
+          "path": "scene.groups[1].depth",
+          "status": "skipped",
+          "consumer": "远近布局",
+          "effect": "远近未明，保持本地默认",
+          "basis": "inferred",
+          "evidence": [
+            "映日荷花别样红"
+          ]
+        },
+        {
+          "path": "scene.groups[2].role",
+          "status": "applied",
+          "consumer": "主次布局",
+          "effect": "保留环境群落层次；保留环境画布范围，主次不改变地形边界",
+          "basis": "inferred",
+          "evidence": [
+            "接天莲叶无穷碧",
+            "映日荷花别样红"
+          ]
+        },
+        {
+          "path": "scene.groups[2].pattern",
+          "status": "skipped",
+          "consumer": "群落布局",
+          "effect": "群落形式未明，保持本地默认",
+          "basis": "inferred",
+          "evidence": [
+            "接天莲叶无穷碧",
+            "映日荷花别样红"
+          ]
+        },
+        {
+          "path": "scene.groups[2].depth",
+          "status": "skipped",
+          "consumer": "远近布局",
+          "effect": "远近未明，保持本地默认",
+          "basis": "inferred",
+          "evidence": [
+            "接天莲叶无穷碧",
+            "映日荷花别样红"
+          ]
+        },
+        {
+          "path": "scene.supports[0]",
+          "status": "applied",
+          "consumer": "场景依托",
+          "effect": "必要环境以独立推断背景表示，不新增原文实体",
+          "basis": "inferred",
+          "evidence": [
+            "接天莲叶无穷碧"
+          ]
+        },
+        {
+          "path": "scene.supports[1]",
+          "status": "applied",
+          "consumer": "场景依托",
+          "effect": "必要环境以独立推断背景表示，不新增原文实体",
+          "basis": "inferred",
+          "evidence": [
+            "映日荷花别样红"
+          ]
+        },
+        {
+          "path": "scene.actions[0].state",
+          "status": "skipped",
+          "consumer": "动作边界",
+          "effect": "可能、假设或未明动作不执行",
+          "basis": "inferred",
+          "evidence": [
+            "接天莲叶无穷碧"
+          ]
+        },
+        {
+          "path": "scene.actions[0].pace",
+          "status": "skipped",
+          "consumer": "本地视觉策略",
+          "effect": "非确定动作不执行",
+          "basis": "inferred",
+          "evidence": [
+            "接天莲叶无穷碧"
+          ]
+        },
+        {
+          "path": "scene.actions[0].direction",
+          "status": "skipped",
+          "consumer": "本地视觉策略",
+          "effect": "非确定动作不执行",
+          "basis": "inferred",
+          "evidence": [
+            "接天莲叶无穷碧"
+          ]
+        },
+        {
+          "path": "scene.actions[1].state",
+          "status": "skipped",
+          "consumer": "动作边界",
+          "effect": "可能、假设或未明动作不执行",
+          "basis": "inferred",
+          "evidence": [
+            "映日荷花别样红"
+          ]
+        },
+        {
+          "path": "scene.actions[1].pace",
+          "status": "skipped",
+          "consumer": "本地视觉策略",
+          "effect": "非确定动作不执行",
+          "basis": "inferred",
+          "evidence": [
+            "映日荷花别样红"
+          ]
+        },
+        {
+          "path": "scene.actions[1].direction",
+          "status": "skipped",
+          "consumer": "本地视觉策略",
+          "effect": "非确定动作不执行",
+          "basis": "inferred",
+          "evidence": [
+            "映日荷花别样红"
+          ]
+        },
+        {
+          "path": "scene.atmosphere.visibility",
+          "status": "applied",
+          "consumer": "画布色层与远景",
+          "effect": "可见度 clear；迷蒙或昏暗时淡化非光源图层",
+          "basis": "inferred",
+          "evidence": [
+            "映日荷花别样红"
+          ]
+        },
+        {
+          "path": "scene.atmosphere.illumination",
+          "status": "applied",
+          "consumer": "有限配色",
+          "effect": "照明 day 映射为本地 tender 配色；用户仍可手动覆盖",
+          "basis": "inferred",
+          "evidence": [
+            "映日荷花别样红"
+          ]
+        },
+        {
+          "path": "atmosphere.energy",
+          "status": "skipped",
+          "consumer": "绘画时钟",
+          "effect": "没有明确动作节奏时，气息强弱控制已有微动的默认时钟"
+        },
+        {
+          "path": "atmosphere.openness",
+          "status": "applied",
+          "consumer": "群落分布与笔触密度",
+          "effect": "开阔度转换为本地间距与工具笔触密度，不等于原文数量"
+        },
+        {
+          "path": "atmosphere.valence",
+          "status": "applied",
+          "consumer": "有限配色",
+          "effect": "正向感受暂用 tender，其余用 clear；尚非完整情感色谱"
+        },
+        {
+          "path": "time.markers",
+          "status": "retained",
+          "consumer": "原始记录与解读",
+          "effect": "保留原文时间标记；本版照明由 scene.atmosphere 转换，多阶段时间逻辑未执行"
+        }
+      ],
+      "summary": {
+        "applied": 12,
+        "partial": 0,
+        "unsupported": 0,
+        "skipped": 11,
+        "retained": 1
+      },
+      "aestheticAcceptance": "pending-user"
+    }
+  },
+  "elapsed_seconds": 16.9
+}

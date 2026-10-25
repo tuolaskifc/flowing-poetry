@@ -1,0 +1,25 @@
+{
+  "version": "generation-recovery-1.0",
+  "status": "partial",
+  "reviewRequired": true,
+  "changes": [],
+  "omitted": [
+    {
+      "path": "spatial[0]",
+      "claim": {
+        "type": "on",
+        "source": "i3",
+        "target": null,
+        "modality": "unclear",
+        "basis": "inferred",
+        "evidence": [
+          "对此可以酣高楼"
+        ]
+      },
+      "errors": [
+        "spatial[0] 必须引用两个不同的已有实体"
+      ]
+    }
+  ],
+  "message": "已绘制核验通过的部分，个别联系或动作暂未采用。"
+}

@@ -57,8 +57,23 @@ test('missing optional expression components yield an explicitly partial view wh
  const a=structuredClone(flower.analysis);delete a.expression;const r=recoverInterpretation(a,a.poem,'expression');assert(r.validation.valid);assert.equal(r.recovery.status,'partial');assert.equal(r.recovery.omitted.length,2);assert.deepEqual(r.effectiveAnalysis.entities,a.entities);assert.deepEqual(r.effectiveAnalysis.expression,{relations:[],processes:[]});assert(!validateExpression(a,a.poem).valid);
  const b=structuredClone(a);delete b.entities;assert(!recoverInterpretation(b,b.poem,'expression').validation.valid);
 });
+test('missing scene extensions retain validated subjects as a partial still view without invented layout claims',()=>{
+ const a=withAction();delete a.scene;delete a.spatial;delete a.expression;const before=JSON.stringify(a),r=recoverInterpretation(a,a.poem,'expression');
+ assert(r.validation.valid,r.validation.errors.join(' '));assert.equal(r.recovery.status,'partial');assert.equal(JSON.stringify(a),before);assert.deepEqual(r.effectiveAnalysis.entities,a.entities);
+ assert.equal(r.effectiveAnalysis.scene.setting.kind,'unclear');assert.deepEqual(r.effectiveAnalysis.scene.groups,[]);assert.deepEqual(r.effectiveAnalysis.scene.actions,[]);
+ const p=constrainRecoveredPlan(buildExpressionPlan(r.effectiveAnalysis),r.recovery);assert(p.concretePlan.layers.every(l=>!l.animate&&l.timeScale===0));
+ const b=structuredClone(a);delete b.entities[0].quantity;assert(!recoverInterpretation(b,b.poem,'expression').validation.valid);
+ const c=withAction();c.scene='omitted';assert(!recoverInterpretation(c,c.poem,'expression').validation.valid);
+});
 test('a quarantined physical action cannot reappear through default movement',()=>{
  const a=withAction();a.scene.actions[1].evidence=['捏造依据'];const r=recoverInterpretation(a,a.poem,'expression');assert(r.validation.valid);assert.equal(r.recovery.status,'partial');const p=constrainRecoveredPlan(buildExpressionPlan(r.effectiveAnalysis),r.recovery),bird=p.concretePlan.layers.find(l=>l.tool==='bird');assert(!bird.animate);assert.equal(bird.timeScale,0);assert(!bird.motion);
+});
+test('an unknown optional action enum is withheld without discarding valid subjects or guessing a replacement',()=>{
+ const a=withAction();a.scene.actions[1].state='soar';const raw=JSON.stringify(a),r=recoverInterpretation(a,a.poem,'expression');
+ assert(r.validation.valid);assert.equal(r.recovery.status,'partial');assert.deepEqual(r.effectiveAnalysis.entities,a.entities);assert.equal(JSON.stringify(a),raw);
+ assert(r.recovery.omitted.some(o=>o.path==='scene.actions[1]'));assert(!r.effectiveAnalysis.scene.actions.some(v=>v.state==='soar'));
+ const p=constrainRecoveredPlan(buildExpressionPlan(r.effectiveAnalysis),r.recovery),bird=p.concretePlan.layers.find(l=>l.tool==='bird');assert.equal(bird.timeScale,0);assert(!bird.motion);
+ const b=withAction();b.scene.atmosphere.illumination='purple';assert(!recoverInterpretation(b,b.poem,'expression').validation.valid);
 });
 test('bad input, invented entities, changed exact quantities and executable extra fields stay hard failures',()=>{
  for(const mutate of [a=>a.poem='改写',a=>a.entities[0].mentions=['凭空添加'],a=>a.entities[0].quantity={...a.entities[0].quantity,mode:'exact',min:1,max:4},a=>delete a.reading,a=>a.expression.relations[0].code='fetch(secret)',a=>a.scene.atmosphere.illumination='purple']){const a=structuredClone(flower.analysis);mutate(a);assert(!recoverInterpretation(a,flower.poem,'expression').validation.valid);}

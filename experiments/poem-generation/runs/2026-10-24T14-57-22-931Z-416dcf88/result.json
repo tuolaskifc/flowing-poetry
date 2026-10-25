@@ -1,0 +1,257 @@
+{
+  "id": "2026-10-24T14-57-22-931Z-416dcf88",
+  "fingerprint": "6be76e1c9b42ad774b157cc70193daf8488774bed71dc403f98c3bfd52a3c482",
+  "poem": "两情若是久长时，又岂在朝朝暮暮。",
+  "source": null,
+  "mode": "expression",
+  "model": "DeepSeek-V4.1-Flash",
+  "started_at": "2026-10-24T14:57:22.932Z",
+  "cached": false,
+  "http_status": 200,
+  "usage": {
+    "completion_tokens": 534,
+    "prompt_tokens": 6064,
+    "total_tokens": 6598,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 6016
+    }
+  },
+  "finish_reason": "stop",
+  "analysis": {
+    "schema_version": "expression-1.0",
+    "poem": "两情若是久长时，又岂在朝朝暮暮。",
+    "reading": "若两人的情意能够长久，又何必在乎朝夕相守。以条件句肯定长久之情，反问淡化朝夕相伴的必要。",
+    "entities": [
+      {
+        "id": "i1",
+        "mentions": [
+          "两情"
+        ],
+        "concept": "两人之间的情意",
+        "kind": "abstract",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "两情若是久长时"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i2",
+        "mentions": [
+          "朝朝暮暮"
+        ],
+        "concept": "朝夕相守的时光",
+        "kind": "abstract",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "又岂在朝朝暮暮"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      }
+    ],
+    "relations": [],
+    "atmosphere": {
+      "labels": [
+        "理性",
+        "从容"
+      ],
+      "valence": "neutral",
+      "energy": "low",
+      "tension": "low",
+      "openness": "unclear",
+      "evidence": [
+        "两情若是久长时",
+        "又岂在朝朝暮暮"
+      ]
+    },
+    "time": {
+      "markers": [
+        {
+          "surface": "久长时",
+          "meaning": "情意持续长久的时间条件"
+        },
+        {
+          "surface": "朝朝暮暮",
+          "meaning": "日复一日的朝夕时段"
+        }
+      ],
+      "note": "以条件与反问表达对长久与朝夕的取舍，未指明具体时点。"
+    },
+    "uncertainties": [
+      "“两情”未明说具体人物身份。",
+      "“朝朝暮暮”可指朝夕相伴，也可泛指日日相处，具体所指不明。"
+    ],
+    "spatial": [],
+    "scene": {
+      "setting": {
+        "kind": "unclear",
+        "basis": "inferred",
+        "evidence": []
+      },
+      "groups": [],
+      "supports": [],
+      "actions": [],
+      "atmosphere": {
+        "visibility": "unclear",
+        "illumination": "unclear",
+        "basis": "inferred",
+        "evidence": []
+      }
+    },
+    "expression": {
+      "relations": [
+        {
+          "source": "i1",
+          "target": "i2",
+          "kind": "contrast",
+          "modality": "asserted",
+          "basis": "inferred",
+          "evidence": [
+            "两情若是久长时",
+            "又岂在朝朝暮暮"
+          ]
+        }
+      ],
+      "processes": [
+        {
+          "subject": "i1",
+          "kind": "persist",
+          "temporal": "unspecified",
+          "modality": "conditional",
+          "basis": "explicit",
+          "evidence": [
+            "两情若是久长时"
+          ]
+        }
+      ]
+    }
+  },
+  "validation": {
+    "valid": true,
+    "errors": [],
+    "warnings": [
+      "模型保留了不确定性，需要审阅",
+      "scene.setting 为语义推断，绘画选择需与原文明示区分",
+      "i1 未进入整体分组，后续使用本地默认布局",
+      "i2 未进入整体分组，后续使用本地默认布局",
+      "scene.atmosphere 为语义推断，绘画选择需与原文明示区分",
+      "expression.relations[0] 为语义推断"
+    ],
+    "review_required": true
+  },
+  "plan": {
+    "version": "shared-expression-1.1-source-bound",
+    "seed": 1809001109,
+    "poem": "两情若是久长时，又岂在朝朝暮暮。",
+    "nodes": [
+      {
+        "id": "i1",
+        "label": "两情",
+        "meaning": "两人之间的情意",
+        "kind": "abstract",
+        "contextOnly": false,
+        "mode": "present"
+      },
+      {
+        "id": "i2",
+        "label": "朝朝暮暮",
+        "meaning": "朝夕相守的时光",
+        "kind": "abstract",
+        "contextOnly": false,
+        "mode": "present"
+      }
+    ],
+    "relations": [
+      {
+        "source": "i1",
+        "target": "i2",
+        "kind": "contrast",
+        "modality": "asserted",
+        "basis": "inferred",
+        "evidence": [
+          "两情若是久长时",
+          "又岂在朝朝暮暮"
+        ]
+      }
+    ],
+    "processes": [
+      {
+        "subject": "i1",
+        "kind": "persist",
+        "temporal": "unspecified",
+        "modality": "conditional",
+        "basis": "explicit",
+        "evidence": [
+          "两情若是久长时"
+        ]
+      }
+    ],
+    "omitted": [],
+    "atmosphere": {
+      "labels": [
+        "理性",
+        "从容"
+      ],
+      "valence": "neutral",
+      "energy": "low",
+      "tension": "low",
+      "openness": "unclear",
+      "evidence": [
+        "两情若是久长时",
+        "又岂在朝朝暮暮"
+      ],
+      "illumination": "unclear"
+    },
+    "concretePlan": null,
+    "renderability": {
+      "status": "ready",
+      "visibleScenery": false,
+      "visibleAbstract": true,
+      "gaps": []
+    },
+    "expression": {
+      "version": "shared-expression-1.1-source-bound",
+      "sourceContract": "expression-1.0",
+      "recommendation": "abstract",
+      "reason": "没有可直接落成实景的主体，以抽象关系组织画面",
+      "gaps": [],
+      "limitations": [
+        "景物过程当前影响抽象纹理；原生景物动作沿用场景能力，未支持的月下楼位移等仍不执行。",
+        "纹理、色层和观看扰动属于本地艺术选择，不改变语义成立状态"
+      ]
+    },
+    "notes": [
+      "三个表达倾向共享景物数量、空间、依托与主体身份；抽象笔触优先服从原景物区域和轮廓。",
+      "纯抽象或比喻句不因切换风景优先而补山水。"
+    ],
+    "aestheticAcceptance": "pending-user"
+  },
+  "delivery": {
+    "status": "complete",
+    "retryable": false,
+    "reason": null,
+    "message": "解读已通过检查。"
+  },
+  "elapsed_seconds": 4.1
+}

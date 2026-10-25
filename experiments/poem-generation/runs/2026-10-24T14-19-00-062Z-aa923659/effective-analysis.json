@@ -1,0 +1,219 @@
+{
+  "schema_version": "expression-1.0",
+  "poem": "长风万里送秋雁，对此可以酣高楼",
+  "reading": "长风自万里之外吹来，送别秋日南飞的雁群；面对这样的景象，正可在高楼上畅饮。",
+  "entities": [
+    {
+      "id": "i1",
+      "mentions": [
+        "长风"
+      ],
+      "concept": "长风",
+      "kind": "environment",
+      "role": "scene",
+      "presence": "present",
+      "evidence": [
+        "长风万里送秋雁"
+      ],
+      "quantity": {
+        "mode": "unspecified",
+        "min": null,
+        "max": null,
+        "unit": null,
+        "scope": "unspecified",
+        "extent": "spread",
+        "evidence": [
+          "长风万里"
+        ]
+      }
+    },
+    {
+      "id": "i2",
+      "mentions": [
+        "秋雁"
+      ],
+      "concept": "秋雁",
+      "kind": "organism",
+      "role": "scene",
+      "presence": "present",
+      "evidence": [
+        "长风万里送秋雁"
+      ],
+      "quantity": {
+        "mode": "many",
+        "min": null,
+        "max": null,
+        "unit": null,
+        "scope": "group",
+        "extent": "spread",
+        "evidence": [
+          "秋雁"
+        ]
+      }
+    },
+    {
+      "id": "i3",
+      "mentions": [
+        "高楼"
+      ],
+      "concept": "高楼",
+      "kind": "place",
+      "role": "scene",
+      "presence": "present",
+      "evidence": [
+        "对此可以酣高楼"
+      ],
+      "quantity": {
+        "mode": "unspecified",
+        "min": null,
+        "max": null,
+        "unit": null,
+        "scope": "unspecified",
+        "extent": "unspecified",
+        "evidence": [
+          "高楼"
+        ]
+      }
+    }
+  ],
+  "relations": [],
+  "atmosphere": {
+    "labels": [
+      "开阔",
+      "豪迈"
+    ],
+    "valence": "positive",
+    "energy": "high",
+    "tension": "low",
+    "openness": "high",
+    "evidence": [
+      "长风万里送秋雁",
+      "对此可以酣高楼"
+    ]
+  },
+  "time": {
+    "markers": [],
+    "note": null
+  },
+  "uncertainties": [
+    "“对此”所指的具体景象未明，可能指长风送雁，也可能兼指高楼所见。",
+    "“可以”表可能或适宜，酣饮是否实际发生未明。"
+  ],
+  "spatial": [],
+  "scene": {
+    "setting": {
+      "kind": "open_land",
+      "basis": "inferred",
+      "evidence": [
+        "长风万里送秋雁"
+      ]
+    },
+    "groups": [
+      {
+        "members": [
+          "i1"
+        ],
+        "role": "environment",
+        "pattern": "field",
+        "depth": "far",
+        "basis": "inferred",
+        "evidence": [
+          "长风万里送秋雁"
+        ]
+      },
+      {
+        "members": [
+          "i2"
+        ],
+        "role": "subject",
+        "pattern": "flock",
+        "depth": "middle",
+        "basis": "inferred",
+        "evidence": [
+          "长风万里送秋雁"
+        ]
+      },
+      {
+        "members": [
+          "i3"
+        ],
+        "role": "environment",
+        "pattern": "single",
+        "depth": "near",
+        "basis": "inferred",
+        "evidence": [
+          "对此可以酣高楼"
+        ]
+      }
+    ],
+    "supports": [],
+    "actions": [
+      {
+        "entity": "i1",
+        "state": "flow",
+        "pace": "fast",
+        "direction": "across",
+        "modality": "asserted",
+        "basis": "explicit",
+        "evidence": [
+          "长风万里送秋雁"
+        ]
+      },
+      {
+        "entity": "i2",
+        "state": "fly",
+        "pace": "normal",
+        "direction": "recede",
+        "modality": "asserted",
+        "basis": "inferred",
+        "evidence": [
+          "长风万里送秋雁"
+        ]
+      }
+    ],
+    "atmosphere": {
+      "visibility": "clear",
+      "illumination": "day",
+      "basis": "inferred",
+      "evidence": [
+        "长风万里送秋雁"
+      ]
+    }
+  },
+  "expression": {
+    "relations": [
+      {
+        "source": "i1",
+        "target": "i2",
+        "kind": "connect",
+        "modality": "asserted",
+        "basis": "explicit",
+        "evidence": [
+          "长风万里送秋雁"
+        ]
+      }
+    ],
+    "processes": [
+      {
+        "subject": "i1",
+        "kind": "persist",
+        "temporal": "ongoing",
+        "modality": "asserted",
+        "basis": "explicit",
+        "evidence": [
+          "长风万里送秋雁"
+        ]
+      },
+      {
+        "subject": "i2",
+        "kind": "unclear",
+        "temporal": "ongoing",
+        "modality": "asserted",
+        "basis": "inferred",
+        "evidence": [
+          "长风万里送秋雁"
+        ]
+      }
+    ]
+  }
+}

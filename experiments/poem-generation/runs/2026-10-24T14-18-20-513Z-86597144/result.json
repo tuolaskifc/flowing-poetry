@@ -1,0 +1,6403 @@
+{
+  "id": "2026-10-24T14-18-20-513Z-86597144",
+  "fingerprint": "cbbb485a06755ecbb9fe3c571b02eadb6d5480788f1b8f58594a9e3ca930b067",
+  "poem": "池上碧苔三四点，叶底黄鹂一两声。",
+  "source": {
+    "provider": "全量下限检查：无当前可重放回答的输入单次补测"
+  },
+  "mode": "expression",
+  "model": "DeepSeek-V4.1-Flash",
+  "started_at": "2026-10-24T14:18:20.515Z",
+  "cached": false,
+  "http_status": 200,
+  "usage": {
+    "completion_tokens": 1026,
+    "prompt_tokens": 5879,
+    "total_tokens": 6905,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 5760
+    }
+  },
+  "finish_reason": "stop",
+  "analysis": {
+    "schema_version": "expression-1.0",
+    "poem": "池上碧苔三四点，叶底黄鹂一两声。",
+    "reading": "池面浮着几点碧苔，叶下传来一两声黄鹂鸣叫，写初夏小池边幽静而略有生机的景象。",
+    "entities": [
+      {
+        "id": "i1",
+        "mentions": [
+          "池"
+        ],
+        "concept": "池塘水面",
+        "kind": "place",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "池上碧苔三四点"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i2",
+        "mentions": [
+          "碧苔"
+        ],
+        "concept": "青绿色苔藓",
+        "kind": "organism",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "池上碧苔三四点"
+        ],
+        "quantity": {
+          "mode": "few",
+          "min": null,
+          "max": null,
+          "unit": "点",
+          "scope": "part",
+          "extent": "local",
+          "evidence": [
+            "碧苔三四点"
+          ]
+        }
+      },
+      {
+        "id": "i3",
+        "mentions": [
+          "叶"
+        ],
+        "concept": "树叶",
+        "kind": "organism",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "叶底黄鹂一两声"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i4",
+        "mentions": [
+          "黄鹂"
+        ],
+        "concept": "黄鹂鸟",
+        "kind": "organism",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "叶底黄鹂一两声"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      }
+    ],
+    "relations": [],
+    "atmosphere": {
+      "labels": [
+        "幽静",
+        "清丽"
+      ],
+      "valence": "positive",
+      "energy": "low",
+      "tension": "low",
+      "openness": "medium",
+      "evidence": [
+        "池上碧苔三四点",
+        "叶底黄鹂一两声"
+      ]
+    },
+    "time": {
+      "markers": [],
+      "note": null
+    },
+    "uncertainties": [
+      "“一两声”是鸣声次数，不能据此确定黄鹂只数。",
+      "“三四点”是苔的局部点数，不能确定苔藓整体数量。"
+    ],
+    "spatial": [
+      {
+        "type": "on",
+        "source": "i2",
+        "target": "i1",
+        "modality": "asserted",
+        "basis": "explicit",
+        "evidence": [
+          "池上碧苔三四点"
+        ]
+      },
+      {
+        "type": "behind",
+        "source": "i4",
+        "target": "i3",
+        "modality": "asserted",
+        "basis": "explicit",
+        "evidence": [
+          "叶底黄鹂一两声"
+        ]
+      }
+    ],
+    "scene": {
+      "setting": {
+        "kind": "waterside",
+        "basis": "explicit",
+        "evidence": [
+          "池上碧苔三四点"
+        ]
+      },
+      "groups": [
+        {
+          "members": [
+            "i1"
+          ],
+          "role": "environment",
+          "pattern": "single",
+          "depth": "unspecified",
+          "basis": "inferred",
+          "evidence": [
+            "池上碧苔三四点"
+          ]
+        },
+        {
+          "members": [
+            "i2"
+          ],
+          "role": "accent",
+          "pattern": "scattered",
+          "depth": "near",
+          "basis": "inferred",
+          "evidence": [
+            "池上碧苔三四点"
+          ]
+        },
+        {
+          "members": [
+            "i3"
+          ],
+          "role": "environment",
+          "pattern": "grove",
+          "depth": "middle",
+          "basis": "inferred",
+          "evidence": [
+            "叶底黄鹂一两声"
+          ]
+        },
+        {
+          "members": [
+            "i4"
+          ],
+          "role": "subject",
+          "pattern": "single",
+          "depth": "middle",
+          "basis": "inferred",
+          "evidence": [
+            "叶底黄鹂一两声"
+          ]
+        }
+      ],
+      "supports": [
+        {
+          "entity": "i2",
+          "surface": "water",
+          "target": "i1",
+          "basis": "explicit",
+          "evidence": [
+            "池上碧苔三四点"
+          ]
+        },
+        {
+          "entity": "i4",
+          "surface": "vegetation",
+          "target": "i3",
+          "basis": "explicit",
+          "evidence": [
+            "叶底黄鹂一两声"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "entity": "i4",
+          "state": "unclear",
+          "pace": "unspecified",
+          "direction": "unspecified",
+          "modality": "asserted",
+          "basis": "inferred",
+          "evidence": [
+            "叶底黄鹂一两声"
+          ]
+        }
+      ],
+      "atmosphere": {
+        "visibility": "clear",
+        "illumination": "day",
+        "basis": "inferred",
+        "evidence": [
+          "池上碧苔三四点",
+          "叶底黄鹂一两声"
+        ]
+      }
+    },
+    "expression": {
+      "relations": [
+        {
+          "source": "i2",
+          "target": "i1",
+          "kind": "connect",
+          "modality": "asserted",
+          "basis": "explicit",
+          "evidence": [
+            "池上碧苔三四点"
+          ]
+        },
+        {
+          "source": "i4",
+          "target": "i3",
+          "kind": "connect",
+          "modality": "asserted",
+          "basis": "explicit",
+          "evidence": [
+            "叶底黄鹂一两声"
+          ]
+        }
+      ],
+      "processes": [
+        {
+          "subject": "i4",
+          "kind": "unclear",
+          "temporal": "unspecified",
+          "modality": "asserted",
+          "basis": "inferred",
+          "evidence": [
+            "叶底黄鹂一两声"
+          ]
+        }
+      ]
+    }
+  },
+  "validation": {
+    "valid": true,
+    "errors": [],
+    "warnings": [
+      "模型保留了不确定性，需要审阅",
+      "scene.groups[0] 为语义推断，绘画选择需与原文明示区分",
+      "scene.groups[1] 为语义推断，绘画选择需与原文明示区分",
+      "scene.groups[2] 为语义推断，绘画选择需与原文明示区分",
+      "scene.groups[3] 为语义推断，绘画选择需与原文明示区分",
+      "scene.actions[0] 为语义推断，绘画选择需与原文明示区分",
+      "scene.atmosphere 为语义推断，绘画选择需与原文明示区分",
+      "expression.processes[0] 为语义推断"
+    ],
+    "review_required": true
+  },
+  "plan": {
+    "version": "shared-expression-1.1-source-bound",
+    "seed": 3059384622,
+    "poem": "池上碧苔三四点，叶底黄鹂一两声。",
+    "nodes": [
+      {
+        "id": "i1",
+        "label": "池",
+        "meaning": "池塘水面",
+        "kind": "concrete",
+        "contextOnly": false,
+        "mode": "present"
+      },
+      {
+        "id": "i2",
+        "label": "碧苔",
+        "meaning": "青绿色苔藓",
+        "kind": "concrete",
+        "contextOnly": false,
+        "mode": "present"
+      },
+      {
+        "id": "i3",
+        "label": "叶",
+        "meaning": "树叶",
+        "kind": "concrete",
+        "contextOnly": false,
+        "mode": "present"
+      },
+      {
+        "id": "i4",
+        "label": "黄鹂",
+        "meaning": "黄鹂鸟",
+        "kind": "concrete",
+        "contextOnly": false,
+        "mode": "present"
+      }
+    ],
+    "relations": [
+      {
+        "source": "i2",
+        "target": "i1",
+        "kind": "connect",
+        "modality": "asserted",
+        "basis": "explicit",
+        "evidence": [
+          "池上碧苔三四点"
+        ]
+      },
+      {
+        "source": "i4",
+        "target": "i3",
+        "kind": "connect",
+        "modality": "asserted",
+        "basis": "explicit",
+        "evidence": [
+          "叶底黄鹂一两声"
+        ]
+      }
+    ],
+    "processes": [
+      {
+        "subject": "i4",
+        "kind": "unclear",
+        "temporal": "unspecified",
+        "modality": "asserted",
+        "basis": "inferred",
+        "evidence": [
+          "叶底黄鹂一两声"
+        ]
+      }
+    ],
+    "omitted": [],
+    "atmosphere": {
+      "labels": [
+        "幽静",
+        "清丽"
+      ],
+      "valence": "positive",
+      "energy": "low",
+      "tension": "low",
+      "openness": "medium",
+      "evidence": [
+        "池上碧苔三四点",
+        "叶底黄鹂一两声"
+      ],
+      "illumination": "day"
+    },
+    "concretePlan": {
+      "version": "semantic-composition-3.3-source-bound",
+      "seed": 3059384622,
+      "settings": {
+        "wind": 0.3,
+        "density": 0.45,
+        "palette": "mineral",
+        "motion": 1.4
+      },
+      "layers": [
+        {
+          "tool": "landscape",
+          "entities": [
+            "i2"
+          ],
+          "projectedEntities": [],
+          "names": [
+            "碧苔"
+          ],
+          "options": {
+            "form": "moss"
+          },
+          "animate": false,
+          "placement": {
+            "anchor": [
+              320,
+              194
+            ],
+            "at": [
+              0.5,
+              0.57
+            ],
+            "scale": 1.5
+          },
+          "semanticGroup": {
+            "members": [
+              "i2"
+            ],
+            "role": "accent",
+            "pattern": "scattered",
+            "depth": "near",
+            "basis": "inferred",
+            "evidence": [
+              "池上碧苔三四点"
+            ],
+            "index": 1
+          },
+          "semanticEffects": [
+            {
+              "path": "scene.groups[1].role",
+              "consumer": "主次布局",
+              "effect": "点景缩小淡化",
+              "status": "applied"
+            },
+            {
+              "path": "scene.groups[1].pattern",
+              "consumer": "群落布局",
+              "effect": "按 scattered 组织显示单元；不覆盖明确数量",
+              "status": "applied"
+            },
+            {
+              "path": "scene.groups[1].depth",
+              "consumer": "远近布局",
+              "effect": "将 near 转为相对大小、透明度与允许区域内的落点",
+              "status": "applied"
+            }
+          ],
+          "semanticEnergy": false,
+          "timeScale": 0.45,
+          "instances": [
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  194
+                ],
+                "at": [
+                  0.5,
+                  0.57
+                ],
+                "scale": 1.3740800000000002
+              },
+              "depth": 0.3,
+              "opacity": 0.78,
+              "variant": 2,
+              "tone": "near",
+              "id": "i2:landscape:moss:0:0"
+            }
+          ],
+          "singleUnit": false,
+          "quantity": {
+            "items": [
+              {
+                "entity": "i2",
+                "mode": "few",
+                "min": null,
+                "max": null,
+                "unit": "点",
+                "scope": "part",
+                "extent": "local",
+                "evidence": [
+                  "碧苔三四点"
+                ],
+                "basis": "model"
+              }
+            ],
+            "rendered": 1,
+            "exact": false,
+            "collective": false,
+            "partUnsupported": true
+          },
+          "quantityLabel": "局部数量尚未实现",
+          "z": 5,
+          "visual": {
+            "role": "vegetation",
+            "brushStrength": 1.2
+          },
+          "performance": {
+            "rhythm": "steady",
+            "rate": 1,
+            "amplitude": 1,
+            "phase": 0
+          },
+          "id": "i2:landscape:moss:0",
+          "interaction": {
+            "mode": "instance",
+            "groupId": "i2:landscape:moss:0"
+          }
+        },
+        {
+          "tool": "tree",
+          "entities": [
+            "i3"
+          ],
+          "projectedEntities": [],
+          "names": [
+            "叶"
+          ],
+          "options": {
+            "form": "broadleaf",
+            "crown": "lines"
+          },
+          "animate": true,
+          "placement": {
+            "anchor": [
+              320,
+              388
+            ],
+            "at": [
+              0.5616285269294098,
+              0.7800027728482697
+            ],
+            "scale": 1.15
+          },
+          "semanticGroup": {
+            "members": [
+              "i3"
+            ],
+            "role": "environment",
+            "pattern": "grove",
+            "depth": "middle",
+            "basis": "inferred",
+            "evidence": [
+              "叶底黄鹂一两声"
+            ],
+            "index": 2
+          },
+          "semanticEffects": [
+            {
+              "path": "scene.groups[2].role",
+              "consumer": "主次布局",
+              "effect": "保留环境群落层次",
+              "status": "applied"
+            },
+            {
+              "path": "scene.groups[2].pattern",
+              "consumer": "群落布局",
+              "effect": "按 grove 组织显示单元；不覆盖明确数量",
+              "status": "applied"
+            },
+            {
+              "path": "scene.groups[2].depth",
+              "consumer": "远近布局",
+              "effect": "将 middle 转为相对大小、透明度与允许区域内的落点",
+              "status": "applied"
+            }
+          ],
+          "semanticEnergy": true,
+          "timeScale": 0.45,
+          "instances": [
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  388
+                ],
+                "at": [
+                  0.880629263017972,
+                  0.671304347826087
+                ],
+                "scale": 0.55571203567125
+              },
+              "depth": 10,
+              "opacity": 0.62412571011,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i3:tree:broadleaf:1:0"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  388
+                ],
+                "at": [
+                  0.4219457665606504,
+                  0.6373214285714286
+                ],
+                "scale": 0.4766450713425
+              },
+              "depth": 10.01,
+              "opacity": 0.55995542022,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i3:tree:broadleaf:1:1"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  388
+                ],
+                "at": [
+                  0.035,
+                  0.6555357142857142
+                ],
+                "scale": 0.39757810701375
+              },
+              "depth": 10.02,
+              "opacity": 0.49578513032999993,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i3:tree:broadleaf:1:2"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  388
+                ],
+                "at": [
+                  0.7557721201608291,
+                  0.788695652173913
+                ],
+                "scale": 0.5255111426850001
+              },
+              "depth": 10.03,
+              "opacity": 0.59961484044,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i3:tree:broadleaf:1:3"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  388
+                ],
+                "at": [
+                  0.2726191290175259,
+                  0.6919642857142857
+                ],
+                "scale": 0.44644417835625005
+              },
+              "depth": 10.04,
+              "opacity": 0.53544455055,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i3:tree:broadleaf:1:4"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  388
+                ],
+                "at": [
+                  0.9051769165031506,
+                  0.7101785714285714
+                ],
+                "scale": 0.5743772140275
+              },
+              "depth": 10.05,
+              "opacity": 0.6392742606599999,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i3:tree:broadleaf:1:5"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  388
+                ],
+                "at": [
+                  0.4124149773036862,
+                  0.6478260869565218
+                ],
+                "scale": 0.49531024969875015
+              },
+              "depth": 10.06,
+              "opacity": 0.5751039707700001,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i3:tree:broadleaf:1:6"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  388
+                ],
+                "at": [
+                  0.12329249147440086,
+                  0.7466071428571428
+                ],
+                "scale": 0.41624328537000005
+              },
+              "depth": 10.07,
+              "opacity": 0.51093368088,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i3:tree:broadleaf:1:7"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  388
+                ],
+                "at": [
+                  0.7558502789600257,
+                  0.9520714285714287
+                ],
+                "scale": 0.7601763210412501
+              },
+              "depth": 10.08,
+              "opacity": 0.8036070518909999,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i3:tree:broadleaf:1:8"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  388
+                ],
+                "at": [
+                  0.6309149773036862,
+                  0.9765217391304348
+                ],
+                "scale": 0.6811093567125002
+              },
+              "depth": 10.09,
+              "opacity": 0.74585379099,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i3:tree:broadleaf:1:9"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  388
+                ],
+                "at": [
+                  0.965,
+                  0.9855
+                ],
+                "scale": 0.8090423923837502
+              },
+              "depth": 10.1,
+              "opacity": 0.839300530089,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i3:tree:broadleaf:1:10"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  388
+                ],
+                "at": [
+                  0.6933435487322576,
+                  0.8356521739130436
+                ],
+                "scale": 0.7299754280550002
+              },
+              "depth": 10.11,
+              "opacity": 0.7815472691879999,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i3:tree:broadleaf:1:11"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  388
+                ],
+                "at": [
+                  0.16270069158940048,
+                  0.7652173913043478
+                ],
+                "scale": 0.6509084637262501
+              },
+              "depth": 10.12,
+              "opacity": 0.723794008287,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i3:tree:broadleaf:1:12"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  388
+                ],
+                "at": [
+                  0.8481392163881528,
+                  0.8556428571428571
+                ],
+                "scale": 0.7788414993975005
+              },
+              "depth": 10.13,
+              "opacity": 0.8172407473860003,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i3:tree:broadleaf:1:13"
+            }
+          ],
+          "singleUnit": true,
+          "quantity": {
+            "items": [
+              {
+                "entity": "i3",
+                "mode": "unspecified",
+                "min": null,
+                "max": null,
+                "unit": null,
+                "scope": "unspecified",
+                "extent": "unspecified",
+                "evidence": [],
+                "basis": "model"
+              }
+            ],
+            "rendered": 14,
+            "exact": false,
+            "collective": true,
+            "partUnsupported": false
+          },
+          "quantityLabel": "成片分布；本地试画 14 个单元",
+          "z": 8,
+          "visual": {
+            "role": "vegetation",
+            "brushStrength": 1.2
+          },
+          "performance": {
+            "rhythm": "gust",
+            "rate": 0.62,
+            "amplitude": 0.65,
+            "phase": 3.8830085198369844
+          },
+          "id": "i3:tree:broadleaf:1",
+          "interaction": {
+            "mode": "instance",
+            "groupId": "i3:tree:broadleaf:1"
+          }
+        },
+        {
+          "tool": "water",
+          "entities": [
+            "i1"
+          ],
+          "projectedEntities": [],
+          "names": [
+            "池"
+          ],
+          "options": {
+            "form": "plane"
+          },
+          "animate": true,
+          "placement": {
+            "anchor": [
+              320,
+              130
+            ],
+            "at": [
+              0.5,
+              0.45
+            ],
+            "scale": 1.5
+          },
+          "semanticGroup": {
+            "members": [
+              "i1"
+            ],
+            "role": "environment",
+            "pattern": "single",
+            "depth": "unspecified",
+            "basis": "inferred",
+            "evidence": [
+              "池上碧苔三四点"
+            ],
+            "index": 0
+          },
+          "semanticEffects": [
+            {
+              "path": "scene.groups[0].role",
+              "consumer": "主次布局",
+              "effect": "保留环境画布范围，主次不改变地形边界",
+              "status": "applied"
+            },
+            {
+              "path": "scene.groups[0].pattern",
+              "consumer": "群落布局",
+              "effect": "按 single 组织显示单元；不覆盖明确数量",
+              "status": "applied"
+            },
+            {
+              "path": "scene.groups[0].depth",
+              "consumer": "远近布局",
+              "effect": "远近未明，保持本地默认",
+              "status": "skipped"
+            }
+          ],
+          "semanticEnergy": true,
+          "timeScale": 0.45,
+          "instances": [
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  135
+                ],
+                "at": [
+                  0.5,
+                  0.45
+                ],
+                "scale": 1.65
+              },
+              "depth": 0.05,
+              "opacity": 1,
+              "variant": 0,
+              "tone": "far",
+              "id": "i1:water:plane:2:0"
+            }
+          ],
+          "singleUnit": false,
+          "quantity": {
+            "items": [
+              {
+                "entity": "i1",
+                "mode": "unspecified",
+                "min": null,
+                "max": null,
+                "unit": null,
+                "scope": "unspecified",
+                "extent": "unspecified",
+                "evidence": [],
+                "basis": "model"
+              }
+            ],
+            "rendered": 1,
+            "exact": false,
+            "collective": false,
+            "partUnsupported": false
+          },
+          "quantityLabel": "整体笔触图层；内部数量尚未适配",
+          "z": -10,
+          "surface": {
+            "top": 0.48,
+            "bottom": 1
+          },
+          "clip": [
+            [
+              0.63,
+              0.48
+            ],
+            [
+              0.43000000000000005,
+              0.65
+            ],
+            [
+              0.12,
+              0.82
+            ],
+            [
+              -0.10000000000000003,
+              1.04
+            ],
+            [
+              0.5800000000000001,
+              1.04
+            ],
+            [
+              0.68,
+              0.82
+            ],
+            [
+              0.85,
+              0.65
+            ],
+            [
+              0.89,
+              0.48
+            ]
+          ],
+          "visual": {
+            "role": "water",
+            "brushStrength": 1.35
+          },
+          "performance": {
+            "rhythm": "continuous",
+            "rate": 0.9,
+            "amplitude": 0.9,
+            "phase": 1.4828317324943823
+          },
+          "id": "i1:water:plane:2",
+          "interaction": {
+            "mode": "group",
+            "groupId": "i1:water:plane:2"
+          }
+        },
+        {
+          "tool": "bird",
+          "entities": [
+            "i4"
+          ],
+          "projectedEntities": [],
+          "names": [
+            "黄鹂"
+          ],
+          "options": {
+            "pose": "flying",
+            "tone": "ink",
+            "facing": "right"
+          },
+          "animate": false,
+          "placement": {
+            "anchor": [
+              320,
+              190
+            ],
+            "at": [
+              0.4458060800961176,
+              0.4156009004594132
+            ],
+            "scale": 0.78
+          },
+          "drawingLabel": "鸟意（写意借形）",
+          "semanticGroup": {
+            "members": [
+              "i4"
+            ],
+            "role": "subject",
+            "pattern": "single",
+            "depth": "middle",
+            "basis": "inferred",
+            "evidence": [
+              "叶底黄鹂一两声"
+            ],
+            "index": 3
+          },
+          "semanticEffects": [
+            {
+              "path": "scene.actions[0].state",
+              "consumer": "动作边界",
+              "effect": "动作未明，保留静态形态",
+              "status": "skipped"
+            },
+            {
+              "path": "scene.groups[3].role",
+              "consumer": "主次布局",
+              "effect": "主体相对突出",
+              "status": "applied"
+            },
+            {
+              "path": "scene.groups[3].pattern",
+              "consumer": "群落布局",
+              "effect": "按 single 组织显示单元；不覆盖明确数量",
+              "status": "applied"
+            },
+            {
+              "path": "scene.groups[3].depth",
+              "consumer": "远近布局",
+              "effect": "将 middle 转为相对大小、透明度与允许区域内的落点",
+              "status": "applied"
+            }
+          ],
+          "semanticEnergy": false,
+          "timeScale": 0,
+          "semanticAction": {
+            "entity": "i4",
+            "state": "unclear",
+            "pace": "unspecified",
+            "direction": "unspecified",
+            "modality": "asserted",
+            "basis": "inferred",
+            "evidence": [
+              "叶底黄鹂一两声"
+            ]
+          },
+          "instances": [
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  190
+                ],
+                "at": [
+                  0.33412852692940975,
+                  0.43
+                ],
+                "scale": 0.5
+              },
+              "depth": 0.0125,
+              "opacity": 0.72,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i4:bird::3:0"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  190
+                ],
+                "at": [
+                  0.4312671712062375,
+                  0.4088006539706586
+                ],
+                "scale": 0.5
+              },
+              "depth": 0.037500000000000006,
+              "opacity": 0.72,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i4:bird::3:1"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  190
+                ],
+                "at": [
+                  0.48657595548414234,
+                  0.45238125620673353
+                ],
+                "scale": 0.5
+              },
+              "depth": 0.0625,
+              "opacity": 0.7454999999999999,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i4:bird::3:2"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  190
+                ],
+                "at": [
+                  0.5312526667646809,
+                  0.3712216916602608
+                ],
+                "scale": 0.5
+              },
+              "depth": 0.08750000000000001,
+              "opacity": 0.8084999999999999,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i4:bird::3:3"
+            }
+          ],
+          "singleUnit": true,
+          "quantity": {
+            "items": [
+              {
+                "entity": "i4",
+                "mode": "unspecified",
+                "min": null,
+                "max": null,
+                "unit": null,
+                "scope": "unspecified",
+                "extent": "unspecified",
+                "evidence": [],
+                "basis": "model"
+              }
+            ],
+            "rendered": 4,
+            "exact": false,
+            "collective": false,
+            "partUnsupported": false
+          },
+          "quantityLabel": "数量未精确；本地试画 4 个单元",
+          "z": 6,
+          "semanticSupport": {
+            "surface": "vegetation",
+            "target": "i3",
+            "path": "scene.supports[1]"
+          },
+          "visual": {
+            "role": "figure",
+            "brushStrength": 1.1
+          },
+          "performance": {
+            "rhythm": "passing",
+            "rate": 1.05,
+            "amplitude": 1.1,
+            "phase": 5.365840252331367
+          },
+          "id": "i4:bird::3",
+          "interaction": {
+            "mode": "instance",
+            "groupId": "i4:bird::3"
+          }
+        },
+        {
+          "tool": "landscape",
+          "entities": [],
+          "projectedEntities": [],
+          "names": [
+            "构图依托·地面"
+          ],
+          "options": {
+            "form": "ground",
+            "edge": "soft"
+          },
+          "animate": false,
+          "placement": {
+            "anchor": [
+              320,
+              194
+            ],
+            "at": [
+              0.5,
+              0.54
+            ],
+            "scale": 1.6
+          },
+          "instances": [
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  265
+                ],
+                "at": [
+                  0.5,
+                  0.54
+                ],
+                "scale": 2.5
+              },
+              "variant": 0,
+              "depth": 0,
+              "opacity": 1,
+              "tone": "far",
+              "id": "inferred:landscape:ground:4:0"
+            }
+          ],
+          "singleUnit": false,
+          "inferred": true,
+          "provenance": {
+            "basis": "local-context",
+            "reason": "生长物、房舍和陆上主体需要共同地表；这是本地构图依托"
+          },
+          "quantity": {
+            "rendered": 1,
+            "exact": false,
+            "items": []
+          },
+          "quantityLabel": "本地环境依托，不计入原文意象覆盖",
+          "z": -18,
+          "clip": [
+            [
+              -0.04,
+              0.43
+            ],
+            [
+              1.04,
+              0.43
+            ],
+            [
+              1.04,
+              1.04
+            ],
+            [
+              0.5800000000000001,
+              1.04
+            ],
+            [
+              0.68,
+              0.82
+            ],
+            [
+              0.85,
+              0.65
+            ],
+            [
+              0.89,
+              0.48
+            ],
+            [
+              0.63,
+              0.48
+            ],
+            [
+              0.43000000000000005,
+              0.65
+            ],
+            [
+              0.12,
+              0.82
+            ],
+            [
+              -0.10000000000000003,
+              1.04
+            ],
+            [
+              -0.04,
+              1.04
+            ]
+          ],
+          "visual": {
+            "role": "ground",
+            "brushStrength": 1.1
+          },
+          "performance": {
+            "rhythm": "steady",
+            "rate": 1,
+            "amplitude": 1,
+            "phase": 2.9656634649887645
+          },
+          "id": "inferred:landscape:ground:4",
+          "interaction": {
+            "mode": "group",
+            "groupId": "inferred:landscape:ground:4"
+          }
+        }
+      ],
+      "spatial": [
+        {
+          "type": "on",
+          "source": "i2",
+          "target": "i1",
+          "modality": "asserted",
+          "basis": "explicit",
+          "evidence": [
+            "池上碧苔三四点"
+          ],
+          "visualized": false,
+          "reason": "该空间关系与形态组合尚未适配"
+        },
+        {
+          "type": "behind",
+          "source": "i4",
+          "target": "i3",
+          "modality": "asserted",
+          "basis": "explicit",
+          "evidence": [
+            "叶底黄鹂一两声"
+          ],
+          "visualized": true,
+          "reason": "由通用场景约束组织；具体方向、距离与尺度属于本地构图"
+        }
+      ],
+      "scene": {
+        "kind": "waterside",
+        "notes": [
+          "水面以连续色层和水纹构成空间；水面的范围、视点与水平线是本地构图选择，不自动增加岸或陆地。",
+          "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。",
+          "通用场景层先组织地面、水域、群落和主体，再比较三个布局的依托、相对位置、尺度与遮挡；检查通过不代表审美已通过。"
+        ],
+        "waterline": 0.46,
+        "semanticSetting": {
+          "kind": "waterside",
+          "basis": "explicit",
+          "evidence": [
+            "池上碧苔三四点"
+          ]
+        },
+        "semanticEffects": [
+          {
+            "path": "scene.supports[0]",
+            "consumer": "场景依托",
+            "status": "unsupported",
+            "effect": "该主体尚无水上姿态，未凭空添加船只"
+          },
+          {
+            "path": "scene.supports[1]",
+            "consumer": "场景依托",
+            "status": "applied",
+            "effect": "使用已提取主体的现有承托画法"
+          }
+        ],
+        "organization": {
+          "version": "1.0",
+          "strategy": "general-constraints",
+          "regions": {
+            "water": [
+              [
+                0.63,
+                0.48
+              ],
+              [
+                0.43000000000000005,
+                0.65
+              ],
+              [
+                0.12,
+                0.82
+              ],
+              [
+                -0.10000000000000003,
+                1.04
+              ],
+              [
+                0.5800000000000001,
+                1.04
+              ],
+              [
+                0.68,
+                0.82
+              ],
+              [
+                0.85,
+                0.65
+              ],
+              [
+                0.89,
+                0.48
+              ]
+            ],
+            "land": [
+              [
+                -0.04,
+                0.43
+              ],
+              [
+                1.04,
+                0.43
+              ],
+              [
+                1.04,
+                1.04
+              ],
+              [
+                0.5800000000000001,
+                1.04
+              ],
+              [
+                0.68,
+                0.82
+              ],
+              [
+                0.85,
+                0.65
+              ],
+              [
+                0.89,
+                0.48
+              ],
+              [
+                0.63,
+                0.48
+              ],
+              [
+                0.43000000000000005,
+                0.65
+              ],
+              [
+                0.12,
+                0.82
+              ],
+              [
+                -0.10000000000000003,
+                1.04
+              ],
+              [
+                -0.04,
+                1.04
+              ]
+            ]
+          },
+          "candidates": [
+            {
+              "layout": 2,
+              "orientation": "近岸池曲",
+              "errors": 0,
+              "cost": 47.607,
+              "score": 74.317,
+              "metrics": {
+                "overlapPenalty": 1.368,
+                "balancePenalty": 0.149,
+                "motifFootprint": 1.046,
+                "landArea": 0.381
+              }
+            },
+            {
+              "layout": 1,
+              "orientation": "池深林近",
+              "errors": 0,
+              "cost": 114.823,
+              "score": 242.265,
+              "metrics": {
+                "overlapPenalty": 7,
+                "balancePenalty": 0.103,
+                "motifFootprint": 1.037,
+                "landArea": 0.455
+              }
+            },
+            {
+              "layout": 0,
+              "orientation": "环池疏岸",
+              "errors": 0,
+              "cost": 128.369,
+              "score": 276.063,
+              "metrics": {
+                "overlapPenalty": 8.15,
+                "balancePenalty": 0.071,
+                "motifFootprint": 1.028,
+                "landArea": 0.447
+              }
+            }
+          ],
+          "repairs": [
+            {
+              "type": "support-added",
+              "reason": "生长物、房舍和陆上主体需要共同地表；这是本地构图依托"
+            }
+          ],
+          "limitations": [
+            "几何检查不判定诗意理解或审美合格",
+            "动作时序与整首诗的场景切换尚未编排"
+          ],
+          "topology": "近岸池曲",
+          "layout": 2,
+          "orientation": "近岸池曲",
+          "audit": {
+            "scope": "implemented-geometry-and-drawing-gaps",
+            "coverage": {
+              "scope": "extracted-entities-only",
+              "present": 4,
+              "mapped": 4,
+              "parameters": [],
+              "missing": []
+            },
+            "checks": [
+              "presence",
+              "count",
+              "finite",
+              "support",
+              "scale",
+              "relative-position",
+              "depth",
+              "grove-spread",
+              "drawing-gaps"
+            ],
+            "status": "needs-review",
+            "errors": 0,
+            "review": 1,
+            "issues": [
+              {
+                "code": "unresolved-relation",
+                "severity": "review",
+                "message": "有空间关系尚无对应布局画法"
+              }
+            ],
+            "metrics": {
+              "overlapPenalty": 4.848,
+              "balancePenalty": 0.149,
+              "motifFootprint": 1.048,
+              "landArea": 0.381
+            },
+            "cost": 89.369,
+            "aestheticAcceptance": "pending-user"
+          },
+          "graph": {
+            "nodes": [
+              {
+                "id": "l0",
+                "entities": [
+                  "i2"
+                ],
+                "tool": "landscape",
+                "role": "detail",
+                "habitat": "water",
+                "inferred": false,
+                "support": "l2"
+              },
+              {
+                "id": "l1",
+                "entities": [
+                  "i3"
+                ],
+                "tool": "tree",
+                "role": "vegetation",
+                "habitat": "land",
+                "inferred": false,
+                "support": "l4"
+              },
+              {
+                "id": "l2",
+                "entities": [
+                  "i1"
+                ],
+                "tool": "water",
+                "role": "water",
+                "habitat": null,
+                "inferred": false,
+                "support": null
+              },
+              {
+                "id": "l3",
+                "entities": [
+                  "i4"
+                ],
+                "tool": "bird",
+                "role": "fauna",
+                "habitat": "air",
+                "inferred": false,
+                "support": null
+              },
+              {
+                "id": "l4",
+                "entities": [],
+                "tool": "landscape",
+                "role": "terrain",
+                "habitat": null,
+                "inferred": true,
+                "support": null
+              }
+            ],
+            "edges": [
+              {
+                "type": "supported-by",
+                "source": "l0",
+                "target": "l2",
+                "basis": "local-composition",
+                "habitat": "water"
+              },
+              {
+                "type": "supported-by",
+                "source": "l1",
+                "target": "l4",
+                "basis": "local-composition",
+                "habitat": "land"
+              },
+              {
+                "type": "supported-by",
+                "source": "l3",
+                "target": null,
+                "basis": "local-composition",
+                "habitat": "air"
+              },
+              {
+                "type": "on",
+                "source": "l0",
+                "target": "l2",
+                "basis": "explicit",
+                "modality": "asserted",
+                "evidence": [
+                  "池上碧苔三四点"
+                ]
+              },
+              {
+                "type": "behind",
+                "source": "l3",
+                "target": "l1",
+                "basis": "explicit",
+                "modality": "asserted",
+                "evidence": [
+                  "叶底黄鹂一两声"
+                ]
+              }
+            ],
+            "setting": "waterside"
+          }
+        },
+        "displayAudit": {
+          "scope": "display-scale-separation-and-habitat",
+          "issues": [
+            {
+              "code": "air",
+              "id": "i4:bird::3:2"
+            }
+          ],
+          "errors": 1,
+          "aestheticAcceptance": "pending-user"
+        }
+      },
+      "compositions": [
+        {
+          "id": "space-2",
+          "label": "近岸池曲",
+          "description": "先安排连续水域与地表，再按主次与远近安放景物",
+          "layers": [
+            {
+              "tool": "landscape",
+              "entities": [
+                "i2"
+              ],
+              "projectedEntities": [],
+              "names": [
+                "碧苔"
+              ],
+              "options": {
+                "form": "moss"
+              },
+              "animate": false,
+              "placement": {
+                "anchor": [
+                  320,
+                  194
+                ],
+                "at": [
+                  0.5,
+                  0.57
+                ],
+                "scale": 1.5
+              },
+              "semanticGroup": {
+                "members": [
+                  "i2"
+                ],
+                "role": "accent",
+                "pattern": "scattered",
+                "depth": "near",
+                "basis": "inferred",
+                "evidence": [
+                  "池上碧苔三四点"
+                ],
+                "index": 1
+              },
+              "semanticEffects": [
+                {
+                  "path": "scene.groups[1].role",
+                  "consumer": "主次布局",
+                  "effect": "点景缩小淡化",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[1].pattern",
+                  "consumer": "群落布局",
+                  "effect": "按 scattered 组织显示单元；不覆盖明确数量",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[1].depth",
+                  "consumer": "远近布局",
+                  "effect": "将 near 转为相对大小、透明度与允许区域内的落点",
+                  "status": "applied"
+                }
+              ],
+              "semanticEnergy": false,
+              "timeScale": 0.45,
+              "instances": [
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      194
+                    ],
+                    "at": [
+                      0.5,
+                      0.57
+                    ],
+                    "scale": 1.3740800000000002
+                  },
+                  "depth": 0.3,
+                  "opacity": 0.78,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i2:landscape:moss:0:0"
+                }
+              ],
+              "singleUnit": false,
+              "quantity": {
+                "items": [
+                  {
+                    "entity": "i2",
+                    "mode": "few",
+                    "min": null,
+                    "max": null,
+                    "unit": "点",
+                    "scope": "part",
+                    "extent": "local",
+                    "evidence": [
+                      "碧苔三四点"
+                    ],
+                    "basis": "model"
+                  }
+                ],
+                "rendered": 1,
+                "exact": false,
+                "collective": false,
+                "partUnsupported": true
+              },
+              "quantityLabel": "局部数量尚未实现",
+              "z": 5,
+              "visual": {
+                "role": "vegetation",
+                "brushStrength": 1.2
+              },
+              "performance": {
+                "rhythm": "steady",
+                "rate": 1,
+                "amplitude": 1,
+                "phase": 0
+              },
+              "id": "i2:landscape:moss:0",
+              "interaction": {
+                "mode": "instance",
+                "groupId": "i2:landscape:moss:0"
+              }
+            },
+            {
+              "tool": "tree",
+              "entities": [
+                "i3"
+              ],
+              "projectedEntities": [],
+              "names": [
+                "叶"
+              ],
+              "options": {
+                "form": "broadleaf",
+                "crown": "lines"
+              },
+              "animate": true,
+              "placement": {
+                "anchor": [
+                  320,
+                  388
+                ],
+                "at": [
+                  0.5616285269294098,
+                  0.7800027728482697
+                ],
+                "scale": 1.15
+              },
+              "semanticGroup": {
+                "members": [
+                  "i3"
+                ],
+                "role": "environment",
+                "pattern": "grove",
+                "depth": "middle",
+                "basis": "inferred",
+                "evidence": [
+                  "叶底黄鹂一两声"
+                ],
+                "index": 2
+              },
+              "semanticEffects": [
+                {
+                  "path": "scene.groups[2].role",
+                  "consumer": "主次布局",
+                  "effect": "保留环境群落层次",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[2].pattern",
+                  "consumer": "群落布局",
+                  "effect": "按 grove 组织显示单元；不覆盖明确数量",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[2].depth",
+                  "consumer": "远近布局",
+                  "effect": "将 middle 转为相对大小、透明度与允许区域内的落点",
+                  "status": "applied"
+                }
+              ],
+              "semanticEnergy": true,
+              "timeScale": 0.45,
+              "instances": [
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.880629263017972,
+                      0.671304347826087
+                    ],
+                    "scale": 0.55571203567125
+                  },
+                  "depth": 10,
+                  "opacity": 0.62412571011,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:tree:broadleaf:1:0"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.4219457665606504,
+                      0.6373214285714286
+                    ],
+                    "scale": 0.4766450713425
+                  },
+                  "depth": 10.01,
+                  "opacity": 0.55995542022,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:tree:broadleaf:1:1"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.035,
+                      0.6555357142857142
+                    ],
+                    "scale": 0.39757810701375
+                  },
+                  "depth": 10.02,
+                  "opacity": 0.49578513032999993,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:tree:broadleaf:1:2"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.7557721201608291,
+                      0.788695652173913
+                    ],
+                    "scale": 0.5255111426850001
+                  },
+                  "depth": 10.03,
+                  "opacity": 0.59961484044,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:tree:broadleaf:1:3"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.2726191290175259,
+                      0.6919642857142857
+                    ],
+                    "scale": 0.44644417835625005
+                  },
+                  "depth": 10.04,
+                  "opacity": 0.53544455055,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:tree:broadleaf:1:4"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.9051769165031506,
+                      0.7101785714285714
+                    ],
+                    "scale": 0.5743772140275
+                  },
+                  "depth": 10.05,
+                  "opacity": 0.6392742606599999,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:tree:broadleaf:1:5"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.4124149773036862,
+                      0.6478260869565218
+                    ],
+                    "scale": 0.49531024969875015
+                  },
+                  "depth": 10.06,
+                  "opacity": 0.5751039707700001,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:tree:broadleaf:1:6"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.12329249147440086,
+                      0.7466071428571428
+                    ],
+                    "scale": 0.41624328537000005
+                  },
+                  "depth": 10.07,
+                  "opacity": 0.51093368088,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:tree:broadleaf:1:7"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.7558502789600257,
+                      0.9520714285714287
+                    ],
+                    "scale": 0.7601763210412501
+                  },
+                  "depth": 10.08,
+                  "opacity": 0.8036070518909999,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:tree:broadleaf:1:8"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.6309149773036862,
+                      0.9765217391304348
+                    ],
+                    "scale": 0.6811093567125002
+                  },
+                  "depth": 10.09,
+                  "opacity": 0.74585379099,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:tree:broadleaf:1:9"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.965,
+                      0.9855
+                    ],
+                    "scale": 0.8090423923837502
+                  },
+                  "depth": 10.1,
+                  "opacity": 0.839300530089,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:tree:broadleaf:1:10"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.6933435487322576,
+                      0.8356521739130436
+                    ],
+                    "scale": 0.7299754280550002
+                  },
+                  "depth": 10.11,
+                  "opacity": 0.7815472691879999,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:tree:broadleaf:1:11"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.16270069158940048,
+                      0.7652173913043478
+                    ],
+                    "scale": 0.6509084637262501
+                  },
+                  "depth": 10.12,
+                  "opacity": 0.723794008287,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:tree:broadleaf:1:12"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.8481392163881528,
+                      0.8556428571428571
+                    ],
+                    "scale": 0.7788414993975005
+                  },
+                  "depth": 10.13,
+                  "opacity": 0.8172407473860003,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:tree:broadleaf:1:13"
+                }
+              ],
+              "singleUnit": true,
+              "quantity": {
+                "items": [
+                  {
+                    "entity": "i3",
+                    "mode": "unspecified",
+                    "min": null,
+                    "max": null,
+                    "unit": null,
+                    "scope": "unspecified",
+                    "extent": "unspecified",
+                    "evidence": [],
+                    "basis": "model"
+                  }
+                ],
+                "rendered": 14,
+                "exact": false,
+                "collective": true,
+                "partUnsupported": false
+              },
+              "quantityLabel": "成片分布；本地试画 14 个单元",
+              "z": 8,
+              "visual": {
+                "role": "vegetation",
+                "brushStrength": 1.2
+              },
+              "performance": {
+                "rhythm": "gust",
+                "rate": 0.62,
+                "amplitude": 0.65,
+                "phase": 3.8830085198369844
+              },
+              "id": "i3:tree:broadleaf:1",
+              "interaction": {
+                "mode": "instance",
+                "groupId": "i3:tree:broadleaf:1"
+              }
+            },
+            {
+              "tool": "water",
+              "entities": [
+                "i1"
+              ],
+              "projectedEntities": [],
+              "names": [
+                "池"
+              ],
+              "options": {
+                "form": "plane"
+              },
+              "animate": true,
+              "placement": {
+                "anchor": [
+                  320,
+                  130
+                ],
+                "at": [
+                  0.5,
+                  0.45
+                ],
+                "scale": 1.5
+              },
+              "semanticGroup": {
+                "members": [
+                  "i1"
+                ],
+                "role": "environment",
+                "pattern": "single",
+                "depth": "unspecified",
+                "basis": "inferred",
+                "evidence": [
+                  "池上碧苔三四点"
+                ],
+                "index": 0
+              },
+              "semanticEffects": [
+                {
+                  "path": "scene.groups[0].role",
+                  "consumer": "主次布局",
+                  "effect": "保留环境画布范围，主次不改变地形边界",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[0].pattern",
+                  "consumer": "群落布局",
+                  "effect": "按 single 组织显示单元；不覆盖明确数量",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[0].depth",
+                  "consumer": "远近布局",
+                  "effect": "远近未明，保持本地默认",
+                  "status": "skipped"
+                }
+              ],
+              "semanticEnergy": true,
+              "timeScale": 0.45,
+              "instances": [
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      135
+                    ],
+                    "at": [
+                      0.5,
+                      0.45
+                    ],
+                    "scale": 1.65
+                  },
+                  "depth": 0.05,
+                  "opacity": 1,
+                  "variant": 0,
+                  "tone": "far",
+                  "id": "i1:water:plane:2:0"
+                }
+              ],
+              "singleUnit": false,
+              "quantity": {
+                "items": [
+                  {
+                    "entity": "i1",
+                    "mode": "unspecified",
+                    "min": null,
+                    "max": null,
+                    "unit": null,
+                    "scope": "unspecified",
+                    "extent": "unspecified",
+                    "evidence": [],
+                    "basis": "model"
+                  }
+                ],
+                "rendered": 1,
+                "exact": false,
+                "collective": false,
+                "partUnsupported": false
+              },
+              "quantityLabel": "整体笔触图层；内部数量尚未适配",
+              "z": -10,
+              "surface": {
+                "top": 0.48,
+                "bottom": 1
+              },
+              "clip": [
+                [
+                  0.63,
+                  0.48
+                ],
+                [
+                  0.43000000000000005,
+                  0.65
+                ],
+                [
+                  0.12,
+                  0.82
+                ],
+                [
+                  -0.10000000000000003,
+                  1.04
+                ],
+                [
+                  0.5800000000000001,
+                  1.04
+                ],
+                [
+                  0.68,
+                  0.82
+                ],
+                [
+                  0.85,
+                  0.65
+                ],
+                [
+                  0.89,
+                  0.48
+                ]
+              ],
+              "visual": {
+                "role": "water",
+                "brushStrength": 1.35
+              },
+              "performance": {
+                "rhythm": "continuous",
+                "rate": 0.9,
+                "amplitude": 0.9,
+                "phase": 1.4828317324943823
+              },
+              "id": "i1:water:plane:2",
+              "interaction": {
+                "mode": "group",
+                "groupId": "i1:water:plane:2"
+              }
+            },
+            {
+              "tool": "bird",
+              "entities": [
+                "i4"
+              ],
+              "projectedEntities": [],
+              "names": [
+                "黄鹂"
+              ],
+              "options": {
+                "pose": "flying",
+                "tone": "ink",
+                "facing": "right"
+              },
+              "animate": false,
+              "placement": {
+                "anchor": [
+                  320,
+                  190
+                ],
+                "at": [
+                  0.4458060800961176,
+                  0.4156009004594132
+                ],
+                "scale": 0.78
+              },
+              "drawingLabel": "鸟意（写意借形）",
+              "semanticGroup": {
+                "members": [
+                  "i4"
+                ],
+                "role": "subject",
+                "pattern": "single",
+                "depth": "middle",
+                "basis": "inferred",
+                "evidence": [
+                  "叶底黄鹂一两声"
+                ],
+                "index": 3
+              },
+              "semanticEffects": [
+                {
+                  "path": "scene.actions[0].state",
+                  "consumer": "动作边界",
+                  "effect": "动作未明，保留静态形态",
+                  "status": "skipped"
+                },
+                {
+                  "path": "scene.groups[3].role",
+                  "consumer": "主次布局",
+                  "effect": "主体相对突出",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[3].pattern",
+                  "consumer": "群落布局",
+                  "effect": "按 single 组织显示单元；不覆盖明确数量",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[3].depth",
+                  "consumer": "远近布局",
+                  "effect": "将 middle 转为相对大小、透明度与允许区域内的落点",
+                  "status": "applied"
+                }
+              ],
+              "semanticEnergy": false,
+              "timeScale": 0,
+              "semanticAction": {
+                "entity": "i4",
+                "state": "unclear",
+                "pace": "unspecified",
+                "direction": "unspecified",
+                "modality": "asserted",
+                "basis": "inferred",
+                "evidence": [
+                  "叶底黄鹂一两声"
+                ]
+              },
+              "instances": [
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      190
+                    ],
+                    "at": [
+                      0.33412852692940975,
+                      0.43
+                    ],
+                    "scale": 0.5
+                  },
+                  "depth": 0.0125,
+                  "opacity": 0.72,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i4:bird::3:0"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      190
+                    ],
+                    "at": [
+                      0.4312671712062375,
+                      0.4088006539706586
+                    ],
+                    "scale": 0.5
+                  },
+                  "depth": 0.037500000000000006,
+                  "opacity": 0.72,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i4:bird::3:1"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      190
+                    ],
+                    "at": [
+                      0.48657595548414234,
+                      0.45238125620673353
+                    ],
+                    "scale": 0.5
+                  },
+                  "depth": 0.0625,
+                  "opacity": 0.7454999999999999,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i4:bird::3:2"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      190
+                    ],
+                    "at": [
+                      0.5312526667646809,
+                      0.3712216916602608
+                    ],
+                    "scale": 0.5
+                  },
+                  "depth": 0.08750000000000001,
+                  "opacity": 0.8084999999999999,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i4:bird::3:3"
+                }
+              ],
+              "singleUnit": true,
+              "quantity": {
+                "items": [
+                  {
+                    "entity": "i4",
+                    "mode": "unspecified",
+                    "min": null,
+                    "max": null,
+                    "unit": null,
+                    "scope": "unspecified",
+                    "extent": "unspecified",
+                    "evidence": [],
+                    "basis": "model"
+                  }
+                ],
+                "rendered": 4,
+                "exact": false,
+                "collective": false,
+                "partUnsupported": false
+              },
+              "quantityLabel": "数量未精确；本地试画 4 个单元",
+              "z": 6,
+              "semanticSupport": {
+                "surface": "vegetation",
+                "target": "i3",
+                "path": "scene.supports[1]"
+              },
+              "visual": {
+                "role": "figure",
+                "brushStrength": 1.1
+              },
+              "performance": {
+                "rhythm": "passing",
+                "rate": 1.05,
+                "amplitude": 1.1,
+                "phase": 5.365840252331367
+              },
+              "id": "i4:bird::3",
+              "interaction": {
+                "mode": "instance",
+                "groupId": "i4:bird::3"
+              }
+            },
+            {
+              "tool": "landscape",
+              "entities": [],
+              "projectedEntities": [],
+              "names": [
+                "构图依托·地面"
+              ],
+              "options": {
+                "form": "ground",
+                "edge": "soft"
+              },
+              "animate": false,
+              "placement": {
+                "anchor": [
+                  320,
+                  194
+                ],
+                "at": [
+                  0.5,
+                  0.54
+                ],
+                "scale": 1.6
+              },
+              "instances": [
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      265
+                    ],
+                    "at": [
+                      0.5,
+                      0.54
+                    ],
+                    "scale": 2.5
+                  },
+                  "variant": 0,
+                  "depth": 0,
+                  "opacity": 1,
+                  "tone": "far",
+                  "id": "inferred:landscape:ground:4:0"
+                }
+              ],
+              "singleUnit": false,
+              "inferred": true,
+              "provenance": {
+                "basis": "local-context",
+                "reason": "生长物、房舍和陆上主体需要共同地表；这是本地构图依托"
+              },
+              "quantity": {
+                "rendered": 1,
+                "exact": false,
+                "items": []
+              },
+              "quantityLabel": "本地环境依托，不计入原文意象覆盖",
+              "z": -18,
+              "clip": [
+                [
+                  -0.04,
+                  0.43
+                ],
+                [
+                  1.04,
+                  0.43
+                ],
+                [
+                  1.04,
+                  1.04
+                ],
+                [
+                  0.5800000000000001,
+                  1.04
+                ],
+                [
+                  0.68,
+                  0.82
+                ],
+                [
+                  0.85,
+                  0.65
+                ],
+                [
+                  0.89,
+                  0.48
+                ],
+                [
+                  0.63,
+                  0.48
+                ],
+                [
+                  0.43000000000000005,
+                  0.65
+                ],
+                [
+                  0.12,
+                  0.82
+                ],
+                [
+                  -0.10000000000000003,
+                  1.04
+                ],
+                [
+                  -0.04,
+                  1.04
+                ]
+              ],
+              "visual": {
+                "role": "ground",
+                "brushStrength": 1.1
+              },
+              "performance": {
+                "rhythm": "steady",
+                "rate": 1,
+                "amplitude": 1,
+                "phase": 2.9656634649887645
+              },
+              "id": "inferred:landscape:ground:4",
+              "interaction": {
+                "mode": "group",
+                "groupId": "inferred:landscape:ground:4"
+              }
+            }
+          ],
+          "scene": {
+            "kind": "waterside",
+            "notes": [
+              "水面以连续色层和水纹构成空间；水面的范围、视点与水平线是本地构图选择，不自动增加岸或陆地。",
+              "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。",
+              "通用场景层先组织地面、水域、群落和主体，再比较三个布局的依托、相对位置、尺度与遮挡；检查通过不代表审美已通过。"
+            ],
+            "waterline": 0.46,
+            "semanticSetting": {
+              "kind": "waterside",
+              "basis": "explicit",
+              "evidence": [
+                "池上碧苔三四点"
+              ]
+            },
+            "semanticEffects": [
+              {
+                "path": "scene.supports[0]",
+                "consumer": "场景依托",
+                "status": "unsupported",
+                "effect": "该主体尚无水上姿态，未凭空添加船只"
+              },
+              {
+                "path": "scene.supports[1]",
+                "consumer": "场景依托",
+                "status": "applied",
+                "effect": "使用已提取主体的现有承托画法"
+              }
+            ],
+            "organization": {
+              "version": "1.0",
+              "strategy": "general-constraints",
+              "regions": {
+                "water": [
+                  [
+                    0.63,
+                    0.48
+                  ],
+                  [
+                    0.43000000000000005,
+                    0.65
+                  ],
+                  [
+                    0.12,
+                    0.82
+                  ],
+                  [
+                    -0.10000000000000003,
+                    1.04
+                  ],
+                  [
+                    0.5800000000000001,
+                    1.04
+                  ],
+                  [
+                    0.68,
+                    0.82
+                  ],
+                  [
+                    0.85,
+                    0.65
+                  ],
+                  [
+                    0.89,
+                    0.48
+                  ]
+                ],
+                "land": [
+                  [
+                    -0.04,
+                    0.43
+                  ],
+                  [
+                    1.04,
+                    0.43
+                  ],
+                  [
+                    1.04,
+                    1.04
+                  ],
+                  [
+                    0.5800000000000001,
+                    1.04
+                  ],
+                  [
+                    0.68,
+                    0.82
+                  ],
+                  [
+                    0.85,
+                    0.65
+                  ],
+                  [
+                    0.89,
+                    0.48
+                  ],
+                  [
+                    0.63,
+                    0.48
+                  ],
+                  [
+                    0.43000000000000005,
+                    0.65
+                  ],
+                  [
+                    0.12,
+                    0.82
+                  ],
+                  [
+                    -0.10000000000000003,
+                    1.04
+                  ],
+                  [
+                    -0.04,
+                    1.04
+                  ]
+                ]
+              },
+              "candidates": [
+                {
+                  "layout": 2,
+                  "orientation": "近岸池曲",
+                  "errors": 0,
+                  "cost": 47.607,
+                  "score": 74.317,
+                  "metrics": {
+                    "overlapPenalty": 1.368,
+                    "balancePenalty": 0.149,
+                    "motifFootprint": 1.046,
+                    "landArea": 0.381
+                  }
+                },
+                {
+                  "layout": 1,
+                  "orientation": "池深林近",
+                  "errors": 0,
+                  "cost": 114.823,
+                  "score": 242.265,
+                  "metrics": {
+                    "overlapPenalty": 7,
+                    "balancePenalty": 0.103,
+                    "motifFootprint": 1.037,
+                    "landArea": 0.455
+                  }
+                },
+                {
+                  "layout": 0,
+                  "orientation": "环池疏岸",
+                  "errors": 0,
+                  "cost": 128.369,
+                  "score": 276.063,
+                  "metrics": {
+                    "overlapPenalty": 8.15,
+                    "balancePenalty": 0.071,
+                    "motifFootprint": 1.028,
+                    "landArea": 0.447
+                  }
+                }
+              ],
+              "repairs": [
+                {
+                  "type": "support-added",
+                  "reason": "生长物、房舍和陆上主体需要共同地表；这是本地构图依托"
+                }
+              ],
+              "limitations": [
+                "几何检查不判定诗意理解或审美合格",
+                "动作时序与整首诗的场景切换尚未编排"
+              ],
+              "topology": "近岸池曲",
+              "layout": 2,
+              "orientation": "近岸池曲",
+              "audit": {
+                "scope": "implemented-geometry-and-drawing-gaps",
+                "coverage": {
+                  "scope": "extracted-entities-only",
+                  "present": 4,
+                  "mapped": 4,
+                  "parameters": [],
+                  "missing": []
+                },
+                "checks": [
+                  "presence",
+                  "count",
+                  "finite",
+                  "support",
+                  "scale",
+                  "relative-position",
+                  "depth",
+                  "grove-spread",
+                  "drawing-gaps"
+                ],
+                "status": "needs-review",
+                "errors": 0,
+                "review": 1,
+                "issues": [
+                  {
+                    "code": "unresolved-relation",
+                    "severity": "review",
+                    "message": "有空间关系尚无对应布局画法"
+                  }
+                ],
+                "metrics": {
+                  "overlapPenalty": 4.848,
+                  "balancePenalty": 0.149,
+                  "motifFootprint": 1.048,
+                  "landArea": 0.381
+                },
+                "cost": 89.369,
+                "aestheticAcceptance": "pending-user"
+              },
+              "graph": {
+                "nodes": [
+                  {
+                    "id": "l0",
+                    "entities": [
+                      "i2"
+                    ],
+                    "tool": "landscape",
+                    "role": "detail",
+                    "habitat": "water",
+                    "inferred": false,
+                    "support": "l2"
+                  },
+                  {
+                    "id": "l1",
+                    "entities": [
+                      "i3"
+                    ],
+                    "tool": "tree",
+                    "role": "vegetation",
+                    "habitat": "land",
+                    "inferred": false,
+                    "support": "l4"
+                  },
+                  {
+                    "id": "l2",
+                    "entities": [
+                      "i1"
+                    ],
+                    "tool": "water",
+                    "role": "water",
+                    "habitat": null,
+                    "inferred": false,
+                    "support": null
+                  },
+                  {
+                    "id": "l3",
+                    "entities": [
+                      "i4"
+                    ],
+                    "tool": "bird",
+                    "role": "fauna",
+                    "habitat": "air",
+                    "inferred": false,
+                    "support": null
+                  },
+                  {
+                    "id": "l4",
+                    "entities": [],
+                    "tool": "landscape",
+                    "role": "terrain",
+                    "habitat": null,
+                    "inferred": true,
+                    "support": null
+                  }
+                ],
+                "edges": [
+                  {
+                    "type": "supported-by",
+                    "source": "l0",
+                    "target": "l2",
+                    "basis": "local-composition",
+                    "habitat": "water"
+                  },
+                  {
+                    "type": "supported-by",
+                    "source": "l1",
+                    "target": "l4",
+                    "basis": "local-composition",
+                    "habitat": "land"
+                  },
+                  {
+                    "type": "supported-by",
+                    "source": "l3",
+                    "target": null,
+                    "basis": "local-composition",
+                    "habitat": "air"
+                  },
+                  {
+                    "type": "on",
+                    "source": "l0",
+                    "target": "l2",
+                    "basis": "explicit",
+                    "modality": "asserted",
+                    "evidence": [
+                      "池上碧苔三四点"
+                    ]
+                  },
+                  {
+                    "type": "behind",
+                    "source": "l3",
+                    "target": "l1",
+                    "basis": "explicit",
+                    "modality": "asserted",
+                    "evidence": [
+                      "叶底黄鹂一两声"
+                    ]
+                  }
+                ],
+                "setting": "waterside"
+              }
+            },
+            "displayAudit": {
+              "scope": "display-scale-separation-and-habitat",
+              "issues": [
+                {
+                  "code": "air",
+                  "id": "i4:bird::3:2"
+                }
+              ],
+              "errors": 1,
+              "aestheticAcceptance": "pending-user"
+            }
+          },
+          "spatial": [
+            {
+              "type": "on",
+              "source": "i2",
+              "target": "i1",
+              "modality": "asserted",
+              "basis": "explicit",
+              "evidence": [
+                "池上碧苔三四点"
+              ],
+              "visualized": false,
+              "reason": "该空间关系与形态组合尚未适配"
+            },
+            {
+              "type": "behind",
+              "source": "i4",
+              "target": "i3",
+              "modality": "asserted",
+              "basis": "explicit",
+              "evidence": [
+                "叶底黄鹂一两声"
+              ],
+              "visualized": true,
+              "reason": "由通用场景约束组织；具体方向、距离与尺度属于本地构图"
+            }
+          ],
+          "landscapeStyle": {
+            "version": "1.0",
+            "color": "role-and-distance",
+            "motion": "layer-rhythms",
+            "aestheticAcceptance": "pending-user"
+          }
+        },
+        {
+          "id": "space-1",
+          "label": "池深林近",
+          "description": "先安排连续水域与地表，再按主次与远近安放景物",
+          "layers": [
+            {
+              "tool": "landscape",
+              "entities": [
+                "i2"
+              ],
+              "projectedEntities": [],
+              "names": [
+                "碧苔"
+              ],
+              "options": {
+                "form": "moss"
+              },
+              "animate": false,
+              "placement": {
+                "anchor": [
+                  320,
+                  194
+                ],
+                "at": [
+                  0.5,
+                  0.57
+                ],
+                "scale": 1.5
+              },
+              "semanticGroup": {
+                "members": [
+                  "i2"
+                ],
+                "role": "accent",
+                "pattern": "scattered",
+                "depth": "near",
+                "basis": "inferred",
+                "evidence": [
+                  "池上碧苔三四点"
+                ],
+                "index": 1
+              },
+              "semanticEffects": [
+                {
+                  "path": "scene.groups[1].role",
+                  "consumer": "主次布局",
+                  "effect": "点景缩小淡化",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[1].pattern",
+                  "consumer": "群落布局",
+                  "effect": "按 scattered 组织显示单元；不覆盖明确数量",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[1].depth",
+                  "consumer": "远近布局",
+                  "effect": "将 near 转为相对大小、透明度与允许区域内的落点",
+                  "status": "applied"
+                }
+              ],
+              "semanticEnergy": false,
+              "timeScale": 0.45,
+              "instances": [
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      194
+                    ],
+                    "at": [
+                      0.5,
+                      0.57
+                    ],
+                    "scale": 1.3740800000000002
+                  },
+                  "depth": 0.3,
+                  "opacity": 0.78,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i2:landscape:moss:0:0"
+                }
+              ],
+              "singleUnit": false,
+              "quantity": {
+                "items": [
+                  {
+                    "entity": "i2",
+                    "mode": "few",
+                    "min": null,
+                    "max": null,
+                    "unit": "点",
+                    "scope": "part",
+                    "extent": "local",
+                    "evidence": [
+                      "碧苔三四点"
+                    ],
+                    "basis": "model"
+                  }
+                ],
+                "rendered": 1,
+                "exact": false,
+                "collective": false,
+                "partUnsupported": true
+              },
+              "quantityLabel": "局部数量尚未实现",
+              "z": 5,
+              "visual": {
+                "role": "vegetation",
+                "brushStrength": 1.2
+              },
+              "performance": {
+                "rhythm": "steady",
+                "rate": 1,
+                "amplitude": 1,
+                "phase": 0
+              },
+              "id": "i2:landscape:moss:0",
+              "interaction": {
+                "mode": "instance",
+                "groupId": "i2:landscape:moss:0"
+              }
+            },
+            {
+              "tool": "tree",
+              "entities": [
+                "i3"
+              ],
+              "projectedEntities": [],
+              "names": [
+                "叶"
+              ],
+              "options": {
+                "form": "broadleaf",
+                "crown": "lines"
+              },
+              "animate": true,
+              "placement": {
+                "anchor": [
+                  320,
+                  388
+                ],
+                "at": [
+                  0.54346495496566,
+                  0.7977820541259981
+                ],
+                "scale": 1.15
+              },
+              "semanticGroup": {
+                "members": [
+                  "i3"
+                ],
+                "role": "environment",
+                "pattern": "grove",
+                "depth": "middle",
+                "basis": "inferred",
+                "evidence": [
+                  "叶底黄鹂一两声"
+                ],
+                "index": 2
+              },
+              "semanticEffects": [
+                {
+                  "path": "scene.groups[2].role",
+                  "consumer": "主次布局",
+                  "effect": "保留环境群落层次",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[2].pattern",
+                  "consumer": "群落布局",
+                  "effect": "按 grove 组织显示单元；不覆盖明确数量",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[2].depth",
+                  "consumer": "远近布局",
+                  "effect": "将 middle 转为相对大小、透明度与允许区域内的落点",
+                  "status": "applied"
+                }
+              ],
+              "semanticEnergy": true,
+              "timeScale": 0.45,
+              "instances": [
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.8664285714285714,
+                      0.5539130434782609
+                    ],
+                    "scale": 0.54060103567125
+                  },
+                  "depth": 10,
+                  "opacity": 0.6118617101099999,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:tree:broadleaf:1:0"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.2905471871271237,
+                      0.5773913043478262
+                    ],
+                    "scale": 0.4615340713425
+                  },
+                  "depth": 10.01,
+                  "opacity": 0.54769142022,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:tree:broadleaf:1:1"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.965,
+                      0.6555357142857142
+                    ],
+                    "scale": 0.5894671070137499
+                  },
+                  "depth": 10.02,
+                  "opacity": 0.6515211303299999,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:tree:broadleaf:1:2"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.6026900442699807,
+                      0.8826086956521739
+                    ],
+                    "scale": 0.510400142685
+                  },
+                  "depth": 10.03,
+                  "opacity": 0.5873508404400001,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:tree:broadleaf:1:3"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.20089298169810627,
+                      0.6919642857142857
+                    ],
+                    "scale": 0.43133317835625007
+                  },
+                  "depth": 10.04,
+                  "opacity": 0.52318055055,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:tree:broadleaf:1:4"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.9148329014128379,
+                      0.7652173913043478
+                    ],
+                    "scale": 0.5592662140275
+                  },
+                  "depth": 10.05,
+                  "opacity": 0.62701026066,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:tree:broadleaf:1:5"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.3529757585556952,
+                      0.8121739130434784
+                    ],
+                    "scale": 0.4801992496987503
+                  },
+                  "depth": 10.06,
+                  "opacity": 0.5628399707700001,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:tree:broadleaf:1:6"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.051566344154981736,
+                      0.7466071428571428
+                    ],
+                    "scale": 0.4011322853700002
+                  },
+                  "depth": 10.07,
+                  "opacity": 0.4986696808800001,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:tree:broadleaf:1:7"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.6841241316406064,
+                      0.9520714285714287
+                    ],
+                    "scale": 0.7450653210412502
+                  },
+                  "depth": 10.08,
+                  "opacity": 0.792569451891,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:tree:broadleaf:1:8"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.29318191912623204,
+                      0.9687857142857144
+                    ],
+                    "scale": 0.6659983567125003
+                  },
+                  "depth": 10.09,
+                  "opacity": 0.7348161909900001,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:tree:broadleaf:1:9"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.9257397066118568,
+                      0.9855
+                    ],
+                    "scale": 0.7939313923837503
+                  },
+                  "depth": 10.1,
+                  "opacity": 0.8282629300890001,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:tree:broadleaf:1:10"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.5402614728414094,
+                      0.8826086956521739
+                    ],
+                    "scale": 0.7148644280550003
+                  },
+                  "depth": 10.11,
+                  "opacity": 0.770509669188,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:tree:broadleaf:1:11"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.14385528158310612,
+                      0.8389285714285715
+                    ],
+                    "scale": 0.6357974637262501
+                  },
+                  "depth": 10.12,
+                  "opacity": 0.7127564082869999,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:tree:broadleaf:1:12"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.7764130690687326,
+                      0.8556428571428571
+                    ],
+                    "scale": 0.7637304993975004
+                  },
+                  "depth": 10.13,
+                  "opacity": 0.8062031473860002,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:tree:broadleaf:1:13"
+                }
+              ],
+              "singleUnit": true,
+              "quantity": {
+                "items": [
+                  {
+                    "entity": "i3",
+                    "mode": "unspecified",
+                    "min": null,
+                    "max": null,
+                    "unit": null,
+                    "scope": "unspecified",
+                    "extent": "unspecified",
+                    "evidence": [],
+                    "basis": "model"
+                  }
+                ],
+                "rendered": 14,
+                "exact": false,
+                "collective": true,
+                "partUnsupported": false
+              },
+              "quantityLabel": "成片分布；本地试画 14 个单元",
+              "z": 8,
+              "visual": {
+                "role": "vegetation",
+                "brushStrength": 1.2
+              },
+              "performance": {
+                "rhythm": "gust",
+                "rate": 0.62,
+                "amplitude": 0.65,
+                "phase": 3.8830085198369844
+              },
+              "id": "i3:tree:broadleaf:1",
+              "interaction": {
+                "mode": "instance",
+                "groupId": "i3:tree:broadleaf:1"
+              }
+            },
+            {
+              "tool": "water",
+              "entities": [
+                "i1"
+              ],
+              "projectedEntities": [],
+              "names": [
+                "池"
+              ],
+              "options": {
+                "form": "plane"
+              },
+              "animate": true,
+              "placement": {
+                "anchor": [
+                  320,
+                  130
+                ],
+                "at": [
+                  0.5,
+                  0.45
+                ],
+                "scale": 1.5
+              },
+              "semanticGroup": {
+                "members": [
+                  "i1"
+                ],
+                "role": "environment",
+                "pattern": "single",
+                "depth": "unspecified",
+                "basis": "inferred",
+                "evidence": [
+                  "池上碧苔三四点"
+                ],
+                "index": 0
+              },
+              "semanticEffects": [
+                {
+                  "path": "scene.groups[0].role",
+                  "consumer": "主次布局",
+                  "effect": "保留环境画布范围，主次不改变地形边界",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[0].pattern",
+                  "consumer": "群落布局",
+                  "effect": "按 single 组织显示单元；不覆盖明确数量",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[0].depth",
+                  "consumer": "远近布局",
+                  "effect": "远近未明，保持本地默认",
+                  "status": "skipped"
+                }
+              ],
+              "semanticEnergy": true,
+              "timeScale": 0.45,
+              "instances": [
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      135
+                    ],
+                    "at": [
+                      0.5,
+                      0.45
+                    ],
+                    "scale": 1.65
+                  },
+                  "depth": 0.05,
+                  "opacity": 1,
+                  "variant": 0,
+                  "tone": "far",
+                  "id": "i1:water:plane:2:0"
+                }
+              ],
+              "singleUnit": false,
+              "quantity": {
+                "items": [
+                  {
+                    "entity": "i1",
+                    "mode": "unspecified",
+                    "min": null,
+                    "max": null,
+                    "unit": null,
+                    "scope": "unspecified",
+                    "extent": "unspecified",
+                    "evidence": [],
+                    "basis": "model"
+                  }
+                ],
+                "rendered": 1,
+                "exact": false,
+                "collective": false,
+                "partUnsupported": false
+              },
+              "quantityLabel": "整体笔触图层；内部数量尚未适配",
+              "z": -10,
+              "surface": {
+                "top": 0.44000000000000006,
+                "bottom": 1
+              },
+              "clip": [
+                [
+                  0.8999999999999999,
+                  0.66
+                ],
+                [
+                  0.885316954888546,
+                  0.7279837387624885
+                ],
+                [
+                  0.8427050983124842,
+                  0.7893127555043441
+                ],
+                [
+                  0.7763355756877419,
+                  0.8379837387624884
+                ],
+                [
+                  0.6927050983124842,
+                  0.8692324335849339
+                ],
+                [
+                  0.6,
+                  0.88
+                ],
+                [
+                  0.5072949016875158,
+                  0.8692324335849339
+                ],
+                [
+                  0.42366442431225804,
+                  0.8379837387624884
+                ],
+                [
+                  0.35729490168751576,
+                  0.7893127555043442
+                ],
+                [
+                  0.31468304511145395,
+                  0.7279837387624885
+                ],
+                [
+                  0.3,
+                  0.66
+                ],
+                [
+                  0.31468304511145384,
+                  0.5920162612375117
+                ],
+                [
+                  0.35729490168751576,
+                  0.530687244495656
+                ],
+                [
+                  0.42366442431225804,
+                  0.4820162612375116
+                ],
+                [
+                  0.5072949016875157,
+                  0.4507675664150662
+                ],
+                [
+                  0.6,
+                  0.44000000000000006
+                ],
+                [
+                  0.6927050983124842,
+                  0.4507675664150662
+                ],
+                [
+                  0.7763355756877418,
+                  0.48201626123751157
+                ],
+                [
+                  0.8427050983124842,
+                  0.5306872444956559
+                ],
+                [
+                  0.885316954888546,
+                  0.5920162612375115
+                ]
+              ],
+              "visual": {
+                "role": "water",
+                "brushStrength": 1.35
+              },
+              "performance": {
+                "rhythm": "continuous",
+                "rate": 0.9,
+                "amplitude": 0.9,
+                "phase": 1.4828317324943823
+              },
+              "id": "i1:water:plane:2",
+              "interaction": {
+                "mode": "group",
+                "groupId": "i1:water:plane:2"
+              }
+            },
+            {
+              "tool": "bird",
+              "entities": [
+                "i4"
+              ],
+              "projectedEntities": [],
+              "names": [
+                "黄鹂"
+              ],
+              "options": {
+                "pose": "flying",
+                "tone": "ink",
+                "facing": "right"
+              },
+              "animate": false,
+              "placement": {
+                "anchor": [
+                  320,
+                  190
+                ],
+                "at": [
+                  0.40705163783941045,
+                  0.432263221611091
+                ],
+                "scale": 0.78
+              },
+              "drawingLabel": "鸟意（写意借形）",
+              "semanticGroup": {
+                "members": [
+                  "i4"
+                ],
+                "role": "subject",
+                "pattern": "single",
+                "depth": "middle",
+                "basis": "inferred",
+                "evidence": [
+                  "叶底黄鹂一两声"
+                ],
+                "index": 3
+              },
+              "semanticEffects": [
+                {
+                  "path": "scene.actions[0].state",
+                  "consumer": "动作边界",
+                  "effect": "动作未明，保留静态形态",
+                  "status": "skipped"
+                },
+                {
+                  "path": "scene.groups[3].role",
+                  "consumer": "主次布局",
+                  "effect": "主体相对突出",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[3].pattern",
+                  "consumer": "群落布局",
+                  "effect": "按 single 组织显示单元；不覆盖明确数量",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[3].depth",
+                  "consumer": "远近布局",
+                  "effect": "将 middle 转为相对大小、透明度与允许区域内的落点",
+                  "status": "applied"
+                }
+              ],
+              "semanticEnergy": false,
+              "timeScale": 0,
+              "semanticAction": {
+                "entity": "i4",
+                "state": "unclear",
+                "pace": "unspecified",
+                "direction": "unspecified",
+                "modality": "asserted",
+                "basis": "inferred",
+                "evidence": [
+                  "叶底黄鹂一两声"
+                ]
+              },
+              "instances": [
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      190
+                    ],
+                    "at": [
+                      0.31596495496566,
+                      0.43
+                    ],
+                    "scale": 0.5
+                  },
+                  "depth": 0.0125,
+                  "opacity": 0.72,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i4:bird::3:0"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      190
+                    ],
+                    "at": [
+                      0.41310359924248774,
+                      0.4088006539706586
+                    ],
+                    "scale": 0.5
+                  },
+                  "depth": 0.037500000000000006,
+                  "opacity": 0.72,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i4:bird::3:1"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      190
+                    ],
+                    "at": [
+                      0.4171109722661985,
+                      0.48964138664357504
+                    ],
+                    "scale": 0.5
+                  },
+                  "depth": 0.0625,
+                  "opacity": 0.7454999999999999,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i4:bird::3:2"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      190
+                    ],
+                    "at": [
+                      0.48202702488329563,
+                      0.4006108458301304
+                    ],
+                    "scale": 0.5
+                  },
+                  "depth": 0.08750000000000001,
+                  "opacity": 0.8084999999999999,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i4:bird::3:3"
+                }
+              ],
+              "singleUnit": true,
+              "quantity": {
+                "items": [
+                  {
+                    "entity": "i4",
+                    "mode": "unspecified",
+                    "min": null,
+                    "max": null,
+                    "unit": null,
+                    "scope": "unspecified",
+                    "extent": "unspecified",
+                    "evidence": [],
+                    "basis": "model"
+                  }
+                ],
+                "rendered": 4,
+                "exact": false,
+                "collective": false,
+                "partUnsupported": false
+              },
+              "quantityLabel": "数量未精确；本地试画 4 个单元",
+              "z": 6,
+              "semanticSupport": {
+                "surface": "vegetation",
+                "target": "i3",
+                "path": "scene.supports[1]"
+              },
+              "visual": {
+                "role": "figure",
+                "brushStrength": 1.1
+              },
+              "performance": {
+                "rhythm": "passing",
+                "rate": 1.05,
+                "amplitude": 1.1,
+                "phase": 5.365840252331367
+              },
+              "id": "i4:bird::3",
+              "interaction": {
+                "mode": "instance",
+                "groupId": "i4:bird::3"
+              }
+            },
+            {
+              "tool": "landscape",
+              "entities": [],
+              "projectedEntities": [],
+              "names": [
+                "构图依托·地面"
+              ],
+              "options": {
+                "form": "ground",
+                "edge": "soft"
+              },
+              "animate": false,
+              "placement": {
+                "anchor": [
+                  320,
+                  194
+                ],
+                "at": [
+                  0.5,
+                  0.54
+                ],
+                "scale": 1.6
+              },
+              "instances": [
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      265
+                    ],
+                    "at": [
+                      0.5,
+                      0.54
+                    ],
+                    "scale": 2.5
+                  },
+                  "variant": 0,
+                  "depth": 0,
+                  "opacity": 1,
+                  "tone": "far",
+                  "id": "inferred:landscape:ground:4:0"
+                }
+              ],
+              "singleUnit": false,
+              "inferred": true,
+              "provenance": {
+                "basis": "local-context",
+                "reason": "生长物、房舍和陆上主体需要共同地表；这是本地构图依托"
+              },
+              "quantity": {
+                "rendered": 1,
+                "exact": false,
+                "items": []
+              },
+              "quantityLabel": "本地环境依托，不计入原文意象覆盖",
+              "z": -18,
+              "clip": [
+                [
+                  -0.04,
+                  0.43
+                ],
+                [
+                  1.04,
+                  0.43
+                ],
+                [
+                  1.04,
+                  1.04
+                ],
+                [
+                  -0.04,
+                  1.04
+                ],
+                [
+                  -0.04,
+                  0.43
+                ],
+                [
+                  0.885316954888546,
+                  0.5920162612375115
+                ],
+                [
+                  0.8427050983124842,
+                  0.5306872444956559
+                ],
+                [
+                  0.7763355756877418,
+                  0.48201626123751157
+                ],
+                [
+                  0.6927050983124842,
+                  0.4507675664150662
+                ],
+                [
+                  0.6,
+                  0.44000000000000006
+                ],
+                [
+                  0.5072949016875157,
+                  0.4507675664150662
+                ],
+                [
+                  0.42366442431225804,
+                  0.4820162612375116
+                ],
+                [
+                  0.35729490168751576,
+                  0.530687244495656
+                ],
+                [
+                  0.31468304511145384,
+                  0.5920162612375117
+                ],
+                [
+                  0.3,
+                  0.66
+                ],
+                [
+                  0.31468304511145395,
+                  0.7279837387624885
+                ],
+                [
+                  0.35729490168751576,
+                  0.7893127555043442
+                ],
+                [
+                  0.42366442431225804,
+                  0.8379837387624884
+                ],
+                [
+                  0.5072949016875158,
+                  0.8692324335849339
+                ],
+                [
+                  0.6,
+                  0.88
+                ],
+                [
+                  0.6927050983124842,
+                  0.8692324335849339
+                ],
+                [
+                  0.7763355756877419,
+                  0.8379837387624884
+                ],
+                [
+                  0.8427050983124842,
+                  0.7893127555043441
+                ],
+                [
+                  0.885316954888546,
+                  0.7279837387624885
+                ],
+                [
+                  0.8999999999999999,
+                  0.66
+                ],
+                [
+                  0.885316954888546,
+                  0.5920162612375115
+                ],
+                [
+                  -0.04,
+                  0.43
+                ]
+              ],
+              "clipRule": "polygon",
+              "visual": {
+                "role": "ground",
+                "brushStrength": 1.1
+              },
+              "performance": {
+                "rhythm": "steady",
+                "rate": 1,
+                "amplitude": 1,
+                "phase": 2.9656634649887645
+              },
+              "id": "inferred:landscape:ground:4",
+              "interaction": {
+                "mode": "group",
+                "groupId": "inferred:landscape:ground:4"
+              }
+            }
+          ],
+          "scene": {
+            "kind": "waterside",
+            "notes": [
+              "水面以连续色层和水纹构成空间；水面的范围、视点与水平线是本地构图选择，不自动增加岸或陆地。",
+              "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。"
+            ],
+            "waterline": 0.46,
+            "semanticSetting": {
+              "kind": "waterside",
+              "basis": "explicit",
+              "evidence": [
+                "池上碧苔三四点"
+              ]
+            },
+            "semanticEffects": [
+              {
+                "path": "scene.supports[0]",
+                "consumer": "场景依托",
+                "status": "unsupported",
+                "effect": "该主体尚无水上姿态，未凭空添加船只"
+              },
+              {
+                "path": "scene.supports[1]",
+                "consumer": "场景依托",
+                "status": "applied",
+                "effect": "使用已提取主体的现有承托画法"
+              }
+            ],
+            "organization": {
+              "version": "1.0",
+              "strategy": "general-constraints",
+              "regions": {
+                "water": [
+                  [
+                    0.8999999999999999,
+                    0.66
+                  ],
+                  [
+                    0.885316954888546,
+                    0.7279837387624885
+                  ],
+                  [
+                    0.8427050983124842,
+                    0.7893127555043441
+                  ],
+                  [
+                    0.7763355756877419,
+                    0.8379837387624884
+                  ],
+                  [
+                    0.6927050983124842,
+                    0.8692324335849339
+                  ],
+                  [
+                    0.6,
+                    0.88
+                  ],
+                  [
+                    0.5072949016875158,
+                    0.8692324335849339
+                  ],
+                  [
+                    0.42366442431225804,
+                    0.8379837387624884
+                  ],
+                  [
+                    0.35729490168751576,
+                    0.7893127555043442
+                  ],
+                  [
+                    0.31468304511145395,
+                    0.7279837387624885
+                  ],
+                  [
+                    0.3,
+                    0.66
+                  ],
+                  [
+                    0.31468304511145384,
+                    0.5920162612375117
+                  ],
+                  [
+                    0.35729490168751576,
+                    0.530687244495656
+                  ],
+                  [
+                    0.42366442431225804,
+                    0.4820162612375116
+                  ],
+                  [
+                    0.5072949016875157,
+                    0.4507675664150662
+                  ],
+                  [
+                    0.6,
+                    0.44000000000000006
+                  ],
+                  [
+                    0.6927050983124842,
+                    0.4507675664150662
+                  ],
+                  [
+                    0.7763355756877418,
+                    0.48201626123751157
+                  ],
+                  [
+                    0.8427050983124842,
+                    0.5306872444956559
+                  ],
+                  [
+                    0.885316954888546,
+                    0.5920162612375115
+                  ]
+                ],
+                "land": [
+                  [
+                    -0.04,
+                    0.43
+                  ],
+                  [
+                    1.04,
+                    0.43
+                  ],
+                  [
+                    1.04,
+                    1.04
+                  ],
+                  [
+                    -0.04,
+                    1.04
+                  ],
+                  [
+                    -0.04,
+                    0.43
+                  ],
+                  [
+                    0.885316954888546,
+                    0.5920162612375115
+                  ],
+                  [
+                    0.8427050983124842,
+                    0.5306872444956559
+                  ],
+                  [
+                    0.7763355756877418,
+                    0.48201626123751157
+                  ],
+                  [
+                    0.6927050983124842,
+                    0.4507675664150662
+                  ],
+                  [
+                    0.6,
+                    0.44000000000000006
+                  ],
+                  [
+                    0.5072949016875157,
+                    0.4507675664150662
+                  ],
+                  [
+                    0.42366442431225804,
+                    0.4820162612375116
+                  ],
+                  [
+                    0.35729490168751576,
+                    0.530687244495656
+                  ],
+                  [
+                    0.31468304511145384,
+                    0.5920162612375117
+                  ],
+                  [
+                    0.3,
+                    0.66
+                  ],
+                  [
+                    0.31468304511145395,
+                    0.7279837387624885
+                  ],
+                  [
+                    0.35729490168751576,
+                    0.7893127555043442
+                  ],
+                  [
+                    0.42366442431225804,
+                    0.8379837387624884
+                  ],
+                  [
+                    0.5072949016875158,
+                    0.8692324335849339
+                  ],
+                  [
+                    0.6,
+                    0.88
+                  ],
+                  [
+                    0.6927050983124842,
+                    0.8692324335849339
+                  ],
+                  [
+                    0.7763355756877419,
+                    0.8379837387624884
+                  ],
+                  [
+                    0.8427050983124842,
+                    0.7893127555043441
+                  ],
+                  [
+                    0.885316954888546,
+                    0.7279837387624885
+                  ],
+                  [
+                    0.8999999999999999,
+                    0.66
+                  ],
+                  [
+                    0.885316954888546,
+                    0.5920162612375115
+                  ],
+                  [
+                    -0.04,
+                    0.43
+                  ]
+                ]
+              },
+              "candidates": [],
+              "repairs": [],
+              "limitations": [
+                "几何检查不判定诗意理解或审美合格",
+                "动作时序与整首诗的场景切换尚未编排"
+              ],
+              "topology": "池深林近",
+              "layout": 1,
+              "orientation": "池深林近",
+              "audit": {
+                "scope": "implemented-geometry-and-drawing-gaps",
+                "coverage": {
+                  "scope": "extracted-entities-only",
+                  "present": 4,
+                  "mapped": 4,
+                  "parameters": [],
+                  "missing": []
+                },
+                "checks": [
+                  "presence",
+                  "count",
+                  "finite",
+                  "support",
+                  "scale",
+                  "relative-position",
+                  "depth",
+                  "grove-spread",
+                  "drawing-gaps"
+                ],
+                "status": "needs-review",
+                "errors": 0,
+                "review": 1,
+                "issues": [
+                  {
+                    "code": "unresolved-relation",
+                    "severity": "review",
+                    "message": "有空间关系尚无对应布局画法"
+                  }
+                ],
+                "metrics": {
+                  "overlapPenalty": 1.473,
+                  "balancePenalty": 0.103,
+                  "motifFootprint": 1.039,
+                  "landArea": 0.455
+                },
+                "cost": 48.496,
+                "aestheticAcceptance": "pending-user"
+              },
+              "graph": {
+                "nodes": [
+                  {
+                    "id": "l0",
+                    "entities": [
+                      "i2"
+                    ],
+                    "tool": "landscape",
+                    "role": "detail",
+                    "habitat": "water",
+                    "inferred": false,
+                    "support": "l2"
+                  },
+                  {
+                    "id": "l1",
+                    "entities": [
+                      "i3"
+                    ],
+                    "tool": "tree",
+                    "role": "vegetation",
+                    "habitat": "land",
+                    "inferred": false,
+                    "support": "l4"
+                  },
+                  {
+                    "id": "l2",
+                    "entities": [
+                      "i1"
+                    ],
+                    "tool": "water",
+                    "role": "water",
+                    "habitat": null,
+                    "inferred": false,
+                    "support": null
+                  },
+                  {
+                    "id": "l3",
+                    "entities": [
+                      "i4"
+                    ],
+                    "tool": "bird",
+                    "role": "fauna",
+                    "habitat": "air",
+                    "inferred": false,
+                    "support": null
+                  },
+                  {
+                    "id": "l4",
+                    "entities": [],
+                    "tool": "landscape",
+                    "role": "terrain",
+                    "habitat": null,
+                    "inferred": true,
+                    "support": null
+                  }
+                ],
+                "edges": [
+                  {
+                    "type": "supported-by",
+                    "source": "l0",
+                    "target": "l2",
+                    "basis": "local-composition",
+                    "habitat": "water"
+                  },
+                  {
+                    "type": "supported-by",
+                    "source": "l1",
+                    "target": "l4",
+                    "basis": "local-composition",
+                    "habitat": "land"
+                  },
+                  {
+                    "type": "supported-by",
+                    "source": "l3",
+                    "target": null,
+                    "basis": "local-composition",
+                    "habitat": "air"
+                  },
+                  {
+                    "type": "on",
+                    "source": "l0",
+                    "target": "l2",
+                    "basis": "explicit",
+                    "modality": "asserted",
+                    "evidence": [
+                      "池上碧苔三四点"
+                    ]
+                  },
+                  {
+                    "type": "behind",
+                    "source": "l3",
+                    "target": "l1",
+                    "basis": "explicit",
+                    "modality": "asserted",
+                    "evidence": [
+                      "叶底黄鹂一两声"
+                    ]
+                  }
+                ],
+                "setting": "waterside"
+              }
+            },
+            "displayAudit": {
+              "scope": "display-scale-separation-and-habitat",
+              "issues": [
+                {
+                  "code": "air",
+                  "id": "i4:bird::3:2"
+                }
+              ],
+              "errors": 1,
+              "aestheticAcceptance": "pending-user"
+            }
+          },
+          "spatial": [
+            {
+              "type": "on",
+              "source": "i2",
+              "target": "i1",
+              "modality": "asserted",
+              "basis": "explicit",
+              "evidence": [
+                "池上碧苔三四点"
+              ],
+              "visualized": false,
+              "reason": "该空间关系与形态组合尚未适配"
+            },
+            {
+              "type": "behind",
+              "source": "i4",
+              "target": "i3",
+              "modality": "asserted",
+              "basis": "explicit",
+              "evidence": [
+                "叶底黄鹂一两声"
+              ],
+              "visualized": true,
+              "reason": "由通用场景约束组织；具体方向、距离与尺度属于本地构图"
+            }
+          ],
+          "landscapeStyle": {
+            "version": "1.0",
+            "color": "role-and-distance",
+            "motion": "layer-rhythms",
+            "aestheticAcceptance": "pending-user"
+          }
+        },
+        {
+          "id": "space-0",
+          "label": "环池疏岸",
+          "description": "先安排连续水域与地表，再按主次与远近安放景物",
+          "layers": [
+            {
+              "tool": "landscape",
+              "entities": [
+                "i2"
+              ],
+              "projectedEntities": [],
+              "names": [
+                "碧苔"
+              ],
+              "options": {
+                "form": "moss"
+              },
+              "animate": false,
+              "placement": {
+                "anchor": [
+                  320,
+                  194
+                ],
+                "at": [
+                  0.5,
+                  0.57
+                ],
+                "scale": 1.5
+              },
+              "semanticGroup": {
+                "members": [
+                  "i2"
+                ],
+                "role": "accent",
+                "pattern": "scattered",
+                "depth": "near",
+                "basis": "inferred",
+                "evidence": [
+                  "池上碧苔三四点"
+                ],
+                "index": 1
+              },
+              "semanticEffects": [
+                {
+                  "path": "scene.groups[1].role",
+                  "consumer": "主次布局",
+                  "effect": "点景缩小淡化",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[1].pattern",
+                  "consumer": "群落布局",
+                  "effect": "按 scattered 组织显示单元；不覆盖明确数量",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[1].depth",
+                  "consumer": "远近布局",
+                  "effect": "将 near 转为相对大小、透明度与允许区域内的落点",
+                  "status": "applied"
+                }
+              ],
+              "semanticEnergy": false,
+              "timeScale": 0.45,
+              "instances": [
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      194
+                    ],
+                    "at": [
+                      0.5,
+                      0.57
+                    ],
+                    "scale": 1.3740800000000002
+                  },
+                  "depth": 0.3,
+                  "opacity": 0.78,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i2:landscape:moss:0:0"
+                }
+              ],
+              "singleUnit": false,
+              "quantity": {
+                "items": [
+                  {
+                    "entity": "i2",
+                    "mode": "few",
+                    "min": null,
+                    "max": null,
+                    "unit": "点",
+                    "scope": "part",
+                    "extent": "local",
+                    "evidence": [
+                      "碧苔三四点"
+                    ],
+                    "basis": "model"
+                  }
+                ],
+                "rendered": 1,
+                "exact": false,
+                "collective": false,
+                "partUnsupported": true
+              },
+              "quantityLabel": "局部数量尚未实现",
+              "z": 5,
+              "visual": {
+                "role": "vegetation",
+                "brushStrength": 1.2
+              },
+              "performance": {
+                "rhythm": "steady",
+                "rate": 1,
+                "amplitude": 1,
+                "phase": 0
+              },
+              "id": "i2:landscape:moss:0",
+              "interaction": {
+                "mode": "instance",
+                "groupId": "i2:landscape:moss:0"
+              }
+            },
+            {
+              "tool": "tree",
+              "entities": [
+                "i3"
+              ],
+              "projectedEntities": [],
+              "names": [
+                "叶"
+              ],
+              "options": {
+                "form": "broadleaf",
+                "crown": "lines"
+              },
+              "animate": true,
+              "placement": {
+                "anchor": [
+                  320,
+                  388
+                ],
+                "at": [
+                  0.5323581830575357,
+                  0.7907246007098492
+                ],
+                "scale": 1.15
+              },
+              "semanticGroup": {
+                "members": [
+                  "i3"
+                ],
+                "role": "environment",
+                "pattern": "grove",
+                "depth": "middle",
+                "basis": "inferred",
+                "evidence": [
+                  "叶底黄鹂一两声"
+                ],
+                "index": 2
+              },
+              "semanticEffects": [
+                {
+                  "path": "scene.groups[2].role",
+                  "consumer": "主次布局",
+                  "effect": "保留环境群落层次",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[2].pattern",
+                  "consumer": "群落布局",
+                  "effect": "按 grove 组织显示单元；不覆盖明确数量",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[2].depth",
+                  "consumer": "远近布局",
+                  "effect": "将 middle 转为相对大小、透明度与允许区域内的落点",
+                  "status": "applied"
+                }
+              ],
+              "semanticEnergy": true,
+              "timeScale": 0.45,
+              "instances": [
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.6764285714285714,
+                      0.48347826086956525
+                    ],
+                    "scale": 0.52549003567125
+                  },
+                  "depth": 10,
+                  "opacity": 0.59959771011,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:tree:broadleaf:1:0"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.16710830039135838,
+                      0.5539130434782609
+                    ],
+                    "scale": 0.44642307134250003
+                  },
+                  "depth": 10.01,
+                  "opacity": 0.53542742022,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:tree:broadleaf:1:1"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.9474654432485012,
+                      0.6478260869565218
+                    ],
+                    "scale": 0.5743561070137501
+                  },
+                  "depth": 10.02,
+                  "opacity": 0.6392571303299999,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:tree:broadleaf:1:2"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.5104654432485011,
+                      0.8591304347826088
+                    ],
+                    "scale": 0.49528914268500007
+                  },
+                  "depth": 10.03,
+                  "opacity": 0.57508684044,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:tree:broadleaf:1:3"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.10467972896278699,
+                      0.6947826086956522
+                    ],
+                    "scale": 0.41622217835625014
+                  },
+                  "depth": 10.04,
+                  "opacity": 0.51091655055,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:tree:broadleaf:1:4"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.8226083003913582,
+                      0.788695652173913
+                    ],
+                    "scale": 0.5441552140275001
+                  },
+                  "depth": 10.05,
+                  "opacity": 0.61474626066,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:tree:broadleaf:1:5"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.35439401467707277,
+                      0.8356521739130436
+                    ],
+                    "scale": 0.46508824969875023
+                  },
+                  "depth": 10.06,
+                  "opacity": 0.5505759707700001,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:tree:broadleaf:1:6"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.965,
+                      0.7466071428571428
+                    ],
+                    "scale": 0.5930212853700002
+                  },
+                  "depth": 10.07,
+                  "opacity": 0.6544056808800001,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:tree:broadleaf:1:7"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.6108268877619837,
+                      0.9520714285714287
+                    ],
+                    "scale": 0.7299543210412501
+                  },
+                  "depth": 10.08,
+                  "opacity": 0.7815318518909999,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:tree:broadleaf:1:8"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.21988467524760918,
+                      0.9687857142857144
+                    ],
+                    "scale": 0.6508873567125003
+                  },
+                  "depth": 10.09,
+                  "opacity": 0.7237785909900001,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:tree:broadleaf:1:9"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.8524424627332339,
+                      0.9855
+                    ],
+                    "scale": 0.7788203923837502
+                  },
+                  "depth": 10.1,
+                  "opacity": 0.817225330089,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:tree:broadleaf:1:10"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.44803687181992985,
+                      0.8591304347826088
+                    ],
+                    "scale": 0.6997534280550002
+                  },
+                  "depth": 10.11,
+                  "opacity": 0.7594720691879999,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:tree:broadleaf:1:11"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.07055803770448332,
+                      0.8389285714285715
+                    ],
+                    "scale": 0.62068646372625
+                  },
+                  "depth": 10.12,
+                  "opacity": 0.701718808287,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:tree:broadleaf:1:12"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.70311582519011,
+                      0.8556428571428571
+                    ],
+                    "scale": 0.7486194993975004
+                  },
+                  "depth": 10.13,
+                  "opacity": 0.7951655473860002,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i3:tree:broadleaf:1:13"
+                }
+              ],
+              "singleUnit": true,
+              "quantity": {
+                "items": [
+                  {
+                    "entity": "i3",
+                    "mode": "unspecified",
+                    "min": null,
+                    "max": null,
+                    "unit": null,
+                    "scope": "unspecified",
+                    "extent": "unspecified",
+                    "evidence": [],
+                    "basis": "model"
+                  }
+                ],
+                "rendered": 14,
+                "exact": false,
+                "collective": true,
+                "partUnsupported": false
+              },
+              "quantityLabel": "成片分布；本地试画 14 个单元",
+              "z": 8,
+              "visual": {
+                "role": "vegetation",
+                "brushStrength": 1.2
+              },
+              "performance": {
+                "rhythm": "gust",
+                "rate": 0.62,
+                "amplitude": 0.65,
+                "phase": 3.8830085198369844
+              },
+              "id": "i3:tree:broadleaf:1",
+              "interaction": {
+                "mode": "instance",
+                "groupId": "i3:tree:broadleaf:1"
+              }
+            },
+            {
+              "tool": "water",
+              "entities": [
+                "i1"
+              ],
+              "projectedEntities": [],
+              "names": [
+                "池"
+              ],
+              "options": {
+                "form": "plane"
+              },
+              "animate": true,
+              "placement": {
+                "anchor": [
+                  320,
+                  130
+                ],
+                "at": [
+                  0.5,
+                  0.45
+                ],
+                "scale": 1.5
+              },
+              "semanticGroup": {
+                "members": [
+                  "i1"
+                ],
+                "role": "environment",
+                "pattern": "single",
+                "depth": "unspecified",
+                "basis": "inferred",
+                "evidence": [
+                  "池上碧苔三四点"
+                ],
+                "index": 0
+              },
+              "semanticEffects": [
+                {
+                  "path": "scene.groups[0].role",
+                  "consumer": "主次布局",
+                  "effect": "保留环境画布范围，主次不改变地形边界",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[0].pattern",
+                  "consumer": "群落布局",
+                  "effect": "按 single 组织显示单元；不覆盖明确数量",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[0].depth",
+                  "consumer": "远近布局",
+                  "effect": "远近未明，保持本地默认",
+                  "status": "skipped"
+                }
+              ],
+              "semanticEnergy": true,
+              "timeScale": 0.45,
+              "instances": [
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      135
+                    ],
+                    "at": [
+                      0.5,
+                      0.45
+                    ],
+                    "scale": 1.65
+                  },
+                  "depth": 0.05,
+                  "opacity": 1,
+                  "variant": 0,
+                  "tone": "far",
+                  "id": "i1:water:plane:2:0"
+                }
+              ],
+              "singleUnit": false,
+              "quantity": {
+                "items": [
+                  {
+                    "entity": "i1",
+                    "mode": "unspecified",
+                    "min": null,
+                    "max": null,
+                    "unit": null,
+                    "scope": "unspecified",
+                    "extent": "unspecified",
+                    "evidence": [],
+                    "basis": "model"
+                  }
+                ],
+                "rendered": 1,
+                "exact": false,
+                "collective": false,
+                "partUnsupported": false
+              },
+              "quantityLabel": "整体笔触图层；内部数量尚未适配",
+              "z": -10,
+              "surface": {
+                "top": 0.47000000000000003,
+                "bottom": 1
+              },
+              "clip": [
+                [
+                  0.88,
+                  0.66
+                ],
+                [
+                  0.8623803458662553,
+                  0.71871322893124
+                ],
+                [
+                  0.811246117974981,
+                  0.7716791979355699
+                ],
+                [
+                  0.7316026908252904,
+                  0.8137132289312401
+                ],
+                [
+                  0.6312461179749811,
+                  0.8407007380960791
+                ],
+                [
+                  0.52,
+                  0.8500000000000001
+                ],
+                [
+                  0.408753882025019,
+                  0.8407007380960793
+                ],
+                [
+                  0.30839730917470976,
+                  0.8137132289312401
+                ],
+                [
+                  0.228753882025019,
+                  0.7716791979355699
+                ],
+                [
+                  0.17761965413374475,
+                  0.71871322893124
+                ],
+                [
+                  0.16000000000000003,
+                  0.66
+                ],
+                [
+                  0.1776196541337447,
+                  0.6012867710687602
+                ],
+                [
+                  0.22875388202501895,
+                  0.5483208020644301
+                ],
+                [
+                  0.30839730917470964,
+                  0.50628677106876
+                ],
+                [
+                  0.4087538820250189,
+                  0.47929926190392086
+                ],
+                [
+                  0.5199999999999999,
+                  0.47000000000000003
+                ],
+                [
+                  0.631246117974981,
+                  0.4792992619039208
+                ],
+                [
+                  0.7316026908252903,
+                  0.50628677106876
+                ],
+                [
+                  0.811246117974981,
+                  0.5483208020644301
+                ],
+                [
+                  0.8623803458662553,
+                  0.6012867710687599
+                ]
+              ],
+              "visual": {
+                "role": "water",
+                "brushStrength": 1.35
+              },
+              "performance": {
+                "rhythm": "continuous",
+                "rate": 0.9,
+                "amplitude": 0.9,
+                "phase": 1.4828317324943823
+              },
+              "id": "i1:water:plane:2",
+              "interaction": {
+                "mode": "group",
+                "groupId": "i1:water:plane:2"
+              }
+            },
+            {
+              "tool": "bird",
+              "entities": [
+                "i4"
+              ],
+              "projectedEntities": [],
+              "names": [
+                "黄鹂"
+              ],
+              "options": {
+                "pose": "flying",
+                "tone": "ink",
+                "facing": "right"
+              },
+              "animate": false,
+              "placement": {
+                "anchor": [
+                  320,
+                  190
+                ],
+                "at": [
+                  0.3959448659312862,
+                  0.432263221611091
+                ],
+                "scale": 0.78
+              },
+              "drawingLabel": "鸟意（写意借形）",
+              "semanticGroup": {
+                "members": [
+                  "i4"
+                ],
+                "role": "subject",
+                "pattern": "single",
+                "depth": "middle",
+                "basis": "inferred",
+                "evidence": [
+                  "叶底黄鹂一两声"
+                ],
+                "index": 3
+              },
+              "semanticEffects": [
+                {
+                  "path": "scene.actions[0].state",
+                  "consumer": "动作边界",
+                  "effect": "动作未明，保留静态形态",
+                  "status": "skipped"
+                },
+                {
+                  "path": "scene.groups[3].role",
+                  "consumer": "主次布局",
+                  "effect": "主体相对突出",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[3].pattern",
+                  "consumer": "群落布局",
+                  "effect": "按 single 组织显示单元；不覆盖明确数量",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[3].depth",
+                  "consumer": "远近布局",
+                  "effect": "将 middle 转为相对大小、透明度与允许区域内的落点",
+                  "status": "applied"
+                }
+              ],
+              "semanticEnergy": false,
+              "timeScale": 0,
+              "semanticAction": {
+                "entity": "i4",
+                "state": "unclear",
+                "pace": "unspecified",
+                "direction": "unspecified",
+                "modality": "asserted",
+                "basis": "inferred",
+                "evidence": [
+                  "叶底黄鹂一两声"
+                ]
+              },
+              "instances": [
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      190
+                    ],
+                    "at": [
+                      0.30485818305753565,
+                      0.43
+                    ],
+                    "scale": 0.5
+                  },
+                  "depth": 0.0125,
+                  "opacity": 0.72,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i4:bird::3:0"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      190
+                    ],
+                    "at": [
+                      0.40199682733436354,
+                      0.4088006539706586
+                    ],
+                    "scale": 0.5
+                  },
+                  "depth": 0.037500000000000006,
+                  "opacity": 0.72,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i4:bird::3:1"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      190
+                    ],
+                    "at": [
+                      0.4060042003580742,
+                      0.48964138664357504
+                    ],
+                    "scale": 0.5
+                  },
+                  "depth": 0.0625,
+                  "opacity": 0.7454999999999999,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i4:bird::3:2"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      190
+                    ],
+                    "at": [
+                      0.4709202529751715,
+                      0.4006108458301304
+                    ],
+                    "scale": 0.5
+                  },
+                  "depth": 0.08750000000000001,
+                  "opacity": 0.8084999999999999,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i4:bird::3:3"
+                }
+              ],
+              "singleUnit": true,
+              "quantity": {
+                "items": [
+                  {
+                    "entity": "i4",
+                    "mode": "unspecified",
+                    "min": null,
+                    "max": null,
+                    "unit": null,
+                    "scope": "unspecified",
+                    "extent": "unspecified",
+                    "evidence": [],
+                    "basis": "model"
+                  }
+                ],
+                "rendered": 4,
+                "exact": false,
+                "collective": false,
+                "partUnsupported": false
+              },
+              "quantityLabel": "数量未精确；本地试画 4 个单元",
+              "z": 6,
+              "semanticSupport": {
+                "surface": "vegetation",
+                "target": "i3",
+                "path": "scene.supports[1]"
+              },
+              "visual": {
+                "role": "figure",
+                "brushStrength": 1.1
+              },
+              "performance": {
+                "rhythm": "passing",
+                "rate": 1.05,
+                "amplitude": 1.1,
+                "phase": 5.365840252331367
+              },
+              "id": "i4:bird::3",
+              "interaction": {
+                "mode": "instance",
+                "groupId": "i4:bird::3"
+              }
+            },
+            {
+              "tool": "landscape",
+              "entities": [],
+              "projectedEntities": [],
+              "names": [
+                "构图依托·地面"
+              ],
+              "options": {
+                "form": "ground",
+                "edge": "soft"
+              },
+              "animate": false,
+              "placement": {
+                "anchor": [
+                  320,
+                  194
+                ],
+                "at": [
+                  0.5,
+                  0.54
+                ],
+                "scale": 1.6
+              },
+              "instances": [
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      265
+                    ],
+                    "at": [
+                      0.5,
+                      0.54
+                    ],
+                    "scale": 2.5
+                  },
+                  "variant": 0,
+                  "depth": 0,
+                  "opacity": 1,
+                  "tone": "far",
+                  "id": "inferred:landscape:ground:4:0"
+                }
+              ],
+              "singleUnit": false,
+              "inferred": true,
+              "provenance": {
+                "basis": "local-context",
+                "reason": "生长物、房舍和陆上主体需要共同地表；这是本地构图依托"
+              },
+              "quantity": {
+                "rendered": 1,
+                "exact": false,
+                "items": []
+              },
+              "quantityLabel": "本地环境依托，不计入原文意象覆盖",
+              "z": -18,
+              "clip": [
+                [
+                  -0.04,
+                  0.43
+                ],
+                [
+                  1.04,
+                  0.43
+                ],
+                [
+                  1.04,
+                  1.04
+                ],
+                [
+                  -0.04,
+                  1.04
+                ],
+                [
+                  -0.04,
+                  0.43
+                ],
+                [
+                  0.8623803458662553,
+                  0.6012867710687599
+                ],
+                [
+                  0.811246117974981,
+                  0.5483208020644301
+                ],
+                [
+                  0.7316026908252903,
+                  0.50628677106876
+                ],
+                [
+                  0.631246117974981,
+                  0.4792992619039208
+                ],
+                [
+                  0.5199999999999999,
+                  0.47000000000000003
+                ],
+                [
+                  0.4087538820250189,
+                  0.47929926190392086
+                ],
+                [
+                  0.30839730917470964,
+                  0.50628677106876
+                ],
+                [
+                  0.22875388202501895,
+                  0.5483208020644301
+                ],
+                [
+                  0.1776196541337447,
+                  0.6012867710687602
+                ],
+                [
+                  0.16000000000000003,
+                  0.66
+                ],
+                [
+                  0.17761965413374475,
+                  0.71871322893124
+                ],
+                [
+                  0.228753882025019,
+                  0.7716791979355699
+                ],
+                [
+                  0.30839730917470976,
+                  0.8137132289312401
+                ],
+                [
+                  0.408753882025019,
+                  0.8407007380960793
+                ],
+                [
+                  0.52,
+                  0.8500000000000001
+                ],
+                [
+                  0.6312461179749811,
+                  0.8407007380960791
+                ],
+                [
+                  0.7316026908252904,
+                  0.8137132289312401
+                ],
+                [
+                  0.811246117974981,
+                  0.7716791979355699
+                ],
+                [
+                  0.8623803458662553,
+                  0.71871322893124
+                ],
+                [
+                  0.88,
+                  0.66
+                ],
+                [
+                  0.8623803458662553,
+                  0.6012867710687599
+                ],
+                [
+                  -0.04,
+                  0.43
+                ]
+              ],
+              "clipRule": "polygon",
+              "visual": {
+                "role": "ground",
+                "brushStrength": 1.1
+              },
+              "performance": {
+                "rhythm": "steady",
+                "rate": 1,
+                "amplitude": 1,
+                "phase": 2.9656634649887645
+              },
+              "id": "inferred:landscape:ground:4",
+              "interaction": {
+                "mode": "group",
+                "groupId": "inferred:landscape:ground:4"
+              }
+            }
+          ],
+          "scene": {
+            "kind": "waterside",
+            "notes": [
+              "水面以连续色层和水纹构成空间；水面的范围、视点与水平线是本地构图选择，不自动增加岸或陆地。",
+              "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。"
+            ],
+            "waterline": 0.46,
+            "semanticSetting": {
+              "kind": "waterside",
+              "basis": "explicit",
+              "evidence": [
+                "池上碧苔三四点"
+              ]
+            },
+            "semanticEffects": [
+              {
+                "path": "scene.supports[0]",
+                "consumer": "场景依托",
+                "status": "unsupported",
+                "effect": "该主体尚无水上姿态，未凭空添加船只"
+              },
+              {
+                "path": "scene.supports[1]",
+                "consumer": "场景依托",
+                "status": "applied",
+                "effect": "使用已提取主体的现有承托画法"
+              }
+            ],
+            "organization": {
+              "version": "1.0",
+              "strategy": "general-constraints",
+              "regions": {
+                "water": [
+                  [
+                    0.88,
+                    0.66
+                  ],
+                  [
+                    0.8623803458662553,
+                    0.71871322893124
+                  ],
+                  [
+                    0.811246117974981,
+                    0.7716791979355699
+                  ],
+                  [
+                    0.7316026908252904,
+                    0.8137132289312401
+                  ],
+                  [
+                    0.6312461179749811,
+                    0.8407007380960791
+                  ],
+                  [
+                    0.52,
+                    0.8500000000000001
+                  ],
+                  [
+                    0.408753882025019,
+                    0.8407007380960793
+                  ],
+                  [
+                    0.30839730917470976,
+                    0.8137132289312401
+                  ],
+                  [
+                    0.228753882025019,
+                    0.7716791979355699
+                  ],
+                  [
+                    0.17761965413374475,
+                    0.71871322893124
+                  ],
+                  [
+                    0.16000000000000003,
+                    0.66
+                  ],
+                  [
+                    0.1776196541337447,
+                    0.6012867710687602
+                  ],
+                  [
+                    0.22875388202501895,
+                    0.5483208020644301
+                  ],
+                  [
+                    0.30839730917470964,
+                    0.50628677106876
+                  ],
+                  [
+                    0.4087538820250189,
+                    0.47929926190392086
+                  ],
+                  [
+                    0.5199999999999999,
+                    0.47000000000000003
+                  ],
+                  [
+                    0.631246117974981,
+                    0.4792992619039208
+                  ],
+                  [
+                    0.7316026908252903,
+                    0.50628677106876
+                  ],
+                  [
+                    0.811246117974981,
+                    0.5483208020644301
+                  ],
+                  [
+                    0.8623803458662553,
+                    0.6012867710687599
+                  ]
+                ],
+                "land": [
+                  [
+                    -0.04,
+                    0.43
+                  ],
+                  [
+                    1.04,
+                    0.43
+                  ],
+                  [
+                    1.04,
+                    1.04
+                  ],
+                  [
+                    -0.04,
+                    1.04
+                  ],
+                  [
+                    -0.04,
+                    0.43
+                  ],
+                  [
+                    0.8623803458662553,
+                    0.6012867710687599
+                  ],
+                  [
+                    0.811246117974981,
+                    0.5483208020644301
+                  ],
+                  [
+                    0.7316026908252903,
+                    0.50628677106876
+                  ],
+                  [
+                    0.631246117974981,
+                    0.4792992619039208
+                  ],
+                  [
+                    0.5199999999999999,
+                    0.47000000000000003
+                  ],
+                  [
+                    0.4087538820250189,
+                    0.47929926190392086
+                  ],
+                  [
+                    0.30839730917470964,
+                    0.50628677106876
+                  ],
+                  [
+                    0.22875388202501895,
+                    0.5483208020644301
+                  ],
+                  [
+                    0.1776196541337447,
+                    0.6012867710687602
+                  ],
+                  [
+                    0.16000000000000003,
+                    0.66
+                  ],
+                  [
+                    0.17761965413374475,
+                    0.71871322893124
+                  ],
+                  [
+                    0.228753882025019,
+                    0.7716791979355699
+                  ],
+                  [
+                    0.30839730917470976,
+                    0.8137132289312401
+                  ],
+                  [
+                    0.408753882025019,
+                    0.8407007380960793
+                  ],
+                  [
+                    0.52,
+                    0.8500000000000001
+                  ],
+                  [
+                    0.6312461179749811,
+                    0.8407007380960791
+                  ],
+                  [
+                    0.7316026908252904,
+                    0.8137132289312401
+                  ],
+                  [
+                    0.811246117974981,
+                    0.7716791979355699
+                  ],
+                  [
+                    0.8623803458662553,
+                    0.71871322893124
+                  ],
+                  [
+                    0.88,
+                    0.66
+                  ],
+                  [
+                    0.8623803458662553,
+                    0.6012867710687599
+                  ],
+                  [
+                    -0.04,
+                    0.43
+                  ]
+                ]
+              },
+              "candidates": [],
+              "repairs": [],
+              "limitations": [
+                "几何检查不判定诗意理解或审美合格",
+                "动作时序与整首诗的场景切换尚未编排"
+              ],
+              "topology": "环池疏岸",
+              "layout": 0,
+              "orientation": "环池疏岸",
+              "audit": {
+                "scope": "implemented-geometry-and-drawing-gaps",
+                "coverage": {
+                  "scope": "extracted-entities-only",
+                  "present": 4,
+                  "mapped": 4,
+                  "parameters": [],
+                  "missing": []
+                },
+                "checks": [
+                  "presence",
+                  "count",
+                  "finite",
+                  "support",
+                  "scale",
+                  "relative-position",
+                  "depth",
+                  "grove-spread",
+                  "drawing-gaps"
+                ],
+                "status": "needs-review",
+                "errors": 0,
+                "review": 1,
+                "issues": [
+                  {
+                    "code": "unresolved-relation",
+                    "severity": "review",
+                    "message": "有空间关系尚无对应布局画法"
+                  }
+                ],
+                "metrics": {
+                  "overlapPenalty": 1.009,
+                  "balancePenalty": 0.071,
+                  "motifFootprint": 1.03,
+                  "landArea": 0.447
+                },
+                "cost": 42.674,
+                "aestheticAcceptance": "pending-user"
+              },
+              "graph": {
+                "nodes": [
+                  {
+                    "id": "l0",
+                    "entities": [
+                      "i2"
+                    ],
+                    "tool": "landscape",
+                    "role": "detail",
+                    "habitat": "water",
+                    "inferred": false,
+                    "support": "l2"
+                  },
+                  {
+                    "id": "l1",
+                    "entities": [
+                      "i3"
+                    ],
+                    "tool": "tree",
+                    "role": "vegetation",
+                    "habitat": "land",
+                    "inferred": false,
+                    "support": "l4"
+                  },
+                  {
+                    "id": "l2",
+                    "entities": [
+                      "i1"
+                    ],
+                    "tool": "water",
+                    "role": "water",
+                    "habitat": null,
+                    "inferred": false,
+                    "support": null
+                  },
+                  {
+                    "id": "l3",
+                    "entities": [
+                      "i4"
+                    ],
+                    "tool": "bird",
+                    "role": "fauna",
+                    "habitat": "air",
+                    "inferred": false,
+                    "support": null
+                  },
+                  {
+                    "id": "l4",
+                    "entities": [],
+                    "tool": "landscape",
+                    "role": "terrain",
+                    "habitat": null,
+                    "inferred": true,
+                    "support": null
+                  }
+                ],
+                "edges": [
+                  {
+                    "type": "supported-by",
+                    "source": "l0",
+                    "target": "l2",
+                    "basis": "local-composition",
+                    "habitat": "water"
+                  },
+                  {
+                    "type": "supported-by",
+                    "source": "l1",
+                    "target": "l4",
+                    "basis": "local-composition",
+                    "habitat": "land"
+                  },
+                  {
+                    "type": "supported-by",
+                    "source": "l3",
+                    "target": null,
+                    "basis": "local-composition",
+                    "habitat": "air"
+                  },
+                  {
+                    "type": "on",
+                    "source": "l0",
+                    "target": "l2",
+                    "basis": "explicit",
+                    "modality": "asserted",
+                    "evidence": [
+                      "池上碧苔三四点"
+                    ]
+                  },
+                  {
+                    "type": "behind",
+                    "source": "l3",
+                    "target": "l1",
+                    "basis": "explicit",
+                    "modality": "asserted",
+                    "evidence": [
+                      "叶底黄鹂一两声"
+                    ]
+                  }
+                ],
+                "setting": "waterside"
+              }
+            },
+            "displayAudit": {
+              "scope": "display-scale-separation-and-habitat",
+              "issues": [
+                {
+                  "code": "air",
+                  "id": "i4:bird::3:2"
+                }
+              ],
+              "errors": 1,
+              "aestheticAcceptance": "pending-user"
+            }
+          },
+          "spatial": [
+            {
+              "type": "on",
+              "source": "i2",
+              "target": "i1",
+              "modality": "asserted",
+              "basis": "explicit",
+              "evidence": [
+                "池上碧苔三四点"
+              ],
+              "visualized": false,
+              "reason": "该空间关系与形态组合尚未适配"
+            },
+            {
+              "type": "behind",
+              "source": "i4",
+              "target": "i3",
+              "modality": "asserted",
+              "basis": "explicit",
+              "evidence": [
+                "叶底黄鹂一两声"
+              ],
+              "visualized": true,
+              "reason": "由通用场景约束组织；具体方向、距离与尺度属于本地构图"
+            }
+          ],
+          "landscapeStyle": {
+            "version": "1.0",
+            "color": "role-and-distance",
+            "motion": "layer-rhythms",
+            "aestheticAcceptance": "pending-user"
+          }
+        }
+      ],
+      "composition": "space-2",
+      "omitted": [],
+      "notes": [
+        "池虽被归为地点，仍按原文明示的自然景物匹配；具体空间关系另行处理。",
+        "黄鹂：以通用写意鸟形表现，不细分物种。这是本地写意借形，保留原词义。",
+        "黄鹂可由鸣声借鸟形联想，不把绘出的姿态当作原文已明确看见的动作。",
+        "位置、大小、笔触与默认微动是本地试画选择；数量解释与本地显示数量分别记录。",
+        "碧苔的数量解释已保留，当前工具以整体图层表现，内部笔触尚未按数量逐个适配。",
+        "碧苔的数量指局部，当前缺少对应局部计数画法，未按枝叶数量复制整株。",
+        "叶未明说精确数量，按模型的 grove 群落解释选择本地显示密度。",
+        "未明说的群落数量、疏密、近中远层次与变体均为本地构图选择；种类可按已声明的写意画法概括，不把铺展词换算成精确物体数量。",
+        "水面以连续色层和水纹构成空间；水面的范围、视点与水平线是本地构图选择，不自动增加岸或陆地。",
+        "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。",
+        "通用场景层先组织地面、水域、群落和主体，再比较三个布局的依托、相对位置、尺度与遮挡；检查通过不代表审美已通过。",
+        "语义保留：scene.supports[0]，该主体尚无水上姿态，未凭空添加船只",
+        "整体场景、主次、远近、依托和支持的动作状态来自本次模型解释；具体布局、颜色和时钟倍率由本地视觉策略选择。",
+        "动作动画表现受支持的主导状态与有限观看运动；先后事件与完整因果尚未编排。",
+        "动态程度与默认轻风是可调整的观看选择；不改变数量、主次或原文动作判断。人物保持点景写意，不新增人物步态。",
+        "显示检查覆盖实例尺度、鸟群分离与空中落点；不保证笔触未被遮挡，也不代替实际观看。竹林默认成组拖动，其余单独拖动；Shift 可拖动同层整组。"
+      ],
+      "relations": [],
+      "semanticConsumption": {
+        "version": "3.3",
+        "items": [
+          {
+            "path": "scene.setting",
+            "status": "applied",
+            "consumer": "本地视觉策略",
+            "effect": "整体环境进入场景提案选择",
+            "basis": "explicit",
+            "evidence": [
+              "池上碧苔三四点"
+            ]
+          },
+          {
+            "path": "scene.groups[0].role",
+            "status": "applied",
+            "consumer": "主次布局",
+            "effect": "保留环境画布范围，主次不改变地形边界",
+            "basis": "inferred",
+            "evidence": [
+              "池上碧苔三四点"
+            ]
+          },
+          {
+            "path": "scene.groups[0].pattern",
+            "status": "applied",
+            "consumer": "群落布局",
+            "effect": "按 single 组织显示单元；不覆盖明确数量",
+            "basis": "inferred",
+            "evidence": [
+              "池上碧苔三四点"
+            ]
+          },
+          {
+            "path": "scene.groups[0].depth",
+            "status": "skipped",
+            "consumer": "远近布局",
+            "effect": "远近未明，保持本地默认",
+            "basis": "inferred",
+            "evidence": [
+              "池上碧苔三四点"
+            ]
+          },
+          {
+            "path": "scene.groups[1].role",
+            "status": "applied",
+            "consumer": "主次布局",
+            "effect": "点景缩小淡化",
+            "basis": "inferred",
+            "evidence": [
+              "池上碧苔三四点"
+            ]
+          },
+          {
+            "path": "scene.groups[1].pattern",
+            "status": "applied",
+            "consumer": "群落布局",
+            "effect": "按 scattered 组织显示单元；不覆盖明确数量",
+            "basis": "inferred",
+            "evidence": [
+              "池上碧苔三四点"
+            ]
+          },
+          {
+            "path": "scene.groups[1].depth",
+            "status": "applied",
+            "consumer": "远近布局",
+            "effect": "将 near 转为相对大小、透明度与允许区域内的落点",
+            "basis": "inferred",
+            "evidence": [
+              "池上碧苔三四点"
+            ]
+          },
+          {
+            "path": "scene.groups[2].role",
+            "status": "applied",
+            "consumer": "主次布局",
+            "effect": "保留环境群落层次",
+            "basis": "inferred",
+            "evidence": [
+              "叶底黄鹂一两声"
+            ]
+          },
+          {
+            "path": "scene.groups[2].pattern",
+            "status": "applied",
+            "consumer": "群落布局",
+            "effect": "按 grove 组织显示单元；不覆盖明确数量",
+            "basis": "inferred",
+            "evidence": [
+              "叶底黄鹂一两声"
+            ]
+          },
+          {
+            "path": "scene.groups[2].depth",
+            "status": "applied",
+            "consumer": "远近布局",
+            "effect": "将 middle 转为相对大小、透明度与允许区域内的落点",
+            "basis": "inferred",
+            "evidence": [
+              "叶底黄鹂一两声"
+            ]
+          },
+          {
+            "path": "scene.groups[3].role",
+            "status": "applied",
+            "consumer": "主次布局",
+            "effect": "主体相对突出",
+            "basis": "inferred",
+            "evidence": [
+              "叶底黄鹂一两声"
+            ]
+          },
+          {
+            "path": "scene.groups[3].pattern",
+            "status": "applied",
+            "consumer": "群落布局",
+            "effect": "按 single 组织显示单元；不覆盖明确数量",
+            "basis": "inferred",
+            "evidence": [
+              "叶底黄鹂一两声"
+            ]
+          },
+          {
+            "path": "scene.groups[3].depth",
+            "status": "applied",
+            "consumer": "远近布局",
+            "effect": "将 middle 转为相对大小、透明度与允许区域内的落点",
+            "basis": "inferred",
+            "evidence": [
+              "叶底黄鹂一两声"
+            ]
+          },
+          {
+            "path": "scene.supports[0]",
+            "status": "unsupported",
+            "consumer": "场景依托",
+            "effect": "该主体尚无水上姿态，未凭空添加船只",
+            "basis": "explicit",
+            "evidence": [
+              "池上碧苔三四点"
+            ]
+          },
+          {
+            "path": "scene.supports[1]",
+            "status": "applied",
+            "consumer": "场景依托",
+            "effect": "使用已提取主体的现有承托画法",
+            "basis": "explicit",
+            "evidence": [
+              "叶底黄鹂一两声"
+            ]
+          },
+          {
+            "path": "scene.actions[0].state",
+            "status": "skipped",
+            "consumer": "动作边界",
+            "effect": "动作未明，保留静态形态",
+            "basis": "inferred",
+            "evidence": [
+              "叶底黄鹂一两声"
+            ]
+          },
+          {
+            "path": "scene.actions[0].pace",
+            "status": "skipped",
+            "consumer": "本地视觉策略",
+            "effect": "该工具尚不支持此动作分量",
+            "basis": "inferred",
+            "evidence": [
+              "叶底黄鹂一两声"
+            ]
+          },
+          {
+            "path": "scene.actions[0].direction",
+            "status": "skipped",
+            "consumer": "本地视觉策略",
+            "effect": "该工具尚不支持此动作分量",
+            "basis": "inferred",
+            "evidence": [
+              "叶底黄鹂一两声"
+            ]
+          },
+          {
+            "path": "scene.atmosphere.visibility",
+            "status": "applied",
+            "consumer": "画布色层与远景",
+            "effect": "可见度 clear；迷蒙或昏暗时淡化非光源图层",
+            "basis": "inferred",
+            "evidence": [
+              "池上碧苔三四点",
+              "叶底黄鹂一两声"
+            ]
+          },
+          {
+            "path": "scene.atmosphere.illumination",
+            "status": "applied",
+            "consumer": "自动光色",
+            "effect": "照明 day 与气息标签共同选择本地 mineral 配色；夜景优先暗底，用户可手动覆盖",
+            "basis": "inferred",
+            "evidence": [
+              "池上碧苔三四点",
+              "叶底黄鹂一两声"
+            ]
+          },
+          {
+            "path": "atmosphere.energy",
+            "status": "applied",
+            "consumer": "绘画时钟",
+            "effect": "没有明确动作节奏时，气息强弱控制已有微动的默认时钟"
+          },
+          {
+            "path": "atmosphere.openness",
+            "status": "applied",
+            "consumer": "群落分布与笔触密度",
+            "effect": "开阔度转换为本地间距与工具笔触密度，不等于原文数量"
+          },
+          {
+            "path": "atmosphere.valence",
+            "status": "applied",
+            "consumer": "自动光色",
+            "effect": "先约束昼夜明暗，再按已支持的气息标签和情绪倾向选择配色；不宣称完整情感理解"
+          },
+          {
+            "path": "time.markers",
+            "status": "retained",
+            "consumer": "原始记录与解读",
+            "effect": "保留原文时间标记；本版照明由 scene.atmosphere 转换，多阶段时间逻辑未执行"
+          }
+        ],
+        "summary": {
+          "applied": 18,
+          "partial": 0,
+          "unsupported": 1,
+          "skipped": 4,
+          "retained": 1
+        },
+        "aestheticAcceptance": "pending-user"
+      },
+      "landscapeStyle": {
+        "version": "1.0",
+        "color": "role-and-distance",
+        "motion": "layer-rhythms",
+        "aestheticAcceptance": "pending-user"
+      },
+      "compositionSelection": {
+        "method": "final-display-constraints-then-geometric-preference",
+        "candidates": [
+          {
+            "id": "space-2",
+            "errors": 1,
+            "score": 178.719
+          },
+          {
+            "id": "space-1",
+            "errors": 1,
+            "score": 76.452
+          },
+          {
+            "id": "space-0",
+            "errors": 1,
+            "score": 61.83
+          }
+        ],
+        "aestheticAcceptance": "pending-user"
+      },
+      "imageryTrace": [
+        {
+          "id": "i1",
+          "mentions": [
+            "池"
+          ],
+          "role": "scene",
+          "presence": "present",
+          "parameter": null,
+          "layers": [
+            {
+              "id": "i1:water:plane:2",
+              "tool": "water",
+              "instances": [
+                "i1:water:plane:2:0"
+              ]
+            }
+          ],
+          "omission": null
+        },
+        {
+          "id": "i2",
+          "mentions": [
+            "碧苔"
+          ],
+          "role": "scene",
+          "presence": "present",
+          "parameter": null,
+          "layers": [
+            {
+              "id": "i2:landscape:moss:0",
+              "tool": "landscape",
+              "instances": [
+                "i2:landscape:moss:0:0"
+              ]
+            }
+          ],
+          "omission": null
+        },
+        {
+          "id": "i3",
+          "mentions": [
+            "叶"
+          ],
+          "role": "scene",
+          "presence": "present",
+          "parameter": null,
+          "layers": [
+            {
+              "id": "i3:tree:broadleaf:1",
+              "tool": "tree",
+              "instances": [
+                "i3:tree:broadleaf:1:0",
+                "i3:tree:broadleaf:1:1",
+                "i3:tree:broadleaf:1:2",
+                "i3:tree:broadleaf:1:3",
+                "i3:tree:broadleaf:1:4",
+                "i3:tree:broadleaf:1:5",
+                "i3:tree:broadleaf:1:6",
+                "i3:tree:broadleaf:1:7",
+                "i3:tree:broadleaf:1:8",
+                "i3:tree:broadleaf:1:9",
+                "i3:tree:broadleaf:1:10",
+                "i3:tree:broadleaf:1:11",
+                "i3:tree:broadleaf:1:12",
+                "i3:tree:broadleaf:1:13"
+              ]
+            }
+          ],
+          "omission": null
+        },
+        {
+          "id": "i4",
+          "mentions": [
+            "黄鹂"
+          ],
+          "role": "scene",
+          "presence": "present",
+          "parameter": null,
+          "layers": [
+            {
+              "id": "i4:bird::3",
+              "tool": "bird",
+              "instances": [
+                "i4:bird::3:0",
+                "i4:bird::3:1",
+                "i4:bird::3:2",
+                "i4:bird::3:3"
+              ]
+            }
+          ],
+          "omission": null
+        }
+      ]
+    },
+    "expression": {
+      "version": "shared-expression-1.1-source-bound",
+      "sourceContract": "expression-1.0",
+      "recommendation": "scenery",
+      "reason": "以明确景物及空间为主，默认风景优先",
+      "gaps": [],
+      "limitations": [
+        "景物过程当前影响抽象纹理；原生景物动作沿用场景能力，未支持的月下楼位移等仍不执行。",
+        "纹理、色层和观看扰动属于本地艺术选择，不改变语义成立状态"
+      ]
+    },
+    "notes": [
+      "三个表达倾向共享景物数量、空间、依托与主体身份；抽象笔触优先服从原景物区域和轮廓。",
+      "纯抽象或比喻句不因切换风景优先而补山水。",
+      "池虽被归为地点，仍按原文明示的自然景物匹配；具体空间关系另行处理。",
+      "黄鹂：以通用写意鸟形表现，不细分物种。这是本地写意借形，保留原词义。",
+      "黄鹂可由鸣声借鸟形联想，不把绘出的姿态当作原文已明确看见的动作。",
+      "位置、大小、笔触与默认微动是本地试画选择；数量解释与本地显示数量分别记录。",
+      "碧苔的数量解释已保留，当前工具以整体图层表现，内部笔触尚未按数量逐个适配。",
+      "碧苔的数量指局部，当前缺少对应局部计数画法，未按枝叶数量复制整株。",
+      "叶未明说精确数量，按模型的 grove 群落解释选择本地显示密度。",
+      "未明说的群落数量、疏密、近中远层次与变体均为本地构图选择；种类可按已声明的写意画法概括，不把铺展词换算成精确物体数量。",
+      "水面以连续色层和水纹构成空间；水面的范围、视点与水平线是本地构图选择，不自动增加岸或陆地。",
+      "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。",
+      "通用场景层先组织地面、水域、群落和主体，再比较三个布局的依托、相对位置、尺度与遮挡；检查通过不代表审美已通过。",
+      "语义保留：scene.supports[0]，该主体尚无水上姿态，未凭空添加船只",
+      "整体场景、主次、远近、依托和支持的动作状态来自本次模型解释；具体布局、颜色和时钟倍率由本地视觉策略选择。",
+      "动作动画表现受支持的主导状态与有限观看运动；先后事件与完整因果尚未编排。",
+      "动态程度与默认轻风是可调整的观看选择；不改变数量、主次或原文动作判断。人物保持点景写意，不新增人物步态。",
+      "显示检查覆盖实例尺度、鸟群分离与空中落点；不保证笔触未被遮挡，也不代替实际观看。竹林默认成组拖动，其余单独拖动；Shift 可拖动同层整组。"
+    ],
+    "aestheticAcceptance": "pending-user"
+  },
+  "delivery": {
+    "status": "complete",
+    "retryable": false,
+    "reason": null,
+    "message": "解读已通过检查。"
+  },
+  "elapsed_seconds": 9.9
+}

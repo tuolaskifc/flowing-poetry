@@ -1,0 +1,39 @@
+{
+  "version": "generation-recovery-1.1",
+  "status": "normalized",
+  "reviewRequired": true,
+  "changes": [
+    {
+      "kind": "source-range-only",
+      "path": "spatial.0.evidence",
+      "original": [
+        "复照青苔上"
+      ],
+      "effective": [
+        "返景入深林，复照青苔上。"
+      ]
+    },
+    {
+      "kind": "source-range-only",
+      "path": "expression.relations.0.evidence",
+      "original": [
+        "复照青苔上"
+      ],
+      "effective": [
+        "返景入深林，复照青苔上。"
+      ]
+    },
+    {
+      "kind": "source-range-only",
+      "path": "expression.processes.0.evidence",
+      "original": [
+        "复照青苔上"
+      ],
+      "effective": [
+        "返景入深林，复照青苔上。"
+      ]
+    }
+  ],
+  "omitted": [],
+  "message": "已完成格式或引用整理，解读仍可复核。"
+}

@@ -1,0 +1,170 @@
+{
+  "id": "2026-10-21T11-58-38-000Z-9c045e69",
+  "fingerprint": "d627b7dd323b991a56627a23f6a8afbcaf78ba367b799b10a191c3fcea69a53e",
+  "poem": "春潮带雨晚来急，野渡无人舟自横。",
+  "source": {
+    "provider": "精选诗句库",
+    "author": "韦应物",
+    "title": "滁州西涧",
+    "dynasty": "唐代"
+  },
+  "mode": "quantity",
+  "model": "DeepSeek-V4.1-Flash",
+  "started_at": "2026-10-21T11:58:38.002Z",
+  "cached": false,
+  "http_status": 200,
+  "usage": {
+    "completion_tokens": 472,
+    "prompt_tokens": 2543,
+    "total_tokens": 3015,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  },
+  "finish_reason": "stop",
+  "analysis": {
+    "schema_version": "3.1",
+    "poem": "春潮带雨晚来急，野渡无人舟自横。",
+    "reading": "春潮夹带雨水，傍晚来得急；荒野渡口无人，小船独自横泊。",
+    "entities": [
+      {
+        "id": "i1",
+        "mentions": [
+          "春潮"
+        ],
+        "concept": "春天的潮水",
+        "kind": "environment",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "春潮带雨晚来急"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "spread",
+          "evidence": [
+            "春潮"
+          ]
+        }
+      },
+      {
+        "id": "i2",
+        "mentions": [
+          "雨"
+        ],
+        "concept": "雨水",
+        "kind": "environment",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "春潮带雨晚来急"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "spread",
+          "evidence": [
+            "雨"
+          ]
+        }
+      },
+      {
+        "id": "i3",
+        "mentions": [
+          "野渡"
+        ],
+        "concept": "荒野的渡口",
+        "kind": "place",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "野渡无人舟自横"
+        ],
+        "quantity": {
+          "mode": "exact",
+          "min": 1,
+          "max": 1,
+          "unit": "个",
+          "scope": "individual",
+          "extent": "local",
+          "evidence": [
+            "野渡"
+          ]
+        }
+      },
+      {
+        "id": "i4",
+        "mentions": [
+          "舟"
+        ],
+        "concept": "小船",
+        "kind": "object",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "野渡无人舟自横"
+        ],
+        "quantity": {
+          "mode": "exact",
+          "min": 1,
+          "max": 1,
+          "unit": "只",
+          "scope": "individual",
+          "extent": "local",
+          "evidence": [
+            "舟"
+          ]
+        }
+      }
+    ],
+    "relations": [],
+    "atmosphere": {
+      "labels": [
+        "荒寂",
+        "清冷"
+      ],
+      "valence": "neutral",
+      "energy": "medium",
+      "tension": "low",
+      "openness": "medium",
+      "evidence": [
+        "春潮带雨晚来急",
+        "野渡无人舟自横"
+      ]
+    },
+    "time": {
+      "markers": [
+        {
+          "surface": "晚",
+          "meaning": "傍晚时分"
+        }
+      ],
+      "note": null
+    },
+    "uncertainties": [
+      "“无人”指渡口无人，未明说是否有人在场或附近。"
+    ]
+  },
+  "validation": {
+    "valid": false,
+    "errors": [
+      "i3.quantity 单位不是原文",
+      "i4.quantity 单位不是原文"
+    ],
+    "warnings": [
+      "模型保留了不确定性，需要审阅"
+    ],
+    "review_required": true
+  },
+  "elapsed_seconds": 3.9
+}

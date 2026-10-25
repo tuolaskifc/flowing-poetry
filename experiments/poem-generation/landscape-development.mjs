@@ -18,7 +18,7 @@ const across=(points,x)=>track(points.map(([a,b])=>[b,a]),x);
 function band(points,near=.17){const side=sign=>points.map(([x,y])=>[x+sign*(.035+(y-points[0][1])*near),y]);return [...side(-1),...side(1).reverse()];}
 function role(l){
  if(l.tool==='landscape')return ['sun','glow','lightwash','stars'].includes(l.options.form)?'light':l.options.form==='mountain'?'mountain':l.options.form==='waterfall'?'water':['ground','shore','path','field'].includes(l.options.form)?'ground':l.options.form==='moss'?'vegetation':'atmosphere';
- return l.tool==='water'?'water':l.tool==='snow'?'snow':l.tool==='tree'&&l.options.form==='blossom'||l.tool==='lotus'&&l.options.form!=='leaf'||['flower','plum-branch','flower-forms'].includes(l.tool)?'blossom':plants.has(l.tool)||l.tool==='lotus'?'vegetation':['dwelling','building','pavilion','boat'].includes(l.tool)?'architecture':['moon'].includes(l.tool)?'light':['cloud','mist','rain','catkins'].includes(l.tool)?'atmosphere':['bird','oriole','fish','horse','figure'].includes(l.tool)?'figure':l.tool==='rock'?'rock':'vegetation';
+ return l.tool==='water'?'water':l.tool==='snow'?'snow':l.tool==='tree'&&l.options.form==='blossom'||l.tool==='lotus'&&l.options.form!=='leaf'||['flower','plum-branch','flower-forms'].includes(l.tool)?'blossom':plants.has(l.tool)||l.tool==='lotus'?'vegetation':['dwelling','building','pavilion','boat','flag'].includes(l.tool)?'architecture':['moon'].includes(l.tool)?'light':['cloud','mist','rain','catkins'].includes(l.tool)?'atmosphere':['bird','oriole','fish','horse','figure','weapon'].includes(l.tool)?'figure':l.tool==='rock'?'rock':'vegetation';
 }
 function style(plan){
  for(const [index,l] of plan.layers.entries()){

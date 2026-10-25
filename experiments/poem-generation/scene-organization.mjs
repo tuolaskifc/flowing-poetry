@@ -5,9 +5,9 @@ import {worldLayout,compositionScore} from './world-layout.mjs';
 const frac=n=>n-Math.floor(n);
 const clamp=(n,a,b)=>Math.max(a,Math.min(b,n));
 const plants=new Set(['tree','willow','bamboo','grass','flower','orchid']);
-const grounded=new Set([...plants,'dwelling','building','pavilion','horse','figure','rock']);
-const subjects=new Set(['dwelling','building','pavilion','horse','figure','boat']);
-const dimensions={tree:[.34,.59],willow:[.43,.50],bamboo:[.24,.51],grass:[.23,.20],flower:[.17,.39],orchid:[.20,.34],dwelling:[.32,.28],building:[.34,.44],pavilion:[.30,.32],horse:[.27,.20],figure:[.08,.19],boat:[.25,.10],bird:[.12,.08],oriole:[.12,.10],rock:[.23,.14],lotus:[.24,.24]};
+const grounded=new Set([...plants,'dwelling','building','pavilion','horse','figure','rock','weapon','flag']);
+const subjects=new Set(['weapon','flag','dwelling','building','pavilion','horse','figure','boat']);
+const dimensions={weapon:[.06,.34],flag:[.22,.24],tree:[.34,.59],willow:[.43,.50],bamboo:[.24,.51],grass:[.23,.20],flower:[.17,.39],orchid:[.20,.34],dwelling:[.32,.28],building:[.34,.44],pavilion:[.30,.32],horse:[.27,.20],figure:[.08,.19],boat:[.25,.10],bird:[.12,.08],oriole:[.12,.10],rock:[.23,.14],lotus:[.24,.24]};
 const polygonArea=p=>Math.abs(p.reduce((a,v,i)=>{const n=p[(i+1)%p.length];return a+v[0]*n[1]-n[0]*v[1];},0))/2;
 export function inRegion([x,y],polygon){
  if(!polygon?.length)return false;let inside=false;
@@ -191,7 +191,9 @@ export function inspectOrganization(analysis,{layers,scene,spatial=[]}){
   for(const v of l.instances){
    const p=v.placement;if(!Array.isArray(p?.at)||p.at.length!==2||!p.at.every(Number.isFinite)||!Array.isArray(p.anchor)||p.anchor.length!==2||!p.anchor.every(Number.isFinite)||!Number.isFinite(p.scale)||p.scale<=0){add('finite','error','出现无效位置或尺度',l);continue;}
    if(generic&&dimensions[l.tool]&&(p.at[0]<-.03||p.at[0]>1.03||p.at[1]<.03||p.at[1]>1.05))add('offscreen-anchor','error','主体锚点落出可见区域',l);
-   if(generic&&grounded.has(l.tool)&&!l.attachment&&regions.land&&!inRegion(p.at,regions.land))add('land-support','error','树根、建筑或人物没有落在地面区域',l);
+   const attachment=v.attachment||l.attachment;
+   if(attachment){const parent=layers.find(x=>x.entities.includes(attachment.target));if(!parent||attachment.instance&&!parent.instances.some(x=>x.id===attachment.instance))add('attachment-target','error','依附的具体对象未找到',l);}
+   if(generic&&grounded.has(l.tool)&&!attachment&&regions.land&&!inRegion(p.at,regions.land))add('land-support','error','树根、建筑或人物没有落在地面区域',l);
    if(['boat','fish'].includes(l.tool)||l.tool==='bird'&&l.options.pose==='waterbird'){
     if(!water){if(generic)add('missing-water','review','水上主体缺少可用水域；未擅自覆盖原文的缺席信息',l);}
     else if(!inRegion(p.at,waterRegion(water,scene)))add('water-support','error','水上主体落在水域之外',l);
@@ -199,7 +201,7 @@ export function inspectOrganization(analysis,{layers,scene,spatial=[]}){
    if(l.tool==='landscape'&&l.options.form==='waterfall'&&!layers.some(t=>t.tool==='landscape'&&t.options.form==='mountain'))add('missing-cliff','error','瀑布缺少山体依托',l);
    if(generic&&['willow','tree','dwelling','building'].includes(l.tool)&&p.scale>1.25)add('oversize','error','近景物尺度过大，挤压主体空间',l);
    if(dimensions[l.tool]){
-    const box=bounds(l,v),a=(box[2]-box[0])*(box[3]-box[1]);footprint+=a;moment+=p.at[0]*a;mass+=a;silhouettes.push({l,box,area:a});
+    const box=bounds(l,v),a=(box[2]-box[0])*(box[3]-box[1]);footprint+=a;moment+=p.at[0]*a;mass+=a;silhouettes.push({l,box,area:a,attached:!!attachment});
    }
   }
   if(plants.has(l.tool)&&l.quantity?.collective&&l.instances.length>3){
@@ -209,7 +211,7 @@ export function inspectOrganization(analysis,{layers,scene,spatial=[]}){
  }
  // Approximate silhouette overlap is only a soft signal; forests need overlap.
  for(let i=0;i<silhouettes.length;i++)for(let j=i+1;j<silhouettes.length;j++){
-  const a=silhouettes[i],b=silhouettes[j];if(a.l===b.l&&!subjects.has(a.l.tool)||plants.has(a.l.tool)&&plants.has(b.l.tool)||a.l.attachment||b.l.attachment)continue;
+  const a=silhouettes[i],b=silhouettes[j];if(a.l===b.l&&!subjects.has(a.l.tool)||plants.has(a.l.tool)&&plants.has(b.l.tool)||a.attached||b.attached)continue;
   const overlap=Math.max(0,Math.min(a.box[2],b.box[2])-Math.max(a.box[0],b.box[0]))*Math.max(0,Math.min(a.box[3],b.box[3])-Math.max(a.box[1],b.box[1]));
   overlaps+=overlap/Math.max(.001,Math.min(a.area,b.area));
  }

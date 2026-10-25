@@ -1,0 +1,212 @@
+{
+  "id": "2026-10-21T11-05-51-990Z-06e8945d",
+  "fingerprint": "081233da1de3d712a80fc3403458ef579ed5b5a929a479b1bdf125bd3d8ab1a7",
+  "poem": "春潮带雨晚来急，野渡无人舟自横。",
+  "source": {
+    "provider": "精选诗句库",
+    "author": "韦应物",
+    "title": "滁州西涧",
+    "dynasty": "唐代"
+  },
+  "mode": "imagery-only",
+  "model": "DeepSeek-V4.1-Flash",
+  "started_at": "2026-10-21T11:05:51.992Z",
+  "cached": false,
+  "http_status": 200,
+  "usage": {
+    "completion_tokens": 339,
+    "prompt_tokens": 1994,
+    "total_tokens": 2333,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 1920
+    }
+  },
+  "finish_reason": "stop",
+  "analysis": {
+    "schema_version": "3.0",
+    "poem": "春潮带雨晚来急，野渡无人舟自横。",
+    "reading": "春潮夹着雨，傍晚水势更急；荒野渡口空无一人，小船独自横泊。",
+    "entities": [
+      {
+        "id": "i1",
+        "mentions": [
+          "春潮"
+        ],
+        "concept": "春天上涨的潮水",
+        "kind": "environment",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "春潮带雨晚来急"
+        ]
+      },
+      {
+        "id": "i2",
+        "mentions": [
+          "雨"
+        ],
+        "concept": "降雨",
+        "kind": "environment",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "春潮带雨晚来急"
+        ]
+      },
+      {
+        "id": "i3",
+        "mentions": [
+          "野渡"
+        ],
+        "concept": "荒野的渡口",
+        "kind": "place",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "野渡无人舟自横"
+        ]
+      },
+      {
+        "id": "i4",
+        "mentions": [
+          "舟"
+        ],
+        "concept": "小船",
+        "kind": "object",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "野渡无人舟自横"
+        ]
+      }
+    ],
+    "relations": [],
+    "atmosphere": {
+      "labels": [
+        "荒寂",
+        "清冷"
+      ],
+      "valence": "neutral",
+      "energy": "medium",
+      "tension": "low",
+      "openness": "medium",
+      "evidence": [
+        "春潮带雨晚来急",
+        "野渡无人舟自横"
+      ]
+    },
+    "time": {
+      "markers": [
+        {
+          "surface": "晚",
+          "meaning": "傍晚时分"
+        }
+      ],
+      "note": null
+    },
+    "uncertainties": [
+      "“无人”未指明是否曾有渡者，人物是否在场只能按字面理解为无人在渡口。"
+    ]
+  },
+  "validation": {
+    "valid": true,
+    "errors": [],
+    "warnings": [
+      "模型保留了不确定性，需要审阅"
+    ],
+    "review_required": true
+  },
+  "plan": {
+    "version": "trial-4-orchid-horse-lotus",
+    "seed": 3131571164,
+    "settings": {
+      "wind": 0,
+      "density": 0.45,
+      "palette": "clear"
+    },
+    "layers": [
+      {
+        "tool": "water",
+        "entities": [
+          "i1"
+        ],
+        "names": [
+          "春潮"
+        ],
+        "options": {},
+        "animate": false,
+        "placement": {
+          "anchor": [
+            320,
+            130
+          ],
+          "at": [
+            0.5,
+            0.57
+          ],
+          "scale": 1.5
+        }
+      },
+      {
+        "tool": "boat",
+        "entities": [
+          "i4"
+        ],
+        "names": [
+          "舟"
+        ],
+        "options": {},
+        "animate": false,
+        "placement": {
+          "anchor": [
+            320,
+            230
+          ],
+          "at": [
+            0.6,
+            0.72
+          ],
+          "scale": 0.95
+        }
+      },
+      {
+        "tool": "rain",
+        "entities": [
+          "i2"
+        ],
+        "names": [
+          "雨"
+        ],
+        "options": {},
+        "animate": false,
+        "placement": {
+          "anchor": [
+            320,
+            194
+          ],
+          "at": [
+            0.5,
+            0.5
+          ],
+          "scale": 1.55
+        }
+      }
+    ],
+    "omitted": [
+      {
+        "id": "i3",
+        "name": "野渡",
+        "reason": "暂未提供该人物、地点或抽象含义的绘画单元"
+      }
+    ],
+    "notes": [
+      "本句有否定或假设提示，基础意象模式未细分其范围，暂缓动画，不宣称完成逻辑解释。",
+      "位置、大小、笔触、固定群体数量与默认微动是本地试画选择；不表示原句给出了这些数值。"
+    ],
+    "relations": []
+  },
+  "elapsed_seconds": 3.8
+}

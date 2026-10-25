@@ -1,6 +1,7 @@
 // Final display constraints run after every layout pass, including alternatives.
 // They preserve semantic entities and counts; unsupported meaning remains a gap.
 import {inRegion,inspectOrganization} from './scene-organization.mjs';
+import {sourceColorCue as colorCue} from './source-colors.mjs';
 import {compositionScore} from './world-layout.mjs';
 const clamp=(x,a,b)=>Math.max(a,Math.min(b,x));
 const birds=l=>['bird','oriole'].includes(l.tool);
@@ -11,7 +12,8 @@ function separate(l,region){
   const original=v.placement.at,min=birds(l)?.07:.055;
   let best=original,score=-Infinity;
   for(let j=0;j<100;j++){
-   const p=j===0?original:[clamp(original[0]+Math.cos(j*2.399+i)*(.025+Math.sqrt(j)*.024),.06,.94),clamp(original[1]+Math.sin(j*2.399+i)*(.02+Math.sqrt(j)*.018),.12,.96)];
+   const sky=birds(l)&&['flying','spread'].includes(l.options.pose);
+   const p=j===0?original:[clamp(original[0]+Math.cos(j*2.399+i)*(.025+Math.sqrt(j)*.024),.06,.94),clamp(original[1]+Math.sin(j*2.399+i)*(.02+Math.sqrt(j)*.018),sky?.14:.12,sky?.43:.96)];
    if(region&&!inRegion(p,region))continue;
    const clearance=occupied.length?Math.min(...occupied.map(q=>Math.hypot(p[0]-q[0],p[1]-q[1]))):1;
    const s=Math.min(clearance,min)-Math.hypot(p[0]-original[0],p[1]-original[1])*.035;
@@ -19,20 +21,6 @@ function separate(l,region){
   }
   v.placement.at=[...best];occupied.push(best);
  }
-}
-function colorCue(analysis,l){
- const entities=analysis.entities.filter(e=>l.entities.includes(e.id));
- const clauses=analysis.poem.split(/[，。；！？\n]/).filter(c=>entities.some(e=>e.mentions.some(m=>c.includes(m))));
- const text=clauses.join('，');
- if(l.tool==='bird'&&l.options.tone==='light')return {color:'#F8F7EB',evidence:text,basis:'source-literal'};
- if(l.tool==='water'&&/(?:江|水|溪|湖).{0,2}(?:碧|绿)|(?:碧|绿)(?:水|江|溪|湖)/.test(text))return {color:'#288F90',evidence:text,basis:'source-literal'};
- if(l.options.form==='mountain'&&/山.{0,2}青|青山/.test(text))return {color:'#427E73',evidence:text,basis:'source-literal'};
- if(['flower','lotus','plum-branch'].includes(l.tool)||l.tool==='tree'&&l.options.form==='blossom'){
-  if(/(?:花|梅|荷).{0,4}红|红(?:花|梅|荷)/.test(text))return {color:'#D95860',evidence:text,basis:'source-literal'};
-  if(/花欲燃/.test(text))return {color:'#D95049',evidence:text,basis:'local-color-interpretation'};
- }
- if(l.tool==='lotus'&&l.options.form==='leaf'&&/叶.{0,5}碧|碧.{0,3}叶/.test(text))return {color:'#328761',evidence:text,basis:'source-literal'};
- return null;
 }
 export function finalizeScene(analysis,plan){
  if(analysis.schema_version!=='3.3')return plan;
@@ -51,15 +39,22 @@ export function finalizeScene(analysis,plan){
     }
     if(birds(l)){
      const far=l.semanticGroup?.depth==='far',near=l.semanticGroup?.depth==='near';
-     v.placement.scale=Math.max(v.placement.scale,far?.38:near?.62:.50);
-     v.opacity=Math.max(v.opacity??1,far?.52:.72);
+     v.placement.scale=Math.max(v.placement.scale,far?.48:near?.72:.62);
+     v.opacity=Math.max(v.opacity??1,far?.7:.86);
      if(l.options.pose==='flying'||l.options.pose==='spread')v.placement.at[1]=clamp(v.placement.at[1],.14,.43);
     }
    }
    if(birds(l)||['boat','dwelling','building'].includes(l.tool))separate(l,l.tool==='boat'||l.options.pose==='waterbird'?water?.clip:['dwelling','building'].includes(l.tool)?land:null);
+   if(['building','dwelling','pavilion','flag','weapon'].includes(l.tool)){
+    l.grounding=true;
+    for(const v of l.instances){const at=v.placement.at,min=l.semanticGroup?.depth==='far'?.66:.73;
+     if(at[1]<min&&(!land||inRegion([at[0],min],land)))at[1]=min;
+    }
+   }
    sync(l);
    const cue=colorCue(analysis,l);if(cue){l.colorCue=cue;l.visual={...l.visual,color:cue.color};}
    if(l.visual)l.visual.brushStrength=l.visual.role==='blossom'?1.65:l.visual.role==='vegetation'?1.2:l.visual.role==='water'?1.35:1.1;
+   if(l.visual&&(birds(l)||l.tool==='landscape'&&l.options.form==='waterfall'))l.visual.brushStrength=2.2;
   }
   // Bind attachment to a particular parent instance rather than its entire type.
   for(const l of p.layers.filter(l=>l.attachment)){

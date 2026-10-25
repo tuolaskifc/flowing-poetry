@@ -4,6 +4,9 @@
 
 | 需要了解什么 | 入口 | 定位 |
 | --- | --- | --- |
+| 改图能否用于后续生成 | [12 组换句验证](../poem-flow/rule-review.html) · [共用绘画规则](../experiments/poem-generation/shared-drawing-policy.md) | 主风景、交融与新抽象景物共用计数、身份、颜色、依托和避让；手工校准与真实回答重放分开统计 |
+| 本轮主要画面的变化 | [13 组前后对比](../poem-flow/refinement-review.html) · [实现与边界](../experiments/poem-generation/source-refinement.md) | 同回答、同种子；数量、身份、词语、颜色、可见度和承托改进，新增旗幡与兵器画法 |
+| 用过的诗句能否保住下限 | [全量检查表](../poem-flow/batch-audit-review.html) · [检查记录](../experiments/poem-generation/batch-audit.md) | 71 次当前接口首测、257 份记录、逐句画面与明确缺口；失败、局部恢复与基础画面分别统计 |
 | 整体设计与分工 | [设计规范](设计规范.md) | 当前唯一设计主文档 |
 | 现在实际运行的架构 | [架构页面](../poem-flow/architecture.html) · [SVG](../poem-flow/architecture.svg) | 当前 3.3 链路，已连接和待实现分别标记 |
 | 更丰富的配色与动态 | [效果预览](../poem-flow/color-motion-review.html) · [实现说明](../experiments/poem-generation/color-motion.md) | 22 套配色、动态程度 0–200%；人物保持基本写意，优先风景 |
@@ -25,7 +28,7 @@
 | 意象如何合并与分工 | [意象目录](../experiments/imagery-library/意象目录.md) | 60 个原始条目、20 类绘画方法及首批建议 |
 | 如何构成一景 | [场景区域与依托](../experiments/poem-generation/regional-composition.md) | 地形承托、群落密度、相对尺度、疏花树与舟上钓者 |
 | 新组合如何组织与自查 | [场景组织层](../experiments/poem-generation/scene-organization.md) | 三种布局、共同依托、有限修正、六句真实请求及失败；几何与审美分开 |
-| 绘画工具怎么扩展 | [结构与来源登记](../experiments/imagery-library/drawing/README.md) | 三十二个独立工具、来源追溯、运行接口与扩展步骤 |
+| 绘画工具怎么扩展 | [结构与来源登记](../experiments/imagery-library/drawing/README.md) | 三十四个独立工具、来源追溯、运行接口与扩展步骤 |
 | 每个意象完善多少 | [六十项进度总表](../experiments/imagery-library/progress.html) | 单表记录已有能力、缺口、试画入口与语境标记 |
 | 取诗句到出画面是否跑通 | [第一轮通路记录](../experiments/poem-generation/README.md) | 今日诗词取句、真实模型请求、基础组合画面与完整关系失败记录 |
 | 过去的讨论与开发 | [历史归档](archive/README.md) | 供回溯，设计以主文档为准 |

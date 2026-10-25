@@ -1,0 +1,1504 @@
+{
+  "id": "2026-10-23T07-37-24-051Z-590f0392",
+  "fingerprint": "3532a3b4d2a917b9caa8f60fa63490c8223639a4a4a241707e5f28d265402a04",
+  "poem": "星垂平野阔，月涌大江流。",
+  "source": {
+    "provider": "精选诗句库",
+    "author": "杜甫",
+    "title": "旅夜书怀",
+    "dynasty": "唐代"
+  },
+  "mode": "composition",
+  "model": "DeepSeek-V4.1-Flash",
+  "started_at": "2026-10-23T07:37:24.053Z",
+  "cached": false,
+  "http_status": 200,
+  "usage": {
+    "completion_tokens": 992,
+    "prompt_tokens": 4896,
+    "total_tokens": 5888,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 4864
+    }
+  },
+  "finish_reason": "stop",
+  "analysis": {
+    "schema_version": "3.3",
+    "poem": "星垂平野阔，月涌大江流。",
+    "reading": "星低垂于辽阔平野之上，月影随大江奔涌而流；上下两句以星月与平野大江构成开阔流动的夜景。",
+    "entities": [
+      {
+        "id": "i1",
+        "mentions": [
+          "星"
+        ],
+        "concept": "星",
+        "kind": "environment",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "星垂平野阔"
+        ],
+        "quantity": {
+          "mode": "many",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "group",
+          "extent": "spread",
+          "evidence": [
+            "星垂平野阔"
+          ]
+        }
+      },
+      {
+        "id": "i2",
+        "mentions": [
+          "平野"
+        ],
+        "concept": "平野",
+        "kind": "place",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "星垂平野阔"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "extent",
+          "extent": "spread",
+          "evidence": [
+            "平野阔"
+          ]
+        }
+      },
+      {
+        "id": "i3",
+        "mentions": [
+          "月"
+        ],
+        "concept": "月",
+        "kind": "environment",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "月涌大江流"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "individual",
+          "extent": "local",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i4",
+        "mentions": [
+          "大江"
+        ],
+        "concept": "大江",
+        "kind": "place",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "月涌大江流"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "extent",
+          "extent": "spread",
+          "evidence": [
+            "大江流"
+          ]
+        }
+      }
+    ],
+    "relations": [],
+    "atmosphere": {
+      "labels": [
+        "开阔",
+        "流动",
+        "夜静"
+      ],
+      "valence": "neutral",
+      "energy": "medium",
+      "tension": "low",
+      "openness": "high",
+      "evidence": [
+        "星垂平野阔",
+        "月涌大江流"
+      ]
+    },
+    "time": {
+      "markers": [],
+      "note": null
+    },
+    "uncertainties": [
+      "“月涌”可解为月影随波涌动，也可解为月亮在江面升起，动作主体与方向不唯一。",
+      "“星垂”是星低垂于平野之上的视觉描写，还是星映于野的倒影，原文未明。",
+      "“阔”“流”为状态描写，未交代具体时间点或先后过程。"
+    ],
+    "spatial": [
+      {
+        "type": "on",
+        "source": "i1",
+        "target": "i2",
+        "modality": "asserted",
+        "basis": "inferred",
+        "evidence": [
+          "星垂平野阔"
+        ]
+      },
+      {
+        "type": "on",
+        "source": "i3",
+        "target": "i4",
+        "modality": "asserted",
+        "basis": "inferred",
+        "evidence": [
+          "月涌大江流"
+        ]
+      }
+    ],
+    "scene": {
+      "setting": {
+        "kind": "mixed",
+        "basis": "inferred",
+        "evidence": [
+          "星垂平野阔",
+          "月涌大江流"
+        ]
+      },
+      "groups": [
+        {
+          "members": [
+            "i1"
+          ],
+          "role": "environment",
+          "pattern": "field",
+          "depth": "far",
+          "basis": "inferred",
+          "evidence": [
+            "星垂平野阔"
+          ]
+        },
+        {
+          "members": [
+            "i2"
+          ],
+          "role": "environment",
+          "pattern": "field",
+          "depth": "middle",
+          "basis": "inferred",
+          "evidence": [
+            "星垂平野阔"
+          ]
+        },
+        {
+          "members": [
+            "i3"
+          ],
+          "role": "accent",
+          "pattern": "single",
+          "depth": "far",
+          "basis": "inferred",
+          "evidence": [
+            "月涌大江流"
+          ]
+        },
+        {
+          "members": [
+            "i4"
+          ],
+          "role": "environment",
+          "pattern": "field",
+          "depth": "middle",
+          "basis": "inferred",
+          "evidence": [
+            "月涌大江流"
+          ]
+        }
+      ],
+      "supports": [
+        {
+          "entity": "i1",
+          "surface": "ground",
+          "target": "i2",
+          "basis": "inferred",
+          "evidence": [
+            "星垂平野阔"
+          ]
+        },
+        {
+          "entity": "i3",
+          "surface": "water",
+          "target": "i4",
+          "basis": "inferred",
+          "evidence": [
+            "月涌大江流"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "entity": "i1",
+          "state": "still",
+          "pace": "unspecified",
+          "direction": "unspecified",
+          "modality": "asserted",
+          "basis": "inferred",
+          "evidence": [
+            "星垂平野阔"
+          ]
+        },
+        {
+          "entity": "i3",
+          "state": "float",
+          "pace": "unspecified",
+          "direction": "unspecified",
+          "modality": "asserted",
+          "basis": "inferred",
+          "evidence": [
+            "月涌大江流"
+          ]
+        },
+        {
+          "entity": "i4",
+          "state": "flow",
+          "pace": "unspecified",
+          "direction": "unspecified",
+          "modality": "asserted",
+          "basis": "explicit",
+          "evidence": [
+            "大江流"
+          ]
+        }
+      ],
+      "atmosphere": {
+        "visibility": "clear",
+        "illumination": "night",
+        "basis": "inferred",
+        "evidence": [
+          "星垂平野阔",
+          "月涌大江流"
+        ]
+      }
+    }
+  },
+  "validation": {
+    "valid": true,
+    "errors": [],
+    "warnings": [
+      "模型保留了不确定性，需要审阅",
+      "spatial[0] 的推断或非确定关系需审阅",
+      "spatial[1] 的推断或非确定关系需审阅",
+      "scene.setting 为语义推断，绘画选择需与原文明示区分",
+      "scene.groups[0] 为语义推断，绘画选择需与原文明示区分",
+      "scene.groups[1] 为语义推断，绘画选择需与原文明示区分",
+      "scene.groups[2] 为语义推断，绘画选择需与原文明示区分",
+      "scene.groups[3] 为语义推断，绘画选择需与原文明示区分",
+      "scene.supports[0] 为语义推断，绘画选择需与原文明示区分",
+      "scene.supports[1] 为语义推断，绘画选择需与原文明示区分",
+      "scene.actions[0] 为语义推断，绘画选择需与原文明示区分",
+      "scene.actions[1] 为语义推断，绘画选择需与原文明示区分",
+      "scene.atmosphere 为语义推断，绘画选择需与原文明示区分"
+    ],
+    "review_required": true
+  },
+  "plan": {
+    "version": "semantic-composition-3.3-landscape",
+    "seed": 2558126582,
+    "settings": {
+      "wind": 0.3,
+      "density": 0.35,
+      "palette": "night",
+      "motion": 1.4
+    },
+    "layers": [
+      {
+        "tool": "landscape",
+        "entities": [
+          "i1"
+        ],
+        "projectedEntities": [],
+        "names": [
+          "星"
+        ],
+        "options": {
+          "form": "stars"
+        },
+        "animate": false,
+        "placement": {
+          "anchor": [
+            320,
+            194
+          ],
+          "at": [
+            0.5,
+            0.5
+          ],
+          "scale": 1.5
+        },
+        "semanticGroup": {
+          "members": [
+            "i1"
+          ],
+          "role": "environment",
+          "pattern": "field",
+          "depth": "far",
+          "basis": "inferred",
+          "evidence": [
+            "星垂平野阔"
+          ],
+          "index": 0
+        },
+        "semanticEffects": [
+          {
+            "path": "scene.actions[0].state",
+            "consumer": "形态与绘画时钟",
+            "effect": "静止姿态并停止该图层时钟",
+            "status": "applied"
+          },
+          {
+            "path": "scene.groups[0].role",
+            "consumer": "主次布局",
+            "effect": "保留环境画布范围，主次不改变地形边界",
+            "status": "applied"
+          },
+          {
+            "path": "scene.groups[0].pattern",
+            "consumer": "群落布局",
+            "effect": "按 field 组织显示单元；不覆盖明确数量",
+            "status": "applied"
+          },
+          {
+            "path": "scene.groups[0].depth",
+            "consumer": "远近布局",
+            "effect": "将 far 转为相对大小、透明度与允许区域内的落点",
+            "status": "applied"
+          }
+        ],
+        "semanticEnergy": false,
+        "timeScale": 0,
+        "semanticAction": {
+          "entity": "i1",
+          "state": "still",
+          "pace": "unspecified",
+          "direction": "unspecified",
+          "modality": "asserted",
+          "basis": "inferred",
+          "evidence": [
+            "星垂平野阔"
+          ]
+        },
+        "instances": [
+          {
+            "placement": {
+              "anchor": [
+                320,
+                194
+              ],
+              "at": [
+                0.5,
+                0.5
+              ],
+              "scale": 1.6
+            },
+            "depth": -0.2,
+            "opacity": 1,
+            "variant": 0,
+            "tone": "far"
+          }
+        ],
+        "singleUnit": false,
+        "quantity": {
+          "items": [
+            {
+              "entity": "i1",
+              "mode": "many",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "group",
+              "extent": "spread",
+              "evidence": [
+                "星垂平野阔"
+              ],
+              "basis": "model"
+            }
+          ],
+          "rendered": 1,
+          "exact": false,
+          "collective": true,
+          "partUnsupported": false
+        },
+        "quantityLabel": "整体笔触图层；内部数量尚未适配",
+        "z": -40,
+        "semanticSupport": {
+          "surface": "ground",
+          "target": "i2",
+          "path": "scene.supports[0]"
+        },
+        "visual": {
+          "role": "light"
+        },
+        "performance": {
+          "rhythm": "steady",
+          "rate": 1,
+          "amplitude": 1,
+          "phase": 0
+        }
+      },
+      {
+        "tool": "landscape",
+        "entities": [
+          "i2"
+        ],
+        "projectedEntities": [],
+        "names": [
+          "平野"
+        ],
+        "options": {
+          "form": "ground",
+          "edge": "soft"
+        },
+        "animate": false,
+        "placement": {
+          "anchor": [
+            320,
+            194
+          ],
+          "at": [
+            0.5,
+            0.54
+          ],
+          "scale": 1.5
+        },
+        "semanticGroup": {
+          "members": [
+            "i2"
+          ],
+          "role": "environment",
+          "pattern": "field",
+          "depth": "middle",
+          "basis": "inferred",
+          "evidence": [
+            "星垂平野阔"
+          ],
+          "index": 1
+        },
+        "semanticEffects": [
+          {
+            "path": "scene.groups[1].role",
+            "consumer": "主次布局",
+            "effect": "保留环境画布范围，主次不改变地形边界",
+            "status": "applied"
+          },
+          {
+            "path": "scene.groups[1].pattern",
+            "consumer": "群落布局",
+            "effect": "按 field 组织显示单元；不覆盖明确数量",
+            "status": "applied"
+          },
+          {
+            "path": "scene.groups[1].depth",
+            "consumer": "远近布局",
+            "effect": "将 middle 转为相对大小、透明度与允许区域内的落点",
+            "status": "applied"
+          }
+        ],
+        "semanticEnergy": false,
+        "timeScale": 0.8,
+        "instances": [
+          {
+            "placement": {
+              "anchor": [
+                320,
+                265
+              ],
+              "at": [
+                0.5,
+                0.54
+              ],
+              "scale": 2.5
+            },
+            "depth": 0.05,
+            "opacity": 1,
+            "variant": 1,
+            "tone": "middle"
+          }
+        ],
+        "singleUnit": false,
+        "quantity": {
+          "items": [
+            {
+              "entity": "i2",
+              "mode": "unspecified",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "extent",
+              "extent": "spread",
+              "evidence": [
+                "平野阔"
+              ],
+              "basis": "model"
+            }
+          ],
+          "rendered": 1,
+          "exact": false,
+          "collective": true,
+          "partUnsupported": false
+        },
+        "quantityLabel": "整体笔触图层；内部数量尚未适配",
+        "z": -18,
+        "clip": [
+          [
+            -0.04,
+            0.48
+          ],
+          [
+            0.34,
+            0.48
+          ],
+          [
+            0.35,
+            0.62
+          ],
+          [
+            0.47,
+            0.79
+          ],
+          [
+            0.28,
+            1.04
+          ],
+          [
+            -0.04,
+            1.04
+          ]
+        ],
+        "visual": {
+          "role": "ground"
+        },
+        "performance": {
+          "rhythm": "steady",
+          "rate": 1,
+          "amplitude": 1,
+          "phase": 3.8830085198369844
+        }
+      },
+      {
+        "tool": "moon",
+        "entities": [
+          "i3"
+        ],
+        "projectedEntities": [],
+        "names": [
+          "月"
+        ],
+        "options": {
+          "shape": "crescent"
+        },
+        "animate": false,
+        "placement": {
+          "anchor": [
+            320,
+            175
+          ],
+          "at": [
+            0.72,
+            0.22
+          ],
+          "scale": 0.85
+        },
+        "semanticGroup": {
+          "members": [
+            "i3"
+          ],
+          "role": "accent",
+          "pattern": "single",
+          "depth": "far",
+          "basis": "inferred",
+          "evidence": [
+            "月涌大江流"
+          ],
+          "index": 2
+        },
+        "semanticEffects": [
+          {
+            "path": "scene.actions[1].state",
+            "consumer": "动作画法",
+            "effect": "当前工具尚无对应动作状态",
+            "status": "unsupported"
+          },
+          {
+            "path": "scene.groups[2].role",
+            "consumer": "主次布局",
+            "effect": "点景缩小淡化",
+            "status": "applied"
+          },
+          {
+            "path": "scene.groups[2].pattern",
+            "consumer": "群落布局",
+            "effect": "按 single 组织显示单元；不覆盖明确数量",
+            "status": "applied"
+          },
+          {
+            "path": "scene.groups[2].depth",
+            "consumer": "远近布局",
+            "effect": "将 far 转为相对大小、透明度与允许区域内的落点",
+            "status": "applied"
+          }
+        ],
+        "semanticEnergy": false,
+        "timeScale": 0,
+        "semanticAction": {
+          "entity": "i3",
+          "state": "float",
+          "pace": "unspecified",
+          "direction": "unspecified",
+          "modality": "asserted",
+          "basis": "inferred",
+          "evidence": [
+            "月涌大江流"
+          ]
+        },
+        "instances": [
+          {
+            "placement": {
+              "anchor": [
+                320,
+                175
+              ],
+              "at": [
+                0.72,
+                0.22
+              ],
+              "scale": 0.31616
+            },
+            "depth": -0.2,
+            "opacity": 0.46799999999999997,
+            "variant": 0,
+            "tone": "far"
+          }
+        ],
+        "singleUnit": true,
+        "quantity": {
+          "items": [
+            {
+              "entity": "i3",
+              "mode": "unspecified",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "individual",
+              "extent": "local",
+              "evidence": [],
+              "basis": "model"
+            }
+          ],
+          "rendered": 1,
+          "exact": false,
+          "collective": false,
+          "partUnsupported": false
+        },
+        "quantityLabel": "数量未精确；本地试画 1 个单元",
+        "z": -5,
+        "visual": {
+          "role": "light"
+        },
+        "performance": {
+          "rhythm": "steady",
+          "rate": 1,
+          "amplitude": 1,
+          "phase": 1.4828317324943823
+        }
+      },
+      {
+        "tool": "water",
+        "entities": [
+          "i4"
+        ],
+        "projectedEntities": [],
+        "names": [
+          "大江"
+        ],
+        "options": {
+          "form": "plane"
+        },
+        "animate": true,
+        "placement": {
+          "anchor": [
+            320,
+            130
+          ],
+          "at": [
+            0.5,
+            0.45
+          ],
+          "scale": 1.5
+        },
+        "semanticGroup": {
+          "members": [
+            "i4"
+          ],
+          "role": "environment",
+          "pattern": "field",
+          "depth": "middle",
+          "basis": "inferred",
+          "evidence": [
+            "月涌大江流"
+          ],
+          "index": 3
+        },
+        "semanticEffects": [
+          {
+            "path": "scene.actions[2].state",
+            "consumer": "形态与绘画时钟",
+            "effect": "启用工具支持的 flow 状态",
+            "status": "applied"
+          },
+          {
+            "path": "scene.actions[2].pace",
+            "consumer": "绘画时钟",
+            "effect": "定性节奏映射为语义基准时钟倍率 0.8；观看动态与景物节奏另行调节",
+            "status": "applied"
+          },
+          {
+            "path": "scene.groups[3].role",
+            "consumer": "主次布局",
+            "effect": "保留环境画布范围，主次不改变地形边界",
+            "status": "applied"
+          },
+          {
+            "path": "scene.groups[3].pattern",
+            "consumer": "群落布局",
+            "effect": "按 field 组织显示单元；不覆盖明确数量",
+            "status": "applied"
+          },
+          {
+            "path": "scene.groups[3].depth",
+            "consumer": "远近布局",
+            "effect": "将 middle 转为相对大小、透明度与允许区域内的落点",
+            "status": "applied"
+          }
+        ],
+        "semanticEnergy": true,
+        "timeScale": 0.8,
+        "semanticAction": {
+          "entity": "i4",
+          "state": "flow",
+          "pace": "unspecified",
+          "direction": "unspecified",
+          "modality": "asserted",
+          "basis": "explicit",
+          "evidence": [
+            "大江流"
+          ]
+        },
+        "instances": [
+          {
+            "placement": {
+              "anchor": [
+                320,
+                135
+              ],
+              "at": [
+                0.5,
+                0.45
+              ],
+              "scale": 1.65
+            },
+            "depth": 0.05,
+            "opacity": 1,
+            "variant": 1,
+            "tone": "middle"
+          }
+        ],
+        "singleUnit": false,
+        "quantity": {
+          "items": [
+            {
+              "entity": "i4",
+              "mode": "unspecified",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "extent",
+              "extent": "spread",
+              "evidence": [
+                "大江流"
+              ],
+              "basis": "model"
+            }
+          ],
+          "rendered": 1,
+          "exact": false,
+          "collective": true,
+          "partUnsupported": false
+        },
+        "quantityLabel": "整体笔触图层；内部数量尚未适配",
+        "z": -10,
+        "surface": {
+          "top": 0.45,
+          "bottom": 1
+        },
+        "clip": [
+          [
+            0.38,
+            0.45
+          ],
+          [
+            1.04,
+            0.45
+          ],
+          [
+            1.04,
+            1.04
+          ],
+          [
+            0.28,
+            1.04
+          ],
+          [
+            0.47,
+            0.79
+          ],
+          [
+            0.35,
+            0.62
+          ]
+        ],
+        "visual": {
+          "role": "water"
+        },
+        "performance": {
+          "rhythm": "continuous",
+          "rate": 0.9,
+          "amplitude": 0.9,
+          "phase": 5.365840252331367
+        }
+      }
+    ],
+    "spatial": [
+      {
+        "type": "on",
+        "source": "i1",
+        "target": "i2",
+        "modality": "asserted",
+        "basis": "inferred",
+        "evidence": [
+          "星垂平野阔"
+        ],
+        "visualized": false,
+        "reason": "该空间关系与形态组合尚未适配"
+      },
+      {
+        "type": "on",
+        "source": "i3",
+        "target": "i4",
+        "modality": "asserted",
+        "basis": "inferred",
+        "evidence": [
+          "月涌大江流"
+        ],
+        "visualized": false,
+        "reason": "该空间关系与形态组合尚未适配"
+      }
+    ],
+    "scene": {
+      "kind": "waterside",
+      "notes": [
+        "水面以连续色层和水纹构成空间；水面的范围、视点与水平线是本地构图选择，不自动增加岸或陆地。",
+        "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。",
+        "通用场景层先组织地面、水域、群落和主体，再比较三个布局的依托、相对位置、尺度与遮挡；检查通过不代表审美已通过。"
+      ],
+      "waterline": 0.46,
+      "semanticSetting": {
+        "kind": "mixed",
+        "basis": "inferred",
+        "evidence": [
+          "星垂平野阔",
+          "月涌大江流"
+        ]
+      },
+      "semanticEffects": [
+        {
+          "path": "scene.supports[0]",
+          "consumer": "场景依托",
+          "status": "applied",
+          "effect": "使用已提取主体的现有承托画法"
+        },
+        {
+          "path": "scene.supports[1]",
+          "consumer": "场景依托",
+          "status": "unsupported",
+          "effect": "该主体尚无水上姿态，未凭空添加船只"
+        }
+      ],
+      "organization": {
+        "version": "1.0",
+        "strategy": "general-constraints",
+        "regions": {
+          "water": [
+            [
+              0.38,
+              0.45
+            ],
+            [
+              1.04,
+              0.45
+            ],
+            [
+              1.04,
+              1.04
+            ],
+            [
+              0.28,
+              1.04
+            ],
+            [
+              0.47,
+              0.79
+            ],
+            [
+              0.35,
+              0.62
+            ]
+          ],
+          "land": [
+            [
+              -0.04,
+              0.48
+            ],
+            [
+              0.34,
+              0.48
+            ],
+            [
+              0.35,
+              0.62
+            ],
+            [
+              0.47,
+              0.79
+            ],
+            [
+              0.28,
+              1.04
+            ],
+            [
+              -0.04,
+              1.04
+            ]
+          ]
+        },
+        "candidates": [
+          {
+            "layout": 0,
+            "orientation": "left-bank",
+            "errors": 0,
+            "cost": 60,
+            "metrics": {
+              "overlapPenalty": 0,
+              "balancePenalty": 0,
+              "motifFootprint": 0,
+              "landArea": 0.234
+            }
+          },
+          {
+            "layout": 1,
+            "orientation": "right-bank",
+            "errors": 0,
+            "cost": 60,
+            "metrics": {
+              "overlapPenalty": 0,
+              "balancePenalty": 0,
+              "motifFootprint": 0,
+              "landArea": 0.234
+            }
+          },
+          {
+            "layout": 2,
+            "orientation": "left-bank",
+            "errors": 0,
+            "cost": 60,
+            "metrics": {
+              "overlapPenalty": 0,
+              "balancePenalty": 0,
+              "motifFootprint": 0,
+              "landArea": 0.234
+            }
+          }
+        ],
+        "repairs": [],
+        "limitations": [
+          "几何检查不判定诗意理解或审美合格",
+          "动作时序与整首诗的场景切换尚未编排"
+        ],
+        "layout": 0,
+        "orientation": "left-bank",
+        "audit": {
+          "scope": "implemented-geometry-and-drawing-gaps",
+          "coverage": {
+            "scope": "extracted-entities-only",
+            "present": 4,
+            "mapped": 4,
+            "parameters": [],
+            "missing": []
+          },
+          "checks": [
+            "presence",
+            "count",
+            "finite",
+            "support",
+            "scale",
+            "relative-position",
+            "depth",
+            "grove-spread",
+            "drawing-gaps"
+          ],
+          "status": "needs-review",
+          "errors": 0,
+          "review": 2,
+          "issues": [
+            {
+              "code": "unresolved-relation",
+              "severity": "review",
+              "message": "有空间关系尚无对应布局画法"
+            },
+            {
+              "code": "unresolved-relation",
+              "severity": "review",
+              "message": "有空间关系尚无对应布局画法"
+            }
+          ],
+          "metrics": {
+            "overlapPenalty": 0,
+            "balancePenalty": 0,
+            "motifFootprint": 0,
+            "landArea": 0.234
+          },
+          "cost": 60,
+          "aestheticAcceptance": "pending-user"
+        },
+        "graph": {
+          "nodes": [
+            {
+              "id": "l0",
+              "entities": [
+                "i1"
+              ],
+              "tool": "landscape",
+              "role": "sky",
+              "habitat": null,
+              "inferred": false,
+              "support": "l1"
+            },
+            {
+              "id": "l1",
+              "entities": [
+                "i2"
+              ],
+              "tool": "landscape",
+              "role": "terrain",
+              "habitat": null,
+              "inferred": false,
+              "support": null
+            },
+            {
+              "id": "l2",
+              "entities": [
+                "i3"
+              ],
+              "tool": "moon",
+              "role": "sky",
+              "habitat": "water",
+              "inferred": false,
+              "support": "l3"
+            },
+            {
+              "id": "l3",
+              "entities": [
+                "i4"
+              ],
+              "tool": "water",
+              "role": "water",
+              "habitat": null,
+              "inferred": false,
+              "support": null
+            }
+          ],
+          "edges": [
+            {
+              "type": "supported-by",
+              "source": "l2",
+              "target": "l3",
+              "basis": "local-composition",
+              "habitat": "water"
+            },
+            {
+              "type": "on",
+              "source": "l0",
+              "target": "l1",
+              "basis": "inferred",
+              "modality": "asserted",
+              "evidence": [
+                "星垂平野阔"
+              ]
+            },
+            {
+              "type": "on",
+              "source": "l2",
+              "target": "l3",
+              "basis": "inferred",
+              "modality": "asserted",
+              "evidence": [
+                "月涌大江流"
+              ]
+            }
+          ],
+          "setting": "waterside"
+        }
+      }
+    },
+    "omitted": [],
+    "notes": [
+      "平野虽被归为地点，仍按原文明示的自然景物匹配；具体空间关系另行处理。",
+      "原句未明确月形，暂用弯月试画；可以手动切换。",
+      "大江虽被归为地点，仍按原文明示的自然景物匹配；具体空间关系另行处理。",
+      "位置、大小、笔触与默认微动是本地试画选择；数量解释与本地显示数量分别记录。",
+      "星的数量解释已保留，当前工具以整体图层表现，内部笔触尚未按数量逐个适配。",
+      "未明说的群落数量、疏密、近中远层次与变体均为本地构图选择；种类可按已声明的写意画法概括，不把铺展词换算成精确物体数量。",
+      "水面以连续色层和水纹构成空间；水面的范围、视点与水平线是本地构图选择，不自动增加岸或陆地。",
+      "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。",
+      "通用场景层先组织地面、水域、群落和主体，再比较三个布局的依托、相对位置、尺度与遮挡；检查通过不代表审美已通过。",
+      "语义保留：scene.supports[1]，该主体尚无水上姿态，未凭空添加船只",
+      "语义保留：scene.actions[1].state，当前工具尚无对应动作状态",
+      "整体场景、主次、远近、依托和支持的动作状态来自本次模型解释；具体布局、颜色和时钟倍率由本地视觉策略选择。",
+      "动作动画表现受支持的主导状态与有限观看运动；先后事件与完整因果尚未编排。",
+      "动态程度与默认轻风是可调整的观看选择；不改变数量、主次或原文动作判断。人物保持点景写意，不新增人物步态。"
+    ],
+    "relations": [],
+    "semanticConsumption": {
+      "version": "3.3",
+      "items": [
+        {
+          "path": "scene.setting",
+          "status": "applied",
+          "consumer": "本地视觉策略",
+          "effect": "整体环境进入场景提案选择",
+          "basis": "inferred",
+          "evidence": [
+            "星垂平野阔",
+            "月涌大江流"
+          ]
+        },
+        {
+          "path": "scene.groups[0].role",
+          "status": "applied",
+          "consumer": "主次布局",
+          "effect": "保留环境画布范围，主次不改变地形边界",
+          "basis": "inferred",
+          "evidence": [
+            "星垂平野阔"
+          ]
+        },
+        {
+          "path": "scene.groups[0].pattern",
+          "status": "applied",
+          "consumer": "群落布局",
+          "effect": "按 field 组织显示单元；不覆盖明确数量",
+          "basis": "inferred",
+          "evidence": [
+            "星垂平野阔"
+          ]
+        },
+        {
+          "path": "scene.groups[0].depth",
+          "status": "applied",
+          "consumer": "远近布局",
+          "effect": "将 far 转为相对大小、透明度与允许区域内的落点",
+          "basis": "inferred",
+          "evidence": [
+            "星垂平野阔"
+          ]
+        },
+        {
+          "path": "scene.groups[1].role",
+          "status": "applied",
+          "consumer": "主次布局",
+          "effect": "保留环境画布范围，主次不改变地形边界",
+          "basis": "inferred",
+          "evidence": [
+            "星垂平野阔"
+          ]
+        },
+        {
+          "path": "scene.groups[1].pattern",
+          "status": "applied",
+          "consumer": "群落布局",
+          "effect": "按 field 组织显示单元；不覆盖明确数量",
+          "basis": "inferred",
+          "evidence": [
+            "星垂平野阔"
+          ]
+        },
+        {
+          "path": "scene.groups[1].depth",
+          "status": "applied",
+          "consumer": "远近布局",
+          "effect": "将 middle 转为相对大小、透明度与允许区域内的落点",
+          "basis": "inferred",
+          "evidence": [
+            "星垂平野阔"
+          ]
+        },
+        {
+          "path": "scene.groups[2].role",
+          "status": "applied",
+          "consumer": "主次布局",
+          "effect": "点景缩小淡化",
+          "basis": "inferred",
+          "evidence": [
+            "月涌大江流"
+          ]
+        },
+        {
+          "path": "scene.groups[2].pattern",
+          "status": "applied",
+          "consumer": "群落布局",
+          "effect": "按 single 组织显示单元；不覆盖明确数量",
+          "basis": "inferred",
+          "evidence": [
+            "月涌大江流"
+          ]
+        },
+        {
+          "path": "scene.groups[2].depth",
+          "status": "applied",
+          "consumer": "远近布局",
+          "effect": "将 far 转为相对大小、透明度与允许区域内的落点",
+          "basis": "inferred",
+          "evidence": [
+            "月涌大江流"
+          ]
+        },
+        {
+          "path": "scene.groups[3].role",
+          "status": "applied",
+          "consumer": "主次布局",
+          "effect": "保留环境画布范围，主次不改变地形边界",
+          "basis": "inferred",
+          "evidence": [
+            "月涌大江流"
+          ]
+        },
+        {
+          "path": "scene.groups[3].pattern",
+          "status": "applied",
+          "consumer": "群落布局",
+          "effect": "按 field 组织显示单元；不覆盖明确数量",
+          "basis": "inferred",
+          "evidence": [
+            "月涌大江流"
+          ]
+        },
+        {
+          "path": "scene.groups[3].depth",
+          "status": "applied",
+          "consumer": "远近布局",
+          "effect": "将 middle 转为相对大小、透明度与允许区域内的落点",
+          "basis": "inferred",
+          "evidence": [
+            "月涌大江流"
+          ]
+        },
+        {
+          "path": "scene.supports[0]",
+          "status": "applied",
+          "consumer": "场景依托",
+          "effect": "使用已提取主体的现有承托画法",
+          "basis": "inferred",
+          "evidence": [
+            "星垂平野阔"
+          ]
+        },
+        {
+          "path": "scene.supports[1]",
+          "status": "unsupported",
+          "consumer": "场景依托",
+          "effect": "该主体尚无水上姿态，未凭空添加船只",
+          "basis": "inferred",
+          "evidence": [
+            "月涌大江流"
+          ]
+        },
+        {
+          "path": "scene.actions[0].state",
+          "status": "applied",
+          "consumer": "形态与绘画时钟",
+          "effect": "静止姿态并停止该图层时钟",
+          "basis": "inferred",
+          "evidence": [
+            "星垂平野阔"
+          ]
+        },
+        {
+          "path": "scene.actions[0].pace",
+          "status": "skipped",
+          "consumer": "本地视觉策略",
+          "effect": "静止状态不推进时钟或位置",
+          "basis": "inferred",
+          "evidence": [
+            "星垂平野阔"
+          ]
+        },
+        {
+          "path": "scene.actions[0].direction",
+          "status": "skipped",
+          "consumer": "本地视觉策略",
+          "effect": "静止状态不推进时钟或位置",
+          "basis": "inferred",
+          "evidence": [
+            "星垂平野阔"
+          ]
+        },
+        {
+          "path": "scene.actions[1].state",
+          "status": "unsupported",
+          "consumer": "动作画法",
+          "effect": "当前工具尚无对应动作状态",
+          "basis": "inferred",
+          "evidence": [
+            "月涌大江流"
+          ]
+        },
+        {
+          "path": "scene.actions[1].pace",
+          "status": "skipped",
+          "consumer": "本地视觉策略",
+          "effect": "该工具尚不支持此动作分量",
+          "basis": "inferred",
+          "evidence": [
+            "月涌大江流"
+          ]
+        },
+        {
+          "path": "scene.actions[1].direction",
+          "status": "skipped",
+          "consumer": "本地视觉策略",
+          "effect": "该工具尚不支持此动作分量",
+          "basis": "inferred",
+          "evidence": [
+            "月涌大江流"
+          ]
+        },
+        {
+          "path": "scene.actions[2].state",
+          "status": "applied",
+          "consumer": "形态与绘画时钟",
+          "effect": "启用工具支持的 flow 状态",
+          "basis": "explicit",
+          "evidence": [
+            "大江流"
+          ]
+        },
+        {
+          "path": "scene.actions[2].pace",
+          "status": "applied",
+          "consumer": "绘画时钟",
+          "effect": "定性节奏映射为语义基准时钟倍率 0.8；观看动态与景物节奏另行调节",
+          "basis": "explicit",
+          "evidence": [
+            "大江流"
+          ]
+        },
+        {
+          "path": "scene.actions[2].direction",
+          "status": "skipped",
+          "consumer": "本地视觉策略",
+          "effect": "该工具尚不支持此动作分量",
+          "basis": "explicit",
+          "evidence": [
+            "大江流"
+          ]
+        },
+        {
+          "path": "scene.atmosphere.visibility",
+          "status": "applied",
+          "consumer": "画布色层与远景",
+          "effect": "可见度 clear；迷蒙或昏暗时淡化非光源图层",
+          "basis": "inferred",
+          "evidence": [
+            "星垂平野阔",
+            "月涌大江流"
+          ]
+        },
+        {
+          "path": "scene.atmosphere.illumination",
+          "status": "applied",
+          "consumer": "有限配色",
+          "effect": "照明 night 映射为本地 night 配色；用户仍可手动覆盖",
+          "basis": "inferred",
+          "evidence": [
+            "星垂平野阔",
+            "月涌大江流"
+          ]
+        },
+        {
+          "path": "atmosphere.energy",
+          "status": "applied",
+          "consumer": "绘画时钟",
+          "effect": "没有明确动作节奏时，气息强弱控制已有微动的默认时钟"
+        },
+        {
+          "path": "atmosphere.openness",
+          "status": "applied",
+          "consumer": "群落分布与笔触密度",
+          "effect": "开阔度转换为本地间距与工具笔触密度，不等于原文数量"
+        },
+        {
+          "path": "atmosphere.valence",
+          "status": "skipped",
+          "consumer": "有限配色",
+          "effect": "照明策略优先，本次不另套情绪配色"
+        },
+        {
+          "path": "time.markers",
+          "status": "retained",
+          "consumer": "原始记录与解读",
+          "effect": "保留原文时间标记；本版照明由 scene.atmosphere 转换，多阶段时间逻辑未执行"
+        }
+      ],
+      "summary": {
+        "applied": 21,
+        "partial": 0,
+        "unsupported": 2,
+        "skipped": 6,
+        "retained": 1
+      },
+      "aestheticAcceptance": "pending-user"
+    },
+    "landscapeStyle": {
+      "version": "1.0",
+      "color": "role-and-distance",
+      "motion": "layer-rhythms",
+      "aestheticAcceptance": "pending-user"
+    }
+  },
+  "elapsed_seconds": 6.2
+}

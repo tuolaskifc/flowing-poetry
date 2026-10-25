@@ -1,0 +1,25 @@
+{
+  "version": "generation-recovery-1.1",
+  "status": "partial",
+  "reviewRequired": true,
+  "changes": [],
+  "omitted": [
+    {
+      "path": "spatial[0]",
+      "claim": {
+        "type": "surround",
+        "source": "i1",
+        "target": "i2",
+        "modality": "asserted",
+        "basis": "explicit",
+        "evidence": [
+          "一水护田将绿绕"
+        ]
+      },
+      "errors": [
+        "spatial[0] 枚举不正确"
+      ]
+    }
+  ],
+  "message": "已绘制核验通过的部分，个别联系或动作暂未采用。"
+}

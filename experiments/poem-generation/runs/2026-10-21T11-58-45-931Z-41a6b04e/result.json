@@ -1,0 +1,195 @@
+{
+  "id": "2026-10-21T11-58-45-931Z-41a6b04e",
+  "fingerprint": "177dfa12e24194e8f846fa781571a19db51deab2f5ce49d4c4cadc8964887063",
+  "poem": "风乍起，吹皱一池春水。",
+  "source": {
+    "provider": "手动试画样句",
+    "author": "冯延巳",
+    "title": "谒金门·风乍起",
+    "dynasty": "五代"
+  },
+  "mode": "quantity",
+  "model": "DeepSeek-V4.1-Flash",
+  "started_at": "2026-10-21T11:58:45.933Z",
+  "cached": false,
+  "http_status": 200,
+  "usage": {
+    "completion_tokens": 302,
+    "prompt_tokens": 2539,
+    "total_tokens": 2841,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2432
+    }
+  },
+  "finish_reason": "stop",
+  "analysis": {
+    "schema_version": "3.1",
+    "poem": "风乍起，吹皱一池春水。",
+    "reading": "风忽然吹起，使满池春水泛起波纹。句中以风与春水为主，写风起水动的瞬间景象。",
+    "entities": [
+      {
+        "id": "i1",
+        "mentions": [
+          "风"
+        ],
+        "concept": "风",
+        "kind": "environment",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "风乍起"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i2",
+        "mentions": [
+          "一池春水"
+        ],
+        "concept": "春水",
+        "kind": "environment",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "一池春水"
+        ],
+        "quantity": {
+          "mode": "exact",
+          "min": 1,
+          "max": 1,
+          "unit": "池",
+          "scope": "group",
+          "extent": "spread",
+          "evidence": [
+            "一池春水"
+          ]
+        }
+      }
+    ],
+    "relations": [],
+    "atmosphere": {
+      "labels": [
+        "清新生动",
+        "微起波澜"
+      ],
+      "valence": "neutral",
+      "energy": "medium",
+      "tension": "low",
+      "openness": "medium",
+      "evidence": [
+        "风乍起",
+        "吹皱一池春水"
+      ]
+    },
+    "time": {
+      "markers": [
+        {
+          "surface": "乍",
+          "meaning": "表示动作突然发生，带有突发、初起的意味"
+        }
+      ],
+      "note": null
+    },
+    "uncertainties": []
+  },
+  "validation": {
+    "valid": true,
+    "errors": [],
+    "warnings": [],
+    "review_required": false
+  },
+  "plan": {
+    "version": "quantity-composition-1",
+    "seed": 2749528309,
+    "settings": {
+      "wind": 0.45,
+      "density": 0.45,
+      "palette": "clear"
+    },
+    "layers": [
+      {
+        "tool": "water",
+        "entities": [
+          "i2"
+        ],
+        "names": [
+          "一池春水"
+        ],
+        "options": {},
+        "animate": true,
+        "placement": {
+          "anchor": [
+            320,
+            130
+          ],
+          "at": [
+            0.5,
+            0.57
+          ],
+          "scale": 1.5
+        },
+        "instances": [
+          {
+            "placement": {
+              "anchor": [
+                320,
+                130
+              ],
+              "at": [
+                0.5,
+                0.46
+              ],
+              "scale": 1.6
+            },
+            "depth": 0,
+            "opacity": 1,
+            "variant": 0
+          }
+        ],
+        "singleUnit": false,
+        "quantity": {
+          "items": [
+            {
+              "entity": "i2",
+              "mode": "exact",
+              "min": 1,
+              "max": 1,
+              "unit": "池",
+              "scope": "group",
+              "extent": "spread",
+              "evidence": [
+                "一池春水"
+              ],
+              "basis": "model"
+            }
+          ],
+          "rendered": 1,
+          "exact": false,
+          "collective": true,
+          "partUnsupported": false
+        },
+        "quantityLabel": "整体笔触图层；内部数量尚未适配"
+      }
+    ],
+    "omitted": [],
+    "notes": [
+      "风作为风参数，不额外画风线；强弱是本次试画选择。",
+      "位置、大小、笔触与默认微动是本地试画选择；数量解释与本地显示数量分别记录。",
+      "一池春水的数量解释已保留，当前工具以整体图层表现，内部笔触尚未按数量逐个适配。",
+      "未明说的群落数量、疏密、近中远层次与变体均为本地构图选择；不增加新物种，不把铺展词换算成精确物体数量。"
+    ],
+    "relations": []
+  },
+  "elapsed_seconds": 3.3
+}

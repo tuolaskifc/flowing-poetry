@@ -1,0 +1,158 @@
+{
+  "id": "2026-10-21T11-59-29-896Z-f9aee500",
+  "fingerprint": "f0e486c3318cb3535f983a0e87da9cff39fb56e4c6f57e73e7f3fdbfc8e8281d",
+  "poem": "接天莲叶无穷碧，映日荷花别样红。",
+  "source": {
+    "provider": "精选诗句库",
+    "author": "杨万里",
+    "title": "晓出净慈寺送林子方",
+    "dynasty": "宋代"
+  },
+  "mode": "quantity",
+  "model": "DeepSeek-V4.1-Flash",
+  "started_at": "2026-10-21T11:59:29.898Z",
+  "cached": false,
+  "http_status": 200,
+  "usage": {
+    "completion_tokens": 439,
+    "prompt_tokens": 2542,
+    "total_tokens": 2981,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2432
+    }
+  },
+  "finish_reason": "stop",
+  "analysis": {
+    "schema_version": "3.1",
+    "poem": "接天莲叶无穷碧，映日荷花别样红。",
+    "reading": "莲叶铺展至天边，碧色无尽；荷花在日光映照下红得格外鲜明。",
+    "entities": [
+      {
+        "id": "i1",
+        "mentions": [
+          "莲叶"
+        ],
+        "concept": "莲叶",
+        "kind": "organism",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "接天莲叶无穷碧"
+        ],
+        "quantity": {
+          "mode": "many",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "group",
+          "extent": "spread",
+          "evidence": [
+            "莲叶无穷碧"
+          ]
+        }
+      },
+      {
+        "id": "i2",
+        "mentions": [
+          "荷花"
+        ],
+        "concept": "荷花",
+        "kind": "organism",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "映日荷花别样红"
+        ],
+        "quantity": {
+          "mode": "many",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "group",
+          "extent": "spread",
+          "evidence": [
+            "荷花别样红"
+          ]
+        }
+      },
+      {
+        "id": "i3",
+        "mentions": [
+          "天"
+        ],
+        "concept": "天空",
+        "kind": "environment",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "接天莲叶无穷碧"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i4",
+        "mentions": [
+          "日"
+        ],
+        "concept": "太阳",
+        "kind": "environment",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "映日荷花别样红"
+        ],
+        "quantity": {
+          "mode": "exact",
+          "min": 1,
+          "max": 1,
+          "unit": "个",
+          "scope": "individual",
+          "extent": "local",
+          "evidence": [
+            "映日"
+          ]
+        }
+      }
+    ],
+    "relations": [],
+    "atmosphere": {
+      "labels": [
+        "明丽",
+        "开阔"
+      ],
+      "valence": "positive",
+      "energy": "medium",
+      "tension": "low",
+      "openness": "high",
+      "evidence": [
+        "接天莲叶无穷碧",
+        "映日荷花别样红"
+      ]
+    },
+    "time": {
+      "markers": [],
+      "note": null
+    },
+    "uncertainties": []
+  },
+  "validation": {
+    "valid": false,
+    "errors": [
+      "i4.quantity 单位不是原文"
+    ],
+    "warnings": [],
+    "review_required": true
+  },
+  "elapsed_seconds": 5.9
+}

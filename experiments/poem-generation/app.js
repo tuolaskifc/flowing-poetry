@@ -76,12 +76,13 @@
     }catch(error){status(error.message);}finally{busy(false);}
   }
   async function show(record){
+    if(record.plan?.renderability?.status==='unavailable'){status('解读已完成，但本句主要内容尚无可靠画法，未生成新画面；如有画面仍为上次结果。可以换一句，或到景意交融页尝试抽象表达。');return;}
     if(!record.validation?.valid){status('本次分析没有通过检查，未生成新画面；下方如有画面仍为上次结果。问题记录已保存，可以换一句或稍后再试。');return;}
     const a=record.effectiveAnalysis||record.analysis,{plan}=record;
     $('output').hidden=false;$('reading').textContent=a.reading;$('scene-title').textContent=record.poem;
     $('record-info').textContent=(record.cached?'回看已保存结果':'本次实际分析')+' · '+record.elapsed_seconds+' 秒'+(record.sourceContext?.applied?' · 引用范围已展开，解读待复核':'');
     for(const id of ['entities','uncertainties','drawn','omitted','notes','relations','credits'])clearList(id);
-    for(const e of a.entities){const q=e.quantity,scope=q&&{individual:'个体',part:'局部',group:'群体单位',extent:'范围单位',unspecified:'计数对象未明'}[q.scope],quantity=q?(q.mode==='exact'?q.min+(q.unit||'')+'，'+scope:q.mode==='range'?q.min+'–'+q.max+(q.unit||'')+'，'+scope:q.mode==='many'?'繁多／群体':q.mode==='few'?'少量，未精确':'数量未明'):'旧记录未提取数量';item('entities',e.mentions.join('／')+' → '+e.concept+'（'+(e.role==='reference'?'比喻参照':{present:'在场',absent:'缺席',unclear:'出现情况待定'}[e.presence])+'；'+quantity+(q?.extent==='spread'?'；铺展':'')+'）');}
+    for(const e of a.entities){const q=plan.sourceResolution?.quantities?.[e.id]||e.quantity,scope=q&&{individual:'个体',part:'局部',group:'群体单位',extent:'范围单位',unspecified:'计数对象未明'}[q.scope],quantity=q?(q.mode==='exact'?q.min+(q.unit||'')+'，'+scope:q.mode==='range'?q.min+'–'+q.max+(q.unit||'')+'，'+scope:q.mode==='many'?'繁多／群体':q.mode==='few'?'少量，未精确':'数量未明'):'旧记录未提取数量';item('entities',e.mentions.join('／')+' → '+e.concept+'（'+(e.role==='reference'?'比喻参照':{present:'在场',absent:'缺席',unclear:'出现情况待定'}[e.presence])+'；'+quantity+(q?.extent==='spread'?'；铺展':'')+'）');}
     $('atmosphere').textContent='文字气息：'+(a.atmosphere.labels.join('、')||'未确定')+(plan.semanticConsumption?'。气息已参与有限配色、远景淡化和节奏；你仍可手动调整。':'。本轮配色由你选择，尚未自动映射全部情感类型。');
     for(const issue of a.uncertainties)item('uncertainties',issue);
     for(const layer of plan.layers){const def=window.PoemDrawing.definitions().find(d=>d.id===layer.tool);item('drawn',layer.names.join('、')+' → '+(layer.drawingLabel||def.name)+(layer.quantityLabel?' · '+layer.quantityLabel:'')+(layer.animate?'':'（静止）'));}

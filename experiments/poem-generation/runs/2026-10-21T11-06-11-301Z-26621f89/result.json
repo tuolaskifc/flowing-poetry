@@ -1,0 +1,199 @@
+{
+  "id": "2026-10-21T11-06-11-301Z-26621f89",
+  "fingerprint": "fba6ff0bb97bb43898101a7c563c9fdcfd268f9a66e601c2894696ab705a4c35",
+  "poem": "疏影横斜水清浅，暗香浮动月黄昏。",
+  "source": {
+    "provider": "精选诗句库",
+    "author": "林逋",
+    "title": "山园小梅·其一",
+    "dynasty": "宋代"
+  },
+  "mode": "imagery-only",
+  "model": "DeepSeek-V4.1-Flash",
+  "started_at": "2026-10-21T11:06:11.303Z",
+  "cached": false,
+  "http_status": 200,
+  "usage": {
+    "completion_tokens": 352,
+    "prompt_tokens": 1993,
+    "total_tokens": 2345,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 1920
+    }
+  },
+  "finish_reason": "stop",
+  "analysis": {
+    "schema_version": "3.0",
+    "poem": "疏影横斜水清浅，暗香浮动月黄昏。",
+    "reading": "稀疏的枝影斜斜横映在清浅的水面，幽微的香气在黄昏月色中飘浮。",
+    "entities": [
+      {
+        "id": "i1",
+        "mentions": [
+          "疏影"
+        ],
+        "concept": "稀疏的枝影",
+        "kind": "abstract",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "疏影横斜"
+        ]
+      },
+      {
+        "id": "i2",
+        "mentions": [
+          "水"
+        ],
+        "concept": "清浅的水面",
+        "kind": "environment",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "水清浅"
+        ]
+      },
+      {
+        "id": "i3",
+        "mentions": [
+          "暗香"
+        ],
+        "concept": "幽微的香气",
+        "kind": "abstract",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "暗香浮动"
+        ]
+      },
+      {
+        "id": "i4",
+        "mentions": [
+          "月"
+        ],
+        "concept": "黄昏时的月亮",
+        "kind": "object",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "月黄昏"
+        ]
+      }
+    ],
+    "relations": [],
+    "atmosphere": {
+      "labels": [
+        "清幽",
+        "静谧",
+        "朦胧"
+      ],
+      "valence": "neutral",
+      "energy": "low",
+      "tension": "low",
+      "openness": "medium",
+      "evidence": [
+        "疏影横斜水清浅",
+        "暗香浮动月黄昏"
+      ]
+    },
+    "time": {
+      "markers": [
+        {
+          "surface": "黄昏",
+          "meaning": "日落前后的时段，点明暮色时分"
+        }
+      ],
+      "note": null
+    },
+    "uncertainties": [
+      "“疏影”未明说为何物之影，只能按稀疏枝影理解。",
+      "“暗香”未指明香气来源，也未说明是否确为花木所发。"
+    ]
+  },
+  "validation": {
+    "valid": true,
+    "errors": [],
+    "warnings": [
+      "模型保留了不确定性，需要审阅"
+    ],
+    "review_required": true
+  },
+  "plan": {
+    "version": "trial-4-orchid-horse-lotus",
+    "seed": 843149832,
+    "settings": {
+      "wind": 0,
+      "density": 0.45,
+      "palette": "clear"
+    },
+    "layers": [
+      {
+        "tool": "moon",
+        "entities": [
+          "i4"
+        ],
+        "names": [
+          "月"
+        ],
+        "options": {
+          "shape": "crescent"
+        },
+        "animate": true,
+        "placement": {
+          "anchor": [
+            320,
+            175
+          ],
+          "at": [
+            0.76,
+            0.2
+          ],
+          "scale": 0.85
+        }
+      },
+      {
+        "tool": "water",
+        "entities": [
+          "i2"
+        ],
+        "names": [
+          "水"
+        ],
+        "options": {},
+        "animate": true,
+        "placement": {
+          "anchor": [
+            320,
+            130
+          ],
+          "at": [
+            0.5,
+            0.57
+          ],
+          "scale": 1.5
+        }
+      }
+    ],
+    "omitted": [
+      {
+        "id": "i1",
+        "name": "疏影",
+        "reason": "暂未提供该人物、地点或抽象含义的绘画单元"
+      },
+      {
+        "id": "i3",
+        "name": "暗香",
+        "reason": "暂未提供该人物、地点或抽象含义的绘画单元"
+      }
+    ],
+    "notes": [
+      "原句未明确月形，暂用弯月试画；可以手动切换。",
+      "位置、大小、笔触、固定群体数量与默认微动是本地试画选择；不表示原句给出了这些数值。"
+    ],
+    "relations": []
+  },
+  "elapsed_seconds": 2.2
+}

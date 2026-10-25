@@ -1,0 +1,235 @@
+{
+  "schema_version": "3.3",
+  "poem": "春潮带雨晚来急，野渡无人舟自横。",
+  "reading": "春潮夹带雨水，傍晚水势湍急；荒野渡口无人，小船独自横泊。",
+  "entities": [
+    {
+      "id": "i1",
+      "mentions": [
+        "春潮"
+      ],
+      "concept": "春天的潮水",
+      "kind": "environment",
+      "role": "scene",
+      "presence": "present",
+      "evidence": [
+        "春潮带雨晚来急"
+      ],
+      "quantity": {
+        "mode": "unspecified",
+        "min": null,
+        "max": null,
+        "unit": null,
+        "scope": "unspecified",
+        "extent": "spread",
+        "evidence": [
+          "春潮"
+        ]
+      }
+    },
+    {
+      "id": "i2",
+      "mentions": [
+        "雨"
+      ],
+      "concept": "雨水",
+      "kind": "environment",
+      "role": "scene",
+      "presence": "present",
+      "evidence": [
+        "春潮带雨晚来急"
+      ],
+      "quantity": {
+        "mode": "unspecified",
+        "min": null,
+        "max": null,
+        "unit": null,
+        "scope": "unspecified",
+        "extent": "spread",
+        "evidence": [
+          "带雨"
+        ]
+      }
+    },
+    {
+      "id": "i3",
+      "mentions": [
+        "野渡"
+      ],
+      "concept": "荒野的渡口",
+      "kind": "place",
+      "role": "scene",
+      "presence": "present",
+      "evidence": [
+        "野渡无人舟自横"
+      ],
+      "quantity": {
+        "mode": "unspecified",
+        "min": null,
+        "max": null,
+        "unit": null,
+        "scope": "unspecified",
+        "extent": "local",
+        "evidence": [
+          "野渡"
+        ]
+      }
+    },
+    {
+      "id": "i4",
+      "mentions": [
+        "舟"
+      ],
+      "concept": "小船",
+      "kind": "object",
+      "role": "scene",
+      "presence": "present",
+      "evidence": [
+        "野渡无人舟自横"
+      ],
+      "quantity": {
+        "mode": "exact",
+        "min": 1,
+        "max": 1,
+        "unit": null,
+        "scope": "individual",
+        "extent": "local",
+        "evidence": [
+          "舟自横"
+        ]
+      }
+    }
+  ],
+  "relations": [],
+  "atmosphere": {
+    "labels": [
+      "荒寂",
+      "清冷"
+    ],
+    "valence": "neutral",
+    "energy": "medium",
+    "tension": "low",
+    "openness": "medium",
+    "evidence": [
+      "春潮带雨晚来急",
+      "野渡无人舟自横"
+    ]
+  },
+  "time": {
+    "markers": [
+      {
+        "surface": "晚",
+        "meaning": "傍晚时分"
+      }
+    ],
+    "note": null
+  },
+  "uncertainties": [
+    "“急”可指潮水湍急，也可兼指雨势，具体所指略有歧义。",
+    "“自横”可理解为无人看管而横泊，也可理解为船自然横斜，动作状态不完全确定。"
+  ],
+  "spatial": [
+    {
+      "type": "on",
+      "source": "i4",
+      "target": "i1",
+      "modality": "asserted",
+      "basis": "inferred",
+      "evidence": [
+        "春潮带雨晚来急，野渡无人舟自横。"
+      ]
+    }
+  ],
+  "scene": {
+    "setting": {
+      "kind": "waterside",
+      "basis": "inferred",
+      "evidence": [
+        "春潮带雨晚来急",
+        "野渡无人舟自横"
+      ]
+    },
+    "groups": [
+      {
+        "members": [
+          "i1",
+          "i2"
+        ],
+        "role": "environment",
+        "pattern": "field",
+        "depth": "unspecified",
+        "basis": "inferred",
+        "evidence": [
+          "春潮带雨晚来急"
+        ]
+      },
+      {
+        "members": [
+          "i3"
+        ],
+        "role": "environment",
+        "pattern": "single",
+        "depth": "unspecified",
+        "basis": "inferred",
+        "evidence": [
+          "野渡无人舟自横"
+        ]
+      },
+      {
+        "members": [
+          "i4"
+        ],
+        "role": "subject",
+        "pattern": "single",
+        "depth": "unspecified",
+        "basis": "inferred",
+        "evidence": [
+          "野渡无人舟自横"
+        ]
+      }
+    ],
+    "supports": [
+      {
+        "entity": "i4",
+        "surface": "water",
+        "target": "i1",
+        "basis": "inferred",
+        "evidence": [
+          "春潮带雨晚来急，野渡无人舟自横。"
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "entity": "i1",
+        "state": "flow",
+        "pace": "fast",
+        "direction": "unspecified",
+        "modality": "asserted",
+        "basis": "inferred",
+        "evidence": [
+          "春潮带雨晚来急"
+        ]
+      },
+      {
+        "entity": "i4",
+        "state": "float",
+        "pace": "unspecified",
+        "direction": "unspecified",
+        "modality": "asserted",
+        "basis": "inferred",
+        "evidence": [
+          "野渡无人舟自横"
+        ]
+      }
+    ],
+    "atmosphere": {
+      "visibility": "unclear",
+      "illumination": "twilight",
+      "basis": "inferred",
+      "evidence": [
+        "晚"
+      ]
+    }
+  }
+}

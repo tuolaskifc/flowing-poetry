@@ -78,6 +78,12 @@ export function applySemanticSupports(analysis,layers,scene,{addSupport,veto}){
   const source=request.entity&&layers.find(l=>l.entities.includes(request.entity));
   let target=request.target?layers.find(l=>l.entities.includes(request.target)):layers.find(l=>matches(l,request.surface));
   const write=(status,effect)=>scene.semanticEffects.push({path:request.path,consumer:'场景依托',status,effect});
+  if(!request.entity&&request.basis==='inferred'){
+   const needed=request.surface==='water'?layers.some(l=>['water','boat','fish','lotus'].includes(l.tool)||l.tool==='landscape'&&['field','shore','waterfall'].includes(l.options.form)||l.tool==='bird'&&l.options.pose==='waterbird')
+    :request.surface==='mountain'?layers.some(l=>l.options.form==='waterfall')||layers.some(l=>l.tool==='water')&&layers.some(l=>l.tool==='rock'||l.tool==='tree'&&l.options.form==='pine')
+    :layers.some(l=>['tree','willow','bamboo','grass','flower','dwelling','building','pavilion','horse','figure'].includes(l.tool));
+   if(!needed){write('unsupported','推断的整体场景标签没有对应主体需要该环境，未凭标签补画山水地面');continue;}
+  }
   if(request.entity&&!source){write('unsupported','依托主体尚无可绘制形态');continue;}
   if(source&&request.surface==='ground'&&(source.tool==='moon'||source.tool==='landscape'&&source.options.form==='sun')){write('unsupported','光源不作地面上的实体，未执行该依托判断');continue;}
   if(source&&request.surface==='ground'&&source.tool==='mist'){
@@ -144,6 +150,11 @@ export function applySemanticLayout(analysis,result,{pointIn,sync}){
   const support=l.semanticSupport;if(!support)continue;
   if(support.surface==='water'&&l.tool==='bird'&&l.semanticAction?.modality==='asserted'&&l.semanticAction.state==='float')l.options.pose='waterbird';
   if(support.surface==='vegetation'&&support.target&&['bird','oriole'].includes(l.tool)){
+   // A canopy dependency is a resting choice unless an asserted action says otherwise.
+   // Do not let the generic flying default detach a singing bird from its leaves.
+   if(!l.semanticAction||l.semanticAction.state==='unclear'){
+    if(l.tool==='bird')l.options.pose='resting';else Object.assign(l.options,{pose:'folded',motion:'still'});
+   }
    const parent=result.layers.find(p=>p.entities.includes(support.target));if(!parent)continue;
    const anchor=parent.instances[Math.floor(parent.instances.length/2)].placement;
    for(const [i,v] of l.instances.entries())v.placement.at=[anchor.at[0]+(i-(l.instances.length-1)/2)*.045,anchor.at[1]-.32*anchor.scale];

@@ -1,0 +1,117 @@
+{
+  "id": "2026-10-24T14-56-46-996Z-03bf3c3a",
+  "fingerprint": "038eb153b89e163e85bd90dc81f0c3c8862595a19c20123cd2a67ecc670aa08b",
+  "poem": "漠漠帆来重，冥冥鸟去迟。",
+  "source": null,
+  "mode": "expression",
+  "model": "DeepSeek-V4.1-Flash",
+  "started_at": "2026-10-24T14:56:46.997Z",
+  "cached": false,
+  "http_status": 200,
+  "usage": {
+    "completion_tokens": 350,
+    "prompt_tokens": 6061,
+    "total_tokens": 6411,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 6016
+    }
+  },
+  "finish_reason": "stop",
+  "analysis": {
+    "schema_version": "expression-1.0",
+    "poem": "漠漠帆来重，冥冥鸟去迟。",
+    "reading": "江面迷蒙，帆影缓缓驶来，显得沉重；天色昏暗，鸟儿飞去迟缓。两句以“漠漠”“冥冥”写空间的朦胧与迟重之感。",
+    "entities": [
+      {
+        "id": "i1",
+        "mentions": [
+          "帆"
+        ],
+        "concept": "船帆",
+        "kind": "object",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "漠漠帆来重"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i2",
+        "mentions": [
+          "鸟"
+        ],
+        "concept": "飞鸟",
+        "kind": "organism",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "冥冥鸟去迟"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      }
+    ],
+    "relations": [],
+    "atmosphere": {
+      "labels": [
+        "迷蒙",
+        "迟重"
+      ],
+      "valence": "neutral",
+      "energy": "low",
+      "tension": "low",
+      "openness": "medium",
+      "evidence": [
+        "漠漠帆来重",
+        "冥冥鸟去迟"
+      ]
+    },
+    "time": {
+      "markers": [],
+      "note": null
+    },
+    "uncertainties": [
+      "“漠漠”“冥冥”具体指江面雾气还是天色昏暗，原文未明。",
+      "帆与鸟的来去方向是相对观察位置而言，原文未给出明确参照。",
+      "“重”“迟”是视觉感受还是心理感受，原文未明。"
+    ]
+  },
+  "validation": {
+    "valid": false,
+    "errors": [
+      "spatial 必须为至多八项的数组",
+      "scene 类型不符",
+      "expression 类型错误"
+    ],
+    "warnings": [
+      "模型保留了不确定性，需要审阅"
+    ],
+    "review_required": true
+  },
+  "delivery": {
+    "status": "failed",
+    "retryable": true,
+    "reason": "interpretation",
+    "message": "这次解读的基础内容仍有问题，尚未生成本句画面。"
+  },
+  "elapsed_seconds": 3.1
+}
