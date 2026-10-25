@@ -265,10 +265,18 @@ def build():
     dirty=command(['git','status','--porcelain','--untracked-files=no']).stdout.strip()
     if dirty:raise RuntimeError('Commit tracked changes before building the package')
     project=PACKAGE/'project'
-    if project.exists():raise RuntimeError('Project snapshot already exists; inspect it rather than silently overwrite')
-    print('Creating an independent repository snapshot with full history...',flush=True)
-    command(['git','-c','core.longpaths=true','clone','--no-hardlinks','--config','core.longpaths=true',str(ROOT),str(project)])
-    command(['git','remote','remove','origin'],cwd=project)
+    if project.exists():
+        # Reuse only this tool's clean, generated snapshot; never reset the source checkout.
+        assert project.resolve().parent==PACKAGE.resolve() and (project/'.git').is_dir()
+        assert not command(['git','status','--porcelain'],cwd=project).stdout.strip()
+        if command(['git','rev-parse','HEAD'],cwd=project).stdout.strip()!=head:
+            command(['git','fetch',str(ROOT),'main'],cwd=project)
+            command(['git','reset','--hard','FETCH_HEAD'],cwd=project)
+        print('Reusing the verified, clean generated snapshot at the current source commit...',flush=True)
+    else:
+        print('Creating an independent repository snapshot with full history...',flush=True)
+        command(['git','-c','core.longpaths=true','clone','--no-hardlinks','--config','core.longpaths=true',str(ROOT),str(project)])
+        command(['git','remote','remove','origin'],cwd=project)
     assert command(['git','rev-parse','HEAD'],cwd=project).stdout.strip()==head
     assert not (project/'llm api.txt').exists()
     assert not (project/'提交材料').exists()
