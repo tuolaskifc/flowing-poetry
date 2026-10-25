@@ -321,6 +321,7 @@ def archive():
     if not (PACKAGE/'attachments/本次复核结果.json').exists():raise RuntimeError('Build first')
     manifest=[]
     for folder,dirs,names in os.walk(PACKAGE):
+        dirs[:]=[d for d in dirs if d not in ['.qa','node_modules','__pycache__','.pytest_cache']]
         dirs.sort();names.sort()
         for name in names:
             p=Path(folder)/name;rel=p.relative_to(PACKAGE).as_posix()
@@ -334,6 +335,7 @@ def archive():
     print('Writing ZIP including .git history and all required local assets...',flush=True)
     with zipfile.ZipFile(temp,'w',compression=zipfile.ZIP_DEFLATED,compresslevel=6,allowZip64=True) as z:
         for folder,dirs,names in os.walk(PACKAGE):
+            dirs[:]=[d for d in dirs if d not in ['.qa','node_modules','__pycache__','.pytest_cache']]
             dirs.sort();names.sort()
             for name in names:
                 p=Path(folder)/name
