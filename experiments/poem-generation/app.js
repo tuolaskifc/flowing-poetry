@@ -30,8 +30,8 @@
   }
   function chooseCurated(entry){
     if(!entry)return;clearCandidateSelection();poem.value=entry.poem;source=window.PoemCuratedLibrary.sourceFor(entry);librarySelection(entry);
-    $('source').textContent='精选诗句库 · '+entry.dynasty+' · '+entry.author+'《'+entry.title+'》';
-    status((entry.focus?'已选择首批改画样本。':'已选择精选诗句。')+'点击“生成画面”开始分析；选句本身不调用模型。');
+    $('source').textContent=entry.author+'《'+entry.title+'》';
+    status('');
   }
   function populateLibrary(){
     const select=$('library-choice');if(!select)return;

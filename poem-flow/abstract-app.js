@@ -16,7 +16,7 @@
  }
  async function show(record,meta){
   if(!record.validation?.valid){$('generate').textContent='重试本句';status(feedback.failure(record,!!current));return;}
-  current=record;replay.remember(record);$('generate').textContent='分析新句 · 开始绘画';vocabulary='expanded';$('poem').value=record.poem;$('reading').textContent=record.analysis.reading;$('poem-title').textContent=record.poem;
+  current=record;replay.remember(record);$('generate').textContent='生成画面';vocabulary='expanded';$('poem').value=record.poem;$('reading').textContent=record.analysis.reading;$('poem-title').textContent=record.poem;
   for(const id of ['relations','processes','uncertainties','choices'])$(id).replaceChildren();
   const source=meta||data.cases.find(c=>c.poem===record.poem);const a=record.effectiveAnalysis||record.analysis,by=id=>a.subjects.find(s=>s.id===id)?.mentions.join('／')||'';
   for(const r of a.relations)item('relations',by(r.source)+' → '+(r.target?by(r.target):'未指定参照')+'：'+words[r.kind]+'，'+words[r.modality]+(r.basis==='inferred'?'（解读推断）':'')+'；依据：'+r.evidence.join('／'));
@@ -24,7 +24,7 @@
   for(const u of [...a.uncertainties,...feedback.notes(record),...(record.validation.warnings||[]),...(source?.reviewWarnings||[])])item('uncertainties',u);
   for(const n of record.plan.notes)item('choices',n);for(const n of record.plan.omitted)item('choices',n.label+'：'+n.reason);
   $('review-note').hidden=!record.localRevalidation&&!source?.reviewWarnings?.length;$('review-note').textContent=record.localRevalidation?'这份回答首次校验未通过，原记录保留；修正“消退已发生、结果缺席”的检查边界后，仅作本地重放，未重新请求模型。':(source?.reviewWarnings||[]).join(' ');
-  $('source').replaceChildren();if(source){const link=document.createElement('a');link.href=source.url;link.target='_blank';link.rel='noopener noreferrer';link.textContent=source.author+'《'+source.title+'》· 原文来源';$('source').append(link);if(source.note)$('source').append(document.createTextNode(' · '+source.note));if(source.reviewSource){const reference=document.createElement('a');reference.href=source.reviewSource;reference.textContent=' · 词义核对';reference.target='_blank';reference.rel='noopener noreferrer';$('source').append(reference);}}
+  $('source').replaceChildren();if(source){const link=document.createElement('a');link.href=source.url;link.target='_blank';link.rel='noopener noreferrer';link.textContent=source.author+'《'+source.title+'》';$('source').append(link);if(source.note)$('source').append(document.createTextNode(' · '+source.note));if(source.reviewSource){const reference=document.createElement('a');reference.href=source.reviewSource;reference.textContent=' · 词义核对';reference.target='_blank';reference.rel='noopener noreferrer';$('source').append(reference);}}
   $('hybrid').disabled=!record.plan.concretePlan;$('hybrid').checked=!!record.plan.concretePlan;
   engine.render(record.plan,{...settings(),seed:record.plan.seed});engine.pause(matchMedia('(prefers-reduced-motion: reduce)').matches);await background();sync();
   status(feedback.success(record,'换画法、种子、配色与交互均在本地完成。'));
