@@ -1,0 +1,1163 @@
+{
+  "id": "2026-11-08T05-05-24-719Z-e21da934",
+  "fingerprint": "02d344063b73234188f3f475bcbc2ffb31044451837c91fbc344c1ebd5db118a",
+  "semanticFingerprint": "44a7c2f39d9ac555a57445fca4b43c26f62a7c44bba8eb972e8fed6efb146f98",
+  "poem": "荷尽已无擎雨盖，菊残犹有傲霜枝。",
+  "source": {
+    "provider": "陌生诗句试验",
+    "author": "苏轼",
+    "title": "赠刘景文"
+  },
+  "mode": "expression",
+  "model": "DeepSeek-V4.1-Flash",
+  "started_at": "2026-11-08T05:05:24.721Z",
+  "cached": false,
+  "http_status": 200,
+  "usage": {
+    "completion_tokens": 982,
+    "prompt_tokens": 6065,
+    "total_tokens": 7047,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 6016
+    }
+  },
+  "finish_reason": "stop",
+  "analysis": {
+    "schema_version": "expression-1.0",
+    "poem": "荷尽已无擎雨盖，菊残犹有傲霜枝。",
+    "reading": "荷花凋尽，已不见那擎雨的荷叶；菊花残败，却仍有傲霜的枝条挺立。写深秋残景中菊枝的耐寒姿态。",
+    "entities": [
+      {
+        "id": "i1",
+        "mentions": [
+          "荷"
+        ],
+        "concept": "荷花",
+        "kind": "organism",
+        "role": "scene",
+        "presence": "absent",
+        "evidence": [
+          "荷尽已无擎雨盖"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i2",
+        "mentions": [
+          "擎雨盖"
+        ],
+        "concept": "荷叶",
+        "kind": "organism",
+        "role": "scene",
+        "presence": "absent",
+        "evidence": [
+          "荷尽已无擎雨盖"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i3",
+        "mentions": [
+          "菊"
+        ],
+        "concept": "菊花",
+        "kind": "organism",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "菊残犹有傲霜枝"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i4",
+        "mentions": [
+          "傲霜枝"
+        ],
+        "concept": "菊的枝条",
+        "kind": "organism",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "菊残犹有傲霜枝"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i5",
+        "mentions": [
+          "霜"
+        ],
+        "concept": "霜寒",
+        "kind": "environment",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "菊残犹有傲霜枝"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      }
+    ],
+    "relations": [],
+    "atmosphere": {
+      "labels": [
+        "清冷",
+        "萧瑟",
+        "孤傲"
+      ],
+      "valence": "mixed",
+      "energy": "low",
+      "tension": "medium",
+      "openness": "unclear",
+      "evidence": [
+        "荷尽已无擎雨盖",
+        "菊残犹有傲霜枝"
+      ]
+    },
+    "time": {
+      "markers": [
+        {
+          "surface": "尽",
+          "meaning": "荷已凋尽，表示变化完成"
+        },
+        {
+          "surface": "已",
+          "meaning": "已经，强调荷叶不再存在"
+        },
+        {
+          "surface": "犹",
+          "meaning": "仍然，表示菊枝在残败中依旧挺立"
+        }
+      ],
+      "note": "两句写同一深秋时节的残景，荷已尽而菊枝犹存。"
+    },
+    "uncertainties": [
+      "“擎雨盖”指荷叶为常见解读，但原文未明说，故单列为荷叶实体。",
+      "“傲霜枝”可理解为菊枝耐寒挺立，但原文未明说其具体姿态。"
+    ],
+    "spatial": [],
+    "scene": {
+      "setting": {
+        "kind": "unclear",
+        "basis": "inferred",
+        "evidence": [
+          "荷尽已无擎雨盖",
+          "菊残犹有傲霜枝"
+        ]
+      },
+      "groups": [
+        {
+          "members": [
+            "i3",
+            "i4"
+          ],
+          "role": "subject",
+          "pattern": "single",
+          "depth": "unspecified",
+          "basis": "inferred",
+          "evidence": [
+            "菊残犹有傲霜枝"
+          ]
+        }
+      ],
+      "supports": [],
+      "actions": [
+        {
+          "entity": "i4",
+          "state": "still",
+          "pace": "unspecified",
+          "direction": "unspecified",
+          "modality": "asserted",
+          "basis": "inferred",
+          "evidence": [
+            "菊残犹有傲霜枝"
+          ]
+        }
+      ],
+      "atmosphere": {
+        "visibility": "unclear",
+        "illumination": "unclear",
+        "basis": "inferred",
+        "evidence": []
+      }
+    },
+    "expression": {
+      "relations": [
+        {
+          "source": "i4",
+          "target": "i5",
+          "kind": "contrast",
+          "modality": "asserted",
+          "basis": "inferred",
+          "evidence": [
+            "菊残犹有傲霜枝"
+          ]
+        }
+      ],
+      "processes": [
+        {
+          "subject": "i1",
+          "kind": "fade",
+          "temporal": "already",
+          "modality": "asserted",
+          "basis": "explicit",
+          "evidence": [
+            "荷尽已无擎雨盖"
+          ]
+        },
+        {
+          "subject": "i3",
+          "kind": "fade",
+          "temporal": "ongoing",
+          "modality": "asserted",
+          "basis": "explicit",
+          "evidence": [
+            "菊残犹有傲霜枝"
+          ]
+        },
+        {
+          "subject": "i4",
+          "kind": "persist",
+          "temporal": "ongoing",
+          "modality": "asserted",
+          "basis": "inferred",
+          "evidence": [
+            "菊残犹有傲霜枝"
+          ]
+        }
+      ]
+    }
+  },
+  "validation": {
+    "valid": true,
+    "errors": [],
+    "warnings": [
+      "模型保留了不确定性，需要审阅",
+      "scene.setting 为语义推断，绘画选择需与原文明示区分",
+      "scene.groups[0] 为语义推断，绘画选择需与原文明示区分",
+      "i5 未进入整体分组，后续使用本地默认布局",
+      "scene.actions[0] 为语义推断，绘画选择需与原文明示区分",
+      "scene.atmosphere 为语义推断，绘画选择需与原文明示区分",
+      "expression.relations[0] 为语义推断",
+      "expression.processes[2] 为语义推断"
+    ],
+    "review_required": true
+  },
+  "plan": {
+    "version": "shared-expression-1.1-source-bound",
+    "seed": 762095796,
+    "poem": "荷尽已无擎雨盖，菊残犹有傲霜枝。",
+    "nodes": [
+      {
+        "id": "i1",
+        "label": "荷",
+        "meaning": "荷花",
+        "kind": "concrete",
+        "contextOnly": false,
+        "mode": "gap"
+      },
+      {
+        "id": "i2",
+        "label": "擎雨盖",
+        "meaning": "荷叶",
+        "kind": "concrete",
+        "contextOnly": false,
+        "mode": "gap"
+      },
+      {
+        "id": "i3",
+        "label": "菊",
+        "meaning": "菊花",
+        "kind": "concrete",
+        "contextOnly": false,
+        "mode": "present"
+      },
+      {
+        "id": "i4",
+        "label": "傲霜枝",
+        "meaning": "菊的枝条",
+        "kind": "concrete",
+        "contextOnly": false,
+        "mode": "present"
+      },
+      {
+        "id": "i5",
+        "label": "霜",
+        "meaning": "霜寒",
+        "kind": "concrete",
+        "contextOnly": false,
+        "mode": "present"
+      }
+    ],
+    "relations": [
+      {
+        "source": "i4",
+        "target": "i5",
+        "kind": "contrast",
+        "modality": "asserted",
+        "basis": "inferred",
+        "evidence": [
+          "菊残犹有傲霜枝"
+        ]
+      }
+    ],
+    "processes": [
+      {
+        "subject": "i1",
+        "kind": "fade",
+        "temporal": "already",
+        "modality": "asserted",
+        "basis": "explicit",
+        "evidence": [
+          "荷尽已无擎雨盖"
+        ]
+      },
+      {
+        "subject": "i3",
+        "kind": "fade",
+        "temporal": "ongoing",
+        "modality": "asserted",
+        "basis": "explicit",
+        "evidence": [
+          "菊残犹有傲霜枝"
+        ]
+      },
+      {
+        "subject": "i4",
+        "kind": "persist",
+        "temporal": "ongoing",
+        "modality": "asserted",
+        "basis": "inferred",
+        "evidence": [
+          "菊残犹有傲霜枝"
+        ]
+      }
+    ],
+    "omitted": [],
+    "atmosphere": {
+      "labels": [
+        "清冷",
+        "萧瑟",
+        "孤傲"
+      ],
+      "valence": "mixed",
+      "energy": "low",
+      "tension": "medium",
+      "openness": "unclear",
+      "evidence": [
+        "荷尽已无擎雨盖",
+        "菊残犹有傲霜枝"
+      ],
+      "illumination": "unclear"
+    },
+    "concretePlan": {
+      "version": "semantic-composition-3.3-source-bound",
+      "seed": 762095796,
+      "settings": {
+        "wind": 0.3,
+        "density": 0.45,
+        "palette": "autumn",
+        "motion": 1.4
+      },
+      "layers": [
+        {
+          "tool": "flower-forms",
+          "entities": [
+            "i3"
+          ],
+          "projectedEntities": [],
+          "names": [
+            "菊"
+          ],
+          "options": {
+            "kind": "chrysanthemum",
+            "form": "clump"
+          },
+          "animate": true,
+          "placement": {
+            "anchor": [
+              320,
+              330
+            ],
+            "at": [
+              0.4,
+              0.9
+            ],
+            "scale": 0.95
+          },
+          "semanticGroup": {
+            "members": [
+              "i3",
+              "i4"
+            ],
+            "role": "subject",
+            "pattern": "single",
+            "depth": "unspecified",
+            "basis": "inferred",
+            "evidence": [
+              "菊残犹有傲霜枝"
+            ],
+            "index": 0
+          },
+          "semanticEffects": [],
+          "semanticEnergy": true,
+          "timeScale": 0.45,
+          "instances": [
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  330
+                ],
+                "at": [
+                  0.4,
+                  0.9
+                ],
+                "scale": 0.95
+              },
+              "depth": 0,
+              "opacity": 1,
+              "variant": 2,
+              "tone": "near",
+              "id": "i3:flower-forms:clump:0:0"
+            }
+          ],
+          "singleUnit": true,
+          "quantity": {
+            "items": [
+              {
+                "entity": "i3",
+                "mode": "unspecified",
+                "min": null,
+                "max": null,
+                "unit": null,
+                "scope": "unspecified",
+                "extent": "unspecified",
+                "evidence": [],
+                "basis": "model"
+              }
+            ],
+            "rendered": 1,
+            "exact": false,
+            "collective": false,
+            "partUnsupported": false
+          },
+          "quantityLabel": "数量未精确；本地试画 1 个单元",
+          "visual": {
+            "role": "blossom",
+            "brushStrength": 1.65
+          },
+          "performance": {
+            "rhythm": "steady",
+            "rate": 1,
+            "amplitude": 1,
+            "phase": 0
+          },
+          "id": "i3:flower-forms:clump:0",
+          "interaction": {
+            "mode": "instance",
+            "groupId": "i3:flower-forms:clump:0"
+          },
+          "visibility": {
+            "protect": true,
+            "reasons": [
+              "semantic-subject"
+            ],
+            "basis": "local-drawing-policy"
+          }
+        },
+        {
+          "tool": "surface-weather",
+          "entities": [
+            "i4"
+          ],
+          "projectedEntities": [],
+          "names": [
+            "傲霜枝"
+          ],
+          "options": {
+            "surface": "frost",
+            "carrier": "detail"
+          },
+          "animate": false,
+          "placement": {
+            "anchor": [
+              320,
+              206
+            ],
+            "at": [
+              0.43,
+              0.76
+            ],
+            "scale": 0.9
+          },
+          "semanticGroup": {
+            "members": [
+              "i3",
+              "i4"
+            ],
+            "role": "subject",
+            "pattern": "single",
+            "depth": "unspecified",
+            "basis": "inferred",
+            "evidence": [
+              "菊残犹有傲霜枝"
+            ],
+            "index": 0
+          },
+          "semanticEffects": [
+            {
+              "path": "scene.actions[0].state",
+              "consumer": "形态与绘画时钟",
+              "effect": "静止姿态并停止该图层时钟",
+              "status": "applied"
+            }
+          ],
+          "semanticEnergy": false,
+          "timeScale": 0,
+          "semanticAction": {
+            "entity": "i4",
+            "state": "still",
+            "pace": "unspecified",
+            "direction": "unspecified",
+            "modality": "asserted",
+            "basis": "inferred",
+            "evidence": [
+              "菊残犹有傲霜枝"
+            ]
+          },
+          "instances": [
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  206
+                ],
+                "at": [
+                  0.43,
+                  0.76
+                ],
+                "scale": 0.9
+              },
+              "depth": 0,
+              "opacity": 1,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i4:surface-weather::1:0"
+            }
+          ],
+          "singleUnit": false,
+          "quantity": {
+            "items": [
+              {
+                "entity": "i4",
+                "mode": "unspecified",
+                "min": null,
+                "max": null,
+                "unit": null,
+                "scope": "unspecified",
+                "extent": "unspecified",
+                "evidence": [],
+                "basis": "model"
+              }
+            ],
+            "rendered": 1,
+            "exact": false,
+            "collective": false,
+            "partUnsupported": false
+          },
+          "quantityLabel": "整体笔触图层；内部数量尚未适配",
+          "visual": {
+            "role": "vegetation",
+            "brushStrength": 1.2
+          },
+          "performance": {
+            "rhythm": "steady",
+            "rate": 1,
+            "amplitude": 1,
+            "phase": 3.8830085198369844
+          },
+          "id": "i4:surface-weather::1",
+          "interaction": {
+            "mode": "instance",
+            "groupId": "i4:surface-weather::1"
+          },
+          "visibility": {
+            "protect": true,
+            "reasons": [
+              "semantic-subject"
+            ],
+            "basis": "local-drawing-policy"
+          }
+        },
+        {
+          "tool": "surface-weather",
+          "entities": [
+            "i5"
+          ],
+          "projectedEntities": [],
+          "names": [
+            "霜"
+          ],
+          "options": {
+            "surface": "frost",
+            "carrier": "detail"
+          },
+          "animate": true,
+          "placement": {
+            "anchor": [
+              320,
+              206
+            ],
+            "at": [
+              0.43,
+              0.76
+            ],
+            "scale": 0.9
+          },
+          "semanticEffects": [],
+          "semanticEnergy": true,
+          "timeScale": 0.45,
+          "instances": [
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  206
+                ],
+                "at": [
+                  0.43,
+                  0.76
+                ],
+                "scale": 0.9
+              },
+              "depth": 0,
+              "opacity": 1,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i5:surface-weather::2:0"
+            }
+          ],
+          "singleUnit": false,
+          "quantity": {
+            "items": [
+              {
+                "entity": "i5",
+                "mode": "unspecified",
+                "min": null,
+                "max": null,
+                "unit": null,
+                "scope": "unspecified",
+                "extent": "unspecified",
+                "evidence": [],
+                "basis": "model"
+              }
+            ],
+            "rendered": 1,
+            "exact": false,
+            "collective": false,
+            "partUnsupported": false
+          },
+          "quantityLabel": "整体笔触图层；内部数量尚未适配",
+          "visual": {
+            "role": "vegetation",
+            "brushStrength": 1.2
+          },
+          "performance": {
+            "rhythm": "steady",
+            "rate": 1,
+            "amplitude": 1,
+            "phase": 1.4828317324943823
+          },
+          "id": "i5:surface-weather::2",
+          "interaction": {
+            "mode": "instance",
+            "groupId": "i5:surface-weather::2"
+          },
+          "visibility": {
+            "protect": false,
+            "reasons": [],
+            "basis": "local-drawing-policy"
+          }
+        }
+      ],
+      "spatial": [],
+      "scene": {
+        "kind": "study",
+        "notes": [],
+        "waterline": null,
+        "semanticSetting": {
+          "kind": "unclear",
+          "basis": "inferred",
+          "evidence": [
+            "荷尽已无擎雨盖",
+            "菊残犹有傲霜枝"
+          ]
+        },
+        "semanticEffects": [],
+        "organization": {
+          "version": "1.0",
+          "strategy": "isolated-study",
+          "regions": {},
+          "candidates": [
+            {
+              "layout": "existing",
+              "errors": 0,
+              "cost": 0
+            }
+          ],
+          "repairs": [],
+          "limitations": [
+            "几何检查不判定诗意理解或审美合格",
+            "动作时序与整首诗的场景切换尚未编排"
+          ],
+          "graph": {
+            "nodes": [
+              {
+                "id": "l0",
+                "entities": [
+                  "i3"
+                ],
+                "tool": "flower-forms",
+                "role": "detail",
+                "habitat": null,
+                "inferred": false,
+                "support": null
+              },
+              {
+                "id": "l1",
+                "entities": [
+                  "i4"
+                ],
+                "tool": "surface-weather",
+                "role": "detail",
+                "habitat": null,
+                "inferred": false,
+                "support": null
+              },
+              {
+                "id": "l2",
+                "entities": [
+                  "i5"
+                ],
+                "tool": "surface-weather",
+                "role": "detail",
+                "habitat": null,
+                "inferred": false,
+                "support": null
+              }
+            ],
+            "edges": [],
+            "setting": "study"
+          },
+          "audit": {
+            "scope": "implemented-geometry-and-drawing-gaps",
+            "coverage": {
+              "scope": "extracted-entities-only",
+              "present": 3,
+              "mapped": 3,
+              "parameters": [],
+              "missing": []
+            },
+            "checks": [
+              "presence",
+              "count",
+              "finite",
+              "water-support",
+              "cliff-support",
+              "grove-spread",
+              "drawing-gaps"
+            ],
+            "status": "checks-passed",
+            "errors": 0,
+            "review": 0,
+            "issues": [],
+            "metrics": {
+              "overlapPenalty": 0,
+              "balancePenalty": 0,
+              "motifFootprint": 0,
+              "landArea": 0
+            },
+            "cost": 0,
+            "aestheticAcceptance": "pending-user"
+          },
+          "actorSpacing": {
+            "version": "1.0",
+            "repairs": [],
+            "residualOverlap": 0,
+            "scope": "discrete-actors-not-intentional-occlusion"
+          }
+        },
+        "displayAudit": {
+          "scope": "display-scale-separation-and-habitat",
+          "issues": [],
+          "errors": 0,
+          "aestheticAcceptance": "pending-user"
+        }
+      },
+      "omitted": [
+        {
+          "id": "i1",
+          "name": "荷",
+          "reason": "原文中缺席，不绘制"
+        },
+        {
+          "id": "i2",
+          "name": "擎雨盖",
+          "reason": "原文中缺席，不绘制"
+        }
+      ],
+      "parameters": [],
+      "sourceResolution": {
+        "version": "source-depiction-1.1",
+        "quantities": {},
+        "identities": [],
+        "changes": []
+      },
+      "notes": [
+        "菊以带茎叶的菊丛呈现；丛内花头数量是本地画法，明确数朵时仍画花冠。",
+        "傲霜枝只显示露珠或霜层的局部笔触，不自动补草叶、枝条或地面；具体载体附着尚未从诗句自动匹配。",
+        "霜只显示露珠或霜层的局部笔触，不自动补草叶、枝条或地面；具体载体附着尚未从诗句自动匹配。",
+        "位置、大小、笔触与默认微动是本地试画选择；数量解释与本地显示数量分别记录。",
+        "未明说的群落数量、疏密、近中远层次与变体均为本地构图选择；种类可按已声明的写意画法概括，不把铺展词换算成精确物体数量。",
+        "语义保留：scene.groups[0].role，分组成员目前缺少基础画法",
+        "语义保留：scene.groups[0].pattern，分组成员目前缺少基础画法",
+        "语义保留：scene.groups[0].depth，分组成员目前缺少基础画法",
+        "整体场景、主次、远近、依托和支持的动作状态来自本次模型解释；具体布局、颜色和时钟倍率由本地视觉策略选择。",
+        "动作动画表现受支持的主导状态与有限观看运动；先后事件与完整因果尚未编排。",
+        "动态程度与默认轻风是可调整的观看选择；不改变数量、主次或原文动作判断。人物保持点景写意，不新增人物步态。",
+        "显示检查覆盖实例尺度、鸟群分离与空中落点；不保证笔触未被遮挡，也不代替实际观看。竹林默认成组拖动，其余单独拖动；Shift 可拖动同层整组。"
+      ],
+      "relations": [],
+      "semanticConsumption": {
+        "version": "3.3",
+        "items": [
+          {
+            "path": "scene.setting",
+            "status": "skipped",
+            "consumer": "本地视觉策略",
+            "effect": "整体环境未明",
+            "basis": "inferred",
+            "evidence": [
+              "荷尽已无擎雨盖",
+              "菊残犹有傲霜枝"
+            ]
+          },
+          {
+            "path": "scene.groups[0].role",
+            "status": "unsupported",
+            "consumer": "本地视觉策略",
+            "effect": "分组成员目前缺少基础画法",
+            "basis": "inferred",
+            "evidence": [
+              "菊残犹有傲霜枝"
+            ]
+          },
+          {
+            "path": "scene.groups[0].pattern",
+            "status": "unsupported",
+            "consumer": "本地视觉策略",
+            "effect": "分组成员目前缺少基础画法",
+            "basis": "inferred",
+            "evidence": [
+              "菊残犹有傲霜枝"
+            ]
+          },
+          {
+            "path": "scene.groups[0].depth",
+            "status": "unsupported",
+            "consumer": "本地视觉策略",
+            "effect": "分组成员目前缺少基础画法",
+            "basis": "inferred",
+            "evidence": [
+              "菊残犹有傲霜枝"
+            ]
+          },
+          {
+            "path": "scene.actions[0].state",
+            "status": "applied",
+            "consumer": "形态与绘画时钟",
+            "effect": "静止姿态并停止该图层时钟",
+            "basis": "inferred",
+            "evidence": [
+              "菊残犹有傲霜枝"
+            ]
+          },
+          {
+            "path": "scene.actions[0].pace",
+            "status": "skipped",
+            "consumer": "本地视觉策略",
+            "effect": "静止状态不推进时钟或位置",
+            "basis": "inferred",
+            "evidence": [
+              "菊残犹有傲霜枝"
+            ]
+          },
+          {
+            "path": "scene.actions[0].direction",
+            "status": "skipped",
+            "consumer": "本地视觉策略",
+            "effect": "静止状态不推进时钟或位置",
+            "basis": "inferred",
+            "evidence": [
+              "菊残犹有傲霜枝"
+            ]
+          },
+          {
+            "path": "scene.atmosphere.visibility",
+            "status": "skipped",
+            "consumer": "画布色层与远景",
+            "effect": "可见度 unclear；迷蒙或昏暗时淡化非光源图层",
+            "basis": "inferred",
+            "evidence": []
+          },
+          {
+            "path": "scene.atmosphere.illumination",
+            "status": "skipped",
+            "consumer": "自动光色",
+            "effect": "照明 unclear 与气息标签共同选择本地 autumn 配色；夜景优先暗底，用户可手动覆盖",
+            "basis": "inferred",
+            "evidence": []
+          },
+          {
+            "path": "atmosphere.energy",
+            "status": "applied",
+            "consumer": "绘画时钟",
+            "effect": "没有明确动作节奏时，气息强弱控制已有微动的默认时钟"
+          },
+          {
+            "path": "atmosphere.openness",
+            "status": "applied",
+            "consumer": "群落分布与笔触密度",
+            "effect": "开阔度转换为本地间距与工具笔触密度，不等于原文数量"
+          },
+          {
+            "path": "atmosphere.valence",
+            "status": "applied",
+            "consumer": "自动光色",
+            "effect": "先约束昼夜明暗，再按已支持的气息标签和情绪倾向选择配色；不宣称完整情感理解"
+          },
+          {
+            "path": "time.markers",
+            "status": "retained",
+            "consumer": "原始记录与解读",
+            "effect": "保留原文时间标记；本版照明由 scene.atmosphere 转换，多阶段时间逻辑未执行"
+          }
+        ],
+        "summary": {
+          "applied": 4,
+          "partial": 0,
+          "unsupported": 3,
+          "skipped": 5,
+          "retained": 1
+        },
+        "aestheticAcceptance": "pending-user"
+      },
+      "landscapeStyle": {
+        "version": "1.0",
+        "color": "role-and-distance",
+        "motion": "layer-rhythms",
+        "aestheticAcceptance": "pending-user"
+      },
+      "imageryTrace": [
+        {
+          "id": "i1",
+          "mentions": [
+            "荷"
+          ],
+          "role": "scene",
+          "presence": "absent",
+          "parameter": null,
+          "layers": [],
+          "omission": "原文中缺席，不绘制"
+        },
+        {
+          "id": "i2",
+          "mentions": [
+            "擎雨盖"
+          ],
+          "role": "scene",
+          "presence": "absent",
+          "parameter": null,
+          "layers": [],
+          "omission": "原文中缺席，不绘制"
+        },
+        {
+          "id": "i3",
+          "mentions": [
+            "菊"
+          ],
+          "role": "scene",
+          "presence": "present",
+          "parameter": null,
+          "layers": [
+            {
+              "id": "i3:flower-forms:clump:0",
+              "tool": "flower-forms",
+              "instances": [
+                "i3:flower-forms:clump:0:0"
+              ]
+            }
+          ],
+          "omission": null
+        },
+        {
+          "id": "i4",
+          "mentions": [
+            "傲霜枝"
+          ],
+          "role": "scene",
+          "presence": "present",
+          "parameter": null,
+          "layers": [
+            {
+              "id": "i4:surface-weather::1",
+              "tool": "surface-weather",
+              "instances": [
+                "i4:surface-weather::1:0"
+              ]
+            }
+          ],
+          "omission": null
+        },
+        {
+          "id": "i5",
+          "mentions": [
+            "霜"
+          ],
+          "role": "scene",
+          "presence": "present",
+          "parameter": null,
+          "layers": [
+            {
+              "id": "i5:surface-weather::2",
+              "tool": "surface-weather",
+              "instances": [
+                "i5:surface-weather::2:0"
+              ]
+            }
+          ],
+          "omission": null
+        }
+      ],
+      "drawingPolicy": {
+        "version": "shared-drawing-policy-1.0",
+        "scope": "source-bound-generation-and-composition-alternatives",
+        "selectedComposition": null,
+        "applied": [
+          {
+            "composition": "primary",
+            "layer": "i3:flower-forms:clump:0",
+            "entities": [
+              "i3"
+            ],
+            "color": null,
+            "visibility": [
+              "semantic-subject"
+            ],
+            "attachment": null
+          },
+          {
+            "composition": "primary",
+            "layer": "i4:surface-weather::1",
+            "entities": [
+              "i4"
+            ],
+            "color": null,
+            "visibility": [
+              "semantic-subject"
+            ],
+            "attachment": null
+          }
+        ],
+        "quantityChanges": 0,
+        "identityGroups": 0,
+        "aestheticAcceptance": "pending-user"
+      }
+    },
+    "renderability": {
+      "status": "ready",
+      "visibleScenery": true,
+      "visibleAbstract": false,
+      "gaps": []
+    },
+    "expression": {
+      "version": "shared-expression-1.1-source-bound",
+      "sourceContract": "expression-1.0",
+      "recommendation": "scenery",
+      "reason": "可画景物较充分，优先呈现风景",
+      "gaps": [],
+      "limitations": [
+        "景物过程当前影响抽象纹理；原生景物动作沿用场景能力，未支持的月下楼位移等仍不执行。",
+        "纹理、色层和观看扰动属于本地艺术选择，不改变语义成立状态"
+      ]
+    },
+    "notes": [
+      "三个表达倾向共享景物数量、空间、依托与主体身份；抽象笔触优先服从原景物区域和轮廓。",
+      "纯抽象或比喻句不因切换风景优先而补山水。",
+      "菊以带茎叶的菊丛呈现；丛内花头数量是本地画法，明确数朵时仍画花冠。",
+      "傲霜枝只显示露珠或霜层的局部笔触，不自动补草叶、枝条或地面；具体载体附着尚未从诗句自动匹配。",
+      "霜只显示露珠或霜层的局部笔触，不自动补草叶、枝条或地面；具体载体附着尚未从诗句自动匹配。",
+      "位置、大小、笔触与默认微动是本地试画选择；数量解释与本地显示数量分别记录。",
+      "未明说的群落数量、疏密、近中远层次与变体均为本地构图选择；种类可按已声明的写意画法概括，不把铺展词换算成精确物体数量。",
+      "语义保留：scene.groups[0].role，分组成员目前缺少基础画法",
+      "语义保留：scene.groups[0].pattern，分组成员目前缺少基础画法",
+      "语义保留：scene.groups[0].depth，分组成员目前缺少基础画法",
+      "整体场景、主次、远近、依托和支持的动作状态来自本次模型解释；具体布局、颜色和时钟倍率由本地视觉策略选择。",
+      "动作动画表现受支持的主导状态与有限观看运动；先后事件与完整因果尚未编排。",
+      "动态程度与默认轻风是可调整的观看选择；不改变数量、主次或原文动作判断。人物保持点景写意，不新增人物步态。",
+      "显示检查覆盖实例尺度、鸟群分离与空中落点；不保证笔触未被遮挡，也不代替实际观看。竹林默认成组拖动，其余单独拖动；Shift 可拖动同层整组。"
+    ],
+    "aestheticAcceptance": "pending-user"
+  },
+  "delivery": {
+    "status": "complete",
+    "retryable": false,
+    "reason": null,
+    "message": "解读已通过检查。"
+  },
+  "elapsed_seconds": 6.5
+}

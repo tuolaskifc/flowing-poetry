@@ -1,0 +1,315 @@
+{
+  "providerCalls": 0,
+  "rows": [
+    {
+      "id": "f01",
+      "poem": "孤山寺北贾亭西，水面初平云脚低。",
+      "modelChoices": [
+        {
+          "entity": "i1",
+          "tool": "dwelling",
+          "fit": "approximate"
+        },
+        {
+          "entity": "i2",
+          "tool": "pavilion",
+          "fit": "direct"
+        },
+        {
+          "entity": "i3",
+          "tool": "water",
+          "fit": "approximate"
+        },
+        {
+          "entity": "i4",
+          "tool": "cloud",
+          "fit": "approximate"
+        }
+      ],
+      "baseline": [
+        {
+          "ids": [
+            "i4"
+          ],
+          "names": [
+            "云脚"
+          ],
+          "tool": "cloud",
+          "options": {}
+        },
+        {
+          "ids": [
+            "i1"
+          ],
+          "names": [
+            "孤山寺"
+          ],
+          "tool": "dwelling",
+          "options": {
+            "kind": "temple"
+          }
+        },
+        {
+          "ids": [
+            "i3"
+          ],
+          "names": [
+            "水面"
+          ],
+          "tool": "water",
+          "options": {
+            "form": "plane"
+          }
+        }
+      ],
+      "actual": [
+        {
+          "ids": [
+            "i4"
+          ],
+          "names": [
+            "云脚"
+          ],
+          "tool": "cloud",
+          "options": {}
+        },
+        {
+          "ids": [
+            "i1"
+          ],
+          "names": [
+            "孤山寺"
+          ],
+          "tool": "dwelling",
+          "options": {
+            "kind": "temple"
+          }
+        },
+        {
+          "ids": [
+            "i2"
+          ],
+          "names": [
+            "贾亭"
+          ],
+          "tool": "pavilion",
+          "options": {}
+        },
+        {
+          "ids": [
+            "i3"
+          ],
+          "names": [
+            "水面"
+          ],
+          "tool": "water",
+          "options": {
+            "form": "plane"
+          }
+        }
+      ],
+      "gaps": []
+    },
+    {
+      "id": "f02",
+      "poem": "日暮苍山远，天寒白屋贫。",
+      "modelChoices": [
+        {
+          "entity": "i1",
+          "tool": "landscape",
+          "fit": "approximate"
+        },
+        {
+          "entity": "i2",
+          "tool": "landscape",
+          "fit": "approximate"
+        },
+        {
+          "entity": "i3",
+          "tool": "landscape",
+          "fit": "approximate"
+        },
+        {
+          "entity": "i4",
+          "tool": "dwelling",
+          "fit": "approximate"
+        }
+      ],
+      "baseline": [
+        {
+          "ids": [
+            "i1"
+          ],
+          "names": [
+            "日暮"
+          ],
+          "tool": "landscape",
+          "options": {
+            "form": "sun"
+          }
+        },
+        {
+          "ids": [
+            "i3"
+          ],
+          "names": [
+            "天"
+          ],
+          "tool": "landscape",
+          "options": {
+            "form": "sky"
+          }
+        },
+        {
+          "ids": [
+            "i4"
+          ],
+          "names": [
+            "白屋"
+          ],
+          "tool": "dwelling",
+          "options": {
+            "kind": "house"
+          }
+        }
+      ],
+      "actual": [
+        {
+          "ids": [
+            "i1"
+          ],
+          "names": [
+            "日暮"
+          ],
+          "tool": "landscape",
+          "options": {
+            "form": "sun"
+          }
+        },
+        {
+          "ids": [
+            "i2"
+          ],
+          "names": [
+            "苍山"
+          ],
+          "tool": "landscape",
+          "options": {
+            "form": "mountain"
+          }
+        },
+        {
+          "ids": [
+            "i3"
+          ],
+          "names": [
+            "天"
+          ],
+          "tool": "landscape",
+          "options": {
+            "form": "sky"
+          }
+        },
+        {
+          "ids": [
+            "i4"
+          ],
+          "names": [
+            "白屋"
+          ],
+          "tool": "dwelling",
+          "options": {
+            "kind": "house"
+          }
+        }
+      ],
+      "gaps": []
+    },
+    {
+      "id": "f03",
+      "poem": "梅子黄时日日晴，小溪泛尽却山行。",
+      "modelChoices": [
+        {
+          "entity": "i1",
+          "tool": "plum-branch",
+          "fit": "approximate"
+        },
+        {
+          "entity": "i2",
+          "tool": "water",
+          "fit": "approximate"
+        },
+        {
+          "entity": "i3",
+          "tool": "landscape",
+          "fit": "direct"
+        }
+      ],
+      "baseline": [
+        {
+          "ids": [
+            "i3"
+          ],
+          "names": [
+            "山"
+          ],
+          "tool": "landscape",
+          "options": {
+            "form": "mountain"
+          }
+        },
+        {
+          "ids": [
+            "i2"
+          ],
+          "names": [
+            "小溪"
+          ],
+          "tool": "water",
+          "options": {
+            "form": "plane"
+          }
+        }
+      ],
+      "actual": [
+        {
+          "ids": [
+            "i3"
+          ],
+          "names": [
+            "山"
+          ],
+          "tool": "landscape",
+          "options": {
+            "form": "mountain"
+          }
+        },
+        {
+          "ids": [
+            "i2"
+          ],
+          "names": [
+            "小溪"
+          ],
+          "tool": "water",
+          "options": {
+            "form": "plane"
+          }
+        },
+        {
+          "ids": [
+            "i1"
+          ],
+          "names": [
+            "梅子"
+          ],
+          "tool": "plum-branch",
+          "options": {
+            "form": "sprig"
+          }
+        }
+      ],
+      "gaps": []
+    }
+  ]
+}

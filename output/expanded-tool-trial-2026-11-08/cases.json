@@ -1,0 +1,82 @@
+[
+  {
+    "id": "e01",
+    "poem": "一道残阳铺水中，半江瑟瑟半江红。",
+    "author": "白居易",
+    "title": "暮江吟",
+    "url": "https://www.gushiwen.cn/mingju/juv_5d5f89939d5e.aspx",
+    "focus": "光色与水面"
+  },
+  {
+    "id": "e02",
+    "poem": "行到水穷处，坐看云起时。",
+    "author": "王维",
+    "title": "终南别业",
+    "url": "https://www.gushiwen.cn/mingju/juv_fc7207b13c00.aspx",
+    "focus": "人物与动作时序"
+  },
+  {
+    "id": "e03",
+    "poem": "荷风送香气，竹露滴清响。",
+    "author": "孟浩然",
+    "title": "夏日南亭怀辛大",
+    "url": "https://www.gushiwen.cn/mingju/juv_15f4db847919.aspx",
+    "focus": "气味、声音与依托"
+  },
+  {
+    "id": "e04",
+    "poem": "落霞与孤鹜齐飞，秋水共长天一色。",
+    "author": "王勃",
+    "title": "滕王阁序",
+    "url": "https://www.gushiwen.cn/mingju/juv_3549fcfbb6ef.aspx",
+    "focus": "数量、色彩与天水"
+  },
+  {
+    "id": "e05",
+    "poem": "人闲桂花落，夜静春山空。",
+    "author": "王维",
+    "title": "鸟鸣涧",
+    "url": "https://www.gushiwen.cn/mingju/juv_bddfaa6722e8.aspx",
+    "focus": "夜色、落花与主体"
+  },
+  {
+    "id": "e06",
+    "poem": "明月别枝惊鹊，清风半夜鸣蝉。",
+    "author": "辛弃疾",
+    "title": "西江月·夜行黄沙道中",
+    "url": "https://m.gushiwen.cn/mingju/juv_6f4f1edd3b11.aspx",
+    "focus": "月、鸟与声音"
+  },
+  {
+    "id": "e07",
+    "poem": "月黑雁飞高，单于夜遁逃。",
+    "author": "卢纶",
+    "title": "塞下曲",
+    "url": "https://www.gushiwen.cn/mingju/juv_fc4b11f3dcf6.aspx",
+    "focus": "夜色、缺月光与动作"
+  },
+  {
+    "id": "e08",
+    "poem": "潮平两岸阔，风正一帆悬。",
+    "author": "王湾",
+    "title": "次北固山下",
+    "url": "https://m.gushiwen.cn/mingju/juv_aa53782f1529.aspx",
+    "focus": "宽幅、数量和帆"
+  },
+  {
+    "id": "e09",
+    "poem": "大漠沙如雪，燕山月似钩。",
+    "author": "李贺",
+    "title": "马诗",
+    "url": "https://m.gushiwen.cn/mingju/juv_e4ce9ced8cfe.aspx",
+    "focus": "比喻与月形"
+  },
+  {
+    "id": "e10",
+    "poem": "独坐幽篁里，弹琴复长啸。",
+    "author": "王维",
+    "title": "竹里馆",
+    "url": "https://www.gushiwen.cn/mingju/juv_995bbb79f869.aspx",
+    "focus": "人物、竹与乐器"
+  }
+]

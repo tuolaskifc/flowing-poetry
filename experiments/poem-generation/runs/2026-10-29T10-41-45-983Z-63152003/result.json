@@ -1,0 +1,27 @@
+{
+  "id": "2026-10-29T10-41-45-983Z-63152003",
+  "fingerprint": "29358366386cc45ad05d47e511830c7b3b45af823678dbf3d9e1d12be1154725",
+  "semanticFingerprint": "4ff6fcc9fd6f3ea5f9141ffdf87a7443dd1ad3233dcd93c38c97963731fb19b5",
+  "poem": "不见去年人，泪湿春衫袖。",
+  "source": null,
+  "mode": "expression",
+  "model": "DeepSeek-V4.1-Flash",
+  "started_at": "2026-10-29T10:41:45.983Z",
+  "cached": false,
+  "error": "fetch failed",
+  "validation": {
+    "valid": false,
+    "errors": [
+      "fetch failed"
+    ],
+    "warnings": [],
+    "review_required": true
+  },
+  "delivery": {
+    "status": "failed",
+    "retryable": true,
+    "reason": "connection-or-format",
+    "message": "这次分析未能完整返回，尚未生成本句画面。"
+  },
+  "elapsed_seconds": 0
+}

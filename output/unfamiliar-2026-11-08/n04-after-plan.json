@@ -1,0 +1,6221 @@
+{
+  "version": "shared-expression-1.1-source-bound",
+  "seed": 4203453111,
+  "poem": "月落乌啼霜满天，江枫渔火对愁眠。",
+  "nodes": [
+    {
+      "id": "i1",
+      "label": "月",
+      "meaning": "月亮",
+      "kind": "concrete",
+      "contextOnly": false,
+      "mode": "present"
+    },
+    {
+      "id": "i2",
+      "label": "乌",
+      "meaning": "乌鸦",
+      "kind": "concrete",
+      "contextOnly": false,
+      "mode": "present"
+    },
+    {
+      "id": "i3",
+      "label": "霜",
+      "meaning": "霜",
+      "kind": "concrete",
+      "contextOnly": false,
+      "mode": "present"
+    },
+    {
+      "id": "i4",
+      "label": "江枫",
+      "meaning": "江边枫树",
+      "kind": "concrete",
+      "contextOnly": false,
+      "mode": "present"
+    },
+    {
+      "id": "i5",
+      "label": "渔火",
+      "meaning": "渔船灯火",
+      "kind": "concrete",
+      "contextOnly": false,
+      "mode": "present"
+    },
+    {
+      "id": "i6",
+      "label": "愁",
+      "meaning": "愁绪",
+      "kind": "abstract",
+      "contextOnly": false,
+      "mode": "present"
+    }
+  ],
+  "relations": [
+    {
+      "source": "i4",
+      "target": "i5",
+      "kind": "contrast",
+      "modality": "asserted",
+      "basis": "inferred",
+      "evidence": [
+        "江枫渔火对愁眠"
+      ]
+    },
+    {
+      "source": "i6",
+      "target": "i4",
+      "kind": "connect",
+      "modality": "asserted",
+      "basis": "inferred",
+      "evidence": [
+        "江枫渔火对愁眠"
+      ]
+    },
+    {
+      "source": "i6",
+      "target": "i5",
+      "kind": "connect",
+      "modality": "asserted",
+      "basis": "inferred",
+      "evidence": [
+        "江枫渔火对愁眠"
+      ]
+    }
+  ],
+  "processes": [
+    {
+      "subject": "i1",
+      "kind": "fade",
+      "temporal": "already",
+      "modality": "asserted",
+      "basis": "explicit",
+      "evidence": [
+        "月落乌啼霜满天"
+      ]
+    },
+    {
+      "subject": "i3",
+      "kind": "accumulate",
+      "temporal": "ongoing",
+      "modality": "asserted",
+      "basis": "inferred",
+      "evidence": [
+        "霜满天"
+      ]
+    }
+  ],
+  "omitted": [],
+  "atmosphere": {
+    "labels": [
+      "清冷",
+      "孤寂",
+      "愁"
+    ],
+    "valence": "negative",
+    "energy": "low",
+    "tension": "medium",
+    "openness": "medium",
+    "evidence": [
+      "月落乌啼霜满天",
+      "江枫渔火对愁眠"
+    ],
+    "illumination": "night"
+  },
+  "concretePlan": {
+    "version": "semantic-composition-3.3-source-bound",
+    "seed": 4203453111,
+    "settings": {
+      "wind": 0.3,
+      "density": 0.45,
+      "palette": "indigo",
+      "motion": 1.4
+    },
+    "layers": [
+      {
+        "tool": "landscape",
+        "entities": [
+          "i5"
+        ],
+        "projectedEntities": [],
+        "names": [
+          "渔火"
+        ],
+        "options": {
+          "form": "glow"
+        },
+        "animate": false,
+        "placement": {
+          "anchor": [
+            320,
+            194
+          ],
+          "at": [
+            0.7,
+            0.6
+          ],
+          "scale": 1.5
+        },
+        "semanticGroup": {
+          "members": [
+            "i4",
+            "i5"
+          ],
+          "role": "subject",
+          "pattern": "cluster",
+          "depth": "middle",
+          "basis": "inferred",
+          "evidence": [
+            "江枫渔火对愁眠"
+          ],
+          "index": 1
+        },
+        "semanticEffects": [
+          {
+            "path": "scene.groups[1].role",
+            "consumer": "主次布局",
+            "effect": "主体相对突出",
+            "status": "applied"
+          },
+          {
+            "path": "scene.groups[1].pattern",
+            "consumer": "群落布局",
+            "effect": "按 cluster 组织显示单元；不覆盖明确数量",
+            "status": "applied"
+          },
+          {
+            "path": "scene.groups[1].depth",
+            "consumer": "远近布局",
+            "effect": "将 middle 转为相对大小、透明度与允许区域内的落点",
+            "status": "applied"
+          }
+        ],
+        "semanticEnergy": false,
+        "timeScale": 0.45,
+        "instances": [
+          {
+            "placement": {
+              "anchor": [
+                320,
+                210
+              ],
+              "at": [
+                0.7,
+                0.6
+              ],
+              "scale": 1.2096
+            },
+            "depth": 0.05,
+            "opacity": 0.84,
+            "variant": 1,
+            "tone": "middle",
+            "id": "i5:landscape:glow:0:0"
+          }
+        ],
+        "singleUnit": false,
+        "quantity": {
+          "items": [
+            {
+              "entity": "i5",
+              "mode": "unspecified",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "unspecified",
+              "extent": "unspecified",
+              "evidence": [],
+              "basis": "model"
+            }
+          ],
+          "rendered": 1,
+          "exact": false,
+          "collective": false,
+          "partUnsupported": false
+        },
+        "quantityLabel": "整体笔触图层；内部数量尚未适配",
+        "z": 30,
+        "visual": {
+          "role": "light",
+          "brushStrength": 1.1
+        },
+        "performance": {
+          "rhythm": "steady",
+          "rate": 1,
+          "amplitude": 1,
+          "phase": 0
+        },
+        "id": "i5:landscape:glow:0",
+        "interaction": {
+          "mode": "instance",
+          "groupId": "i5:landscape:glow:0"
+        },
+        "visibility": {
+          "protect": true,
+          "reasons": [
+            "semantic-subject"
+          ],
+          "basis": "local-drawing-policy"
+        }
+      },
+      {
+        "tool": "moon",
+        "entities": [
+          "i1"
+        ],
+        "projectedEntities": [],
+        "names": [
+          "月"
+        ],
+        "options": {
+          "shape": "crescent"
+        },
+        "animate": false,
+        "placement": {
+          "anchor": [
+            320,
+            175
+          ],
+          "at": [
+            0.72,
+            0.22
+          ],
+          "scale": 0.85
+        },
+        "semanticGroup": {
+          "members": [
+            "i1",
+            "i2",
+            "i3"
+          ],
+          "role": "environment",
+          "pattern": "scattered",
+          "depth": "far",
+          "basis": "inferred",
+          "evidence": [
+            "月落乌啼霜满天"
+          ],
+          "index": 0
+        },
+        "semanticEffects": [
+          {
+            "path": "scene.actions[0].state",
+            "consumer": "动作画法",
+            "effect": "当前工具尚无对应动作状态",
+            "status": "unsupported"
+          },
+          {
+            "path": "scene.groups[0].role",
+            "consumer": "主次布局",
+            "effect": "保留环境群落层次",
+            "status": "applied"
+          },
+          {
+            "path": "scene.groups[0].pattern",
+            "consumer": "群落布局",
+            "effect": "按 scattered 组织显示单元；不覆盖明确数量",
+            "status": "applied"
+          },
+          {
+            "path": "scene.groups[0].depth",
+            "consumer": "远近布局",
+            "effect": "将 far 转为相对大小、透明度与允许区域内的落点",
+            "status": "applied"
+          }
+        ],
+        "semanticEnergy": false,
+        "timeScale": 0,
+        "semanticAction": {
+          "entity": "i1",
+          "state": "fall",
+          "pace": "slow",
+          "direction": "down",
+          "modality": "asserted",
+          "basis": "explicit",
+          "evidence": [
+            "月落乌啼霜满天"
+          ]
+        },
+        "instances": [
+          {
+            "placement": {
+              "anchor": [
+                320,
+                175
+              ],
+              "at": [
+                0.72,
+                0.22
+              ],
+              "scale": 0.76
+            },
+            "depth": -0.2,
+            "opacity": 0.92,
+            "variant": 0,
+            "tone": "far",
+            "id": "i1:moon::1:0"
+          }
+        ],
+        "singleUnit": true,
+        "quantity": {
+          "items": [
+            {
+              "entity": "i1",
+              "mode": "unspecified",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "unspecified",
+              "extent": "unspecified",
+              "evidence": [],
+              "basis": "model"
+            }
+          ],
+          "rendered": 1,
+          "exact": false,
+          "collective": false,
+          "partUnsupported": false
+        },
+        "quantityLabel": "数量未精确；本地试画 1 个单元",
+        "z": -5,
+        "visual": {
+          "role": "light",
+          "brushStrength": 1.1
+        },
+        "performance": {
+          "rhythm": "steady",
+          "rate": 1,
+          "amplitude": 1,
+          "phase": 3.8830085198369844
+        },
+        "id": "i1:moon::1",
+        "interaction": {
+          "mode": "instance",
+          "groupId": "i1:moon::1"
+        },
+        "visibility": {
+          "protect": true,
+          "reasons": [
+            "recognizable-subject"
+          ],
+          "basis": "local-drawing-policy"
+        }
+      },
+      {
+        "tool": "tree",
+        "entities": [
+          "i4"
+        ],
+        "projectedEntities": [],
+        "names": [
+          "江枫"
+        ],
+        "options": {
+          "form": "broadleaf",
+          "crown": "lines"
+        },
+        "animate": true,
+        "placement": {
+          "anchor": [
+            320,
+            388
+          ],
+          "at": [
+            0.508103592834643,
+            0.8314017391304348
+          ],
+          "scale": 1.15
+        },
+        "drawingLabel": "树意（写意借形）",
+        "semanticGroup": {
+          "members": [
+            "i4",
+            "i5"
+          ],
+          "role": "subject",
+          "pattern": "cluster",
+          "depth": "middle",
+          "basis": "inferred",
+          "evidence": [
+            "江枫渔火对愁眠"
+          ],
+          "index": 1
+        },
+        "semanticEffects": [
+          {
+            "path": "scene.groups[1].role",
+            "consumer": "主次布局",
+            "effect": "主体相对突出",
+            "status": "applied"
+          },
+          {
+            "path": "scene.groups[1].pattern",
+            "consumer": "群落布局",
+            "effect": "按 cluster 组织显示单元；不覆盖明确数量",
+            "status": "applied"
+          },
+          {
+            "path": "scene.groups[1].depth",
+            "consumer": "远近布局",
+            "effect": "将 middle 转为相对大小、透明度与允许区域内的落点",
+            "status": "applied"
+          }
+        ],
+        "semanticEnergy": true,
+        "timeScale": 0.45,
+        "instances": [
+          {
+            "placement": {
+              "anchor": [
+                320,
+                388
+              ],
+              "at": [
+                0.5984601505633286,
+                0.7837490086956522
+              ],
+              "scale": 0.5885488399518001
+            },
+            "depth": 10,
+            "opacity": 0.59959771011,
+            "variant": 1,
+            "tone": "middle",
+            "id": "i4:tree:broadleaf:2:0"
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                388
+              ],
+              "at": [
+                0.4073744362776143,
+                0.8175577043478262
+              ],
+              "scale": 0.4999938399036001
+            },
+            "depth": 10.01,
+            "opacity": 0.53542742022,
+            "variant": 1,
+            "tone": "middle",
+            "id": "i4:tree:broadleaf:2:1"
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                388
+              ],
+              "at": [
+                0.7200601505633286,
+                0.7837490086956522
+              ],
+              "scale": 0.6432788398554
+            },
+            "depth": 10.02,
+            "opacity": 0.6392571303299999,
+            "variant": 1,
+            "tone": "middle",
+            "id": "i4:tree:broadleaf:2:2"
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                388
+              ],
+              "at": [
+                0.5160955333884717,
+                0.9339284869565218
+              ],
+              "scale": 0.7966438398072002
+            },
+            "depth": 10.03,
+            "opacity": 0.767898156396,
+            "variant": 1,
+            "tone": "middle",
+            "id": "i4:tree:broadleaf:2:3"
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                388
+              ],
+              "at": [
+                0.29852769338047175,
+                0.8380244869565219
+              ],
+              "scale": 0.7080888397590002
+            },
+            "depth": 10.04,
+            "opacity": 0.710144895495,
+            "variant": 1,
+            "tone": "middle",
+            "id": "i4:tree:broadleaf:2:4"
+          }
+        ],
+        "singleUnit": true,
+        "quantity": {
+          "items": [
+            {
+              "entity": "i4",
+              "mode": "unspecified",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "unspecified",
+              "extent": "unspecified",
+              "evidence": [],
+              "basis": "model"
+            }
+          ],
+          "rendered": 5,
+          "exact": false,
+          "collective": true,
+          "partUnsupported": false
+        },
+        "quantityLabel": "成片分布；本地试画 5 个单元",
+        "z": 8,
+        "semanticSupport": {
+          "surface": "ground",
+          "target": null,
+          "path": "scene.supports[0]"
+        },
+        "visual": {
+          "role": "vegetation",
+          "brushStrength": 1.2
+        },
+        "performance": {
+          "rhythm": "gust",
+          "rate": 0.62,
+          "amplitude": 0.65,
+          "phase": 1.4828317324943823
+        },
+        "id": "i4:tree:broadleaf:2",
+        "interaction": {
+          "mode": "instance",
+          "groupId": "i4:tree:broadleaf:2"
+        },
+        "visibility": {
+          "protect": true,
+          "reasons": [
+            "semantic-subject"
+          ],
+          "basis": "local-drawing-policy"
+        }
+      },
+      {
+        "tool": "surface-weather",
+        "entities": [
+          "i3"
+        ],
+        "projectedEntities": [],
+        "names": [
+          "霜"
+        ],
+        "options": {
+          "surface": "frost",
+          "carrier": "detail"
+        },
+        "animate": true,
+        "placement": {
+          "anchor": [
+            320,
+            206
+          ],
+          "at": [
+            0.43,
+            0.76
+          ],
+          "scale": 0.9
+        },
+        "semanticGroup": {
+          "members": [
+            "i1",
+            "i2",
+            "i3"
+          ],
+          "role": "environment",
+          "pattern": "scattered",
+          "depth": "far",
+          "basis": "inferred",
+          "evidence": [
+            "月落乌啼霜满天"
+          ],
+          "index": 0
+        },
+        "semanticEffects": [
+          {
+            "path": "scene.groups[0].role",
+            "consumer": "主次布局",
+            "effect": "保留环境群落层次",
+            "status": "applied"
+          },
+          {
+            "path": "scene.groups[0].pattern",
+            "consumer": "群落布局",
+            "effect": "按 scattered 组织显示单元；不覆盖明确数量",
+            "status": "applied"
+          },
+          {
+            "path": "scene.groups[0].depth",
+            "consumer": "远近布局",
+            "effect": "将 far 转为相对大小、透明度与允许区域内的落点",
+            "status": "applied"
+          }
+        ],
+        "semanticEnergy": true,
+        "timeScale": 0.45,
+        "instances": [
+          {
+            "placement": {
+              "anchor": [
+                320,
+                206
+              ],
+              "at": [
+                0.43,
+                0.76
+              ],
+              "scale": 0.5850000000000001
+            },
+            "depth": -0.2,
+            "opacity": 0.6,
+            "variant": 0,
+            "tone": "far",
+            "id": "i3:surface-weather::3:0"
+          }
+        ],
+        "singleUnit": false,
+        "quantity": {
+          "items": [
+            {
+              "entity": "i3",
+              "mode": "many",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "extent",
+              "extent": "spread",
+              "evidence": [
+                "霜满天"
+              ],
+              "basis": "model"
+            }
+          ],
+          "rendered": 1,
+          "exact": false,
+          "collective": true,
+          "partUnsupported": false
+        },
+        "quantityLabel": "整体笔触图层；内部数量尚未适配",
+        "visual": {
+          "role": "vegetation",
+          "brushStrength": 1.2
+        },
+        "performance": {
+          "rhythm": "steady",
+          "rate": 1,
+          "amplitude": 1,
+          "phase": 5.365840252331367
+        },
+        "id": "i3:surface-weather::3",
+        "interaction": {
+          "mode": "instance",
+          "groupId": "i3:surface-weather::3"
+        },
+        "visibility": {
+          "protect": false,
+          "reasons": [],
+          "basis": "local-drawing-policy"
+        }
+      },
+      {
+        "tool": "bird",
+        "entities": [
+          "i2"
+        ],
+        "projectedEntities": [],
+        "names": [
+          "乌"
+        ],
+        "options": {
+          "pose": "flying",
+          "tone": "ink",
+          "facing": "right"
+        },
+        "animate": false,
+        "placement": {
+          "anchor": [
+            320,
+            190
+          ],
+          "at": [
+            0.51,
+            0.29558843586204675
+          ],
+          "scale": 0.78
+        },
+        "drawingLabel": "鸟意（写意借形）",
+        "semanticGroup": {
+          "members": [
+            "i1",
+            "i2",
+            "i3"
+          ],
+          "role": "environment",
+          "pattern": "scattered",
+          "depth": "far",
+          "basis": "inferred",
+          "evidence": [
+            "月落乌啼霜满天"
+          ],
+          "index": 0
+        },
+        "semanticEffects": [
+          {
+            "path": "scene.actions[1].state",
+            "consumer": "动作边界",
+            "effect": "动作未明，保留静态形态",
+            "status": "skipped"
+          },
+          {
+            "path": "scene.groups[0].role",
+            "consumer": "主次布局",
+            "effect": "保留环境群落层次",
+            "status": "applied"
+          },
+          {
+            "path": "scene.groups[0].pattern",
+            "consumer": "群落布局",
+            "effect": "按 scattered 组织显示单元；不覆盖明确数量",
+            "status": "applied"
+          },
+          {
+            "path": "scene.groups[0].depth",
+            "consumer": "远近布局",
+            "effect": "将 far 转为相对大小、透明度与允许区域内的落点",
+            "status": "applied"
+          }
+        ],
+        "semanticEnergy": false,
+        "timeScale": 0,
+        "semanticAction": {
+          "entity": "i2",
+          "state": "unclear",
+          "pace": "unspecified",
+          "direction": "unspecified",
+          "modality": "asserted",
+          "basis": "explicit",
+          "evidence": [
+            "月落乌啼霜满天"
+          ]
+        },
+        "instances": [
+          {
+            "placement": {
+              "anchor": [
+                320,
+                190
+              ],
+              "at": [
+                0.24262500000000004,
+                0.2753552859917767
+              ],
+              "scale": 0.48
+            },
+            "depth": -0.2375,
+            "opacity": 0.7,
+            "variant": 0,
+            "tone": "far",
+            "id": "i2:bird::4:0"
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                190
+              ],
+              "at": [
+                0.420875,
+                0.33522273465450847
+              ],
+              "scale": 0.48
+            },
+            "depth": -0.2125,
+            "opacity": 0.7,
+            "variant": 0,
+            "tone": "far",
+            "id": "i2:bird::4:1"
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                190
+              ],
+              "at": [
+                0.599125,
+                0.32353517688002975
+              ],
+              "scale": 0.48
+            },
+            "depth": -0.1875,
+            "opacity": 0.7,
+            "variant": 0,
+            "tone": "far",
+            "id": "i2:bird::4:2"
+          },
+          {
+            "placement": {
+              "anchor": [
+                320,
+                190
+              ],
+              "at": [
+                0.7773749999999999,
+                0.24824054592187209
+              ],
+              "scale": 0.48
+            },
+            "depth": -0.16249999999999998,
+            "opacity": 0.7,
+            "variant": 0,
+            "tone": "far",
+            "id": "i2:bird::4:3"
+          }
+        ],
+        "singleUnit": true,
+        "quantity": {
+          "items": [
+            {
+              "entity": "i2",
+              "mode": "unspecified",
+              "min": null,
+              "max": null,
+              "unit": null,
+              "scope": "unspecified",
+              "extent": "unspecified",
+              "evidence": [],
+              "basis": "model"
+            }
+          ],
+          "rendered": 4,
+          "exact": false,
+          "collective": false,
+          "partUnsupported": false
+        },
+        "quantityLabel": "数量未精确；本地试画 4 个单元",
+        "z": 24,
+        "visual": {
+          "role": "figure",
+          "brushStrength": 2.2
+        },
+        "performance": {
+          "rhythm": "passing",
+          "rate": 1.05,
+          "amplitude": 1.1,
+          "phase": 2.9656634649887645
+        },
+        "id": "i2:bird::4",
+        "interaction": {
+          "mode": "instance",
+          "groupId": "i2:bird::4"
+        },
+        "visibility": {
+          "protect": true,
+          "reasons": [
+            "recognizable-subject"
+          ],
+          "basis": "local-drawing-policy"
+        }
+      },
+      {
+        "tool": "landscape",
+        "entities": [],
+        "projectedEntities": [],
+        "names": [
+          "构图依托·地面"
+        ],
+        "options": {
+          "form": "ground",
+          "edge": "soft"
+        },
+        "animate": false,
+        "placement": {
+          "anchor": [
+            320,
+            194
+          ],
+          "at": [
+            0.5,
+            0.54
+          ],
+          "scale": 1.6
+        },
+        "instances": [
+          {
+            "placement": {
+              "anchor": [
+                320,
+                265
+              ],
+              "at": [
+                0.5,
+                0.54
+              ],
+              "scale": 2.5
+            },
+            "variant": 0,
+            "depth": 0,
+            "opacity": 1,
+            "tone": "far",
+            "id": "inferred:landscape:ground:5:0"
+          }
+        ],
+        "singleUnit": false,
+        "inferred": true,
+        "provenance": {
+          "basis": "local-context",
+          "reason": "模型解释的必要依托，依据：江枫渔火对愁眠",
+          "semanticPath": "scene.supports[0]"
+        },
+        "quantity": {
+          "rendered": 1,
+          "exact": false,
+          "items": []
+        },
+        "quantityLabel": "本地环境依托，不计入原文意象覆盖",
+        "z": -18,
+        "clip": [
+          [
+            -0.04,
+            0.77
+          ],
+          [
+            0.3,
+            0.82
+          ],
+          [
+            0.67,
+            0.75
+          ],
+          [
+            1.04,
+            0.78
+          ],
+          [
+            1.04,
+            1.04
+          ],
+          [
+            -0.04,
+            1.04
+          ]
+        ],
+        "visual": {
+          "role": "ground",
+          "brushStrength": 1.1
+        },
+        "performance": {
+          "rhythm": "steady",
+          "rate": 1,
+          "amplitude": 1,
+          "phase": 0.5654866776461619
+        },
+        "id": "inferred:landscape:ground:5",
+        "interaction": {
+          "mode": "group",
+          "groupId": "inferred:landscape:ground:5"
+        },
+        "visibility": {
+          "protect": false,
+          "reasons": [],
+          "basis": "local-drawing-policy"
+        }
+      },
+      {
+        "tool": "water",
+        "entities": [],
+        "projectedEntities": [],
+        "names": [
+          "构图依托·水域"
+        ],
+        "options": {
+          "form": "plane"
+        },
+        "animate": true,
+        "placement": {
+          "anchor": [
+            320,
+            135
+          ],
+          "at": [
+            0.5,
+            0.45
+          ],
+          "scale": 1.6
+        },
+        "instances": [
+          {
+            "placement": {
+              "anchor": [
+                320,
+                135
+              ],
+              "at": [
+                0.5,
+                0.45
+              ],
+              "scale": 1.65
+            },
+            "variant": 0,
+            "depth": 0,
+            "opacity": 1,
+            "tone": "far",
+            "id": "inferred:water:plane:6:0"
+          }
+        ],
+        "singleUnit": false,
+        "inferred": true,
+        "provenance": {
+          "basis": "local-context",
+          "reason": "模型解释的必要依托，依据：江枫渔火对愁眠",
+          "semanticPath": "scene.supports[1]"
+        },
+        "quantity": {
+          "rendered": 1,
+          "exact": false,
+          "items": []
+        },
+        "quantityLabel": "本地环境依托，不计入原文意象覆盖",
+        "z": -10,
+        "clip": [
+          [
+            -0.04,
+            0.49
+          ],
+          [
+            0.34,
+            0.46
+          ],
+          [
+            0.73,
+            0.49
+          ],
+          [
+            1.04,
+            0.46
+          ],
+          [
+            1.04,
+            0.78
+          ],
+          [
+            0.67,
+            0.75
+          ],
+          [
+            0.3,
+            0.82
+          ],
+          [
+            -0.04,
+            0.77
+          ]
+        ],
+        "surface": {
+          "top": 0.46,
+          "bottom": 1
+        },
+        "visual": {
+          "role": "water",
+          "brushStrength": 1.35
+        },
+        "performance": {
+          "rhythm": "continuous",
+          "rate": 0.9,
+          "amplitude": 0.9,
+          "phase": 4.448495197483148
+        },
+        "id": "inferred:water:plane:6",
+        "interaction": {
+          "mode": "group",
+          "groupId": "inferred:water:plane:6"
+        },
+        "visibility": {
+          "protect": false,
+          "reasons": [],
+          "basis": "local-drawing-policy"
+        }
+      }
+    ],
+    "spatial": [
+      {
+        "type": "on",
+        "source": "i3",
+        "target": "i1",
+        "modality": "asserted",
+        "basis": "inferred",
+        "evidence": [
+          "月落乌啼霜满天"
+        ],
+        "visualized": false,
+        "reason": "该空间关系与形态组合尚未适配"
+      },
+      {
+        "type": "beside",
+        "source": "i4",
+        "target": "i5",
+        "modality": "asserted",
+        "basis": "inferred",
+        "evidence": [
+          "江枫渔火对愁眠"
+        ],
+        "visualized": true,
+        "reason": "表现邻接或外侧；左右方向为本地选择"
+      }
+    ],
+    "scene": {
+      "kind": "woodland",
+      "notes": [
+        "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。",
+        "通用场景层先组织地面、水域、群落和主体，再比较三个布局的依托、相对位置、尺度与遮挡；检查通过不代表审美已通过。"
+      ],
+      "waterline": null,
+      "semanticSetting": {
+        "kind": "waterside",
+        "basis": "inferred",
+        "evidence": [
+          "江枫渔火对愁眠"
+        ]
+      },
+      "semanticEffects": [
+        {
+          "path": "scene.supports[0]",
+          "consumer": "场景依托",
+          "status": "applied",
+          "effect": "必要环境以独立推断背景表示，不新增原文实体"
+        },
+        {
+          "path": "scene.supports[1]",
+          "consumer": "场景依托",
+          "status": "unsupported",
+          "effect": "该主体尚无水上姿态，未凭空添加船只"
+        }
+      ],
+      "organization": {
+        "version": "1.0",
+        "strategy": "general-constraints",
+        "regions": {
+          "water": [
+            [
+              -0.04,
+              0.49
+            ],
+            [
+              0.34,
+              0.46
+            ],
+            [
+              0.73,
+              0.49
+            ],
+            [
+              1.04,
+              0.46
+            ],
+            [
+              1.04,
+              0.78
+            ],
+            [
+              0.67,
+              0.75
+            ],
+            [
+              0.3,
+              0.82
+            ],
+            [
+              -0.04,
+              0.77
+            ]
+          ],
+          "land": [
+            [
+              -0.04,
+              0.77
+            ],
+            [
+              0.3,
+              0.82
+            ],
+            [
+              0.67,
+              0.75
+            ],
+            [
+              1.04,
+              0.78
+            ],
+            [
+              1.04,
+              1.04
+            ],
+            [
+              -0.04,
+              1.04
+            ]
+          ]
+        },
+        "candidates": [
+          {
+            "layout": 0,
+            "orientation": "横江远岸",
+            "errors": 0,
+            "cost": 60.044,
+            "score": 60.128,
+            "metrics": {
+              "overlapPenalty": 0,
+              "balancePenalty": 0.006,
+              "motifFootprint": 0.434,
+              "landArea": 0.279
+            }
+          },
+          {
+            "layout": 1,
+            "orientation": "曲岸开阔",
+            "errors": 0,
+            "cost": 60.403,
+            "score": 61.103,
+            "metrics": {
+              "overlapPenalty": 0,
+              "balancePenalty": 0.05,
+              "motifFootprint": 0.456,
+              "landArea": 0.175
+            }
+          },
+          {
+            "layout": 2,
+            "orientation": "斜江入远",
+            "errors": 0,
+            "cost": 67.025,
+            "score": 77.571,
+            "metrics": {
+              "overlapPenalty": 0.582,
+              "balancePenalty": 0.005,
+              "motifFootprint": 0.427,
+              "landArea": 0.381
+            }
+          }
+        ],
+        "repairs": [
+          {
+            "type": "support-added",
+            "reason": "模型解释的必要依托，依据：江枫渔火对愁眠"
+          },
+          {
+            "type": "support-added",
+            "reason": "模型解释的必要依托，依据：江枫渔火对愁眠"
+          }
+        ],
+        "limitations": [
+          "几何检查不判定诗意理解或审美合格",
+          "动作时序与整首诗的场景切换尚未编排"
+        ],
+        "topology": "横江远岸",
+        "layout": 0,
+        "orientation": "横江远岸",
+        "audit": {
+          "scope": "implemented-geometry-and-drawing-gaps",
+          "coverage": {
+            "scope": "extracted-entities-only",
+            "present": 6,
+            "mapped": 5,
+            "parameters": [],
+            "missing": [
+              {
+                "id": "i6",
+                "name": "愁"
+              }
+            ]
+          },
+          "checks": [
+            "presence",
+            "count",
+            "finite",
+            "support",
+            "scale",
+            "relative-position",
+            "depth",
+            "grove-spread",
+            "drawing-gaps"
+          ],
+          "status": "needs-review",
+          "errors": 0,
+          "review": 2,
+          "issues": [
+            {
+              "code": "unresolved-relation",
+              "severity": "review",
+              "message": "有空间关系尚无对应布局画法"
+            },
+            {
+              "code": "drawing-gaps",
+              "severity": "review",
+              "message": "还有 1 项已提取线索尚未转成画面：愁"
+            }
+          ],
+          "metrics": {
+            "overlapPenalty": 0,
+            "balancePenalty": 0.005,
+            "motifFootprint": 0.439,
+            "landArea": 0.279
+          },
+          "cost": 60.043,
+          "aestheticAcceptance": "pending-user"
+        },
+        "graph": {
+          "nodes": [
+            {
+              "id": "l0",
+              "entities": [
+                "i5"
+              ],
+              "tool": "landscape",
+              "role": "detail",
+              "habitat": null,
+              "inferred": false,
+              "support": null
+            },
+            {
+              "id": "l1",
+              "entities": [
+                "i1"
+              ],
+              "tool": "moon",
+              "role": "sky",
+              "habitat": "air",
+              "inferred": false,
+              "support": null
+            },
+            {
+              "id": "l2",
+              "entities": [
+                "i4"
+              ],
+              "tool": "tree",
+              "role": "vegetation",
+              "habitat": "land",
+              "inferred": false,
+              "support": "l5"
+            },
+            {
+              "id": "l3",
+              "entities": [
+                "i3"
+              ],
+              "tool": "surface-weather",
+              "role": "detail",
+              "habitat": null,
+              "inferred": false,
+              "support": "l1"
+            },
+            {
+              "id": "l4",
+              "entities": [
+                "i2"
+              ],
+              "tool": "bird",
+              "role": "fauna",
+              "habitat": "air",
+              "inferred": false,
+              "support": null
+            },
+            {
+              "id": "l5",
+              "entities": [],
+              "tool": "landscape",
+              "role": "terrain",
+              "habitat": null,
+              "inferred": true,
+              "support": null
+            },
+            {
+              "id": "l6",
+              "entities": [],
+              "tool": "water",
+              "role": "water",
+              "habitat": null,
+              "inferred": true,
+              "support": null
+            }
+          ],
+          "edges": [
+            {
+              "type": "supported-by",
+              "source": "l1",
+              "target": null,
+              "basis": "local-composition",
+              "habitat": "air"
+            },
+            {
+              "type": "supported-by",
+              "source": "l2",
+              "target": "l5",
+              "basis": "local-composition",
+              "habitat": "land"
+            },
+            {
+              "type": "supported-by",
+              "source": "l4",
+              "target": null,
+              "basis": "local-composition",
+              "habitat": "air"
+            },
+            {
+              "type": "on",
+              "source": "l3",
+              "target": "l1",
+              "basis": "inferred",
+              "modality": "asserted",
+              "evidence": [
+                "月落乌啼霜满天"
+              ]
+            },
+            {
+              "type": "beside",
+              "source": "l2",
+              "target": "l0",
+              "basis": "inferred",
+              "modality": "asserted",
+              "evidence": [
+                "江枫渔火对愁眠"
+              ]
+            }
+          ],
+          "setting": "woodland"
+        },
+        "actorSpacing": {
+          "version": "1.0",
+          "repairs": [],
+          "residualOverlap": 0,
+          "scope": "discrete-actors-not-intentional-occlusion"
+        }
+      },
+      "displayAudit": {
+        "scope": "display-scale-separation-and-habitat",
+        "issues": [],
+        "errors": 0,
+        "aestheticAcceptance": "pending-user"
+      }
+    },
+    "compositions": [
+      {
+        "id": "space-0",
+        "label": "横江远岸",
+        "description": "先安排连续水域与地表，再按主次与远近安放景物",
+        "layers": [
+          {
+            "tool": "landscape",
+            "entities": [
+              "i5"
+            ],
+            "projectedEntities": [],
+            "names": [
+              "渔火"
+            ],
+            "options": {
+              "form": "glow"
+            },
+            "animate": false,
+            "placement": {
+              "anchor": [
+                320,
+                194
+              ],
+              "at": [
+                0.7,
+                0.6
+              ],
+              "scale": 1.5
+            },
+            "semanticGroup": {
+              "members": [
+                "i4",
+                "i5"
+              ],
+              "role": "subject",
+              "pattern": "cluster",
+              "depth": "middle",
+              "basis": "inferred",
+              "evidence": [
+                "江枫渔火对愁眠"
+              ],
+              "index": 1
+            },
+            "semanticEffects": [
+              {
+                "path": "scene.groups[1].role",
+                "consumer": "主次布局",
+                "effect": "主体相对突出",
+                "status": "applied"
+              },
+              {
+                "path": "scene.groups[1].pattern",
+                "consumer": "群落布局",
+                "effect": "按 cluster 组织显示单元；不覆盖明确数量",
+                "status": "applied"
+              },
+              {
+                "path": "scene.groups[1].depth",
+                "consumer": "远近布局",
+                "effect": "将 middle 转为相对大小、透明度与允许区域内的落点",
+                "status": "applied"
+              }
+            ],
+            "semanticEnergy": false,
+            "timeScale": 0.45,
+            "instances": [
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    210
+                  ],
+                  "at": [
+                    0.7,
+                    0.6
+                  ],
+                  "scale": 1.2096
+                },
+                "depth": 0.05,
+                "opacity": 0.84,
+                "variant": 1,
+                "tone": "middle",
+                "id": "i5:landscape:glow:0:0"
+              }
+            ],
+            "singleUnit": false,
+            "quantity": {
+              "items": [
+                {
+                  "entity": "i5",
+                  "mode": "unspecified",
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "scope": "unspecified",
+                  "extent": "unspecified",
+                  "evidence": [],
+                  "basis": "model"
+                }
+              ],
+              "rendered": 1,
+              "exact": false,
+              "collective": false,
+              "partUnsupported": false
+            },
+            "quantityLabel": "整体笔触图层；内部数量尚未适配",
+            "z": 30,
+            "visual": {
+              "role": "light",
+              "brushStrength": 1.1
+            },
+            "performance": {
+              "rhythm": "steady",
+              "rate": 1,
+              "amplitude": 1,
+              "phase": 0
+            },
+            "id": "i5:landscape:glow:0",
+            "interaction": {
+              "mode": "instance",
+              "groupId": "i5:landscape:glow:0"
+            },
+            "visibility": {
+              "protect": true,
+              "reasons": [
+                "semantic-subject"
+              ],
+              "basis": "local-drawing-policy"
+            }
+          },
+          {
+            "tool": "moon",
+            "entities": [
+              "i1"
+            ],
+            "projectedEntities": [],
+            "names": [
+              "月"
+            ],
+            "options": {
+              "shape": "crescent"
+            },
+            "animate": false,
+            "placement": {
+              "anchor": [
+                320,
+                175
+              ],
+              "at": [
+                0.72,
+                0.22
+              ],
+              "scale": 0.85
+            },
+            "semanticGroup": {
+              "members": [
+                "i1",
+                "i2",
+                "i3"
+              ],
+              "role": "environment",
+              "pattern": "scattered",
+              "depth": "far",
+              "basis": "inferred",
+              "evidence": [
+                "月落乌啼霜满天"
+              ],
+              "index": 0
+            },
+            "semanticEffects": [
+              {
+                "path": "scene.actions[0].state",
+                "consumer": "动作画法",
+                "effect": "当前工具尚无对应动作状态",
+                "status": "unsupported"
+              },
+              {
+                "path": "scene.groups[0].role",
+                "consumer": "主次布局",
+                "effect": "保留环境群落层次",
+                "status": "applied"
+              },
+              {
+                "path": "scene.groups[0].pattern",
+                "consumer": "群落布局",
+                "effect": "按 scattered 组织显示单元；不覆盖明确数量",
+                "status": "applied"
+              },
+              {
+                "path": "scene.groups[0].depth",
+                "consumer": "远近布局",
+                "effect": "将 far 转为相对大小、透明度与允许区域内的落点",
+                "status": "applied"
+              }
+            ],
+            "semanticEnergy": false,
+            "timeScale": 0,
+            "semanticAction": {
+              "entity": "i1",
+              "state": "fall",
+              "pace": "slow",
+              "direction": "down",
+              "modality": "asserted",
+              "basis": "explicit",
+              "evidence": [
+                "月落乌啼霜满天"
+              ]
+            },
+            "instances": [
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    175
+                  ],
+                  "at": [
+                    0.72,
+                    0.22
+                  ],
+                  "scale": 0.76
+                },
+                "depth": -0.2,
+                "opacity": 0.92,
+                "variant": 0,
+                "tone": "far",
+                "id": "i1:moon::1:0"
+              }
+            ],
+            "singleUnit": true,
+            "quantity": {
+              "items": [
+                {
+                  "entity": "i1",
+                  "mode": "unspecified",
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "scope": "unspecified",
+                  "extent": "unspecified",
+                  "evidence": [],
+                  "basis": "model"
+                }
+              ],
+              "rendered": 1,
+              "exact": false,
+              "collective": false,
+              "partUnsupported": false
+            },
+            "quantityLabel": "数量未精确；本地试画 1 个单元",
+            "z": -5,
+            "visual": {
+              "role": "light",
+              "brushStrength": 1.1
+            },
+            "performance": {
+              "rhythm": "steady",
+              "rate": 1,
+              "amplitude": 1,
+              "phase": 3.8830085198369844
+            },
+            "id": "i1:moon::1",
+            "interaction": {
+              "mode": "instance",
+              "groupId": "i1:moon::1"
+            },
+            "visibility": {
+              "protect": true,
+              "reasons": [
+                "recognizable-subject"
+              ],
+              "basis": "local-drawing-policy"
+            }
+          },
+          {
+            "tool": "tree",
+            "entities": [
+              "i4"
+            ],
+            "projectedEntities": [],
+            "names": [
+              "江枫"
+            ],
+            "options": {
+              "form": "broadleaf",
+              "crown": "lines"
+            },
+            "animate": true,
+            "placement": {
+              "anchor": [
+                320,
+                388
+              ],
+              "at": [
+                0.508103592834643,
+                0.8314017391304348
+              ],
+              "scale": 1.15
+            },
+            "drawingLabel": "树意（写意借形）",
+            "semanticGroup": {
+              "members": [
+                "i4",
+                "i5"
+              ],
+              "role": "subject",
+              "pattern": "cluster",
+              "depth": "middle",
+              "basis": "inferred",
+              "evidence": [
+                "江枫渔火对愁眠"
+              ],
+              "index": 1
+            },
+            "semanticEffects": [
+              {
+                "path": "scene.groups[1].role",
+                "consumer": "主次布局",
+                "effect": "主体相对突出",
+                "status": "applied"
+              },
+              {
+                "path": "scene.groups[1].pattern",
+                "consumer": "群落布局",
+                "effect": "按 cluster 组织显示单元；不覆盖明确数量",
+                "status": "applied"
+              },
+              {
+                "path": "scene.groups[1].depth",
+                "consumer": "远近布局",
+                "effect": "将 middle 转为相对大小、透明度与允许区域内的落点",
+                "status": "applied"
+              }
+            ],
+            "semanticEnergy": true,
+            "timeScale": 0.45,
+            "instances": [
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    388
+                  ],
+                  "at": [
+                    0.5984601505633286,
+                    0.7837490086956522
+                  ],
+                  "scale": 0.5885488399518001
+                },
+                "depth": 10,
+                "opacity": 0.59959771011,
+                "variant": 1,
+                "tone": "middle",
+                "id": "i4:tree:broadleaf:2:0"
+              },
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    388
+                  ],
+                  "at": [
+                    0.4073744362776143,
+                    0.8175577043478262
+                  ],
+                  "scale": 0.4999938399036001
+                },
+                "depth": 10.01,
+                "opacity": 0.53542742022,
+                "variant": 1,
+                "tone": "middle",
+                "id": "i4:tree:broadleaf:2:1"
+              },
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    388
+                  ],
+                  "at": [
+                    0.7200601505633286,
+                    0.7837490086956522
+                  ],
+                  "scale": 0.6432788398554
+                },
+                "depth": 10.02,
+                "opacity": 0.6392571303299999,
+                "variant": 1,
+                "tone": "middle",
+                "id": "i4:tree:broadleaf:2:2"
+              },
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    388
+                  ],
+                  "at": [
+                    0.5160955333884717,
+                    0.9339284869565218
+                  ],
+                  "scale": 0.7966438398072002
+                },
+                "depth": 10.03,
+                "opacity": 0.767898156396,
+                "variant": 1,
+                "tone": "middle",
+                "id": "i4:tree:broadleaf:2:3"
+              },
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    388
+                  ],
+                  "at": [
+                    0.29852769338047175,
+                    0.8380244869565219
+                  ],
+                  "scale": 0.7080888397590002
+                },
+                "depth": 10.04,
+                "opacity": 0.710144895495,
+                "variant": 1,
+                "tone": "middle",
+                "id": "i4:tree:broadleaf:2:4"
+              }
+            ],
+            "singleUnit": true,
+            "quantity": {
+              "items": [
+                {
+                  "entity": "i4",
+                  "mode": "unspecified",
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "scope": "unspecified",
+                  "extent": "unspecified",
+                  "evidence": [],
+                  "basis": "model"
+                }
+              ],
+              "rendered": 5,
+              "exact": false,
+              "collective": true,
+              "partUnsupported": false
+            },
+            "quantityLabel": "成片分布；本地试画 5 个单元",
+            "z": 8,
+            "semanticSupport": {
+              "surface": "ground",
+              "target": null,
+              "path": "scene.supports[0]"
+            },
+            "visual": {
+              "role": "vegetation",
+              "brushStrength": 1.2
+            },
+            "performance": {
+              "rhythm": "gust",
+              "rate": 0.62,
+              "amplitude": 0.65,
+              "phase": 1.4828317324943823
+            },
+            "id": "i4:tree:broadleaf:2",
+            "interaction": {
+              "mode": "instance",
+              "groupId": "i4:tree:broadleaf:2"
+            },
+            "visibility": {
+              "protect": true,
+              "reasons": [
+                "semantic-subject"
+              ],
+              "basis": "local-drawing-policy"
+            }
+          },
+          {
+            "tool": "surface-weather",
+            "entities": [
+              "i3"
+            ],
+            "projectedEntities": [],
+            "names": [
+              "霜"
+            ],
+            "options": {
+              "surface": "frost",
+              "carrier": "detail"
+            },
+            "animate": true,
+            "placement": {
+              "anchor": [
+                320,
+                206
+              ],
+              "at": [
+                0.43,
+                0.76
+              ],
+              "scale": 0.9
+            },
+            "semanticGroup": {
+              "members": [
+                "i1",
+                "i2",
+                "i3"
+              ],
+              "role": "environment",
+              "pattern": "scattered",
+              "depth": "far",
+              "basis": "inferred",
+              "evidence": [
+                "月落乌啼霜满天"
+              ],
+              "index": 0
+            },
+            "semanticEffects": [
+              {
+                "path": "scene.groups[0].role",
+                "consumer": "主次布局",
+                "effect": "保留环境群落层次",
+                "status": "applied"
+              },
+              {
+                "path": "scene.groups[0].pattern",
+                "consumer": "群落布局",
+                "effect": "按 scattered 组织显示单元；不覆盖明确数量",
+                "status": "applied"
+              },
+              {
+                "path": "scene.groups[0].depth",
+                "consumer": "远近布局",
+                "effect": "将 far 转为相对大小、透明度与允许区域内的落点",
+                "status": "applied"
+              }
+            ],
+            "semanticEnergy": true,
+            "timeScale": 0.45,
+            "instances": [
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    206
+                  ],
+                  "at": [
+                    0.43,
+                    0.76
+                  ],
+                  "scale": 0.5850000000000001
+                },
+                "depth": -0.2,
+                "opacity": 0.6,
+                "variant": 0,
+                "tone": "far",
+                "id": "i3:surface-weather::3:0"
+              }
+            ],
+            "singleUnit": false,
+            "quantity": {
+              "items": [
+                {
+                  "entity": "i3",
+                  "mode": "many",
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "scope": "extent",
+                  "extent": "spread",
+                  "evidence": [
+                    "霜满天"
+                  ],
+                  "basis": "model"
+                }
+              ],
+              "rendered": 1,
+              "exact": false,
+              "collective": true,
+              "partUnsupported": false
+            },
+            "quantityLabel": "整体笔触图层；内部数量尚未适配",
+            "visual": {
+              "role": "vegetation",
+              "brushStrength": 1.2
+            },
+            "performance": {
+              "rhythm": "steady",
+              "rate": 1,
+              "amplitude": 1,
+              "phase": 5.365840252331367
+            },
+            "id": "i3:surface-weather::3",
+            "interaction": {
+              "mode": "instance",
+              "groupId": "i3:surface-weather::3"
+            },
+            "visibility": {
+              "protect": false,
+              "reasons": [],
+              "basis": "local-drawing-policy"
+            }
+          },
+          {
+            "tool": "bird",
+            "entities": [
+              "i2"
+            ],
+            "projectedEntities": [],
+            "names": [
+              "乌"
+            ],
+            "options": {
+              "pose": "flying",
+              "tone": "ink",
+              "facing": "right"
+            },
+            "animate": false,
+            "placement": {
+              "anchor": [
+                320,
+                190
+              ],
+              "at": [
+                0.51,
+                0.29558843586204675
+              ],
+              "scale": 0.78
+            },
+            "drawingLabel": "鸟意（写意借形）",
+            "semanticGroup": {
+              "members": [
+                "i1",
+                "i2",
+                "i3"
+              ],
+              "role": "environment",
+              "pattern": "scattered",
+              "depth": "far",
+              "basis": "inferred",
+              "evidence": [
+                "月落乌啼霜满天"
+              ],
+              "index": 0
+            },
+            "semanticEffects": [
+              {
+                "path": "scene.actions[1].state",
+                "consumer": "动作边界",
+                "effect": "动作未明，保留静态形态",
+                "status": "skipped"
+              },
+              {
+                "path": "scene.groups[0].role",
+                "consumer": "主次布局",
+                "effect": "保留环境群落层次",
+                "status": "applied"
+              },
+              {
+                "path": "scene.groups[0].pattern",
+                "consumer": "群落布局",
+                "effect": "按 scattered 组织显示单元；不覆盖明确数量",
+                "status": "applied"
+              },
+              {
+                "path": "scene.groups[0].depth",
+                "consumer": "远近布局",
+                "effect": "将 far 转为相对大小、透明度与允许区域内的落点",
+                "status": "applied"
+              }
+            ],
+            "semanticEnergy": false,
+            "timeScale": 0,
+            "semanticAction": {
+              "entity": "i2",
+              "state": "unclear",
+              "pace": "unspecified",
+              "direction": "unspecified",
+              "modality": "asserted",
+              "basis": "explicit",
+              "evidence": [
+                "月落乌啼霜满天"
+              ]
+            },
+            "instances": [
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    190
+                  ],
+                  "at": [
+                    0.24262500000000004,
+                    0.2753552859917767
+                  ],
+                  "scale": 0.48
+                },
+                "depth": -0.2375,
+                "opacity": 0.7,
+                "variant": 0,
+                "tone": "far",
+                "id": "i2:bird::4:0"
+              },
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    190
+                  ],
+                  "at": [
+                    0.420875,
+                    0.33522273465450847
+                  ],
+                  "scale": 0.48
+                },
+                "depth": -0.2125,
+                "opacity": 0.7,
+                "variant": 0,
+                "tone": "far",
+                "id": "i2:bird::4:1"
+              },
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    190
+                  ],
+                  "at": [
+                    0.599125,
+                    0.32353517688002975
+                  ],
+                  "scale": 0.48
+                },
+                "depth": -0.1875,
+                "opacity": 0.7,
+                "variant": 0,
+                "tone": "far",
+                "id": "i2:bird::4:2"
+              },
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    190
+                  ],
+                  "at": [
+                    0.7773749999999999,
+                    0.24824054592187209
+                  ],
+                  "scale": 0.48
+                },
+                "depth": -0.16249999999999998,
+                "opacity": 0.7,
+                "variant": 0,
+                "tone": "far",
+                "id": "i2:bird::4:3"
+              }
+            ],
+            "singleUnit": true,
+            "quantity": {
+              "items": [
+                {
+                  "entity": "i2",
+                  "mode": "unspecified",
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "scope": "unspecified",
+                  "extent": "unspecified",
+                  "evidence": [],
+                  "basis": "model"
+                }
+              ],
+              "rendered": 4,
+              "exact": false,
+              "collective": false,
+              "partUnsupported": false
+            },
+            "quantityLabel": "数量未精确；本地试画 4 个单元",
+            "z": 24,
+            "visual": {
+              "role": "figure",
+              "brushStrength": 2.2
+            },
+            "performance": {
+              "rhythm": "passing",
+              "rate": 1.05,
+              "amplitude": 1.1,
+              "phase": 2.9656634649887645
+            },
+            "id": "i2:bird::4",
+            "interaction": {
+              "mode": "instance",
+              "groupId": "i2:bird::4"
+            },
+            "visibility": {
+              "protect": true,
+              "reasons": [
+                "recognizable-subject"
+              ],
+              "basis": "local-drawing-policy"
+            }
+          },
+          {
+            "tool": "landscape",
+            "entities": [],
+            "projectedEntities": [],
+            "names": [
+              "构图依托·地面"
+            ],
+            "options": {
+              "form": "ground",
+              "edge": "soft"
+            },
+            "animate": false,
+            "placement": {
+              "anchor": [
+                320,
+                194
+              ],
+              "at": [
+                0.5,
+                0.54
+              ],
+              "scale": 1.6
+            },
+            "instances": [
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    265
+                  ],
+                  "at": [
+                    0.5,
+                    0.54
+                  ],
+                  "scale": 2.5
+                },
+                "variant": 0,
+                "depth": 0,
+                "opacity": 1,
+                "tone": "far",
+                "id": "inferred:landscape:ground:5:0"
+              }
+            ],
+            "singleUnit": false,
+            "inferred": true,
+            "provenance": {
+              "basis": "local-context",
+              "reason": "模型解释的必要依托，依据：江枫渔火对愁眠",
+              "semanticPath": "scene.supports[0]"
+            },
+            "quantity": {
+              "rendered": 1,
+              "exact": false,
+              "items": []
+            },
+            "quantityLabel": "本地环境依托，不计入原文意象覆盖",
+            "z": -18,
+            "clip": [
+              [
+                -0.04,
+                0.77
+              ],
+              [
+                0.3,
+                0.82
+              ],
+              [
+                0.67,
+                0.75
+              ],
+              [
+                1.04,
+                0.78
+              ],
+              [
+                1.04,
+                1.04
+              ],
+              [
+                -0.04,
+                1.04
+              ]
+            ],
+            "visual": {
+              "role": "ground",
+              "brushStrength": 1.1
+            },
+            "performance": {
+              "rhythm": "steady",
+              "rate": 1,
+              "amplitude": 1,
+              "phase": 0.5654866776461619
+            },
+            "id": "inferred:landscape:ground:5",
+            "interaction": {
+              "mode": "group",
+              "groupId": "inferred:landscape:ground:5"
+            },
+            "visibility": {
+              "protect": false,
+              "reasons": [],
+              "basis": "local-drawing-policy"
+            }
+          },
+          {
+            "tool": "water",
+            "entities": [],
+            "projectedEntities": [],
+            "names": [
+              "构图依托·水域"
+            ],
+            "options": {
+              "form": "plane"
+            },
+            "animate": true,
+            "placement": {
+              "anchor": [
+                320,
+                135
+              ],
+              "at": [
+                0.5,
+                0.45
+              ],
+              "scale": 1.6
+            },
+            "instances": [
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    135
+                  ],
+                  "at": [
+                    0.5,
+                    0.45
+                  ],
+                  "scale": 1.65
+                },
+                "variant": 0,
+                "depth": 0,
+                "opacity": 1,
+                "tone": "far",
+                "id": "inferred:water:plane:6:0"
+              }
+            ],
+            "singleUnit": false,
+            "inferred": true,
+            "provenance": {
+              "basis": "local-context",
+              "reason": "模型解释的必要依托，依据：江枫渔火对愁眠",
+              "semanticPath": "scene.supports[1]"
+            },
+            "quantity": {
+              "rendered": 1,
+              "exact": false,
+              "items": []
+            },
+            "quantityLabel": "本地环境依托，不计入原文意象覆盖",
+            "z": -10,
+            "clip": [
+              [
+                -0.04,
+                0.49
+              ],
+              [
+                0.34,
+                0.46
+              ],
+              [
+                0.73,
+                0.49
+              ],
+              [
+                1.04,
+                0.46
+              ],
+              [
+                1.04,
+                0.78
+              ],
+              [
+                0.67,
+                0.75
+              ],
+              [
+                0.3,
+                0.82
+              ],
+              [
+                -0.04,
+                0.77
+              ]
+            ],
+            "surface": {
+              "top": 0.46,
+              "bottom": 1
+            },
+            "visual": {
+              "role": "water",
+              "brushStrength": 1.35
+            },
+            "performance": {
+              "rhythm": "continuous",
+              "rate": 0.9,
+              "amplitude": 0.9,
+              "phase": 4.448495197483148
+            },
+            "id": "inferred:water:plane:6",
+            "interaction": {
+              "mode": "group",
+              "groupId": "inferred:water:plane:6"
+            },
+            "visibility": {
+              "protect": false,
+              "reasons": [],
+              "basis": "local-drawing-policy"
+            }
+          }
+        ],
+        "scene": {
+          "kind": "woodland",
+          "notes": [
+            "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。",
+            "通用场景层先组织地面、水域、群落和主体，再比较三个布局的依托、相对位置、尺度与遮挡；检查通过不代表审美已通过。"
+          ],
+          "waterline": null,
+          "semanticSetting": {
+            "kind": "waterside",
+            "basis": "inferred",
+            "evidence": [
+              "江枫渔火对愁眠"
+            ]
+          },
+          "semanticEffects": [
+            {
+              "path": "scene.supports[0]",
+              "consumer": "场景依托",
+              "status": "applied",
+              "effect": "必要环境以独立推断背景表示，不新增原文实体"
+            },
+            {
+              "path": "scene.supports[1]",
+              "consumer": "场景依托",
+              "status": "unsupported",
+              "effect": "该主体尚无水上姿态，未凭空添加船只"
+            }
+          ],
+          "organization": {
+            "version": "1.0",
+            "strategy": "general-constraints",
+            "regions": {
+              "water": [
+                [
+                  -0.04,
+                  0.49
+                ],
+                [
+                  0.34,
+                  0.46
+                ],
+                [
+                  0.73,
+                  0.49
+                ],
+                [
+                  1.04,
+                  0.46
+                ],
+                [
+                  1.04,
+                  0.78
+                ],
+                [
+                  0.67,
+                  0.75
+                ],
+                [
+                  0.3,
+                  0.82
+                ],
+                [
+                  -0.04,
+                  0.77
+                ]
+              ],
+              "land": [
+                [
+                  -0.04,
+                  0.77
+                ],
+                [
+                  0.3,
+                  0.82
+                ],
+                [
+                  0.67,
+                  0.75
+                ],
+                [
+                  1.04,
+                  0.78
+                ],
+                [
+                  1.04,
+                  1.04
+                ],
+                [
+                  -0.04,
+                  1.04
+                ]
+              ]
+            },
+            "candidates": [
+              {
+                "layout": 0,
+                "orientation": "横江远岸",
+                "errors": 0,
+                "cost": 60.044,
+                "score": 60.128,
+                "metrics": {
+                  "overlapPenalty": 0,
+                  "balancePenalty": 0.006,
+                  "motifFootprint": 0.434,
+                  "landArea": 0.279
+                }
+              },
+              {
+                "layout": 1,
+                "orientation": "曲岸开阔",
+                "errors": 0,
+                "cost": 60.403,
+                "score": 61.103,
+                "metrics": {
+                  "overlapPenalty": 0,
+                  "balancePenalty": 0.05,
+                  "motifFootprint": 0.456,
+                  "landArea": 0.175
+                }
+              },
+              {
+                "layout": 2,
+                "orientation": "斜江入远",
+                "errors": 0,
+                "cost": 67.025,
+                "score": 77.571,
+                "metrics": {
+                  "overlapPenalty": 0.582,
+                  "balancePenalty": 0.005,
+                  "motifFootprint": 0.427,
+                  "landArea": 0.381
+                }
+              }
+            ],
+            "repairs": [
+              {
+                "type": "support-added",
+                "reason": "模型解释的必要依托，依据：江枫渔火对愁眠"
+              },
+              {
+                "type": "support-added",
+                "reason": "模型解释的必要依托，依据：江枫渔火对愁眠"
+              }
+            ],
+            "limitations": [
+              "几何检查不判定诗意理解或审美合格",
+              "动作时序与整首诗的场景切换尚未编排"
+            ],
+            "topology": "横江远岸",
+            "layout": 0,
+            "orientation": "横江远岸",
+            "audit": {
+              "scope": "implemented-geometry-and-drawing-gaps",
+              "coverage": {
+                "scope": "extracted-entities-only",
+                "present": 6,
+                "mapped": 5,
+                "parameters": [],
+                "missing": [
+                  {
+                    "id": "i6",
+                    "name": "愁"
+                  }
+                ]
+              },
+              "checks": [
+                "presence",
+                "count",
+                "finite",
+                "support",
+                "scale",
+                "relative-position",
+                "depth",
+                "grove-spread",
+                "drawing-gaps"
+              ],
+              "status": "needs-review",
+              "errors": 0,
+              "review": 2,
+              "issues": [
+                {
+                  "code": "unresolved-relation",
+                  "severity": "review",
+                  "message": "有空间关系尚无对应布局画法"
+                },
+                {
+                  "code": "drawing-gaps",
+                  "severity": "review",
+                  "message": "还有 1 项已提取线索尚未转成画面：愁"
+                }
+              ],
+              "metrics": {
+                "overlapPenalty": 0,
+                "balancePenalty": 0.005,
+                "motifFootprint": 0.439,
+                "landArea": 0.279
+              },
+              "cost": 60.043,
+              "aestheticAcceptance": "pending-user"
+            },
+            "graph": {
+              "nodes": [
+                {
+                  "id": "l0",
+                  "entities": [
+                    "i5"
+                  ],
+                  "tool": "landscape",
+                  "role": "detail",
+                  "habitat": null,
+                  "inferred": false,
+                  "support": null
+                },
+                {
+                  "id": "l1",
+                  "entities": [
+                    "i1"
+                  ],
+                  "tool": "moon",
+                  "role": "sky",
+                  "habitat": "air",
+                  "inferred": false,
+                  "support": null
+                },
+                {
+                  "id": "l2",
+                  "entities": [
+                    "i4"
+                  ],
+                  "tool": "tree",
+                  "role": "vegetation",
+                  "habitat": "land",
+                  "inferred": false,
+                  "support": "l5"
+                },
+                {
+                  "id": "l3",
+                  "entities": [
+                    "i3"
+                  ],
+                  "tool": "surface-weather",
+                  "role": "detail",
+                  "habitat": null,
+                  "inferred": false,
+                  "support": "l1"
+                },
+                {
+                  "id": "l4",
+                  "entities": [
+                    "i2"
+                  ],
+                  "tool": "bird",
+                  "role": "fauna",
+                  "habitat": "air",
+                  "inferred": false,
+                  "support": null
+                },
+                {
+                  "id": "l5",
+                  "entities": [],
+                  "tool": "landscape",
+                  "role": "terrain",
+                  "habitat": null,
+                  "inferred": true,
+                  "support": null
+                },
+                {
+                  "id": "l6",
+                  "entities": [],
+                  "tool": "water",
+                  "role": "water",
+                  "habitat": null,
+                  "inferred": true,
+                  "support": null
+                }
+              ],
+              "edges": [
+                {
+                  "type": "supported-by",
+                  "source": "l1",
+                  "target": null,
+                  "basis": "local-composition",
+                  "habitat": "air"
+                },
+                {
+                  "type": "supported-by",
+                  "source": "l2",
+                  "target": "l5",
+                  "basis": "local-composition",
+                  "habitat": "land"
+                },
+                {
+                  "type": "supported-by",
+                  "source": "l4",
+                  "target": null,
+                  "basis": "local-composition",
+                  "habitat": "air"
+                },
+                {
+                  "type": "on",
+                  "source": "l3",
+                  "target": "l1",
+                  "basis": "inferred",
+                  "modality": "asserted",
+                  "evidence": [
+                    "月落乌啼霜满天"
+                  ]
+                },
+                {
+                  "type": "beside",
+                  "source": "l2",
+                  "target": "l0",
+                  "basis": "inferred",
+                  "modality": "asserted",
+                  "evidence": [
+                    "江枫渔火对愁眠"
+                  ]
+                }
+              ],
+              "setting": "woodland"
+            },
+            "actorSpacing": {
+              "version": "1.0",
+              "repairs": [],
+              "residualOverlap": 0,
+              "scope": "discrete-actors-not-intentional-occlusion"
+            }
+          },
+          "displayAudit": {
+            "scope": "display-scale-separation-and-habitat",
+            "issues": [],
+            "errors": 0,
+            "aestheticAcceptance": "pending-user"
+          }
+        },
+        "spatial": [
+          {
+            "type": "on",
+            "source": "i3",
+            "target": "i1",
+            "modality": "asserted",
+            "basis": "inferred",
+            "evidence": [
+              "月落乌啼霜满天"
+            ],
+            "visualized": false,
+            "reason": "该空间关系与形态组合尚未适配"
+          },
+          {
+            "type": "beside",
+            "source": "i4",
+            "target": "i5",
+            "modality": "asserted",
+            "basis": "inferred",
+            "evidence": [
+              "江枫渔火对愁眠"
+            ],
+            "visualized": true,
+            "reason": "表现邻接或外侧；左右方向为本地选择"
+          }
+        ],
+        "landscapeStyle": {
+          "version": "1.0",
+          "color": "role-and-distance",
+          "motion": "layer-rhythms",
+          "aestheticAcceptance": "pending-user"
+        }
+      },
+      {
+        "id": "space-1",
+        "label": "曲岸开阔",
+        "description": "先安排连续水域与地表，再按主次与远近安放景物",
+        "layers": [
+          {
+            "tool": "landscape",
+            "entities": [
+              "i5"
+            ],
+            "projectedEntities": [],
+            "names": [
+              "渔火"
+            ],
+            "options": {
+              "form": "glow"
+            },
+            "animate": false,
+            "placement": {
+              "anchor": [
+                320,
+                194
+              ],
+              "at": [
+                0.7,
+                0.6
+              ],
+              "scale": 1.5
+            },
+            "semanticGroup": {
+              "members": [
+                "i4",
+                "i5"
+              ],
+              "role": "subject",
+              "pattern": "cluster",
+              "depth": "middle",
+              "basis": "inferred",
+              "evidence": [
+                "江枫渔火对愁眠"
+              ],
+              "index": 1
+            },
+            "semanticEffects": [
+              {
+                "path": "scene.groups[1].role",
+                "consumer": "主次布局",
+                "effect": "主体相对突出",
+                "status": "applied"
+              },
+              {
+                "path": "scene.groups[1].pattern",
+                "consumer": "群落布局",
+                "effect": "按 cluster 组织显示单元；不覆盖明确数量",
+                "status": "applied"
+              },
+              {
+                "path": "scene.groups[1].depth",
+                "consumer": "远近布局",
+                "effect": "将 middle 转为相对大小、透明度与允许区域内的落点",
+                "status": "applied"
+              }
+            ],
+            "semanticEnergy": false,
+            "timeScale": 0.45,
+            "instances": [
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    210
+                  ],
+                  "at": [
+                    0.7,
+                    0.6
+                  ],
+                  "scale": 1.2096
+                },
+                "depth": 0.05,
+                "opacity": 0.84,
+                "variant": 1,
+                "tone": "middle",
+                "id": "i5:landscape:glow:0:0"
+              }
+            ],
+            "singleUnit": false,
+            "quantity": {
+              "items": [
+                {
+                  "entity": "i5",
+                  "mode": "unspecified",
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "scope": "unspecified",
+                  "extent": "unspecified",
+                  "evidence": [],
+                  "basis": "model"
+                }
+              ],
+              "rendered": 1,
+              "exact": false,
+              "collective": false,
+              "partUnsupported": false
+            },
+            "quantityLabel": "整体笔触图层；内部数量尚未适配",
+            "z": 30,
+            "visual": {
+              "role": "light",
+              "brushStrength": 1.1
+            },
+            "performance": {
+              "rhythm": "steady",
+              "rate": 1,
+              "amplitude": 1,
+              "phase": 0
+            },
+            "id": "i5:landscape:glow:0",
+            "interaction": {
+              "mode": "instance",
+              "groupId": "i5:landscape:glow:0"
+            },
+            "visibility": {
+              "protect": true,
+              "reasons": [
+                "semantic-subject"
+              ],
+              "basis": "local-drawing-policy"
+            }
+          },
+          {
+            "tool": "moon",
+            "entities": [
+              "i1"
+            ],
+            "projectedEntities": [],
+            "names": [
+              "月"
+            ],
+            "options": {
+              "shape": "crescent"
+            },
+            "animate": false,
+            "placement": {
+              "anchor": [
+                320,
+                175
+              ],
+              "at": [
+                0.29,
+                0.22
+              ],
+              "scale": 0.85
+            },
+            "semanticGroup": {
+              "members": [
+                "i1",
+                "i2",
+                "i3"
+              ],
+              "role": "environment",
+              "pattern": "scattered",
+              "depth": "far",
+              "basis": "inferred",
+              "evidence": [
+                "月落乌啼霜满天"
+              ],
+              "index": 0
+            },
+            "semanticEffects": [
+              {
+                "path": "scene.actions[0].state",
+                "consumer": "动作画法",
+                "effect": "当前工具尚无对应动作状态",
+                "status": "unsupported"
+              },
+              {
+                "path": "scene.groups[0].role",
+                "consumer": "主次布局",
+                "effect": "保留环境群落层次",
+                "status": "applied"
+              },
+              {
+                "path": "scene.groups[0].pattern",
+                "consumer": "群落布局",
+                "effect": "按 scattered 组织显示单元；不覆盖明确数量",
+                "status": "applied"
+              },
+              {
+                "path": "scene.groups[0].depth",
+                "consumer": "远近布局",
+                "effect": "将 far 转为相对大小、透明度与允许区域内的落点",
+                "status": "applied"
+              }
+            ],
+            "semanticEnergy": false,
+            "timeScale": 0,
+            "semanticAction": {
+              "entity": "i1",
+              "state": "fall",
+              "pace": "slow",
+              "direction": "down",
+              "modality": "asserted",
+              "basis": "explicit",
+              "evidence": [
+                "月落乌啼霜满天"
+              ]
+            },
+            "instances": [
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    175
+                  ],
+                  "at": [
+                    0.29,
+                    0.22
+                  ],
+                  "scale": 0.76
+                },
+                "depth": -0.2,
+                "opacity": 0.92,
+                "variant": 0,
+                "tone": "far",
+                "id": "i1:moon::1:0"
+              }
+            ],
+            "singleUnit": true,
+            "quantity": {
+              "items": [
+                {
+                  "entity": "i1",
+                  "mode": "unspecified",
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "scope": "unspecified",
+                  "extent": "unspecified",
+                  "evidence": [],
+                  "basis": "model"
+                }
+              ],
+              "rendered": 1,
+              "exact": false,
+              "collective": false,
+              "partUnsupported": false
+            },
+            "quantityLabel": "数量未精确；本地试画 1 个单元",
+            "z": -5,
+            "visual": {
+              "role": "light",
+              "brushStrength": 1.1
+            },
+            "performance": {
+              "rhythm": "steady",
+              "rate": 1,
+              "amplitude": 1,
+              "phase": 3.8830085198369844
+            },
+            "id": "i1:moon::1",
+            "interaction": {
+              "mode": "instance",
+              "groupId": "i1:moon::1"
+            },
+            "visibility": {
+              "protect": true,
+              "reasons": [
+                "recognizable-subject"
+              ],
+              "basis": "local-drawing-policy"
+            }
+          },
+          {
+            "tool": "tree",
+            "entities": [
+              "i4"
+            ],
+            "projectedEntities": [],
+            "names": [
+              "江枫"
+            ],
+            "options": {
+              "form": "broadleaf",
+              "crown": "lines"
+            },
+            "animate": true,
+            "placement": {
+              "anchor": [
+                320,
+                388
+              ],
+              "at": [
+                0.5496836285614286,
+                0.8867600000000002
+              ],
+              "scale": 1.15
+            },
+            "drawingLabel": "树意（写意借形）",
+            "semanticGroup": {
+              "members": [
+                "i4",
+                "i5"
+              ],
+              "role": "subject",
+              "pattern": "cluster",
+              "depth": "middle",
+              "basis": "inferred",
+              "evidence": [
+                "江枫渔火对愁眠"
+              ],
+              "index": 1
+            },
+            "semanticEffects": [
+              {
+                "path": "scene.groups[1].role",
+                "consumer": "主次布局",
+                "effect": "主体相对突出",
+                "status": "applied"
+              },
+              {
+                "path": "scene.groups[1].pattern",
+                "consumer": "群落布局",
+                "effect": "按 cluster 组织显示单元；不覆盖明确数量",
+                "status": "applied"
+              },
+              {
+                "path": "scene.groups[1].depth",
+                "consumer": "远近布局",
+                "effect": "将 middle 转为相对大小、透明度与允许区域内的落点",
+                "status": "applied"
+              }
+            ],
+            "semanticEnergy": true,
+            "timeScale": 0.45,
+            "instances": [
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    388
+                  ],
+                  "at": [
+                    0.6134289634249714,
+                    0.8499623652173914
+                  ],
+                  "scale": 0.6054731599518001
+                },
+                "depth": 10,
+                "opacity": 0.6118617101099999,
+                "variant": 1,
+                "tone": "middle",
+                "id": "i4:tree:broadleaf:2:0"
+              },
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    388
+                  ],
+                  "at": [
+                    0.43971467771068573,
+                    0.8499623652173914
+                  ],
+                  "scale": 0.5169181599036001
+                },
+                "depth": 10.01,
+                "opacity": 0.54769142022,
+                "variant": 1,
+                "tone": "middle",
+                "id": "i4:tree:broadleaf:2:1"
+              },
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    388
+                  ],
+                  "at": [
+                    0.7697718205678286,
+                    0.9175797565217392
+                  ],
+                  "scale": 0.6602031598554
+                },
+                "depth": 10.02,
+                "opacity": 0.6515211303299999,
+                "variant": 1,
+                "tone": "middle",
+                "id": "i4:tree:broadleaf:2:2"
+              },
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    388
+                  ],
+                  "at": [
+                    0.5726451462501145,
+                    0.9494288000000001
+                  ],
+                  "scale": 0.8135681598072002
+                },
+                "depth": 10.03,
+                "opacity": 0.778935756396,
+                "variant": 1,
+                "tone": "middle",
+                "id": "i4:tree:broadleaf:2:3"
+              },
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    388
+                  ],
+                  "at": [
+                    0.3528575348535429,
+                    0.8668667130434784
+                  ],
+                  "scale": 0.7250131597590003
+                },
+                "depth": 10.04,
+                "opacity": 0.721182495495,
+                "variant": 1,
+                "tone": "middle",
+                "id": "i4:tree:broadleaf:2:4"
+              }
+            ],
+            "singleUnit": true,
+            "quantity": {
+              "items": [
+                {
+                  "entity": "i4",
+                  "mode": "unspecified",
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "scope": "unspecified",
+                  "extent": "unspecified",
+                  "evidence": [],
+                  "basis": "model"
+                }
+              ],
+              "rendered": 5,
+              "exact": false,
+              "collective": true,
+              "partUnsupported": false
+            },
+            "quantityLabel": "成片分布；本地试画 5 个单元",
+            "z": 8,
+            "semanticSupport": {
+              "surface": "ground",
+              "target": null,
+              "path": "scene.supports[0]"
+            },
+            "visual": {
+              "role": "vegetation",
+              "brushStrength": 1.2
+            },
+            "performance": {
+              "rhythm": "gust",
+              "rate": 0.62,
+              "amplitude": 0.65,
+              "phase": 1.4828317324943823
+            },
+            "id": "i4:tree:broadleaf:2",
+            "interaction": {
+              "mode": "instance",
+              "groupId": "i4:tree:broadleaf:2"
+            },
+            "visibility": {
+              "protect": true,
+              "reasons": [
+                "semantic-subject"
+              ],
+              "basis": "local-drawing-policy"
+            }
+          },
+          {
+            "tool": "surface-weather",
+            "entities": [
+              "i3"
+            ],
+            "projectedEntities": [],
+            "names": [
+              "霜"
+            ],
+            "options": {
+              "surface": "frost",
+              "carrier": "detail"
+            },
+            "animate": true,
+            "placement": {
+              "anchor": [
+                320,
+                206
+              ],
+              "at": [
+                0.43,
+                0.76
+              ],
+              "scale": 0.9
+            },
+            "semanticGroup": {
+              "members": [
+                "i1",
+                "i2",
+                "i3"
+              ],
+              "role": "environment",
+              "pattern": "scattered",
+              "depth": "far",
+              "basis": "inferred",
+              "evidence": [
+                "月落乌啼霜满天"
+              ],
+              "index": 0
+            },
+            "semanticEffects": [
+              {
+                "path": "scene.groups[0].role",
+                "consumer": "主次布局",
+                "effect": "保留环境群落层次",
+                "status": "applied"
+              },
+              {
+                "path": "scene.groups[0].pattern",
+                "consumer": "群落布局",
+                "effect": "按 scattered 组织显示单元；不覆盖明确数量",
+                "status": "applied"
+              },
+              {
+                "path": "scene.groups[0].depth",
+                "consumer": "远近布局",
+                "effect": "将 far 转为相对大小、透明度与允许区域内的落点",
+                "status": "applied"
+              }
+            ],
+            "semanticEnergy": true,
+            "timeScale": 0.45,
+            "instances": [
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    206
+                  ],
+                  "at": [
+                    0.43,
+                    0.76
+                  ],
+                  "scale": 0.5850000000000001
+                },
+                "depth": -0.2,
+                "opacity": 0.6,
+                "variant": 0,
+                "tone": "far",
+                "id": "i3:surface-weather::3:0"
+              }
+            ],
+            "singleUnit": false,
+            "quantity": {
+              "items": [
+                {
+                  "entity": "i3",
+                  "mode": "many",
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "scope": "extent",
+                  "extent": "spread",
+                  "evidence": [
+                    "霜满天"
+                  ],
+                  "basis": "model"
+                }
+              ],
+              "rendered": 1,
+              "exact": false,
+              "collective": true,
+              "partUnsupported": false
+            },
+            "quantityLabel": "整体笔触图层；内部数量尚未适配",
+            "visual": {
+              "role": "vegetation",
+              "brushStrength": 1.2
+            },
+            "performance": {
+              "rhythm": "steady",
+              "rate": 1,
+              "amplitude": 1,
+              "phase": 5.365840252331367
+            },
+            "id": "i3:surface-weather::3",
+            "interaction": {
+              "mode": "instance",
+              "groupId": "i3:surface-weather::3"
+            },
+            "visibility": {
+              "protect": false,
+              "reasons": [],
+              "basis": "local-drawing-policy"
+            }
+          },
+          {
+            "tool": "bird",
+            "entities": [
+              "i2"
+            ],
+            "projectedEntities": [],
+            "names": [
+              "乌"
+            ],
+            "options": {
+              "pose": "flying",
+              "tone": "ink",
+              "facing": "right"
+            },
+            "animate": false,
+            "placement": {
+              "anchor": [
+                320,
+                190
+              ],
+              "at": [
+                0.51,
+                0.25826678689007426
+              ],
+              "scale": 0.78
+            },
+            "drawingLabel": "鸟意（写意借形）",
+            "semanticGroup": {
+              "members": [
+                "i1",
+                "i2",
+                "i3"
+              ],
+              "role": "environment",
+              "pattern": "scattered",
+              "depth": "far",
+              "basis": "inferred",
+              "evidence": [
+                "月落乌啼霜满天"
+              ],
+              "index": 0
+            },
+            "semanticEffects": [
+              {
+                "path": "scene.actions[1].state",
+                "consumer": "动作边界",
+                "effect": "动作未明，保留静态形态",
+                "status": "skipped"
+              },
+              {
+                "path": "scene.groups[0].role",
+                "consumer": "主次布局",
+                "effect": "保留环境群落层次",
+                "status": "applied"
+              },
+              {
+                "path": "scene.groups[0].pattern",
+                "consumer": "群落布局",
+                "effect": "按 scattered 组织显示单元；不覆盖明确数量",
+                "status": "applied"
+              },
+              {
+                "path": "scene.groups[0].depth",
+                "consumer": "远近布局",
+                "effect": "将 far 转为相对大小、透明度与允许区域内的落点",
+                "status": "applied"
+              }
+            ],
+            "semanticEnergy": false,
+            "timeScale": 0,
+            "semanticAction": {
+              "entity": "i2",
+              "state": "unclear",
+              "pace": "unspecified",
+              "direction": "unspecified",
+              "modality": "asserted",
+              "basis": "explicit",
+              "evidence": [
+                "月落乌啼霜满天"
+              ]
+            },
+            "instances": [
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    190
+                  ],
+                  "at": [
+                    0.24262500000000004,
+                    0.3388329581845325
+                  ],
+                  "scale": 0.48
+                },
+                "depth": -0.2375,
+                "opacity": 0.7,
+                "variant": 0,
+                "tone": "far",
+                "id": "i2:bird::4:0"
+              },
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    190
+                  ],
+                  "at": [
+                    0.420875,
+                    0.3138340092619923
+                  ],
+                  "scale": 0.48
+                },
+                "depth": -0.2125,
+                "opacity": 0.7,
+                "variant": 0,
+                "tone": "far",
+                "id": "i2:bird::4:1"
+              },
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    190
+                  ],
+                  "at": [
+                    0.599125,
+                    0.23182510814522828
+                  ],
+                  "scale": 0.48
+                },
+                "depth": -0.1875,
+                "opacity": 0.7,
+                "variant": 0,
+                "tone": "far",
+                "id": "i2:bird::4:2"
+              },
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    190
+                  ],
+                  "at": [
+                    0.7773749999999999,
+                    0.14857507196854386
+                  ],
+                  "scale": 0.48
+                },
+                "depth": -0.16249999999999998,
+                "opacity": 0.7,
+                "variant": 0,
+                "tone": "far",
+                "id": "i2:bird::4:3"
+              }
+            ],
+            "singleUnit": true,
+            "quantity": {
+              "items": [
+                {
+                  "entity": "i2",
+                  "mode": "unspecified",
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "scope": "unspecified",
+                  "extent": "unspecified",
+                  "evidence": [],
+                  "basis": "model"
+                }
+              ],
+              "rendered": 4,
+              "exact": false,
+              "collective": false,
+              "partUnsupported": false
+            },
+            "quantityLabel": "数量未精确；本地试画 4 个单元",
+            "z": 24,
+            "visual": {
+              "role": "figure",
+              "brushStrength": 2.2
+            },
+            "performance": {
+              "rhythm": "passing",
+              "rate": 1.05,
+              "amplitude": 1.1,
+              "phase": 2.9656634649887645
+            },
+            "id": "i2:bird::4",
+            "interaction": {
+              "mode": "instance",
+              "groupId": "i2:bird::4"
+            },
+            "visibility": {
+              "protect": true,
+              "reasons": [
+                "recognizable-subject"
+              ],
+              "basis": "local-drawing-policy"
+            }
+          },
+          {
+            "tool": "landscape",
+            "entities": [],
+            "projectedEntities": [],
+            "names": [
+              "构图依托·地面"
+            ],
+            "options": {
+              "form": "ground",
+              "edge": "soft"
+            },
+            "animate": false,
+            "placement": {
+              "anchor": [
+                320,
+                194
+              ],
+              "at": [
+                0.5,
+                0.54
+              ],
+              "scale": 1.6
+            },
+            "instances": [
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    265
+                  ],
+                  "at": [
+                    0.5,
+                    0.54
+                  ],
+                  "scale": 2.5
+                },
+                "variant": 0,
+                "depth": 0,
+                "opacity": 1,
+                "tone": "far",
+                "id": "inferred:landscape:ground:5:0"
+              }
+            ],
+            "singleUnit": false,
+            "inferred": true,
+            "provenance": {
+              "basis": "local-context",
+              "reason": "模型解释的必要依托，依据：江枫渔火对愁眠",
+              "semanticPath": "scene.supports[0]"
+            },
+            "quantity": {
+              "rendered": 1,
+              "exact": false,
+              "items": []
+            },
+            "quantityLabel": "本地环境依托，不计入原文意象覆盖",
+            "z": -18,
+            "clip": [
+              [
+                -0.04,
+                0.99
+              ],
+              [
+                0.22,
+                0.86
+              ],
+              [
+                0.55,
+                0.79
+              ],
+              [
+                0.74,
+                0.87
+              ],
+              [
+                1.04,
+                0.98
+              ],
+              [
+                1.04,
+                1.04
+              ],
+              [
+                -0.04,
+                1.04
+              ]
+            ],
+            "visual": {
+              "role": "ground",
+              "brushStrength": 1.1
+            },
+            "performance": {
+              "rhythm": "steady",
+              "rate": 1,
+              "amplitude": 1,
+              "phase": 0.5654866776461619
+            },
+            "id": "inferred:landscape:ground:5",
+            "interaction": {
+              "mode": "group",
+              "groupId": "inferred:landscape:ground:5"
+            },
+            "visibility": {
+              "protect": false,
+              "reasons": [],
+              "basis": "local-drawing-policy"
+            }
+          },
+          {
+            "tool": "water",
+            "entities": [],
+            "projectedEntities": [],
+            "names": [
+              "构图依托·水域"
+            ],
+            "options": {
+              "form": "plane"
+            },
+            "animate": false,
+            "placement": {
+              "anchor": [
+                320,
+                135
+              ],
+              "at": [
+                0.5,
+                0.45
+              ],
+              "scale": 1.6
+            },
+            "instances": [
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    135
+                  ],
+                  "at": [
+                    0.5,
+                    0.45
+                  ],
+                  "scale": 1.65
+                },
+                "variant": 0,
+                "depth": 0,
+                "opacity": 1,
+                "tone": "far",
+                "id": "inferred:water:plane:6:0"
+              }
+            ],
+            "singleUnit": false,
+            "inferred": true,
+            "provenance": {
+              "basis": "local-context",
+              "reason": "模型解释的必要依托，依据：江枫渔火对愁眠",
+              "semanticPath": "scene.supports[1]"
+            },
+            "quantity": {
+              "rendered": 1,
+              "exact": false,
+              "items": []
+            },
+            "quantityLabel": "本地环境依托，不计入原文意象覆盖",
+            "z": -10,
+            "clip": [
+              [
+                -0.04,
+                0.46
+              ],
+              [
+                1.04,
+                0.46
+              ],
+              [
+                1.04,
+                0.98
+              ],
+              [
+                0.74,
+                0.87
+              ],
+              [
+                0.55,
+                0.79
+              ],
+              [
+                0.22,
+                0.86
+              ],
+              [
+                -0.04,
+                0.99
+              ]
+            ],
+            "surface": {
+              "top": 0.46,
+              "bottom": 1
+            },
+            "visual": {
+              "role": "water",
+              "brushStrength": 1.35
+            },
+            "performance": {
+              "rhythm": "continuous",
+              "rate": 0.9,
+              "amplitude": 0.9,
+              "phase": 4.448495197483148
+            },
+            "id": "inferred:water:plane:6",
+            "interaction": {
+              "mode": "group",
+              "groupId": "inferred:water:plane:6"
+            },
+            "visibility": {
+              "protect": false,
+              "reasons": [],
+              "basis": "local-drawing-policy"
+            }
+          }
+        ],
+        "scene": {
+          "kind": "woodland",
+          "notes": [
+            "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。"
+          ],
+          "waterline": null,
+          "semanticSetting": {
+            "kind": "waterside",
+            "basis": "inferred",
+            "evidence": [
+              "江枫渔火对愁眠"
+            ]
+          },
+          "semanticEffects": [
+            {
+              "path": "scene.supports[0]",
+              "consumer": "场景依托",
+              "status": "applied",
+              "effect": "必要环境以独立推断背景表示，不新增原文实体"
+            },
+            {
+              "path": "scene.supports[1]",
+              "consumer": "场景依托",
+              "status": "unsupported",
+              "effect": "该主体尚无水上姿态，未凭空添加船只"
+            }
+          ],
+          "organization": {
+            "version": "1.0",
+            "strategy": "general-constraints",
+            "regions": {
+              "water": [
+                [
+                  -0.04,
+                  0.46
+                ],
+                [
+                  1.04,
+                  0.46
+                ],
+                [
+                  1.04,
+                  0.98
+                ],
+                [
+                  0.74,
+                  0.87
+                ],
+                [
+                  0.55,
+                  0.79
+                ],
+                [
+                  0.22,
+                  0.86
+                ],
+                [
+                  -0.04,
+                  0.99
+                ]
+              ],
+              "land": [
+                [
+                  -0.04,
+                  0.99
+                ],
+                [
+                  0.22,
+                  0.86
+                ],
+                [
+                  0.55,
+                  0.79
+                ],
+                [
+                  0.74,
+                  0.87
+                ],
+                [
+                  1.04,
+                  0.98
+                ],
+                [
+                  1.04,
+                  1.04
+                ],
+                [
+                  -0.04,
+                  1.04
+                ]
+              ]
+            },
+            "candidates": [],
+            "repairs": [],
+            "limitations": [
+              "几何检查不判定诗意理解或审美合格",
+              "动作时序与整首诗的场景切换尚未编排"
+            ],
+            "topology": "曲岸开阔",
+            "layout": 1,
+            "orientation": "曲岸开阔",
+            "audit": {
+              "scope": "implemented-geometry-and-drawing-gaps",
+              "coverage": {
+                "scope": "extracted-entities-only",
+                "present": 6,
+                "mapped": 5,
+                "parameters": [],
+                "missing": [
+                  {
+                    "id": "i6",
+                    "name": "愁"
+                  }
+                ]
+              },
+              "checks": [
+                "presence",
+                "count",
+                "finite",
+                "support",
+                "scale",
+                "relative-position",
+                "depth",
+                "grove-spread",
+                "drawing-gaps"
+              ],
+              "status": "needs-review",
+              "errors": 0,
+              "review": 2,
+              "issues": [
+                {
+                  "code": "unresolved-relation",
+                  "severity": "review",
+                  "message": "有空间关系尚无对应布局画法"
+                },
+                {
+                  "code": "drawing-gaps",
+                  "severity": "review",
+                  "message": "还有 1 项已提取线索尚未转成画面：愁"
+                }
+              ],
+              "metrics": {
+                "overlapPenalty": 0,
+                "balancePenalty": 0.05,
+                "motifFootprint": 0.462,
+                "landArea": 0.175
+              },
+              "cost": 60.397,
+              "aestheticAcceptance": "pending-user"
+            },
+            "graph": {
+              "nodes": [
+                {
+                  "id": "l0",
+                  "entities": [
+                    "i5"
+                  ],
+                  "tool": "landscape",
+                  "role": "detail",
+                  "habitat": null,
+                  "inferred": false,
+                  "support": null
+                },
+                {
+                  "id": "l1",
+                  "entities": [
+                    "i1"
+                  ],
+                  "tool": "moon",
+                  "role": "sky",
+                  "habitat": "air",
+                  "inferred": false,
+                  "support": null
+                },
+                {
+                  "id": "l2",
+                  "entities": [
+                    "i4"
+                  ],
+                  "tool": "tree",
+                  "role": "vegetation",
+                  "habitat": "land",
+                  "inferred": false,
+                  "support": "l5"
+                },
+                {
+                  "id": "l3",
+                  "entities": [
+                    "i3"
+                  ],
+                  "tool": "surface-weather",
+                  "role": "detail",
+                  "habitat": null,
+                  "inferred": false,
+                  "support": "l1"
+                },
+                {
+                  "id": "l4",
+                  "entities": [
+                    "i2"
+                  ],
+                  "tool": "bird",
+                  "role": "fauna",
+                  "habitat": "air",
+                  "inferred": false,
+                  "support": null
+                },
+                {
+                  "id": "l5",
+                  "entities": [],
+                  "tool": "landscape",
+                  "role": "terrain",
+                  "habitat": null,
+                  "inferred": true,
+                  "support": null
+                },
+                {
+                  "id": "l6",
+                  "entities": [],
+                  "tool": "water",
+                  "role": "water",
+                  "habitat": null,
+                  "inferred": true,
+                  "support": null
+                }
+              ],
+              "edges": [
+                {
+                  "type": "supported-by",
+                  "source": "l1",
+                  "target": null,
+                  "basis": "local-composition",
+                  "habitat": "air"
+                },
+                {
+                  "type": "supported-by",
+                  "source": "l2",
+                  "target": "l5",
+                  "basis": "local-composition",
+                  "habitat": "land"
+                },
+                {
+                  "type": "supported-by",
+                  "source": "l4",
+                  "target": null,
+                  "basis": "local-composition",
+                  "habitat": "air"
+                },
+                {
+                  "type": "on",
+                  "source": "l3",
+                  "target": "l1",
+                  "basis": "inferred",
+                  "modality": "asserted",
+                  "evidence": [
+                    "月落乌啼霜满天"
+                  ]
+                },
+                {
+                  "type": "beside",
+                  "source": "l2",
+                  "target": "l0",
+                  "basis": "inferred",
+                  "modality": "asserted",
+                  "evidence": [
+                    "江枫渔火对愁眠"
+                  ]
+                }
+              ],
+              "setting": "woodland"
+            },
+            "actorSpacing": {
+              "version": "1.0",
+              "repairs": [],
+              "residualOverlap": 0,
+              "scope": "discrete-actors-not-intentional-occlusion"
+            }
+          },
+          "displayAudit": {
+            "scope": "display-scale-separation-and-habitat",
+            "issues": [],
+            "errors": 0,
+            "aestheticAcceptance": "pending-user"
+          }
+        },
+        "spatial": [
+          {
+            "type": "on",
+            "source": "i3",
+            "target": "i1",
+            "modality": "asserted",
+            "basis": "inferred",
+            "evidence": [
+              "月落乌啼霜满天"
+            ],
+            "visualized": false,
+            "reason": "该空间关系与形态组合尚未适配"
+          },
+          {
+            "type": "beside",
+            "source": "i4",
+            "target": "i5",
+            "modality": "asserted",
+            "basis": "inferred",
+            "evidence": [
+              "江枫渔火对愁眠"
+            ],
+            "visualized": true,
+            "reason": "表现邻接或外侧；左右方向为本地选择"
+          }
+        ],
+        "landscapeStyle": {
+          "version": "1.0",
+          "color": "role-and-distance",
+          "motion": "layer-rhythms",
+          "aestheticAcceptance": "pending-user"
+        },
+        "notes": []
+      },
+      {
+        "id": "space-2",
+        "label": "斜江入远",
+        "description": "先安排连续水域与地表，再按主次与远近安放景物",
+        "layers": [
+          {
+            "tool": "landscape",
+            "entities": [
+              "i5"
+            ],
+            "projectedEntities": [],
+            "names": [
+              "渔火"
+            ],
+            "options": {
+              "form": "glow"
+            },
+            "animate": false,
+            "placement": {
+              "anchor": [
+                320,
+                194
+              ],
+              "at": [
+                0.7,
+                0.6
+              ],
+              "scale": 1.5
+            },
+            "semanticGroup": {
+              "members": [
+                "i4",
+                "i5"
+              ],
+              "role": "subject",
+              "pattern": "cluster",
+              "depth": "middle",
+              "basis": "inferred",
+              "evidence": [
+                "江枫渔火对愁眠"
+              ],
+              "index": 1
+            },
+            "semanticEffects": [
+              {
+                "path": "scene.groups[1].role",
+                "consumer": "主次布局",
+                "effect": "主体相对突出",
+                "status": "applied"
+              },
+              {
+                "path": "scene.groups[1].pattern",
+                "consumer": "群落布局",
+                "effect": "按 cluster 组织显示单元；不覆盖明确数量",
+                "status": "applied"
+              },
+              {
+                "path": "scene.groups[1].depth",
+                "consumer": "远近布局",
+                "effect": "将 middle 转为相对大小、透明度与允许区域内的落点",
+                "status": "applied"
+              }
+            ],
+            "semanticEnergy": false,
+            "timeScale": 0.45,
+            "instances": [
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    210
+                  ],
+                  "at": [
+                    0.7,
+                    0.6
+                  ],
+                  "scale": 1.2096
+                },
+                "depth": 0.05,
+                "opacity": 0.84,
+                "variant": 1,
+                "tone": "middle",
+                "id": "i5:landscape:glow:0:0"
+              }
+            ],
+            "singleUnit": false,
+            "quantity": {
+              "items": [
+                {
+                  "entity": "i5",
+                  "mode": "unspecified",
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "scope": "unspecified",
+                  "extent": "unspecified",
+                  "evidence": [],
+                  "basis": "model"
+                }
+              ],
+              "rendered": 1,
+              "exact": false,
+              "collective": false,
+              "partUnsupported": false
+            },
+            "quantityLabel": "整体笔触图层；内部数量尚未适配",
+            "z": 30,
+            "visual": {
+              "role": "light",
+              "brushStrength": 1.1
+            },
+            "performance": {
+              "rhythm": "steady",
+              "rate": 1,
+              "amplitude": 1,
+              "phase": 0
+            },
+            "id": "i5:landscape:glow:0",
+            "interaction": {
+              "mode": "instance",
+              "groupId": "i5:landscape:glow:0"
+            },
+            "visibility": {
+              "protect": true,
+              "reasons": [
+                "semantic-subject"
+              ],
+              "basis": "local-drawing-policy"
+            }
+          },
+          {
+            "tool": "moon",
+            "entities": [
+              "i1"
+            ],
+            "projectedEntities": [],
+            "names": [
+              "月"
+            ],
+            "options": {
+              "shape": "crescent"
+            },
+            "animate": false,
+            "placement": {
+              "anchor": [
+                320,
+                175
+              ],
+              "at": [
+                0.72,
+                0.22
+              ],
+              "scale": 0.85
+            },
+            "semanticGroup": {
+              "members": [
+                "i1",
+                "i2",
+                "i3"
+              ],
+              "role": "environment",
+              "pattern": "scattered",
+              "depth": "far",
+              "basis": "inferred",
+              "evidence": [
+                "月落乌啼霜满天"
+              ],
+              "index": 0
+            },
+            "semanticEffects": [
+              {
+                "path": "scene.actions[0].state",
+                "consumer": "动作画法",
+                "effect": "当前工具尚无对应动作状态",
+                "status": "unsupported"
+              },
+              {
+                "path": "scene.groups[0].role",
+                "consumer": "主次布局",
+                "effect": "保留环境群落层次",
+                "status": "applied"
+              },
+              {
+                "path": "scene.groups[0].pattern",
+                "consumer": "群落布局",
+                "effect": "按 scattered 组织显示单元；不覆盖明确数量",
+                "status": "applied"
+              },
+              {
+                "path": "scene.groups[0].depth",
+                "consumer": "远近布局",
+                "effect": "将 far 转为相对大小、透明度与允许区域内的落点",
+                "status": "applied"
+              }
+            ],
+            "semanticEnergy": false,
+            "timeScale": 0,
+            "semanticAction": {
+              "entity": "i1",
+              "state": "fall",
+              "pace": "slow",
+              "direction": "down",
+              "modality": "asserted",
+              "basis": "explicit",
+              "evidence": [
+                "月落乌啼霜满天"
+              ]
+            },
+            "instances": [
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    175
+                  ],
+                  "at": [
+                    0.72,
+                    0.22
+                  ],
+                  "scale": 0.76
+                },
+                "depth": -0.2,
+                "opacity": 0.92,
+                "variant": 0,
+                "tone": "far",
+                "id": "i1:moon::1:0"
+              }
+            ],
+            "singleUnit": true,
+            "quantity": {
+              "items": [
+                {
+                  "entity": "i1",
+                  "mode": "unspecified",
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "scope": "unspecified",
+                  "extent": "unspecified",
+                  "evidence": [],
+                  "basis": "model"
+                }
+              ],
+              "rendered": 1,
+              "exact": false,
+              "collective": false,
+              "partUnsupported": false
+            },
+            "quantityLabel": "数量未精确；本地试画 1 个单元",
+            "z": -5,
+            "visual": {
+              "role": "light",
+              "brushStrength": 1.1
+            },
+            "performance": {
+              "rhythm": "steady",
+              "rate": 1,
+              "amplitude": 1,
+              "phase": 3.8830085198369844
+            },
+            "id": "i1:moon::1",
+            "interaction": {
+              "mode": "instance",
+              "groupId": "i1:moon::1"
+            },
+            "visibility": {
+              "protect": true,
+              "reasons": [
+                "recognizable-subject"
+              ],
+              "basis": "local-drawing-policy"
+            }
+          },
+          {
+            "tool": "tree",
+            "entities": [
+              "i4"
+            ],
+            "projectedEntities": [],
+            "names": [
+              "江枫"
+            ],
+            "options": {
+              "form": "broadleaf",
+              "crown": "lines"
+            },
+            "animate": true,
+            "placement": {
+              "anchor": [
+                320,
+                388
+              ],
+              "at": [
+                0.46136639090822573,
+                0.7702764730434782
+              ],
+              "scale": 1.15
+            },
+            "drawingLabel": "树意（写意借形）",
+            "semanticGroup": {
+              "members": [
+                "i4",
+                "i5"
+              ],
+              "role": "subject",
+              "pattern": "cluster",
+              "depth": "middle",
+              "basis": "inferred",
+              "evidence": [
+                "江枫渔火对愁眠"
+              ],
+              "index": 1
+            },
+            "semanticEffects": [
+              {
+                "path": "scene.groups[1].role",
+                "consumer": "主次布局",
+                "effect": "主体相对突出",
+                "status": "applied"
+              },
+              {
+                "path": "scene.groups[1].pattern",
+                "consumer": "群落布局",
+                "effect": "按 cluster 组织显示单元；不覆盖明确数量",
+                "status": "applied"
+              },
+              {
+                "path": "scene.groups[1].depth",
+                "consumer": "远近布局",
+                "effect": "将 middle 转为相对大小、透明度与允许区域内的落点",
+                "status": "applied"
+              }
+            ],
+            "semanticEnergy": true,
+            "timeScale": 0.45,
+            "instances": [
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    388
+                  ],
+                  "at": [
+                    0.7307142857142858,
+                    0.788695652173913
+                  ],
+                  "scale": 0.6223974799518002
+                },
+                "depth": 10,
+                "opacity": 0.62412571011,
+                "variant": 1,
+                "tone": "middle",
+                "id": "i4:tree:broadleaf:2:0"
+              },
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    388
+                  ],
+                  "at": [
+                    0.43214285714285716,
+                    0.6478260869565218
+                  ],
+                  "scale": 0.5338424799036001
+                },
+                "depth": 10.01,
+                "opacity": 0.55995542022,
+                "variant": 1,
+                "tone": "middle",
+                "id": "i4:tree:broadleaf:2:1"
+              },
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    388
+                  ],
+                  "at": [
+                    0.2254033831125572,
+                    0.7435562782608697
+                  ],
+                  "scale": 0.44528747985540007
+                },
+                "depth": 10.02,
+                "opacity": 0.49578513032999993,
+                "variant": 1,
+                "tone": "middle",
+                "id": "i4:tree:broadleaf:2:2"
+              },
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    388
+                  ],
+                  "at": [
+                    0.6221428571428571,
+                    0.9530434782608697
+                  ],
+                  "scale": 0.8304924798072002
+                },
+                "depth": 10.03,
+                "opacity": 0.789973356396,
+                "variant": 1,
+                "tone": "middle",
+                "id": "i4:tree:broadleaf:2:3"
+              },
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    388
+                  ],
+                  "at": [
+                    0.29642857142857143,
+                    0.7182608695652175
+                  ],
+                  "scale": 0.7419374797590003
+                },
+                "depth": 10.04,
+                "opacity": 0.732220095495,
+                "variant": 1,
+                "tone": "middle",
+                "id": "i4:tree:broadleaf:2:4"
+              }
+            ],
+            "singleUnit": true,
+            "quantity": {
+              "items": [
+                {
+                  "entity": "i4",
+                  "mode": "unspecified",
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "scope": "unspecified",
+                  "extent": "unspecified",
+                  "evidence": [],
+                  "basis": "model"
+                }
+              ],
+              "rendered": 5,
+              "exact": false,
+              "collective": true,
+              "partUnsupported": false
+            },
+            "quantityLabel": "成片分布；本地试画 5 个单元",
+            "z": 8,
+            "semanticSupport": {
+              "surface": "ground",
+              "target": null,
+              "path": "scene.supports[0]"
+            },
+            "visual": {
+              "role": "vegetation",
+              "brushStrength": 1.2
+            },
+            "performance": {
+              "rhythm": "gust",
+              "rate": 0.62,
+              "amplitude": 0.65,
+              "phase": 1.4828317324943823
+            },
+            "id": "i4:tree:broadleaf:2",
+            "interaction": {
+              "mode": "instance",
+              "groupId": "i4:tree:broadleaf:2"
+            },
+            "visibility": {
+              "protect": true,
+              "reasons": [
+                "semantic-subject"
+              ],
+              "basis": "local-drawing-policy"
+            }
+          },
+          {
+            "tool": "surface-weather",
+            "entities": [
+              "i3"
+            ],
+            "projectedEntities": [],
+            "names": [
+              "霜"
+            ],
+            "options": {
+              "surface": "frost",
+              "carrier": "detail"
+            },
+            "animate": true,
+            "placement": {
+              "anchor": [
+                320,
+                206
+              ],
+              "at": [
+                0.43,
+                0.76
+              ],
+              "scale": 0.9
+            },
+            "semanticGroup": {
+              "members": [
+                "i1",
+                "i2",
+                "i3"
+              ],
+              "role": "environment",
+              "pattern": "scattered",
+              "depth": "far",
+              "basis": "inferred",
+              "evidence": [
+                "月落乌啼霜满天"
+              ],
+              "index": 0
+            },
+            "semanticEffects": [
+              {
+                "path": "scene.groups[0].role",
+                "consumer": "主次布局",
+                "effect": "保留环境群落层次",
+                "status": "applied"
+              },
+              {
+                "path": "scene.groups[0].pattern",
+                "consumer": "群落布局",
+                "effect": "按 scattered 组织显示单元；不覆盖明确数量",
+                "status": "applied"
+              },
+              {
+                "path": "scene.groups[0].depth",
+                "consumer": "远近布局",
+                "effect": "将 far 转为相对大小、透明度与允许区域内的落点",
+                "status": "applied"
+              }
+            ],
+            "semanticEnergy": true,
+            "timeScale": 0.45,
+            "instances": [
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    206
+                  ],
+                  "at": [
+                    0.43,
+                    0.76
+                  ],
+                  "scale": 0.5850000000000001
+                },
+                "depth": -0.2,
+                "opacity": 0.6,
+                "variant": 0,
+                "tone": "far",
+                "id": "i3:surface-weather::3:0"
+              }
+            ],
+            "singleUnit": false,
+            "quantity": {
+              "items": [
+                {
+                  "entity": "i3",
+                  "mode": "many",
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "scope": "extent",
+                  "extent": "spread",
+                  "evidence": [
+                    "霜满天"
+                  ],
+                  "basis": "model"
+                }
+              ],
+              "rendered": 1,
+              "exact": false,
+              "collective": true,
+              "partUnsupported": false
+            },
+            "quantityLabel": "整体笔触图层；内部数量尚未适配",
+            "visual": {
+              "role": "vegetation",
+              "brushStrength": 1.2
+            },
+            "performance": {
+              "rhythm": "steady",
+              "rate": 1,
+              "amplitude": 1,
+              "phase": 5.365840252331367
+            },
+            "id": "i3:surface-weather::3",
+            "interaction": {
+              "mode": "instance",
+              "groupId": "i3:surface-weather::3"
+            },
+            "visibility": {
+              "protect": false,
+              "reasons": [],
+              "basis": "local-drawing-policy"
+            }
+          },
+          {
+            "tool": "bird",
+            "entities": [
+              "i2"
+            ],
+            "projectedEntities": [],
+            "names": [
+              "乌"
+            ],
+            "options": {
+              "pose": "flying",
+              "tone": "ink",
+              "facing": "right"
+            },
+            "animate": false,
+            "placement": {
+              "anchor": [
+                320,
+                190
+              ],
+              "at": [
+                0.51,
+                0.1994046982264183
+              ],
+              "scale": 0.78
+            },
+            "drawingLabel": "鸟意（写意借形）",
+            "semanticGroup": {
+              "members": [
+                "i1",
+                "i2",
+                "i3"
+              ],
+              "role": "environment",
+              "pattern": "scattered",
+              "depth": "far",
+              "basis": "inferred",
+              "evidence": [
+                "月落乌啼霜满天"
+              ],
+              "index": 0
+            },
+            "semanticEffects": [
+              {
+                "path": "scene.actions[1].state",
+                "consumer": "动作边界",
+                "effect": "动作未明，保留静态形态",
+                "status": "skipped"
+              },
+              {
+                "path": "scene.groups[0].role",
+                "consumer": "主次布局",
+                "effect": "保留环境群落层次",
+                "status": "applied"
+              },
+              {
+                "path": "scene.groups[0].pattern",
+                "consumer": "群落布局",
+                "effect": "按 scattered 组织显示单元；不覆盖明确数量",
+                "status": "applied"
+              },
+              {
+                "path": "scene.groups[0].depth",
+                "consumer": "远近布局",
+                "effect": "将 far 转为相对大小、透明度与允许区域内的落点",
+                "status": "applied"
+              }
+            ],
+            "semanticEnergy": false,
+            "timeScale": 0,
+            "semanticAction": {
+              "entity": "i2",
+              "state": "unclear",
+              "pace": "unspecified",
+              "direction": "unspecified",
+              "modality": "asserted",
+              "basis": "explicit",
+              "evidence": [
+                "月落乌啼霜满天"
+              ]
+            },
+            "instances": [
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    190
+                  ],
+                  "at": [
+                    0.24262500000000004,
+                    0.3022501105313308
+                  ],
+                  "scale": 0.48
+                },
+                "depth": -0.2375,
+                "opacity": 0.7,
+                "variant": 0,
+                "tone": "far",
+                "id": "i2:bird::4:0"
+              },
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    190
+                  ],
+                  "at": [
+                    0.420875,
+                    0.21536868237434237
+                  ],
+                  "scale": 0.48
+                },
+                "depth": -0.2125,
+                "opacity": 0.7,
+                "variant": 0,
+                "tone": "far",
+                "id": "i2:bird::4:1"
+              },
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    190
+                  ],
+                  "at": [
+                    0.599125,
+                    0.14
+                  ],
+                  "scale": 0.48
+                },
+                "depth": -0.1875,
+                "opacity": 0.7,
+                "variant": 0,
+                "tone": "far",
+                "id": "i2:bird::4:2"
+              },
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    190
+                  ],
+                  "at": [
+                    0.7773749999999999,
+                    0.14
+                  ],
+                  "scale": 0.48
+                },
+                "depth": -0.16249999999999998,
+                "opacity": 0.7,
+                "variant": 0,
+                "tone": "far",
+                "id": "i2:bird::4:3"
+              }
+            ],
+            "singleUnit": true,
+            "quantity": {
+              "items": [
+                {
+                  "entity": "i2",
+                  "mode": "unspecified",
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "scope": "unspecified",
+                  "extent": "unspecified",
+                  "evidence": [],
+                  "basis": "model"
+                }
+              ],
+              "rendered": 4,
+              "exact": false,
+              "collective": false,
+              "partUnsupported": false
+            },
+            "quantityLabel": "数量未精确；本地试画 4 个单元",
+            "z": 24,
+            "visual": {
+              "role": "figure",
+              "brushStrength": 2.2
+            },
+            "performance": {
+              "rhythm": "passing",
+              "rate": 1.05,
+              "amplitude": 1.1,
+              "phase": 2.9656634649887645
+            },
+            "id": "i2:bird::4",
+            "interaction": {
+              "mode": "instance",
+              "groupId": "i2:bird::4"
+            },
+            "visibility": {
+              "protect": true,
+              "reasons": [
+                "recognizable-subject"
+              ],
+              "basis": "local-drawing-policy"
+            }
+          },
+          {
+            "tool": "landscape",
+            "entities": [],
+            "projectedEntities": [],
+            "names": [
+              "构图依托·地面"
+            ],
+            "options": {
+              "form": "ground",
+              "edge": "soft"
+            },
+            "animate": false,
+            "placement": {
+              "anchor": [
+                320,
+                194
+              ],
+              "at": [
+                0.5,
+                0.54
+              ],
+              "scale": 1.6
+            },
+            "instances": [
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    265
+                  ],
+                  "at": [
+                    0.5,
+                    0.54
+                  ],
+                  "scale": 2.5
+                },
+                "variant": 0,
+                "depth": 0,
+                "opacity": 1,
+                "tone": "far",
+                "id": "inferred:landscape:ground:5:0"
+              }
+            ],
+            "singleUnit": false,
+            "inferred": true,
+            "provenance": {
+              "basis": "local-context",
+              "reason": "模型解释的必要依托，依据：江枫渔火对愁眠",
+              "semanticPath": "scene.supports[0]"
+            },
+            "quantity": {
+              "rendered": 1,
+              "exact": false,
+              "items": []
+            },
+            "quantityLabel": "本地环境依托，不计入原文意象覆盖",
+            "z": -18,
+            "clip": [
+              [
+                -0.04,
+                0.43
+              ],
+              [
+                1.04,
+                0.43
+              ],
+              [
+                1.04,
+                1.04
+              ],
+              [
+                0.5800000000000001,
+                1.04
+              ],
+              [
+                0.68,
+                0.82
+              ],
+              [
+                0.85,
+                0.65
+              ],
+              [
+                0.89,
+                0.48
+              ],
+              [
+                0.63,
+                0.48
+              ],
+              [
+                0.43000000000000005,
+                0.65
+              ],
+              [
+                0.12,
+                0.82
+              ],
+              [
+                -0.10000000000000003,
+                1.04
+              ],
+              [
+                -0.04,
+                1.04
+              ]
+            ],
+            "visual": {
+              "role": "ground",
+              "brushStrength": 1.1
+            },
+            "performance": {
+              "rhythm": "steady",
+              "rate": 1,
+              "amplitude": 1,
+              "phase": 0.5654866776461619
+            },
+            "id": "inferred:landscape:ground:5",
+            "interaction": {
+              "mode": "group",
+              "groupId": "inferred:landscape:ground:5"
+            },
+            "visibility": {
+              "protect": false,
+              "reasons": [],
+              "basis": "local-drawing-policy"
+            }
+          },
+          {
+            "tool": "water",
+            "entities": [],
+            "projectedEntities": [],
+            "names": [
+              "构图依托·水域"
+            ],
+            "options": {
+              "form": "plane"
+            },
+            "animate": false,
+            "placement": {
+              "anchor": [
+                320,
+                135
+              ],
+              "at": [
+                0.5,
+                0.45
+              ],
+              "scale": 1.6
+            },
+            "instances": [
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    135
+                  ],
+                  "at": [
+                    0.5,
+                    0.45
+                  ],
+                  "scale": 1.65
+                },
+                "variant": 0,
+                "depth": 0,
+                "opacity": 1,
+                "tone": "far",
+                "id": "inferred:water:plane:6:0"
+              }
+            ],
+            "singleUnit": false,
+            "inferred": true,
+            "provenance": {
+              "basis": "local-context",
+              "reason": "模型解释的必要依托，依据：江枫渔火对愁眠",
+              "semanticPath": "scene.supports[1]"
+            },
+            "quantity": {
+              "rendered": 1,
+              "exact": false,
+              "items": []
+            },
+            "quantityLabel": "本地环境依托，不计入原文意象覆盖",
+            "z": -10,
+            "clip": [
+              [
+                0.63,
+                0.48
+              ],
+              [
+                0.43000000000000005,
+                0.65
+              ],
+              [
+                0.12,
+                0.82
+              ],
+              [
+                -0.10000000000000003,
+                1.04
+              ],
+              [
+                0.5800000000000001,
+                1.04
+              ],
+              [
+                0.68,
+                0.82
+              ],
+              [
+                0.85,
+                0.65
+              ],
+              [
+                0.89,
+                0.48
+              ]
+            ],
+            "surface": {
+              "top": 0.48,
+              "bottom": 1
+            },
+            "visual": {
+              "role": "water",
+              "brushStrength": 1.35
+            },
+            "performance": {
+              "rhythm": "continuous",
+              "rate": 0.9,
+              "amplitude": 0.9,
+              "phase": 4.448495197483148
+            },
+            "id": "inferred:water:plane:6",
+            "interaction": {
+              "mode": "group",
+              "groupId": "inferred:water:plane:6"
+            },
+            "visibility": {
+              "protect": false,
+              "reasons": [],
+              "basis": "local-drawing-policy"
+            }
+          }
+        ],
+        "scene": {
+          "kind": "woodland",
+          "notes": [
+            "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。"
+          ],
+          "waterline": null,
+          "semanticSetting": {
+            "kind": "waterside",
+            "basis": "inferred",
+            "evidence": [
+              "江枫渔火对愁眠"
+            ]
+          },
+          "semanticEffects": [
+            {
+              "path": "scene.supports[0]",
+              "consumer": "场景依托",
+              "status": "applied",
+              "effect": "必要环境以独立推断背景表示，不新增原文实体"
+            },
+            {
+              "path": "scene.supports[1]",
+              "consumer": "场景依托",
+              "status": "unsupported",
+              "effect": "该主体尚无水上姿态，未凭空添加船只"
+            }
+          ],
+          "organization": {
+            "version": "1.0",
+            "strategy": "general-constraints",
+            "regions": {
+              "water": [
+                [
+                  0.63,
+                  0.48
+                ],
+                [
+                  0.43000000000000005,
+                  0.65
+                ],
+                [
+                  0.12,
+                  0.82
+                ],
+                [
+                  -0.10000000000000003,
+                  1.04
+                ],
+                [
+                  0.5800000000000001,
+                  1.04
+                ],
+                [
+                  0.68,
+                  0.82
+                ],
+                [
+                  0.85,
+                  0.65
+                ],
+                [
+                  0.89,
+                  0.48
+                ]
+              ],
+              "land": [
+                [
+                  -0.04,
+                  0.43
+                ],
+                [
+                  1.04,
+                  0.43
+                ],
+                [
+                  1.04,
+                  1.04
+                ],
+                [
+                  0.5800000000000001,
+                  1.04
+                ],
+                [
+                  0.68,
+                  0.82
+                ],
+                [
+                  0.85,
+                  0.65
+                ],
+                [
+                  0.89,
+                  0.48
+                ],
+                [
+                  0.63,
+                  0.48
+                ],
+                [
+                  0.43000000000000005,
+                  0.65
+                ],
+                [
+                  0.12,
+                  0.82
+                ],
+                [
+                  -0.10000000000000003,
+                  1.04
+                ],
+                [
+                  -0.04,
+                  1.04
+                ]
+              ]
+            },
+            "candidates": [],
+            "repairs": [],
+            "limitations": [
+              "几何检查不判定诗意理解或审美合格",
+              "动作时序与整首诗的场景切换尚未编排"
+            ],
+            "topology": "斜江入远",
+            "layout": 2,
+            "orientation": "斜江入远",
+            "audit": {
+              "scope": "implemented-geometry-and-drawing-gaps",
+              "coverage": {
+                "scope": "extracted-entities-only",
+                "present": 6,
+                "mapped": 5,
+                "parameters": [],
+                "missing": [
+                  {
+                    "id": "i6",
+                    "name": "愁"
+                  }
+                ]
+              },
+              "checks": [
+                "presence",
+                "count",
+                "finite",
+                "support",
+                "scale",
+                "relative-position",
+                "depth",
+                "grove-spread",
+                "drawing-gaps"
+              ],
+              "status": "needs-review",
+              "errors": 0,
+              "review": 2,
+              "issues": [
+                {
+                  "code": "unresolved-relation",
+                  "severity": "review",
+                  "message": "有空间关系尚无对应布局画法"
+                },
+                {
+                  "code": "drawing-gaps",
+                  "severity": "review",
+                  "message": "还有 1 项已提取线索尚未转成画面：愁"
+                }
+              ],
+              "metrics": {
+                "overlapPenalty": 1,
+                "balancePenalty": 0.005,
+                "motifFootprint": 0.432,
+                "landArea": 0.381
+              },
+              "cost": 72.044,
+              "aestheticAcceptance": "pending-user"
+            },
+            "graph": {
+              "nodes": [
+                {
+                  "id": "l0",
+                  "entities": [
+                    "i5"
+                  ],
+                  "tool": "landscape",
+                  "role": "detail",
+                  "habitat": null,
+                  "inferred": false,
+                  "support": null
+                },
+                {
+                  "id": "l1",
+                  "entities": [
+                    "i1"
+                  ],
+                  "tool": "moon",
+                  "role": "sky",
+                  "habitat": "air",
+                  "inferred": false,
+                  "support": null
+                },
+                {
+                  "id": "l2",
+                  "entities": [
+                    "i4"
+                  ],
+                  "tool": "tree",
+                  "role": "vegetation",
+                  "habitat": "land",
+                  "inferred": false,
+                  "support": "l5"
+                },
+                {
+                  "id": "l3",
+                  "entities": [
+                    "i3"
+                  ],
+                  "tool": "surface-weather",
+                  "role": "detail",
+                  "habitat": null,
+                  "inferred": false,
+                  "support": "l1"
+                },
+                {
+                  "id": "l4",
+                  "entities": [
+                    "i2"
+                  ],
+                  "tool": "bird",
+                  "role": "fauna",
+                  "habitat": "air",
+                  "inferred": false,
+                  "support": null
+                },
+                {
+                  "id": "l5",
+                  "entities": [],
+                  "tool": "landscape",
+                  "role": "terrain",
+                  "habitat": null,
+                  "inferred": true,
+                  "support": null
+                },
+                {
+                  "id": "l6",
+                  "entities": [],
+                  "tool": "water",
+                  "role": "water",
+                  "habitat": null,
+                  "inferred": true,
+                  "support": null
+                }
+              ],
+              "edges": [
+                {
+                  "type": "supported-by",
+                  "source": "l1",
+                  "target": null,
+                  "basis": "local-composition",
+                  "habitat": "air"
+                },
+                {
+                  "type": "supported-by",
+                  "source": "l2",
+                  "target": "l5",
+                  "basis": "local-composition",
+                  "habitat": "land"
+                },
+                {
+                  "type": "supported-by",
+                  "source": "l4",
+                  "target": null,
+                  "basis": "local-composition",
+                  "habitat": "air"
+                },
+                {
+                  "type": "on",
+                  "source": "l3",
+                  "target": "l1",
+                  "basis": "inferred",
+                  "modality": "asserted",
+                  "evidence": [
+                    "月落乌啼霜满天"
+                  ]
+                },
+                {
+                  "type": "beside",
+                  "source": "l2",
+                  "target": "l0",
+                  "basis": "inferred",
+                  "modality": "asserted",
+                  "evidence": [
+                    "江枫渔火对愁眠"
+                  ]
+                }
+              ],
+              "setting": "woodland"
+            },
+            "actorSpacing": {
+              "version": "1.0",
+              "repairs": [],
+              "residualOverlap": 0,
+              "scope": "discrete-actors-not-intentional-occlusion"
+            }
+          },
+          "displayAudit": {
+            "scope": "display-scale-separation-and-habitat",
+            "issues": [],
+            "errors": 0,
+            "aestheticAcceptance": "pending-user"
+          }
+        },
+        "spatial": [
+          {
+            "type": "on",
+            "source": "i3",
+            "target": "i1",
+            "modality": "asserted",
+            "basis": "inferred",
+            "evidence": [
+              "月落乌啼霜满天"
+            ],
+            "visualized": false,
+            "reason": "该空间关系与形态组合尚未适配"
+          },
+          {
+            "type": "beside",
+            "source": "i4",
+            "target": "i5",
+            "modality": "asserted",
+            "basis": "inferred",
+            "evidence": [
+              "江枫渔火对愁眠"
+            ],
+            "visualized": true,
+            "reason": "表现邻接或外侧；左右方向为本地选择"
+          }
+        ],
+        "landscapeStyle": {
+          "version": "1.0",
+          "color": "role-and-distance",
+          "motion": "layer-rhythms",
+          "aestheticAcceptance": "pending-user"
+        },
+        "notes": []
+      }
+    ],
+    "composition": "space-0",
+    "omitted": [
+      {
+        "id": "i6",
+        "name": "愁",
+        "reason": "该专名人物、地名或抽象含义暂不作实景补画"
+      }
+    ],
+    "parameters": [],
+    "sourceResolution": {
+      "version": "source-depiction-1.1",
+      "quantities": {},
+      "identities": [],
+      "changes": []
+    },
+    "notes": [
+      "原句未明确月形，暂用弯月试画；可以手动切换。",
+      "乌：以通用写意鸟形表现，不细分物种。这是本地写意借形，保留原词义。",
+      "乌可由鸣声借鸟形联想，不把绘出的姿态当作原文已明确看见的动作。",
+      "霜只显示露珠或霜层的局部笔触，不自动补草叶、枝条或地面；具体载体附着尚未从诗句自动匹配。",
+      "江枫：按本次解读的江边枫树借阔叶树形；江枫亦有其他解释，保留待复核，不由江字补水。这是本地写意借形，保留原词义。",
+      "位置、大小、笔触与默认微动是本地试画选择；数量解释与本地显示数量分别记录。",
+      "江枫未明说精确数量，按模型的 cluster 群落解释选择本地显示密度。",
+      "霜的数量解释已保留，当前工具以整体图层表现，内部笔触尚未按数量逐个适配。",
+      "未明说的群落数量、疏密、近中远层次与变体均为本地构图选择；种类可按已声明的写意画法概括，不把铺展词换算成精确物体数量。",
+      "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。",
+      "通用场景层先组织地面、水域、群落和主体，再比较三个布局的依托、相对位置、尺度与遮挡；检查通过不代表审美已通过。",
+      "语义保留：scene.supports[1]，该主体尚无水上姿态，未凭空添加船只",
+      "语义保留：scene.actions[0].state，当前工具尚无对应动作状态",
+      "整体场景、主次、远近、依托和支持的动作状态来自本次模型解释；具体布局、颜色和时钟倍率由本地视觉策略选择。",
+      "动作动画表现受支持的主导状态与有限观看运动；先后事件与完整因果尚未编排。",
+      "动态程度与默认轻风是可调整的观看选择；不改变数量、主次或原文动作判断。人物保持点景写意，不新增人物步态。",
+      "显示检查覆盖实例尺度、鸟群分离与空中落点；不保证笔触未被遮挡，也不代替实际观看。竹林默认成组拖动，其余单独拖动；Shift 可拖动同层整组。"
+    ],
+    "relations": [],
+    "semanticConsumption": {
+      "version": "3.3",
+      "items": [
+        {
+          "path": "scene.setting",
+          "status": "applied",
+          "consumer": "本地视觉策略",
+          "effect": "整体环境进入场景提案选择",
+          "basis": "inferred",
+          "evidence": [
+            "江枫渔火对愁眠"
+          ]
+        },
+        {
+          "path": "scene.groups[0].role",
+          "status": "applied",
+          "consumer": "主次布局",
+          "effect": "保留环境群落层次",
+          "basis": "inferred",
+          "evidence": [
+            "月落乌啼霜满天"
+          ]
+        },
+        {
+          "path": "scene.groups[0].pattern",
+          "status": "applied",
+          "consumer": "群落布局",
+          "effect": "按 scattered 组织显示单元；不覆盖明确数量",
+          "basis": "inferred",
+          "evidence": [
+            "月落乌啼霜满天"
+          ]
+        },
+        {
+          "path": "scene.groups[0].depth",
+          "status": "applied",
+          "consumer": "远近布局",
+          "effect": "将 far 转为相对大小、透明度与允许区域内的落点",
+          "basis": "inferred",
+          "evidence": [
+            "月落乌啼霜满天"
+          ]
+        },
+        {
+          "path": "scene.groups[1].role",
+          "status": "applied",
+          "consumer": "主次布局",
+          "effect": "主体相对突出",
+          "basis": "inferred",
+          "evidence": [
+            "江枫渔火对愁眠"
+          ]
+        },
+        {
+          "path": "scene.groups[1].pattern",
+          "status": "applied",
+          "consumer": "群落布局",
+          "effect": "按 cluster 组织显示单元；不覆盖明确数量",
+          "basis": "inferred",
+          "evidence": [
+            "江枫渔火对愁眠"
+          ]
+        },
+        {
+          "path": "scene.groups[1].depth",
+          "status": "applied",
+          "consumer": "远近布局",
+          "effect": "将 middle 转为相对大小、透明度与允许区域内的落点",
+          "basis": "inferred",
+          "evidence": [
+            "江枫渔火对愁眠"
+          ]
+        },
+        {
+          "path": "scene.supports[0]",
+          "status": "applied",
+          "consumer": "场景依托",
+          "effect": "必要环境以独立推断背景表示，不新增原文实体",
+          "basis": "inferred",
+          "evidence": [
+            "江枫渔火对愁眠"
+          ]
+        },
+        {
+          "path": "scene.supports[1]",
+          "status": "unsupported",
+          "consumer": "场景依托",
+          "effect": "该主体尚无水上姿态，未凭空添加船只",
+          "basis": "inferred",
+          "evidence": [
+            "江枫渔火对愁眠"
+          ]
+        },
+        {
+          "path": "scene.actions[0].state",
+          "status": "unsupported",
+          "consumer": "动作画法",
+          "effect": "当前工具尚无对应动作状态",
+          "basis": "explicit",
+          "evidence": [
+            "月落乌啼霜满天"
+          ]
+        },
+        {
+          "path": "scene.actions[0].pace",
+          "status": "skipped",
+          "consumer": "本地视觉策略",
+          "effect": "该工具尚不支持此动作分量",
+          "basis": "explicit",
+          "evidence": [
+            "月落乌啼霜满天"
+          ]
+        },
+        {
+          "path": "scene.actions[0].direction",
+          "status": "skipped",
+          "consumer": "本地视觉策略",
+          "effect": "该工具尚不支持此动作分量",
+          "basis": "explicit",
+          "evidence": [
+            "月落乌啼霜满天"
+          ]
+        },
+        {
+          "path": "scene.actions[1].state",
+          "status": "skipped",
+          "consumer": "动作边界",
+          "effect": "动作未明，保留静态形态",
+          "basis": "explicit",
+          "evidence": [
+            "月落乌啼霜满天"
+          ]
+        },
+        {
+          "path": "scene.actions[1].pace",
+          "status": "skipped",
+          "consumer": "本地视觉策略",
+          "effect": "该工具尚不支持此动作分量",
+          "basis": "explicit",
+          "evidence": [
+            "月落乌啼霜满天"
+          ]
+        },
+        {
+          "path": "scene.actions[1].direction",
+          "status": "skipped",
+          "consumer": "本地视觉策略",
+          "effect": "该工具尚不支持此动作分量",
+          "basis": "explicit",
+          "evidence": [
+            "月落乌啼霜满天"
+          ]
+        },
+        {
+          "path": "scene.atmosphere.visibility",
+          "status": "applied",
+          "consumer": "画布色层与远景",
+          "effect": "可见度 clear；迷蒙或昏暗时淡化非光源图层",
+          "basis": "inferred",
+          "evidence": [
+            "月落乌啼霜满天"
+          ]
+        },
+        {
+          "path": "scene.atmosphere.illumination",
+          "status": "applied",
+          "consumer": "自动光色",
+          "effect": "照明 night 与气息标签共同选择本地 indigo 配色；夜景优先暗底，用户可手动覆盖",
+          "basis": "inferred",
+          "evidence": [
+            "月落乌啼霜满天"
+          ]
+        },
+        {
+          "path": "atmosphere.energy",
+          "status": "applied",
+          "consumer": "绘画时钟",
+          "effect": "没有明确动作节奏时，气息强弱控制已有微动的默认时钟"
+        },
+        {
+          "path": "atmosphere.openness",
+          "status": "applied",
+          "consumer": "群落分布与笔触密度",
+          "effect": "开阔度转换为本地间距与工具笔触密度，不等于原文数量"
+        },
+        {
+          "path": "atmosphere.valence",
+          "status": "applied",
+          "consumer": "自动光色",
+          "effect": "先约束昼夜明暗，再按已支持的气息标签和情绪倾向选择配色；不宣称完整情感理解"
+        },
+        {
+          "path": "time.markers",
+          "status": "retained",
+          "consumer": "原始记录与解读",
+          "effect": "保留原文时间标记；本版照明由 scene.atmosphere 转换，多阶段时间逻辑未执行"
+        }
+      ],
+      "summary": {
+        "applied": 13,
+        "partial": 0,
+        "unsupported": 2,
+        "skipped": 5,
+        "retained": 1
+      },
+      "aestheticAcceptance": "pending-user"
+    },
+    "landscapeStyle": {
+      "version": "1.0",
+      "color": "role-and-distance",
+      "motion": "layer-rhythms",
+      "aestheticAcceptance": "pending-user"
+    },
+    "compositionSelection": {
+      "method": "shared-policy-final-audit-and-geometric-preference",
+      "candidates": [
+        {
+          "id": "space-0",
+          "errors": 0,
+          "score": 60.113,
+          "actorOverlap": 0
+        },
+        {
+          "id": "space-1",
+          "errors": 0,
+          "score": 61.097,
+          "actorOverlap": 0
+        },
+        {
+          "id": "space-2",
+          "errors": 0,
+          "score": 90.114,
+          "actorOverlap": 0
+        }
+      ],
+      "aestheticAcceptance": "pending-user"
+    },
+    "imageryTrace": [
+      {
+        "id": "i1",
+        "mentions": [
+          "月"
+        ],
+        "role": "scene",
+        "presence": "present",
+        "parameter": null,
+        "layers": [
+          {
+            "id": "i1:moon::1",
+            "tool": "moon",
+            "instances": [
+              "i1:moon::1:0"
+            ]
+          }
+        ],
+        "omission": null
+      },
+      {
+        "id": "i2",
+        "mentions": [
+          "乌"
+        ],
+        "role": "scene",
+        "presence": "present",
+        "parameter": null,
+        "layers": [
+          {
+            "id": "i2:bird::4",
+            "tool": "bird",
+            "instances": [
+              "i2:bird::4:0",
+              "i2:bird::4:1",
+              "i2:bird::4:2",
+              "i2:bird::4:3"
+            ]
+          }
+        ],
+        "omission": null
+      },
+      {
+        "id": "i3",
+        "mentions": [
+          "霜"
+        ],
+        "role": "scene",
+        "presence": "present",
+        "parameter": null,
+        "layers": [
+          {
+            "id": "i3:surface-weather::3",
+            "tool": "surface-weather",
+            "instances": [
+              "i3:surface-weather::3:0"
+            ]
+          }
+        ],
+        "omission": null
+      },
+      {
+        "id": "i4",
+        "mentions": [
+          "江枫"
+        ],
+        "role": "scene",
+        "presence": "present",
+        "parameter": null,
+        "layers": [
+          {
+            "id": "i4:tree:broadleaf:2",
+            "tool": "tree",
+            "instances": [
+              "i4:tree:broadleaf:2:0",
+              "i4:tree:broadleaf:2:1",
+              "i4:tree:broadleaf:2:2",
+              "i4:tree:broadleaf:2:3",
+              "i4:tree:broadleaf:2:4"
+            ]
+          }
+        ],
+        "omission": null
+      },
+      {
+        "id": "i5",
+        "mentions": [
+          "渔火"
+        ],
+        "role": "scene",
+        "presence": "present",
+        "parameter": null,
+        "layers": [
+          {
+            "id": "i5:landscape:glow:0",
+            "tool": "landscape",
+            "instances": [
+              "i5:landscape:glow:0:0"
+            ]
+          }
+        ],
+        "omission": null
+      },
+      {
+        "id": "i6",
+        "mentions": [
+          "愁"
+        ],
+        "role": "scene",
+        "presence": "present",
+        "parameter": null,
+        "layers": [],
+        "omission": "该专名人物、地名或抽象含义暂不作实景补画"
+      }
+    ],
+    "drawingPolicy": {
+      "version": "shared-drawing-policy-1.0",
+      "scope": "source-bound-generation-and-composition-alternatives",
+      "selectedComposition": "space-0",
+      "applied": [
+        {
+          "composition": "space-0",
+          "layer": "i5:landscape:glow:0",
+          "entities": [
+            "i5"
+          ],
+          "color": null,
+          "visibility": [
+            "semantic-subject"
+          ],
+          "attachment": null
+        },
+        {
+          "composition": "space-0",
+          "layer": "i1:moon::1",
+          "entities": [
+            "i1"
+          ],
+          "color": null,
+          "visibility": [
+            "recognizable-subject"
+          ],
+          "attachment": null
+        },
+        {
+          "composition": "space-0",
+          "layer": "i4:tree:broadleaf:2",
+          "entities": [
+            "i4"
+          ],
+          "color": null,
+          "visibility": [
+            "semantic-subject"
+          ],
+          "attachment": null
+        },
+        {
+          "composition": "space-0",
+          "layer": "i2:bird::4",
+          "entities": [
+            "i2"
+          ],
+          "color": null,
+          "visibility": [
+            "recognizable-subject"
+          ],
+          "attachment": null
+        },
+        {
+          "composition": "space-1",
+          "layer": "i5:landscape:glow:0",
+          "entities": [
+            "i5"
+          ],
+          "color": null,
+          "visibility": [
+            "semantic-subject"
+          ],
+          "attachment": null
+        },
+        {
+          "composition": "space-1",
+          "layer": "i1:moon::1",
+          "entities": [
+            "i1"
+          ],
+          "color": null,
+          "visibility": [
+            "recognizable-subject"
+          ],
+          "attachment": null
+        },
+        {
+          "composition": "space-1",
+          "layer": "i4:tree:broadleaf:2",
+          "entities": [
+            "i4"
+          ],
+          "color": null,
+          "visibility": [
+            "semantic-subject"
+          ],
+          "attachment": null
+        },
+        {
+          "composition": "space-1",
+          "layer": "i2:bird::4",
+          "entities": [
+            "i2"
+          ],
+          "color": null,
+          "visibility": [
+            "recognizable-subject"
+          ],
+          "attachment": null
+        },
+        {
+          "composition": "space-2",
+          "layer": "i5:landscape:glow:0",
+          "entities": [
+            "i5"
+          ],
+          "color": null,
+          "visibility": [
+            "semantic-subject"
+          ],
+          "attachment": null
+        },
+        {
+          "composition": "space-2",
+          "layer": "i1:moon::1",
+          "entities": [
+            "i1"
+          ],
+          "color": null,
+          "visibility": [
+            "recognizable-subject"
+          ],
+          "attachment": null
+        },
+        {
+          "composition": "space-2",
+          "layer": "i4:tree:broadleaf:2",
+          "entities": [
+            "i4"
+          ],
+          "color": null,
+          "visibility": [
+            "semantic-subject"
+          ],
+          "attachment": null
+        },
+        {
+          "composition": "space-2",
+          "layer": "i2:bird::4",
+          "entities": [
+            "i2"
+          ],
+          "color": null,
+          "visibility": [
+            "recognizable-subject"
+          ],
+          "attachment": null
+        }
+      ],
+      "quantityChanges": 0,
+      "identityGroups": 0,
+      "aestheticAcceptance": "pending-user"
+    }
+  },
+  "renderability": {
+    "status": "ready",
+    "visibleScenery": true,
+    "visibleAbstract": true,
+    "gaps": []
+  },
+  "expression": {
+    "version": "shared-expression-1.1-source-bound",
+    "sourceContract": "expression-1.0",
+    "recommendation": "balanced",
+    "reason": "结合可画景物与抽象笔势",
+    "gaps": [],
+    "limitations": [
+      "景物过程当前影响抽象纹理；原生景物动作沿用场景能力，未支持的月下楼位移等仍不执行。",
+      "纹理、色层和观看扰动属于本地艺术选择，不改变语义成立状态"
+    ]
+  },
+  "notes": [
+    "三个表达倾向共享景物数量、空间、依托与主体身份；抽象笔触优先服从原景物区域和轮廓。",
+    "纯抽象或比喻句不因切换风景优先而补山水。",
+    "原句未明确月形，暂用弯月试画；可以手动切换。",
+    "乌：以通用写意鸟形表现，不细分物种。这是本地写意借形，保留原词义。",
+    "乌可由鸣声借鸟形联想，不把绘出的姿态当作原文已明确看见的动作。",
+    "霜只显示露珠或霜层的局部笔触，不自动补草叶、枝条或地面；具体载体附着尚未从诗句自动匹配。",
+    "江枫：按本次解读的江边枫树借阔叶树形；江枫亦有其他解释，保留待复核，不由江字补水。这是本地写意借形，保留原词义。",
+    "位置、大小、笔触与默认微动是本地试画选择；数量解释与本地显示数量分别记录。",
+    "江枫未明说精确数量，按模型的 cluster 群落解释选择本地显示密度。",
+    "霜的数量解释已保留，当前工具以整体图层表现，内部笔触尚未按数量逐个适配。",
+    "未明说的群落数量、疏密、近中远层次与变体均为本地构图选择；种类可按已声明的写意画法概括，不把铺展词换算成精确物体数量。",
+    "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。",
+    "通用场景层先组织地面、水域、群落和主体，再比较三个布局的依托、相对位置、尺度与遮挡；检查通过不代表审美已通过。",
+    "语义保留：scene.supports[1]，该主体尚无水上姿态，未凭空添加船只",
+    "语义保留：scene.actions[0].state，当前工具尚无对应动作状态",
+    "整体场景、主次、远近、依托和支持的动作状态来自本次模型解释；具体布局、颜色和时钟倍率由本地视觉策略选择。",
+    "动作动画表现受支持的主导状态与有限观看运动；先后事件与完整因果尚未编排。",
+    "动态程度与默认轻风是可调整的观看选择；不改变数量、主次或原文动作判断。人物保持点景写意，不新增人物步态。",
+    "显示检查覆盖实例尺度、鸟群分离与空中落点；不保证笔触未被遮挡，也不代替实际观看。竹林默认成组拖动，其余单独拖动；Shift 可拖动同层整组。"
+  ],
+  "aestheticAcceptance": "pending-user"
+}

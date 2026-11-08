@@ -1,0 +1,113 @@
+[
+  {
+    "id": "f01",
+    "poem": "孤山寺北贾亭西，水面初平云脚低。",
+    "author": "白居易",
+    "title": "钱塘湖春行",
+    "url": "https://www.gushiwen.cn/mingju/juv_2368a60dad6f.aspx",
+    "adviceUsage": {
+      "completion_tokens": 600,
+      "prompt_tokens": 2838,
+      "total_tokens": 3438,
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "adviceFinish": "stop",
+    "adviceRaw": "{\n  \"choices\": [\n    {\n    \"entity\": \"i1\",\n    \"tool_id\": \"dwelling\",\n    \"fit\": \"approximate\",\n    \"reason\": \"目录中 dwelling 的寺院变体可表现低层屋顶、疏窗和门洞的寺院建筑，但不对应具体历史建筑，也不区分朝代，因此只能近似表现孤山寺这一地点。\",\n    \"evidence\": [\"孤山寺北贾亭西\"]\n    },\n    {\n    \"entity\": \"i2\",\n    \"tool_id\": \"pavilion\",\n    \"fit\": \"direct\",\n    \"reason\": \"pavilion 提供固定一座空亭，可表现贾亭这一亭式建筑；不自动添人，符合原文未提及人物的情况。\",\n    \"evidence\": [\"孤山寺北贾亭西\"]\n    },\n    {\n    \"entity\": \"i3\",\n    \"tool_id\": \"water\",\n    \"fit\": \"approximate\",\n    \"reason\": \"water 提供水纹和场景布局配合，可表现水面；但目录说明不提供真实流体模拟，因此“初平”的刚涨平状态只能近似示意。\",\n    \"evidence\": [\"水面初平云脚低\"]\n    },\n    {\n    \"entity\": \"i4\",\n    \"tool_id\": \"cloud\",\n    \"fit\": \"approximate\",\n    \"reason\": \"cloud 提供固定 3 团云，可表现云层；但“云脚低”是低垂贴近水面的描写，目录未说明云团可自动贴近水面或与水面相接，因此只能近似表现低垂感。\",\n    \"evidence\": [\"水面初平云脚低\"]\n    }\n  ],\n  \"composition\": \"画面以水面和低垂云层为主体，水面横向展开，云层位于水面上方并呈现低垂之势；孤山寺与贾亭作为岸上或水边的方位参照，分别以寺院和空亭的简略形体布置，不添加原文未提及的人物、舟船或具体山形。\",\n  \"expected\": \"可表现水面波纹、低垂云团、寺院与空亭的概括形体，以及开阔平静的氛围；但“水面初平”的刚涨平状态和“云脚低”贴近水面的程度只能近似示意，无法精确还原。\",\n  \"uncertainties\": [\n    \"“孤山寺北贾亭西”只给出方位参照，未明示观察者所在位置，寺院与亭的具体相对距离和朝向无法确定。\",\n    \"“云脚低”是云层低垂的描写，未说明云与水面是否相接，云团贴近水面的程度无法精确表现。\",\n    \"孤山寺与贾亭均为具体历史地点，目录中的寺院和亭为写意形体，不对应具体历史建筑。\"\n  ]\n}",
+    "adviceValidation": {
+      "valid": true,
+      "errors": []
+    },
+    "recordId": "2026-11-08T10-38-28-671Z-fd2728aa",
+    "semanticUsage": {
+      "completion_tokens": 702,
+      "prompt_tokens": 6064,
+      "total_tokens": 6766,
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "prompt_tokens_details": {
+        "cached_tokens": 6016
+      }
+    },
+    "semanticStatus": "partial"
+  },
+  {
+    "id": "f02",
+    "poem": "日暮苍山远，天寒白屋贫。",
+    "author": "刘长卿",
+    "title": "逢雪宿芙蓉山主人",
+    "url": "https://www.gushiwen.cn/mingju/juv_3d8f40997a53.aspx",
+    "adviceUsage": {
+      "completion_tokens": 497,
+      "prompt_tokens": 2806,
+      "total_tokens": 3303,
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "adviceFinish": "stop",
+    "adviceRaw": "{\n  \"choices\": [\n    {\n    \"entity\": \"i1\",\n    \"tool_id\": \"landscape\",\n    \"fit\": \"approximate\",\n    \"reason\": \"山水场景工具提供“日光”变体，可表现暮色光照，但无法精确呈现“日暮”的完整时间氛围。\",\n    \"evidence\": [\"日暮苍山远\"]\n  },\n  {\n    \"entity\": \"i2\",\n    \"tool_id\": \"landscape\",\n    \"fit\": \"approximate\",\n    \"reason\": \"山水场景工具提供“层山”变体，可表现苍山形态，但“远”的距离感需依赖构图与层次，工具本身不保证。\",\n    \"evidence\": [\"日暮苍山远\"]\n  },\n  {\n    \"entity\": \"i3\",\n    \"tool_id\": \"landscape\",\n    \"fit\": \"approximate\",\n    \"reason\": \"山水场景工具提供“天空”变体，可表现天，但“寒”是温度感受，工具无法直接表现。\",\n    \"evidence\": [\"天寒白屋贫\"]\n  },\n  {\n    \"entity\": \"i4\",\n    \"tool_id\": \"dwelling\",\n    \"fit\": \"approximate\",\n    \"reason\": \"房舍工具可绘制低层屋顶、疏窗和门洞，近似“白屋”，但“白”色与“贫”的简陋感需依赖配色与简化处理，工具不自动保证。\",\n    \"evidence\": [\"天寒白屋贫\"]\n  }\n  ],\n  \"composition\": \"画面以暮色天空为背景，远处层山隐约，近处一座简朴房舍孤立于地面，整体呈现清冷寂寥的山水场景。\",\n  \"expected\": \"可表现暮色、远山、天空和房舍的基本形态，但“远”的距离感、“寒”的温度感、“贫”的简陋感以及“白”色均需依赖构图与配色近似，无法精确还原。\",\n  \"uncertainties\": [\n    \"“远”是山距人远还是山色苍茫辽远，原文未明。\",\n    \"“贫”指白屋简陋清贫，还是诗人主观感受，原文未明。\",\n    \"“白屋”的“白”是颜色还是指简陋，原文未明。\"\n  ]\n}",
+    "adviceValidation": {
+      "valid": true,
+      "errors": []
+    },
+    "recordId": "2026-11-08T10-38-28-673Z-6f7ce397",
+    "semanticUsage": {
+      "completion_tokens": 673,
+      "prompt_tokens": 6061,
+      "total_tokens": 6734,
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "prompt_tokens_details": {
+        "cached_tokens": 6016
+      }
+    },
+    "semanticStatus": "partial"
+  },
+  {
+    "id": "f03",
+    "poem": "梅子黄时日日晴，小溪泛尽却山行。",
+    "author": "曾几",
+    "title": "三衢道中",
+    "url": "https://m.gushiwen.cn/mingju/juv_5eaf16d17251.aspx",
+    "adviceUsage": {
+      "completion_tokens": 460,
+      "prompt_tokens": 2767,
+      "total_tokens": 3227,
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "adviceFinish": "stop",
+    "adviceRaw": "{\"choices\":[{\"entity\":\"i1\",\"tool_id\":\"plum-branch\",\"fit\":\"approximate\",\"reason\":\"目录中梅枝为风格化梅枝，花与花苞附于枝上，可近似表现“梅子”所属的梅树局部；但工具描述的是梅枝而非梅子果实，且无整树，故为近似而非直接。\",\"evidence\":[\"梅子黄时日日晴\"]},{\"entity\":\"i2\",\"tool_id\":\"water\",\"fit\":\"approximate\",\"reason\":\"水工具提供水纹与水面布局，可近似表现小溪的水面；但工具不提供真实流体模拟，也不保证“泛尽”这一行程终点的状态。\",\"evidence\":[\"小溪泛尽却山行\"]},{\"entity\":\"i3\",\"tool_id\":\"landscape\",\"fit\":\"direct\",\"reason\":\"山水场景工具包含山、岸、地面、小径等概括形态，可表现“山”作为山间环境；须分别选择，不能据此补造实景。\",\"evidence\":[\"小溪泛尽却山行\"]}],\"composition\":\"画面以山间环境为背景，山体与山路构成行旅空间；小溪水面作为前景或中景的水纹区域，与山径相接；梅枝作为近景点缀，提示梅子黄熟的季节。原文未明说乘舟者与步行者，故不添人物；不画舟、亭、房舍等未出现物象。\",\"expected\":\"可表现晴日山行、溪水与梅枝的季节氛围；但“梅子”果实本身、小溪“泛尽”的行程终点、以及“山行”是步行还是泛指山间行进，均无法由现有工具确证或完整呈现。\",\"uncertainties\":[\"“泛尽”的主语未明说，可能是乘舟者，也可能是行程本身，画面不添人物或舟。\",\"“山行”是步行还是泛指在山间行进，原文未明，工具无法表现具体行进方式。\",\"梅枝工具为风格化梅枝，不能确证为梅子果实或整株梅树。\",\"水工具不提供真实流体模拟，无法表现“泛尽”的终点状态。\"]}",
+    "adviceValidation": {
+      "valid": true,
+      "errors": []
+    },
+    "recordId": "2026-11-08T10-38-38-979Z-db051f5b",
+    "semanticUsage": {
+      "completion_tokens": 632,
+      "prompt_tokens": 6063,
+      "total_tokens": 6695,
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "prompt_tokens_details": {
+        "cached_tokens": 6016
+      }
+    },
+    "semanticStatus": "partial"
+  }
+]

@@ -1,0 +1,108 @@
+{
+  "id": "n02",
+  "poem": "竹喧归浣女，莲动下渔舟。",
+  "originalRecord": "2026-11-08T05-05-24-718Z-5a929a3b",
+  "baseline": [
+    {
+      "names": [
+        "浣女"
+      ],
+      "tool": "figure",
+      "entities": [
+        "i2"
+      ]
+    },
+    {
+      "names": [
+        "竹"
+      ],
+      "tool": "bamboo",
+      "entities": [
+        "i1"
+      ]
+    },
+    {
+      "names": [
+        "渔舟"
+      ],
+      "tool": "boat",
+      "entities": [
+        "i4"
+      ]
+    },
+    {
+      "names": [
+        "莲"
+      ],
+      "tool": "lotus",
+      "entities": [
+        "i3"
+      ]
+    }
+  ],
+  "baselineGaps": [],
+  "usage": {
+    "completion_tokens": 482,
+    "prompt_tokens": 2572,
+    "total_tokens": 3054,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  },
+  "finish": "stop",
+  "raw": "{\n  \"choices\": [\n    {\n    \"entity\": \"i1\",\n    \"tool_id\": \"bamboo\",\n    \"fit\": \"direct\",\n    \"reason\": \"目录有竹工具，可画竹竿、侧枝与窄叶，风可改变叶簇摆动，适合表现竹林。\",\n    \"evidence\": [\"竹喧归浣女\"]\n    },\n    {\n    \"entity\": \"i2\",\n    \"tool_id\": \"figure\",\n    \"fit\": \"approximate\",\n    \"reason\": \"目录有人意工具，可近似女性人影，但无行走步态与五官，不能表现“归”的行走动作。\",\n    \"evidence\": [\"竹喧归浣女\"]\n    },\n    {\n    \"entity\": \"i3\",\n    \"tool_id\": \"lotus\",\n    \"fit\": \"direct\",\n    \"reason\": \"目录有莲·荷叶工具，可画静态花、叶或花叶组合，适合表现莲叶。\",\n    \"evidence\": [\"莲动下渔舟\"]\n    },\n    {\n    \"entity\": \"i4\",\n    \"tool_id\": \"boat\",\n    \"fit\": \"approximate\",\n    \"reason\": \"目录有舟工具，可画船体，但不附加桅杆、帆、桨、人物，不能表现“下”的行驶动作。\",\n    \"evidence\": [\"莲动下渔舟\"]\n    }\n  ],\n  \"composition\": \"画面以水岸为背景，左侧或近处布置竹林，竹林旁有洗衣女子人影；右侧或远处水面布置莲叶与渔船，莲叶摇动，渔船浮于水面。整体呈现清新生动的场景。\",\n  \"expected\": \"可表现竹林、莲叶、人影和船体等静态元素，但无法表现“归”的行走动作、“下”的行驶动作以及“喧”“动”的声响与动态效果。\",\n  \"uncertainties\": [\n    \"“归”与“下”的方向是相对观察位置还是相对居所/下游，原文未明。\",\n    \"“竹喧”与“莲动”是人物、船只活动引起的结果，还是同时发生的景象，原文未明。\",\n    \"浣女与渔舟是否同处一个连续场景，原文未明。\"\n  ]\n}",
+  "advice": {
+    "choices": [
+      {
+        "entity": "i1",
+        "tool_id": "bamboo",
+        "fit": "direct",
+        "reason": "目录有竹工具，可画竹竿、侧枝与窄叶，风可改变叶簇摆动，适合表现竹林。",
+        "evidence": [
+          "竹喧归浣女"
+        ]
+      },
+      {
+        "entity": "i2",
+        "tool_id": "figure",
+        "fit": "approximate",
+        "reason": "目录有人意工具，可近似女性人影，但无行走步态与五官，不能表现“归”的行走动作。",
+        "evidence": [
+          "竹喧归浣女"
+        ]
+      },
+      {
+        "entity": "i3",
+        "tool_id": "lotus",
+        "fit": "direct",
+        "reason": "目录有莲·荷叶工具，可画静态花、叶或花叶组合，适合表现莲叶。",
+        "evidence": [
+          "莲动下渔舟"
+        ]
+      },
+      {
+        "entity": "i4",
+        "tool_id": "boat",
+        "fit": "approximate",
+        "reason": "目录有舟工具，可画船体，但不附加桅杆、帆、桨、人物，不能表现“下”的行驶动作。",
+        "evidence": [
+          "莲动下渔舟"
+        ]
+      }
+    ],
+    "composition": "画面以水岸为背景，左侧或近处布置竹林，竹林旁有洗衣女子人影；右侧或远处水面布置莲叶与渔船，莲叶摇动，渔船浮于水面。整体呈现清新生动的场景。",
+    "expected": "可表现竹林、莲叶、人影和船体等静态元素，但无法表现“归”的行走动作、“下”的行驶动作以及“喧”“动”的声响与动态效果。",
+    "uncertainties": [
+      "“归”与“下”的方向是相对观察位置还是相对居所/下游，原文未明。",
+      "“竹喧”与“莲动”是人物、船只活动引起的结果，还是同时发生的景象，原文未明。",
+      "浣女与渔舟是否同处一个连续场景，原文未明。"
+    ]
+  },
+  "validation": {
+    "valid": true,
+    "errors": []
+  }
+}

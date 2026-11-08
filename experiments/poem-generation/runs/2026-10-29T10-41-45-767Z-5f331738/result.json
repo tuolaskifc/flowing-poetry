@@ -1,0 +1,27 @@
+{
+  "id": "2026-10-29T10-41-45-767Z-5f331738",
+  "fingerprint": "c7ddde8b469b6bf9a3ecb177c32fcad7ad6649c793cfc4b4fac52129c51b3d79",
+  "semanticFingerprint": "7fec91f2ecf44aea1154fbba14bc8703fd4bd6b44fa26dba813a6955968f0d5b",
+  "poem": "无边落木萧萧下，不尽长江滚滚来。",
+  "source": null,
+  "mode": "expression",
+  "model": "DeepSeek-V4.1-Flash",
+  "started_at": "2026-10-29T10:41:45.768Z",
+  "cached": false,
+  "error": "fetch failed",
+  "validation": {
+    "valid": false,
+    "errors": [
+      "fetch failed"
+    ],
+    "warnings": [],
+    "review_required": true
+  },
+  "delivery": {
+    "status": "failed",
+    "retryable": true,
+    "reason": "connection-or-format",
+    "message": "这次分析未能完整返回，尚未生成本句画面。"
+  },
+  "elapsed_seconds": 0
+}

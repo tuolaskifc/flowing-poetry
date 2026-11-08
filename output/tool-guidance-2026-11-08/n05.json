@@ -1,0 +1,110 @@
+{
+  "id": "n05",
+  "poem": "黄梅时节家家雨，青草池塘处处蛙。",
+  "originalRecord": "2026-11-08T05-05-38-925Z-8534b6aa",
+  "baseline": [
+    {
+      "names": [
+        "池塘"
+      ],
+      "tool": "water",
+      "entities": [
+        "i3"
+      ]
+    },
+    {
+      "names": [
+        "青草"
+      ],
+      "tool": "grass",
+      "entities": [
+        "i2"
+      ]
+    },
+    {
+      "names": [
+        "雨"
+      ],
+      "tool": "rain",
+      "entities": [
+        "i1"
+      ]
+    }
+  ],
+  "baselineGaps": [
+    {
+      "id": "i4",
+      "label": "蛙",
+      "reason": "该意象尚无合适的写意画法"
+    }
+  ],
+  "usage": {
+    "completion_tokens": 501,
+    "prompt_tokens": 2645,
+    "total_tokens": 3146,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  },
+  "finish": "stop",
+  "raw": "{\n  \"choices\": [\n    {\n    \"entity\": \"已有i1\",\n    \"tool_id\": \"rain\",\n    \"fit\": \"approximate\",\n    \"reason\": \"工具可画固定雨线，但原文“家家雨”是范围性概括，无法确定具体户数与雨量，且工具尚未加入积水或涟漪。\",\n    \"evidence\": [\"黄梅时节家家雨\"]\n    },\n    {\n    \"entity\": \"已有i2\",\n    \"tool_id\": \"grass\",\n    \"fit\": \"approximate\",\n    \"reason\": \"工具可画多簇草叶，但原文“青草”为范围性概括，无法确定具体簇数，且工具默认9簇、每簇6片草叶，与“处处”的无限延伸有差距。\",\n    \"evidence\": [\"青草池塘处处蛙\"]\n    },\n    {\n    \"entity\": \"已有i3\",\n    \"tool_id\": \"water\",\n    \"fit\": \"approximate\",\n    \"reason\": \"工具可画水纹，但原文“池塘”是具体地点，工具不提供真实流体模拟，且需配合场景布局。\",\n    \"evidence\": [\"青草池塘处处蛙\"]\n    },\n    {\n    \"entity\": \"已有i4\",\n    \"tool_id\": null,\n    \"fit\": \"unavailable\",\n    \"reason\": \"目录中没有专门画蛙的工具；通用鸟意工具不能替代蛙，且原文“处处蛙”为范围性概括，无法确定具体数量。\",\n    \"evidence\": [\"青草池塘处处蛙\"]\n    }\n  ],\n  \"composition\": \"画面以黄梅时节的雨景为背景，雨线笼罩家家户户；前景或中景为青草与池塘，草簇生长在池塘边，蛙声从池塘周围处处响起，但蛙本身因无工具而缺席。\",\n  \"expected\": \"可表现雨线、青草、池塘水纹的概括形态，但无法画出蛙的具体形象，且“家家”“处处”的范围性概括只能以有限元素近似示意。\",\n  \"uncertainties\": [\n    \"“家家”“处处”为范围性概括，无法确定具体户数与蛙的数量。\",\n    \"蛙无对应工具，无法画出原句中的蛙。\",\n    \"雨、草、池塘的具体布局与数量关系需依赖场景组织，工具能力有限。\"\n  ]\n}",
+  "advice": {
+    "choices": [
+      {
+        "entity": "已有i1",
+        "tool_id": "rain",
+        "fit": "approximate",
+        "reason": "工具可画固定雨线，但原文“家家雨”是范围性概括，无法确定具体户数与雨量，且工具尚未加入积水或涟漪。",
+        "evidence": [
+          "黄梅时节家家雨"
+        ]
+      },
+      {
+        "entity": "已有i2",
+        "tool_id": "grass",
+        "fit": "approximate",
+        "reason": "工具可画多簇草叶，但原文“青草”为范围性概括，无法确定具体簇数，且工具默认9簇、每簇6片草叶，与“处处”的无限延伸有差距。",
+        "evidence": [
+          "青草池塘处处蛙"
+        ]
+      },
+      {
+        "entity": "已有i3",
+        "tool_id": "water",
+        "fit": "approximate",
+        "reason": "工具可画水纹，但原文“池塘”是具体地点，工具不提供真实流体模拟，且需配合场景布局。",
+        "evidence": [
+          "青草池塘处处蛙"
+        ]
+      },
+      {
+        "entity": "已有i4",
+        "tool_id": null,
+        "fit": "unavailable",
+        "reason": "目录中没有专门画蛙的工具；通用鸟意工具不能替代蛙，且原文“处处蛙”为范围性概括，无法确定具体数量。",
+        "evidence": [
+          "青草池塘处处蛙"
+        ]
+      }
+    ],
+    "composition": "画面以黄梅时节的雨景为背景，雨线笼罩家家户户；前景或中景为青草与池塘，草簇生长在池塘边，蛙声从池塘周围处处响起，但蛙本身因无工具而缺席。",
+    "expected": "可表现雨线、青草、池塘水纹的概括形态，但无法画出蛙的具体形象，且“家家”“处处”的范围性概括只能以有限元素近似示意。",
+    "uncertainties": [
+      "“家家”“处处”为范围性概括，无法确定具体户数与蛙的数量。",
+      "蛙无对应工具，无法画出原句中的蛙。",
+      "雨、草、池塘的具体布局与数量关系需依赖场景组织，工具能力有限。"
+    ]
+  },
+  "validation": {
+    "valid": false,
+    "errors": [
+      "choices[0] 主体不存在或重复",
+      "choices[1] 主体不存在或重复",
+      "choices[2] 主体不存在或重复",
+      "choices[3] 主体不存在或重复"
+    ]
+  }
+}

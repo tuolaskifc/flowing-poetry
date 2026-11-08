@@ -1,0 +1,356 @@
+{
+  "scope": "same-five-existing-analyses-tool-advice-only",
+  "calls": 3,
+  "noAutomaticRetry": true,
+  "rows": [
+    {
+      "id": "n03",
+      "poem": "荷尽已无擎雨盖，菊残犹有傲霜枝。",
+      "originalRecord": "2026-11-08T05-05-24-719Z-e21da934",
+      "baseline": [
+        {
+          "names": [
+            "菊"
+          ],
+          "tool": "flower-forms",
+          "entities": [
+            "i3"
+          ]
+        },
+        {
+          "names": [
+            "傲霜枝"
+          ],
+          "tool": "surface-weather",
+          "entities": [
+            "i4"
+          ]
+        },
+        {
+          "names": [
+            "霜"
+          ],
+          "tool": "surface-weather",
+          "entities": [
+            "i5"
+          ]
+        }
+      ],
+      "baselineGaps": [],
+      "usage": {
+        "completion_tokens": 565,
+        "prompt_tokens": 3119,
+        "total_tokens": 3684,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "finish": "stop",
+      "raw": "{\n  \"choices\": [\n    {\n    \"entity\": \"i1\",\n    \"tool_id\": null,\n    \"fit\": \"not_drawn\",\n    \"reason\": \"荷花已凋尽，属缺席状态，不应画成实物。\",\n    \"evidence\": [\"荷尽已无擎雨盖\"]\n    },\n    {\n    \"entity\": \"i2\",\n    \"tool_id\": null,\n    \"fit\": \"not_drawn\",\n    \"reason\": \"荷叶已不存在，属缺席状态，不应画成实物。\",\n    \"evidence\": [\"荷尽已无擎雨盖\"]\n    },\n    {\n    \"entity\": \"i3\",\n    \"tool_id\": \"flower-forms\",\n    \"fit\": \"approximate\",\n    \"reason\": \"菊形或带叶菊丛可近似表现菊花，但工具明确不支持残菊，无法呈现“菊残”的凋败状态。\",\n    \"evidence\": [\"菊残犹有傲霜枝\"]\n    },\n    {\n    \"entity\": \"i4\",\n    \"tool_id\": null,\n    \"fit\": \"unavailable\",\n    \"reason\": \"目录中无菊枝专用工具；梅枝为不同植物，通用树不辨认品种与残败状态，无法可靠画出“傲霜枝”。\",\n    \"evidence\": [\"菊残犹有傲霜枝\"]\n    },\n    {\n    \"entity\": \"i5\",\n    \"tool_id\": \"surface-weather\",\n    \"fit\": \"approximate\",\n    \"reason\": \"露霜附着可表现霜的局部笔触，但工具说明其不是枝条、也不表示霜在空中飘落，只能近似附着于枝上。\",\n    \"evidence\": [\"菊残犹有傲霜枝\"]\n    }\n  ],\n  \"composition\": \"画面以深秋残景为基调：荷花与荷叶已尽，不出现；菊花残败，菊枝挺立，霜寒附着于枝上。整体清冷萧瑟，突出菊枝在霜寒中犹存的姿态。\",\n  \"expected\": \"可近似表现残菊与霜寒附着，但无法画出凋尽的荷花荷叶，也无法可靠表现菊枝的残败挺立状态。\",\n  \"uncertainties\": [\n    \"“擎雨盖”指荷叶为常见解读，但原文未明说，故单列为荷叶实体。\",\n    \"“傲霜枝”可理解为菊枝耐寒挺立，但原文未明说其具体姿态。\",\n    \"工具目录中无菊枝专用工具，通用树与梅枝均不能替代。\",\n    \"花冠·菊丛工具明确不支持残菊，无法呈现“菊残”状态。\"\n  ]\n}",
+      "advice": {
+        "choices": [
+          {
+            "entity": "i1",
+            "tool_id": null,
+            "fit": "not_drawn",
+            "reason": "荷花已凋尽，属缺席状态，不应画成实物。",
+            "evidence": [
+              "荷尽已无擎雨盖"
+            ]
+          },
+          {
+            "entity": "i2",
+            "tool_id": null,
+            "fit": "not_drawn",
+            "reason": "荷叶已不存在，属缺席状态，不应画成实物。",
+            "evidence": [
+              "荷尽已无擎雨盖"
+            ]
+          },
+          {
+            "entity": "i3",
+            "tool_id": "flower-forms",
+            "fit": "approximate",
+            "reason": "菊形或带叶菊丛可近似表现菊花，但工具明确不支持残菊，无法呈现“菊残”的凋败状态。",
+            "evidence": [
+              "菊残犹有傲霜枝"
+            ]
+          },
+          {
+            "entity": "i4",
+            "tool_id": null,
+            "fit": "unavailable",
+            "reason": "目录中无菊枝专用工具；梅枝为不同植物，通用树不辨认品种与残败状态，无法可靠画出“傲霜枝”。",
+            "evidence": [
+              "菊残犹有傲霜枝"
+            ]
+          },
+          {
+            "entity": "i5",
+            "tool_id": "surface-weather",
+            "fit": "approximate",
+            "reason": "露霜附着可表现霜的局部笔触，但工具说明其不是枝条、也不表示霜在空中飘落，只能近似附着于枝上。",
+            "evidence": [
+              "菊残犹有傲霜枝"
+            ]
+          }
+        ],
+        "composition": "画面以深秋残景为基调：荷花与荷叶已尽，不出现；菊花残败，菊枝挺立，霜寒附着于枝上。整体清冷萧瑟，突出菊枝在霜寒中犹存的姿态。",
+        "expected": "可近似表现残菊与霜寒附着，但无法画出凋尽的荷花荷叶，也无法可靠表现菊枝的残败挺立状态。",
+        "uncertainties": [
+          "“擎雨盖”指荷叶为常见解读，但原文未明说，故单列为荷叶实体。",
+          "“傲霜枝”可理解为菊枝耐寒挺立，但原文未明说其具体姿态。",
+          "工具目录中无菊枝专用工具，通用树与梅枝均不能替代。",
+          "花冠·菊丛工具明确不支持残菊，无法呈现“菊残”状态。"
+        ]
+      },
+      "validation": {
+        "valid": true,
+        "errors": []
+      }
+    },
+    {
+      "id": "n04",
+      "poem": "月落乌啼霜满天，江枫渔火对愁眠。",
+      "originalRecord": "2026-11-08T05-05-31-253Z-ec916b77",
+      "baseline": [
+        {
+          "names": [
+            "渔火"
+          ],
+          "tool": "landscape",
+          "entities": [
+            "i5"
+          ]
+        },
+        {
+          "names": [
+            "月"
+          ],
+          "tool": "moon",
+          "entities": [
+            "i1"
+          ]
+        },
+        {
+          "names": [
+            "江枫"
+          ],
+          "tool": "water",
+          "entities": [
+            "i4"
+          ]
+        },
+        {
+          "names": [
+            "霜"
+          ],
+          "tool": "surface-weather",
+          "entities": [
+            "i3"
+          ]
+        },
+        {
+          "names": [
+            "乌"
+          ],
+          "tool": "bird",
+          "entities": [
+            "i2"
+          ]
+        }
+      ],
+      "baselineGaps": [],
+      "usage": {
+        "completion_tokens": 589,
+        "prompt_tokens": 3386,
+        "total_tokens": 3975,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "finish": "stop",
+      "raw": "{\n  \"choices\": [\n    {\n    \"entity\": \"i1\",\n    \"tool_id\": \"moon\",\n    \"fit\": \"approximate\",\n    \"reason\": \"月形工具可画月亮，但原句为“月落”的消退过程，工具未实现落下或消退状态，只能近似表现月形。\",\n    \"evidence\": [\"月落乌啼霜满天\"]\n  },\n  {\n    \"entity\": \"i2\",\n    \"tool_id\": \"bird\",\n    \"fit\": \"approximate\",\n    \"reason\": \"通用鸟意可近似乌鸦，但工具不区分鸟种，且原句“乌啼”为听觉动作，工具不表现鸣叫。\",\n    \"evidence\": [\"月落乌啼霜满天\"]\n  },\n  {\n    \"entity\": \"i3\",\n    \"tool_id\": \"grass\",\n    \"fit\": \"approximate\",\n    \"reason\": \"草·露·霜工具含霜线，但霜线附于草叶，不在空中降落，无法表现“霜满天”的弥漫状态。\",\n    \"evidence\": [\"霜满天\"]\n  },\n  {\n    \"entity\": \"i4\",\n    \"tool_id\": \"tree\",\n    \"fit\": \"approximate\",\n    \"reason\": \"树工具可近似枫树形态，但不辨认具体品种，无法确认为枫树。\",\n    \"evidence\": [\"江枫渔火对愁眠\"]\n  },\n  {\n    \"entity\": \"i5\",\n    \"tool_id\": \"landscape\",\n    \"fit\": \"approximate\",\n    \"reason\": \"山水场景工具含“灯火”变体，可近似渔火，但工具不自动关联渔船或水面。\",\n    \"evidence\": [\"江枫渔火对愁眠\"]\n  },\n  {\n    \"entity\": \"i6\",\n    \"tool_id\": null,\n    \"fit\": \"not_drawn\",\n    \"reason\": \"愁绪为抽象情感，无对应工具，不可强行画成实物。\",\n    \"evidence\": [\"江枫渔火对愁眠\"]\n  }\n  ],\n  \"composition\": \"画面以江边夜景为背景，远处月落、乌鸦啼鸣、霜气弥漫；中景江边枫树与渔火相对，愁绪贯穿其中。\",\n  \"expected\": \"可表现月、鸟、霜、树、灯火等元素，但月落、乌啼、霜满天、愁绪等动态或抽象状态难以完全呈现。\",\n  \"uncertainties\": [\n    \"“对愁眠”的主语未明，可能是诗人或泛指愁眠之人。\",\n    \"“江枫”可指江边枫树，也可能与渔火并列为江桥、枫桥的省称，此处按枫树理解。\"\n  ]\n}",
+      "advice": {
+        "choices": [
+          {
+            "entity": "i1",
+            "tool_id": "moon",
+            "fit": "approximate",
+            "reason": "月形工具可画月亮，但原句为“月落”的消退过程，工具未实现落下或消退状态，只能近似表现月形。",
+            "evidence": [
+              "月落乌啼霜满天"
+            ]
+          },
+          {
+            "entity": "i2",
+            "tool_id": "bird",
+            "fit": "approximate",
+            "reason": "通用鸟意可近似乌鸦，但工具不区分鸟种，且原句“乌啼”为听觉动作，工具不表现鸣叫。",
+            "evidence": [
+              "月落乌啼霜满天"
+            ]
+          },
+          {
+            "entity": "i3",
+            "tool_id": "grass",
+            "fit": "approximate",
+            "reason": "草·露·霜工具含霜线，但霜线附于草叶，不在空中降落，无法表现“霜满天”的弥漫状态。",
+            "evidence": [
+              "霜满天"
+            ]
+          },
+          {
+            "entity": "i4",
+            "tool_id": "tree",
+            "fit": "approximate",
+            "reason": "树工具可近似枫树形态，但不辨认具体品种，无法确认为枫树。",
+            "evidence": [
+              "江枫渔火对愁眠"
+            ]
+          },
+          {
+            "entity": "i5",
+            "tool_id": "landscape",
+            "fit": "approximate",
+            "reason": "山水场景工具含“灯火”变体，可近似渔火，但工具不自动关联渔船或水面。",
+            "evidence": [
+              "江枫渔火对愁眠"
+            ]
+          },
+          {
+            "entity": "i6",
+            "tool_id": null,
+            "fit": "not_drawn",
+            "reason": "愁绪为抽象情感，无对应工具，不可强行画成实物。",
+            "evidence": [
+              "江枫渔火对愁眠"
+            ]
+          }
+        ],
+        "composition": "画面以江边夜景为背景，远处月落、乌鸦啼鸣、霜气弥漫；中景江边枫树与渔火相对，愁绪贯穿其中。",
+        "expected": "可表现月、鸟、霜、树、灯火等元素，但月落、乌啼、霜满天、愁绪等动态或抽象状态难以完全呈现。",
+        "uncertainties": [
+          "“对愁眠”的主语未明，可能是诗人或泛指愁眠之人。",
+          "“江枫”可指江边枫树，也可能与渔火并列为江桥、枫桥的省称，此处按枫树理解。"
+        ]
+      },
+      "validation": {
+        "valid": true,
+        "errors": []
+      }
+    },
+    {
+      "id": "n05",
+      "poem": "黄梅时节家家雨，青草池塘处处蛙。",
+      "originalRecord": "2026-11-08T05-05-38-925Z-8534b6aa",
+      "baseline": [
+        {
+          "names": [
+            "池塘"
+          ],
+          "tool": "water",
+          "entities": [
+            "i3"
+          ]
+        },
+        {
+          "names": [
+            "青草"
+          ],
+          "tool": "grass",
+          "entities": [
+            "i2"
+          ]
+        },
+        {
+          "names": [
+            "雨"
+          ],
+          "tool": "rain",
+          "entities": [
+            "i1"
+          ]
+        }
+      ],
+      "baselineGaps": [
+        {
+          "id": "i4",
+          "label": "蛙",
+          "reason": "该意象尚无合适的写意画法"
+        }
+      ],
+      "usage": {
+        "completion_tokens": 469,
+        "prompt_tokens": 3050,
+        "total_tokens": 3519,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "finish": "stop",
+      "raw": "{\"choices\":[{\"entity\":\"i1\",\"tool_id\":\"rain\",\"fit\":\"direct\",\"reason\":\"雨为持续、范围广的降雨，工具可画固定雨线并以疏密表现浓淡，能对应“家家雨”的连绵感；但工具不提供积水或涟漪，无法表现雨落地后的状态。\",\"evidence\":[\"黄梅时节家家雨\"]},{\"entity\":\"i2\",\"tool_id\":\"grass\",\"fit\":\"approximate\",\"reason\":\"青草为多簇草本，草叶簇可近似表现；但工具默认9簇、每簇6片，不能保证“处处”的无限延展，也不区分草种。\",\"evidence\":[\"青草池塘处处蛙\"]},{\"entity\":\"i3\",\"tool_id\":\"water\",\"fit\":\"approximate\",\"reason\":\"池塘为水体，水纹可示意水面；但工具只提供水纹，不构成池塘边界、岸线或具体池形，需配合场景布局。\",\"evidence\":[\"青草池塘处处蛙\"]},{\"entity\":\"i4\",\"tool_id\":null,\"fit\":\"not_drawn\",\"reason\":\"目录中没有蛙或两栖类工具，无法画出“处处蛙”的实体；鸟意等工具不可替代，不能把蛙声强行画成可见鸟形。\",\"evidence\":[\"青草池塘处处蛙\"]}],\"composition\":\"画面以雨幕为整体环境，雨线覆盖全幅；下方或中景布置水纹示意池塘，池边与水面附近以草叶簇表现青草；蛙不画出，仅以草与水面的散布暗示其所在环境。不添加原文没有的人物、建筑、舟、月等物象。\",\"expected\":\"可表现雨线连绵、草簇散布、水纹示意池塘的湿润繁密氛围；蛙的实体与“处处”的声景无法直接画出，只能通过环境暗示。\",\"uncertainties\":[\"“家家”“处处”为范围性概括，无法确定具体户数与蛙的数量。\",\"蛙在目录中无对应工具，不能以其他生物替代。\",\"池塘的具体形状、大小与岸线未在原文中明确，水纹工具不提供真实池形。\",\"青草工具为固定簇数，不能保证覆盖“处处”的无限范围。\"]}",
+      "advice": {
+        "choices": [
+          {
+            "entity": "i1",
+            "tool_id": "rain",
+            "fit": "direct",
+            "reason": "雨为持续、范围广的降雨，工具可画固定雨线并以疏密表现浓淡，能对应“家家雨”的连绵感；但工具不提供积水或涟漪，无法表现雨落地后的状态。",
+            "evidence": [
+              "黄梅时节家家雨"
+            ]
+          },
+          {
+            "entity": "i2",
+            "tool_id": "grass",
+            "fit": "approximate",
+            "reason": "青草为多簇草本，草叶簇可近似表现；但工具默认9簇、每簇6片，不能保证“处处”的无限延展，也不区分草种。",
+            "evidence": [
+              "青草池塘处处蛙"
+            ]
+          },
+          {
+            "entity": "i3",
+            "tool_id": "water",
+            "fit": "approximate",
+            "reason": "池塘为水体，水纹可示意水面；但工具只提供水纹，不构成池塘边界、岸线或具体池形，需配合场景布局。",
+            "evidence": [
+              "青草池塘处处蛙"
+            ]
+          },
+          {
+            "entity": "i4",
+            "tool_id": null,
+            "fit": "not_drawn",
+            "reason": "目录中没有蛙或两栖类工具，无法画出“处处蛙”的实体；鸟意等工具不可替代，不能把蛙声强行画成可见鸟形。",
+            "evidence": [
+              "青草池塘处处蛙"
+            ]
+          }
+        ],
+        "composition": "画面以雨幕为整体环境，雨线覆盖全幅；下方或中景布置水纹示意池塘，池边与水面附近以草叶簇表现青草；蛙不画出，仅以草与水面的散布暗示其所在环境。不添加原文没有的人物、建筑、舟、月等物象。",
+        "expected": "可表现雨线连绵、草簇散布、水纹示意池塘的湿润繁密氛围；蛙的实体与“处处”的声景无法直接画出，只能通过环境暗示。",
+        "uncertainties": [
+          "“家家”“处处”为范围性概括，无法确定具体户数与蛙的数量。",
+          "蛙在目录中无对应工具，不能以其他生物替代。",
+          "池塘的具体形状、大小与岸线未在原文中明确，水纹工具不提供真实池形。",
+          "青草工具为固定簇数，不能保证覆盖“处处”的无限范围。"
+        ]
+      },
+      "validation": {
+        "valid": true,
+        "errors": []
+      }
+    }
+  ]
+}

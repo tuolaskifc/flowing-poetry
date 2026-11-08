@@ -1,0 +1,329 @@
+{
+  "id": "2026-10-29T10-43-53-565Z-59fe916a",
+  "fingerprint": "29358366386cc45ad05d47e511830c7b3b45af823678dbf3d9e1d12be1154725",
+  "semanticFingerprint": "4ff6fcc9fd6f3ea5f9141ffdf87a7443dd1ad3233dcd93c38c97963731fb19b5",
+  "poem": "不见去年人，泪湿春衫袖。",
+  "source": null,
+  "mode": "expression",
+  "model": "DeepSeek-V4.1-Flash",
+  "started_at": "2026-10-29T10:43:53.565Z",
+  "cached": false,
+  "http_status": 200,
+  "usage": {
+    "completion_tokens": 644,
+    "prompt_tokens": 6059,
+    "total_tokens": 6703,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 6016
+    }
+  },
+  "finish_reason": "stop",
+  "analysis": {
+    "schema_version": "expression-1.0",
+    "poem": "不见去年人，泪湿春衫袖。",
+    "reading": "去年之人已不可见，泪落沾湿春衫衣袖，写出去年与今朝的落差与伤怀。",
+    "entities": [
+      {
+        "id": "i1",
+        "mentions": [
+          "去年人"
+        ],
+        "concept": "去年所遇之人",
+        "kind": "person",
+        "role": "scene",
+        "presence": "absent",
+        "evidence": [
+          "不见去年人"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i2",
+        "mentions": [
+          "泪"
+        ],
+        "concept": "泪水",
+        "kind": "object",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "泪湿春衫袖"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i3",
+        "mentions": [
+          "春衫袖"
+        ],
+        "concept": "春衫的衣袖",
+        "kind": "object",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "泪湿春衫袖"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      }
+    ],
+    "relations": [],
+    "atmosphere": {
+      "labels": [
+        "伤怀",
+        "失落"
+      ],
+      "valence": "negative",
+      "energy": "low",
+      "tension": "medium",
+      "openness": "unclear",
+      "evidence": [
+        "不见去年人",
+        "泪湿春衫袖"
+      ]
+    },
+    "time": {
+      "markers": [
+        {
+          "surface": "去年",
+          "meaning": "指已经过去的年份，与当下形成对照"
+        }
+      ],
+      "note": "去年之人已不可见，泪湿衣袖发生在当下，但原文未明说具体时刻。"
+    },
+    "uncertainties": [
+      "‘去年人’的具体身份与关系未明，只能确定是去年曾见之人。",
+      "‘不见’是主动寻访未遇还是对方已不在，原文未交代。"
+    ],
+    "spatial": [],
+    "scene": {
+      "setting": {
+        "kind": "unclear",
+        "basis": "inferred",
+        "evidence": [
+          "泪湿春衫袖"
+        ]
+      },
+      "groups": [
+        {
+          "members": [
+            "i2",
+            "i3"
+          ],
+          "role": "subject",
+          "pattern": "single",
+          "depth": "unspecified",
+          "basis": "inferred",
+          "evidence": [
+            "泪湿春衫袖"
+          ]
+        }
+      ],
+      "supports": [
+        {
+          "entity": "i2",
+          "surface": "vegetation",
+          "target": "i3",
+          "basis": "inferred",
+          "evidence": [
+            "泪湿春衫袖"
+          ]
+        }
+      ],
+      "actions": [],
+      "atmosphere": {
+        "visibility": "unclear",
+        "illumination": "unclear",
+        "basis": "inferred",
+        "evidence": []
+      }
+    },
+    "expression": {
+      "relations": [
+        {
+          "source": "i2",
+          "target": "i3",
+          "kind": "connect",
+          "modality": "asserted",
+          "basis": "explicit",
+          "evidence": [
+            "泪湿春衫袖"
+          ]
+        }
+      ],
+      "processes": [
+        {
+          "subject": "i1",
+          "kind": "fade",
+          "temporal": "already",
+          "modality": "asserted",
+          "basis": "explicit",
+          "evidence": [
+            "不见去年人"
+          ]
+        }
+      ]
+    }
+  },
+  "validation": {
+    "valid": true,
+    "errors": [],
+    "warnings": [
+      "模型保留了不确定性，需要审阅",
+      "scene.setting 为语义推断，绘画选择需与原文明示区分",
+      "scene.groups[0] 为语义推断，绘画选择需与原文明示区分",
+      "scene.supports[0] 为语义推断，绘画选择需与原文明示区分",
+      "scene.atmosphere 为语义推断，绘画选择需与原文明示区分"
+    ],
+    "review_required": true
+  },
+  "plan": {
+    "version": "shared-expression-1.1-source-bound",
+    "seed": 1409189096,
+    "poem": "不见去年人，泪湿春衫袖。",
+    "nodes": [
+      {
+        "id": "i1",
+        "label": "去年人",
+        "meaning": "去年所遇之人",
+        "kind": "concrete",
+        "contextOnly": false,
+        "mode": "gap"
+      },
+      {
+        "id": "i2",
+        "label": "泪",
+        "meaning": "泪水",
+        "kind": "concrete",
+        "contextOnly": false,
+        "mode": "present"
+      },
+      {
+        "id": "i3",
+        "label": "春衫袖",
+        "meaning": "春衫的衣袖",
+        "kind": "concrete",
+        "contextOnly": false,
+        "mode": "present"
+      }
+    ],
+    "relations": [
+      {
+        "source": "i2",
+        "target": "i3",
+        "kind": "connect",
+        "modality": "asserted",
+        "basis": "explicit",
+        "evidence": [
+          "泪湿春衫袖"
+        ]
+      }
+    ],
+    "processes": [
+      {
+        "subject": "i1",
+        "kind": "fade",
+        "temporal": "already",
+        "modality": "asserted",
+        "basis": "explicit",
+        "evidence": [
+          "不见去年人"
+        ]
+      }
+    ],
+    "omitted": [],
+    "atmosphere": {
+      "labels": [
+        "伤怀",
+        "失落"
+      ],
+      "valence": "negative",
+      "energy": "low",
+      "tension": "medium",
+      "openness": "unclear",
+      "evidence": [
+        "不见去年人",
+        "泪湿春衫袖"
+      ],
+      "illumination": "unclear"
+    },
+    "concretePlan": null,
+    "renderability": {
+      "status": "unavailable",
+      "visibleScenery": false,
+      "visibleAbstract": false,
+      "gaps": [
+        {
+          "id": "i2",
+          "label": "泪",
+          "reason": "身体局部或心绪线索尚无独立画法，不从概念解释中借出花、江河或其他实景"
+        },
+        {
+          "id": "i3",
+          "label": "春衫袖",
+          "reason": "该意象尚无合适的写意画法"
+        }
+      ]
+    },
+    "expression": {
+      "version": "shared-expression-1.1-source-bound",
+      "sourceContract": "expression-1.0",
+      "recommendation": "abstract",
+      "reason": "具体主体尚有画法缺口；不据此补造抽象主体",
+      "gaps": [
+        {
+          "id": "i2",
+          "label": "泪",
+          "reason": "身体局部或心绪线索尚无独立画法，不从概念解释中借出花、江河或其他实景"
+        },
+        {
+          "id": "i3",
+          "label": "春衫袖",
+          "reason": "该意象尚无合适的写意画法"
+        }
+      ],
+      "limitations": [
+        "景物过程当前影响抽象纹理；原生景物动作沿用场景能力，未支持的月下楼位移等仍不执行。",
+        "纹理、色层和观看扰动属于本地艺术选择，不改变语义成立状态"
+      ]
+    },
+    "notes": [
+      "三个表达倾向共享景物数量、空间、依托与主体身份；抽象笔触优先服从原景物区域和轮廓。",
+      "纯抽象或比喻句不因切换风景优先而补山水。"
+    ],
+    "aestheticAcceptance": "pending-user"
+  },
+  "delivery": {
+    "status": "failed",
+    "retryable": false,
+    "reason": "drawing-gap",
+    "message": "解读已完成，但本句主要内容尚无可靠画法，未生成新画面。"
+  },
+  "elapsed_seconds": 4.6
+}

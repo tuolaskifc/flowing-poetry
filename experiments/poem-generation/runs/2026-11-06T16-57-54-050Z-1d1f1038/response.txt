@@ -1,0 +1,82 @@
+{
+  "schema_version": "abstract-1.0",
+  "poem": "两情若是久长时，又岂在朝朝暮暮。",
+  "reading": "此句以假设语气提出：若两情能够长久，就不必以朝夕相守来衡量。它把“情”的持久与“朝朝暮暮”的日常相守并置，形成条件与反问的张力，重点不在具体场景，而在对长久与相聚关系的思辨。",
+  "subjects": [
+    {
+    "id": "a1",
+    "mentions": ["两情"],
+    "meaning": "双方之间的情感，被设想为可以长久延续的关系。",
+    "kind": "abstract",
+    "role": "scene",
+    "presence": "present",
+    "evidence": ["两情若是久长时"]
+    },
+    {
+    "id": "a2",
+    "mentions": ["久长时"],
+    "meaning": "情感长久延续的状态或时段。",
+    "kind": "abstract",
+    "role": "scene",
+    "presence": "unclear",
+    "evidence": ["两情若是久长时"]
+    },
+    {
+    "id": "a3",
+    "mentions": ["朝朝暮暮"],
+    "meaning": "日复一日、早晚相守的日常相处。",
+    "kind": "abstract",
+    "role": "reference",
+    "presence": "unclear",
+    "evidence": ["又岂在朝朝暮暮"]
+    }
+  ],
+  "relations": [
+    {
+    "source": "a1",
+    "target": "a2",
+    "kind": "connect",
+    "modality": "conditional",
+    "basis": "explicit",
+    "evidence": ["两情若是久长时"]
+    },
+    {
+    "source": "a1",
+    "target": "a3",
+    "kind": "contrast",
+    "modality": "negated",
+    "basis": "explicit",
+    "evidence": ["两情若是久长时", "又岂在朝朝暮暮"]
+    }
+  ],
+  "processes": [
+    {
+    "subject": "a1",
+    "kind": "persist",
+    "temporal": "not_yet",
+    "modality": "conditional",
+    "basis": "explicit",
+    "evidence": ["两情若是久长时"]
+    },
+    {
+    "subject": "a3",
+    "kind": "recur",
+    "temporal": "repeated",
+    "modality": "negated",
+    "basis": "explicit",
+    "evidence": ["又岂在朝朝暮暮"]
+    }
+  ],
+  "atmosphere": {
+    "labels": ["思辨", "含蓄", "反问"],
+    "valence": "mixed",
+    "openness": "medium",
+    "illumination": "unclear",
+    "evidence": ["两情若是久长时", "又岂在朝朝暮暮"]
+  },
+  "uncertainties": [
+    "“久长时”是条件中的理想状态，并未明示已经实现。",
+    "“又岂在朝朝暮暮”是反问，不能直接等同于否定朝夕相守的价值。",
+    "“朝朝暮暮”作为日常相守的参照，其具体在场与否并不明确。"
+  ]
+}

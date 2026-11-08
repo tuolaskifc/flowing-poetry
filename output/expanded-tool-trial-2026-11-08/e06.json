@@ -1,0 +1,4584 @@
+{
+  "id": "e06",
+  "poem": "明月别枝惊鹊，清风半夜鸣蝉。",
+  "author": "辛弃疾",
+  "title": "西江月·夜行黄沙道中",
+  "url": "https://m.gushiwen.cn/mingju/juv_6f4f1edd3b11.aspx",
+  "focus": "月、鸟与声音",
+  "record": {
+    "id": "2026-11-08T10-48-34-666Z-a7ad5420",
+    "fingerprint": "acbb395e8c7583c21e214f95a3122d405c2be16e3ebd14f677a2b64b1269fc58",
+    "semanticFingerprint": "c50c8c639c79aef7cec51dbfd5bd6875c368ae9cf851fd6d95a0bd6d77b253c5",
+    "poem": "明月别枝惊鹊，清风半夜鸣蝉。",
+    "source": {
+      "provider": "独立选笔试验",
+      "author": "辛弃疾",
+      "title": "西江月·夜行黄沙道中"
+    },
+    "mode": "expression",
+    "model": "DeepSeek-V4.1-Flash",
+    "started_at": "2026-11-08T10:48:34.667Z",
+    "cached": false,
+    "http_status": 200,
+    "usage": {
+      "completion_tokens": 1078,
+      "prompt_tokens": 6060,
+      "total_tokens": 7138,
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "prompt_tokens_details": {
+        "cached_tokens": 6016
+      }
+    },
+    "finish_reason": "stop",
+    "analysis": {
+      "schema_version": "expression-1.0",
+      "poem": "明月别枝惊鹊，清风半夜鸣蝉。",
+      "reading": "月光明亮，惊动了枝头的鹊鸟；清风在半夜吹来，蝉声随之响起。",
+      "entities": [
+        {
+          "id": "i1",
+          "mentions": [
+            "明月"
+          ],
+          "concept": "明亮的月亮",
+          "kind": "object",
+          "role": "scene",
+          "presence": "present",
+          "evidence": [
+            "明月别枝惊鹊"
+          ],
+          "quantity": {
+            "mode": "unspecified",
+            "min": null,
+            "max": null,
+            "unit": null,
+            "scope": "unspecified",
+            "extent": "unspecified",
+            "evidence": []
+          }
+        },
+        {
+          "id": "i2",
+          "mentions": [
+            "枝"
+          ],
+          "concept": "树枝",
+          "kind": "object",
+          "role": "scene",
+          "presence": "present",
+          "evidence": [
+            "明月别枝惊鹊"
+          ],
+          "quantity": {
+            "mode": "unspecified",
+            "min": null,
+            "max": null,
+            "unit": null,
+            "scope": "unspecified",
+            "extent": "unspecified",
+            "evidence": []
+          }
+        },
+        {
+          "id": "i3",
+          "mentions": [
+            "鹊"
+          ],
+          "concept": "喜鹊",
+          "kind": "organism",
+          "role": "scene",
+          "presence": "present",
+          "evidence": [
+            "明月别枝惊鹊"
+          ],
+          "quantity": {
+            "mode": "unspecified",
+            "min": null,
+            "max": null,
+            "unit": null,
+            "scope": "unspecified",
+            "extent": "unspecified",
+            "evidence": []
+          }
+        },
+        {
+          "id": "i4",
+          "mentions": [
+            "清风"
+          ],
+          "concept": "清凉的风",
+          "kind": "environment",
+          "role": "scene",
+          "presence": "present",
+          "evidence": [
+            "清风半夜鸣蝉"
+          ],
+          "quantity": {
+            "mode": "unspecified",
+            "min": null,
+            "max": null,
+            "unit": null,
+            "scope": "unspecified",
+            "extent": "unspecified",
+            "evidence": []
+          }
+        },
+        {
+          "id": "i5",
+          "mentions": [
+            "蝉"
+          ],
+          "concept": "蝉",
+          "kind": "organism",
+          "role": "scene",
+          "presence": "present",
+          "evidence": [
+            "清风半夜鸣蝉"
+          ],
+          "quantity": {
+            "mode": "unspecified",
+            "min": null,
+            "max": null,
+            "unit": null,
+            "scope": "unspecified",
+            "extent": "unspecified",
+            "evidence": []
+          }
+        }
+      ],
+      "relations": [],
+      "atmosphere": {
+        "labels": [
+          "清幽",
+          "夜静"
+        ],
+        "valence": "neutral",
+        "energy": "low",
+        "tension": "low",
+        "openness": "medium",
+        "evidence": [
+          "明月别枝惊鹊",
+          "清风半夜鸣蝉"
+        ]
+      },
+      "time": {
+        "markers": [
+          {
+            "surface": "半夜",
+            "meaning": "夜间时段，点明事情发生在深夜"
+          }
+        ],
+        "note": null
+      },
+      "uncertainties": [
+        "“别枝”可解为月光离开树枝或鹊离开树枝，动作主体不明确。",
+        "“惊鹊”是月光惊动鹊还是鹊被别枝惊动，存在歧义。"
+      ],
+      "spatial": [
+        {
+          "type": "on",
+          "source": "i1",
+          "target": "i2",
+          "modality": "unclear",
+          "basis": "inferred",
+          "evidence": [
+            "明月别枝惊鹊"
+          ]
+        }
+      ],
+      "scene": {
+        "setting": {
+          "kind": "woodland",
+          "basis": "inferred",
+          "evidence": [
+            "明月别枝惊鹊",
+            "清风半夜鸣蝉"
+          ]
+        },
+        "groups": [
+          {
+            "members": [
+              "i1"
+            ],
+            "role": "environment",
+            "pattern": "single",
+            "depth": "unspecified",
+            "basis": "inferred",
+            "evidence": [
+              "明月别枝惊鹊"
+            ]
+          },
+          {
+            "members": [
+              "i2",
+              "i3"
+            ],
+            "role": "subject",
+            "pattern": "cluster",
+            "depth": "unspecified",
+            "basis": "inferred",
+            "evidence": [
+              "明月别枝惊鹊"
+            ]
+          },
+          {
+            "members": [
+              "i4"
+            ],
+            "role": "environment",
+            "pattern": "single",
+            "depth": "unspecified",
+            "basis": "inferred",
+            "evidence": [
+              "清风半夜鸣蝉"
+            ]
+          },
+          {
+            "members": [
+              "i5"
+            ],
+            "role": "accent",
+            "pattern": "single",
+            "depth": "unspecified",
+            "basis": "inferred",
+            "evidence": [
+              "清风半夜鸣蝉"
+            ]
+          }
+        ],
+        "supports": [
+          {
+            "entity": "i3",
+            "surface": "vegetation",
+            "target": "i2",
+            "basis": "inferred",
+            "evidence": [
+              "明月别枝惊鹊"
+            ]
+          }
+        ],
+        "actions": [
+          {
+            "entity": "i3",
+            "state": "unclear",
+            "pace": "unspecified",
+            "direction": "unspecified",
+            "modality": "asserted",
+            "basis": "inferred",
+            "evidence": [
+              "明月别枝惊鹊"
+            ]
+          },
+          {
+            "entity": "i5",
+            "state": "unclear",
+            "pace": "unspecified",
+            "direction": "unspecified",
+            "modality": "asserted",
+            "basis": "inferred",
+            "evidence": [
+              "清风半夜鸣蝉"
+            ]
+          }
+        ],
+        "atmosphere": {
+          "visibility": "clear",
+          "illumination": "night",
+          "basis": "inferred",
+          "evidence": [
+            "明月别枝惊鹊",
+            "清风半夜鸣蝉"
+          ]
+        }
+      },
+      "expression": {
+        "relations": [
+          {
+            "source": "i1",
+            "target": "i3",
+            "kind": "connect",
+            "modality": "unclear",
+            "basis": "inferred",
+            "evidence": [
+              "明月别枝惊鹊"
+            ]
+          },
+          {
+            "source": "i4",
+            "target": "i5",
+            "kind": "connect",
+            "modality": "asserted",
+            "basis": "inferred",
+            "evidence": [
+              "清风半夜鸣蝉"
+            ]
+          }
+        ],
+        "processes": [
+          {
+            "subject": "i3",
+            "kind": "unclear",
+            "temporal": "unspecified",
+            "modality": "asserted",
+            "basis": "inferred",
+            "evidence": [
+              "明月别枝惊鹊"
+            ]
+          },
+          {
+            "subject": "i5",
+            "kind": "unclear",
+            "temporal": "unspecified",
+            "modality": "asserted",
+            "basis": "inferred",
+            "evidence": [
+              "清风半夜鸣蝉"
+            ]
+          }
+        ]
+      }
+    },
+    "validation": {
+      "valid": true,
+      "errors": [],
+      "warnings": [
+        "模型保留了不确定性，需要审阅",
+        "spatial[0] 的推断或非确定关系需审阅",
+        "scene.setting 为语义推断，绘画选择需与原文明示区分",
+        "scene.groups[0] 为语义推断，绘画选择需与原文明示区分",
+        "scene.groups[1] 为语义推断，绘画选择需与原文明示区分",
+        "scene.groups[2] 为语义推断，绘画选择需与原文明示区分",
+        "scene.groups[3] 为语义推断，绘画选择需与原文明示区分",
+        "scene.supports[0] 为语义推断，绘画选择需与原文明示区分",
+        "scene.actions[0] 为语义推断，绘画选择需与原文明示区分",
+        "scene.actions[1] 为语义推断，绘画选择需与原文明示区分",
+        "scene.atmosphere 为语义推断，绘画选择需与原文明示区分",
+        "expression.relations[0] 为语义推断",
+        "expression.relations[1] 为语义推断",
+        "expression.processes[0] 为语义推断",
+        "expression.processes[1] 为语义推断"
+      ],
+      "review_required": true
+    },
+    "plan": {
+      "version": "shared-expression-1.1-source-bound",
+      "seed": 3084961718,
+      "poem": "明月别枝惊鹊，清风半夜鸣蝉。",
+      "nodes": [
+        {
+          "id": "i1",
+          "label": "明月",
+          "meaning": "明亮的月亮",
+          "kind": "concrete",
+          "contextOnly": false,
+          "mode": "present"
+        },
+        {
+          "id": "i2",
+          "label": "枝",
+          "meaning": "树枝",
+          "kind": "concrete",
+          "contextOnly": false,
+          "mode": "present"
+        },
+        {
+          "id": "i3",
+          "label": "鹊",
+          "meaning": "喜鹊",
+          "kind": "concrete",
+          "contextOnly": false,
+          "mode": "present"
+        },
+        {
+          "id": "i4",
+          "label": "清风",
+          "meaning": "清凉的风",
+          "kind": "concrete",
+          "contextOnly": false,
+          "mode": "present"
+        },
+        {
+          "id": "i5",
+          "label": "蝉",
+          "meaning": "蝉",
+          "kind": "concrete",
+          "contextOnly": true,
+          "mode": "present"
+        }
+      ],
+      "relations": [
+        {
+          "source": "i1",
+          "target": "i3",
+          "kind": "connect",
+          "modality": "unclear",
+          "basis": "inferred",
+          "evidence": [
+            "明月别枝惊鹊"
+          ]
+        },
+        {
+          "source": "i4",
+          "target": "i5",
+          "kind": "connect",
+          "modality": "asserted",
+          "basis": "inferred",
+          "evidence": [
+            "清风半夜鸣蝉"
+          ]
+        }
+      ],
+      "processes": [
+        {
+          "subject": "i3",
+          "kind": "unclear",
+          "temporal": "unspecified",
+          "modality": "asserted",
+          "basis": "inferred",
+          "evidence": [
+            "明月别枝惊鹊"
+          ]
+        },
+        {
+          "subject": "i5",
+          "kind": "unclear",
+          "temporal": "unspecified",
+          "modality": "asserted",
+          "basis": "inferred",
+          "evidence": [
+            "清风半夜鸣蝉"
+          ]
+        }
+      ],
+      "omitted": [],
+      "atmosphere": {
+        "labels": [
+          "清幽",
+          "夜静"
+        ],
+        "valence": "neutral",
+        "energy": "low",
+        "tension": "low",
+        "openness": "medium",
+        "evidence": [
+          "明月别枝惊鹊",
+          "清风半夜鸣蝉"
+        ],
+        "illumination": "night"
+      },
+      "concretePlan": {
+        "version": "semantic-composition-3.3-source-bound",
+        "seed": 3084961718,
+        "settings": {
+          "wind": 0.45,
+          "density": 0.45,
+          "palette": "indigo",
+          "motion": 1.4
+        },
+        "layers": [
+          {
+            "tool": "moon",
+            "entities": [
+              "i1"
+            ],
+            "projectedEntities": [],
+            "names": [
+              "明月"
+            ],
+            "options": {
+              "shape": "crescent"
+            },
+            "animate": true,
+            "placement": {
+              "anchor": [
+                320,
+                175
+              ],
+              "at": [
+                0.72,
+                0.22
+              ],
+              "scale": 0.85
+            },
+            "semanticGroup": {
+              "members": [
+                "i1"
+              ],
+              "role": "environment",
+              "pattern": "single",
+              "depth": "unspecified",
+              "basis": "inferred",
+              "evidence": [
+                "明月别枝惊鹊"
+              ],
+              "index": 0
+            },
+            "semanticEffects": [
+              {
+                "path": "scene.groups[0].role",
+                "consumer": "主次布局",
+                "effect": "保留环境群落层次",
+                "status": "applied"
+              },
+              {
+                "path": "scene.groups[0].pattern",
+                "consumer": "群落布局",
+                "effect": "按 single 组织显示单元；不覆盖明确数量",
+                "status": "applied"
+              },
+              {
+                "path": "scene.groups[0].depth",
+                "consumer": "远近布局",
+                "effect": "远近未明，保持本地默认",
+                "status": "skipped"
+              }
+            ],
+            "semanticEnergy": true,
+            "timeScale": 0.45,
+            "instances": [
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    175
+                  ],
+                  "at": [
+                    0.72,
+                    0.22
+                  ],
+                  "scale": 0.76
+                },
+                "depth": 0.05,
+                "opacity": 1,
+                "variant": 0,
+                "tone": "far",
+                "id": "i1:moon::0:0"
+              }
+            ],
+            "singleUnit": true,
+            "quantity": {
+              "items": [
+                {
+                  "entity": "i1",
+                  "mode": "unspecified",
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "scope": "unspecified",
+                  "extent": "unspecified",
+                  "evidence": [],
+                  "basis": "model"
+                }
+              ],
+              "rendered": 1,
+              "exact": false,
+              "collective": false,
+              "partUnsupported": false
+            },
+            "quantityLabel": "数量未精确；本地试画 1 个单元",
+            "z": -5,
+            "visual": {
+              "role": "light",
+              "brushStrength": 1.1
+            },
+            "performance": {
+              "rhythm": "steady",
+              "rate": 1,
+              "amplitude": 1,
+              "phase": 0
+            },
+            "id": "i1:moon::0",
+            "interaction": {
+              "mode": "instance",
+              "groupId": "i1:moon::0"
+            },
+            "visibility": {
+              "protect": true,
+              "reasons": [
+                "recognizable-subject"
+              ],
+              "basis": "local-drawing-policy"
+            }
+          },
+          {
+            "tool": "tree",
+            "entities": [
+              "i2"
+            ],
+            "projectedEntities": [],
+            "names": [
+              "枝"
+            ],
+            "options": {
+              "form": "broadleaf",
+              "crown": "lines"
+            },
+            "animate": true,
+            "placement": {
+              "anchor": [
+                320,
+                388
+              ],
+              "at": [
+                0.4742807499625,
+                0.77478
+              ],
+              "scale": 1.15
+            },
+            "semanticGroup": {
+              "members": [
+                "i2",
+                "i3"
+              ],
+              "role": "subject",
+              "pattern": "cluster",
+              "depth": "unspecified",
+              "basis": "inferred",
+              "evidence": [
+                "明月别枝惊鹊"
+              ],
+              "index": 1
+            },
+            "semanticEffects": [
+              {
+                "path": "scene.groups[1].role",
+                "consumer": "主次布局",
+                "effect": "主体相对突出",
+                "status": "applied"
+              },
+              {
+                "path": "scene.groups[1].pattern",
+                "consumer": "群落布局",
+                "effect": "按 cluster 组织显示单元；不覆盖明确数量",
+                "status": "applied"
+              },
+              {
+                "path": "scene.groups[1].depth",
+                "consumer": "远近布局",
+                "effect": "远近未明，保持本地默认",
+                "status": "skipped"
+              }
+            ],
+            "semanticEnergy": true,
+            "timeScale": 0.45,
+            "instances": [
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    388
+                  ],
+                  "at": [
+                    0.5676564299785001,
+                    0.6744983999999999
+                  ],
+                  "scale": 0.645184755502
+                },
+                "depth": 10,
+                "opacity": 0.70700679775,
+                "variant": 1,
+                "tone": "middle",
+                "id": "i2:tree:broadleaf:1:0"
+              },
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    388
+                  ],
+                  "at": [
+                    0.3500885899705,
+                    0.7112184
+                  ],
+                  "scale": 0.5467903110040001
+                },
+                "depth": 10.01,
+                "opacity": 0.6306135955,
+                "variant": 1,
+                "tone": "middle",
+                "id": "i2:tree:broadleaf:1:1"
+              },
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    388
+                  ],
+                  "at": [
+                    0.7021207499625,
+                    0.7479384
+                  ],
+                  "scale": 0.705995866506
+                },
+                "depth": 10.02,
+                "opacity": 0.75422039325,
+                "variant": 1,
+                "tone": "middle",
+                "id": "i2:tree:broadleaf:1:2"
+              },
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    388
+                  ],
+                  "at": [
+                    0.48455290995450007,
+                    0.9180744000000001
+                  ],
+                  "scale": 0.8764014220080002
+                },
+                "depth": 20.03,
+                "opacity": 0.9080444718999999,
+                "variant": 2,
+                "tone": "near",
+                "id": "i2:tree:broadleaf:1:3"
+              },
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    388
+                  ],
+                  "at": [
+                    0.2669850699465001,
+                    0.8221704000000001
+                  ],
+                  "scale": 0.7780069775100001
+                },
+                "depth": 10.04,
+                "opacity": 0.8392905898749999,
+                "variant": 1,
+                "tone": "middle",
+                "id": "i2:tree:broadleaf:1:4"
+              }
+            ],
+            "singleUnit": true,
+            "quantity": {
+              "items": [
+                {
+                  "entity": "i2",
+                  "mode": "unspecified",
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "scope": "unspecified",
+                  "extent": "unspecified",
+                  "evidence": [],
+                  "basis": "model"
+                }
+              ],
+              "rendered": 5,
+              "exact": false,
+              "collective": true,
+              "partUnsupported": false
+            },
+            "quantityLabel": "成片分布；本地试画 5 个单元",
+            "z": 8,
+            "visual": {
+              "role": "vegetation",
+              "brushStrength": 1.2
+            },
+            "performance": {
+              "rhythm": "gust",
+              "rate": 0.62,
+              "amplitude": 0.65,
+              "phase": 3.8830085198369844
+            },
+            "id": "i2:tree:broadleaf:1",
+            "interaction": {
+              "mode": "instance",
+              "groupId": "i2:tree:broadleaf:1"
+            },
+            "visibility": {
+              "protect": true,
+              "reasons": [
+                "semantic-subject"
+              ],
+              "basis": "local-drawing-policy"
+            }
+          },
+          {
+            "tool": "bird",
+            "entities": [
+              "i3"
+            ],
+            "projectedEntities": [],
+            "names": [
+              "鹊"
+            ],
+            "options": {
+              "pose": "resting",
+              "tone": "ink",
+              "facing": "right"
+            },
+            "animate": false,
+            "placement": {
+              "anchor": [
+                320,
+                190
+              ],
+              "at": [
+                0.7257074328362504,
+                0.5242829443291711
+              ],
+              "scale": 0.78
+            },
+            "drawingLabel": "鸟意（写意借形）",
+            "semanticGroup": {
+              "members": [
+                "i2",
+                "i3"
+              ],
+              "role": "subject",
+              "pattern": "cluster",
+              "depth": "unspecified",
+              "basis": "inferred",
+              "evidence": [
+                "明月别枝惊鹊"
+              ],
+              "index": 1
+            },
+            "semanticEffects": [
+              {
+                "path": "scene.actions[0].state",
+                "consumer": "动作边界",
+                "effect": "动作未明，保留静态形态",
+                "status": "skipped"
+              },
+              {
+                "path": "scene.groups[1].role",
+                "consumer": "主次布局",
+                "effect": "主体相对突出",
+                "status": "applied"
+              },
+              {
+                "path": "scene.groups[1].pattern",
+                "consumer": "群落布局",
+                "effect": "按 cluster 组织显示单元；不覆盖明确数量",
+                "status": "applied"
+              },
+              {
+                "path": "scene.groups[1].depth",
+                "consumer": "远近布局",
+                "effect": "远近未明，保持本地默认",
+                "status": "skipped"
+              }
+            ],
+            "semanticEnergy": false,
+            "timeScale": 0,
+            "semanticAction": {
+              "entity": "i3",
+              "state": "unclear",
+              "pace": "unspecified",
+              "direction": "unspecified",
+              "modality": "asserted",
+              "basis": "inferred",
+              "evidence": [
+                "明月别枝惊鹊"
+              ]
+            },
+            "instances": [
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    190
+                  ],
+                  "at": [
+                    0.6346207499625,
+                    0.5220197227180801
+                  ],
+                  "scale": 0.62
+                },
+                "depth": 0.0125,
+                "opacity": 0.86,
+                "variant": 0,
+                "tone": "far",
+                "id": "i3:bird::2:0"
+              },
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    190
+                  ],
+                  "at": [
+                    0.7317593942393277,
+                    0.5008203766887387
+                  ],
+                  "scale": 0.62
+                },
+                "depth": 0.037500000000000006,
+                "opacity": 0.86,
+                "variant": 0,
+                "tone": "far",
+                "id": "i3:bird::2:1"
+              },
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    190
+                  ],
+                  "at": [
+                    0.7357667672630384,
+                    0.5816611093616552
+                  ],
+                  "scale": 0.62
+                },
+                "depth": 0.0625,
+                "opacity": 0.8875,
+                "variant": 0,
+                "tone": "far",
+                "id": "i3:bird::2:2"
+              },
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    190
+                  ],
+                  "at": [
+                    0.8006828198801356,
+                    0.49263056854821047
+                  ],
+                  "scale": 0.62
+                },
+                "depth": 0.08750000000000001,
+                "opacity": 0.9624999999999999,
+                "variant": 0,
+                "tone": "far",
+                "id": "i3:bird::2:3"
+              }
+            ],
+            "singleUnit": true,
+            "quantity": {
+              "items": [
+                {
+                  "entity": "i3",
+                  "mode": "unspecified",
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "scope": "unspecified",
+                  "extent": "unspecified",
+                  "evidence": [],
+                  "basis": "model"
+                }
+              ],
+              "rendered": 4,
+              "exact": false,
+              "collective": false,
+              "partUnsupported": false
+            },
+            "quantityLabel": "数量未精确；本地试画 4 个单元",
+            "z": 10,
+            "semanticSupport": {
+              "surface": "vegetation",
+              "target": "i2",
+              "path": "scene.supports[0]"
+            },
+            "visual": {
+              "role": "figure",
+              "brushStrength": 2.2
+            },
+            "performance": {
+              "rhythm": "passing",
+              "rate": 1.05,
+              "amplitude": 1.1,
+              "phase": 1.4828317324943823
+            },
+            "id": "i3:bird::2",
+            "interaction": {
+              "mode": "instance",
+              "groupId": "i3:bird::2"
+            },
+            "visibility": {
+              "protect": true,
+              "reasons": [
+                "recognizable-subject",
+                "semantic-subject"
+              ],
+              "basis": "local-drawing-policy"
+            }
+          },
+          {
+            "tool": "landscape",
+            "entities": [],
+            "projectedEntities": [],
+            "names": [
+              "构图依托·地面"
+            ],
+            "options": {
+              "form": "ground",
+              "edge": "soft"
+            },
+            "animate": false,
+            "placement": {
+              "anchor": [
+                320,
+                194
+              ],
+              "at": [
+                0.5,
+                0.54
+              ],
+              "scale": 1.6
+            },
+            "instances": [
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    265
+                  ],
+                  "at": [
+                    0.5,
+                    0.54
+                  ],
+                  "scale": 2.5
+                },
+                "variant": 0,
+                "depth": 0,
+                "opacity": 1,
+                "tone": "far",
+                "id": "inferred:landscape:ground:3:0"
+              }
+            ],
+            "singleUnit": false,
+            "inferred": true,
+            "provenance": {
+              "basis": "local-context",
+              "reason": "整体场景解释为 woodland，本地补充必要 ground 依托",
+              "semanticPath": "scene.setting"
+            },
+            "quantity": {
+              "rendered": 1,
+              "exact": false,
+              "items": []
+            },
+            "quantityLabel": "本地环境依托，不计入原文意象覆盖",
+            "z": -18,
+            "clip": [
+              [
+                0,
+                0.5
+              ],
+              [
+                1,
+                0.5
+              ],
+              [
+                1,
+                1.04
+              ],
+              [
+                0,
+                1.04
+              ]
+            ],
+            "visual": {
+              "role": "ground",
+              "brushStrength": 1.1
+            },
+            "performance": {
+              "rhythm": "steady",
+              "rate": 1,
+              "amplitude": 1,
+              "phase": 5.365840252331367
+            },
+            "id": "inferred:landscape:ground:3",
+            "interaction": {
+              "mode": "group",
+              "groupId": "inferred:landscape:ground:3"
+            },
+            "visibility": {
+              "protect": false,
+              "reasons": [],
+              "basis": "local-drawing-policy"
+            }
+          }
+        ],
+        "spatial": [
+          {
+            "type": "on",
+            "source": "i1",
+            "target": "i2",
+            "modality": "unclear",
+            "basis": "inferred",
+            "evidence": [
+              "明月别枝惊鹊"
+            ],
+            "visualized": false,
+            "reason": "非确定关系仅保留解读"
+          }
+        ],
+        "scene": {
+          "kind": "woodland",
+          "notes": [
+            "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。"
+          ],
+          "waterline": null,
+          "semanticSetting": {
+            "kind": "woodland",
+            "basis": "inferred",
+            "evidence": [
+              "明月别枝惊鹊",
+              "清风半夜鸣蝉"
+            ]
+          },
+          "semanticEffects": [
+            {
+              "path": "scene.supports[0]",
+              "consumer": "场景依托",
+              "status": "applied",
+              "effect": "使用已提取主体的现有承托画法"
+            },
+            {
+              "path": "scene.setting",
+              "consumer": "场景依托",
+              "status": "applied",
+              "effect": "必要环境以独立推断背景表示，不新增原文实体"
+            }
+          ],
+          "organization": {
+            "version": "1.0",
+            "strategy": "general-constraints",
+            "regions": {
+              "land": [
+                [
+                  0,
+                  0.5
+                ],
+                [
+                  1,
+                  0.5
+                ],
+                [
+                  1,
+                  1.04
+                ],
+                [
+                  0,
+                  1.04
+                ]
+              ]
+            },
+            "candidates": [],
+            "repairs": [],
+            "limitations": [
+              "几何检查不判定诗意理解或审美合格",
+              "动作时序与整首诗的场景切换尚未编排"
+            ],
+            "topology": "疏林前后",
+            "layout": 0,
+            "orientation": "疏林前后",
+            "audit": {
+              "scope": "implemented-geometry-and-drawing-gaps",
+              "coverage": {
+                "scope": "extracted-entities-only",
+                "present": 5,
+                "mapped": 3,
+                "parameters": [
+                  "i4"
+                ],
+                "missing": [
+                  {
+                    "id": "i5",
+                    "name": "蝉"
+                  }
+                ]
+              },
+              "checks": [
+                "presence",
+                "count",
+                "finite",
+                "support",
+                "scale",
+                "relative-position",
+                "depth",
+                "grove-spread",
+                "drawing-gaps"
+              ],
+              "status": "needs-review",
+              "errors": 0,
+              "review": 1,
+              "issues": [
+                {
+                  "code": "drawing-gaps",
+                  "severity": "review",
+                  "message": "还有 1 项已提取线索尚未转成画面：蝉"
+                }
+              ],
+              "metrics": {
+                "overlapPenalty": 5.274,
+                "balancePenalty": 0.02,
+                "motifFootprint": 0.534,
+                "landArea": 0.54
+              },
+              "cost": 93.444,
+              "aestheticAcceptance": "pending-user"
+            },
+            "graph": {
+              "nodes": [
+                {
+                  "id": "l0",
+                  "entities": [
+                    "i1"
+                  ],
+                  "tool": "moon",
+                  "role": "sky",
+                  "habitat": "air",
+                  "inferred": false,
+                  "support": null
+                },
+                {
+                  "id": "l1",
+                  "entities": [
+                    "i2"
+                  ],
+                  "tool": "tree",
+                  "role": "vegetation",
+                  "habitat": "land",
+                  "inferred": false,
+                  "support": "l3"
+                },
+                {
+                  "id": "l2",
+                  "entities": [
+                    "i3"
+                  ],
+                  "tool": "bird",
+                  "role": "fauna",
+                  "habitat": "air",
+                  "inferred": false,
+                  "support": null
+                },
+                {
+                  "id": "l3",
+                  "entities": [],
+                  "tool": "landscape",
+                  "role": "terrain",
+                  "habitat": null,
+                  "inferred": true,
+                  "support": null
+                }
+              ],
+              "edges": [
+                {
+                  "type": "supported-by",
+                  "source": "l0",
+                  "target": null,
+                  "basis": "local-composition",
+                  "habitat": "air"
+                },
+                {
+                  "type": "supported-by",
+                  "source": "l1",
+                  "target": "l3",
+                  "basis": "local-composition",
+                  "habitat": "land"
+                },
+                {
+                  "type": "supported-by",
+                  "source": "l2",
+                  "target": null,
+                  "basis": "local-composition",
+                  "habitat": "air"
+                },
+                {
+                  "type": "on",
+                  "source": "l0",
+                  "target": "l1",
+                  "basis": "inferred",
+                  "modality": "unclear",
+                  "evidence": [
+                    "明月别枝惊鹊"
+                  ]
+                }
+              ],
+              "setting": "woodland"
+            },
+            "actorSpacing": {
+              "version": "1.0",
+              "repairs": [],
+              "residualOverlap": 0,
+              "scope": "discrete-actors-not-intentional-occlusion"
+            }
+          },
+          "displayAudit": {
+            "scope": "display-scale-separation-and-habitat",
+            "issues": [],
+            "errors": 0,
+            "aestheticAcceptance": "pending-user"
+          }
+        },
+        "compositions": [
+          {
+            "id": "space-0",
+            "label": "疏林前后",
+            "description": "先安排连续水域与地表，再按主次与远近安放景物",
+            "layers": [
+              {
+                "tool": "moon",
+                "entities": [
+                  "i1"
+                ],
+                "projectedEntities": [],
+                "names": [
+                  "明月"
+                ],
+                "options": {
+                  "shape": "crescent"
+                },
+                "animate": true,
+                "placement": {
+                  "anchor": [
+                    320,
+                    175
+                  ],
+                  "at": [
+                    0.72,
+                    0.22
+                  ],
+                  "scale": 0.85
+                },
+                "semanticGroup": {
+                  "members": [
+                    "i1"
+                  ],
+                  "role": "environment",
+                  "pattern": "single",
+                  "depth": "unspecified",
+                  "basis": "inferred",
+                  "evidence": [
+                    "明月别枝惊鹊"
+                  ],
+                  "index": 0
+                },
+                "semanticEffects": [
+                  {
+                    "path": "scene.groups[0].role",
+                    "consumer": "主次布局",
+                    "effect": "保留环境群落层次",
+                    "status": "applied"
+                  },
+                  {
+                    "path": "scene.groups[0].pattern",
+                    "consumer": "群落布局",
+                    "effect": "按 single 组织显示单元；不覆盖明确数量",
+                    "status": "applied"
+                  },
+                  {
+                    "path": "scene.groups[0].depth",
+                    "consumer": "远近布局",
+                    "effect": "远近未明，保持本地默认",
+                    "status": "skipped"
+                  }
+                ],
+                "semanticEnergy": true,
+                "timeScale": 0.45,
+                "instances": [
+                  {
+                    "placement": {
+                      "anchor": [
+                        320,
+                        175
+                      ],
+                      "at": [
+                        0.72,
+                        0.22
+                      ],
+                      "scale": 0.76
+                    },
+                    "depth": 0.05,
+                    "opacity": 1,
+                    "variant": 0,
+                    "tone": "far",
+                    "id": "i1:moon::0:0"
+                  }
+                ],
+                "singleUnit": true,
+                "quantity": {
+                  "items": [
+                    {
+                      "entity": "i1",
+                      "mode": "unspecified",
+                      "min": null,
+                      "max": null,
+                      "unit": null,
+                      "scope": "unspecified",
+                      "extent": "unspecified",
+                      "evidence": [],
+                      "basis": "model"
+                    }
+                  ],
+                  "rendered": 1,
+                  "exact": false,
+                  "collective": false,
+                  "partUnsupported": false
+                },
+                "quantityLabel": "数量未精确；本地试画 1 个单元",
+                "z": -5,
+                "visual": {
+                  "role": "light",
+                  "brushStrength": 1.1
+                },
+                "performance": {
+                  "rhythm": "steady",
+                  "rate": 1,
+                  "amplitude": 1,
+                  "phase": 0
+                },
+                "id": "i1:moon::0",
+                "interaction": {
+                  "mode": "instance",
+                  "groupId": "i1:moon::0"
+                },
+                "visibility": {
+                  "protect": true,
+                  "reasons": [
+                    "recognizable-subject"
+                  ],
+                  "basis": "local-drawing-policy"
+                }
+              },
+              {
+                "tool": "tree",
+                "entities": [
+                  "i2"
+                ],
+                "projectedEntities": [],
+                "names": [
+                  "枝"
+                ],
+                "options": {
+                  "form": "broadleaf",
+                  "crown": "lines"
+                },
+                "animate": true,
+                "placement": {
+                  "anchor": [
+                    320,
+                    388
+                  ],
+                  "at": [
+                    0.4742807499625,
+                    0.77478
+                  ],
+                  "scale": 1.15
+                },
+                "semanticGroup": {
+                  "members": [
+                    "i2",
+                    "i3"
+                  ],
+                  "role": "subject",
+                  "pattern": "cluster",
+                  "depth": "unspecified",
+                  "basis": "inferred",
+                  "evidence": [
+                    "明月别枝惊鹊"
+                  ],
+                  "index": 1
+                },
+                "semanticEffects": [
+                  {
+                    "path": "scene.groups[1].role",
+                    "consumer": "主次布局",
+                    "effect": "主体相对突出",
+                    "status": "applied"
+                  },
+                  {
+                    "path": "scene.groups[1].pattern",
+                    "consumer": "群落布局",
+                    "effect": "按 cluster 组织显示单元；不覆盖明确数量",
+                    "status": "applied"
+                  },
+                  {
+                    "path": "scene.groups[1].depth",
+                    "consumer": "远近布局",
+                    "effect": "远近未明，保持本地默认",
+                    "status": "skipped"
+                  }
+                ],
+                "semanticEnergy": true,
+                "timeScale": 0.45,
+                "instances": [
+                  {
+                    "placement": {
+                      "anchor": [
+                        320,
+                        388
+                      ],
+                      "at": [
+                        0.5676564299785001,
+                        0.6744983999999999
+                      ],
+                      "scale": 0.645184755502
+                    },
+                    "depth": 10,
+                    "opacity": 0.70700679775,
+                    "variant": 1,
+                    "tone": "middle",
+                    "id": "i2:tree:broadleaf:1:0"
+                  },
+                  {
+                    "placement": {
+                      "anchor": [
+                        320,
+                        388
+                      ],
+                      "at": [
+                        0.3500885899705,
+                        0.7112184
+                      ],
+                      "scale": 0.5467903110040001
+                    },
+                    "depth": 10.01,
+                    "opacity": 0.6306135955,
+                    "variant": 1,
+                    "tone": "middle",
+                    "id": "i2:tree:broadleaf:1:1"
+                  },
+                  {
+                    "placement": {
+                      "anchor": [
+                        320,
+                        388
+                      ],
+                      "at": [
+                        0.7021207499625,
+                        0.7479384
+                      ],
+                      "scale": 0.705995866506
+                    },
+                    "depth": 10.02,
+                    "opacity": 0.75422039325,
+                    "variant": 1,
+                    "tone": "middle",
+                    "id": "i2:tree:broadleaf:1:2"
+                  },
+                  {
+                    "placement": {
+                      "anchor": [
+                        320,
+                        388
+                      ],
+                      "at": [
+                        0.48455290995450007,
+                        0.9180744000000001
+                      ],
+                      "scale": 0.8764014220080002
+                    },
+                    "depth": 20.03,
+                    "opacity": 0.9080444718999999,
+                    "variant": 2,
+                    "tone": "near",
+                    "id": "i2:tree:broadleaf:1:3"
+                  },
+                  {
+                    "placement": {
+                      "anchor": [
+                        320,
+                        388
+                      ],
+                      "at": [
+                        0.2669850699465001,
+                        0.8221704000000001
+                      ],
+                      "scale": 0.7780069775100001
+                    },
+                    "depth": 10.04,
+                    "opacity": 0.8392905898749999,
+                    "variant": 1,
+                    "tone": "middle",
+                    "id": "i2:tree:broadleaf:1:4"
+                  }
+                ],
+                "singleUnit": true,
+                "quantity": {
+                  "items": [
+                    {
+                      "entity": "i2",
+                      "mode": "unspecified",
+                      "min": null,
+                      "max": null,
+                      "unit": null,
+                      "scope": "unspecified",
+                      "extent": "unspecified",
+                      "evidence": [],
+                      "basis": "model"
+                    }
+                  ],
+                  "rendered": 5,
+                  "exact": false,
+                  "collective": true,
+                  "partUnsupported": false
+                },
+                "quantityLabel": "成片分布；本地试画 5 个单元",
+                "z": 8,
+                "visual": {
+                  "role": "vegetation",
+                  "brushStrength": 1.2
+                },
+                "performance": {
+                  "rhythm": "gust",
+                  "rate": 0.62,
+                  "amplitude": 0.65,
+                  "phase": 3.8830085198369844
+                },
+                "id": "i2:tree:broadleaf:1",
+                "interaction": {
+                  "mode": "instance",
+                  "groupId": "i2:tree:broadleaf:1"
+                },
+                "visibility": {
+                  "protect": true,
+                  "reasons": [
+                    "semantic-subject"
+                  ],
+                  "basis": "local-drawing-policy"
+                }
+              },
+              {
+                "tool": "bird",
+                "entities": [
+                  "i3"
+                ],
+                "projectedEntities": [],
+                "names": [
+                  "鹊"
+                ],
+                "options": {
+                  "pose": "resting",
+                  "tone": "ink",
+                  "facing": "right"
+                },
+                "animate": false,
+                "placement": {
+                  "anchor": [
+                    320,
+                    190
+                  ],
+                  "at": [
+                    0.7257074328362504,
+                    0.5242829443291711
+                  ],
+                  "scale": 0.78
+                },
+                "drawingLabel": "鸟意（写意借形）",
+                "semanticGroup": {
+                  "members": [
+                    "i2",
+                    "i3"
+                  ],
+                  "role": "subject",
+                  "pattern": "cluster",
+                  "depth": "unspecified",
+                  "basis": "inferred",
+                  "evidence": [
+                    "明月别枝惊鹊"
+                  ],
+                  "index": 1
+                },
+                "semanticEffects": [
+                  {
+                    "path": "scene.actions[0].state",
+                    "consumer": "动作边界",
+                    "effect": "动作未明，保留静态形态",
+                    "status": "skipped"
+                  },
+                  {
+                    "path": "scene.groups[1].role",
+                    "consumer": "主次布局",
+                    "effect": "主体相对突出",
+                    "status": "applied"
+                  },
+                  {
+                    "path": "scene.groups[1].pattern",
+                    "consumer": "群落布局",
+                    "effect": "按 cluster 组织显示单元；不覆盖明确数量",
+                    "status": "applied"
+                  },
+                  {
+                    "path": "scene.groups[1].depth",
+                    "consumer": "远近布局",
+                    "effect": "远近未明，保持本地默认",
+                    "status": "skipped"
+                  }
+                ],
+                "semanticEnergy": false,
+                "timeScale": 0,
+                "semanticAction": {
+                  "entity": "i3",
+                  "state": "unclear",
+                  "pace": "unspecified",
+                  "direction": "unspecified",
+                  "modality": "asserted",
+                  "basis": "inferred",
+                  "evidence": [
+                    "明月别枝惊鹊"
+                  ]
+                },
+                "instances": [
+                  {
+                    "placement": {
+                      "anchor": [
+                        320,
+                        190
+                      ],
+                      "at": [
+                        0.6346207499625,
+                        0.5220197227180801
+                      ],
+                      "scale": 0.62
+                    },
+                    "depth": 0.0125,
+                    "opacity": 0.86,
+                    "variant": 0,
+                    "tone": "far",
+                    "id": "i3:bird::2:0"
+                  },
+                  {
+                    "placement": {
+                      "anchor": [
+                        320,
+                        190
+                      ],
+                      "at": [
+                        0.7317593942393277,
+                        0.5008203766887387
+                      ],
+                      "scale": 0.62
+                    },
+                    "depth": 0.037500000000000006,
+                    "opacity": 0.86,
+                    "variant": 0,
+                    "tone": "far",
+                    "id": "i3:bird::2:1"
+                  },
+                  {
+                    "placement": {
+                      "anchor": [
+                        320,
+                        190
+                      ],
+                      "at": [
+                        0.7357667672630384,
+                        0.5816611093616552
+                      ],
+                      "scale": 0.62
+                    },
+                    "depth": 0.0625,
+                    "opacity": 0.8875,
+                    "variant": 0,
+                    "tone": "far",
+                    "id": "i3:bird::2:2"
+                  },
+                  {
+                    "placement": {
+                      "anchor": [
+                        320,
+                        190
+                      ],
+                      "at": [
+                        0.8006828198801356,
+                        0.49263056854821047
+                      ],
+                      "scale": 0.62
+                    },
+                    "depth": 0.08750000000000001,
+                    "opacity": 0.9624999999999999,
+                    "variant": 0,
+                    "tone": "far",
+                    "id": "i3:bird::2:3"
+                  }
+                ],
+                "singleUnit": true,
+                "quantity": {
+                  "items": [
+                    {
+                      "entity": "i3",
+                      "mode": "unspecified",
+                      "min": null,
+                      "max": null,
+                      "unit": null,
+                      "scope": "unspecified",
+                      "extent": "unspecified",
+                      "evidence": [],
+                      "basis": "model"
+                    }
+                  ],
+                  "rendered": 4,
+                  "exact": false,
+                  "collective": false,
+                  "partUnsupported": false
+                },
+                "quantityLabel": "数量未精确；本地试画 4 个单元",
+                "z": 10,
+                "semanticSupport": {
+                  "surface": "vegetation",
+                  "target": "i2",
+                  "path": "scene.supports[0]"
+                },
+                "visual": {
+                  "role": "figure",
+                  "brushStrength": 2.2
+                },
+                "performance": {
+                  "rhythm": "passing",
+                  "rate": 1.05,
+                  "amplitude": 1.1,
+                  "phase": 1.4828317324943823
+                },
+                "id": "i3:bird::2",
+                "interaction": {
+                  "mode": "instance",
+                  "groupId": "i3:bird::2"
+                },
+                "visibility": {
+                  "protect": true,
+                  "reasons": [
+                    "recognizable-subject",
+                    "semantic-subject"
+                  ],
+                  "basis": "local-drawing-policy"
+                }
+              },
+              {
+                "tool": "landscape",
+                "entities": [],
+                "projectedEntities": [],
+                "names": [
+                  "构图依托·地面"
+                ],
+                "options": {
+                  "form": "ground",
+                  "edge": "soft"
+                },
+                "animate": false,
+                "placement": {
+                  "anchor": [
+                    320,
+                    194
+                  ],
+                  "at": [
+                    0.5,
+                    0.54
+                  ],
+                  "scale": 1.6
+                },
+                "instances": [
+                  {
+                    "placement": {
+                      "anchor": [
+                        320,
+                        265
+                      ],
+                      "at": [
+                        0.5,
+                        0.54
+                      ],
+                      "scale": 2.5
+                    },
+                    "variant": 0,
+                    "depth": 0,
+                    "opacity": 1,
+                    "tone": "far",
+                    "id": "inferred:landscape:ground:3:0"
+                  }
+                ],
+                "singleUnit": false,
+                "inferred": true,
+                "provenance": {
+                  "basis": "local-context",
+                  "reason": "整体场景解释为 woodland，本地补充必要 ground 依托",
+                  "semanticPath": "scene.setting"
+                },
+                "quantity": {
+                  "rendered": 1,
+                  "exact": false,
+                  "items": []
+                },
+                "quantityLabel": "本地环境依托，不计入原文意象覆盖",
+                "z": -18,
+                "clip": [
+                  [
+                    0,
+                    0.5
+                  ],
+                  [
+                    1,
+                    0.5
+                  ],
+                  [
+                    1,
+                    1.04
+                  ],
+                  [
+                    0,
+                    1.04
+                  ]
+                ],
+                "visual": {
+                  "role": "ground",
+                  "brushStrength": 1.1
+                },
+                "performance": {
+                  "rhythm": "steady",
+                  "rate": 1,
+                  "amplitude": 1,
+                  "phase": 5.365840252331367
+                },
+                "id": "inferred:landscape:ground:3",
+                "interaction": {
+                  "mode": "group",
+                  "groupId": "inferred:landscape:ground:3"
+                },
+                "visibility": {
+                  "protect": false,
+                  "reasons": [],
+                  "basis": "local-drawing-policy"
+                }
+              }
+            ],
+            "scene": {
+              "kind": "woodland",
+              "notes": [
+                "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。"
+              ],
+              "waterline": null,
+              "semanticSetting": {
+                "kind": "woodland",
+                "basis": "inferred",
+                "evidence": [
+                  "明月别枝惊鹊",
+                  "清风半夜鸣蝉"
+                ]
+              },
+              "semanticEffects": [
+                {
+                  "path": "scene.supports[0]",
+                  "consumer": "场景依托",
+                  "status": "applied",
+                  "effect": "使用已提取主体的现有承托画法"
+                },
+                {
+                  "path": "scene.setting",
+                  "consumer": "场景依托",
+                  "status": "applied",
+                  "effect": "必要环境以独立推断背景表示，不新增原文实体"
+                }
+              ],
+              "organization": {
+                "version": "1.0",
+                "strategy": "general-constraints",
+                "regions": {
+                  "land": [
+                    [
+                      0,
+                      0.5
+                    ],
+                    [
+                      1,
+                      0.5
+                    ],
+                    [
+                      1,
+                      1.04
+                    ],
+                    [
+                      0,
+                      1.04
+                    ]
+                  ]
+                },
+                "candidates": [],
+                "repairs": [],
+                "limitations": [
+                  "几何检查不判定诗意理解或审美合格",
+                  "动作时序与整首诗的场景切换尚未编排"
+                ],
+                "topology": "疏林前后",
+                "layout": 0,
+                "orientation": "疏林前后",
+                "audit": {
+                  "scope": "implemented-geometry-and-drawing-gaps",
+                  "coverage": {
+                    "scope": "extracted-entities-only",
+                    "present": 5,
+                    "mapped": 3,
+                    "parameters": [
+                      "i4"
+                    ],
+                    "missing": [
+                      {
+                        "id": "i5",
+                        "name": "蝉"
+                      }
+                    ]
+                  },
+                  "checks": [
+                    "presence",
+                    "count",
+                    "finite",
+                    "support",
+                    "scale",
+                    "relative-position",
+                    "depth",
+                    "grove-spread",
+                    "drawing-gaps"
+                  ],
+                  "status": "needs-review",
+                  "errors": 0,
+                  "review": 1,
+                  "issues": [
+                    {
+                      "code": "drawing-gaps",
+                      "severity": "review",
+                      "message": "还有 1 项已提取线索尚未转成画面：蝉"
+                    }
+                  ],
+                  "metrics": {
+                    "overlapPenalty": 5.274,
+                    "balancePenalty": 0.02,
+                    "motifFootprint": 0.534,
+                    "landArea": 0.54
+                  },
+                  "cost": 93.444,
+                  "aestheticAcceptance": "pending-user"
+                },
+                "graph": {
+                  "nodes": [
+                    {
+                      "id": "l0",
+                      "entities": [
+                        "i1"
+                      ],
+                      "tool": "moon",
+                      "role": "sky",
+                      "habitat": "air",
+                      "inferred": false,
+                      "support": null
+                    },
+                    {
+                      "id": "l1",
+                      "entities": [
+                        "i2"
+                      ],
+                      "tool": "tree",
+                      "role": "vegetation",
+                      "habitat": "land",
+                      "inferred": false,
+                      "support": "l3"
+                    },
+                    {
+                      "id": "l2",
+                      "entities": [
+                        "i3"
+                      ],
+                      "tool": "bird",
+                      "role": "fauna",
+                      "habitat": "air",
+                      "inferred": false,
+                      "support": null
+                    },
+                    {
+                      "id": "l3",
+                      "entities": [],
+                      "tool": "landscape",
+                      "role": "terrain",
+                      "habitat": null,
+                      "inferred": true,
+                      "support": null
+                    }
+                  ],
+                  "edges": [
+                    {
+                      "type": "supported-by",
+                      "source": "l0",
+                      "target": null,
+                      "basis": "local-composition",
+                      "habitat": "air"
+                    },
+                    {
+                      "type": "supported-by",
+                      "source": "l1",
+                      "target": "l3",
+                      "basis": "local-composition",
+                      "habitat": "land"
+                    },
+                    {
+                      "type": "supported-by",
+                      "source": "l2",
+                      "target": null,
+                      "basis": "local-composition",
+                      "habitat": "air"
+                    },
+                    {
+                      "type": "on",
+                      "source": "l0",
+                      "target": "l1",
+                      "basis": "inferred",
+                      "modality": "unclear",
+                      "evidence": [
+                        "明月别枝惊鹊"
+                      ]
+                    }
+                  ],
+                  "setting": "woodland"
+                },
+                "actorSpacing": {
+                  "version": "1.0",
+                  "repairs": [],
+                  "residualOverlap": 0,
+                  "scope": "discrete-actors-not-intentional-occlusion"
+                }
+              },
+              "displayAudit": {
+                "scope": "display-scale-separation-and-habitat",
+                "issues": [],
+                "errors": 0,
+                "aestheticAcceptance": "pending-user"
+              }
+            },
+            "spatial": [
+              {
+                "type": "on",
+                "source": "i1",
+                "target": "i2",
+                "modality": "unclear",
+                "basis": "inferred",
+                "evidence": [
+                  "明月别枝惊鹊"
+                ],
+                "visualized": false,
+                "reason": "非确定关系仅保留解读"
+              }
+            ],
+            "landscapeStyle": {
+              "version": "1.0",
+              "color": "role-and-distance",
+              "motion": "layer-rhythms",
+              "aestheticAcceptance": "pending-user"
+            }
+          },
+          {
+            "id": "space-1",
+            "label": "林隙展开",
+            "description": "先安排连续水域与地表，再按主次与远近安放景物",
+            "layers": [
+              {
+                "tool": "moon",
+                "entities": [
+                  "i1"
+                ],
+                "projectedEntities": [],
+                "names": [
+                  "明月"
+                ],
+                "options": {
+                  "shape": "crescent"
+                },
+                "animate": true,
+                "placement": {
+                  "anchor": [
+                    320,
+                    175
+                  ],
+                  "at": [
+                    0.29,
+                    0.22
+                  ],
+                  "scale": 0.85
+                },
+                "semanticGroup": {
+                  "members": [
+                    "i1"
+                  ],
+                  "role": "environment",
+                  "pattern": "single",
+                  "depth": "unspecified",
+                  "basis": "inferred",
+                  "evidence": [
+                    "明月别枝惊鹊"
+                  ],
+                  "index": 0
+                },
+                "semanticEffects": [
+                  {
+                    "path": "scene.groups[0].role",
+                    "consumer": "主次布局",
+                    "effect": "保留环境群落层次",
+                    "status": "applied"
+                  },
+                  {
+                    "path": "scene.groups[0].pattern",
+                    "consumer": "群落布局",
+                    "effect": "按 single 组织显示单元；不覆盖明确数量",
+                    "status": "applied"
+                  },
+                  {
+                    "path": "scene.groups[0].depth",
+                    "consumer": "远近布局",
+                    "effect": "远近未明，保持本地默认",
+                    "status": "skipped"
+                  }
+                ],
+                "semanticEnergy": true,
+                "timeScale": 0.45,
+                "instances": [
+                  {
+                    "placement": {
+                      "anchor": [
+                        320,
+                        175
+                      ],
+                      "at": [
+                        0.29,
+                        0.22
+                      ],
+                      "scale": 0.76
+                    },
+                    "depth": 0.05,
+                    "opacity": 1,
+                    "variant": 0,
+                    "tone": "far",
+                    "id": "i1:moon::0:0"
+                  }
+                ],
+                "singleUnit": true,
+                "quantity": {
+                  "items": [
+                    {
+                      "entity": "i1",
+                      "mode": "unspecified",
+                      "min": null,
+                      "max": null,
+                      "unit": null,
+                      "scope": "unspecified",
+                      "extent": "unspecified",
+                      "evidence": [],
+                      "basis": "model"
+                    }
+                  ],
+                  "rendered": 1,
+                  "exact": false,
+                  "collective": false,
+                  "partUnsupported": false
+                },
+                "quantityLabel": "数量未精确；本地试画 1 个单元",
+                "z": -5,
+                "visual": {
+                  "role": "light",
+                  "brushStrength": 1.1
+                },
+                "performance": {
+                  "rhythm": "steady",
+                  "rate": 1,
+                  "amplitude": 1,
+                  "phase": 0
+                },
+                "id": "i1:moon::0",
+                "interaction": {
+                  "mode": "instance",
+                  "groupId": "i1:moon::0"
+                },
+                "visibility": {
+                  "protect": true,
+                  "reasons": [
+                    "recognizable-subject"
+                  ],
+                  "basis": "local-drawing-policy"
+                }
+              },
+              {
+                "tool": "tree",
+                "entities": [
+                  "i2"
+                ],
+                "projectedEntities": [],
+                "names": [
+                  "枝"
+                ],
+                "options": {
+                  "form": "broadleaf",
+                  "crown": "lines"
+                },
+                "animate": true,
+                "placement": {
+                  "anchor": [
+                    320,
+                    388
+                  ],
+                  "at": [
+                    0.5392507499625,
+                    0.77478
+                  ],
+                  "scale": 1.15
+                },
+                "semanticGroup": {
+                  "members": [
+                    "i2",
+                    "i3"
+                  ],
+                  "role": "subject",
+                  "pattern": "cluster",
+                  "depth": "unspecified",
+                  "basis": "inferred",
+                  "evidence": [
+                    "明月别枝惊鹊"
+                  ],
+                  "index": 1
+                },
+                "semanticEffects": [
+                  {
+                    "path": "scene.groups[1].role",
+                    "consumer": "主次布局",
+                    "effect": "主体相对突出",
+                    "status": "applied"
+                  },
+                  {
+                    "path": "scene.groups[1].pattern",
+                    "consumer": "群落布局",
+                    "effect": "按 cluster 组织显示单元；不覆盖明确数量",
+                    "status": "applied"
+                  },
+                  {
+                    "path": "scene.groups[1].depth",
+                    "consumer": "远近布局",
+                    "effect": "远近未明，保持本地默认",
+                    "status": "skipped"
+                  }
+                ],
+                "semanticEnergy": true,
+                "timeScale": 0.45,
+                "instances": [
+                  {
+                    "placement": {
+                      "anchor": [
+                        320,
+                        388
+                      ],
+                      "at": [
+                        0.6326264299785,
+                        0.6744983999999999
+                      ],
+                      "scale": 0.6639895555020001
+                    },
+                    "depth": 10,
+                    "opacity": 0.72160679775,
+                    "variant": 1,
+                    "tone": "middle",
+                    "id": "i2:tree:broadleaf:1:0"
+                  },
+                  {
+                    "placement": {
+                      "anchor": [
+                        320,
+                        388
+                      ],
+                      "at": [
+                        0.4150585899705,
+                        0.7112184
+                      ],
+                      "scale": 0.5655951110040001
+                    },
+                    "depth": 10.01,
+                    "opacity": 0.6452135954999999,
+                    "variant": 1,
+                    "tone": "middle",
+                    "id": "i2:tree:broadleaf:1:1"
+                  },
+                  {
+                    "placement": {
+                      "anchor": [
+                        320,
+                        388
+                      ],
+                      "at": [
+                        0.7670907499624999,
+                        0.7479384
+                      ],
+                      "scale": 0.724800666506
+                    },
+                    "depth": 10.02,
+                    "opacity": 0.76882039325,
+                    "variant": 1,
+                    "tone": "middle",
+                    "id": "i2:tree:broadleaf:1:2"
+                  },
+                  {
+                    "placement": {
+                      "anchor": [
+                        320,
+                        388
+                      ],
+                      "at": [
+                        0.5495229099545,
+                        0.9180744000000001
+                      ],
+                      "scale": 0.8952062220080002
+                    },
+                    "depth": 20.03,
+                    "opacity": 0.9211844719,
+                    "variant": 2,
+                    "tone": "near",
+                    "id": "i2:tree:broadleaf:1:3"
+                  },
+                  {
+                    "placement": {
+                      "anchor": [
+                        320,
+                        388
+                      ],
+                      "at": [
+                        0.3319550699465001,
+                        0.8221704000000001
+                      ],
+                      "scale": 0.7968117775100001
+                    },
+                    "depth": 10.04,
+                    "opacity": 0.852430589875,
+                    "variant": 1,
+                    "tone": "middle",
+                    "id": "i2:tree:broadleaf:1:4"
+                  }
+                ],
+                "singleUnit": true,
+                "quantity": {
+                  "items": [
+                    {
+                      "entity": "i2",
+                      "mode": "unspecified",
+                      "min": null,
+                      "max": null,
+                      "unit": null,
+                      "scope": "unspecified",
+                      "extent": "unspecified",
+                      "evidence": [],
+                      "basis": "model"
+                    }
+                  ],
+                  "rendered": 5,
+                  "exact": false,
+                  "collective": true,
+                  "partUnsupported": false
+                },
+                "quantityLabel": "成片分布；本地试画 5 个单元",
+                "z": 8,
+                "visual": {
+                  "role": "vegetation",
+                  "brushStrength": 1.2
+                },
+                "performance": {
+                  "rhythm": "gust",
+                  "rate": 0.62,
+                  "amplitude": 0.65,
+                  "phase": 3.8830085198369844
+                },
+                "id": "i2:tree:broadleaf:1",
+                "interaction": {
+                  "mode": "instance",
+                  "groupId": "i2:tree:broadleaf:1"
+                },
+                "visibility": {
+                  "protect": true,
+                  "reasons": [
+                    "semantic-subject"
+                  ],
+                  "basis": "local-drawing-policy"
+                }
+              },
+              {
+                "tool": "bird",
+                "entities": [
+                  "i3"
+                ],
+                "projectedEntities": [],
+                "names": [
+                  "鹊"
+                ],
+                "options": {
+                  "pose": "resting",
+                  "tone": "ink",
+                  "facing": "right"
+                },
+                "animate": false,
+                "placement": {
+                  "anchor": [
+                    320,
+                    190
+                  ],
+                  "at": [
+                    0.7906774328362504,
+                    0.518265408329171
+                  ],
+                  "scale": 0.78
+                },
+                "drawingLabel": "鸟意（写意借形）",
+                "semanticGroup": {
+                  "members": [
+                    "i2",
+                    "i3"
+                  ],
+                  "role": "subject",
+                  "pattern": "cluster",
+                  "depth": "unspecified",
+                  "basis": "inferred",
+                  "evidence": [
+                    "明月别枝惊鹊"
+                  ],
+                  "index": 1
+                },
+                "semanticEffects": [
+                  {
+                    "path": "scene.actions[0].state",
+                    "consumer": "动作边界",
+                    "effect": "动作未明，保留静态形态",
+                    "status": "skipped"
+                  },
+                  {
+                    "path": "scene.groups[1].role",
+                    "consumer": "主次布局",
+                    "effect": "主体相对突出",
+                    "status": "applied"
+                  },
+                  {
+                    "path": "scene.groups[1].pattern",
+                    "consumer": "群落布局",
+                    "effect": "按 cluster 组织显示单元；不覆盖明确数量",
+                    "status": "applied"
+                  },
+                  {
+                    "path": "scene.groups[1].depth",
+                    "consumer": "远近布局",
+                    "effect": "远近未明，保持本地默认",
+                    "status": "skipped"
+                  }
+                ],
+                "semanticEnergy": false,
+                "timeScale": 0,
+                "semanticAction": {
+                  "entity": "i3",
+                  "state": "unclear",
+                  "pace": "unspecified",
+                  "direction": "unspecified",
+                  "modality": "asserted",
+                  "basis": "inferred",
+                  "evidence": [
+                    "明月别枝惊鹊"
+                  ]
+                },
+                "instances": [
+                  {
+                    "placement": {
+                      "anchor": [
+                        320,
+                        190
+                      ],
+                      "at": [
+                        0.6995907499624999,
+                        0.51600218671808
+                      ],
+                      "scale": 0.62
+                    },
+                    "depth": 0.0125,
+                    "opacity": 0.86,
+                    "variant": 0,
+                    "tone": "far",
+                    "id": "i3:bird::2:0"
+                  },
+                  {
+                    "placement": {
+                      "anchor": [
+                        320,
+                        190
+                      ],
+                      "at": [
+                        0.7967293942393276,
+                        0.4948028406887386
+                      ],
+                      "scale": 0.62
+                    },
+                    "depth": 0.037500000000000006,
+                    "opacity": 0.86,
+                    "variant": 0,
+                    "tone": "far",
+                    "id": "i3:bird::2:1"
+                  },
+                  {
+                    "placement": {
+                      "anchor": [
+                        320,
+                        190
+                      ],
+                      "at": [
+                        0.8007367672630383,
+                        0.5756435733616551
+                      ],
+                      "scale": 0.62
+                    },
+                    "depth": 0.0625,
+                    "opacity": 0.8875,
+                    "variant": 0,
+                    "tone": "far",
+                    "id": "i3:bird::2:2"
+                  },
+                  {
+                    "placement": {
+                      "anchor": [
+                        320,
+                        190
+                      ],
+                      "at": [
+                        0.8656528198801355,
+                        0.48661303254821037
+                      ],
+                      "scale": 0.62
+                    },
+                    "depth": 0.08750000000000001,
+                    "opacity": 0.9624999999999999,
+                    "variant": 0,
+                    "tone": "far",
+                    "id": "i3:bird::2:3"
+                  }
+                ],
+                "singleUnit": true,
+                "quantity": {
+                  "items": [
+                    {
+                      "entity": "i3",
+                      "mode": "unspecified",
+                      "min": null,
+                      "max": null,
+                      "unit": null,
+                      "scope": "unspecified",
+                      "extent": "unspecified",
+                      "evidence": [],
+                      "basis": "model"
+                    }
+                  ],
+                  "rendered": 4,
+                  "exact": false,
+                  "collective": false,
+                  "partUnsupported": false
+                },
+                "quantityLabel": "数量未精确；本地试画 4 个单元",
+                "z": 10,
+                "semanticSupport": {
+                  "surface": "vegetation",
+                  "target": "i2",
+                  "path": "scene.supports[0]"
+                },
+                "visual": {
+                  "role": "figure",
+                  "brushStrength": 2.2
+                },
+                "performance": {
+                  "rhythm": "passing",
+                  "rate": 1.05,
+                  "amplitude": 1.1,
+                  "phase": 1.4828317324943823
+                },
+                "id": "i3:bird::2",
+                "interaction": {
+                  "mode": "instance",
+                  "groupId": "i3:bird::2"
+                },
+                "visibility": {
+                  "protect": true,
+                  "reasons": [
+                    "recognizable-subject",
+                    "semantic-subject"
+                  ],
+                  "basis": "local-drawing-policy"
+                }
+              },
+              {
+                "tool": "landscape",
+                "entities": [],
+                "projectedEntities": [],
+                "names": [
+                  "构图依托·地面"
+                ],
+                "options": {
+                  "form": "ground",
+                  "edge": "soft"
+                },
+                "animate": false,
+                "placement": {
+                  "anchor": [
+                    320,
+                    194
+                  ],
+                  "at": [
+                    0.5,
+                    0.54
+                  ],
+                  "scale": 1.6
+                },
+                "instances": [
+                  {
+                    "placement": {
+                      "anchor": [
+                        320,
+                        265
+                      ],
+                      "at": [
+                        0.5,
+                        0.54
+                      ],
+                      "scale": 2.5
+                    },
+                    "variant": 0,
+                    "depth": 0,
+                    "opacity": 1,
+                    "tone": "far",
+                    "id": "inferred:landscape:ground:3:0"
+                  }
+                ],
+                "singleUnit": false,
+                "inferred": true,
+                "provenance": {
+                  "basis": "local-context",
+                  "reason": "整体场景解释为 woodland，本地补充必要 ground 依托",
+                  "semanticPath": "scene.setting"
+                },
+                "quantity": {
+                  "rendered": 1,
+                  "exact": false,
+                  "items": []
+                },
+                "quantityLabel": "本地环境依托，不计入原文意象覆盖",
+                "z": -18,
+                "clip": [
+                  [
+                    0,
+                    0.5
+                  ],
+                  [
+                    1,
+                    0.5
+                  ],
+                  [
+                    1,
+                    1.04
+                  ],
+                  [
+                    0,
+                    1.04
+                  ]
+                ],
+                "visual": {
+                  "role": "ground",
+                  "brushStrength": 1.1
+                },
+                "performance": {
+                  "rhythm": "steady",
+                  "rate": 1,
+                  "amplitude": 1,
+                  "phase": 5.365840252331367
+                },
+                "id": "inferred:landscape:ground:3",
+                "interaction": {
+                  "mode": "group",
+                  "groupId": "inferred:landscape:ground:3"
+                },
+                "visibility": {
+                  "protect": false,
+                  "reasons": [],
+                  "basis": "local-drawing-policy"
+                }
+              }
+            ],
+            "scene": {
+              "kind": "woodland",
+              "notes": [
+                "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。"
+              ],
+              "waterline": null,
+              "semanticSetting": {
+                "kind": "woodland",
+                "basis": "inferred",
+                "evidence": [
+                  "明月别枝惊鹊",
+                  "清风半夜鸣蝉"
+                ]
+              },
+              "semanticEffects": [
+                {
+                  "path": "scene.supports[0]",
+                  "consumer": "场景依托",
+                  "status": "applied",
+                  "effect": "使用已提取主体的现有承托画法"
+                },
+                {
+                  "path": "scene.setting",
+                  "consumer": "场景依托",
+                  "status": "applied",
+                  "effect": "必要环境以独立推断背景表示，不新增原文实体"
+                }
+              ],
+              "organization": {
+                "version": "1.0",
+                "strategy": "general-constraints",
+                "regions": {
+                  "land": [
+                    [
+                      0,
+                      0.5
+                    ],
+                    [
+                      1,
+                      0.5
+                    ],
+                    [
+                      1,
+                      1.04
+                    ],
+                    [
+                      0,
+                      1.04
+                    ]
+                  ]
+                },
+                "candidates": [],
+                "repairs": [],
+                "limitations": [
+                  "几何检查不判定诗意理解或审美合格",
+                  "动作时序与整首诗的场景切换尚未编排"
+                ],
+                "topology": "林隙展开",
+                "layout": 1,
+                "orientation": "林隙展开",
+                "audit": {
+                  "scope": "implemented-geometry-and-drawing-gaps",
+                  "coverage": {
+                    "scope": "extracted-entities-only",
+                    "present": 5,
+                    "mapped": 3,
+                    "parameters": [
+                      "i4"
+                    ],
+                    "missing": [
+                      {
+                        "id": "i5",
+                        "name": "蝉"
+                      }
+                    ]
+                  },
+                  "checks": [
+                    "presence",
+                    "count",
+                    "finite",
+                    "support",
+                    "scale",
+                    "relative-position",
+                    "depth",
+                    "grove-spread",
+                    "drawing-gaps"
+                  ],
+                  "status": "needs-review",
+                  "errors": 0,
+                  "review": 1,
+                  "issues": [
+                    {
+                      "code": "drawing-gaps",
+                      "severity": "review",
+                      "message": "还有 1 项已提取线索尚未转成画面：蝉"
+                    }
+                  ],
+                  "metrics": {
+                    "overlapPenalty": 5.36,
+                    "balancePenalty": 0.045,
+                    "motifFootprint": 0.561,
+                    "landArea": 0.54
+                  },
+                  "cost": 94.678,
+                  "aestheticAcceptance": "pending-user"
+                },
+                "graph": {
+                  "nodes": [
+                    {
+                      "id": "l0",
+                      "entities": [
+                        "i1"
+                      ],
+                      "tool": "moon",
+                      "role": "sky",
+                      "habitat": "air",
+                      "inferred": false,
+                      "support": null
+                    },
+                    {
+                      "id": "l1",
+                      "entities": [
+                        "i2"
+                      ],
+                      "tool": "tree",
+                      "role": "vegetation",
+                      "habitat": "land",
+                      "inferred": false,
+                      "support": "l3"
+                    },
+                    {
+                      "id": "l2",
+                      "entities": [
+                        "i3"
+                      ],
+                      "tool": "bird",
+                      "role": "fauna",
+                      "habitat": "air",
+                      "inferred": false,
+                      "support": null
+                    },
+                    {
+                      "id": "l3",
+                      "entities": [],
+                      "tool": "landscape",
+                      "role": "terrain",
+                      "habitat": null,
+                      "inferred": true,
+                      "support": null
+                    }
+                  ],
+                  "edges": [
+                    {
+                      "type": "supported-by",
+                      "source": "l0",
+                      "target": null,
+                      "basis": "local-composition",
+                      "habitat": "air"
+                    },
+                    {
+                      "type": "supported-by",
+                      "source": "l1",
+                      "target": "l3",
+                      "basis": "local-composition",
+                      "habitat": "land"
+                    },
+                    {
+                      "type": "supported-by",
+                      "source": "l2",
+                      "target": null,
+                      "basis": "local-composition",
+                      "habitat": "air"
+                    },
+                    {
+                      "type": "on",
+                      "source": "l0",
+                      "target": "l1",
+                      "basis": "inferred",
+                      "modality": "unclear",
+                      "evidence": [
+                        "明月别枝惊鹊"
+                      ]
+                    }
+                  ],
+                  "setting": "woodland"
+                },
+                "actorSpacing": {
+                  "version": "1.0",
+                  "repairs": [],
+                  "residualOverlap": 0,
+                  "scope": "discrete-actors-not-intentional-occlusion"
+                }
+              },
+              "displayAudit": {
+                "scope": "display-scale-separation-and-habitat",
+                "issues": [],
+                "errors": 0,
+                "aestheticAcceptance": "pending-user"
+              }
+            },
+            "spatial": [
+              {
+                "type": "on",
+                "source": "i1",
+                "target": "i2",
+                "modality": "unclear",
+                "basis": "inferred",
+                "evidence": [
+                  "明月别枝惊鹊"
+                ],
+                "visualized": false,
+                "reason": "非确定关系仅保留解读"
+              }
+            ],
+            "landscapeStyle": {
+              "version": "1.0",
+              "color": "role-and-distance",
+              "motion": "layer-rhythms",
+              "aestheticAcceptance": "pending-user"
+            },
+            "notes": []
+          },
+          {
+            "id": "space-2",
+            "label": "远近错落",
+            "description": "先安排连续水域与地表，再按主次与远近安放景物",
+            "layers": [
+              {
+                "tool": "moon",
+                "entities": [
+                  "i1"
+                ],
+                "projectedEntities": [],
+                "names": [
+                  "明月"
+                ],
+                "options": {
+                  "shape": "crescent"
+                },
+                "animate": true,
+                "placement": {
+                  "anchor": [
+                    320,
+                    175
+                  ],
+                  "at": [
+                    0.72,
+                    0.22
+                  ],
+                  "scale": 0.85
+                },
+                "semanticGroup": {
+                  "members": [
+                    "i1"
+                  ],
+                  "role": "environment",
+                  "pattern": "single",
+                  "depth": "unspecified",
+                  "basis": "inferred",
+                  "evidence": [
+                    "明月别枝惊鹊"
+                  ],
+                  "index": 0
+                },
+                "semanticEffects": [
+                  {
+                    "path": "scene.groups[0].role",
+                    "consumer": "主次布局",
+                    "effect": "保留环境群落层次",
+                    "status": "applied"
+                  },
+                  {
+                    "path": "scene.groups[0].pattern",
+                    "consumer": "群落布局",
+                    "effect": "按 single 组织显示单元；不覆盖明确数量",
+                    "status": "applied"
+                  },
+                  {
+                    "path": "scene.groups[0].depth",
+                    "consumer": "远近布局",
+                    "effect": "远近未明，保持本地默认",
+                    "status": "skipped"
+                  }
+                ],
+                "semanticEnergy": true,
+                "timeScale": 0.45,
+                "instances": [
+                  {
+                    "placement": {
+                      "anchor": [
+                        320,
+                        175
+                      ],
+                      "at": [
+                        0.72,
+                        0.22
+                      ],
+                      "scale": 0.76
+                    },
+                    "depth": 0.05,
+                    "opacity": 1,
+                    "variant": 0,
+                    "tone": "far",
+                    "id": "i1:moon::0:0"
+                  }
+                ],
+                "singleUnit": true,
+                "quantity": {
+                  "items": [
+                    {
+                      "entity": "i1",
+                      "mode": "unspecified",
+                      "min": null,
+                      "max": null,
+                      "unit": null,
+                      "scope": "unspecified",
+                      "extent": "unspecified",
+                      "evidence": [],
+                      "basis": "model"
+                    }
+                  ],
+                  "rendered": 1,
+                  "exact": false,
+                  "collective": false,
+                  "partUnsupported": false
+                },
+                "quantityLabel": "数量未精确；本地试画 1 个单元",
+                "z": -5,
+                "visual": {
+                  "role": "light",
+                  "brushStrength": 1.1
+                },
+                "performance": {
+                  "rhythm": "steady",
+                  "rate": 1,
+                  "amplitude": 1,
+                  "phase": 0
+                },
+                "id": "i1:moon::0",
+                "interaction": {
+                  "mode": "instance",
+                  "groupId": "i1:moon::0"
+                },
+                "visibility": {
+                  "protect": true,
+                  "reasons": [
+                    "recognizable-subject"
+                  ],
+                  "basis": "local-drawing-policy"
+                }
+              },
+              {
+                "tool": "tree",
+                "entities": [
+                  "i2"
+                ],
+                "projectedEntities": [],
+                "names": [
+                  "枝"
+                ],
+                "options": {
+                  "form": "broadleaf",
+                  "crown": "lines"
+                },
+                "animate": true,
+                "placement": {
+                  "anchor": [
+                    320,
+                    388
+                  ],
+                  "at": [
+                    0.42622074996250003,
+                    0.77478
+                  ],
+                  "scale": 1.15
+                },
+                "semanticGroup": {
+                  "members": [
+                    "i2",
+                    "i3"
+                  ],
+                  "role": "subject",
+                  "pattern": "cluster",
+                  "depth": "unspecified",
+                  "basis": "inferred",
+                  "evidence": [
+                    "明月别枝惊鹊"
+                  ],
+                  "index": 1
+                },
+                "semanticEffects": [
+                  {
+                    "path": "scene.groups[1].role",
+                    "consumer": "主次布局",
+                    "effect": "主体相对突出",
+                    "status": "applied"
+                  },
+                  {
+                    "path": "scene.groups[1].pattern",
+                    "consumer": "群落布局",
+                    "effect": "按 cluster 组织显示单元；不覆盖明确数量",
+                    "status": "applied"
+                  },
+                  {
+                    "path": "scene.groups[1].depth",
+                    "consumer": "远近布局",
+                    "effect": "远近未明，保持本地默认",
+                    "status": "skipped"
+                  }
+                ],
+                "semanticEnergy": true,
+                "timeScale": 0.45,
+                "instances": [
+                  {
+                    "placement": {
+                      "anchor": [
+                        320,
+                        388
+                      ],
+                      "at": [
+                        0.6335164299785001,
+                        0.6744983999999999
+                      ],
+                      "scale": 0.6827943555020001
+                    },
+                    "depth": 10,
+                    "opacity": 0.73620679775,
+                    "variant": 1,
+                    "tone": "middle",
+                    "id": "i2:tree:broadleaf:1:0"
+                  },
+                  {
+                    "placement": {
+                      "anchor": [
+                        320,
+                        388
+                      ],
+                      "at": [
+                        0.41594858997049994,
+                        0.7112184
+                      ],
+                      "scale": 0.584399911004
+                    },
+                    "depth": 10.01,
+                    "opacity": 0.6598135955,
+                    "variant": 1,
+                    "tone": "middle",
+                    "id": "i2:tree:broadleaf:1:1"
+                  },
+                  {
+                    "placement": {
+                      "anchor": [
+                        320,
+                        388
+                      ],
+                      "at": [
+                        0.1983807499624999,
+                        0.7479384
+                      ],
+                      "scale": 0.486005466506
+                    },
+                    "depth": 10.02,
+                    "opacity": 0.58342039325,
+                    "variant": 1,
+                    "tone": "middle",
+                    "id": "i2:tree:broadleaf:1:2"
+                  },
+                  {
+                    "placement": {
+                      "anchor": [
+                        320,
+                        388
+                      ],
+                      "at": [
+                        0.5504129099545,
+                        0.9180744000000001
+                      ],
+                      "scale": 0.9140110220080001
+                    },
+                    "depth": 20.03,
+                    "opacity": 0.9343244718999999,
+                    "variant": 2,
+                    "tone": "near",
+                    "id": "i2:tree:broadleaf:1:3"
+                  },
+                  {
+                    "placement": {
+                      "anchor": [
+                        320,
+                        388
+                      ],
+                      "at": [
+                        0.3328450699465001,
+                        0.8221704000000001
+                      ],
+                      "scale": 0.8156165775100002
+                    },
+                    "depth": 10.04,
+                    "opacity": 0.865570589875,
+                    "variant": 1,
+                    "tone": "middle",
+                    "id": "i2:tree:broadleaf:1:4"
+                  }
+                ],
+                "singleUnit": true,
+                "quantity": {
+                  "items": [
+                    {
+                      "entity": "i2",
+                      "mode": "unspecified",
+                      "min": null,
+                      "max": null,
+                      "unit": null,
+                      "scope": "unspecified",
+                      "extent": "unspecified",
+                      "evidence": [],
+                      "basis": "model"
+                    }
+                  ],
+                  "rendered": 5,
+                  "exact": false,
+                  "collective": true,
+                  "partUnsupported": false
+                },
+                "quantityLabel": "成片分布；本地试画 5 个单元",
+                "z": 8,
+                "visual": {
+                  "role": "vegetation",
+                  "brushStrength": 1.2
+                },
+                "performance": {
+                  "rhythm": "gust",
+                  "rate": 0.62,
+                  "amplitude": 0.65,
+                  "phase": 3.8830085198369844
+                },
+                "id": "i2:tree:broadleaf:1",
+                "interaction": {
+                  "mode": "instance",
+                  "groupId": "i2:tree:broadleaf:1"
+                },
+                "visibility": {
+                  "protect": true,
+                  "reasons": [
+                    "semantic-subject"
+                  ],
+                  "basis": "local-drawing-policy"
+                }
+              },
+              {
+                "tool": "bird",
+                "entities": [
+                  "i3"
+                ],
+                "projectedEntities": [],
+                "names": [
+                  "鹊"
+                ],
+                "options": {
+                  "pose": "resting",
+                  "tone": "ink",
+                  "facing": "right"
+                },
+                "animate": false,
+                "placement": {
+                  "anchor": [
+                    320,
+                    190
+                  ],
+                  "at": [
+                    0.22196743283625034,
+                    0.5946798723291711
+                  ],
+                  "scale": 0.78
+                },
+                "drawingLabel": "鸟意（写意借形）",
+                "semanticGroup": {
+                  "members": [
+                    "i2",
+                    "i3"
+                  ],
+                  "role": "subject",
+                  "pattern": "cluster",
+                  "depth": "unspecified",
+                  "basis": "inferred",
+                  "evidence": [
+                    "明月别枝惊鹊"
+                  ],
+                  "index": 1
+                },
+                "semanticEffects": [
+                  {
+                    "path": "scene.actions[0].state",
+                    "consumer": "动作边界",
+                    "effect": "动作未明，保留静态形态",
+                    "status": "skipped"
+                  },
+                  {
+                    "path": "scene.groups[1].role",
+                    "consumer": "主次布局",
+                    "effect": "主体相对突出",
+                    "status": "applied"
+                  },
+                  {
+                    "path": "scene.groups[1].pattern",
+                    "consumer": "群落布局",
+                    "effect": "按 cluster 组织显示单元；不覆盖明确数量",
+                    "status": "applied"
+                  },
+                  {
+                    "path": "scene.groups[1].depth",
+                    "consumer": "远近布局",
+                    "effect": "远近未明，保持本地默认",
+                    "status": "skipped"
+                  }
+                ],
+                "semanticEnergy": false,
+                "timeScale": 0,
+                "semanticAction": {
+                  "entity": "i3",
+                  "state": "unclear",
+                  "pace": "unspecified",
+                  "direction": "unspecified",
+                  "modality": "asserted",
+                  "basis": "inferred",
+                  "evidence": [
+                    "明月别枝惊鹊"
+                  ]
+                },
+                "instances": [
+                  {
+                    "placement": {
+                      "anchor": [
+                        320,
+                        190
+                      ],
+                      "at": [
+                        0.1308807499624999,
+                        0.59241665071808
+                      ],
+                      "scale": 0.62
+                    },
+                    "depth": 0.0125,
+                    "opacity": 0.86,
+                    "variant": 0,
+                    "tone": "far",
+                    "id": "i3:bird::2:0"
+                  },
+                  {
+                    "placement": {
+                      "anchor": [
+                        320,
+                        190
+                      ],
+                      "at": [
+                        0.22801939423932763,
+                        0.5712173046887387
+                      ],
+                      "scale": 0.62
+                    },
+                    "depth": 0.037500000000000006,
+                    "opacity": 0.86,
+                    "variant": 0,
+                    "tone": "far",
+                    "id": "i3:bird::2:1"
+                  },
+                  {
+                    "placement": {
+                      "anchor": [
+                        320,
+                        190
+                      ],
+                      "at": [
+                        0.2320267672630384,
+                        0.6520580373616551
+                      ],
+                      "scale": 0.62
+                    },
+                    "depth": 0.0625,
+                    "opacity": 0.8875,
+                    "variant": 0,
+                    "tone": "far",
+                    "id": "i3:bird::2:2"
+                  },
+                  {
+                    "placement": {
+                      "anchor": [
+                        320,
+                        190
+                      ],
+                      "at": [
+                        0.2969428198801355,
+                        0.5630274965482105
+                      ],
+                      "scale": 0.62
+                    },
+                    "depth": 0.08750000000000001,
+                    "opacity": 0.9624999999999999,
+                    "variant": 0,
+                    "tone": "far",
+                    "id": "i3:bird::2:3"
+                  }
+                ],
+                "singleUnit": true,
+                "quantity": {
+                  "items": [
+                    {
+                      "entity": "i3",
+                      "mode": "unspecified",
+                      "min": null,
+                      "max": null,
+                      "unit": null,
+                      "scope": "unspecified",
+                      "extent": "unspecified",
+                      "evidence": [],
+                      "basis": "model"
+                    }
+                  ],
+                  "rendered": 4,
+                  "exact": false,
+                  "collective": false,
+                  "partUnsupported": false
+                },
+                "quantityLabel": "数量未精确；本地试画 4 个单元",
+                "z": 10,
+                "semanticSupport": {
+                  "surface": "vegetation",
+                  "target": "i2",
+                  "path": "scene.supports[0]"
+                },
+                "visual": {
+                  "role": "figure",
+                  "brushStrength": 2.2
+                },
+                "performance": {
+                  "rhythm": "passing",
+                  "rate": 1.05,
+                  "amplitude": 1.1,
+                  "phase": 1.4828317324943823
+                },
+                "id": "i3:bird::2",
+                "interaction": {
+                  "mode": "instance",
+                  "groupId": "i3:bird::2"
+                },
+                "visibility": {
+                  "protect": true,
+                  "reasons": [
+                    "recognizable-subject",
+                    "semantic-subject"
+                  ],
+                  "basis": "local-drawing-policy"
+                }
+              },
+              {
+                "tool": "landscape",
+                "entities": [],
+                "projectedEntities": [],
+                "names": [
+                  "构图依托·地面"
+                ],
+                "options": {
+                  "form": "ground",
+                  "edge": "soft"
+                },
+                "animate": false,
+                "placement": {
+                  "anchor": [
+                    320,
+                    194
+                  ],
+                  "at": [
+                    0.5,
+                    0.54
+                  ],
+                  "scale": 1.6
+                },
+                "instances": [
+                  {
+                    "placement": {
+                      "anchor": [
+                        320,
+                        265
+                      ],
+                      "at": [
+                        0.5,
+                        0.54
+                      ],
+                      "scale": 2.5
+                    },
+                    "variant": 0,
+                    "depth": 0,
+                    "opacity": 1,
+                    "tone": "far",
+                    "id": "inferred:landscape:ground:3:0"
+                  }
+                ],
+                "singleUnit": false,
+                "inferred": true,
+                "provenance": {
+                  "basis": "local-context",
+                  "reason": "整体场景解释为 woodland，本地补充必要 ground 依托",
+                  "semanticPath": "scene.setting"
+                },
+                "quantity": {
+                  "rendered": 1,
+                  "exact": false,
+                  "items": []
+                },
+                "quantityLabel": "本地环境依托，不计入原文意象覆盖",
+                "z": -18,
+                "clip": [
+                  [
+                    0,
+                    0.5
+                  ],
+                  [
+                    1,
+                    0.5
+                  ],
+                  [
+                    1,
+                    1.04
+                  ],
+                  [
+                    0,
+                    1.04
+                  ]
+                ],
+                "visual": {
+                  "role": "ground",
+                  "brushStrength": 1.1
+                },
+                "performance": {
+                  "rhythm": "steady",
+                  "rate": 1,
+                  "amplitude": 1,
+                  "phase": 5.365840252331367
+                },
+                "id": "inferred:landscape:ground:3",
+                "interaction": {
+                  "mode": "group",
+                  "groupId": "inferred:landscape:ground:3"
+                },
+                "visibility": {
+                  "protect": false,
+                  "reasons": [],
+                  "basis": "local-drawing-policy"
+                }
+              }
+            ],
+            "scene": {
+              "kind": "woodland",
+              "notes": [
+                "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。",
+                "通用场景层先组织地面、水域、群落和主体，再比较三个布局的依托、相对位置、尺度与遮挡；检查通过不代表审美已通过。"
+              ],
+              "waterline": null,
+              "semanticSetting": {
+                "kind": "woodland",
+                "basis": "inferred",
+                "evidence": [
+                  "明月别枝惊鹊",
+                  "清风半夜鸣蝉"
+                ]
+              },
+              "semanticEffects": [
+                {
+                  "path": "scene.supports[0]",
+                  "consumer": "场景依托",
+                  "status": "applied",
+                  "effect": "使用已提取主体的现有承托画法"
+                },
+                {
+                  "path": "scene.setting",
+                  "consumer": "场景依托",
+                  "status": "applied",
+                  "effect": "必要环境以独立推断背景表示，不新增原文实体"
+                }
+              ],
+              "organization": {
+                "version": "1.0",
+                "strategy": "general-constraints",
+                "regions": {
+                  "land": [
+                    [
+                      0,
+                      0.5
+                    ],
+                    [
+                      1,
+                      0.5
+                    ],
+                    [
+                      1,
+                      1.04
+                    ],
+                    [
+                      0,
+                      1.04
+                    ]
+                  ]
+                },
+                "candidates": [
+                  {
+                    "layout": 2,
+                    "orientation": "远近错落",
+                    "errors": 0,
+                    "cost": 98.009,
+                    "score": 200.101,
+                    "metrics": {
+                      "overlapPenalty": 5.636,
+                      "balancePenalty": 0.046,
+                      "motifFootprint": 0.52,
+                      "landArea": 0.54
+                    }
+                  },
+                  {
+                    "layout": 0,
+                    "orientation": "疏林前后",
+                    "errors": 0,
+                    "cost": 101.435,
+                    "score": 208.627,
+                    "metrics": {
+                      "overlapPenalty": 5.938,
+                      "balancePenalty": 0.022,
+                      "motifFootprint": 0.528,
+                      "landArea": 0.54
+                    }
+                  },
+                  {
+                    "layout": 1,
+                    "orientation": "林隙展开",
+                    "errors": 0,
+                    "cost": 103.034,
+                    "score": 212.666,
+                    "metrics": {
+                      "overlapPenalty": 6.058,
+                      "balancePenalty": 0.042,
+                      "motifFootprint": 0.555,
+                      "landArea": 0.54
+                    }
+                  }
+                ],
+                "repairs": [
+                  {
+                    "type": "support-added",
+                    "reason": "整体场景解释为 woodland，本地补充必要 ground 依托"
+                  }
+                ],
+                "limitations": [
+                  "几何检查不判定诗意理解或审美合格",
+                  "动作时序与整首诗的场景切换尚未编排"
+                ],
+                "topology": "远近错落",
+                "layout": 2,
+                "orientation": "远近错落",
+                "audit": {
+                  "scope": "implemented-geometry-and-drawing-gaps",
+                  "coverage": {
+                    "scope": "extracted-entities-only",
+                    "present": 5,
+                    "mapped": 3,
+                    "parameters": [
+                      "i4"
+                    ],
+                    "missing": [
+                      {
+                        "id": "i5",
+                        "name": "蝉"
+                      }
+                    ]
+                  },
+                  "checks": [
+                    "presence",
+                    "count",
+                    "finite",
+                    "support",
+                    "scale",
+                    "relative-position",
+                    "depth",
+                    "grove-spread",
+                    "drawing-gaps"
+                  ],
+                  "status": "needs-review",
+                  "errors": 0,
+                  "review": 1,
+                  "issues": [
+                    {
+                      "code": "drawing-gaps",
+                      "severity": "review",
+                      "message": "还有 1 项已提取线索尚未转成画面：蝉"
+                    }
+                  ],
+                  "metrics": {
+                    "overlapPenalty": 6.179,
+                    "balancePenalty": 0.049,
+                    "motifFootprint": 0.525,
+                    "landArea": 0.54
+                  },
+                  "cost": 104.542,
+                  "aestheticAcceptance": "pending-user"
+                },
+                "graph": {
+                  "nodes": [
+                    {
+                      "id": "l0",
+                      "entities": [
+                        "i1"
+                      ],
+                      "tool": "moon",
+                      "role": "sky",
+                      "habitat": "air",
+                      "inferred": false,
+                      "support": null
+                    },
+                    {
+                      "id": "l1",
+                      "entities": [
+                        "i2"
+                      ],
+                      "tool": "tree",
+                      "role": "vegetation",
+                      "habitat": "land",
+                      "inferred": false,
+                      "support": "l3"
+                    },
+                    {
+                      "id": "l2",
+                      "entities": [
+                        "i3"
+                      ],
+                      "tool": "bird",
+                      "role": "fauna",
+                      "habitat": "air",
+                      "inferred": false,
+                      "support": null
+                    },
+                    {
+                      "id": "l3",
+                      "entities": [],
+                      "tool": "landscape",
+                      "role": "terrain",
+                      "habitat": null,
+                      "inferred": true,
+                      "support": null
+                    }
+                  ],
+                  "edges": [
+                    {
+                      "type": "supported-by",
+                      "source": "l0",
+                      "target": null,
+                      "basis": "local-composition",
+                      "habitat": "air"
+                    },
+                    {
+                      "type": "supported-by",
+                      "source": "l1",
+                      "target": "l3",
+                      "basis": "local-composition",
+                      "habitat": "land"
+                    },
+                    {
+                      "type": "supported-by",
+                      "source": "l2",
+                      "target": null,
+                      "basis": "local-composition",
+                      "habitat": "air"
+                    },
+                    {
+                      "type": "on",
+                      "source": "l0",
+                      "target": "l1",
+                      "basis": "inferred",
+                      "modality": "unclear",
+                      "evidence": [
+                        "明月别枝惊鹊"
+                      ]
+                    }
+                  ],
+                  "setting": "woodland"
+                },
+                "actorSpacing": {
+                  "version": "1.0",
+                  "repairs": [],
+                  "residualOverlap": 0,
+                  "scope": "discrete-actors-not-intentional-occlusion"
+                }
+              },
+              "displayAudit": {
+                "scope": "display-scale-separation-and-habitat",
+                "issues": [],
+                "errors": 0,
+                "aestheticAcceptance": "pending-user"
+              }
+            },
+            "spatial": [
+              {
+                "type": "on",
+                "source": "i1",
+                "target": "i2",
+                "modality": "unclear",
+                "basis": "inferred",
+                "evidence": [
+                  "明月别枝惊鹊"
+                ],
+                "visualized": false,
+                "reason": "非确定关系仅保留解读"
+              }
+            ],
+            "landscapeStyle": {
+              "version": "1.0",
+              "color": "role-and-distance",
+              "motion": "layer-rhythms",
+              "aestheticAcceptance": "pending-user"
+            },
+            "notes": []
+          }
+        ],
+        "composition": "space-0",
+        "omitted": [
+          {
+            "id": "i5",
+            "name": "蝉",
+            "reason": "地名、集合概念或本阶段不绘制的虫体：保留语境，不拆字补景",
+            "category": "context-only"
+          }
+        ],
+        "parameters": [
+          {
+            "entity": "i4",
+            "type": "wind"
+          }
+        ],
+        "sourceResolution": {
+          "version": "source-depiction-1.1",
+          "quantities": {},
+          "identities": [],
+          "changes": []
+        },
+        "notes": [
+          "原句未明确月形，暂用弯月试画；可以手动切换。",
+          "鹊：以通用写意鸟形表现，不细分物种。这是本地写意借形，保留原词义。",
+          "清风作为风参数，不额外画风线；强弱是本次试画选择。",
+          "位置、大小、笔触与默认微动是本地试画选择；数量解释与本地显示数量分别记录。",
+          "枝未明说精确数量，按模型的 cluster 群落解释选择本地显示密度。",
+          "未明说的群落数量、疏密、近中远层次与变体均为本地构图选择；种类可按已声明的写意画法概括，不把铺展词换算成精确物体数量。",
+          "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。",
+          "通用场景层先组织地面、水域、群落和主体，再比较三个布局的依托、相对位置、尺度与遮挡；检查通过不代表审美已通过。",
+          "语义保留：scene.groups[2].role，分组成员目前缺少基础画法",
+          "语义保留：scene.groups[2].pattern，分组成员目前缺少基础画法",
+          "语义保留：scene.groups[2].depth，分组成员目前缺少基础画法",
+          "语义保留：scene.groups[3].role，分组成员目前缺少基础画法",
+          "语义保留：scene.groups[3].pattern，分组成员目前缺少基础画法",
+          "语义保留：scene.groups[3].depth，分组成员目前缺少基础画法",
+          "整体场景、主次、远近、依托和支持的动作状态来自本次模型解释；具体布局、颜色和时钟倍率由本地视觉策略选择。",
+          "动作动画表现受支持的主导状态与有限观看运动；先后事件与完整因果尚未编排。",
+          "动态程度与默认轻风是可调整的观看选择；不改变数量、主次或原文动作判断。人物保持点景写意，不新增人物步态。",
+          "显示检查覆盖实例尺度、鸟群分离与空中落点；不保证笔触未被遮挡，也不代替实际观看。竹林默认成组拖动，其余单独拖动；Shift 可拖动同层整组。"
+        ],
+        "relations": [],
+        "semanticConsumption": {
+          "version": "3.3",
+          "items": [
+            {
+              "path": "scene.setting",
+              "status": "applied",
+              "consumer": "场景依托",
+              "effect": "必要环境以独立推断背景表示，不新增原文实体",
+              "basis": "inferred",
+              "evidence": [
+                "明月别枝惊鹊",
+                "清风半夜鸣蝉"
+              ]
+            },
+            {
+              "path": "scene.groups[0].role",
+              "status": "applied",
+              "consumer": "主次布局",
+              "effect": "保留环境群落层次",
+              "basis": "inferred",
+              "evidence": [
+                "明月别枝惊鹊"
+              ]
+            },
+            {
+              "path": "scene.groups[0].pattern",
+              "status": "applied",
+              "consumer": "群落布局",
+              "effect": "按 single 组织显示单元；不覆盖明确数量",
+              "basis": "inferred",
+              "evidence": [
+                "明月别枝惊鹊"
+              ]
+            },
+            {
+              "path": "scene.groups[0].depth",
+              "status": "skipped",
+              "consumer": "远近布局",
+              "effect": "远近未明，保持本地默认",
+              "basis": "inferred",
+              "evidence": [
+                "明月别枝惊鹊"
+              ]
+            },
+            {
+              "path": "scene.groups[1].role",
+              "status": "applied",
+              "consumer": "主次布局",
+              "effect": "主体相对突出",
+              "basis": "inferred",
+              "evidence": [
+                "明月别枝惊鹊"
+              ]
+            },
+            {
+              "path": "scene.groups[1].pattern",
+              "status": "applied",
+              "consumer": "群落布局",
+              "effect": "按 cluster 组织显示单元；不覆盖明确数量",
+              "basis": "inferred",
+              "evidence": [
+                "明月别枝惊鹊"
+              ]
+            },
+            {
+              "path": "scene.groups[1].depth",
+              "status": "skipped",
+              "consumer": "远近布局",
+              "effect": "远近未明，保持本地默认",
+              "basis": "inferred",
+              "evidence": [
+                "明月别枝惊鹊"
+              ]
+            },
+            {
+              "path": "scene.groups[2].role",
+              "status": "unsupported",
+              "consumer": "本地视觉策略",
+              "effect": "分组成员目前缺少基础画法",
+              "basis": "inferred",
+              "evidence": [
+                "清风半夜鸣蝉"
+              ]
+            },
+            {
+              "path": "scene.groups[2].pattern",
+              "status": "unsupported",
+              "consumer": "本地视觉策略",
+              "effect": "分组成员目前缺少基础画法",
+              "basis": "inferred",
+              "evidence": [
+                "清风半夜鸣蝉"
+              ]
+            },
+            {
+              "path": "scene.groups[2].depth",
+              "status": "unsupported",
+              "consumer": "本地视觉策略",
+              "effect": "分组成员目前缺少基础画法",
+              "basis": "inferred",
+              "evidence": [
+                "清风半夜鸣蝉"
+              ]
+            },
+            {
+              "path": "scene.groups[3].role",
+              "status": "unsupported",
+              "consumer": "本地视觉策略",
+              "effect": "分组成员目前缺少基础画法",
+              "basis": "inferred",
+              "evidence": [
+                "清风半夜鸣蝉"
+              ]
+            },
+            {
+              "path": "scene.groups[3].pattern",
+              "status": "unsupported",
+              "consumer": "本地视觉策略",
+              "effect": "分组成员目前缺少基础画法",
+              "basis": "inferred",
+              "evidence": [
+                "清风半夜鸣蝉"
+              ]
+            },
+            {
+              "path": "scene.groups[3].depth",
+              "status": "unsupported",
+              "consumer": "本地视觉策略",
+              "effect": "分组成员目前缺少基础画法",
+              "basis": "inferred",
+              "evidence": [
+                "清风半夜鸣蝉"
+              ]
+            },
+            {
+              "path": "scene.supports[0]",
+              "status": "applied",
+              "consumer": "场景依托",
+              "effect": "使用已提取主体的现有承托画法",
+              "basis": "inferred",
+              "evidence": [
+                "明月别枝惊鹊"
+              ]
+            },
+            {
+              "path": "scene.actions[0].state",
+              "status": "skipped",
+              "consumer": "动作边界",
+              "effect": "动作未明，保留静态形态",
+              "basis": "inferred",
+              "evidence": [
+                "明月别枝惊鹊"
+              ]
+            },
+            {
+              "path": "scene.actions[0].pace",
+              "status": "skipped",
+              "consumer": "本地视觉策略",
+              "effect": "该工具尚不支持此动作分量",
+              "basis": "inferred",
+              "evidence": [
+                "明月别枝惊鹊"
+              ]
+            },
+            {
+              "path": "scene.actions[0].direction",
+              "status": "skipped",
+              "consumer": "本地视觉策略",
+              "effect": "该工具尚不支持此动作分量",
+              "basis": "inferred",
+              "evidence": [
+                "明月别枝惊鹊"
+              ]
+            },
+            {
+              "path": "scene.actions[1].state",
+              "status": "skipped",
+              "consumer": "本地视觉策略",
+              "effect": "主体无画法",
+              "basis": "inferred",
+              "evidence": [
+                "清风半夜鸣蝉"
+              ]
+            },
+            {
+              "path": "scene.actions[1].pace",
+              "status": "skipped",
+              "consumer": "本地视觉策略",
+              "effect": "该工具尚不支持此动作分量",
+              "basis": "inferred",
+              "evidence": [
+                "清风半夜鸣蝉"
+              ]
+            },
+            {
+              "path": "scene.actions[1].direction",
+              "status": "skipped",
+              "consumer": "本地视觉策略",
+              "effect": "该工具尚不支持此动作分量",
+              "basis": "inferred",
+              "evidence": [
+                "清风半夜鸣蝉"
+              ]
+            },
+            {
+              "path": "scene.atmosphere.visibility",
+              "status": "applied",
+              "consumer": "画布色层与远景",
+              "effect": "可见度 clear；迷蒙或昏暗时淡化非光源图层",
+              "basis": "inferred",
+              "evidence": [
+                "明月别枝惊鹊",
+                "清风半夜鸣蝉"
+              ]
+            },
+            {
+              "path": "scene.atmosphere.illumination",
+              "status": "applied",
+              "consumer": "自动光色",
+              "effect": "照明 night 与气息标签共同选择本地 indigo 配色；夜景优先暗底，用户可手动覆盖",
+              "basis": "inferred",
+              "evidence": [
+                "明月别枝惊鹊",
+                "清风半夜鸣蝉"
+              ]
+            },
+            {
+              "path": "atmosphere.energy",
+              "status": "applied",
+              "consumer": "绘画时钟",
+              "effect": "没有明确动作节奏时，气息强弱控制已有微动的默认时钟"
+            },
+            {
+              "path": "atmosphere.openness",
+              "status": "applied",
+              "consumer": "群落分布与笔触密度",
+              "effect": "开阔度转换为本地间距与工具笔触密度，不等于原文数量"
+            },
+            {
+              "path": "atmosphere.valence",
+              "status": "applied",
+              "consumer": "自动光色",
+              "effect": "先约束昼夜明暗，再按已支持的气息标签和情绪倾向选择配色；不宣称完整情感理解"
+            },
+            {
+              "path": "time.markers",
+              "status": "retained",
+              "consumer": "原始记录与解读",
+              "effect": "保留原文时间标记；本版照明由 scene.atmosphere 转换，多阶段时间逻辑未执行"
+            }
+          ],
+          "summary": {
+            "applied": 11,
+            "partial": 0,
+            "unsupported": 6,
+            "skipped": 8,
+            "retained": 1
+          },
+          "aestheticAcceptance": "pending-user"
+        },
+        "landscapeStyle": {
+          "version": "1.0",
+          "color": "role-and-distance",
+          "motion": "layer-rhythms",
+          "aestheticAcceptance": "pending-user"
+        },
+        "compositionSelection": {
+          "method": "shared-policy-final-audit-and-geometric-preference",
+          "candidates": [
+            {
+              "id": "space-0",
+              "errors": 0,
+              "score": 188.656,
+              "actorOverlap": 0
+            },
+            {
+              "id": "space-1",
+              "errors": 0,
+              "score": 191.788,
+              "actorOverlap": 0
+            },
+            {
+              "id": "space-2",
+              "errors": 0,
+              "score": 216.45,
+              "actorOverlap": 0
+            }
+          ],
+          "aestheticAcceptance": "pending-user"
+        },
+        "imageryTrace": [
+          {
+            "id": "i1",
+            "mentions": [
+              "明月"
+            ],
+            "role": "scene",
+            "presence": "present",
+            "parameter": null,
+            "layers": [
+              {
+                "id": "i1:moon::0",
+                "tool": "moon",
+                "instances": [
+                  "i1:moon::0:0"
+                ]
+              }
+            ],
+            "omission": null
+          },
+          {
+            "id": "i2",
+            "mentions": [
+              "枝"
+            ],
+            "role": "scene",
+            "presence": "present",
+            "parameter": null,
+            "layers": [
+              {
+                "id": "i2:tree:broadleaf:1",
+                "tool": "tree",
+                "instances": [
+                  "i2:tree:broadleaf:1:0",
+                  "i2:tree:broadleaf:1:1",
+                  "i2:tree:broadleaf:1:2",
+                  "i2:tree:broadleaf:1:3",
+                  "i2:tree:broadleaf:1:4"
+                ]
+              }
+            ],
+            "omission": null
+          },
+          {
+            "id": "i3",
+            "mentions": [
+              "鹊"
+            ],
+            "role": "scene",
+            "presence": "present",
+            "parameter": null,
+            "layers": [
+              {
+                "id": "i3:bird::2",
+                "tool": "bird",
+                "instances": [
+                  "i3:bird::2:0",
+                  "i3:bird::2:1",
+                  "i3:bird::2:2",
+                  "i3:bird::2:3"
+                ]
+              }
+            ],
+            "omission": null
+          },
+          {
+            "id": "i4",
+            "mentions": [
+              "清风"
+            ],
+            "role": "scene",
+            "presence": "present",
+            "parameter": "wind",
+            "layers": [],
+            "omission": null
+          },
+          {
+            "id": "i5",
+            "mentions": [
+              "蝉"
+            ],
+            "role": "scene",
+            "presence": "present",
+            "parameter": null,
+            "layers": [],
+            "omission": "地名、集合概念或本阶段不绘制的虫体：保留语境，不拆字补景"
+          }
+        ],
+        "drawingPolicy": {
+          "version": "shared-drawing-policy-1.0",
+          "scope": "source-bound-generation-and-composition-alternatives",
+          "selectedComposition": "space-0",
+          "applied": [
+            {
+              "composition": "space-0",
+              "layer": "i1:moon::0",
+              "entities": [
+                "i1"
+              ],
+              "color": null,
+              "visibility": [
+                "recognizable-subject"
+              ],
+              "attachment": null
+            },
+            {
+              "composition": "space-0",
+              "layer": "i2:tree:broadleaf:1",
+              "entities": [
+                "i2"
+              ],
+              "color": null,
+              "visibility": [
+                "semantic-subject"
+              ],
+              "attachment": null
+            },
+            {
+              "composition": "space-0",
+              "layer": "i3:bird::2",
+              "entities": [
+                "i3"
+              ],
+              "color": null,
+              "visibility": [
+                "recognizable-subject",
+                "semantic-subject"
+              ],
+              "attachment": null
+            },
+            {
+              "composition": "space-1",
+              "layer": "i1:moon::0",
+              "entities": [
+                "i1"
+              ],
+              "color": null,
+              "visibility": [
+                "recognizable-subject"
+              ],
+              "attachment": null
+            },
+            {
+              "composition": "space-1",
+              "layer": "i2:tree:broadleaf:1",
+              "entities": [
+                "i2"
+              ],
+              "color": null,
+              "visibility": [
+                "semantic-subject"
+              ],
+              "attachment": null
+            },
+            {
+              "composition": "space-1",
+              "layer": "i3:bird::2",
+              "entities": [
+                "i3"
+              ],
+              "color": null,
+              "visibility": [
+                "recognizable-subject",
+                "semantic-subject"
+              ],
+              "attachment": null
+            },
+            {
+              "composition": "space-2",
+              "layer": "i1:moon::0",
+              "entities": [
+                "i1"
+              ],
+              "color": null,
+              "visibility": [
+                "recognizable-subject"
+              ],
+              "attachment": null
+            },
+            {
+              "composition": "space-2",
+              "layer": "i2:tree:broadleaf:1",
+              "entities": [
+                "i2"
+              ],
+              "color": null,
+              "visibility": [
+                "semantic-subject"
+              ],
+              "attachment": null
+            },
+            {
+              "composition": "space-2",
+              "layer": "i3:bird::2",
+              "entities": [
+                "i3"
+              ],
+              "color": null,
+              "visibility": [
+                "recognizable-subject",
+                "semantic-subject"
+              ],
+              "attachment": null
+            }
+          ],
+          "quantityChanges": 0,
+          "identityGroups": 0,
+          "aestheticAcceptance": "pending-user"
+        }
+      },
+      "renderability": {
+        "status": "ready",
+        "visibleScenery": true,
+        "visibleAbstract": false,
+        "gaps": []
+      },
+      "expression": {
+        "version": "shared-expression-1.1-source-bound",
+        "sourceContract": "expression-1.0",
+        "recommendation": "scenery",
+        "reason": "可画景物较充分，优先呈现风景",
+        "gaps": [],
+        "limitations": [
+          "景物过程当前影响抽象纹理；原生景物动作沿用场景能力，未支持的月下楼位移等仍不执行。",
+          "纹理、色层和观看扰动属于本地艺术选择，不改变语义成立状态"
+        ]
+      },
+      "notes": [
+        "三个表达倾向共享景物数量、空间、依托与主体身份；抽象笔触优先服从原景物区域和轮廓。",
+        "纯抽象或比喻句不因切换风景优先而补山水。",
+        "原句未明确月形，暂用弯月试画；可以手动切换。",
+        "鹊：以通用写意鸟形表现，不细分物种。这是本地写意借形，保留原词义。",
+        "清风作为风参数，不额外画风线；强弱是本次试画选择。",
+        "位置、大小、笔触与默认微动是本地试画选择；数量解释与本地显示数量分别记录。",
+        "枝未明说精确数量，按模型的 cluster 群落解释选择本地显示密度。",
+        "未明说的群落数量、疏密、近中远层次与变体均为本地构图选择；种类可按已声明的写意画法概括，不把铺展词换算成精确物体数量。",
+        "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。",
+        "通用场景层先组织地面、水域、群落和主体，再比较三个布局的依托、相对位置、尺度与遮挡；检查通过不代表审美已通过。",
+        "语义保留：scene.groups[2].role，分组成员目前缺少基础画法",
+        "语义保留：scene.groups[2].pattern，分组成员目前缺少基础画法",
+        "语义保留：scene.groups[2].depth，分组成员目前缺少基础画法",
+        "语义保留：scene.groups[3].role，分组成员目前缺少基础画法",
+        "语义保留：scene.groups[3].pattern，分组成员目前缺少基础画法",
+        "语义保留：scene.groups[3].depth，分组成员目前缺少基础画法",
+        "整体场景、主次、远近、依托和支持的动作状态来自本次模型解释；具体布局、颜色和时钟倍率由本地视觉策略选择。",
+        "动作动画表现受支持的主导状态与有限观看运动；先后事件与完整因果尚未编排。",
+        "动态程度与默认轻风是可调整的观看选择；不改变数量、主次或原文动作判断。人物保持点景写意，不新增人物步态。",
+        "显示检查覆盖实例尺度、鸟群分离与空中落点；不保证笔触未被遮挡，也不代替实际观看。竹林默认成组拖动，其余单独拖动；Shift 可拖动同层整组。"
+      ],
+      "aestheticAcceptance": "pending-user"
+    },
+    "delivery": {
+      "status": "complete",
+      "retryable": false,
+      "reason": null,
+      "message": "解读已通过检查。"
+    },
+    "elapsed_seconds": 5.8
+  },
+  "adviceUsage": {
+    "completion_tokens": 507,
+    "prompt_tokens": 3210,
+    "total_tokens": 3717,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  },
+  "adviceFinish": "stop",
+  "adviceRaw": "{\n  \"choices\": [\n    {\n    \"entity\": \"i1\",\n    \"tool_id\": \"moon\",\n    \"fit\": \"direct\",\n    \"reason\": \"工具可绘制月形与亮边，但默认弯月，需注意圆缺未指定。\",\n    \"evidence\": [\"明月别枝惊鹊\"]\n  },\n  {\n    \"entity\": \"i2\",\n    \"tool_id\": \"tree\",\n    \"fit\": \"approximate\",\n    \"reason\": \"树工具提供阔叶、松意、疏花树等近似形态，不辨认具体品种，可表现树枝。\",\n    \"evidence\": [\"明月别枝惊鹊\"]\n  },\n  {\n    \"entity\": \"i3\",\n    \"tool_id\": \"bird\",\n    \"fit\": \"approximate\",\n    \"reason\": \"通用鸟意可表现鹊形，但工具不证明听见的鸟一定可见，且惊飞动作未支持。\",\n    \"evidence\": [\"明月别枝惊鹊\"]\n  },\n  {\n    \"entity\": \"i4\",\n    \"tool_id\": null,\n    \"fit\": \"not_drawn\",\n    \"reason\": \"清风为抽象环境，目录无直接表现风的工具，不能强行画成实物。\",\n    \"evidence\": [\"清风半夜鸣蝉\"]\n  },\n  {\n    \"entity\": \"i5\",\n    \"tool_id\": null,\n    \"fit\": \"not_drawn\",\n    \"reason\": \"蝉为具体昆虫，目录无蝉形工具，不能以其他生物替代。\",\n    \"evidence\": [\"清风半夜鸣蝉\"]\n  }\n  ],\n  \"composition\": \"画面以月、树、鹊、蝉、风为元素：月与树、鹊构成近景或中景，风与蝉声暗示环境，但风与蝉无直接工具，需留白或抽象处理。\",\n  \"expected\": \"可表现明月、树枝、鹊鸟的近似形态；清风与蝉声无法直接绘制，需依赖文字或留白。\",\n  \"uncertainties\": [\n    \"“别枝”动作主体不明确，月光或鹊离开树枝存在歧义。\",\n    \"“惊鹊”是月光惊动还是别枝惊动，存在歧义。\",\n    \"蝉声可闻但蝉不一定可见，工具无法表现声音。\",\n    \"清风为抽象环境，无直接视觉表现工具。\"\n  ]\n}",
+  "advice": {
+    "choices": [
+      {
+        "entity": "i1",
+        "tool_id": "moon",
+        "fit": "direct",
+        "reason": "工具可绘制月形与亮边，但默认弯月，需注意圆缺未指定。",
+        "evidence": [
+          "明月别枝惊鹊"
+        ]
+      },
+      {
+        "entity": "i2",
+        "tool_id": "tree",
+        "fit": "approximate",
+        "reason": "树工具提供阔叶、松意、疏花树等近似形态，不辨认具体品种，可表现树枝。",
+        "evidence": [
+          "明月别枝惊鹊"
+        ]
+      },
+      {
+        "entity": "i3",
+        "tool_id": "bird",
+        "fit": "approximate",
+        "reason": "通用鸟意可表现鹊形，但工具不证明听见的鸟一定可见，且惊飞动作未支持。",
+        "evidence": [
+          "明月别枝惊鹊"
+        ]
+      },
+      {
+        "entity": "i4",
+        "tool_id": null,
+        "fit": "not_drawn",
+        "reason": "清风为抽象环境，目录无直接表现风的工具，不能强行画成实物。",
+        "evidence": [
+          "清风半夜鸣蝉"
+        ]
+      },
+      {
+        "entity": "i5",
+        "tool_id": null,
+        "fit": "not_drawn",
+        "reason": "蝉为具体昆虫，目录无蝉形工具，不能以其他生物替代。",
+        "evidence": [
+          "清风半夜鸣蝉"
+        ]
+      }
+    ],
+    "composition": "画面以月、树、鹊、蝉、风为元素：月与树、鹊构成近景或中景，风与蝉声暗示环境，但风与蝉无直接工具，需留白或抽象处理。",
+    "expected": "可表现明月、树枝、鹊鸟的近似形态；清风与蝉声无法直接绘制，需依赖文字或留白。",
+    "uncertainties": [
+      "“别枝”动作主体不明确，月光或鹊离开树枝存在歧义。",
+      "“惊鹊”是月光惊动还是别枝惊动，存在歧义。",
+      "蝉声可闻但蝉不一定可见，工具无法表现声音。",
+      "清风为抽象环境，无直接视觉表现工具。"
+    ]
+  },
+  "adviceValidation": {
+    "valid": true,
+    "errors": []
+  }
+}

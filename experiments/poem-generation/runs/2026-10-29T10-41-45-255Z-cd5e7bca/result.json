@@ -1,0 +1,27 @@
+{
+  "id": "2026-10-29T10-41-45-255Z-cd5e7bca",
+  "fingerprint": "cd1beff6507a20e47f971129753ad1b2c9d5b53e03c7beed175cca12214d2e8d",
+  "semanticFingerprint": "7c2b2c63e507ef9412cf6c586d66085309dd97130f1a8fb5ffd4142f0683a391",
+  "poem": "大漠孤烟直，长河落日圆。",
+  "source": null,
+  "mode": "expression",
+  "model": "DeepSeek-V4.1-Flash",
+  "started_at": "2026-10-29T10:41:45.256Z",
+  "cached": false,
+  "error": "fetch failed",
+  "validation": {
+    "valid": false,
+    "errors": [
+      "fetch failed"
+    ],
+    "warnings": [],
+    "review_required": true
+  },
+  "delivery": {
+    "status": "failed",
+    "retryable": true,
+    "reason": "connection-or-format",
+    "message": "这次分析未能完整返回，尚未生成本句画面。"
+  },
+  "elapsed_seconds": 0
+}

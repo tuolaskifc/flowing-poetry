@@ -1,0 +1,522 @@
+{
+  "providerCalls": 0,
+  "rows": [
+    {
+      "id": "n02",
+      "poem": "竹喧归浣女，莲动下渔舟。",
+      "audit": [
+        {
+          "entity": "i1",
+          "tool": "bamboo",
+          "existing": "bamboo",
+          "status": "accepted",
+          "reason": "与现有本地画法一致，沿用共用规则和数量"
+        },
+        {
+          "entity": "i2",
+          "tool": "figure",
+          "existing": "figure",
+          "status": "accepted",
+          "reason": "与现有本地画法一致，沿用共用规则和数量"
+        },
+        {
+          "entity": "i3",
+          "tool": "lotus",
+          "existing": "lotus",
+          "status": "accepted",
+          "reason": "与现有本地画法一致，沿用共用规则和数量"
+        },
+        {
+          "entity": "i4",
+          "tool": "boat",
+          "existing": "boat",
+          "status": "accepted",
+          "reason": "与现有本地画法一致，沿用共用规则和数量"
+        }
+      ],
+      "excluded": [],
+      "gaps": [],
+      "baseline": [
+        {
+          "names": [
+            "浣女"
+          ],
+          "tool": "figure"
+        },
+        {
+          "names": [
+            "竹"
+          ],
+          "tool": "bamboo"
+        },
+        {
+          "names": [
+            "渔舟"
+          ],
+          "tool": "boat"
+        },
+        {
+          "names": [
+            "莲"
+          ],
+          "tool": "lotus"
+        },
+        {
+          "names": [
+            "构图依托·水域"
+          ],
+          "tool": "water"
+        },
+        {
+          "names": [
+            "构图依托·地面"
+          ],
+          "tool": "landscape"
+        }
+      ],
+      "guided": [
+        {
+          "names": [
+            "浣女"
+          ],
+          "tool": "figure"
+        },
+        {
+          "names": [
+            "竹"
+          ],
+          "tool": "bamboo"
+        },
+        {
+          "names": [
+            "渔舟"
+          ],
+          "tool": "boat"
+        },
+        {
+          "names": [
+            "莲"
+          ],
+          "tool": "lotus"
+        },
+        {
+          "names": [
+            "构图依托·水域"
+          ],
+          "tool": "water"
+        },
+        {
+          "names": [
+            "构图依托·地面"
+          ],
+          "tool": "landscape"
+        }
+      ]
+    },
+    {
+      "id": "n03",
+      "poem": "荷尽已无擎雨盖，菊残犹有傲霜枝。",
+      "audit": [
+        {
+          "entity": "i1",
+          "tool": null,
+          "existing": null,
+          "status": "not-applicable",
+          "reason": "非在场主体不绘成实物"
+        },
+        {
+          "entity": "i2",
+          "tool": null,
+          "existing": null,
+          "status": "not-applicable",
+          "reason": "非在场主体不绘成实物"
+        },
+        {
+          "entity": "i3",
+          "tool": "flower-forms",
+          "existing": null,
+          "status": "withheld-suggestion",
+          "reason": "建议与本地已验证映射不同，暂不自动替换画笔或推测变体"
+        },
+        {
+          "entity": "i4",
+          "tool": null,
+          "existing": null,
+          "status": "not-applicable",
+          "reason": "原计划没有对应景物画笔"
+        },
+        {
+          "entity": "i5",
+          "tool": "surface-weather",
+          "existing": "surface-weather",
+          "status": "accepted",
+          "reason": "与现有本地画法一致，沿用共用规则和数量"
+        }
+      ],
+      "excluded": [],
+      "gaps": [
+        {
+          "id": "i3",
+          "label": "菊",
+          "reason": "原文明示菊残，现有菊丛是盛花形态，残败菊花尚无可靠画法"
+        },
+        {
+          "id": "i4",
+          "label": "傲霜枝",
+          "reason": "此处为菊的枝条；现有霜笔触不能代替枝条，暂缺可靠画法"
+        }
+      ],
+      "baseline": [
+        {
+          "names": [
+            "霜"
+          ],
+          "tool": "surface-weather"
+        }
+      ],
+      "guided": [
+        {
+          "names": [
+            "霜"
+          ],
+          "tool": "surface-weather"
+        }
+      ]
+    },
+    {
+      "id": "n04",
+      "poem": "月落乌啼霜满天，江枫渔火对愁眠。",
+      "audit": [
+        {
+          "entity": "i1",
+          "tool": "moon",
+          "existing": "moon",
+          "status": "withheld",
+          "reason": "已消退过程尚不能由原生画笔表现，先保留缺口"
+        },
+        {
+          "entity": "i2",
+          "tool": "bird",
+          "existing": "bird",
+          "status": "accepted",
+          "reason": "与现有本地画法一致，沿用共用规则和数量"
+        },
+        {
+          "entity": "i3",
+          "tool": "grass",
+          "existing": "surface-weather",
+          "status": "withheld-suggestion",
+          "reason": "建议与本地已验证映射不同，暂不自动替换画笔或推测变体"
+        },
+        {
+          "entity": "i4",
+          "tool": "tree",
+          "existing": "tree",
+          "status": "accepted",
+          "reason": "与现有本地画法一致，沿用共用规则和数量"
+        },
+        {
+          "entity": "i5",
+          "tool": "landscape",
+          "existing": "landscape",
+          "status": "accepted",
+          "reason": "与现有本地画法一致，沿用共用规则和数量"
+        },
+        {
+          "entity": "i6",
+          "tool": null,
+          "existing": null,
+          "status": "not-applicable",
+          "reason": "原计划没有对应景物画笔"
+        }
+      ],
+      "excluded": [
+        "i1"
+      ],
+      "gaps": [
+        {
+          "id": "i1",
+          "label": "月",
+          "reason": "试验中保守保留为缺口；模型建议或已消退状态尚需复核"
+        }
+      ],
+      "baseline": [
+        {
+          "names": [
+            "渔火"
+          ],
+          "tool": "landscape"
+        },
+        {
+          "names": [
+            "月"
+          ],
+          "tool": "moon"
+        },
+        {
+          "names": [
+            "江枫"
+          ],
+          "tool": "tree"
+        },
+        {
+          "names": [
+            "霜"
+          ],
+          "tool": "surface-weather"
+        },
+        {
+          "names": [
+            "乌"
+          ],
+          "tool": "bird"
+        },
+        {
+          "names": [
+            "构图依托·地面"
+          ],
+          "tool": "landscape"
+        },
+        {
+          "names": [
+            "构图依托·水域"
+          ],
+          "tool": "water"
+        }
+      ],
+      "guided": [
+        {
+          "names": [
+            "渔火"
+          ],
+          "tool": "landscape"
+        },
+        {
+          "names": [
+            "江枫"
+          ],
+          "tool": "tree"
+        },
+        {
+          "names": [
+            "霜"
+          ],
+          "tool": "surface-weather"
+        },
+        {
+          "names": [
+            "乌"
+          ],
+          "tool": "bird"
+        },
+        {
+          "names": [
+            "构图依托·地面"
+          ],
+          "tool": "landscape"
+        },
+        {
+          "names": [
+            "构图依托·水域"
+          ],
+          "tool": "water"
+        }
+      ]
+    },
+    {
+      "id": "n05",
+      "poem": "黄梅时节家家雨，青草池塘处处蛙。",
+      "audit": [
+        {
+          "entity": "i1",
+          "tool": "rain",
+          "existing": "rain",
+          "status": "accepted",
+          "reason": "与现有本地画法一致，沿用共用规则和数量"
+        },
+        {
+          "entity": "i2",
+          "tool": "grass",
+          "existing": "grass",
+          "status": "accepted",
+          "reason": "与现有本地画法一致，沿用共用规则和数量"
+        },
+        {
+          "entity": "i3",
+          "tool": "water",
+          "existing": "water",
+          "status": "accepted",
+          "reason": "与现有本地画法一致，沿用共用规则和数量"
+        },
+        {
+          "entity": "i4",
+          "tool": null,
+          "existing": null,
+          "status": "not-applicable",
+          "reason": "原计划没有对应景物画笔"
+        }
+      ],
+      "excluded": [],
+      "gaps": [
+        {
+          "id": "i4",
+          "label": "蛙",
+          "reason": "该意象尚无合适的写意画法"
+        }
+      ],
+      "baseline": [
+        {
+          "names": [
+            "池塘"
+          ],
+          "tool": "water"
+        },
+        {
+          "names": [
+            "青草"
+          ],
+          "tool": "grass"
+        },
+        {
+          "names": [
+            "雨"
+          ],
+          "tool": "rain"
+        },
+        {
+          "names": [
+            "构图依托·地面"
+          ],
+          "tool": "landscape"
+        }
+      ],
+      "guided": [
+        {
+          "names": [
+            "池塘"
+          ],
+          "tool": "water"
+        },
+        {
+          "names": [
+            "青草"
+          ],
+          "tool": "grass"
+        },
+        {
+          "names": [
+            "雨"
+          ],
+          "tool": "rain"
+        },
+        {
+          "names": [
+            "构图依托·地面"
+          ],
+          "tool": "landscape"
+        }
+      ]
+    },
+    {
+      "id": "n06",
+      "poem": "细草微风岸，危樯独夜舟。",
+      "audit": [
+        {
+          "entity": "i1",
+          "tool": "grass",
+          "existing": "grass",
+          "status": "accepted",
+          "reason": "与现有本地画法一致，沿用共用规则和数量"
+        },
+        {
+          "entity": "i2",
+          "tool": null,
+          "existing": null,
+          "status": "not-applicable",
+          "reason": "原计划没有对应景物画笔"
+        },
+        {
+          "entity": "i3",
+          "tool": "landscape",
+          "existing": "landscape",
+          "status": "accepted",
+          "reason": "与现有本地画法一致，沿用共用规则和数量"
+        },
+        {
+          "entity": "i4",
+          "tool": null,
+          "existing": null,
+          "status": "not-applicable",
+          "reason": "原计划没有对应景物画笔"
+        },
+        {
+          "entity": "i5",
+          "tool": "boat",
+          "existing": "boat",
+          "status": "accepted",
+          "reason": "与现有本地画法一致，沿用共用规则和数量"
+        }
+      ],
+      "excluded": [],
+      "gaps": [
+        {
+          "id": "i4",
+          "label": "危樯",
+          "reason": "该意象尚无合适的写意画法"
+        }
+      ],
+      "baseline": [
+        {
+          "names": [
+            "岸"
+          ],
+          "tool": "landscape"
+        },
+        {
+          "names": [
+            "舟"
+          ],
+          "tool": "boat"
+        },
+        {
+          "names": [
+            "细草"
+          ],
+          "tool": "grass"
+        },
+        {
+          "names": [
+            "构图依托·水域"
+          ],
+          "tool": "water"
+        }
+      ],
+      "guided": [
+        {
+          "names": [
+            "岸"
+          ],
+          "tool": "landscape"
+        },
+        {
+          "names": [
+            "舟"
+          ],
+          "tool": "boat"
+        },
+        {
+          "names": [
+            "细草"
+          ],
+          "tool": "grass"
+        },
+        {
+          "names": [
+            "构图依托·水域"
+          ],
+          "tool": "water"
+        }
+      ]
+    }
+  ]
+}

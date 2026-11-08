@@ -1,0 +1,269 @@
+{
+  "id": "2026-11-07T12-17-50-898Z-30a92667",
+  "fingerprint": "597330428a227397955d9e3d6f1ca487dc105871254afdd6b85f76d94d5405aa",
+  "semanticFingerprint": "23f6dd40c9c2ec1099fa8fbc120053cb35e2818cc9c56650bc54e3a728e2d378",
+  "poem": "细雨梦回鸡塞远，小楼吹彻玉笙寒。",
+  "source": {
+    "provider": "今日诗词",
+    "author": "李璟",
+    "title": "摊破浣溪沙·菡萏香销翠叶残",
+    "dynasty": "五代"
+  },
+  "mode": "composition",
+  "model": "DeepSeek-V4.1-Flash",
+  "started_at": "2026-11-07T12:17:50.899Z",
+  "cached": false,
+  "http_status": 200,
+  "usage": {
+    "completion_tokens": 811,
+    "prompt_tokens": 4899,
+    "total_tokens": 5710,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 4864
+    }
+  },
+  "finish_reason": "stop",
+  "analysis": {
+    "schema_version": "3.3",
+    "poem": "细雨梦回鸡塞远，小楼吹彻玉笙寒。",
+    "reading": "细雨声中梦醒，梦里的鸡塞已远；小楼之上玉笙吹到尽头，只余寒意。",
+    "entities": [
+      {
+        "id": "i1",
+        "mentions": [
+          "细雨"
+        ],
+        "concept": "细密的雨",
+        "kind": "environment",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "细雨梦回鸡塞远"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "spread",
+          "evidence": [
+            "细雨"
+          ]
+        }
+      },
+      {
+        "id": "i2",
+        "mentions": [
+          "鸡塞"
+        ],
+        "concept": "梦中远方的边塞",
+        "kind": "place",
+        "role": "scene",
+        "presence": "unclear",
+        "evidence": [
+          "细雨梦回鸡塞远"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i3",
+        "mentions": [
+          "小楼"
+        ],
+        "concept": "小楼",
+        "kind": "place",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "小楼吹彻玉笙寒"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "local",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i4",
+        "mentions": [
+          "玉笙"
+        ],
+        "concept": "玉制的笙",
+        "kind": "object",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "小楼吹彻玉笙寒"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "local",
+          "evidence": []
+        }
+      }
+    ],
+    "relations": [],
+    "atmosphere": {
+      "labels": [
+        "清冷",
+        "幽寂"
+      ],
+      "valence": "negative",
+      "energy": "low",
+      "tension": "low",
+      "openness": "low",
+      "evidence": [
+        "细雨梦回鸡塞远",
+        "小楼吹彻玉笙寒"
+      ]
+    },
+    "time": {
+      "markers": [],
+      "note": null
+    },
+    "uncertainties": [
+      "‘梦回’可解为梦醒或梦归，主体与梦的关系不明。",
+      "‘鸡塞’是梦中之地还是实指边塞，原文未明。",
+      "吹笙者未在原文出现，动作主体不明。"
+    ],
+    "spatial": [
+      {
+        "type": "outside",
+        "source": "i2",
+        "target": "i3",
+        "modality": "unclear",
+        "basis": "inferred",
+        "evidence": [
+          "细雨梦回鸡塞远，小楼吹彻玉笙寒"
+        ]
+      }
+    ],
+    "scene": {
+      "setting": {
+        "kind": "mixed",
+        "basis": "inferred",
+        "evidence": [
+          "细雨梦回鸡塞远",
+          "小楼吹彻玉笙寒"
+        ]
+      },
+      "groups": [
+        {
+          "members": [
+            "i1"
+          ],
+          "role": "environment",
+          "pattern": "field",
+          "depth": "unspecified",
+          "basis": "inferred",
+          "evidence": [
+            "细雨梦回鸡塞远"
+          ]
+        },
+        {
+          "members": [
+            "i3",
+            "i4"
+          ],
+          "role": "subject",
+          "pattern": "single",
+          "depth": "unspecified",
+          "basis": "inferred",
+          "evidence": [
+            "小楼吹彻玉笙寒"
+          ]
+        },
+        {
+          "members": [
+            "i2"
+          ],
+          "role": "accent",
+          "pattern": "single",
+          "depth": "far",
+          "basis": "inferred",
+          "evidence": [
+            "细雨梦回鸡塞远"
+          ]
+        }
+      ],
+      "supports": [
+        {
+          "entity": "i3",
+          "surface": "ground",
+          "target": null,
+          "basis": "inferred",
+          "evidence": [
+            "小楼吹彻玉笙寒"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "entity": "i4",
+          "state": "unclear",
+          "pace": "unspecified",
+          "direction": "unspecified",
+          "modality": "asserted",
+          "basis": "inferred",
+          "evidence": [
+            "小楼吹彻玉笙寒"
+          ]
+        }
+      ],
+      "atmosphere": {
+        "visibility": "hazy",
+        "illumination": "unclear",
+        "basis": "inferred",
+        "evidence": [
+          "细雨梦回鸡塞远"
+        ]
+      }
+    }
+  },
+  "validation": {
+    "valid": false,
+    "errors": [
+      "scene.groups[2] 不能把缺席、未知或比喻参照作为在场画面主体"
+    ],
+    "warnings": [
+      "$.entities[1]: 场景主体的出现情况不清楚",
+      "模型保留了不确定性，需要审阅",
+      "spatial[0] 的推断或非确定关系需审阅",
+      "scene.setting 为语义推断，绘画选择需与原文明示区分",
+      "scene.groups[0] 为语义推断，绘画选择需与原文明示区分",
+      "scene.groups[1] 为语义推断，绘画选择需与原文明示区分",
+      "scene.groups[2] 为语义推断，绘画选择需与原文明示区分",
+      "scene.supports[0] 为语义推断，绘画选择需与原文明示区分",
+      "scene.actions[0] 为语义推断，绘画选择需与原文明示区分",
+      "scene.atmosphere 为语义推断，绘画选择需与原文明示区分"
+    ],
+    "review_required": true
+  },
+  "delivery": {
+    "status": "failed",
+    "retryable": true,
+    "reason": "interpretation",
+    "message": "这次解读的基础内容仍有问题，尚未生成本句画面。"
+  },
+  "elapsed_seconds": 5.1
+}

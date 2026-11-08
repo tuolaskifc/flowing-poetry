@@ -1,0 +1,27 @@
+{
+  "id": "2026-10-29T10-41-46-053Z-e2d0688d",
+  "fingerprint": "305c6f5819352a0831d79bda7805630fb1f26c263b572cad9bfc678866786f5b",
+  "semanticFingerprint": "c892dd8d86353149ac3f7b9992d0d8bfafa5a5d0063b925677c1d7f5ff0b86f8",
+  "poem": "天街小雨润如酥，草色遥看近却无。",
+  "source": null,
+  "mode": "expression",
+  "model": "DeepSeek-V4.1-Flash",
+  "started_at": "2026-10-29T10:41:46.054Z",
+  "cached": false,
+  "error": "fetch failed",
+  "validation": {
+    "valid": false,
+    "errors": [
+      "fetch failed"
+    ],
+    "warnings": [],
+    "review_required": true
+  },
+  "delivery": {
+    "status": "failed",
+    "retryable": true,
+    "reason": "connection-or-format",
+    "message": "这次分析未能完整返回，尚未生成本句画面。"
+  },
+  "elapsed_seconds": 0
+}

@@ -1,0 +1,778 @@
+{
+  "inputs": 24,
+  "providerCalls": 0,
+  "postRequests": [],
+  "render": "actual-browser",
+  "rows": [
+    {
+      "id": "l01",
+      "poem": "两只白鹭临清泉。",
+      "focus": "明确数量与水鸟",
+      "mode": "scenery",
+      "entities": [
+        {
+          "id": "i1",
+          "word": "白鹭"
+        },
+        {
+          "id": "i2",
+          "word": "清泉"
+        }
+      ],
+      "layers": [
+        {
+          "names": [
+            "清泉"
+          ],
+          "tool": "water",
+          "count": 1
+        },
+        {
+          "names": [
+            "白鹭"
+          ],
+          "tool": "bird",
+          "count": 2
+        }
+      ],
+      "deferred": [],
+      "gaps": [],
+      "artisticFallback": false
+    },
+    {
+      "id": "l02",
+      "poem": "红梅映清泉。",
+      "focus": "明示颜色",
+      "mode": "scenery",
+      "entities": [
+        {
+          "id": "i1",
+          "word": "红梅"
+        },
+        {
+          "id": "i2",
+          "word": "清泉"
+        }
+      ],
+      "layers": [
+        {
+          "names": [
+            "清泉"
+          ],
+          "tool": "water",
+          "count": 1
+        },
+        {
+          "names": [
+            "红梅"
+          ],
+          "tool": "plum-branch",
+          "count": 1
+        }
+      ],
+      "deferred": [],
+      "gaps": [],
+      "artisticFallback": false
+    },
+    {
+      "id": "l03",
+      "poem": "明月照松林，清泉流石上。",
+      "focus": "空间关系与单字意象",
+      "mode": "scenery",
+      "entities": [
+        {
+          "id": "i1",
+          "word": "明月"
+        },
+        {
+          "id": "i2",
+          "word": "松林"
+        },
+        {
+          "id": "i3",
+          "word": "清泉"
+        }
+      ],
+      "layers": [
+        {
+          "names": [
+            "明月"
+          ],
+          "tool": "moon",
+          "count": 1
+        },
+        {
+          "names": [
+            "松林"
+          ],
+          "tool": "tree",
+          "count": 14
+        },
+        {
+          "names": [
+            "清泉"
+          ],
+          "tool": "water",
+          "count": 1
+        }
+      ],
+      "deferred": [
+        {
+          "text": "石",
+          "reason": "单字容易属于复合词，暂不直接断定物象"
+        }
+      ],
+      "gaps": [],
+      "artisticFallback": false
+    },
+    {
+      "id": "l04",
+      "poem": "两对白鹭临江水。",
+      "focus": "成对计数",
+      "mode": "scenery",
+      "entities": [
+        {
+          "id": "i1",
+          "word": "白鹭"
+        },
+        {
+          "id": "i2",
+          "word": "江水"
+        }
+      ],
+      "layers": [
+        {
+          "names": [
+            "江水"
+          ],
+          "tool": "water",
+          "count": 1
+        },
+        {
+          "names": [
+            "白鹭"
+          ],
+          "tool": "bird",
+          "count": 4
+        }
+      ],
+      "deferred": [],
+      "gaps": [],
+      "artisticFallback": false
+    },
+    {
+      "id": "l05",
+      "poem": "不见白鹭，明月照清泉。",
+      "focus": "缺席与同句画面",
+      "mode": "scenery",
+      "entities": [
+        {
+          "id": "i1",
+          "word": "明月"
+        },
+        {
+          "id": "i2",
+          "word": "清泉"
+        }
+      ],
+      "layers": [
+        {
+          "names": [
+            "明月"
+          ],
+          "tool": "moon",
+          "count": 1
+        },
+        {
+          "names": [
+            "清泉"
+          ],
+          "tool": "water",
+          "count": 1
+        }
+      ],
+      "deferred": [
+        {
+          "text": "不见白鹭",
+          "reason": "含否定、比喻、可能、感官或其他歧义线索，本地暂不判定"
+        }
+      ],
+      "gaps": [],
+      "artisticFallback": false
+    },
+    {
+      "id": "l06",
+      "poem": "鸟不飞，清泉流。",
+      "focus": "否定动作与主体",
+      "mode": "balanced",
+      "entities": [
+        {
+          "id": "i1",
+          "word": "清泉"
+        }
+      ],
+      "layers": [
+        {
+          "names": [
+            "清泉"
+          ],
+          "tool": "water",
+          "count": 1
+        }
+      ],
+      "deferred": [
+        {
+          "text": "鸟不飞",
+          "reason": "含否定、比喻、可能、感官或其他歧义线索，本地暂不判定"
+        }
+      ],
+      "gaps": [],
+      "artisticFallback": false
+    },
+    {
+      "id": "l07",
+      "poem": "江水如长剑。",
+      "focus": "比喻参照",
+      "mode": "abstract",
+      "entities": [],
+      "layers": [],
+      "deferred": [
+        {
+          "text": "江水如长剑",
+          "reason": "含否定、比喻、可能、感官或其他歧义线索，本地暂不判定"
+        }
+      ],
+      "gaps": [],
+      "artisticFallback": true
+    },
+    {
+      "id": "l08",
+      "poem": "若明月升起，清泉流。",
+      "focus": "跨句条件",
+      "mode": "abstract",
+      "entities": [],
+      "layers": [],
+      "deferred": [
+        {
+          "text": "若明月升起",
+          "reason": "含否定、比喻、可能、感官或其他歧义线索，本地暂不判定"
+        },
+        {
+          "text": "清泉流",
+          "reason": "含否定、比喻、可能、感官或其他歧义线索，本地暂不判定"
+        }
+      ],
+      "gaps": [],
+      "artisticFallback": true
+    },
+    {
+      "id": "l09",
+      "poem": "青山映江水，白云绕青山。",
+      "focus": "重复称谓与同指",
+      "mode": "balanced",
+      "entities": [
+        {
+          "id": "i1",
+          "word": "江水"
+        }
+      ],
+      "layers": [
+        {
+          "names": [
+            "江水"
+          ],
+          "tool": "water",
+          "count": 1
+        }
+      ],
+      "deferred": [
+        {
+          "text": "云",
+          "reason": "单字容易属于复合词，暂不直接断定物象"
+        },
+        {
+          "text": "青山",
+          "reason": "重复称谓可能同指，暂不判断主体数"
+        },
+        {
+          "text": "青山",
+          "reason": "重复称谓可能同指，暂不判断主体数"
+        }
+      ],
+      "gaps": [],
+      "artisticFallback": false
+    },
+    {
+      "id": "l10",
+      "poem": "两只黄鹂鸣翠柳，一行白鹭上青天。",
+      "focus": "声音、颜色、数量",
+      "mode": "scenery",
+      "entities": [
+        {
+          "id": "i1",
+          "word": "黄鹂"
+        },
+        {
+          "id": "i2",
+          "word": "白鹭"
+        },
+        {
+          "id": "i3",
+          "word": "青天"
+        }
+      ],
+      "layers": [
+        {
+          "names": [
+            "青天"
+          ],
+          "tool": "landscape",
+          "count": 1
+        },
+        {
+          "names": [
+            "黄鹂"
+          ],
+          "tool": "bird",
+          "count": 2
+        },
+        {
+          "names": [
+            "白鹭"
+          ],
+          "tool": "bird",
+          "count": 4
+        }
+      ],
+      "deferred": [
+        {
+          "text": "柳",
+          "reason": "单字容易属于复合词，暂不直接断定物象"
+        }
+      ],
+      "gaps": [],
+      "artisticFallback": false
+    },
+    {
+      "id": "l11",
+      "poem": "小荷才露尖尖角，早有蜻蜓立上头。",
+      "focus": "不支持主体与依托",
+      "mode": "abstract",
+      "entities": [],
+      "layers": [],
+      "deferred": [
+        {
+          "text": "露",
+          "reason": "单字容易属于复合词，暂不直接断定物象"
+        },
+        {
+          "text": "早有蜻蜓立上头",
+          "reason": "未匹配到可确认的意象"
+        }
+      ],
+      "gaps": [],
+      "artisticFallback": true
+    },
+    {
+      "id": "l12",
+      "poem": "明月松间照，清泉石上流。",
+      "focus": "古诗空间与动作",
+      "mode": "scenery",
+      "entities": [
+        {
+          "id": "i1",
+          "word": "明月"
+        },
+        {
+          "id": "i2",
+          "word": "松间"
+        },
+        {
+          "id": "i3",
+          "word": "清泉"
+        }
+      ],
+      "layers": [
+        {
+          "names": [
+            "明月"
+          ],
+          "tool": "moon",
+          "count": 1
+        },
+        {
+          "names": [
+            "松间"
+          ],
+          "tool": "tree",
+          "count": 3
+        },
+        {
+          "names": [
+            "清泉"
+          ],
+          "tool": "water",
+          "count": 1
+        }
+      ],
+      "deferred": [
+        {
+          "text": "石",
+          "reason": "单字容易属于复合词，暂不直接断定物象"
+        }
+      ],
+      "gaps": [],
+      "artisticFallback": false
+    },
+    {
+      "id": "l13",
+      "poem": "停车坐爱枫林晚，霜叶红于二月花。",
+      "focus": "比较、枫林和颜色",
+      "mode": "abstract",
+      "entities": [],
+      "layers": [],
+      "deferred": [
+        {
+          "text": "林",
+          "reason": "单字容易属于复合词，暂不直接断定物象"
+        },
+        {
+          "text": "霜",
+          "reason": "单字容易属于复合词，暂不直接断定物象"
+        },
+        {
+          "text": "花",
+          "reason": "单字容易属于复合词，暂不直接断定物象"
+        },
+        {
+          "text": "霜叶红于二月花",
+          "reason": "包含未支持或有歧义的词：二月"
+        }
+      ],
+      "gaps": [],
+      "artisticFallback": true
+    },
+    {
+      "id": "l14",
+      "poem": "大漠孤烟直，长河落日圆。",
+      "focus": "广阔景物和单字",
+      "mode": "scenery",
+      "entities": [
+        {
+          "id": "i1",
+          "word": "孤烟"
+        },
+        {
+          "id": "i2",
+          "word": "落日"
+        }
+      ],
+      "layers": [
+        {
+          "names": [
+            "落日"
+          ],
+          "tool": "landscape",
+          "count": 1
+        },
+        {
+          "names": [
+            "孤烟"
+          ],
+          "tool": "mist",
+          "count": 1
+        }
+      ],
+      "deferred": [
+        {
+          "text": "河",
+          "reason": "单字容易属于复合词，暂不直接断定物象"
+        }
+      ],
+      "gaps": [],
+      "artisticFallback": false
+    },
+    {
+      "id": "l15",
+      "poem": "春风吹绿柳，细雨湿桃花。",
+      "focus": "常见植物与动作",
+      "mode": "balanced",
+      "entities": [
+        {
+          "id": "i1",
+          "word": "桃花"
+        }
+      ],
+      "layers": [
+        {
+          "names": [
+            "桃花"
+          ],
+          "tool": "tree",
+          "count": 1
+        }
+      ],
+      "deferred": [
+        {
+          "text": "柳",
+          "reason": "单字容易属于复合词，暂不直接断定物象"
+        },
+        {
+          "text": "雨",
+          "reason": "单字容易属于复合词，暂不直接断定物象"
+        }
+      ],
+      "gaps": [],
+      "artisticFallback": false
+    },
+    {
+      "id": "l16",
+      "poem": "酒旗旁有两艘轻舟。",
+      "focus": "道具与数量",
+      "mode": "balanced",
+      "entities": [
+        {
+          "id": "i1",
+          "word": "酒旗"
+        }
+      ],
+      "layers": [
+        {
+          "names": [
+            "酒旗"
+          ],
+          "tool": "flag",
+          "count": 1
+        }
+      ],
+      "deferred": [
+        {
+          "text": "舟",
+          "reason": "单字容易属于复合词，暂不直接断定物象"
+        }
+      ],
+      "gaps": [],
+      "artisticFallback": false
+    },
+    {
+      "id": "l17",
+      "poem": "琴瑟和鸣，明月当空。",
+      "focus": "乐器与听觉",
+      "mode": "scenery",
+      "entities": [
+        {
+          "id": "i1",
+          "word": "琴瑟"
+        },
+        {
+          "id": "i2",
+          "word": "明月"
+        }
+      ],
+      "layers": [
+        {
+          "names": [
+            "琴瑟"
+          ],
+          "tool": "instrument",
+          "count": 1
+        },
+        {
+          "names": [
+            "明月"
+          ],
+          "tool": "moon",
+          "count": 1
+        }
+      ],
+      "deferred": [],
+      "gaps": [],
+      "artisticFallback": false
+    },
+    {
+      "id": "l18",
+      "poem": "杜鹃啼血，桃花满山。",
+      "focus": "歧义物种与推断",
+      "mode": "balanced",
+      "entities": [
+        {
+          "id": "i1",
+          "word": "桃花"
+        }
+      ],
+      "layers": [
+        {
+          "names": [
+            "桃花"
+          ],
+          "tool": "tree",
+          "count": 1
+        }
+      ],
+      "deferred": [
+        {
+          "text": "杜鹃啼血",
+          "reason": "含否定、比喻、可能、感官或其他歧义线索，本地暂不判定"
+        },
+        {
+          "text": "山",
+          "reason": "单字容易属于复合词，暂不直接断定物象"
+        }
+      ],
+      "gaps": [],
+      "artisticFallback": false
+    },
+    {
+      "id": "l19",
+      "poem": "兰桡浮水，菊花临岸。",
+      "focus": "别称与边界",
+      "mode": "scenery",
+      "entities": [
+        {
+          "id": "i1",
+          "word": "兰桡"
+        },
+        {
+          "id": "i2",
+          "word": "菊花"
+        }
+      ],
+      "layers": [
+        {
+          "names": [
+            "兰桡"
+          ],
+          "tool": "boat",
+          "count": 1
+        },
+        {
+          "names": [
+            "菊花"
+          ],
+          "tool": "flower-forms",
+          "count": 1
+        }
+      ],
+      "deferred": [
+        {
+          "text": "水",
+          "reason": "单字容易属于复合词，暂不直接断定物象"
+        },
+        {
+          "text": "岸",
+          "reason": "单字容易属于复合词，暂不直接断定物象"
+        }
+      ],
+      "gaps": [],
+      "artisticFallback": false
+    },
+    {
+      "id": "l20",
+      "poem": "梦中白云低，醒来不见青山。",
+      "focus": "梦境与缺席",
+      "mode": "abstract",
+      "entities": [],
+      "layers": [],
+      "deferred": [
+        {
+          "text": "梦中白云低",
+          "reason": "含否定、比喻、可能、感官或其他歧义线索，本地暂不判定"
+        },
+        {
+          "text": "醒来不见青山",
+          "reason": "含否定、比喻、可能、感官或其他歧义线索，本地暂不判定"
+        }
+      ],
+      "gaps": [],
+      "artisticFallback": true
+    },
+    {
+      "id": "l21",
+      "poem": "黑夜给了我黑色的眼睛，我却用它寻找光明。",
+      "focus": "现代诗与抽象",
+      "mode": "abstract",
+      "entities": [],
+      "layers": [],
+      "deferred": [
+        {
+          "text": "黑夜给了我黑色的眼睛",
+          "reason": "未匹配到可确认的意象"
+        },
+        {
+          "text": "我却用它寻找光明",
+          "reason": "未匹配到可确认的意象"
+        }
+      ],
+      "gaps": [],
+      "artisticFallback": true
+    },
+    {
+      "id": "l22",
+      "poem": "白云啊，请你替我带走这些忧伤。",
+      "focus": "祈使与拟人",
+      "mode": "abstract",
+      "entities": [],
+      "layers": [],
+      "deferred": [
+        {
+          "text": "云",
+          "reason": "单字容易属于复合词，暂不直接断定物象"
+        },
+        {
+          "text": "请你替我带走这些忧伤",
+          "reason": "未匹配到可确认的意象"
+        }
+      ],
+      "gaps": [],
+      "artisticFallback": true
+    },
+    {
+      "id": "l23",
+      "poem": "明月明月，清泉清泉。",
+      "focus": "重复称谓",
+      "mode": "abstract",
+      "entities": [],
+      "layers": [],
+      "deferred": [
+        {
+          "text": "明月",
+          "reason": "重复称谓可能同指，暂不判断主体数"
+        },
+        {
+          "text": "明月",
+          "reason": "重复称谓可能同指，暂不判断主体数"
+        },
+        {
+          "text": "清泉",
+          "reason": "重复称谓可能同指，暂不判断主体数"
+        },
+        {
+          "text": "清泉",
+          "reason": "重复称谓可能同指，暂不判断主体数"
+        }
+      ],
+      "gaps": [],
+      "artisticFallback": true
+    },
+    {
+      "id": "l24",
+      "poem": "没有河流，却有一座山。",
+      "focus": "否定范围与单字",
+      "mode": "abstract",
+      "entities": [],
+      "layers": [],
+      "deferred": [
+        {
+          "text": "没有河流",
+          "reason": "含否定、比喻、可能、感官或其他歧义线索，本地暂不判定"
+        },
+        {
+          "text": "山",
+          "reason": "单字容易属于复合词，暂不直接断定物象"
+        }
+      ],
+      "gaps": [],
+      "artisticFallback": true
+    }
+  ]
+}

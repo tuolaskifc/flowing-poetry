@@ -1,0 +1,385 @@
+[
+  {
+    "id": "e01",
+    "poem": "一道残阳铺水中，半江瑟瑟半江红。",
+    "author": "白居易",
+    "title": "暮江吟",
+    "url": "https://www.gushiwen.cn/mingju/juv_5d5f89939d5e.aspx",
+    "focus": "光色与水面",
+    "adviceUsage": {
+      "completion_tokens": 348,
+      "prompt_tokens": 2747,
+      "total_tokens": 3095,
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "adviceFinish": "stop",
+    "adviceRaw": "{\"choices\":[{\"entity\":\"i1\",\"tool_id\":\"landscape\",\"fit\":\"approximate\",\"reason\":\"目录中“日光/返照”属山水场景的概括光形变体，可近似表现斜阳铺水的光带，但工具不提供“残阳”这一具体日轮或残损状态，也不保证铺展水面的连续光带效果。\",\"evidence\":[\"一道残阳铺水中\"]},{\"entity\":\"i2\",\"tool_id\":\"water\",\"fit\":\"direct\",\"reason\":\"水纹工具直接对应江面，可作连续波纹或疏密水面；但“半江瑟瑟半江红”的分色与瑟瑟歧义需另行处理，工具本身不提供双色分区。\",\"evidence\":[\"一道残阳铺水中\",\"半江瑟瑟半江红\"]}],\"composition\":\"画面以江面为主体环境，一道斜阳的光带自上方铺展于水面；江面呈现明暗或色区对照的概括效果，不添加原诗未出现的舟、人、山、树等物象。\",\"expected\":\"可表现水纹与概括光带，形成暮色江面的基本对照；但“残阳”的日轮形态、光带是否连续铺满、以及“瑟瑟”的具体色感均无法由现有工具确证，只能作近似或留白处理。\",\"uncertainties\":[\"“瑟瑟”所指颜色或质感存在歧义，工具无法据此确定具体色相。\",\"“残阳”的残损或低垂状态无对应工具，仅能以日光/返照近似。\",\"半江分色的边界与比例原文未明，工具不提供精确分区。\"]}",
+    "adviceValidation": {
+      "valid": true,
+      "errors": []
+    },
+    "recordId": "2026-11-08T10-48-15-349Z-fcafd2fa",
+    "semanticUsage": {
+      "completion_tokens": 613,
+      "prompt_tokens": 6062,
+      "total_tokens": 6675,
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "prompt_tokens_details": {
+        "cached_tokens": 6016
+      }
+    },
+    "semanticStatus": "partial"
+  },
+  {
+    "id": "e02",
+    "poem": "行到水穷处，坐看云起时。",
+    "author": "王维",
+    "title": "终南别业",
+    "url": "https://www.gushiwen.cn/mingju/juv_fc7207b13c00.aspx",
+    "focus": "人物与动作时序",
+    "adviceUsage": {
+      "completion_tokens": 338,
+      "prompt_tokens": 2687,
+      "total_tokens": 3025,
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "adviceFinish": "stop",
+    "adviceRaw": "{\"choices\":[{\"entity\":\"i1\",\"tool_id\":\"water\",\"fit\":\"approximate\",\"reason\":\"目录中的水纹可表现水面，但“水穷处”指水流尽头或水源尽头，原文未明，工具不提供真实流体或尽头状态，只能近似表现水景。\",\"evidence\":[\"行到水穷处\"]},{\"entity\":\"i2\",\"tool_id\":\"cloud\",\"fit\":\"direct\",\"reason\":\"云工具可画云团轮廓，能对应“云起时”的云气升起意象；但“起”的动态过程需以云团位置或形态暗示，工具不提供真实升腾模拟。\",\"evidence\":[\"坐看云起时\"]}],\"composition\":\"画面以水景与云气为主：近处或一侧布置水纹，暗示行至水尽之处；另一侧或上方布置云团，表现云气升起。隐含的观看者未明说，不画为人物。\",\"expected\":\"可表现水纹与云团两类环境主体，形成水边静观云起的场景；但“水穷处”的具体含义、云气升腾的动态过程以及隐含观看者均无法可靠呈现。\",\"uncertainties\":\"“水穷处”是水流尽头还是水源尽头，原文未明；云工具不提供真实升腾模拟，只能以云团形态近似；“坐看”的观看者未明说，不画为人物。\",\"choices_note\":\"i1 使用 water 为近似，因工具不提供真实流体或尽头状态；i2 使用 cloud 为直接，但升腾动态需以形态暗示。\"}",
+    "adviceValidation": {
+      "valid": false,
+      "errors": [
+        "顶层字段不符",
+        "uncertainties 不符"
+      ]
+    },
+    "recordId": "2026-11-08T10-48-15-352Z-50746a9f",
+    "semanticUsage": {
+      "completion_tokens": 554,
+      "prompt_tokens": 6061,
+      "total_tokens": 6615,
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "prompt_tokens_details": {
+        "cached_tokens": 6016
+      }
+    },
+    "semanticStatus": "complete"
+  },
+  {
+    "id": "e03",
+    "poem": "荷风送香气，竹露滴清响。",
+    "author": "孟浩然",
+    "title": "夏日南亭怀辛大",
+    "url": "https://www.gushiwen.cn/mingju/juv_15f4db847919.aspx",
+    "focus": "气味、声音与依托",
+    "adviceUsage": {
+      "completion_tokens": 414,
+      "prompt_tokens": 2904,
+      "total_tokens": 3318,
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "adviceFinish": "stop",
+    "adviceRaw": "{\"choices\":[{\"entity\":\"i1\",\"tool_id\":null,\"fit\":\"not_drawn\",\"reason\":\"荷风是带香气的流动空气，目录无风或气流的独立工具；竹工具的风摆动只作用于竹叶，不能代表荷风本身。\",\"evidence\":[\"荷风送香气\"]},{\"entity\":\"i2\",\"tool_id\":null,\"fit\":\"not_drawn\",\"reason\":\"香气为不可见抽象感知，目录无表现气味的工具；莲工具只画花叶，不能画出香气。\",\"evidence\":[\"荷风送香气\"]},{\"entity\":\"i3\",\"tool_id\":\"bamboo\",\"fit\":\"approximate\",\"reason\":\"竹工具可画竹竿与叶，但露水是附于草叶的露珠笔触，不在空中降落；竹露滴落的过程无工具支持。\",\"evidence\":[\"竹露滴清响\"]},{\"entity\":\"i4\",\"tool_id\":null,\"fit\":\"not_drawn\",\"reason\":\"清响是听觉抽象，目录无声音表现工具。\",\"evidence\":[\"竹露滴清响\"]}],\"composition\":\"画面以荷风与竹露两处意象并置：一侧可借莲工具表现荷叶与荷花以暗示荷香来源，另一侧用竹工具表现竹竿与叶；香气与清响本身不可见，只能通过荷、竹的静态形态间接提示，不添加原文未有的人、舟、亭等物象。\",\"expected\":\"可画出竹的静态形态与荷叶荷花，但无法画出荷风送香、竹露滴落及清响；画面只能呈现荷与竹的并置，不能呈现原句的流动与听觉效果。\",\"uncertainties\":[\"荷风与竹露是否同处一地、是否同时发生，原文未明说。\",\"香气与清响的感知主体未出现，无法确定观察者。\",\"竹露滴落的过程与清响均无工具支持，只能以竹的静态形态近似提示。\"]}",
+    "adviceValidation": {
+      "valid": true,
+      "errors": []
+    },
+    "recordId": "2026-11-08T10-48-23-241Z-7252b1a5",
+    "semanticUsage": {
+      "completion_tokens": 849,
+      "prompt_tokens": 6060,
+      "total_tokens": 6909,
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "prompt_tokens_details": {
+        "cached_tokens": 6016
+      }
+    },
+    "semanticStatus": "partial"
+  },
+  {
+    "id": "e04",
+    "poem": "落霞与孤鹜齐飞，秋水共长天一色。",
+    "author": "王勃",
+    "title": "滕王阁序",
+    "url": "https://www.gushiwen.cn/mingju/juv_3549fcfbb6ef.aspx",
+    "focus": "数量、色彩与天水",
+    "adviceUsage": {
+      "completion_tokens": 584,
+      "prompt_tokens": 3059,
+      "total_tokens": 3643,
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "prompt_tokens_details": {
+        "cached_tokens": 256
+      }
+    },
+    "adviceFinish": "stop",
+    "adviceRaw": "{\n  \"choices\": [\n    {\n    \"entity\": \"i1\",\n    \"tool_id\": \"landscape\",\n    \"fit\": \"approximate\",\n    \"reason\": \"目录中 landscape 的“返照”变体可近似表现晚霞光色，但无专门霞光工具，且不能表现“与孤鹜齐飞”的动态关系。\",\n    \"evidence\": [\"落霞与孤鹜齐飞\"]\n  },\n  {\n    \"entity\": \"i2\",\n    \"tool_id\": \"bird\",\n    \"fit\": \"approximate\",\n    \"reason\": \"bird 的“飞鸟”变体可表现单只飞鸟，但目录未区分鹜（野鸭），且“孤”的孤独意味与“齐飞”的并置关系无法由工具保证。\",\n    \"evidence\": [\"孤鹜\", \"落霞与孤鹜齐飞\"]\n  },\n  {\n    \"entity\": \"i3\",\n    \"tool_id\": \"water\",\n    \"fit\": \"approximate\",\n    \"reason\": \"water 可表现水面波纹，但“秋水”的季节限定与“共长天一色”的色融关系需依赖场景配色，工具本身不提供。\",\n    \"evidence\": [\"秋水共长天一色\"]\n  },\n  {\n    \"entity\": \"i4\",\n    \"tool_id\": \"landscape\",\n    \"fit\": \"approximate\",\n    \"reason\": \"landscape 的“天空”变体可表现辽阔天空，但“长天”与秋水“一色”的融合需整体配色，工具不自动实现。\",\n    \"evidence\": [\"秋水共长天一色\"]\n  }\n  ],\n  \"composition\": \"画面以秋水与长天为开阔背景，二者色融；落霞光色铺陈于天际，一只孤鹜飞动其间，与霞光并置。不添加原文未出现的物象。\",\n  \"expected\": \"可表现秋水、长天、飞鸟与霞光色层，但“齐飞”的动态并置、“一色”的色融程度以及“孤”的情感意味难以完全实现，需依赖整体配色与构图。\",\n  \"uncertainties\": [\n    \"“齐飞”的动作主体关系不完全确定，工具无法保证落霞与孤鹜一同飞动的动态。\",\n    \"“一色”的具体色调未明，工具不自动实现秋水与长天的色融。\",\n    \"“孤鹜”的“孤”可指数量单一或孤独意味，工具仅能表现单只飞鸟，不传达情感。\",\n    \"落霞无专门工具，仅能以 landscape 的“返照”近似表现，且不能表现其飞动。\"\n  ]\n}",
+    "adviceValidation": {
+      "valid": true,
+      "errors": []
+    },
+    "recordId": "2026-11-08T10-48-23-638Z-0583c51a",
+    "semanticUsage": {
+      "completion_tokens": 913,
+      "prompt_tokens": 6064,
+      "total_tokens": 6977,
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "prompt_tokens_details": {
+        "cached_tokens": 6016
+      }
+    },
+    "semanticStatus": "adjusted"
+  },
+  {
+    "id": "e05",
+    "poem": "人闲桂花落，夜静春山空。",
+    "author": "王维",
+    "title": "鸟鸣涧",
+    "url": "https://www.gushiwen.cn/mingju/juv_bddfaa6722e8.aspx",
+    "focus": "夜色、落花与主体",
+    "adviceUsage": {
+      "completion_tokens": 531,
+      "prompt_tokens": 2917,
+      "total_tokens": 3448,
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "adviceFinish": "stop",
+    "adviceRaw": "{\n  \"choices\": [\n    {\n    \"entity\": \"i1\",\n    \"tool_id\": \"figure\",\n    \"fit\": \"approximate\",\n    \"reason\": \"目录中 figure 可提供简略人影，但无行走步态与五官，且原文未明说人物身份、姿态或是否看见落花，只能作近似静态人影。\",\n    \"evidence\": [\"人闲桂花落\"]\n    },\n    {\n    \"entity\": \"i2\",\n    \"tool_id\": \"falling-petals\",\n    \"fit\": \"approximate\",\n    \"reason\": \"目录中 falling-petals 可表现花瓣飘落，但固定 18 片且默认一次飘落后停留，尚未实现从具体花枝脱落，不能确证为桂花或持续飘落。\",\n    \"evidence\": [\"人闲桂花落\"]\n    },\n    {\n    \"entity\": \"i3\",\n    \"tool_id\": null,\n    \"fit\": \"not_drawn\",\n    \"reason\": \"“夜”是时间环境，非独立可画实体；目录无直接表现夜晚本身的工具，只能通过整体暗色与月等间接暗示，不应强行画成实物。\",\n    \"evidence\": [\"夜静春山空\"]\n    },\n    {\n    \"entity\": \"i4\",\n    \"tool_id\": \"landscape\",\n    \"fit\": \"approximate\",\n    \"reason\": \"目录中 landscape 可提供山、地面等概括形态，但“春山空”的空寂程度与具体山形不明，只能作近似场景。\",\n    \"evidence\": [\"夜静春山空\"]\n    }\n  ],\n  \"composition\": \"以春山与夜色为背景，山体概括呈现；画面中有一简略人影，桂花花瓣飘落于山间或地面附近，整体氛围静谧空寂。\",\n  \"expected\": \"可表现人影、飘落花瓣与山景的近似组合，但无法确证桂花品种、人物身份、落花是否持续，以及“春山空”的空寂程度；夜晚本身只能通过整体暗色间接暗示。\",\n  \"uncertainties\": [\n    \"“人”未明说身份，也未明说是否看见桂花落下。\",\n    \"“春山空”的“空”可指空旷或空寂，具体程度不明。\",\n    \"桂花与春山的位置关系仅为推断，原文未明确。\",\n    \"落花工具尚未实现从具体花枝脱落，不能确证为桂花。\"\n  ]\n}",
+    "adviceValidation": {
+      "valid": true,
+      "errors": []
+    },
+    "recordId": "2026-11-08T10-48-32-737Z-96235b14",
+    "semanticUsage": {
+      "completion_tokens": 785,
+      "prompt_tokens": 6060,
+      "total_tokens": 6845,
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "prompt_tokens_details": {
+        "cached_tokens": 6016
+      }
+    },
+    "semanticStatus": "partial"
+  },
+  {
+    "id": "e06",
+    "poem": "明月别枝惊鹊，清风半夜鸣蝉。",
+    "author": "辛弃疾",
+    "title": "西江月·夜行黄沙道中",
+    "url": "https://m.gushiwen.cn/mingju/juv_6f4f1edd3b11.aspx",
+    "focus": "月、鸟与声音",
+    "adviceUsage": {
+      "completion_tokens": 507,
+      "prompt_tokens": 3210,
+      "total_tokens": 3717,
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "adviceFinish": "stop",
+    "adviceRaw": "{\n  \"choices\": [\n    {\n    \"entity\": \"i1\",\n    \"tool_id\": \"moon\",\n    \"fit\": \"direct\",\n    \"reason\": \"工具可绘制月形与亮边，但默认弯月，需注意圆缺未指定。\",\n    \"evidence\": [\"明月别枝惊鹊\"]\n  },\n  {\n    \"entity\": \"i2\",\n    \"tool_id\": \"tree\",\n    \"fit\": \"approximate\",\n    \"reason\": \"树工具提供阔叶、松意、疏花树等近似形态，不辨认具体品种，可表现树枝。\",\n    \"evidence\": [\"明月别枝惊鹊\"]\n  },\n  {\n    \"entity\": \"i3\",\n    \"tool_id\": \"bird\",\n    \"fit\": \"approximate\",\n    \"reason\": \"通用鸟意可表现鹊形，但工具不证明听见的鸟一定可见，且惊飞动作未支持。\",\n    \"evidence\": [\"明月别枝惊鹊\"]\n  },\n  {\n    \"entity\": \"i4\",\n    \"tool_id\": null,\n    \"fit\": \"not_drawn\",\n    \"reason\": \"清风为抽象环境，目录无直接表现风的工具，不能强行画成实物。\",\n    \"evidence\": [\"清风半夜鸣蝉\"]\n  },\n  {\n    \"entity\": \"i5\",\n    \"tool_id\": null,\n    \"fit\": \"not_drawn\",\n    \"reason\": \"蝉为具体昆虫，目录无蝉形工具，不能以其他生物替代。\",\n    \"evidence\": [\"清风半夜鸣蝉\"]\n  }\n  ],\n  \"composition\": \"画面以月、树、鹊、蝉、风为元素：月与树、鹊构成近景或中景，风与蝉声暗示环境，但风与蝉无直接工具，需留白或抽象处理。\",\n  \"expected\": \"可表现明月、树枝、鹊鸟的近似形态；清风与蝉声无法直接绘制，需依赖文字或留白。\",\n  \"uncertainties\": [\n    \"“别枝”动作主体不明确，月光或鹊离开树枝存在歧义。\",\n    \"“惊鹊”是月光惊动还是别枝惊动，存在歧义。\",\n    \"蝉声可闻但蝉不一定可见，工具无法表现声音。\",\n    \"清风为抽象环境，无直接视觉表现工具。\"\n  ]\n}",
+    "adviceValidation": {
+      "valid": true,
+      "errors": []
+    },
+    "recordId": "2026-11-08T10-48-34-666Z-a7ad5420",
+    "semanticUsage": {
+      "completion_tokens": 1078,
+      "prompt_tokens": 6060,
+      "total_tokens": 7138,
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "prompt_tokens_details": {
+        "cached_tokens": 6016
+      }
+    },
+    "semanticStatus": "complete"
+  },
+  {
+    "id": "e07",
+    "poem": "月黑雁飞高，单于夜遁逃。",
+    "author": "卢纶",
+    "title": "塞下曲",
+    "url": "https://www.gushiwen.cn/mingju/juv_fc4b11f3dcf6.aspx",
+    "focus": "夜色、缺月光与动作",
+    "adviceUsage": {
+      "completion_tokens": 489,
+      "prompt_tokens": 2946,
+      "total_tokens": 3435,
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "adviceFinish": "stop",
+    "adviceRaw": "{\"choices\":[{\"entity\":\"i1\",\"tool_id\":\"moon\",\"fit\":\"approximate\",\"reason\":\"目录有月形工具，可保留暗月极淡轮廓，但“月黑”的昏暗程度与成因（云遮或月缺）无法确定，只能近似表现暗月而非确证的黑月。\",\"evidence\":[\"月黑雁飞高\"]},{\"entity\":\"i2\",\"tool_id\":\"bird\",\"fit\":\"approximate\",\"reason\":\"目录仅有通用单鸟形（飞鸟），可提示飞鸟意象，但无法表现“雁”的物种特征，也无法表现“高飞”的群体与高度。\",\"evidence\":[\"月黑雁飞高\"]},{\"entity\":\"i3\",\"tool_id\":\"figure\",\"fit\":\"approximate\",\"reason\":\"目录有人意简略人影，可作单于的粗略人影提示，但无行走步态与五官，无法表现“夜遁逃”的快速逃遁动作与身份特征。\",\"evidence\":[\"单于夜遁逃\"]},{\"entity\":\"i4\",\"tool_id\":null,\"fit\":\"not_drawn\",\"reason\":\"“夜”是抽象时间背景，非可绘制实体；目录无直接表现夜晚抽象概念的工具，只能通过整体暗色氛围间接暗示。\",\"evidence\":[\"单于夜遁逃\"]}],\"composition\":\"以昏暗夜色为整体基调：上方或远处安排极淡的暗月轮廓，空中以通用飞鸟提示高飞的大雁，地面或近处安排简略人影暗示单于夜遁。不添加原文没有的物象，不补造具体边塞实景。\",\"expected\":\"可表现暗月、飞鸟与人影的粗略意象，传达昏暗紧张氛围；但无法确证月黑成因、雁的物种与高度、单于身份与逃遁动作，夜晚抽象背景只能间接暗示。\",\"uncertainties\":[\"“月黑”可指月色昏暗或被云遮暗，具体程度不明，暗月工具只能近似表现。\",\"“雁飞高”是受惊高飞还是夜行常态，原文未明，通用鸟形无法区分雁与高度。\",\"“遁逃”的方向与是否成功，原文未交代，人影工具无行走步态。\",\"“夜”为抽象时间背景，无直接绘制工具，只能通过整体暗色氛围间接暗示。\"]}",
+    "adviceValidation": {
+      "valid": true,
+      "errors": []
+    },
+    "recordId": "2026-11-08T10-48-44-769Z-ed9ca2d9",
+    "semanticUsage": {
+      "completion_tokens": 813,
+      "prompt_tokens": 6061,
+      "total_tokens": 6874,
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "prompt_tokens_details": {
+        "cached_tokens": 6016
+      }
+    },
+    "semanticStatus": "partial"
+  },
+  {
+    "id": "e08",
+    "poem": "潮平两岸阔，风正一帆悬。",
+    "author": "王湾",
+    "title": "次北固山下",
+    "url": "https://m.gushiwen.cn/mingju/juv_aa53782f1529.aspx",
+    "focus": "宽幅、数量和帆",
+    "adviceUsage": {
+      "completion_tokens": 487,
+      "prompt_tokens": 3030,
+      "total_tokens": 3517,
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "adviceFinish": "stop",
+    "adviceRaw": "{\"choices\":[{\"entity\":\"i1\",\"tool_id\":\"water\",\"fit\":\"approximate\",\"reason\":\"水纹工具可表现水面，但“潮平”的涨平状态与开阔感需靠构图与水面铺陈，工具不提供真实流体或潮位模拟。\",\"evidence\":[\"潮平两岸阔\"]},{\"entity\":\"i2\",\"tool_id\":\"landscape\",\"fit\":\"approximate\",\"reason\":\"山水场景含“水岸”变体，可作两岸概括形态；但“阔”是空间关系，需由两岸间距与水面比例体现，工具不直接表达开阔程度。\",\"evidence\":[\"潮平两岸阔\"]},{\"entity\":\"i3\",\"tool_id\":null,\"fit\":\"not_drawn\",\"reason\":\"目录无独立风形工具；风为不可见环境要素，只能通过帆、水纹等间接暗示，不应画成实物。\",\"evidence\":[\"风正一帆悬\"]},{\"entity\":\"i4\",\"tool_id\":\"boat\",\"fit\":\"approximate\",\"reason\":\"舟工具提供船体，但明确不附加桅杆与帆；原句的“一帆悬”核心是帆，工具无法直接画出高悬的帆。\",\"evidence\":[\"风正一帆悬\"]}],\"composition\":\"以开阔水面为主体，两岸分列左右并留出宽阔间距，水面平缓延伸；中景置一船体，帆的高悬状态因工具限制只能以船体位置示意，风不可见，不另添人物、山、云、日等原文未出现物象。\",\"expected\":\"可表现平缓水面、两岸概括形态与中景船体，形成开阔平稳的基调；但“潮平”的潮位状态、“阔”的空间感、“风正”的顺风不可见条件以及“一帆悬”的帆均无法由现有工具直接落实，画面将缺失原句最关键的帆意象。\",\"uncertainties\":[\"“一帆”按字面取一片帆，但也可借指一叶孤舟，解读存在分歧。\",\"风为不可见要素，只能间接暗示，无法确认画面是否传达“风正”。\",\"舟工具不附帆，若以船体代替帆会改变原句主体，需谨慎。\",\"两岸的具体形态（岸线、植被、远近）原文未限定，不宜补造。\"]}",
+    "adviceValidation": {
+      "valid": true,
+      "errors": []
+    },
+    "recordId": "2026-11-08T10-48-44-781Z-d87a4a76",
+    "semanticUsage": {
+      "completion_tokens": 899,
+      "prompt_tokens": 6059,
+      "total_tokens": 6958,
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "prompt_tokens_details": {
+        "cached_tokens": 6016
+      }
+    },
+    "semanticStatus": "partial"
+  },
+  {
+    "id": "e09",
+    "poem": "大漠沙如雪，燕山月似钩。",
+    "author": "李贺",
+    "title": "马诗",
+    "url": "https://m.gushiwen.cn/mingju/juv_e4ce9ced8cfe.aspx",
+    "focus": "比喻与月形",
+    "adviceUsage": {
+      "completion_tokens": 571,
+      "prompt_tokens": 2954,
+      "total_tokens": 3525,
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "adviceFinish": "stop",
+    "adviceRaw": "{\n  \"choices\": [\n    {\n    \"entity\": \"i1\",\n    \"tool_id\": \"landscape\",\n    \"fit\": \"approximate\",\n    \"reason\": \"目录中 landscape 的“原野”变体可表现大漠沙地的概括形态，但无法表现沙的细密质感或“如雪”的比喻效果。\",\n    \"evidence\": [\"大漠沙如雪\"]\n  },\n  {\n    \"entity\": \"i2\",\n    \"tool_id\": null,\n    \"fit\": \"not_drawn\",\n    \"reason\": \"雪是比喻参照，并非场景中实际存在的物体，不应强行画成实物。\",\n    \"evidence\": [\"大漠沙如雪\"]\n  },\n  {\n    \"entity\": \"i3\",\n    \"tool_id\": \"landscape\",\n    \"fit\": \"approximate\",\n    \"reason\": \"目录中 landscape 的“层山”变体可表现燕山的概括山形，但无法确认具体山势或与月的精确位置关系。\",\n    \"evidence\": [\"燕山月似钩\"]\n  },\n  {\n    \"entity\": \"i4\",\n    \"tool_id\": \"moon\",\n    \"fit\": \"direct\",\n    \"reason\": \"目录中 moon 工具可绘制月形与亮边方向，默认弯月，与“月似钩”的弯月形态相符。\",\n    \"evidence\": [\"燕山月似钩\"]\n  },\n  {\n    \"entity\": \"i5\",\n    \"tool_id\": null,\n    \"fit\": \"not_drawn\",\n    \"reason\": \"钩是比喻参照，并非场景中实际存在的物体，不应强行画成实物。\",\n    \"evidence\": [\"燕山月似钩\"]\n  }\n  ],\n  \"composition\": \"画面以广阔的大漠沙地（原野）为远景，沙面可作淡色处理以暗示“如雪”的比喻；燕山以层山形态出现在远处，山上方有一弯月，月形取弯月以呼应“似钩”。雪与钩作为比喻参照不画为实物。\",\n  \"expected\": \"可表现大漠沙地、燕山和弯月的基本场景，但沙的“如雪”质感、月与山的精确位置关系以及雪和钩的比喻效果无法完全呈现。\",\n  \"uncertainties\": [\n    \"沙与雪、月与钩均为比喻，雪和钩并非场景中实际存在的物体。\",\n    \"燕山与月的位置关系未明说，只能确定月出现在燕山一带的上空。\",\n    \"大漠与燕山是否在同一画面中并置，原文未明确，只能按两句并列处理。\"\n  ]\n}",
+    "adviceValidation": {
+      "valid": true,
+      "errors": []
+    },
+    "recordId": "2026-11-08T10-48-55-673Z-889afca2",
+    "semanticUsage": {
+      "completion_tokens": 821,
+      "prompt_tokens": 6061,
+      "total_tokens": 6882,
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "prompt_tokens_details": {
+        "cached_tokens": 6016
+      }
+    },
+    "semanticStatus": "partial"
+  },
+  {
+    "id": "e10",
+    "poem": "独坐幽篁里，弹琴复长啸。",
+    "author": "王维",
+    "title": "竹里馆",
+    "url": "https://www.gushiwen.cn/mingju/juv_995bbb79f869.aspx",
+    "focus": "人物、竹与乐器",
+    "adviceUsage": {
+      "completion_tokens": 391,
+      "prompt_tokens": 2748,
+      "total_tokens": 3139,
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "adviceFinish": "stop",
+    "adviceRaw": "{\"choices\":[{\"entity\":\"i1\",\"tool_id\":\"bamboo\",\"fit\":\"approximate\",\"reason\":\"竹工具可表现竹林环境，但固定3根竹竿，无法呈现“幽深”的密度与范围；且不区分竹种。\",\"evidence\":[\"独坐幽篁里\"]},{\"entity\":\"i2\",\"tool_id\":\"instrument\",\"fit\":\"direct\",\"reason\":\"instrument 的“琴”变体提供琴写意器形，与原文“琴”直接对应；但无演奏者与演奏动作。\",\"evidence\":[\"弹琴复长啸\"]},{\"entity\":\"i3\",\"tool_id\":null,\"fit\":\"not_drawn\",\"reason\":\"“长啸之声”为抽象声音，目录中无表现声音的工具，不能强行画成实物。\",\"evidence\":[\"弹琴复长啸\"]}],\"composition\":\"画面以幽深竹林为环境主体，竹竿与窄叶构成场景；其中置一琴器形，作为场景中的器物点缀。弹琴与长啸的主体未在句中明说，仅能由“独坐”推知为同一人，但原文未出现人物，故不绘制人影。长啸之声为抽象，不落为可见物象。\",\"expected\":\"可表现竹林环境与琴器形，但竹林密度、幽深程度与具体范围无法由工具保证；琴的演奏动作与声音无法表现；人物缺席，长啸之声不可见。\",\"uncertainties\":[\"弹琴与长啸的主体未在句中明说，只能由“独坐”推知为同一人。\",\"“幽篁”的幽深程度与具体范围未明。\",\"竹工具固定3根竹竿，能否呈现“幽篁”的幽深密度不确定。\",\"琴工具无演奏者与演奏动作，无法表现“弹琴”这一动作。\"]}",
+    "adviceValidation": {
+      "valid": true,
+      "errors": []
+    },
+    "recordId": "2026-11-08T10-48-56-652Z-ce07d96e",
+    "semanticUsage": {
+      "completion_tokens": 650,
+      "prompt_tokens": 6062,
+      "total_tokens": 6712,
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "prompt_tokens_details": {
+        "cached_tokens": 6016
+      }
+    },
+    "semanticStatus": "partial"
+  }
+]

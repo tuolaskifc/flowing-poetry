@@ -1,0 +1,4130 @@
+{
+  "id": "2026-11-08T10-48-23-638Z-0583c51a",
+  "fingerprint": "66f3ea6f1447b537b58848c393dc5b785aa53aeee4116072ef112ecc67a5bfe5",
+  "semanticFingerprint": "422824fc326cf62f3ad54e65cba73994a4aac5fe552a9bca5fc419e109c9eed0",
+  "poem": "落霞与孤鹜齐飞，秋水共长天一色。",
+  "source": {
+    "provider": "独立选笔试验",
+    "author": "王勃",
+    "title": "滕王阁序"
+  },
+  "mode": "expression",
+  "model": "DeepSeek-V4.1-Flash",
+  "started_at": "2026-11-08T10:48:23.638Z",
+  "cached": false,
+  "http_status": 200,
+  "usage": {
+    "completion_tokens": 913,
+    "prompt_tokens": 6064,
+    "total_tokens": 6977,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 6016
+    }
+  },
+  "finish_reason": "stop",
+  "analysis": {
+    "schema_version": "expression-1.0",
+    "poem": "落霞与孤鹜齐飞，秋水共长天一色。",
+    "reading": "晚霞与一只孤鹜一同飞动，秋日的水面与辽阔天空融为一色，画面开阔而静远。",
+    "entities": [
+      {
+        "id": "i1",
+        "mentions": [
+          "落霞"
+        ],
+        "concept": "晚霞",
+        "kind": "environment",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "落霞与孤鹜齐飞"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "spread",
+          "evidence": [
+            "落霞与孤鹜齐飞"
+          ]
+        }
+      },
+      {
+        "id": "i2",
+        "mentions": [
+          "孤鹜"
+        ],
+        "concept": "孤飞的野鸭",
+        "kind": "organism",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "落霞与孤鹜齐飞"
+        ],
+        "quantity": {
+          "mode": "exact",
+          "min": 1,
+          "max": 1,
+          "unit": null,
+          "scope": "individual",
+          "extent": "local",
+          "evidence": [
+            "孤鹜"
+          ]
+        }
+      },
+      {
+        "id": "i3",
+        "mentions": [
+          "秋水"
+        ],
+        "concept": "秋日的水面",
+        "kind": "environment",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "秋水共长天一色"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "spread",
+          "evidence": [
+            "秋水共长天一色"
+          ]
+        }
+      },
+      {
+        "id": "i4",
+        "mentions": [
+          "长天"
+        ],
+        "concept": "辽阔的天空",
+        "kind": "environment",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "秋水共长天一色"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "spread",
+          "evidence": [
+            "秋水共长天一色"
+          ]
+        }
+      }
+    ],
+    "relations": [],
+    "atmosphere": {
+      "labels": [
+        "开阔",
+        "静远",
+        "秋暮"
+      ],
+      "valence": "neutral",
+      "energy": "medium",
+      "tension": "low",
+      "openness": "high",
+      "evidence": [
+        "落霞与孤鹜齐飞",
+        "秋水共长天一色"
+      ]
+    },
+    "time": {
+      "markers": [],
+      "note": null
+    },
+    "uncertainties": [
+      "“齐飞”可理解为落霞与孤鹜一同飞动，也可理解为二者并置呈现，动作主体关系不完全确定。",
+      "“一色”指秋水与长天颜色相融，具体是何种色调未明。",
+      "“孤鹜”的“孤”可指数量单一，也可带孤独意味，此处按数量单一处理。"
+    ],
+    "spatial": [
+      {
+        "type": "on",
+        "source": "i2",
+        "target": "i3",
+        "modality": "unclear",
+        "basis": "inferred",
+        "evidence": [
+          "秋水共长天一色"
+        ]
+      }
+    ],
+    "scene": {
+      "setting": {
+        "kind": "waterside",
+        "basis": "inferred",
+        "evidence": [
+          "秋水共长天一色"
+        ]
+      },
+      "groups": [
+        {
+          "members": [
+            "i1",
+            "i2"
+          ],
+          "role": "subject",
+          "pattern": "scattered",
+          "depth": "far",
+          "basis": "inferred",
+          "evidence": [
+            "落霞与孤鹜齐飞"
+          ]
+        },
+        {
+          "members": [
+            "i3",
+            "i4"
+          ],
+          "role": "environment",
+          "pattern": "field",
+          "depth": "far",
+          "basis": "inferred",
+          "evidence": [
+            "秋水共长天一色"
+          ]
+        }
+      ],
+      "supports": [],
+      "actions": [
+        {
+          "entity": "i2",
+          "state": "fly",
+          "pace": "unspecified",
+          "direction": "unspecified",
+          "modality": "asserted",
+          "basis": "explicit",
+          "evidence": [
+            "落霞与孤鹜齐飞"
+          ]
+        }
+      ],
+      "atmosphere": {
+        "visibility": "clear",
+        "illumination": "twilight",
+        "basis": "inferred",
+        "evidence": [
+          "落霞与孤鹜齐飞"
+        ]
+      }
+    },
+    "expression": {
+      "relations": [
+        {
+          "source": "i1",
+          "target": "i2",
+          "kind": "connect",
+          "modality": "asserted",
+          "basis": "explicit",
+          "evidence": [
+            "落霞与孤鹜齐飞"
+          ]
+        },
+        {
+          "source": "i3",
+          "target": "i4",
+          "kind": "interweave",
+          "modality": "asserted",
+          "basis": "explicit",
+          "evidence": [
+            "秋水共长天一色"
+          ]
+        }
+      ],
+      "processes": [
+        {
+          "subject": "i2",
+          "kind": "unclear",
+          "temporal": "ongoing",
+          "modality": "asserted",
+          "basis": "explicit",
+          "evidence": [
+            "落霞与孤鹜齐飞"
+          ]
+        }
+      ]
+    }
+  },
+  "validation": {
+    "valid": true,
+    "errors": [],
+    "warnings": [
+      "模型保留了不确定性，需要审阅",
+      "spatial[0] 的推断或非确定关系需审阅",
+      "scene.setting 为语义推断，绘画选择需与原文明示区分",
+      "scene.groups[0] 为语义推断，绘画选择需与原文明示区分",
+      "scene.groups[1] 为语义推断，绘画选择需与原文明示区分",
+      "scene.atmosphere 为语义推断，绘画选择需与原文明示区分",
+      "格式或原文引用范围由本地处理，语义合理性仍需复核"
+    ],
+    "review_required": true
+  },
+  "rawValidation": {
+    "valid": false,
+    "errors": [
+      "spatial[0] 依据未关联关系两端"
+    ],
+    "warnings": [
+      "模型保留了不确定性，需要审阅",
+      "spatial[0] 的推断或非确定关系需审阅"
+    ],
+    "review_required": true
+  },
+  "effectiveAnalysis": {
+    "schema_version": "expression-1.0",
+    "poem": "落霞与孤鹜齐飞，秋水共长天一色。",
+    "reading": "晚霞与一只孤鹜一同飞动，秋日的水面与辽阔天空融为一色，画面开阔而静远。",
+    "entities": [
+      {
+        "id": "i1",
+        "mentions": [
+          "落霞"
+        ],
+        "concept": "晚霞",
+        "kind": "environment",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "落霞与孤鹜齐飞"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "spread",
+          "evidence": [
+            "落霞与孤鹜齐飞"
+          ]
+        }
+      },
+      {
+        "id": "i2",
+        "mentions": [
+          "孤鹜"
+        ],
+        "concept": "孤飞的野鸭",
+        "kind": "organism",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "落霞与孤鹜齐飞"
+        ],
+        "quantity": {
+          "mode": "exact",
+          "min": 1,
+          "max": 1,
+          "unit": null,
+          "scope": "individual",
+          "extent": "local",
+          "evidence": [
+            "孤鹜"
+          ]
+        }
+      },
+      {
+        "id": "i3",
+        "mentions": [
+          "秋水"
+        ],
+        "concept": "秋日的水面",
+        "kind": "environment",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "秋水共长天一色"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "spread",
+          "evidence": [
+            "秋水共长天一色"
+          ]
+        }
+      },
+      {
+        "id": "i4",
+        "mentions": [
+          "长天"
+        ],
+        "concept": "辽阔的天空",
+        "kind": "environment",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "秋水共长天一色"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "spread",
+          "evidence": [
+            "秋水共长天一色"
+          ]
+        }
+      }
+    ],
+    "relations": [],
+    "atmosphere": {
+      "labels": [
+        "开阔",
+        "静远",
+        "秋暮"
+      ],
+      "valence": "neutral",
+      "energy": "medium",
+      "tension": "low",
+      "openness": "high",
+      "evidence": [
+        "落霞与孤鹜齐飞",
+        "秋水共长天一色"
+      ]
+    },
+    "time": {
+      "markers": [],
+      "note": null
+    },
+    "uncertainties": [
+      "“齐飞”可理解为落霞与孤鹜一同飞动，也可理解为二者并置呈现，动作主体关系不完全确定。",
+      "“一色”指秋水与长天颜色相融，具体是何种色调未明。",
+      "“孤鹜”的“孤”可指数量单一，也可带孤独意味，此处按数量单一处理。"
+    ],
+    "spatial": [
+      {
+        "type": "on",
+        "source": "i2",
+        "target": "i3",
+        "modality": "unclear",
+        "basis": "inferred",
+        "evidence": [
+          "落霞与孤鹜齐飞，秋水共长天一色。"
+        ]
+      }
+    ],
+    "scene": {
+      "setting": {
+        "kind": "waterside",
+        "basis": "inferred",
+        "evidence": [
+          "秋水共长天一色"
+        ]
+      },
+      "groups": [
+        {
+          "members": [
+            "i1",
+            "i2"
+          ],
+          "role": "subject",
+          "pattern": "scattered",
+          "depth": "far",
+          "basis": "inferred",
+          "evidence": [
+            "落霞与孤鹜齐飞"
+          ]
+        },
+        {
+          "members": [
+            "i3",
+            "i4"
+          ],
+          "role": "environment",
+          "pattern": "field",
+          "depth": "far",
+          "basis": "inferred",
+          "evidence": [
+            "秋水共长天一色"
+          ]
+        }
+      ],
+      "supports": [],
+      "actions": [
+        {
+          "entity": "i2",
+          "state": "fly",
+          "pace": "unspecified",
+          "direction": "unspecified",
+          "modality": "asserted",
+          "basis": "explicit",
+          "evidence": [
+            "落霞与孤鹜齐飞"
+          ]
+        }
+      ],
+      "atmosphere": {
+        "visibility": "clear",
+        "illumination": "twilight",
+        "basis": "inferred",
+        "evidence": [
+          "落霞与孤鹜齐飞"
+        ]
+      }
+    },
+    "expression": {
+      "relations": [
+        {
+          "source": "i1",
+          "target": "i2",
+          "kind": "connect",
+          "modality": "asserted",
+          "basis": "explicit",
+          "evidence": [
+            "落霞与孤鹜齐飞"
+          ]
+        },
+        {
+          "source": "i3",
+          "target": "i4",
+          "kind": "interweave",
+          "modality": "asserted",
+          "basis": "explicit",
+          "evidence": [
+            "秋水共长天一色"
+          ]
+        }
+      ],
+      "processes": [
+        {
+          "subject": "i2",
+          "kind": "unclear",
+          "temporal": "ongoing",
+          "modality": "asserted",
+          "basis": "explicit",
+          "evidence": [
+            "落霞与孤鹜齐飞"
+          ]
+        }
+      ]
+    }
+  },
+  "recovery": {
+    "version": "generation-recovery-1.2",
+    "status": "normalized",
+    "reviewRequired": true,
+    "changes": [
+      {
+        "kind": "source-range-only",
+        "path": "spatial.0.evidence",
+        "original": [
+          "秋水共长天一色"
+        ],
+        "effective": [
+          "落霞与孤鹜齐飞，秋水共长天一色。"
+        ]
+      }
+    ],
+    "omitted": [],
+    "message": "已完成格式或引用整理，解读仍可复核。"
+  },
+  "plan": {
+    "version": "shared-expression-1.1-source-bound",
+    "seed": 4065211612,
+    "poem": "落霞与孤鹜齐飞，秋水共长天一色。",
+    "nodes": [
+      {
+        "id": "i1",
+        "label": "落霞",
+        "meaning": "晚霞",
+        "kind": "concrete",
+        "contextOnly": false,
+        "mode": "present"
+      },
+      {
+        "id": "i2",
+        "label": "孤鹜",
+        "meaning": "孤飞的野鸭",
+        "kind": "concrete",
+        "contextOnly": false,
+        "mode": "present"
+      },
+      {
+        "id": "i3",
+        "label": "秋水",
+        "meaning": "秋日的水面",
+        "kind": "concrete",
+        "contextOnly": false,
+        "mode": "present"
+      },
+      {
+        "id": "i4",
+        "label": "长天",
+        "meaning": "辽阔的天空",
+        "kind": "concrete",
+        "contextOnly": false,
+        "mode": "present"
+      }
+    ],
+    "relations": [
+      {
+        "source": "i1",
+        "target": "i2",
+        "kind": "connect",
+        "modality": "asserted",
+        "basis": "explicit",
+        "evidence": [
+          "落霞与孤鹜齐飞"
+        ]
+      },
+      {
+        "source": "i3",
+        "target": "i4",
+        "kind": "interweave",
+        "modality": "asserted",
+        "basis": "explicit",
+        "evidence": [
+          "秋水共长天一色"
+        ]
+      }
+    ],
+    "processes": [
+      {
+        "subject": "i2",
+        "kind": "unclear",
+        "temporal": "ongoing",
+        "modality": "asserted",
+        "basis": "explicit",
+        "evidence": [
+          "落霞与孤鹜齐飞"
+        ]
+      }
+    ],
+    "omitted": [],
+    "atmosphere": {
+      "labels": [
+        "开阔",
+        "静远",
+        "秋暮"
+      ],
+      "valence": "neutral",
+      "energy": "medium",
+      "tension": "low",
+      "openness": "high",
+      "evidence": [
+        "落霞与孤鹜齐飞",
+        "秋水共长天一色"
+      ],
+      "illumination": "twilight"
+    },
+    "concretePlan": {
+      "version": "semantic-composition-3.3-source-bound",
+      "seed": 4065211612,
+      "settings": {
+        "wind": 0.3,
+        "density": 0.35,
+        "palette": "twilight",
+        "motion": 1.4
+      },
+      "layers": [
+        {
+          "tool": "landscape",
+          "entities": [
+            "i1"
+          ],
+          "projectedEntities": [],
+          "names": [
+            "落霞"
+          ],
+          "options": {
+            "form": "sky"
+          },
+          "animate": false,
+          "placement": {
+            "anchor": [
+              320,
+              194
+            ],
+            "at": [
+              0.5,
+              0.5
+            ],
+            "scale": 1.5
+          },
+          "semanticGroup": {
+            "members": [
+              "i1",
+              "i2"
+            ],
+            "role": "subject",
+            "pattern": "scattered",
+            "depth": "far",
+            "basis": "inferred",
+            "evidence": [
+              "落霞与孤鹜齐飞"
+            ],
+            "index": 0
+          },
+          "semanticEffects": [
+            {
+              "path": "scene.groups[0].role",
+              "consumer": "主次布局",
+              "effect": "保留环境画布范围，主次不改变地形边界",
+              "status": "applied"
+            },
+            {
+              "path": "scene.groups[0].pattern",
+              "consumer": "群落布局",
+              "effect": "按 scattered 组织显示单元；不覆盖明确数量",
+              "status": "applied"
+            },
+            {
+              "path": "scene.groups[0].depth",
+              "consumer": "远近布局",
+              "effect": "将 far 转为相对大小、透明度与允许区域内的落点",
+              "status": "applied"
+            }
+          ],
+          "semanticEnergy": false,
+          "timeScale": 0.8,
+          "instances": [
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  194
+                ],
+                "at": [
+                  0.5,
+                  0.5
+                ],
+                "scale": 1.6
+              },
+              "depth": -0.2,
+              "opacity": 1,
+              "variant": 0,
+              "tone": "far",
+              "id": "i1:landscape:sky:0:0"
+            }
+          ],
+          "singleUnit": false,
+          "quantity": {
+            "items": [
+              {
+                "entity": "i1",
+                "mode": "unspecified",
+                "min": null,
+                "max": null,
+                "unit": null,
+                "scope": "unspecified",
+                "extent": "spread",
+                "evidence": [
+                  "落霞与孤鹜齐飞"
+                ],
+                "basis": "model"
+              }
+            ],
+            "rendered": 1,
+            "exact": false,
+            "collective": true,
+            "partUnsupported": false
+          },
+          "quantityLabel": "整体笔触图层；内部数量尚未适配",
+          "z": -45,
+          "visual": {
+            "role": "atmosphere",
+            "brushStrength": 1.1
+          },
+          "performance": {
+            "rhythm": "steady",
+            "rate": 1,
+            "amplitude": 1,
+            "phase": 0
+          },
+          "id": "i1:landscape:sky:0",
+          "interaction": {
+            "mode": "instance",
+            "groupId": "i1:landscape:sky:0"
+          },
+          "visibility": {
+            "protect": false,
+            "reasons": [],
+            "basis": "local-drawing-policy"
+          }
+        },
+        {
+          "tool": "landscape",
+          "entities": [
+            "i4"
+          ],
+          "projectedEntities": [],
+          "names": [
+            "长天"
+          ],
+          "options": {
+            "form": "sky"
+          },
+          "animate": false,
+          "placement": {
+            "anchor": [
+              320,
+              194
+            ],
+            "at": [
+              0.5,
+              0.5
+            ],
+            "scale": 1.5
+          },
+          "semanticGroup": {
+            "members": [
+              "i3",
+              "i4"
+            ],
+            "role": "environment",
+            "pattern": "field",
+            "depth": "far",
+            "basis": "inferred",
+            "evidence": [
+              "秋水共长天一色"
+            ],
+            "index": 1
+          },
+          "semanticEffects": [
+            {
+              "path": "scene.groups[1].role",
+              "consumer": "主次布局",
+              "effect": "保留环境画布范围，主次不改变地形边界",
+              "status": "applied"
+            },
+            {
+              "path": "scene.groups[1].pattern",
+              "consumer": "群落布局",
+              "effect": "按 field 组织显示单元；不覆盖明确数量",
+              "status": "applied"
+            },
+            {
+              "path": "scene.groups[1].depth",
+              "consumer": "远近布局",
+              "effect": "将 far 转为相对大小、透明度与允许区域内的落点",
+              "status": "applied"
+            }
+          ],
+          "semanticEnergy": false,
+          "timeScale": 0.8,
+          "instances": [
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  194
+                ],
+                "at": [
+                  0.5,
+                  0.5
+                ],
+                "scale": 1.6
+              },
+              "depth": -0.2,
+              "opacity": 1,
+              "variant": 0,
+              "tone": "far",
+              "id": "i4:landscape:sky:1:0"
+            }
+          ],
+          "singleUnit": false,
+          "quantity": {
+            "items": [
+              {
+                "entity": "i4",
+                "mode": "unspecified",
+                "min": null,
+                "max": null,
+                "unit": null,
+                "scope": "unspecified",
+                "extent": "spread",
+                "evidence": [
+                  "秋水共长天一色"
+                ],
+                "basis": "model"
+              }
+            ],
+            "rendered": 1,
+            "exact": false,
+            "collective": true,
+            "partUnsupported": false
+          },
+          "quantityLabel": "整体笔触图层；内部数量尚未适配",
+          "z": -45,
+          "visual": {
+            "role": "atmosphere",
+            "brushStrength": 1.1
+          },
+          "performance": {
+            "rhythm": "steady",
+            "rate": 1,
+            "amplitude": 1,
+            "phase": 3.8830085198369844
+          },
+          "id": "i4:landscape:sky:1",
+          "interaction": {
+            "mode": "instance",
+            "groupId": "i4:landscape:sky:1"
+          },
+          "visibility": {
+            "protect": false,
+            "reasons": [],
+            "basis": "local-drawing-policy"
+          }
+        },
+        {
+          "tool": "water",
+          "entities": [
+            "i3"
+          ],
+          "projectedEntities": [],
+          "names": [
+            "秋水"
+          ],
+          "options": {
+            "form": "plane"
+          },
+          "animate": true,
+          "placement": {
+            "anchor": [
+              320,
+              130
+            ],
+            "at": [
+              0.5,
+              0.45
+            ],
+            "scale": 1.5
+          },
+          "semanticGroup": {
+            "members": [
+              "i3",
+              "i4"
+            ],
+            "role": "environment",
+            "pattern": "field",
+            "depth": "far",
+            "basis": "inferred",
+            "evidence": [
+              "秋水共长天一色"
+            ],
+            "index": 1
+          },
+          "semanticEffects": [
+            {
+              "path": "scene.groups[1].role",
+              "consumer": "主次布局",
+              "effect": "保留环境画布范围，主次不改变地形边界",
+              "status": "applied"
+            },
+            {
+              "path": "scene.groups[1].pattern",
+              "consumer": "群落布局",
+              "effect": "按 field 组织显示单元；不覆盖明确数量",
+              "status": "applied"
+            },
+            {
+              "path": "scene.groups[1].depth",
+              "consumer": "远近布局",
+              "effect": "将 far 转为相对大小、透明度与允许区域内的落点",
+              "status": "applied"
+            }
+          ],
+          "semanticEnergy": true,
+          "timeScale": 0.8,
+          "instances": [
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  135
+                ],
+                "at": [
+                  0.5,
+                  0.45
+                ],
+                "scale": 1.65
+              },
+              "depth": -0.2,
+              "opacity": 1,
+              "variant": 0,
+              "tone": "far",
+              "id": "i3:water:plane:2:0"
+            }
+          ],
+          "singleUnit": false,
+          "quantity": {
+            "items": [
+              {
+                "entity": "i3",
+                "mode": "unspecified",
+                "min": null,
+                "max": null,
+                "unit": null,
+                "scope": "unspecified",
+                "extent": "spread",
+                "evidence": [
+                  "秋水共长天一色"
+                ],
+                "basis": "model"
+              }
+            ],
+            "rendered": 1,
+            "exact": false,
+            "collective": true,
+            "partUnsupported": false
+          },
+          "quantityLabel": "整体笔触图层；内部数量尚未适配",
+          "z": -10,
+          "surface": {
+            "top": 0.42,
+            "bottom": 1
+          },
+          "clip": [
+            [
+              0,
+              0.42
+            ],
+            [
+              1,
+              0.42
+            ],
+            [
+              1,
+              1.04
+            ],
+            [
+              0,
+              1.04
+            ]
+          ],
+          "visual": {
+            "role": "water",
+            "brushStrength": 1.35
+          },
+          "performance": {
+            "rhythm": "continuous",
+            "rate": 0.9,
+            "amplitude": 0.9,
+            "phase": 1.4828317324943823
+          },
+          "id": "i3:water:plane:2",
+          "interaction": {
+            "mode": "group",
+            "groupId": "i3:water:plane:2"
+          },
+          "visibility": {
+            "protect": false,
+            "reasons": [],
+            "basis": "local-drawing-policy"
+          }
+        },
+        {
+          "tool": "bird",
+          "entities": [
+            "i2"
+          ],
+          "projectedEntities": [],
+          "names": [
+            "孤鹜"
+          ],
+          "options": {
+            "pose": "flying",
+            "tone": "ink",
+            "facing": "right"
+          },
+          "animate": true,
+          "placement": {
+            "anchor": [
+              320,
+              190
+            ],
+            "at": [
+              0.51,
+              0.33908312914977157
+            ],
+            "scale": 0.78
+          },
+          "drawingLabel": "鸟意（写意借形）",
+          "semanticGroup": {
+            "members": [
+              "i1",
+              "i2"
+            ],
+            "role": "subject",
+            "pattern": "scattered",
+            "depth": "far",
+            "basis": "inferred",
+            "evidence": [
+              "落霞与孤鹜齐飞"
+            ],
+            "index": 0
+          },
+          "semanticEffects": [
+            {
+              "path": "scene.actions[0].state",
+              "consumer": "形态与绘画时钟",
+              "effect": "启用工具支持的 fly 状态",
+              "status": "applied"
+            },
+            {
+              "path": "scene.actions[0].pace",
+              "consumer": "绘画时钟",
+              "effect": "定性节奏映射为语义基准时钟倍率 0.8；观看动态与景物节奏另行调节",
+              "status": "applied"
+            },
+            {
+              "path": "scene.actions[0].direction",
+              "consumer": "画布合成",
+              "effect": "方向未明，仅用本地小幅微动",
+              "status": "applied"
+            },
+            {
+              "path": "scene.groups[0].role",
+              "consumer": "主次布局",
+              "effect": "主体相对突出",
+              "status": "applied"
+            },
+            {
+              "path": "scene.groups[0].pattern",
+              "consumer": "群落布局",
+              "effect": "按 scattered 组织显示单元；不覆盖明确数量",
+              "status": "applied"
+            },
+            {
+              "path": "scene.groups[0].depth",
+              "consumer": "远近布局",
+              "effect": "将 far 转为相对大小、透明度与允许区域内的落点",
+              "status": "applied"
+            }
+          ],
+          "semanticEnergy": true,
+          "timeScale": 0.8,
+          "semanticAction": {
+            "entity": "i2",
+            "state": "fly",
+            "pace": "unspecified",
+            "direction": "unspecified",
+            "modality": "asserted",
+            "basis": "explicit",
+            "evidence": [
+              "落霞与孤鹜齐飞"
+            ]
+          },
+          "motion": {
+            "kind": "drift",
+            "direction": "unspecified",
+            "rate": 0.8,
+            "state": "fly"
+          },
+          "instances": [
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  190
+                ],
+                "at": [
+                  0.51,
+                  0.33908312914977157
+                ],
+                "scale": 0.48
+              },
+              "depth": -0.2,
+              "opacity": 0.7,
+              "variant": 0,
+              "tone": "far",
+              "id": "i2:bird::3:0"
+            }
+          ],
+          "singleUnit": true,
+          "quantity": {
+            "items": [
+              {
+                "entity": "i2",
+                "mode": "exact",
+                "min": 1,
+                "max": 1,
+                "unit": null,
+                "scope": "individual",
+                "extent": "local",
+                "evidence": [
+                  "孤鹜"
+                ],
+                "basis": "model"
+              }
+            ],
+            "rendered": 1,
+            "exact": true,
+            "collective": false,
+            "partUnsupported": false
+          },
+          "quantityLabel": "按提取数量绘制 1 个",
+          "z": 24,
+          "visual": {
+            "role": "figure",
+            "brushStrength": 2.2
+          },
+          "performance": {
+            "rhythm": "passing",
+            "rate": 1.05,
+            "amplitude": 1.1,
+            "phase": 5.365840252331367
+          },
+          "id": "i2:bird::3",
+          "interaction": {
+            "mode": "instance",
+            "groupId": "i2:bird::3"
+          },
+          "visibility": {
+            "protect": true,
+            "reasons": [
+              "recognizable-subject",
+              "semantic-subject"
+            ],
+            "basis": "local-drawing-policy"
+          }
+        }
+      ],
+      "spatial": [
+        {
+          "type": "on",
+          "source": "i2",
+          "target": "i3",
+          "modality": "unclear",
+          "basis": "inferred",
+          "evidence": [
+            "落霞与孤鹜齐飞，秋水共长天一色。"
+          ],
+          "visualized": false,
+          "reason": "非确定关系仅保留解读"
+        }
+      ],
+      "scene": {
+        "kind": "waterside",
+        "notes": [
+          "水面以连续色层和水纹构成空间；水面的范围、视点与水平线是本地构图选择，不自动增加岸或陆地。",
+          "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。",
+          "通用场景层先组织地面、水域、群落和主体，再比较三个布局的依托、相对位置、尺度与遮挡；检查通过不代表审美已通过。"
+        ],
+        "waterline": 0.46,
+        "semanticSetting": {
+          "kind": "waterside",
+          "basis": "inferred",
+          "evidence": [
+            "秋水共长天一色"
+          ]
+        },
+        "semanticEffects": [
+          {
+            "path": "scene.setting",
+            "consumer": "场景依托",
+            "status": "applied",
+            "effect": "使用已提取主体的现有承托画法"
+          }
+        ],
+        "organization": {
+          "version": "1.0",
+          "strategy": "general-constraints",
+          "regions": {
+            "water": [
+              [
+                0,
+                0.42
+              ],
+              [
+                1,
+                0.42
+              ],
+              [
+                1,
+                1.04
+              ],
+              [
+                0,
+                1.04
+              ]
+            ]
+          },
+          "candidates": [
+            {
+              "layout": 0,
+              "orientation": "阔水远天",
+              "errors": 0,
+              "cost": 0.08,
+              "score": 0.22,
+              "metrics": {
+                "overlapPenalty": 0,
+                "balancePenalty": 0.01,
+                "motifFootprint": 0.001,
+                "landArea": 0
+              }
+            },
+            {
+              "layout": 1,
+              "orientation": "水面横展",
+              "errors": 0,
+              "cost": 0.08,
+              "score": 0.22,
+              "metrics": {
+                "overlapPenalty": 0,
+                "balancePenalty": 0.01,
+                "motifFootprint": 0.001,
+                "landArea": 0
+              }
+            },
+            {
+              "layout": 2,
+              "orientation": "近水远照",
+              "errors": 0,
+              "cost": 0.08,
+              "score": 0.22,
+              "metrics": {
+                "overlapPenalty": 0,
+                "balancePenalty": 0.01,
+                "motifFootprint": 0.001,
+                "landArea": 0
+              }
+            }
+          ],
+          "repairs": [],
+          "limitations": [
+            "几何检查不判定诗意理解或审美合格",
+            "动作时序与整首诗的场景切换尚未编排"
+          ],
+          "topology": "阔水远天",
+          "layout": 0,
+          "orientation": "阔水远天",
+          "audit": {
+            "scope": "implemented-geometry-and-drawing-gaps",
+            "coverage": {
+              "scope": "extracted-entities-only",
+              "present": 4,
+              "mapped": 4,
+              "parameters": [],
+              "missing": []
+            },
+            "checks": [
+              "presence",
+              "count",
+              "finite",
+              "support",
+              "scale",
+              "relative-position",
+              "depth",
+              "grove-spread",
+              "drawing-gaps"
+            ],
+            "status": "checks-passed",
+            "errors": 0,
+            "review": 0,
+            "issues": [],
+            "metrics": {
+              "overlapPenalty": 0,
+              "balancePenalty": 0.01,
+              "motifFootprint": 0.002,
+              "landArea": 0
+            },
+            "cost": 0.08,
+            "aestheticAcceptance": "pending-user"
+          },
+          "graph": {
+            "nodes": [
+              {
+                "id": "l0",
+                "entities": [
+                  "i1"
+                ],
+                "tool": "landscape",
+                "role": "sky",
+                "habitat": null,
+                "inferred": false,
+                "support": null
+              },
+              {
+                "id": "l1",
+                "entities": [
+                  "i4"
+                ],
+                "tool": "landscape",
+                "role": "sky",
+                "habitat": null,
+                "inferred": false,
+                "support": null
+              },
+              {
+                "id": "l2",
+                "entities": [
+                  "i3"
+                ],
+                "tool": "water",
+                "role": "water",
+                "habitat": null,
+                "inferred": false,
+                "support": null
+              },
+              {
+                "id": "l3",
+                "entities": [
+                  "i2"
+                ],
+                "tool": "bird",
+                "role": "fauna",
+                "habitat": "air",
+                "inferred": false,
+                "support": null
+              }
+            ],
+            "edges": [
+              {
+                "type": "supported-by",
+                "source": "l3",
+                "target": null,
+                "basis": "local-composition",
+                "habitat": "air"
+              },
+              {
+                "type": "on",
+                "source": "l3",
+                "target": "l2",
+                "basis": "inferred",
+                "modality": "unclear",
+                "evidence": [
+                  "落霞与孤鹜齐飞，秋水共长天一色。"
+                ]
+              }
+            ],
+            "setting": "waterside"
+          },
+          "actorSpacing": {
+            "version": "1.0",
+            "repairs": [],
+            "residualOverlap": 0,
+            "scope": "discrete-actors-not-intentional-occlusion"
+          }
+        },
+        "displayAudit": {
+          "scope": "display-scale-separation-and-habitat",
+          "issues": [],
+          "errors": 0,
+          "aestheticAcceptance": "pending-user"
+        }
+      },
+      "compositions": [
+        {
+          "id": "space-0",
+          "label": "阔水远天",
+          "description": "先安排连续水域与地表，再按主次与远近安放景物",
+          "layers": [
+            {
+              "tool": "landscape",
+              "entities": [
+                "i1"
+              ],
+              "projectedEntities": [],
+              "names": [
+                "落霞"
+              ],
+              "options": {
+                "form": "sky"
+              },
+              "animate": false,
+              "placement": {
+                "anchor": [
+                  320,
+                  194
+                ],
+                "at": [
+                  0.5,
+                  0.5
+                ],
+                "scale": 1.5
+              },
+              "semanticGroup": {
+                "members": [
+                  "i1",
+                  "i2"
+                ],
+                "role": "subject",
+                "pattern": "scattered",
+                "depth": "far",
+                "basis": "inferred",
+                "evidence": [
+                  "落霞与孤鹜齐飞"
+                ],
+                "index": 0
+              },
+              "semanticEffects": [
+                {
+                  "path": "scene.groups[0].role",
+                  "consumer": "主次布局",
+                  "effect": "保留环境画布范围，主次不改变地形边界",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[0].pattern",
+                  "consumer": "群落布局",
+                  "effect": "按 scattered 组织显示单元；不覆盖明确数量",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[0].depth",
+                  "consumer": "远近布局",
+                  "effect": "将 far 转为相对大小、透明度与允许区域内的落点",
+                  "status": "applied"
+                }
+              ],
+              "semanticEnergy": false,
+              "timeScale": 0.8,
+              "instances": [
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      194
+                    ],
+                    "at": [
+                      0.5,
+                      0.5
+                    ],
+                    "scale": 1.6
+                  },
+                  "depth": -0.2,
+                  "opacity": 1,
+                  "variant": 0,
+                  "tone": "far",
+                  "id": "i1:landscape:sky:0:0"
+                }
+              ],
+              "singleUnit": false,
+              "quantity": {
+                "items": [
+                  {
+                    "entity": "i1",
+                    "mode": "unspecified",
+                    "min": null,
+                    "max": null,
+                    "unit": null,
+                    "scope": "unspecified",
+                    "extent": "spread",
+                    "evidence": [
+                      "落霞与孤鹜齐飞"
+                    ],
+                    "basis": "model"
+                  }
+                ],
+                "rendered": 1,
+                "exact": false,
+                "collective": true,
+                "partUnsupported": false
+              },
+              "quantityLabel": "整体笔触图层；内部数量尚未适配",
+              "z": -45,
+              "visual": {
+                "role": "atmosphere",
+                "brushStrength": 1.1
+              },
+              "performance": {
+                "rhythm": "steady",
+                "rate": 1,
+                "amplitude": 1,
+                "phase": 0
+              },
+              "id": "i1:landscape:sky:0",
+              "interaction": {
+                "mode": "instance",
+                "groupId": "i1:landscape:sky:0"
+              },
+              "visibility": {
+                "protect": false,
+                "reasons": [],
+                "basis": "local-drawing-policy"
+              }
+            },
+            {
+              "tool": "landscape",
+              "entities": [
+                "i4"
+              ],
+              "projectedEntities": [],
+              "names": [
+                "长天"
+              ],
+              "options": {
+                "form": "sky"
+              },
+              "animate": false,
+              "placement": {
+                "anchor": [
+                  320,
+                  194
+                ],
+                "at": [
+                  0.5,
+                  0.5
+                ],
+                "scale": 1.5
+              },
+              "semanticGroup": {
+                "members": [
+                  "i3",
+                  "i4"
+                ],
+                "role": "environment",
+                "pattern": "field",
+                "depth": "far",
+                "basis": "inferred",
+                "evidence": [
+                  "秋水共长天一色"
+                ],
+                "index": 1
+              },
+              "semanticEffects": [
+                {
+                  "path": "scene.groups[1].role",
+                  "consumer": "主次布局",
+                  "effect": "保留环境画布范围，主次不改变地形边界",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[1].pattern",
+                  "consumer": "群落布局",
+                  "effect": "按 field 组织显示单元；不覆盖明确数量",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[1].depth",
+                  "consumer": "远近布局",
+                  "effect": "将 far 转为相对大小、透明度与允许区域内的落点",
+                  "status": "applied"
+                }
+              ],
+              "semanticEnergy": false,
+              "timeScale": 0.8,
+              "instances": [
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      194
+                    ],
+                    "at": [
+                      0.5,
+                      0.5
+                    ],
+                    "scale": 1.6
+                  },
+                  "depth": -0.2,
+                  "opacity": 1,
+                  "variant": 0,
+                  "tone": "far",
+                  "id": "i4:landscape:sky:1:0"
+                }
+              ],
+              "singleUnit": false,
+              "quantity": {
+                "items": [
+                  {
+                    "entity": "i4",
+                    "mode": "unspecified",
+                    "min": null,
+                    "max": null,
+                    "unit": null,
+                    "scope": "unspecified",
+                    "extent": "spread",
+                    "evidence": [
+                      "秋水共长天一色"
+                    ],
+                    "basis": "model"
+                  }
+                ],
+                "rendered": 1,
+                "exact": false,
+                "collective": true,
+                "partUnsupported": false
+              },
+              "quantityLabel": "整体笔触图层；内部数量尚未适配",
+              "z": -45,
+              "visual": {
+                "role": "atmosphere",
+                "brushStrength": 1.1
+              },
+              "performance": {
+                "rhythm": "steady",
+                "rate": 1,
+                "amplitude": 1,
+                "phase": 3.8830085198369844
+              },
+              "id": "i4:landscape:sky:1",
+              "interaction": {
+                "mode": "instance",
+                "groupId": "i4:landscape:sky:1"
+              },
+              "visibility": {
+                "protect": false,
+                "reasons": [],
+                "basis": "local-drawing-policy"
+              }
+            },
+            {
+              "tool": "water",
+              "entities": [
+                "i3"
+              ],
+              "projectedEntities": [],
+              "names": [
+                "秋水"
+              ],
+              "options": {
+                "form": "plane"
+              },
+              "animate": true,
+              "placement": {
+                "anchor": [
+                  320,
+                  130
+                ],
+                "at": [
+                  0.5,
+                  0.45
+                ],
+                "scale": 1.5
+              },
+              "semanticGroup": {
+                "members": [
+                  "i3",
+                  "i4"
+                ],
+                "role": "environment",
+                "pattern": "field",
+                "depth": "far",
+                "basis": "inferred",
+                "evidence": [
+                  "秋水共长天一色"
+                ],
+                "index": 1
+              },
+              "semanticEffects": [
+                {
+                  "path": "scene.groups[1].role",
+                  "consumer": "主次布局",
+                  "effect": "保留环境画布范围，主次不改变地形边界",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[1].pattern",
+                  "consumer": "群落布局",
+                  "effect": "按 field 组织显示单元；不覆盖明确数量",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[1].depth",
+                  "consumer": "远近布局",
+                  "effect": "将 far 转为相对大小、透明度与允许区域内的落点",
+                  "status": "applied"
+                }
+              ],
+              "semanticEnergy": true,
+              "timeScale": 0.8,
+              "instances": [
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      135
+                    ],
+                    "at": [
+                      0.5,
+                      0.45
+                    ],
+                    "scale": 1.65
+                  },
+                  "depth": -0.2,
+                  "opacity": 1,
+                  "variant": 0,
+                  "tone": "far",
+                  "id": "i3:water:plane:2:0"
+                }
+              ],
+              "singleUnit": false,
+              "quantity": {
+                "items": [
+                  {
+                    "entity": "i3",
+                    "mode": "unspecified",
+                    "min": null,
+                    "max": null,
+                    "unit": null,
+                    "scope": "unspecified",
+                    "extent": "spread",
+                    "evidence": [
+                      "秋水共长天一色"
+                    ],
+                    "basis": "model"
+                  }
+                ],
+                "rendered": 1,
+                "exact": false,
+                "collective": true,
+                "partUnsupported": false
+              },
+              "quantityLabel": "整体笔触图层；内部数量尚未适配",
+              "z": -10,
+              "surface": {
+                "top": 0.42,
+                "bottom": 1
+              },
+              "clip": [
+                [
+                  0,
+                  0.42
+                ],
+                [
+                  1,
+                  0.42
+                ],
+                [
+                  1,
+                  1.04
+                ],
+                [
+                  0,
+                  1.04
+                ]
+              ],
+              "visual": {
+                "role": "water",
+                "brushStrength": 1.35
+              },
+              "performance": {
+                "rhythm": "continuous",
+                "rate": 0.9,
+                "amplitude": 0.9,
+                "phase": 1.4828317324943823
+              },
+              "id": "i3:water:plane:2",
+              "interaction": {
+                "mode": "group",
+                "groupId": "i3:water:plane:2"
+              },
+              "visibility": {
+                "protect": false,
+                "reasons": [],
+                "basis": "local-drawing-policy"
+              }
+            },
+            {
+              "tool": "bird",
+              "entities": [
+                "i2"
+              ],
+              "projectedEntities": [],
+              "names": [
+                "孤鹜"
+              ],
+              "options": {
+                "pose": "flying",
+                "tone": "ink",
+                "facing": "right"
+              },
+              "animate": true,
+              "placement": {
+                "anchor": [
+                  320,
+                  190
+                ],
+                "at": [
+                  0.51,
+                  0.33908312914977157
+                ],
+                "scale": 0.78
+              },
+              "drawingLabel": "鸟意（写意借形）",
+              "semanticGroup": {
+                "members": [
+                  "i1",
+                  "i2"
+                ],
+                "role": "subject",
+                "pattern": "scattered",
+                "depth": "far",
+                "basis": "inferred",
+                "evidence": [
+                  "落霞与孤鹜齐飞"
+                ],
+                "index": 0
+              },
+              "semanticEffects": [
+                {
+                  "path": "scene.actions[0].state",
+                  "consumer": "形态与绘画时钟",
+                  "effect": "启用工具支持的 fly 状态",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.actions[0].pace",
+                  "consumer": "绘画时钟",
+                  "effect": "定性节奏映射为语义基准时钟倍率 0.8；观看动态与景物节奏另行调节",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.actions[0].direction",
+                  "consumer": "画布合成",
+                  "effect": "方向未明，仅用本地小幅微动",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[0].role",
+                  "consumer": "主次布局",
+                  "effect": "主体相对突出",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[0].pattern",
+                  "consumer": "群落布局",
+                  "effect": "按 scattered 组织显示单元；不覆盖明确数量",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[0].depth",
+                  "consumer": "远近布局",
+                  "effect": "将 far 转为相对大小、透明度与允许区域内的落点",
+                  "status": "applied"
+                }
+              ],
+              "semanticEnergy": true,
+              "timeScale": 0.8,
+              "semanticAction": {
+                "entity": "i2",
+                "state": "fly",
+                "pace": "unspecified",
+                "direction": "unspecified",
+                "modality": "asserted",
+                "basis": "explicit",
+                "evidence": [
+                  "落霞与孤鹜齐飞"
+                ]
+              },
+              "motion": {
+                "kind": "drift",
+                "direction": "unspecified",
+                "rate": 0.8,
+                "state": "fly"
+              },
+              "instances": [
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      190
+                    ],
+                    "at": [
+                      0.51,
+                      0.33908312914977157
+                    ],
+                    "scale": 0.48
+                  },
+                  "depth": -0.2,
+                  "opacity": 0.7,
+                  "variant": 0,
+                  "tone": "far",
+                  "id": "i2:bird::3:0"
+                }
+              ],
+              "singleUnit": true,
+              "quantity": {
+                "items": [
+                  {
+                    "entity": "i2",
+                    "mode": "exact",
+                    "min": 1,
+                    "max": 1,
+                    "unit": null,
+                    "scope": "individual",
+                    "extent": "local",
+                    "evidence": [
+                      "孤鹜"
+                    ],
+                    "basis": "model"
+                  }
+                ],
+                "rendered": 1,
+                "exact": true,
+                "collective": false,
+                "partUnsupported": false
+              },
+              "quantityLabel": "按提取数量绘制 1 个",
+              "z": 24,
+              "visual": {
+                "role": "figure",
+                "brushStrength": 2.2
+              },
+              "performance": {
+                "rhythm": "passing",
+                "rate": 1.05,
+                "amplitude": 1.1,
+                "phase": 5.365840252331367
+              },
+              "id": "i2:bird::3",
+              "interaction": {
+                "mode": "instance",
+                "groupId": "i2:bird::3"
+              },
+              "visibility": {
+                "protect": true,
+                "reasons": [
+                  "recognizable-subject",
+                  "semantic-subject"
+                ],
+                "basis": "local-drawing-policy"
+              }
+            }
+          ],
+          "scene": {
+            "kind": "waterside",
+            "notes": [
+              "水面以连续色层和水纹构成空间；水面的范围、视点与水平线是本地构图选择，不自动增加岸或陆地。",
+              "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。",
+              "通用场景层先组织地面、水域、群落和主体，再比较三个布局的依托、相对位置、尺度与遮挡；检查通过不代表审美已通过。"
+            ],
+            "waterline": 0.46,
+            "semanticSetting": {
+              "kind": "waterside",
+              "basis": "inferred",
+              "evidence": [
+                "秋水共长天一色"
+              ]
+            },
+            "semanticEffects": [
+              {
+                "path": "scene.setting",
+                "consumer": "场景依托",
+                "status": "applied",
+                "effect": "使用已提取主体的现有承托画法"
+              }
+            ],
+            "organization": {
+              "version": "1.0",
+              "strategy": "general-constraints",
+              "regions": {
+                "water": [
+                  [
+                    0,
+                    0.42
+                  ],
+                  [
+                    1,
+                    0.42
+                  ],
+                  [
+                    1,
+                    1.04
+                  ],
+                  [
+                    0,
+                    1.04
+                  ]
+                ]
+              },
+              "candidates": [
+                {
+                  "layout": 0,
+                  "orientation": "阔水远天",
+                  "errors": 0,
+                  "cost": 0.08,
+                  "score": 0.22,
+                  "metrics": {
+                    "overlapPenalty": 0,
+                    "balancePenalty": 0.01,
+                    "motifFootprint": 0.001,
+                    "landArea": 0
+                  }
+                },
+                {
+                  "layout": 1,
+                  "orientation": "水面横展",
+                  "errors": 0,
+                  "cost": 0.08,
+                  "score": 0.22,
+                  "metrics": {
+                    "overlapPenalty": 0,
+                    "balancePenalty": 0.01,
+                    "motifFootprint": 0.001,
+                    "landArea": 0
+                  }
+                },
+                {
+                  "layout": 2,
+                  "orientation": "近水远照",
+                  "errors": 0,
+                  "cost": 0.08,
+                  "score": 0.22,
+                  "metrics": {
+                    "overlapPenalty": 0,
+                    "balancePenalty": 0.01,
+                    "motifFootprint": 0.001,
+                    "landArea": 0
+                  }
+                }
+              ],
+              "repairs": [],
+              "limitations": [
+                "几何检查不判定诗意理解或审美合格",
+                "动作时序与整首诗的场景切换尚未编排"
+              ],
+              "topology": "阔水远天",
+              "layout": 0,
+              "orientation": "阔水远天",
+              "audit": {
+                "scope": "implemented-geometry-and-drawing-gaps",
+                "coverage": {
+                  "scope": "extracted-entities-only",
+                  "present": 4,
+                  "mapped": 4,
+                  "parameters": [],
+                  "missing": []
+                },
+                "checks": [
+                  "presence",
+                  "count",
+                  "finite",
+                  "support",
+                  "scale",
+                  "relative-position",
+                  "depth",
+                  "grove-spread",
+                  "drawing-gaps"
+                ],
+                "status": "checks-passed",
+                "errors": 0,
+                "review": 0,
+                "issues": [],
+                "metrics": {
+                  "overlapPenalty": 0,
+                  "balancePenalty": 0.01,
+                  "motifFootprint": 0.002,
+                  "landArea": 0
+                },
+                "cost": 0.08,
+                "aestheticAcceptance": "pending-user"
+              },
+              "graph": {
+                "nodes": [
+                  {
+                    "id": "l0",
+                    "entities": [
+                      "i1"
+                    ],
+                    "tool": "landscape",
+                    "role": "sky",
+                    "habitat": null,
+                    "inferred": false,
+                    "support": null
+                  },
+                  {
+                    "id": "l1",
+                    "entities": [
+                      "i4"
+                    ],
+                    "tool": "landscape",
+                    "role": "sky",
+                    "habitat": null,
+                    "inferred": false,
+                    "support": null
+                  },
+                  {
+                    "id": "l2",
+                    "entities": [
+                      "i3"
+                    ],
+                    "tool": "water",
+                    "role": "water",
+                    "habitat": null,
+                    "inferred": false,
+                    "support": null
+                  },
+                  {
+                    "id": "l3",
+                    "entities": [
+                      "i2"
+                    ],
+                    "tool": "bird",
+                    "role": "fauna",
+                    "habitat": "air",
+                    "inferred": false,
+                    "support": null
+                  }
+                ],
+                "edges": [
+                  {
+                    "type": "supported-by",
+                    "source": "l3",
+                    "target": null,
+                    "basis": "local-composition",
+                    "habitat": "air"
+                  },
+                  {
+                    "type": "on",
+                    "source": "l3",
+                    "target": "l2",
+                    "basis": "inferred",
+                    "modality": "unclear",
+                    "evidence": [
+                      "落霞与孤鹜齐飞，秋水共长天一色。"
+                    ]
+                  }
+                ],
+                "setting": "waterside"
+              },
+              "actorSpacing": {
+                "version": "1.0",
+                "repairs": [],
+                "residualOverlap": 0,
+                "scope": "discrete-actors-not-intentional-occlusion"
+              }
+            },
+            "displayAudit": {
+              "scope": "display-scale-separation-and-habitat",
+              "issues": [],
+              "errors": 0,
+              "aestheticAcceptance": "pending-user"
+            }
+          },
+          "spatial": [
+            {
+              "type": "on",
+              "source": "i2",
+              "target": "i3",
+              "modality": "unclear",
+              "basis": "inferred",
+              "evidence": [
+                "落霞与孤鹜齐飞，秋水共长天一色。"
+              ],
+              "visualized": false,
+              "reason": "非确定关系仅保留解读"
+            }
+          ],
+          "landscapeStyle": {
+            "version": "1.0",
+            "color": "role-and-distance",
+            "motion": "layer-rhythms",
+            "aestheticAcceptance": "pending-user"
+          }
+        },
+        {
+          "id": "space-1",
+          "label": "水面横展",
+          "description": "先安排连续水域与地表，再按主次与远近安放景物",
+          "layers": [
+            {
+              "tool": "landscape",
+              "entities": [
+                "i1"
+              ],
+              "projectedEntities": [],
+              "names": [
+                "落霞"
+              ],
+              "options": {
+                "form": "sky"
+              },
+              "animate": false,
+              "placement": {
+                "anchor": [
+                  320,
+                  194
+                ],
+                "at": [
+                  0.5,
+                  0.5
+                ],
+                "scale": 1.5
+              },
+              "semanticGroup": {
+                "members": [
+                  "i1",
+                  "i2"
+                ],
+                "role": "subject",
+                "pattern": "scattered",
+                "depth": "far",
+                "basis": "inferred",
+                "evidence": [
+                  "落霞与孤鹜齐飞"
+                ],
+                "index": 0
+              },
+              "semanticEffects": [
+                {
+                  "path": "scene.groups[0].role",
+                  "consumer": "主次布局",
+                  "effect": "保留环境画布范围，主次不改变地形边界",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[0].pattern",
+                  "consumer": "群落布局",
+                  "effect": "按 scattered 组织显示单元；不覆盖明确数量",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[0].depth",
+                  "consumer": "远近布局",
+                  "effect": "将 far 转为相对大小、透明度与允许区域内的落点",
+                  "status": "applied"
+                }
+              ],
+              "semanticEnergy": false,
+              "timeScale": 0.8,
+              "instances": [
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      194
+                    ],
+                    "at": [
+                      0.5,
+                      0.5
+                    ],
+                    "scale": 1.6
+                  },
+                  "depth": -0.2,
+                  "opacity": 1,
+                  "variant": 0,
+                  "tone": "far",
+                  "id": "i1:landscape:sky:0:0"
+                }
+              ],
+              "singleUnit": false,
+              "quantity": {
+                "items": [
+                  {
+                    "entity": "i1",
+                    "mode": "unspecified",
+                    "min": null,
+                    "max": null,
+                    "unit": null,
+                    "scope": "unspecified",
+                    "extent": "spread",
+                    "evidence": [
+                      "落霞与孤鹜齐飞"
+                    ],
+                    "basis": "model"
+                  }
+                ],
+                "rendered": 1,
+                "exact": false,
+                "collective": true,
+                "partUnsupported": false
+              },
+              "quantityLabel": "整体笔触图层；内部数量尚未适配",
+              "z": -45,
+              "visual": {
+                "role": "atmosphere",
+                "brushStrength": 1.1
+              },
+              "performance": {
+                "rhythm": "steady",
+                "rate": 1,
+                "amplitude": 1,
+                "phase": 0
+              },
+              "id": "i1:landscape:sky:0",
+              "interaction": {
+                "mode": "instance",
+                "groupId": "i1:landscape:sky:0"
+              },
+              "visibility": {
+                "protect": false,
+                "reasons": [],
+                "basis": "local-drawing-policy"
+              }
+            },
+            {
+              "tool": "landscape",
+              "entities": [
+                "i4"
+              ],
+              "projectedEntities": [],
+              "names": [
+                "长天"
+              ],
+              "options": {
+                "form": "sky"
+              },
+              "animate": false,
+              "placement": {
+                "anchor": [
+                  320,
+                  194
+                ],
+                "at": [
+                  0.5,
+                  0.5
+                ],
+                "scale": 1.5
+              },
+              "semanticGroup": {
+                "members": [
+                  "i3",
+                  "i4"
+                ],
+                "role": "environment",
+                "pattern": "field",
+                "depth": "far",
+                "basis": "inferred",
+                "evidence": [
+                  "秋水共长天一色"
+                ],
+                "index": 1
+              },
+              "semanticEffects": [
+                {
+                  "path": "scene.groups[1].role",
+                  "consumer": "主次布局",
+                  "effect": "保留环境画布范围，主次不改变地形边界",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[1].pattern",
+                  "consumer": "群落布局",
+                  "effect": "按 field 组织显示单元；不覆盖明确数量",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[1].depth",
+                  "consumer": "远近布局",
+                  "effect": "将 far 转为相对大小、透明度与允许区域内的落点",
+                  "status": "applied"
+                }
+              ],
+              "semanticEnergy": false,
+              "timeScale": 0.8,
+              "instances": [
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      194
+                    ],
+                    "at": [
+                      0.5,
+                      0.5
+                    ],
+                    "scale": 1.6
+                  },
+                  "depth": -0.2,
+                  "opacity": 1,
+                  "variant": 0,
+                  "tone": "far",
+                  "id": "i4:landscape:sky:1:0"
+                }
+              ],
+              "singleUnit": false,
+              "quantity": {
+                "items": [
+                  {
+                    "entity": "i4",
+                    "mode": "unspecified",
+                    "min": null,
+                    "max": null,
+                    "unit": null,
+                    "scope": "unspecified",
+                    "extent": "spread",
+                    "evidence": [
+                      "秋水共长天一色"
+                    ],
+                    "basis": "model"
+                  }
+                ],
+                "rendered": 1,
+                "exact": false,
+                "collective": true,
+                "partUnsupported": false
+              },
+              "quantityLabel": "整体笔触图层；内部数量尚未适配",
+              "z": -45,
+              "visual": {
+                "role": "atmosphere",
+                "brushStrength": 1.1
+              },
+              "performance": {
+                "rhythm": "steady",
+                "rate": 1,
+                "amplitude": 1,
+                "phase": 3.8830085198369844
+              },
+              "id": "i4:landscape:sky:1",
+              "interaction": {
+                "mode": "instance",
+                "groupId": "i4:landscape:sky:1"
+              },
+              "visibility": {
+                "protect": false,
+                "reasons": [],
+                "basis": "local-drawing-policy"
+              }
+            },
+            {
+              "tool": "water",
+              "entities": [
+                "i3"
+              ],
+              "projectedEntities": [],
+              "names": [
+                "秋水"
+              ],
+              "options": {
+                "form": "plane"
+              },
+              "animate": true,
+              "placement": {
+                "anchor": [
+                  320,
+                  130
+                ],
+                "at": [
+                  0.5,
+                  0.45
+                ],
+                "scale": 1.5
+              },
+              "semanticGroup": {
+                "members": [
+                  "i3",
+                  "i4"
+                ],
+                "role": "environment",
+                "pattern": "field",
+                "depth": "far",
+                "basis": "inferred",
+                "evidence": [
+                  "秋水共长天一色"
+                ],
+                "index": 1
+              },
+              "semanticEffects": [
+                {
+                  "path": "scene.groups[1].role",
+                  "consumer": "主次布局",
+                  "effect": "保留环境画布范围，主次不改变地形边界",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[1].pattern",
+                  "consumer": "群落布局",
+                  "effect": "按 field 组织显示单元；不覆盖明确数量",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[1].depth",
+                  "consumer": "远近布局",
+                  "effect": "将 far 转为相对大小、透明度与允许区域内的落点",
+                  "status": "applied"
+                }
+              ],
+              "semanticEnergy": true,
+              "timeScale": 0.8,
+              "instances": [
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      135
+                    ],
+                    "at": [
+                      0.5,
+                      0.45
+                    ],
+                    "scale": 1.65
+                  },
+                  "depth": -0.2,
+                  "opacity": 1,
+                  "variant": 0,
+                  "tone": "far",
+                  "id": "i3:water:plane:2:0"
+                }
+              ],
+              "singleUnit": false,
+              "quantity": {
+                "items": [
+                  {
+                    "entity": "i3",
+                    "mode": "unspecified",
+                    "min": null,
+                    "max": null,
+                    "unit": null,
+                    "scope": "unspecified",
+                    "extent": "spread",
+                    "evidence": [
+                      "秋水共长天一色"
+                    ],
+                    "basis": "model"
+                  }
+                ],
+                "rendered": 1,
+                "exact": false,
+                "collective": true,
+                "partUnsupported": false
+              },
+              "quantityLabel": "整体笔触图层；内部数量尚未适配",
+              "z": -10,
+              "surface": {
+                "top": 0.475,
+                "bottom": 1
+              },
+              "clip": [
+                [
+                  0,
+                  0.475
+                ],
+                [
+                  1,
+                  0.475
+                ],
+                [
+                  1,
+                  1.04
+                ],
+                [
+                  0,
+                  1.04
+                ]
+              ],
+              "visual": {
+                "role": "water",
+                "brushStrength": 1.35
+              },
+              "performance": {
+                "rhythm": "continuous",
+                "rate": 0.9,
+                "amplitude": 0.9,
+                "phase": 1.4828317324943823
+              },
+              "id": "i3:water:plane:2",
+              "interaction": {
+                "mode": "group",
+                "groupId": "i3:water:plane:2"
+              },
+              "visibility": {
+                "protect": false,
+                "reasons": [],
+                "basis": "local-drawing-policy"
+              }
+            },
+            {
+              "tool": "bird",
+              "entities": [
+                "i2"
+              ],
+              "projectedEntities": [],
+              "names": [
+                "孤鹜"
+              ],
+              "options": {
+                "pose": "flying",
+                "tone": "ink",
+                "facing": "right"
+              },
+              "animate": true,
+              "placement": {
+                "anchor": [
+                  320,
+                  190
+                ],
+                "at": [
+                  0.51,
+                  0.2770117868257213
+                ],
+                "scale": 0.78
+              },
+              "drawingLabel": "鸟意（写意借形）",
+              "semanticGroup": {
+                "members": [
+                  "i1",
+                  "i2"
+                ],
+                "role": "subject",
+                "pattern": "scattered",
+                "depth": "far",
+                "basis": "inferred",
+                "evidence": [
+                  "落霞与孤鹜齐飞"
+                ],
+                "index": 0
+              },
+              "semanticEffects": [
+                {
+                  "path": "scene.actions[0].state",
+                  "consumer": "形态与绘画时钟",
+                  "effect": "启用工具支持的 fly 状态",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.actions[0].pace",
+                  "consumer": "绘画时钟",
+                  "effect": "定性节奏映射为语义基准时钟倍率 0.8；观看动态与景物节奏另行调节",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.actions[0].direction",
+                  "consumer": "画布合成",
+                  "effect": "方向未明，仅用本地小幅微动",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[0].role",
+                  "consumer": "主次布局",
+                  "effect": "主体相对突出",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[0].pattern",
+                  "consumer": "群落布局",
+                  "effect": "按 scattered 组织显示单元；不覆盖明确数量",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[0].depth",
+                  "consumer": "远近布局",
+                  "effect": "将 far 转为相对大小、透明度与允许区域内的落点",
+                  "status": "applied"
+                }
+              ],
+              "semanticEnergy": true,
+              "timeScale": 0.8,
+              "semanticAction": {
+                "entity": "i2",
+                "state": "fly",
+                "pace": "unspecified",
+                "direction": "unspecified",
+                "modality": "asserted",
+                "basis": "explicit",
+                "evidence": [
+                  "落霞与孤鹜齐飞"
+                ]
+              },
+              "motion": {
+                "kind": "drift",
+                "direction": "unspecified",
+                "rate": 0.8,
+                "state": "fly"
+              },
+              "instances": [
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      190
+                    ],
+                    "at": [
+                      0.51,
+                      0.2770117868257213
+                    ],
+                    "scale": 0.48
+                  },
+                  "depth": -0.2,
+                  "opacity": 0.7,
+                  "variant": 0,
+                  "tone": "far",
+                  "id": "i2:bird::3:0"
+                }
+              ],
+              "singleUnit": true,
+              "quantity": {
+                "items": [
+                  {
+                    "entity": "i2",
+                    "mode": "exact",
+                    "min": 1,
+                    "max": 1,
+                    "unit": null,
+                    "scope": "individual",
+                    "extent": "local",
+                    "evidence": [
+                      "孤鹜"
+                    ],
+                    "basis": "model"
+                  }
+                ],
+                "rendered": 1,
+                "exact": true,
+                "collective": false,
+                "partUnsupported": false
+              },
+              "quantityLabel": "按提取数量绘制 1 个",
+              "z": 24,
+              "visual": {
+                "role": "figure",
+                "brushStrength": 2.2
+              },
+              "performance": {
+                "rhythm": "passing",
+                "rate": 1.05,
+                "amplitude": 1.1,
+                "phase": 5.365840252331367
+              },
+              "id": "i2:bird::3",
+              "interaction": {
+                "mode": "instance",
+                "groupId": "i2:bird::3"
+              },
+              "visibility": {
+                "protect": true,
+                "reasons": [
+                  "recognizable-subject",
+                  "semantic-subject"
+                ],
+                "basis": "local-drawing-policy"
+              }
+            }
+          ],
+          "scene": {
+            "kind": "waterside",
+            "notes": [
+              "水面以连续色层和水纹构成空间；水面的范围、视点与水平线是本地构图选择，不自动增加岸或陆地。",
+              "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。"
+            ],
+            "waterline": 0.46,
+            "semanticSetting": {
+              "kind": "waterside",
+              "basis": "inferred",
+              "evidence": [
+                "秋水共长天一色"
+              ]
+            },
+            "semanticEffects": [
+              {
+                "path": "scene.setting",
+                "consumer": "场景依托",
+                "status": "applied",
+                "effect": "使用已提取主体的现有承托画法"
+              }
+            ],
+            "organization": {
+              "version": "1.0",
+              "strategy": "general-constraints",
+              "regions": {
+                "water": [
+                  [
+                    0,
+                    0.475
+                  ],
+                  [
+                    1,
+                    0.475
+                  ],
+                  [
+                    1,
+                    1.04
+                  ],
+                  [
+                    0,
+                    1.04
+                  ]
+                ]
+              },
+              "candidates": [],
+              "repairs": [],
+              "limitations": [
+                "几何检查不判定诗意理解或审美合格",
+                "动作时序与整首诗的场景切换尚未编排"
+              ],
+              "topology": "水面横展",
+              "layout": 1,
+              "orientation": "水面横展",
+              "audit": {
+                "scope": "implemented-geometry-and-drawing-gaps",
+                "coverage": {
+                  "scope": "extracted-entities-only",
+                  "present": 4,
+                  "mapped": 4,
+                  "parameters": [],
+                  "missing": []
+                },
+                "checks": [
+                  "presence",
+                  "count",
+                  "finite",
+                  "support",
+                  "scale",
+                  "relative-position",
+                  "depth",
+                  "grove-spread",
+                  "drawing-gaps"
+                ],
+                "status": "checks-passed",
+                "errors": 0,
+                "review": 0,
+                "issues": [],
+                "metrics": {
+                  "overlapPenalty": 0,
+                  "balancePenalty": 0.01,
+                  "motifFootprint": 0.002,
+                  "landArea": 0
+                },
+                "cost": 0.08,
+                "aestheticAcceptance": "pending-user"
+              },
+              "graph": {
+                "nodes": [
+                  {
+                    "id": "l0",
+                    "entities": [
+                      "i1"
+                    ],
+                    "tool": "landscape",
+                    "role": "sky",
+                    "habitat": null,
+                    "inferred": false,
+                    "support": null
+                  },
+                  {
+                    "id": "l1",
+                    "entities": [
+                      "i4"
+                    ],
+                    "tool": "landscape",
+                    "role": "sky",
+                    "habitat": null,
+                    "inferred": false,
+                    "support": null
+                  },
+                  {
+                    "id": "l2",
+                    "entities": [
+                      "i3"
+                    ],
+                    "tool": "water",
+                    "role": "water",
+                    "habitat": null,
+                    "inferred": false,
+                    "support": null
+                  },
+                  {
+                    "id": "l3",
+                    "entities": [
+                      "i2"
+                    ],
+                    "tool": "bird",
+                    "role": "fauna",
+                    "habitat": "air",
+                    "inferred": false,
+                    "support": null
+                  }
+                ],
+                "edges": [
+                  {
+                    "type": "supported-by",
+                    "source": "l3",
+                    "target": null,
+                    "basis": "local-composition",
+                    "habitat": "air"
+                  },
+                  {
+                    "type": "on",
+                    "source": "l3",
+                    "target": "l2",
+                    "basis": "inferred",
+                    "modality": "unclear",
+                    "evidence": [
+                      "落霞与孤鹜齐飞，秋水共长天一色。"
+                    ]
+                  }
+                ],
+                "setting": "waterside"
+              },
+              "actorSpacing": {
+                "version": "1.0",
+                "repairs": [],
+                "residualOverlap": 0,
+                "scope": "discrete-actors-not-intentional-occlusion"
+              }
+            },
+            "displayAudit": {
+              "scope": "display-scale-separation-and-habitat",
+              "issues": [],
+              "errors": 0,
+              "aestheticAcceptance": "pending-user"
+            }
+          },
+          "spatial": [
+            {
+              "type": "on",
+              "source": "i2",
+              "target": "i3",
+              "modality": "unclear",
+              "basis": "inferred",
+              "evidence": [
+                "落霞与孤鹜齐飞，秋水共长天一色。"
+              ],
+              "visualized": false,
+              "reason": "非确定关系仅保留解读"
+            }
+          ],
+          "landscapeStyle": {
+            "version": "1.0",
+            "color": "role-and-distance",
+            "motion": "layer-rhythms",
+            "aestheticAcceptance": "pending-user"
+          },
+          "notes": []
+        },
+        {
+          "id": "space-2",
+          "label": "近水远照",
+          "description": "先安排连续水域与地表，再按主次与远近安放景物",
+          "layers": [
+            {
+              "tool": "landscape",
+              "entities": [
+                "i1"
+              ],
+              "projectedEntities": [],
+              "names": [
+                "落霞"
+              ],
+              "options": {
+                "form": "sky"
+              },
+              "animate": false,
+              "placement": {
+                "anchor": [
+                  320,
+                  194
+                ],
+                "at": [
+                  0.5,
+                  0.5
+                ],
+                "scale": 1.5
+              },
+              "semanticGroup": {
+                "members": [
+                  "i1",
+                  "i2"
+                ],
+                "role": "subject",
+                "pattern": "scattered",
+                "depth": "far",
+                "basis": "inferred",
+                "evidence": [
+                  "落霞与孤鹜齐飞"
+                ],
+                "index": 0
+              },
+              "semanticEffects": [
+                {
+                  "path": "scene.groups[0].role",
+                  "consumer": "主次布局",
+                  "effect": "保留环境画布范围，主次不改变地形边界",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[0].pattern",
+                  "consumer": "群落布局",
+                  "effect": "按 scattered 组织显示单元；不覆盖明确数量",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[0].depth",
+                  "consumer": "远近布局",
+                  "effect": "将 far 转为相对大小、透明度与允许区域内的落点",
+                  "status": "applied"
+                }
+              ],
+              "semanticEnergy": false,
+              "timeScale": 0.8,
+              "instances": [
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      194
+                    ],
+                    "at": [
+                      0.5,
+                      0.5
+                    ],
+                    "scale": 1.6
+                  },
+                  "depth": -0.2,
+                  "opacity": 1,
+                  "variant": 0,
+                  "tone": "far",
+                  "id": "i1:landscape:sky:0:0"
+                }
+              ],
+              "singleUnit": false,
+              "quantity": {
+                "items": [
+                  {
+                    "entity": "i1",
+                    "mode": "unspecified",
+                    "min": null,
+                    "max": null,
+                    "unit": null,
+                    "scope": "unspecified",
+                    "extent": "spread",
+                    "evidence": [
+                      "落霞与孤鹜齐飞"
+                    ],
+                    "basis": "model"
+                  }
+                ],
+                "rendered": 1,
+                "exact": false,
+                "collective": true,
+                "partUnsupported": false
+              },
+              "quantityLabel": "整体笔触图层；内部数量尚未适配",
+              "z": -45,
+              "visual": {
+                "role": "atmosphere",
+                "brushStrength": 1.1
+              },
+              "performance": {
+                "rhythm": "steady",
+                "rate": 1,
+                "amplitude": 1,
+                "phase": 0
+              },
+              "id": "i1:landscape:sky:0",
+              "interaction": {
+                "mode": "instance",
+                "groupId": "i1:landscape:sky:0"
+              },
+              "visibility": {
+                "protect": false,
+                "reasons": [],
+                "basis": "local-drawing-policy"
+              }
+            },
+            {
+              "tool": "landscape",
+              "entities": [
+                "i4"
+              ],
+              "projectedEntities": [],
+              "names": [
+                "长天"
+              ],
+              "options": {
+                "form": "sky"
+              },
+              "animate": false,
+              "placement": {
+                "anchor": [
+                  320,
+                  194
+                ],
+                "at": [
+                  0.5,
+                  0.5
+                ],
+                "scale": 1.5
+              },
+              "semanticGroup": {
+                "members": [
+                  "i3",
+                  "i4"
+                ],
+                "role": "environment",
+                "pattern": "field",
+                "depth": "far",
+                "basis": "inferred",
+                "evidence": [
+                  "秋水共长天一色"
+                ],
+                "index": 1
+              },
+              "semanticEffects": [
+                {
+                  "path": "scene.groups[1].role",
+                  "consumer": "主次布局",
+                  "effect": "保留环境画布范围，主次不改变地形边界",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[1].pattern",
+                  "consumer": "群落布局",
+                  "effect": "按 field 组织显示单元；不覆盖明确数量",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[1].depth",
+                  "consumer": "远近布局",
+                  "effect": "将 far 转为相对大小、透明度与允许区域内的落点",
+                  "status": "applied"
+                }
+              ],
+              "semanticEnergy": false,
+              "timeScale": 0.8,
+              "instances": [
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      194
+                    ],
+                    "at": [
+                      0.5,
+                      0.5
+                    ],
+                    "scale": 1.6
+                  },
+                  "depth": -0.2,
+                  "opacity": 1,
+                  "variant": 0,
+                  "tone": "far",
+                  "id": "i4:landscape:sky:1:0"
+                }
+              ],
+              "singleUnit": false,
+              "quantity": {
+                "items": [
+                  {
+                    "entity": "i4",
+                    "mode": "unspecified",
+                    "min": null,
+                    "max": null,
+                    "unit": null,
+                    "scope": "unspecified",
+                    "extent": "spread",
+                    "evidence": [
+                      "秋水共长天一色"
+                    ],
+                    "basis": "model"
+                  }
+                ],
+                "rendered": 1,
+                "exact": false,
+                "collective": true,
+                "partUnsupported": false
+              },
+              "quantityLabel": "整体笔触图层；内部数量尚未适配",
+              "z": -45,
+              "visual": {
+                "role": "atmosphere",
+                "brushStrength": 1.1
+              },
+              "performance": {
+                "rhythm": "steady",
+                "rate": 1,
+                "amplitude": 1,
+                "phase": 3.8830085198369844
+              },
+              "id": "i4:landscape:sky:1",
+              "interaction": {
+                "mode": "instance",
+                "groupId": "i4:landscape:sky:1"
+              },
+              "visibility": {
+                "protect": false,
+                "reasons": [],
+                "basis": "local-drawing-policy"
+              }
+            },
+            {
+              "tool": "water",
+              "entities": [
+                "i3"
+              ],
+              "projectedEntities": [],
+              "names": [
+                "秋水"
+              ],
+              "options": {
+                "form": "plane"
+              },
+              "animate": true,
+              "placement": {
+                "anchor": [
+                  320,
+                  130
+                ],
+                "at": [
+                  0.5,
+                  0.45
+                ],
+                "scale": 1.5
+              },
+              "semanticGroup": {
+                "members": [
+                  "i3",
+                  "i4"
+                ],
+                "role": "environment",
+                "pattern": "field",
+                "depth": "far",
+                "basis": "inferred",
+                "evidence": [
+                  "秋水共长天一色"
+                ],
+                "index": 1
+              },
+              "semanticEffects": [
+                {
+                  "path": "scene.groups[1].role",
+                  "consumer": "主次布局",
+                  "effect": "保留环境画布范围，主次不改变地形边界",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[1].pattern",
+                  "consumer": "群落布局",
+                  "effect": "按 field 组织显示单元；不覆盖明确数量",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[1].depth",
+                  "consumer": "远近布局",
+                  "effect": "将 far 转为相对大小、透明度与允许区域内的落点",
+                  "status": "applied"
+                }
+              ],
+              "semanticEnergy": true,
+              "timeScale": 0.8,
+              "instances": [
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      135
+                    ],
+                    "at": [
+                      0.5,
+                      0.45
+                    ],
+                    "scale": 1.65
+                  },
+                  "depth": -0.2,
+                  "opacity": 1,
+                  "variant": 0,
+                  "tone": "far",
+                  "id": "i3:water:plane:2:0"
+                }
+              ],
+              "singleUnit": false,
+              "quantity": {
+                "items": [
+                  {
+                    "entity": "i3",
+                    "mode": "unspecified",
+                    "min": null,
+                    "max": null,
+                    "unit": null,
+                    "scope": "unspecified",
+                    "extent": "spread",
+                    "evidence": [
+                      "秋水共长天一色"
+                    ],
+                    "basis": "model"
+                  }
+                ],
+                "rendered": 1,
+                "exact": false,
+                "collective": true,
+                "partUnsupported": false
+              },
+              "quantityLabel": "整体笔触图层；内部数量尚未适配",
+              "z": -10,
+              "surface": {
+                "top": 0.53,
+                "bottom": 1
+              },
+              "clip": [
+                [
+                  0,
+                  0.53
+                ],
+                [
+                  1,
+                  0.53
+                ],
+                [
+                  1,
+                  1.04
+                ],
+                [
+                  0,
+                  1.04
+                ]
+              ],
+              "visual": {
+                "role": "water",
+                "brushStrength": 1.35
+              },
+              "performance": {
+                "rhythm": "continuous",
+                "rate": 0.9,
+                "amplitude": 0.9,
+                "phase": 1.4828317324943823
+              },
+              "id": "i3:water:plane:2",
+              "interaction": {
+                "mode": "group",
+                "groupId": "i3:water:plane:2"
+              },
+              "visibility": {
+                "protect": false,
+                "reasons": [],
+                "basis": "local-drawing-policy"
+              }
+            },
+            {
+              "tool": "bird",
+              "entities": [
+                "i2"
+              ],
+              "projectedEntities": [],
+              "names": [
+                "孤鹜"
+              ],
+              "options": {
+                "pose": "flying",
+                "tone": "ink",
+                "facing": "right"
+              },
+              "animate": true,
+              "placement": {
+                "anchor": [
+                  320,
+                  190
+                ],
+                "at": [
+                  0.51,
+                  0.17171802450006574
+                ],
+                "scale": 0.78
+              },
+              "drawingLabel": "鸟意（写意借形）",
+              "semanticGroup": {
+                "members": [
+                  "i1",
+                  "i2"
+                ],
+                "role": "subject",
+                "pattern": "scattered",
+                "depth": "far",
+                "basis": "inferred",
+                "evidence": [
+                  "落霞与孤鹜齐飞"
+                ],
+                "index": 0
+              },
+              "semanticEffects": [
+                {
+                  "path": "scene.actions[0].state",
+                  "consumer": "形态与绘画时钟",
+                  "effect": "启用工具支持的 fly 状态",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.actions[0].pace",
+                  "consumer": "绘画时钟",
+                  "effect": "定性节奏映射为语义基准时钟倍率 0.8；观看动态与景物节奏另行调节",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.actions[0].direction",
+                  "consumer": "画布合成",
+                  "effect": "方向未明，仅用本地小幅微动",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[0].role",
+                  "consumer": "主次布局",
+                  "effect": "主体相对突出",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[0].pattern",
+                  "consumer": "群落布局",
+                  "effect": "按 scattered 组织显示单元；不覆盖明确数量",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[0].depth",
+                  "consumer": "远近布局",
+                  "effect": "将 far 转为相对大小、透明度与允许区域内的落点",
+                  "status": "applied"
+                }
+              ],
+              "semanticEnergy": true,
+              "timeScale": 0.8,
+              "semanticAction": {
+                "entity": "i2",
+                "state": "fly",
+                "pace": "unspecified",
+                "direction": "unspecified",
+                "modality": "asserted",
+                "basis": "explicit",
+                "evidence": [
+                  "落霞与孤鹜齐飞"
+                ]
+              },
+              "motion": {
+                "kind": "drift",
+                "direction": "unspecified",
+                "rate": 0.8,
+                "state": "fly"
+              },
+              "instances": [
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      190
+                    ],
+                    "at": [
+                      0.51,
+                      0.17171802450006574
+                    ],
+                    "scale": 0.48
+                  },
+                  "depth": -0.2,
+                  "opacity": 0.7,
+                  "variant": 0,
+                  "tone": "far",
+                  "id": "i2:bird::3:0"
+                }
+              ],
+              "singleUnit": true,
+              "quantity": {
+                "items": [
+                  {
+                    "entity": "i2",
+                    "mode": "exact",
+                    "min": 1,
+                    "max": 1,
+                    "unit": null,
+                    "scope": "individual",
+                    "extent": "local",
+                    "evidence": [
+                      "孤鹜"
+                    ],
+                    "basis": "model"
+                  }
+                ],
+                "rendered": 1,
+                "exact": true,
+                "collective": false,
+                "partUnsupported": false
+              },
+              "quantityLabel": "按提取数量绘制 1 个",
+              "z": 24,
+              "visual": {
+                "role": "figure",
+                "brushStrength": 2.2
+              },
+              "performance": {
+                "rhythm": "passing",
+                "rate": 1.05,
+                "amplitude": 1.1,
+                "phase": 5.365840252331367
+              },
+              "id": "i2:bird::3",
+              "interaction": {
+                "mode": "instance",
+                "groupId": "i2:bird::3"
+              },
+              "visibility": {
+                "protect": true,
+                "reasons": [
+                  "recognizable-subject",
+                  "semantic-subject"
+                ],
+                "basis": "local-drawing-policy"
+              }
+            }
+          ],
+          "scene": {
+            "kind": "waterside",
+            "notes": [
+              "水面以连续色层和水纹构成空间；水面的范围、视点与水平线是本地构图选择，不自动增加岸或陆地。",
+              "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。"
+            ],
+            "waterline": 0.46,
+            "semanticSetting": {
+              "kind": "waterside",
+              "basis": "inferred",
+              "evidence": [
+                "秋水共长天一色"
+              ]
+            },
+            "semanticEffects": [
+              {
+                "path": "scene.setting",
+                "consumer": "场景依托",
+                "status": "applied",
+                "effect": "使用已提取主体的现有承托画法"
+              }
+            ],
+            "organization": {
+              "version": "1.0",
+              "strategy": "general-constraints",
+              "regions": {
+                "water": [
+                  [
+                    0,
+                    0.53
+                  ],
+                  [
+                    1,
+                    0.53
+                  ],
+                  [
+                    1,
+                    1.04
+                  ],
+                  [
+                    0,
+                    1.04
+                  ]
+                ]
+              },
+              "candidates": [],
+              "repairs": [],
+              "limitations": [
+                "几何检查不判定诗意理解或审美合格",
+                "动作时序与整首诗的场景切换尚未编排"
+              ],
+              "topology": "近水远照",
+              "layout": 2,
+              "orientation": "近水远照",
+              "audit": {
+                "scope": "implemented-geometry-and-drawing-gaps",
+                "coverage": {
+                  "scope": "extracted-entities-only",
+                  "present": 4,
+                  "mapped": 4,
+                  "parameters": [],
+                  "missing": []
+                },
+                "checks": [
+                  "presence",
+                  "count",
+                  "finite",
+                  "support",
+                  "scale",
+                  "relative-position",
+                  "depth",
+                  "grove-spread",
+                  "drawing-gaps"
+                ],
+                "status": "checks-passed",
+                "errors": 0,
+                "review": 0,
+                "issues": [],
+                "metrics": {
+                  "overlapPenalty": 0,
+                  "balancePenalty": 0.01,
+                  "motifFootprint": 0.002,
+                  "landArea": 0
+                },
+                "cost": 0.08,
+                "aestheticAcceptance": "pending-user"
+              },
+              "graph": {
+                "nodes": [
+                  {
+                    "id": "l0",
+                    "entities": [
+                      "i1"
+                    ],
+                    "tool": "landscape",
+                    "role": "sky",
+                    "habitat": null,
+                    "inferred": false,
+                    "support": null
+                  },
+                  {
+                    "id": "l1",
+                    "entities": [
+                      "i4"
+                    ],
+                    "tool": "landscape",
+                    "role": "sky",
+                    "habitat": null,
+                    "inferred": false,
+                    "support": null
+                  },
+                  {
+                    "id": "l2",
+                    "entities": [
+                      "i3"
+                    ],
+                    "tool": "water",
+                    "role": "water",
+                    "habitat": null,
+                    "inferred": false,
+                    "support": null
+                  },
+                  {
+                    "id": "l3",
+                    "entities": [
+                      "i2"
+                    ],
+                    "tool": "bird",
+                    "role": "fauna",
+                    "habitat": "air",
+                    "inferred": false,
+                    "support": null
+                  }
+                ],
+                "edges": [
+                  {
+                    "type": "supported-by",
+                    "source": "l3",
+                    "target": null,
+                    "basis": "local-composition",
+                    "habitat": "air"
+                  },
+                  {
+                    "type": "on",
+                    "source": "l3",
+                    "target": "l2",
+                    "basis": "inferred",
+                    "modality": "unclear",
+                    "evidence": [
+                      "落霞与孤鹜齐飞，秋水共长天一色。"
+                    ]
+                  }
+                ],
+                "setting": "waterside"
+              },
+              "actorSpacing": {
+                "version": "1.0",
+                "repairs": [],
+                "residualOverlap": 0,
+                "scope": "discrete-actors-not-intentional-occlusion"
+              }
+            },
+            "displayAudit": {
+              "scope": "display-scale-separation-and-habitat",
+              "issues": [],
+              "errors": 0,
+              "aestheticAcceptance": "pending-user"
+            }
+          },
+          "spatial": [
+            {
+              "type": "on",
+              "source": "i2",
+              "target": "i3",
+              "modality": "unclear",
+              "basis": "inferred",
+              "evidence": [
+                "落霞与孤鹜齐飞，秋水共长天一色。"
+              ],
+              "visualized": false,
+              "reason": "非确定关系仅保留解读"
+            }
+          ],
+          "landscapeStyle": {
+            "version": "1.0",
+            "color": "role-and-distance",
+            "motion": "layer-rhythms",
+            "aestheticAcceptance": "pending-user"
+          },
+          "notes": []
+        }
+      ],
+      "composition": "space-0",
+      "omitted": [],
+      "parameters": [],
+      "sourceResolution": {
+        "version": "source-depiction-1.1",
+        "quantities": {},
+        "identities": [],
+        "changes": []
+      },
+      "notes": [
+        "落霞：以天际薄色层借形霞，局部冷暖色尚未自动适配。这是本地写意借形，保留原词义。",
+        "孤鹜：以通用写意鸟形表现，不细分物种。这是本地写意借形，保留原词义。",
+        "位置、大小、笔触与默认微动是本地试画选择；数量解释与本地显示数量分别记录。",
+        "未明说的群落数量、疏密、近中远层次与变体均为本地构图选择；种类可按已声明的写意画法概括，不把铺展词换算成精确物体数量。",
+        "水面以连续色层和水纹构成空间；水面的范围、视点与水平线是本地构图选择，不自动增加岸或陆地。",
+        "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。",
+        "通用场景层先组织地面、水域、群落和主体，再比较三个布局的依托、相对位置、尺度与遮挡；检查通过不代表审美已通过。",
+        "整体场景、主次、远近、依托和支持的动作状态来自本次模型解释；具体布局、颜色和时钟倍率由本地视觉策略选择。",
+        "动作动画表现受支持的主导状态与有限观看运动；先后事件与完整因果尚未编排。",
+        "动态程度与默认轻风是可调整的观看选择；不改变数量、主次或原文动作判断。人物保持点景写意，不新增人物步态。",
+        "显示检查覆盖实例尺度、鸟群分离与空中落点；不保证笔触未被遮挡，也不代替实际观看。竹林默认成组拖动，其余单独拖动；Shift 可拖动同层整组。"
+      ],
+      "relations": [],
+      "semanticConsumption": {
+        "version": "3.3",
+        "items": [
+          {
+            "path": "scene.setting",
+            "status": "applied",
+            "consumer": "场景依托",
+            "effect": "使用已提取主体的现有承托画法",
+            "basis": "inferred",
+            "evidence": [
+              "秋水共长天一色"
+            ]
+          },
+          {
+            "path": "scene.groups[0].role",
+            "status": "applied",
+            "consumer": "主次布局",
+            "effect": "保留环境画布范围，主次不改变地形边界；主体相对突出",
+            "basis": "inferred",
+            "evidence": [
+              "落霞与孤鹜齐飞"
+            ]
+          },
+          {
+            "path": "scene.groups[0].pattern",
+            "status": "applied",
+            "consumer": "群落布局",
+            "effect": "按 scattered 组织显示单元；不覆盖明确数量",
+            "basis": "inferred",
+            "evidence": [
+              "落霞与孤鹜齐飞"
+            ]
+          },
+          {
+            "path": "scene.groups[0].depth",
+            "status": "applied",
+            "consumer": "远近布局",
+            "effect": "将 far 转为相对大小、透明度与允许区域内的落点",
+            "basis": "inferred",
+            "evidence": [
+              "落霞与孤鹜齐飞"
+            ]
+          },
+          {
+            "path": "scene.groups[1].role",
+            "status": "applied",
+            "consumer": "主次布局",
+            "effect": "保留环境画布范围，主次不改变地形边界",
+            "basis": "inferred",
+            "evidence": [
+              "秋水共长天一色"
+            ]
+          },
+          {
+            "path": "scene.groups[1].pattern",
+            "status": "applied",
+            "consumer": "群落布局",
+            "effect": "按 field 组织显示单元；不覆盖明确数量",
+            "basis": "inferred",
+            "evidence": [
+              "秋水共长天一色"
+            ]
+          },
+          {
+            "path": "scene.groups[1].depth",
+            "status": "applied",
+            "consumer": "远近布局",
+            "effect": "将 far 转为相对大小、透明度与允许区域内的落点",
+            "basis": "inferred",
+            "evidence": [
+              "秋水共长天一色"
+            ]
+          },
+          {
+            "path": "scene.actions[0].state",
+            "status": "applied",
+            "consumer": "形态与绘画时钟",
+            "effect": "启用工具支持的 fly 状态",
+            "basis": "explicit",
+            "evidence": [
+              "落霞与孤鹜齐飞"
+            ]
+          },
+          {
+            "path": "scene.actions[0].pace",
+            "status": "applied",
+            "consumer": "绘画时钟",
+            "effect": "定性节奏映射为语义基准时钟倍率 0.8；观看动态与景物节奏另行调节",
+            "basis": "explicit",
+            "evidence": [
+              "落霞与孤鹜齐飞"
+            ]
+          },
+          {
+            "path": "scene.actions[0].direction",
+            "status": "applied",
+            "consumer": "画布合成",
+            "effect": "方向未明，仅用本地小幅微动",
+            "basis": "explicit",
+            "evidence": [
+              "落霞与孤鹜齐飞"
+            ]
+          },
+          {
+            "path": "scene.atmosphere.visibility",
+            "status": "applied",
+            "consumer": "画布色层与远景",
+            "effect": "可见度 clear；迷蒙或昏暗时淡化非光源图层",
+            "basis": "inferred",
+            "evidence": [
+              "落霞与孤鹜齐飞"
+            ]
+          },
+          {
+            "path": "scene.atmosphere.illumination",
+            "status": "applied",
+            "consumer": "自动光色",
+            "effect": "照明 twilight 与气息标签共同选择本地 twilight 配色；夜景优先暗底，用户可手动覆盖",
+            "basis": "inferred",
+            "evidence": [
+              "落霞与孤鹜齐飞"
+            ]
+          },
+          {
+            "path": "atmosphere.energy",
+            "status": "applied",
+            "consumer": "绘画时钟",
+            "effect": "没有明确动作节奏时，气息强弱控制已有微动的默认时钟"
+          },
+          {
+            "path": "atmosphere.openness",
+            "status": "applied",
+            "consumer": "群落分布与笔触密度",
+            "effect": "开阔度转换为本地间距与工具笔触密度，不等于原文数量"
+          },
+          {
+            "path": "atmosphere.valence",
+            "status": "applied",
+            "consumer": "自动光色",
+            "effect": "先约束昼夜明暗，再按已支持的气息标签和情绪倾向选择配色；不宣称完整情感理解"
+          },
+          {
+            "path": "time.markers",
+            "status": "retained",
+            "consumer": "原始记录与解读",
+            "effect": "保留原文时间标记；本版照明由 scene.atmosphere 转换，多阶段时间逻辑未执行"
+          }
+        ],
+        "summary": {
+          "applied": 15,
+          "partial": 0,
+          "unsupported": 0,
+          "skipped": 0,
+          "retained": 1
+        },
+        "aestheticAcceptance": "pending-user"
+      },
+      "landscapeStyle": {
+        "version": "1.0",
+        "color": "role-and-distance",
+        "motion": "layer-rhythms",
+        "aestheticAcceptance": "pending-user"
+      },
+      "compositionSelection": {
+        "method": "shared-policy-final-audit-and-geometric-preference",
+        "candidates": [
+          {
+            "id": "space-0",
+            "errors": 0,
+            "score": 0.22,
+            "actorOverlap": 0
+          },
+          {
+            "id": "space-1",
+            "errors": 0,
+            "score": 0.22,
+            "actorOverlap": 0
+          },
+          {
+            "id": "space-2",
+            "errors": 0,
+            "score": 0.22,
+            "actorOverlap": 0
+          }
+        ],
+        "aestheticAcceptance": "pending-user"
+      },
+      "imageryTrace": [
+        {
+          "id": "i1",
+          "mentions": [
+            "落霞"
+          ],
+          "role": "scene",
+          "presence": "present",
+          "parameter": null,
+          "layers": [
+            {
+              "id": "i1:landscape:sky:0",
+              "tool": "landscape",
+              "instances": [
+                "i1:landscape:sky:0:0"
+              ]
+            }
+          ],
+          "omission": null
+        },
+        {
+          "id": "i2",
+          "mentions": [
+            "孤鹜"
+          ],
+          "role": "scene",
+          "presence": "present",
+          "parameter": null,
+          "layers": [
+            {
+              "id": "i2:bird::3",
+              "tool": "bird",
+              "instances": [
+                "i2:bird::3:0"
+              ]
+            }
+          ],
+          "omission": null
+        },
+        {
+          "id": "i3",
+          "mentions": [
+            "秋水"
+          ],
+          "role": "scene",
+          "presence": "present",
+          "parameter": null,
+          "layers": [
+            {
+              "id": "i3:water:plane:2",
+              "tool": "water",
+              "instances": [
+                "i3:water:plane:2:0"
+              ]
+            }
+          ],
+          "omission": null
+        },
+        {
+          "id": "i4",
+          "mentions": [
+            "长天"
+          ],
+          "role": "scene",
+          "presence": "present",
+          "parameter": null,
+          "layers": [
+            {
+              "id": "i4:landscape:sky:1",
+              "tool": "landscape",
+              "instances": [
+                "i4:landscape:sky:1:0"
+              ]
+            }
+          ],
+          "omission": null
+        }
+      ],
+      "drawingPolicy": {
+        "version": "shared-drawing-policy-1.0",
+        "scope": "source-bound-generation-and-composition-alternatives",
+        "selectedComposition": "space-0",
+        "applied": [
+          {
+            "composition": "space-0",
+            "layer": "i2:bird::3",
+            "entities": [
+              "i2"
+            ],
+            "color": null,
+            "visibility": [
+              "recognizable-subject",
+              "semantic-subject"
+            ],
+            "attachment": null
+          },
+          {
+            "composition": "space-1",
+            "layer": "i2:bird::3",
+            "entities": [
+              "i2"
+            ],
+            "color": null,
+            "visibility": [
+              "recognizable-subject",
+              "semantic-subject"
+            ],
+            "attachment": null
+          },
+          {
+            "composition": "space-2",
+            "layer": "i2:bird::3",
+            "entities": [
+              "i2"
+            ],
+            "color": null,
+            "visibility": [
+              "recognizable-subject",
+              "semantic-subject"
+            ],
+            "attachment": null
+          }
+        ],
+        "quantityChanges": 0,
+        "identityGroups": 0,
+        "aestheticAcceptance": "pending-user"
+      }
+    },
+    "renderability": {
+      "status": "ready",
+      "visibleScenery": true,
+      "visibleAbstract": false,
+      "gaps": []
+    },
+    "expression": {
+      "version": "shared-expression-1.1-source-bound",
+      "sourceContract": "expression-1.0",
+      "recommendation": "scenery",
+      "reason": "可画景物较充分，优先呈现风景",
+      "gaps": [],
+      "limitations": [
+        "景物过程当前影响抽象纹理；原生景物动作沿用场景能力，未支持的月下楼位移等仍不执行。",
+        "纹理、色层和观看扰动属于本地艺术选择，不改变语义成立状态"
+      ]
+    },
+    "notes": [
+      "三个表达倾向共享景物数量、空间、依托与主体身份；抽象笔触优先服从原景物区域和轮廓。",
+      "纯抽象或比喻句不因切换风景优先而补山水。",
+      "落霞：以天际薄色层借形霞，局部冷暖色尚未自动适配。这是本地写意借形，保留原词义。",
+      "孤鹜：以通用写意鸟形表现，不细分物种。这是本地写意借形，保留原词义。",
+      "位置、大小、笔触与默认微动是本地试画选择；数量解释与本地显示数量分别记录。",
+      "未明说的群落数量、疏密、近中远层次与变体均为本地构图选择；种类可按已声明的写意画法概括，不把铺展词换算成精确物体数量。",
+      "水面以连续色层和水纹构成空间；水面的范围、视点与水平线是本地构图选择，不自动增加岸或陆地。",
+      "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。",
+      "通用场景层先组织地面、水域、群落和主体，再比较三个布局的依托、相对位置、尺度与遮挡；检查通过不代表审美已通过。",
+      "整体场景、主次、远近、依托和支持的动作状态来自本次模型解释；具体布局、颜色和时钟倍率由本地视觉策略选择。",
+      "动作动画表现受支持的主导状态与有限观看运动；先后事件与完整因果尚未编排。",
+      "动态程度与默认轻风是可调整的观看选择；不改变数量、主次或原文动作判断。人物保持点景写意，不新增人物步态。",
+      "显示检查覆盖实例尺度、鸟群分离与空中落点；不保证笔触未被遮挡，也不代替实际观看。竹林默认成组拖动，其余单独拖动；Shift 可拖动同层整组。"
+    ],
+    "aestheticAcceptance": "pending-user"
+  },
+  "delivery": {
+    "status": "adjusted",
+    "retryable": false,
+    "reason": null,
+    "message": "已完成格式或引用整理，解读仍可复核。"
+  },
+  "elapsed_seconds": 5.6
+}

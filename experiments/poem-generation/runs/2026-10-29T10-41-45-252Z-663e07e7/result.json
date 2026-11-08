@@ -1,0 +1,27 @@
+{
+  "id": "2026-10-29T10-41-45-252Z-663e07e7",
+  "fingerprint": "6c4f2b7bd3da20bab9ffd2dd2359716b45ed8db387893cf8fdb95616623127c1",
+  "semanticFingerprint": "ad1094e5dab916c0fc43e56eb1e07979f45f1ecbc02c49f556467a47feaeeafd",
+  "poem": "孤帆远影碧空尽，唯见长江天际流。",
+  "source": null,
+  "mode": "expression",
+  "model": "DeepSeek-V4.1-Flash",
+  "started_at": "2026-10-29T10:41:45.255Z",
+  "cached": false,
+  "error": "fetch failed",
+  "validation": {
+    "valid": false,
+    "errors": [
+      "fetch failed"
+    ],
+    "warnings": [],
+    "review_required": true
+  },
+  "delivery": {
+    "status": "failed",
+    "retryable": true,
+    "reason": "connection-or-format",
+    "message": "这次分析未能完整返回，尚未生成本句画面。"
+  },
+  "elapsed_seconds": 0.1
+}

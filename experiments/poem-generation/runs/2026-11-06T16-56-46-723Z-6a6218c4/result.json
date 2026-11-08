@@ -1,0 +1,293 @@
+{
+  "id": "2026-11-06T16-56-46-723Z-6a6218c4",
+  "fingerprint": "b49ec9017c20b3920fa20f0a6aa8f21627e772bde40b061b26e2feae04218b18",
+  "semanticFingerprint": "7e1786791f66562cb5bc397598e3bb6e155e32dafe56a942d5905f4e4cbb05dc",
+  "poem": "千山鸟飞绝，万径人踪灭。",
+  "source": {
+    "provider": "泛化新句试验",
+    "author": "柳宗元",
+    "title": "江雪",
+    "dynasty": "唐代"
+  },
+  "mode": "composition",
+  "model": "DeepSeek-V4.1-Flash",
+  "started_at": "2026-11-06T16:56:46.725Z",
+  "cached": false,
+  "http_status": 200,
+  "usage": {
+    "completion_tokens": 843,
+    "prompt_tokens": 4896,
+    "total_tokens": 5739,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  },
+  "finish_reason": "stop",
+  "analysis": {
+    "schema_version": "3.3",
+    "poem": "千山鸟飞绝，万径人踪灭。",
+    "reading": "群山之间鸟飞已绝，众多路径上人的踪迹也已消失，呈现空寂无人的山野景象。",
+    "entities": [
+      {
+        "id": "i1",
+        "mentions": [
+          "千山"
+        ],
+        "concept": "连绵的群山",
+        "kind": "place",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "千山鸟飞绝"
+        ],
+        "quantity": {
+          "mode": "many",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "group",
+          "extent": "spread",
+          "evidence": [
+            "千山"
+          ]
+        }
+      },
+      {
+        "id": "i2",
+        "mentions": [
+          "鸟"
+        ],
+        "concept": "飞鸟",
+        "kind": "organism",
+        "role": "scene",
+        "presence": "absent",
+        "evidence": [
+          "千山鸟飞绝"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i3",
+        "mentions": [
+          "万径"
+        ],
+        "concept": "众多小路",
+        "kind": "place",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "万径人踪灭"
+        ],
+        "quantity": {
+          "mode": "many",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "group",
+          "extent": "spread",
+          "evidence": [
+            "万径"
+          ]
+        }
+      },
+      {
+        "id": "i4",
+        "mentions": [
+          "人踪"
+        ],
+        "concept": "人的踪迹",
+        "kind": "abstract",
+        "role": "scene",
+        "presence": "absent",
+        "evidence": [
+          "万径人踪灭"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      }
+    ],
+    "relations": [],
+    "atmosphere": {
+      "labels": [
+        "空寂",
+        "清冷"
+      ],
+      "valence": "negative",
+      "energy": "low",
+      "tension": "low",
+      "openness": "high",
+      "evidence": [
+        "千山鸟飞绝",
+        "万径人踪灭"
+      ]
+    },
+    "time": {
+      "markers": [],
+      "note": null
+    },
+    "uncertainties": [
+      "“绝”“灭”表示鸟飞与人踪已消失，但未说明消失发生的时间或过程。",
+      "“千山”“万径”为概数性铺展，无法确定具体数量或范围。"
+    ],
+    "spatial": [],
+    "scene": {
+      "setting": {
+        "kind": "mountain_stream",
+        "basis": "inferred",
+        "evidence": [
+          "千山鸟飞绝",
+          "万径人踪灭"
+        ]
+      },
+      "groups": [
+        {
+          "members": [
+            "i1"
+          ],
+          "role": "environment",
+          "pattern": "field",
+          "depth": "far",
+          "basis": "inferred",
+          "evidence": [
+            "千山鸟飞绝"
+          ]
+        },
+        {
+          "members": [
+            "i3"
+          ],
+          "role": "environment",
+          "pattern": "scattered",
+          "depth": "middle",
+          "basis": "inferred",
+          "evidence": [
+            "万径人踪灭"
+          ]
+        },
+        {
+          "members": [
+            "i2"
+          ],
+          "role": "accent",
+          "pattern": "unspecified",
+          "depth": "unspecified",
+          "basis": "inferred",
+          "evidence": [
+            "千山鸟飞绝"
+          ]
+        },
+        {
+          "members": [
+            "i4"
+          ],
+          "role": "accent",
+          "pattern": "unspecified",
+          "depth": "unspecified",
+          "basis": "inferred",
+          "evidence": [
+            "万径人踪灭"
+          ]
+        }
+      ],
+      "supports": [
+        {
+          "entity": "i1",
+          "surface": "ground",
+          "target": null,
+          "basis": "inferred",
+          "evidence": [
+            "千山鸟飞绝"
+          ]
+        },
+        {
+          "entity": "i3",
+          "surface": "ground",
+          "target": null,
+          "basis": "inferred",
+          "evidence": [
+            "万径人踪灭"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "entity": "i2",
+          "state": "fly",
+          "pace": "unspecified",
+          "direction": "unspecified",
+          "modality": "negated",
+          "basis": "explicit",
+          "evidence": [
+            "千山鸟飞绝"
+          ]
+        },
+        {
+          "entity": "i4",
+          "state": "unclear",
+          "pace": "unspecified",
+          "direction": "unspecified",
+          "modality": "negated",
+          "basis": "explicit",
+          "evidence": [
+            "万径人踪灭"
+          ]
+        }
+      ],
+      "atmosphere": {
+        "visibility": "clear",
+        "illumination": "unclear",
+        "basis": "inferred",
+        "evidence": [
+          "千山鸟飞绝",
+          "万径人踪灭"
+        ]
+      }
+    }
+  },
+  "validation": {
+    "valid": false,
+    "errors": [
+      "scene.groups[2] 不能把缺席、未知或比喻参照作为在场画面主体",
+      "scene.groups[3] 不能把缺席、未知或比喻参照作为在场画面主体",
+      "scene.actions[0] 不能把缺席、未知或比喻参照作为在场画面主体",
+      "scene.actions[1] 不能把缺席、未知或比喻参照作为在场画面主体"
+    ],
+    "warnings": [
+      "模型保留了不确定性，需要审阅",
+      "scene.setting 为语义推断，绘画选择需与原文明示区分",
+      "scene.groups[0] 为语义推断，绘画选择需与原文明示区分",
+      "scene.groups[1] 为语义推断，绘画选择需与原文明示区分",
+      "scene.groups[2] 为语义推断，绘画选择需与原文明示区分",
+      "scene.groups[3] 为语义推断，绘画选择需与原文明示区分",
+      "scene.supports[0] 为语义推断，绘画选择需与原文明示区分",
+      "scene.supports[1] 为语义推断，绘画选择需与原文明示区分",
+      "scene.atmosphere 为语义推断，绘画选择需与原文明示区分"
+    ],
+    "review_required": true
+  },
+  "delivery": {
+    "status": "failed",
+    "retryable": true,
+    "reason": "interpretation",
+    "message": "这次解读的基础内容仍有问题，尚未生成本句画面。"
+  },
+  "elapsed_seconds": 6.1
+}

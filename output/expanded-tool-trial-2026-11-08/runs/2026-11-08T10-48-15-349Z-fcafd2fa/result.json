@@ -1,0 +1,1997 @@
+{
+  "id": "2026-11-08T10-48-15-349Z-fcafd2fa",
+  "fingerprint": "777b126ccd049bd1360b381a7896db210638d39d2e151365cbbf297ea8d3d53c",
+  "semanticFingerprint": "da5627a87084c9b554d5e0a6d4970ce67c5924f1e05253789940ffeebf671147",
+  "poem": "一道残阳铺水中，半江瑟瑟半江红。",
+  "source": {
+    "provider": "独立选笔试验",
+    "author": "白居易",
+    "title": "暮江吟"
+  },
+  "mode": "expression",
+  "model": "DeepSeek-V4.1-Flash",
+  "started_at": "2026-11-08T10:48:15.352Z",
+  "cached": false,
+  "http_status": 200,
+  "usage": {
+    "completion_tokens": 613,
+    "prompt_tokens": 6062,
+    "total_tokens": 6675,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 6016
+    }
+  },
+  "finish_reason": "stop",
+  "analysis": {
+    "schema_version": "expression-1.0",
+    "poem": "一道残阳铺水中，半江瑟瑟半江红。",
+    "reading": "一道残阳铺展在水面上，江面一半呈现瑟瑟之色，一半被染成红色。",
+    "entities": [
+      {
+        "id": "i1",
+        "mentions": [
+          "残阳"
+        ],
+        "concept": "残阳",
+        "kind": "object",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "一道残阳铺水中"
+        ],
+        "quantity": {
+          "mode": "exact",
+          "min": 1,
+          "max": 1,
+          "unit": "道",
+          "scope": "individual",
+          "extent": "local",
+          "evidence": [
+            "一道残阳铺水中"
+          ]
+        }
+      },
+      {
+        "id": "i2",
+        "mentions": [
+          "水",
+          "江"
+        ],
+        "concept": "江水",
+        "kind": "environment",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "一道残阳铺水中",
+          "半江瑟瑟半江红"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      }
+    ],
+    "relations": [],
+    "atmosphere": {
+      "labels": [
+        "暮色",
+        "明暗对照"
+      ],
+      "valence": "neutral",
+      "energy": "low",
+      "tension": "low",
+      "openness": "medium",
+      "evidence": [
+        "一道残阳铺水中",
+        "半江瑟瑟半江红"
+      ]
+    },
+    "time": {
+      "markers": [],
+      "note": null
+    },
+    "uncertainties": [
+      "“瑟瑟”所指的具体颜色或质感存在歧义，可能指碧绿或寒凉之色。"
+    ],
+    "spatial": [
+      {
+        "type": "on",
+        "source": "i1",
+        "target": "i2",
+        "modality": "asserted",
+        "basis": "explicit",
+        "evidence": [
+          "一道残阳铺水中"
+        ]
+      }
+    ],
+    "scene": {
+      "setting": {
+        "kind": "waterside",
+        "basis": "explicit",
+        "evidence": [
+          "一道残阳铺水中",
+          "半江瑟瑟半江红"
+        ]
+      },
+      "groups": [
+        {
+          "members": [
+            "i1"
+          ],
+          "role": "subject",
+          "pattern": "single",
+          "depth": "unspecified",
+          "basis": "inferred",
+          "evidence": [
+            "一道残阳铺水中"
+          ]
+        },
+        {
+          "members": [
+            "i2"
+          ],
+          "role": "environment",
+          "pattern": "field",
+          "depth": "unspecified",
+          "basis": "inferred",
+          "evidence": [
+            "半江瑟瑟半江红"
+          ]
+        }
+      ],
+      "supports": [
+        {
+          "entity": "i1",
+          "surface": "water",
+          "target": "i2",
+          "basis": "explicit",
+          "evidence": [
+            "一道残阳铺水中"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "entity": "i1",
+          "state": "still",
+          "pace": "unspecified",
+          "direction": "unspecified",
+          "modality": "asserted",
+          "basis": "inferred",
+          "evidence": [
+            "一道残阳铺水中"
+          ]
+        }
+      ],
+      "atmosphere": {
+        "visibility": "clear",
+        "illumination": "twilight",
+        "basis": "inferred",
+        "evidence": [
+          "一道残阳铺水中"
+        ]
+      }
+    },
+    "expression": {
+      "relations": [
+        {
+          "source": "i1",
+          "target": "i2",
+          "kind": "connect",
+          "modality": "asserted",
+          "basis": "explicit",
+          "evidence": [
+            "一道残阳铺水中"
+          ]
+        }
+      ],
+      "processes": []
+    }
+  },
+  "validation": {
+    "valid": true,
+    "errors": [],
+    "warnings": [
+      "模型保留了不确定性，需要审阅",
+      "scene.groups[0] 为语义推断，绘画选择需与原文明示区分",
+      "scene.groups[1] 为语义推断，绘画选择需与原文明示区分",
+      "scene.actions[0] 为语义推断，绘画选择需与原文明示区分",
+      "scene.atmosphere 为语义推断，绘画选择需与原文明示区分"
+    ],
+    "review_required": true
+  },
+  "plan": {
+    "version": "shared-expression-1.1-source-bound",
+    "seed": 2145058604,
+    "poem": "一道残阳铺水中，半江瑟瑟半江红。",
+    "nodes": [
+      {
+        "id": "i1",
+        "label": "残阳",
+        "meaning": "残阳",
+        "kind": "concrete",
+        "contextOnly": false,
+        "mode": "present"
+      },
+      {
+        "id": "i2",
+        "label": "水／江",
+        "meaning": "江水",
+        "kind": "concrete",
+        "contextOnly": false,
+        "mode": "present"
+      }
+    ],
+    "relations": [
+      {
+        "source": "i1",
+        "target": "i2",
+        "kind": "connect",
+        "modality": "asserted",
+        "basis": "explicit",
+        "evidence": [
+          "一道残阳铺水中"
+        ]
+      }
+    ],
+    "processes": [],
+    "omitted": [],
+    "atmosphere": {
+      "labels": [
+        "暮色",
+        "明暗对照"
+      ],
+      "valence": "neutral",
+      "energy": "low",
+      "tension": "low",
+      "openness": "medium",
+      "evidence": [
+        "一道残阳铺水中",
+        "半江瑟瑟半江红"
+      ],
+      "illumination": "twilight"
+    },
+    "concretePlan": {
+      "version": "semantic-composition-3.3-source-bound",
+      "seed": 2145058604,
+      "settings": {
+        "wind": 0.3,
+        "density": 0.45,
+        "palette": "twilight",
+        "motion": 1.4
+      },
+      "layers": [
+        {
+          "tool": "water",
+          "entities": [
+            "i2"
+          ],
+          "projectedEntities": [],
+          "names": [
+            "水／江"
+          ],
+          "options": {
+            "form": "plane"
+          },
+          "animate": true,
+          "placement": {
+            "anchor": [
+              320,
+              130
+            ],
+            "at": [
+              0.5,
+              0.45
+            ],
+            "scale": 1.5
+          },
+          "semanticGroup": {
+            "members": [
+              "i2"
+            ],
+            "role": "environment",
+            "pattern": "field",
+            "depth": "unspecified",
+            "basis": "inferred",
+            "evidence": [
+              "半江瑟瑟半江红"
+            ],
+            "index": 1
+          },
+          "semanticEffects": [
+            {
+              "path": "scene.groups[1].role",
+              "consumer": "主次布局",
+              "effect": "保留环境画布范围，主次不改变地形边界",
+              "status": "applied"
+            },
+            {
+              "path": "scene.groups[1].pattern",
+              "consumer": "群落布局",
+              "effect": "按 field 组织显示单元；不覆盖明确数量",
+              "status": "applied"
+            },
+            {
+              "path": "scene.groups[1].depth",
+              "consumer": "远近布局",
+              "effect": "远近未明，保持本地默认",
+              "status": "skipped"
+            }
+          ],
+          "semanticEnergy": true,
+          "timeScale": 0.45,
+          "instances": [
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  135
+                ],
+                "at": [
+                  0.5,
+                  0.45
+                ],
+                "scale": 1.65
+              },
+              "depth": 0.05,
+              "opacity": 1,
+              "variant": 0,
+              "tone": "far",
+              "id": "i2:water:plane:0:0"
+            }
+          ],
+          "singleUnit": false,
+          "quantity": {
+            "items": [
+              {
+                "entity": "i2",
+                "mode": "unspecified",
+                "min": null,
+                "max": null,
+                "unit": null,
+                "scope": "unspecified",
+                "extent": "unspecified",
+                "evidence": [],
+                "basis": "model"
+              }
+            ],
+            "rendered": 1,
+            "exact": false,
+            "collective": false,
+            "partUnsupported": false
+          },
+          "quantityLabel": "整体笔触图层；内部数量尚未适配",
+          "z": -10,
+          "surface": {
+            "top": 0.42,
+            "bottom": 1
+          },
+          "clip": [
+            [
+              0,
+              0.42
+            ],
+            [
+              1,
+              0.42
+            ],
+            [
+              1,
+              1.04
+            ],
+            [
+              0,
+              1.04
+            ]
+          ],
+          "visual": {
+            "role": "water",
+            "color": "#D95860",
+            "brushStrength": 1.35
+          },
+          "performance": {
+            "rhythm": "continuous",
+            "rate": 0.9,
+            "amplitude": 0.9,
+            "phase": 0
+          },
+          "id": "i2:water:plane:0",
+          "interaction": {
+            "mode": "group",
+            "groupId": "i2:water:plane:0"
+          },
+          "colorCue": {
+            "color": "#D95860",
+            "word": "红",
+            "evidence": "半江瑟瑟半江红",
+            "basis": "source-literal"
+          },
+          "visibility": {
+            "protect": false,
+            "reasons": [],
+            "basis": "local-drawing-policy"
+          }
+        }
+      ],
+      "spatial": [
+        {
+          "type": "on",
+          "source": "i1",
+          "target": "i2",
+          "modality": "asserted",
+          "basis": "explicit",
+          "evidence": [
+            "一道残阳铺水中"
+          ],
+          "visualized": false,
+          "reason": "关系的一端缺少独立画法"
+        }
+      ],
+      "scene": {
+        "kind": "waterside",
+        "notes": [
+          "水面以连续色层和水纹构成空间；水面的范围、视点与水平线是本地构图选择，不自动增加岸或陆地。",
+          "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。",
+          "通用场景层先组织地面、水域、群落和主体，再比较三个布局的依托、相对位置、尺度与遮挡；检查通过不代表审美已通过。"
+        ],
+        "waterline": 0.46,
+        "semanticSetting": {
+          "kind": "waterside",
+          "basis": "explicit",
+          "evidence": [
+            "一道残阳铺水中",
+            "半江瑟瑟半江红"
+          ]
+        },
+        "semanticEffects": [
+          {
+            "path": "scene.supports[0]",
+            "consumer": "场景依托",
+            "status": "unsupported",
+            "effect": "依托主体尚无可绘制形态"
+          }
+        ],
+        "organization": {
+          "version": "1.0",
+          "strategy": "general-constraints",
+          "regions": {
+            "water": [
+              [
+                0,
+                0.42
+              ],
+              [
+                1,
+                0.42
+              ],
+              [
+                1,
+                1.04
+              ],
+              [
+                0,
+                1.04
+              ]
+            ]
+          },
+          "candidates": [
+            {
+              "layout": 0,
+              "orientation": "阔水远天",
+              "errors": 0,
+              "cost": 60,
+              "score": 60,
+              "metrics": {
+                "overlapPenalty": 0,
+                "balancePenalty": 0,
+                "motifFootprint": 0,
+                "landArea": 0
+              }
+            },
+            {
+              "layout": 1,
+              "orientation": "水面横展",
+              "errors": 0,
+              "cost": 60,
+              "score": 60,
+              "metrics": {
+                "overlapPenalty": 0,
+                "balancePenalty": 0,
+                "motifFootprint": 0,
+                "landArea": 0
+              }
+            },
+            {
+              "layout": 2,
+              "orientation": "近水远照",
+              "errors": 0,
+              "cost": 60,
+              "score": 60,
+              "metrics": {
+                "overlapPenalty": 0,
+                "balancePenalty": 0,
+                "motifFootprint": 0,
+                "landArea": 0
+              }
+            }
+          ],
+          "repairs": [],
+          "limitations": [
+            "几何检查不判定诗意理解或审美合格",
+            "动作时序与整首诗的场景切换尚未编排"
+          ],
+          "topology": "阔水远天",
+          "layout": 0,
+          "orientation": "阔水远天",
+          "audit": {
+            "scope": "implemented-geometry-and-drawing-gaps",
+            "coverage": {
+              "scope": "extracted-entities-only",
+              "present": 2,
+              "mapped": 1,
+              "parameters": [],
+              "missing": [
+                {
+                  "id": "i1",
+                  "name": "残阳"
+                }
+              ]
+            },
+            "checks": [
+              "presence",
+              "count",
+              "finite",
+              "support",
+              "scale",
+              "relative-position",
+              "depth",
+              "grove-spread",
+              "drawing-gaps"
+            ],
+            "status": "needs-review",
+            "errors": 0,
+            "review": 2,
+            "issues": [
+              {
+                "code": "unresolved-relation",
+                "severity": "review",
+                "message": "有空间关系尚无对应布局画法"
+              },
+              {
+                "code": "drawing-gaps",
+                "severity": "review",
+                "message": "还有 1 项已提取线索尚未转成画面：残阳"
+              }
+            ],
+            "metrics": {
+              "overlapPenalty": 0,
+              "balancePenalty": 0,
+              "motifFootprint": 0,
+              "landArea": 0
+            },
+            "cost": 60,
+            "aestheticAcceptance": "pending-user"
+          },
+          "graph": {
+            "nodes": [
+              {
+                "id": "l0",
+                "entities": [
+                  "i2"
+                ],
+                "tool": "water",
+                "role": "water",
+                "habitat": null,
+                "inferred": false,
+                "support": null
+              }
+            ],
+            "edges": [
+              {
+                "type": "on",
+                "target": "l0",
+                "basis": "explicit",
+                "modality": "asserted",
+                "evidence": [
+                  "一道残阳铺水中"
+                ]
+              }
+            ],
+            "setting": "waterside"
+          },
+          "actorSpacing": {
+            "version": "1.0",
+            "repairs": [],
+            "residualOverlap": 0,
+            "scope": "discrete-actors-not-intentional-occlusion"
+          }
+        },
+        "displayAudit": {
+          "scope": "display-scale-separation-and-habitat",
+          "issues": [],
+          "errors": 0,
+          "aestheticAcceptance": "pending-user"
+        }
+      },
+      "compositions": [
+        {
+          "id": "space-0",
+          "label": "阔水远天",
+          "description": "先安排连续水域与地表，再按主次与远近安放景物",
+          "layers": [
+            {
+              "tool": "water",
+              "entities": [
+                "i2"
+              ],
+              "projectedEntities": [],
+              "names": [
+                "水／江"
+              ],
+              "options": {
+                "form": "plane"
+              },
+              "animate": true,
+              "placement": {
+                "anchor": [
+                  320,
+                  130
+                ],
+                "at": [
+                  0.5,
+                  0.45
+                ],
+                "scale": 1.5
+              },
+              "semanticGroup": {
+                "members": [
+                  "i2"
+                ],
+                "role": "environment",
+                "pattern": "field",
+                "depth": "unspecified",
+                "basis": "inferred",
+                "evidence": [
+                  "半江瑟瑟半江红"
+                ],
+                "index": 1
+              },
+              "semanticEffects": [
+                {
+                  "path": "scene.groups[1].role",
+                  "consumer": "主次布局",
+                  "effect": "保留环境画布范围，主次不改变地形边界",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[1].pattern",
+                  "consumer": "群落布局",
+                  "effect": "按 field 组织显示单元；不覆盖明确数量",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[1].depth",
+                  "consumer": "远近布局",
+                  "effect": "远近未明，保持本地默认",
+                  "status": "skipped"
+                }
+              ],
+              "semanticEnergy": true,
+              "timeScale": 0.45,
+              "instances": [
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      135
+                    ],
+                    "at": [
+                      0.5,
+                      0.45
+                    ],
+                    "scale": 1.65
+                  },
+                  "depth": 0.05,
+                  "opacity": 1,
+                  "variant": 0,
+                  "tone": "far",
+                  "id": "i2:water:plane:0:0"
+                }
+              ],
+              "singleUnit": false,
+              "quantity": {
+                "items": [
+                  {
+                    "entity": "i2",
+                    "mode": "unspecified",
+                    "min": null,
+                    "max": null,
+                    "unit": null,
+                    "scope": "unspecified",
+                    "extent": "unspecified",
+                    "evidence": [],
+                    "basis": "model"
+                  }
+                ],
+                "rendered": 1,
+                "exact": false,
+                "collective": false,
+                "partUnsupported": false
+              },
+              "quantityLabel": "整体笔触图层；内部数量尚未适配",
+              "z": -10,
+              "surface": {
+                "top": 0.42,
+                "bottom": 1
+              },
+              "clip": [
+                [
+                  0,
+                  0.42
+                ],
+                [
+                  1,
+                  0.42
+                ],
+                [
+                  1,
+                  1.04
+                ],
+                [
+                  0,
+                  1.04
+                ]
+              ],
+              "visual": {
+                "role": "water",
+                "color": "#D95860",
+                "brushStrength": 1.35
+              },
+              "performance": {
+                "rhythm": "continuous",
+                "rate": 0.9,
+                "amplitude": 0.9,
+                "phase": 0
+              },
+              "id": "i2:water:plane:0",
+              "interaction": {
+                "mode": "group",
+                "groupId": "i2:water:plane:0"
+              },
+              "colorCue": {
+                "color": "#D95860",
+                "word": "红",
+                "evidence": "半江瑟瑟半江红",
+                "basis": "source-literal"
+              },
+              "visibility": {
+                "protect": false,
+                "reasons": [],
+                "basis": "local-drawing-policy"
+              }
+            }
+          ],
+          "scene": {
+            "kind": "waterside",
+            "notes": [
+              "水面以连续色层和水纹构成空间；水面的范围、视点与水平线是本地构图选择，不自动增加岸或陆地。",
+              "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。",
+              "通用场景层先组织地面、水域、群落和主体，再比较三个布局的依托、相对位置、尺度与遮挡；检查通过不代表审美已通过。"
+            ],
+            "waterline": 0.46,
+            "semanticSetting": {
+              "kind": "waterside",
+              "basis": "explicit",
+              "evidence": [
+                "一道残阳铺水中",
+                "半江瑟瑟半江红"
+              ]
+            },
+            "semanticEffects": [
+              {
+                "path": "scene.supports[0]",
+                "consumer": "场景依托",
+                "status": "unsupported",
+                "effect": "依托主体尚无可绘制形态"
+              }
+            ],
+            "organization": {
+              "version": "1.0",
+              "strategy": "general-constraints",
+              "regions": {
+                "water": [
+                  [
+                    0,
+                    0.42
+                  ],
+                  [
+                    1,
+                    0.42
+                  ],
+                  [
+                    1,
+                    1.04
+                  ],
+                  [
+                    0,
+                    1.04
+                  ]
+                ]
+              },
+              "candidates": [
+                {
+                  "layout": 0,
+                  "orientation": "阔水远天",
+                  "errors": 0,
+                  "cost": 60,
+                  "score": 60,
+                  "metrics": {
+                    "overlapPenalty": 0,
+                    "balancePenalty": 0,
+                    "motifFootprint": 0,
+                    "landArea": 0
+                  }
+                },
+                {
+                  "layout": 1,
+                  "orientation": "水面横展",
+                  "errors": 0,
+                  "cost": 60,
+                  "score": 60,
+                  "metrics": {
+                    "overlapPenalty": 0,
+                    "balancePenalty": 0,
+                    "motifFootprint": 0,
+                    "landArea": 0
+                  }
+                },
+                {
+                  "layout": 2,
+                  "orientation": "近水远照",
+                  "errors": 0,
+                  "cost": 60,
+                  "score": 60,
+                  "metrics": {
+                    "overlapPenalty": 0,
+                    "balancePenalty": 0,
+                    "motifFootprint": 0,
+                    "landArea": 0
+                  }
+                }
+              ],
+              "repairs": [],
+              "limitations": [
+                "几何检查不判定诗意理解或审美合格",
+                "动作时序与整首诗的场景切换尚未编排"
+              ],
+              "topology": "阔水远天",
+              "layout": 0,
+              "orientation": "阔水远天",
+              "audit": {
+                "scope": "implemented-geometry-and-drawing-gaps",
+                "coverage": {
+                  "scope": "extracted-entities-only",
+                  "present": 2,
+                  "mapped": 1,
+                  "parameters": [],
+                  "missing": [
+                    {
+                      "id": "i1",
+                      "name": "残阳"
+                    }
+                  ]
+                },
+                "checks": [
+                  "presence",
+                  "count",
+                  "finite",
+                  "support",
+                  "scale",
+                  "relative-position",
+                  "depth",
+                  "grove-spread",
+                  "drawing-gaps"
+                ],
+                "status": "needs-review",
+                "errors": 0,
+                "review": 2,
+                "issues": [
+                  {
+                    "code": "unresolved-relation",
+                    "severity": "review",
+                    "message": "有空间关系尚无对应布局画法"
+                  },
+                  {
+                    "code": "drawing-gaps",
+                    "severity": "review",
+                    "message": "还有 1 项已提取线索尚未转成画面：残阳"
+                  }
+                ],
+                "metrics": {
+                  "overlapPenalty": 0,
+                  "balancePenalty": 0,
+                  "motifFootprint": 0,
+                  "landArea": 0
+                },
+                "cost": 60,
+                "aestheticAcceptance": "pending-user"
+              },
+              "graph": {
+                "nodes": [
+                  {
+                    "id": "l0",
+                    "entities": [
+                      "i2"
+                    ],
+                    "tool": "water",
+                    "role": "water",
+                    "habitat": null,
+                    "inferred": false,
+                    "support": null
+                  }
+                ],
+                "edges": [
+                  {
+                    "type": "on",
+                    "target": "l0",
+                    "basis": "explicit",
+                    "modality": "asserted",
+                    "evidence": [
+                      "一道残阳铺水中"
+                    ]
+                  }
+                ],
+                "setting": "waterside"
+              },
+              "actorSpacing": {
+                "version": "1.0",
+                "repairs": [],
+                "residualOverlap": 0,
+                "scope": "discrete-actors-not-intentional-occlusion"
+              }
+            },
+            "displayAudit": {
+              "scope": "display-scale-separation-and-habitat",
+              "issues": [],
+              "errors": 0,
+              "aestheticAcceptance": "pending-user"
+            }
+          },
+          "spatial": [
+            {
+              "type": "on",
+              "source": "i1",
+              "target": "i2",
+              "modality": "asserted",
+              "basis": "explicit",
+              "evidence": [
+                "一道残阳铺水中"
+              ],
+              "visualized": false,
+              "reason": "关系的一端缺少独立画法"
+            }
+          ],
+          "landscapeStyle": {
+            "version": "1.0",
+            "color": "role-and-distance",
+            "motion": "layer-rhythms",
+            "aestheticAcceptance": "pending-user"
+          }
+        },
+        {
+          "id": "space-1",
+          "label": "水面横展",
+          "description": "先安排连续水域与地表，再按主次与远近安放景物",
+          "layers": [
+            {
+              "tool": "water",
+              "entities": [
+                "i2"
+              ],
+              "projectedEntities": [],
+              "names": [
+                "水／江"
+              ],
+              "options": {
+                "form": "plane"
+              },
+              "animate": true,
+              "placement": {
+                "anchor": [
+                  320,
+                  130
+                ],
+                "at": [
+                  0.5,
+                  0.45
+                ],
+                "scale": 1.5
+              },
+              "semanticGroup": {
+                "members": [
+                  "i2"
+                ],
+                "role": "environment",
+                "pattern": "field",
+                "depth": "unspecified",
+                "basis": "inferred",
+                "evidence": [
+                  "半江瑟瑟半江红"
+                ],
+                "index": 1
+              },
+              "semanticEffects": [
+                {
+                  "path": "scene.groups[1].role",
+                  "consumer": "主次布局",
+                  "effect": "保留环境画布范围，主次不改变地形边界",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[1].pattern",
+                  "consumer": "群落布局",
+                  "effect": "按 field 组织显示单元；不覆盖明确数量",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[1].depth",
+                  "consumer": "远近布局",
+                  "effect": "远近未明，保持本地默认",
+                  "status": "skipped"
+                }
+              ],
+              "semanticEnergy": true,
+              "timeScale": 0.45,
+              "instances": [
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      135
+                    ],
+                    "at": [
+                      0.5,
+                      0.45
+                    ],
+                    "scale": 1.65
+                  },
+                  "depth": 0.05,
+                  "opacity": 1,
+                  "variant": 0,
+                  "tone": "far",
+                  "id": "i2:water:plane:0:0"
+                }
+              ],
+              "singleUnit": false,
+              "quantity": {
+                "items": [
+                  {
+                    "entity": "i2",
+                    "mode": "unspecified",
+                    "min": null,
+                    "max": null,
+                    "unit": null,
+                    "scope": "unspecified",
+                    "extent": "unspecified",
+                    "evidence": [],
+                    "basis": "model"
+                  }
+                ],
+                "rendered": 1,
+                "exact": false,
+                "collective": false,
+                "partUnsupported": false
+              },
+              "quantityLabel": "整体笔触图层；内部数量尚未适配",
+              "z": -10,
+              "surface": {
+                "top": 0.475,
+                "bottom": 1
+              },
+              "clip": [
+                [
+                  0,
+                  0.475
+                ],
+                [
+                  1,
+                  0.475
+                ],
+                [
+                  1,
+                  1.04
+                ],
+                [
+                  0,
+                  1.04
+                ]
+              ],
+              "visual": {
+                "role": "water",
+                "color": "#D95860",
+                "brushStrength": 1.35
+              },
+              "performance": {
+                "rhythm": "continuous",
+                "rate": 0.9,
+                "amplitude": 0.9,
+                "phase": 0
+              },
+              "id": "i2:water:plane:0",
+              "interaction": {
+                "mode": "group",
+                "groupId": "i2:water:plane:0"
+              },
+              "colorCue": {
+                "color": "#D95860",
+                "word": "红",
+                "evidence": "半江瑟瑟半江红",
+                "basis": "source-literal"
+              },
+              "visibility": {
+                "protect": false,
+                "reasons": [],
+                "basis": "local-drawing-policy"
+              }
+            }
+          ],
+          "scene": {
+            "kind": "waterside",
+            "notes": [
+              "水面以连续色层和水纹构成空间；水面的范围、视点与水平线是本地构图选择，不自动增加岸或陆地。",
+              "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。"
+            ],
+            "waterline": 0.46,
+            "semanticSetting": {
+              "kind": "waterside",
+              "basis": "explicit",
+              "evidence": [
+                "一道残阳铺水中",
+                "半江瑟瑟半江红"
+              ]
+            },
+            "semanticEffects": [
+              {
+                "path": "scene.supports[0]",
+                "consumer": "场景依托",
+                "status": "unsupported",
+                "effect": "依托主体尚无可绘制形态"
+              }
+            ],
+            "organization": {
+              "version": "1.0",
+              "strategy": "general-constraints",
+              "regions": {
+                "water": [
+                  [
+                    0,
+                    0.475
+                  ],
+                  [
+                    1,
+                    0.475
+                  ],
+                  [
+                    1,
+                    1.04
+                  ],
+                  [
+                    0,
+                    1.04
+                  ]
+                ]
+              },
+              "candidates": [],
+              "repairs": [],
+              "limitations": [
+                "几何检查不判定诗意理解或审美合格",
+                "动作时序与整首诗的场景切换尚未编排"
+              ],
+              "topology": "水面横展",
+              "layout": 1,
+              "orientation": "水面横展",
+              "audit": {
+                "scope": "implemented-geometry-and-drawing-gaps",
+                "coverage": {
+                  "scope": "extracted-entities-only",
+                  "present": 2,
+                  "mapped": 1,
+                  "parameters": [],
+                  "missing": [
+                    {
+                      "id": "i1",
+                      "name": "残阳"
+                    }
+                  ]
+                },
+                "checks": [
+                  "presence",
+                  "count",
+                  "finite",
+                  "support",
+                  "scale",
+                  "relative-position",
+                  "depth",
+                  "grove-spread",
+                  "drawing-gaps"
+                ],
+                "status": "needs-review",
+                "errors": 0,
+                "review": 2,
+                "issues": [
+                  {
+                    "code": "unresolved-relation",
+                    "severity": "review",
+                    "message": "有空间关系尚无对应布局画法"
+                  },
+                  {
+                    "code": "drawing-gaps",
+                    "severity": "review",
+                    "message": "还有 1 项已提取线索尚未转成画面：残阳"
+                  }
+                ],
+                "metrics": {
+                  "overlapPenalty": 0,
+                  "balancePenalty": 0,
+                  "motifFootprint": 0,
+                  "landArea": 0
+                },
+                "cost": 60,
+                "aestheticAcceptance": "pending-user"
+              },
+              "graph": {
+                "nodes": [
+                  {
+                    "id": "l0",
+                    "entities": [
+                      "i2"
+                    ],
+                    "tool": "water",
+                    "role": "water",
+                    "habitat": null,
+                    "inferred": false,
+                    "support": null
+                  }
+                ],
+                "edges": [
+                  {
+                    "type": "on",
+                    "target": "l0",
+                    "basis": "explicit",
+                    "modality": "asserted",
+                    "evidence": [
+                      "一道残阳铺水中"
+                    ]
+                  }
+                ],
+                "setting": "waterside"
+              },
+              "actorSpacing": {
+                "version": "1.0",
+                "repairs": [],
+                "residualOverlap": 0,
+                "scope": "discrete-actors-not-intentional-occlusion"
+              }
+            },
+            "displayAudit": {
+              "scope": "display-scale-separation-and-habitat",
+              "issues": [],
+              "errors": 0,
+              "aestheticAcceptance": "pending-user"
+            }
+          },
+          "spatial": [
+            {
+              "type": "on",
+              "source": "i1",
+              "target": "i2",
+              "modality": "asserted",
+              "basis": "explicit",
+              "evidence": [
+                "一道残阳铺水中"
+              ],
+              "visualized": false,
+              "reason": "关系的一端缺少独立画法"
+            }
+          ],
+          "landscapeStyle": {
+            "version": "1.0",
+            "color": "role-and-distance",
+            "motion": "layer-rhythms",
+            "aestheticAcceptance": "pending-user"
+          },
+          "notes": []
+        },
+        {
+          "id": "space-2",
+          "label": "近水远照",
+          "description": "先安排连续水域与地表，再按主次与远近安放景物",
+          "layers": [
+            {
+              "tool": "water",
+              "entities": [
+                "i2"
+              ],
+              "projectedEntities": [],
+              "names": [
+                "水／江"
+              ],
+              "options": {
+                "form": "plane"
+              },
+              "animate": true,
+              "placement": {
+                "anchor": [
+                  320,
+                  130
+                ],
+                "at": [
+                  0.5,
+                  0.45
+                ],
+                "scale": 1.5
+              },
+              "semanticGroup": {
+                "members": [
+                  "i2"
+                ],
+                "role": "environment",
+                "pattern": "field",
+                "depth": "unspecified",
+                "basis": "inferred",
+                "evidence": [
+                  "半江瑟瑟半江红"
+                ],
+                "index": 1
+              },
+              "semanticEffects": [
+                {
+                  "path": "scene.groups[1].role",
+                  "consumer": "主次布局",
+                  "effect": "保留环境画布范围，主次不改变地形边界",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[1].pattern",
+                  "consumer": "群落布局",
+                  "effect": "按 field 组织显示单元；不覆盖明确数量",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[1].depth",
+                  "consumer": "远近布局",
+                  "effect": "远近未明，保持本地默认",
+                  "status": "skipped"
+                }
+              ],
+              "semanticEnergy": true,
+              "timeScale": 0.45,
+              "instances": [
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      135
+                    ],
+                    "at": [
+                      0.5,
+                      0.45
+                    ],
+                    "scale": 1.65
+                  },
+                  "depth": 0.05,
+                  "opacity": 1,
+                  "variant": 0,
+                  "tone": "far",
+                  "id": "i2:water:plane:0:0"
+                }
+              ],
+              "singleUnit": false,
+              "quantity": {
+                "items": [
+                  {
+                    "entity": "i2",
+                    "mode": "unspecified",
+                    "min": null,
+                    "max": null,
+                    "unit": null,
+                    "scope": "unspecified",
+                    "extent": "unspecified",
+                    "evidence": [],
+                    "basis": "model"
+                  }
+                ],
+                "rendered": 1,
+                "exact": false,
+                "collective": false,
+                "partUnsupported": false
+              },
+              "quantityLabel": "整体笔触图层；内部数量尚未适配",
+              "z": -10,
+              "surface": {
+                "top": 0.53,
+                "bottom": 1
+              },
+              "clip": [
+                [
+                  0,
+                  0.53
+                ],
+                [
+                  1,
+                  0.53
+                ],
+                [
+                  1,
+                  1.04
+                ],
+                [
+                  0,
+                  1.04
+                ]
+              ],
+              "visual": {
+                "role": "water",
+                "color": "#D95860",
+                "brushStrength": 1.35
+              },
+              "performance": {
+                "rhythm": "continuous",
+                "rate": 0.9,
+                "amplitude": 0.9,
+                "phase": 0
+              },
+              "id": "i2:water:plane:0",
+              "interaction": {
+                "mode": "group",
+                "groupId": "i2:water:plane:0"
+              },
+              "colorCue": {
+                "color": "#D95860",
+                "word": "红",
+                "evidence": "半江瑟瑟半江红",
+                "basis": "source-literal"
+              },
+              "visibility": {
+                "protect": false,
+                "reasons": [],
+                "basis": "local-drawing-policy"
+              }
+            }
+          ],
+          "scene": {
+            "kind": "waterside",
+            "notes": [
+              "水面以连续色层和水纹构成空间；水面的范围、视点与水平线是本地构图选择，不自动增加岸或陆地。",
+              "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。"
+            ],
+            "waterline": 0.46,
+            "semanticSetting": {
+              "kind": "waterside",
+              "basis": "explicit",
+              "evidence": [
+                "一道残阳铺水中",
+                "半江瑟瑟半江红"
+              ]
+            },
+            "semanticEffects": [
+              {
+                "path": "scene.supports[0]",
+                "consumer": "场景依托",
+                "status": "unsupported",
+                "effect": "依托主体尚无可绘制形态"
+              }
+            ],
+            "organization": {
+              "version": "1.0",
+              "strategy": "general-constraints",
+              "regions": {
+                "water": [
+                  [
+                    0,
+                    0.53
+                  ],
+                  [
+                    1,
+                    0.53
+                  ],
+                  [
+                    1,
+                    1.04
+                  ],
+                  [
+                    0,
+                    1.04
+                  ]
+                ]
+              },
+              "candidates": [],
+              "repairs": [],
+              "limitations": [
+                "几何检查不判定诗意理解或审美合格",
+                "动作时序与整首诗的场景切换尚未编排"
+              ],
+              "topology": "近水远照",
+              "layout": 2,
+              "orientation": "近水远照",
+              "audit": {
+                "scope": "implemented-geometry-and-drawing-gaps",
+                "coverage": {
+                  "scope": "extracted-entities-only",
+                  "present": 2,
+                  "mapped": 1,
+                  "parameters": [],
+                  "missing": [
+                    {
+                      "id": "i1",
+                      "name": "残阳"
+                    }
+                  ]
+                },
+                "checks": [
+                  "presence",
+                  "count",
+                  "finite",
+                  "support",
+                  "scale",
+                  "relative-position",
+                  "depth",
+                  "grove-spread",
+                  "drawing-gaps"
+                ],
+                "status": "needs-review",
+                "errors": 0,
+                "review": 2,
+                "issues": [
+                  {
+                    "code": "unresolved-relation",
+                    "severity": "review",
+                    "message": "有空间关系尚无对应布局画法"
+                  },
+                  {
+                    "code": "drawing-gaps",
+                    "severity": "review",
+                    "message": "还有 1 项已提取线索尚未转成画面：残阳"
+                  }
+                ],
+                "metrics": {
+                  "overlapPenalty": 0,
+                  "balancePenalty": 0,
+                  "motifFootprint": 0,
+                  "landArea": 0
+                },
+                "cost": 60,
+                "aestheticAcceptance": "pending-user"
+              },
+              "graph": {
+                "nodes": [
+                  {
+                    "id": "l0",
+                    "entities": [
+                      "i2"
+                    ],
+                    "tool": "water",
+                    "role": "water",
+                    "habitat": null,
+                    "inferred": false,
+                    "support": null
+                  }
+                ],
+                "edges": [
+                  {
+                    "type": "on",
+                    "target": "l0",
+                    "basis": "explicit",
+                    "modality": "asserted",
+                    "evidence": [
+                      "一道残阳铺水中"
+                    ]
+                  }
+                ],
+                "setting": "waterside"
+              },
+              "actorSpacing": {
+                "version": "1.0",
+                "repairs": [],
+                "residualOverlap": 0,
+                "scope": "discrete-actors-not-intentional-occlusion"
+              }
+            },
+            "displayAudit": {
+              "scope": "display-scale-separation-and-habitat",
+              "issues": [],
+              "errors": 0,
+              "aestheticAcceptance": "pending-user"
+            }
+          },
+          "spatial": [
+            {
+              "type": "on",
+              "source": "i1",
+              "target": "i2",
+              "modality": "asserted",
+              "basis": "explicit",
+              "evidence": [
+                "一道残阳铺水中"
+              ],
+              "visualized": false,
+              "reason": "关系的一端缺少独立画法"
+            }
+          ],
+          "landscapeStyle": {
+            "version": "1.0",
+            "color": "role-and-distance",
+            "motion": "layer-rhythms",
+            "aestheticAcceptance": "pending-user"
+          },
+          "notes": []
+        }
+      ],
+      "composition": "space-0",
+      "omitted": [
+        {
+          "id": "i1",
+          "name": "残阳",
+          "reason": "该意象尚无合适的写意画法"
+        }
+      ],
+      "parameters": [],
+      "sourceResolution": {
+        "version": "source-depiction-1.1",
+        "quantities": {},
+        "identities": [],
+        "changes": []
+      },
+      "notes": [
+        "位置、大小、笔触与默认微动是本地试画选择；数量解释与本地显示数量分别记录。",
+        "未明说的群落数量、疏密、近中远层次与变体均为本地构图选择；种类可按已声明的写意画法概括，不把铺展词换算成精确物体数量。",
+        "水面以连续色层和水纹构成空间；水面的范围、视点与水平线是本地构图选择，不自动增加岸或陆地。",
+        "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。",
+        "通用场景层先组织地面、水域、群落和主体，再比较三个布局的依托、相对位置、尺度与遮挡；检查通过不代表审美已通过。",
+        "语义保留：scene.groups[0].role，分组成员目前缺少基础画法",
+        "语义保留：scene.groups[0].pattern，分组成员目前缺少基础画法",
+        "语义保留：scene.groups[0].depth，分组成员目前缺少基础画法",
+        "语义保留：scene.supports[0]，依托主体尚无可绘制形态",
+        "整体场景、主次、远近、依托和支持的动作状态来自本次模型解释；具体布局、颜色和时钟倍率由本地视觉策略选择。",
+        "动作动画表现受支持的主导状态与有限观看运动；先后事件与完整因果尚未编排。",
+        "动态程度与默认轻风是可调整的观看选择；不改变数量、主次或原文动作判断。人物保持点景写意，不新增人物步态。",
+        "显示检查覆盖实例尺度、鸟群分离与空中落点；不保证笔触未被遮挡，也不代替实际观看。竹林默认成组拖动，其余单独拖动；Shift 可拖动同层整组。"
+      ],
+      "relations": [],
+      "semanticConsumption": {
+        "version": "3.3",
+        "items": [
+          {
+            "path": "scene.setting",
+            "status": "applied",
+            "consumer": "本地视觉策略",
+            "effect": "整体环境进入场景提案选择",
+            "basis": "explicit",
+            "evidence": [
+              "一道残阳铺水中",
+              "半江瑟瑟半江红"
+            ]
+          },
+          {
+            "path": "scene.groups[0].role",
+            "status": "unsupported",
+            "consumer": "本地视觉策略",
+            "effect": "分组成员目前缺少基础画法",
+            "basis": "inferred",
+            "evidence": [
+              "一道残阳铺水中"
+            ]
+          },
+          {
+            "path": "scene.groups[0].pattern",
+            "status": "unsupported",
+            "consumer": "本地视觉策略",
+            "effect": "分组成员目前缺少基础画法",
+            "basis": "inferred",
+            "evidence": [
+              "一道残阳铺水中"
+            ]
+          },
+          {
+            "path": "scene.groups[0].depth",
+            "status": "unsupported",
+            "consumer": "本地视觉策略",
+            "effect": "分组成员目前缺少基础画法",
+            "basis": "inferred",
+            "evidence": [
+              "一道残阳铺水中"
+            ]
+          },
+          {
+            "path": "scene.groups[1].role",
+            "status": "applied",
+            "consumer": "主次布局",
+            "effect": "保留环境画布范围，主次不改变地形边界",
+            "basis": "inferred",
+            "evidence": [
+              "半江瑟瑟半江红"
+            ]
+          },
+          {
+            "path": "scene.groups[1].pattern",
+            "status": "applied",
+            "consumer": "群落布局",
+            "effect": "按 field 组织显示单元；不覆盖明确数量",
+            "basis": "inferred",
+            "evidence": [
+              "半江瑟瑟半江红"
+            ]
+          },
+          {
+            "path": "scene.groups[1].depth",
+            "status": "skipped",
+            "consumer": "远近布局",
+            "effect": "远近未明，保持本地默认",
+            "basis": "inferred",
+            "evidence": [
+              "半江瑟瑟半江红"
+            ]
+          },
+          {
+            "path": "scene.supports[0]",
+            "status": "unsupported",
+            "consumer": "场景依托",
+            "effect": "依托主体尚无可绘制形态",
+            "basis": "explicit",
+            "evidence": [
+              "一道残阳铺水中"
+            ]
+          },
+          {
+            "path": "scene.actions[0].state",
+            "status": "skipped",
+            "consumer": "本地视觉策略",
+            "effect": "主体无画法",
+            "basis": "inferred",
+            "evidence": [
+              "一道残阳铺水中"
+            ]
+          },
+          {
+            "path": "scene.actions[0].pace",
+            "status": "skipped",
+            "consumer": "本地视觉策略",
+            "effect": "静止状态不推进时钟或位置",
+            "basis": "inferred",
+            "evidence": [
+              "一道残阳铺水中"
+            ]
+          },
+          {
+            "path": "scene.actions[0].direction",
+            "status": "skipped",
+            "consumer": "本地视觉策略",
+            "effect": "静止状态不推进时钟或位置",
+            "basis": "inferred",
+            "evidence": [
+              "一道残阳铺水中"
+            ]
+          },
+          {
+            "path": "scene.atmosphere.visibility",
+            "status": "applied",
+            "consumer": "画布色层与远景",
+            "effect": "可见度 clear；迷蒙或昏暗时淡化非光源图层",
+            "basis": "inferred",
+            "evidence": [
+              "一道残阳铺水中"
+            ]
+          },
+          {
+            "path": "scene.atmosphere.illumination",
+            "status": "applied",
+            "consumer": "自动光色",
+            "effect": "照明 twilight 与气息标签共同选择本地 twilight 配色；夜景优先暗底，用户可手动覆盖",
+            "basis": "inferred",
+            "evidence": [
+              "一道残阳铺水中"
+            ]
+          },
+          {
+            "path": "atmosphere.energy",
+            "status": "applied",
+            "consumer": "绘画时钟",
+            "effect": "没有明确动作节奏时，气息强弱控制已有微动的默认时钟"
+          },
+          {
+            "path": "atmosphere.openness",
+            "status": "applied",
+            "consumer": "群落分布与笔触密度",
+            "effect": "开阔度转换为本地间距与工具笔触密度，不等于原文数量"
+          },
+          {
+            "path": "atmosphere.valence",
+            "status": "applied",
+            "consumer": "自动光色",
+            "effect": "先约束昼夜明暗，再按已支持的气息标签和情绪倾向选择配色；不宣称完整情感理解"
+          },
+          {
+            "path": "time.markers",
+            "status": "retained",
+            "consumer": "原始记录与解读",
+            "effect": "保留原文时间标记；本版照明由 scene.atmosphere 转换，多阶段时间逻辑未执行"
+          }
+        ],
+        "summary": {
+          "applied": 8,
+          "partial": 0,
+          "unsupported": 4,
+          "skipped": 4,
+          "retained": 1
+        },
+        "aestheticAcceptance": "pending-user"
+      },
+      "landscapeStyle": {
+        "version": "1.0",
+        "color": "role-and-distance",
+        "motion": "layer-rhythms",
+        "aestheticAcceptance": "pending-user"
+      },
+      "compositionSelection": {
+        "method": "shared-policy-final-audit-and-geometric-preference",
+        "candidates": [
+          {
+            "id": "space-0",
+            "errors": 0,
+            "score": 60,
+            "actorOverlap": 0
+          },
+          {
+            "id": "space-1",
+            "errors": 0,
+            "score": 60,
+            "actorOverlap": 0
+          },
+          {
+            "id": "space-2",
+            "errors": 0,
+            "score": 60,
+            "actorOverlap": 0
+          }
+        ],
+        "aestheticAcceptance": "pending-user"
+      },
+      "imageryTrace": [
+        {
+          "id": "i1",
+          "mentions": [
+            "残阳"
+          ],
+          "role": "scene",
+          "presence": "present",
+          "parameter": null,
+          "layers": [],
+          "omission": "该意象尚无合适的写意画法"
+        },
+        {
+          "id": "i2",
+          "mentions": [
+            "水",
+            "江"
+          ],
+          "role": "scene",
+          "presence": "present",
+          "parameter": null,
+          "layers": [
+            {
+              "id": "i2:water:plane:0",
+              "tool": "water",
+              "instances": [
+                "i2:water:plane:0:0"
+              ]
+            }
+          ],
+          "omission": null
+        }
+      ],
+      "drawingPolicy": {
+        "version": "shared-drawing-policy-1.0",
+        "scope": "source-bound-generation-and-composition-alternatives",
+        "selectedComposition": "space-0",
+        "applied": [
+          {
+            "composition": "space-0",
+            "layer": "i2:water:plane:0",
+            "entities": [
+              "i2"
+            ],
+            "color": "红",
+            "visibility": [],
+            "attachment": null
+          },
+          {
+            "composition": "space-1",
+            "layer": "i2:water:plane:0",
+            "entities": [
+              "i2"
+            ],
+            "color": "红",
+            "visibility": [],
+            "attachment": null
+          },
+          {
+            "composition": "space-2",
+            "layer": "i2:water:plane:0",
+            "entities": [
+              "i2"
+            ],
+            "color": "红",
+            "visibility": [],
+            "attachment": null
+          }
+        ],
+        "quantityChanges": 0,
+        "identityGroups": 0,
+        "aestheticAcceptance": "pending-user"
+      }
+    },
+    "renderability": {
+      "status": "limited",
+      "visibleScenery": true,
+      "visibleAbstract": false,
+      "gaps": [
+        {
+          "id": "i1",
+          "label": "残阳",
+          "reason": "该意象尚无合适的写意画法"
+        }
+      ]
+    },
+    "expression": {
+      "version": "shared-expression-1.1-source-bound",
+      "sourceContract": "expression-1.0",
+      "recommendation": "balanced",
+      "reason": "结合可画景物与抽象笔势",
+      "gaps": [
+        {
+          "id": "i1",
+          "label": "残阳",
+          "reason": "该意象尚无合适的写意画法"
+        }
+      ],
+      "limitations": [
+        "景物过程当前影响抽象纹理；原生景物动作沿用场景能力，未支持的月下楼位移等仍不执行。",
+        "纹理、色层和观看扰动属于本地艺术选择，不改变语义成立状态"
+      ]
+    },
+    "notes": [
+      "三个表达倾向共享景物数量、空间、依托与主体身份；抽象笔触优先服从原景物区域和轮廓。",
+      "纯抽象或比喻句不因切换风景优先而补山水。",
+      "位置、大小、笔触与默认微动是本地试画选择；数量解释与本地显示数量分别记录。",
+      "未明说的群落数量、疏密、近中远层次与变体均为本地构图选择；种类可按已声明的写意画法概括，不把铺展词换算成精确物体数量。",
+      "水面以连续色层和水纹构成空间；水面的范围、视点与水平线是本地构图选择，不自动增加岸或陆地。",
+      "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。",
+      "通用场景层先组织地面、水域、群落和主体，再比较三个布局的依托、相对位置、尺度与遮挡；检查通过不代表审美已通过。",
+      "语义保留：scene.groups[0].role，分组成员目前缺少基础画法",
+      "语义保留：scene.groups[0].pattern，分组成员目前缺少基础画法",
+      "语义保留：scene.groups[0].depth，分组成员目前缺少基础画法",
+      "语义保留：scene.supports[0]，依托主体尚无可绘制形态",
+      "整体场景、主次、远近、依托和支持的动作状态来自本次模型解释；具体布局、颜色和时钟倍率由本地视觉策略选择。",
+      "动作动画表现受支持的主导状态与有限观看运动；先后事件与完整因果尚未编排。",
+      "动态程度与默认轻风是可调整的观看选择；不改变数量、主次或原文动作判断。人物保持点景写意，不新增人物步态。",
+      "显示检查覆盖实例尺度、鸟群分离与空中落点；不保证笔触未被遮挡，也不代替实际观看。竹林默认成组拖动，其余单独拖动；Shift 可拖动同层整组。"
+    ],
+    "aestheticAcceptance": "pending-user"
+  },
+  "delivery": {
+    "status": "partial",
+    "retryable": false,
+    "reason": "drawing-gap",
+    "message": "基础画面已生成，部分意象尚未单独表现，具体缺口已列出。"
+  },
+  "elapsed_seconds": 3.9
+}

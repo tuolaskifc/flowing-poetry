@@ -1,0 +1,27 @@
+{
+  "id": "2026-10-29T10-41-45-662Z-5bef1ef3",
+  "fingerprint": "4b9bbb7d0a7071e974f16a7ceeae0436b5ba1f15e2d43963b42b64e6e6f3a59d",
+  "semanticFingerprint": "8b96bf7ee66e1774791567a5df71bb736d1dd4d81218a55240ccc72c9c4c7480",
+  "poem": "小荷才露尖尖角，早有蜻蜓立上头。",
+  "source": null,
+  "mode": "expression",
+  "model": "DeepSeek-V4.1-Flash",
+  "started_at": "2026-10-29T10:41:45.662Z",
+  "cached": false,
+  "error": "fetch failed",
+  "validation": {
+    "valid": false,
+    "errors": [
+      "fetch failed"
+    ],
+    "warnings": [],
+    "review_required": true
+  },
+  "delivery": {
+    "status": "failed",
+    "retryable": true,
+    "reason": "connection-or-format",
+    "message": "这次分析未能完整返回，尚未生成本句画面。"
+  },
+  "elapsed_seconds": 0
+}

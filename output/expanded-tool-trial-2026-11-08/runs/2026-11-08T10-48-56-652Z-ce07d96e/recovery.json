@@ -1,0 +1,25 @@
+{
+  "version": "generation-recovery-1.2",
+  "status": "partial",
+  "reviewRequired": true,
+  "changes": [],
+  "omitted": [
+    {
+      "path": "spatial[0]",
+      "claim": {
+        "type": "among",
+        "source": "i1",
+        "target": "i1",
+        "modality": "unclear",
+        "basis": "inferred",
+        "evidence": [
+          "独坐幽篁里"
+        ]
+      },
+      "errors": [
+        "spatial[0] 必须引用两个不同的已有实体"
+      ]
+    }
+  ],
+  "message": "已绘制核验通过的部分，个别联系或动作暂未采用。"
+}

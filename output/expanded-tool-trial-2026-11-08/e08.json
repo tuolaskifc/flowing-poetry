@@ -1,0 +1,3016 @@
+{
+  "id": "e08",
+  "poem": "潮平两岸阔，风正一帆悬。",
+  "author": "王湾",
+  "title": "次北固山下",
+  "url": "https://m.gushiwen.cn/mingju/juv_aa53782f1529.aspx",
+  "focus": "宽幅、数量和帆",
+  "record": {
+    "id": "2026-11-08T10-48-44-781Z-d87a4a76",
+    "fingerprint": "7562e2c13e59c15fb8ddc93ba48bde2834866237fc1ad9481a4fa067b949b8da",
+    "semanticFingerprint": "e3851a6976c463025c4da280771b2b56b987de6875063d221f95e80cf0594ae2",
+    "poem": "潮平两岸阔，风正一帆悬。",
+    "source": {
+      "provider": "独立选笔试验",
+      "author": "王湾",
+      "title": "次北固山下"
+    },
+    "mode": "expression",
+    "model": "DeepSeek-V4.1-Flash",
+    "started_at": "2026-11-08T10:48:44.782Z",
+    "cached": false,
+    "http_status": 200,
+    "usage": {
+      "completion_tokens": 899,
+      "prompt_tokens": 6059,
+      "total_tokens": 6958,
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "prompt_tokens_details": {
+        "cached_tokens": 6016
+      }
+    },
+    "finish_reason": "stop",
+    "analysis": {
+      "schema_version": "expression-1.0",
+      "poem": "潮平两岸阔，风正一帆悬。",
+      "reading": "潮水涨平，两岸显得开阔；顺风正稳，一片船帆高悬。写江上行舟的平稳开阔之景。",
+      "entities": [
+        {
+          "id": "i1",
+          "mentions": [
+            "潮"
+          ],
+          "concept": "潮水",
+          "kind": "environment",
+          "role": "scene",
+          "presence": "present",
+          "evidence": [
+            "潮平两岸阔"
+          ],
+          "quantity": {
+            "mode": "unspecified",
+            "min": null,
+            "max": null,
+            "unit": null,
+            "scope": "unspecified",
+            "extent": "unspecified",
+            "evidence": []
+          }
+        },
+        {
+          "id": "i2",
+          "mentions": [
+            "两岸"
+          ],
+          "concept": "江流两岸",
+          "kind": "place",
+          "role": "scene",
+          "presence": "present",
+          "evidence": [
+            "潮平两岸阔"
+          ],
+          "quantity": {
+            "mode": "unspecified",
+            "min": null,
+            "max": null,
+            "unit": null,
+            "scope": "unspecified",
+            "extent": "unspecified",
+            "evidence": []
+          }
+        },
+        {
+          "id": "i3",
+          "mentions": [
+            "风"
+          ],
+          "concept": "顺风",
+          "kind": "environment",
+          "role": "scene",
+          "presence": "present",
+          "evidence": [
+            "风正一帆悬"
+          ],
+          "quantity": {
+            "mode": "unspecified",
+            "min": null,
+            "max": null,
+            "unit": null,
+            "scope": "unspecified",
+            "extent": "unspecified",
+            "evidence": []
+          }
+        },
+        {
+          "id": "i4",
+          "mentions": [
+            "一帆"
+          ],
+          "concept": "船帆",
+          "kind": "object",
+          "role": "scene",
+          "presence": "present",
+          "evidence": [
+            "风正一帆悬"
+          ],
+          "quantity": {
+            "mode": "exact",
+            "min": 1,
+            "max": 1,
+            "unit": "帆",
+            "scope": "individual",
+            "extent": "local",
+            "evidence": [
+              "风正一帆悬"
+            ]
+          }
+        }
+      ],
+      "relations": [],
+      "atmosphere": {
+        "labels": [
+          "开阔",
+          "平稳"
+        ],
+        "valence": "positive",
+        "energy": "low",
+        "tension": "low",
+        "openness": "high",
+        "evidence": [
+          "潮平两岸阔",
+          "风正一帆悬"
+        ]
+      },
+      "time": {
+        "markers": [],
+        "note": null
+      },
+      "uncertainties": [
+        "“一帆”可指一片帆，也可借指一叶孤舟，此处按字面取一片帆。"
+      ],
+      "spatial": [
+        {
+          "type": "on",
+          "source": "i4",
+          "target": "i1",
+          "modality": "asserted",
+          "basis": "inferred",
+          "evidence": [
+            "潮平两岸阔",
+            "风正一帆悬"
+          ]
+        }
+      ],
+      "scene": {
+        "setting": {
+          "kind": "waterside",
+          "basis": "inferred",
+          "evidence": [
+            "潮平两岸阔",
+            "风正一帆悬"
+          ]
+        },
+        "groups": [
+          {
+            "members": [
+              "i1",
+              "i2"
+            ],
+            "role": "environment",
+            "pattern": "field",
+            "depth": "far",
+            "basis": "inferred",
+            "evidence": [
+              "潮平两岸阔"
+            ]
+          },
+          {
+            "members": [
+              "i3"
+            ],
+            "role": "environment",
+            "pattern": "unspecified",
+            "depth": "unspecified",
+            "basis": "inferred",
+            "evidence": [
+              "风正一帆悬"
+            ]
+          },
+          {
+            "members": [
+              "i4"
+            ],
+            "role": "subject",
+            "pattern": "single",
+            "depth": "middle",
+            "basis": "inferred",
+            "evidence": [
+              "风正一帆悬"
+            ]
+          }
+        ],
+        "supports": [
+          {
+            "entity": "i4",
+            "surface": "water",
+            "target": "i1",
+            "basis": "inferred",
+            "evidence": [
+              "潮平两岸阔",
+              "风正一帆悬"
+            ]
+          }
+        ],
+        "actions": [
+          {
+            "entity": "i4",
+            "state": "float",
+            "pace": "slow",
+            "direction": "unspecified",
+            "modality": "asserted",
+            "basis": "inferred",
+            "evidence": [
+              "风正一帆悬"
+            ]
+          }
+        ],
+        "atmosphere": {
+          "visibility": "clear",
+          "illumination": "day",
+          "basis": "inferred",
+          "evidence": [
+            "潮平两岸阔",
+            "风正一帆悬"
+          ]
+        }
+      },
+      "expression": {
+        "relations": [
+          {
+            "source": "i1",
+            "target": "i2",
+            "kind": "connect",
+            "modality": "asserted",
+            "basis": "inferred",
+            "evidence": [
+              "潮平两岸阔"
+            ]
+          },
+          {
+            "source": "i3",
+            "target": "i4",
+            "kind": "connect",
+            "modality": "asserted",
+            "basis": "inferred",
+            "evidence": [
+              "风正一帆悬"
+            ]
+          }
+        ],
+        "processes": [
+          {
+            "subject": "i1",
+            "kind": "persist",
+            "temporal": "ongoing",
+            "modality": "asserted",
+            "basis": "inferred",
+            "evidence": [
+              "潮平两岸阔"
+            ]
+          },
+          {
+            "subject": "i4",
+            "kind": "persist",
+            "temporal": "ongoing",
+            "modality": "asserted",
+            "basis": "inferred",
+            "evidence": [
+              "风正一帆悬"
+            ]
+          }
+        ]
+      }
+    },
+    "validation": {
+      "valid": true,
+      "errors": [],
+      "warnings": [
+        "模型保留了不确定性，需要审阅",
+        "spatial[0] 的推断或非确定关系需审阅",
+        "scene.setting 为语义推断，绘画选择需与原文明示区分",
+        "scene.groups[0] 为语义推断，绘画选择需与原文明示区分",
+        "scene.groups[1] 为语义推断，绘画选择需与原文明示区分",
+        "scene.groups[2] 为语义推断，绘画选择需与原文明示区分",
+        "scene.supports[0] 为语义推断，绘画选择需与原文明示区分",
+        "scene.actions[0] 为语义推断，绘画选择需与原文明示区分",
+        "scene.atmosphere 为语义推断，绘画选择需与原文明示区分",
+        "expression.relations[0] 为语义推断",
+        "expression.relations[1] 为语义推断",
+        "expression.processes[0] 为语义推断",
+        "expression.processes[1] 为语义推断"
+      ],
+      "review_required": true
+    },
+    "plan": {
+      "version": "shared-expression-1.1-source-bound",
+      "seed": 3835695495,
+      "poem": "潮平两岸阔，风正一帆悬。",
+      "nodes": [
+        {
+          "id": "i1",
+          "label": "潮",
+          "meaning": "潮水",
+          "kind": "concrete",
+          "contextOnly": false,
+          "mode": "present"
+        },
+        {
+          "id": "i2",
+          "label": "两岸",
+          "meaning": "江流两岸",
+          "kind": "concrete",
+          "contextOnly": false,
+          "mode": "present"
+        },
+        {
+          "id": "i3",
+          "label": "风",
+          "meaning": "顺风",
+          "kind": "concrete",
+          "contextOnly": false,
+          "mode": "present"
+        },
+        {
+          "id": "i4",
+          "label": "一帆",
+          "meaning": "船帆",
+          "kind": "concrete",
+          "contextOnly": false,
+          "mode": "present"
+        }
+      ],
+      "relations": [
+        {
+          "source": "i1",
+          "target": "i2",
+          "kind": "connect",
+          "modality": "asserted",
+          "basis": "inferred",
+          "evidence": [
+            "潮平两岸阔"
+          ]
+        },
+        {
+          "source": "i3",
+          "target": "i4",
+          "kind": "connect",
+          "modality": "asserted",
+          "basis": "inferred",
+          "evidence": [
+            "风正一帆悬"
+          ]
+        }
+      ],
+      "processes": [
+        {
+          "subject": "i1",
+          "kind": "persist",
+          "temporal": "ongoing",
+          "modality": "asserted",
+          "basis": "inferred",
+          "evidence": [
+            "潮平两岸阔"
+          ]
+        },
+        {
+          "subject": "i4",
+          "kind": "persist",
+          "temporal": "ongoing",
+          "modality": "asserted",
+          "basis": "inferred",
+          "evidence": [
+            "风正一帆悬"
+          ]
+        }
+      ],
+      "omitted": [],
+      "atmosphere": {
+        "labels": [
+          "开阔",
+          "平稳"
+        ],
+        "valence": "positive",
+        "energy": "low",
+        "tension": "low",
+        "openness": "high",
+        "evidence": [
+          "潮平两岸阔",
+          "风正一帆悬"
+        ],
+        "illumination": "day"
+      },
+      "concretePlan": {
+        "version": "semantic-composition-3.3-source-bound",
+        "seed": 3835695495,
+        "settings": {
+          "wind": 0.45,
+          "density": 0.35,
+          "palette": "mineral",
+          "motion": 1.4
+        },
+        "layers": [
+          {
+            "tool": "water",
+            "entities": [
+              "i1"
+            ],
+            "projectedEntities": [],
+            "names": [
+              "潮"
+            ],
+            "options": {
+              "form": "plane"
+            },
+            "animate": true,
+            "placement": {
+              "anchor": [
+                320,
+                130
+              ],
+              "at": [
+                0.5,
+                0.45
+              ],
+              "scale": 1.5
+            },
+            "semanticGroup": {
+              "members": [
+                "i1",
+                "i2"
+              ],
+              "role": "environment",
+              "pattern": "field",
+              "depth": "far",
+              "basis": "inferred",
+              "evidence": [
+                "潮平两岸阔"
+              ],
+              "index": 0
+            },
+            "semanticEffects": [
+              {
+                "path": "scene.groups[0].role",
+                "consumer": "主次布局",
+                "effect": "保留环境画布范围，主次不改变地形边界",
+                "status": "applied"
+              },
+              {
+                "path": "scene.groups[0].pattern",
+                "consumer": "群落布局",
+                "effect": "按 field 组织显示单元；不覆盖明确数量",
+                "status": "applied"
+              },
+              {
+                "path": "scene.groups[0].depth",
+                "consumer": "远近布局",
+                "effect": "将 far 转为相对大小、透明度与允许区域内的落点",
+                "status": "applied"
+              }
+            ],
+            "semanticEnergy": true,
+            "timeScale": 0.45,
+            "instances": [
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    135
+                  ],
+                  "at": [
+                    0.5,
+                    0.45
+                  ],
+                  "scale": 1.65
+                },
+                "depth": -0.2,
+                "opacity": 1,
+                "variant": 0,
+                "tone": "far",
+                "id": "i1:water:plane:0:0"
+              }
+            ],
+            "singleUnit": false,
+            "quantity": {
+              "items": [
+                {
+                  "entity": "i1",
+                  "mode": "unspecified",
+                  "min": null,
+                  "max": null,
+                  "unit": null,
+                  "scope": "unspecified",
+                  "extent": "unspecified",
+                  "evidence": [],
+                  "basis": "model"
+                }
+              ],
+              "rendered": 1,
+              "exact": false,
+              "collective": false,
+              "partUnsupported": false
+            },
+            "quantityLabel": "整体笔触图层；内部数量尚未适配",
+            "z": -10,
+            "surface": {
+              "top": 0.42,
+              "bottom": 1
+            },
+            "clip": [
+              [
+                0,
+                0.42
+              ],
+              [
+                1,
+                0.42
+              ],
+              [
+                1,
+                1.04
+              ],
+              [
+                0,
+                1.04
+              ]
+            ],
+            "visual": {
+              "role": "water",
+              "brushStrength": 1.35
+            },
+            "performance": {
+              "rhythm": "continuous",
+              "rate": 0.9,
+              "amplitude": 0.9,
+              "phase": 0
+            },
+            "id": "i1:water:plane:0",
+            "interaction": {
+              "mode": "group",
+              "groupId": "i1:water:plane:0"
+            },
+            "visibility": {
+              "protect": false,
+              "reasons": [],
+              "basis": "local-drawing-policy"
+            }
+          },
+          {
+            "tool": "boat",
+            "entities": [
+              "i4"
+            ],
+            "projectedEntities": [
+              "i4"
+            ],
+            "names": [
+              "一帆"
+            ],
+            "options": {},
+            "animate": true,
+            "placement": {
+              "anchor": [
+                320,
+                230
+              ],
+              "at": [
+                0.7254237921250001,
+                0.72
+              ],
+              "scale": 0.95
+            },
+            "semanticGroup": {
+              "members": [
+                "i4"
+              ],
+              "role": "subject",
+              "pattern": "single",
+              "depth": "middle",
+              "basis": "inferred",
+              "evidence": [
+                "风正一帆悬"
+              ],
+              "index": 2
+            },
+            "semanticEffects": [
+              {
+                "path": "scene.actions[0].state",
+                "consumer": "形态与绘画时钟",
+                "effect": "启用工具支持的 float 状态",
+                "status": "applied"
+              },
+              {
+                "path": "scene.actions[0].pace",
+                "consumer": "绘画时钟",
+                "effect": "定性节奏映射为语义基准时钟倍率 0.35；观看动态与景物节奏另行调节",
+                "status": "applied"
+              },
+              {
+                "path": "scene.actions[0].direction",
+                "consumer": "画布合成",
+                "effect": "方向未明，仅用本地小幅微动",
+                "status": "applied"
+              },
+              {
+                "path": "scene.groups[2].role",
+                "consumer": "主次布局",
+                "effect": "主体相对突出",
+                "status": "applied"
+              },
+              {
+                "path": "scene.groups[2].pattern",
+                "consumer": "群落布局",
+                "effect": "按 single 组织显示单元；不覆盖明确数量",
+                "status": "applied"
+              },
+              {
+                "path": "scene.groups[2].depth",
+                "consumer": "远近布局",
+                "effect": "将 middle 转为相对大小、透明度与允许区域内的落点",
+                "status": "applied"
+              }
+            ],
+            "semanticEnergy": false,
+            "timeScale": 0.35,
+            "semanticAction": {
+              "entity": "i4",
+              "state": "float",
+              "pace": "slow",
+              "direction": "unspecified",
+              "modality": "asserted",
+              "basis": "inferred",
+              "evidence": [
+                "风正一帆悬"
+              ]
+            },
+            "motion": {
+              "kind": "drift",
+              "direction": "unspecified",
+              "rate": 0.35,
+              "state": "float"
+            },
+            "instances": [
+              {
+                "placement": {
+                  "anchor": [
+                    320,
+                    230
+                  ],
+                  "at": [
+                    0.7254237921250001,
+                    0.72
+                  ],
+                  "scale": 0.7257600000000001
+                },
+                "depth": 0.05,
+                "opacity": 0.84,
+                "variant": 1,
+                "tone": "middle",
+                "id": "i4:boat::1:0"
+              }
+            ],
+            "singleUnit": true,
+            "quantity": {
+              "items": [
+                {
+                  "entity": "i4",
+                  "mode": "exact",
+                  "min": 1,
+                  "max": 1,
+                  "unit": "帆",
+                  "scope": "individual",
+                  "extent": "local",
+                  "evidence": [
+                    "风正一帆悬"
+                  ],
+                  "basis": "model"
+                }
+              ],
+              "rendered": 1,
+              "exact": false,
+              "collective": false,
+              "partUnsupported": false
+            },
+            "quantityLabel": "由帆借形为一舟，帆面尚未绘制",
+            "z": 22,
+            "semanticSupport": {
+              "surface": "water",
+              "target": "i1",
+              "path": "scene.supports[0]"
+            },
+            "visual": {
+              "role": "architecture",
+              "brushStrength": 1.1
+            },
+            "performance": {
+              "rhythm": "steady",
+              "rate": 1,
+              "amplitude": 1,
+              "phase": 3.8830085198369844
+            },
+            "id": "i4:boat::1",
+            "interaction": {
+              "mode": "instance",
+              "groupId": "i4:boat::1"
+            },
+            "visibility": {
+              "protect": true,
+              "reasons": [
+                "recognizable-subject",
+                "semantic-subject"
+              ],
+              "basis": "local-drawing-policy"
+            }
+          }
+        ],
+        "spatial": [
+          {
+            "type": "on",
+            "source": "i4",
+            "target": "i1",
+            "modality": "asserted",
+            "basis": "inferred",
+            "evidence": [
+              "潮平两岸阔",
+              "风正一帆悬"
+            ],
+            "visualized": true,
+            "reason": "由通用场景约束组织；具体方向、距离与尺度属于本地构图"
+          }
+        ],
+        "scene": {
+          "kind": "waterside",
+          "notes": [
+            "水面以连续色层和水纹构成空间；水面的范围、视点与水平线是本地构图选择，不自动增加岸或陆地。",
+            "一帆与水同场时先按水面区域组织；此项是本地试画安排，不宣称已识别承载关系。",
+            "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。",
+            "通用场景层先组织地面、水域、群落和主体，再比较三个布局的依托、相对位置、尺度与遮挡；检查通过不代表审美已通过。"
+          ],
+          "waterline": 0.46,
+          "semanticSetting": {
+            "kind": "waterside",
+            "basis": "inferred",
+            "evidence": [
+              "潮平两岸阔",
+              "风正一帆悬"
+            ]
+          },
+          "semanticEffects": [
+            {
+              "path": "scene.supports[0]",
+              "consumer": "场景依托",
+              "status": "applied",
+              "effect": "使用已提取主体的现有承托画法"
+            }
+          ],
+          "organization": {
+            "version": "1.0",
+            "strategy": "general-constraints",
+            "regions": {
+              "water": [
+                [
+                  0,
+                  0.42
+                ],
+                [
+                  1,
+                  0.42
+                ],
+                [
+                  1,
+                  1.04
+                ],
+                [
+                  0,
+                  1.04
+                ]
+              ]
+            },
+            "candidates": [
+              {
+                "layout": 0,
+                "orientation": "阔水远天",
+                "errors": 0,
+                "cost": 31.803,
+                "score": 34.953,
+                "metrics": {
+                  "overlapPenalty": 0,
+                  "balancePenalty": 0.225,
+                  "motifFootprint": 0.013,
+                  "landArea": 0
+                }
+              },
+              {
+                "layout": 1,
+                "orientation": "水面横展",
+                "errors": 0,
+                "cost": 32.212,
+                "score": 36.09,
+                "metrics": {
+                  "overlapPenalty": 0,
+                  "balancePenalty": 0.277,
+                  "motifFootprint": 0.013,
+                  "landArea": 0
+                }
+              },
+              {
+                "layout": 2,
+                "orientation": "近水远照",
+                "errors": 0,
+                "cost": 32.621,
+                "score": 37.213,
+                "metrics": {
+                  "overlapPenalty": 0,
+                  "balancePenalty": 0.328,
+                  "motifFootprint": 0.013,
+                  "landArea": 0
+                }
+              }
+            ],
+            "repairs": [],
+            "limitations": [
+              "几何检查不判定诗意理解或审美合格",
+              "动作时序与整首诗的场景切换尚未编排"
+            ],
+            "topology": "阔水远天",
+            "layout": 0,
+            "orientation": "阔水远天",
+            "audit": {
+              "scope": "implemented-geometry-and-drawing-gaps",
+              "coverage": {
+                "scope": "extracted-entities-only",
+                "present": 4,
+                "mapped": 2,
+                "parameters": [
+                  "i3"
+                ],
+                "missing": [
+                  {
+                    "id": "i2",
+                    "name": "两岸"
+                  }
+                ]
+              },
+              "checks": [
+                "presence",
+                "count",
+                "finite",
+                "support",
+                "scale",
+                "relative-position",
+                "depth",
+                "grove-spread",
+                "drawing-gaps"
+              ],
+              "status": "needs-review",
+              "errors": 0,
+              "review": 1,
+              "issues": [
+                {
+                  "code": "drawing-gaps",
+                  "severity": "review",
+                  "message": "还有 1 项已提取线索尚未转成画面：两岸"
+                }
+              ],
+              "metrics": {
+                "overlapPenalty": 0,
+                "balancePenalty": 0.225,
+                "motifFootprint": 0.013,
+                "landArea": 0
+              },
+              "cost": 31.803,
+              "aestheticAcceptance": "pending-user"
+            },
+            "graph": {
+              "nodes": [
+                {
+                  "id": "l0",
+                  "entities": [
+                    "i1"
+                  ],
+                  "tool": "water",
+                  "role": "water",
+                  "habitat": null,
+                  "inferred": false,
+                  "support": null
+                },
+                {
+                  "id": "l1",
+                  "entities": [
+                    "i4"
+                  ],
+                  "tool": "boat",
+                  "role": "subject",
+                  "habitat": "water",
+                  "inferred": false,
+                  "support": "l0"
+                }
+              ],
+              "edges": [
+                {
+                  "type": "supported-by",
+                  "source": "l1",
+                  "target": "l0",
+                  "basis": "local-composition",
+                  "habitat": "water"
+                },
+                {
+                  "type": "on",
+                  "source": "l1",
+                  "target": "l0",
+                  "basis": "inferred",
+                  "modality": "asserted",
+                  "evidence": [
+                    "潮平两岸阔",
+                    "风正一帆悬"
+                  ]
+                }
+              ],
+              "setting": "waterside"
+            },
+            "actorSpacing": {
+              "version": "1.0",
+              "repairs": [],
+              "residualOverlap": 0,
+              "scope": "discrete-actors-not-intentional-occlusion"
+            }
+          },
+          "displayAudit": {
+            "scope": "display-scale-separation-and-habitat",
+            "issues": [],
+            "errors": 0,
+            "aestheticAcceptance": "pending-user"
+          }
+        },
+        "compositions": [
+          {
+            "id": "space-0",
+            "label": "阔水远天",
+            "description": "先安排连续水域与地表，再按主次与远近安放景物",
+            "layers": [
+              {
+                "tool": "water",
+                "entities": [
+                  "i1"
+                ],
+                "projectedEntities": [],
+                "names": [
+                  "潮"
+                ],
+                "options": {
+                  "form": "plane"
+                },
+                "animate": true,
+                "placement": {
+                  "anchor": [
+                    320,
+                    130
+                  ],
+                  "at": [
+                    0.5,
+                    0.45
+                  ],
+                  "scale": 1.5
+                },
+                "semanticGroup": {
+                  "members": [
+                    "i1",
+                    "i2"
+                  ],
+                  "role": "environment",
+                  "pattern": "field",
+                  "depth": "far",
+                  "basis": "inferred",
+                  "evidence": [
+                    "潮平两岸阔"
+                  ],
+                  "index": 0
+                },
+                "semanticEffects": [
+                  {
+                    "path": "scene.groups[0].role",
+                    "consumer": "主次布局",
+                    "effect": "保留环境画布范围，主次不改变地形边界",
+                    "status": "applied"
+                  },
+                  {
+                    "path": "scene.groups[0].pattern",
+                    "consumer": "群落布局",
+                    "effect": "按 field 组织显示单元；不覆盖明确数量",
+                    "status": "applied"
+                  },
+                  {
+                    "path": "scene.groups[0].depth",
+                    "consumer": "远近布局",
+                    "effect": "将 far 转为相对大小、透明度与允许区域内的落点",
+                    "status": "applied"
+                  }
+                ],
+                "semanticEnergy": true,
+                "timeScale": 0.45,
+                "instances": [
+                  {
+                    "placement": {
+                      "anchor": [
+                        320,
+                        135
+                      ],
+                      "at": [
+                        0.5,
+                        0.45
+                      ],
+                      "scale": 1.65
+                    },
+                    "depth": -0.2,
+                    "opacity": 1,
+                    "variant": 0,
+                    "tone": "far",
+                    "id": "i1:water:plane:0:0"
+                  }
+                ],
+                "singleUnit": false,
+                "quantity": {
+                  "items": [
+                    {
+                      "entity": "i1",
+                      "mode": "unspecified",
+                      "min": null,
+                      "max": null,
+                      "unit": null,
+                      "scope": "unspecified",
+                      "extent": "unspecified",
+                      "evidence": [],
+                      "basis": "model"
+                    }
+                  ],
+                  "rendered": 1,
+                  "exact": false,
+                  "collective": false,
+                  "partUnsupported": false
+                },
+                "quantityLabel": "整体笔触图层；内部数量尚未适配",
+                "z": -10,
+                "surface": {
+                  "top": 0.42,
+                  "bottom": 1
+                },
+                "clip": [
+                  [
+                    0,
+                    0.42
+                  ],
+                  [
+                    1,
+                    0.42
+                  ],
+                  [
+                    1,
+                    1.04
+                  ],
+                  [
+                    0,
+                    1.04
+                  ]
+                ],
+                "visual": {
+                  "role": "water",
+                  "brushStrength": 1.35
+                },
+                "performance": {
+                  "rhythm": "continuous",
+                  "rate": 0.9,
+                  "amplitude": 0.9,
+                  "phase": 0
+                },
+                "id": "i1:water:plane:0",
+                "interaction": {
+                  "mode": "group",
+                  "groupId": "i1:water:plane:0"
+                },
+                "visibility": {
+                  "protect": false,
+                  "reasons": [],
+                  "basis": "local-drawing-policy"
+                }
+              },
+              {
+                "tool": "boat",
+                "entities": [
+                  "i4"
+                ],
+                "projectedEntities": [
+                  "i4"
+                ],
+                "names": [
+                  "一帆"
+                ],
+                "options": {},
+                "animate": true,
+                "placement": {
+                  "anchor": [
+                    320,
+                    230
+                  ],
+                  "at": [
+                    0.7254237921250001,
+                    0.72
+                  ],
+                  "scale": 0.95
+                },
+                "semanticGroup": {
+                  "members": [
+                    "i4"
+                  ],
+                  "role": "subject",
+                  "pattern": "single",
+                  "depth": "middle",
+                  "basis": "inferred",
+                  "evidence": [
+                    "风正一帆悬"
+                  ],
+                  "index": 2
+                },
+                "semanticEffects": [
+                  {
+                    "path": "scene.actions[0].state",
+                    "consumer": "形态与绘画时钟",
+                    "effect": "启用工具支持的 float 状态",
+                    "status": "applied"
+                  },
+                  {
+                    "path": "scene.actions[0].pace",
+                    "consumer": "绘画时钟",
+                    "effect": "定性节奏映射为语义基准时钟倍率 0.35；观看动态与景物节奏另行调节",
+                    "status": "applied"
+                  },
+                  {
+                    "path": "scene.actions[0].direction",
+                    "consumer": "画布合成",
+                    "effect": "方向未明，仅用本地小幅微动",
+                    "status": "applied"
+                  },
+                  {
+                    "path": "scene.groups[2].role",
+                    "consumer": "主次布局",
+                    "effect": "主体相对突出",
+                    "status": "applied"
+                  },
+                  {
+                    "path": "scene.groups[2].pattern",
+                    "consumer": "群落布局",
+                    "effect": "按 single 组织显示单元；不覆盖明确数量",
+                    "status": "applied"
+                  },
+                  {
+                    "path": "scene.groups[2].depth",
+                    "consumer": "远近布局",
+                    "effect": "将 middle 转为相对大小、透明度与允许区域内的落点",
+                    "status": "applied"
+                  }
+                ],
+                "semanticEnergy": false,
+                "timeScale": 0.35,
+                "semanticAction": {
+                  "entity": "i4",
+                  "state": "float",
+                  "pace": "slow",
+                  "direction": "unspecified",
+                  "modality": "asserted",
+                  "basis": "inferred",
+                  "evidence": [
+                    "风正一帆悬"
+                  ]
+                },
+                "motion": {
+                  "kind": "drift",
+                  "direction": "unspecified",
+                  "rate": 0.35,
+                  "state": "float"
+                },
+                "instances": [
+                  {
+                    "placement": {
+                      "anchor": [
+                        320,
+                        230
+                      ],
+                      "at": [
+                        0.7254237921250001,
+                        0.72
+                      ],
+                      "scale": 0.7257600000000001
+                    },
+                    "depth": 0.05,
+                    "opacity": 0.84,
+                    "variant": 1,
+                    "tone": "middle",
+                    "id": "i4:boat::1:0"
+                  }
+                ],
+                "singleUnit": true,
+                "quantity": {
+                  "items": [
+                    {
+                      "entity": "i4",
+                      "mode": "exact",
+                      "min": 1,
+                      "max": 1,
+                      "unit": "帆",
+                      "scope": "individual",
+                      "extent": "local",
+                      "evidence": [
+                        "风正一帆悬"
+                      ],
+                      "basis": "model"
+                    }
+                  ],
+                  "rendered": 1,
+                  "exact": false,
+                  "collective": false,
+                  "partUnsupported": false
+                },
+                "quantityLabel": "由帆借形为一舟，帆面尚未绘制",
+                "z": 22,
+                "semanticSupport": {
+                  "surface": "water",
+                  "target": "i1",
+                  "path": "scene.supports[0]"
+                },
+                "visual": {
+                  "role": "architecture",
+                  "brushStrength": 1.1
+                },
+                "performance": {
+                  "rhythm": "steady",
+                  "rate": 1,
+                  "amplitude": 1,
+                  "phase": 3.8830085198369844
+                },
+                "id": "i4:boat::1",
+                "interaction": {
+                  "mode": "instance",
+                  "groupId": "i4:boat::1"
+                },
+                "visibility": {
+                  "protect": true,
+                  "reasons": [
+                    "recognizable-subject",
+                    "semantic-subject"
+                  ],
+                  "basis": "local-drawing-policy"
+                }
+              }
+            ],
+            "scene": {
+              "kind": "waterside",
+              "notes": [
+                "水面以连续色层和水纹构成空间；水面的范围、视点与水平线是本地构图选择，不自动增加岸或陆地。",
+                "一帆与水同场时先按水面区域组织；此项是本地试画安排，不宣称已识别承载关系。",
+                "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。",
+                "通用场景层先组织地面、水域、群落和主体，再比较三个布局的依托、相对位置、尺度与遮挡；检查通过不代表审美已通过。"
+              ],
+              "waterline": 0.46,
+              "semanticSetting": {
+                "kind": "waterside",
+                "basis": "inferred",
+                "evidence": [
+                  "潮平两岸阔",
+                  "风正一帆悬"
+                ]
+              },
+              "semanticEffects": [
+                {
+                  "path": "scene.supports[0]",
+                  "consumer": "场景依托",
+                  "status": "applied",
+                  "effect": "使用已提取主体的现有承托画法"
+                }
+              ],
+              "organization": {
+                "version": "1.0",
+                "strategy": "general-constraints",
+                "regions": {
+                  "water": [
+                    [
+                      0,
+                      0.42
+                    ],
+                    [
+                      1,
+                      0.42
+                    ],
+                    [
+                      1,
+                      1.04
+                    ],
+                    [
+                      0,
+                      1.04
+                    ]
+                  ]
+                },
+                "candidates": [
+                  {
+                    "layout": 0,
+                    "orientation": "阔水远天",
+                    "errors": 0,
+                    "cost": 31.803,
+                    "score": 34.953,
+                    "metrics": {
+                      "overlapPenalty": 0,
+                      "balancePenalty": 0.225,
+                      "motifFootprint": 0.013,
+                      "landArea": 0
+                    }
+                  },
+                  {
+                    "layout": 1,
+                    "orientation": "水面横展",
+                    "errors": 0,
+                    "cost": 32.212,
+                    "score": 36.09,
+                    "metrics": {
+                      "overlapPenalty": 0,
+                      "balancePenalty": 0.277,
+                      "motifFootprint": 0.013,
+                      "landArea": 0
+                    }
+                  },
+                  {
+                    "layout": 2,
+                    "orientation": "近水远照",
+                    "errors": 0,
+                    "cost": 32.621,
+                    "score": 37.213,
+                    "metrics": {
+                      "overlapPenalty": 0,
+                      "balancePenalty": 0.328,
+                      "motifFootprint": 0.013,
+                      "landArea": 0
+                    }
+                  }
+                ],
+                "repairs": [],
+                "limitations": [
+                  "几何检查不判定诗意理解或审美合格",
+                  "动作时序与整首诗的场景切换尚未编排"
+                ],
+                "topology": "阔水远天",
+                "layout": 0,
+                "orientation": "阔水远天",
+                "audit": {
+                  "scope": "implemented-geometry-and-drawing-gaps",
+                  "coverage": {
+                    "scope": "extracted-entities-only",
+                    "present": 4,
+                    "mapped": 2,
+                    "parameters": [
+                      "i3"
+                    ],
+                    "missing": [
+                      {
+                        "id": "i2",
+                        "name": "两岸"
+                      }
+                    ]
+                  },
+                  "checks": [
+                    "presence",
+                    "count",
+                    "finite",
+                    "support",
+                    "scale",
+                    "relative-position",
+                    "depth",
+                    "grove-spread",
+                    "drawing-gaps"
+                  ],
+                  "status": "needs-review",
+                  "errors": 0,
+                  "review": 1,
+                  "issues": [
+                    {
+                      "code": "drawing-gaps",
+                      "severity": "review",
+                      "message": "还有 1 项已提取线索尚未转成画面：两岸"
+                    }
+                  ],
+                  "metrics": {
+                    "overlapPenalty": 0,
+                    "balancePenalty": 0.225,
+                    "motifFootprint": 0.013,
+                    "landArea": 0
+                  },
+                  "cost": 31.803,
+                  "aestheticAcceptance": "pending-user"
+                },
+                "graph": {
+                  "nodes": [
+                    {
+                      "id": "l0",
+                      "entities": [
+                        "i1"
+                      ],
+                      "tool": "water",
+                      "role": "water",
+                      "habitat": null,
+                      "inferred": false,
+                      "support": null
+                    },
+                    {
+                      "id": "l1",
+                      "entities": [
+                        "i4"
+                      ],
+                      "tool": "boat",
+                      "role": "subject",
+                      "habitat": "water",
+                      "inferred": false,
+                      "support": "l0"
+                    }
+                  ],
+                  "edges": [
+                    {
+                      "type": "supported-by",
+                      "source": "l1",
+                      "target": "l0",
+                      "basis": "local-composition",
+                      "habitat": "water"
+                    },
+                    {
+                      "type": "on",
+                      "source": "l1",
+                      "target": "l0",
+                      "basis": "inferred",
+                      "modality": "asserted",
+                      "evidence": [
+                        "潮平两岸阔",
+                        "风正一帆悬"
+                      ]
+                    }
+                  ],
+                  "setting": "waterside"
+                },
+                "actorSpacing": {
+                  "version": "1.0",
+                  "repairs": [],
+                  "residualOverlap": 0,
+                  "scope": "discrete-actors-not-intentional-occlusion"
+                }
+              },
+              "displayAudit": {
+                "scope": "display-scale-separation-and-habitat",
+                "issues": [],
+                "errors": 0,
+                "aestheticAcceptance": "pending-user"
+              }
+            },
+            "spatial": [
+              {
+                "type": "on",
+                "source": "i4",
+                "target": "i1",
+                "modality": "asserted",
+                "basis": "inferred",
+                "evidence": [
+                  "潮平两岸阔",
+                  "风正一帆悬"
+                ],
+                "visualized": true,
+                "reason": "由通用场景约束组织；具体方向、距离与尺度属于本地构图"
+              }
+            ],
+            "landscapeStyle": {
+              "version": "1.0",
+              "color": "role-and-distance",
+              "motion": "layer-rhythms",
+              "aestheticAcceptance": "pending-user"
+            }
+          },
+          {
+            "id": "space-1",
+            "label": "水面横展",
+            "description": "先安排连续水域与地表，再按主次与远近安放景物",
+            "layers": [
+              {
+                "tool": "water",
+                "entities": [
+                  "i1"
+                ],
+                "projectedEntities": [],
+                "names": [
+                  "潮"
+                ],
+                "options": {
+                  "form": "plane"
+                },
+                "animate": true,
+                "placement": {
+                  "anchor": [
+                    320,
+                    130
+                  ],
+                  "at": [
+                    0.5,
+                    0.45
+                  ],
+                  "scale": 1.5
+                },
+                "semanticGroup": {
+                  "members": [
+                    "i1",
+                    "i2"
+                  ],
+                  "role": "environment",
+                  "pattern": "field",
+                  "depth": "far",
+                  "basis": "inferred",
+                  "evidence": [
+                    "潮平两岸阔"
+                  ],
+                  "index": 0
+                },
+                "semanticEffects": [
+                  {
+                    "path": "scene.groups[0].role",
+                    "consumer": "主次布局",
+                    "effect": "保留环境画布范围，主次不改变地形边界",
+                    "status": "applied"
+                  },
+                  {
+                    "path": "scene.groups[0].pattern",
+                    "consumer": "群落布局",
+                    "effect": "按 field 组织显示单元；不覆盖明确数量",
+                    "status": "applied"
+                  },
+                  {
+                    "path": "scene.groups[0].depth",
+                    "consumer": "远近布局",
+                    "effect": "将 far 转为相对大小、透明度与允许区域内的落点",
+                    "status": "applied"
+                  }
+                ],
+                "semanticEnergy": true,
+                "timeScale": 0.45,
+                "instances": [
+                  {
+                    "placement": {
+                      "anchor": [
+                        320,
+                        135
+                      ],
+                      "at": [
+                        0.5,
+                        0.45
+                      ],
+                      "scale": 1.65
+                    },
+                    "depth": -0.2,
+                    "opacity": 1,
+                    "variant": 0,
+                    "tone": "far",
+                    "id": "i1:water:plane:0:0"
+                  }
+                ],
+                "singleUnit": false,
+                "quantity": {
+                  "items": [
+                    {
+                      "entity": "i1",
+                      "mode": "unspecified",
+                      "min": null,
+                      "max": null,
+                      "unit": null,
+                      "scope": "unspecified",
+                      "extent": "unspecified",
+                      "evidence": [],
+                      "basis": "model"
+                    }
+                  ],
+                  "rendered": 1,
+                  "exact": false,
+                  "collective": false,
+                  "partUnsupported": false
+                },
+                "quantityLabel": "整体笔触图层；内部数量尚未适配",
+                "z": -10,
+                "surface": {
+                  "top": 0.475,
+                  "bottom": 1
+                },
+                "clip": [
+                  [
+                    0,
+                    0.475
+                  ],
+                  [
+                    1,
+                    0.475
+                  ],
+                  [
+                    1,
+                    1.04
+                  ],
+                  [
+                    0,
+                    1.04
+                  ]
+                ],
+                "visual": {
+                  "role": "water",
+                  "brushStrength": 1.35
+                },
+                "performance": {
+                  "rhythm": "continuous",
+                  "rate": 0.9,
+                  "amplitude": 0.9,
+                  "phase": 0
+                },
+                "id": "i1:water:plane:0",
+                "interaction": {
+                  "mode": "group",
+                  "groupId": "i1:water:plane:0"
+                },
+                "visibility": {
+                  "protect": false,
+                  "reasons": [],
+                  "basis": "local-drawing-policy"
+                }
+              },
+              {
+                "tool": "boat",
+                "entities": [
+                  "i4"
+                ],
+                "projectedEntities": [
+                  "i4"
+                ],
+                "names": [
+                  "一帆"
+                ],
+                "options": {},
+                "animate": true,
+                "placement": {
+                  "anchor": [
+                    320,
+                    230
+                  ],
+                  "at": [
+                    0.776523792125,
+                    0.72
+                  ],
+                  "scale": 0.95
+                },
+                "semanticGroup": {
+                  "members": [
+                    "i4"
+                  ],
+                  "role": "subject",
+                  "pattern": "single",
+                  "depth": "middle",
+                  "basis": "inferred",
+                  "evidence": [
+                    "风正一帆悬"
+                  ],
+                  "index": 2
+                },
+                "semanticEffects": [
+                  {
+                    "path": "scene.actions[0].state",
+                    "consumer": "形态与绘画时钟",
+                    "effect": "启用工具支持的 float 状态",
+                    "status": "applied"
+                  },
+                  {
+                    "path": "scene.actions[0].pace",
+                    "consumer": "绘画时钟",
+                    "effect": "定性节奏映射为语义基准时钟倍率 0.35；观看动态与景物节奏另行调节",
+                    "status": "applied"
+                  },
+                  {
+                    "path": "scene.actions[0].direction",
+                    "consumer": "画布合成",
+                    "effect": "方向未明，仅用本地小幅微动",
+                    "status": "applied"
+                  },
+                  {
+                    "path": "scene.groups[2].role",
+                    "consumer": "主次布局",
+                    "effect": "主体相对突出",
+                    "status": "applied"
+                  },
+                  {
+                    "path": "scene.groups[2].pattern",
+                    "consumer": "群落布局",
+                    "effect": "按 single 组织显示单元；不覆盖明确数量",
+                    "status": "applied"
+                  },
+                  {
+                    "path": "scene.groups[2].depth",
+                    "consumer": "远近布局",
+                    "effect": "将 middle 转为相对大小、透明度与允许区域内的落点",
+                    "status": "applied"
+                  }
+                ],
+                "semanticEnergy": false,
+                "timeScale": 0.35,
+                "semanticAction": {
+                  "entity": "i4",
+                  "state": "float",
+                  "pace": "slow",
+                  "direction": "unspecified",
+                  "modality": "asserted",
+                  "basis": "inferred",
+                  "evidence": [
+                    "风正一帆悬"
+                  ]
+                },
+                "motion": {
+                  "kind": "drift",
+                  "direction": "unspecified",
+                  "rate": 0.35,
+                  "state": "float"
+                },
+                "instances": [
+                  {
+                    "placement": {
+                      "anchor": [
+                        320,
+                        230
+                      ],
+                      "at": [
+                        0.776523792125,
+                        0.72
+                      ],
+                      "scale": 0.7257600000000001
+                    },
+                    "depth": 0.05,
+                    "opacity": 0.84,
+                    "variant": 1,
+                    "tone": "middle",
+                    "id": "i4:boat::1:0"
+                  }
+                ],
+                "singleUnit": true,
+                "quantity": {
+                  "items": [
+                    {
+                      "entity": "i4",
+                      "mode": "exact",
+                      "min": 1,
+                      "max": 1,
+                      "unit": "帆",
+                      "scope": "individual",
+                      "extent": "local",
+                      "evidence": [
+                        "风正一帆悬"
+                      ],
+                      "basis": "model"
+                    }
+                  ],
+                  "rendered": 1,
+                  "exact": false,
+                  "collective": false,
+                  "partUnsupported": false
+                },
+                "quantityLabel": "由帆借形为一舟，帆面尚未绘制",
+                "z": 22,
+                "semanticSupport": {
+                  "surface": "water",
+                  "target": "i1",
+                  "path": "scene.supports[0]"
+                },
+                "visual": {
+                  "role": "architecture",
+                  "brushStrength": 1.1
+                },
+                "performance": {
+                  "rhythm": "steady",
+                  "rate": 1,
+                  "amplitude": 1,
+                  "phase": 3.8830085198369844
+                },
+                "id": "i4:boat::1",
+                "interaction": {
+                  "mode": "instance",
+                  "groupId": "i4:boat::1"
+                },
+                "visibility": {
+                  "protect": true,
+                  "reasons": [
+                    "recognizable-subject",
+                    "semantic-subject"
+                  ],
+                  "basis": "local-drawing-policy"
+                }
+              }
+            ],
+            "scene": {
+              "kind": "waterside",
+              "notes": [
+                "水面以连续色层和水纹构成空间；水面的范围、视点与水平线是本地构图选择，不自动增加岸或陆地。",
+                "一帆与水同场时先按水面区域组织；此项是本地试画安排，不宣称已识别承载关系。",
+                "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。"
+              ],
+              "waterline": 0.46,
+              "semanticSetting": {
+                "kind": "waterside",
+                "basis": "inferred",
+                "evidence": [
+                  "潮平两岸阔",
+                  "风正一帆悬"
+                ]
+              },
+              "semanticEffects": [
+                {
+                  "path": "scene.supports[0]",
+                  "consumer": "场景依托",
+                  "status": "applied",
+                  "effect": "使用已提取主体的现有承托画法"
+                }
+              ],
+              "organization": {
+                "version": "1.0",
+                "strategy": "general-constraints",
+                "regions": {
+                  "water": [
+                    [
+                      0,
+                      0.475
+                    ],
+                    [
+                      1,
+                      0.475
+                    ],
+                    [
+                      1,
+                      1.04
+                    ],
+                    [
+                      0,
+                      1.04
+                    ]
+                  ]
+                },
+                "candidates": [],
+                "repairs": [],
+                "limitations": [
+                  "几何检查不判定诗意理解或审美合格",
+                  "动作时序与整首诗的场景切换尚未编排"
+                ],
+                "topology": "水面横展",
+                "layout": 1,
+                "orientation": "水面横展",
+                "audit": {
+                  "scope": "implemented-geometry-and-drawing-gaps",
+                  "coverage": {
+                    "scope": "extracted-entities-only",
+                    "present": 4,
+                    "mapped": 2,
+                    "parameters": [
+                      "i3"
+                    ],
+                    "missing": [
+                      {
+                        "id": "i2",
+                        "name": "两岸"
+                      }
+                    ]
+                  },
+                  "checks": [
+                    "presence",
+                    "count",
+                    "finite",
+                    "support",
+                    "scale",
+                    "relative-position",
+                    "depth",
+                    "grove-spread",
+                    "drawing-gaps"
+                  ],
+                  "status": "needs-review",
+                  "errors": 0,
+                  "review": 1,
+                  "issues": [
+                    {
+                      "code": "drawing-gaps",
+                      "severity": "review",
+                      "message": "还有 1 项已提取线索尚未转成画面：两岸"
+                    }
+                  ],
+                  "metrics": {
+                    "overlapPenalty": 0,
+                    "balancePenalty": 0.277,
+                    "motifFootprint": 0.013,
+                    "landArea": 0
+                  },
+                  "cost": 32.212,
+                  "aestheticAcceptance": "pending-user"
+                },
+                "graph": {
+                  "nodes": [
+                    {
+                      "id": "l0",
+                      "entities": [
+                        "i1"
+                      ],
+                      "tool": "water",
+                      "role": "water",
+                      "habitat": null,
+                      "inferred": false,
+                      "support": null
+                    },
+                    {
+                      "id": "l1",
+                      "entities": [
+                        "i4"
+                      ],
+                      "tool": "boat",
+                      "role": "subject",
+                      "habitat": "water",
+                      "inferred": false,
+                      "support": "l0"
+                    }
+                  ],
+                  "edges": [
+                    {
+                      "type": "supported-by",
+                      "source": "l1",
+                      "target": "l0",
+                      "basis": "local-composition",
+                      "habitat": "water"
+                    },
+                    {
+                      "type": "on",
+                      "source": "l1",
+                      "target": "l0",
+                      "basis": "inferred",
+                      "modality": "asserted",
+                      "evidence": [
+                        "潮平两岸阔",
+                        "风正一帆悬"
+                      ]
+                    }
+                  ],
+                  "setting": "waterside"
+                },
+                "actorSpacing": {
+                  "version": "1.0",
+                  "repairs": [],
+                  "residualOverlap": 0,
+                  "scope": "discrete-actors-not-intentional-occlusion"
+                }
+              },
+              "displayAudit": {
+                "scope": "display-scale-separation-and-habitat",
+                "issues": [],
+                "errors": 0,
+                "aestheticAcceptance": "pending-user"
+              }
+            },
+            "spatial": [
+              {
+                "type": "on",
+                "source": "i4",
+                "target": "i1",
+                "modality": "asserted",
+                "basis": "inferred",
+                "evidence": [
+                  "潮平两岸阔",
+                  "风正一帆悬"
+                ],
+                "visualized": true,
+                "reason": "由通用场景约束组织；具体方向、距离与尺度属于本地构图"
+              }
+            ],
+            "landscapeStyle": {
+              "version": "1.0",
+              "color": "role-and-distance",
+              "motion": "layer-rhythms",
+              "aestheticAcceptance": "pending-user"
+            },
+            "notes": []
+          },
+          {
+            "id": "space-2",
+            "label": "近水远照",
+            "description": "先安排连续水域与地表，再按主次与远近安放景物",
+            "layers": [
+              {
+                "tool": "water",
+                "entities": [
+                  "i1"
+                ],
+                "projectedEntities": [],
+                "names": [
+                  "潮"
+                ],
+                "options": {
+                  "form": "plane"
+                },
+                "animate": true,
+                "placement": {
+                  "anchor": [
+                    320,
+                    130
+                  ],
+                  "at": [
+                    0.5,
+                    0.45
+                  ],
+                  "scale": 1.5
+                },
+                "semanticGroup": {
+                  "members": [
+                    "i1",
+                    "i2"
+                  ],
+                  "role": "environment",
+                  "pattern": "field",
+                  "depth": "far",
+                  "basis": "inferred",
+                  "evidence": [
+                    "潮平两岸阔"
+                  ],
+                  "index": 0
+                },
+                "semanticEffects": [
+                  {
+                    "path": "scene.groups[0].role",
+                    "consumer": "主次布局",
+                    "effect": "保留环境画布范围，主次不改变地形边界",
+                    "status": "applied"
+                  },
+                  {
+                    "path": "scene.groups[0].pattern",
+                    "consumer": "群落布局",
+                    "effect": "按 field 组织显示单元；不覆盖明确数量",
+                    "status": "applied"
+                  },
+                  {
+                    "path": "scene.groups[0].depth",
+                    "consumer": "远近布局",
+                    "effect": "将 far 转为相对大小、透明度与允许区域内的落点",
+                    "status": "applied"
+                  }
+                ],
+                "semanticEnergy": true,
+                "timeScale": 0.45,
+                "instances": [
+                  {
+                    "placement": {
+                      "anchor": [
+                        320,
+                        135
+                      ],
+                      "at": [
+                        0.5,
+                        0.45
+                      ],
+                      "scale": 1.65
+                    },
+                    "depth": -0.2,
+                    "opacity": 1,
+                    "variant": 0,
+                    "tone": "far",
+                    "id": "i1:water:plane:0:0"
+                  }
+                ],
+                "singleUnit": false,
+                "quantity": {
+                  "items": [
+                    {
+                      "entity": "i1",
+                      "mode": "unspecified",
+                      "min": null,
+                      "max": null,
+                      "unit": null,
+                      "scope": "unspecified",
+                      "extent": "unspecified",
+                      "evidence": [],
+                      "basis": "model"
+                    }
+                  ],
+                  "rendered": 1,
+                  "exact": false,
+                  "collective": false,
+                  "partUnsupported": false
+                },
+                "quantityLabel": "整体笔触图层；内部数量尚未适配",
+                "z": -10,
+                "surface": {
+                  "top": 0.53,
+                  "bottom": 1
+                },
+                "clip": [
+                  [
+                    0,
+                    0.53
+                  ],
+                  [
+                    1,
+                    0.53
+                  ],
+                  [
+                    1,
+                    1.04
+                  ],
+                  [
+                    0,
+                    1.04
+                  ]
+                ],
+                "visual": {
+                  "role": "water",
+                  "brushStrength": 1.35
+                },
+                "performance": {
+                  "rhythm": "continuous",
+                  "rate": 0.9,
+                  "amplitude": 0.9,
+                  "phase": 0
+                },
+                "id": "i1:water:plane:0",
+                "interaction": {
+                  "mode": "group",
+                  "groupId": "i1:water:plane:0"
+                },
+                "visibility": {
+                  "protect": false,
+                  "reasons": [],
+                  "basis": "local-drawing-policy"
+                }
+              },
+              {
+                "tool": "boat",
+                "entities": [
+                  "i4"
+                ],
+                "projectedEntities": [
+                  "i4"
+                ],
+                "names": [
+                  "一帆"
+                ],
+                "options": {},
+                "animate": true,
+                "placement": {
+                  "anchor": [
+                    320,
+                    230
+                  ],
+                  "at": [
+                    0.827623792125,
+                    0.72
+                  ],
+                  "scale": 0.95
+                },
+                "semanticGroup": {
+                  "members": [
+                    "i4"
+                  ],
+                  "role": "subject",
+                  "pattern": "single",
+                  "depth": "middle",
+                  "basis": "inferred",
+                  "evidence": [
+                    "风正一帆悬"
+                  ],
+                  "index": 2
+                },
+                "semanticEffects": [
+                  {
+                    "path": "scene.actions[0].state",
+                    "consumer": "形态与绘画时钟",
+                    "effect": "启用工具支持的 float 状态",
+                    "status": "applied"
+                  },
+                  {
+                    "path": "scene.actions[0].pace",
+                    "consumer": "绘画时钟",
+                    "effect": "定性节奏映射为语义基准时钟倍率 0.35；观看动态与景物节奏另行调节",
+                    "status": "applied"
+                  },
+                  {
+                    "path": "scene.actions[0].direction",
+                    "consumer": "画布合成",
+                    "effect": "方向未明，仅用本地小幅微动",
+                    "status": "applied"
+                  },
+                  {
+                    "path": "scene.groups[2].role",
+                    "consumer": "主次布局",
+                    "effect": "主体相对突出",
+                    "status": "applied"
+                  },
+                  {
+                    "path": "scene.groups[2].pattern",
+                    "consumer": "群落布局",
+                    "effect": "按 single 组织显示单元；不覆盖明确数量",
+                    "status": "applied"
+                  },
+                  {
+                    "path": "scene.groups[2].depth",
+                    "consumer": "远近布局",
+                    "effect": "将 middle 转为相对大小、透明度与允许区域内的落点",
+                    "status": "applied"
+                  }
+                ],
+                "semanticEnergy": false,
+                "timeScale": 0.35,
+                "semanticAction": {
+                  "entity": "i4",
+                  "state": "float",
+                  "pace": "slow",
+                  "direction": "unspecified",
+                  "modality": "asserted",
+                  "basis": "inferred",
+                  "evidence": [
+                    "风正一帆悬"
+                  ]
+                },
+                "motion": {
+                  "kind": "drift",
+                  "direction": "unspecified",
+                  "rate": 0.35,
+                  "state": "float"
+                },
+                "instances": [
+                  {
+                    "placement": {
+                      "anchor": [
+                        320,
+                        230
+                      ],
+                      "at": [
+                        0.827623792125,
+                        0.72
+                      ],
+                      "scale": 0.7257600000000001
+                    },
+                    "depth": 0.05,
+                    "opacity": 0.84,
+                    "variant": 1,
+                    "tone": "middle",
+                    "id": "i4:boat::1:0"
+                  }
+                ],
+                "singleUnit": true,
+                "quantity": {
+                  "items": [
+                    {
+                      "entity": "i4",
+                      "mode": "exact",
+                      "min": 1,
+                      "max": 1,
+                      "unit": "帆",
+                      "scope": "individual",
+                      "extent": "local",
+                      "evidence": [
+                        "风正一帆悬"
+                      ],
+                      "basis": "model"
+                    }
+                  ],
+                  "rendered": 1,
+                  "exact": false,
+                  "collective": false,
+                  "partUnsupported": false
+                },
+                "quantityLabel": "由帆借形为一舟，帆面尚未绘制",
+                "z": 22,
+                "semanticSupport": {
+                  "surface": "water",
+                  "target": "i1",
+                  "path": "scene.supports[0]"
+                },
+                "visual": {
+                  "role": "architecture",
+                  "brushStrength": 1.1
+                },
+                "performance": {
+                  "rhythm": "steady",
+                  "rate": 1,
+                  "amplitude": 1,
+                  "phase": 3.8830085198369844
+                },
+                "id": "i4:boat::1",
+                "interaction": {
+                  "mode": "instance",
+                  "groupId": "i4:boat::1"
+                },
+                "visibility": {
+                  "protect": true,
+                  "reasons": [
+                    "recognizable-subject",
+                    "semantic-subject"
+                  ],
+                  "basis": "local-drawing-policy"
+                }
+              }
+            ],
+            "scene": {
+              "kind": "waterside",
+              "notes": [
+                "水面以连续色层和水纹构成空间；水面的范围、视点与水平线是本地构图选择，不自动增加岸或陆地。",
+                "一帆与水同场时先按水面区域组织；此项是本地试画安排，不宣称已识别承载关系。",
+                "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。"
+              ],
+              "waterline": 0.46,
+              "semanticSetting": {
+                "kind": "waterside",
+                "basis": "inferred",
+                "evidence": [
+                  "潮平两岸阔",
+                  "风正一帆悬"
+                ]
+              },
+              "semanticEffects": [
+                {
+                  "path": "scene.supports[0]",
+                  "consumer": "场景依托",
+                  "status": "applied",
+                  "effect": "使用已提取主体的现有承托画法"
+                }
+              ],
+              "organization": {
+                "version": "1.0",
+                "strategy": "general-constraints",
+                "regions": {
+                  "water": [
+                    [
+                      0,
+                      0.53
+                    ],
+                    [
+                      1,
+                      0.53
+                    ],
+                    [
+                      1,
+                      1.04
+                    ],
+                    [
+                      0,
+                      1.04
+                    ]
+                  ]
+                },
+                "candidates": [],
+                "repairs": [],
+                "limitations": [
+                  "几何检查不判定诗意理解或审美合格",
+                  "动作时序与整首诗的场景切换尚未编排"
+                ],
+                "topology": "近水远照",
+                "layout": 2,
+                "orientation": "近水远照",
+                "audit": {
+                  "scope": "implemented-geometry-and-drawing-gaps",
+                  "coverage": {
+                    "scope": "extracted-entities-only",
+                    "present": 4,
+                    "mapped": 2,
+                    "parameters": [
+                      "i3"
+                    ],
+                    "missing": [
+                      {
+                        "id": "i2",
+                        "name": "两岸"
+                      }
+                    ]
+                  },
+                  "checks": [
+                    "presence",
+                    "count",
+                    "finite",
+                    "support",
+                    "scale",
+                    "relative-position",
+                    "depth",
+                    "grove-spread",
+                    "drawing-gaps"
+                  ],
+                  "status": "needs-review",
+                  "errors": 0,
+                  "review": 1,
+                  "issues": [
+                    {
+                      "code": "drawing-gaps",
+                      "severity": "review",
+                      "message": "还有 1 项已提取线索尚未转成画面：两岸"
+                    }
+                  ],
+                  "metrics": {
+                    "overlapPenalty": 0,
+                    "balancePenalty": 0.328,
+                    "motifFootprint": 0.013,
+                    "landArea": 0
+                  },
+                  "cost": 32.621,
+                  "aestheticAcceptance": "pending-user"
+                },
+                "graph": {
+                  "nodes": [
+                    {
+                      "id": "l0",
+                      "entities": [
+                        "i1"
+                      ],
+                      "tool": "water",
+                      "role": "water",
+                      "habitat": null,
+                      "inferred": false,
+                      "support": null
+                    },
+                    {
+                      "id": "l1",
+                      "entities": [
+                        "i4"
+                      ],
+                      "tool": "boat",
+                      "role": "subject",
+                      "habitat": "water",
+                      "inferred": false,
+                      "support": "l0"
+                    }
+                  ],
+                  "edges": [
+                    {
+                      "type": "supported-by",
+                      "source": "l1",
+                      "target": "l0",
+                      "basis": "local-composition",
+                      "habitat": "water"
+                    },
+                    {
+                      "type": "on",
+                      "source": "l1",
+                      "target": "l0",
+                      "basis": "inferred",
+                      "modality": "asserted",
+                      "evidence": [
+                        "潮平两岸阔",
+                        "风正一帆悬"
+                      ]
+                    }
+                  ],
+                  "setting": "waterside"
+                },
+                "actorSpacing": {
+                  "version": "1.0",
+                  "repairs": [],
+                  "residualOverlap": 0,
+                  "scope": "discrete-actors-not-intentional-occlusion"
+                }
+              },
+              "displayAudit": {
+                "scope": "display-scale-separation-and-habitat",
+                "issues": [],
+                "errors": 0,
+                "aestheticAcceptance": "pending-user"
+              }
+            },
+            "spatial": [
+              {
+                "type": "on",
+                "source": "i4",
+                "target": "i1",
+                "modality": "asserted",
+                "basis": "inferred",
+                "evidence": [
+                  "潮平两岸阔",
+                  "风正一帆悬"
+                ],
+                "visualized": true,
+                "reason": "由通用场景约束组织；具体方向、距离与尺度属于本地构图"
+              }
+            ],
+            "landscapeStyle": {
+              "version": "1.0",
+              "color": "role-and-distance",
+              "motion": "layer-rhythms",
+              "aestheticAcceptance": "pending-user"
+            },
+            "notes": []
+          }
+        ],
+        "composition": "space-0",
+        "omitted": [
+          {
+            "id": "i2",
+            "name": "两岸",
+            "reason": "该专名人物、地名或抽象含义暂不作实景补画"
+          }
+        ],
+        "parameters": [
+          {
+            "entity": "i3",
+            "type": "wind"
+          }
+        ],
+        "sourceResolution": {
+          "version": "source-depiction-1.1",
+          "quantities": {},
+          "identities": [],
+          "changes": []
+        },
+        "notes": [
+          "风作为风参数，不额外画风线；强弱是本次试画选择。",
+          "一帆：以舟身借形帆所指的船，当前不补帆布；帆的数量与船数分别保留。这是本地写意借形，保留原词义。",
+          "位置、大小、笔触与默认微动是本地试画选择；数量解释与本地显示数量分别记录。",
+          "一帆以一舟借形，尚未单画帆；多帆与船数不能机械等同。",
+          "未明说的群落数量、疏密、近中远层次与变体均为本地构图选择；种类可按已声明的写意画法概括，不把铺展词换算成精确物体数量。",
+          "水面以连续色层和水纹构成空间；水面的范围、视点与水平线是本地构图选择，不自动增加岸或陆地。",
+          "一帆与水同场时先按水面区域组织；此项是本地试画安排，不宣称已识别承载关系。",
+          "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。",
+          "通用场景层先组织地面、水域、群落和主体，再比较三个布局的依托、相对位置、尺度与遮挡；检查通过不代表审美已通过。",
+          "语义保留：scene.groups[1].role，分组成员目前缺少基础画法",
+          "语义保留：scene.groups[1].pattern，分组成员目前缺少基础画法",
+          "语义保留：scene.groups[1].depth，分组成员目前缺少基础画法",
+          "整体场景、主次、远近、依托和支持的动作状态来自本次模型解释；具体布局、颜色和时钟倍率由本地视觉策略选择。",
+          "动作动画表现受支持的主导状态与有限观看运动；先后事件与完整因果尚未编排。",
+          "动态程度与默认轻风是可调整的观看选择；不改变数量、主次或原文动作判断。人物保持点景写意，不新增人物步态。",
+          "显示检查覆盖实例尺度、鸟群分离与空中落点；不保证笔触未被遮挡，也不代替实际观看。竹林默认成组拖动，其余单独拖动；Shift 可拖动同层整组。"
+        ],
+        "relations": [],
+        "semanticConsumption": {
+          "version": "3.3",
+          "items": [
+            {
+              "path": "scene.setting",
+              "status": "applied",
+              "consumer": "本地视觉策略",
+              "effect": "整体环境进入场景提案选择",
+              "basis": "inferred",
+              "evidence": [
+                "潮平两岸阔",
+                "风正一帆悬"
+              ]
+            },
+            {
+              "path": "scene.groups[0].role",
+              "status": "applied",
+              "consumer": "主次布局",
+              "effect": "保留环境画布范围，主次不改变地形边界",
+              "basis": "inferred",
+              "evidence": [
+                "潮平两岸阔"
+              ]
+            },
+            {
+              "path": "scene.groups[0].pattern",
+              "status": "applied",
+              "consumer": "群落布局",
+              "effect": "按 field 组织显示单元；不覆盖明确数量",
+              "basis": "inferred",
+              "evidence": [
+                "潮平两岸阔"
+              ]
+            },
+            {
+              "path": "scene.groups[0].depth",
+              "status": "applied",
+              "consumer": "远近布局",
+              "effect": "将 far 转为相对大小、透明度与允许区域内的落点",
+              "basis": "inferred",
+              "evidence": [
+                "潮平两岸阔"
+              ]
+            },
+            {
+              "path": "scene.groups[1].role",
+              "status": "unsupported",
+              "consumer": "本地视觉策略",
+              "effect": "分组成员目前缺少基础画法",
+              "basis": "inferred",
+              "evidence": [
+                "风正一帆悬"
+              ]
+            },
+            {
+              "path": "scene.groups[1].pattern",
+              "status": "unsupported",
+              "consumer": "本地视觉策略",
+              "effect": "分组成员目前缺少基础画法",
+              "basis": "inferred",
+              "evidence": [
+                "风正一帆悬"
+              ]
+            },
+            {
+              "path": "scene.groups[1].depth",
+              "status": "unsupported",
+              "consumer": "本地视觉策略",
+              "effect": "分组成员目前缺少基础画法",
+              "basis": "inferred",
+              "evidence": [
+                "风正一帆悬"
+              ]
+            },
+            {
+              "path": "scene.groups[2].role",
+              "status": "applied",
+              "consumer": "主次布局",
+              "effect": "主体相对突出",
+              "basis": "inferred",
+              "evidence": [
+                "风正一帆悬"
+              ]
+            },
+            {
+              "path": "scene.groups[2].pattern",
+              "status": "applied",
+              "consumer": "群落布局",
+              "effect": "按 single 组织显示单元；不覆盖明确数量",
+              "basis": "inferred",
+              "evidence": [
+                "风正一帆悬"
+              ]
+            },
+            {
+              "path": "scene.groups[2].depth",
+              "status": "applied",
+              "consumer": "远近布局",
+              "effect": "将 middle 转为相对大小、透明度与允许区域内的落点",
+              "basis": "inferred",
+              "evidence": [
+                "风正一帆悬"
+              ]
+            },
+            {
+              "path": "scene.supports[0]",
+              "status": "applied",
+              "consumer": "场景依托",
+              "effect": "使用已提取主体的现有承托画法",
+              "basis": "inferred",
+              "evidence": [
+                "潮平两岸阔",
+                "风正一帆悬"
+              ]
+            },
+            {
+              "path": "scene.actions[0].state",
+              "status": "applied",
+              "consumer": "形态与绘画时钟",
+              "effect": "启用工具支持的 float 状态",
+              "basis": "inferred",
+              "evidence": [
+                "风正一帆悬"
+              ]
+            },
+            {
+              "path": "scene.actions[0].pace",
+              "status": "applied",
+              "consumer": "绘画时钟",
+              "effect": "定性节奏映射为语义基准时钟倍率 0.35；观看动态与景物节奏另行调节",
+              "basis": "inferred",
+              "evidence": [
+                "风正一帆悬"
+              ]
+            },
+            {
+              "path": "scene.actions[0].direction",
+              "status": "applied",
+              "consumer": "画布合成",
+              "effect": "方向未明，仅用本地小幅微动",
+              "basis": "inferred",
+              "evidence": [
+                "风正一帆悬"
+              ]
+            },
+            {
+              "path": "scene.atmosphere.visibility",
+              "status": "applied",
+              "consumer": "画布色层与远景",
+              "effect": "可见度 clear；迷蒙或昏暗时淡化非光源图层",
+              "basis": "inferred",
+              "evidence": [
+                "潮平两岸阔",
+                "风正一帆悬"
+              ]
+            },
+            {
+              "path": "scene.atmosphere.illumination",
+              "status": "applied",
+              "consumer": "自动光色",
+              "effect": "照明 day 与气息标签共同选择本地 mineral 配色；夜景优先暗底，用户可手动覆盖",
+              "basis": "inferred",
+              "evidence": [
+                "潮平两岸阔",
+                "风正一帆悬"
+              ]
+            },
+            {
+              "path": "atmosphere.energy",
+              "status": "applied",
+              "consumer": "绘画时钟",
+              "effect": "没有明确动作节奏时，气息强弱控制已有微动的默认时钟"
+            },
+            {
+              "path": "atmosphere.openness",
+              "status": "applied",
+              "consumer": "群落分布与笔触密度",
+              "effect": "开阔度转换为本地间距与工具笔触密度，不等于原文数量"
+            },
+            {
+              "path": "atmosphere.valence",
+              "status": "applied",
+              "consumer": "自动光色",
+              "effect": "先约束昼夜明暗，再按已支持的气息标签和情绪倾向选择配色；不宣称完整情感理解"
+            },
+            {
+              "path": "time.markers",
+              "status": "retained",
+              "consumer": "原始记录与解读",
+              "effect": "保留原文时间标记；本版照明由 scene.atmosphere 转换，多阶段时间逻辑未执行"
+            }
+          ],
+          "summary": {
+            "applied": 16,
+            "partial": 0,
+            "unsupported": 3,
+            "skipped": 0,
+            "retained": 1
+          },
+          "aestheticAcceptance": "pending-user"
+        },
+        "landscapeStyle": {
+          "version": "1.0",
+          "color": "role-and-distance",
+          "motion": "layer-rhythms",
+          "aestheticAcceptance": "pending-user"
+        },
+        "compositionSelection": {
+          "method": "shared-policy-final-audit-and-geometric-preference",
+          "candidates": [
+            {
+              "id": "space-0",
+              "errors": 0,
+              "score": 34.953,
+              "actorOverlap": 0
+            },
+            {
+              "id": "space-1",
+              "errors": 0,
+              "score": 36.09,
+              "actorOverlap": 0
+            },
+            {
+              "id": "space-2",
+              "errors": 0,
+              "score": 37.213,
+              "actorOverlap": 0
+            }
+          ],
+          "aestheticAcceptance": "pending-user"
+        },
+        "imageryTrace": [
+          {
+            "id": "i1",
+            "mentions": [
+              "潮"
+            ],
+            "role": "scene",
+            "presence": "present",
+            "parameter": null,
+            "layers": [
+              {
+                "id": "i1:water:plane:0",
+                "tool": "water",
+                "instances": [
+                  "i1:water:plane:0:0"
+                ]
+              }
+            ],
+            "omission": null
+          },
+          {
+            "id": "i2",
+            "mentions": [
+              "两岸"
+            ],
+            "role": "scene",
+            "presence": "present",
+            "parameter": null,
+            "layers": [],
+            "omission": "该专名人物、地名或抽象含义暂不作实景补画"
+          },
+          {
+            "id": "i3",
+            "mentions": [
+              "风"
+            ],
+            "role": "scene",
+            "presence": "present",
+            "parameter": "wind",
+            "layers": [],
+            "omission": null
+          },
+          {
+            "id": "i4",
+            "mentions": [
+              "一帆"
+            ],
+            "role": "scene",
+            "presence": "present",
+            "parameter": null,
+            "layers": [
+              {
+                "id": "i4:boat::1",
+                "tool": "boat",
+                "instances": [
+                  "i4:boat::1:0"
+                ]
+              }
+            ],
+            "omission": null
+          }
+        ],
+        "drawingPolicy": {
+          "version": "shared-drawing-policy-1.0",
+          "scope": "source-bound-generation-and-composition-alternatives",
+          "selectedComposition": "space-0",
+          "applied": [
+            {
+              "composition": "space-0",
+              "layer": "i4:boat::1",
+              "entities": [
+                "i4"
+              ],
+              "color": null,
+              "visibility": [
+                "recognizable-subject",
+                "semantic-subject"
+              ],
+              "attachment": null
+            },
+            {
+              "composition": "space-1",
+              "layer": "i4:boat::1",
+              "entities": [
+                "i4"
+              ],
+              "color": null,
+              "visibility": [
+                "recognizable-subject",
+                "semantic-subject"
+              ],
+              "attachment": null
+            },
+            {
+              "composition": "space-2",
+              "layer": "i4:boat::1",
+              "entities": [
+                "i4"
+              ],
+              "color": null,
+              "visibility": [
+                "recognizable-subject",
+                "semantic-subject"
+              ],
+              "attachment": null
+            }
+          ],
+          "quantityChanges": 0,
+          "identityGroups": 0,
+          "aestheticAcceptance": "pending-user"
+        }
+      },
+      "renderability": {
+        "status": "limited",
+        "visibleScenery": true,
+        "visibleAbstract": false,
+        "gaps": [
+          {
+            "id": "i2",
+            "label": "两岸",
+            "reason": "该专名人物、地名或抽象含义暂不作实景补画"
+          }
+        ]
+      },
+      "expression": {
+        "version": "shared-expression-1.1-source-bound",
+        "sourceContract": "expression-1.0",
+        "recommendation": "balanced",
+        "reason": "结合可画景物与抽象笔势",
+        "gaps": [
+          {
+            "id": "i2",
+            "label": "两岸",
+            "reason": "该专名人物、地名或抽象含义暂不作实景补画"
+          }
+        ],
+        "limitations": [
+          "景物过程当前影响抽象纹理；原生景物动作沿用场景能力，未支持的月下楼位移等仍不执行。",
+          "纹理、色层和观看扰动属于本地艺术选择，不改变语义成立状态"
+        ]
+      },
+      "notes": [
+        "三个表达倾向共享景物数量、空间、依托与主体身份；抽象笔触优先服从原景物区域和轮廓。",
+        "纯抽象或比喻句不因切换风景优先而补山水。",
+        "风作为风参数，不额外画风线；强弱是本次试画选择。",
+        "一帆：以舟身借形帆所指的船，当前不补帆布；帆的数量与船数分别保留。这是本地写意借形，保留原词义。",
+        "位置、大小、笔触与默认微动是本地试画选择；数量解释与本地显示数量分别记录。",
+        "一帆以一舟借形，尚未单画帆；多帆与船数不能机械等同。",
+        "未明说的群落数量、疏密、近中远层次与变体均为本地构图选择；种类可按已声明的写意画法概括，不把铺展词换算成精确物体数量。",
+        "水面以连续色层和水纹构成空间；水面的范围、视点与水平线是本地构图选择，不自动增加岸或陆地。",
+        "一帆与水同场时先按水面区域组织；此项是本地试画安排，不宣称已识别承载关系。",
+        "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。",
+        "通用场景层先组织地面、水域、群落和主体，再比较三个布局的依托、相对位置、尺度与遮挡；检查通过不代表审美已通过。",
+        "语义保留：scene.groups[1].role，分组成员目前缺少基础画法",
+        "语义保留：scene.groups[1].pattern，分组成员目前缺少基础画法",
+        "语义保留：scene.groups[1].depth，分组成员目前缺少基础画法",
+        "整体场景、主次、远近、依托和支持的动作状态来自本次模型解释；具体布局、颜色和时钟倍率由本地视觉策略选择。",
+        "动作动画表现受支持的主导状态与有限观看运动；先后事件与完整因果尚未编排。",
+        "动态程度与默认轻风是可调整的观看选择；不改变数量、主次或原文动作判断。人物保持点景写意，不新增人物步态。",
+        "显示检查覆盖实例尺度、鸟群分离与空中落点；不保证笔触未被遮挡，也不代替实际观看。竹林默认成组拖动，其余单独拖动；Shift 可拖动同层整组。"
+      ],
+      "aestheticAcceptance": "pending-user"
+    },
+    "delivery": {
+      "status": "partial",
+      "retryable": false,
+      "reason": "drawing-gap",
+      "message": "基础画面已生成，部分意象尚未单独表现，具体缺口已列出。"
+    },
+    "elapsed_seconds": 4.9
+  },
+  "adviceUsage": {
+    "completion_tokens": 487,
+    "prompt_tokens": 3030,
+    "total_tokens": 3517,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  },
+  "adviceFinish": "stop",
+  "adviceRaw": "{\"choices\":[{\"entity\":\"i1\",\"tool_id\":\"water\",\"fit\":\"approximate\",\"reason\":\"水纹工具可表现水面，但“潮平”的涨平状态与开阔感需靠构图与水面铺陈，工具不提供真实流体或潮位模拟。\",\"evidence\":[\"潮平两岸阔\"]},{\"entity\":\"i2\",\"tool_id\":\"landscape\",\"fit\":\"approximate\",\"reason\":\"山水场景含“水岸”变体，可作两岸概括形态；但“阔”是空间关系，需由两岸间距与水面比例体现，工具不直接表达开阔程度。\",\"evidence\":[\"潮平两岸阔\"]},{\"entity\":\"i3\",\"tool_id\":null,\"fit\":\"not_drawn\",\"reason\":\"目录无独立风形工具；风为不可见环境要素，只能通过帆、水纹等间接暗示，不应画成实物。\",\"evidence\":[\"风正一帆悬\"]},{\"entity\":\"i4\",\"tool_id\":\"boat\",\"fit\":\"approximate\",\"reason\":\"舟工具提供船体，但明确不附加桅杆与帆；原句的“一帆悬”核心是帆，工具无法直接画出高悬的帆。\",\"evidence\":[\"风正一帆悬\"]}],\"composition\":\"以开阔水面为主体，两岸分列左右并留出宽阔间距，水面平缓延伸；中景置一船体，帆的高悬状态因工具限制只能以船体位置示意，风不可见，不另添人物、山、云、日等原文未出现物象。\",\"expected\":\"可表现平缓水面、两岸概括形态与中景船体，形成开阔平稳的基调；但“潮平”的潮位状态、“阔”的空间感、“风正”的顺风不可见条件以及“一帆悬”的帆均无法由现有工具直接落实，画面将缺失原句最关键的帆意象。\",\"uncertainties\":[\"“一帆”按字面取一片帆，但也可借指一叶孤舟，解读存在分歧。\",\"风为不可见要素，只能间接暗示，无法确认画面是否传达“风正”。\",\"舟工具不附帆，若以船体代替帆会改变原句主体，需谨慎。\",\"两岸的具体形态（岸线、植被、远近）原文未限定，不宜补造。\"]}",
+  "advice": {
+    "choices": [
+      {
+        "entity": "i1",
+        "tool_id": "water",
+        "fit": "approximate",
+        "reason": "水纹工具可表现水面，但“潮平”的涨平状态与开阔感需靠构图与水面铺陈，工具不提供真实流体或潮位模拟。",
+        "evidence": [
+          "潮平两岸阔"
+        ]
+      },
+      {
+        "entity": "i2",
+        "tool_id": "landscape",
+        "fit": "approximate",
+        "reason": "山水场景含“水岸”变体，可作两岸概括形态；但“阔”是空间关系，需由两岸间距与水面比例体现，工具不直接表达开阔程度。",
+        "evidence": [
+          "潮平两岸阔"
+        ]
+      },
+      {
+        "entity": "i3",
+        "tool_id": null,
+        "fit": "not_drawn",
+        "reason": "目录无独立风形工具；风为不可见环境要素，只能通过帆、水纹等间接暗示，不应画成实物。",
+        "evidence": [
+          "风正一帆悬"
+        ]
+      },
+      {
+        "entity": "i4",
+        "tool_id": "boat",
+        "fit": "approximate",
+        "reason": "舟工具提供船体，但明确不附加桅杆与帆；原句的“一帆悬”核心是帆，工具无法直接画出高悬的帆。",
+        "evidence": [
+          "风正一帆悬"
+        ]
+      }
+    ],
+    "composition": "以开阔水面为主体，两岸分列左右并留出宽阔间距，水面平缓延伸；中景置一船体，帆的高悬状态因工具限制只能以船体位置示意，风不可见，不另添人物、山、云、日等原文未出现物象。",
+    "expected": "可表现平缓水面、两岸概括形态与中景船体，形成开阔平稳的基调；但“潮平”的潮位状态、“阔”的空间感、“风正”的顺风不可见条件以及“一帆悬”的帆均无法由现有工具直接落实，画面将缺失原句最关键的帆意象。",
+    "uncertainties": [
+      "“一帆”按字面取一片帆，但也可借指一叶孤舟，解读存在分歧。",
+      "风为不可见要素，只能间接暗示，无法确认画面是否传达“风正”。",
+      "舟工具不附帆，若以船体代替帆会改变原句主体，需谨慎。",
+      "两岸的具体形态（岸线、植被、远近）原文未限定，不宜补造。"
+    ]
+  },
+  "adviceValidation": {
+    "valid": true,
+    "errors": []
+  }
+}

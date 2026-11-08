@@ -1,0 +1,808 @@
+{
+  "providerCalls": 0,
+  "rows": [
+    {
+      "id": "e01",
+      "poem": "一道残阳铺水中，半江瑟瑟半江红。",
+      "modelChoices": [
+        {
+          "entity": "i1",
+          "tool": "landscape",
+          "fit": "approximate"
+        },
+        {
+          "entity": "i2",
+          "tool": "water",
+          "fit": "direct"
+        }
+      ],
+      "baseline": [
+        {
+          "ids": [
+            "i2"
+          ],
+          "names": [
+            "水／江"
+          ],
+          "tool": "water",
+          "options": {
+            "form": "plane"
+          }
+        }
+      ],
+      "actual": [
+        {
+          "ids": [
+            "i2"
+          ],
+          "names": [
+            "水／江"
+          ],
+          "tool": "water",
+          "options": {
+            "form": "plane"
+          }
+        }
+      ],
+      "gaps": [
+        {
+          "id": "i1",
+          "label": "残阳",
+          "reason": "该意象尚无合适的写意画法"
+        }
+      ]
+    },
+    {
+      "id": "e02",
+      "poem": "行到水穷处，坐看云起时。",
+      "error": "解读或选笔建议未通过检查"
+    },
+    {
+      "id": "e03",
+      "poem": "荷风送香气，竹露滴清响。",
+      "modelChoices": [
+        {
+          "entity": "i1",
+          "tool": null,
+          "fit": "not_drawn"
+        },
+        {
+          "entity": "i2",
+          "tool": null,
+          "fit": "not_drawn"
+        },
+        {
+          "entity": "i3",
+          "tool": "bamboo",
+          "fit": "approximate"
+        },
+        {
+          "entity": "i4",
+          "tool": null,
+          "fit": "not_drawn"
+        }
+      ],
+      "baseline": [
+        {
+          "ids": [
+            "i3"
+          ],
+          "names": [
+            "竹露"
+          ],
+          "tool": "bamboo",
+          "options": {}
+        },
+        {
+          "ids": [
+            "i1"
+          ],
+          "names": [
+            "荷风"
+          ],
+          "tool": "lotus",
+          "options": {
+            "form": "leaf"
+          }
+        }
+      ],
+      "actual": [
+        {
+          "ids": [
+            "i3"
+          ],
+          "names": [
+            "竹露"
+          ],
+          "tool": "bamboo",
+          "options": {}
+        },
+        {
+          "ids": [
+            "i1"
+          ],
+          "names": [
+            "荷风"
+          ],
+          "tool": "lotus",
+          "options": {
+            "form": "leaf"
+          }
+        }
+      ],
+      "gaps": []
+    },
+    {
+      "id": "e04",
+      "poem": "落霞与孤鹜齐飞，秋水共长天一色。",
+      "modelChoices": [
+        {
+          "entity": "i1",
+          "tool": "landscape",
+          "fit": "approximate"
+        },
+        {
+          "entity": "i2",
+          "tool": "bird",
+          "fit": "approximate"
+        },
+        {
+          "entity": "i3",
+          "tool": "water",
+          "fit": "approximate"
+        },
+        {
+          "entity": "i4",
+          "tool": "landscape",
+          "fit": "approximate"
+        }
+      ],
+      "baseline": [
+        {
+          "ids": [
+            "i1"
+          ],
+          "names": [
+            "落霞"
+          ],
+          "tool": "landscape",
+          "options": {
+            "form": "sky"
+          }
+        },
+        {
+          "ids": [
+            "i4"
+          ],
+          "names": [
+            "长天"
+          ],
+          "tool": "landscape",
+          "options": {
+            "form": "sky"
+          }
+        },
+        {
+          "ids": [
+            "i3"
+          ],
+          "names": [
+            "秋水"
+          ],
+          "tool": "water",
+          "options": {
+            "form": "plane"
+          }
+        },
+        {
+          "ids": [
+            "i2"
+          ],
+          "names": [
+            "孤鹜"
+          ],
+          "tool": "bird",
+          "options": {
+            "pose": "flying",
+            "tone": "ink",
+            "facing": "right"
+          }
+        }
+      ],
+      "actual": [
+        {
+          "ids": [
+            "i1"
+          ],
+          "names": [
+            "落霞"
+          ],
+          "tool": "landscape",
+          "options": {
+            "form": "sky"
+          }
+        },
+        {
+          "ids": [
+            "i4"
+          ],
+          "names": [
+            "长天"
+          ],
+          "tool": "landscape",
+          "options": {
+            "form": "sky"
+          }
+        },
+        {
+          "ids": [
+            "i3"
+          ],
+          "names": [
+            "秋水"
+          ],
+          "tool": "water",
+          "options": {
+            "form": "plane"
+          }
+        },
+        {
+          "ids": [
+            "i2"
+          ],
+          "names": [
+            "孤鹜"
+          ],
+          "tool": "bird",
+          "options": {
+            "pose": "flying",
+            "tone": "ink",
+            "facing": "right"
+          }
+        }
+      ],
+      "gaps": []
+    },
+    {
+      "id": "e05",
+      "poem": "人闲桂花落，夜静春山空。",
+      "modelChoices": [
+        {
+          "entity": "i1",
+          "tool": "figure",
+          "fit": "approximate"
+        },
+        {
+          "entity": "i2",
+          "tool": "falling-petals",
+          "fit": "approximate"
+        },
+        {
+          "entity": "i3",
+          "tool": null,
+          "fit": "not_drawn"
+        },
+        {
+          "entity": "i4",
+          "tool": "landscape",
+          "fit": "approximate"
+        }
+      ],
+      "baseline": [
+        {
+          "ids": [
+            "i1"
+          ],
+          "names": [
+            "人"
+          ],
+          "tool": "figure",
+          "options": {
+            "pose": "standing"
+          }
+        },
+        {
+          "ids": [
+            "i2"
+          ],
+          "names": [
+            "桂花"
+          ],
+          "tool": "flower",
+          "options": {}
+        }
+      ],
+      "actual": [
+        {
+          "ids": [
+            "i1"
+          ],
+          "names": [
+            "人"
+          ],
+          "tool": "figure",
+          "options": {
+            "pose": "standing"
+          }
+        },
+        {
+          "ids": [
+            "i4"
+          ],
+          "names": [
+            "春山"
+          ],
+          "tool": "landscape",
+          "options": {
+            "form": "mountain"
+          }
+        },
+        {
+          "ids": [
+            "i2"
+          ],
+          "names": [
+            "桂花"
+          ],
+          "tool": "falling-petals",
+          "options": {}
+        }
+      ],
+      "gaps": []
+    },
+    {
+      "id": "e06",
+      "poem": "明月别枝惊鹊，清风半夜鸣蝉。",
+      "modelChoices": [
+        {
+          "entity": "i1",
+          "tool": "moon",
+          "fit": "direct"
+        },
+        {
+          "entity": "i2",
+          "tool": "tree",
+          "fit": "approximate"
+        },
+        {
+          "entity": "i3",
+          "tool": "bird",
+          "fit": "approximate"
+        },
+        {
+          "entity": "i4",
+          "tool": null,
+          "fit": "not_drawn"
+        },
+        {
+          "entity": "i5",
+          "tool": null,
+          "fit": "not_drawn"
+        }
+      ],
+      "baseline": [
+        {
+          "ids": [
+            "i1"
+          ],
+          "names": [
+            "明月"
+          ],
+          "tool": "moon",
+          "options": {
+            "shape": "crescent"
+          }
+        },
+        {
+          "ids": [
+            "i2"
+          ],
+          "names": [
+            "枝"
+          ],
+          "tool": "tree",
+          "options": {
+            "form": "broadleaf",
+            "crown": "lines"
+          }
+        },
+        {
+          "ids": [
+            "i3"
+          ],
+          "names": [
+            "鹊"
+          ],
+          "tool": "bird",
+          "options": {
+            "pose": "resting",
+            "tone": "ink",
+            "facing": "right"
+          }
+        }
+      ],
+      "actual": [
+        {
+          "ids": [
+            "i1"
+          ],
+          "names": [
+            "明月"
+          ],
+          "tool": "moon",
+          "options": {
+            "shape": "crescent"
+          }
+        },
+        {
+          "ids": [
+            "i2"
+          ],
+          "names": [
+            "枝"
+          ],
+          "tool": "tree",
+          "options": {
+            "form": "broadleaf",
+            "crown": "lines"
+          }
+        },
+        {
+          "ids": [
+            "i3"
+          ],
+          "names": [
+            "鹊"
+          ],
+          "tool": "bird",
+          "options": {
+            "pose": "resting",
+            "tone": "ink",
+            "facing": "right"
+          }
+        }
+      ],
+      "gaps": [
+        {
+          "id": "i5",
+          "label": "蝉",
+          "reason": "试验中保守保留为缺口；模型建议或已消退状态尚需复核"
+        }
+      ]
+    },
+    {
+      "id": "e07",
+      "poem": "月黑雁飞高，单于夜遁逃。",
+      "modelChoices": [
+        {
+          "entity": "i1",
+          "tool": "moon",
+          "fit": "approximate"
+        },
+        {
+          "entity": "i2",
+          "tool": "bird",
+          "fit": "approximate"
+        },
+        {
+          "entity": "i3",
+          "tool": "figure",
+          "fit": "approximate"
+        },
+        {
+          "entity": "i4",
+          "tool": null,
+          "fit": "not_drawn"
+        }
+      ],
+      "baseline": [
+        {
+          "ids": [
+            "i1"
+          ],
+          "names": [
+            "月"
+          ],
+          "tool": "moon",
+          "options": {
+            "shape": "crescent"
+          }
+        },
+        {
+          "ids": [
+            "i2"
+          ],
+          "names": [
+            "雁"
+          ],
+          "tool": "bird",
+          "options": {
+            "pose": "flying",
+            "tone": "ink",
+            "facing": "right"
+          }
+        }
+      ],
+      "actual": [
+        {
+          "ids": [
+            "i3"
+          ],
+          "names": [
+            "单于"
+          ],
+          "tool": "figure",
+          "options": {
+            "pose": "standing"
+          }
+        },
+        {
+          "ids": [
+            "i1"
+          ],
+          "names": [
+            "月"
+          ],
+          "tool": "moon",
+          "options": {
+            "shape": "crescent"
+          }
+        },
+        {
+          "ids": [
+            "i2"
+          ],
+          "names": [
+            "雁"
+          ],
+          "tool": "bird",
+          "options": {
+            "pose": "flying",
+            "tone": "ink",
+            "facing": "right"
+          }
+        }
+      ],
+      "gaps": []
+    },
+    {
+      "id": "e08",
+      "poem": "潮平两岸阔，风正一帆悬。",
+      "modelChoices": [
+        {
+          "entity": "i1",
+          "tool": "water",
+          "fit": "approximate"
+        },
+        {
+          "entity": "i2",
+          "tool": "landscape",
+          "fit": "approximate"
+        },
+        {
+          "entity": "i3",
+          "tool": null,
+          "fit": "not_drawn"
+        },
+        {
+          "entity": "i4",
+          "tool": "boat",
+          "fit": "approximate"
+        }
+      ],
+      "baseline": [
+        {
+          "ids": [
+            "i1"
+          ],
+          "names": [
+            "潮"
+          ],
+          "tool": "water",
+          "options": {
+            "form": "plane"
+          }
+        },
+        {
+          "ids": [
+            "i4"
+          ],
+          "names": [
+            "一帆"
+          ],
+          "tool": "boat",
+          "options": {}
+        }
+      ],
+      "actual": [
+        {
+          "ids": [
+            "i2"
+          ],
+          "names": [
+            "两岸"
+          ],
+          "tool": "landscape",
+          "options": {
+            "form": "shore",
+            "edge": "soft"
+          }
+        },
+        {
+          "ids": [
+            "i1"
+          ],
+          "names": [
+            "潮"
+          ],
+          "tool": "water",
+          "options": {
+            "form": "plane"
+          }
+        },
+        {
+          "ids": [
+            "i4"
+          ],
+          "names": [
+            "一帆"
+          ],
+          "tool": "boat",
+          "options": {}
+        }
+      ],
+      "gaps": []
+    },
+    {
+      "id": "e09",
+      "poem": "大漠沙如雪，燕山月似钩。",
+      "modelChoices": [
+        {
+          "entity": "i1",
+          "tool": "landscape",
+          "fit": "approximate"
+        },
+        {
+          "entity": "i2",
+          "tool": null,
+          "fit": "not_drawn"
+        },
+        {
+          "entity": "i3",
+          "tool": "landscape",
+          "fit": "approximate"
+        },
+        {
+          "entity": "i4",
+          "tool": "moon",
+          "fit": "direct"
+        },
+        {
+          "entity": "i5",
+          "tool": null,
+          "fit": "not_drawn"
+        }
+      ],
+      "baseline": [
+        {
+          "ids": [
+            "i4"
+          ],
+          "names": [
+            "月"
+          ],
+          "tool": "moon",
+          "options": {
+            "shape": "crescent"
+          }
+        }
+      ],
+      "actual": [
+        {
+          "ids": [
+            "i3"
+          ],
+          "names": [
+            "燕山"
+          ],
+          "tool": "landscape",
+          "options": {
+            "form": "mountain"
+          }
+        },
+        {
+          "ids": [
+            "i4"
+          ],
+          "names": [
+            "月"
+          ],
+          "tool": "moon",
+          "options": {
+            "shape": "crescent"
+          }
+        }
+      ],
+      "gaps": [
+        {
+          "id": "i1",
+          "label": "大漠／沙",
+          "reason": "该专名人物、地名或抽象含义暂不作实景补画"
+        }
+      ]
+    },
+    {
+      "id": "e10",
+      "poem": "独坐幽篁里，弹琴复长啸。",
+      "modelChoices": [
+        {
+          "entity": "i1",
+          "tool": "bamboo",
+          "fit": "approximate"
+        },
+        {
+          "entity": "i2",
+          "tool": "instrument",
+          "fit": "direct"
+        },
+        {
+          "entity": "i3",
+          "tool": null,
+          "fit": "not_drawn"
+        }
+      ],
+      "baseline": [
+        {
+          "ids": [
+            "i2"
+          ],
+          "names": [
+            "琴"
+          ],
+          "tool": "instrument",
+          "options": {
+            "kind": "qin"
+          }
+        },
+        {
+          "ids": [
+            "i1"
+          ],
+          "names": [
+            "幽篁"
+          ],
+          "tool": "tree",
+          "options": {
+            "form": "broadleaf",
+            "crown": "lines"
+          }
+        }
+      ],
+      "actual": [
+        {
+          "ids": [
+            "i2"
+          ],
+          "names": [
+            "琴"
+          ],
+          "tool": "instrument",
+          "options": {
+            "kind": "qin"
+          }
+        },
+        {
+          "ids": [
+            "i1"
+          ],
+          "names": [
+            "幽篁"
+          ],
+          "tool": "bamboo",
+          "options": {}
+        }
+      ],
+      "gaps": []
+    }
+  ]
+}

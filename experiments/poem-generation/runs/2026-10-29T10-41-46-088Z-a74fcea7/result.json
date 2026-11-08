@@ -1,0 +1,27 @@
+{
+  "id": "2026-10-29T10-41-46-088Z-a74fcea7",
+  "fingerprint": "ca3ba842abeed831576a83f14ea10cb39e08f1c680084847c5245a6f7859a15d",
+  "semanticFingerprint": "dd3fb89c3df804285ae7c7f898a2059858d1b2716385efedcb7840c160d3007a",
+  "poem": "我希望逢着一个丁香一样地结着愁怨的姑娘。",
+  "source": null,
+  "mode": "expression",
+  "model": "DeepSeek-V4.1-Flash",
+  "started_at": "2026-10-29T10:41:46.089Z",
+  "cached": false,
+  "error": "fetch failed",
+  "validation": {
+    "valid": false,
+    "errors": [
+      "fetch failed"
+    ],
+    "warnings": [],
+    "review_required": true
+  },
+  "delivery": {
+    "status": "failed",
+    "retryable": true,
+    "reason": "connection-or-format",
+    "message": "这次分析未能完整返回，尚未生成本句画面。"
+  },
+  "elapsed_seconds": 0
+}

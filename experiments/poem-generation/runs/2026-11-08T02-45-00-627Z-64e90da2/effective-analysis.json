@@ -1,0 +1,151 @@
+{
+  "schema_version": "expression-1.0",
+  "poem": "幽州思妇十二月，停歌罢笑双蛾摧。",
+  "reading": "幽州一位思妇在十二月里停下歌唱、收起笑容，双眉低垂摧折，写出寒冬中思妇的愁苦与静默。",
+  "entities": [
+    {
+      "id": "i1",
+      "mentions": [
+        "幽州思妇"
+      ],
+      "concept": "幽州的思妇",
+      "kind": "person",
+      "role": "scene",
+      "presence": "present",
+      "evidence": [
+        "幽州思妇十二月"
+      ],
+      "quantity": {
+        "mode": "unspecified",
+        "min": null,
+        "max": null,
+        "unit": null,
+        "scope": "unspecified",
+        "extent": "unspecified",
+        "evidence": []
+      }
+    },
+    {
+      "id": "i2",
+      "mentions": [
+        "双蛾"
+      ],
+      "concept": "女子的双眉",
+      "kind": "object",
+      "role": "scene",
+      "presence": "present",
+      "evidence": [
+        "停歌罢笑双蛾摧"
+      ],
+      "quantity": {
+        "mode": "exact",
+        "min": 2,
+        "max": 2,
+        "unit": "双",
+        "scope": "part",
+        "extent": "local",
+        "evidence": [
+          "停歌罢笑双蛾摧"
+        ]
+      }
+    }
+  ],
+  "relations": [],
+  "atmosphere": {
+    "labels": [
+      "愁苦",
+      "静默"
+    ],
+    "valence": "negative",
+    "energy": "low",
+    "tension": "medium",
+    "openness": "unclear",
+    "evidence": [
+      "停歌罢笑双蛾摧"
+    ]
+  },
+  "time": {
+    "markers": [
+      {
+        "surface": "十二月",
+        "meaning": "点明时令为十二月，寒冬时节"
+      }
+    ],
+    "note": null
+  },
+  "uncertainties": [
+    "“双蛾”指双眉，属借代用法，未明说具体面容或姿态。",
+    "“摧”可解为摧折、低垂，具体形态未详。"
+  ],
+  "spatial": [],
+  "scene": {
+    "setting": {
+      "kind": "settlement",
+      "basis": "inferred",
+      "evidence": [
+        "幽州思妇十二月"
+      ]
+    },
+    "groups": [
+      {
+        "members": [
+          "i1"
+        ],
+        "role": "subject",
+        "pattern": "single",
+        "depth": "unspecified",
+        "basis": "inferred",
+        "evidence": [
+          "幽州思妇十二月"
+        ]
+      },
+      {
+        "members": [
+          "i2"
+        ],
+        "role": "accent",
+        "pattern": "single",
+        "depth": "unspecified",
+        "basis": "inferred",
+        "evidence": [
+          "停歌罢笑双蛾摧"
+        ]
+      }
+    ],
+    "supports": [],
+    "actions": [
+      {
+        "entity": "i1",
+        "state": "still",
+        "pace": "unspecified",
+        "direction": "unspecified",
+        "modality": "asserted",
+        "basis": "inferred",
+        "evidence": [
+          "幽州思妇十二月，停歌罢笑双蛾摧。"
+        ]
+      }
+    ],
+    "atmosphere": {
+      "visibility": "unclear",
+      "illumination": "unclear",
+      "basis": "inferred",
+      "evidence": []
+    }
+  },
+  "expression": {
+    "relations": [],
+    "processes": [
+      {
+        "subject": "i1",
+        "kind": "unclear",
+        "temporal": "ongoing",
+        "modality": "asserted",
+        "basis": "inferred",
+        "evidence": [
+          "幽州思妇十二月，停歌罢笑双蛾摧。"
+        ]
+      }
+    ]
+  }
+}

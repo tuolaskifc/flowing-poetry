@@ -3,3 +3,4 @@
 /experiments/poem-semantics/results/** -text -whitespace
 /poem-flow/verification/** -text -whitespace
 /docs/sources/** -text -whitespace
+/output/** -text -whitespace

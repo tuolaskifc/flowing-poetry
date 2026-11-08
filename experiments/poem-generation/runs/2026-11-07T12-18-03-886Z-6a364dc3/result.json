@@ -1,0 +1,292 @@
+{
+  "id": "2026-11-07T12-18-03-886Z-6a364dc3",
+  "fingerprint": "dc37edea55b26ec13a679e0023b302644bc9062f8a6559f8bf9bfea330899e80",
+  "semanticFingerprint": "0f3701729d597052b4d96db161881d6e7ee5a85aa6b93c6eebc4f80e4a806520",
+  "poem": "七八个星天外，两三点雨山前。",
+  "source": {
+    "provider": "今日诗词",
+    "author": "辛弃疾",
+    "title": "西江月·夜行黄沙道中",
+    "dynasty": "宋代"
+  },
+  "mode": "composition",
+  "model": "DeepSeek-V4.1-Flash",
+  "started_at": "2026-11-07T12:18:03.887Z",
+  "cached": false,
+  "http_status": 200,
+  "usage": {
+    "completion_tokens": 872,
+    "prompt_tokens": 4896,
+    "total_tokens": 5768,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 4864
+    }
+  },
+  "finish_reason": "stop",
+  "analysis": {
+    "schema_version": "3.3",
+    "poem": "七八个星天外，两三点雨山前。",
+    "reading": "天边疏星七八点，山前飘落两三滴雨，星雨并见，画面疏朗开阔。",
+    "entities": [
+      {
+        "id": "i1",
+        "mentions": [
+          "星"
+        ],
+        "concept": "天空中的星星",
+        "kind": "object",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "七八个星天外"
+        ],
+        "quantity": {
+          "mode": "exact",
+          "min": 7,
+          "max": 8,
+          "unit": "个",
+          "scope": "individual",
+          "extent": "local",
+          "evidence": [
+            "七八个星"
+          ]
+        }
+      },
+      {
+        "id": "i2",
+        "mentions": [
+          "天"
+        ],
+        "concept": "天空",
+        "kind": "environment",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "七八个星天外"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i3",
+        "mentions": [
+          "雨"
+        ],
+        "concept": "落下的雨点",
+        "kind": "object",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "两三点雨山前"
+        ],
+        "quantity": {
+          "mode": "few",
+          "min": null,
+          "max": null,
+          "unit": "点",
+          "scope": "part",
+          "extent": "local",
+          "evidence": [
+            "两三点雨"
+          ]
+        }
+      },
+      {
+        "id": "i4",
+        "mentions": [
+          "山"
+        ],
+        "concept": "山",
+        "kind": "place",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "两三点雨山前"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      }
+    ],
+    "relations": [],
+    "atmosphere": {
+      "labels": [
+        "疏朗",
+        "清旷"
+      ],
+      "valence": "neutral",
+      "energy": "low",
+      "tension": "low",
+      "openness": "high",
+      "evidence": [
+        "七八个星天外",
+        "两三点雨山前"
+      ]
+    },
+    "time": {
+      "markers": [],
+      "note": null
+    },
+    "uncertainties": [
+      "“天外”“山前”只表明相对方位，未交代观察者位置与远近层次。",
+      "“两三点雨”是稀疏雨滴，未说明雨是否持续或成片落下。"
+    ],
+    "spatial": [
+      {
+        "type": "outside",
+        "source": "i1",
+        "target": "i2",
+        "modality": "asserted",
+        "basis": "explicit",
+        "evidence": [
+          "七八个星天外"
+        ]
+      },
+      {
+        "type": "in_front_of",
+        "source": "i3",
+        "target": "i4",
+        "modality": "asserted",
+        "basis": "explicit",
+        "evidence": [
+          "两三点雨山前"
+        ]
+      }
+    ],
+    "scene": {
+      "setting": {
+        "kind": "mixed",
+        "basis": "inferred",
+        "evidence": [
+          "七八个星天外",
+          "两三点雨山前"
+        ]
+      },
+      "groups": [
+        {
+          "members": [
+            "i1"
+          ],
+          "role": "subject",
+          "pattern": "scattered",
+          "depth": "far",
+          "basis": "inferred",
+          "evidence": [
+            "七八个星天外"
+          ]
+        },
+        {
+          "members": [
+            "i3"
+          ],
+          "role": "subject",
+          "pattern": "scattered",
+          "depth": "middle",
+          "basis": "inferred",
+          "evidence": [
+            "两三点雨山前"
+          ]
+        },
+        {
+          "members": [
+            "i2",
+            "i4"
+          ],
+          "role": "environment",
+          "pattern": "unspecified",
+          "depth": "unspecified",
+          "basis": "inferred",
+          "evidence": [
+            "七八个星天外",
+            "两三点雨山前"
+          ]
+        }
+      ],
+      "supports": [
+        {
+          "entity": "i1",
+          "surface": "ground",
+          "target": null,
+          "basis": "inferred",
+          "evidence": [
+            "七八个星天外"
+          ]
+        },
+        {
+          "entity": "i3",
+          "surface": "ground",
+          "target": null,
+          "basis": "inferred",
+          "evidence": [
+            "两三点雨山前"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "entity": "i1",
+          "state": "still",
+          "pace": "unspecified",
+          "direction": "unspecified",
+          "modality": "asserted",
+          "basis": "inferred",
+          "evidence": [
+            "七八个星天外"
+          ]
+        },
+        {
+          "entity": "i3",
+          "state": "fall",
+          "pace": "slow",
+          "direction": "down",
+          "modality": "asserted",
+          "basis": "inferred",
+          "evidence": [
+            "两三点雨山前"
+          ]
+        }
+      ],
+      "atmosphere": {
+        "visibility": "clear",
+        "illumination": "night",
+        "basis": "inferred",
+        "evidence": [
+          "七八个星天外"
+        ]
+      }
+    }
+  },
+  "validation": {
+    "valid": false,
+    "errors": [
+      "i1.quantity 数量范围不正确"
+    ],
+    "warnings": [
+      "模型保留了不确定性，需要审阅"
+    ],
+    "review_required": true
+  },
+  "delivery": {
+    "status": "failed",
+    "retryable": true,
+    "reason": "interpretation",
+    "message": "这次解读的基础内容仍有问题，尚未生成本句画面。"
+  },
+  "elapsed_seconds": 4.9
+}

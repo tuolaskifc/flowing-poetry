@@ -1,0 +1,39 @@
+{
+  "id": "n01",
+  "poem": "沾衣欲湿杏花雨，吹面不寒杨柳风。",
+  "author": "志南",
+  "title": "绝句",
+  "url": "https://www.gushiwen.cn/mingju/juv_6ee372efe8e5.aspx",
+  "focus": "时令借称与动作",
+  "record": {
+    "id": "2026-11-08T05-05-24-715Z-036f90ee",
+    "fingerprint": "41f227d35daaf0accb2a198230c685c8501b7a6af4ad6d5b7de73e360ffd59a2",
+    "semanticFingerprint": "6ff7a5a950023a5e191f1d74ab702b3811e9f60b85fad3f3ad6391a3d402d8dc",
+    "poem": "沾衣欲湿杏花雨，吹面不寒杨柳风。",
+    "source": {
+      "provider": "陌生诗句试验",
+      "author": "志南",
+      "title": "绝句"
+    },
+    "mode": "expression",
+    "model": "DeepSeek-V4.1-Flash",
+    "started_at": "2026-11-08T05:05:24.718Z",
+    "cached": false,
+    "error": "The operation was aborted due to timeout",
+    "validation": {
+      "valid": false,
+      "errors": [
+        "The operation was aborted due to timeout"
+      ],
+      "warnings": [],
+      "review_required": true
+    },
+    "delivery": {
+      "status": "failed",
+      "retryable": true,
+      "reason": "connection-or-format",
+      "message": "这次分析未能完整返回，尚未生成本句画面。"
+    },
+    "elapsed_seconds": 90
+  }
+}

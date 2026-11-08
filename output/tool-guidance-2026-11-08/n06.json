@@ -1,0 +1,115 @@
+{
+  "id": "n06",
+  "poem": "细草微风岸，危樯独夜舟。",
+  "originalRecord": "2026-11-08T05-05-40-333Z-382f78cc",
+  "baseline": [
+    {
+      "names": [
+        "岸"
+      ],
+      "tool": "landscape",
+      "entities": [
+        "i3"
+      ]
+    },
+    {
+      "names": [
+        "舟"
+      ],
+      "tool": "boat",
+      "entities": [
+        "i5"
+      ]
+    },
+    {
+      "names": [
+        "细草"
+      ],
+      "tool": "grass",
+      "entities": [
+        "i1"
+      ]
+    }
+  ],
+  "baselineGaps": [
+    {
+      "id": "i4",
+      "label": "危樯",
+      "reason": "该意象尚无合适的写意画法"
+    }
+  ],
+  "usage": {
+    "completion_tokens": 553,
+    "prompt_tokens": 2664,
+    "total_tokens": 3217,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  },
+  "finish": "stop",
+  "raw": "{\n  \"choices\": [\n    {\n    \"entity\": \"i1\",\n    \"tool_id\": \"grass\",\n    \"fit\": \"approximate\",\n    \"reason\": \"草工具可画细草簇，但默认9簇6叶，需调整疏密以近似“细草”；不能保证“细”的形态。\",\n    \"evidence\": [\"细草微风岸\"]\n    },\n    {\n    \"entity\": \"i2\",\n    \"tool_id\": null,\n    \"fit\": \"not_drawn\",\n    \"reason\": \"微风是抽象环境状态，目录无直接表现风的工具；草、柳等可借摆动暗示，但非风本身。\",\n    \"evidence\": [\"细草微风岸\"]\n    },\n    {\n    \"entity\": \"i3\",\n    \"tool_id\": \"landscape\",\n    \"fit\": \"approximate\",\n    \"reason\": \"山水场景工具可概括岸、地面等形态，但须选择具体形态，不能自动生成“岸”。\",\n    \"evidence\": [\"细草微风岸\"]\n    },\n    {\n    \"entity\": \"i4\",\n    \"tool_id\": null,\n    \"fit\": \"not_drawn\",\n    \"reason\": \"舟工具不附加桅杆，目录无独立桅杆工具；无法可靠画出“危樯”。\",\n    \"evidence\": [\"危樯独夜舟\"]\n    },\n    {\n    \"entity\": \"i5\",\n    \"tool_id\": \"boat\",\n    \"fit\": \"approximate\",\n    \"reason\": \"舟工具可画船体，但无桅杆、帆、桨、人物；可表现孤舟，不能表现“危樯”。\",\n    \"evidence\": [\"危樯独夜舟\"]\n    }\n  ],\n  \"composition\": \"画面以夜晚水岸为背景：岸边细草与微风暗示的草叶轻摆，水面上一叶孤舟漂浮；舟上无桅杆可画，故“危樯”缺席。\",\n  \"expected\": \"可表现细草、岸、孤舟与夜色氛围；微风只能借草叶摆动间接暗示，危樯无法画出，夜晚暗度需依赖整体配色。\",\n  \"uncertainties\": [\n    \"“危樯”是否指桅杆本身还是借指整艘船，存在歧义。\",\n    \"“独”修饰舟，是否也暗示人的孤独，未明说。\",\n    \"微风为抽象环境，目录无直接工具，只能借草叶动态近似。\",\n    \"岸的具体形态需从山水工具中选择，不能自动生成。\"\n  ]\n}",
+  "advice": {
+    "choices": [
+      {
+        "entity": "i1",
+        "tool_id": "grass",
+        "fit": "approximate",
+        "reason": "草工具可画细草簇，但默认9簇6叶，需调整疏密以近似“细草”；不能保证“细”的形态。",
+        "evidence": [
+          "细草微风岸"
+        ]
+      },
+      {
+        "entity": "i2",
+        "tool_id": null,
+        "fit": "not_drawn",
+        "reason": "微风是抽象环境状态，目录无直接表现风的工具；草、柳等可借摆动暗示，但非风本身。",
+        "evidence": [
+          "细草微风岸"
+        ]
+      },
+      {
+        "entity": "i3",
+        "tool_id": "landscape",
+        "fit": "approximate",
+        "reason": "山水场景工具可概括岸、地面等形态，但须选择具体形态，不能自动生成“岸”。",
+        "evidence": [
+          "细草微风岸"
+        ]
+      },
+      {
+        "entity": "i4",
+        "tool_id": null,
+        "fit": "not_drawn",
+        "reason": "舟工具不附加桅杆，目录无独立桅杆工具；无法可靠画出“危樯”。",
+        "evidence": [
+          "危樯独夜舟"
+        ]
+      },
+      {
+        "entity": "i5",
+        "tool_id": "boat",
+        "fit": "approximate",
+        "reason": "舟工具可画船体，但无桅杆、帆、桨、人物；可表现孤舟，不能表现“危樯”。",
+        "evidence": [
+          "危樯独夜舟"
+        ]
+      }
+    ],
+    "composition": "画面以夜晚水岸为背景：岸边细草与微风暗示的草叶轻摆，水面上一叶孤舟漂浮；舟上无桅杆可画，故“危樯”缺席。",
+    "expected": "可表现细草、岸、孤舟与夜色氛围；微风只能借草叶摆动间接暗示，危樯无法画出，夜晚暗度需依赖整体配色。",
+    "uncertainties": [
+      "“危樯”是否指桅杆本身还是借指整艘船，存在歧义。",
+      "“独”修饰舟，是否也暗示人的孤独，未明说。",
+      "微风为抽象环境，目录无直接工具，只能借草叶动态近似。",
+      "岸的具体形态需从山水工具中选择，不能自动生成。"
+    ]
+  },
+  "validation": {
+    "valid": true,
+    "errors": []
+  }
+}

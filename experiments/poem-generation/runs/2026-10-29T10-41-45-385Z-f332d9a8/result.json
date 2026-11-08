@@ -1,0 +1,27 @@
+{
+  "id": "2026-10-29T10-41-45-385Z-f332d9a8",
+  "fingerprint": "ff43471322add17c339e375a0b1f0ddb8dd59c8a355d67cb9c7183618f32dc79",
+  "semanticFingerprint": "eba1d2e46153da148f4b605e21e223d697df7159127441a0f3d3ef5e0b898f81",
+  "poem": "停车坐爱枫林晚，霜叶红于二月花。",
+  "source": null,
+  "mode": "expression",
+  "model": "DeepSeek-V4.1-Flash",
+  "started_at": "2026-10-29T10:41:45.386Z",
+  "cached": false,
+  "error": "fetch failed",
+  "validation": {
+    "valid": false,
+    "errors": [
+      "fetch failed"
+    ],
+    "warnings": [],
+    "review_required": true
+  },
+  "delivery": {
+    "status": "failed",
+    "retryable": true,
+    "reason": "connection-or-format",
+    "message": "这次分析未能完整返回，尚未生成本句画面。"
+  },
+  "elapsed_seconds": 0
+}

@@ -1,0 +1,29 @@
+{
+  "version": "generation-recovery-1.2",
+  "status": "normalized",
+  "reviewRequired": true,
+  "changes": [
+    {
+      "kind": "source-range-only",
+      "path": "scene.actions.0.evidence",
+      "original": [
+        "停歌罢笑双蛾摧"
+      ],
+      "effective": [
+        "幽州思妇十二月，停歌罢笑双蛾摧。"
+      ]
+    },
+    {
+      "kind": "source-range-only",
+      "path": "expression.processes.0.evidence",
+      "original": [
+        "停歌罢笑双蛾摧"
+      ],
+      "effective": [
+        "幽州思妇十二月，停歌罢笑双蛾摧。"
+      ]
+    }
+  ],
+  "omitted": [],
+  "message": "已完成格式或引用整理，解读仍可复核。"
+}

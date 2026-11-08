@@ -1,0 +1,5381 @@
+{
+  "id": "2026-11-08T05-05-40-333Z-382f78cc",
+  "fingerprint": "19a4fbdabb2e5e16bb3391eb82b78a5f46d2f7201a5730cd684257a315928d41",
+  "semanticFingerprint": "2b150693875116b0069a365a08c4c29415114a1aaf62477f8d31877afa73476d",
+  "poem": "细草微风岸，危樯独夜舟。",
+  "source": {
+    "provider": "陌生诗句试验",
+    "author": "杜甫",
+    "title": "旅夜书怀"
+  },
+  "mode": "expression",
+  "model": "DeepSeek-V4.1-Flash",
+  "started_at": "2026-11-08T05:05:40.334Z",
+  "cached": false,
+  "http_status": 200,
+  "usage": {
+    "completion_tokens": 936,
+    "prompt_tokens": 6061,
+    "total_tokens": 6997,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 6016
+    }
+  },
+  "finish_reason": "stop",
+  "analysis": {
+    "schema_version": "expression-1.0",
+    "poem": "细草微风岸，危樯独夜舟。",
+    "reading": "微风吹拂着岸边的细草，夜色中一叶孤舟立着高高的桅杆。",
+    "entities": [
+      {
+        "id": "i1",
+        "mentions": [
+          "细草"
+        ],
+        "concept": "细草",
+        "kind": "organism",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "细草微风岸"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i2",
+        "mentions": [
+          "微风"
+        ],
+        "concept": "微风",
+        "kind": "environment",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "细草微风岸"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i3",
+        "mentions": [
+          "岸"
+        ],
+        "concept": "岸",
+        "kind": "place",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "细草微风岸"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i4",
+        "mentions": [
+          "危樯"
+        ],
+        "concept": "高耸的桅杆",
+        "kind": "object",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "危樯独夜舟"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i5",
+        "mentions": [
+          "舟"
+        ],
+        "concept": "孤舟",
+        "kind": "object",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "危樯独夜舟"
+        ],
+        "quantity": {
+          "mode": "exact",
+          "min": 1,
+          "max": 1,
+          "unit": null,
+          "scope": "individual",
+          "extent": "local",
+          "evidence": [
+            "危樯独夜舟"
+          ]
+        }
+      }
+    ],
+    "relations": [],
+    "atmosphere": {
+      "labels": [
+        "孤寂",
+        "静谧"
+      ],
+      "valence": "neutral",
+      "energy": "low",
+      "tension": "low",
+      "openness": "medium",
+      "evidence": [
+        "细草微风岸",
+        "危樯独夜舟"
+      ]
+    },
+    "time": {
+      "markers": [
+        {
+          "surface": "夜",
+          "meaning": "夜晚时段"
+        }
+      ],
+      "note": null
+    },
+    "uncertainties": [
+      "“危樯”是否指桅杆本身还是借指整艘船，存在歧义。",
+      "“独”修饰舟，是否也暗示人的孤独，未明说。"
+    ],
+    "spatial": [
+      {
+        "type": "on",
+        "source": "i1",
+        "target": "i3",
+        "modality": "asserted",
+        "basis": "inferred",
+        "evidence": [
+          "细草微风岸"
+        ]
+      },
+      {
+        "type": "on",
+        "source": "i4",
+        "target": "i5",
+        "modality": "asserted",
+        "basis": "inferred",
+        "evidence": [
+          "危樯独夜舟"
+        ]
+      }
+    ],
+    "scene": {
+      "setting": {
+        "kind": "waterside",
+        "basis": "inferred",
+        "evidence": [
+          "细草微风岸",
+          "危樯独夜舟"
+        ]
+      },
+      "groups": [
+        {
+          "members": [
+            "i1",
+            "i2",
+            "i3"
+          ],
+          "role": "environment",
+          "pattern": "unspecified",
+          "depth": "unspecified",
+          "basis": "inferred",
+          "evidence": [
+            "细草微风岸"
+          ]
+        },
+        {
+          "members": [
+            "i4",
+            "i5"
+          ],
+          "role": "subject",
+          "pattern": "single",
+          "depth": "unspecified",
+          "basis": "inferred",
+          "evidence": [
+            "危樯独夜舟"
+          ]
+        }
+      ],
+      "supports": [
+        {
+          "entity": "i1",
+          "surface": "ground",
+          "target": "i3",
+          "basis": "inferred",
+          "evidence": [
+            "细草微风岸"
+          ]
+        },
+        {
+          "entity": "i5",
+          "surface": "water",
+          "target": null,
+          "basis": "inferred",
+          "evidence": [
+            "危樯独夜舟"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "entity": "i2",
+          "state": "flow",
+          "pace": "slow",
+          "direction": "unspecified",
+          "modality": "asserted",
+          "basis": "inferred",
+          "evidence": [
+            "细草微风岸"
+          ]
+        },
+        {
+          "entity": "i5",
+          "state": "float",
+          "pace": "unspecified",
+          "direction": "unspecified",
+          "modality": "asserted",
+          "basis": "inferred",
+          "evidence": [
+            "危樯独夜舟"
+          ]
+        }
+      ],
+      "atmosphere": {
+        "visibility": "dark",
+        "illumination": "night",
+        "basis": "explicit",
+        "evidence": [
+          "危樯独夜舟"
+        ]
+      }
+    },
+    "expression": {
+      "relations": [],
+      "processes": []
+    }
+  },
+  "validation": {
+    "valid": true,
+    "errors": [],
+    "warnings": [
+      "模型保留了不确定性，需要审阅",
+      "spatial[0] 的推断或非确定关系需审阅",
+      "spatial[1] 的推断或非确定关系需审阅",
+      "scene.setting 为语义推断，绘画选择需与原文明示区分",
+      "scene.groups[0] 为语义推断，绘画选择需与原文明示区分",
+      "scene.groups[1] 为语义推断，绘画选择需与原文明示区分",
+      "scene.supports[0] 为语义推断，绘画选择需与原文明示区分",
+      "scene.supports[1] 为语义推断，绘画选择需与原文明示区分",
+      "scene.actions[0] 为语义推断，绘画选择需与原文明示区分",
+      "scene.actions[1] 为语义推断，绘画选择需与原文明示区分"
+    ],
+    "review_required": true
+  },
+  "plan": {
+    "version": "shared-expression-1.1-source-bound",
+    "seed": 2453573253,
+    "poem": "细草微风岸，危樯独夜舟。",
+    "nodes": [
+      {
+        "id": "i1",
+        "label": "细草",
+        "meaning": "细草",
+        "kind": "concrete",
+        "contextOnly": false,
+        "mode": "present"
+      },
+      {
+        "id": "i2",
+        "label": "微风",
+        "meaning": "微风",
+        "kind": "concrete",
+        "contextOnly": false,
+        "mode": "present"
+      },
+      {
+        "id": "i3",
+        "label": "岸",
+        "meaning": "岸",
+        "kind": "concrete",
+        "contextOnly": false,
+        "mode": "present"
+      },
+      {
+        "id": "i4",
+        "label": "危樯",
+        "meaning": "高耸的桅杆",
+        "kind": "concrete",
+        "contextOnly": false,
+        "mode": "present"
+      },
+      {
+        "id": "i5",
+        "label": "舟",
+        "meaning": "孤舟",
+        "kind": "concrete",
+        "contextOnly": false,
+        "mode": "present"
+      }
+    ],
+    "relations": [],
+    "processes": [],
+    "omitted": [],
+    "atmosphere": {
+      "labels": [
+        "孤寂",
+        "静谧"
+      ],
+      "valence": "neutral",
+      "energy": "low",
+      "tension": "low",
+      "openness": "medium",
+      "evidence": [
+        "细草微风岸",
+        "危樯独夜舟"
+      ],
+      "illumination": "night"
+    },
+    "concretePlan": {
+      "version": "semantic-composition-3.3-source-bound",
+      "seed": 2453573253,
+      "settings": {
+        "wind": 0.45,
+        "density": 0.45,
+        "palette": "indigo",
+        "motion": 1.4
+      },
+      "layers": [
+        {
+          "tool": "landscape",
+          "entities": [
+            "i3"
+          ],
+          "projectedEntities": [],
+          "names": [
+            "岸"
+          ],
+          "options": {
+            "form": "shore",
+            "edge": "soft"
+          },
+          "animate": false,
+          "placement": {
+            "anchor": [
+              320,
+              194
+            ],
+            "at": [
+              0.5,
+              0.57
+            ],
+            "scale": 1.5
+          },
+          "semanticGroup": {
+            "members": [
+              "i1",
+              "i2",
+              "i3"
+            ],
+            "role": "environment",
+            "pattern": "unspecified",
+            "depth": "unspecified",
+            "basis": "inferred",
+            "evidence": [
+              "细草微风岸"
+            ],
+            "index": 0
+          },
+          "semanticEffects": [
+            {
+              "path": "scene.groups[0].role",
+              "consumer": "主次布局",
+              "effect": "保留环境画布范围，主次不改变地形边界",
+              "status": "applied"
+            },
+            {
+              "path": "scene.groups[0].pattern",
+              "consumer": "群落布局",
+              "effect": "群落形式未明，保持本地默认",
+              "status": "skipped"
+            },
+            {
+              "path": "scene.groups[0].depth",
+              "consumer": "远近布局",
+              "effect": "远近未明，保持本地默认",
+              "status": "skipped"
+            }
+          ],
+          "semanticEnergy": false,
+          "timeScale": 0.45,
+          "instances": [
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  194
+                ],
+                "at": [
+                  0.5,
+                  0.57
+                ],
+                "scale": 1.6
+              },
+              "depth": 0.05,
+              "opacity": 0.84,
+              "variant": 0,
+              "tone": "far",
+              "id": "i3:landscape:shore:0:0"
+            }
+          ],
+          "singleUnit": false,
+          "quantity": {
+            "items": [
+              {
+                "entity": "i3",
+                "mode": "unspecified",
+                "min": null,
+                "max": null,
+                "unit": null,
+                "scope": "unspecified",
+                "extent": "unspecified",
+                "evidence": [],
+                "basis": "model"
+              }
+            ],
+            "rendered": 1,
+            "exact": false,
+            "collective": false,
+            "partUnsupported": false
+          },
+          "quantityLabel": "整体笔触图层；内部数量尚未适配",
+          "z": -20,
+          "clip": [
+            [
+              -0.04,
+              0.99
+            ],
+            [
+              0.22,
+              0.86
+            ],
+            [
+              0.55,
+              0.79
+            ],
+            [
+              0.74,
+              0.87
+            ],
+            [
+              1.04,
+              0.98
+            ],
+            [
+              1.04,
+              1.04
+            ],
+            [
+              -0.04,
+              1.04
+            ]
+          ],
+          "visual": {
+            "role": "ground",
+            "brushStrength": 1.1
+          },
+          "performance": {
+            "rhythm": "steady",
+            "rate": 1,
+            "amplitude": 1,
+            "phase": 0
+          },
+          "id": "i3:landscape:shore:0",
+          "interaction": {
+            "mode": "group",
+            "groupId": "i3:landscape:shore:0"
+          },
+          "visibility": {
+            "protect": false,
+            "reasons": [],
+            "basis": "local-drawing-policy"
+          }
+        },
+        {
+          "tool": "boat",
+          "entities": [
+            "i5"
+          ],
+          "projectedEntities": [],
+          "names": [
+            "舟"
+          ],
+          "options": {},
+          "animate": true,
+          "placement": {
+            "anchor": [
+              320,
+              230
+            ],
+            "at": [
+              0.776523792125,
+              0.72
+            ],
+            "scale": 0.95
+          },
+          "semanticGroup": {
+            "members": [
+              "i4",
+              "i5"
+            ],
+            "role": "subject",
+            "pattern": "single",
+            "depth": "unspecified",
+            "basis": "inferred",
+            "evidence": [
+              "危樯独夜舟"
+            ],
+            "index": 1
+          },
+          "semanticEffects": [
+            {
+              "path": "scene.actions[1].state",
+              "consumer": "形态与绘画时钟",
+              "effect": "启用工具支持的 float 状态",
+              "status": "applied"
+            },
+            {
+              "path": "scene.actions[1].pace",
+              "consumer": "绘画时钟",
+              "effect": "定性节奏映射为语义基准时钟倍率 0.45；观看动态与景物节奏另行调节",
+              "status": "applied"
+            },
+            {
+              "path": "scene.actions[1].direction",
+              "consumer": "画布合成",
+              "effect": "方向未明，仅用本地小幅微动",
+              "status": "applied"
+            },
+            {
+              "path": "scene.groups[1].role",
+              "consumer": "主次布局",
+              "effect": "主体相对突出",
+              "status": "applied"
+            },
+            {
+              "path": "scene.groups[1].pattern",
+              "consumer": "群落布局",
+              "effect": "按 single 组织显示单元；不覆盖明确数量",
+              "status": "applied"
+            },
+            {
+              "path": "scene.groups[1].depth",
+              "consumer": "远近布局",
+              "effect": "远近未明，保持本地默认",
+              "status": "skipped"
+            }
+          ],
+          "semanticEnergy": true,
+          "timeScale": 0.45,
+          "semanticAction": {
+            "entity": "i5",
+            "state": "float",
+            "pace": "unspecified",
+            "direction": "unspecified",
+            "modality": "asserted",
+            "basis": "inferred",
+            "evidence": [
+              "危樯独夜舟"
+            ]
+          },
+          "motion": {
+            "kind": "drift",
+            "direction": "unspecified",
+            "rate": 0.45,
+            "state": "float"
+          },
+          "instances": [
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  230
+                ],
+                "at": [
+                  0.776523792125,
+                  0.72
+                ],
+                "scale": 0.8064
+              },
+              "depth": 0.05,
+              "opacity": 0.84,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i5:boat::1:0"
+            }
+          ],
+          "singleUnit": true,
+          "quantity": {
+            "items": [
+              {
+                "entity": "i5",
+                "mode": "exact",
+                "min": 1,
+                "max": 1,
+                "unit": null,
+                "scope": "individual",
+                "extent": "local",
+                "evidence": [
+                  "危樯独夜舟"
+                ],
+                "basis": "model"
+              }
+            ],
+            "rendered": 1,
+            "exact": true,
+            "collective": false,
+            "partUnsupported": false
+          },
+          "quantityLabel": "按提取数量绘制 1 个",
+          "semanticSupport": {
+            "surface": "water",
+            "target": null,
+            "path": "scene.supports[1]"
+          },
+          "z": 22,
+          "visual": {
+            "role": "architecture",
+            "brushStrength": 1.1
+          },
+          "performance": {
+            "rhythm": "steady",
+            "rate": 1,
+            "amplitude": 1,
+            "phase": 3.8830085198369844
+          },
+          "id": "i5:boat::1",
+          "interaction": {
+            "mode": "instance",
+            "groupId": "i5:boat::1"
+          },
+          "visibility": {
+            "protect": true,
+            "reasons": [
+              "recognizable-subject",
+              "semantic-subject"
+            ],
+            "basis": "local-drawing-policy"
+          }
+        },
+        {
+          "tool": "grass",
+          "entities": [
+            "i1"
+          ],
+          "projectedEntities": [],
+          "names": [
+            "细草"
+          ],
+          "options": {},
+          "animate": true,
+          "placement": {
+            "anchor": [
+              320,
+              315
+            ],
+            "at": [
+              0.5435687999600002,
+              0.8818689855072465
+            ],
+            "scale": 1
+          },
+          "semanticGroup": {
+            "members": [
+              "i1",
+              "i2",
+              "i3"
+            ],
+            "role": "environment",
+            "pattern": "unspecified",
+            "depth": "unspecified",
+            "basis": "inferred",
+            "evidence": [
+              "细草微风岸"
+            ],
+            "index": 0
+          },
+          "semanticEffects": [
+            {
+              "path": "scene.groups[0].role",
+              "consumer": "主次布局",
+              "effect": "保留环境群落层次",
+              "status": "applied"
+            },
+            {
+              "path": "scene.groups[0].pattern",
+              "consumer": "群落布局",
+              "effect": "群落形式未明，保持本地默认",
+              "status": "skipped"
+            },
+            {
+              "path": "scene.groups[0].depth",
+              "consumer": "远近布局",
+              "effect": "远近未明，保持本地默认",
+              "status": "skipped"
+            }
+          ],
+          "semanticEnergy": true,
+          "timeScale": 0.45,
+          "instances": [
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  310
+                ],
+                "at": [
+                  0.7578571428571428,
+                  0.8826086956521739
+                ],
+                "scale": 0.3263544185375
+              },
+              "depth": 20,
+              "opacity": 0.63756571011,
+              "variant": 2,
+              "tone": "near",
+              "id": "i1:grass::2:0"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  310
+                ],
+                "at": [
+                  0.5135714285714285,
+                  0.8121739130434784
+                ],
+                "scale": 0.276698837075
+              },
+              "depth": 10.01,
+              "opacity": 0.57339542022,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i1:grass::2:1"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  310
+                ],
+                "at": [
+                  0.2421428571428571,
+                  0.8591304347826088
+                ],
+                "scale": 0.22704325561250002
+              },
+              "depth": 20.02,
+              "opacity": 0.5092251303299999,
+              "variant": 2,
+              "tone": "near",
+              "id": "i1:grass::2:2"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  310
+                ],
+                "at": [
+                  0.6492857142857142,
+                  0.8356521739130436
+                ],
+                "scale": 0.30738767415
+              },
+              "depth": 20.03,
+              "opacity": 0.61305484044,
+              "variant": 2,
+              "tone": "near",
+              "id": "i1:grass::2:3"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  310
+                ],
+                "at": [
+                  0.4592857142857143,
+                  0.8121739130434784
+                ],
+                "scale": 0.2577320926875001
+              },
+              "depth": 10.04,
+              "opacity": 0.54888455055,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i1:grass::2:4"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  310
+                ],
+                "at": [
+                  0.8935714285714286,
+                  0.9295652173913044
+                ],
+                "scale": 0.33807651122500004
+              },
+              "depth": 20.05,
+              "opacity": 0.6527142606599999,
+              "variant": 2,
+              "tone": "near",
+              "id": "i1:grass::2:5"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  310
+                ],
+                "at": [
+                  0.595,
+                  0.8121739130434784
+                ],
+                "scale": 0.2884209297625001
+              },
+              "depth": 10.06,
+              "opacity": 0.5885439707700001,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i1:grass::2:6"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  310
+                ],
+                "at": [
+                  0.2421428571428571,
+                  0.8591304347826088
+                ],
+                "scale": 0.23876534830000004
+              },
+              "depth": 20.07,
+              "opacity": 0.52437368088,
+              "variant": 2,
+              "tone": "near",
+              "id": "i1:grass::2:7"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  310
+                ],
+                "at": [
+                  0.7578571428571428,
+                  0.8826086956521739
+                ],
+                "scale": 0.31910976683750003
+              },
+              "depth": 20.08,
+              "opacity": 0.62820339099,
+              "variant": 2,
+              "tone": "near",
+              "id": "i1:grass::2:8"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  310
+                ],
+                "at": [
+                  0.46203249987500067,
+                  0.9582
+                ],
+                "scale": 0.3794541853750001
+              },
+              "depth": 20.09,
+              "opacity": 0.7579497909900001,
+              "variant": 2,
+              "tone": "near",
+              "id": "i1:grass::2:9"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  310
+                ],
+                "at": [
+                  0.12208274986250045,
+                  0.9738
+                ],
+                "scale": 0.32979860391250004
+              },
+              "depth": 20.1,
+              "opacity": 0.700196530089,
+              "variant": 2,
+              "tone": "near",
+              "id": "i1:grass::2:10"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  310
+                ],
+                "at": [
+                  0.6721329998500002,
+                  0.9894000000000001
+                ],
+                "scale": 0.41014302245
+              },
+              "depth": 20.11,
+              "opacity": 0.793643269188,
+              "variant": 2,
+              "tone": "near",
+              "id": "i1:grass::2:11"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  310
+                ],
+                "at": [
+                  0.3507142857142857,
+                  0.8356521739130436
+                ],
+                "scale": 0.36048744098750013
+              },
+              "depth": 20.12,
+              "opacity": 0.735890008287,
+              "variant": 2,
+              "tone": "near",
+              "id": "i1:grass::2:12"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  310
+                ],
+                "at": [
+                  0.8935714285714286,
+                  0.9295652173913044
+                ],
+                "scale": 0.4408318595250003
+              },
+              "depth": 20.13,
+              "opacity": 0.8293367473860002,
+              "variant": 2,
+              "tone": "near",
+              "id": "i1:grass::2:13"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  310
+                ],
+                "at": [
+                  0.5422837498125018,
+                  0.8562000000000001
+                ],
+                "scale": 0.39117627806250027
+              },
+              "depth": 20.14,
+              "opacity": 0.7715834864850002,
+              "variant": 2,
+              "tone": "near",
+              "id": "i1:grass::2:14"
+            }
+          ],
+          "singleUnit": true,
+          "quantity": {
+            "items": [
+              {
+                "entity": "i1",
+                "mode": "unspecified",
+                "min": null,
+                "max": null,
+                "unit": null,
+                "scope": "unspecified",
+                "extent": "unspecified",
+                "evidence": [],
+                "basis": "model"
+              }
+            ],
+            "rendered": 15,
+            "exact": false,
+            "collective": false,
+            "partUnsupported": false
+          },
+          "quantityLabel": "数量未精确；本地试画 15 个单元",
+          "semanticSupport": {
+            "surface": "ground",
+            "target": "i3",
+            "path": "scene.supports[0]"
+          },
+          "z": 14,
+          "visual": {
+            "role": "vegetation",
+            "brushStrength": 1.2
+          },
+          "performance": {
+            "rhythm": "gust",
+            "rate": 0.62,
+            "amplitude": 0.65,
+            "phase": 1.4828317324943823
+          },
+          "id": "i1:grass::2",
+          "interaction": {
+            "mode": "instance",
+            "groupId": "i1:grass::2"
+          },
+          "visibility": {
+            "protect": false,
+            "reasons": [],
+            "basis": "local-drawing-policy"
+          }
+        },
+        {
+          "tool": "water",
+          "entities": [],
+          "projectedEntities": [],
+          "names": [
+            "构图依托·水域"
+          ],
+          "options": {
+            "form": "plane"
+          },
+          "animate": true,
+          "placement": {
+            "anchor": [
+              320,
+              135
+            ],
+            "at": [
+              0.5,
+              0.45
+            ],
+            "scale": 1.6
+          },
+          "instances": [
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  135
+                ],
+                "at": [
+                  0.5,
+                  0.45
+                ],
+                "scale": 1.65
+              },
+              "variant": 0,
+              "depth": 0,
+              "opacity": 0.84,
+              "tone": "far",
+              "id": "inferred:water:plane:3:0"
+            }
+          ],
+          "singleUnit": false,
+          "inferred": true,
+          "provenance": {
+            "basis": "local-context",
+            "reason": "模型解释的必要依托，依据：危樯独夜舟",
+            "semanticPath": "scene.supports[1]"
+          },
+          "quantity": {
+            "rendered": 1,
+            "exact": false,
+            "items": []
+          },
+          "quantityLabel": "本地环境依托，不计入原文意象覆盖",
+          "z": -10,
+          "clip": [
+            [
+              -0.04,
+              0.46
+            ],
+            [
+              1.04,
+              0.46
+            ],
+            [
+              1.04,
+              0.98
+            ],
+            [
+              0.74,
+              0.87
+            ],
+            [
+              0.55,
+              0.79
+            ],
+            [
+              0.22,
+              0.86
+            ],
+            [
+              -0.04,
+              0.99
+            ]
+          ],
+          "surface": {
+            "top": 0.46,
+            "bottom": 1
+          },
+          "visual": {
+            "role": "water",
+            "brushStrength": 1.35
+          },
+          "performance": {
+            "rhythm": "continuous",
+            "rate": 0.9,
+            "amplitude": 0.9,
+            "phase": 5.365840252331367
+          },
+          "id": "inferred:water:plane:3",
+          "interaction": {
+            "mode": "group",
+            "groupId": "inferred:water:plane:3"
+          },
+          "visibility": {
+            "protect": false,
+            "reasons": [],
+            "basis": "local-drawing-policy"
+          }
+        }
+      ],
+      "spatial": [
+        {
+          "type": "on",
+          "source": "i1",
+          "target": "i3",
+          "modality": "asserted",
+          "basis": "inferred",
+          "evidence": [
+            "细草微风岸"
+          ],
+          "visualized": true,
+          "reason": "主体以地表为共同依托；具体落点由本地场景区域安排"
+        },
+        {
+          "type": "on",
+          "source": "i4",
+          "target": "i5",
+          "modality": "asserted",
+          "basis": "inferred",
+          "evidence": [
+            "危樯独夜舟"
+          ],
+          "visualized": false,
+          "reason": "关系的一端缺少独立画法"
+        }
+      ],
+      "scene": {
+        "kind": "landscape",
+        "notes": [
+          "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。",
+          "通用场景层先组织地面、水域、群落和主体，再比较三个布局的依托、相对位置、尺度与遮挡；检查通过不代表审美已通过。"
+        ],
+        "waterline": null,
+        "semanticSetting": {
+          "kind": "waterside",
+          "basis": "inferred",
+          "evidence": [
+            "细草微风岸",
+            "危樯独夜舟"
+          ]
+        },
+        "semanticEffects": [
+          {
+            "path": "scene.supports[0]",
+            "consumer": "场景依托",
+            "status": "applied",
+            "effect": "使用已提取主体的现有承托画法"
+          },
+          {
+            "path": "scene.supports[1]",
+            "consumer": "场景依托",
+            "status": "applied",
+            "effect": "必要环境以独立推断背景表示，不新增原文实体"
+          }
+        ],
+        "organization": {
+          "version": "1.0",
+          "strategy": "general-constraints",
+          "regions": {
+            "water": [
+              [
+                -0.04,
+                0.46
+              ],
+              [
+                1.04,
+                0.46
+              ],
+              [
+                1.04,
+                0.98
+              ],
+              [
+                0.74,
+                0.87
+              ],
+              [
+                0.55,
+                0.79
+              ],
+              [
+                0.22,
+                0.86
+              ],
+              [
+                -0.04,
+                0.99
+              ]
+            ],
+            "land": [
+              [
+                -0.04,
+                0.99
+              ],
+              [
+                0.22,
+                0.86
+              ],
+              [
+                0.55,
+                0.79
+              ],
+              [
+                0.74,
+                0.87
+              ],
+              [
+                1.04,
+                0.98
+              ],
+              [
+                1.04,
+                1.04
+              ],
+              [
+                -0.04,
+                1.04
+              ]
+            ]
+          },
+          "candidates": [
+            {
+              "layout": 1,
+              "orientation": "曲岸开阔",
+              "errors": 0,
+              "cost": 60.937,
+              "score": 62.575,
+              "metrics": {
+                "overlapPenalty": 0,
+                "balancePenalty": 0.117,
+                "motifFootprint": 0.092,
+                "landArea": 0.175
+              }
+            },
+            {
+              "layout": 2,
+              "orientation": "斜江入远",
+              "errors": 0,
+              "cost": 75.811,
+              "score": 99.687,
+              "metrics": {
+                "overlapPenalty": 1.265,
+                "balancePenalty": 0.079,
+                "motifFootprint": 0.089,
+                "landArea": 0.381
+              }
+            },
+            {
+              "layout": 0,
+              "orientation": "横江远岸",
+              "errors": 0,
+              "cost": 96.22,
+              "score": 150.688,
+              "metrics": {
+                "overlapPenalty": 2.977,
+                "balancePenalty": 0.063,
+                "motifFootprint": 0.088,
+                "landArea": 0.279
+              }
+            }
+          ],
+          "repairs": [
+            {
+              "type": "support-added",
+              "reason": "模型解释的必要依托，依据：危樯独夜舟"
+            }
+          ],
+          "limitations": [
+            "几何检查不判定诗意理解或审美合格",
+            "动作时序与整首诗的场景切换尚未编排"
+          ],
+          "topology": "曲岸开阔",
+          "layout": 1,
+          "orientation": "曲岸开阔",
+          "audit": {
+            "scope": "implemented-geometry-and-drawing-gaps",
+            "coverage": {
+              "scope": "extracted-entities-only",
+              "present": 5,
+              "mapped": 3,
+              "parameters": [
+                "i2"
+              ],
+              "missing": [
+                {
+                  "id": "i4",
+                  "name": "危樯"
+                }
+              ]
+            },
+            "checks": [
+              "presence",
+              "count",
+              "finite",
+              "support",
+              "scale",
+              "relative-position",
+              "depth",
+              "grove-spread",
+              "drawing-gaps"
+            ],
+            "status": "needs-review",
+            "errors": 0,
+            "review": 2,
+            "issues": [
+              {
+                "code": "unresolved-relation",
+                "severity": "review",
+                "message": "有空间关系尚无对应布局画法"
+              },
+              {
+                "code": "drawing-gaps",
+                "severity": "review",
+                "message": "还有 1 项已提取线索尚未转成画面：危樯"
+              }
+            ],
+            "metrics": {
+              "overlapPenalty": 0,
+              "balancePenalty": 0.117,
+              "motifFootprint": 0.092,
+              "landArea": 0.175
+            },
+            "cost": 60.937,
+            "aestheticAcceptance": "pending-user"
+          },
+          "graph": {
+            "nodes": [
+              {
+                "id": "l0",
+                "entities": [
+                  "i3"
+                ],
+                "tool": "landscape",
+                "role": "terrain",
+                "habitat": null,
+                "inferred": false,
+                "support": null
+              },
+              {
+                "id": "l1",
+                "entities": [
+                  "i5"
+                ],
+                "tool": "boat",
+                "role": "subject",
+                "habitat": "water",
+                "inferred": false,
+                "support": "l3"
+              },
+              {
+                "id": "l2",
+                "entities": [
+                  "i1"
+                ],
+                "tool": "grass",
+                "role": "vegetation",
+                "habitat": "land",
+                "inferred": false,
+                "support": "l0"
+              },
+              {
+                "id": "l3",
+                "entities": [],
+                "tool": "water",
+                "role": "water",
+                "habitat": null,
+                "inferred": true,
+                "support": null
+              }
+            ],
+            "edges": [
+              {
+                "type": "supported-by",
+                "source": "l1",
+                "target": "l3",
+                "basis": "local-composition",
+                "habitat": "water"
+              },
+              {
+                "type": "supported-by",
+                "source": "l2",
+                "target": "l0",
+                "basis": "local-composition",
+                "habitat": "land"
+              },
+              {
+                "type": "on",
+                "source": "l2",
+                "target": "l0",
+                "basis": "inferred",
+                "modality": "asserted",
+                "evidence": [
+                  "细草微风岸"
+                ]
+              },
+              {
+                "type": "on",
+                "target": "l1",
+                "basis": "inferred",
+                "modality": "asserted",
+                "evidence": [
+                  "危樯独夜舟"
+                ]
+              }
+            ],
+            "setting": "landscape"
+          },
+          "actorSpacing": {
+            "version": "1.0",
+            "repairs": [],
+            "residualOverlap": 0,
+            "scope": "discrete-actors-not-intentional-occlusion"
+          }
+        },
+        "displayAudit": {
+          "scope": "display-scale-separation-and-habitat",
+          "issues": [],
+          "errors": 0,
+          "aestheticAcceptance": "pending-user"
+        }
+      },
+      "compositions": [
+        {
+          "id": "space-1",
+          "label": "曲岸开阔",
+          "description": "先安排连续水域与地表，再按主次与远近安放景物",
+          "layers": [
+            {
+              "tool": "landscape",
+              "entities": [
+                "i3"
+              ],
+              "projectedEntities": [],
+              "names": [
+                "岸"
+              ],
+              "options": {
+                "form": "shore",
+                "edge": "soft"
+              },
+              "animate": false,
+              "placement": {
+                "anchor": [
+                  320,
+                  194
+                ],
+                "at": [
+                  0.5,
+                  0.57
+                ],
+                "scale": 1.5
+              },
+              "semanticGroup": {
+                "members": [
+                  "i1",
+                  "i2",
+                  "i3"
+                ],
+                "role": "environment",
+                "pattern": "unspecified",
+                "depth": "unspecified",
+                "basis": "inferred",
+                "evidence": [
+                  "细草微风岸"
+                ],
+                "index": 0
+              },
+              "semanticEffects": [
+                {
+                  "path": "scene.groups[0].role",
+                  "consumer": "主次布局",
+                  "effect": "保留环境画布范围，主次不改变地形边界",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[0].pattern",
+                  "consumer": "群落布局",
+                  "effect": "群落形式未明，保持本地默认",
+                  "status": "skipped"
+                },
+                {
+                  "path": "scene.groups[0].depth",
+                  "consumer": "远近布局",
+                  "effect": "远近未明，保持本地默认",
+                  "status": "skipped"
+                }
+              ],
+              "semanticEnergy": false,
+              "timeScale": 0.45,
+              "instances": [
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      194
+                    ],
+                    "at": [
+                      0.5,
+                      0.57
+                    ],
+                    "scale": 1.6
+                  },
+                  "depth": 0.05,
+                  "opacity": 0.84,
+                  "variant": 0,
+                  "tone": "far",
+                  "id": "i3:landscape:shore:0:0"
+                }
+              ],
+              "singleUnit": false,
+              "quantity": {
+                "items": [
+                  {
+                    "entity": "i3",
+                    "mode": "unspecified",
+                    "min": null,
+                    "max": null,
+                    "unit": null,
+                    "scope": "unspecified",
+                    "extent": "unspecified",
+                    "evidence": [],
+                    "basis": "model"
+                  }
+                ],
+                "rendered": 1,
+                "exact": false,
+                "collective": false,
+                "partUnsupported": false
+              },
+              "quantityLabel": "整体笔触图层；内部数量尚未适配",
+              "z": -20,
+              "clip": [
+                [
+                  -0.04,
+                  0.99
+                ],
+                [
+                  0.22,
+                  0.86
+                ],
+                [
+                  0.55,
+                  0.79
+                ],
+                [
+                  0.74,
+                  0.87
+                ],
+                [
+                  1.04,
+                  0.98
+                ],
+                [
+                  1.04,
+                  1.04
+                ],
+                [
+                  -0.04,
+                  1.04
+                ]
+              ],
+              "visual": {
+                "role": "ground",
+                "brushStrength": 1.1
+              },
+              "performance": {
+                "rhythm": "steady",
+                "rate": 1,
+                "amplitude": 1,
+                "phase": 0
+              },
+              "id": "i3:landscape:shore:0",
+              "interaction": {
+                "mode": "group",
+                "groupId": "i3:landscape:shore:0"
+              },
+              "visibility": {
+                "protect": false,
+                "reasons": [],
+                "basis": "local-drawing-policy"
+              }
+            },
+            {
+              "tool": "boat",
+              "entities": [
+                "i5"
+              ],
+              "projectedEntities": [],
+              "names": [
+                "舟"
+              ],
+              "options": {},
+              "animate": true,
+              "placement": {
+                "anchor": [
+                  320,
+                  230
+                ],
+                "at": [
+                  0.776523792125,
+                  0.72
+                ],
+                "scale": 0.95
+              },
+              "semanticGroup": {
+                "members": [
+                  "i4",
+                  "i5"
+                ],
+                "role": "subject",
+                "pattern": "single",
+                "depth": "unspecified",
+                "basis": "inferred",
+                "evidence": [
+                  "危樯独夜舟"
+                ],
+                "index": 1
+              },
+              "semanticEffects": [
+                {
+                  "path": "scene.actions[1].state",
+                  "consumer": "形态与绘画时钟",
+                  "effect": "启用工具支持的 float 状态",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.actions[1].pace",
+                  "consumer": "绘画时钟",
+                  "effect": "定性节奏映射为语义基准时钟倍率 0.45；观看动态与景物节奏另行调节",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.actions[1].direction",
+                  "consumer": "画布合成",
+                  "effect": "方向未明，仅用本地小幅微动",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[1].role",
+                  "consumer": "主次布局",
+                  "effect": "主体相对突出",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[1].pattern",
+                  "consumer": "群落布局",
+                  "effect": "按 single 组织显示单元；不覆盖明确数量",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[1].depth",
+                  "consumer": "远近布局",
+                  "effect": "远近未明，保持本地默认",
+                  "status": "skipped"
+                }
+              ],
+              "semanticEnergy": true,
+              "timeScale": 0.45,
+              "semanticAction": {
+                "entity": "i5",
+                "state": "float",
+                "pace": "unspecified",
+                "direction": "unspecified",
+                "modality": "asserted",
+                "basis": "inferred",
+                "evidence": [
+                  "危樯独夜舟"
+                ]
+              },
+              "motion": {
+                "kind": "drift",
+                "direction": "unspecified",
+                "rate": 0.45,
+                "state": "float"
+              },
+              "instances": [
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      230
+                    ],
+                    "at": [
+                      0.776523792125,
+                      0.72
+                    ],
+                    "scale": 0.8064
+                  },
+                  "depth": 0.05,
+                  "opacity": 0.84,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i5:boat::1:0"
+                }
+              ],
+              "singleUnit": true,
+              "quantity": {
+                "items": [
+                  {
+                    "entity": "i5",
+                    "mode": "exact",
+                    "min": 1,
+                    "max": 1,
+                    "unit": null,
+                    "scope": "individual",
+                    "extent": "local",
+                    "evidence": [
+                      "危樯独夜舟"
+                    ],
+                    "basis": "model"
+                  }
+                ],
+                "rendered": 1,
+                "exact": true,
+                "collective": false,
+                "partUnsupported": false
+              },
+              "quantityLabel": "按提取数量绘制 1 个",
+              "semanticSupport": {
+                "surface": "water",
+                "target": null,
+                "path": "scene.supports[1]"
+              },
+              "z": 22,
+              "visual": {
+                "role": "architecture",
+                "brushStrength": 1.1
+              },
+              "performance": {
+                "rhythm": "steady",
+                "rate": 1,
+                "amplitude": 1,
+                "phase": 3.8830085198369844
+              },
+              "id": "i5:boat::1",
+              "interaction": {
+                "mode": "instance",
+                "groupId": "i5:boat::1"
+              },
+              "visibility": {
+                "protect": true,
+                "reasons": [
+                  "recognizable-subject",
+                  "semantic-subject"
+                ],
+                "basis": "local-drawing-policy"
+              }
+            },
+            {
+              "tool": "grass",
+              "entities": [
+                "i1"
+              ],
+              "projectedEntities": [],
+              "names": [
+                "细草"
+              ],
+              "options": {},
+              "animate": true,
+              "placement": {
+                "anchor": [
+                  320,
+                  315
+                ],
+                "at": [
+                  0.5435687999600002,
+                  0.8818689855072465
+                ],
+                "scale": 1
+              },
+              "semanticGroup": {
+                "members": [
+                  "i1",
+                  "i2",
+                  "i3"
+                ],
+                "role": "environment",
+                "pattern": "unspecified",
+                "depth": "unspecified",
+                "basis": "inferred",
+                "evidence": [
+                  "细草微风岸"
+                ],
+                "index": 0
+              },
+              "semanticEffects": [
+                {
+                  "path": "scene.groups[0].role",
+                  "consumer": "主次布局",
+                  "effect": "保留环境群落层次",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[0].pattern",
+                  "consumer": "群落布局",
+                  "effect": "群落形式未明，保持本地默认",
+                  "status": "skipped"
+                },
+                {
+                  "path": "scene.groups[0].depth",
+                  "consumer": "远近布局",
+                  "effect": "远近未明，保持本地默认",
+                  "status": "skipped"
+                }
+              ],
+              "semanticEnergy": true,
+              "timeScale": 0.45,
+              "instances": [
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      310
+                    ],
+                    "at": [
+                      0.7578571428571428,
+                      0.8826086956521739
+                    ],
+                    "scale": 0.3263544185375
+                  },
+                  "depth": 20,
+                  "opacity": 0.63756571011,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i1:grass::2:0"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      310
+                    ],
+                    "at": [
+                      0.5135714285714285,
+                      0.8121739130434784
+                    ],
+                    "scale": 0.276698837075
+                  },
+                  "depth": 10.01,
+                  "opacity": 0.57339542022,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i1:grass::2:1"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      310
+                    ],
+                    "at": [
+                      0.2421428571428571,
+                      0.8591304347826088
+                    ],
+                    "scale": 0.22704325561250002
+                  },
+                  "depth": 20.02,
+                  "opacity": 0.5092251303299999,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i1:grass::2:2"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      310
+                    ],
+                    "at": [
+                      0.6492857142857142,
+                      0.8356521739130436
+                    ],
+                    "scale": 0.30738767415
+                  },
+                  "depth": 20.03,
+                  "opacity": 0.61305484044,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i1:grass::2:3"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      310
+                    ],
+                    "at": [
+                      0.4592857142857143,
+                      0.8121739130434784
+                    ],
+                    "scale": 0.2577320926875001
+                  },
+                  "depth": 10.04,
+                  "opacity": 0.54888455055,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i1:grass::2:4"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      310
+                    ],
+                    "at": [
+                      0.8935714285714286,
+                      0.9295652173913044
+                    ],
+                    "scale": 0.33807651122500004
+                  },
+                  "depth": 20.05,
+                  "opacity": 0.6527142606599999,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i1:grass::2:5"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      310
+                    ],
+                    "at": [
+                      0.595,
+                      0.8121739130434784
+                    ],
+                    "scale": 0.2884209297625001
+                  },
+                  "depth": 10.06,
+                  "opacity": 0.5885439707700001,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i1:grass::2:6"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      310
+                    ],
+                    "at": [
+                      0.2421428571428571,
+                      0.8591304347826088
+                    ],
+                    "scale": 0.23876534830000004
+                  },
+                  "depth": 20.07,
+                  "opacity": 0.52437368088,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i1:grass::2:7"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      310
+                    ],
+                    "at": [
+                      0.7578571428571428,
+                      0.8826086956521739
+                    ],
+                    "scale": 0.31910976683750003
+                  },
+                  "depth": 20.08,
+                  "opacity": 0.62820339099,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i1:grass::2:8"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      310
+                    ],
+                    "at": [
+                      0.46203249987500067,
+                      0.9582
+                    ],
+                    "scale": 0.3794541853750001
+                  },
+                  "depth": 20.09,
+                  "opacity": 0.7579497909900001,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i1:grass::2:9"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      310
+                    ],
+                    "at": [
+                      0.12208274986250045,
+                      0.9738
+                    ],
+                    "scale": 0.32979860391250004
+                  },
+                  "depth": 20.1,
+                  "opacity": 0.700196530089,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i1:grass::2:10"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      310
+                    ],
+                    "at": [
+                      0.6721329998500002,
+                      0.9894000000000001
+                    ],
+                    "scale": 0.41014302245
+                  },
+                  "depth": 20.11,
+                  "opacity": 0.793643269188,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i1:grass::2:11"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      310
+                    ],
+                    "at": [
+                      0.3507142857142857,
+                      0.8356521739130436
+                    ],
+                    "scale": 0.36048744098750013
+                  },
+                  "depth": 20.12,
+                  "opacity": 0.735890008287,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i1:grass::2:12"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      310
+                    ],
+                    "at": [
+                      0.8935714285714286,
+                      0.9295652173913044
+                    ],
+                    "scale": 0.4408318595250003
+                  },
+                  "depth": 20.13,
+                  "opacity": 0.8293367473860002,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i1:grass::2:13"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      310
+                    ],
+                    "at": [
+                      0.5422837498125018,
+                      0.8562000000000001
+                    ],
+                    "scale": 0.39117627806250027
+                  },
+                  "depth": 20.14,
+                  "opacity": 0.7715834864850002,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i1:grass::2:14"
+                }
+              ],
+              "singleUnit": true,
+              "quantity": {
+                "items": [
+                  {
+                    "entity": "i1",
+                    "mode": "unspecified",
+                    "min": null,
+                    "max": null,
+                    "unit": null,
+                    "scope": "unspecified",
+                    "extent": "unspecified",
+                    "evidence": [],
+                    "basis": "model"
+                  }
+                ],
+                "rendered": 15,
+                "exact": false,
+                "collective": false,
+                "partUnsupported": false
+              },
+              "quantityLabel": "数量未精确；本地试画 15 个单元",
+              "semanticSupport": {
+                "surface": "ground",
+                "target": "i3",
+                "path": "scene.supports[0]"
+              },
+              "z": 14,
+              "visual": {
+                "role": "vegetation",
+                "brushStrength": 1.2
+              },
+              "performance": {
+                "rhythm": "gust",
+                "rate": 0.62,
+                "amplitude": 0.65,
+                "phase": 1.4828317324943823
+              },
+              "id": "i1:grass::2",
+              "interaction": {
+                "mode": "instance",
+                "groupId": "i1:grass::2"
+              },
+              "visibility": {
+                "protect": false,
+                "reasons": [],
+                "basis": "local-drawing-policy"
+              }
+            },
+            {
+              "tool": "water",
+              "entities": [],
+              "projectedEntities": [],
+              "names": [
+                "构图依托·水域"
+              ],
+              "options": {
+                "form": "plane"
+              },
+              "animate": true,
+              "placement": {
+                "anchor": [
+                  320,
+                  135
+                ],
+                "at": [
+                  0.5,
+                  0.45
+                ],
+                "scale": 1.6
+              },
+              "instances": [
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      135
+                    ],
+                    "at": [
+                      0.5,
+                      0.45
+                    ],
+                    "scale": 1.65
+                  },
+                  "variant": 0,
+                  "depth": 0,
+                  "opacity": 0.84,
+                  "tone": "far",
+                  "id": "inferred:water:plane:3:0"
+                }
+              ],
+              "singleUnit": false,
+              "inferred": true,
+              "provenance": {
+                "basis": "local-context",
+                "reason": "模型解释的必要依托，依据：危樯独夜舟",
+                "semanticPath": "scene.supports[1]"
+              },
+              "quantity": {
+                "rendered": 1,
+                "exact": false,
+                "items": []
+              },
+              "quantityLabel": "本地环境依托，不计入原文意象覆盖",
+              "z": -10,
+              "clip": [
+                [
+                  -0.04,
+                  0.46
+                ],
+                [
+                  1.04,
+                  0.46
+                ],
+                [
+                  1.04,
+                  0.98
+                ],
+                [
+                  0.74,
+                  0.87
+                ],
+                [
+                  0.55,
+                  0.79
+                ],
+                [
+                  0.22,
+                  0.86
+                ],
+                [
+                  -0.04,
+                  0.99
+                ]
+              ],
+              "surface": {
+                "top": 0.46,
+                "bottom": 1
+              },
+              "visual": {
+                "role": "water",
+                "brushStrength": 1.35
+              },
+              "performance": {
+                "rhythm": "continuous",
+                "rate": 0.9,
+                "amplitude": 0.9,
+                "phase": 5.365840252331367
+              },
+              "id": "inferred:water:plane:3",
+              "interaction": {
+                "mode": "group",
+                "groupId": "inferred:water:plane:3"
+              },
+              "visibility": {
+                "protect": false,
+                "reasons": [],
+                "basis": "local-drawing-policy"
+              }
+            }
+          ],
+          "scene": {
+            "kind": "landscape",
+            "notes": [
+              "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。",
+              "通用场景层先组织地面、水域、群落和主体，再比较三个布局的依托、相对位置、尺度与遮挡；检查通过不代表审美已通过。"
+            ],
+            "waterline": null,
+            "semanticSetting": {
+              "kind": "waterside",
+              "basis": "inferred",
+              "evidence": [
+                "细草微风岸",
+                "危樯独夜舟"
+              ]
+            },
+            "semanticEffects": [
+              {
+                "path": "scene.supports[0]",
+                "consumer": "场景依托",
+                "status": "applied",
+                "effect": "使用已提取主体的现有承托画法"
+              },
+              {
+                "path": "scene.supports[1]",
+                "consumer": "场景依托",
+                "status": "applied",
+                "effect": "必要环境以独立推断背景表示，不新增原文实体"
+              }
+            ],
+            "organization": {
+              "version": "1.0",
+              "strategy": "general-constraints",
+              "regions": {
+                "water": [
+                  [
+                    -0.04,
+                    0.46
+                  ],
+                  [
+                    1.04,
+                    0.46
+                  ],
+                  [
+                    1.04,
+                    0.98
+                  ],
+                  [
+                    0.74,
+                    0.87
+                  ],
+                  [
+                    0.55,
+                    0.79
+                  ],
+                  [
+                    0.22,
+                    0.86
+                  ],
+                  [
+                    -0.04,
+                    0.99
+                  ]
+                ],
+                "land": [
+                  [
+                    -0.04,
+                    0.99
+                  ],
+                  [
+                    0.22,
+                    0.86
+                  ],
+                  [
+                    0.55,
+                    0.79
+                  ],
+                  [
+                    0.74,
+                    0.87
+                  ],
+                  [
+                    1.04,
+                    0.98
+                  ],
+                  [
+                    1.04,
+                    1.04
+                  ],
+                  [
+                    -0.04,
+                    1.04
+                  ]
+                ]
+              },
+              "candidates": [
+                {
+                  "layout": 1,
+                  "orientation": "曲岸开阔",
+                  "errors": 0,
+                  "cost": 60.937,
+                  "score": 62.575,
+                  "metrics": {
+                    "overlapPenalty": 0,
+                    "balancePenalty": 0.117,
+                    "motifFootprint": 0.092,
+                    "landArea": 0.175
+                  }
+                },
+                {
+                  "layout": 2,
+                  "orientation": "斜江入远",
+                  "errors": 0,
+                  "cost": 75.811,
+                  "score": 99.687,
+                  "metrics": {
+                    "overlapPenalty": 1.265,
+                    "balancePenalty": 0.079,
+                    "motifFootprint": 0.089,
+                    "landArea": 0.381
+                  }
+                },
+                {
+                  "layout": 0,
+                  "orientation": "横江远岸",
+                  "errors": 0,
+                  "cost": 96.22,
+                  "score": 150.688,
+                  "metrics": {
+                    "overlapPenalty": 2.977,
+                    "balancePenalty": 0.063,
+                    "motifFootprint": 0.088,
+                    "landArea": 0.279
+                  }
+                }
+              ],
+              "repairs": [
+                {
+                  "type": "support-added",
+                  "reason": "模型解释的必要依托，依据：危樯独夜舟"
+                }
+              ],
+              "limitations": [
+                "几何检查不判定诗意理解或审美合格",
+                "动作时序与整首诗的场景切换尚未编排"
+              ],
+              "topology": "曲岸开阔",
+              "layout": 1,
+              "orientation": "曲岸开阔",
+              "audit": {
+                "scope": "implemented-geometry-and-drawing-gaps",
+                "coverage": {
+                  "scope": "extracted-entities-only",
+                  "present": 5,
+                  "mapped": 3,
+                  "parameters": [
+                    "i2"
+                  ],
+                  "missing": [
+                    {
+                      "id": "i4",
+                      "name": "危樯"
+                    }
+                  ]
+                },
+                "checks": [
+                  "presence",
+                  "count",
+                  "finite",
+                  "support",
+                  "scale",
+                  "relative-position",
+                  "depth",
+                  "grove-spread",
+                  "drawing-gaps"
+                ],
+                "status": "needs-review",
+                "errors": 0,
+                "review": 2,
+                "issues": [
+                  {
+                    "code": "unresolved-relation",
+                    "severity": "review",
+                    "message": "有空间关系尚无对应布局画法"
+                  },
+                  {
+                    "code": "drawing-gaps",
+                    "severity": "review",
+                    "message": "还有 1 项已提取线索尚未转成画面：危樯"
+                  }
+                ],
+                "metrics": {
+                  "overlapPenalty": 0,
+                  "balancePenalty": 0.117,
+                  "motifFootprint": 0.092,
+                  "landArea": 0.175
+                },
+                "cost": 60.937,
+                "aestheticAcceptance": "pending-user"
+              },
+              "graph": {
+                "nodes": [
+                  {
+                    "id": "l0",
+                    "entities": [
+                      "i3"
+                    ],
+                    "tool": "landscape",
+                    "role": "terrain",
+                    "habitat": null,
+                    "inferred": false,
+                    "support": null
+                  },
+                  {
+                    "id": "l1",
+                    "entities": [
+                      "i5"
+                    ],
+                    "tool": "boat",
+                    "role": "subject",
+                    "habitat": "water",
+                    "inferred": false,
+                    "support": "l3"
+                  },
+                  {
+                    "id": "l2",
+                    "entities": [
+                      "i1"
+                    ],
+                    "tool": "grass",
+                    "role": "vegetation",
+                    "habitat": "land",
+                    "inferred": false,
+                    "support": "l0"
+                  },
+                  {
+                    "id": "l3",
+                    "entities": [],
+                    "tool": "water",
+                    "role": "water",
+                    "habitat": null,
+                    "inferred": true,
+                    "support": null
+                  }
+                ],
+                "edges": [
+                  {
+                    "type": "supported-by",
+                    "source": "l1",
+                    "target": "l3",
+                    "basis": "local-composition",
+                    "habitat": "water"
+                  },
+                  {
+                    "type": "supported-by",
+                    "source": "l2",
+                    "target": "l0",
+                    "basis": "local-composition",
+                    "habitat": "land"
+                  },
+                  {
+                    "type": "on",
+                    "source": "l2",
+                    "target": "l0",
+                    "basis": "inferred",
+                    "modality": "asserted",
+                    "evidence": [
+                      "细草微风岸"
+                    ]
+                  },
+                  {
+                    "type": "on",
+                    "target": "l1",
+                    "basis": "inferred",
+                    "modality": "asserted",
+                    "evidence": [
+                      "危樯独夜舟"
+                    ]
+                  }
+                ],
+                "setting": "landscape"
+              },
+              "actorSpacing": {
+                "version": "1.0",
+                "repairs": [],
+                "residualOverlap": 0,
+                "scope": "discrete-actors-not-intentional-occlusion"
+              }
+            },
+            "displayAudit": {
+              "scope": "display-scale-separation-and-habitat",
+              "issues": [],
+              "errors": 0,
+              "aestheticAcceptance": "pending-user"
+            }
+          },
+          "spatial": [
+            {
+              "type": "on",
+              "source": "i1",
+              "target": "i3",
+              "modality": "asserted",
+              "basis": "inferred",
+              "evidence": [
+                "细草微风岸"
+              ],
+              "visualized": true,
+              "reason": "主体以地表为共同依托；具体落点由本地场景区域安排"
+            },
+            {
+              "type": "on",
+              "source": "i4",
+              "target": "i5",
+              "modality": "asserted",
+              "basis": "inferred",
+              "evidence": [
+                "危樯独夜舟"
+              ],
+              "visualized": false,
+              "reason": "关系的一端缺少独立画法"
+            }
+          ],
+          "landscapeStyle": {
+            "version": "1.0",
+            "color": "role-and-distance",
+            "motion": "layer-rhythms",
+            "aestheticAcceptance": "pending-user"
+          }
+        },
+        {
+          "id": "space-2",
+          "label": "斜江入远",
+          "description": "先安排连续水域与地表，再按主次与远近安放景物",
+          "layers": [
+            {
+              "tool": "landscape",
+              "entities": [
+                "i3"
+              ],
+              "projectedEntities": [],
+              "names": [
+                "岸"
+              ],
+              "options": {
+                "form": "shore",
+                "edge": "soft"
+              },
+              "animate": false,
+              "placement": {
+                "anchor": [
+                  320,
+                  194
+                ],
+                "at": [
+                  0.5,
+                  0.57
+                ],
+                "scale": 1.5
+              },
+              "semanticGroup": {
+                "members": [
+                  "i1",
+                  "i2",
+                  "i3"
+                ],
+                "role": "environment",
+                "pattern": "unspecified",
+                "depth": "unspecified",
+                "basis": "inferred",
+                "evidence": [
+                  "细草微风岸"
+                ],
+                "index": 0
+              },
+              "semanticEffects": [
+                {
+                  "path": "scene.groups[0].role",
+                  "consumer": "主次布局",
+                  "effect": "保留环境画布范围，主次不改变地形边界",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[0].pattern",
+                  "consumer": "群落布局",
+                  "effect": "群落形式未明，保持本地默认",
+                  "status": "skipped"
+                },
+                {
+                  "path": "scene.groups[0].depth",
+                  "consumer": "远近布局",
+                  "effect": "远近未明，保持本地默认",
+                  "status": "skipped"
+                }
+              ],
+              "semanticEnergy": false,
+              "timeScale": 0.45,
+              "instances": [
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      194
+                    ],
+                    "at": [
+                      0.5,
+                      0.57
+                    ],
+                    "scale": 1.6
+                  },
+                  "depth": 0.05,
+                  "opacity": 1,
+                  "variant": 0,
+                  "tone": "far",
+                  "id": "i3:landscape:shore:0:0"
+                }
+              ],
+              "singleUnit": false,
+              "quantity": {
+                "items": [
+                  {
+                    "entity": "i3",
+                    "mode": "unspecified",
+                    "min": null,
+                    "max": null,
+                    "unit": null,
+                    "scope": "unspecified",
+                    "extent": "unspecified",
+                    "evidence": [],
+                    "basis": "model"
+                  }
+                ],
+                "rendered": 1,
+                "exact": false,
+                "collective": false,
+                "partUnsupported": false
+              },
+              "quantityLabel": "整体笔触图层；内部数量尚未适配",
+              "z": -20,
+              "clip": [
+                [
+                  -0.04,
+                  0.43
+                ],
+                [
+                  1.04,
+                  0.43
+                ],
+                [
+                  1.04,
+                  1.04
+                ],
+                [
+                  0.5800000000000001,
+                  1.04
+                ],
+                [
+                  0.68,
+                  0.82
+                ],
+                [
+                  0.85,
+                  0.65
+                ],
+                [
+                  0.89,
+                  0.48
+                ],
+                [
+                  0.63,
+                  0.48
+                ],
+                [
+                  0.43000000000000005,
+                  0.65
+                ],
+                [
+                  0.12,
+                  0.82
+                ],
+                [
+                  -0.10000000000000003,
+                  1.04
+                ],
+                [
+                  -0.04,
+                  1.04
+                ]
+              ],
+              "visual": {
+                "role": "ground",
+                "brushStrength": 1.1
+              },
+              "performance": {
+                "rhythm": "steady",
+                "rate": 1,
+                "amplitude": 1,
+                "phase": 0
+              },
+              "id": "i3:landscape:shore:0",
+              "interaction": {
+                "mode": "group",
+                "groupId": "i3:landscape:shore:0"
+              },
+              "visibility": {
+                "protect": false,
+                "reasons": [],
+                "basis": "local-drawing-policy"
+              }
+            },
+            {
+              "tool": "boat",
+              "entities": [
+                "i5"
+              ],
+              "projectedEntities": [],
+              "names": [
+                "舟"
+              ],
+              "options": {},
+              "animate": true,
+              "placement": {
+                "anchor": [
+                  320,
+                  230
+                ],
+                "at": [
+                  0.7849999999999999,
+                  0.6947826086956522
+                ],
+                "scale": 0.95
+              },
+              "semanticGroup": {
+                "members": [
+                  "i4",
+                  "i5"
+                ],
+                "role": "subject",
+                "pattern": "single",
+                "depth": "unspecified",
+                "basis": "inferred",
+                "evidence": [
+                  "危樯独夜舟"
+                ],
+                "index": 1
+              },
+              "semanticEffects": [
+                {
+                  "path": "scene.actions[1].state",
+                  "consumer": "形态与绘画时钟",
+                  "effect": "启用工具支持的 float 状态",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.actions[1].pace",
+                  "consumer": "绘画时钟",
+                  "effect": "定性节奏映射为语义基准时钟倍率 0.45；观看动态与景物节奏另行调节",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.actions[1].direction",
+                  "consumer": "画布合成",
+                  "effect": "方向未明，仅用本地小幅微动",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[1].role",
+                  "consumer": "主次布局",
+                  "effect": "主体相对突出",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[1].pattern",
+                  "consumer": "群落布局",
+                  "effect": "按 single 组织显示单元；不覆盖明确数量",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[1].depth",
+                  "consumer": "远近布局",
+                  "effect": "远近未明，保持本地默认",
+                  "status": "skipped"
+                }
+              ],
+              "semanticEnergy": true,
+              "timeScale": 0.45,
+              "semanticAction": {
+                "entity": "i5",
+                "state": "float",
+                "pace": "unspecified",
+                "direction": "unspecified",
+                "modality": "asserted",
+                "basis": "inferred",
+                "evidence": [
+                  "危樯独夜舟"
+                ]
+              },
+              "motion": {
+                "kind": "drift",
+                "direction": "unspecified",
+                "rate": 0.45,
+                "state": "float"
+              },
+              "instances": [
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      230
+                    ],
+                    "at": [
+                      0.7849999999999999,
+                      0.6947826086956522
+                    ],
+                    "scale": 0.8064
+                  },
+                  "depth": 0.05,
+                  "opacity": 1,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i5:boat::1:0"
+                }
+              ],
+              "singleUnit": true,
+              "quantity": {
+                "items": [
+                  {
+                    "entity": "i5",
+                    "mode": "exact",
+                    "min": 1,
+                    "max": 1,
+                    "unit": null,
+                    "scope": "individual",
+                    "extent": "local",
+                    "evidence": [
+                      "危樯独夜舟"
+                    ],
+                    "basis": "model"
+                  }
+                ],
+                "rendered": 1,
+                "exact": true,
+                "collective": false,
+                "partUnsupported": false
+              },
+              "quantityLabel": "按提取数量绘制 1 个",
+              "semanticSupport": {
+                "surface": "water",
+                "target": null,
+                "path": "scene.supports[1]"
+              },
+              "z": 22,
+              "visual": {
+                "role": "architecture",
+                "brushStrength": 1.1
+              },
+              "performance": {
+                "rhythm": "steady",
+                "rate": 1,
+                "amplitude": 1,
+                "phase": 3.8830085198369844
+              },
+              "id": "i5:boat::1",
+              "interaction": {
+                "mode": "instance",
+                "groupId": "i5:boat::1"
+              },
+              "visibility": {
+                "protect": true,
+                "reasons": [
+                  "recognizable-subject",
+                  "semantic-subject"
+                ],
+                "basis": "local-drawing-policy"
+              }
+            },
+            {
+              "tool": "grass",
+              "entities": [
+                "i1"
+              ],
+              "projectedEntities": [],
+              "names": [
+                "细草"
+              ],
+              "options": {},
+              "animate": true,
+              "placement": {
+                "anchor": [
+                  320,
+                  315
+                ],
+                "at": [
+                  0.49022694043869064,
+                  0.7614985507246377
+                ],
+                "scale": 1
+              },
+              "semanticGroup": {
+                "members": [
+                  "i1",
+                  "i2",
+                  "i3"
+                ],
+                "role": "environment",
+                "pattern": "unspecified",
+                "depth": "unspecified",
+                "basis": "inferred",
+                "evidence": [
+                  "细草微风岸"
+                ],
+                "index": 0
+              },
+              "semanticEffects": [
+                {
+                  "path": "scene.groups[0].role",
+                  "consumer": "主次布局",
+                  "effect": "保留环境群落层次",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[0].pattern",
+                  "consumer": "群落布局",
+                  "effect": "群落形式未明，保持本地默认",
+                  "status": "skipped"
+                },
+                {
+                  "path": "scene.groups[0].depth",
+                  "consumer": "远近布局",
+                  "effect": "远近未明，保持本地默认",
+                  "status": "skipped"
+                }
+              ],
+              "semanticEnergy": true,
+              "timeScale": 0.45,
+              "instances": [
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      310
+                    ],
+                    "at": [
+                      0.9165502499875002,
+                      0.6184999999999999
+                    ],
+                    "scale": 0.3358444185375
+                  },
+                  "depth": 0,
+                  "opacity": 0.77360679775,
+                  "variant": 0,
+                  "tone": "far",
+                  "id": "i1:grass::2:0"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      310
+                    ],
+                    "at": [
+                      0.5135714285714285,
+                      0.5773913043478262
+                    ],
+                    "scale": 0.286188837075
+                  },
+                  "depth": 0.01,
+                  "opacity": 0.6972135955,
+                  "variant": 0,
+                  "tone": "far",
+                  "id": "i1:grass::2:1"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      310
+                    ],
+                    "at": [
+                      0.23665074996250007,
+                      0.6525
+                    ],
+                    "scale": 0.2365332556125
+                  },
+                  "depth": 10.02,
+                  "opacity": 0.6208203932499999,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i1:grass::2:2"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      310
+                    ],
+                    "at": [
+                      0.812142857142857,
+                      0.6947826086956522
+                    ],
+                    "scale": 0.31687767415
+                  },
+                  "depth": 10.03,
+                  "opacity": 0.744427191,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i1:grass::2:3"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      310
+                    ],
+                    "at": [
+                      0.43214285714285716,
+                      0.6478260869565218
+                    ],
+                    "scale": 0.2672220926875
+                  },
+                  "depth": 10.04,
+                  "opacity": 0.6680339887500001,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i1:grass::2:4"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      310
+                    ],
+                    "at": [
+                      0.10680149992500049,
+                      0.7035
+                    ],
+                    "scale": 0.21756651122500006
+                  },
+                  "depth": 10.05,
+                  "opacity": 0.5916407865000001,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i1:grass::2:5"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      310
+                    ],
+                    "at": [
+                      0.7307142857142858,
+                      0.788695652173913
+                    ],
+                    "scale": 0.2979109297625
+                  },
+                  "depth": 10.06,
+                  "opacity": 0.71524758425,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i1:grass::2:6"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      310
+                    ],
+                    "at": [
+                      0.29642857142857143,
+                      0.7182608695652175
+                    ],
+                    "scale": 0.24825534829999998
+                  },
+                  "depth": 10.07,
+                  "opacity": 0.638854382,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i1:grass::2:7"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      310
+                    ],
+                    "at": [
+                      0.8669522498874997,
+                      0.7545
+                    ],
+                    "scale": 0.3285997668375
+                  },
+                  "depth": 10.08,
+                  "opacity": 0.7624611797499999,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i1:grass::2:8"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      310
+                    ],
+                    "at": [
+                      0.6221428571428571,
+                      0.9530434782608697
+                    ],
+                    "scale": 0.38894418537500003
+                  },
+                  "depth": 20.09,
+                  "opacity": 0.91546117975,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i1:grass::2:9"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      310
+                    ],
+                    "at": [
+                      0.07928571428571429,
+                      0.8591304347826088
+                    ],
+                    "scale": 0.3392886039125
+                  },
+                  "depth": 20.1,
+                  "opacity": 0.846707297725,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i1:grass::2:10"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      310
+                    ],
+                    "at": [
+                      0.7371029998499998,
+                      0.9894000000000001
+                    ],
+                    "scale": 0.41963302245
+                  },
+                  "depth": 20.11,
+                  "opacity": 0.9579534156999999,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i1:grass::2:11"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      310
+                    ],
+                    "at": [
+                      0.29642857142857143,
+                      0.7182608695652175
+                    ],
+                    "scale": 0.3699774409875002
+                  },
+                  "depth": 10.12,
+                  "opacity": 0.8891995336750002,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i1:grass::2:12"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      310
+                    ],
+                    "at": [
+                      0.05720349982500239,
+                      0.8406000000000001
+                    ],
+                    "scale": 0.32032185952500036
+                  },
+                  "depth": 20.13,
+                  "opacity": 0.8204456516500004,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i1:grass::2:13"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      310
+                    ],
+                    "at": [
+                      0.6492857142857142,
+                      0.9060869565217392
+                    ],
+                    "scale": 0.4006662780625003
+                  },
+                  "depth": 20.14,
+                  "opacity": 0.9316917696250003,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i1:grass::2:14"
+                }
+              ],
+              "singleUnit": true,
+              "quantity": {
+                "items": [
+                  {
+                    "entity": "i1",
+                    "mode": "unspecified",
+                    "min": null,
+                    "max": null,
+                    "unit": null,
+                    "scope": "unspecified",
+                    "extent": "unspecified",
+                    "evidence": [],
+                    "basis": "model"
+                  }
+                ],
+                "rendered": 15,
+                "exact": false,
+                "collective": false,
+                "partUnsupported": false
+              },
+              "quantityLabel": "数量未精确；本地试画 15 个单元",
+              "semanticSupport": {
+                "surface": "ground",
+                "target": "i3",
+                "path": "scene.supports[0]"
+              },
+              "z": 14,
+              "visual": {
+                "role": "vegetation",
+                "brushStrength": 1.2
+              },
+              "performance": {
+                "rhythm": "gust",
+                "rate": 0.62,
+                "amplitude": 0.65,
+                "phase": 1.4828317324943823
+              },
+              "id": "i1:grass::2",
+              "interaction": {
+                "mode": "instance",
+                "groupId": "i1:grass::2"
+              },
+              "visibility": {
+                "protect": false,
+                "reasons": [],
+                "basis": "local-drawing-policy"
+              }
+            },
+            {
+              "tool": "water",
+              "entities": [],
+              "projectedEntities": [],
+              "names": [
+                "构图依托·水域"
+              ],
+              "options": {
+                "form": "plane"
+              },
+              "animate": false,
+              "placement": {
+                "anchor": [
+                  320,
+                  135
+                ],
+                "at": [
+                  0.5,
+                  0.45
+                ],
+                "scale": 1.6
+              },
+              "instances": [
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      135
+                    ],
+                    "at": [
+                      0.5,
+                      0.45
+                    ],
+                    "scale": 1.65
+                  },
+                  "variant": 0,
+                  "depth": 0,
+                  "opacity": 1,
+                  "tone": "far",
+                  "id": "inferred:water:plane:3:0"
+                }
+              ],
+              "singleUnit": false,
+              "inferred": true,
+              "provenance": {
+                "basis": "local-context",
+                "reason": "模型解释的必要依托，依据：危樯独夜舟",
+                "semanticPath": "scene.supports[1]"
+              },
+              "quantity": {
+                "rendered": 1,
+                "exact": false,
+                "items": []
+              },
+              "quantityLabel": "本地环境依托，不计入原文意象覆盖",
+              "z": -10,
+              "clip": [
+                [
+                  0.63,
+                  0.48
+                ],
+                [
+                  0.43000000000000005,
+                  0.65
+                ],
+                [
+                  0.12,
+                  0.82
+                ],
+                [
+                  -0.10000000000000003,
+                  1.04
+                ],
+                [
+                  0.5800000000000001,
+                  1.04
+                ],
+                [
+                  0.68,
+                  0.82
+                ],
+                [
+                  0.85,
+                  0.65
+                ],
+                [
+                  0.89,
+                  0.48
+                ]
+              ],
+              "surface": {
+                "top": 0.48,
+                "bottom": 1
+              },
+              "visual": {
+                "role": "water",
+                "brushStrength": 1.35
+              },
+              "performance": {
+                "rhythm": "continuous",
+                "rate": 0.9,
+                "amplitude": 0.9,
+                "phase": 5.365840252331367
+              },
+              "id": "inferred:water:plane:3",
+              "interaction": {
+                "mode": "group",
+                "groupId": "inferred:water:plane:3"
+              },
+              "visibility": {
+                "protect": false,
+                "reasons": [],
+                "basis": "local-drawing-policy"
+              }
+            }
+          ],
+          "scene": {
+            "kind": "landscape",
+            "notes": [
+              "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。"
+            ],
+            "waterline": null,
+            "semanticSetting": {
+              "kind": "waterside",
+              "basis": "inferred",
+              "evidence": [
+                "细草微风岸",
+                "危樯独夜舟"
+              ]
+            },
+            "semanticEffects": [
+              {
+                "path": "scene.supports[0]",
+                "consumer": "场景依托",
+                "status": "applied",
+                "effect": "使用已提取主体的现有承托画法"
+              },
+              {
+                "path": "scene.supports[1]",
+                "consumer": "场景依托",
+                "status": "applied",
+                "effect": "必要环境以独立推断背景表示，不新增原文实体"
+              }
+            ],
+            "organization": {
+              "version": "1.0",
+              "strategy": "general-constraints",
+              "regions": {
+                "water": [
+                  [
+                    0.63,
+                    0.48
+                  ],
+                  [
+                    0.43000000000000005,
+                    0.65
+                  ],
+                  [
+                    0.12,
+                    0.82
+                  ],
+                  [
+                    -0.10000000000000003,
+                    1.04
+                  ],
+                  [
+                    0.5800000000000001,
+                    1.04
+                  ],
+                  [
+                    0.68,
+                    0.82
+                  ],
+                  [
+                    0.85,
+                    0.65
+                  ],
+                  [
+                    0.89,
+                    0.48
+                  ]
+                ],
+                "land": [
+                  [
+                    -0.04,
+                    0.43
+                  ],
+                  [
+                    1.04,
+                    0.43
+                  ],
+                  [
+                    1.04,
+                    1.04
+                  ],
+                  [
+                    0.5800000000000001,
+                    1.04
+                  ],
+                  [
+                    0.68,
+                    0.82
+                  ],
+                  [
+                    0.85,
+                    0.65
+                  ],
+                  [
+                    0.89,
+                    0.48
+                  ],
+                  [
+                    0.63,
+                    0.48
+                  ],
+                  [
+                    0.43000000000000005,
+                    0.65
+                  ],
+                  [
+                    0.12,
+                    0.82
+                  ],
+                  [
+                    -0.10000000000000003,
+                    1.04
+                  ],
+                  [
+                    -0.04,
+                    1.04
+                  ]
+                ]
+              },
+              "candidates": [],
+              "repairs": [],
+              "limitations": [
+                "几何检查不判定诗意理解或审美合格",
+                "动作时序与整首诗的场景切换尚未编排"
+              ],
+              "topology": "斜江入远",
+              "layout": 2,
+              "orientation": "斜江入远",
+              "audit": {
+                "scope": "implemented-geometry-and-drawing-gaps",
+                "coverage": {
+                  "scope": "extracted-entities-only",
+                  "present": 5,
+                  "mapped": 3,
+                  "parameters": [
+                    "i2"
+                  ],
+                  "missing": [
+                    {
+                      "id": "i4",
+                      "name": "危樯"
+                    }
+                  ]
+                },
+                "checks": [
+                  "presence",
+                  "count",
+                  "finite",
+                  "support",
+                  "scale",
+                  "relative-position",
+                  "depth",
+                  "grove-spread",
+                  "drawing-gaps"
+                ],
+                "status": "needs-review",
+                "errors": 0,
+                "review": 2,
+                "issues": [
+                  {
+                    "code": "unresolved-relation",
+                    "severity": "review",
+                    "message": "有空间关系尚无对应布局画法"
+                  },
+                  {
+                    "code": "drawing-gaps",
+                    "severity": "review",
+                    "message": "还有 1 项已提取线索尚未转成画面：危樯"
+                  }
+                ],
+                "metrics": {
+                  "overlapPenalty": 1.265,
+                  "balancePenalty": 0.079,
+                  "motifFootprint": 0.089,
+                  "landArea": 0.381
+                },
+                "cost": 75.811,
+                "aestheticAcceptance": "pending-user"
+              },
+              "graph": {
+                "nodes": [
+                  {
+                    "id": "l0",
+                    "entities": [
+                      "i3"
+                    ],
+                    "tool": "landscape",
+                    "role": "terrain",
+                    "habitat": null,
+                    "inferred": false,
+                    "support": null
+                  },
+                  {
+                    "id": "l1",
+                    "entities": [
+                      "i5"
+                    ],
+                    "tool": "boat",
+                    "role": "subject",
+                    "habitat": "water",
+                    "inferred": false,
+                    "support": "l3"
+                  },
+                  {
+                    "id": "l2",
+                    "entities": [
+                      "i1"
+                    ],
+                    "tool": "grass",
+                    "role": "vegetation",
+                    "habitat": "land",
+                    "inferred": false,
+                    "support": "l0"
+                  },
+                  {
+                    "id": "l3",
+                    "entities": [],
+                    "tool": "water",
+                    "role": "water",
+                    "habitat": null,
+                    "inferred": true,
+                    "support": null
+                  }
+                ],
+                "edges": [
+                  {
+                    "type": "supported-by",
+                    "source": "l1",
+                    "target": "l3",
+                    "basis": "local-composition",
+                    "habitat": "water"
+                  },
+                  {
+                    "type": "supported-by",
+                    "source": "l2",
+                    "target": "l0",
+                    "basis": "local-composition",
+                    "habitat": "land"
+                  },
+                  {
+                    "type": "on",
+                    "source": "l2",
+                    "target": "l0",
+                    "basis": "inferred",
+                    "modality": "asserted",
+                    "evidence": [
+                      "细草微风岸"
+                    ]
+                  },
+                  {
+                    "type": "on",
+                    "target": "l1",
+                    "basis": "inferred",
+                    "modality": "asserted",
+                    "evidence": [
+                      "危樯独夜舟"
+                    ]
+                  }
+                ],
+                "setting": "landscape"
+              },
+              "actorSpacing": {
+                "version": "1.0",
+                "repairs": [],
+                "residualOverlap": 0,
+                "scope": "discrete-actors-not-intentional-occlusion"
+              }
+            },
+            "displayAudit": {
+              "scope": "display-scale-separation-and-habitat",
+              "issues": [],
+              "errors": 0,
+              "aestheticAcceptance": "pending-user"
+            }
+          },
+          "spatial": [
+            {
+              "type": "on",
+              "source": "i1",
+              "target": "i3",
+              "modality": "asserted",
+              "basis": "inferred",
+              "evidence": [
+                "细草微风岸"
+              ],
+              "visualized": true,
+              "reason": "主体以地表为共同依托；具体落点由本地场景区域安排"
+            },
+            {
+              "type": "on",
+              "source": "i4",
+              "target": "i5",
+              "modality": "asserted",
+              "basis": "inferred",
+              "evidence": [
+                "危樯独夜舟"
+              ],
+              "visualized": false,
+              "reason": "关系的一端缺少独立画法"
+            }
+          ],
+          "landscapeStyle": {
+            "version": "1.0",
+            "color": "role-and-distance",
+            "motion": "layer-rhythms",
+            "aestheticAcceptance": "pending-user"
+          },
+          "notes": []
+        },
+        {
+          "id": "space-0",
+          "label": "横江远岸",
+          "description": "先安排连续水域与地表，再按主次与远近安放景物",
+          "layers": [
+            {
+              "tool": "landscape",
+              "entities": [
+                "i3"
+              ],
+              "projectedEntities": [],
+              "names": [
+                "岸"
+              ],
+              "options": {
+                "form": "shore",
+                "edge": "soft"
+              },
+              "animate": false,
+              "placement": {
+                "anchor": [
+                  320,
+                  194
+                ],
+                "at": [
+                  0.5,
+                  0.57
+                ],
+                "scale": 1.5
+              },
+              "semanticGroup": {
+                "members": [
+                  "i1",
+                  "i2",
+                  "i3"
+                ],
+                "role": "environment",
+                "pattern": "unspecified",
+                "depth": "unspecified",
+                "basis": "inferred",
+                "evidence": [
+                  "细草微风岸"
+                ],
+                "index": 0
+              },
+              "semanticEffects": [
+                {
+                  "path": "scene.groups[0].role",
+                  "consumer": "主次布局",
+                  "effect": "保留环境画布范围，主次不改变地形边界",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[0].pattern",
+                  "consumer": "群落布局",
+                  "effect": "群落形式未明，保持本地默认",
+                  "status": "skipped"
+                },
+                {
+                  "path": "scene.groups[0].depth",
+                  "consumer": "远近布局",
+                  "effect": "远近未明，保持本地默认",
+                  "status": "skipped"
+                }
+              ],
+              "semanticEnergy": false,
+              "timeScale": 0.45,
+              "instances": [
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      194
+                    ],
+                    "at": [
+                      0.5,
+                      0.57
+                    ],
+                    "scale": 1.6
+                  },
+                  "depth": 0.05,
+                  "opacity": 1,
+                  "variant": 0,
+                  "tone": "far",
+                  "id": "i3:landscape:shore:0:0"
+                }
+              ],
+              "singleUnit": false,
+              "quantity": {
+                "items": [
+                  {
+                    "entity": "i3",
+                    "mode": "unspecified",
+                    "min": null,
+                    "max": null,
+                    "unit": null,
+                    "scope": "unspecified",
+                    "extent": "unspecified",
+                    "evidence": [],
+                    "basis": "model"
+                  }
+                ],
+                "rendered": 1,
+                "exact": false,
+                "collective": false,
+                "partUnsupported": false
+              },
+              "quantityLabel": "整体笔触图层；内部数量尚未适配",
+              "z": -20,
+              "clip": [
+                [
+                  -0.04,
+                  0.77
+                ],
+                [
+                  0.3,
+                  0.82
+                ],
+                [
+                  0.67,
+                  0.75
+                ],
+                [
+                  1.04,
+                  0.78
+                ],
+                [
+                  1.04,
+                  1.04
+                ],
+                [
+                  -0.04,
+                  1.04
+                ]
+              ],
+              "visual": {
+                "role": "ground",
+                "brushStrength": 1.1
+              },
+              "performance": {
+                "rhythm": "steady",
+                "rate": 1,
+                "amplitude": 1,
+                "phase": 0
+              },
+              "id": "i3:landscape:shore:0",
+              "interaction": {
+                "mode": "group",
+                "groupId": "i3:landscape:shore:0"
+              },
+              "visibility": {
+                "protect": false,
+                "reasons": [],
+                "basis": "local-drawing-policy"
+              }
+            },
+            {
+              "tool": "boat",
+              "entities": [
+                "i5"
+              ],
+              "projectedEntities": [],
+              "names": [
+                "舟"
+              ],
+              "options": {},
+              "animate": true,
+              "placement": {
+                "anchor": [
+                  320,
+                  230
+                ],
+                "at": [
+                  0.7254237921250001,
+                  0.72
+                ],
+                "scale": 0.95
+              },
+              "semanticGroup": {
+                "members": [
+                  "i4",
+                  "i5"
+                ],
+                "role": "subject",
+                "pattern": "single",
+                "depth": "unspecified",
+                "basis": "inferred",
+                "evidence": [
+                  "危樯独夜舟"
+                ],
+                "index": 1
+              },
+              "semanticEffects": [
+                {
+                  "path": "scene.actions[1].state",
+                  "consumer": "形态与绘画时钟",
+                  "effect": "启用工具支持的 float 状态",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.actions[1].pace",
+                  "consumer": "绘画时钟",
+                  "effect": "定性节奏映射为语义基准时钟倍率 0.45；观看动态与景物节奏另行调节",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.actions[1].direction",
+                  "consumer": "画布合成",
+                  "effect": "方向未明，仅用本地小幅微动",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[1].role",
+                  "consumer": "主次布局",
+                  "effect": "主体相对突出",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[1].pattern",
+                  "consumer": "群落布局",
+                  "effect": "按 single 组织显示单元；不覆盖明确数量",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[1].depth",
+                  "consumer": "远近布局",
+                  "effect": "远近未明，保持本地默认",
+                  "status": "skipped"
+                }
+              ],
+              "semanticEnergy": true,
+              "timeScale": 0.45,
+              "semanticAction": {
+                "entity": "i5",
+                "state": "float",
+                "pace": "unspecified",
+                "direction": "unspecified",
+                "modality": "asserted",
+                "basis": "inferred",
+                "evidence": [
+                  "危樯独夜舟"
+                ]
+              },
+              "motion": {
+                "kind": "drift",
+                "direction": "unspecified",
+                "rate": 0.45,
+                "state": "float"
+              },
+              "instances": [
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      230
+                    ],
+                    "at": [
+                      0.7254237921250001,
+                      0.72
+                    ],
+                    "scale": 0.8064
+                  },
+                  "depth": 0.05,
+                  "opacity": 1,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i5:boat::1:0"
+                }
+              ],
+              "singleUnit": true,
+              "quantity": {
+                "items": [
+                  {
+                    "entity": "i5",
+                    "mode": "exact",
+                    "min": 1,
+                    "max": 1,
+                    "unit": null,
+                    "scope": "individual",
+                    "extent": "local",
+                    "evidence": [
+                      "危樯独夜舟"
+                    ],
+                    "basis": "model"
+                  }
+                ],
+                "rendered": 1,
+                "exact": true,
+                "collective": false,
+                "partUnsupported": false
+              },
+              "quantityLabel": "按提取数量绘制 1 个",
+              "semanticSupport": {
+                "surface": "water",
+                "target": null,
+                "path": "scene.supports[1]"
+              },
+              "z": 22,
+              "visual": {
+                "role": "architecture",
+                "brushStrength": 1.1
+              },
+              "performance": {
+                "rhythm": "steady",
+                "rate": 1,
+                "amplitude": 1,
+                "phase": 3.8830085198369844
+              },
+              "id": "i5:boat::1",
+              "interaction": {
+                "mode": "instance",
+                "groupId": "i5:boat::1"
+              },
+              "visibility": {
+                "protect": true,
+                "reasons": [
+                  "recognizable-subject",
+                  "semantic-subject"
+                ],
+                "basis": "local-drawing-policy"
+              }
+            },
+            {
+              "tool": "grass",
+              "entities": [
+                "i1"
+              ],
+              "projectedEntities": [],
+              "names": [
+                "细草"
+              ],
+              "options": {},
+              "animate": true,
+              "placement": {
+                "anchor": [
+                  320,
+                  315
+                ],
+                "at": [
+                  0.4830181070803574,
+                  0.8329669565217392
+                ],
+                "scale": 1
+              },
+              "semanticGroup": {
+                "members": [
+                  "i1",
+                  "i2",
+                  "i3"
+                ],
+                "role": "environment",
+                "pattern": "unspecified",
+                "depth": "unspecified",
+                "basis": "inferred",
+                "evidence": [
+                  "细草微风岸"
+                ],
+                "index": 0
+              },
+              "semanticEffects": [
+                {
+                  "path": "scene.groups[0].role",
+                  "consumer": "主次布局",
+                  "effect": "保留环境群落层次",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[0].pattern",
+                  "consumer": "群落布局",
+                  "effect": "群落形式未明，保持本地默认",
+                  "status": "skipped"
+                },
+                {
+                  "path": "scene.groups[0].depth",
+                  "consumer": "远近布局",
+                  "effect": "远近未明，保持本地默认",
+                  "status": "skipped"
+                }
+              ],
+              "semanticEnergy": true,
+              "timeScale": 0.45,
+              "instances": [
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      310
+                    ],
+                    "at": [
+                      0.7849999999999999,
+                      0.7652173913043478
+                    ],
+                    "scale": 0.3168644185375
+                  },
+                  "depth": 10,
+                  "opacity": 0.74440679775,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i1:grass::2:0"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      310
+                    ],
+                    "at": [
+                      0.48642857142857143,
+                      0.788695652173913
+                    ],
+                    "scale": 0.267208837075
+                  },
+                  "depth": 10.01,
+                  "opacity": 0.6680135955,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i1:grass::2:1"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      310
+                    ],
+                    "at": [
+                      0.07928571428571429,
+                      0.788695652173913
+                    ],
+                    "scale": 0.21755325561250002
+                  },
+                  "depth": 10.02,
+                  "opacity": 0.59162039325,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i1:grass::2:2"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      310
+                    ],
+                    "at": [
+                      0.6492857142857142,
+                      0.7652173913043478
+                    ],
+                    "scale": 0.29789767415
+                  },
+                  "depth": 10.03,
+                  "opacity": 0.7152271910000001,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i1:grass::2:3"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      310
+                    ],
+                    "at": [
+                      0.3507142857142857,
+                      0.8121739130434784
+                    ],
+                    "scale": 0.24824209268750005
+                  },
+                  "depth": 10.04,
+                  "opacity": 0.6388339887500001,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i1:grass::2:4"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      310
+                    ],
+                    "at": [
+                      0.8392857142857143,
+                      0.7652173913043478
+                    ],
+                    "scale": 0.32858651122500004
+                  },
+                  "depth": 10.05,
+                  "opacity": 0.7624407865,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i1:grass::2:5"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      310
+                    ],
+                    "at": [
+                      0.5135714285714285,
+                      0.788695652173913
+                    ],
+                    "scale": 0.27893092976250006
+                  },
+                  "depth": 10.06,
+                  "opacity": 0.68604758425,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i1:grass::2:6"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      310
+                    ],
+                    "at": [
+                      0.18785714285714283,
+                      0.8121739130434784
+                    ],
+                    "scale": 0.22927534830000001
+                  },
+                  "depth": 10.07,
+                  "opacity": 0.609654382,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i1:grass::2:7"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      310
+                    ],
+                    "at": [
+                      0.7307142857142858,
+                      0.7652173913043478
+                    ],
+                    "scale": 0.3096197668375
+                  },
+                  "depth": 10.08,
+                  "opacity": 0.7332611797499999,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i1:grass::2:8"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      310
+                    ],
+                    "at": [
+                      0.3970624998750003,
+                      0.9582
+                    ],
+                    "scale": 0.36996418537500003
+                  },
+                  "depth": 20.09,
+                  "opacity": 0.88918117975,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i1:grass::2:9"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      310
+                    ],
+                    "at": [
+                      0.057112749862500034,
+                      0.9738
+                    ],
+                    "scale": 0.3203086039125
+                  },
+                  "depth": 20.1,
+                  "opacity": 0.820427297725,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i1:grass::2:10"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      310
+                    ],
+                    "at": [
+                      0.6071629998499999,
+                      0.9894000000000001
+                    ],
+                    "scale": 0.40065302245
+                  },
+                  "depth": 20.11,
+                  "opacity": 0.9316734157,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i1:grass::2:11"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      310
+                    ],
+                    "at": [
+                      0.26721324983750033,
+                      0.8250000000000001
+                    ],
+                    "scale": 0.3509974409875001
+                  },
+                  "depth": 10.12,
+                  "opacity": 0.862919533675,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i1:grass::2:12"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      310
+                    ],
+                    "at": [
+                      0.8172634998250017,
+                      0.8406000000000001
+                    ],
+                    "scale": 0.43134185952500026
+                  },
+                  "depth": 20.13,
+                  "opacity": 0.9741656516500002,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i1:grass::2:13"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      310
+                    ],
+                    "at": [
+                      0.4773137498125014,
+                      0.8562000000000001
+                    ],
+                    "scale": 0.3816862780625002
+                  },
+                  "depth": 20.14,
+                  "opacity": 0.9054117696250003,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i1:grass::2:14"
+                }
+              ],
+              "singleUnit": true,
+              "quantity": {
+                "items": [
+                  {
+                    "entity": "i1",
+                    "mode": "unspecified",
+                    "min": null,
+                    "max": null,
+                    "unit": null,
+                    "scope": "unspecified",
+                    "extent": "unspecified",
+                    "evidence": [],
+                    "basis": "model"
+                  }
+                ],
+                "rendered": 15,
+                "exact": false,
+                "collective": false,
+                "partUnsupported": false
+              },
+              "quantityLabel": "数量未精确；本地试画 15 个单元",
+              "semanticSupport": {
+                "surface": "ground",
+                "target": "i3",
+                "path": "scene.supports[0]"
+              },
+              "z": 14,
+              "visual": {
+                "role": "vegetation",
+                "brushStrength": 1.2
+              },
+              "performance": {
+                "rhythm": "gust",
+                "rate": 0.62,
+                "amplitude": 0.65,
+                "phase": 1.4828317324943823
+              },
+              "id": "i1:grass::2",
+              "interaction": {
+                "mode": "instance",
+                "groupId": "i1:grass::2"
+              },
+              "visibility": {
+                "protect": false,
+                "reasons": [],
+                "basis": "local-drawing-policy"
+              }
+            },
+            {
+              "tool": "water",
+              "entities": [],
+              "projectedEntities": [],
+              "names": [
+                "构图依托·水域"
+              ],
+              "options": {
+                "form": "plane"
+              },
+              "animate": false,
+              "placement": {
+                "anchor": [
+                  320,
+                  135
+                ],
+                "at": [
+                  0.5,
+                  0.45
+                ],
+                "scale": 1.6
+              },
+              "instances": [
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      135
+                    ],
+                    "at": [
+                      0.5,
+                      0.45
+                    ],
+                    "scale": 1.65
+                  },
+                  "variant": 0,
+                  "depth": 0,
+                  "opacity": 1,
+                  "tone": "far",
+                  "id": "inferred:water:plane:3:0"
+                }
+              ],
+              "singleUnit": false,
+              "inferred": true,
+              "provenance": {
+                "basis": "local-context",
+                "reason": "模型解释的必要依托，依据：危樯独夜舟",
+                "semanticPath": "scene.supports[1]"
+              },
+              "quantity": {
+                "rendered": 1,
+                "exact": false,
+                "items": []
+              },
+              "quantityLabel": "本地环境依托，不计入原文意象覆盖",
+              "z": -10,
+              "clip": [
+                [
+                  -0.04,
+                  0.49
+                ],
+                [
+                  0.34,
+                  0.46
+                ],
+                [
+                  0.73,
+                  0.49
+                ],
+                [
+                  1.04,
+                  0.46
+                ],
+                [
+                  1.04,
+                  0.78
+                ],
+                [
+                  0.67,
+                  0.75
+                ],
+                [
+                  0.3,
+                  0.82
+                ],
+                [
+                  -0.04,
+                  0.77
+                ]
+              ],
+              "surface": {
+                "top": 0.46,
+                "bottom": 1
+              },
+              "visual": {
+                "role": "water",
+                "brushStrength": 1.35
+              },
+              "performance": {
+                "rhythm": "continuous",
+                "rate": 0.9,
+                "amplitude": 0.9,
+                "phase": 5.365840252331367
+              },
+              "id": "inferred:water:plane:3",
+              "interaction": {
+                "mode": "group",
+                "groupId": "inferred:water:plane:3"
+              },
+              "visibility": {
+                "protect": false,
+                "reasons": [],
+                "basis": "local-drawing-policy"
+              }
+            }
+          ],
+          "scene": {
+            "kind": "landscape",
+            "notes": [
+              "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。"
+            ],
+            "waterline": null,
+            "semanticSetting": {
+              "kind": "waterside",
+              "basis": "inferred",
+              "evidence": [
+                "细草微风岸",
+                "危樯独夜舟"
+              ]
+            },
+            "semanticEffects": [
+              {
+                "path": "scene.supports[0]",
+                "consumer": "场景依托",
+                "status": "applied",
+                "effect": "使用已提取主体的现有承托画法"
+              },
+              {
+                "path": "scene.supports[1]",
+                "consumer": "场景依托",
+                "status": "applied",
+                "effect": "必要环境以独立推断背景表示，不新增原文实体"
+              }
+            ],
+            "organization": {
+              "version": "1.0",
+              "strategy": "general-constraints",
+              "regions": {
+                "water": [
+                  [
+                    -0.04,
+                    0.49
+                  ],
+                  [
+                    0.34,
+                    0.46
+                  ],
+                  [
+                    0.73,
+                    0.49
+                  ],
+                  [
+                    1.04,
+                    0.46
+                  ],
+                  [
+                    1.04,
+                    0.78
+                  ],
+                  [
+                    0.67,
+                    0.75
+                  ],
+                  [
+                    0.3,
+                    0.82
+                  ],
+                  [
+                    -0.04,
+                    0.77
+                  ]
+                ],
+                "land": [
+                  [
+                    -0.04,
+                    0.77
+                  ],
+                  [
+                    0.3,
+                    0.82
+                  ],
+                  [
+                    0.67,
+                    0.75
+                  ],
+                  [
+                    1.04,
+                    0.78
+                  ],
+                  [
+                    1.04,
+                    1.04
+                  ],
+                  [
+                    -0.04,
+                    1.04
+                  ]
+                ]
+              },
+              "candidates": [],
+              "repairs": [],
+              "limitations": [
+                "几何检查不判定诗意理解或审美合格",
+                "动作时序与整首诗的场景切换尚未编排"
+              ],
+              "topology": "横江远岸",
+              "layout": 0,
+              "orientation": "横江远岸",
+              "audit": {
+                "scope": "implemented-geometry-and-drawing-gaps",
+                "coverage": {
+                  "scope": "extracted-entities-only",
+                  "present": 5,
+                  "mapped": 3,
+                  "parameters": [
+                    "i2"
+                  ],
+                  "missing": [
+                    {
+                      "id": "i4",
+                      "name": "危樯"
+                    }
+                  ]
+                },
+                "checks": [
+                  "presence",
+                  "count",
+                  "finite",
+                  "support",
+                  "scale",
+                  "relative-position",
+                  "depth",
+                  "grove-spread",
+                  "drawing-gaps"
+                ],
+                "status": "needs-review",
+                "errors": 0,
+                "review": 2,
+                "issues": [
+                  {
+                    "code": "unresolved-relation",
+                    "severity": "review",
+                    "message": "有空间关系尚无对应布局画法"
+                  },
+                  {
+                    "code": "drawing-gaps",
+                    "severity": "review",
+                    "message": "还有 1 项已提取线索尚未转成画面：危樯"
+                  }
+                ],
+                "metrics": {
+                  "overlapPenalty": 2.977,
+                  "balancePenalty": 0.063,
+                  "motifFootprint": 0.088,
+                  "landArea": 0.279
+                },
+                "cost": 96.22,
+                "aestheticAcceptance": "pending-user"
+              },
+              "graph": {
+                "nodes": [
+                  {
+                    "id": "l0",
+                    "entities": [
+                      "i3"
+                    ],
+                    "tool": "landscape",
+                    "role": "terrain",
+                    "habitat": null,
+                    "inferred": false,
+                    "support": null
+                  },
+                  {
+                    "id": "l1",
+                    "entities": [
+                      "i5"
+                    ],
+                    "tool": "boat",
+                    "role": "subject",
+                    "habitat": "water",
+                    "inferred": false,
+                    "support": "l3"
+                  },
+                  {
+                    "id": "l2",
+                    "entities": [
+                      "i1"
+                    ],
+                    "tool": "grass",
+                    "role": "vegetation",
+                    "habitat": "land",
+                    "inferred": false,
+                    "support": "l0"
+                  },
+                  {
+                    "id": "l3",
+                    "entities": [],
+                    "tool": "water",
+                    "role": "water",
+                    "habitat": null,
+                    "inferred": true,
+                    "support": null
+                  }
+                ],
+                "edges": [
+                  {
+                    "type": "supported-by",
+                    "source": "l1",
+                    "target": "l3",
+                    "basis": "local-composition",
+                    "habitat": "water"
+                  },
+                  {
+                    "type": "supported-by",
+                    "source": "l2",
+                    "target": "l0",
+                    "basis": "local-composition",
+                    "habitat": "land"
+                  },
+                  {
+                    "type": "on",
+                    "source": "l2",
+                    "target": "l0",
+                    "basis": "inferred",
+                    "modality": "asserted",
+                    "evidence": [
+                      "细草微风岸"
+                    ]
+                  },
+                  {
+                    "type": "on",
+                    "target": "l1",
+                    "basis": "inferred",
+                    "modality": "asserted",
+                    "evidence": [
+                      "危樯独夜舟"
+                    ]
+                  }
+                ],
+                "setting": "landscape"
+              },
+              "actorSpacing": {
+                "version": "1.0",
+                "repairs": [],
+                "residualOverlap": 0,
+                "scope": "discrete-actors-not-intentional-occlusion"
+              }
+            },
+            "displayAudit": {
+              "scope": "display-scale-separation-and-habitat",
+              "issues": [],
+              "errors": 0,
+              "aestheticAcceptance": "pending-user"
+            }
+          },
+          "spatial": [
+            {
+              "type": "on",
+              "source": "i1",
+              "target": "i3",
+              "modality": "asserted",
+              "basis": "inferred",
+              "evidence": [
+                "细草微风岸"
+              ],
+              "visualized": true,
+              "reason": "主体以地表为共同依托；具体落点由本地场景区域安排"
+            },
+            {
+              "type": "on",
+              "source": "i4",
+              "target": "i5",
+              "modality": "asserted",
+              "basis": "inferred",
+              "evidence": [
+                "危樯独夜舟"
+              ],
+              "visualized": false,
+              "reason": "关系的一端缺少独立画法"
+            }
+          ],
+          "landscapeStyle": {
+            "version": "1.0",
+            "color": "role-and-distance",
+            "motion": "layer-rhythms",
+            "aestheticAcceptance": "pending-user"
+          },
+          "notes": []
+        }
+      ],
+      "composition": "space-1",
+      "omitted": [
+        {
+          "id": "i4",
+          "name": "危樯",
+          "reason": "该意象尚无合适的写意画法"
+        }
+      ],
+      "parameters": [
+        {
+          "entity": "i2",
+          "type": "wind"
+        }
+      ],
+      "sourceResolution": {
+        "version": "source-depiction-1.1",
+        "quantities": {},
+        "identities": [],
+        "changes": []
+      },
+      "notes": [
+        "微风作为风参数，不额外画风线；强弱是本次试画选择。",
+        "岸虽被归为地点，仍按原文明示的自然景物匹配；具体空间关系另行处理。",
+        "舟：按舟船这个主体选择画法，材质或修饰词不另画成植物。这是本地写意借形，保留原词义。",
+        "位置、大小、笔触与默认微动是本地试画选择；数量解释与本地显示数量分别记录。",
+        "未明说的群落数量、疏密、近中远层次与变体均为本地构图选择；种类可按已声明的写意画法概括，不把铺展词换算成精确物体数量。",
+        "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。",
+        "通用场景层先组织地面、水域、群落和主体，再比较三个布局的依托、相对位置、尺度与遮挡；检查通过不代表审美已通过。",
+        "整体场景、主次、远近、依托和支持的动作状态来自本次模型解释；具体布局、颜色和时钟倍率由本地视觉策略选择。",
+        "动作动画表现受支持的主导状态与有限观看运动；先后事件与完整因果尚未编排。",
+        "动态程度与默认轻风是可调整的观看选择；不改变数量、主次或原文动作判断。人物保持点景写意，不新增人物步态。",
+        "显示检查覆盖实例尺度、鸟群分离与空中落点；不保证笔触未被遮挡，也不代替实际观看。竹林默认成组拖动，其余单独拖动；Shift 可拖动同层整组。"
+      ],
+      "relations": [],
+      "semanticConsumption": {
+        "version": "3.3",
+        "items": [
+          {
+            "path": "scene.setting",
+            "status": "applied",
+            "consumer": "本地视觉策略",
+            "effect": "整体环境进入场景提案选择",
+            "basis": "inferred",
+            "evidence": [
+              "细草微风岸",
+              "危樯独夜舟"
+            ]
+          },
+          {
+            "path": "scene.groups[0].role",
+            "status": "applied",
+            "consumer": "主次布局",
+            "effect": "保留环境画布范围，主次不改变地形边界；保留环境群落层次",
+            "basis": "inferred",
+            "evidence": [
+              "细草微风岸"
+            ]
+          },
+          {
+            "path": "scene.groups[0].pattern",
+            "status": "skipped",
+            "consumer": "群落布局",
+            "effect": "群落形式未明，保持本地默认",
+            "basis": "inferred",
+            "evidence": [
+              "细草微风岸"
+            ]
+          },
+          {
+            "path": "scene.groups[0].depth",
+            "status": "skipped",
+            "consumer": "远近布局",
+            "effect": "远近未明，保持本地默认",
+            "basis": "inferred",
+            "evidence": [
+              "细草微风岸"
+            ]
+          },
+          {
+            "path": "scene.groups[1].role",
+            "status": "applied",
+            "consumer": "主次布局",
+            "effect": "主体相对突出",
+            "basis": "inferred",
+            "evidence": [
+              "危樯独夜舟"
+            ]
+          },
+          {
+            "path": "scene.groups[1].pattern",
+            "status": "applied",
+            "consumer": "群落布局",
+            "effect": "按 single 组织显示单元；不覆盖明确数量",
+            "basis": "inferred",
+            "evidence": [
+              "危樯独夜舟"
+            ]
+          },
+          {
+            "path": "scene.groups[1].depth",
+            "status": "skipped",
+            "consumer": "远近布局",
+            "effect": "远近未明，保持本地默认",
+            "basis": "inferred",
+            "evidence": [
+              "危樯独夜舟"
+            ]
+          },
+          {
+            "path": "scene.supports[0]",
+            "status": "applied",
+            "consumer": "场景依托",
+            "effect": "使用已提取主体的现有承托画法",
+            "basis": "inferred",
+            "evidence": [
+              "细草微风岸"
+            ]
+          },
+          {
+            "path": "scene.supports[1]",
+            "status": "applied",
+            "consumer": "场景依托",
+            "effect": "必要环境以独立推断背景表示，不新增原文实体",
+            "basis": "inferred",
+            "evidence": [
+              "危樯独夜舟"
+            ]
+          },
+          {
+            "path": "scene.actions[0].state",
+            "status": "skipped",
+            "consumer": "本地视觉策略",
+            "effect": "主体无画法",
+            "basis": "inferred",
+            "evidence": [
+              "细草微风岸"
+            ]
+          },
+          {
+            "path": "scene.actions[0].pace",
+            "status": "skipped",
+            "consumer": "本地视觉策略",
+            "effect": "该工具尚不支持此动作分量",
+            "basis": "inferred",
+            "evidence": [
+              "细草微风岸"
+            ]
+          },
+          {
+            "path": "scene.actions[0].direction",
+            "status": "skipped",
+            "consumer": "本地视觉策略",
+            "effect": "该工具尚不支持此动作分量",
+            "basis": "inferred",
+            "evidence": [
+              "细草微风岸"
+            ]
+          },
+          {
+            "path": "scene.actions[1].state",
+            "status": "applied",
+            "consumer": "形态与绘画时钟",
+            "effect": "启用工具支持的 float 状态",
+            "basis": "inferred",
+            "evidence": [
+              "危樯独夜舟"
+            ]
+          },
+          {
+            "path": "scene.actions[1].pace",
+            "status": "applied",
+            "consumer": "绘画时钟",
+            "effect": "定性节奏映射为语义基准时钟倍率 0.45；观看动态与景物节奏另行调节",
+            "basis": "inferred",
+            "evidence": [
+              "危樯独夜舟"
+            ]
+          },
+          {
+            "path": "scene.actions[1].direction",
+            "status": "applied",
+            "consumer": "画布合成",
+            "effect": "方向未明，仅用本地小幅微动",
+            "basis": "inferred",
+            "evidence": [
+              "危樯独夜舟"
+            ]
+          },
+          {
+            "path": "scene.atmosphere.visibility",
+            "status": "applied",
+            "consumer": "画布色层与远景",
+            "effect": "可见度 dark；迷蒙或昏暗时淡化非光源图层",
+            "basis": "explicit",
+            "evidence": [
+              "危樯独夜舟"
+            ]
+          },
+          {
+            "path": "scene.atmosphere.illumination",
+            "status": "applied",
+            "consumer": "自动光色",
+            "effect": "照明 night 与气息标签共同选择本地 indigo 配色；夜景优先暗底，用户可手动覆盖",
+            "basis": "explicit",
+            "evidence": [
+              "危樯独夜舟"
+            ]
+          },
+          {
+            "path": "atmosphere.energy",
+            "status": "applied",
+            "consumer": "绘画时钟",
+            "effect": "没有明确动作节奏时，气息强弱控制已有微动的默认时钟"
+          },
+          {
+            "path": "atmosphere.openness",
+            "status": "applied",
+            "consumer": "群落分布与笔触密度",
+            "effect": "开阔度转换为本地间距与工具笔触密度，不等于原文数量"
+          },
+          {
+            "path": "atmosphere.valence",
+            "status": "applied",
+            "consumer": "自动光色",
+            "effect": "先约束昼夜明暗，再按已支持的气息标签和情绪倾向选择配色；不宣称完整情感理解"
+          },
+          {
+            "path": "time.markers",
+            "status": "retained",
+            "consumer": "原始记录与解读",
+            "effect": "保留原文时间标记；本版照明由 scene.atmosphere 转换，多阶段时间逻辑未执行"
+          }
+        ],
+        "summary": {
+          "applied": 14,
+          "partial": 0,
+          "unsupported": 0,
+          "skipped": 6,
+          "retained": 1
+        },
+        "aestheticAcceptance": "pending-user"
+      },
+      "landscapeStyle": {
+        "version": "1.0",
+        "color": "role-and-distance",
+        "motion": "layer-rhythms",
+        "aestheticAcceptance": "pending-user"
+      },
+      "compositionSelection": {
+        "method": "shared-policy-final-audit-and-geometric-preference",
+        "candidates": [
+          {
+            "id": "space-1",
+            "errors": 0,
+            "score": 62.575,
+            "actorOverlap": 0
+          },
+          {
+            "id": "space-2",
+            "errors": 0,
+            "score": 99.687,
+            "actorOverlap": 0
+          },
+          {
+            "id": "space-0",
+            "errors": 0,
+            "score": 150.688,
+            "actorOverlap": 0
+          }
+        ],
+        "aestheticAcceptance": "pending-user"
+      },
+      "imageryTrace": [
+        {
+          "id": "i1",
+          "mentions": [
+            "细草"
+          ],
+          "role": "scene",
+          "presence": "present",
+          "parameter": null,
+          "layers": [
+            {
+              "id": "i1:grass::2",
+              "tool": "grass",
+              "instances": [
+                "i1:grass::2:0",
+                "i1:grass::2:1",
+                "i1:grass::2:2",
+                "i1:grass::2:3",
+                "i1:grass::2:4",
+                "i1:grass::2:5",
+                "i1:grass::2:6",
+                "i1:grass::2:7",
+                "i1:grass::2:8",
+                "i1:grass::2:9",
+                "i1:grass::2:10",
+                "i1:grass::2:11",
+                "i1:grass::2:12",
+                "i1:grass::2:13",
+                "i1:grass::2:14"
+              ]
+            }
+          ],
+          "omission": null
+        },
+        {
+          "id": "i2",
+          "mentions": [
+            "微风"
+          ],
+          "role": "scene",
+          "presence": "present",
+          "parameter": "wind",
+          "layers": [],
+          "omission": null
+        },
+        {
+          "id": "i3",
+          "mentions": [
+            "岸"
+          ],
+          "role": "scene",
+          "presence": "present",
+          "parameter": null,
+          "layers": [
+            {
+              "id": "i3:landscape:shore:0",
+              "tool": "landscape",
+              "instances": [
+                "i3:landscape:shore:0:0"
+              ]
+            }
+          ],
+          "omission": null
+        },
+        {
+          "id": "i4",
+          "mentions": [
+            "危樯"
+          ],
+          "role": "scene",
+          "presence": "present",
+          "parameter": null,
+          "layers": [],
+          "omission": "该意象尚无合适的写意画法"
+        },
+        {
+          "id": "i5",
+          "mentions": [
+            "舟"
+          ],
+          "role": "scene",
+          "presence": "present",
+          "parameter": null,
+          "layers": [
+            {
+              "id": "i5:boat::1",
+              "tool": "boat",
+              "instances": [
+                "i5:boat::1:0"
+              ]
+            }
+          ],
+          "omission": null
+        }
+      ],
+      "drawingPolicy": {
+        "version": "shared-drawing-policy-1.0",
+        "scope": "source-bound-generation-and-composition-alternatives",
+        "selectedComposition": "space-1",
+        "applied": [
+          {
+            "composition": "space-1",
+            "layer": "i5:boat::1",
+            "entities": [
+              "i5"
+            ],
+            "color": null,
+            "visibility": [
+              "recognizable-subject",
+              "semantic-subject"
+            ],
+            "attachment": null
+          },
+          {
+            "composition": "space-2",
+            "layer": "i5:boat::1",
+            "entities": [
+              "i5"
+            ],
+            "color": null,
+            "visibility": [
+              "recognizable-subject",
+              "semantic-subject"
+            ],
+            "attachment": null
+          },
+          {
+            "composition": "space-0",
+            "layer": "i5:boat::1",
+            "entities": [
+              "i5"
+            ],
+            "color": null,
+            "visibility": [
+              "recognizable-subject",
+              "semantic-subject"
+            ],
+            "attachment": null
+          }
+        ],
+        "quantityChanges": 0,
+        "identityGroups": 0,
+        "aestheticAcceptance": "pending-user"
+      }
+    },
+    "renderability": {
+      "status": "limited",
+      "visibleScenery": true,
+      "visibleAbstract": false,
+      "gaps": [
+        {
+          "id": "i4",
+          "label": "危樯",
+          "reason": "该意象尚无合适的写意画法"
+        }
+      ]
+    },
+    "expression": {
+      "version": "shared-expression-1.1-source-bound",
+      "sourceContract": "expression-1.0",
+      "recommendation": "balanced",
+      "reason": "结合可画景物与抽象笔势",
+      "gaps": [
+        {
+          "id": "i4",
+          "label": "危樯",
+          "reason": "该意象尚无合适的写意画法"
+        }
+      ],
+      "limitations": [
+        "景物过程当前影响抽象纹理；原生景物动作沿用场景能力，未支持的月下楼位移等仍不执行。",
+        "纹理、色层和观看扰动属于本地艺术选择，不改变语义成立状态"
+      ]
+    },
+    "notes": [
+      "三个表达倾向共享景物数量、空间、依托与主体身份；抽象笔触优先服从原景物区域和轮廓。",
+      "纯抽象或比喻句不因切换风景优先而补山水。",
+      "微风作为风参数，不额外画风线；强弱是本次试画选择。",
+      "岸虽被归为地点，仍按原文明示的自然景物匹配；具体空间关系另行处理。",
+      "舟：按舟船这个主体选择画法，材质或修饰词不另画成植物。这是本地写意借形，保留原词义。",
+      "位置、大小、笔触与默认微动是本地试画选择；数量解释与本地显示数量分别记录。",
+      "未明说的群落数量、疏密、近中远层次与变体均为本地构图选择；种类可按已声明的写意画法概括，不把铺展词换算成精确物体数量。",
+      "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。",
+      "通用场景层先组织地面、水域、群落和主体，再比较三个布局的依托、相对位置、尺度与遮挡；检查通过不代表审美已通过。",
+      "整体场景、主次、远近、依托和支持的动作状态来自本次模型解释；具体布局、颜色和时钟倍率由本地视觉策略选择。",
+      "动作动画表现受支持的主导状态与有限观看运动；先后事件与完整因果尚未编排。",
+      "动态程度与默认轻风是可调整的观看选择；不改变数量、主次或原文动作判断。人物保持点景写意，不新增人物步态。",
+      "显示检查覆盖实例尺度、鸟群分离与空中落点；不保证笔触未被遮挡，也不代替实际观看。竹林默认成组拖动，其余单独拖动；Shift 可拖动同层整组。"
+    ],
+    "aestheticAcceptance": "pending-user"
+  },
+  "delivery": {
+    "status": "partial",
+    "retryable": false,
+    "reason": "drawing-gap",
+    "message": "基础画面已生成，部分意象尚未单独表现，具体缺口已列出。"
+  },
+  "elapsed_seconds": 7.1
+}

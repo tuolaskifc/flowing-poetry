@@ -1,0 +1,3844 @@
+{
+  "id": "2026-11-08T10-48-32-737Z-96235b14",
+  "fingerprint": "bd4d832348c2da5e9e2f6e7829aa64376e322593782963e91758b771e1a2a89a",
+  "semanticFingerprint": "66ab374a6e59d54cf6bc3e0da5884e32ff899ca143a3fecbe37a2b3ab087b22e",
+  "poem": "人闲桂花落，夜静春山空。",
+  "source": {
+    "provider": "独立选笔试验",
+    "author": "王维",
+    "title": "鸟鸣涧"
+  },
+  "mode": "expression",
+  "model": "DeepSeek-V4.1-Flash",
+  "started_at": "2026-11-08T10:48:32.737Z",
+  "cached": false,
+  "http_status": 200,
+  "usage": {
+    "completion_tokens": 785,
+    "prompt_tokens": 6060,
+    "total_tokens": 6845,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 6016
+    }
+  },
+  "finish_reason": "stop",
+  "analysis": {
+    "schema_version": "expression-1.0",
+    "poem": "人闲桂花落，夜静春山空。",
+    "reading": "人闲时桂花飘落，夜色静谧，春山显得空寂。",
+    "entities": [
+      {
+        "id": "i1",
+        "mentions": [
+          "人"
+        ],
+        "concept": "人",
+        "kind": "person",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "人闲桂花落"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i2",
+        "mentions": [
+          "桂花"
+        ],
+        "concept": "桂花",
+        "kind": "organism",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "人闲桂花落"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i3",
+        "mentions": [
+          "夜"
+        ],
+        "concept": "夜晚",
+        "kind": "environment",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "夜静春山空"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      },
+      {
+        "id": "i4",
+        "mentions": [
+          "春山"
+        ],
+        "concept": "春山",
+        "kind": "place",
+        "role": "scene",
+        "presence": "present",
+        "evidence": [
+          "夜静春山空"
+        ],
+        "quantity": {
+          "mode": "unspecified",
+          "min": null,
+          "max": null,
+          "unit": null,
+          "scope": "unspecified",
+          "extent": "unspecified",
+          "evidence": []
+        }
+      }
+    ],
+    "relations": [],
+    "atmosphere": {
+      "labels": [
+        "静谧",
+        "空寂"
+      ],
+      "valence": "neutral",
+      "energy": "low",
+      "tension": "low",
+      "openness": "medium",
+      "evidence": [
+        "人闲桂花落",
+        "夜静春山空"
+      ]
+    },
+    "time": {
+      "markers": [],
+      "note": null
+    },
+    "uncertainties": [
+      "“人”未明说身份，也未明说是否看见桂花落下。",
+      "“春山空”的“空”可指空旷或空寂，具体程度不明。"
+    ],
+    "spatial": [
+      {
+        "type": "on",
+        "source": "i2",
+        "target": "i4",
+        "modality": "unclear",
+        "basis": "inferred",
+        "evidence": [
+          "人闲桂花落",
+          "夜静春山空"
+        ]
+      }
+    ],
+    "scene": {
+      "setting": {
+        "kind": "mountain_stream",
+        "basis": "inferred",
+        "evidence": [
+          "夜静春山空"
+        ]
+      },
+      "groups": [
+        {
+          "members": [
+            "i1"
+          ],
+          "role": "subject",
+          "pattern": "single",
+          "depth": "unspecified",
+          "basis": "inferred",
+          "evidence": [
+            "人闲桂花落"
+          ]
+        },
+        {
+          "members": [
+            "i2"
+          ],
+          "role": "accent",
+          "pattern": "scattered",
+          "depth": "unspecified",
+          "basis": "inferred",
+          "evidence": [
+            "人闲桂花落"
+          ]
+        },
+        {
+          "members": [
+            "i3",
+            "i4"
+          ],
+          "role": "environment",
+          "pattern": "unspecified",
+          "depth": "unspecified",
+          "basis": "inferred",
+          "evidence": [
+            "夜静春山空"
+          ]
+        }
+      ],
+      "supports": [
+        {
+          "entity": "i2",
+          "surface": "ground",
+          "target": null,
+          "basis": "inferred",
+          "evidence": [
+            "人闲桂花落"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "entity": "i2",
+          "state": "fall",
+          "pace": "slow",
+          "direction": "down",
+          "modality": "asserted",
+          "basis": "explicit",
+          "evidence": [
+            "人闲桂花落"
+          ]
+        }
+      ],
+      "atmosphere": {
+        "visibility": "dark",
+        "illumination": "night",
+        "basis": "explicit",
+        "evidence": [
+          "夜静春山空"
+        ]
+      }
+    },
+    "expression": {
+      "relations": [],
+      "processes": [
+        {
+          "subject": "i2",
+          "kind": "fade",
+          "temporal": "ongoing",
+          "modality": "asserted",
+          "basis": "explicit",
+          "evidence": [
+            "人闲桂花落"
+          ]
+        }
+      ]
+    }
+  },
+  "validation": {
+    "valid": true,
+    "errors": [],
+    "warnings": [
+      "模型保留了不确定性，需要审阅",
+      "spatial[0] 的推断或非确定关系需审阅",
+      "scene.setting 为语义推断，绘画选择需与原文明示区分",
+      "scene.groups[0] 为语义推断，绘画选择需与原文明示区分",
+      "scene.groups[1] 为语义推断，绘画选择需与原文明示区分",
+      "scene.groups[2] 为语义推断，绘画选择需与原文明示区分",
+      "scene.supports[0] 为语义推断，绘画选择需与原文明示区分"
+    ],
+    "review_required": true
+  },
+  "plan": {
+    "version": "shared-expression-1.1-source-bound",
+    "seed": 3421446627,
+    "poem": "人闲桂花落，夜静春山空。",
+    "nodes": [
+      {
+        "id": "i1",
+        "label": "人",
+        "meaning": "人",
+        "kind": "concrete",
+        "contextOnly": false,
+        "mode": "present"
+      },
+      {
+        "id": "i2",
+        "label": "桂花",
+        "meaning": "桂花",
+        "kind": "concrete",
+        "contextOnly": false,
+        "mode": "present"
+      },
+      {
+        "id": "i3",
+        "label": "夜",
+        "meaning": "夜晚",
+        "kind": "concrete",
+        "contextOnly": true,
+        "mode": "present"
+      },
+      {
+        "id": "i4",
+        "label": "春山",
+        "meaning": "春山",
+        "kind": "concrete",
+        "contextOnly": false,
+        "mode": "present"
+      }
+    ],
+    "relations": [],
+    "processes": [
+      {
+        "subject": "i2",
+        "kind": "fade",
+        "temporal": "ongoing",
+        "modality": "asserted",
+        "basis": "explicit",
+        "evidence": [
+          "人闲桂花落"
+        ]
+      }
+    ],
+    "omitted": [],
+    "atmosphere": {
+      "labels": [
+        "静谧",
+        "空寂"
+      ],
+      "valence": "neutral",
+      "energy": "low",
+      "tension": "low",
+      "openness": "medium",
+      "evidence": [
+        "人闲桂花落",
+        "夜静春山空"
+      ],
+      "illumination": "night"
+    },
+    "concretePlan": {
+      "version": "semantic-composition-3.3-source-bound",
+      "seed": 3421446627,
+      "settings": {
+        "wind": 0.3,
+        "density": 0.45,
+        "palette": "indigo",
+        "motion": 1.4
+      },
+      "layers": [
+        {
+          "tool": "figure",
+          "entities": [
+            "i1"
+          ],
+          "projectedEntities": [],
+          "names": [
+            "人"
+          ],
+          "options": {
+            "pose": "standing"
+          },
+          "animate": true,
+          "placement": {
+            "anchor": [
+              320,
+              310
+            ],
+            "at": [
+              0.7254237921250001,
+              0.73
+            ],
+            "scale": 0.6
+          },
+          "semanticGroup": {
+            "members": [
+              "i1"
+            ],
+            "role": "subject",
+            "pattern": "single",
+            "depth": "unspecified",
+            "basis": "inferred",
+            "evidence": [
+              "人闲桂花落"
+            ],
+            "index": 0
+          },
+          "semanticEffects": [
+            {
+              "path": "scene.groups[0].role",
+              "consumer": "主次布局",
+              "effect": "主体相对突出",
+              "status": "applied"
+            },
+            {
+              "path": "scene.groups[0].pattern",
+              "consumer": "群落布局",
+              "effect": "按 single 组织显示单元；不覆盖明确数量",
+              "status": "applied"
+            },
+            {
+              "path": "scene.groups[0].depth",
+              "consumer": "远近布局",
+              "effect": "远近未明，保持本地默认",
+              "status": "skipped"
+            }
+          ],
+          "semanticEnergy": true,
+          "timeScale": 0.45,
+          "instances": [
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  310
+                ],
+                "at": [
+                  0.7254237921250001,
+                  0.73
+                ],
+                "scale": 0.5376000000000001
+              },
+              "depth": 0.05,
+              "opacity": 0.84,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i1:figure::0:0"
+            }
+          ],
+          "singleUnit": true,
+          "quantity": {
+            "items": [
+              {
+                "entity": "i1",
+                "mode": "unspecified",
+                "min": null,
+                "max": null,
+                "unit": null,
+                "scope": "unspecified",
+                "extent": "unspecified",
+                "evidence": [],
+                "basis": "model"
+              }
+            ],
+            "rendered": 1,
+            "exact": false,
+            "collective": false,
+            "partUnsupported": false
+          },
+          "quantityLabel": "数量未精确；本地试画 1 个单元",
+          "z": 12,
+          "visual": {
+            "role": "figure",
+            "brushStrength": 1.1
+          },
+          "performance": {
+            "rhythm": "steady",
+            "rate": 1,
+            "amplitude": 1,
+            "phase": 0
+          },
+          "id": "i1:figure::0",
+          "interaction": {
+            "mode": "instance",
+            "groupId": "i1:figure::0"
+          },
+          "visibility": {
+            "protect": true,
+            "reasons": [
+              "recognizable-subject",
+              "semantic-subject"
+            ],
+            "basis": "local-drawing-policy"
+          }
+        },
+        {
+          "tool": "flower",
+          "entities": [
+            "i2"
+          ],
+          "projectedEntities": [],
+          "names": [
+            "桂花"
+          ],
+          "options": {},
+          "animate": false,
+          "placement": {
+            "anchor": [
+              320,
+              320
+            ],
+            "at": [
+              0.5028363749312502,
+              0.77478
+            ],
+            "scale": 0.95
+          },
+          "drawingLabel": "花意（写意借形）",
+          "semanticGroup": {
+            "members": [
+              "i2"
+            ],
+            "role": "accent",
+            "pattern": "scattered",
+            "depth": "unspecified",
+            "basis": "inferred",
+            "evidence": [
+              "人闲桂花落"
+            ],
+            "index": 1
+          },
+          "semanticEffects": [
+            {
+              "path": "scene.actions[0].state",
+              "consumer": "动作画法",
+              "effect": "当前工具尚无对应动作状态",
+              "status": "unsupported"
+            },
+            {
+              "path": "scene.groups[1].role",
+              "consumer": "主次布局",
+              "effect": "点景缩小淡化",
+              "status": "applied"
+            },
+            {
+              "path": "scene.groups[1].pattern",
+              "consumer": "群落布局",
+              "effect": "按 scattered 组织显示单元；不覆盖明确数量",
+              "status": "applied"
+            },
+            {
+              "path": "scene.groups[1].depth",
+              "consumer": "远近布局",
+              "effect": "远近未明，保持本地默认",
+              "status": "skipped"
+            }
+          ],
+          "semanticEnergy": false,
+          "timeScale": 0,
+          "semanticAction": {
+            "entity": "i2",
+            "state": "fall",
+            "pace": "slow",
+            "direction": "down",
+            "modality": "asserted",
+            "basis": "explicit",
+            "evidence": [
+              "人闲桂花落"
+            ]
+          },
+          "instances": [
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  388
+                ],
+                "at": [
+                  0.8291763312459377,
+                  0.62275
+                ],
+                "scale": 0.36
+              },
+              "depth": 0,
+              "opacity": 0.72,
+              "variant": 0,
+              "tone": "far",
+              "id": "i2:flower::1:0"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  388
+                ],
+                "at": [
+                  0.4382341187315625,
+                  0.64825
+                ],
+                "scale": 0.395
+              },
+              "depth": 10.01,
+              "opacity": 0.72,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i2:flower::1:1"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  388
+                ],
+                "at": [
+                  0.04729190621718771,
+                  0.67375
+                ],
+                "scale": 0.43
+              },
+              "depth": 10.02,
+              "opacity": 0.72,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i2:flower::1:2"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  388
+                ],
+                "at": [
+                  0.6798496937028129,
+                  0.6992499999999999
+                ],
+                "scale": 0.46499999999999997
+              },
+              "depth": 10.03,
+              "opacity": 0.72,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i2:flower::1:3"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  388
+                ],
+                "at": [
+                  0.288907481188438,
+                  0.72475
+                ],
+                "scale": 0.36
+              },
+              "depth": 10.04,
+              "opacity": 0.72,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i2:flower::1:4"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  388
+                ],
+                "at": [
+                  0.9214652686740628,
+                  0.75025
+                ],
+                "scale": 0.395
+              },
+              "depth": 10.05,
+              "opacity": 0.72,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i2:flower::1:5"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  388
+                ],
+                "at": [
+                  0.5305230561596879,
+                  0.9621000000000001
+                ],
+                "scale": 0.43
+              },
+              "depth": 20.06,
+              "opacity": 0.72,
+              "variant": 2,
+              "tone": "near",
+              "id": "i2:flower::1:6"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  388
+                ],
+                "at": [
+                  0.1395808436453126,
+                  0.9855
+                ],
+                "scale": 0.46499999999999997
+              },
+              "depth": 20.07,
+              "opacity": 0.72,
+              "variant": 2,
+              "tone": "near",
+              "id": "i2:flower::1:7"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  388
+                ],
+                "at": [
+                  0.7721386311309373,
+                  0.8289000000000001
+                ],
+                "scale": 0.36
+              },
+              "depth": 10.08,
+              "opacity": 0.72,
+              "variant": 1,
+              "tone": "middle",
+              "id": "i2:flower::1:8"
+            },
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  388
+                ],
+                "at": [
+                  0.38119641861656284,
+                  0.8523000000000001
+                ],
+                "scale": 0.395
+              },
+              "depth": 20.09,
+              "opacity": 0.72,
+              "variant": 2,
+              "tone": "near",
+              "id": "i2:flower::1:9"
+            }
+          ],
+          "singleUnit": true,
+          "quantity": {
+            "items": [
+              {
+                "entity": "i2",
+                "mode": "unspecified",
+                "min": null,
+                "max": null,
+                "unit": null,
+                "scope": "unspecified",
+                "extent": "unspecified",
+                "evidence": [],
+                "basis": "model"
+              }
+            ],
+            "rendered": 10,
+            "exact": false,
+            "collective": false,
+            "partUnsupported": false
+          },
+          "quantityLabel": "数量未精确；本地试画 10 个单元",
+          "semanticSupport": {
+            "surface": "ground",
+            "target": null,
+            "path": "scene.supports[0]"
+          },
+          "z": 14,
+          "visual": {
+            "role": "blossom",
+            "brushStrength": 1.65
+          },
+          "performance": {
+            "rhythm": "gust",
+            "rate": 0.62,
+            "amplitude": 0.65,
+            "phase": 3.8830085198369844
+          },
+          "id": "i2:flower::1",
+          "interaction": {
+            "mode": "instance",
+            "groupId": "i2:flower::1"
+          },
+          "visibility": {
+            "protect": false,
+            "reasons": [],
+            "basis": "local-drawing-policy"
+          }
+        },
+        {
+          "tool": "landscape",
+          "entities": [],
+          "projectedEntities": [],
+          "names": [
+            "构图依托·地面"
+          ],
+          "options": {
+            "form": "ground",
+            "edge": "soft"
+          },
+          "animate": false,
+          "placement": {
+            "anchor": [
+              320,
+              194
+            ],
+            "at": [
+              0.5,
+              0.54
+            ],
+            "scale": 1.6
+          },
+          "instances": [
+            {
+              "placement": {
+                "anchor": [
+                  320,
+                  265
+                ],
+                "at": [
+                  0.5,
+                  0.54
+                ],
+                "scale": 2.5
+              },
+              "variant": 0,
+              "depth": 0,
+              "opacity": 0.84,
+              "tone": "far",
+              "id": "inferred:landscape:ground:2:0"
+            }
+          ],
+          "singleUnit": false,
+          "inferred": true,
+          "provenance": {
+            "basis": "local-context",
+            "reason": "模型解释的必要依托，依据：人闲桂花落",
+            "semanticPath": "scene.supports[0]"
+          },
+          "quantity": {
+            "rendered": 1,
+            "exact": false,
+            "items": []
+          },
+          "quantityLabel": "本地环境依托，不计入原文意象覆盖",
+          "z": -18,
+          "clip": [
+            [
+              0,
+              0.5
+            ],
+            [
+              1,
+              0.5
+            ],
+            [
+              1,
+              1.04
+            ],
+            [
+              0,
+              1.04
+            ]
+          ],
+          "visual": {
+            "role": "ground",
+            "brushStrength": 1.1
+          },
+          "performance": {
+            "rhythm": "steady",
+            "rate": 1,
+            "amplitude": 1,
+            "phase": 1.4828317324943823
+          },
+          "id": "inferred:landscape:ground:2",
+          "interaction": {
+            "mode": "group",
+            "groupId": "inferred:landscape:ground:2"
+          },
+          "visibility": {
+            "protect": false,
+            "reasons": [],
+            "basis": "local-drawing-policy"
+          }
+        }
+      ],
+      "spatial": [
+        {
+          "type": "on",
+          "source": "i2",
+          "target": "i4",
+          "modality": "unclear",
+          "basis": "inferred",
+          "evidence": [
+            "人闲桂花落",
+            "夜静春山空"
+          ],
+          "visualized": false,
+          "reason": "非确定关系仅保留解读"
+        }
+      ],
+      "scene": {
+        "kind": "study",
+        "notes": [
+          "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。",
+          "通用场景层先组织地面、水域、群落和主体，再比较三个布局的依托、相对位置、尺度与遮挡；检查通过不代表审美已通过。"
+        ],
+        "waterline": null,
+        "semanticSetting": {
+          "kind": "mountain_stream",
+          "basis": "inferred",
+          "evidence": [
+            "夜静春山空"
+          ]
+        },
+        "semanticEffects": [
+          {
+            "path": "scene.supports[0]",
+            "consumer": "场景依托",
+            "status": "applied",
+            "effect": "必要环境以独立推断背景表示，不新增原文实体"
+          },
+          {
+            "path": "scene.setting",
+            "consumer": "场景依托",
+            "status": "unsupported",
+            "effect": "推断的整体场景标签没有对应主体需要该环境，未凭标签补画山水地面"
+          },
+          {
+            "path": "scene.setting",
+            "consumer": "场景依托",
+            "status": "unsupported",
+            "effect": "推断的整体场景标签没有对应主体需要该环境，未凭标签补画山水地面"
+          }
+        ],
+        "organization": {
+          "version": "1.0",
+          "strategy": "general-constraints",
+          "regions": {
+            "land": [
+              [
+                0,
+                0.5
+              ],
+              [
+                1,
+                0.5
+              ],
+              [
+                1,
+                1.04
+              ],
+              [
+                0,
+                1.04
+              ]
+            ]
+          },
+          "candidates": [
+            {
+              "layout": 0,
+              "orientation": "疏林前后",
+              "errors": 0,
+              "cost": 30.653,
+              "score": 31.761,
+              "metrics": {
+                "overlapPenalty": 0.011,
+                "balancePenalty": 0.065,
+                "motifFootprint": 0.045,
+                "landArea": 0.54
+              }
+            },
+            {
+              "layout": 1,
+              "orientation": "林隙展开",
+              "errors": 0,
+              "cost": 33.286,
+              "score": 38.474,
+              "metrics": {
+                "overlapPenalty": 0.191,
+                "balancePenalty": 0.125,
+                "motifFootprint": 0.047,
+                "landArea": 0.54
+              }
+            },
+            {
+              "layout": 2,
+              "orientation": "远近错落",
+              "errors": 0,
+              "cost": 39.465,
+              "score": 53.939,
+              "metrics": {
+                "overlapPenalty": 0.696,
+                "balancePenalty": 0.139,
+                "motifFootprint": 0.047,
+                "landArea": 0.54
+              }
+            }
+          ],
+          "repairs": [
+            {
+              "type": "support-added",
+              "reason": "模型解释的必要依托，依据：人闲桂花落"
+            }
+          ],
+          "limitations": [
+            "几何检查不判定诗意理解或审美合格",
+            "动作时序与整首诗的场景切换尚未编排"
+          ],
+          "topology": "疏林前后",
+          "layout": 0,
+          "orientation": "疏林前后",
+          "audit": {
+            "scope": "implemented-geometry-and-drawing-gaps",
+            "coverage": {
+              "scope": "extracted-entities-only",
+              "present": 4,
+              "mapped": 2,
+              "parameters": [],
+              "missing": [
+                {
+                  "id": "i3",
+                  "name": "夜"
+                },
+                {
+                  "id": "i4",
+                  "name": "春山"
+                }
+              ]
+            },
+            "checks": [
+              "presence",
+              "count",
+              "finite",
+              "support",
+              "scale",
+              "relative-position",
+              "depth",
+              "grove-spread",
+              "drawing-gaps"
+            ],
+            "status": "needs-review",
+            "errors": 0,
+            "review": 1,
+            "issues": [
+              {
+                "code": "drawing-gaps",
+                "severity": "review",
+                "message": "还有 2 项已提取线索尚未转成画面：夜、春山"
+              }
+            ],
+            "metrics": {
+              "overlapPenalty": 0.302,
+              "balancePenalty": 0.008,
+              "motifFootprint": 0.114,
+              "landArea": 0.54
+            },
+            "cost": 33.69,
+            "aestheticAcceptance": "pending-user"
+          },
+          "graph": {
+            "nodes": [
+              {
+                "id": "l0",
+                "entities": [
+                  "i1"
+                ],
+                "tool": "figure",
+                "role": "subject",
+                "habitat": "land",
+                "inferred": false,
+                "support": "l2"
+              },
+              {
+                "id": "l1",
+                "entities": [
+                  "i2"
+                ],
+                "tool": "flower",
+                "role": "vegetation",
+                "habitat": "land",
+                "inferred": false,
+                "support": "l2"
+              },
+              {
+                "id": "l2",
+                "entities": [],
+                "tool": "landscape",
+                "role": "terrain",
+                "habitat": null,
+                "inferred": true,
+                "support": null
+              }
+            ],
+            "edges": [
+              {
+                "type": "supported-by",
+                "source": "l0",
+                "target": "l2",
+                "basis": "local-composition",
+                "habitat": "land"
+              },
+              {
+                "type": "supported-by",
+                "source": "l1",
+                "target": "l2",
+                "basis": "local-composition",
+                "habitat": "land"
+              },
+              {
+                "type": "on",
+                "source": "l1",
+                "basis": "inferred",
+                "modality": "unclear",
+                "evidence": [
+                  "人闲桂花落",
+                  "夜静春山空"
+                ]
+              }
+            ],
+            "setting": "study"
+          },
+          "actorSpacing": {
+            "version": "1.0",
+            "repairs": [],
+            "residualOverlap": 0,
+            "scope": "discrete-actors-not-intentional-occlusion"
+          }
+        },
+        "displayAudit": {
+          "scope": "display-scale-separation-and-habitat",
+          "issues": [],
+          "errors": 0,
+          "aestheticAcceptance": "pending-user"
+        }
+      },
+      "compositions": [
+        {
+          "id": "space-0",
+          "label": "疏林前后",
+          "description": "先安排连续水域与地表，再按主次与远近安放景物",
+          "layers": [
+            {
+              "tool": "figure",
+              "entities": [
+                "i1"
+              ],
+              "projectedEntities": [],
+              "names": [
+                "人"
+              ],
+              "options": {
+                "pose": "standing"
+              },
+              "animate": true,
+              "placement": {
+                "anchor": [
+                  320,
+                  310
+                ],
+                "at": [
+                  0.7254237921250001,
+                  0.73
+                ],
+                "scale": 0.6
+              },
+              "semanticGroup": {
+                "members": [
+                  "i1"
+                ],
+                "role": "subject",
+                "pattern": "single",
+                "depth": "unspecified",
+                "basis": "inferred",
+                "evidence": [
+                  "人闲桂花落"
+                ],
+                "index": 0
+              },
+              "semanticEffects": [
+                {
+                  "path": "scene.groups[0].role",
+                  "consumer": "主次布局",
+                  "effect": "主体相对突出",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[0].pattern",
+                  "consumer": "群落布局",
+                  "effect": "按 single 组织显示单元；不覆盖明确数量",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[0].depth",
+                  "consumer": "远近布局",
+                  "effect": "远近未明，保持本地默认",
+                  "status": "skipped"
+                }
+              ],
+              "semanticEnergy": true,
+              "timeScale": 0.45,
+              "instances": [
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      310
+                    ],
+                    "at": [
+                      0.7254237921250001,
+                      0.73
+                    ],
+                    "scale": 0.5376000000000001
+                  },
+                  "depth": 0.05,
+                  "opacity": 0.84,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i1:figure::0:0"
+                }
+              ],
+              "singleUnit": true,
+              "quantity": {
+                "items": [
+                  {
+                    "entity": "i1",
+                    "mode": "unspecified",
+                    "min": null,
+                    "max": null,
+                    "unit": null,
+                    "scope": "unspecified",
+                    "extent": "unspecified",
+                    "evidence": [],
+                    "basis": "model"
+                  }
+                ],
+                "rendered": 1,
+                "exact": false,
+                "collective": false,
+                "partUnsupported": false
+              },
+              "quantityLabel": "数量未精确；本地试画 1 个单元",
+              "z": 12,
+              "visual": {
+                "role": "figure",
+                "brushStrength": 1.1
+              },
+              "performance": {
+                "rhythm": "steady",
+                "rate": 1,
+                "amplitude": 1,
+                "phase": 0
+              },
+              "id": "i1:figure::0",
+              "interaction": {
+                "mode": "instance",
+                "groupId": "i1:figure::0"
+              },
+              "visibility": {
+                "protect": true,
+                "reasons": [
+                  "recognizable-subject",
+                  "semantic-subject"
+                ],
+                "basis": "local-drawing-policy"
+              }
+            },
+            {
+              "tool": "flower",
+              "entities": [
+                "i2"
+              ],
+              "projectedEntities": [],
+              "names": [
+                "桂花"
+              ],
+              "options": {},
+              "animate": false,
+              "placement": {
+                "anchor": [
+                  320,
+                  320
+                ],
+                "at": [
+                  0.5028363749312502,
+                  0.77478
+                ],
+                "scale": 0.95
+              },
+              "drawingLabel": "花意（写意借形）",
+              "semanticGroup": {
+                "members": [
+                  "i2"
+                ],
+                "role": "accent",
+                "pattern": "scattered",
+                "depth": "unspecified",
+                "basis": "inferred",
+                "evidence": [
+                  "人闲桂花落"
+                ],
+                "index": 1
+              },
+              "semanticEffects": [
+                {
+                  "path": "scene.actions[0].state",
+                  "consumer": "动作画法",
+                  "effect": "当前工具尚无对应动作状态",
+                  "status": "unsupported"
+                },
+                {
+                  "path": "scene.groups[1].role",
+                  "consumer": "主次布局",
+                  "effect": "点景缩小淡化",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[1].pattern",
+                  "consumer": "群落布局",
+                  "effect": "按 scattered 组织显示单元；不覆盖明确数量",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[1].depth",
+                  "consumer": "远近布局",
+                  "effect": "远近未明，保持本地默认",
+                  "status": "skipped"
+                }
+              ],
+              "semanticEnergy": false,
+              "timeScale": 0,
+              "semanticAction": {
+                "entity": "i2",
+                "state": "fall",
+                "pace": "slow",
+                "direction": "down",
+                "modality": "asserted",
+                "basis": "explicit",
+                "evidence": [
+                  "人闲桂花落"
+                ]
+              },
+              "instances": [
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.8291763312459377,
+                      0.62275
+                    ],
+                    "scale": 0.36
+                  },
+                  "depth": 0,
+                  "opacity": 0.72,
+                  "variant": 0,
+                  "tone": "far",
+                  "id": "i2:flower::1:0"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.4382341187315625,
+                      0.64825
+                    ],
+                    "scale": 0.395
+                  },
+                  "depth": 10.01,
+                  "opacity": 0.72,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i2:flower::1:1"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.04729190621718771,
+                      0.67375
+                    ],
+                    "scale": 0.43
+                  },
+                  "depth": 10.02,
+                  "opacity": 0.72,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i2:flower::1:2"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.6798496937028129,
+                      0.6992499999999999
+                    ],
+                    "scale": 0.46499999999999997
+                  },
+                  "depth": 10.03,
+                  "opacity": 0.72,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i2:flower::1:3"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.288907481188438,
+                      0.72475
+                    ],
+                    "scale": 0.36
+                  },
+                  "depth": 10.04,
+                  "opacity": 0.72,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i2:flower::1:4"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.9214652686740628,
+                      0.75025
+                    ],
+                    "scale": 0.395
+                  },
+                  "depth": 10.05,
+                  "opacity": 0.72,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i2:flower::1:5"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.5305230561596879,
+                      0.9621000000000001
+                    ],
+                    "scale": 0.43
+                  },
+                  "depth": 20.06,
+                  "opacity": 0.72,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i2:flower::1:6"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.1395808436453126,
+                      0.9855
+                    ],
+                    "scale": 0.46499999999999997
+                  },
+                  "depth": 20.07,
+                  "opacity": 0.72,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i2:flower::1:7"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.7721386311309373,
+                      0.8289000000000001
+                    ],
+                    "scale": 0.36
+                  },
+                  "depth": 10.08,
+                  "opacity": 0.72,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i2:flower::1:8"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.38119641861656284,
+                      0.8523000000000001
+                    ],
+                    "scale": 0.395
+                  },
+                  "depth": 20.09,
+                  "opacity": 0.72,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i2:flower::1:9"
+                }
+              ],
+              "singleUnit": true,
+              "quantity": {
+                "items": [
+                  {
+                    "entity": "i2",
+                    "mode": "unspecified",
+                    "min": null,
+                    "max": null,
+                    "unit": null,
+                    "scope": "unspecified",
+                    "extent": "unspecified",
+                    "evidence": [],
+                    "basis": "model"
+                  }
+                ],
+                "rendered": 10,
+                "exact": false,
+                "collective": false,
+                "partUnsupported": false
+              },
+              "quantityLabel": "数量未精确；本地试画 10 个单元",
+              "semanticSupport": {
+                "surface": "ground",
+                "target": null,
+                "path": "scene.supports[0]"
+              },
+              "z": 14,
+              "visual": {
+                "role": "blossom",
+                "brushStrength": 1.65
+              },
+              "performance": {
+                "rhythm": "gust",
+                "rate": 0.62,
+                "amplitude": 0.65,
+                "phase": 3.8830085198369844
+              },
+              "id": "i2:flower::1",
+              "interaction": {
+                "mode": "instance",
+                "groupId": "i2:flower::1"
+              },
+              "visibility": {
+                "protect": false,
+                "reasons": [],
+                "basis": "local-drawing-policy"
+              }
+            },
+            {
+              "tool": "landscape",
+              "entities": [],
+              "projectedEntities": [],
+              "names": [
+                "构图依托·地面"
+              ],
+              "options": {
+                "form": "ground",
+                "edge": "soft"
+              },
+              "animate": false,
+              "placement": {
+                "anchor": [
+                  320,
+                  194
+                ],
+                "at": [
+                  0.5,
+                  0.54
+                ],
+                "scale": 1.6
+              },
+              "instances": [
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      265
+                    ],
+                    "at": [
+                      0.5,
+                      0.54
+                    ],
+                    "scale": 2.5
+                  },
+                  "variant": 0,
+                  "depth": 0,
+                  "opacity": 0.84,
+                  "tone": "far",
+                  "id": "inferred:landscape:ground:2:0"
+                }
+              ],
+              "singleUnit": false,
+              "inferred": true,
+              "provenance": {
+                "basis": "local-context",
+                "reason": "模型解释的必要依托，依据：人闲桂花落",
+                "semanticPath": "scene.supports[0]"
+              },
+              "quantity": {
+                "rendered": 1,
+                "exact": false,
+                "items": []
+              },
+              "quantityLabel": "本地环境依托，不计入原文意象覆盖",
+              "z": -18,
+              "clip": [
+                [
+                  0,
+                  0.5
+                ],
+                [
+                  1,
+                  0.5
+                ],
+                [
+                  1,
+                  1.04
+                ],
+                [
+                  0,
+                  1.04
+                ]
+              ],
+              "visual": {
+                "role": "ground",
+                "brushStrength": 1.1
+              },
+              "performance": {
+                "rhythm": "steady",
+                "rate": 1,
+                "amplitude": 1,
+                "phase": 1.4828317324943823
+              },
+              "id": "inferred:landscape:ground:2",
+              "interaction": {
+                "mode": "group",
+                "groupId": "inferred:landscape:ground:2"
+              },
+              "visibility": {
+                "protect": false,
+                "reasons": [],
+                "basis": "local-drawing-policy"
+              }
+            }
+          ],
+          "scene": {
+            "kind": "study",
+            "notes": [
+              "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。",
+              "通用场景层先组织地面、水域、群落和主体，再比较三个布局的依托、相对位置、尺度与遮挡；检查通过不代表审美已通过。"
+            ],
+            "waterline": null,
+            "semanticSetting": {
+              "kind": "mountain_stream",
+              "basis": "inferred",
+              "evidence": [
+                "夜静春山空"
+              ]
+            },
+            "semanticEffects": [
+              {
+                "path": "scene.supports[0]",
+                "consumer": "场景依托",
+                "status": "applied",
+                "effect": "必要环境以独立推断背景表示，不新增原文实体"
+              },
+              {
+                "path": "scene.setting",
+                "consumer": "场景依托",
+                "status": "unsupported",
+                "effect": "推断的整体场景标签没有对应主体需要该环境，未凭标签补画山水地面"
+              },
+              {
+                "path": "scene.setting",
+                "consumer": "场景依托",
+                "status": "unsupported",
+                "effect": "推断的整体场景标签没有对应主体需要该环境，未凭标签补画山水地面"
+              }
+            ],
+            "organization": {
+              "version": "1.0",
+              "strategy": "general-constraints",
+              "regions": {
+                "land": [
+                  [
+                    0,
+                    0.5
+                  ],
+                  [
+                    1,
+                    0.5
+                  ],
+                  [
+                    1,
+                    1.04
+                  ],
+                  [
+                    0,
+                    1.04
+                  ]
+                ]
+              },
+              "candidates": [
+                {
+                  "layout": 0,
+                  "orientation": "疏林前后",
+                  "errors": 0,
+                  "cost": 30.653,
+                  "score": 31.761,
+                  "metrics": {
+                    "overlapPenalty": 0.011,
+                    "balancePenalty": 0.065,
+                    "motifFootprint": 0.045,
+                    "landArea": 0.54
+                  }
+                },
+                {
+                  "layout": 1,
+                  "orientation": "林隙展开",
+                  "errors": 0,
+                  "cost": 33.286,
+                  "score": 38.474,
+                  "metrics": {
+                    "overlapPenalty": 0.191,
+                    "balancePenalty": 0.125,
+                    "motifFootprint": 0.047,
+                    "landArea": 0.54
+                  }
+                },
+                {
+                  "layout": 2,
+                  "orientation": "远近错落",
+                  "errors": 0,
+                  "cost": 39.465,
+                  "score": 53.939,
+                  "metrics": {
+                    "overlapPenalty": 0.696,
+                    "balancePenalty": 0.139,
+                    "motifFootprint": 0.047,
+                    "landArea": 0.54
+                  }
+                }
+              ],
+              "repairs": [
+                {
+                  "type": "support-added",
+                  "reason": "模型解释的必要依托，依据：人闲桂花落"
+                }
+              ],
+              "limitations": [
+                "几何检查不判定诗意理解或审美合格",
+                "动作时序与整首诗的场景切换尚未编排"
+              ],
+              "topology": "疏林前后",
+              "layout": 0,
+              "orientation": "疏林前后",
+              "audit": {
+                "scope": "implemented-geometry-and-drawing-gaps",
+                "coverage": {
+                  "scope": "extracted-entities-only",
+                  "present": 4,
+                  "mapped": 2,
+                  "parameters": [],
+                  "missing": [
+                    {
+                      "id": "i3",
+                      "name": "夜"
+                    },
+                    {
+                      "id": "i4",
+                      "name": "春山"
+                    }
+                  ]
+                },
+                "checks": [
+                  "presence",
+                  "count",
+                  "finite",
+                  "support",
+                  "scale",
+                  "relative-position",
+                  "depth",
+                  "grove-spread",
+                  "drawing-gaps"
+                ],
+                "status": "needs-review",
+                "errors": 0,
+                "review": 1,
+                "issues": [
+                  {
+                    "code": "drawing-gaps",
+                    "severity": "review",
+                    "message": "还有 2 项已提取线索尚未转成画面：夜、春山"
+                  }
+                ],
+                "metrics": {
+                  "overlapPenalty": 0.302,
+                  "balancePenalty": 0.008,
+                  "motifFootprint": 0.114,
+                  "landArea": 0.54
+                },
+                "cost": 33.69,
+                "aestheticAcceptance": "pending-user"
+              },
+              "graph": {
+                "nodes": [
+                  {
+                    "id": "l0",
+                    "entities": [
+                      "i1"
+                    ],
+                    "tool": "figure",
+                    "role": "subject",
+                    "habitat": "land",
+                    "inferred": false,
+                    "support": "l2"
+                  },
+                  {
+                    "id": "l1",
+                    "entities": [
+                      "i2"
+                    ],
+                    "tool": "flower",
+                    "role": "vegetation",
+                    "habitat": "land",
+                    "inferred": false,
+                    "support": "l2"
+                  },
+                  {
+                    "id": "l2",
+                    "entities": [],
+                    "tool": "landscape",
+                    "role": "terrain",
+                    "habitat": null,
+                    "inferred": true,
+                    "support": null
+                  }
+                ],
+                "edges": [
+                  {
+                    "type": "supported-by",
+                    "source": "l0",
+                    "target": "l2",
+                    "basis": "local-composition",
+                    "habitat": "land"
+                  },
+                  {
+                    "type": "supported-by",
+                    "source": "l1",
+                    "target": "l2",
+                    "basis": "local-composition",
+                    "habitat": "land"
+                  },
+                  {
+                    "type": "on",
+                    "source": "l1",
+                    "basis": "inferred",
+                    "modality": "unclear",
+                    "evidence": [
+                      "人闲桂花落",
+                      "夜静春山空"
+                    ]
+                  }
+                ],
+                "setting": "study"
+              },
+              "actorSpacing": {
+                "version": "1.0",
+                "repairs": [],
+                "residualOverlap": 0,
+                "scope": "discrete-actors-not-intentional-occlusion"
+              }
+            },
+            "displayAudit": {
+              "scope": "display-scale-separation-and-habitat",
+              "issues": [],
+              "errors": 0,
+              "aestheticAcceptance": "pending-user"
+            }
+          },
+          "spatial": [
+            {
+              "type": "on",
+              "source": "i2",
+              "target": "i4",
+              "modality": "unclear",
+              "basis": "inferred",
+              "evidence": [
+                "人闲桂花落",
+                "夜静春山空"
+              ],
+              "visualized": false,
+              "reason": "非确定关系仅保留解读"
+            }
+          ],
+          "landscapeStyle": {
+            "version": "1.0",
+            "color": "role-and-distance",
+            "motion": "layer-rhythms",
+            "aestheticAcceptance": "pending-user"
+          }
+        },
+        {
+          "id": "space-1",
+          "label": "林隙展开",
+          "description": "先安排连续水域与地表，再按主次与远近安放景物",
+          "layers": [
+            {
+              "tool": "figure",
+              "entities": [
+                "i1"
+              ],
+              "projectedEntities": [],
+              "names": [
+                "人"
+              ],
+              "options": {
+                "pose": "standing"
+              },
+              "animate": true,
+              "placement": {
+                "anchor": [
+                  320,
+                  310
+                ],
+                "at": [
+                  0.776523792125,
+                  0.73
+                ],
+                "scale": 0.6
+              },
+              "semanticGroup": {
+                "members": [
+                  "i1"
+                ],
+                "role": "subject",
+                "pattern": "single",
+                "depth": "unspecified",
+                "basis": "inferred",
+                "evidence": [
+                  "人闲桂花落"
+                ],
+                "index": 0
+              },
+              "semanticEffects": [
+                {
+                  "path": "scene.groups[0].role",
+                  "consumer": "主次布局",
+                  "effect": "主体相对突出",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[0].pattern",
+                  "consumer": "群落布局",
+                  "effect": "按 single 组织显示单元；不覆盖明确数量",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[0].depth",
+                  "consumer": "远近布局",
+                  "effect": "远近未明，保持本地默认",
+                  "status": "skipped"
+                }
+              ],
+              "semanticEnergy": true,
+              "timeScale": 0.45,
+              "instances": [
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      310
+                    ],
+                    "at": [
+                      0.776523792125,
+                      0.73
+                    ],
+                    "scale": 0.5376000000000001
+                  },
+                  "depth": 0.05,
+                  "opacity": 1,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i1:figure::0:0"
+                }
+              ],
+              "singleUnit": true,
+              "quantity": {
+                "items": [
+                  {
+                    "entity": "i1",
+                    "mode": "unspecified",
+                    "min": null,
+                    "max": null,
+                    "unit": null,
+                    "scope": "unspecified",
+                    "extent": "unspecified",
+                    "evidence": [],
+                    "basis": "model"
+                  }
+                ],
+                "rendered": 1,
+                "exact": false,
+                "collective": false,
+                "partUnsupported": false
+              },
+              "quantityLabel": "数量未精确；本地试画 1 个单元",
+              "z": 12,
+              "visual": {
+                "role": "figure",
+                "brushStrength": 1.1
+              },
+              "performance": {
+                "rhythm": "steady",
+                "rate": 1,
+                "amplitude": 1,
+                "phase": 0
+              },
+              "id": "i1:figure::0",
+              "interaction": {
+                "mode": "instance",
+                "groupId": "i1:figure::0"
+              },
+              "visibility": {
+                "protect": true,
+                "reasons": [
+                  "recognizable-subject",
+                  "semantic-subject"
+                ],
+                "basis": "local-drawing-policy"
+              }
+            },
+            {
+              "tool": "flower",
+              "entities": [
+                "i2"
+              ],
+              "projectedEntities": [],
+              "names": [
+                "桂花"
+              ],
+              "options": {},
+              "animate": false,
+              "placement": {
+                "anchor": [
+                  320,
+                  320
+                ],
+                "at": [
+                  0.5656628480638441,
+                  0.77478
+                ],
+                "scale": 0.95
+              },
+              "drawingLabel": "花意（写意借形）",
+              "semanticGroup": {
+                "members": [
+                  "i2"
+                ],
+                "role": "accent",
+                "pattern": "scattered",
+                "depth": "unspecified",
+                "basis": "inferred",
+                "evidence": [
+                  "人闲桂花落"
+                ],
+                "index": 1
+              },
+              "semanticEffects": [
+                {
+                  "path": "scene.actions[0].state",
+                  "consumer": "动作画法",
+                  "effect": "当前工具尚无对应动作状态",
+                  "status": "unsupported"
+                },
+                {
+                  "path": "scene.groups[1].role",
+                  "consumer": "主次布局",
+                  "effect": "点景缩小淡化",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[1].pattern",
+                  "consumer": "群落布局",
+                  "effect": "按 scattered 组织显示单元；不覆盖明确数量",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[1].depth",
+                  "consumer": "远近布局",
+                  "effect": "远近未明，保持本地默认",
+                  "status": "skipped"
+                }
+              ],
+              "semanticEnergy": false,
+              "timeScale": 0,
+              "semanticAction": {
+                "entity": "i2",
+                "state": "fall",
+                "pace": "slow",
+                "direction": "down",
+                "modality": "asserted",
+                "basis": "explicit",
+                "evidence": [
+                  "人闲桂花落"
+                ]
+              },
+              "instances": [
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.8941463312459377,
+                      0.62275
+                    ],
+                    "scale": 0.36
+                  },
+                  "depth": 0,
+                  "opacity": 0.72,
+                  "variant": 0,
+                  "tone": "far",
+                  "id": "i2:flower::1:0"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.5032041187315625,
+                      0.64825
+                    ],
+                    "scale": 0.395
+                  },
+                  "depth": 10.01,
+                  "opacity": 0.72,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i2:flower::1:1"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.11226190621718768,
+                      0.67375
+                    ],
+                    "scale": 0.43
+                  },
+                  "depth": 10.02,
+                  "opacity": 0.72,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i2:flower::1:2"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.7448196937028129,
+                      0.6992499999999999
+                    ],
+                    "scale": 0.46499999999999997
+                  },
+                  "depth": 10.03,
+                  "opacity": 0.72,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i2:flower::1:3"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.3538774811884379,
+                      0.72475
+                    ],
+                    "scale": 0.36
+                  },
+                  "depth": 10.04,
+                  "opacity": 0.72,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i2:flower::1:4"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.965,
+                      0.75025
+                    ],
+                    "scale": 0.395
+                  },
+                  "depth": 10.05,
+                  "opacity": 0.72,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i2:flower::1:5"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.5954930561596883,
+                      0.9621000000000001
+                    ],
+                    "scale": 0.43
+                  },
+                  "depth": 20.06,
+                  "opacity": 0.7242946041435001,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i2:flower::1:6"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.20455084364531295,
+                      0.9855
+                    ],
+                    "scale": 0.46499999999999997
+                  },
+                  "depth": 20.07,
+                  "opacity": 0.72,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i2:flower::1:7"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.8371086311309377,
+                      0.8289000000000001
+                    ],
+                    "scale": 0.36
+                  },
+                  "depth": 10.08,
+                  "opacity": 0.7574385481845,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i2:flower::1:8"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.44616641861656325,
+                      0.8523000000000001
+                    ],
+                    "scale": 0.395
+                  },
+                  "depth": 20.09,
+                  "opacity": 0.72,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i2:flower::1:9"
+                }
+              ],
+              "singleUnit": true,
+              "quantity": {
+                "items": [
+                  {
+                    "entity": "i2",
+                    "mode": "unspecified",
+                    "min": null,
+                    "max": null,
+                    "unit": null,
+                    "scope": "unspecified",
+                    "extent": "unspecified",
+                    "evidence": [],
+                    "basis": "model"
+                  }
+                ],
+                "rendered": 10,
+                "exact": false,
+                "collective": false,
+                "partUnsupported": false
+              },
+              "quantityLabel": "数量未精确；本地试画 10 个单元",
+              "semanticSupport": {
+                "surface": "ground",
+                "target": null,
+                "path": "scene.supports[0]"
+              },
+              "z": 14,
+              "visual": {
+                "role": "blossom",
+                "brushStrength": 1.65
+              },
+              "performance": {
+                "rhythm": "gust",
+                "rate": 0.62,
+                "amplitude": 0.65,
+                "phase": 3.8830085198369844
+              },
+              "id": "i2:flower::1",
+              "interaction": {
+                "mode": "instance",
+                "groupId": "i2:flower::1"
+              },
+              "visibility": {
+                "protect": false,
+                "reasons": [],
+                "basis": "local-drawing-policy"
+              }
+            },
+            {
+              "tool": "landscape",
+              "entities": [],
+              "projectedEntities": [],
+              "names": [
+                "构图依托·地面"
+              ],
+              "options": {
+                "form": "ground",
+                "edge": "soft"
+              },
+              "animate": false,
+              "placement": {
+                "anchor": [
+                  320,
+                  194
+                ],
+                "at": [
+                  0.5,
+                  0.54
+                ],
+                "scale": 1.6
+              },
+              "instances": [
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      265
+                    ],
+                    "at": [
+                      0.5,
+                      0.54
+                    ],
+                    "scale": 2.5
+                  },
+                  "variant": 0,
+                  "depth": 0,
+                  "opacity": 1,
+                  "tone": "far",
+                  "id": "inferred:landscape:ground:2:0"
+                }
+              ],
+              "singleUnit": false,
+              "inferred": true,
+              "provenance": {
+                "basis": "local-context",
+                "reason": "模型解释的必要依托，依据：人闲桂花落",
+                "semanticPath": "scene.supports[0]"
+              },
+              "quantity": {
+                "rendered": 1,
+                "exact": false,
+                "items": []
+              },
+              "quantityLabel": "本地环境依托，不计入原文意象覆盖",
+              "z": -18,
+              "clip": [
+                [
+                  0,
+                  0.5
+                ],
+                [
+                  1,
+                  0.5
+                ],
+                [
+                  1,
+                  1.04
+                ],
+                [
+                  0,
+                  1.04
+                ]
+              ],
+              "visual": {
+                "role": "ground",
+                "brushStrength": 1.1
+              },
+              "performance": {
+                "rhythm": "steady",
+                "rate": 1,
+                "amplitude": 1,
+                "phase": 1.4828317324943823
+              },
+              "id": "inferred:landscape:ground:2",
+              "interaction": {
+                "mode": "group",
+                "groupId": "inferred:landscape:ground:2"
+              },
+              "visibility": {
+                "protect": false,
+                "reasons": [],
+                "basis": "local-drawing-policy"
+              }
+            }
+          ],
+          "scene": {
+            "kind": "study",
+            "notes": [
+              "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。"
+            ],
+            "waterline": null,
+            "semanticSetting": {
+              "kind": "mountain_stream",
+              "basis": "inferred",
+              "evidence": [
+                "夜静春山空"
+              ]
+            },
+            "semanticEffects": [
+              {
+                "path": "scene.supports[0]",
+                "consumer": "场景依托",
+                "status": "applied",
+                "effect": "必要环境以独立推断背景表示，不新增原文实体"
+              },
+              {
+                "path": "scene.setting",
+                "consumer": "场景依托",
+                "status": "unsupported",
+                "effect": "推断的整体场景标签没有对应主体需要该环境，未凭标签补画山水地面"
+              },
+              {
+                "path": "scene.setting",
+                "consumer": "场景依托",
+                "status": "unsupported",
+                "effect": "推断的整体场景标签没有对应主体需要该环境，未凭标签补画山水地面"
+              }
+            ],
+            "organization": {
+              "version": "1.0",
+              "strategy": "general-constraints",
+              "regions": {
+                "land": [
+                  [
+                    0,
+                    0.5
+                  ],
+                  [
+                    1,
+                    0.5
+                  ],
+                  [
+                    1,
+                    1.04
+                  ],
+                  [
+                    0,
+                    1.04
+                  ]
+                ]
+              },
+              "candidates": [],
+              "repairs": [],
+              "limitations": [
+                "几何检查不判定诗意理解或审美合格",
+                "动作时序与整首诗的场景切换尚未编排"
+              ],
+              "topology": "林隙展开",
+              "layout": 1,
+              "orientation": "林隙展开",
+              "audit": {
+                "scope": "implemented-geometry-and-drawing-gaps",
+                "coverage": {
+                  "scope": "extracted-entities-only",
+                  "present": 4,
+                  "mapped": 2,
+                  "parameters": [],
+                  "missing": [
+                    {
+                      "id": "i3",
+                      "name": "夜"
+                    },
+                    {
+                      "id": "i4",
+                      "name": "春山"
+                    }
+                  ]
+                },
+                "checks": [
+                  "presence",
+                  "count",
+                  "finite",
+                  "support",
+                  "scale",
+                  "relative-position",
+                  "depth",
+                  "grove-spread",
+                  "drawing-gaps"
+                ],
+                "status": "needs-review",
+                "errors": 0,
+                "review": 1,
+                "issues": [
+                  {
+                    "code": "drawing-gaps",
+                    "severity": "review",
+                    "message": "还有 2 项已提取线索尚未转成画面：夜、春山"
+                  }
+                ],
+                "metrics": {
+                  "overlapPenalty": 0.477,
+                  "balancePenalty": 0.054,
+                  "motifFootprint": 0.114,
+                  "landArea": 0.54
+                },
+                "cost": 36.154,
+                "aestheticAcceptance": "pending-user"
+              },
+              "graph": {
+                "nodes": [
+                  {
+                    "id": "l0",
+                    "entities": [
+                      "i1"
+                    ],
+                    "tool": "figure",
+                    "role": "subject",
+                    "habitat": "land",
+                    "inferred": false,
+                    "support": "l2"
+                  },
+                  {
+                    "id": "l1",
+                    "entities": [
+                      "i2"
+                    ],
+                    "tool": "flower",
+                    "role": "vegetation",
+                    "habitat": "land",
+                    "inferred": false,
+                    "support": "l2"
+                  },
+                  {
+                    "id": "l2",
+                    "entities": [],
+                    "tool": "landscape",
+                    "role": "terrain",
+                    "habitat": null,
+                    "inferred": true,
+                    "support": null
+                  }
+                ],
+                "edges": [
+                  {
+                    "type": "supported-by",
+                    "source": "l0",
+                    "target": "l2",
+                    "basis": "local-composition",
+                    "habitat": "land"
+                  },
+                  {
+                    "type": "supported-by",
+                    "source": "l1",
+                    "target": "l2",
+                    "basis": "local-composition",
+                    "habitat": "land"
+                  },
+                  {
+                    "type": "on",
+                    "source": "l1",
+                    "basis": "inferred",
+                    "modality": "unclear",
+                    "evidence": [
+                      "人闲桂花落",
+                      "夜静春山空"
+                    ]
+                  }
+                ],
+                "setting": "study"
+              },
+              "actorSpacing": {
+                "version": "1.0",
+                "repairs": [],
+                "residualOverlap": 0,
+                "scope": "discrete-actors-not-intentional-occlusion"
+              }
+            },
+            "displayAudit": {
+              "scope": "display-scale-separation-and-habitat",
+              "issues": [],
+              "errors": 0,
+              "aestheticAcceptance": "pending-user"
+            }
+          },
+          "spatial": [
+            {
+              "type": "on",
+              "source": "i2",
+              "target": "i4",
+              "modality": "unclear",
+              "basis": "inferred",
+              "evidence": [
+                "人闲桂花落",
+                "夜静春山空"
+              ],
+              "visualized": false,
+              "reason": "非确定关系仅保留解读"
+            }
+          ],
+          "landscapeStyle": {
+            "version": "1.0",
+            "color": "role-and-distance",
+            "motion": "layer-rhythms",
+            "aestheticAcceptance": "pending-user"
+          },
+          "notes": []
+        },
+        {
+          "id": "space-2",
+          "label": "远近错落",
+          "description": "先安排连续水域与地表，再按主次与远近安放景物",
+          "layers": [
+            {
+              "tool": "figure",
+              "entities": [
+                "i1"
+              ],
+              "projectedEntities": [],
+              "names": [
+                "人"
+              ],
+              "options": {
+                "pose": "standing"
+              },
+              "animate": true,
+              "placement": {
+                "anchor": [
+                  320,
+                  310
+                ],
+                "at": [
+                  0.827623792125,
+                  0.73
+                ],
+                "scale": 0.6
+              },
+              "semanticGroup": {
+                "members": [
+                  "i1"
+                ],
+                "role": "subject",
+                "pattern": "single",
+                "depth": "unspecified",
+                "basis": "inferred",
+                "evidence": [
+                  "人闲桂花落"
+                ],
+                "index": 0
+              },
+              "semanticEffects": [
+                {
+                  "path": "scene.groups[0].role",
+                  "consumer": "主次布局",
+                  "effect": "主体相对突出",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[0].pattern",
+                  "consumer": "群落布局",
+                  "effect": "按 single 组织显示单元；不覆盖明确数量",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[0].depth",
+                  "consumer": "远近布局",
+                  "effect": "远近未明，保持本地默认",
+                  "status": "skipped"
+                }
+              ],
+              "semanticEnergy": true,
+              "timeScale": 0.45,
+              "instances": [
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      310
+                    ],
+                    "at": [
+                      0.827623792125,
+                      0.73
+                    ],
+                    "scale": 0.5376000000000001
+                  },
+                  "depth": 0.05,
+                  "opacity": 1,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i1:figure::0:0"
+                }
+              ],
+              "singleUnit": true,
+              "quantity": {
+                "items": [
+                  {
+                    "entity": "i1",
+                    "mode": "unspecified",
+                    "min": null,
+                    "max": null,
+                    "unit": null,
+                    "scope": "unspecified",
+                    "extent": "unspecified",
+                    "evidence": [],
+                    "basis": "model"
+                  }
+                ],
+                "rendered": 1,
+                "exact": false,
+                "collective": false,
+                "partUnsupported": false
+              },
+              "quantityLabel": "数量未精确；本地试画 1 个单元",
+              "z": 12,
+              "visual": {
+                "role": "figure",
+                "brushStrength": 1.1
+              },
+              "performance": {
+                "rhythm": "steady",
+                "rate": 1,
+                "amplitude": 1,
+                "phase": 0
+              },
+              "id": "i1:figure::0",
+              "interaction": {
+                "mode": "instance",
+                "groupId": "i1:figure::0"
+              },
+              "visibility": {
+                "protect": true,
+                "reasons": [
+                  "recognizable-subject",
+                  "semantic-subject"
+                ],
+                "basis": "local-drawing-policy"
+              }
+            },
+            {
+              "tool": "flower",
+              "entities": [
+                "i2"
+              ],
+              "projectedEntities": [],
+              "names": [
+                "桂花"
+              ],
+              "options": {},
+              "animate": false,
+              "placement": {
+                "anchor": [
+                  320,
+                  320
+                ],
+                "at": [
+                  0.5430297418066564,
+                  0.77478
+                ],
+                "scale": 0.95
+              },
+              "drawingLabel": "花意（写意借形）",
+              "semanticGroup": {
+                "members": [
+                  "i2"
+                ],
+                "role": "accent",
+                "pattern": "scattered",
+                "depth": "unspecified",
+                "basis": "inferred",
+                "evidence": [
+                  "人闲桂花落"
+                ],
+                "index": 1
+              },
+              "semanticEffects": [
+                {
+                  "path": "scene.actions[0].state",
+                  "consumer": "动作画法",
+                  "effect": "当前工具尚无对应动作状态",
+                  "status": "unsupported"
+                },
+                {
+                  "path": "scene.groups[1].role",
+                  "consumer": "主次布局",
+                  "effect": "点景缩小淡化",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[1].pattern",
+                  "consumer": "群落布局",
+                  "effect": "按 scattered 组织显示单元；不覆盖明确数量",
+                  "status": "applied"
+                },
+                {
+                  "path": "scene.groups[1].depth",
+                  "consumer": "远近布局",
+                  "effect": "远近未明，保持本地默认",
+                  "status": "skipped"
+                }
+              ],
+              "semanticEnergy": false,
+              "timeScale": 0,
+              "semanticAction": {
+                "entity": "i2",
+                "state": "fall",
+                "pace": "slow",
+                "direction": "down",
+                "modality": "asserted",
+                "basis": "explicit",
+                "evidence": [
+                  "人闲桂花落"
+                ]
+              },
+              "instances": [
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.965,
+                      0.62275
+                    ],
+                    "scale": 0.36
+                  },
+                  "depth": 0,
+                  "opacity": 0.72,
+                  "variant": 0,
+                  "tone": "far",
+                  "id": "i2:flower::1:0"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.5815241187315624,
+                      0.64825
+                    ],
+                    "scale": 0.395
+                  },
+                  "depth": 10.01,
+                  "opacity": 0.72,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i2:flower::1:1"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.19058190621718757,
+                      0.67375
+                    ],
+                    "scale": 0.43
+                  },
+                  "depth": 10.02,
+                  "opacity": 0.72,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i2:flower::1:2"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.8231396937028128,
+                      0.6992499999999999
+                    ],
+                    "scale": 0.46499999999999997
+                  },
+                  "depth": 10.03,
+                  "opacity": 0.72,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i2:flower::1:3"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.4321974811884379,
+                      0.72475
+                    ],
+                    "scale": 0.36
+                  },
+                  "depth": 10.04,
+                  "opacity": 0.72,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i2:flower::1:4"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.04125526867406304,
+                      0.75025
+                    ],
+                    "scale": 0.395
+                  },
+                  "depth": 10.05,
+                  "opacity": 0.72,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i2:flower::1:5"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.6738130561596878,
+                      0.9621000000000001
+                    ],
+                    "scale": 0.43
+                  },
+                  "depth": 20.06,
+                  "opacity": 0.7345438041435001,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i2:flower::1:6"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.28287084364531245,
+                      0.9855
+                    ],
+                    "scale": 0.46499999999999997
+                  },
+                  "depth": 20.07,
+                  "opacity": 0.72,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i2:flower::1:7"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.9154286311309372,
+                      0.8289000000000001
+                    ],
+                    "scale": 0.36
+                  },
+                  "depth": 10.08,
+                  "opacity": 0.7676877481844999,
+                  "variant": 1,
+                  "tone": "middle",
+                  "id": "i2:flower::1:8"
+                },
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      388
+                    ],
+                    "at": [
+                      0.5244864186165628,
+                      0.8523000000000001
+                    ],
+                    "scale": 0.395
+                  },
+                  "depth": 20.09,
+                  "opacity": 0.72,
+                  "variant": 2,
+                  "tone": "near",
+                  "id": "i2:flower::1:9"
+                }
+              ],
+              "singleUnit": true,
+              "quantity": {
+                "items": [
+                  {
+                    "entity": "i2",
+                    "mode": "unspecified",
+                    "min": null,
+                    "max": null,
+                    "unit": null,
+                    "scope": "unspecified",
+                    "extent": "unspecified",
+                    "evidence": [],
+                    "basis": "model"
+                  }
+                ],
+                "rendered": 10,
+                "exact": false,
+                "collective": false,
+                "partUnsupported": false
+              },
+              "quantityLabel": "数量未精确；本地试画 10 个单元",
+              "semanticSupport": {
+                "surface": "ground",
+                "target": null,
+                "path": "scene.supports[0]"
+              },
+              "z": 14,
+              "visual": {
+                "role": "blossom",
+                "brushStrength": 1.65
+              },
+              "performance": {
+                "rhythm": "gust",
+                "rate": 0.62,
+                "amplitude": 0.65,
+                "phase": 3.8830085198369844
+              },
+              "id": "i2:flower::1",
+              "interaction": {
+                "mode": "instance",
+                "groupId": "i2:flower::1"
+              },
+              "visibility": {
+                "protect": false,
+                "reasons": [],
+                "basis": "local-drawing-policy"
+              }
+            },
+            {
+              "tool": "landscape",
+              "entities": [],
+              "projectedEntities": [],
+              "names": [
+                "构图依托·地面"
+              ],
+              "options": {
+                "form": "ground",
+                "edge": "soft"
+              },
+              "animate": false,
+              "placement": {
+                "anchor": [
+                  320,
+                  194
+                ],
+                "at": [
+                  0.5,
+                  0.54
+                ],
+                "scale": 1.6
+              },
+              "instances": [
+                {
+                  "placement": {
+                    "anchor": [
+                      320,
+                      265
+                    ],
+                    "at": [
+                      0.5,
+                      0.54
+                    ],
+                    "scale": 2.5
+                  },
+                  "variant": 0,
+                  "depth": 0,
+                  "opacity": 1,
+                  "tone": "far",
+                  "id": "inferred:landscape:ground:2:0"
+                }
+              ],
+              "singleUnit": false,
+              "inferred": true,
+              "provenance": {
+                "basis": "local-context",
+                "reason": "模型解释的必要依托，依据：人闲桂花落",
+                "semanticPath": "scene.supports[0]"
+              },
+              "quantity": {
+                "rendered": 1,
+                "exact": false,
+                "items": []
+              },
+              "quantityLabel": "本地环境依托，不计入原文意象覆盖",
+              "z": -18,
+              "clip": [
+                [
+                  0,
+                  0.5
+                ],
+                [
+                  1,
+                  0.5
+                ],
+                [
+                  1,
+                  1.04
+                ],
+                [
+                  0,
+                  1.04
+                ]
+              ],
+              "visual": {
+                "role": "ground",
+                "brushStrength": 1.1
+              },
+              "performance": {
+                "rhythm": "steady",
+                "rate": 1,
+                "amplitude": 1,
+                "phase": 1.4828317324943823
+              },
+              "id": "inferred:landscape:ground:2",
+              "interaction": {
+                "mode": "group",
+                "groupId": "inferred:landscape:ground:2"
+              },
+              "visibility": {
+                "protect": false,
+                "reasons": [],
+                "basis": "local-drawing-policy"
+              }
+            }
+          ],
+          "scene": {
+            "kind": "study",
+            "notes": [
+              "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。"
+            ],
+            "waterline": null,
+            "semanticSetting": {
+              "kind": "mountain_stream",
+              "basis": "inferred",
+              "evidence": [
+                "夜静春山空"
+              ]
+            },
+            "semanticEffects": [
+              {
+                "path": "scene.supports[0]",
+                "consumer": "场景依托",
+                "status": "applied",
+                "effect": "必要环境以独立推断背景表示，不新增原文实体"
+              },
+              {
+                "path": "scene.setting",
+                "consumer": "场景依托",
+                "status": "unsupported",
+                "effect": "推断的整体场景标签没有对应主体需要该环境，未凭标签补画山水地面"
+              },
+              {
+                "path": "scene.setting",
+                "consumer": "场景依托",
+                "status": "unsupported",
+                "effect": "推断的整体场景标签没有对应主体需要该环境，未凭标签补画山水地面"
+              }
+            ],
+            "organization": {
+              "version": "1.0",
+              "strategy": "general-constraints",
+              "regions": {
+                "land": [
+                  [
+                    0,
+                    0.5
+                  ],
+                  [
+                    1,
+                    0.5
+                  ],
+                  [
+                    1,
+                    1.04
+                  ],
+                  [
+                    0,
+                    1.04
+                  ]
+                ]
+              },
+              "candidates": [],
+              "repairs": [],
+              "limitations": [
+                "几何检查不判定诗意理解或审美合格",
+                "动作时序与整首诗的场景切换尚未编排"
+              ],
+              "topology": "远近错落",
+              "layout": 2,
+              "orientation": "远近错落",
+              "audit": {
+                "scope": "implemented-geometry-and-drawing-gaps",
+                "coverage": {
+                  "scope": "extracted-entities-only",
+                  "present": 4,
+                  "mapped": 2,
+                  "parameters": [],
+                  "missing": [
+                    {
+                      "id": "i3",
+                      "name": "夜"
+                    },
+                    {
+                      "id": "i4",
+                      "name": "春山"
+                    }
+                  ]
+                },
+                "checks": [
+                  "presence",
+                  "count",
+                  "finite",
+                  "support",
+                  "scale",
+                  "relative-position",
+                  "depth",
+                  "grove-spread",
+                  "drawing-gaps"
+                ],
+                "status": "needs-review",
+                "errors": 0,
+                "review": 1,
+                "issues": [
+                  {
+                    "code": "drawing-gaps",
+                    "severity": "review",
+                    "message": "还有 2 项已提取线索尚未转成画面：夜、春山"
+                  }
+                ],
+                "metrics": {
+                  "overlapPenalty": 0.699,
+                  "balancePenalty": 0.04,
+                  "motifFootprint": 0.114,
+                  "landArea": 0.54
+                },
+                "cost": 38.711,
+                "aestheticAcceptance": "pending-user"
+              },
+              "graph": {
+                "nodes": [
+                  {
+                    "id": "l0",
+                    "entities": [
+                      "i1"
+                    ],
+                    "tool": "figure",
+                    "role": "subject",
+                    "habitat": "land",
+                    "inferred": false,
+                    "support": "l2"
+                  },
+                  {
+                    "id": "l1",
+                    "entities": [
+                      "i2"
+                    ],
+                    "tool": "flower",
+                    "role": "vegetation",
+                    "habitat": "land",
+                    "inferred": false,
+                    "support": "l2"
+                  },
+                  {
+                    "id": "l2",
+                    "entities": [],
+                    "tool": "landscape",
+                    "role": "terrain",
+                    "habitat": null,
+                    "inferred": true,
+                    "support": null
+                  }
+                ],
+                "edges": [
+                  {
+                    "type": "supported-by",
+                    "source": "l0",
+                    "target": "l2",
+                    "basis": "local-composition",
+                    "habitat": "land"
+                  },
+                  {
+                    "type": "supported-by",
+                    "source": "l1",
+                    "target": "l2",
+                    "basis": "local-composition",
+                    "habitat": "land"
+                  },
+                  {
+                    "type": "on",
+                    "source": "l1",
+                    "basis": "inferred",
+                    "modality": "unclear",
+                    "evidence": [
+                      "人闲桂花落",
+                      "夜静春山空"
+                    ]
+                  }
+                ],
+                "setting": "study"
+              },
+              "actorSpacing": {
+                "version": "1.0",
+                "repairs": [],
+                "residualOverlap": 0,
+                "scope": "discrete-actors-not-intentional-occlusion"
+              }
+            },
+            "displayAudit": {
+              "scope": "display-scale-separation-and-habitat",
+              "issues": [],
+              "errors": 0,
+              "aestheticAcceptance": "pending-user"
+            }
+          },
+          "spatial": [
+            {
+              "type": "on",
+              "source": "i2",
+              "target": "i4",
+              "modality": "unclear",
+              "basis": "inferred",
+              "evidence": [
+                "人闲桂花落",
+                "夜静春山空"
+              ],
+              "visualized": false,
+              "reason": "非确定关系仅保留解读"
+            }
+          ],
+          "landscapeStyle": {
+            "version": "1.0",
+            "color": "role-and-distance",
+            "motion": "layer-rhythms",
+            "aestheticAcceptance": "pending-user"
+          },
+          "notes": []
+        }
+      ],
+      "composition": "space-0",
+      "omitted": [
+        {
+          "id": "i3",
+          "name": "夜",
+          "reason": "该意象尚无合适的写意画法"
+        },
+        {
+          "id": "i4",
+          "name": "春山",
+          "reason": "该专名人物、地名或抽象含义暂不作实景补画"
+        }
+      ],
+      "parameters": [],
+      "sourceResolution": {
+        "version": "source-depiction-1.1",
+        "quantities": {},
+        "identities": [],
+        "changes": []
+      },
+      "notes": [
+        "人：只以淡墨衣形和头部笔点提示人物，不作肖像或服饰考据。这是本地写意借形，保留原词义。",
+        "桂花：以通用花形概括，不细分花种。这是本地写意借形，保留原词义。",
+        "位置、大小、笔触与默认微动是本地试画选择；数量解释与本地显示数量分别记录。",
+        "未明说的群落数量、疏密、近中远层次与变体均为本地构图选择；种类可按已声明的写意画法概括，不把铺展词换算成精确物体数量。",
+        "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。",
+        "通用场景层先组织地面、水域、群落和主体，再比较三个布局的依托、相对位置、尺度与遮挡；检查通过不代表审美已通过。",
+        "语义保留：scene.setting，推断的整体场景标签没有对应主体需要该环境，未凭标签补画山水地面",
+        "语义保留：scene.groups[2].role，分组成员目前缺少基础画法",
+        "语义保留：scene.groups[2].pattern，分组成员目前缺少基础画法",
+        "语义保留：scene.groups[2].depth，分组成员目前缺少基础画法",
+        "语义保留：scene.actions[0].state，当前工具尚无对应动作状态",
+        "整体场景、主次、远近、依托和支持的动作状态来自本次模型解释；具体布局、颜色和时钟倍率由本地视觉策略选择。",
+        "动作动画表现受支持的主导状态与有限观看运动；先后事件与完整因果尚未编排。",
+        "动态程度与默认轻风是可调整的观看选择；不改变数量、主次或原文动作判断。人物保持点景写意，不新增人物步态。",
+        "显示检查覆盖实例尺度、鸟群分离与空中落点；不保证笔触未被遮挡，也不代替实际观看。竹林默认成组拖动，其余单独拖动；Shift 可拖动同层整组。"
+      ],
+      "relations": [],
+      "semanticConsumption": {
+        "version": "3.3",
+        "items": [
+          {
+            "path": "scene.setting",
+            "status": "unsupported",
+            "consumer": "场景依托",
+            "effect": "推断的整体场景标签没有对应主体需要该环境，未凭标签补画山水地面",
+            "basis": "inferred",
+            "evidence": [
+              "夜静春山空"
+            ]
+          },
+          {
+            "path": "scene.groups[0].role",
+            "status": "applied",
+            "consumer": "主次布局",
+            "effect": "主体相对突出",
+            "basis": "inferred",
+            "evidence": [
+              "人闲桂花落"
+            ]
+          },
+          {
+            "path": "scene.groups[0].pattern",
+            "status": "applied",
+            "consumer": "群落布局",
+            "effect": "按 single 组织显示单元；不覆盖明确数量",
+            "basis": "inferred",
+            "evidence": [
+              "人闲桂花落"
+            ]
+          },
+          {
+            "path": "scene.groups[0].depth",
+            "status": "skipped",
+            "consumer": "远近布局",
+            "effect": "远近未明，保持本地默认",
+            "basis": "inferred",
+            "evidence": [
+              "人闲桂花落"
+            ]
+          },
+          {
+            "path": "scene.groups[1].role",
+            "status": "applied",
+            "consumer": "主次布局",
+            "effect": "点景缩小淡化",
+            "basis": "inferred",
+            "evidence": [
+              "人闲桂花落"
+            ]
+          },
+          {
+            "path": "scene.groups[1].pattern",
+            "status": "applied",
+            "consumer": "群落布局",
+            "effect": "按 scattered 组织显示单元；不覆盖明确数量",
+            "basis": "inferred",
+            "evidence": [
+              "人闲桂花落"
+            ]
+          },
+          {
+            "path": "scene.groups[1].depth",
+            "status": "skipped",
+            "consumer": "远近布局",
+            "effect": "远近未明，保持本地默认",
+            "basis": "inferred",
+            "evidence": [
+              "人闲桂花落"
+            ]
+          },
+          {
+            "path": "scene.groups[2].role",
+            "status": "unsupported",
+            "consumer": "本地视觉策略",
+            "effect": "分组成员目前缺少基础画法",
+            "basis": "inferred",
+            "evidence": [
+              "夜静春山空"
+            ]
+          },
+          {
+            "path": "scene.groups[2].pattern",
+            "status": "unsupported",
+            "consumer": "本地视觉策略",
+            "effect": "分组成员目前缺少基础画法",
+            "basis": "inferred",
+            "evidence": [
+              "夜静春山空"
+            ]
+          },
+          {
+            "path": "scene.groups[2].depth",
+            "status": "unsupported",
+            "consumer": "本地视觉策略",
+            "effect": "分组成员目前缺少基础画法",
+            "basis": "inferred",
+            "evidence": [
+              "夜静春山空"
+            ]
+          },
+          {
+            "path": "scene.supports[0]",
+            "status": "applied",
+            "consumer": "场景依托",
+            "effect": "必要环境以独立推断背景表示，不新增原文实体",
+            "basis": "inferred",
+            "evidence": [
+              "人闲桂花落"
+            ]
+          },
+          {
+            "path": "scene.actions[0].state",
+            "status": "unsupported",
+            "consumer": "动作画法",
+            "effect": "当前工具尚无对应动作状态",
+            "basis": "explicit",
+            "evidence": [
+              "人闲桂花落"
+            ]
+          },
+          {
+            "path": "scene.actions[0].pace",
+            "status": "skipped",
+            "consumer": "本地视觉策略",
+            "effect": "该工具尚不支持此动作分量",
+            "basis": "explicit",
+            "evidence": [
+              "人闲桂花落"
+            ]
+          },
+          {
+            "path": "scene.actions[0].direction",
+            "status": "skipped",
+            "consumer": "本地视觉策略",
+            "effect": "该工具尚不支持此动作分量",
+            "basis": "explicit",
+            "evidence": [
+              "人闲桂花落"
+            ]
+          },
+          {
+            "path": "scene.atmosphere.visibility",
+            "status": "applied",
+            "consumer": "画布色层与远景",
+            "effect": "可见度 dark；迷蒙或昏暗时淡化非光源图层",
+            "basis": "explicit",
+            "evidence": [
+              "夜静春山空"
+            ]
+          },
+          {
+            "path": "scene.atmosphere.illumination",
+            "status": "applied",
+            "consumer": "自动光色",
+            "effect": "照明 night 与气息标签共同选择本地 indigo 配色；夜景优先暗底，用户可手动覆盖",
+            "basis": "explicit",
+            "evidence": [
+              "夜静春山空"
+            ]
+          },
+          {
+            "path": "atmosphere.energy",
+            "status": "applied",
+            "consumer": "绘画时钟",
+            "effect": "没有明确动作节奏时，气息强弱控制已有微动的默认时钟"
+          },
+          {
+            "path": "atmosphere.openness",
+            "status": "applied",
+            "consumer": "群落分布与笔触密度",
+            "effect": "开阔度转换为本地间距与工具笔触密度，不等于原文数量"
+          },
+          {
+            "path": "atmosphere.valence",
+            "status": "applied",
+            "consumer": "自动光色",
+            "effect": "先约束昼夜明暗，再按已支持的气息标签和情绪倾向选择配色；不宣称完整情感理解"
+          },
+          {
+            "path": "time.markers",
+            "status": "retained",
+            "consumer": "原始记录与解读",
+            "effect": "保留原文时间标记；本版照明由 scene.atmosphere 转换，多阶段时间逻辑未执行"
+          }
+        ],
+        "summary": {
+          "applied": 10,
+          "partial": 0,
+          "unsupported": 5,
+          "skipped": 4,
+          "retained": 1
+        },
+        "aestheticAcceptance": "pending-user"
+      },
+      "landscapeStyle": {
+        "version": "1.0",
+        "color": "role-and-distance",
+        "motion": "layer-rhythms",
+        "aestheticAcceptance": "pending-user"
+      },
+      "compositionSelection": {
+        "method": "shared-policy-final-audit-and-geometric-preference",
+        "candidates": [
+          {
+            "id": "space-0",
+            "errors": 0,
+            "score": 39.238,
+            "actorOverlap": 0
+          },
+          {
+            "id": "space-1",
+            "errors": 0,
+            "score": 45.496,
+            "actorOverlap": 0
+          },
+          {
+            "id": "space-2",
+            "errors": 0,
+            "score": 51.853,
+            "actorOverlap": 0
+          }
+        ],
+        "aestheticAcceptance": "pending-user"
+      },
+      "imageryTrace": [
+        {
+          "id": "i1",
+          "mentions": [
+            "人"
+          ],
+          "role": "scene",
+          "presence": "present",
+          "parameter": null,
+          "layers": [
+            {
+              "id": "i1:figure::0",
+              "tool": "figure",
+              "instances": [
+                "i1:figure::0:0"
+              ]
+            }
+          ],
+          "omission": null
+        },
+        {
+          "id": "i2",
+          "mentions": [
+            "桂花"
+          ],
+          "role": "scene",
+          "presence": "present",
+          "parameter": null,
+          "layers": [
+            {
+              "id": "i2:flower::1",
+              "tool": "flower",
+              "instances": [
+                "i2:flower::1:0",
+                "i2:flower::1:1",
+                "i2:flower::1:2",
+                "i2:flower::1:3",
+                "i2:flower::1:4",
+                "i2:flower::1:5",
+                "i2:flower::1:6",
+                "i2:flower::1:7",
+                "i2:flower::1:8",
+                "i2:flower::1:9"
+              ]
+            }
+          ],
+          "omission": null
+        },
+        {
+          "id": "i3",
+          "mentions": [
+            "夜"
+          ],
+          "role": "scene",
+          "presence": "present",
+          "parameter": null,
+          "layers": [],
+          "omission": "该意象尚无合适的写意画法"
+        },
+        {
+          "id": "i4",
+          "mentions": [
+            "春山"
+          ],
+          "role": "scene",
+          "presence": "present",
+          "parameter": null,
+          "layers": [],
+          "omission": "该专名人物、地名或抽象含义暂不作实景补画"
+        }
+      ],
+      "drawingPolicy": {
+        "version": "shared-drawing-policy-1.0",
+        "scope": "source-bound-generation-and-composition-alternatives",
+        "selectedComposition": "space-0",
+        "applied": [
+          {
+            "composition": "space-0",
+            "layer": "i1:figure::0",
+            "entities": [
+              "i1"
+            ],
+            "color": null,
+            "visibility": [
+              "recognizable-subject",
+              "semantic-subject"
+            ],
+            "attachment": null
+          },
+          {
+            "composition": "space-1",
+            "layer": "i1:figure::0",
+            "entities": [
+              "i1"
+            ],
+            "color": null,
+            "visibility": [
+              "recognizable-subject",
+              "semantic-subject"
+            ],
+            "attachment": null
+          },
+          {
+            "composition": "space-2",
+            "layer": "i1:figure::0",
+            "entities": [
+              "i1"
+            ],
+            "color": null,
+            "visibility": [
+              "recognizable-subject",
+              "semantic-subject"
+            ],
+            "attachment": null
+          }
+        ],
+        "quantityChanges": 0,
+        "identityGroups": 0,
+        "aestheticAcceptance": "pending-user"
+      }
+    },
+    "renderability": {
+      "status": "limited",
+      "visibleScenery": true,
+      "visibleAbstract": false,
+      "gaps": [
+        {
+          "id": "i4",
+          "label": "春山",
+          "reason": "该专名人物、地名或抽象含义暂不作实景补画"
+        }
+      ]
+    },
+    "expression": {
+      "version": "shared-expression-1.1-source-bound",
+      "sourceContract": "expression-1.0",
+      "recommendation": "balanced",
+      "reason": "结合可画景物与抽象笔势",
+      "gaps": [
+        {
+          "id": "i4",
+          "label": "春山",
+          "reason": "该专名人物、地名或抽象含义暂不作实景补画"
+        }
+      ],
+      "limitations": [
+        "景物过程当前影响抽象纹理；原生景物动作沿用场景能力，未支持的月下楼位移等仍不执行。",
+        "纹理、色层和观看扰动属于本地艺术选择，不改变语义成立状态"
+      ]
+    },
+    "notes": [
+      "三个表达倾向共享景物数量、空间、依托与主体身份；抽象笔触优先服从原景物区域和轮廓。",
+      "纯抽象或比喻句不因切换风景优先而补山水。",
+      "人：只以淡墨衣形和头部笔点提示人物，不作肖像或服饰考据。这是本地写意借形，保留原词义。",
+      "桂花：以通用花形概括，不细分花种。这是本地写意借形，保留原词义。",
+      "位置、大小、笔触与默认微动是本地试画选择；数量解释与本地显示数量分别记录。",
+      "未明说的群落数量、疏密、近中远层次与变体均为本地构图选择；种类可按已声明的写意画法概括，不把铺展词换算成精确物体数量。",
+      "空间关系只在两端有画法且关系成立时应用；相对关系之外的距离、方向和尺度仍由本地构图选择。",
+      "通用场景层先组织地面、水域、群落和主体，再比较三个布局的依托、相对位置、尺度与遮挡；检查通过不代表审美已通过。",
+      "语义保留：scene.setting，推断的整体场景标签没有对应主体需要该环境，未凭标签补画山水地面",
+      "语义保留：scene.groups[2].role，分组成员目前缺少基础画法",
+      "语义保留：scene.groups[2].pattern，分组成员目前缺少基础画法",
+      "语义保留：scene.groups[2].depth，分组成员目前缺少基础画法",
+      "语义保留：scene.actions[0].state，当前工具尚无对应动作状态",
+      "整体场景、主次、远近、依托和支持的动作状态来自本次模型解释；具体布局、颜色和时钟倍率由本地视觉策略选择。",
+      "动作动画表现受支持的主导状态与有限观看运动；先后事件与完整因果尚未编排。",
+      "动态程度与默认轻风是可调整的观看选择；不改变数量、主次或原文动作判断。人物保持点景写意，不新增人物步态。",
+      "显示检查覆盖实例尺度、鸟群分离与空中落点；不保证笔触未被遮挡，也不代替实际观看。竹林默认成组拖动，其余单独拖动；Shift 可拖动同层整组。"
+    ],
+    "aestheticAcceptance": "pending-user"
+  },
+  "delivery": {
+    "status": "partial",
+    "retryable": false,
+    "reason": "drawing-gap",
+    "message": "基础画面已生成，部分意象尚未单独表现，具体缺口已列出。"
+  },
+  "elapsed_seconds": 4.8
+}

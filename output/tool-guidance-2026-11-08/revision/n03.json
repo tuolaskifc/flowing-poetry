@@ -1,0 +1,109 @@
+{
+  "id": "n03",
+  "poem": "荷尽已无擎雨盖，菊残犹有傲霜枝。",
+  "originalRecord": "2026-11-08T05-05-24-719Z-e21da934",
+  "baseline": [
+    {
+      "names": [
+        "菊"
+      ],
+      "tool": "flower-forms",
+      "entities": [
+        "i3"
+      ]
+    },
+    {
+      "names": [
+        "傲霜枝"
+      ],
+      "tool": "surface-weather",
+      "entities": [
+        "i4"
+      ]
+    },
+    {
+      "names": [
+        "霜"
+      ],
+      "tool": "surface-weather",
+      "entities": [
+        "i5"
+      ]
+    }
+  ],
+  "baselineGaps": [],
+  "usage": {
+    "completion_tokens": 565,
+    "prompt_tokens": 3119,
+    "total_tokens": 3684,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  },
+  "finish": "stop",
+  "raw": "{\n  \"choices\": [\n    {\n    \"entity\": \"i1\",\n    \"tool_id\": null,\n    \"fit\": \"not_drawn\",\n    \"reason\": \"荷花已凋尽，属缺席状态，不应画成实物。\",\n    \"evidence\": [\"荷尽已无擎雨盖\"]\n    },\n    {\n    \"entity\": \"i2\",\n    \"tool_id\": null,\n    \"fit\": \"not_drawn\",\n    \"reason\": \"荷叶已不存在，属缺席状态，不应画成实物。\",\n    \"evidence\": [\"荷尽已无擎雨盖\"]\n    },\n    {\n    \"entity\": \"i3\",\n    \"tool_id\": \"flower-forms\",\n    \"fit\": \"approximate\",\n    \"reason\": \"菊形或带叶菊丛可近似表现菊花，但工具明确不支持残菊，无法呈现“菊残”的凋败状态。\",\n    \"evidence\": [\"菊残犹有傲霜枝\"]\n    },\n    {\n    \"entity\": \"i4\",\n    \"tool_id\": null,\n    \"fit\": \"unavailable\",\n    \"reason\": \"目录中无菊枝专用工具；梅枝为不同植物，通用树不辨认品种与残败状态，无法可靠画出“傲霜枝”。\",\n    \"evidence\": [\"菊残犹有傲霜枝\"]\n    },\n    {\n    \"entity\": \"i5\",\n    \"tool_id\": \"surface-weather\",\n    \"fit\": \"approximate\",\n    \"reason\": \"露霜附着可表现霜的局部笔触，但工具说明其不是枝条、也不表示霜在空中飘落，只能近似附着于枝上。\",\n    \"evidence\": [\"菊残犹有傲霜枝\"]\n    }\n  ],\n  \"composition\": \"画面以深秋残景为基调：荷花与荷叶已尽，不出现；菊花残败，菊枝挺立，霜寒附着于枝上。整体清冷萧瑟，突出菊枝在霜寒中犹存的姿态。\",\n  \"expected\": \"可近似表现残菊与霜寒附着，但无法画出凋尽的荷花荷叶，也无法可靠表现菊枝的残败挺立状态。\",\n  \"uncertainties\": [\n    \"“擎雨盖”指荷叶为常见解读，但原文未明说，故单列为荷叶实体。\",\n    \"“傲霜枝”可理解为菊枝耐寒挺立，但原文未明说其具体姿态。\",\n    \"工具目录中无菊枝专用工具，通用树与梅枝均不能替代。\",\n    \"花冠·菊丛工具明确不支持残菊，无法呈现“菊残”状态。\"\n  ]\n}",
+  "advice": {
+    "choices": [
+      {
+        "entity": "i1",
+        "tool_id": null,
+        "fit": "not_drawn",
+        "reason": "荷花已凋尽，属缺席状态，不应画成实物。",
+        "evidence": [
+          "荷尽已无擎雨盖"
+        ]
+      },
+      {
+        "entity": "i2",
+        "tool_id": null,
+        "fit": "not_drawn",
+        "reason": "荷叶已不存在，属缺席状态，不应画成实物。",
+        "evidence": [
+          "荷尽已无擎雨盖"
+        ]
+      },
+      {
+        "entity": "i3",
+        "tool_id": "flower-forms",
+        "fit": "approximate",
+        "reason": "菊形或带叶菊丛可近似表现菊花，但工具明确不支持残菊，无法呈现“菊残”的凋败状态。",
+        "evidence": [
+          "菊残犹有傲霜枝"
+        ]
+      },
+      {
+        "entity": "i4",
+        "tool_id": null,
+        "fit": "unavailable",
+        "reason": "目录中无菊枝专用工具；梅枝为不同植物，通用树不辨认品种与残败状态，无法可靠画出“傲霜枝”。",
+        "evidence": [
+          "菊残犹有傲霜枝"
+        ]
+      },
+      {
+        "entity": "i5",
+        "tool_id": "surface-weather",
+        "fit": "approximate",
+        "reason": "露霜附着可表现霜的局部笔触，但工具说明其不是枝条、也不表示霜在空中飘落，只能近似附着于枝上。",
+        "evidence": [
+          "菊残犹有傲霜枝"
+        ]
+      }
+    ],
+    "composition": "画面以深秋残景为基调：荷花与荷叶已尽，不出现；菊花残败，菊枝挺立，霜寒附着于枝上。整体清冷萧瑟，突出菊枝在霜寒中犹存的姿态。",
+    "expected": "可近似表现残菊与霜寒附着，但无法画出凋尽的荷花荷叶，也无法可靠表现菊枝的残败挺立状态。",
+    "uncertainties": [
+      "“擎雨盖”指荷叶为常见解读，但原文未明说，故单列为荷叶实体。",
+      "“傲霜枝”可理解为菊枝耐寒挺立，但原文未明说其具体姿态。",
+      "工具目录中无菊枝专用工具，通用树与梅枝均不能替代。",
+      "花冠·菊丛工具明确不支持残菊，无法呈现“菊残”状态。"
+    ]
+  },
+  "validation": {
+    "valid": true,
+    "errors": []
+  }
+}

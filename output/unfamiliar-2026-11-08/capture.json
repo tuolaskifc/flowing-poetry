@@ -1,0 +1,255 @@
+{
+  "scope": "one-attempt-per-fixed-real-poem",
+  "cases": 6,
+  "rows": [
+    {
+      "id": "n01",
+      "poem": "沾衣欲湿杏花雨，吹面不寒杨柳风。",
+      "author": "志南",
+      "title": "绝句",
+      "url": "https://www.gushiwen.cn/mingju/juv_6ee372efe8e5.aspx",
+      "focus": "时令借称与动作",
+      "recordId": "2026-11-08T05-05-24-715Z-036f90ee",
+      "cached": false,
+      "delivery": {
+        "status": "failed",
+        "retryable": true,
+        "reason": "connection-or-format",
+        "message": "这次分析未能完整返回，尚未生成本句画面。"
+      },
+      "validation": {
+        "valid": false,
+        "errors": [
+          "The operation was aborted due to timeout"
+        ],
+        "warnings": [],
+        "review_required": true
+      }
+    },
+    {
+      "id": "n02",
+      "poem": "竹喧归浣女，莲动下渔舟。",
+      "author": "王维",
+      "title": "山居秋暝",
+      "url": "https://m.gushiwen.cn/mingju/juv_e63ff6fd0592.aspx",
+      "focus": "人物、动作和依托",
+      "recordId": "2026-11-08T05-05-24-718Z-5a929a3b",
+      "cached": false,
+      "delivery": {
+        "status": "complete",
+        "retryable": false,
+        "reason": null,
+        "message": "解读已通过检查。"
+      },
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [
+          "模型保留了不确定性，需要审阅",
+          "scene.setting 为语义推断，绘画选择需与原文明示区分",
+          "scene.groups[0] 为语义推断，绘画选择需与原文明示区分",
+          "scene.groups[1] 为语义推断，绘画选择需与原文明示区分",
+          "scene.groups[2] 为语义推断，绘画选择需与原文明示区分",
+          "scene.groups[3] 为语义推断，绘画选择需与原文明示区分",
+          "scene.supports[0] 为语义推断，绘画选择需与原文明示区分",
+          "scene.actions[0] 为语义推断，绘画选择需与原文明示区分",
+          "scene.actions[1] 为语义推断，绘画选择需与原文明示区分",
+          "scene.atmosphere 为语义推断，绘画选择需与原文明示区分"
+        ],
+        "review_required": true
+      },
+      "usage": {
+        "completion_tokens": 844,
+        "prompt_tokens": 6061,
+        "total_tokens": 6905,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens_details": {
+          "cached_tokens": 6016
+        }
+      }
+    },
+    {
+      "id": "n03",
+      "poem": "荷尽已无擎雨盖，菊残犹有傲霜枝。",
+      "author": "苏轼",
+      "title": "赠刘景文",
+      "url": "https://www.gushiwen.cn/mingju/juv_fef37d4f6345.aspx",
+      "focus": "残败、缺席与比喻",
+      "recordId": "2026-11-08T05-05-24-719Z-e21da934",
+      "cached": false,
+      "delivery": {
+        "status": "complete",
+        "retryable": false,
+        "reason": null,
+        "message": "解读已通过检查。"
+      },
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [
+          "模型保留了不确定性，需要审阅",
+          "scene.setting 为语义推断，绘画选择需与原文明示区分",
+          "scene.groups[0] 为语义推断，绘画选择需与原文明示区分",
+          "i5 未进入整体分组，后续使用本地默认布局",
+          "scene.actions[0] 为语义推断，绘画选择需与原文明示区分",
+          "scene.atmosphere 为语义推断，绘画选择需与原文明示区分",
+          "expression.relations[0] 为语义推断",
+          "expression.processes[2] 为语义推断"
+        ],
+        "review_required": true
+      },
+      "usage": {
+        "completion_tokens": 982,
+        "prompt_tokens": 6065,
+        "total_tokens": 7047,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens_details": {
+          "cached_tokens": 6016
+        }
+      }
+    },
+    {
+      "id": "n04",
+      "poem": "月落乌啼霜满天，江枫渔火对愁眠。",
+      "author": "张继",
+      "title": "枫桥夜泊",
+      "url": "https://www.gushiwen.cn/mingju/juv_5825ef91e09b.aspx",
+      "focus": "时态、听觉及夜景",
+      "recordId": "2026-11-08T05-05-31-253Z-ec916b77",
+      "cached": false,
+      "delivery": {
+        "status": "complete",
+        "retryable": false,
+        "reason": null,
+        "message": "解读已通过检查。"
+      },
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [
+          "模型保留了不确定性，需要审阅",
+          "spatial[0] 的推断或非确定关系需审阅",
+          "spatial[1] 的推断或非确定关系需审阅",
+          "scene.setting 为语义推断，绘画选择需与原文明示区分",
+          "scene.groups[0] 为语义推断，绘画选择需与原文明示区分",
+          "scene.groups[1] 为语义推断，绘画选择需与原文明示区分",
+          "i6 未进入整体分组，后续使用本地默认布局",
+          "scene.supports[0] 为语义推断，绘画选择需与原文明示区分",
+          "scene.supports[1] 为语义推断，绘画选择需与原文明示区分",
+          "scene.atmosphere 为语义推断，绘画选择需与原文明示区分",
+          "expression.relations[0] 为语义推断",
+          "expression.relations[1] 为语义推断",
+          "expression.relations[2] 为语义推断",
+          "expression.processes[1] 为语义推断"
+        ],
+        "review_required": true
+      },
+      "usage": {
+        "completion_tokens": 1251,
+        "prompt_tokens": 6064,
+        "total_tokens": 7315,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens_details": {
+          "cached_tokens": 6016
+        }
+      }
+    },
+    {
+      "id": "n05",
+      "poem": "黄梅时节家家雨，青草池塘处处蛙。",
+      "author": "赵师秀",
+      "title": "约客",
+      "url": "https://www.gushiwen.cn/mingju/juv_67e516ea51fc.aspx",
+      "focus": "时令、听觉、景物",
+      "recordId": "2026-11-08T05-05-38-925Z-8534b6aa",
+      "cached": false,
+      "delivery": {
+        "status": "partial",
+        "retryable": false,
+        "reason": "drawing-gap",
+        "message": "基础画面已生成，部分意象尚未单独表现，具体缺口已列出。"
+      },
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [
+          "模型保留了不确定性，需要审阅",
+          "spatial[0] 的推断或非确定关系需审阅",
+          "scene.setting 为语义推断，绘画选择需与原文明示区分",
+          "scene.groups[0] 为语义推断，绘画选择需与原文明示区分",
+          "scene.groups[1] 为语义推断，绘画选择需与原文明示区分",
+          "scene.groups[2] 为语义推断，绘画选择需与原文明示区分",
+          "scene.supports[0] 为语义推断，绘画选择需与原文明示区分",
+          "scene.actions[0] 为语义推断，绘画选择需与原文明示区分",
+          "scene.atmosphere 为语义推断，绘画选择需与原文明示区分",
+          "expression.relations[0] 为语义推断",
+          "expression.relations[1] 为语义推断",
+          "expression.processes[0] 为语义推断",
+          "expression.processes[1] 为语义推断"
+        ],
+        "review_required": true
+      },
+      "usage": {
+        "completion_tokens": 917,
+        "prompt_tokens": 6061,
+        "total_tokens": 6978,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens_details": {
+          "cached_tokens": 6016
+        }
+      }
+    },
+    {
+      "id": "n06",
+      "poem": "细草微风岸，危樯独夜舟。",
+      "author": "杜甫",
+      "title": "旅夜书怀",
+      "url": "https://www.gushiwen.cn/mingju/juv_e338be66125b.aspx",
+      "focus": "舟岸、数量和夜色",
+      "recordId": "2026-11-08T05-05-40-333Z-382f78cc",
+      "cached": false,
+      "delivery": {
+        "status": "partial",
+        "retryable": false,
+        "reason": "drawing-gap",
+        "message": "基础画面已生成，部分意象尚未单独表现，具体缺口已列出。"
+      },
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [
+          "模型保留了不确定性，需要审阅",
+          "spatial[0] 的推断或非确定关系需审阅",
+          "spatial[1] 的推断或非确定关系需审阅",
+          "scene.setting 为语义推断，绘画选择需与原文明示区分",
+          "scene.groups[0] 为语义推断，绘画选择需与原文明示区分",
+          "scene.groups[1] 为语义推断，绘画选择需与原文明示区分",
+          "scene.supports[0] 为语义推断，绘画选择需与原文明示区分",
+          "scene.supports[1] 为语义推断，绘画选择需与原文明示区分",
+          "scene.actions[0] 为语义推断，绘画选择需与原文明示区分",
+          "scene.actions[1] 为语义推断，绘画选择需与原文明示区分"
+        ],
+        "review_required": true
+      },
+      "usage": {
+        "completion_tokens": 936,
+        "prompt_tokens": 6061,
+        "total_tokens": 6997,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens_details": {
+          "cached_tokens": 6016
+        }
+      }
+    }
+  ]
+}

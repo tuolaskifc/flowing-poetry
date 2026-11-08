@@ -1,0 +1,27 @@
+{
+  "id": "2026-10-29T10-41-45-727Z-5373ba04",
+  "fingerprint": "9a3f00ef87bb3b344e66a27d3be935ebe3224d15352633e2574422675db8cbf9",
+  "semanticFingerprint": "d109533a5c0ea8e0834459ebb39293034f3dce16b67c6b0de02cb458f160ca45",
+  "poem": "稻花香里说丰年，听取蛙声一片。",
+  "source": null,
+  "mode": "expression",
+  "model": "DeepSeek-V4.1-Flash",
+  "started_at": "2026-10-29T10:41:45.728Z",
+  "cached": false,
+  "error": "fetch failed",
+  "validation": {
+    "valid": false,
+    "errors": [
+      "fetch failed"
+    ],
+    "warnings": [],
+    "review_required": true
+  },
+  "delivery": {
+    "status": "failed",
+    "retryable": true,
+    "reason": "connection-or-format",
+    "message": "这次分析未能完整返回，尚未生成本句画面。"
+  },
+  "elapsed_seconds": 0
+}

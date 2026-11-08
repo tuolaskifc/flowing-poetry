@@ -1,0 +1,27 @@
+{
+  "id": "2026-10-29T10-41-46-255Z-f369168e",
+  "fingerprint": "068e7dcf94da9ed59fcd7b3250c546f9d22f5eb6a55d3146d338e058577fc200",
+  "semanticFingerprint": "d392bcf2e684ae5697f0b0c20cebe2ca2b80acc264d4c1fecaaf0322b574d408",
+  "poem": "黑夜给了我黑色的眼睛，我却用它寻找光明。",
+  "source": null,
+  "mode": "expression",
+  "model": "DeepSeek-V4.1-Flash",
+  "started_at": "2026-10-29T10:41:46.256Z",
+  "cached": false,
+  "error": "fetch failed",
+  "validation": {
+    "valid": false,
+    "errors": [
+      "fetch failed"
+    ],
+    "warnings": [],
+    "review_required": true
+  },
+  "delivery": {
+    "status": "failed",
+    "retryable": true,
+    "reason": "connection-or-format",
+    "message": "这次分析未能完整返回，尚未生成本句画面。"
+  },
+  "elapsed_seconds": 0
+}
