@@ -4,6 +4,8 @@
 
 | 需要了解什么 | 入口 | 定位 |
 | --- | --- | --- |
+| 诗句规则怎样串联及离线试验 | [执行路径与本地规则试验](../experiments/poem-generation/local-rule-pipeline.md) | 从原文到共用绘画计划；独立命令，不替换现有生成 |
+| 意象表范围与别称对应 | [本轮处理](../experiments/poem-generation/imagery-scope.md) · [进度表](../experiments/imagery-library/progress.html) | 57 项活动条目、三项地名归档；酒器、菊丛、女子衣影、长亭和乐器；歧义与挂果缺口保留 |
 | 改图能否用于后续生成 | [12 组换句验证](../poem-flow/rule-review.html) · [共用绘画规则](../experiments/poem-generation/shared-drawing-policy.md) | 主风景、交融与新抽象景物共用计数、身份、颜色、依托和避让；手工校准与真实回答重放分开统计 |
 | 本轮主要画面的变化 | [13 组前后对比](../poem-flow/refinement-review.html) · [实现与边界](../experiments/poem-generation/source-refinement.md) | 同回答、同种子；数量、身份、词语、颜色、可见度和承托改进，新增旗幡与兵器画法 |
 | 用过的诗句能否保住下限 | [全量检查表](../poem-flow/batch-audit-review.html) · [检查记录](../experiments/poem-generation/batch-audit.md) | 71 次当前接口首测、257 份记录、逐句画面与明确缺口；失败、局部恢复与基础画面分别统计 |
