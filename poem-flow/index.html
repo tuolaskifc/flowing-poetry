@@ -46,14 +46,18 @@
   <script defer src="/experiments/imagery-library/drawing/tools/bird.js"></script>
   <script defer src="/experiments/imagery-library/drawing/tools/figure.js"></script>
 <script defer src="/experiments/imagery-library/drawing/tools/emblems.js"></script>
+<script defer src="/experiments/imagery-library/drawing/tools/instrument.js"></script>
   <script defer src="/experiments/poem-generation/scene.js"></script>
+  <script defer src="/experiments/poem-generation/expression-layout.js"></script>
+  <script defer src="/experiments/poem-generation/gesture-field.js"></script>
+  <script defer src="/experiments/poem-generation/abstract-scene.js"></script>
   <script defer src="/experiments/poem-generation/imagery-lexicon.js"></script>
   <script defer src="/experiments/poem-generation/recommendation.js"></script>
   <script defer src="/experiments/poem-generation/curated-library.js"></script>
   <script defer src="/experiments/poem-generation/app.js"></script>
 </head>
 <body>
-  <header><a class="wordmark" href="/">流动诗</a><nav aria-label="主导航"><a href="/" aria-current="page">风景</a><a href="/poem-flow/expression.html">景意交融</a><a href="/poem-flow/abstract.html">抽象试画</a><a href="/poem-flow/library.html">诗句库</a><details class="nav-more"><summary>更多</summary><div class="nav-menu"><a href="/poem-flow/architecture.html">当前架构</a><a href="/poem-flow/composition-review.html">构图对照</a><a href="/poem-flow/color-motion-review.html">色彩与动态</a><a href="/experiments/imagery-library/progress.html">意象进度</a></div></details></nav></header>
+  <header><a class="wordmark" href="/">流动诗</a><nav aria-label="主导航"><a href="/" aria-current="page">画诗</a><a href="/poem-flow/library.html">诗句库</a><details class="nav-more"><summary>更多</summary><div class="nav-menu"><a href="/poem-flow/architecture.html">当前架构</a><a href="/poem-flow/composition-review.html">构图对照</a><a href="/poem-flow/color-motion-review.html">色彩与动态</a><a href="/experiments/imagery-library/progress.html">意象进度</a></div></details></nav></header>
   <main>
     <aside class="input-panel">
       <h1>一句诗，一幅画。</h1>
@@ -77,12 +81,13 @@
       <section id="output" hidden>
         <div class="scene-heading"><h2 id="scene-title"></h2></div>
         <div id="artwork" class="artwork">
-          <canvas id="scene" width="960" height="600" role="img" aria-label="诗句生成的动态画面，可拖动可见笔触调整构图"></canvas><div id="layer-hosts" hidden></div>
+          <canvas id="scene" width="960" height="600" role="img" aria-label="诗句生成的动态画面，可拖动可见笔触调整构图"></canvas><canvas id="art" width="960" height="600" hidden role="img" aria-label="诗句生成的动态画面"></canvas><div id="layer-hosts" hidden></div>
           <div id="empty-scene" hidden><p>这句诗，还缺合适的画法。</p><small>已有解读见下方。可以换一条本地推荐，再点击生成。</small></div>
           <button id="immersive" type="button" aria-pressed="false">沉浸观看 ⤢</button>
         </div>
         <div id="palette-swatches" class="palette-swatches" role="group" aria-label="试试鲜明山色"></div>
         <div class="view-controls">
+          <label id="expression-control" hidden>表达 <select id="expression-mode"><option value="auto">随诗意推荐</option><option value="scenery">风景优先</option><option value="balanced">景意交融</option><option value="abstract">抽象优先</option></select></label>
           <button id="pause" type="button" aria-pressed="false">暂停</button><button id="reseed" type="button">换一组形态</button><button id="reset-layout" type="button">还原构图</button><button id="save" type="button">保存画面 ↓</button>
           <label>配色 <select id="palette"><option value="clear">清寂澄明</option><option value="tender">温柔缱绻</option><option value="twilight">暮色微暖</option><option value="night">夜色淡墨</option></select></label>
           <label id="composition-control" hidden>构图 <select id="composition" aria-label="选择风景构图"></select></label>

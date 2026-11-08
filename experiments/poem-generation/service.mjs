@@ -13,6 +13,7 @@ import {buildAbstractPlan,abstractPolicyVersion} from './abstract-plan.mjs';
 import {schema as expressionSchema,prompt as expressionPrompt,reliabilityPrompt,validateExpression} from './expression-contract.mjs';
 import {buildExpressionPlan,expressionPolicyVersion} from './expression-plan.mjs';
 import {recoverInterpretation,constrainRecoveredPlan,parseModelJSON,recoveryVersion} from './generation-recovery.mjs';
+import {toolCatalog,advicePrompt,validateAdvice} from './tool-guidance.mjs';
 const dir=dirname(fileURLToPath(import.meta.url)),root=resolve(dir,'../..');
 export function parseCredentials(text){
   const lines=text.replace(/^\uFEFF/,'').split(/\r?\n/).map(s=>s.trim()).filter(s=>s&&!s.startsWith('#'));
@@ -28,7 +29,10 @@ export function createGenerationService({fetcher=fetch,credentialsPath=resolve(r
   const promptFile=resolve(dir,'../poem-semantics/contract-v3/system-prompt.txt');
   async function configured(){try{parseCredentials(await readFile(credentialsPath,'utf8'));return true;}catch{return false;}}
   const planning=(r)=>{
-    const a=r.effectiveAnalysis||r.analysis,p=constrainRecoveredPlan(r.mode==='expression'?buildExpressionPlan(a):r.mode==='abstract'?buildAbstractPlan(a,{sourceBound:true}):buildPlan(a),r.recovery);
+    const a=r.effectiveAnalysis||r.analysis,choices=r.toolAdvice&&validateAdvice(r.toolAdvice,a).valid?r.toolAdvice.choices:[],tools={};
+    for(const c of choices){const e=a.entities.find(x=>x.id===c.entity);if(e?.role==='scene'&&e.presence==='present'&&e.kind!=='abstract'&&c.tool_id&&!e.mentions.some(m=>/梅子|莲子|莲蓬/.test(m))&&!a.expression?.processes.some(p=>p.subject===e.id&&p.kind==='fade'&&p.temporal==='already'&&p.modality==='asserted'))tools[e.id]=c.tool_id;}
+    const p=constrainRecoveredPlan(r.mode==='expression'?buildExpressionPlan(a,{experimentalTools:tools}):r.mode==='abstract'?buildAbstractPlan(a,{sourceBound:true}):buildPlan(a),r.recovery);
+    if(r.mode==='expression'&&r.toolAdvice)p.toolAdviceAudit={suggested:choices.map(c=>({entity:c.entity,tool:c.tool_id,actual:p.concretePlan?.layers.find(l=>l.entities.includes(c.entity)&&!l.inferred)?.tool||null})),expected:r.toolAdvice.expected,composition:r.toolAdvice.composition,reviewRequired:true};
     if(!['expression','abstract'].includes(r.mode)){
       const visible=p.layers.some(l=>!l.inferred&&l.entities.length),gaps=p.omitted.filter(o=>o.category!=='context-only'&&a.entities.some(e=>e.id===o.id&&e.role==='scene'&&e.presence==='present'));
       p.renderability={status:!visible?'unavailable':gaps.length?'limited':'ready',visibleScenery:visible,gaps};
@@ -37,7 +41,7 @@ export function createGenerationService({fetcher=fetch,credentialsPath=resolve(r
   };
   function delivery(record){
     if(record.validation?.valid&&record.plan?.renderability?.status==='unavailable')return {status:'failed',retryable:false,reason:'drawing-gap',message:'解读已完成，但本句主要内容尚无可靠画法，未生成新画面。'};
-    if(record.validation?.valid&&record.plan?.renderability?.status==='limited')return {status:'partial',retryable:false,reason:'drawing-gap',message:'基础画面已生成，部分意象尚未单独表现，具体缺口已列出。'+(record.recovery?.message||'')};
+    if(record.validation?.valid&&record.plan?.renderability?.status==='limited')return {status:'partial',retryable:false,reason:'drawing-gap',message:(record.plan.nodes?.some(n=>n.artisticFallback)?'已用整体抽象笔势呈现，部分意象尚无具体画法。':'基础画面已生成，部分意象尚未单独表现，具体缺口已列出。')+(record.recovery?.message||'')};
     const failed=!record.validation?.valid,status=failed?'failed':record.recovery?.status==='partial'?'partial':record.recovery?'adjusted':'complete';
     const errors=(record.validation?.errors||[]).join(' ');
     const reason=record.finish_reason&&record.finish_reason!=='stop'?'truncated':/HTTP|fetch|timeout|timed out|网络|接口|JSON|最终文本/i.test(errors)?'connection-or-format':'interpretation';
@@ -74,9 +78,13 @@ export function createGenerationService({fetcher=fetch,credentialsPath=resolve(r
       const config=parseCredentials(await readFile(credentialsPath,'utf8'));key=config.key;
       const mode=['full','imagery-only','quantity','scene','abstract','expression'].includes(input.mode)?input.mode:'composition';
       const requestSchema=structuredClone(mode==='expression'?expressionSchema:mode==='abstract'?abstractSchema:mode==='composition'?compositionSchema:mode==='scene'?sceneSchema:mode==='quantity'?quantitySchema:schema);
+      if(mode==='expression'){
+        const choice={type:'object',additionalProperties:false,required:['entity','tool_id','fit','reason','evidence'],properties:{entity:{type:'string'},tool_id:{type:['string','null']},fit:{enum:['direct','approximate','unavailable','not_drawn']},reason:{type:'string'},evidence:{type:'array',items:{type:'string'}}}};
+        requestSchema.required.push('tool_selection');requestSchema.properties.tool_selection={type:'object',additionalProperties:false,required:['choices','composition','expected','uncertainties'],properties:{choices:{type:'array',items:choice},composition:{type:'string'},expected:{type:'string'},uncertainties:{type:'array',items:{type:'string'}}}};
+      }
       if(mode==='imagery-only')requestSchema.properties.relations.maxItems=0;
       const poem=input.poem,prompt=(await readFile(promptFile,'utf8'))+(mode!=='full'?'\n\n【本次任务范围：基础意象通路】\n本次只检验 entities 到现有绘画库的连接，尚未请求完整关系抽取。relations 必须为 []，不得输出任何关系项。动作和属性只在 reading 中简述。其余字段仍按协议 3.0 填写。不要把人物想象成在场；保留 presence 与 role 的不确定性。':'\n\n【本轮通路自检补充】\n提交前检查每条关系引用。grows_from、carries、located_in、compared_to 等双对象关系必须给出两个已有实体的 id，不能有 null；缺少第二个实体就不输出该关系。状态或属性可留在 reading 中，不要虚构生长或承载动作。怀念不是观察，observes 只用于实际观看。relations 可以为空数组。');
-      const effectivePrompt=mode==='expression'?(await readFile(promptFile,'utf8'))+'\n'+expressionPrompt+'\n'+reliabilityPrompt:mode==='abstract'?abstractPrompt+'\n比喻的 echo/contrast 可以关联 reference 且 presence=unclear 的主体，断言的是比较成立，不是该主体在场。确定过程仍不得执行在参照主体上。':mode==='composition'?(await readFile(promptFile,'utf8'))+'\n\n本次请求整体场景语义 3.3。按下列扩展解释环境、主次群落、远近、必要依托、动作状态与可见气息，原文依据与推断分开。\n'+compositionPrompt:mode==='scene'?prompt+scenePrompt:mode==='quantity'?prompt+promptAddition:prompt;
+      const effectivePrompt=mode==='expression'?(await readFile(promptFile,'utf8'))+'\n'+expressionPrompt+'\n'+reliabilityPrompt+'\n\n【本次额外任务：工具选择】前文禁止画笔建议的限制仅用于语义字段；现在允许在独立的 tool_selection 字段中提供目录内工具建议，不改变语义字段。'+advicePrompt+'\n可用工具目录：'+JSON.stringify(toolCatalog)+'\n将上述建议对象作为顶层 tool_selection 的值，与语义字段一同返回。':mode==='abstract'?abstractPrompt+'\n比喻的 echo/contrast 可以关联 reference 且 presence=unclear 的主体，断言的是比较成立，不是该主体在场。确定过程仍不得执行在参照主体上。':mode==='composition'?(await readFile(promptFile,'utf8'))+'\n\n本次请求整体场景语义 3.3。按下列扩展解释环境、主次群落、远近、必要依托、动作状态与可见气息，原文依据与推断分开。\n'+compositionPrompt:mode==='scene'?prompt+scenePrompt:mode==='quantity'?prompt+promptAddition:prompt;
       if(['quantity','scene','composition'].includes(mode))requestSchema.properties.relations.maxItems=0;
       const semanticKey={poem,prompt:effectivePrompt,schema:requestSchema,model:config.model,endpoint:config.endpoint},digest=v=>createHash('sha256').update(JSON.stringify(v)).digest('hex'),semanticFingerprint=digest(semanticKey);
       const localPolicy=mode==='expression'?expressionPolicyVersion:mode==='abstract'?abstractPolicyVersion:policyVersion;
@@ -105,6 +113,7 @@ export function createGenerationService({fetcher=fetch,credentialsPath=resolve(r
         try{
           if(['abstract','expression'].includes(mode)){
             const parsed=parseModelJSON(text);record.analysis=parsed.analysis;
+            if(mode==='expression'&&record.analysis?.tool_selection){record.toolAdvice=record.analysis.tool_selection;delete record.analysis.tool_selection;}
             if(parsed.wrapped){
               record.rawValidation={valid:false,errors:['回答使用 Markdown 围栏，未直接返回 JSON 对象'],warnings:[],review_required:true};
               record.recovery={version:recoveryVersion,status:'normalized',reviewRequired:true,changes:[{kind:'markdown-fence',path:'response'}],omitted:[],message:'已整理回答的 JSON 包装，原始文本保留。'};
@@ -131,7 +140,7 @@ export function createGenerationService({fetcher=fetch,credentialsPath=resolve(r
         }
         if(!['full','abstract','expression'].includes(mode)&&record.analysis.relations?.length){record.validation.valid=false;record.validation.errors.push('基础意象模式要求 relations=[]。');}
         if(record.finish_reason!=='stop'){record.validation.valid=false;record.validation.errors.push('回答未正常结束。');}
-        if(record.validation.valid)record.plan=planning(record);
+        if(record.validation.valid){if(record.toolAdvice){record.toolAdviceValidation=validateAdvice(record.toolAdvice,record.effectiveAnalysis||record.analysis);if(!record.toolAdviceValidation.valid)delete record.toolAdvice;}if(mode==='expression')record.toolAdviceStatus=record.toolAdvice?'accepted':'fallback';record.plan=planning(record);}
       }catch(error){record.error=redact(error.message);record.validation={valid:false,errors:[record.error],warnings:[],review_required:true};}
       record.delivery=delivery(record);record.elapsed_seconds=Math.round((Date.now()-start)/100)/10;
       if(record.effectiveAnalysis&&['abstract','expression'].includes(mode))await save('effective-analysis.json',record.effectiveAnalysis);

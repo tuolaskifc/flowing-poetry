@@ -4,7 +4,7 @@ import{sourceColorCue}from'./source-colors.mjs';
 import{inspectOrganization}from'./scene-organization.mjs';
 import{compositionScore}from'./world-layout.mjs';
 import{spaceSubjects}from'./subject-spacing.mjs';
-const recognizable=new Set(['moon','building','dwelling','pavilion','boat','figure','bird','oriole','horse','fish','flag','weapon']);
+const recognizable=new Set(['instrument','moon','building','dwelling','pavilion','boat','figure','bird','oriole','horse','fish','flag','weapon']);
 const broad=l=>l.tool==='water'||['rain','snow','mist','catkins','falling-petals','leaves'].includes(l.tool)||l.tool==='landscape'&&['sky','ground','field','path','lightwash','shadow','moss'].includes(l.options.form);
 const preference=p=>compositionScore(p)+(p.scene.organization.actorSpacing?.residualOverlap||0)*2;
 export function applyDrawingPolicy(a,plan){

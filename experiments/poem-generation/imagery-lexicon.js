@@ -2,6 +2,10 @@
 // Matching words alone never establishes presence, metaphor or movement.
 (function(root,factory){if(typeof module==='object'&&module.exports)module.exports=factory();else root.PoemImageryLexicon=factory();})(globalThis,()=>{
 const rules=[
+  {words:['眉黛','蛾眉','娥眉','佳人','美人','丽人','女子','少女','仕女','姑娘','女郎','玉人','红颜','红袖','翠袖','罗敷'],tool:'figure',options:{pose:'woman'}},
+  {words:['羌笛','笛子','横笛','玉笛','竹笛','笛','琴瑟','古琴','琴','瑟'],tool:'instrument'},
+  {words:['秦楼'],tool:'building'},
+  {words:['兰桡','兰舟'],tool:'boat'},
   {words:['酒旗','酒招','旗幡','旗帜','旌旗','招幌','酒幌','红旗','青旗','白旗','素旗','黄旗','战旗','军旗','彩旗','旗'],tool:'flag',exclude:['旗人','旗舰','旗鼓相当']},
   {words:['长剑','宝剑','戈鋋','长矛','剑','戈','矛','戟'],tool:'weapon',exclude:['剑阁','剑南','剑门']},
   {words:['市集','街市'],tool:'dwelling',options:{kind:'house'}},
@@ -22,7 +26,7 @@ const rules=[
   {words:['返景','返照','夕照'],tool:'landscape',options:{form:'lightwash'}},
   {words:['禅房','禅院','寺院','寺庙','古寺','佛寺','山寺','庙','寺'],tool:'dwelling',options:{kind:'temple'},approximation:'以寺院屋舍概括，不作具体建筑复原'},
   {words:['客舍','茅舍','茅屋','草堂','人家','村舍','房舍','房屋','屋舍','屋','房'],tool:'dwelling',options:{kind:'house'},exclude:['房玄龄'],approximation:'以低层房舍概括用途不同的屋舍'},
-  {words:['白鹭','黄鹂','燕子','雁','鸦','夜莺','鸳鸯','沙鸥','青鸟','鹧鸪','鹤','鹊','雀','鸟','燕','鹭','鸥','鸭','鸿'],tool:'bird',exclude:['燕子楼','燕京','燕赵','燕山','燕国','鸿儒','杜鹃花'],approximation:'以通用写意鸟形表现，不细分物种'},
+  {words:['白鹭','黄鹂','燕子','雁','鸦','夜莺','鸳鸯','沙鸥','哀鸿','鸿雁','青鸟','鹧鸪','鹤','鹊','雀','鸟','燕','鹭','鸥','鸭','鸿'],tool:'bird',exclude:['燕子楼','燕京','燕赵','燕山','燕国','鸿儒','杜鹃花'],approximation:'以通用写意鸟形表现，不细分物种'},
   {words:['杜鹃'],tool:'bird',exclude:['杜鹃花'],approximation:'杜鹃按语义中的鸟或花选择画法'},
   {words:['马蹄','蹄'],tool:'horse',projection:'whole-from-part',approximation:'以整匹马表现马蹄的主体，蹄数不折算马匹数'},
   {words:['水田','稻田','田畴'],tool:'landscape',options:{form:'field'}},
@@ -66,7 +70,8 @@ const rules=[
   {words:['烟雾','薄雾','来烟','烟','雾'],tool:'mist'}, {words:['云'],tool:'cloud'},
   {words:['舟','船'],tool:'boat'},
   {words:['雨'],tool:'rain'}, {words:['江水','流水','细流','清泉','泉水','春潮','潮水','潮','水','泉','江','溪','涧','湖','河'],tool:'water'},
-  {words:['长亭','亭'],tool:'pavilion'},
+  {words:['长亭','茅亭'],tool:'pavilion',options:{roof:'thatched',railing:'rail'}},
+  {words:['亭'],tool:'pavilion'},
   {words:['石','岩'],tool:'rock'}, {words:['鱼'],tool:'fish'},
   {words:['花'],tool:'flower',exclude:['桃花','兰花','杜鹃','杨花','桂花','槐花','梅子','菊花','莲花','荷花']}
 ];

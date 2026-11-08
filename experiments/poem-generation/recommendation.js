@@ -7,6 +7,7 @@
   for(const word of [...lexicon.unsupportedTerms,'燕京','岁月','光阴','风光','风情','风流','风骨','石头城'])tokens.set(word,{word,blocked:true});
   // These compounds name a supported tool rather than their first character.
   tokens.set('梅雨',{word:'梅雨',tool:'rain'});tokens.set('兰舟',{word:'兰舟',tool:'boat'});
+  tokens.set('兰桡',{word:'兰桡',tool:'boat'});
   tokens.set('风',{word:'风',effect:true});
   const words=[...tokens.values()].sort((a,b)=>b.word.length-a.word.length);
   function scorePoem(poem){

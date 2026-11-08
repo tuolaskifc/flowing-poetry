@@ -14,8 +14,9 @@ import {applyDrawingPolicy} from './drawing-policy.mjs';
 import {resolveSource} from './source-resolution.mjs';
 export const policyVersion='semantic-composition-3.3-source-bound';
 const {rules,unsupportedTerms}=lexicon;
-const order=['weapon','flag','landscape','moon','cloud','mist','dwelling','building','tree','willow','bamboo','pavilion','horse','water','rock','boat','lotus','grass','orchid','plum-branch','flower','flower-forms','wine','leaves','surface-weather','fish','bird','oriole','falling-petals','catkins','rain','snow'];
+const order=['instrument','weapon','flag','landscape','moon','cloud','mist','dwelling','building','tree','willow','bamboo','pavilion','horse','water','rock','boat','lotus','grass','orchid','plum-branch','flower','flower-forms','wine','leaves','surface-weather','fish','bird','oriole','falling-petals','catkins','rain','snow'];
 const placements={
+  instrument:{anchor:[320,300],at:[.5,.85],scale:.8},
   weapon:{anchor:[320,310],at:[.55,.83],scale:.75},flag:{anchor:[310,310],at:[.62,.80],scale:.85},
   figure:{anchor:[320,310],at:[.6,.76],scale:.6},bird:{anchor:[320,190],at:[.62,.34],scale:.78},dwelling:{anchor:[320,307],at:[.66,.74],scale:1.05},
   landscape:{anchor:[320,194],at:[.5,.5],scale:1.5},tree:{anchor:[320,388],at:[.25,.9],scale:1.15},
@@ -32,7 +33,7 @@ const placements={
   'surface-weather':{anchor:[320,206],at:[.43,.76],scale:.9},oriole:{anchor:[320,200],at:[.64,.43],scale:.72},
   orchid:{anchor:[272,331],at:[.27,.91],scale:.95},horse:{anchor:[298,312],at:[.7,.87],scale:.88},lotus:{anchor:[320,330],at:[.53,.92],scale:.95}
 };
-export function buildPlan(analysis,{landscape=true,sourceBound=analysis.schema_version==='3.3'}={}){
+export function buildPlan(analysis,{landscape=true,sourceBound=analysis.schema_version==='3.3',experimentalExclude=[],experimentalTools={}}={}){
   const resolution=sourceBound?resolveSource(analysis):{quantities:{},identities:[],changes:[]};
   const layers=[],omitted=[],notes=[],entityTools=new Map(),parameters=[];let wind=0;
   for(const entity of analysis.entities){
@@ -40,9 +41,10 @@ export function buildPlan(analysis,{landscape=true,sourceBound=analysis.schema_v
     if(entity.role!=='scene'||entity.presence!=='present'){
       omitted.push({id:entity.id,name,reason:entity.role==='reference'?'仅为比喻参照，不当作实景':entity.presence==='absent'?'原文中缺席，不绘制':'出现情况不确定，暂不补画'});continue;
     }
+    if(experimentalExclude.includes(entity.id)){omitted.push({id:entity.id,name,reason:'试验中保守保留为缺口；模型建议或已消退状态尚需复核',category:'unsupported-detail'});continue;}
     // Source mentions choose a pictorial family. Species and part names may
     // borrow a declared local symbol; presence and reference roles stay semantic.
-    const text=entity.mentions.join(' ')+' '+entity.concept,source=sourceBound?sourceDrawing(entity):null;
+    const text=entity.mentions.join(' ')+' '+entity.concept,source=sourceBound?sourceDrawing(entity,analysis.poem):null;
     if(source?.omit){omitted.push({id:entity.id,name,reason:source.omit,category:source.category});continue;}
     const windText=sourceBound?entity.mentions.join(' '):text;
     if(/风/.test(windText)&&!(/风景|风情|风流|风骨|风度|风范|风韵/.test(windText))&&entity.kind==='environment'){
@@ -53,8 +55,11 @@ export function buildPlan(analysis,{landscape=true,sourceBound=analysis.schema_v
     }
     const specificUnsupported=unsupportedTerms.some(word=>text.includes(word));
     const findRule=value=>{let best=null,length=0;for(const r of rules){if(r.exclude?.some(word=>value.includes(word)))continue;for(const word of r.words)if(value.includes(word)&&word.length>length){best=r;length=word.length;}}return best;};
-    const rawRule=findRule(entity.mentions.join(' ')),rule=source?.rule||expressiveRule(entity,specificUnsupported?null:rawRule||findRule(text),analysis.poem);
-    const localSurface=physicalPlace(entity)||entity.kind==='place'&&source?.allowPlace,physicalAbstract=source?.allowAbstract||entity.mentions.some(m=>/^(泉声|飞流|飞瀑|瀑布|水田|稻田|客舍|禅房|火光|灯火|渔火|返景|返照|夕照|疏影|树阴|树荫|树影|倒影|马蹄声|蹄声|马蹄)$/.test(m)||/^(莺|鸟|黄鹂|燕|雁|鹭|鸥|鸦|杜鹃|鹧鸪)(声|啼|鸣)$/.test(m));
+    const rawRule=findRule(entity.mentions.join(' ')),localRule=source?.rule||expressiveRule(entity,specificUnsupported?null:rawRule||findRule(text),analysis.poem);
+    const suggested=experimentalTools[entity.id],prototype=rules.find(r=>r.tool===suggested);
+    const trialRule=suggested&&(suggested!=='landscape'||localRule?.tool==='landscape')&&(prototype||suggested==='figure')?{tool:suggested,options:suggested===localRule?.tool?localRule.options:suggested==='figure'?{pose:entity.kind==='person'?'standing':'woman'}:prototype?.options,approximation:'模型在独立试验中选择的现有画笔，语义和画面效果待复核'}:null;
+    const rule=trialRule||localRule;
+    const localSurface=physicalPlace(entity)||entity.kind==='place'&&(source?.allowPlace||!!trialRule),physicalAbstract=source?.allowAbstract||entity.mentions.some(m=>/^(泉声|飞流|飞瀑|瀑布|水田|稻田|客舍|禅房|火光|灯火|渔火|返景|返照|夕照|疏影|树阴|树荫|树影|倒影|马蹄声|蹄声|马蹄)$/.test(m)||/^(莺|鸟|黄鹂|燕|雁|鹭|鸥|鸦|杜鹃|鹧鸪)(声|啼|鸣)$/.test(m));
     if(entity.kind==='abstract'&&!physicalAbstract||entity.kind==='person'&&rule?.tool!=='figure'&&!source?.allowPerson||entity.kind==='place'&&!localSurface){omitted.push({id:entity.id,name,reason:'该专名人物、地名或抽象含义暂不作实景补画'});continue;}
     if(!rule){omitted.push({id:entity.id,name,reason:'该意象尚无合适的写意画法'});continue;}
     const options={...rule.options},quantity=resolution.quantities[entity.id]||entity.quantity;
@@ -81,7 +86,8 @@ export function buildPlan(analysis,{landscape=true,sourceBound=analysis.schema_v
       if(!explicitCup&&!explicitJar&&/饮酒|饮|劝酒|醉酒|沽酒|买酒/.test(mentions)){
         omitted.push({id:entity.id,name,reason:'这是饮酒或相关活动线索，未据此补出杯、壶或人物'});continue;
       }
-      options.form=explicitCup?'cup':explicitJar?'jar':'liquid';
+      options.form=explicitCup?'cup':explicitJar?'jar':sourceBound&&!/酒液/.test(mentions)?'jar':'liquid';
+      if(sourceBound&&!explicitCup&&!explicitJar&&options.form==='jar')notes.push(`${name}以酒壶借形：这是用户选定的本地呈现方式，不表示原文明说有壶。`);
     }
     if(localSurface)notes.push(`${name}虽被归为地点，仍按原文明示的自然景物匹配；具体空间关系另行处理。`);
     if(rule.tool==='moon'){
@@ -96,14 +102,19 @@ export function buildPlan(analysis,{landscape=true,sourceBound=analysis.schema_v
     else layers.push({key,tool:rule.tool,entities:[entity.id],projectedEntities:rule.projection?[entity.id]:[],names:[name],options,animate:!freeze,placement:placements[rule.tool]});
     entityTools.set(entity.id,rule.tool);
     const drawnLayer=existing||layers[layers.length-1];
+    if(sourceBound&&rule.tool==='wine'&&options.form!=='liquid')drawnLayer.placement={...placements.wine,anchor:[320,options.form==='jar'?297:280]};
     if(rule.approximation)drawnLayer.drawingLabel=({bird:'鸟意（写意借形）',tree:'树意（写意借形）','plum-branch':'疏花枝（写意借形）',flower:'花意（写意借形）',horse:'马意（由马蹄借形）',dwelling:options.kind==='temple'?'寺院屋舍':'房舍'})[rule.tool]||undefined;
     if(rule.approximation)notes.push(`${name}：${rule.approximation}。这是本地写意借形，保留原词义。`);
     if(rule.tool==='bird'&&/[声啼鸣]/.test([...entity.mentions,...entity.evidence].join(' ')))notes.push(`${name}可由鸣声借鸟形联想，不把绘出的姿态当作原文已明确看见的动作。`);
     if(freeze)notes.push(`${name}的动作被否定或尚未成立，保持静止试画。`);
-    if(rule.tool==='flower-forms')notes.push(`${name}目前只画花冠示意，未补出枝叶或整株。`);
+    if(sourceBound&&rule.tool==='flower-forms'&&options.kind==='chrysanthemum'){
+      options.form=quantity?.scope==='individual'&&quantity.unit==='朵'?'crown':'clump';
+      if(options.form==='clump')drawnLayer.placement={anchor:[320,330],at:[.4,.9],scale:.95};
+      notes.push(`${name}以带茎叶的菊丛呈现；丛内花头数量是本地画法，明确数朵时仍画花冠。`);
+    }
     if(rule.tool==='plum-branch')notes.push(`${name}采用带花与花苞的梅枝试画；枝形和花朵数量是本地选择，未实现整树或离枝落花。`);
     if(rule.tool==='wine'&&options.form==='liquid')notes.push(`${name}仅以酒液局部作抽象试画，不补杯、壶或饮酒者；不表示原文给出了酒液的外形。`);
-    if(rule.tool==='wine'&&options.form!=='liquid')notes.push(`${name}按明确提到的容器绘制风格化轮廓，不作历史器型复原。`);
+    if(rule.tool==='wine'&&options.form!=='liquid')notes.push(`${name}使用风格化酒器轮廓，不作历史器型复原。`);
     if(rule.tool==='building')notes.push(`${name}采用二层楼体试画，层数与门窗排列是本地选择；不等同于具体历史建筑，也未实现人物登楼。`);
     if(rule.tool==='surface-weather')notes.push(`${name}只显示露珠或霜层的局部笔触，不自动补草叶、枝条或地面；具体载体附着尚未从诗句自动匹配。`);
     if(rule.tool==='oriole')notes.push(`${name}以淡墨莺形为单体，浅黄墨面与几笔深翼、尾喙提示姿态，不刻画眼、足和细羽；数量另按语义与构图规则处理，不自动添加栖枝。`);

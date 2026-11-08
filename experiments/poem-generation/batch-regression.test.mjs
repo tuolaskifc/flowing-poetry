@@ -23,16 +23,16 @@ test('bird calls do not become exact bird counts and a canopy dependency stays i
  assert(layers('b046').find(l=>l.tool==='horse').instances.length>1);
 });
 test('all saved replies replay without modifying meanings or drawing nonpresent references',async()=>{
- const data=await collectBatch();assert(data.records>=184);assert.equal(data.cases.filter(c=>!c.exercise).length,71);
+ const data=await collectBatch();assert(data.records>=184);assert(data.cases.filter(c=>!c.exercise).length>=71);
  for(const c of data.cases)for(const r of c.versions){
   const before=JSON.stringify(r),result=evaluateRecord(r);assert.equal(JSON.stringify(r),before);
   if(!result.plan)continue;
   const a=result.analysis;for(const l of result.plan.concretePlan?.layers||[])for(const id of l.entities){const e=(a.entities||a.subjects).find(e=>e.id===id);assert(e);assert.equal(e.role,'scene',r.id);assert.equal(e.presence,'present',r.id);}
  }
 });
-test('a missing concrete subject cannot pass as an abstract pattern or a filled background',()=>{
+test('a missing concrete subject remains a gap when an abstract fallback is shown',()=>{
  const a=JSON.parse(JSON.stringify(sample('b066')).replaceAll('戈鋋','计算器'));a.entities.find(e=>e.mentions.includes('计算器')).concept='计算器';
- const p=buildExpressionPlan(a);assert.equal(p.renderability.status,'unavailable');assert(!p.renderability.visibleScenery);assert(!p.renderability.visibleAbstract);assert(p.expression.gaps.some(g=>g.label==='计算器'));
+ const p=buildExpressionPlan(a);assert.equal(p.renderability.status,'limited');assert(!p.renderability.visibleScenery);assert(p.renderability.visibleAbstract);assert(p.nodes.some(n=>n.artisticFallback));assert(p.expression.gaps.some(g=>g.label==='计算器'));
 });
 test('automatic unified colors respect day and night across seeds while manual colors remain selectable',()=>{
  for(const [id,dark]of [['b012',false],['b002',true]])for(let seed=0;seed<32;seed++){

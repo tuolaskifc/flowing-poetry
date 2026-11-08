@@ -1,6 +1,7 @@
 (() => {
   'use strict';
-  const $=id=>document.getElementById(id),poem=$('poem');let source=null,latest=null,sdkPromise,candidateBatch=[],catalog=null,trials=[];
+  const $=id=>document.getElementById(id),poem=$('poem');let source=null,latest=null,sdkPromise,candidateBatch=[],catalog=null,trials=[],otherPoems=[],unified=null;
+  const expressionEngine=window.PoemAbstract.mount($('art'),{background:()=>unified?.plan.concretePlan?$('scene'):null,mask:i=>window.PoemTrialScene.layerCanvas(i),foreground:()=>window.PoemTrialScene.foregroundCanvas(window.PoemExpression.protectedLayers(unified?.plan))});
   const status=text=>{$('status').textContent=text;};
   function syncViewingControls(settings){
     $('palette').value=settings.palette;
@@ -22,7 +23,7 @@
   const clearList=id=>{$(id).replaceChildren();};
   const clearCandidateSelection=()=>{for(const button of document.querySelectorAll('[data-candidate]'))button.setAttribute('aria-pressed','false');};
   function item(id,text){const li=document.createElement('li');li.textContent=text;$(id).append(li);return li;}
-  function busy(value){for(const id of ['generate','fetch-poem','sample','replay','recommend','library-choice'])if($(id))$(id).disabled=value||(!catalog&&['recommend','library-choice'].includes(id));for(const button of document.querySelectorAll('[data-candidate]'))button.disabled=value||button.dataset.drawable==='false';poem.disabled=value;poem.setAttribute('aria-busy',String(value));}
+  function busy(value){for(const id of ['generate','fetch-poem','sample','replay','recommend','library-choice'])if($(id))$(id).disabled=value||(!catalog&&['recommend','library-choice'].includes(id));for(const button of document.querySelectorAll('[data-candidate]'))button.disabled=value;poem.disabled=value;poem.setAttribute('aria-busy',String(value));}
   function librarySelection(entry){
     if($('library-choice'))$('library-choice').value=entry?.id||'';
     if(!$('library-goal'))return;$('library-goal').hidden=!entry;
@@ -76,6 +77,26 @@
     }catch(error){status(error.message);}finally{busy(false);}
   }
   async function show(record){
+    if(!record?.validation?.valid){status('本次分析没有通过检查，画面保持不变。可以换一句或稍后再试。');return;}
+    if(record.plan?.expression){
+      unified=record;const p=record.plan,a=record.effectiveAnalysis||record.analysis;
+      window.PoemTrialScene.dispose();if(p.concretePlan)await window.PoemTrialScene.render(p.concretePlan);
+      $('scene').hidden=true;$('art').hidden=false;$('expression-control').hidden=false;$('expression-mode').value='auto';
+      $('output').hidden=false;$('welcome').hidden=true;$('empty-scene').hidden=true;$('scene-title').textContent=record.poem;$('reading').textContent=a.reading;
+      for(const id of ['entities','uncertainties','drawn','omitted','notes','relations','credits','semantic-applied','semantic-pending','organization-issues'])clearList(id);
+      for(const e of a.entities||[])item('entities',e.mentions.join('／')+'：'+e.concept);
+      for(const g of p.expression.gaps)item('omitted',g.label+'：'+g.reason);
+      for(const l of p.concretePlan?.layers||[])if(l.entities.length)item('drawn',l.names.join('、'));
+      for(const issue of a.uncertainties||[])item('uncertainties',issue);
+      $('atmosphere').textContent=(a.atmosphere.labels||[]).join('、');$('semantic-summary').textContent=p.expression.reason;$('organization-summary').textContent='画面按当前可用意象组织。';$('record-info').textContent='';$('usage').textContent='';
+      $('composition-control').hidden=true;$('composition-note').hidden=true;$('moon-control').hidden=true;$('palette-swatches').hidden=true;$('wind').disabled=!p.concretePlan;
+      $('palette').replaceChildren(new Option('随诗意配色','auto'));for(const color of window.PoemAbstract.palettes)$('palette').add(new Option(color.name,color.id));
+      expressionEngine.render(p,{expression:'auto',style:'auto',palette:'auto',expanse:.9,density:.55,motion:1,trace:.55,response:.65,seed:p.seed});
+      const pause=window.matchMedia('(prefers-reduced-motion: reduce)').matches;expressionEngine.pause(pause);if(p.concretePlan)window.PoemTrialScene.pause(pause);
+      $('pause').textContent=pause?'继续':'暂停';$('pause').setAttribute('aria-pressed',String(pause));latest=record;$('replay').hidden=false;
+      status((record.delivery?.status==='partial'?(record.delivery.message||'部分意象尚无画法。'):'已生成画面。')+(record.toolAdviceStatus==='fallback'?' 本次选笔建议未能使用，已采用原有画法。':''));return;
+    }
+    if(unified){$('palette').replaceChildren();for(const color of options)$('palette').add(new Option(color.label,color.id));}unified=null;$('wind').disabled=false;$('scene').hidden=false;$('art').hidden=true;$('expression-control').hidden=true;$('palette-swatches').hidden=false;
     if(record.plan?.renderability?.status==='unavailable'){status('解读已完成，但本句主要内容尚无可靠画法，未生成新画面；如有画面仍为上次结果。可以换一句，或到景意交融页尝试抽象表达。');return;}
     if(!record.validation?.valid){status('本次分析没有通过检查，未生成新画面；下方如有画面仍为上次结果。问题记录已保存，可以换一句或稍后再试。');return;}
     const a=record.effectiveAnalysis||record.analysis,{plan}=record;
@@ -136,36 +157,39 @@
   }
   $('fetch-poem').addEventListener('click',fetchPoem);
   $('recommend')?.addEventListener('click',()=>{if(catalog)chooseCurated(window.PoemCuratedLibrary.next(catalog,poem.value));});
-  $('library-choice')?.addEventListener('change',e=>{const trial=trials.find(c=>c.id===e.target.value),entry=window.PoemCuratedLibrary.find(catalog,e.target.value);if(trial)chooseTrial(trial);else if(entry)chooseCurated(entry);});
+  $('library-choice')?.addEventListener('change',e=>{const trial=trials.find(c=>c.id===e.target.value),entry=window.PoemCuratedLibrary.find(catalog,e.target.value),other=otherPoems.find(c=>c.id===e.target.value);if(trial)chooseTrial(trial);else if(entry)chooseCurated(entry);else if(other){poem.value=other.poem;source=null;$('source').textContent='';status('');}});
   $('sample').addEventListener('click',()=>{clearCandidateSelection();librarySelection(null);poem.value='风乍起，吹皱一池春水。';source={provider:'手动试画样句',author:'冯延巳',title:'谒金门·风乍起',dynasty:'五代'};$('source').textContent='手动试画样句 · 冯延巳《谒金门·风乍起》';status('已填入样句，点击“生成画面”开始分析。');});
   poem.addEventListener('input',()=>{source=null;librarySelection(null);$('source').textContent='手动输入';clearCandidateSelection();});
   $('generate').addEventListener('click',async()=>{
     if(!poem.value.trim()){status('请先取一句或输入诗句。');return;}
     busy(true);status('正在分析诗句，再由本地规则组织画面……');
-    try{const response=await fetch('/api/analyze',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({poem:poem.value,source})}),data=await response.json();if(!data.record)throw new Error(data.error||'分析失败，请稍后手动再试。');await show(data.record);}catch(error){status(error.message);}finally{busy(false);}
+    try{const response=await fetch('/api/analyze',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({poem:poem.value,source,mode:'expression'})}),data=await response.json();if(!data.record)throw new Error(data.error||'分析失败，请稍后手动再试。');await show(data.record);}catch(error){status(error.message);}finally{busy(false);}
   });
   $('replay').addEventListener('click',async()=>{if(latest){busy(true);clearCandidateSelection();try{poem.value=latest.poem;source=latest.source;librarySelection(catalog?.poems.find(p=>p.poem===latest.poem));$('source').textContent=source?[source.provider,source.author,source.title].filter(Boolean).join(' · '):'已保存的诗句';await show({...latest,cached:true});}catch(error){status(error.message);}finally{busy(false);}}});
-  $('pause').addEventListener('click',()=>{const paused=$('pause').getAttribute('aria-pressed')!=='true';window.PoemTrialScene.pause(paused);$('pause').textContent=paused?'继续':'暂停';$('pause').setAttribute('aria-pressed',String(paused));});
-  $('reseed').addEventListener('click',()=>window.PoemTrialScene.reseed());$('save').addEventListener('click',()=>window.PoemTrialScene.save());
-  $('palette').addEventListener('change',e=>choosePalette(e.target.value));$('moon-shape').addEventListener('change',e=>window.PoemTrialScene.moon(e.target.value));
-  $('motion')?.addEventListener('input',e=>{window.PoemTrialScene.update({motion:Number(e.target.value)});syncViewingControls(window.PoemTrialScene.inspect().settings);});
+  $('pause').addEventListener('click',()=>{const paused=$('pause').getAttribute('aria-pressed')!=='true';if(unified)expressionEngine.pause(paused);if(!unified||unified.plan.concretePlan)window.PoemTrialScene.pause(paused);$('pause').textContent=paused?'继续':'暂停';$('pause').setAttribute('aria-pressed',String(paused));});
+  $('reseed').addEventListener('click',()=>unified?expressionEngine.reseed():window.PoemTrialScene.reseed());$('save').addEventListener('click',()=>unified?expressionEngine.save():window.PoemTrialScene.save());
+  $('expression-mode').addEventListener('change',e=>{if(unified)expressionEngine.configure({expression:e.target.value});});
+  $('palette').addEventListener('change',e=>{if(unified){expressionEngine.configure({palette:e.target.value});if(unified.plan.concretePlan)window.PoemTrialScene.update({palette:window.PoemAbstract.backgroundPalette(expressionEngine.inspect().palette)});}else choosePalette(e.target.value);});$('moon-shape').addEventListener('change',e=>window.PoemTrialScene.moon(e.target.value));
+  $('motion')?.addEventListener('input',e=>{if(unified)expressionEngine.configure({motion:Number(e.target.value)});if(!unified||unified.plan.concretePlan){window.PoemTrialScene.update({motion:Number(e.target.value)});if(!unified)syncViewingControls(window.PoemTrialScene.inspect().settings);}});
   $('composition')?.addEventListener('change',async e=>{
     const select=e.target;select.disabled=true;
     try{const scene=await window.PoemTrialScene.composition(select.value);if(!$('moon-control').hidden)window.PoemTrialScene.moon($('moon-shape').value);$('composition-note').textContent=scene.landscape.description;status('已切换为“'+scene.landscape.label+'”，沿用同一份诗句解读，没有新增模型调用。');}catch(error){status(error.message);}finally{select.disabled=false;}
   });
-  $('wind')?.addEventListener('input',e=>window.PoemTrialScene.update({wind:Number(e.target.value)}));
-  $('reset-layout')?.addEventListener('click',()=>window.PoemTrialScene.resetLayout());
+  $('wind')?.addEventListener('input',e=>{if(!unified||unified.plan.concretePlan)window.PoemTrialScene.update({wind:Number(e.target.value)});});
+  $('reset-layout')?.addEventListener('click',()=>{if(unified)expressionEngine.restart();if(!unified||unified.plan.concretePlan)window.PoemTrialScene.resetLayout();});
   function immersive(value){document.body.classList.toggle('immersive',value);$('immersive').setAttribute('aria-pressed',String(value));$('immersive').textContent=value?'返回诗句 ⤡':'沉浸观看 ⤢';}
   $('immersive')?.addEventListener('click',()=>immersive(!document.body.classList.contains('immersive')));
   document.addEventListener('keydown',e=>{if(e.key==='Escape'&&$('immersive'))immersive(false);});
   busy(true);
   const loadLibrary=fetch('/experiments/poem-generation/curated-poems.json').then(r=>{if(!r.ok)throw new Error('library unavailable');return r.json();}).then(data=>window.PoemCuratedLibrary.validate(data)).catch(()=>null);
   const loadTrials=fetch('/experiments/poem-generation/generalization-cases.json').then(r=>r.ok?r.json():null).then(d=>d?.cases||[]).catch(()=>[]);
+  const loadOther=fetch('/poem-flow/batch-audit-studies.json').then(r=>r.ok?r.json():null).then(d=>d?.cases||[]).catch(()=>[]);
   const pageQuery=new URLSearchParams(location.search);
   const replayKey=pageQuery.has('review')?'review':'study';
   const loadStudy=pageQuery.has(replayKey)?fetch('/poem-flow/'+(replayKey==='review'?'composition-studies.json':'landscape-studies.json')).then(r=>r.ok?r.json():null).then(d=>d?.cases.find(c=>c.id===pageQuery.get(replayKey))).catch(()=>null):Promise.resolve(null);
-  Promise.all([fetch('/api/status').then(r=>r.json()),fetch('/api/latest').then(r=>r.json()),loadLibrary,loadTrials,loadStudy]).then(async([config,saved,data,trialCases,study])=>{
+  Promise.all([fetch('/api/status').then(r=>r.json()),fetch('/api/latest?mode=expression').then(r=>r.json()),loadLibrary,loadTrials,loadStudy,loadOther]).then(async([config,saved,data,trialCases,study,otherCases])=>{
     catalog=data;if(saved.record){latest=saved.record;$('replay').hidden=false;}
+    const known=new Set([...(catalog?.poems||[]),...trialCases].map(c=>c.poem));otherPoems=otherCases.filter(c=>{if(!c.poem||known.has(c.poem))return false;known.add(c.poem);return true;});if(otherPoems.length){const group=document.createElement('optgroup');group.label='更多诗句';for(const entry of otherPoems)group.append(new Option(entry.poem,entry.id));$('library-choice').append(group);}
     trials=trialCases;if(catalog){populateLibrary();if(trials.length&&$('library-choice')){const group=document.createElement('optgroup');group.label='新句试验 · '+trials.length+' 组';for(const trial of trials){const option=document.createElement('option');option.value=trial.id;option.textContent=trial.poem+' · '+trial.author;group.append(option);}$('library-choice').append(group);}const query=new URLSearchParams(location.search),requested=query.get('poem'),trial=trials.find(c=>c.id===query.get('trial'));if(trial)chooseTrial(trial);else chooseCurated(window.PoemCuratedLibrary.find(catalog,requested)||window.PoemCuratedLibrary.ordered(catalog)[0]);if(!config.configured)status('精选诗句库已载入；分析接口尚未配置。');}
     else status('精选诗句库暂未载入，可以手动输入；'+(config.configured?'分析接口已就绪。':'分析接口尚未配置。'));
     if(study){

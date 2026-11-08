@@ -32,7 +32,7 @@ test('recommendations distinguish scenery, mixed expression and metaphor without
 });
 test('directional buildings use the existing brush, while night context and unknown places remain distinct',()=>{
  const p=by('u02').record.plan;assert(p.concretePlan.layers.some(l=>l.tool==='building'&&l.names.includes('西楼')));assert(p.nodes.find(n=>n.label==='良夜').contextOnly);assert(!p.expression.gaps.length);
- const a=asComposition(fixture('长安',[{text:'长安',concept:'高楼',kind:'place'}])),missing=buildExpressionPlan(a);assert.equal(missing.concretePlan,null);assert.equal(missing.expression.gaps.length,1);for(const mode of ['scenery','balanced','abstract'])assert.equal(drawing.compose(missing,{expression:mode}).nodes[0].expressionGain,0);
+ const a=asComposition(fixture('洛阳',[{text:'洛阳',concept:'高楼',kind:'place'}])),missing=buildExpressionPlan(a);assert.equal(missing.concretePlan,null);assert.equal(missing.expression.gaps.length,1);for(const mode of ['scenery','balanced','abstract'])assert.equal(drawing.compose(missing,{expression:mode}).nodes[0].expressionGain,0);
 });
 test('all modes and seeds preserve exact scene instances, anchors, supports and source semantics',()=>{
  const cases=data.cases.filter(c=>c.record.plan.concretePlan);

@@ -30,6 +30,7 @@ button{cursor:pointer}button:hover:not(:disabled){background:#ffffff60}button:di
 .scene-heading{padding:0 0 18px}.scene-heading h2{font-size:21px;letter-spacing:1px;line-height:1.7;margin:0;overflow-wrap:anywhere}#record-info{font-size:11px;color:var(--muted)}
 .artwork{position:relative;border-radius:4px;overflow:hidden;background:#eef0e8}
 #scene{display:block;width:100%;height:auto;aspect-ratio:1.6;touch-action:none;cursor:grab}#scene:active{cursor:grabbing}
+#art{display:block;width:100%;height:auto;aspect-ratio:1.6;touch-action:none}body.immersive #art{width:min(100vw,160vh);height:auto;max-height:100vh;object-fit:contain}
 #immersive{position:absolute;right:15px;top:15px;font-size:11px;background:#f7f7edb8;backdrop-filter:blur(8px);border-color:#fff8}
 .view-controls{display:flex;gap:12px;align-items:center;flex-wrap:wrap;padding:18px 0}
 .view-controls button,.view-controls label{font-size:11px}.view-controls label{display:flex;gap:6px;align-items:center}.view-controls select{padding:5px}.view-controls input{width:90px;accent-color:#59776a}.view-controls output{min-width:76px;color:var(--muted);font-variant-numeric:tabular-nums}

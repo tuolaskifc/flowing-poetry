@@ -34,8 +34,8 @@ test('missing, contextual and unavailable subjects never gain a free painted fie
  for(const patch of [{mode:'gap'},{contextOnly:true},{unavailable:true},{expressionGain:0}]){
   assert.equal(gestures.build(null,{...base,nodes:[{...source,...patch}]},1),null);
  }
- const missing=buildExpressionPlan(asComposition(fixture('长安',[{text:'长安',concept:'高楼',kind:'place'}])));
- assert(!drawing.compose(missing,{expression:'abstract',expanse:1}).frame);
+ const missing=buildExpressionPlan(asComposition(fixture('洛阳',[{text:'洛阳',concept:'高楼',kind:'place'}])));
+ assert(drawing.compose(missing,{expression:'abstract',expanse:1}).frame);assert(missing.nodes.some(n=>n.artisticFallback));assert(missing.expression.gaps.some(g=>g.label==='洛阳'));
  const candidate=gestures.build(null,{...base,nodes:[{...source,mode:'candidate'}]},1);
  assert(candidate);assert.equal(candidate.fields.length,1);assert.equal(candidate.fields[0].source,source.id);
 });

@@ -12,8 +12,8 @@ test('longest compounds win, supported species survive generic exclusions, repea
   assert.deepEqual(scorePoem('露水清泉水').hits.map(h=>h.tool),['surface-weather','water','water']);
 });
 test('months, named places and unsupported compounds do not become drawable substrings',()=>{
-  for(const poem of ['十月二月2026年10月','剑阁剑门剑南','兰桡莲子莲蓬梅子','风流风骨岁月'])assert.equal(scorePoem(poem).toolCount,0,poem);
-  assert.equal(scorePoem('三月明月').toolCount,1);
+  for(const poem of ['十月二月2026年10月','剑阁剑门剑南','莲子莲蓬梅子','风流风骨岁月'])assert.equal(scorePoem(poem).toolCount,0,poem);
+  assert.equal(scorePoem('三月明月').toolCount,1);assert.deepEqual(scorePoem('兰桡').hits.map(h=>h.tool),['boat']);
   assert.deepEqual(scorePoem('兰舟梅雨').hits.map(h=>h.tool),['boat','rain']);
   assert.equal(scorePoem('只有风').score,0);assert.deepEqual(scorePoem('酒旗长剑').hits.map(h=>h.tool),['flag','weapon']);
 });

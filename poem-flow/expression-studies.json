@@ -6178,7 +6178,7 @@
             "version": "shared-expression-1.1-source-bound",
             "sourceContract": "expression-1.0",
             "recommendation": "scenery",
-            "reason": "以明确景物及空间为主，默认风景优先",
+            "reason": "可画景物较充分，优先呈现风景",
             "gaps": [],
             "limitations": [
               "景物过程当前影响抽象纹理；原生景物动作沿用场景能力，未支持的月下楼位移等仍不执行。",
@@ -9288,7 +9288,7 @@
             "version": "shared-expression-1.1-source-bound",
             "sourceContract": "expression-1.0",
             "recommendation": "balanced",
-            "reason": "已有景物承托，同时有抽象主体，默认景意交融",
+            "reason": "结合可画景物与抽象笔势",
             "gaps": [],
             "limitations": [
               "景物过程当前影响抽象纹理；原生景物动作沿用场景能力，未支持的月下楼位移等仍不执行。",
@@ -9503,7 +9503,7 @@
             "version": "shared-expression-1.1-source-bound",
             "sourceContract": "expression-1.0",
             "recommendation": "abstract",
-            "reason": "没有可直接落成实景的主体，以抽象关系组织画面",
+            "reason": "以抽象笔势组织画面",
             "gaps": [],
             "limitations": [
               "景物过程当前影响抽象纹理；原生景物动作沿用场景能力，未支持的月下楼位移等仍不执行。",
@@ -14856,7 +14856,7 @@
             "version": "shared-expression-1.1-source-bound",
             "sourceContract": "3.3",
             "recommendation": "scenery",
-            "reason": "以明确景物及空间为主，默认风景优先",
+            "reason": "可画景物较充分，优先呈现风景",
             "gaps": [],
             "limitations": [
               "历史3.3回答没有抽象关系字段；不根据解读文本补造关系",
@@ -19615,7 +19615,7 @@
             "version": "shared-expression-1.1-source-bound",
             "sourceContract": "3.3",
             "recommendation": "scenery",
-            "reason": "以明确景物及空间为主，默认风景优先",
+            "reason": "可画景物较充分，优先呈现风景",
             "gaps": [],
             "limitations": [
               "历史3.3回答没有抽象关系字段；不根据解读文本补造关系",
@@ -19950,7 +19950,7 @@
             "version": "shared-expression-1.1-source-bound",
             "sourceContract": "abstract-1.0",
             "recommendation": "abstract",
-            "reason": "没有可直接落成实景的主体，以抽象关系组织画面",
+            "reason": "以抽象笔势组织画面",
             "gaps": [],
             "limitations": [
               "历史抽象协议未提供精确数量与完整空间语义，沿用其已标注的景物适配边界",
