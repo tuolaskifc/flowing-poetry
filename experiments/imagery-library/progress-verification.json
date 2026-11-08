@@ -1,38 +1,40 @@
 {
   "status": "passed",
-  "total": 60,
+  "total": 57,
   "summary": {
-    "total": 60,
-    "tools": 32,
+    "total": 57,
+    "original_total": 60,
+    "archived": 3,
+    "tools": 35,
     "stages": {
       "basic": {
         "label": "基础可画",
-        "count": 31
+        "count": 44
       },
       "partial": {
         "label": "部分支持",
-        "count": 8
+        "count": 5
       },
       "todo": {
         "label": "待制作",
-        "count": 12
+        "count": 0
       },
       "handoff": {
         "label": "转交其他模块",
-        "count": 9
+        "count": 8
       }
     },
-    "needs_context": 13,
+    "needs_context": 11,
     "basic_generation_trial": true,
     "full_semantic_visual_integration": false,
     "art_review": "待用户审阅"
   },
   "filters": {
-    "basic": 31,
-    "partial": 8,
-    "todo": 12,
-    "handoff": 9,
-    "context": 13,
+    "basic": 44,
+    "partial": 5,
+    "todo": 0,
+    "handoff": 8,
+    "context": 11,
     "search": true,
     "empty": true,
     "reset": true
@@ -75,8 +77,33 @@
     },
     {
       "name": "酒",
-      "href": "file:///C:/Users/Liu%20Mie/Desktop/%E5%A4%A7%E4%BA%8C%E4%B8%8A/AI%E7%BC%96%E7%A8%8B%E8%BF%9B%E9%98%B6%EF%BC%9A%E6%96%B9%E6%B3%95%E4%B8%8E%E5%AE%9E%E8%B7%B5%20%E9%9F%A9%E6%96%87%E5%BC%BA/experiments/imagery-library/index.html?tool=wine&form=liquid#wine",
-      "selected": "liquid"
+      "href": "file:///C:/Users/Liu%20Mie/Desktop/%E5%A4%A7%E4%BA%8C%E4%B8%8A/AI%E7%BC%96%E7%A8%8B%E8%BF%9B%E9%98%B6%EF%BC%9A%E6%96%B9%E6%B3%95%E4%B8%8E%E5%AE%9E%E8%B7%B5%20%E9%9F%A9%E6%96%87%E5%BC%BA/experiments/imagery-library/index.html?tool=wine&form=jar#wine",
+      "selected": "jar"
+    },
+    {
+      "name": "菊花",
+      "href": "file:///C:/Users/Liu%20Mie/Desktop/%E5%A4%A7%E4%BA%8C%E4%B8%8A/AI%E7%BC%96%E7%A8%8B%E8%BF%9B%E9%98%B6%EF%BC%9A%E6%96%B9%E6%B3%95%E4%B8%8E%E5%AE%9E%E8%B7%B5%20%E9%9F%A9%E6%96%87%E5%BC%BA/experiments/imagery-library/index.html?tool=flower-forms&kind=chrysanthemum&form=clump#flower-forms",
+      "selected": "clump"
+    },
+    {
+      "name": "眉黛",
+      "href": "file:///C:/Users/Liu%20Mie/Desktop/%E5%A4%A7%E4%BA%8C%E4%B8%8A/AI%E7%BC%96%E7%A8%8B%E8%BF%9B%E9%98%B6%EF%BC%9A%E6%96%B9%E6%B3%95%E4%B8%8E%E5%AE%9E%E8%B7%B5%20%E9%9F%A9%E6%96%87%E5%BC%BA/experiments/imagery-library/index.html?tool=figure&pose=woman#figure",
+      "selected": "woman"
+    },
+    {
+      "name": "长亭",
+      "href": "file:///C:/Users/Liu%20Mie/Desktop/%E5%A4%A7%E4%BA%8C%E4%B8%8A/AI%E7%BC%96%E7%A8%8B%E8%BF%9B%E9%98%B6%EF%BC%9A%E6%96%B9%E6%B3%95%E4%B8%8E%E5%AE%9E%E8%B7%B5%20%E9%9F%A9%E6%96%87%E5%BC%BA/experiments/imagery-library/index.html?tool=pavilion&roof=thatched&railing=rail#pavilion",
+      "selected": "thatched"
+    },
+    {
+      "name": "羌笛",
+      "href": "file:///C:/Users/Liu%20Mie/Desktop/%E5%A4%A7%E4%BA%8C%E4%B8%8A/AI%E7%BC%96%E7%A8%8B%E8%BF%9B%E9%98%B6%EF%BC%9A%E6%96%B9%E6%B3%95%E4%B8%8E%E5%AE%9E%E8%B7%B5%20%E9%9F%A9%E6%96%87%E5%BC%BA/experiments/imagery-library/index.html?tool=instrument&kind=flute#instrument",
+      "selected": "flute"
+    },
+    {
+      "name": "琴瑟",
+      "href": "file:///C:/Users/Liu%20Mie/Desktop/%E5%A4%A7%E4%BA%8C%E4%B8%8A/AI%E7%BC%96%E7%A8%8B%E8%BF%9B%E9%98%B6%EF%BC%9A%E6%96%B9%E6%B3%95%E4%B8%8E%E5%AE%9E%E8%B7%B5%20%E9%9F%A9%E6%96%87%E5%BC%BA/experiments/imagery-library/index.html?tool=instrument&kind=pair#instrument",
+      "selected": "pair"
     },
     {
       "name": "楼",

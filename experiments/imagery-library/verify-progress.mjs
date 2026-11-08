@@ -22,7 +22,7 @@ try{
   await send('Emulation.setDeviceMetricsOverride',{width:1280,height:1000,deviceScaleFactor:1,mobile:false});await send('Page.navigate',{url:base+'progress.html'});await waitFor('Boolean(window.PoemProgressView)');
   const full=await evaluate(`({inspection:window.PoemProgressView.inspect(),rows:Array.from(document.querySelectorAll('#rows tr'),r=>({name:r.dataset.imagery,stage:r.dataset.stage,frequency:Number(r.querySelector('th small').textContent.replaceAll(',',''))})),links:Array.from(document.querySelectorAll('#rows a'),a=>a.getAttribute('href'))})`);
   const catalog=JSON.parse(await readFile(resolve(dir,'意象目录.json'),'utf8'));
-  if(full.rows.length!==60||new Set(full.rows.map(r=>r.name)).size!==60||catalog.items.some(item=>!full.rows.some(row=>row.name===item.imagery&&row.frequency===item.count&&row.stage===item.progress.stage)))throw new Error('Progress rows differ from canonical catalog');
+  if(full.rows.length!==catalog.items.length||new Set(full.rows.map(r=>r.name)).size!==catalog.items.length||catalog.items.some(item=>!full.rows.some(row=>row.name===item.imagery&&row.frequency===item.count&&row.stage===item.progress.stage)))throw new Error('Progress rows differ from canonical catalog');
   if(full.rows.some((row,i)=>i>0&&row.frequency>full.rows[i-1].frequency))throw new Error('Progress table no longer follows descending original frequency');
   const expected=catalog.progress_summary;
   const filters=await evaluate(`(()=>{
@@ -31,7 +31,7 @@ try{
     for(const key of ['basic','partial','todo','handoff']){stage.value=key;stage.dispatchEvent(new Event('change'));result[key]=count();}
     clear.click();context.value='required';context.dispatchEvent(new Event('change'));result.context=count();
     clear.click();search.value='羌笛';search.dispatchEvent(new Event('input'));result.search=count()===1&&document.querySelector('#rows tr').dataset.imagery==='羌笛';
-    search.value='没有这个词__';search.dispatchEvent(new Event('input'));result.empty=count()===0&&!document.getElementById('empty').hidden;clear.click();result.reset=count()===60;return result;
+    search.value='没有这个词__';search.dispatchEvent(new Event('input'));result.empty=count()===0&&!document.getElementById('empty').hidden;clear.click();result.reset=count()===57;return result;
   })()`);
   if(Object.entries(expected.stages).some(([key,value])=>filters[key]!==value.count)||filters.context!==expected.needs_context||!filters.search||!filters.empty||!filters.reset)throw new Error('Table filters failed: '+JSON.stringify(filters));
   const wide=await evaluate('({width:innerWidth,document:document.documentElement.scrollWidth})');
@@ -41,7 +41,7 @@ try{
   if(wide.document>wide.width||narrow.document>narrow.width||narrow.table<=narrow.width)throw new Error('Table overflow is not contained');
   const mobile=await send('Page.captureScreenshot',{format:'png'});await writeFile(resolve(qa,'progress-mobile.png'),Buffer.from(mobile.data,'base64'));
   const deepLinks=[];
-  for(const [name,tool,option,value] of [['兰','orchid','form','plant'],['马','horse','pose','stand'],['莲','lotus','form','flower'],['露','surface-weather','surface','dew'],['霜','surface-weather','surface','frost'],['莺','oriole','pose','folded'],['黄叶','leaves','color','yellow'],['酒','wine','form','liquid'],['楼','building','levels','two'],['梅','plum-branch','form','branch']]){
+  for(const [name,tool,option,value] of [['兰','orchid','form','plant'],['马','horse','pose','stand'],['莲','lotus','form','flower'],['露','surface-weather','surface','dew'],['霜','surface-weather','surface','frost'],['莺','oriole','pose','folded'],['黄叶','leaves','color','yellow'],['酒','wine','form','jar'],['菊花','flower-forms','form','clump'],['眉黛','figure','pose','woman'],['长亭','pavilion','roof','thatched'],['羌笛','instrument','kind','flute'],['琴瑟','instrument','kind','pair'],['楼','building','levels','two'],['梅','plum-branch','form','branch']]){
     const href=await evaluate(`Array.from(document.querySelectorAll('#rows tr')).find(r=>r.dataset.imagery===${JSON.stringify(name)}).querySelector('a').href`);
     await send('Page.navigate',{url:href});await waitFor('Boolean(window.imageryExperiment)&&window.imageryExperiment.inspect().every(t=>t.ready)');
     const linked=await evaluate(`({value:document.getElementById(${JSON.stringify(tool+'-'+option)}).value,state:window.imageryExperiment.inspect().find(t=>t.id===${JSON.stringify(tool)})})`);

@@ -1,15 +1,15 @@
 {
-  "date": "2026-10-21",
+  "date": "2026-11-08",
   "records": {
     "风": {
-      "stage": "partial",
+      "stage": "basic",
       "tools": [
         "tree",
         "water",
         "rain"
       ],
-      "available": "多种工具已有共用风强度、局部形变与漂移。",
-      "remaining": "尚无空间风场、遮挡或跨物体一致的风传播。",
+      "available": "已有共用风强度、形变与漂移；用户确认当前范围足够。",
+      "remaining": "当前范围足够；后续按实际诗句反馈调整。",
       "needs_context": false
     },
     "云": {
@@ -49,16 +49,17 @@
       "needs_context": false
     },
     "酒": {
-      "stage": "partial",
+      "stage": "basic",
       "tools": [
         "wine"
       ],
-      "available": "酒液局部抽象试画，另可显式选择杯中酒或酒壶；不自动添人物。",
-      "remaining": "酒液、器物与饮酒活动需按语境区分；仅写酒时不补杯。未实现倾倒、饮用与历史器型。",
-      "needs_context": true,
+      "available": "生成优先用酒壶借形；明确提杯时用酒杯，也可分别出现壶与杯。",
+      "remaining": "默认酒壶属于本地画法，不声称原文明示容器；不自动添加饮酒者。",
+      "needs_context": false,
+      "catalog_note": "酒优先酒壶，杯形按原词或手动选择；明确酒液仍保留液态示意。",
       "presets": {
         "wine": {
-          "form": "liquid"
+          "form": "jar"
         }
       }
     },
@@ -285,25 +286,31 @@
       }
     },
     "蝉": {
-      "stage": "todo",
+      "stage": "handoff",
       "tools": [],
-      "available": "尚无该条目的专用形态试画。",
-      "remaining": "若只是听到蝉鸣，交给声音线索处理，不自动画出虫体。",
-      "needs_context": true
+      "available": "当前不制作虫体，用户确认无须扩展。",
+      "remaining": "鸣声作为语境保留，不计作绘画缺项。",
+      "needs_context": false,
+      "catalog_note": "本阶段不制作独立虫体。"
     },
     "长安": {
       "stage": "handoff",
       "tools": [],
-      "available": "已确定交给场景、关系、动作或声音处理。",
-      "remaining": "转交规则已有记录；对应模块尚未实现。",
-      "needs_context": false
+      "available": "地名／语境，不列入绘画任务。",
+      "remaining": "已退出当前绘画表；仅保留原始统计记录。",
+      "needs_context": false,
+      "catalog_note": "用户确认不作为可绘意象。",
+      "excluded": true
     },
     "鸳鸯": {
-      "stage": "todo",
-      "tools": [],
-      "available": "已有通用鸟群运动可复用，但尚无该鸟种的专门外形。",
-      "remaining": "鸟体可共用；数量、成对关系和象征含义不由名称强制生成。",
-      "needs_context": false
+      "stage": "basic",
+      "tools": [
+        "bird"
+      ],
+      "available": "复用写意鸟；未明数量时两只示意，明确数量优先。",
+      "remaining": "当前范围足够；后续按实际诗句反馈调整。",
+      "needs_context": false,
+      "catalog_note": "两只鸟为本地示意，不伪造原文数量。"
     },
     "落花": {
       "stage": "partial",
@@ -331,11 +338,14 @@
       }
     },
     "杨花": {
-      "stage": "todo",
-      "tools": [],
-      "available": "尚无该条目的专用形态试画。",
-      "remaining": "暂保留原词；确认所指后才与飞絮单元对应，不直接当作柳絮的固定别名。",
-      "needs_context": true
+      "stage": "basic",
+      "tools": [
+        "catkins"
+      ],
+      "available": "对应已有细丝飞絮，复用漂移动画。",
+      "remaining": "当前范围足够；后续按实际诗句反馈调整。",
+      "needs_context": false,
+      "catalog_note": "以飞絮呈现杨花，不画普通花冠。"
     },
     "梧桐": {
       "stage": "basic",
@@ -352,27 +362,38 @@
       }
     },
     "长亭": {
-      "stage": "partial",
+      "stage": "basic",
       "tools": [
         "pavilion"
       ],
-      "available": "空亭、两类屋顶、可选栏杆与地板锚点。",
-      "remaining": "尚无长亭尺度或场景组合；不默认添加送别人群。",
-      "needs_context": false
+      "available": "默认茅顶、有栏杆的空亭。",
+      "remaining": "当前范围足够；后续按实际诗句反馈调整。",
+      "needs_context": false,
+      "catalog_note": "茅顶有栏杆；不自动补送别人物。",
+      "presets": {
+        "pavilion": {
+          "roof": "thatched",
+          "railing": "rail"
+        }
+      }
     },
     "南浦": {
       "stage": "handoff",
       "tools": [],
-      "available": "已确定交给场景、关系、动作或声音处理。",
-      "remaining": "转交规则已有记录；对应模块尚未实现。",
-      "needs_context": false
+      "available": "地名／语境，不列入绘画任务。",
+      "remaining": "已退出当前绘画表；仅保留原始统计记录。",
+      "needs_context": false,
+      "catalog_note": "用户确认不作为可绘意象。",
+      "excluded": true
     },
     "潇湘": {
       "stage": "handoff",
       "tools": [],
-      "available": "已确定交给场景、关系、动作或声音处理。",
-      "remaining": "转交规则已有记录；对应模块尚未实现。",
-      "needs_context": false
+      "available": "地名／语境，不列入绘画任务。",
+      "remaining": "已退出当前绘画表；仅保留原始统计记录。",
+      "needs_context": false,
+      "catalog_note": "用户确认不作为可绘意象。",
+      "excluded": true
     },
     "杜鹃": {
       "stage": "partial",
@@ -380,9 +401,10 @@
         "bird",
         "flower"
       ],
-      "available": "可依语义选择通用鸟形或通用花形。",
-      "remaining": "鸟与花的歧义仍按具体诗句判断，原词义与借形说明分开。",
-      "needs_context": true
+      "available": "语义明确鸟时画鸟，明确花时画花。",
+      "remaining": "所指不明或鸟花冲突时保留歧义，不随机选形。",
+      "needs_context": true,
+      "catalog_note": "先由诗句语义区分鸟与花，再共享相应画笔。"
     },
     "登高": {
       "stage": "handoff",
@@ -406,34 +428,37 @@
       }
     },
     "江水": {
-      "stage": "partial",
+      "stage": "basic",
       "tools": [
         "water"
       ],
-      "available": "可复用连续水纹。",
-      "remaining": "江面尺度、岸线与流向仍缺独立参数。",
+      "available": "复用已有江面与水域构图；用户确认当前范围足够。",
+      "remaining": "当前范围足够；后续按实际诗句反馈调整。",
       "needs_context": false
     },
     "菊花": {
-      "stage": "partial",
+      "stage": "basic",
       "tools": [
         "flower-forms"
       ],
-      "available": "细长多瓣、三层花冠示意。",
-      "remaining": "尚未做植物学辨识验收；枝叶、整株和具体品种仍缺。",
+      "available": "新增带茎叶、多花头的一丛菊；生成默认整株，明确数朵时画花冠。",
+      "remaining": "新株式待用户审美确认；内部花头为本地密度，不冒充原文数目。",
       "needs_context": false,
+      "catalog_note": "菊花优先完整植株与成丛形态。",
       "presets": {
         "flower-forms": {
-          "kind": "chrysanthemum"
+          "kind": "chrysanthemum",
+          "form": "clump"
         }
       }
     },
     "桃源": {
       "stage": "handoff",
       "tools": [],
-      "available": "已确定交给场景、关系、动作或声音处理。",
-      "remaining": "转交规则已有记录；对应模块尚未实现。",
-      "needs_context": false
+      "available": "作为桃树、屋舍、人影等可能构成的集合场景保留。",
+      "remaining": "谨慎处理，暂不自动展开成桃花树、房舍与人物。",
+      "needs_context": true,
+      "catalog_note": "集合场景，不拆词凭空补齐所有构成。"
     },
     "柳絮": {
       "stage": "basic",
@@ -459,11 +484,19 @@
       }
     },
     "眉黛": {
-      "stage": "todo",
-      "tools": [],
-      "available": "尚无该条目的专用形态试画。",
-      "remaining": "先判断具体眉部、人物指代或其他用法；不自动补出完整人物。",
-      "needs_context": true
+      "stage": "basic",
+      "tools": [
+        "figure"
+      ],
+      "available": "眉黛、蛾眉、佳人、女子、红袖等共用疏墨女子衣影。",
+      "remaining": "按借代人物呈现，不细画眉眼；比喻参照与缺席状态优先。",
+      "needs_context": true,
+      "catalog_note": "常见女子称谓与人物借代对应基本人型。",
+      "presets": {
+        "figure": {
+          "pose": "woman"
+        }
+      }
     },
     "凭栏": {
       "stage": "handoff",
@@ -473,25 +506,33 @@
       "needs_context": false
     },
     "沙鸥": {
-      "stage": "todo",
-      "tools": [],
-      "available": "已有通用鸟群运动可复用，但尚无该鸟种的专门外形。",
-      "remaining": "保留鸟种；是否栖息水岸及数量要另行判断。",
+      "stage": "basic",
+      "tools": [
+        "bird"
+      ],
+      "available": "复用现有写意鸟形。",
+      "remaining": "当前范围足够；后续按实际诗句反馈调整。",
       "needs_context": false
     },
     "梅子": {
-      "stage": "todo",
-      "tools": [],
-      "available": "尚无该条目的专用形态试画。",
-      "remaining": "果实与承载枝条可组合；不把梅花和梅子合成同一视觉形态。",
-      "needs_context": false
+      "stage": "partial",
+      "tools": [
+        "tree"
+      ],
+      "available": "可复用树枝作为组合依托。",
+      "remaining": "挂果笔触尚未接入；不以梅花替代梅子，也不标为完成。",
+      "needs_context": false,
+      "catalog_note": "通过果实与枝叶组合处理，挂果仍待实现。"
     },
     "秦楼": {
-      "stage": "todo",
-      "tools": [],
-      "available": "尚无该条目的专用形态试画。",
-      "remaining": "判断实际楼宇还是借代／典故；仅在适宜时使用楼体变体。",
-      "needs_context": true
+      "stage": "basic",
+      "tools": [
+        "building"
+      ],
+      "available": "实景楼宇复用现有楼体，保留原名。",
+      "remaining": "典故／比喻参照不据此补楼；不作历史建筑复原。",
+      "needs_context": true,
+      "catalog_note": "实景时使用已有楼体。"
     },
     "鹧鸪": {
       "stage": "basic",
@@ -530,11 +571,14 @@
       "needs_context": false
     },
     "兰桡": {
-      "stage": "todo",
-      "tools": [],
-      "available": "尚无该条目的专用形态试画。",
-      "remaining": "先判断指桨还是借代舟船；桨与船不是可无条件合并的实体。",
-      "needs_context": true
+      "stage": "partial",
+      "tools": [
+        "boat"
+      ],
+      "available": "借代舟船时复用船体，不自动添桨。",
+      "remaining": "明确指桨时仍缺桨画法；不会用船数代替桨数。",
+      "needs_context": true,
+      "catalog_note": "先判断指舟船还是桨，不提桨不加桨。"
     },
     "鸿雁": {
       "stage": "basic",
@@ -598,32 +642,52 @@
       "needs_context": false
     },
     "羌笛": {
-      "stage": "todo",
-      "tools": [],
-      "available": "尚无该条目的专用形态试画。",
-      "remaining": "笛的形体与笛声分开；只出现听觉线索时不自动补演奏者。",
-      "needs_context": true
+      "stage": "basic",
+      "tools": [
+        "instrument"
+      ],
+      "available": "新增专门写意乐器形体，琴与瑟有区别。",
+      "remaining": "待用户审美确认；不补演奏者，不含声音合成。",
+      "needs_context": true,
+      "catalog_note": "形体与声音分开；不从笛声补出人物。",
+      "presets": {
+        "instrument": {
+          "kind": "flute"
+        }
+      }
     },
     "琴瑟": {
-      "stage": "todo",
-      "tools": [],
-      "available": "尚无该条目的专用形态试画。",
-      "remaining": "保留琴与瑟的区别；不能合成一个已经确定的通用乐器图标。",
-      "needs_context": false
+      "stage": "basic",
+      "tools": [
+        "instrument"
+      ],
+      "available": "新增专门写意乐器形体，琴与瑟有区别。",
+      "remaining": "待用户审美确认；不补演奏者，不含声音合成。",
+      "needs_context": true,
+      "catalog_note": "形体与声音分开；不从笛声补出人物。",
+      "presets": {
+        "instrument": {
+          "kind": "pair"
+        }
+      }
     },
     "蟋蟀": {
-      "stage": "todo",
+      "stage": "handoff",
       "tools": [],
-      "available": "尚无该条目的专用形态试画。",
-      "remaining": "虫体与鸣声分开，具体是否可见需确认。",
-      "needs_context": true
+      "available": "当前不制作虫体，用户确认无须扩展。",
+      "remaining": "鸣声作为语境保留，不计作绘画缺项。",
+      "needs_context": false,
+      "catalog_note": "本阶段不制作独立虫体。"
     },
     "哀鸿": {
-      "stage": "todo",
-      "tools": [],
-      "available": "尚无该条目的专用形态试画。",
-      "remaining": "具体鸟体、群体处境或比喻等所指需确认，不直接等同于鸿雁实体。",
-      "needs_context": true
+      "stage": "basic",
+      "tools": [
+        "bird"
+      ],
+      "available": "具体鸟体共用鸿雁的写意鸟形。",
+      "remaining": "比喻参照或缺席主体不补实鸟。",
+      "needs_context": true,
+      "catalog_note": "具体鸟体可等同鸿雁的画法，原词义保留。"
     }
   }
 }

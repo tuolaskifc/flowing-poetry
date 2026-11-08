@@ -18,18 +18,18 @@ families=[
 ('surface_weather','露霜附着','扩展','experiments/imagery-library/drawing/tools/surface-weather.js','共用露霜附着层支持草叶、叶面、枝条、石面和局部笔触；任意载体及诗句自动附着匹配未实现。'),
 ('grass','草叶簇','首批','experiments/imagery-library/drawing/tools/grass.js','已有九簇草叶及风响应；其他草种和地表组织待扩展。'),
 ('branch','枝干与叶片','首批','experiments/imagery-library/code-research/shan-index.html','已有通用树、柳形与竹竿叶簇；梧桐、松柏、芭蕉仍待专门形态。'),
-('flower','花瓣与花冠','首批','experiments/imagery-library/drawing/tools/orchid.js','已有梅枝、兰意长叶疏花、莲花茎叶分开试画及通用花冠；新增原生疏花树供桃杏借形，菊的完整枝叶待做，辨识待审阅。'),
+('flower','花瓣与花冠','首批','experiments/imagery-library/drawing/tools/orchid.js','已有梅枝、兰意长叶疏花、莲花茎叶分开试画及通用花冠；新增原生疏花树供桃杏借形，菊已新增带茎叶的成丛变体，辨识待审阅。'),
 ('petal_drift','离枝花瓣与飞絮','首批','experiments/imagery-library/drawing/tools/falling-petals.js','已有落花与独立细丝柳絮试画；从枝条脱离仍未实现。'),
 ('bird','鸟体与鸟群','首批','experiments/imagery-library/drawing/tools/oriole.js','已有通用鸟群运动与单只莺形收翅／展翅试画；其他具体鸟形、栖息关系与鸣声仍待细化。'),
 ('fish','鱼体','扩展','experiments/imagery-library/drawing/tools/fish.js','已有独立单鱼轮廓、鳍、尾与摆尾；鱼种、群游和水体交互未实现。'),
 ('insect','虫体','扩展',None,'待制作虫体；只有鸣声依据时不自动添加可见虫体。'),
 ('horse','马体','扩展','experiments/imagery-library/drawing/tools/horse.js','已有静立／低首与左右朝向的单匹写意马形；连续步态、骑乘与肢体物理未实现。'),
 ('boat','舟船与桨','首批','experiments/imagery-library/drawing/tools/boat.js','已有独立船体与甲板锚点；明确钓者可接原生淡墨人物，桨、帆与物理承载尚未实现。'),
-('architecture','楼亭与栏杆','首批','experiments/imagery-library/drawing/tools/building.js','已有独立空亭与二层／三层写意楼体；楼用曲檐墨面、断笔和疏窗，亭保留折檐。未实现人物登楼或楼内活动。'),
-('liquid_container','酒液与容器','扩展','experiments/imagery-library/drawing/tools/wine.js','已有酒液局部、杯中酒与酒壶试画；默认不补杯，饮酒活动仍须语境处理。'),
-('instrument','乐器形体','扩展',None,'琴、瑟、笛分别制作；形体与声音分开，暂不实现音频。'),
+('architecture','楼亭与栏杆','首批','experiments/imagery-library/drawing/tools/building.js','已有独立空亭与二层／三层写意楼体；楼用曲檐墨面、断笔和疏窗，长亭优先茅顶与栏杆。未实现人物登楼或楼内活动。'),
+('liquid_container','酒液与容器','扩展','experiments/imagery-library/drawing/tools/wine.js','已有酒液局部、杯中酒与酒壶试画；生成优先酒壶借形，明确杯形另绘；饮酒活动仍须语境处理。'),
+('instrument','乐器形体','扩展','experiments/imagery-library/drawing/tools/instrument.js','已有笛、琴、瑟简笔形体；声音与演奏者不自动补出。'),
 ('fruit','果实','扩展','experiments/imagery-library/code-research/fresco/demos/fruitTrees/sketch.js','有通用果实示例，不代表已有梅子形态；需确认外形与附着。'),
-('human_detail','人物局部','扩展',None,'眉、眼、面部局部待做；人物指代或比喻不能机械添加人脸。')]
+('human_detail','人物衣影','扩展','experiments/imagery-library/drawing/tools/figure.js','女子称谓与眉黛等借代可用疏墨人型，不刻画五官。')]
 family_map={f[0]:{'id':f[0],'name':f[1],'phase':f[2],'code_reference':f[3],'status':f[4]} for f in families}
 # original term | treatment | possible family ids | visual distinction / required context
 text='''风|作用|airflow|作为作用场影响已有主体；可见流线仅是待选择的艺术表达。
@@ -114,6 +114,8 @@ stages={'basic':'基础可画','partial':'部分支持','todo':'待制作','hand
 assert set(progress)==names,'Progress must cover all 60 original terms exactly'
 for item in items:
     record=progress[item['imagery']]
+    if record.get('catalog_note'): item['note']=record['catalog_note']
+    item['status']='当前本地画法与语境处理；见进度记录'
     assert record['stage'] in stages and record['remaining'] and record['available'],item['imagery']
     assert len(record['tools'])==len(set(record['tools'])),item['imagery']
     assert all(t in tool_map for t in record['tools']),item['imagery']
@@ -123,16 +125,18 @@ for item in items:
         assert all(key in fields and any(c['value']==value for c in fields[key]['choices']) for key,value in preset.items()),item['imagery']
     if record['stage'] in ['basic','partial']:assert record['tools'],item['imagery']
     item['progress']={**record,'label':stages[record['stage']]}
+archived=[item for item in items if item['progress'].get('excluded')]
+items=[item for item in items if not item['progress'].get('excluded')]
 stage_counts=Counter(item['progress']['stage'] for item in items)
-progress_summary={'total':len(items),'tools':len(tool_map),'stages':{key:{'label':label,'count':stage_counts[key]} for key,label in stages.items()},'needs_context':sum(item['progress']['needs_context'] for item in items),'basic_generation_trial':True,'full_semantic_visual_integration':False,'art_review':'待用户审阅'}
-data={'catalog_version':'0.3-frequency','date':date,'status':'设计映射与实际试画进度，不是模型输出协议',
+progress_summary={'total':len(items),'original_total':len(source['items']),'archived':len(archived),'tools':len(tool_map),'stages':{key:{'label':label,'count':stage_counts[key]} for key,label in stages.items()},'needs_context':sum(item['progress']['needs_context'] for item in items),'basic_generation_trial':True,'full_semantic_visual_integration':False,'art_review':'待用户审阅'}
+data={'catalog_version':'0.4-scope','date':date,'status':'设计映射与实际试画进度，不是模型输出协议',
       'basis':'已保存的新华网统计条目与本项目设计讨论；词义提示不是经过词书核实的文学注释',
-      'source':'docs/sources/quansongci/意象频次.json','progress_summary':progress_summary,'families':list(family_map.values()),'items':items}
+      'source':'docs/sources/quansongci/意象频次.json','progress_summary':progress_summary,'families':list(family_map.values()),'items':items,'archived_items':archived}
 (out/'意象目录.json').write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
-(out/'progress-data.js').write_text('/* Generated by organize-catalog.py; edit progress-records.json instead. */\nwindow.PoemProgress = '+json.dumps({'summary':progress_summary,'items':items,'tools':manifest['tools'],'sources':manifest['sources']},ensure_ascii=False,indent=2)+';\n',encoding='utf-8')
+(out/'progress-data.js').write_text('/* Generated by organize-catalog.py; edit progress-records.json instead. */\nwindow.PoemProgress = '+json.dumps({'summary':progress_summary,'items':items,'tools':manifest['tools'],'sources':manifest['sources'],'archived_items':archived},ensure_ascii=False,indent=2)+';\n',encoding='utf-8')
 counts=Counter(x['treatment'] for x in items)
-lines=['# 流动诗：意象目录与绘画单元','',f'版本：0.3 高频扩展 · {date}。整体职责仍以 [设计规范](../../docs/设计规范.md) 为准。',
-'','## 这次整理的结论','','原始 60 个条目全部保留并逐项安排去向；建议用 **20 类绘画方法**组织，其中 **12 类作为首批范围建议**，并非一次全部实现，也不表示用户已经确认数量。',
+lines=['# 流动诗：意象目录与绘画单元','',f'版本：0.4 范围复核 · {date}。整体职责仍以 [设计规范](../../docs/设计规范.md) 为准。',
+'','## 这次整理的结论','','原始 60 个条目保留溯源；当前绘画表 57 项，长安、南浦、潇湘归档退出绘画任务；建议用 **20 类绘画方法**组织，其中 **12 类作为首批范围建议**，并非一次全部实现，也不表示用户已经确认数量。',
 '','语义名称与绘画入口分开：共享绘画代码，不等于合并词义。原统计名称、频次均未改写，也不把它们转换成新合并频次。',
 '','### 扩展顺序','','按原意象频次从高到低补缺口，已有基础形态先保留；非物体和歧义条目明确去向，共用代码不改写原频次。工具可以共用接口，不能因样例诗句需要就跳到低频项。',
 '','当前已增加通用鸟形、原生疏花树及场景构图；先按二十句反馈完善承托、比例、数量与群落，再继续高频缺项。歧义与听觉条目仍按具体语境处理。风的空间作用与完整关系工作不阻塞基础形态扩展。',
@@ -149,7 +153,7 @@ lines=['# 流动诗：意象目录与绘画单元','',f'版本：0.3 高频扩�
 for f in family_map.values():lines.append(f"| {f['name']} | {f['phase']} | {f['status']} |")
 lines += ['','首批 12 类：'+ '、'.join(f['name'] for f in family_map.values() if f['phase']=='首批')+'。',
 '','这些是绘画方法类别，不是 20 种物体。例如“风”属于作用，“露霜”需要附着载体；一条诗句可以组合多种方法。',
-'','## 六十项进度总表','','[打开可筛选的网页进度表](progress.html)。同一份进度记录生成本表和网页，按原统计顺序保留全部 60 项。',
+'','## 当前绘画进度表','','[打开可筛选的网页进度表](progress.html)。同一份进度记录生成本表和网页，按原统计顺序显示 57 项；原始地名条目在 JSON 的 archived_items 中保留。',
 '','当前：'+'；'.join(f'{stages[key]} {stage_counts[key]}' for key in stages)+f'。另有 {progress_summary["needs_context"]} 项需要具体语境判断；语境标记不代表该项绘画已完成。',
 '','“基础可画”只表示已有该目标的本地形态试画，全部仍待审美确认；“部分支持”表示目标的一部分已实现；通用花、树、鸟的代码不能让未制作的具体物种自动升级。已另做[基础诗句组合试验](../poem-generation/README.md)，不表示全部条目或完整关系已接入。',
 '','处理数量：'+'；'.join(f'{k} {v}' for k,v in counts.items())+'。',

@@ -8,10 +8,16 @@ const dir=dirname(fileURLToPath(import.meta.url)),root=resolve(dir,'..');
 const sandbox={window:{}};vm.createContext(sandbox);
 const html=await readFile(resolve(root,'index.html'),'utf8');
 const scripts=[...html.matchAll(/<script defer src="([^"]+)"/g)].map(m=>m[1]).filter(p=>p.startsWith('drawing/'));
-for(const script of scripts)vm.runInContext(await readFile(resolve(root,script),'utf8'),sandbox,{filename:script});
+for(const script of scripts){
+ const before=sandbox.window.PoemDrawing?.definitions().length||0;
+ vm.runInContext(await readFile(resolve(root,script),'utf8'),sandbox,{filename:script});
+ if(script.startsWith('drawing/tools/')&&sandbox.window.PoemDrawing.definitions().length<=before)throw new Error('Tool module did not register a tool: '+script);
+}
 const definitions=sandbox.window.PoemDrawing.definitions(),sources=sandbox.window.PoemDrawingSources;
 const toolFiles=(await readdir(resolve(dir,'tools'))).filter(f=>f.endsWith('.js')).map(f=>f.slice(0,-3)).sort();
-if(JSON.stringify(definitions.map(t=>t.id).sort())!==JSON.stringify(toolFiles))throw new Error('Every tool module must be loaded and registered exactly once');
+// One module may register several tools, e.g. emblems.js registers flag/weapon.
+const loaded=scripts.filter(p=>p.startsWith('drawing/tools/')).map(p=>p.split('/').at(-1).slice(0,-3)).sort();
+if(JSON.stringify(loaded)!==JSON.stringify(toolFiles))throw new Error('Every tool module must be loaded exactly once');
 for(const tool of definitions)for(const key of tool.sources){
   const source=sources[key];if(!source)throw new Error(`Source missing: ${key}`);
   if(source.kind==='adapted'&&(!source.url||!source.license||!source.licenseFile||!source.originals.length))throw new Error(`Incomplete attribution: ${key}`);

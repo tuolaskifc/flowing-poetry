@@ -760,14 +760,14 @@
     },
     {
       "id": "flower-forms",
-      "name": "梅 · 菊 · 莲花冠",
+      "name": "花冠 · 菊丛",
       "subtitle": "从瓣形与层次区别花形，不只换颜色。",
       "credit": "本项目试作 · 三类花冠结构",
       "sources": [
         "project"
       ],
       "reference": "drawing/README.md#花形变体",
-      "note": "圆瓣五出、细长多瓣与尖瓣层叠三种花冠示意；尚未接入花枝、莲叶或具体品种，也未做植物学辨识验收。",
+      "note": "圆瓣五出、细长多瓣与尖瓣层叠三种花冠示意；菊形新增带茎叶的成丛株式；单冠仍可选，未做植物学辨识验收。",
       "controls": [
         {
           "id": "kind",
@@ -785,6 +785,21 @@
             {
               "value": "lotus",
               "label": "莲形"
+            }
+          ]
+        },
+        {
+          "id": "form",
+          "label": "株式",
+          "default": "crown",
+          "choices": [
+            {
+              "value": "crown",
+              "label": "单花冠"
+            },
+            {
+              "value": "clump",
+              "label": "带叶菊丛"
             }
           ]
         }
@@ -1312,6 +1327,98 @@
             {
               "value": "standing",
               "label": "立人"
+            },
+            {
+              "value": "woman",
+              "label": "女子衣影"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "flag",
+      "name": "旗幡",
+      "subtitle": "几笔墨形，点到为止。",
+      "sources": [
+        "project"
+      ],
+      "credit": "本项目 · 写意旗幡与兵器",
+      "reference": "drawing/README.md#旗幡与兵器",
+      "note": "原生简笔形体，不作器制、服饰或军事场面复原。",
+      "capabilities": [
+        "anchors",
+        "fixed-count"
+      ],
+      "controls": []
+    },
+    {
+      "id": "weapon",
+      "name": "兵器",
+      "subtitle": "几笔墨形，点到为止。",
+      "sources": [
+        "project"
+      ],
+      "credit": "本项目 · 写意旗幡与兵器",
+      "reference": "drawing/README.md#旗幡与兵器",
+      "note": "原生简笔形体，不作器制、服饰或军事场面复原。",
+      "capabilities": [
+        "anchors",
+        "fixed-count"
+      ],
+      "controls": [
+        {
+          "id": "kind",
+          "label": "借形",
+          "default": "spear",
+          "choices": [
+            {
+              "value": "sword",
+              "label": "剑意"
+            },
+            {
+              "value": "spear",
+              "label": "戈矛意"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "instrument",
+      "name": "笛 · 琴瑟",
+      "subtitle": "几根弦，几处孔，留下乐器的形。",
+      "sources": [
+        "project"
+      ],
+      "credit": "本项目 · 写意乐器",
+      "reference": "drawing/README.md#乐器",
+      "note": "笛、琴、瑟分别借形；不复原器制，不补演奏者。",
+      "capabilities": [
+        "anchors",
+        "fixed-count"
+      ],
+      "controls": [
+        {
+          "id": "kind",
+          "label": "乐器",
+          "default": "flute",
+          "choices": [
+            {
+              "value": "flute",
+              "label": "笛"
+            },
+            {
+              "value": "qin",
+              "label": "琴"
+            },
+            {
+              "value": "se",
+              "label": "瑟"
+            },
+            {
+              "value": "pair",
+              "label": "琴与瑟"
             }
           ]
         }

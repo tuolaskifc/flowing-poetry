@@ -2,11 +2,16 @@
 window.PoemDrawing.register({
  id:'figure',name:'人意',subtitle:'一抹衣影，几笔见人。',sources:['project'],credit:'本项目 · 淡墨人物',reference:'drawing/README.md#人意',
  note:'以衣形、头部笔点和笠沿提示人物；钓者只加一根疏线，不刻画五官。',capabilities:['anchors'],
- controls:[{id:'pose',label:'姿态',default:'fisher',choices:[{value:'fisher',label:'蓑笠钓者'},{value:'standing',label:'立人'}]}],
+ controls:[{id:'pose',label:'姿态',default:'fisher',choices:[{value:'fisher',label:'蓑笠钓者'},{value:'standing',label:'立人'},{value:'woman',label:'女子衣影'}]}],
  create(ctx){const {p,alpha}=ctx;let lean=0;return {
   reset(){lean=p.random(-7,7);},
   draw(){const b=window.PoemInkBrush.create(ctx),ink=ctx.palette.ink,main=ctx.palette.main,fisher=ctx.options.pose==='fisher';
    p.push();p.translate(lean,0);p.noStroke();p.fill(alpha(p,ink,120));p.ellipse(316,232,9,11);
+   if(ctx.options.pose==='woman'){
+    p.fill(alpha(p,ink,140));p.ellipse(316,226,7,6);
+    p.fill(alpha(p,main,115));p.beginShape();for(const [x,y]of [[315,241],[307,254],[303,277],[292,309],[329,310],[325,277],[324,254]])p.vertex(x,y);p.endShape(p.CLOSE);
+    b.stroke([316,245,312,265,313,287,306,307],1.8,ink,120,2,true);b.stroke([320,250,328,268,336,276,331,279],2,ink,115,4,true);p.pop();return;
+   }
    b.stroke([315,242,300,260,304,283,296,302],6,main,110,1,true);
    p.noStroke();p.fill(alpha(p,ink,85));p.beginShape();for(const [x,y] of (fisher?[[314,243],[292,264],[286,294],[329,300],[333,274],[323,250]]:[[314,243],[300,265],[293,307],[331,309],[329,266]]))p.vertex(x,y);p.endShape(p.CLOSE);
    b.stroke([315,246,316,270,330,282,343,283],2,ink,145,3,true);
